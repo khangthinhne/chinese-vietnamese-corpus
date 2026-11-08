@@ -16,8 +16,8 @@ INPUT
     --dpi 300  --workers 4  --low-conf 60
  
 OUTPUT (data/<WORK_ID>/02_extraction/)
-    01_page_image/page_0205.png   ảnh trang gốc (dựng từ PDF), tên số cố định 4 chữ số
-    02_ocr_raw/page_0205.json     OCR thô của TỪNG engine: từng dòng + bbox + độ tin cậy
+    01_page_image/page_205.png   ảnh trang gốc (dựng từ PDF), số trang tối thiểu 3 chữ số
+    02_ocr_raw/page_205.json     OCR thô của TỪNG engine: từng dòng + bbox + độ tin cậy
                                   (để truy vết / bỏ phiếu / hiệu đính — KHÔNG bị ghi đè khi chạy lại
                                   với cùng tham số; đổi tham số thì tự OCR lại)
     <layer>.xml                   XML thô (STATUS: Raw extraction)

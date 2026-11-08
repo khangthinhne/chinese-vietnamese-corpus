@@ -9,8 +9,8 @@ Cấu trúc thư mục:
     <data_root>/<WORK_ID>/01_sources/                bản nguồn gốc, KHÔNG sửa
     <data_root>/<WORK_ID>/02_extraction/<layer>.xml   output thô (han|am|nghia|tho)
     <data_root>/<WORK_ID>/02_extraction/metadata.json
-    <data_root>/<WORK_ID>/02_extraction/01_page_image/page_0205.png      (OCR)
-    <data_root>/<WORK_ID>/02_extraction/02_ocr_raw/page_0205.json        (OCR)
+    <data_root>/<WORK_ID>/02_extraction/01_page_image/page_205.png      (OCR)
+    <data_root>/<WORK_ID>/02_extraction/02_ocr_raw/page_205.json        (OCR)
  
 Muốn thêm lớp văn bản mới  -> thêm 1 dòng vào LAYERS.
 Muốn đổi schema XML        -> chỉ sửa write_xml / build_document.
