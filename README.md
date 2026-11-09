@@ -9,7 +9,7 @@ src/
   common/corpus.py             shared schema, paths, XML writer, metadata, CLI helpers
   extraction/pdf_extraction.py PDF -> page images (+ optional Google Drive upload)
   extraction/web_extraction.py web page -> raw HTML -> XML
-  ocr/ocr.py                   scanned PDF / images -> raw OCR JSON -> XML
+  ocr/ocr.py                   page image directory -> raw OCR JSON -> XML
 configs/CPO_18.json            example shared config
 data/<WORK_ID>/
   01_sources/                  original files (never edited)
@@ -43,17 +43,21 @@ Output: `01_sources/<layer>.html` (original HTML) and `02_extraction/<layer>.xml
 **OCR to XML**
 
 ```bash
-python -m src.ocr.ocr --layer han --work-id CPO_18 \
-  --source data/CPO_18/01_sources/book.pdf --pages 205-210 --region 0,0,0.5,1
+python -m src.ocr.ocr --layer han --work-id MY_WORK \
+  --source data/MY_WORK/01_sources/pages --pages 205-210 \
+  --workers 1
 ```
 
-Output: page images, per-page raw OCR in `02_ocr_raw/page_0205.json`, `02_extraction/<layer>.xml`. Pages with low confidence are listed in `metadata.json` for review. OCR is a draft and must be checked by a human.
+Input: local page images only; split PDFs first. Output: per-page raw OCR in `02_ocr_raw/page_0205.json` and `02_extraction/<layer>.xml`. Pages with low confidence or no retained text are listed in `metadata.json` for review. OCR is a draft and must be checked by a human.
+
+The selected OCR engine is **Tesseract** for all layers. See [OCR setup and usage](docs/ocr.md). Replace `MY_WORK`, the image directory and the page range with your source information. Source page IDs come from image filenames.
 
 **Shared config**: `--config configs/CPO_18.json --layer han`. Priority: defaults < `common` < `layers.<layer>` < CLI flags.
 
 ## Notes
 
 - Existing outputs are not overwritten without `--force`.
+- For OCR, `--force` permits rebuilding XML and metadata; it reuses valid OCR cache entries. New recognition parameters append a new raw result rather than replacing older results.
 - Re-runs resume: existing images, uploads and OCR results (same parameters) are skipped.
 - Extraction only: no cleaning, footnote removal or sentence splitting. That belongs to `03_cleaned`.
 - To add an OCR engine, subclass `OcrEngine` and use `@register_engine`. To add a website, add a `SiteProfile` in `web_extraction.py`. To add a layer, add a line to `LAYERS` in `corpus.py`.
