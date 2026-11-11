@@ -43,13 +43,13 @@ def preproccess_for_ocr_using_bright(input_path, output_path):
     # beta: brightness
     enhanced = cv2.convertScaleAbs(
         gray,
-        alpha=1.35,
-        beta=-100
+        alpha=1.2,  # Increase contrast
+        beta=-40
     )
     cv2.imwrite(output_path, enhanced)
 
 
 preproccess_for_ocr_using_bright(
-    "test/data/input/page_001.png",
-    "test/data/processed/processed.png"
+    "data/CPO_18/02_extraction/01_page_image/CPO_18_han/page_205.png",
+    "data/CPO_18/01_sources/processed/page_205.png"
 )
