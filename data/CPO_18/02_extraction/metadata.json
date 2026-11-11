@@ -1,12 +1,50 @@
 {
-    "dataset_id": "CPO_18",
-    "title": "Sưu tầm và khảo luận tác phẩm chữ Hán của người Việt Nam trước thế kỷ X",
-    "source_file": "Sưu tầm và khảo luận tác phẩm chữ Hán của người Việt Nam trước thế kỷ X.pdf",
-    "source_type": "scanned_pdf",
-    "page_count": 1000,
-    "extraction_method": "OCR",
-    "ocr_engine": "...",
-    "ocr_languages": ["ch"],
-    "extracted_at": "yyyy-mm-dd",
-    "status": "raw_extraction"
+  "dataset_id": "CPO_18",
+  "title": "Sưu tầm và khảo luận tác phẩm chữ Hán của người Việt Nam trước thế kỷ X",
+  "source_file": "Sưu tầm và khảo luận tác phẩm chữ Hán của người Việt Nam trước thế kỷ X.pdf",
+  "source_type": "scanned_pdf",
+  "page_count": 1000,
+  "extraction_method": "OCR",
+  "ocr_engine": "...",
+  "ocr_languages": [
+    "ch"
+  ],
+  "extracted_at": "yyyy-mm-dd",
+  "status": "raw_extraction",
+  "layers": {
+    "han_images": {
+      "source": {
+        "path": "01_sources/CPO18.pdf",
+        "sha256": "02097c62708a086d9c83e3ca404e3fef187c217e9efb6a40e3586612e2233396",
+        "bytes": 135237721
+      },
+      "total_pages": 565,
+      "parameters": {
+        "dpi": 300,
+        "format": "png",
+        "workers": 4
+      },
+      "pages": [
+        205
+      ],
+      "images": [
+        {
+          "page": 205,
+          "file": "02_extraction/01_page_image/han/page_205.png",
+          "drive_id": null,
+          "drive_url": null,
+          "sync_path": "E:\\Projects\\han-viet-corpus\\data\\CPO_18\\02_extraction\\01_page_image\\CPO_18_han\\page_205.png",
+          "sync_status": "copied_to_drive_desktop"
+        }
+      ],
+      "drive_parent_id": null,
+      "drive_folder_id": null,
+      "drive_sync": {
+        "method": "Google Drive for desktop",
+        "local_folder": "E:\\Projects\\han-viet-corpus\\data\\CPO_18\\02_extraction\\01_page_image\\CPO_18_han",
+        "status": "copied; cloud sync is handled by Drive for desktop"
+      },
+      "run_at": "2026-11-11T10:57:46+00:00"
+    }
   }
+}
