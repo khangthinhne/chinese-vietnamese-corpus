@@ -1,0 +1,129 @@
+{
+  "work_id": "CPO_19",
+  "layers": {
+    "am": {
+      "output": "02_extraction/am.xml",
+      "source": {
+        "path": "01_sources/data"
+      },
+      "counts": {
+        "sections": 1,
+        "pages": 1,
+        "units": 10
+      },
+      "status": "Raw extraction, not cleaned",
+      "method": "ocr",
+      "engines": {
+        "tesseract": {
+          "name": "tesseract",
+          "version": "5.5.3.20260724",
+          "wrapper_version": "0.3.13",
+          "models": {
+            "vie": "164d9bed7e5a6444586d39434cc1adf4df976cfe23cffd6468e444c94703640a"
+          },
+          "oem": 1,
+          "adapter_version": 1
+        }
+      },
+      "parameters": {
+        "pages": [
+          1
+        ],
+        "region": null,
+        "lang": "vie",
+        "psm": 6,
+        "dpi": 300,
+        "keep": "latin",
+        "select": "first",
+        "low_conf": 60,
+        "workers_requested": 4,
+        "workers_used": 1
+      },
+      "low_conf_pages": [
+        1
+      ],
+      "empty_pages": [],
+      "pages": [
+        {
+          "page": 1,
+          "image": "01_sources/data/page_001.png",
+          "image_sha256": "9a1eb9c733fb655acdd83d91509ce5f46aef1fa1a84961660469039e9b36c09c",
+          "raw": "02_extraction/02_ocr_raw/page_0001.json",
+          "selected_engine": "tesseract",
+          "confidence": 24.43638730315608,
+          "empty": false,
+          "engines": [
+            {
+              "engine": "tesseract",
+              "key": "4f29ddfce5aad88f6f2add56d9d9dd9788b418984054ee2aedbb79658dfd71e8",
+              "cache_hit": false
+            }
+          ]
+        }
+      ],
+      "review_required": true,
+      "run_at": "2026-11-11T09:52:54+00:00"
+    },
+    "han": {
+      "output": "02_extraction/han.xml",
+      "source": {
+        "path": "01_sources/processed"
+      },
+      "counts": {
+        "sections": 1,
+        "pages": 1,
+        "units": 10
+      },
+      "status": "Raw extraction, not cleaned",
+      "method": "ocr",
+      "engines": {
+        "tesseract": {
+          "name": "tesseract",
+          "version": "5.5.3.20260724",
+          "wrapper_version": "0.3.13",
+          "models": {
+            "chi_tra": "559067dc0f7c94788884742129d66a0117dde7f4ff12b263d92147173497db14"
+          },
+          "oem": 1,
+          "adapter_version": 1
+        }
+      },
+      "parameters": {
+        "pages": [
+          2
+        ],
+        "region": null,
+        "lang": "chi_tra",
+        "psm": 6,
+        "dpi": 300,
+        "keep": "cjk",
+        "select": "first",
+        "low_conf": 60,
+        "workers_requested": 4,
+        "workers_used": 1
+      },
+      "low_conf_pages": [],
+      "empty_pages": [],
+      "pages": [
+        {
+          "page": 2,
+          "image": "01_sources/processed/page_002.png",
+          "image_sha256": "8fdd65abb4affcd93a9966feaf06ec6aecc44bdc68287a471e7e820a631b5b2c",
+          "raw": "02_extraction/02_ocr_raw/page_0002.json",
+          "selected_engine": "tesseract",
+          "confidence": 69.84219663195701,
+          "empty": false,
+          "engines": [
+            {
+              "engine": "tesseract",
+              "key": "c8e85c730f668acce245acc6fd0be0d24d638f220df517204bf99f2e74f196cd",
+              "cache_hit": false
+            }
+          ]
+        }
+      ],
+      "review_required": true,
+      "run_at": "2026-11-11T10:23:57+00:00"
+    }
+  }
+}

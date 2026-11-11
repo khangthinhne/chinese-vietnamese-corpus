@@ -340,7 +340,14 @@ class MetadataStore:
     def load(self) -> dict:
         p = self.layout.metadata_path
         if p.exists():
-            return json.loads(p.read_text(encoding="utf-8"))
+            data = json.loads(p.read_text(encoding="utf-8"))
+            if not isinstance(data, dict):
+                raise ValueError("metadata.json phải là JSON object")
+            data.setdefault("work_id", self.layout.work_id)
+            data.setdefault("layers", {})
+            if not isinstance(data["layers"], dict):
+                raise ValueError("metadata.json: layers phải là JSON object")
+            return data
         return {"work_id": self.layout.work_id, "layers": {}}
  
     def update(self, layer: str, record: dict) -> None:
