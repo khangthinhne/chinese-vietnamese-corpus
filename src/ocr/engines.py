@@ -11,7 +11,7 @@ from pathlib import Path
 
 from PIL import Image
 from src.common.corpus import sha256_file
-
+from dotenv import load_dotenv
 
 @dataclass
 class OcrLine:
@@ -56,6 +56,9 @@ def tesseract_setup():
         import pytesseract
     except ImportError as exc:
         raise RuntimeError("Cài dependencies: python -m pip install -r requirements-ocr.txt") from exc
+
+    load_dotenv()
+    
     executable = os.environ.get("TESSERACT_CMD") or shutil.which("tesseract")
     if not executable or not Path(executable).is_file():
         raise RuntimeError("Không tìm thấy Tesseract; thêm vào PATH hoặc đặt TESSERACT_CMD")

@@ -223,6 +223,8 @@ def run(args) -> Path:
     args.region = parse_region(args.region)
     if not args.source:
         raise ValueError("Thiếu --source (CLI hoặc config)")
+    print(f"Pages: {pages}")
+    
     source = Path(args.source).resolve()
     images = discover_images(source, pages)
     args.engines = list(dict.fromkeys(x.strip() for x in args.engines.split(",") if x.strip()))
@@ -256,7 +258,7 @@ def run(args) -> Path:
                             args, descriptors, worker_state), pages))
     low_conf = [r["page"] for r in results if r["confidence"] is None or r["confidence"] < args.low_conf]
     empty = [r["page"] for r in results if r["empty"]]
-    if empty:
+    if empty: 
         log.warning("Trang không có dòng sau lọc: %s", empty)
     doc = build_document(args.work_id, args.layer, make_meta(
         args.layer, title=args.title, source=args.source_label or source.name,
