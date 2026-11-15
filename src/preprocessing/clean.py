@@ -11,10 +11,16 @@ INPUT
     --keep-markers         không xoá chỉ mục chú thích [1], (1), ①
     --abbrev tp,ts,...     thêm chữ viết tắt Việt không được coi là hết câu khi có dấu chấm
 
+    --start-after REGEX   chỉ lấy nội dung SAU dòng khớp regex này (không gồm dòng khớp);
+                          cắt theo TOÀN BỘ danh sách dòng, nên hoạt động cả khi nội dung
+                          trải qua nhiều trang
+    --end-before REGEX    ngừng lấy khi gặp dòng khớp regex này (không gồm dòng khớp)
+
 OUTPUT (data/<WORK_ID>/03_cleaned/)
     <layer>.jsonl        mỗi dòng 1 Sentence: id, text, pages, src_ids, flags
     <layer>.txt          mỗi câu 1 dòng (bản "văn bản sạch" theo guideline)
     <layer>.dropped.tsv  mọi dòng bị loại: id, trang, lý do, nội dung  -> NGƯỜI PHẢI DUYỆT lại
+                         (gồm cả dòng ngoài đoạn cắt bởi --start-after/--end-before)
     02_extraction/metadata.json -> layers["<layer>_cleaned"]
 
 Các việc làm ở đây (đúng bước 5-6 của guideline):
@@ -27,6 +33,8 @@ Không đổi nghĩa, không sửa tên riêng/niên hiệu/số theo nghĩa.
 Ví dụ:
     python -m src.preprocessing.clean --work-id CPO_18 --layer han
     python -m src.preprocessing.clean --work-id CPO_18 --layer nghia --drop-pattern "^Phần II"
+    python -m src.preprocessing.clean --work-id CPO_18 --layer am \
+        --start-after "^Phiên âm" --end-before "^Dịch nghĩa"
 """
 
 from __future__ import annotations
@@ -48,7 +56,7 @@ log = logging.getLogger("clean")
 # --------------------------------------------------------------------------- #
 # Cấu hình mặc định (đổi bằng CLI/config, không sửa logic)
 # --------------------------------------------------------------------------- #
-HAN_TERMINATORS = "。！？；"
+HAN_TERMINATORS = "。！？；﹖﹕﹒"
 HAN_CLOSERS = "」』”’）)》〉"
 HAN_PUNCT = "，。！？；：、"                 # dấu ngắt câu/ý; ngoặc, nháy, gạch KHÔNG tính khi nhận diện tiêu đề
 ASCII_TO_HAN = {",": "，", ".": "。", ";": "；", ":": "：", "?": "？", "!": "！", "、": "、"}
@@ -79,6 +87,8 @@ class CleanConfig:
     max_heading_vi: int = 90
     abbrev: set[str] = field(default_factory=lambda: set(VI_ABBREV))
     han_strip_latin: bool = True
+    start_after: str | None = None     # regex ranh giới đầu đoạn: chỉ lấy nội dung SAU dòng khớp
+    end_before: str | None = None      # regex ranh giới cuối đoạn: ngừng lấy trước dòng khớp
 
 
 @dataclass
@@ -87,6 +97,101 @@ class RawLine:
     page: int
     text: str
     is_last_on_page: bool = False
+
+
+# --------------------------------------------------------------------------- #
+# 0. Cắt đoạn theo ranh giới tiêu đề (start_after / end_before)
+# --------------------------------------------------------------------------- #
+@dataclass
+class SectionInfo:
+    """Kết quả cắt đoạn: báo cho metadata + các dòng bị loại kèm lý do."""
+    status: str                                  # unbounded | ok | incomplete_end
+    start_pattern: str | None = None
+    end_pattern: str | None = None
+    start_found: bool = False
+    end_found: bool = False
+    first_page: int | None = None                # trang của dòng được chọn đầu/cuối
+    last_page: int | None = None
+    n_selected: int = 0
+    excluded: list[tuple[RawLine, str]] = field(default_factory=list)  # (dòng, before_start|after_end)
+
+    def as_dict(self) -> dict:
+        d = {k: v for k, v in self.__dict__.items() if k != "excluded"}
+        d["n_excluded"] = len(self.excluded)
+        return d
+
+
+def compile_boundary(pattern: str | None, name: str) -> re.Pattern | None:
+    """Biên dịch regex ranh giới một lần; regex sai = lỗi cấu hình, không nuốt lặng lẽ."""
+    if pattern is None:
+        return None
+    try:
+        return re.compile(pattern, re.IGNORECASE | re.UNICODE)
+    except re.error as exc:
+        raise ValueError(f"Regex {name} không hợp lệ: {pattern!r} ({exc})") from exc
+
+
+def extract_section(lines: list[RawLine], start_after: str | None = None,
+                    end_before: str | None = None
+                    ) -> tuple[list[RawLine], SectionInfo]:
+    """Cắt đoạn theo ranh giới tiêu đề, chạy trên TOÀN BỘ danh sách dòng (qua trang mượt).
+
+    Trạng thái: trước start -> thu thập -> gặp end thì dừng. Dòng khớp ranh giới KHÔNG
+    được chọn; phần bị loại trước start / từ end trở đi trả về trong info.excluded.
+    Không hiệu chỉnh text, không đổi ID/trang/is_last_on_page.
+    """
+    start_re = compile_boundary(start_after, "start_after")
+    end_re = compile_boundary(end_before, "end_before")
+
+    print(f"extract_section: start_after={start_after!r}, end_before={end_before!r}, ")
+    info = SectionInfo(status="unbounded", start_pattern=start_after, end_pattern=end_before)
+    if start_re is None and end_re is None:
+        info.n_selected = len(lines)
+        if lines:
+            info.first_page, info.last_page = lines[0].page, lines[-1].page
+        return list(lines), info
+
+    selected: list[RawLine] = []
+    collecting = start_re is None          # không có start = thu thập từ dòng đầu
+    info.start_found = start_re is None
+    end_idx: int | None = None
+    for i, ln in enumerate(lines):
+        probe = unicodedata.normalize("NFC", ln.text).strip()
+        # print(f"line {i}: {probe!r} (page {ln.page})")
+        if not collecting:
+            if start_re.search(probe):     # dòng tiêu đề start: ghi nhận, lấy từ dòng kế
+                print(f"Probe start_after match: {probe!r} (page {ln.page})")
+                collecting = True
+                info.start_found = True
+                info.excluded.append((ln, "start_heading"))
+            else:
+                info.excluded.append((ln, "before_start"))
+            continue
+        if end_re is not None and end_re.search(probe):
+            info.end_found = True          # dòng tiêu đề end: dừng tại đây
+            info.excluded.append((ln, "end_heading"))
+            end_idx = i
+            break
+        selected.append(ln)
+    if not info.start_found:
+        raise ValueError(
+            f"start_after={start_after!r} không khớp dòng nào trong {len(lines)} dòng; "
+            f"kiểm tra regex/trang OCR (trang: "
+            f"{sorted({ln.page for ln in lines})[:5]}...)")
+    info.status = "ok"
+    if end_re is not None and not info.end_found:
+        info.status = "incomplete_end"     # cảnh báo lớn, không nuốt lặng lẽ
+        log.warning("end_before=%r không khớp dòng nào; lấy tới hết dữ liệu "
+                    "(kiểm tra regex/phạm vi trang OCR)", end_before)
+    elif end_idx is not None:
+        info.excluded.extend((ln, "after_end") for ln in lines[end_idx + 1:])
+    info.n_selected = len(selected)
+    if selected:
+        info.first_page, info.last_page = selected[0].page, selected[-1].page
+    if not selected:
+        raise ValueError(f"Đoạn cắt rỗng (start_after={start_after!r}, end_before={end_before!r}): "
+                         "không còn dòng nào giữa hai ranh giới")
+    return selected, info
 
 
 # --------------------------------------------------------------------------- #
@@ -137,7 +242,7 @@ def clean_vi_line(text: str, cfg: CleanConfig) -> str:
 
 
 def is_parenthesized(text: str) -> bool:
-    pairs = {"(": ")", "（": "）", "[": "]", "［": "］"}
+    pairs = {"(": ")", "（": "）", "[": "]", "［": "］", "(":"﹚", " ( ":" )"}
     t = text.strip()
     return len(t) > 2 and t[0] in pairs and t[-1] == pairs[t[0]]
 
@@ -333,10 +438,15 @@ def run(args) -> Path:
         heading_heuristic=not args.no_heading_heuristic,
         strip_markers=not args.keep_markers,
         abbrev=set(VI_ABBREV) | {a.strip().lower() for a in (args.abbrev or "").split(",") if a.strip()},
+        start_after=args.start_after,
+        end_before=args.end_before,
     )
     xml_path = layout.layer_xml(layer)
     raw = read_raw_lines(xml_path)
-    sentences, dropped, stats = clean_layer(args.work_id, layer, raw, cfg)
+    selected, sec_info = extract_section(raw, cfg.start_after, cfg.end_before)
+    sentences, dropped, stats = clean_layer(args.work_id, layer, selected, cfg)
+    dropped = [(ln.id, ln.page, f"section_{reason}", ln.text) for ln, reason in sec_info.excluded] + dropped
+    stats["section_lines"] = sec_info.n_selected
     if not sentences:
         raise ValueError(f"Không còn câu nào sau khi làm sạch {xml_path}; xem lại --drop-pattern/--keep")
 
@@ -349,6 +459,7 @@ def run(args) -> Path:
         "parameters": {"split": cfg.split, "split_colon": cfg.split_colon,
                        "drop_patterns": cfg.drop_patterns, "heading_heuristic": cfg.heading_heuristic,
                        "strip_markers": cfg.strip_markers},
+        "section": sec_info.as_dict(),
         "review_required": True})
     log.info("[%s] %s", layer, stats)
     if stats["dropped_lines"]:
@@ -361,6 +472,8 @@ def create_parser():
     p.add_argument("--split", choices=["punct", "line"], help="Mặc định: line cho tho, punct cho lớp khác")
     p.add_argument("--split-colon", action="store_true")
     p.add_argument("--drop-pattern", action="append", help="Regex dòng cần bỏ (lặp lại được)")
+    p.add_argument("--start-after", help="Regex ranh giới đầu đoạn: lấy nội dung SAU dòng khớp (không gồm dòng khớp)")
+    p.add_argument("--end-before", help="Regex ranh giới cuối đoạn: ngừng lấy trước dòng khớp (không gồm dòng khớp)")
     p.add_argument("--no-heading-heuristic", action="store_true")
     p.add_argument("--keep-markers", action="store_true")
     p.add_argument("--abbrev", help="Viết tắt Việt thêm, phân cách dấu phẩy")

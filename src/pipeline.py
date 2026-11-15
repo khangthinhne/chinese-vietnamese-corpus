@@ -17,7 +17,9 @@ Config (JSON):
               "region": "0,0.08,1,0.93", "engines": "tesseract"},
     "nghia": {"pdf": "...", "pages": "207-208", "engines": "tesseract"}
   },
-  "clean": {"nghia": {"drop_pattern": ["^Phần II"]}},     # tham số riêng cho từng lớp ở bước clean
+  "clean": {"nghia": {"drop_pattern": ["^Phần II"],                # regex dòng cần bỏ
+                      "start_after": "^Dịch nghĩa",                # ranh giới đầu đoạn (tùy chọn)
+                      "end_before": "^Chú thích"}},                # ranh giới cuối đoạn (tùy chọn)
   "pairs": {"han-nghia": {"method": "length", "name": "CPO_18_parallel"}},
   "extra_args": {"extract": [], "ocr": [], "clean": [], "align": [], "export": []}
 }
@@ -90,6 +92,8 @@ def build_plan(cfg: dict, steps: list[str], layers: list[str] | None, pairs: lis
             _opt(argv, "--split", cc.get("split"))
             for pat in cc.get("drop_pattern", []):
                 argv += ["--drop-pattern", pat]
+            _opt(argv, "--start-after", cc.get("start_after"))
+            _opt(argv, "--end-before", cc.get("end_before"))
             _opt(argv, "--abbrev", cc.get("abbrev"))
             for flag, key in (("--split-colon", "split_colon"), ("--no-heading-heuristic", "no_heading_heuristic"),
                               ("--keep-markers", "keep_markers")):

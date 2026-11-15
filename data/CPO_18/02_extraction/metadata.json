@@ -37,7 +37,7 @@
       ],
       "drive_parent_id": null,
       "drive_folder_id": null,
-      "run_at": "2026-11-15T08:56:01+00:00"
+      "run_at": "2026-11-15T09:38:59+00:00"
     },
     "han": {
       "output": "02_extraction/han.xml",
@@ -47,7 +47,7 @@
       "counts": {
         "sections": 1,
         "pages": 1,
-        "units": 8
+        "units": 11
       },
       "status": "Raw extraction, not cleaned",
       "method": "ocr",
@@ -68,10 +68,10 @@
           205
         ],
         "region": [
+          0.0,
           0.08,
-          0.15,
-          0.93,
-          0.47
+          1.0,
+          0.93
         ],
         "lang": "chi_tra",
         "psm": 6,
@@ -91,19 +91,19 @@
           "image_sha256": "5afb8b82d045bf87f457e4285f977c608023a2e74a49f37199f54817e1218e72",
           "raw": "02_extraction/02_ocr_raw/page_0205.json",
           "selected_engine": "tesseract",
-          "confidence": 88.90802464967572,
+          "confidence": 88.39974668108326,
           "empty": false,
           "engines": [
             {
               "engine": "tesseract",
-              "key": "3d30feb3e8dcc8ff5bad72d17dadde38d39b1507c7c915b2de50ca67a313f41c",
-              "cache_hit": false
+              "key": "80871be07387e7df84b2b8e6caca23bae465189e85d2a9e883ece9d540e1b4b9",
+              "cache_hit": true
             }
           ]
         }
       ],
       "review_required": true,
-      "run_at": "2026-11-15T08:56:04+00:00"
+      "run_at": "2026-11-15T09:39:01+00:00"
     },
     "am": {
       "output": "02_extraction/am.xml",
@@ -113,7 +113,7 @@
       "counts": {
         "sections": 1,
         "pages": 2,
-        "units": 23
+        "units": 53
       },
       "status": "Raw extraction, not cleaned",
       "method": "ocr",
@@ -135,9 +135,9 @@
           206
         ],
         "region": [
+          0.0,
           0.08,
-          0.6,
-          0.93,
+          1.0,
           0.93
         ],
         "lang": "vie",
@@ -158,13 +158,13 @@
           "image_sha256": "5afb8b82d045bf87f457e4285f977c608023a2e74a49f37199f54817e1218e72",
           "raw": "02_extraction/02_ocr_raw/page_0205.json",
           "selected_engine": "tesseract",
-          "confidence": 93.93959366292806,
+          "confidence": 72.13793045367423,
           "empty": false,
           "engines": [
             {
               "engine": "tesseract",
-              "key": "79712f3d9ed20b161fa9156af04430ac92620accd683935d99a4c519aa2f85ea",
-              "cache_hit": false
+              "key": "1d5e500c5f7ec88ee1d94ae2eef496aa95c84c9d098a420c2ce0c3001078e06a",
+              "cache_hit": true
             }
           ]
         },
@@ -174,31 +174,32 @@
           "image_sha256": "fed77272d9e993999a8d2d3890ab340d1c1b0b312d145ff1c8c528eb188a8ddc",
           "raw": "02_extraction/02_ocr_raw/page_0206.json",
           "selected_engine": "tesseract",
-          "confidence": 92.20645210571548,
+          "confidence": 92.00762829898034,
           "empty": false,
           "engines": [
             {
               "engine": "tesseract",
-              "key": "51e387e777fe3391cf12b1c9ec789aef6a3a9d47d8b1fafdf40d6bca85498834",
-              "cache_hit": false
+              "key": "d0351e60bd7ed12aabb01051f96caf696bde76ccc730a5a6cf755b280f24481b",
+              "cache_hit": true
             }
           ]
         }
       ],
       "review_required": true,
-      "run_at": "2026-11-15T08:56:09+00:00"
+      "run_at": "2026-11-15T09:39:05+00:00"
     },
     "han_cleaned": {
       "input": "02_extraction/han.xml",
       "output": "03_cleaned/han.jsonl",
       "stats": {
-        "raw_lines": 8,
-        "kept_lines": 5,
-        "dropped_lines": 3,
-        "sentences": 2,
+        "raw_lines": 11,
+        "kept_lines": 7,
+        "dropped_lines": 4,
+        "sentences": 6,
         "cross_page": 0,
         "no_terminal_punct": 1,
-        "long": 0
+        "long": 0,
+        "section_lines": 11
       },
       "parameters": {
         "split": "punct",
@@ -209,8 +210,19 @@
         "heading_heuristic": true,
         "strip_markers": true
       },
+      "section": {
+        "status": "unbounded",
+        "start_pattern": null,
+        "end_pattern": null,
+        "start_found": false,
+        "end_found": false,
+        "first_page": 205,
+        "last_page": 205,
+        "n_selected": 11,
+        "n_excluded": 0
+      },
       "review_required": true,
-      "run_at": "2026-11-15T08:56:04+00:00"
+      "run_at": "2026-11-15T10:12:31+00:00"
     },
     "am_images": {
       "source": {
@@ -244,19 +256,20 @@
       ],
       "drive_parent_id": null,
       "drive_folder_id": null,
-      "run_at": "2026-11-15T08:56:08+00:00"
+      "run_at": "2026-11-15T09:39:05+00:00"
     },
     "am_cleaned": {
       "input": "02_extraction/am.xml",
       "output": "03_cleaned/am.jsonl",
       "stats": {
-        "raw_lines": 23,
-        "kept_lines": 22,
+        "raw_lines": 16,
+        "kept_lines": 15,
         "dropped_lines": 1,
-        "sentences": 9,
+        "sentences": 8,
         "cross_page": 1,
-        "no_terminal_punct": 1,
-        "long": 0
+        "no_terminal_punct": 0,
+        "long": 0,
+        "section_lines": 16
       },
       "parameters": {
         "split": "punct",
@@ -268,8 +281,19 @@
         "heading_heuristic": true,
         "strip_markers": true
       },
+      "section": {
+        "status": "ok",
+        "start_pattern": "^PHIÊN ÂM\\s*:$",
+        "end_pattern": "^DỊCH NGHĨA\\s*:$",
+        "start_found": true,
+        "end_found": true,
+        "first_page": 205,
+        "last_page": 206,
+        "n_selected": 16,
+        "n_excluded": 37
+      },
       "review_required": true,
-      "run_at": "2026-11-15T08:56:09+00:00"
+      "run_at": "2026-11-15T10:12:31+00:00"
     },
     "nghia_images": {
       "source": {
@@ -296,7 +320,7 @@
       ],
       "drive_parent_id": null,
       "drive_folder_id": null,
-      "run_at": "2026-11-15T08:56:14+00:00"
+      "run_at": "2026-11-15T09:39:09+00:00"
     },
     "nghia": {
       "output": "02_extraction/nghia.xml",
@@ -306,7 +330,7 @@
       "counts": {
         "sections": 1,
         "pages": 1,
-        "units": 18
+        "units": 28
       },
       "status": "Raw extraction, not cleaned",
       "method": "ocr",
@@ -327,10 +351,10 @@
           206
         ],
         "region": [
+          0.0,
           0.08,
-          0.23,
-          0.93,
-          0.77
+          1.0,
+          0.93
         ],
         "lang": "vie",
         "psm": 6,
@@ -350,31 +374,32 @@
           "image_sha256": "fed77272d9e993999a8d2d3890ab340d1c1b0b312d145ff1c8c528eb188a8ddc",
           "raw": "02_extraction/02_ocr_raw/page_0206.json",
           "selected_engine": "tesseract",
-          "confidence": 91.82371912577078,
+          "confidence": 92.00762829898034,
           "empty": false,
           "engines": [
             {
               "engine": "tesseract",
-              "key": "43a9367294b7a2bb970ec42554a6f722ea6dd62838051cfc1e5625799e676c3b",
-              "cache_hit": false
+              "key": "a9ab67d08d63bbfd966ca9caa3c5999ad0d5098400ddc0a8dbd120f95697af7b",
+              "cache_hit": true
             }
           ]
         }
       ],
       "review_required": true,
-      "run_at": "2026-11-15T08:56:15+00:00"
+      "run_at": "2026-11-15T09:39:10+00:00"
     },
     "nghia_cleaned": {
       "input": "02_extraction/nghia.xml",
       "output": "03_cleaned/nghia.jsonl",
       "stats": {
-        "raw_lines": 18,
-        "kept_lines": 17,
+        "raw_lines": 17,
+        "kept_lines": 16,
         "dropped_lines": 1,
         "sentences": 6,
         "cross_page": 0,
         "no_terminal_punct": 0,
-        "long": 0
+        "long": 0,
+        "section_lines": 17
       },
       "parameters": {
         "split": "punct",
@@ -386,8 +411,19 @@
         "heading_heuristic": true,
         "strip_markers": true
       },
+      "section": {
+        "status": "ok",
+        "start_pattern": "^DỊCH NGHĨA\\s*:$",
+        "end_pattern": "^CHÚ THÍCH\\s*:$",
+        "start_found": true,
+        "end_found": true,
+        "first_page": 206,
+        "last_page": 206,
+        "n_selected": 17,
+        "n_excluded": 11
+      },
       "review_required": true,
-      "run_at": "2026-11-15T08:56:15+00:00"
+      "run_at": "2026-11-15T10:12:31+00:00"
     },
     "han-am_alignment": {
       "output": "04_alignment/han-am.jsonl",
@@ -407,23 +443,23 @@
         "tgt_sentences": 9,
         "beads": 7,
         "kinds": {
+          "0-1": 5,
           "1-1": 1,
-          "1-3": 1,
-          "0-1": 5
+          "1-3": 1
         },
         "unaligned": 5,
-        "low_score": 1
+        "low_score": 2
       },
       "low_score_threshold": 0.6,
       "review_required": true,
-      "run_at": "2026-11-15T08:56:16+00:00"
+      "run_at": "2026-11-15T09:39:10+00:00"
     },
     "han-am_export": {
       "name": "CPO_18_han-am_parallel",
       "report": {
         "name": "CPO_18_han-am_parallel",
         "pair": "han-am",
-        "generated_at": "2026-11-15T09:02:47+00:00",
+        "generated_at": "2026-11-15T09:39:10+00:00",
         "pairs_exported": 2,
         "han_sentences": 2,
         "am_sentences": 9,
@@ -434,7 +470,7 @@
         "skipped": {
           "unaligned": 5
         },
-        "low_score_exported": 1,
+        "low_score_exported": 2,
         "cross_page_exported": 0,
         "self_check": {
           "no_empty_cell": true,
@@ -448,7 +484,7 @@
         }
       },
       "review_required": true,
-      "run_at": "2026-11-15T09:02:47+00:00"
+      "run_at": "2026-11-15T09:39:10+00:00"
     },
     "han-nghia_alignment": {
       "output": "04_alignment/han-nghia.jsonl",
@@ -474,14 +510,14 @@
       },
       "low_score_threshold": 0.6,
       "review_required": true,
-      "run_at": "2026-11-15T08:56:16+00:00"
+      "run_at": "2026-11-15T09:39:10+00:00"
     },
     "han-nghia_export": {
       "name": "CPO_18_han-nghia_parallel",
       "report": {
         "name": "CPO_18_han-nghia_parallel",
         "pair": "han-nghia",
-        "generated_at": "2026-11-15T09:02:47+00:00",
+        "generated_at": "2026-11-15T09:39:10+00:00",
         "pairs_exported": 2,
         "han_sentences": 2,
         "nghia_sentences": 6,
@@ -506,7 +542,7 @@
         }
       },
       "review_required": true,
-      "run_at": "2026-11-15T09:02:47+00:00"
+      "run_at": "2026-11-15T09:39:10+00:00"
     }
   },
   "work_id": "CPO_18"
