@@ -23,16 +23,48 @@ from src.common.corpus import LAYERS, DataLayout
 
 log = logging.getLogger("sentences")
 
-CLEANED_DIRNAME = "03_cleaned"
-ALIGNMENT_DIRNAME = "04_alignment"
+CLEANED_DIRNAME = "05_cleaning"
+LEGACY_CLEANED_DIRNAME = "03_cleaned"
+ALIGNMENT_DIRNAME = "06_alignment"
+LEGACY_ALIGNMENT_DIRNAME = "04_alignment"
+EXPORT_DIRNAME = "07_export"
 
 
 def cleaned_dir(layout: DataLayout) -> Path:
-    return layout.work_dir / CLEANED_DIRNAME
+    """Nơi GHI kết quả clean (layout mới)."""
+    return layout.cleaning_root
+
+
+def find_cleaned_dir(layout: DataLayout) -> Path:
+    """Đọc: ưu tiên layout mới, lùi về 03_cleaned của dữ liệu cũ (không xoá gì)."""
+    new = layout.cleaning_root
+    if new.exists():
+        return new
+    legacy = layout.work_dir / LEGACY_CLEANED_DIRNAME
+    return legacy if legacy.exists() else new
 
 
 def alignment_dir(layout: DataLayout) -> Path:
-    return layout.work_dir / ALIGNMENT_DIRNAME
+    """Nơi GHI kết quả dóng hàng (layout mới)."""
+    return layout.alignment_root
+
+
+def export_dir(layout: DataLayout) -> Path:
+    """Nơi GHI file bàn giao TSV/XLSX (layout mới)."""
+    return layout.export_root
+
+
+def find_alignment_dir(layout: DataLayout) -> Path:
+    """Đọc: ưu tiên 06_alignment, lùi về 04_alignment của dữ liệu cũ."""
+    new = layout.alignment_root
+    if new.exists():
+        return new
+    legacy = layout.work_dir / LEGACY_ALIGNMENT_DIRNAME
+    return legacy if legacy.exists() else new
+
+
+def find_alignment_file(layout: DataLayout, pair: str) -> Path:
+    return find_alignment_dir(layout) / f"{pair}.jsonl"
 
 
 # --------------------------------------------------------------------------- #
@@ -45,6 +77,7 @@ class Sentence:
     pages: list[int]                           # trang nguồn (>1 phần tử = câu bị cắt qua trang)
     src_ids: list[str]                         # ID dòng ở 02_extraction đã tạo nên câu này
     flags: list[str] = field(default_factory=list)
+    document_id: str = ""                      # CPO_18.001 (dữ liệu cũ có thể để trống)
 
 
 @dataclass
@@ -94,11 +127,12 @@ def save_sentences(layout: DataLayout, layer: str, sentences: list[Sentence]) ->
 
 
 def load_sentences(layout: DataLayout, layer: str) -> list[Sentence]:
-    path = cleaned_dir(layout) / f"{layer}.jsonl"
+    path = find_cleaned_dir(layout) / f"{layer}.jsonl"
     try:
         rows = read_jsonl(path)
     except FileNotFoundError:
-        raise FileNotFoundError(f"Chưa có {path}; chạy src.preprocessing.clean --layer {layer} trước") from None
+        raise FileNotFoundError(
+            f"Chưa có {path}; chạy clean --layer {layer} (hoặc pipeline) trước") from None
     return [Sentence(**r) for r in rows]
 
 

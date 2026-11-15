@@ -25,7 +25,12 @@
         "workers": 4
       },
       "pages": [
-        205
+        205,
+        206,
+        207,
+        208,
+        209,
+        210
       ],
       "images": [
         {
@@ -33,11 +38,41 @@
           "file": "02_extraction/01_page_image/han/page_205.png",
           "drive_id": null,
           "drive_url": null
+        },
+        {
+          "page": 206,
+          "file": "02_extraction/01_page_image/han/page_206.png",
+          "drive_id": null,
+          "drive_url": null
+        },
+        {
+          "page": 207,
+          "file": "02_extraction/01_page_image/han/page_207.png",
+          "drive_id": null,
+          "drive_url": null
+        },
+        {
+          "page": 208,
+          "file": "02_extraction/01_page_image/han/page_208.png",
+          "drive_id": null,
+          "drive_url": null
+        },
+        {
+          "page": 209,
+          "file": "02_extraction/01_page_image/han/page_209.png",
+          "drive_id": null,
+          "drive_url": null
+        },
+        {
+          "page": 210,
+          "file": "02_extraction/01_page_image/han/page_210.png",
+          "drive_id": null,
+          "drive_url": null
         }
       ],
       "drive_parent_id": null,
       "drive_folder_id": null,
-      "run_at": "2026-11-15T09:38:59+00:00"
+      "run_at": "2026-11-15T17:05:42+00:00"
     },
     "han": {
       "output": "02_extraction/han.xml",
@@ -46,8 +81,8 @@
       },
       "counts": {
         "sections": 1,
-        "pages": 1,
-        "units": 11
+        "pages": 4,
+        "units": 41
       },
       "status": "Raw extraction, not cleaned",
       "method": "ocr",
@@ -65,7 +100,12 @@
       },
       "parameters": {
         "pages": [
-          205
+          205,
+          206,
+          207,
+          208,
+          209,
+          210
         ],
         "region": [
           0.0,
@@ -80,10 +120,16 @@
         "select": "first",
         "low_conf": 60,
         "workers_requested": 4,
-        "workers_used": 1
+        "workers_used": 4
       },
-      "low_conf_pages": [],
-      "empty_pages": [],
+      "low_conf_pages": [
+        206,
+        210
+      ],
+      "empty_pages": [
+        206,
+        210
+      ],
       "pages": [
         {
           "page": 205,
@@ -100,10 +146,90 @@
               "cache_hit": true
             }
           ]
+        },
+        {
+          "page": 206,
+          "image": "01_sources/han/page_206.png",
+          "image_sha256": "fed77272d9e993999a8d2d3890ab340d1c1b0b312d145ff1c8c528eb188a8ddc",
+          "raw": "02_extraction/02_ocr_raw/page_0206.json",
+          "selected_engine": "tesseract",
+          "confidence": null,
+          "empty": true,
+          "engines": [
+            {
+              "engine": "tesseract",
+              "key": "adea81510b5056116b64fa13a57cac27611d16d2db398bf278af44258eeeb1b7",
+              "cache_hit": false
+            }
+          ]
+        },
+        {
+          "page": 207,
+          "image": "01_sources/han/page_207.png",
+          "image_sha256": "f494be772212d386652db632fd2fe7095a93d2791d1aee46fba1dd374ad5d571",
+          "raw": "02_extraction/02_ocr_raw/page_0207.json",
+          "selected_engine": "tesseract",
+          "confidence": 81.44,
+          "empty": false,
+          "engines": [
+            {
+              "engine": "tesseract",
+              "key": "d8a4ad3a2dde5df2dd2a668d87c2fe3704e2298333ec5f58c512f04ac62bfbfe",
+              "cache_hit": false
+            }
+          ]
+        },
+        {
+          "page": 208,
+          "image": "01_sources/han/page_208.png",
+          "image_sha256": "e5661834fd45b1d00adddded488760bbcf7f94fe8287c328a201ed918a69fb74",
+          "raw": "02_extraction/02_ocr_raw/page_0208.json",
+          "selected_engine": "tesseract",
+          "confidence": 84.55440143011634,
+          "empty": false,
+          "engines": [
+            {
+              "engine": "tesseract",
+              "key": "dcfe687632597301b0c8a5f6560c7c66dffbd294279623a1c8a4cd9066927477",
+              "cache_hit": false
+            }
+          ]
+        },
+        {
+          "page": 209,
+          "image": "01_sources/han/page_209.png",
+          "image_sha256": "96954f5f44b2492cfcfbafb0ff6f0bb6b2663351439d2c5bf67b615cc7724a87",
+          "raw": "02_extraction/02_ocr_raw/page_0209.json",
+          "selected_engine": "tesseract",
+          "confidence": 70.05073913628827,
+          "empty": false,
+          "engines": [
+            {
+              "engine": "tesseract",
+              "key": "7eb3667cb914d00e0ffcb0b465837e85a025109e87c475a49f2b94ed849458f7",
+              "cache_hit": false
+            }
+          ]
+        },
+        {
+          "page": 210,
+          "image": "01_sources/han/page_210.png",
+          "image_sha256": "13b28c0741438cc418c13bf911105d9e9a9fd5da0d1bbe878010eac09da1b806",
+          "raw": "02_extraction/02_ocr_raw/page_0210.json",
+          "selected_engine": "tesseract",
+          "confidence": null,
+          "empty": true,
+          "engines": [
+            {
+              "engine": "tesseract",
+              "key": "217176f1b6f8b0adc44c41901af4bf82957c897993193c552cd0eb43642e29b8",
+              "cache_hit": false
+            }
+          ]
         }
       ],
       "review_required": true,
-      "run_at": "2026-11-15T12:24:24+00:00"
+      "run_at": "2026-11-15T17:36:28+00:00"
     },
     "am": {
       "output": "02_extraction/am.xml",
@@ -189,30 +315,29 @@
       "run_at": "2026-11-15T12:24:25+00:00"
     },
     "han_cleaned": {
-      "input": "02_extraction/han.xml",
-      "output": "03_cleaned/han.jsonl",
+      "input": "04_segmentation/layers/han.jsonl",
+      "output": "05_cleaning/han.jsonl",
       "stats": {
-        "raw_lines": 11,
-        "kept_lines": 6,
-        "dropped_lines": 5,
-        "sentences": 4,
-        "cross_page": 0,
-        "no_terminal_punct": 0,
+        "raw_lines": 35,
+        "kept_lines": 29,
+        "dropped_lines": 7,
+        "sentences": 30,
+        "cross_page": 1,
+        "no_terminal_punct": 1,
         "long": 0,
-        "section_lines": 8,
+        "section_lines": 35,
         "pages_removed": 0,
         "duplicates": 0,
-        "metadata_fields": {
-          "title": 1,
-          "author": 1,
-          "attribution": 1
-        },
-        "metadata_excluded": 3,
+        "metadata_fields": {},
+        "metadata_excluded": 0,
         "notes": {
-          "bibliographic_note": 1
+          "bibliographic_note": 1,
+          "uncertain_note": 1
         },
-        "reconstructions": {},
-        "review_flags": 0
+        "reconstructions": {
+          "sentence_continuation": 2
+        },
+        "review_flags": 3
       },
       "parameters": {
         "split": "punct",
@@ -232,17 +357,13 @@
           "policy": "exclude"
         },
         "metadata": {
-          "enabled": true,
+          "enabled": false,
           "exclude_from_main_text": true,
           "section_start": [],
           "section_end": [],
-          "title_patterns": [
-            "^\\s*\\d{1,3}\\s*[·.．、﹒)]"
-          ],
+          "title_patterns": [],
           "author_patterns": [],
-          "attribution_patterns": [
-            "^.{0,3}\\*"
-          ]
+          "attribution_patterns": []
         }
       },
       "section": {
@@ -252,13 +373,13 @@
         "start_found": false,
         "end_found": false,
         "first_page": 205,
-        "last_page": 205,
-        "n_selected": 8,
+        "last_page": 209,
+        "n_selected": 35,
         "n_excluded": 0
       },
       "pages_removed": [],
       "review_required": true,
-      "run_at": "2026-11-15T12:15:53+00:00"
+      "run_at": "2026-11-15T20:56:53+00:00"
     },
     "am_images": {
       "source": {
@@ -295,32 +416,30 @@
       "run_at": "2026-11-15T09:39:05+00:00"
     },
     "am_cleaned": {
-      "input": "02_extraction/am.xml",
-      "output": "03_cleaned/am.jsonl",
+      "input": "04_segmentation/layers/am.jsonl",
+      "output": "05_cleaning/am.jsonl",
       "stats": {
-        "raw_lines": 53,
-        "kept_lines": 8,
-        "dropped_lines": 45,
-        "sentences": 5,
-        "cross_page": 1,
+        "raw_lines": 50,
+        "kept_lines": 45,
+        "dropped_lines": 5,
+        "sentences": 28,
+        "cross_page": 2,
         "no_terminal_punct": 0,
         "long": 0,
-        "section_lines": 12,
+        "section_lines": 50,
         "pages_removed": 0,
         "duplicates": 0,
-        "metadata_fields": {
-          "title": 1,
-          "author": 1,
-          "attribution": 1
-        },
-        "metadata_excluded": 41,
+        "metadata_fields": {},
+        "metadata_excluded": 0,
         "notes": {
+          "footnote": 1,
           "bibliographic_note": 1
         },
         "reconstructions": {
-          "ambiguous_join": 1
+          "ambiguous_join": 1,
+          "sentence_continuation": 1
         },
-        "review_flags": 2
+        "review_flags": 10
       },
       "parameters": {
         "split": "punct",
@@ -341,19 +460,13 @@
           "policy": "exclude"
         },
         "metadata": {
-          "enabled": true,
+          "enabled": false,
           "exclude_from_main_text": true,
-          "section_start": [
-            "^PHIÊN ÂM\\s*:?$"
-          ],
-          "section_end": [
-            "^DỊCH NGHĨA\\s*:?$"
-          ],
+          "section_start": [],
+          "section_end": [],
           "title_patterns": [],
           "author_patterns": [],
-          "attribution_patterns": [
-            "^\\*"
-          ]
+          "attribution_patterns": []
         }
       },
       "section": {
@@ -363,13 +476,13 @@
         "start_found": false,
         "end_found": false,
         "first_page": 205,
-        "last_page": 206,
-        "n_selected": 12,
+        "last_page": 210,
+        "n_selected": 50,
         "n_excluded": 0
       },
       "pages_removed": [],
       "review_required": true,
-      "run_at": "2026-11-15T12:15:53+00:00"
+      "run_at": "2026-11-15T20:56:53+00:00"
     },
     "nghia_images": {
       "source": {
@@ -465,30 +578,29 @@
       "run_at": "2026-11-15T12:24:25+00:00"
     },
     "nghia_cleaned": {
-      "input": "02_extraction/nghia.xml",
-      "output": "03_cleaned/nghia.jsonl",
+      "input": "04_segmentation/layers/nghia.jsonl",
+      "output": "05_cleaning/nghia.jsonl",
       "stats": {
-        "raw_lines": 28,
-        "kept_lines": 10,
-        "dropped_lines": 18,
-        "sentences": 5,
-        "cross_page": 0,
+        "raw_lines": 65,
+        "kept_lines": 61,
+        "dropped_lines": 4,
+        "sentences": 26,
+        "cross_page": 2,
         "no_terminal_punct": 1,
         "long": 0,
-        "section_lines": 13,
+        "section_lines": 65,
         "pages_removed": 0,
         "duplicates": 0,
-        "metadata_fields": {
-          "title": 1,
-          "author": 1,
-          "attribution": 1
-        },
-        "metadata_excluded": 15,
+        "metadata_fields": {},
+        "metadata_excluded": 0,
         "notes": {
+          "footnote": 1,
           "bibliographic_note": 1
         },
-        "reconstructions": {},
-        "review_flags": 1
+        "reconstructions": {
+          "ambiguous_join": 3
+        },
+        "review_flags": 12
       },
       "parameters": {
         "split": "punct",
@@ -509,19 +621,13 @@
           "policy": "exclude"
         },
         "metadata": {
-          "enabled": true,
+          "enabled": false,
           "exclude_from_main_text": true,
-          "section_start": [
-            "^DỊCH NGHĨA\\s*:?$"
-          ],
-          "section_end": [
-            "^CHÚ THÍCH\\s*:?$"
-          ],
+          "section_start": [],
+          "section_end": [],
           "title_patterns": [],
           "author_patterns": [],
-          "attribution_patterns": [
-            "^\\*"
-          ]
+          "attribution_patterns": []
         }
       },
       "section": {
@@ -531,16 +637,16 @@
         "start_found": false,
         "end_found": false,
         "first_page": 206,
-        "last_page": 206,
-        "n_selected": 13,
+        "last_page": 212,
+        "n_selected": 65,
         "n_excluded": 0
       },
       "pages_removed": [],
       "review_required": true,
-      "run_at": "2026-11-15T12:15:53+00:00"
+      "run_at": "2026-11-15T20:56:54+00:00"
     },
     "han-am_alignment": {
-      "output": "04_alignment/han-am.jsonl",
+      "output": "06_alignment/han-am.jsonl",
       "aligner": {
         "name": "levenshtein",
         "options": {
@@ -553,36 +659,46 @@
         }
       },
       "stats": {
-        "src_sentences": 4,
-        "tgt_sentences": 5,
-        "beads": 4,
+        "src_sentences": 30,
+        "tgt_sentences": 28,
+        "beads": 24,
+        "documents": 2,
         "kinds": {
-          "1-1": 3,
-          "1-2": 1
+          "1-1": 15,
+          "1-2": 2,
+          "2-1": 3,
+          "1-3": 1,
+          "0-1": 1,
+          "3-1": 2
         },
-        "unaligned": 0,
-        "low_score": 0
+        "unaligned": 1,
+        "low_score": 8
       },
       "low_score_threshold": 0.6,
       "review_required": true,
-      "run_at": "2026-11-15T12:18:29+00:00"
+      "run_at": "2026-11-15T20:56:55+00:00"
     },
     "han-am_export": {
       "name": "CPO_18_han-am_parallel",
       "report": {
         "name": "CPO_18_han-am_parallel",
         "pair": "han-am",
-        "generated_at": "2026-11-15T12:19:24+00:00",
-        "pairs_exported": 4,
-        "han_sentences": 4,
-        "am_sentences": 5,
+        "generated_at": "2026-11-15T20:56:57+00:00",
+        "pairs_exported": 23,
+        "han_sentences": 30,
+        "am_sentences": 28,
         "kinds_exported": {
-          "1-1": 3,
-          "1-2": 1
+          "1-1": 15,
+          "1-2": 2,
+          "2-1": 3,
+          "1-3": 1,
+          "3-1": 2
         },
-        "skipped": {},
-        "low_score_exported": 0,
-        "cross_page_exported": 1,
+        "skipped": {
+          "unaligned": 1
+        },
+        "low_score_exported": 8,
+        "cross_page_exported": 3,
         "self_check": {
           "no_empty_cell": true,
           "no_tab_or_newline_in_cell": true,
@@ -595,10 +711,10 @@
         }
       },
       "review_required": true,
-      "run_at": "2026-11-15T12:19:24+00:00"
+      "run_at": "2026-11-15T20:56:57+00:00"
     },
     "han-nghia_alignment": {
-      "output": "04_alignment/han-nghia.jsonl",
+      "output": "06_alignment/han-nghia.jsonl",
       "aligner": {
         "name": "length",
         "options": {
@@ -608,36 +724,39 @@
         }
       },
       "stats": {
-        "src_sentences": 4,
-        "tgt_sentences": 5,
-        "beads": 4,
+        "src_sentences": 30,
+        "tgt_sentences": 26,
+        "beads": 25,
+        "documents": 2,
         "kinds": {
-          "1-1": 3,
-          "1-2": 1
+          "1-1": 19,
+          "1-2": 1,
+          "2-1": 5
         },
         "unaligned": 0,
-        "low_score": 0
+        "low_score": 13
       },
       "low_score_threshold": 0.6,
       "review_required": true,
-      "run_at": "2026-11-15T12:18:29+00:00"
+      "run_at": "2026-11-15T20:56:57+00:00"
     },
     "han-nghia_export": {
       "name": "CPO_18_han-nghia_parallel",
       "report": {
         "name": "CPO_18_han-nghia_parallel",
         "pair": "han-nghia",
-        "generated_at": "2026-11-15T12:19:24+00:00",
-        "pairs_exported": 4,
-        "han_sentences": 4,
-        "nghia_sentences": 5,
+        "generated_at": "2026-11-15T20:56:57+00:00",
+        "pairs_exported": 25,
+        "han_sentences": 30,
+        "nghia_sentences": 26,
         "kinds_exported": {
-          "1-1": 3,
-          "1-2": 1
+          "1-1": 19,
+          "1-2": 1,
+          "2-1": 5
         },
         "skipped": {},
-        "low_score_exported": 0,
-        "cross_page_exported": 0,
+        "low_score_exported": 13,
+        "cross_page_exported": 2,
         "self_check": {
           "no_empty_cell": true,
           "no_tab_or_newline_in_cell": true,
@@ -650,7 +769,188 @@
         }
       },
       "review_required": true,
-      "run_at": "2026-11-15T12:19:24+00:00"
+      "run_at": "2026-11-15T20:56:57+00:00"
+    },
+    "pages": {
+      "source": {
+        "path": "01_sources/CPO18.pdf",
+        "sha256": "02097c62708a086d9c83e3ca404e3fef187c217e9efb6a40e3586612e2233396",
+        "bytes": 135237721
+      },
+      "total_pages": 565,
+      "parameters": {
+        "dpi": 300,
+        "format": "png",
+        "workers": 4
+      },
+      "pages": [
+        205,
+        206,
+        207,
+        208,
+        209,
+        210,
+        211,
+        212
+      ],
+      "images": [
+        {
+          "page": 205,
+          "file": "02_extraction/pages/page_205.png",
+          "drive_id": null,
+          "drive_url": null
+        },
+        {
+          "page": 206,
+          "file": "02_extraction/pages/page_206.png",
+          "drive_id": null,
+          "drive_url": null
+        },
+        {
+          "page": 207,
+          "file": "02_extraction/pages/page_207.png",
+          "drive_id": null,
+          "drive_url": null
+        },
+        {
+          "page": 208,
+          "file": "02_extraction/pages/page_208.png",
+          "drive_id": null,
+          "drive_url": null
+        },
+        {
+          "page": 209,
+          "file": "02_extraction/pages/page_209.png",
+          "drive_id": null,
+          "drive_url": null
+        },
+        {
+          "page": 210,
+          "file": "02_extraction/pages/page_210.png",
+          "drive_id": null,
+          "drive_url": null
+        },
+        {
+          "page": 211,
+          "file": "02_extraction/pages/page_211.png",
+          "drive_id": null,
+          "drive_url": null
+        },
+        {
+          "page": 212,
+          "file": "02_extraction/pages/page_212.png",
+          "drive_id": null,
+          "drive_url": null
+        }
+      ],
+      "drive_parent_id": null,
+      "drive_folder_id": null,
+      "run_at": "2026-11-15T20:56:45+00:00"
+    },
+    "chi_tra_ocr": {
+      "output": "03_ocr/manifests/chi_tra.json",
+      "source": {
+        "path": "E:\\Projects\\han-viet-corpus\\data\\CPO_18\\02_extraction\\pages"
+      },
+      "counts": {
+        "pages": 8,
+        "lines": 41
+      },
+      "parameters": {
+        "pages": [
+          205,
+          206,
+          207,
+          208,
+          209,
+          210,
+          211,
+          212
+        ],
+        "region": [
+          0.0,
+          0.08,
+          1.0,
+          0.93
+        ],
+        "psm": 6,
+        "dpi": 300,
+        "keep": "cjk",
+        "select": "first",
+        "low_conf": 60.0,
+        "workers_requested": 4,
+        "workers_used": 4
+      },
+      "low_conf_pages": [
+        206,
+        210,
+        211,
+        212
+      ],
+      "empty_pages": [
+        206,
+        210,
+        211,
+        212
+      ],
+      "review_required": true,
+      "run_at": "2026-11-15T20:56:52+00:00"
+    },
+    "vie_ocr": {
+      "output": "03_ocr/manifests/vie.json",
+      "source": {
+        "path": "E:\\Projects\\han-viet-corpus\\data\\CPO_18\\02_extraction\\pages"
+      },
+      "counts": {
+        "pages": 8,
+        "lines": 227
+      },
+      "parameters": {
+        "pages": [
+          205,
+          206,
+          207,
+          208,
+          209,
+          210,
+          211,
+          212
+        ],
+        "region": [
+          0.0,
+          0.08,
+          1.0,
+          0.93
+        ],
+        "psm": 6,
+        "dpi": 300,
+        "keep": "latin",
+        "select": "first",
+        "low_conf": 60.0,
+        "workers_requested": 4,
+        "workers_used": 4
+      },
+      "low_conf_pages": [
+        208
+      ],
+      "empty_pages": [],
+      "review_required": true,
+      "run_at": "2026-11-15T20:56:53+00:00"
+    },
+    "segmentation": {
+      "documents": 2,
+      "lines": {
+        "han": 35,
+        "am": 50,
+        "nghia": 65
+      },
+      "headings": 10,
+      "review_required": 98,
+      "sources": [
+        "chi_tra",
+        "vie"
+      ],
+      "run_at": "2026-11-15T20:56:53+00:00"
     }
   },
   "work_id": "CPO_18"

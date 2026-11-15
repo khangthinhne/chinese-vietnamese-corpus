@@ -28,6 +28,7 @@ from src.common.corpus import (
     filter_lines, finalize, make_meta, parse_args, parse_pages, parse_region,
     register_source, sha256_file, write_json,
 )
+from src.ocr import raw_store
 from src.ocr.engines import ENGINES, DEFAULT_ENGINE, OcrEngine, OcrLine, OcrResult, register_engine
 
 log = logging.getLogger(__name__)
@@ -65,9 +66,11 @@ def discover_images(source: Path, pages: list[int]) -> dict[int, Path]:
             raise ValueError(f"Trùng số trang {page}: {found[page].name}, {path.name}")
         found[page] = path
     missing = sorted(set(pages) - found.keys())
+    print(f"Phát hiện {len(found)} ảnh trong {source}, thiếu trang: {missing}")
     if missing:
         raise ValueError(f"Thiếu ảnh cho trang: {missing}")
     selected = {p: found[p] for p in pages}
+    print(f"Chọn {len(selected)} trang: {list(selected.keys())}")
     for page, path in selected.items():
         try:
             with Image.open(path) as image:
@@ -203,27 +206,159 @@ def process_page(page: int, image_path: Path, layout: DataLayout, args,
 
 
 def create_parser() -> argparse.ArgumentParser:
-    parser = base_parser("OCR thư mục ảnh -> JSON thô -> XML; không làm sạch/tách câu")
+    parser = base_parser("OCR ảnh -> kho thô theo HỆ CHỮ (chế độ mới) hoặc XML theo lớp (chế độ cũ)",
+                         layer_required=False)
     parser.add_argument("--source", help="Thư mục ảnh, mỗi file là một trang")
     parser.add_argument("--pages", help="Bắt buộc, ví dụ 205-210,212")
+    parser.add_argument("--writing-system", choices=list(raw_store.WRITING_SYSTEMS),
+                        help="chế độ mới: chi_tra | vie (mỗi hệ chữ OCR MỘT lần)")
     parser.add_argument("--engines", default=DEFAULT_ENGINE, help="Tên registry, phân cách bằng dấu phẩy")
     parser.add_argument("--select", choices=sorted(SELECTORS), default="first")
-    parser.add_argument("--lang", help="Mặc định từ LAYERS; adapter chuyển mã engine")
+    parser.add_argument("--lang", help="Mặc định: hệ chữ (mới) hoặc theo lớp (cũ)")
     parser.add_argument("--psm", type=int, default=6, help="Tesseract PSM; engine khác bỏ qua")
     parser.add_argument("--region", help="x0,y0,x1,y1, theo tỉ lệ 0..1")
-    parser.add_argument("--keep", choices=["cjk", "latin", "none"], help="Lọc chữ viết; mặc định theo lớp")
+    parser.add_argument("--keep", choices=["cjk", "latin", "none"], help="Lọc chữ viết")
     parser.add_argument("--dpi", type=int, default=300, help="DPI khai báo, không resample ảnh")
     parser.add_argument("--workers", type=int, default=4)
     parser.add_argument("--low-conf", type=float, default=60)
     return parser
 
 
+def process_writing_system_page(page: int, image_path: Path, layout: DataLayout, args,
+                                writing_system: str, lang: str, keep: str | None,
+                                descriptors: dict, worker_state: threading.local) -> dict:
+    try:
+        store = raw_store.load_page(layout, writing_system, page, args.work_id)
+        digest = sha256_file(image_path)
+        with Image.open(image_path) as opened:
+            image = opened.convert("RGB")
+        cropped, box = crop_image(image, args.region)
+        candidates, records = [], []
+        for name in args.engines:
+            parameters = {
+                "image_sha256": digest, "writing_system": writing_system,
+                "engine": descriptors[name], "lang": lang, "region": args.region,
+                "psm": args.psm, "dpi": args.dpi, "preprocessing": "rgb-crop-v1",
+            }
+            key = raw_store.cache_key(parameters)
+            record = raw_store.find_run(store, key)
+            hit = record is not None
+            if record is None:
+                if not hasattr(worker_state, "engines"):
+                    worker_state.engines = {}
+                if name not in worker_state.engines:
+                    worker_state.engines[name] = ENGINES[name]()
+                result = worker_state.engines[name].recognize(
+                    cropped, lang=lang, psm=args.psm, dpi=args.dpi)
+                validate_result(result, cropped.size)
+                lines = [OcrLine(x.text, (x.bbox[0] + box[0], x.bbox[1] + box[1],
+                                         x.bbox[2] + box[0], x.bbox[3] + box[1]),
+                                 x.confidence) for x in result.lines]
+                record = {
+                    "key": key, "parameters": parameters, "created_at": raw_store.now(),
+                    "image": str(image_path), "image_size": list(image.size),
+                    "crop_box": list(box), "lines": [asdict(x) for x in lines],
+                    "raw": result.raw,
+                }
+                store["runs"].append(record)
+                raw_store.save_page(layout, writing_system, page, store)
+            lines = [OcrLine(x["text"], tuple(x["bbox"]), x["confidence"]) for x in record["lines"]]
+            candidates.append(OcrResult(name, lines, record["raw"]))
+            records.append({"engine": name, "key": key, "cache_hit": hit})
+        filtered = [OcrResult(result.engine, [line for line in result.lines
+                    if line.text.strip() and filter_lines([line.text], keep)], result.raw)
+                    for result in candidates]
+        selected = SELECTORS[args.select](filtered)
+        confidence = mean_confidence(selected.lines)
+        selected_key = next(r["key"] for r in records if r["engine"] == selected.engine)
+        return {"page": page, "image": str(image_path), "image_sha256": digest,
+                "raw": layout.rel(raw_store.raw_path(layout, writing_system, page)),
+                "selected_engine": selected.engine, "selected_key": selected_key,
+                "confidence": confidence, "empty": not selected.lines,
+                "n_lines": len(selected.lines),
+                "lines": [{"text": x.text, "bbox": list(x.bbox), "confidence": x.confidence}
+                          for x in selected.lines],
+                "engines": records}
+    except Exception as exc:
+        raise RuntimeError(f"OCR trang {page} ({image_path.name}) thất bại: {exc}") from exc
+
+
+def run_writing_system(args) -> Path:
+    """OCR một HỆ CHỮ (chi_tra|vie) cho toàn bộ phạm vi trang -> 03_ocr/ (không tạo XML lớp)."""
+    writing_system = args.writing_system
+    pages = requested_pages(args.pages)
+    args.region = parse_region(args.region)
+    if not args.source:
+        raise ValueError("Thiếu --source (thư mục ảnh)")
+    source = Path(args.source).resolve()
+    images = discover_images(source, pages)
+    args.engines = list(dict.fromkeys(x.strip() for x in args.engines.split(",") if x.strip()))
+    if not args.engines or any(name not in ENGINES for name in args.engines):
+        raise ValueError(f"Engine không hợp lệ. Có sẵn: {', '.join(ENGINES)}")
+    if args.select not in SELECTORS:
+        raise ValueError("Selector không hợp lệ")
+    if args.workers < 1 or args.dpi < 1 or not 0 <= args.psm <= 13:
+        raise ValueError("Cần workers >= 1, dpi >= 1, psm trong 0..13")
+    if not math.isfinite(args.low_conf) or not 0 <= args.low_conf <= 100:
+        raise ValueError("--low-conf phải trong 0..100")
+    if args.keep is not None and args.keep not in ("cjk", "latin", "none"):
+        raise ValueError("--keep phải là cjk, latin hoặc none")
+    lang = args.lang or writing_system
+    keep = args.keep or ("cjk" if writing_system == "chi_tra" else "latin")
+    keep = None if keep == "none" else keep
+    layout = DataLayout(Path(args.data_root), args.work_id)
+    target = raw_store.manifest_path(layout, writing_system)
+    if target.exists() and not args.force:
+        raise FileExistsError(f"{target} đã tồn tại; dùng --force để ghi lại manifest (cache vẫn dùng lại)")
+    layout.ensure(layout.ocr_raw_root / writing_system, layout.ocr_manifest_dir)
+    descriptors = {name: ENGINES[name].describe(lang) for name in args.engines}
+    workers = min(args.workers, len(pages), *(ENGINES[n].max_workers for n in args.engines))
+    worker_state = threading.local()
+    with ThreadPoolExecutor(max_workers=workers) as pool:
+        results = list(pool.map(
+            lambda p: process_writing_system_page(p, images[p], layout, args, writing_system,
+                                                  lang, keep, descriptors, worker_state),
+            pages))
+    low_conf = [r["page"] for r in results if r["confidence"] is None or r["confidence"] < args.low_conf]
+    empty = [r["page"] for r in results if r["empty"]]
+    if empty:
+        log.warning("Trang không có dòng sau lọc: %s", empty)
+    record = {
+        "schema_version": raw_store.SCHEMA_VERSION, "work_id": args.work_id,
+        "writing_system": writing_system, "lang": lang, "keep": keep,
+        "source": {"path": str(source)},
+        "engines": descriptors,
+        "parameters": {"pages": pages, "region": args.region, "psm": args.psm,
+                       "dpi": args.dpi, "keep": keep, "select": args.select,
+                       "low_conf": args.low_conf, "workers_requested": args.workers,
+                       "workers_used": workers},
+        "pages": results, "low_conf_pages": low_conf, "empty_pages": empty,
+        "review_required": True,
+    }
+    path = raw_store.write_manifest(layout, writing_system, record)
+    MetadataStore(layout).update(f"{writing_system}_ocr", {
+        "output": layout.rel(path), "source": {"path": str(source)},
+        "counts": {"pages": len(pages), "lines": sum(r["n_lines"] for r in results)},
+        "parameters": record["parameters"], "low_conf_pages": low_conf,
+        "empty_pages": empty, "review_required": True})
+    log.info("[%s] OCR %d trang -> %s", writing_system, len(pages), path)
+    return path
+
+
 def run(args) -> Path:
+    if args.writing_system:
+        return run_writing_system(args)
+    if not args.layer:
+        raise ValueError("Cần --writing-system chi_tra|vie (chế độ mới) hoặc --layer (chế độ cũ)")
+    return run_legacy(args)
+
+
+def run_legacy(args) -> Path:
     pages = requested_pages(args.pages)
     args.region = parse_region(args.region)
     if not args.source:
         raise ValueError("Thiếu --source (CLI hoặc config)")
-    print(f"Pages: {pages}")
+    # print(f"Pages: {pages}")
     
     source = Path(args.source).resolve()
     images = discover_images(source, pages)
@@ -247,7 +382,9 @@ def run(args) -> Path:
     descriptors = {name: ENGINES[name].describe(args.lang) for name in args.engines}
     source_info = register_source(layout, source)
     registered = layout.work_dir / source_info["path"]
+    print(f"[TEST] {pages} trang từ {source} -> {registered}")
     registered_images = discover_images(registered, pages)
+    
     for page in pages:
         if sha256_file(images[page]) != sha256_file(registered_images[page]):
             raise ValueError(f"Nguồn lưu trữ khác ảnh trang {page}; dùng tên thư mục nguồn mới")

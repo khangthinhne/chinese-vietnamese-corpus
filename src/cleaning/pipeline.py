@@ -20,7 +20,8 @@ from dataclasses import dataclass
 from pathlib import Path
 
 from src.common.corpus import DataLayout, MetadataStore, base_parser, parse_args, parse_pages
-from src.common.sentences import Sentence, atomic_write_text, cleaned_dir, save_sentences
+from src.common.sentences import (Sentence, atomic_write_text, cleaned_dir, read_jsonl,
+                                  save_sentences)
 
 from src.cleaning.model import (DEFAULT_DROP, DUPLICATE_LINE, UNCERTAIN, VI_ABBREV, CleanConfig,
                                 FootnoteConfig, MetadataConfig, OCRCleaningConfig, RawLine)
@@ -54,6 +55,18 @@ def read_raw_lines(xml_path: Path) -> list[RawLine]:
         units = [u for u in page if u.get("ID")]
         for i, u in enumerate(units):
             out.append(RawLine(u.get("ID"), page_no, u.text or "", is_last_on_page=(i == len(units) - 1)))
+    return out
+
+
+def read_segmentation_lines(path: Path) -> list[RawLine]:
+    """04_segmentation/layers/<layer>.jsonl -> RawLine (đã cắt tài liệu/lớp ở bước trước)."""
+    if not path.exists():
+        raise FileNotFoundError(f"Chưa có {path}; chạy bước segment trước")
+    out: list[RawLine] = []
+    for row in read_jsonl(path):
+        text = row.get("text", "")
+        out.append(RawLine(row["id"], int(row["page"]), text, raw_text=text,
+                           flags=list(row.get("flags") or [])))
     return out
 
 
@@ -245,21 +258,25 @@ def run(args) -> Path:
     cfg.footnotes.remove_in_text_markers = not args.keep_markers
 
     xml_path = layout.layer_xml(layer)
-    raw = read_raw_lines(xml_path)
+    seg_path = layout.segmentation_layer(layer)
+    segmented = seg_path.exists()
+    input_path = seg_path if segmented else xml_path
+    raw = read_segmentation_lines(seg_path) if segmented else read_raw_lines(xml_path)
     out = run_cleaning(args.work_id, layer, raw, cfg)
     if not out.sentences:
-        raise ValueError(f"Không còn câu nào sau khi làm sạch {xml_path}; xem lại --drop-pattern/--start-after")
+        raise ValueError(f"Không còn câu nào sau khi làm sạch {input_path}; xem lại --drop-pattern/--start-after")
 
     save_sentences(layout, layer, out.sentences)
     atomic_write_text(out_dir / f"{layer}.txt", "".join(s.text + "\n" for s in out.sentences))
-    write_layer_metadata(out_dir, layer, out.metadata_docs)  # <layer>.metadata.jsonl
-    aggregate_document_metadata(out_dir, args.work_id)  # gộp mọi lớp -> document_metadata.jsonl
-    aggregate_file_metadata(layout, out_dir)            # <FILE><meta> mọi lớp -> file_metadata.json
+    if not segmented:
+        write_layer_metadata(out_dir, layer, out.metadata_docs)  # <layer>.metadata.jsonl
+        aggregate_document_metadata(out_dir, args.work_id)  # gộp mọi lớp -> document_metadata.jsonl
+        aggregate_file_metadata(layout, out_dir)            # <FILE><meta> mọi lớp -> file_metadata.json
     atomic_write_text(out_dir / f"{layer}.dropped.tsv", "id\tpage\treason\ttext\n" + "".join(
         f"{i}\t{p}\t{r}\t{t.replace(chr(9), ' ').replace(chr(10), ' ')}\n" for i, p, r, t in out.dropped_rows))
     write_audit_files(out_dir, out.audit, out.notes, out.duplicates, out.reconstructions)
     MetadataStore(layout).update(f"{layer}_cleaned", {
-        "input": layout.rel(xml_path), "output": layout.rel(out_jsonl), "stats": out.stats,
+        "input": layout.rel(input_path), "output": layout.rel(out_jsonl), "stats": out.stats,
         "parameters": {"split": cfg.split, "split_colon": cfg.split_colon,
                        "drop_patterns": cfg.drop_patterns, "heading_heuristic": cfg.heading_heuristic,
                        "strip_markers": cfg.strip_markers,

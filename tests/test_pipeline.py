@@ -98,7 +98,7 @@ def test_clean_han_cross_page_and_noise(root):
     ]
     sents = load_sentences(DataLayout(root, WORK), "han")
     assert sents[3].pages == [205, 206] and "cross_page" in sents[3].flags
-    dropped = (root / WORK / "03_cleaned" / "han.dropped.tsv").read_text(encoding="utf-8")
+    dropped = (root / WORK / "05_cleaning" / "han.dropped.tsv").read_text(encoding="utf-8")
     assert dropped.count("\theading\t") == 4 and dropped.count("\tfootnote\t") == 1
 
 
@@ -131,13 +131,13 @@ def test_han_am_levenshtein_then_export(root):
     argv = ["--work-id", WORK, "--data-root", str(root), "--pair", "han-am", "--method", "levenshtein",
             "--opt", f"reading_dict={root / 'han_viet.tsv'}"]
     assert align.main(argv) == 0
-    beads = read_jsonl(root / WORK / "04_alignment" / "han-am.jsonl")
+    beads = read_jsonl(root / WORK / "06_alignment" / "han-am.jsonl")
     assert [b["kind"] for b in beads] == ["1-1"] * 5
     assert all(b["score"] >= 0.9 for b in beads), [b["score"] for b in beads]
 
     assert export.main(["--work-id", WORK, "--data-root", str(root), "--pair", "han-am",
                         "--name", "T_01_parallel"]) == 0
-    out = root / WORK / "04_alignment"
+    out = root / WORK / "07_export"
     lines = (out / "T_01_parallel.tsv").read_text(encoding="utf-8").splitlines()
     assert len(lines) == 5 and all(l.count("\t") == 1 for l in lines)
     ws = load_workbook(out / "T_01_parallel.xlsx")["DONG_HANG"]
@@ -159,11 +159,11 @@ def test_han_am_merge_and_omission(root):
     run_clean(root, "am")
     assert align.main(["--work-id", WORK, "--data-root", str(root), "--pair", "han-am", "--method", "levenshtein",
                        "--opt", f"reading_dict={root / 'han_viet.tsv'}"]) == 0
-    beads = read_jsonl(root / WORK / "04_alignment" / "han-am.jsonl")
+    beads = read_jsonl(root / WORK / "06_alignment" / "han-am.jsonl")
     assert [b["kind"] for b in beads] == ["1-1", "2-1", "1-1", "1-0"]
     assert beads[-1]["flags"] == ["unaligned"]
     export.main(["--work-id", WORK, "--data-root", str(root), "--pair", "han-am"])
-    tsv = (root / WORK / "04_alignment" / f"{WORK}_han-am_parallel.tsv").read_text(encoding="utf-8").splitlines()
+    tsv = (root / WORK / "07_export" / f"{WORK}_han-am_parallel.tsv").read_text(encoding="utf-8").splitlines()
     assert len(tsv) == 3                                              # câu Hán bị bỏ không vào file bàn giao
 
 
@@ -172,7 +172,7 @@ def test_han_nghia_length_baseline_covers_everything(root):
     run_clean(root, "nghia", "--drop-pattern", "^Phần II")
     assert align.main(["--work-id", WORK, "--data-root", str(root), "--pair", "han-nghia",
                        "--method", "length"]) == 0
-    beads = read_jsonl(root / WORK / "04_alignment" / "han-nghia.jsonl")
+    beads = read_jsonl(root / WORK / "06_alignment" / "han-nghia.jsonl")
     assert sum(len(b["src_ids"]) for b in beads) == 5
     assert sum(len(b["tgt_ids"]) for b in beads) == len(texts(root, "nghia"))
 
@@ -208,6 +208,31 @@ def test_pipeline_plan_and_dry_run(tmp_path, capsys):
     assert "--region 0,0.1,1,0.9" in out and "--drop-pattern '^Phần II'" in out
 
 
+def test_pipeline_new_config_uses_two_ocr_runs(tmp_path, capsys):
+    import json
+    from src import pipeline
+    cfg = {"common": {"work_id": "T_01", "data_root": str(tmp_path), "source": "book.pdf",
+                      "pages": "1-2"},
+           "ocr": {"chi_tra": {"engines": "tesseract"}, "vie": {"engines": "tesseract"}},
+           "segmentation": {"layers": {"han": {"source": "chi_tra"}, "am": {"source": "vie"},
+                                       "nghia": {"source": "vie"}}},
+           "metadata_extraction": {"enabled": True},
+           "pairs": {"han-am": {"method": "levenshtein"}}}
+    path = tmp_path / "cfg.json"
+    path.write_text(json.dumps(cfg), encoding="utf-8")
+    assert pipeline.main(["--config", str(path), "--dry-run"]) == 0
+    out = capsys.readouterr().out
+    steps = [line.split()[3] for line in out.splitlines() if line.startswith("$")]
+    assert steps == ["src.extraction.pdf_extraction", "src.ocr.ocr", "src.ocr.ocr",
+                     "src.segmentation.pipeline", "src.preprocessing.clean",
+                     "src.preprocessing.clean", "src.preprocessing.clean",
+                     "src.alignment.align", "src.alignment.export"]
+    assert out.count("--writing-system chi_tra") == 1
+    assert out.count("--writing-system vie") == 1
+    assert out.count("--no-metadata") == 3
+    assert "--config" in out.split("src.segmentation.pipeline")[1]
+
+
 def test_pipeline_runs_clean_align_export(root):
     import json
     from src import pipeline
@@ -219,4 +244,4 @@ def test_pipeline_runs_clean_align_export(root):
     path = root / "cfg.json"
     path.write_text(json.dumps(cfg), encoding="utf-8")
     assert pipeline.main(["--config", str(path), "--steps", "clean,align,export", "--force"]) == 0
-    assert (root / WORK / "04_alignment" / "T_01_parallel.xlsx").exists()
+    assert (root / WORK / "07_export" / "T_01_parallel.xlsx").exists()

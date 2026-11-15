@@ -1,27 +1,75 @@
 # Pipeline dóng hàng Hán-Việt
 
+Chế độ mới (khuyến nghị): OCR MỘT lần cho mỗi HỆ CHỮ, rồi phân đoạn tài liệu/lớp:
+
 ```
-PDF ─extract─▶ ảnh trang ─ocr─▶ 02_extraction/<layer>.xml ─clean─▶ 03_cleaned/<layer>.jsonl ─align─▶ 04_alignment/<pair>.jsonl ─export─▶ .tsv + .xlsx + report
+PDF ─extract─▶ 02_extraction/pages ─ocr(chi_tra|vie)─▶ 03_ocr/raw + manifests
+    ─segment─▶ 04_segmentation/{documents,layers} ─clean─▶ 05_cleaning/<layer>.jsonl
+    ─align─▶ 06_alignment/<pair>.jsonl ─export─▶ 07_export/*.tsv + *.xlsx + report
 ```
+
+Chế độ cũ (vẫn chạy, đọc/ghi tương thích): OCR 3 lần theo lớp `han/am/nghia` ->
+`02_extraction/<layer>.xml` -> `03_cleaned` -> `04_alignment`. Dữ liệu cũ không bị xoá;
+các bước đọc tự lùi về thư mục cũ nếu thư mục mới chưa có (`find_cleaned_dir`,
+`find_alignment_dir`).
 
 | Bước | Lệnh | Vào | Ra |
 |---|---|---|---|
-| extract | `python -m src.extraction.pdf_extraction` | PDF | `02_extraction/01_page_image/<layer>/page_205.png` |
-| ocr | `python -m src.ocr.ocr` | thư mục ảnh | `02_ocr_raw/*.json` (cache) + `02_extraction/<layer>.xml` |
-| clean | `python -m src.preprocessing.clean` | `<layer>.xml` | `03_cleaned/<layer>.{jsonl,txt,dropped.tsv}` + audit |
-| align | `python -m src.alignment.align` | 2 lớp đã clean | `04_alignment/<pair>.jsonl` |
-| export | `python -m src.alignment.export` | `<pair>.jsonl` | `<name>.tsv`, `<name>.xlsx`, `<name>_report.{json,md}` |
+| extract | `python -m src.extraction.pdf_extraction` | PDF | `02_extraction/pages/page_205.png` (mới) hoặc `02_extraction/01_page_image/<layer>/` (cũ) |
+| ocr | `python -m src.ocr.ocr --writing-system chi_tra\|vie` | `02_extraction/pages` | `03_ocr/raw/<ws>/page_XXXX.json` + `03_ocr/manifests/<ws>.json` |
+| segment | `python -m src.segmentation.pipeline --config ...` | `03_ocr` | `04_segmentation/` |
+| clean | `python -m src.preprocessing.clean --layer L` | `04_segmentation/layers/<L>.jsonl` (mới) hoặc XML (cũ) | `05_cleaning/<L>.{jsonl,txt,dropped.tsv}` |
+| align | `python -m src.alignment.align` | 2 lớp đã clean | `06_alignment/<pair>.jsonl` |
+| export | `python -m src.alignment.export` | `<pair>.jsonl` | `07_export/<name>.{tsv,xlsx}`, report |
 
-Chạy cả chuỗi: `python -m src.pipeline --config configs/CPO_18_demo.json` (thêm `--dry-run` để xem lệnh).
+Chạy cả chuỗi: `python -m src.pipeline --config configs/CPO_18_demo.json` (config mới);
+`configs/CPO_18_demo_legacy.json` minh hoạ chế độ cũ. Thêm `--dry-run` để xem lệnh.
+
+## Kiến trúc mới: OCR theo hệ chữ + phân đoạn
+- **Config**: có khối `ocr` và/hoặc `segmentation` -> chế độ mới; còn `layers` -> chế độ cũ.
+  `common.source/pages` dùng chung cho extract/OCR; `ocr.<chi_tra|vie>` khai báo engine,
+  region, psm, dpi, lang, keep, workers, low_conf.
+- **OCR**: mỗi hệ chữ chạy đúng MỘT lần (thay vì 3 lần cho han/am/nghia). Kho thô append-only
+  `03_ocr/raw/<ws>/page_XXXX.json` lưu từng `run` kèm bbox/confidence/payload engine; manifest
+  giữ engine/ tham số/ trang lỗi. Chạy lại dùng cache theo băm tham số; `--force` chỉ ghi lại
+  manifest, KHÔNG xoá run cũ (không có tuỳ chọn xoá cache trong quy trình thường).
+- **Segment** (`src/segmentation/`): cắt tài liệu theo `segmentation.document.start_patterns`
+  trên system chính (chi_tra nếu có). Bật `numbered_heading: true` để dùng quy ước
+  `^\s*(\d{1,3})\s*[.．﹒·。]\s+` (bắt buộc có khoảng trắng sau dấu); có thể truyền pattern
+  riêng dạng chuỗi hoặc `{enabled, pattern}`. System còn lại ghép theo TRANG; nếu một trang
+  có nhiều tài liệu thì chia theo tỉ lệ số dòng của system chính. Gán lớp bằng state
+  machine `segmentation.layers.<layer>.start_patterns/end_patterns` (heading không vào dòng
+  chính, lưu `section_headings.jsonl`). Bật `heading_mode: true` cho lớp có heading dạng
+  nhãn: pattern phải khớp ĐẦU dòng (sau tiền tố OCR mặc định `[lI|] `), phần đuôi chỉ được
+  có khoảng trắng/dấu câu/ký hiệu; nhờ vậy câu văn chứa “phiên âm”/“dịch nghĩa” không bị
+  nhận nhầm. Đổi tiền tố bằng `heading_prefix_pattern`, đặt `null` để tắt; không bật
+  `heading_mode` thì regex giữ nguyên hành vi `search` cũ. Không đủ tin cậy ->
+  `review_required.tsv` với lý do `document_boundary_assumed`, `document_heading_not_found`,
+  `document_match_ambiguous`, `document_match_estimated`, `layer_overlap`, `missing_heading`,
+  `missing_layer`, `missing_source`, `unassigned_line`, `metadata_uncertain`.
+- **Metadata** chuyển sang cấu hình lớp của segmentation (`title_patterns`, `author_patterns`,
+  `attribution_patterns`, `author_max_len`...) và chạy trên dòng đầu ĐÚNG tài liệu + lớp;
+  `metadata_extraction` chỉ còn bật/tắt và `exclude_from_main_text`. Cleaning nhận
+  `--no-metadata` để không trích lại/second-guess.
+- **ID ổn định**: `<work>.<doc:03d>.P{page:03d}.{S|L}{seq:03d}`. `Sentence.document_id` được
+  giữ qua clean; align chỉ dóng TRONG từng tài liệu, không bắc cầu sang tài liệu khác.
+- **Output**: `04_segmentation/{documents.jsonl,document_metadata.jsonl,section_headings.jsonl,
+  review_required.tsv,layers/<layer>.jsonl,<layer>.metadata.jsonl}`;
+  clean ghi `05_cleaning/` và bỏ qua gộp metadata (đã do segmentation sở hữu);
+  export ghi `07_export/`, sheet REVIEW có thêm `document_id`.
 
 ## Quy ước
 - Mỗi bước không ghi đè output cũ nếu không có `--force`.
-- Mọi dòng bị loại ở bước clean nằm trong `03_cleaned/<layer>.dropped.tsv` kèm lý do: người phải duyệt.
+- Mọi dòng bị loại ở bước clean nằm trong `<cleaned>/<layer>.dropped.tsv` kèm lý do: người phải duyệt.
 - Câu nằm trên nhiều trang có `pages: [205, 206]` và cờ `cross_page` (ưu tiên rà soát khi QA).
 - Điểm `score` chỉ để xếp hạng rà soát; tỉ lệ lỗi thật đo bằng mẫu kiểm tra thủ công.
 - Sheet `REVIEW` trong xlsx cùng thứ tự hàng với `DONG_HANG`; xoá hoặc bỏ qua khi nộp nếu không cần.
 
-## Cắt đoạn theo ranh giới tiêu đề (clean)
+## Cắt đoạn theo ranh giới tiêu đề (clean — chế độ cũ)
+> Chế độ mới: việc cắt tài liệu/lớp nằm ở `src/segmentation`; cleaning nhận
+> `04_segmentation/layers/<layer>.jsonl` và chạy với `--no-metadata`, bỏ qua
+> `start_after/end_before`. Phần dưới giữ cho config/dữ liệu cũ.
+
 Khi một trang sách chứa nhiều mục (PHIÊN ÂM / DỊCH NGHĨA / CHÚ THÍCH...) mà mỗi lớp OCR
 chỉ cần một mục, cấu hình `clean.<layer>` hỗ trợ hai regex (tùy chọn, `pipeline` tự truyền xuống):
 
@@ -73,7 +121,7 @@ front_matter / ocr_noise -> [section_start marker] -> title | author | attributi
   KHÔNG dùng đồng thời `clean.<layer>.start_after/end_before` cho cùng marker (sẽ báo lỗi
   vì marker đã bị metadata stage loại trước).
 
-Output trong `03_cleaned/`:
+Output trong `03_cleaned/` (chế độ cũ) hoặc `04_segmentation/` + `05_cleaning/` (chế độ mới):
 
 | Tệp | Nội dung |
 |---|---|

@@ -1,23 +1,17 @@
 """
-04_alignment/<pair>.jsonl -> file bàn giao .tsv + .xlsx (+ báo cáo tự kiểm tra)
+06_alignment/<pair>.jsonl -> file bàn giao .tsv + .xlsx (+ báo cáo tự kiểm tra)
 
 INPUT
     --work-id CPO_18 --pair han-am     [--data-root data]
     --name CPO_18_parallel             tên file (mặc định <work-id>_<pair>_parallel)
-    --min-score 0.0                    chỉ xuất cặp có score >= ngưỡng (mặc định xuất hết cặp hợp lệ)
-    --exclude-flag low_score           (lặp lại) bỏ cặp mang cờ này, vd sau khi rà soát
+    --min-score 0.0                    chỉ xuất cặp có score >= ngưỡng
+    --exclude-flag low_score           (lặp lại) bỏ cặp mang cờ này
 
-OUTPUT (data/<WORK_ID>/04_alignment/)
+OUTPUT (data/<WORK_ID>/07_export/)
     <name>.tsv           <CÂU_HÁN>\\t<CÂU_VIỆT>, UTF-8, LF, không header
-    <name>.xlsx          sheet DONG_HANG (đúng 2 cột Hán | Việt, hàng 1 là tiêu đề)
-                         + sheet REVIEW (cùng thứ tự hàng: id, kind, score, cờ, trang, ID câu) để rà soát/QA
-    <name>_report.json   số cặp, số dòng Hán/Việt, câu bị bỏ, phân bố kind, kết quả tự kiểm tra
-    <name>_report.md     bản đọc được của báo cáo trên
-
-Tự kiểm tra (xuất lỗi nếu sai): không ô rỗng, không tab/xuống dòng trong vế, TSV và XLSX đọc lại
-khớp từng dòng, không công thức/ô gộp trong DONG_HANG.
-
-Hán luôn ở cột 1: nếu --pair có Hán ở vế thứ hai (vd am-han) thì từ chối, hãy dùng han-<lớp>.
+    <name>.xlsx          sheet DONG_HANG (2 cột) + sheet REVIEW (có document_id)
+    <name>_report.json   số cặp, số câu, câu bị bỏ, phân bố kind, tự kiểm tra
+    <name>_report.md     bản đọc được của báo cáo
 """
 
 from __future__ import annotations
@@ -34,8 +28,8 @@ from pathlib import Path
 from openpyxl import Workbook, load_workbook
 
 from src.common.corpus import DataLayout, MetadataStore
-from src.common.sentences import (alignment_dir, atomic_write_text, load_sentences, parse_args_by_pair,
-                                  parse_pair, read_jsonl)
+from src.common.sentences import (atomic_write_text, export_dir, find_alignment_dir,
+                                  load_sentences, parse_args_by_pair, parse_pair, read_jsonl)
 
 log = logging.getLogger("export")
 
@@ -71,7 +65,8 @@ def write_xlsx(path: Path, rows: list[tuple[str, str]], review: list[list]) -> N
     ws.column_dimensions["A"].width = 60
     ws.column_dimensions["B"].width = 80
     rv = wb.create_sheet("REVIEW")
-    rv.append(["row", "id", "kind", "score", "flags", "pages_han", "pages_viet", "src_ids", "tgt_ids"])
+    rv.append(["row", "id", "document_id", "kind", "score", "flags", "pages_han",
+               "pages_viet", "src_ids", "tgt_ids"])
     for row in review:
         rv.append(row)
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -113,8 +108,8 @@ def run(args) -> Path:
     if src_layer != "han":
         raise ValueError("Cột Hán phải đứng trước: dùng --pair han-<lớp>")
     layout = DataLayout(Path(args.data_root), args.work_id)
-    out_dir = alignment_dir(layout)
-    beads = read_jsonl(out_dir / f"{args.pair}.jsonl")
+    out_dir = export_dir(layout)
+    beads = read_jsonl(find_alignment_dir(layout) / f"{args.pair}.jsonl")
     name = args.name or f"{args.work_id}_{args.pair}_parallel"
     tsv, xlsx = out_dir / f"{name}.tsv", out_dir / f"{name}.xlsx"
     if (tsv.exists() or xlsx.exists()) and not args.force:
@@ -134,7 +129,8 @@ def run(args) -> Path:
             skipped[f"flag:{sorted(hit)[0]}"] += 1
             continue
         rows.append((sanitize(b["src_text"]), sanitize(b["tgt_text"])))
-        review.append([len(rows) + 1, b["id"], b["kind"], b["score"], ",".join(b["flags"]),
+        review.append([len(rows) + 1, b["id"], b.get("document_id", ""), b["kind"], b["score"],
+                       ",".join(b["flags"]),
                        ",".join(map(str, b["pages"][src_layer])), ",".join(map(str, b["pages"][tgt_layer])),
                        ",".join(b["src_ids"]), ",".join(b["tgt_ids"])])
 
@@ -153,9 +149,9 @@ def run(args) -> Path:
     report = {
         "name": name, "pair": args.pair, "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "pairs_exported": len(rows), "han_sentences": n_src, f"{tgt_layer}_sentences": n_tgt,
-        "kinds_exported": dict(Counter(r[2] for r in review)), "skipped": dict(skipped),
-        "low_score_exported": sum("low_score" in r[4] for r in review),
-        "cross_page_exported": sum("cross_page" in r[4] for r in review),
+        "kinds_exported": dict(Counter(r[3] for r in review)), "skipped": dict(skipped),
+        "low_score_exported": sum("low_score" in r[5] for r in review),
+        "cross_page_exported": sum("cross_page" in r[5] for r in review),
         "self_check": {"no_empty_cell": True, "no_tab_or_newline_in_cell": True,
                        "tsv_xlsx_identical": True, "no_formula_or_merged_cell": True},
         "params": {"min_score": args.min_score, "exclude_flag": sorted(exclude)},

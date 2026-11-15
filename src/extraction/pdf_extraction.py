@@ -346,7 +346,12 @@ def run(args) -> dict[str, int]:
     total, poppler_path = _pdf_info(stored_source, args.poppler_path)
     pages = _selected_pages(args, total)
 
-    output_dir = layout.page_images / args.layer
+    # Chế độ mới: tách mỗi trang MỘT lần vào 02_extraction/pages (dùng chung cho mọi hệ chữ).
+    # Chế độ cũ: --layer -> 02_extraction/01_page_image/<layer> (giữ tương thích).
+    layer = args.layer
+    output_dir = layout.page_images / layer if layer else layout.pages_dir
+    key = f"{layer}_images" if layer else "pages"
+    label = layer or "pages"
     layout.ensure(output_dir)
     store = MetadataStore(layout)
     data = store.load()
@@ -356,7 +361,6 @@ def run(args) -> dict[str, int]:
     elif not isinstance(data["layers"], dict):
         raise ValueError("metadata.json: 'layers' phải là object")
 
-    key = f"{args.layer}_images"
     previous = data["layers"].get(key, {})
     if previous and not isinstance(previous, dict):
         raise ValueError(f"metadata.json: {key} phải là object")
@@ -464,7 +468,7 @@ def run(args) -> dict[str, int]:
         if pending:
             service = _drive_service(credentials, Path(args.drive_token).expanduser())
             folder_id = _drive_folder(service, args.drive_folder_id,
-                                      f"{args.work_id}_{args.layer}")
+                                      f"{args.work_id}_{label}")
             record["drive_parent_id"] = args.drive_folder_id
             record["drive_folder_id"] = folder_id
             save()
@@ -491,7 +495,7 @@ def run(args) -> dict[str, int]:
     sync_folder = None
     if args.upload == "sync":
         sync_folder, sync_paths, synced = _sync_to_drive_desktop(
-            output_dir, Path(args.drive_sync_dir), args.work_id, args.layer,
+            output_dir, Path(args.drive_sync_dir), args.work_id, label,
             pages, args.format, args.force,
         )
         record["drive_sync"] = {
@@ -509,14 +513,15 @@ def run(args) -> dict[str, int]:
         "rendered": len(to_render), "reused": reused,
         "uploaded": uploaded, "synced": synced,
     }
-    log.info("Hoàn tất %s/%s: %s", args.work_id, args.layer, result)
+    log.info("Hoàn tất %s/%s: %s", args.work_id, label, result)
     return result
 
 
 def main(argv: list[str] | None = None) -> None:
     if os.name == "nt" and hasattr(sys.stdout, "reconfigure"):
         sys.stdout.reconfigure(encoding="utf-8")
-    parser = base_parser("Tách PDF thành ảnh trang và tùy chọn upload Google Drive")
+    parser = base_parser("Tách PDF thành ảnh trang (dùng chung hoặc theo lớp cũ) và tùy chọn upload Drive",
+                         layer_required=False)
     parser.add_argument("--source", help="File PDF nguồn")
     parser.add_argument("--start", type=int, help="Trang đầu (1-based)")
     parser.add_argument("--end", type=int, help="Trang cuối (1-based)")

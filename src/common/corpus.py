@@ -83,9 +83,34 @@ class DataLayout:
     @property
     def page_images(self) -> Path: return self.extraction / "01_page_image"
     @property
+    def pages_dir(self) -> Path: return self.extraction / "pages"   # ảnh dùng chung (chế độ mới)
+    @property
     def ocr_raw(self) -> Path: return self.extraction / "02_ocr_raw"
     @property
     def metadata_path(self) -> Path: return self.extraction / "metadata.json"
+    # --- pipeline OCR theo HỆ CHỮ (07_... không đổi các đường cũ ở trên) ---
+    @property
+    def ocr_root(self) -> Path: return self.work_dir / "03_ocr"
+    @property
+    def ocr_raw_root(self) -> Path: return self.ocr_root / "raw"
+    @property
+    def ocr_manifest_dir(self) -> Path: return self.ocr_root / "manifests"
+    # --- phân đoạn tài liệu/lớp ---
+    @property
+    def segmentation_dir(self) -> Path: return self.work_dir / "04_segmentation"
+    @property
+    def segmentation_layers(self) -> Path: return self.segmentation_dir / "layers"
+
+    def segmentation_layer(self, layer: str) -> Path:
+        return self.segmentation_layers / f"{layer}.jsonl"
+
+    # --- các tầng sau (giữ 03_cleaned/04_alignment cũ làm bản đọc tương thích) ---
+    @property
+    def cleaning_root(self) -> Path: return self.work_dir / "05_cleaning"
+    @property
+    def alignment_root(self) -> Path: return self.work_dir / "06_alignment"
+    @property
+    def export_root(self) -> Path: return self.work_dir / "07_export"
  
     def layer_xml(self, layer: str) -> Path:
         return self.extraction / LAYERS[layer].filename
@@ -106,6 +131,52 @@ def sha256_file(path: Path) -> str:
     return h.hexdigest()
  
  
+def _same_file(left: Path, right: Path) -> bool:
+    if left.stat().st_size != right.stat().st_size:
+        return False
+    return sha256_file(left) == sha256_file(right)
+
+
+def _sync_source_tree(src: Path, dst: Path) -> None:
+    """Đồng bộ thư mục nguồn vào bản đăng ký, không ghi đè và không xoá gì.
+
+    - Đích chưa có: copy toàn bộ cây (giữ cấu trúc thư mục con).
+    - Đích đã có: copy thêm tệp còn thiếu; tệp cùng đường dẫn dẫn mà khác nội dung
+      -> báo lỗi thay vì ghi đè âm thầm. Tệp thừa ở đích được giữ nguyên.
+    """
+    files = sorted(p for p in src.rglob("*") if p.is_file())
+    rels = [p.relative_to(src) for p in files]
+    if not dst.exists():
+        shutil.copytree(src, dst)
+        log.info("Đã copy nguồn vào %s (%d tệp)", dst, len(files))
+        return
+    if not dst.is_dir():
+        raise ValueError(f"Đích đã tồn tại nhưng không phải thư mục: {dst}")
+    missing: list[Path] = []
+    conflicts: list[str] = []
+    for rel, path in zip(rels, files):
+        target = dst / rel
+        if target.exists():
+            if target.is_dir() or not _same_file(path, target):
+                conflicts.append(rel.as_posix())
+        else:
+            missing.append(rel)
+    if conflicts:
+        shown = ", ".join(conflicts[:5])
+        more = "" if len(conflicts) <= 5 else f" (+{len(conflicts) - 5} tệp nữa)"
+        raise ValueError(
+            f"Nguồn {src} xung đột nội dung với {dst}: {shown}{more}; "
+            "không ghi đè — hãy dùng tên thư mục nguồn khác")
+    for rel in missing:
+        target = dst / rel
+        target.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(src / rel, target)
+    if missing:
+        log.warning("Đã bổ sung %d tệp còn thiếu vào %s", len(missing), dst)
+    else:
+        log.info("Nguồn %s đã đồng bộ, dùng lại %s", src.name, dst)
+
+
 def register_source(layout: DataLayout, src: Path | str) -> dict:
     """Đảm bảo nguồn nằm trong 01_sources (copy nếu ở ngoài) và trả thông tin kiểm kê."""
     src = Path(src).resolve()
@@ -115,9 +186,12 @@ def register_source(layout: DataLayout, src: Path | str) -> dict:
     sources = layout.sources.resolve()
     if sources not in src.parents and src != sources:
         dst = sources / src.name
-        if not dst.exists():
-            shutil.copytree(src, dst) if src.is_dir() else shutil.copy2(src, dst)
+        if src.is_dir():
+            _sync_source_tree(src, dst)
+        elif not dst.exists():
+            shutil.copy2(src, dst)
             log.info("Đã copy nguồn vào %s", dst)
+        # tệp đã đăng ký (vd PDF) được giữ nguyên như hành vi cũ
         src = dst
     info = {"path": layout.rel(src)}
     if src.is_file():
@@ -377,11 +451,13 @@ def finalize(doc: Document, layout: DataLayout, source_info: dict, run_info: dic
 # --------------------------------------------------------------------------- #
 # 6. CLI dùng chung: tham số + file config JSON
 # --------------------------------------------------------------------------- #
-def base_parser(description: str) -> argparse.ArgumentParser:
+def base_parser(description: str, layer_required: bool = True) -> argparse.ArgumentParser:
     p = argparse.ArgumentParser(description=description,
                                 formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     p.add_argument("--config", help="JSON: {'common': {...}, 'layers': {'han': {...}}}")
-    p.add_argument("--layer", required=True, choices=sorted(LAYERS))
+    p.add_argument("--layer", required=layer_required, choices=sorted(LAYERS),
+                   help="Lớp văn bản; bỏ trống ở chế độ ảnh dùng chung (02_extraction/pages)")
+    p.set_defaults(_layer_required=layer_required)
     p.add_argument("--work-id", help="Mã tác phẩm, vd CPO_18")
     p.add_argument("--data-root", default="data")
     p.add_argument("--title", default="")
@@ -405,6 +481,8 @@ def parse_args(parser: argparse.ArgumentParser, argv: list[str] | None = None):
     args = parser.parse_args(argv)
     logging.basicConfig(level=logging.DEBUG if args.verbose else logging.INFO,
                         format="%(asctime)s %(levelname)s %(name)s: %(message)s")
+    if getattr(args, "_layer_required", True) and not args.layer:
+        parser.error("Thiếu --layer (CLI hoặc config)")
     if not args.work_id:
         parser.error("Thiếu --work-id (CLI hoặc config)")
     return args

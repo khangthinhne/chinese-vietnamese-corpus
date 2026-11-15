@@ -93,6 +93,11 @@ def split_vi(text: str, cfg: CleanConfig) -> list[tuple[int, int]]:
     return spans
 
 
+def _document_id(line_id: str) -> str:
+    parts = line_id.rsplit(".", 2)
+    return parts[0] if len(parts) == 3 else line_id
+
+
 def make_sentences(work_id: str, layer: str, lines: list[RawLine], cfg: CleanConfig
                    ) -> tuple[list[Sentence], list[tuple[str, int, str, str]]]:
     """Trả về (sentences, dropped_sentence_rows)."""
@@ -119,17 +124,28 @@ def make_sentences(work_id: str, layer: str, lines: list[RawLine], cfg: CleanCon
             flags.append("no_terminal_punct")
         if len(text) > (200 if layer == "han" else 600):
             flags.append("long")
-        sentences.append(Sentence(f"{work_id}.{layer}.{len(sentences) + 1:05d}", text, pages, ids, flags))
+        doc_ids = {_document_id(lines[k].id) for k in idxs}
+        document_id = next(iter(doc_ids)) if len(doc_ids) == 1 else ""
+        sentences.append(Sentence(f"{work_id}.{layer}.{len(sentences) + 1:05d}", text,
+                                  pages, ids, flags, document_id=document_id))
 
     if cfg.split == "line":
         for k, ln in enumerate(lines):
             emit(ln.text, [k])
         return sentences, dropped
 
-    text, owner = build_stream(lines, layer)
-    spans = split_han(text) if layer == "han" else split_vi(text, cfg)
-    for a, b in spans:
-        idxs = sorted({o for o in owner[a:b] if o >= 0})
-        if idxs:
-            emit(text[a:b], idxs)
+    runs: list[tuple[int, int]] = []
+    start = 0
+    for k in range(1, len(lines) + 1):
+        if k == len(lines) or _document_id(lines[k].id) != _document_id(lines[start].id):
+            runs.append((start, k))
+            start = k
+    for start, end in runs:
+        group = lines[start:end]
+        text, owner = build_stream(group, layer)
+        spans = split_han(text) if layer == "han" else split_vi(text, cfg)
+        for a, b in spans:
+            idxs = sorted({start + o for o in owner[a:b] if o >= 0})
+            if idxs:
+                emit(text[a:b], idxs)
     return sentences, dropped

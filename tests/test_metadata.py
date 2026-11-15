@@ -231,7 +231,7 @@ def test_uncertain_lines_reviewed_not_silently_dropped(root):
 # --------------------------------------------------------------------------- #
 def test_aggregate_document_and_file_metadata(root, tmp_path):
     layout = DataLayout(root, WORK)
-    out_dir = root / WORK / "03_cleaned"
+    out_dir = root / WORK / "05_cleaning"
     out_dir.mkdir()
     for layer, cfg in (("han", meta_cfg(title_patterns=[r"^\s*\d{1,3}\s*[·.．、﹒)]"],
                                         attribution_patterns=[r"^.{0,3}\*"], author_max_len=8)),
@@ -276,7 +276,7 @@ def test_clean_cli_metadata_end_to_end(root):
               "--meta-section-end", r"^DỊCH NGHĨA\s*:?$", "--meta-attribution-pattern", r"^\*")
     run_clean(root, "nghia", "--meta-section-start", r"^DỊCH NGHĨA\s*:?$",
               "--meta-section-end", r"^CHÚ THÍCH\s*:?$", "--meta-attribution-pattern", r"^\*")
-    out = root / WORK / "03_cleaned"
+    out = root / WORK / "05_cleaning"
     rows = read_jsonl(out / "document_metadata.jsonl")
     assert len(rows) == 1 and rows[0]["document_id"] == DOC
     assert set(rows[0]["metadata"]["title"]) == {"han", "am", "nghia"}

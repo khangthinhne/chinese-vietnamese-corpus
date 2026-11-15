@@ -1,6 +1,8 @@
 # Hướng dẫn chạy OCR bằng Tesseract
 
-Chạy lệnh từ thư mục gốc repo. Module nhận thư mục ảnh, lưu OCR thô dạng JSON và xuất XML cho các lớp `han`, `am`, `nghia`, `tho`.
+Chạy lệnh từ thư mục gốc repo. Module nhận thư mục ảnh, lưu OCR thô dạng JSON; chế độ mới
+xuất kho thô theo hệ chữ (`chi_tra`, `vie`) cho bước phân đoạn, chế độ cũ xuất XML cho từng
+lớp `han`, `am`, `nghia`, `tho`.
 
 ## 1. Cài môi trường
 
@@ -66,6 +68,30 @@ Ví dụ OCR nửa trên trang:
 ```
 
 Nếu cần `chi_tra_vert` hoặc kết hợp ngôn ngữ như `chi_tra+vie`, cài đủ các model tương ứng. Tách Hán/Việt theo vùng ảnh hoặc bộ lọc chữ viết. Phân biệt âm/nghĩa/thơ cần chọn đúng nội dung nguồn; bộ lọc Latin không tự phân biệt ba lớp này.
+
+## 2b. Chế độ mới: OCR theo HỆ CHỮ (khuyến nghị)
+
+Chế độ mới chạy OCR đúng MỘT lần cho mỗi hệ chữ viết (`chi_tra`, `vie`) thay vì 3 lần cho
+`han/am/nghia`, rồi để bước phân đoạn cắt tài liệu/lớp:
+
+```powershell
+.venv-ocr/Scripts/python.exe -m src.ocr.ocr --writing-system chi_tra --work-id MY_WORK `
+  --source data/MY_WORK/02_extraction/pages --pages 205-210 --workers 4
+.venv-ocr/Scripts/python.exe -m src.ocr.ocr --writing-system vie --work-id MY_WORK `
+  --source data/MY_WORK/02_extraction/pages --pages 205-210 --workers 4
+```
+
+- `--writing-system` thay cho `--layer`; không tạo `<layer>.xml`.
+- Mặc định `lang` = hệ chữ, `keep` = `cjk` (chi_tra) / `latin` (vie); có thể ghi đè.
+- Output: `03_ocr/raw/<writing_system>/page_XXXX.json` (append-only, giữ bbox/confidence/payload
+  engine) và `03_ocr/manifests/<writing_system>.json` (engine, tham số, trang lỗi/rỗng).
+- Vì ảnh nằm trong `02_extraction/pages` của chính work, chế độ mới KHÔNG copy lại vào
+  `01_sources`; nguồn PDF/ảnh gốc đã được extract đăng ký trước đó.
+- Cache dùng băm tham số (ảnh, hệ chữ, engine/model, lang, crop, psm, dpi). Chạy lại cùng tham
+  số chỉ đọc cache. `--force` ghi lại manifest nhưng KHÔNG xoá run cũ; muốn nhận dạng lại với
+  cùng tham số phải xoá thủ công tệp raw tương ứng (có chủ đích, tránh mất dữ liệu).
+- Manifest ghi đè cần `--force`. Nếu chưa có `04_segmentation`, chạy
+  `python -m src.segmentation.pipeline --config <config> --work-id MY_WORK` tiếp theo.
 
 ## 3. Dùng config
 

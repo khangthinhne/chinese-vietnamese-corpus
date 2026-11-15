@@ -2,28 +2,79 @@
   "common": {
     "work_id": "CPO_18",
     "data_root": "data",
-    "title": "Demo CPO_18 (Sáu bức thư) - SỬA số trang cho đúng sách",
-    "dpi": 300
+    "title": "Demo CPO_18 (chế độ mới: OCR theo hệ chữ -> phân đoạn tài liệu/lớp)",
+    "source": "data/CPO_18/01_sources/CPO18.pdf",
+    "pages": "205-212",
+    "dpi": 300,
+    "workers": 4
   },
-  "layers": {
-    "han": {
-      "pdf": "data/CPO_18/01_sources/CPO18.pdf",
-      "pages": "205",
+  "ocr": {
+    "chi_tra": {
+      "engines": "tesseract",
       "region": "0,0.08,1,0.93",
-      "engines": "tesseract"
+      "lang": "chi_tra",
+      "keep": "cjk",
+      "psm": 6,
+      "dpi": 300,
+      "workers": 4,
+      "low_conf": 60
     },
-    "am": {
-      "pdf": "data/CPO_18/01_sources/CPO18.pdf",
-      "pages": "205-206",
+    "vie": {
+      "engines": "tesseract",
       "region": "0,0.08,1,0.93",
-      "engines": "tesseract"
+      "lang": "vie",
+      "keep": "latin",
+      "psm": 6,
+      "dpi": 300,
+      "workers": 4,
+      "low_conf": 60
+    }
+  },
+  "segmentation": {
+    "enabled": true,
+    "document": {
+      "numbered_heading": true,
+      "start_patterns": [],
+      "end_patterns": [],
+      "case_sensitive": false
     },
-    
-    "nghia": {
-      "pdf": "data/CPO_18/01_sources/CPO18.pdf",
-      "pages": "206",
-      "region": "0,0.08,1,0.93",
-      "engines": "tesseract"
+    "layers": {
+      "han": {
+        "source": "chi_tra",
+        "title_patterns": [
+          "^\\s*\\d{1,3}\\s*[·.．、﹒)]"
+        ],
+        "attribution_patterns": [
+          "^.{0,3}\\*"
+        ],
+        "author_max_len": 8
+      },
+      "am": {
+        "source": "vie",
+        "heading_mode": true,
+        "start_patterns": [
+          "^PHIÊN\\s+ÂM\\b"
+        ],
+        "end_patterns": [
+          "^DỊCH\\s+NGHĨA\\b"
+        ],
+        "attribution_patterns": [
+          "^\\*"
+        ]
+      },
+      "nghia": {
+        "source": "vie",
+        "heading_mode": true,
+        "start_patterns": [
+          "^DỊCH\\s+NGHĨA\\b"
+        ],
+        "end_patterns": [
+          "^CHÚ\\s+THÍCH\\b"
+        ],
+        "attribution_patterns": [
+          "^\\*"
+        ]
+      }
     }
   },
   "clean": {
@@ -40,39 +91,7 @@
   },
   "metadata_extraction": {
     "enabled": true,
-    "layers": {
-      "han": {
-        "title_patterns": [
-          "^\\s*\\d{1,3}\\s*[·.．、﹒)]"
-        ],
-        "attribution_patterns": [
-          "^.{0,3}\\*"
-        ],
-        "author_max_len": 8
-      },
-      "am": {
-        "section_start": [
-          "^PHIÊN ÂM\\s*:?$"
-        ],
-        "section_end": [
-          "^DỊCH NGHĨA\\s*:?$"
-        ],
-        "attribution_patterns": [
-          "^\\*"
-        ]
-      },
-      "nghia": {
-        "section_start": [
-          "^DỊCH NGHĨA\\s*:?$"
-        ],
-        "section_end": [
-          "^CHÚ THÍCH\\s*:?$"
-        ],
-        "attribution_patterns": [
-          "^\\*"
-        ]
-      }
-    }
+    "exclude_from_main_text": true
   },
   "pairs": {
     "han-am": {

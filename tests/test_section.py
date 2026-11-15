@@ -161,7 +161,7 @@ def test_with_clean_and_split(tmp_path):
     assert [s.text for s in sents] == ["Đạo vốn ở nơi thanh tịnh hư vô.", "Bốn đại có lẽ thường."]
     all_ids = [i for s in sents for i in s.src_ids]
     assert all(i.endswith(("L003", "L004")) for i in all_ids)   # không dính dòng ngoài đoạn
-    dropped = (tmp_path / WORK / "03_cleaned" / "nghia.dropped.tsv").read_text(encoding="utf-8")
+    dropped = (tmp_path / WORK / "05_cleaning" / "nghia.dropped.tsv").read_text(encoding="utf-8")
     assert "section_before_start" in dropped and "section_after_end" in dropped
 
 

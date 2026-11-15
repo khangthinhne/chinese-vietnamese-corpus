@@ -317,6 +317,29 @@ def extract_metadata(lines: list[RawLine], cfg: MetadataConfig, layer: str
     return kept, MetadataResult(layer=layer, status="ok", documents=docs)
 
 
+def classify_leading_block(lines: list[RawLine], cfg: MetadataConfig, layer: str,
+                           document_id: str = "") -> tuple[list[RawLine], DocumentMetadata]:
+    """Dùng cho bước segmentation: dòng đã thuộc ĐÚNG một tài liệu + lớp.
+
+    Không có ranh giới mục (section_start/end) vì segmentation đã cắt xong; chỉ phân loại
+    tiêu đề / tác giả / quy trách ở đầu khối. Không cấu hình pattern -> giữ nguyên.
+    """
+    doc_id = document_id or (document_id_of(lines[0]) if lines else "")
+    if not cfg.enabled or not (cfg.title_patterns or cfg.author_patterns or cfg.attribution_patterns):
+        return list(lines), DocumentMetadata(document_id=doc_id)
+    title_res = [compile_boundary(p, f"metadata.title_patterns[{i}]")
+                 for i, p in enumerate(cfg.title_patterns)]
+    author_res = [compile_boundary(p, f"metadata.author_patterns[{i}]")
+                  for i, p in enumerate(cfg.author_patterns)]
+    attr_res = [compile_boundary(p, f"metadata.attribution_patterns[{i}]")
+                for i, p in enumerate(cfg.attribution_patterns)]
+    kept, doc = _classify_document(doc_id, lines, cfg, layer == "han", [], [],
+                                   title_res, author_res, attr_res)
+    if not cfg.exclude_from_main_text:
+        return list(lines), doc
+    return kept, doc
+
+
 # --------------------------------------------------------------------------- #
 # Ghi file: <layer>.metadata.jsonl + gộp document_metadata.jsonl + file_metadata.json
 # --------------------------------------------------------------------------- #

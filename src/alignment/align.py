@@ -1,24 +1,19 @@
 """
-03_cleaned/<layer>.jsonl (2 lớp) -> dóng hàng -> 04_alignment/<pair>.jsonl
+05_cleaning/<layer>.jsonl (2 lớp) -> dóng hàng THEO TỪNG TÀI LIỆU -> 06_alignment/<pair>.jsonl
 
 INPUT
     --work-id CPO_18  --pair han-am | han-nghia | han-tho   [--data-root data]
-    --method levenshtein | length | ...   (xem src/alignment/aligners.py; mặc định: levenshtein cho han-am,
-                                           length cho các cặp khác cho tới khi có clc/bertalign/llm)
-    --opt KEY=VALUE        (lặp lại) tuỳ chọn riêng của aligner, vd --opt reading_dict=resources/han_viet.tsv
-    --low-score 0.6        cặp có score thấp hơn bị gắn cờ low_score để ưu tiên rà soát
+    --method levenshtein | length | ...   (xem src/alignment/aligners.py)
+    --opt KEY=VALUE        (lặp lại) tuỳ chọn riêng của aligner
+    --low-score 0.6        cặp có score thấp hơn bị gắn cờ low_score
 
-OUTPUT (data/<WORK_ID>/04_alignment/)
-    <pair>.jsonl    mỗi dòng 1 Bead: id, kind (1-1, 1-2, 2-1, 1-0, 0-1...), score, flags,
-                    src_ids/tgt_ids (ID câu ở 03_cleaned), pages, src_text, tgt_text
+OUTPUT (data/<WORK_ID>/06_alignment/)
+    <pair>.jsonl    mỗi dòng 1 Bead: id, document_id, kind, score, flags,
+                    src_ids/tgt_ids (ID câu ở 05_cleaning), pages, src_text, tgt_text
     02_extraction/metadata.json -> layers["<pair>_alignment"]
 
-Chưa tạo file bàn giao: bước đó là src/alignment/export.py.
-
-Ví dụ:
-    python -m src.alignment.align --work-id CPO_18 --pair han-am --method levenshtein \\
-        --opt reading_dict=resources/han_viet.tsv
-    python -m src.alignment.align --work-id CPO_18 --pair han-nghia --method length
+Sentence.document_id (từ 04_segmentation) chia nhóm; aligner chạy riêng từng tài liệu,
+không bao giờ bắc cầu hai tài liệu. Dữ liệu cũ document_id rỗng = một nhóm duy nhất.
 """
 
 from __future__ import annotations
@@ -64,35 +59,46 @@ def run(args) -> Path:
     src = load_sentences(layout, src_layer)
     tgt = load_sentences(layout, tgt_layer)
     aligner = ALIGNERS[method](**parse_opts(args.opt))
-    log.info("Dóng %s: %d câu %s ↔ %d câu %s bằng %s", args.pair, len(src), src_layer, len(tgt), tgt_layer, method)
-    beads = aligner.align(src_layer, tgt_layer, src, tgt)
-
-    # kiểm tra hợp đồng: phủ đủ, đúng thứ tự
-    for side, n, getter in (("src", len(src), lambda b: b.src), ("tgt", len(tgt), lambda b: b.tgt)):
-        flat = [i for b in beads for i in getter(b)]
-        if flat != list(range(n)):
-            raise RuntimeError(f"Aligner {method} vi phạm hợp đồng: chỉ số {side} không phủ đủ/đúng thứ tự")
+    groups: dict[str, tuple[list[int], list[int]]] = {}
+    for i, s in enumerate(src):
+        groups.setdefault(s.document_id, ([], []))[0].append(i)
+    for i, s in enumerate(tgt):
+        groups.setdefault(s.document_id, ([], []))[1].append(i)
+    log.info("Dóng %s: %d câu %s ↔ %d câu %s bằng %s (%d tài liệu)", args.pair, len(src),
+             src_layer, len(tgt), tgt_layer, method, len(groups))
 
     rows = []
-    for k, b in enumerate(beads, 1):
-        s_items, t_items = [src[i] for i in b.src], [tgt[i] for i in b.tgt]
-        flags = list(b.flags)
-        if "unaligned" not in flags and b.score < args.low_score:
-            flags.append("low_score")
-        if any("cross_page" in x.flags for x in s_items + t_items):
-            flags.append("cross_page")
-        rows.append({
-            "id": f"{args.work_id}.{args.pair}.{k:05d}", "kind": b.kind, "score": round(b.score, 4),
-            "flags": flags,
-            "src_ids": [x.id for x in s_items], "tgt_ids": [x.id for x in t_items],
-            "pages": {src_layer: sorted({p for x in s_items for p in x.pages}),
-                      tgt_layer: sorted({p for x in t_items for p in x.pages})},
-            "src_text": join_texts(src_layer, (x.text for x in s_items)),
-            "tgt_text": join_texts(tgt_layer, (x.text for x in t_items)),
-        })
+    for doc_id, (s_idx, t_idx) in groups.items():
+        local_src = [src[i] for i in s_idx]
+        local_tgt = [tgt[i] for i in t_idx]
+        beads = aligner.align(src_layer, tgt_layer, local_src, local_tgt)
+        for side, n, getter in (("src", len(local_src), lambda b: b.src),
+                                ("tgt", len(local_tgt), lambda b: b.tgt)):
+            flat = [i for b in beads for i in getter(b)]
+            if flat != list(range(n)):
+                raise RuntimeError(f"Aligner {method} vi phạm hợp đồng: chỉ số {side} "
+                                   f"không phủ đủ/đúng thứ tự (tài liệu {doc_id or '<trống>'})")
+        for b in beads:
+            s_items = [local_src[i] for i in b.src]
+            t_items = [local_tgt[i] for i in b.tgt]
+            flags = list(b.flags)
+            if "unaligned" not in flags and b.score < args.low_score:
+                flags.append("low_score")
+            if any("cross_page" in x.flags for x in s_items + t_items):
+                flags.append("cross_page")
+            rows.append({
+                "id": f"{args.work_id}.{args.pair}.{len(rows) + 1:05d}", "document_id": doc_id,
+                "kind": b.kind, "score": round(b.score, 4), "flags": flags,
+                "src_ids": [x.id for x in s_items], "tgt_ids": [x.id for x in t_items],
+                "pages": {src_layer: sorted({p for x in s_items for p in x.pages}),
+                          tgt_layer: sorted({p for x in t_items for p in x.pages})},
+                "src_text": join_texts(src_layer, (x.text for x in s_items)),
+                "tgt_text": join_texts(tgt_layer, (x.text for x in t_items)),
+            })
     write_jsonl(out, rows)
 
     stats = {"src_sentences": len(src), "tgt_sentences": len(tgt), "beads": len(rows),
+             "documents": len(groups),
              "kinds": dict(Counter(r["kind"] for r in rows)),
              "unaligned": sum("unaligned" in r["flags"] for r in rows),
              "low_score": sum("low_score" in r["flags"] for r in rows)}
