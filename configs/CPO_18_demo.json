@@ -1,0 +1,58 @@
+{
+  "common": {
+    "work_id": "CPO_18",
+    "data_root": "data",
+    "title": "Demo CPO_18 (Sáu bức thư) - SỬA số trang cho đúng sách",
+    "dpi": 300
+  },
+  "layers": {
+    "han": {
+      "pdf": "data/CPO_18/01_sources/CPO18.pdf",
+      "pages": "205",
+      "region": "0,0.08,1,0.93",
+      "engines": "tesseract"
+    },
+    "am": {
+      "pdf": "data/CPO_18/01_sources/CPO18.pdf",
+      "pages": "205-206",
+      "region": "0,0.08,1,0.93",
+      "engines": "tesseract"
+    },
+    
+    "nghia": {
+      "pdf": "data/CPO_18/01_sources/CPO18.pdf",
+      "pages": "206",
+      "region": "0,0.08,1,0.93",
+      "engines": "tesseract"
+    }
+  },
+  "clean": {
+    "am": {
+      "drop_pattern": [
+        "^Phần II"
+      ],
+      "start_after": "^Phiên âm",
+      "end_before": "^Dịch nghĩa"
+    },
+    "nghia": {
+      "drop_pattern": [
+        "^Phần II"
+      ],
+      "start_after": "^Dịch nghĩa",
+      "end_before": "^Chú thích"
+    }
+  },
+  "pairs": {
+    "han-am": {
+      "method": "levenshtein",
+      "opt": [
+        "reading_dict=resources/han_viet.tsv"
+      ],
+      "name": "CPO_18_han-am_parallel"
+    },
+    "han-nghia": {
+      "method": "length",
+      "name": "CPO_18_han-nghia_parallel"
+    }
+  }
+}

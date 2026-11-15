@@ -32,19 +32,12 @@
           "page": 205,
           "file": "02_extraction/01_page_image/han/page_205.png",
           "drive_id": null,
-          "drive_url": null,
-          "sync_path": "E:\\Projects\\han-viet-corpus\\data\\CPO_18\\02_extraction\\01_page_image\\CPO_18_han\\page_205.png",
-          "sync_status": "copied_to_drive_desktop"
+          "drive_url": null
         }
       ],
       "drive_parent_id": null,
       "drive_folder_id": null,
-      "drive_sync": {
-        "method": "Google Drive for desktop",
-        "local_folder": "E:\\Projects\\han-viet-corpus\\data\\CPO_18\\02_extraction\\01_page_image\\CPO_18_han",
-        "status": "copied; cloud sync is handled by Drive for desktop"
-      },
-      "run_at": "2026-11-11T10:57:46+00:00"
+      "run_at": "2026-11-15T08:56:01+00:00"
     },
     "han": {
       "output": "02_extraction/han.xml",
@@ -54,7 +47,7 @@
       "counts": {
         "sections": 1,
         "pages": 1,
-        "units": 12
+        "units": 8
       },
       "status": "Raw extraction, not cleaned",
       "method": "ocr",
@@ -74,7 +67,12 @@
         "pages": [
           205
         ],
-        "region": null,
+        "region": [
+          0.08,
+          0.15,
+          0.93,
+          0.47
+        ],
         "lang": "chi_tra",
         "psm": 6,
         "dpi": 300,
@@ -93,29 +91,29 @@
           "image_sha256": "5afb8b82d045bf87f457e4285f977c608023a2e74a49f37199f54817e1218e72",
           "raw": "02_extraction/02_ocr_raw/page_0205.json",
           "selected_engine": "tesseract",
-          "confidence": 86.82646402574495,
+          "confidence": 88.90802464967572,
           "empty": false,
           "engines": [
             {
               "engine": "tesseract",
-              "key": "bf83dce133a44b856208219ac37a9e466f9f6ec762a253d093a71863e197f939",
-              "cache_hit": true
+              "key": "3d30feb3e8dcc8ff5bad72d17dadde38d39b1507c7c915b2de50ca67a313f41c",
+              "cache_hit": false
             }
           ]
         }
       ],
       "review_required": true,
-      "run_at": "2026-11-11T11:48:09+00:00"
+      "run_at": "2026-11-15T08:56:04+00:00"
     },
     "am": {
       "output": "02_extraction/am.xml",
       "source": {
-        "path": "01_sources/han"
+        "path": "01_sources/am"
       },
       "counts": {
         "sections": 1,
-        "pages": 1,
-        "units": 28
+        "pages": 2,
+        "units": 23
       },
       "status": "Raw extraction, not cleaned",
       "method": "ocr",
@@ -133,9 +131,207 @@
       },
       "parameters": {
         "pages": [
-          205
+          205,
+          206
         ],
-        "region": null,
+        "region": [
+          0.08,
+          0.6,
+          0.93,
+          0.93
+        ],
+        "lang": "vie",
+        "psm": 6,
+        "dpi": 300,
+        "keep": "latin",
+        "select": "first",
+        "low_conf": 60,
+        "workers_requested": 4,
+        "workers_used": 2
+      },
+      "low_conf_pages": [],
+      "empty_pages": [],
+      "pages": [
+        {
+          "page": 205,
+          "image": "01_sources/am/page_205.png",
+          "image_sha256": "5afb8b82d045bf87f457e4285f977c608023a2e74a49f37199f54817e1218e72",
+          "raw": "02_extraction/02_ocr_raw/page_0205.json",
+          "selected_engine": "tesseract",
+          "confidence": 93.93959366292806,
+          "empty": false,
+          "engines": [
+            {
+              "engine": "tesseract",
+              "key": "79712f3d9ed20b161fa9156af04430ac92620accd683935d99a4c519aa2f85ea",
+              "cache_hit": false
+            }
+          ]
+        },
+        {
+          "page": 206,
+          "image": "01_sources/am/page_206.png",
+          "image_sha256": "fed77272d9e993999a8d2d3890ab340d1c1b0b312d145ff1c8c528eb188a8ddc",
+          "raw": "02_extraction/02_ocr_raw/page_0206.json",
+          "selected_engine": "tesseract",
+          "confidence": 92.20645210571548,
+          "empty": false,
+          "engines": [
+            {
+              "engine": "tesseract",
+              "key": "51e387e777fe3391cf12b1c9ec789aef6a3a9d47d8b1fafdf40d6bca85498834",
+              "cache_hit": false
+            }
+          ]
+        }
+      ],
+      "review_required": true,
+      "run_at": "2026-11-15T08:56:09+00:00"
+    },
+    "han_cleaned": {
+      "input": "02_extraction/han.xml",
+      "output": "03_cleaned/han.jsonl",
+      "stats": {
+        "raw_lines": 8,
+        "kept_lines": 5,
+        "dropped_lines": 3,
+        "sentences": 2,
+        "cross_page": 0,
+        "no_terminal_punct": 1,
+        "long": 0
+      },
+      "parameters": {
+        "split": "punct",
+        "split_colon": false,
+        "drop_patterns": [
+          "^[\\-–—\\s]*\\d{1,4}[\\-–—\\s]*$"
+        ],
+        "heading_heuristic": true,
+        "strip_markers": true
+      },
+      "review_required": true,
+      "run_at": "2026-11-15T08:56:04+00:00"
+    },
+    "am_images": {
+      "source": {
+        "path": "01_sources/CPO18.pdf",
+        "sha256": "02097c62708a086d9c83e3ca404e3fef187c217e9efb6a40e3586612e2233396",
+        "bytes": 135237721
+      },
+      "total_pages": 565,
+      "parameters": {
+        "dpi": 300,
+        "format": "png",
+        "workers": 4
+      },
+      "pages": [
+        205,
+        206
+      ],
+      "images": [
+        {
+          "page": 205,
+          "file": "02_extraction/01_page_image/am/page_205.png",
+          "drive_id": null,
+          "drive_url": null
+        },
+        {
+          "page": 206,
+          "file": "02_extraction/01_page_image/am/page_206.png",
+          "drive_id": null,
+          "drive_url": null
+        }
+      ],
+      "drive_parent_id": null,
+      "drive_folder_id": null,
+      "run_at": "2026-11-15T08:56:08+00:00"
+    },
+    "am_cleaned": {
+      "input": "02_extraction/am.xml",
+      "output": "03_cleaned/am.jsonl",
+      "stats": {
+        "raw_lines": 23,
+        "kept_lines": 22,
+        "dropped_lines": 1,
+        "sentences": 9,
+        "cross_page": 1,
+        "no_terminal_punct": 1,
+        "long": 0
+      },
+      "parameters": {
+        "split": "punct",
+        "split_colon": false,
+        "drop_patterns": [
+          "^[\\-–—\\s]*\\d{1,4}[\\-–—\\s]*$",
+          "^Phần II"
+        ],
+        "heading_heuristic": true,
+        "strip_markers": true
+      },
+      "review_required": true,
+      "run_at": "2026-11-15T08:56:09+00:00"
+    },
+    "nghia_images": {
+      "source": {
+        "path": "01_sources/CPO18.pdf",
+        "sha256": "02097c62708a086d9c83e3ca404e3fef187c217e9efb6a40e3586612e2233396",
+        "bytes": 135237721
+      },
+      "total_pages": 565,
+      "parameters": {
+        "dpi": 300,
+        "format": "png",
+        "workers": 4
+      },
+      "pages": [
+        206
+      ],
+      "images": [
+        {
+          "page": 206,
+          "file": "02_extraction/01_page_image/nghia/page_206.png",
+          "drive_id": null,
+          "drive_url": null
+        }
+      ],
+      "drive_parent_id": null,
+      "drive_folder_id": null,
+      "run_at": "2026-11-15T08:56:14+00:00"
+    },
+    "nghia": {
+      "output": "02_extraction/nghia.xml",
+      "source": {
+        "path": "01_sources/nghia"
+      },
+      "counts": {
+        "sections": 1,
+        "pages": 1,
+        "units": 18
+      },
+      "status": "Raw extraction, not cleaned",
+      "method": "ocr",
+      "engines": {
+        "tesseract": {
+          "name": "tesseract",
+          "version": "5.5.3.20260724",
+          "wrapper_version": "0.3.13",
+          "models": {
+            "vie": "164d9bed7e5a6444586d39434cc1adf4df976cfe23cffd6468e444c94703640a"
+          },
+          "oem": 1,
+          "adapter_version": 1
+        }
+      },
+      "parameters": {
+        "pages": [
+          206
+        ],
+        "region": [
+          0.08,
+          0.23,
+          0.93,
+          0.77
+        ],
         "lang": "vie",
         "psm": 6,
         "dpi": 300,
@@ -149,24 +345,168 @@
       "empty_pages": [],
       "pages": [
         {
-          "page": 205,
-          "image": "01_sources/han/page_205.png",
-          "image_sha256": "5afb8b82d045bf87f457e4285f977c608023a2e74a49f37199f54817e1218e72",
-          "raw": "02_extraction/02_ocr_raw/page_0205.json",
+          "page": 206,
+          "image": "01_sources/nghia/page_206.png",
+          "image_sha256": "fed77272d9e993999a8d2d3890ab340d1c1b0b312d145ff1c8c528eb188a8ddc",
+          "raw": "02_extraction/02_ocr_raw/page_0206.json",
           "selected_engine": "tesseract",
-          "confidence": 70.29277576026027,
+          "confidence": 91.82371912577078,
           "empty": false,
           "engines": [
             {
               "engine": "tesseract",
-              "key": "c5e9d9fcddce0f30b20cfd422ca2bfd31193b7bf289ba2d386baf482c4b9f6e8",
+              "key": "43a9367294b7a2bb970ec42554a6f722ea6dd62838051cfc1e5625799e676c3b",
               "cache_hit": false
             }
           ]
         }
       ],
       "review_required": true,
-      "run_at": "2026-11-11T11:24:32+00:00"
+      "run_at": "2026-11-15T08:56:15+00:00"
+    },
+    "nghia_cleaned": {
+      "input": "02_extraction/nghia.xml",
+      "output": "03_cleaned/nghia.jsonl",
+      "stats": {
+        "raw_lines": 18,
+        "kept_lines": 17,
+        "dropped_lines": 1,
+        "sentences": 6,
+        "cross_page": 0,
+        "no_terminal_punct": 0,
+        "long": 0
+      },
+      "parameters": {
+        "split": "punct",
+        "split_colon": false,
+        "drop_patterns": [
+          "^[\\-–—\\s]*\\d{1,4}[\\-–—\\s]*$",
+          "^Phần II"
+        ],
+        "heading_heuristic": true,
+        "strip_markers": true
+      },
+      "review_required": true,
+      "run_at": "2026-11-15T08:56:15+00:00"
+    },
+    "han-am_alignment": {
+      "output": "04_alignment/han-am.jsonl",
+      "aligner": {
+        "name": "levenshtein",
+        "options": {
+          "reading_dict": "resources/han_viet.tsv",
+          "unknown_cost": 0.5,
+          "bare_cost": 0.3,
+          "merge_penalty": 2.0,
+          "skip_penalty": 1.0,
+          "band": 30
+        }
+      },
+      "stats": {
+        "src_sentences": 2,
+        "tgt_sentences": 9,
+        "beads": 7,
+        "kinds": {
+          "1-1": 1,
+          "1-3": 1,
+          "0-1": 5
+        },
+        "unaligned": 5,
+        "low_score": 1
+      },
+      "low_score_threshold": 0.6,
+      "review_required": true,
+      "run_at": "2026-11-15T08:56:16+00:00"
+    },
+    "han-am_export": {
+      "name": "CPO_18_han-am_parallel",
+      "report": {
+        "name": "CPO_18_han-am_parallel",
+        "pair": "han-am",
+        "generated_at": "2026-11-15T09:02:47+00:00",
+        "pairs_exported": 2,
+        "han_sentences": 2,
+        "am_sentences": 9,
+        "kinds_exported": {
+          "1-1": 1,
+          "1-3": 1
+        },
+        "skipped": {
+          "unaligned": 5
+        },
+        "low_score_exported": 1,
+        "cross_page_exported": 0,
+        "self_check": {
+          "no_empty_cell": true,
+          "no_tab_or_newline_in_cell": true,
+          "tsv_xlsx_identical": true,
+          "no_formula_or_merged_cell": true
+        },
+        "params": {
+          "min_score": 0.0,
+          "exclude_flag": []
+        }
+      },
+      "review_required": true,
+      "run_at": "2026-11-15T09:02:47+00:00"
+    },
+    "han-nghia_alignment": {
+      "output": "04_alignment/han-nghia.jsonl",
+      "aligner": {
+        "name": "length",
+        "options": {
+          "variance": 6.8,
+          "skip_cost": 6.0,
+          "band": 30
+        }
+      },
+      "stats": {
+        "src_sentences": 2,
+        "tgt_sentences": 6,
+        "beads": 3,
+        "kinds": {
+          "0-1": 1,
+          "1-2": 1,
+          "1-3": 1
+        },
+        "unaligned": 1,
+        "low_score": 2
+      },
+      "low_score_threshold": 0.6,
+      "review_required": true,
+      "run_at": "2026-11-15T08:56:16+00:00"
+    },
+    "han-nghia_export": {
+      "name": "CPO_18_han-nghia_parallel",
+      "report": {
+        "name": "CPO_18_han-nghia_parallel",
+        "pair": "han-nghia",
+        "generated_at": "2026-11-15T09:02:47+00:00",
+        "pairs_exported": 2,
+        "han_sentences": 2,
+        "nghia_sentences": 6,
+        "kinds_exported": {
+          "1-2": 1,
+          "1-3": 1
+        },
+        "skipped": {
+          "unaligned": 1
+        },
+        "low_score_exported": 2,
+        "cross_page_exported": 0,
+        "self_check": {
+          "no_empty_cell": true,
+          "no_tab_or_newline_in_cell": true,
+          "tsv_xlsx_identical": true,
+          "no_formula_or_merged_cell": true
+        },
+        "params": {
+          "min_score": 0.0,
+          "exclude_flag": []
+        }
+      },
+      "review_required": true,
+      "run_at": "2026-11-15T09:02:47+00:00"
     }
   },
   "work_id": "CPO_18"
