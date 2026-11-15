@@ -87,7 +87,8 @@ def build_plan(cfg: dict, steps: list[str], layers: list[str] | None, pairs: lis
             argv += (["--force"] if force else []) + list(extra.get("ocr", [])) + list(lc.get("ocr_args", []))
             plan.append(("ocr", argv))
         if "clean" in steps:
-            cc = cfg.get("clean", {}).get(layer, {})
+            common_clean = cfg.get("clean", {}).get("common", {})    # áp cho mọi lớp
+            cc = {**common_clean, **cfg.get("clean", {}).get(layer, {})}
             argv = ["--layer", layer, *base]
             _opt(argv, "--split", cc.get("split"))
             for pat in cc.get("drop_pattern", []):
@@ -96,9 +97,32 @@ def build_plan(cfg: dict, steps: list[str], layers: list[str] | None, pairs: lis
             _opt(argv, "--end-before", cc.get("end_before"))
             _opt(argv, "--abbrev", cc.get("abbrev"))
             for flag, key in (("--split-colon", "split_colon"), ("--no-heading-heuristic", "no_heading_heuristic"),
-                              ("--keep-markers", "keep_markers")):
-                if cc.get(key):
+                              ("--keep-markers", "keep_markers"), ("--no-headers", "remove_headers"),
+                              ("--no-footers", "remove_footers"), ("--no-duplicates", "remove_duplicates"),
+                              ("--no-reconstruct", "reconstruct_page_boundaries"),
+                              ("--no-footnotes", "enabled")):
+                if key == "enabled":
+                    if cc.get("footnotes", {}).get("enabled") is False:
+                        argv.append(flag)
+                elif cc.get(key) is False:
                     argv.append(flag)
+            if cc.get("excluded_pages"):
+                argv += ["--exclude-pages", ",".join(str(p) for p in cc["excluded_pages"])]
+            _opt(argv, "--footnote-policy", cc.get("footnote_policy")
+                 or cc.get("footnotes", {}).get("policy"))
+            _opt(argv, "--header-footer-min-pages", cc.get("header_footer_min_pages"))
+            _opt(argv, "--dup-threshold", cc.get("duplicate_threshold"))
+            _opt(argv, "--dup-min-len", cc.get("duplicate_min_len"))
+            for flag, key in (("--no-paren-notes", "detect_parentheses"),
+                              ("--no-bib-notes", "detect_bibliographic_notes")):
+                if cc.get("footnotes", {}).get(key) is False:
+                    argv.append(flag)
+            ocr_cfg = cc.get("ocr", {})
+            for pat in ocr_cfg.get("remove_patterns", []):
+                argv += ["--ocr-remove", pat]
+            for rule in ocr_cfg.get("replace_patterns", []):
+                pat, repl = (rule["pattern"], rule.get("replacement", "")) if isinstance(rule, dict) else rule
+                argv += ["--ocr-replace", f"{pat}=>{repl}"]
             argv += (["--force"] if force else []) + list(extra.get("clean", []))
             plan.append(("clean", argv))
 

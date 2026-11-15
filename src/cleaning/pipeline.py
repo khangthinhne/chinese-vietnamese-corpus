@@ -1,0 +1,279 @@
+"""Điều phối bộ làm sạch (bước 1..10) + CLI + ghi output/audit.
+
+Thứ tự thực thi (khác đề xuất ở 2 điểm, lý do trong docstring từng module):
+    1 unicode -> 2 page_filter -> 3 section -> 4 duplicates -> 5 footnotes
+    -> 6 artifacts -> 7 reconstruction -> 8 normalization -> 9 filtering
+    -> 10 segmentation
+- section (3) chạy TRƯỚC duplicates/footnotes: là cắt cấp cao theo config, tránh rác
+  OCR chưa chọn nuốt c state machine chú thích.
+- footnotes (5) chạy TRƯỚC artifacts (6): chỉ mục "(1)" vừa là marker trong dòng vừa là
+  đầu một chú thích nhiều dòng; xoá marker trước sẽ mất manh mối.
+"""
+
+from __future__ import annotations
+
+import argparse
+import logging
+import sys
+import xml.etree.ElementTree as ET
+from dataclasses import dataclass
+from pathlib import Path
+
+from src.common.corpus import DataLayout, MetadataStore, base_parser, parse_args, parse_pages
+from src.common.sentences import Sentence, atomic_write_text, cleaned_dir, save_sentences
+
+from src.cleaning.model import (DEFAULT_DROP, DUPLICATE_LINE, VI_ABBREV, CleanConfig,
+                                FootnoteConfig, OCRCleaningConfig, RawLine)
+from src.cleaning.audit import Audit, write_audit_files
+from src.cleaning.unicode import normalize_unicode
+from src.cleaning.page_filter import filter_pages
+from src.cleaning.section import SectionInfo, extract_section
+from src.cleaning.duplicates import detect_duplicates
+from src.cleaning.footnotes import detect_footnotes
+from src.cleaning.artifacts import clean_lines
+from src.cleaning.reconstruction import reconstruct_page_boundaries
+from src.cleaning.normalization import normalize_lines
+from src.cleaning.filtering import filter_invalid_lines
+from src.cleaning.segmentation import make_sentences
+
+log = logging.getLogger("clean")
+
+
+# --------------------------------------------------------------------------- #
+# Đọc XML thô (giữ hành vi clean.py cũ)
+# --------------------------------------------------------------------------- #
+def read_raw_lines(xml_path: Path) -> list[RawLine]:
+    if not xml_path.exists():
+        raise FileNotFoundError(f"Chưa có {xml_path}; chạy extraction/OCR cho lớp này trước")
+    root = ET.parse(xml_path).getroot()
+    out: list[RawLine] = []
+    for page in root.iter("PAGE"):
+        page_no = int(page.get("SOURCE_PAGE", "0"))
+        units = [u for u in page if u.get("ID")]
+        for i, u in enumerate(units):
+            out.append(RawLine(u.get("ID"), page_no, u.text or "", is_last_on_page=(i == len(units) - 1)))
+    return out
+
+
+# --------------------------------------------------------------------------- #
+# Điều phối
+# --------------------------------------------------------------------------- #
+@dataclass
+class CleanOutput:
+    sentences: list[Sentence]
+    dropped_rows: list[tuple[str, int, str, str]]
+    stats: dict
+    audit: Audit
+    section: SectionInfo
+    notes: list
+    duplicates: list[dict]
+    reconstructions: list[dict]
+    pages: list[dict]
+
+
+def run_cleaning(work_id: str, layer: str, raw_lines: list[RawLine], cfg: CleanConfig) -> CleanOutput:
+    audit = Audit(work_id, layer)
+
+    # 1. Unicode: giữ nguyên bản gốc trong raw_text
+    lines: list[RawLine] = []
+    for ln in raw_lines:
+        lines.append(RawLine(ln.id, ln.page, normalize_unicode(ln.text), ln.is_last_on_page,
+                             ln.text, list(ln.flags)))
+
+    # 2. Trang: loại thủ công / trắng / header-footer lặp
+    lines, page_records = filter_pages(lines, cfg, audit)
+
+    # 3. Cắt đoạn theo ranh giới config (nếu không cấu hình -> giữ nguyên, info unbounded)
+    lines, sec_info = extract_section(lines, cfg.start_after, cfg.end_before)
+    for ln, reason in sec_info.excluded:
+        audit.add("remove_line", f"section_{reason}", rule="boundary", line=ln)
+
+    # 4. Trùng lặp OCR
+    lines, dup_records = detect_duplicates(lines, cfg, audit)
+
+    # 5. Chú thích / trích dẫn nguồn / mục chú thích đánh số
+    fn_res = detect_footnotes(lines, cfg.footnotes, layer)
+    fn_rows: list[tuple[str, int, str, str]] = []
+    if fn_res.excluded_ids:
+        lines = [ln for ln in lines if ln.id not in fn_res.excluded_ids]
+        for fn in fn_res.notes:
+            if fn.action == "exclude":
+                for ln in fn.lines:
+                    fn_rows.append((ln.id, ln.page, fn.category, ln.raw_text or ln.text))
+                    audit.add("remove_line", fn.category, rule=f"note:{fn.note_id}", line=ln)
+            elif fn.action == "review":
+                for ln in fn.lines:
+                    audit.flag_review(ln, "uncertain", rule=f"note:{fn.note_id}",
+                                      note=f"chú thích không chắc ({fn.reason})")
+
+    # 6. Nhiễu OCR + chỉ mục chú thích trong dòng + cờ ký tự không chắc
+    lines = clean_lines(lines, cfg.ocr, audit, layer)
+
+    # 7. Nối văn bản qua ranh giới trang
+    lines, recon_records = reconstruct_page_boundaries(lines, cfg, audit, layer)
+
+    # 8. Chuẩn hoá theo lớp
+    lines = normalize_lines(lines, cfg, layer)
+
+    # 9. Lọc dòng (heuristic cũ + ngữ cảnh)
+    kept, dropped_rows = filter_invalid_lines(lines, cfg, audit)
+    dup_rows = [(r["removed_id"], r["page"], DUPLICATE_LINE, r["text"]) for r in dup_records]
+
+    # 10. Tách câu
+    sentences, dropped_sent = make_sentences(work_id, layer, kept, cfg)
+
+    dropped_all = [(ln.id, ln.page, f"section_{reason}", ln.raw_text or ln.text)
+                   for ln, reason in sec_info.excluded] + fn_rows + dup_rows \
+        + dropped_rows + dropped_sent
+    stats = {
+        "raw_lines": len(raw_lines), "kept_lines": len(kept),
+        "dropped_lines": len(dropped_all),
+        "sentences": len(sentences),
+        "cross_page": sum("cross_page" in s.flags for s in sentences),
+        "no_terminal_punct": sum("no_terminal_punct" in s.flags for s in sentences),
+        "long": sum("long" in s.flags for s in sentences),
+        "section_lines": sec_info.n_selected,
+        "pages_removed": len(page_records),
+        "duplicates": len(dup_records),
+        "notes": {cat: sum(1 for n in fn_res.notes if n.category == cat)
+                  for cat in ("footnote", "bibliographic_note", "editorial_note", "uncertain_note")
+                  if any(n.category == cat for n in fn_res.notes)},
+        "reconstructions": {t: sum(1 for r in recon_records if r["type"] == t)
+                            for t in {r["type"] for r in recon_records}},
+        "review_flags": len(audit.reviews),
+    }
+    return CleanOutput(sentences, dropped_all, stats, audit, sec_info,
+                       fn_res.notes, dup_records, recon_records, page_records)
+
+
+def clean_layer(work_id: str, layer: str, raw_lines: list[RawLine], cfg: CleanConfig):
+    """Giao diện tương thích clean.py cũ: (sentences, dropped_rows, stats)."""
+    out = run_cleaning(work_id, layer, raw_lines, cfg)
+    return out.sentences, out.dropped_rows, out.stats
+
+
+def _parse_replace(spec: str) -> tuple[str, str]:
+    pat, sep, repl = spec.partition("=>")
+    if not sep:
+        raise ValueError(f"--ocr-replace phải dạng 'REGEX=>THAY_THẾ', nhận: {spec!r}")
+    return pat, repl
+
+
+def build_config(args, layer: str) -> CleanConfig:
+    return CleanConfig(
+        layer=layer,
+        split=args.split or ("line" if layer == "tho" else "punct"),
+        split_colon=args.split_colon,
+        drop_patterns=list(DEFAULT_DROP) + list(args.drop_pattern or []),
+        heading_heuristic=not args.no_heading_heuristic,
+        strip_markers=not args.keep_markers,
+        abbrev=set(VI_ABBREV) | {a.strip().lower() for a in (args.abbrev or "").split(",") if a.strip()},
+        start_after=args.start_after,
+        end_before=args.end_before,
+        excluded_pages=parse_pages(args.exclude_pages) if args.exclude_pages else [],
+        remove_headers=not args.no_headers,
+        remove_footers=not args.no_footers,
+        header_footer_min_pages=args.header_footer_min_pages,
+        remove_duplicates=not args.no_duplicates,
+        duplicate_threshold=args.dup_threshold,
+        duplicate_min_len=args.dup_min_len,
+        reconstruct_page_boundaries=not args.no_reconstruct,
+        ocr=OCRCleaningConfig(
+            remove_patterns=list(args.ocr_remove or []),
+            replace_patterns=[_parse_replace(r) for r in (args.ocr_replace or [])],
+        ),
+        footnotes=FootnoteConfig(),
+    )
+
+
+def run(args) -> Path:
+    layer = args.layer
+    layout = DataLayout(Path(args.data_root), args.work_id)
+    out_dir = cleaned_dir(layout)
+    out_jsonl = out_dir / f"{layer}.jsonl"
+    if out_jsonl.exists() and not args.force:
+        raise FileExistsError(f"{out_jsonl} đã tồn tại; dùng --force để ghi đè (hoặc lưu bản cũ: v01, v02...)")
+
+    cfg = build_config(args, layer)
+    cfg.footnotes.enabled = not args.no_footnotes
+    cfg.footnotes.policy = args.footnote_policy
+    cfg.footnotes.detect_parentheses = not args.no_paren_notes
+    cfg.footnotes.detect_bibliographic = not args.no_bib_notes
+    cfg.footnotes.remove_in_text_markers = not args.keep_markers
+
+    xml_path = layout.layer_xml(layer)
+    raw = read_raw_lines(xml_path)
+    out = run_cleaning(args.work_id, layer, raw, cfg)
+    if not out.sentences:
+        raise ValueError(f"Không còn câu nào sau khi làm sạch {xml_path}; xem lại --drop-pattern/--start-after")
+
+    save_sentences(layout, layer, out.sentences)
+    atomic_write_text(out_dir / f"{layer}.txt", "".join(s.text + "\n" for s in out.sentences))
+    atomic_write_text(out_dir / f"{layer}.dropped.tsv", "id\tpage\treason\ttext\n" + "".join(
+        f"{i}\t{p}\t{r}\t{t.replace(chr(9), ' ').replace(chr(10), ' ')}\n" for i, p, r, t in out.dropped_rows))
+    write_audit_files(out_dir, out.audit, out.notes, out.duplicates, out.reconstructions)
+    MetadataStore(layout).update(f"{layer}_cleaned", {
+        "input": layout.rel(xml_path), "output": layout.rel(out_jsonl), "stats": out.stats,
+        "parameters": {"split": cfg.split, "split_colon": cfg.split_colon,
+                       "drop_patterns": cfg.drop_patterns, "heading_heuristic": cfg.heading_heuristic,
+                       "strip_markers": cfg.strip_markers,
+                       "excluded_pages": cfg.excluded_pages,
+                       "remove_headers": cfg.remove_headers, "remove_footers": cfg.remove_footers,
+                       "remove_duplicates": cfg.remove_duplicates,
+                       "reconstruct_page_boundaries": cfg.reconstruct_page_boundaries,
+                       "footnotes": {"enabled": cfg.footnotes.enabled, "policy": cfg.footnotes.policy}},
+        "section": out.section.as_dict(),
+        "pages_removed": out.pages,
+        "review_required": True})
+    log.info("[%s] %s", layer, out.stats)
+    if out.stats["dropped_lines"]:
+        log.info("[%s] Xem lại các dòng bị loại: %s", layer, out_dir / f"{layer}.dropped.tsv")
+    if out.stats["review_flags"]:
+        log.info("[%s] %d trường hợp không chắc: %s", layer, out.stats["review_flags"],
+                 out_dir / "review_required.tsv")
+    return out_jsonl
+
+
+def create_parser():
+    p = base_parser("02_extraction XML -> làm sạch + tách câu -> 03_cleaned (+ audit)")
+    p.add_argument("--split", choices=["punct", "line"], help="Mặc định: line cho tho, punct cho lớp khác")
+    p.add_argument("--split-colon", action="store_true")
+    p.add_argument("--drop-pattern", action="append", help="Regex dòng cần bỏ (lặp lại được)")
+    p.add_argument("--start-after", help="Regex ranh giới đầu đoạn: lấy nội dung SAU dòng khớp (không gồm dòng khớp)")
+    p.add_argument("--end-before", help="Regex ranh giới cuối đoạn: ngừng lấy trước dòng khớp (không gồm dòng khớp)")
+    p.add_argument("--no-heading-heuristic", action="store_true")
+    p.add_argument("--keep-markers", action="store_true")
+    p.add_argument("--abbrev", help="Viết tắt Việt thêm, phân cách dấu phẩy")
+    # trang / trùng / nối
+    p.add_argument("--exclude-pages", help="Trang loại thủ công, vd '205,210-212'")
+    p.add_argument("--no-headers", action="store_true", help="Tắt nhận diện header đầu trang lặp lại")
+    p.add_argument("--no-footers", action="store_true", help="Tắt nhận diện footer cuối trang lặp lại")
+    p.add_argument("--header-footer-min-pages", type=int, default=3)
+    p.add_argument("--no-duplicates", action="store_true", help="Tắt phát hiện dòng OCR trùng")
+    p.add_argument("--dup-threshold", type=float, default=0.9)
+    p.add_argument("--dup-min-len", type=int, default=12)
+    p.add_argument("--no-reconstruct", action="store_true", help="Tắt phân tích nối qua ranh giới trang")
+    # chú thích
+    p.add_argument("--no-footnotes", action="store_true", help="Tắt toàn bộ phát hiện chú thích")
+    p.add_argument("--footnote-policy", choices=["exclude", "preserve", "review"], default="exclude")
+    p.add_argument("--no-paren-notes", action="store_true", help="Tắt nhận diện chú thích ngoặc nhiều dòng")
+    p.add_argument("--no-bib-notes", action="store_true", help="Tắt nhận diện trích dẫn nguồn")
+    # nhiễu OCR cấu hình được
+    p.add_argument("--ocr-remove", action="append", help="Regex xoá (lặp lại được; tắt mặc định)")
+    p.add_argument("--ocr-replace", action="append", help="'REGEX=>THAY_THẾ' (lặp lại được)")
+    return p
+
+
+def main(argv: list[str] | None = None) -> int:
+    parser = create_parser()
+    args = parse_args(parser, argv)
+    try:
+        run(args)
+    except (OSError, ValueError) as exc:
+        log.error("%s", exc)
+        return 1
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
