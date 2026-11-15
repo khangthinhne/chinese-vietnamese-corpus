@@ -123,6 +123,22 @@ def build_plan(cfg: dict, steps: list[str], layers: list[str] | None, pairs: lis
             for rule in ocr_cfg.get("replace_patterns", []):
                 pat, repl = (rule["pattern"], rule.get("replacement", "")) if isinstance(rule, dict) else rule
                 argv += ["--ocr-replace", f"{pat}=>{repl}"]
+            # metadata cấp tài liệu: "metadata_extraction": {"enabled", "exclude_from_main_text", "layers": {...}}
+            meta_cfg = cfg.get("metadata_extraction", {})
+            meta_layer = {k: v for k, v in meta_cfg.items()
+                          if k not in ("enabled", "exclude_from_main_text", "layers")}
+            meta_layer = {**meta_layer, **meta_cfg.get("layers", {}).get(layer, {})}
+            if meta_cfg.get("enabled") is False:
+                argv.append("--no-metadata")
+            if meta_cfg.get("exclude_from_main_text") is False or meta_layer.get("exclude_from_main_text") is False:
+                argv.append("--metadata-keep")
+            for key, flag in (("section_start", "--meta-section-start"), ("section_end", "--meta-section-end"),
+                              ("title_patterns", "--meta-title-pattern"), ("author_patterns", "--meta-author-pattern"),
+                              ("attribution_patterns", "--meta-attribution-pattern")):
+                for pat in meta_layer.get(key, []) or []:
+                    argv += [flag, pat]
+            _opt(argv, "--meta-author-max-tokens", meta_layer.get("author_max_tokens"))
+            _opt(argv, "--meta-author-max-len", meta_layer.get("author_max_len"))
             argv += (["--force"] if force else []) + list(extra.get("clean", []))
             plan.append(("clean", argv))
 

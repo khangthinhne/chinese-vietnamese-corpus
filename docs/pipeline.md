@@ -47,6 +47,45 @@ chỉ cần một mục, cấu hình `clean.<layer>` hỗ trợ hai regex (tùy 
   mục kế tiếp nằm ngoài phạm vi trang OCR đã chọn).
 - CLI tương đương: `--start-after REGEX`, `--end-before REGEX`. Không cấu hình gì = hành vi cũ.
 
+## Trích xuất metadata cấp tài liệu (src/cleaning/metadata.py)
+Chạy NGAY SAU lọc trang, TRƯỚC mọi bước làm sạch nội dung, để tiêu đề/tác giả/quy trách
+không lọt vào corpus dóng hàng:
+
+```text
+front_matter / ocr_noise -> [section_start marker] -> title | author | attribution -> body
+```
+
+- Bật qua config `metadata_extraction` (src/pipeline.py) hoặc CLI `--meta-*` của clean.
+  KHÔNG cấu hình gì = **no-op hoàn toàn** (không bao giờ xoá metadata phá huỷ).
+- Lớp `han`: thường không có marker; tiêu đề qua `title_patterns` (vd đánh số `1﹒`),
+  quy trách qua `attribution_patterns` (vd `^.{0,3}\*`), thân bài = dòng có dấu ngắt câu.
+- Lớp `am`/`nghia`: `section_start` (`PHIÊN ÂM` / `DỊCH NGHĨA`) mở khối metadata; dòng
+  TRƯỚC marker = `front_matter` (lời dẫn) hoặc `ocr_noise` (rác OCR); tiêu đề/tác giả =
+  các dòng CHỮ HOA trước thân bài (dòng cuối khối đúng "dạng tên người" = tác giả,
+  còn lại = tiêu đề); `attribution_patterns` (`^\*`) bắt dòng quy trách; `section_end`
+  (`DỊCH NGHĨA` / `CHÚ THÍCH`) cắt phần sau (`after_section_end`).
+- Tiêu đề nhiều dòng được GHỘP MỘT giá trị nhưng giữ nguyên từng `source_ids`/`pages`.
+- Dòng không xếp loại được trong khối metadata → `metadata_uncertain`: bị loại khỏi corpus
+  chính nhưng vào review_required.tsv + file metadata (không xoá lặng lẽ).
+- Nhiều `<SECT>` = nhiều tài liệu: metadata tách theo `document_id` (tiền tố ID dòng),
+  không bao giờ trộn lẫn.
+- Khi metadata trích được, các ranh giới do metadata lo (`section_start`/`section_end`);
+  KHÔNG dùng đồng thời `clean.<layer>.start_after/end_before` cho cùng marker (sẽ báo lỗi
+  vì marker đã bị metadata stage loại trước).
+
+Output trong `03_cleaned/`:
+
+| Tệp | Nội dung |
+|---|---|
+| `<layer>.metadata.jsonl` | metadata theo từng tài liệu của lớp: fields + uncertain + status |
+| `document_metadata.jsonl` | GỘP MỌI LỚP theo `document_id`: title/author/attribution của han/am/nghia + source_pages |
+| `file_metadata.json` | `<FILE><meta>` của mọi lớp (file-level: TITLE, LANGUAGE, OCR...) |
+
+Lý do mới trong `dropped.tsv`: `front_matter`, `ocr_noise`, `section_marker`,
+`metadata_title`, `metadata_author`, `metadata_attribution`, `metadata_uncertain`,
+`after_section_end`.
+
+
 ## Bộ làm sạch module-hoá (src/cleaning/)
 `src/preprocessing/clean.py` giờ chỉ là wrapper tương thích (re-export từ `src/cleaning`).
 Chuỗi 10 bước, mỗi bước nhận `list[RawLine]` + `CleanConfig` + `Audit` và trả về

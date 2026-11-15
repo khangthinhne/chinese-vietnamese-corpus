@@ -49,6 +49,15 @@ EDITORIAL_NOTE = "editorial_note"
 UNCERTAIN_NOTE = "uncertain_note"
 OCR_ARTIFACT = "ocr_artifact"
 UNCERTAIN = "uncertain"
+# metadata cấp tài liệu (src/cleaning/metadata.py)
+SECTION_MARKER = "section_marker"            # PHIÊN ÂM / DỊCH NGHĨA / CHÚ THÍCH...
+FRONT_MATTER = "front_matter"                # lời dẫn trước marker (giữ audit, không vào corpus)
+OCR_NOISE = "ocr_noise"                      # rác OCR / trang trí trước marker
+METADATA_TITLE = "metadata_title"
+METADATA_AUTHOR = "metadata_author"
+METADATA_ATTRIBUTION = "metadata_attribution"
+METADATA_UNCERTAIN = "metadata_uncertain"    # dòng metadata không chắc -> review, không xoá lặng lẽ
+AFTER_SECTION_END = "after_section_end"      # phần sau marker kết thúc (CHÚ THÍCH...)
 
 
 @dataclass
@@ -89,6 +98,24 @@ class FootnoteConfig:
 
 
 @dataclass
+class MetadataConfig:
+    """Trích xuất metadata cấp tài liệu (tiêu đề/tác giả/quy trách) khỏi dòng chữ chính.
+
+    Không cấu hình gì (không markers, không patterns) -> bước này NO-OP hoàn toàn:
+    thiếu cấu hình KHÔNG bao giờ dẫn tới xoá metadata phá huỷ.
+    """
+    enabled: bool = True
+    exclude_from_main_text: bool = True         # False: vẫn nhận diện nhưng giữ trong dòng chính
+    section_start: list[str] = field(default_factory=list)  # marker mở khối (PHIÊN ÂM / DỊCH NGHĨA...)
+    section_end: list[str] = field(default_factory=list)    # marker đóng (CHÚ THÍCH...): sau đó bị loại
+    title_patterns: list[str] = field(default_factory=list)  # regex ÉP phân loại tiêu đề
+    author_patterns: list[str] = field(default_factory=list)
+    attribution_patterns: list[str] = field(default_factory=list)  # vd r"^\*" dòng quy trách
+    author_max_tokens: int = 4                  # "dạng tên người": tối đa bao nhiêu token
+    author_max_len: int = 24                    # và độ dài ký tự tối đa (lớp Hán nên đặt nhỏ hơn)
+
+
+@dataclass
 class CleanConfig:
     layer: str
     split: str = "punct"
@@ -119,6 +146,7 @@ class CleanConfig:
     # --- cấu hình con ---
     ocr: OCRCleaningConfig = field(default_factory=OCRCleaningConfig)
     footnotes: FootnoteConfig = field(default_factory=FootnoteConfig)
+    metadata: MetadataConfig = field(default_factory=MetadataConfig)
 
     def __post_init__(self) -> None:
         # chỉ mục chú thích: hai công tắc phải cùng bật

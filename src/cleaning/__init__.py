@@ -24,6 +24,10 @@ from src.cleaning.reconstruction import reconstruct_page_boundaries
 from src.cleaning.normalization import clean_han_line, clean_vi_line, is_parenthesized
 from src.cleaning.filtering import drop_reason, filter_invalid_lines
 from src.cleaning.segmentation import (build_stream, make_sentences, split_han, split_vi)
+from src.cleaning.metadata import (DocumentMetadata, MetadataConfig, MetadataOccurrence,  # noqa: F401
+                                   MetadataResult, aggregate_document_metadata,
+                                   aggregate_file_metadata, extract_metadata,
+                                   write_layer_metadata)
 from src.cleaning.pipeline import (CleanOutput, clean_layer, create_parser, main,  # noqa: F401
                                    read_raw_lines, run, run_cleaning)
 
@@ -32,4 +36,7 @@ __all__ = ["CleanConfig", "RawLine", "Audit", "normalize_unicode", "filter_pages
            "clean_ocr_artifacts", "clean_lines", "reconstruct_page_boundaries",
            "clean_han_line", "clean_vi_line", "drop_reason", "filter_invalid_lines",
            "build_stream", "split_han", "split_vi", "make_sentences", "clean_layer",
-           "run", "main", "create_parser", "read_raw_lines", "is_parenthesized"]
+           "run", "main", "create_parser", "read_raw_lines", "is_parenthesized",
+           "MetadataConfig", "extract_metadata", "MetadataResult", "DocumentMetadata",
+           "MetadataOccurrence", "aggregate_document_metadata", "aggregate_file_metadata",
+           "write_layer_metadata"]

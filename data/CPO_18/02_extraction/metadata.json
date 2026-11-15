@@ -103,7 +103,7 @@
         }
       ],
       "review_required": true,
-      "run_at": "2026-11-15T09:39:01+00:00"
+      "run_at": "2026-11-15T12:24:24+00:00"
     },
     "am": {
       "output": "02_extraction/am.xml",
@@ -186,7 +186,7 @@
         }
       ],
       "review_required": true,
-      "run_at": "2026-11-15T09:39:05+00:00"
+      "run_at": "2026-11-15T12:24:25+00:00"
     },
     "han_cleaned": {
       "input": "02_extraction/han.xml",
@@ -199,9 +199,15 @@
         "cross_page": 0,
         "no_terminal_punct": 0,
         "long": 0,
-        "section_lines": 11,
+        "section_lines": 8,
         "pages_removed": 0,
         "duplicates": 0,
+        "metadata_fields": {
+          "title": 1,
+          "author": 1,
+          "attribution": 1
+        },
+        "metadata_excluded": 3,
         "notes": {
           "bibliographic_note": 1
         },
@@ -224,6 +230,19 @@
         "footnotes": {
           "enabled": true,
           "policy": "exclude"
+        },
+        "metadata": {
+          "enabled": true,
+          "exclude_from_main_text": true,
+          "section_start": [],
+          "section_end": [],
+          "title_patterns": [
+            "^\\s*\\d{1,3}\\s*[·.．、﹒)]"
+          ],
+          "author_patterns": [],
+          "attribution_patterns": [
+            "^.{0,3}\\*"
+          ]
         }
       },
       "section": {
@@ -234,12 +253,12 @@
         "end_found": false,
         "first_page": 205,
         "last_page": 205,
-        "n_selected": 11,
+        "n_selected": 8,
         "n_excluded": 0
       },
       "pages_removed": [],
       "review_required": true,
-      "run_at": "2026-11-15T11:28:00+00:00"
+      "run_at": "2026-11-15T12:15:53+00:00"
     },
     "am_images": {
       "source": {
@@ -280,17 +299,22 @@
       "output": "03_cleaned/am.jsonl",
       "stats": {
         "raw_lines": 53,
-        "kept_lines": 11,
-        "dropped_lines": 42,
+        "kept_lines": 8,
+        "dropped_lines": 45,
         "sentences": 5,
         "cross_page": 1,
         "no_terminal_punct": 0,
         "long": 0,
-        "section_lines": 16,
+        "section_lines": 12,
         "pages_removed": 0,
         "duplicates": 0,
+        "metadata_fields": {
+          "title": 1,
+          "author": 1,
+          "attribution": 1
+        },
+        "metadata_excluded": 41,
         "notes": {
-          "footnote": 1,
           "bibliographic_note": 1
         },
         "reconstructions": {
@@ -315,22 +339,37 @@
         "footnotes": {
           "enabled": true,
           "policy": "exclude"
+        },
+        "metadata": {
+          "enabled": true,
+          "exclude_from_main_text": true,
+          "section_start": [
+            "^PHIÊN ÂM\\s*:?$"
+          ],
+          "section_end": [
+            "^DỊCH NGHĨA\\s*:?$"
+          ],
+          "title_patterns": [],
+          "author_patterns": [],
+          "attribution_patterns": [
+            "^\\*"
+          ]
         }
       },
       "section": {
-        "status": "ok",
-        "start_pattern": "^PHIÊN ÂM\\s*:$",
-        "end_pattern": "^DỊCH NGHĨA\\s*:$",
-        "start_found": true,
-        "end_found": true,
+        "status": "unbounded",
+        "start_pattern": null,
+        "end_pattern": null,
+        "start_found": false,
+        "end_found": false,
         "first_page": 205,
         "last_page": 206,
-        "n_selected": 16,
-        "n_excluded": 37
+        "n_selected": 12,
+        "n_excluded": 0
       },
       "pages_removed": [],
       "review_required": true,
-      "run_at": "2026-11-15T11:28:00+00:00"
+      "run_at": "2026-11-15T12:15:53+00:00"
     },
     "nghia_images": {
       "source": {
@@ -423,24 +462,29 @@
         }
       ],
       "review_required": true,
-      "run_at": "2026-11-15T09:39:10+00:00"
+      "run_at": "2026-11-15T12:24:25+00:00"
     },
     "nghia_cleaned": {
       "input": "02_extraction/nghia.xml",
       "output": "03_cleaned/nghia.jsonl",
       "stats": {
         "raw_lines": 28,
-        "kept_lines": 13,
-        "dropped_lines": 15,
+        "kept_lines": 10,
+        "dropped_lines": 18,
         "sentences": 5,
         "cross_page": 0,
         "no_terminal_punct": 1,
         "long": 0,
-        "section_lines": 17,
+        "section_lines": 13,
         "pages_removed": 0,
         "duplicates": 0,
+        "metadata_fields": {
+          "title": 1,
+          "author": 1,
+          "attribution": 1
+        },
+        "metadata_excluded": 15,
         "notes": {
-          "footnote": 1,
           "bibliographic_note": 1
         },
         "reconstructions": {},
@@ -463,22 +507,37 @@
         "footnotes": {
           "enabled": true,
           "policy": "exclude"
+        },
+        "metadata": {
+          "enabled": true,
+          "exclude_from_main_text": true,
+          "section_start": [
+            "^DỊCH NGHĨA\\s*:?$"
+          ],
+          "section_end": [
+            "^CHÚ THÍCH\\s*:?$"
+          ],
+          "title_patterns": [],
+          "author_patterns": [],
+          "attribution_patterns": [
+            "^\\*"
+          ]
         }
       },
       "section": {
-        "status": "ok",
-        "start_pattern": "^DỊCH NGHĨA\\s*:$",
-        "end_pattern": "^CHÚ THÍCH\\s*:$",
-        "start_found": true,
-        "end_found": true,
+        "status": "unbounded",
+        "start_pattern": null,
+        "end_pattern": null,
+        "start_found": false,
+        "end_found": false,
         "first_page": 206,
         "last_page": 206,
-        "n_selected": 17,
-        "n_excluded": 11
+        "n_selected": 13,
+        "n_excluded": 0
       },
       "pages_removed": [],
       "review_required": true,
-      "run_at": "2026-11-15T11:28:01+00:00"
+      "run_at": "2026-11-15T12:15:53+00:00"
     },
     "han-am_alignment": {
       "output": "04_alignment/han-am.jsonl",
@@ -502,18 +561,18 @@
           "1-2": 1
         },
         "unaligned": 0,
-        "low_score": 1
+        "low_score": 0
       },
       "low_score_threshold": 0.6,
       "review_required": true,
-      "run_at": "2026-11-15T11:30:03+00:00"
+      "run_at": "2026-11-15T12:18:29+00:00"
     },
     "han-am_export": {
       "name": "CPO_18_han-am_parallel",
       "report": {
         "name": "CPO_18_han-am_parallel",
         "pair": "han-am",
-        "generated_at": "2026-11-15T11:22:05+00:00",
+        "generated_at": "2026-11-15T12:19:24+00:00",
         "pairs_exported": 4,
         "han_sentences": 4,
         "am_sentences": 5,
@@ -522,7 +581,7 @@
           "1-2": 1
         },
         "skipped": {},
-        "low_score_exported": 1,
+        "low_score_exported": 0,
         "cross_page_exported": 1,
         "self_check": {
           "no_empty_cell": true,
@@ -536,7 +595,7 @@
         }
       },
       "review_required": true,
-      "run_at": "2026-11-15T11:22:05+00:00"
+      "run_at": "2026-11-15T12:19:24+00:00"
     },
     "han-nghia_alignment": {
       "output": "04_alignment/han-nghia.jsonl",
@@ -557,18 +616,18 @@
           "1-2": 1
         },
         "unaligned": 0,
-        "low_score": 2
+        "low_score": 0
       },
       "low_score_threshold": 0.6,
       "review_required": true,
-      "run_at": "2026-11-15T11:30:03+00:00"
+      "run_at": "2026-11-15T12:18:29+00:00"
     },
     "han-nghia_export": {
       "name": "CPO_18_han-nghia_parallel",
       "report": {
         "name": "CPO_18_han-nghia_parallel",
         "pair": "han-nghia",
-        "generated_at": "2026-11-15T11:22:05+00:00",
+        "generated_at": "2026-11-15T12:19:24+00:00",
         "pairs_exported": 4,
         "han_sentences": 4,
         "nghia_sentences": 5,
@@ -577,7 +636,7 @@
           "1-2": 1
         },
         "skipped": {},
-        "low_score_exported": 2,
+        "low_score_exported": 0,
         "cross_page_exported": 0,
         "self_check": {
           "no_empty_cell": true,
@@ -591,7 +650,7 @@
         }
       },
       "review_required": true,
-      "run_at": "2026-11-15T11:22:05+00:00"
+      "run_at": "2026-11-15T12:19:24+00:00"
     }
   },
   "work_id": "CPO_18"

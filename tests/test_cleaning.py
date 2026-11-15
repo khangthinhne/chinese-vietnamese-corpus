@@ -125,15 +125,15 @@ def test_artifacts_markers_removed_editorial_kept():
 
 
 def test_artifacts_noise_removed_suspect_flagged():
-    text = "suông mà không có thực ®? lợi N cho M4 ` không"
+    text = "suông mà không có thực ®? lợi N cho M4 ` \" không"
     audit = Audit(WORK, "nghia")
     out = clean_lines([RawLine("a", 1, text)], OCRCleaningConfig(), audit, "nghia")
     t = out[0].text
-    assert "®" not in t                                                # nhiễu biết chắc: XOÁ
+    assert "®" not in t and "`" not in t                              # nhiễu biết chắc: XOÁ
     assert ("noise_char", "®") in clean_ocr_artifacts(text, OCRCleaningConfig()).removed
-    for ch in ("N", "M4", "`"):
-        assert ch in t                                                 # nghi vấn: GIỮ, chỉ cờ
-    assert "uncertain:`" in out[0].flags
+    for ch in ("N", "M4", '"'):
+        assert ch in t                                                # nghi vấn: GIỮ, chỉ cờ
+    assert 'uncertain:' + '"' in out[0].flags
     assert audit.reviews and all(r["line_id"] == "a" for r in audit.reviews)
 
 
@@ -307,7 +307,7 @@ def test_segmentation_keeps_source_metadata():
 def test_run_cleaning_end_to_end_synthetic():
     lines = [rl(1, 205, "SAUU TẦM"), rl(2, 205, "Trang 205"),
              rl(3, 205, "* Chú thích: theo Hoằng minh tập."),
-             rl(4, 205, "Rằng, chỗ Đạo thanh hư, tứ đại ® lẽ thường. `"),
+             rl(4, 205, 'Rằng, chỗ Đạo thanh hư, tứ đại ® lẽ thường. "'),
              rl(5, 205, "Nay đang lúc di tìm nguồn cội Phương tây, cúi"),
              rl(6, 206, "( Hoằng minh tập, Q. 11 ; Toàn Thương"),
              rl(7, 206, "cổ, Tam đại, Tôn, Hán, Q.57 )"),

@@ -22,8 +22,8 @@ from pathlib import Path
 from src.common.corpus import DataLayout, MetadataStore, base_parser, parse_args, parse_pages
 from src.common.sentences import Sentence, atomic_write_text, cleaned_dir, save_sentences
 
-from src.cleaning.model import (DEFAULT_DROP, DUPLICATE_LINE, VI_ABBREV, CleanConfig,
-                                FootnoteConfig, OCRCleaningConfig, RawLine)
+from src.cleaning.model import (DEFAULT_DROP, DUPLICATE_LINE, UNCERTAIN, VI_ABBREV, CleanConfig,
+                                FootnoteConfig, MetadataConfig, OCRCleaningConfig, RawLine)
 from src.cleaning.audit import Audit, write_audit_files
 from src.cleaning.unicode import normalize_unicode
 from src.cleaning.page_filter import filter_pages
@@ -35,6 +35,8 @@ from src.cleaning.reconstruction import reconstruct_page_boundaries
 from src.cleaning.normalization import normalize_lines
 from src.cleaning.filtering import filter_invalid_lines
 from src.cleaning.segmentation import make_sentences
+from src.cleaning.metadata import (aggregate_document_metadata, aggregate_file_metadata,
+                                   extract_metadata, write_layer_metadata)
 
 log = logging.getLogger("clean")
 
@@ -69,6 +71,7 @@ class CleanOutput:
     duplicates: list[dict]
     reconstructions: list[dict]
     pages: list[dict]
+    metadata_docs: list[dict]
 
 
 def run_cleaning(work_id: str, layer: str, raw_lines: list[RawLine], cfg: CleanConfig) -> CleanOutput:
@@ -82,6 +85,28 @@ def run_cleaning(work_id: str, layer: str, raw_lines: list[RawLine], cfg: CleanC
 
     # 2. Trang: loại thủ công / trắng / header-footer lặp
     lines, page_records = filter_pages(lines, cfg, audit)
+
+    # 2.5 Metadata cấp tài liệu: tiêu đề/tác giả/quy trách + ranh giới PHIÊN ÂM/DỊCH NGHĨA/CHÚ THÍCH.
+    #     Không cấu hình gì -> no-op (không xoá gì); dòng trích được KHÔNG đi vào corpus chính.
+    meta_lines, meta = extract_metadata(lines, cfg.metadata, layer)
+    meta_rows: list[tuple[str, int, str, str]] = []
+    meta_removed = meta.excluded + meta.uncertain if cfg.metadata.exclude_from_main_text else []
+    for ln, reason in meta_removed:
+        audit.add("remove_line", reason, rule="metadata", line=ln)
+        meta_rows.append((ln.id, ln.page, reason, ln.raw_text or ln.text))
+    for ln, reason in meta.uncertain:
+        audit.flag_review(ln, UNCERTAIN, rule="metadata",
+                          note="dòng trong khối metadata không xếp loại chắc chắn")
+    for doc in meta.documents:
+        for occ in doc.fields:
+            for ln in occ.lines:
+                audit.add("extract_metadata", f"metadata_{occ.field}", rule=f"metadata:{occ.field}",
+                          line=ln, note=occ.text)
+            if occ.confidence == "ambiguous":
+                for ln in occ.lines:
+                    audit.flag_review(ln, UNCERTAIN, rule=f"metadata:{occ.field}",
+                                      note="phân loại tiêu đề/tác giả mơ hồ theo dạng dòng")
+    lines = meta_lines if cfg.metadata.exclude_from_main_text else lines
 
     # 3. Cắt đoạn theo ranh giới config (nếu không cấu hình -> giữ nguyên, info unbounded)
     lines, sec_info = extract_section(lines, cfg.start_after, cfg.end_before)
@@ -122,8 +147,10 @@ def run_cleaning(work_id: str, layer: str, raw_lines: list[RawLine], cfg: CleanC
     # 10. Tách câu
     sentences, dropped_sent = make_sentences(work_id, layer, kept, cfg)
 
-    dropped_all = [(ln.id, ln.page, f"section_{reason}", ln.raw_text or ln.text)
-                   for ln, reason in sec_info.excluded] + fn_rows + dup_rows \
+    dropped_all = [(ln.id, ln.page, reason, ln.raw_text or ln.text)
+                   for ln, reason in meta_removed] + \
+        [(ln.id, ln.page, f"section_{reason}", ln.raw_text or ln.text)
+         for ln, reason in sec_info.excluded] + fn_rows + dup_rows \
         + dropped_rows + dropped_sent
     stats = {
         "raw_lines": len(raw_lines), "kept_lines": len(kept),
@@ -135,6 +162,10 @@ def run_cleaning(work_id: str, layer: str, raw_lines: list[RawLine], cfg: CleanC
         "section_lines": sec_info.n_selected,
         "pages_removed": len(page_records),
         "duplicates": len(dup_records),
+        "metadata_fields": {f: sum(1 for d in meta.documents for o in d.fields if o.field == f)
+                            for f in ("title", "author", "attribution")
+                            if any(o.field == f for d in meta.documents for o in d.fields)},
+        "metadata_excluded": len(meta_removed),
         "notes": {cat: sum(1 for n in fn_res.notes if n.category == cat)
                   for cat in ("footnote", "bibliographic_note", "editorial_note", "uncertain_note")
                   if any(n.category == cat for n in fn_res.notes)},
@@ -142,8 +173,9 @@ def run_cleaning(work_id: str, layer: str, raw_lines: list[RawLine], cfg: CleanC
                             for t in {r["type"] for r in recon_records}},
         "review_flags": len(audit.reviews),
     }
+    metadata_docs = [meta.doc_row(work_id, d) for d in meta.documents]
     return CleanOutput(sentences, dropped_all, stats, audit, sec_info,
-                       fn_res.notes, dup_records, recon_records, page_records)
+                       fn_res.notes, dup_records, recon_records, page_records, metadata_docs)
 
 
 def clean_layer(work_id: str, layer: str, raw_lines: list[RawLine], cfg: CleanConfig):
@@ -183,6 +215,17 @@ def build_config(args, layer: str) -> CleanConfig:
             replace_patterns=[_parse_replace(r) for r in (args.ocr_replace or [])],
         ),
         footnotes=FootnoteConfig(),
+        metadata=MetadataConfig(
+            enabled=not args.no_metadata,
+            exclude_from_main_text=not args.metadata_keep,
+            section_start=list(args.meta_section_start or []),
+            section_end=list(args.meta_section_end or []),
+            title_patterns=list(args.meta_title_pattern or []),
+            author_patterns=list(args.meta_author_pattern or []),
+            attribution_patterns=list(args.meta_attribution_pattern or []),
+            author_max_tokens=args.meta_author_max_tokens,
+            author_max_len=args.meta_author_max_len,
+        ),
     )
 
 
@@ -209,6 +252,9 @@ def run(args) -> Path:
 
     save_sentences(layout, layer, out.sentences)
     atomic_write_text(out_dir / f"{layer}.txt", "".join(s.text + "\n" for s in out.sentences))
+    write_layer_metadata(out_dir, layer, out.metadata_docs)  # <layer>.metadata.jsonl
+    aggregate_document_metadata(out_dir, args.work_id)  # gộp mọi lớp -> document_metadata.jsonl
+    aggregate_file_metadata(layout, out_dir)            # <FILE><meta> mọi lớp -> file_metadata.json
     atomic_write_text(out_dir / f"{layer}.dropped.tsv", "id\tpage\treason\ttext\n" + "".join(
         f"{i}\t{p}\t{r}\t{t.replace(chr(9), ' ').replace(chr(10), ' ')}\n" for i, p, r, t in out.dropped_rows))
     write_audit_files(out_dir, out.audit, out.notes, out.duplicates, out.reconstructions)
@@ -221,7 +267,14 @@ def run(args) -> Path:
                        "remove_headers": cfg.remove_headers, "remove_footers": cfg.remove_footers,
                        "remove_duplicates": cfg.remove_duplicates,
                        "reconstruct_page_boundaries": cfg.reconstruct_page_boundaries,
-                       "footnotes": {"enabled": cfg.footnotes.enabled, "policy": cfg.footnotes.policy}},
+                       "footnotes": {"enabled": cfg.footnotes.enabled, "policy": cfg.footnotes.policy},
+                       "metadata": {"enabled": cfg.metadata.enabled,
+                                    "exclude_from_main_text": cfg.metadata.exclude_from_main_text,
+                                    "section_start": cfg.metadata.section_start,
+                                    "section_end": cfg.metadata.section_end,
+                                    "title_patterns": cfg.metadata.title_patterns,
+                                    "author_patterns": cfg.metadata.author_patterns,
+                                    "attribution_patterns": cfg.metadata.attribution_patterns}},
         "section": out.section.as_dict(),
         "pages_removed": out.pages,
         "review_required": True})
@@ -258,6 +311,25 @@ def create_parser():
     p.add_argument("--footnote-policy", choices=["exclude", "preserve", "review"], default="exclude")
     p.add_argument("--no-paren-notes", action="store_true", help="Tắt nhận diện chú thích ngoặc nhiều dòng")
     p.add_argument("--no-bib-notes", action="store_true", help="Tắt nhận diện trích dẫn nguồn")
+    # metadata cấp tài liệu (tiêu đề / tác giả / quy trách)
+    p.add_argument("--no-metadata", action="store_true",
+                   help="Tắt trích xuất metadata (mặc định bật nhưng no-op khi không có luật)")
+    p.add_argument("--metadata-keep", action="store_true",
+                   help="Vẫn trích xuất metadata nhưng GIỮ các dòng trong corpus chính")
+    p.add_argument("--meta-section-start", action="append", metavar="REGEX",
+                   help="Marker mở khối metadata (vd '^PHIÊN ÂM\\s*:'); phần TRƯỚC marker = front_matter")
+    p.add_argument("--meta-section-end", action="append", metavar="REGEX",
+                   help="Marker đóng (vd '^CHÚ THÍCH\\s*:'); phần SAU marker bị loại khỏi corpus chính")
+    p.add_argument("--meta-title-pattern", action="append", metavar="REGEX",
+                   help="Regex ép phân loại dòng là TIÊU ĐỀ (lặp lại được)")
+    p.add_argument("--meta-author-pattern", action="append", metavar="REGEX",
+                   help="Regex ép phân loại dòng là TÁC GIẢ (lặp lại được)")
+    p.add_argument("--meta-attribution-pattern", action="append", metavar="REGEX",
+                   help="Regex nhận diện dòng quy trách/ghi chú tác giả (lặp lại được)")
+    p.add_argument("--meta-author-max-tokens", type=int, default=4,
+                   help="'Dạng tên người': số token tối đa để đoán dòng cuối khối là tác giả")
+    p.add_argument("--meta-author-max-len", type=int, default=24,
+                   help="'Dạng tên người': độ dài ký tự tối đa (lớp Hán nên đặt ~8)")
     # nhiễu OCR cấu hình được
     p.add_argument("--ocr-remove", action="append", help="Regex xoá (lặp lại được; tắt mặc định)")
     p.add_argument("--ocr-replace", action="append", help="'REGEX=>THAY_THẾ' (lặp lại được)")
