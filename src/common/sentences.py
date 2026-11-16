@@ -1,11 +1,11 @@
 """Mô hình dữ liệu + I/O dùng chung cho các tầng SAU extraction.
 
-    02_extraction/<layer>.xml      (do pdf/web/ocr sinh ra)
- -> 03_cleaned/<layer>.jsonl       Sentence đã làm sạch + tách câu   (preprocessing/clean.py)
- -> 04_alignment/<pair>.jsonl      Bead = một cặp/nhóm dóng hàng     (alignment/align.py)
- -> 04_alignment/<name>.tsv|xlsx   file bàn giao                      (alignment/export.py)
+    03_ocr/ocr_raw/<he>.xml          dòng OCR đã chọn (do ocr sinh ra)
+ -> 05_cleaning/<layer>.xml         Sentence đã làm sạch + tách câu   (preprocessing/clean.py)
+ -> 06_alignment/<pair>.xml         Bead = một cặp/nhóm dóng hàng     (alignment/align.py)
+ -> 07_export/<name>.tsv|xlsx       file bàn giao                      (alignment/export.py)
 
-Không sửa corpus.py: chỉ dùng lại DataLayout, MetadataStore, LAYERS.
+JSONL cũ vẫn đọc được để tương thích dữ liệu đã sinh trước đây.
 """
 
 from __future__ import annotations
@@ -15,11 +15,13 @@ import json
 import logging
 import os
 import tempfile
-from dataclasses import asdict, dataclass, field
+from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Iterable
 
 from src.common.corpus import LAYERS, DataLayout
+from src.common.xmlstore import (add, file_element, int_list_attr, list_attr, read_root,
+                                 text_of, write_file_root, write_root)
 
 log = logging.getLogger("sentences")
 
@@ -63,8 +65,18 @@ def find_alignment_dir(layout: DataLayout) -> Path:
     return legacy if legacy.exists() else new
 
 
+def find_cleaned_file(layout: DataLayout, layer: str) -> Path:
+    """Ưu tiên XML; chỉ rơi về JSONL khi XML chưa có nhưng JSONL cũ tồn tại."""
+    directory = find_cleaned_dir(layout)
+    xml, jsonl = directory / f"{layer}.xml", directory / f"{layer}.jsonl"
+    return xml if xml.exists() or not jsonl.exists() else jsonl
+
+
 def find_alignment_file(layout: DataLayout, pair: str) -> Path:
-    return find_alignment_dir(layout) / f"{pair}.jsonl"
+    """Ưu tiên XML; chỉ rơi về JSONL khi XML chưa có nhưng JSONL cũ tồn tại."""
+    directory = find_alignment_dir(layout)
+    xml, jsonl = directory / f"{pair}.xml", directory / f"{pair}.jsonl"
+    return xml if xml.exists() or not jsonl.exists() else jsonl
 
 
 # --------------------------------------------------------------------------- #
@@ -121,18 +133,35 @@ def read_jsonl(path: Path) -> list[dict]:
 
 
 def save_sentences(layout: DataLayout, layer: str, sentences: list[Sentence]) -> Path:
-    out = cleaned_dir(layout) / f"{layer}.jsonl"
-    write_jsonl(out, (asdict(s) for s in sentences))
-    return out
+    out = cleaned_dir(layout) / f"{layer}.xml"
+    root = write_file_root(out, layout.work_id)
+    layer_el = add(file_element(root), "LAYER", NAME=layer)
+    for sentence in sentences:
+        add(layer_el, "SENTENCE", sentence.text, ID=sentence.id,
+            DOCUMENT_ID=sentence.document_id or None,
+            PAGES=",".join(str(p) for p in sentence.pages) or None,
+            SRC_IDS=",".join(sentence.src_ids) or None,
+            FLAGS=",".join(sentence.flags) or None)
+    return write_root(out, root)
 
 
 def load_sentences(layout: DataLayout, layer: str) -> list[Sentence]:
-    path = find_cleaned_dir(layout) / f"{layer}.jsonl"
+    directory = find_cleaned_dir(layout)
+    xml_path = directory / f"{layer}.xml"
+    if xml_path.exists():
+        root = read_root(xml_path)
+        layer_el = file_element(root).find("LAYER")
+        units = layer_el.findall("SENTENCE") if layer_el is not None else []
+        return [Sentence(id=el.get("ID", ""), text=text_of(el),
+                         pages=int_list_attr(el, "PAGES"),
+                         src_ids=list_attr(el, "SRC_IDS"), flags=list_attr(el, "FLAGS"),
+                         document_id=el.get("DOCUMENT_ID", "")) for el in units]
+    path = directory / f"{layer}.jsonl"
     try:
         rows = read_jsonl(path)
     except FileNotFoundError:
         raise FileNotFoundError(
-            f"Chưa có {path}; chạy clean --layer {layer} (hoặc pipeline) trước") from None
+            f"Chưa có {xml_path}; chạy clean --layer {layer} (hoặc pipeline) trước") from None
     return [Sentence(**r) for r in rows]
 
 

@@ -23,12 +23,13 @@ from typing import Callable
 
 from PIL import Image
 
+from src.common import deps
 from src.common.corpus import (
     LAYERS, DataLayout, MetadataStore, RawPage, base_parser, build_document,
     filter_lines, finalize, make_meta, parse_args, parse_pages, parse_region,
     register_source, sha256_file, write_json,
 )
-from src.ocr import raw_store
+from src.ocr import raw_store, raw_xml
 from src.ocr.engines import ENGINES, DEFAULT_ENGINE, OcrEngine, OcrLine, OcrResult, register_engine
 
 log = logging.getLogger(__name__)
@@ -308,9 +309,16 @@ def run_writing_system(args) -> Path:
     keep = None if keep == "none" else keep
     layout = DataLayout(Path(args.data_root), args.work_id)
     target = raw_store.manifest_path(layout, writing_system)
-    if target.exists() and not args.force:
-        raise FileExistsError(f"{target} đã tồn tại; dùng --force để ghi lại manifest (cache vẫn dùng lại)")
-    layout.ensure(layout.ocr_raw_root / writing_system, layout.ocr_manifest_dir)
+    xml_path = layout.ocr_raw_xml_path(writing_system)
+    outputs = [target, xml_path, *(raw_store.raw_path(layout, writing_system, p) for p in pages)]
+    inputs = [*images.values()]
+    if getattr(args, "config", None):
+        inputs.append(Path(args.config))
+    deps.check_fresh(
+        layout, f"ocr:{writing_system}", inputs, outputs, args.force,
+        f"{target} đã tồn tại; dùng --force để ghi lại manifest (cache vẫn dùng lại)")
+    layout.ensure(layout.ocr_raw_root / writing_system, layout.ocr_manifest_dir,
+                  layout.ocr_raw_xml)
     descriptors = {name: ENGINES[name].describe(lang) for name in args.engines}
     workers = min(args.workers, len(pages), *(ENGINES[n].max_workers for n in args.engines))
     worker_state = threading.local()
@@ -336,8 +344,11 @@ def run_writing_system(args) -> Path:
         "review_required": True,
     }
     path = raw_store.write_manifest(layout, writing_system, record)
+    xml_path = raw_xml.write_writing_system(layout, writing_system, pages)
+    deps.record(layout, f"ocr:{writing_system}", inputs, [*outputs, xml_path])
     MetadataStore(layout).update(f"{writing_system}_ocr", {
-        "output": layout.rel(path), "source": {"path": str(source)},
+        "output": layout.rel(path), "xml": layout.rel(xml_path),
+        "source": {"path": str(source)},
         "counts": {"pages": len(pages), "lines": sum(r["n_lines"] for r in results)},
         "parameters": record["parameters"], "low_conf_pages": low_conf,
         "empty_pages": empty, "review_required": True})

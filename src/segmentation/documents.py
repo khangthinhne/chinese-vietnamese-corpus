@@ -39,6 +39,10 @@ def review_row(work_id: str, document_id: str, layer: str, reason: str,
 
 
 def load_writing_system(layout: DataLayout, writing_system: str, pages: list[int]) -> list[OcrLine]:
+    # Đầu ra chuẩn của bước OCR là XML; JSON thô vẫn giữ để tương thích dữ liệu cũ.
+    if layout.ocr_raw_xml_path(writing_system).exists():
+        from src.ocr.raw_xml import load_writing_system as load_xml
+        return load_xml(layout, writing_system, pages)
     manifest = raw_store.load_manifest(layout, writing_system)
     if manifest is None:
         return []

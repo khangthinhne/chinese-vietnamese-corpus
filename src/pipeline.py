@@ -38,7 +38,11 @@ import shlex
 import sys
 from pathlib import Path
 
+from src.alignment.aligners import ALIGNERS
+from src.common.corpus import LAYERS, parse_pages
 from src.common.sentences import parse_pair
+from src.ocr import raw_store
+from src.segmentation.patterns import compile_matcher
 
 log = logging.getLogger("pipeline")
 
@@ -51,6 +55,47 @@ MODULES = {"extract": "src.extraction.pdf_extraction", "ocr": "src.ocr.ocr",
 def uses_writing_system_config(cfg: dict) -> bool:
     """Config kiểu mới có khối 'ocr' (OCR theo hệ chữ) và/hoặc 'segmentation'."""
     return "ocr" in cfg or "segmentation" in cfg
+
+
+def validate_config(cfg: dict) -> None:
+    """Kiểm tra cấu trúc/lớp/nguồn/regex/phương pháp trước khi chạy bất kỳ bước nào."""
+    common = cfg.get("common", {})
+    if not common.get("work_id"):
+        raise ValueError("Config thiếu common.work_id")
+    if common.get("pages"):
+        parse_pages(str(common["pages"]))
+
+    for writing_system in cfg.get("ocr", {}):
+        if writing_system not in raw_store.WRITING_SYSTEMS:
+            raise ValueError(f"ocr.{writing_system}: hệ chữ phải thuộc {raw_store.WRITING_SYSTEMS}")
+
+    seg = cfg.get("segmentation", {})
+    for name, layer in seg.get("layers", {}).items():
+        if name not in LAYERS:
+            raise ValueError(f"segmentation.layers.{name}: lớp không hợp lệ; có {sorted(LAYERS)}")
+        source = layer.get("source") or ("chi_tra" if name == "han" else "vie")
+        if source not in raw_store.WRITING_SYSTEMS:
+            raise ValueError(f"segmentation.layers.{name}.source phải thuộc {raw_store.WRITING_SYSTEMS}")
+        if name == "tho" and source != "vie":
+            raise ValueError("segmentation.layers.tho phải lấy từ hệ chữ 'vie'")
+        for kind in ("start_patterns", "end_patterns"):
+            compile_matcher(layer.get(kind), f"segmentation.layers.{name}.{kind}",
+                            bool(layer.get("case_sensitive")),
+                            heading=bool(layer.get("heading_mode")))
+    for kind in ("start_patterns", "end_patterns"):
+        compile_matcher(seg.get("document", {}).get(kind), f"segmentation.document.{kind}")
+
+    for pair, pc in cfg.get("pairs", {}).items():
+        if pair == "han-viet":
+            continue
+        parse_pair(pair)
+        method = (pc or {}).get("method")
+        if method and method not in ALIGNERS:
+            raise ValueError(f"pairs.{pair}.method không hợp lệ: {method}")
+
+    name = (cfg.get("consolidated") or {}).get("name")
+    if name is not None and not str(name).strip():
+        raise ValueError("consolidated.name không được rỗng")
 
 
 def _opt(argv: list[str], flag: str, value) -> None:
@@ -125,6 +170,8 @@ def _pair_steps(cfg: dict, steps: list[str], pairs: list[str] | None, base: list
     pair_cfgs = cfg.get("pairs", {})
     plan: list[tuple[str, list[str]]] = []
     for pair in pairs or list(pair_cfgs):
+        if pair == "han-viet":                    # chỉ dùng cho export tổng hợp
+            continue
         parse_pair(pair)
         pc = pair_cfgs.get(pair, {})
         if "align" in steps:
@@ -144,6 +191,25 @@ def _pair_steps(cfg: dict, steps: list[str], pairs: list[str] | None, base: list
             argv += (["--force"] if force else []) + list(extra.get("export", []))
             plan.append(("export", argv))
     return plan
+
+
+def _consolidated_steps(cfg: dict, steps: list[str], pairs: list[str] | None,
+                        base: list[str], force: bool,
+                        extra: dict) -> list[tuple[str, list[str]]]:
+    if "export" not in steps or (pairs is not None and "han-viet" not in pairs):
+        return []
+    if not (cfg.get("consolidated") or "han-viet" in cfg.get("pairs", {})
+            or (pairs is not None and "han-viet" in pairs)):
+        return []
+    pc = cfg.get("pairs", {}).get("han-viet", {})
+    cc = cfg.get("consolidated", {})
+    argv = ["--pair", "han-viet", *base]
+    _opt(argv, "--name", cc.get("name") or pc.get("name"))
+    _opt(argv, "--min-score", cc.get("min_score", pc.get("min_score")))
+    for flag in cc.get("exclude_flag", pc.get("exclude_flag", [])):
+        argv += ["--exclude-flag", flag]
+    argv += (["--force"] if force else []) + list(extra.get("export", []))
+    return [("export", argv)]
 
 
 def _new_plan(cfg: dict, steps: list[str], layers: list[str] | None, pairs: list[str] | None,
@@ -206,6 +272,7 @@ def _new_plan(cfg: dict, steps: list[str], layers: list[str] | None, pairs: list
                                               boundaries=False, metadata=False)))
 
     plan += _pair_steps(cfg, steps, pairs, base, force, extra)
+    plan += _consolidated_steps(cfg, steps, pairs, base, force, extra)
     return plan
 
 
@@ -251,6 +318,7 @@ def build_plan(cfg: dict, steps: list[str], layers: list[str] | None, pairs: lis
             plan.append(("clean", _clean_argv(cfg, layer, base, force, extra.get("clean", []))))
 
     plan += _pair_steps(cfg, steps, pairs, base, force, extra)
+    plan += _consolidated_steps(cfg, steps, pairs, base, force, extra)
     return plan
 
 
@@ -280,6 +348,7 @@ def main(argv: list[str] | None = None) -> int:
         p.error(f"Bước không hợp lệ: {bad}")
     cfg = json.loads(Path(args.config).read_text(encoding="utf-8"))
     try:
+        validate_config(cfg)
         plan = build_plan(cfg, steps, args.layers.split(",") if args.layers else None,
                           args.pairs.split(",") if args.pairs else None, args.force,
                           config_path=args.config)

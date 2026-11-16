@@ -17,7 +17,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from src.alignment import align, export                       # noqa: E402
 from src.common.corpus import (DataLayout, RawPage, build_document, make_meta,  # noqa: E402
                                write_xml)
-from src.common.sentences import load_sentences, read_jsonl      # noqa: E402
+from src.common.sentences import load_sentences                 # noqa: E402
+from src.alignment.serialization import read_alignments          # noqa: E402
 from src.preprocessing import clean                              # noqa: E402
 
 WORK = "T_01"
@@ -131,7 +132,7 @@ def test_han_am_levenshtein_then_export(root):
     argv = ["--work-id", WORK, "--data-root", str(root), "--pair", "han-am", "--method", "levenshtein",
             "--opt", f"reading_dict={root / 'han_viet.tsv'}"]
     assert align.main(argv) == 0
-    beads = read_jsonl(root / WORK / "06_alignment" / "han-am.jsonl")
+    beads = read_alignments(root / WORK / "06_alignment" / "han-am.xml")
     assert [b["kind"] for b in beads] == ["1-1"] * 5
     assert all(b["score"] >= 0.9 for b in beads), [b["score"] for b in beads]
 
@@ -159,7 +160,7 @@ def test_han_am_merge_and_omission(root):
     run_clean(root, "am")
     assert align.main(["--work-id", WORK, "--data-root", str(root), "--pair", "han-am", "--method", "levenshtein",
                        "--opt", f"reading_dict={root / 'han_viet.tsv'}"]) == 0
-    beads = read_jsonl(root / WORK / "06_alignment" / "han-am.jsonl")
+    beads = read_alignments(root / WORK / "06_alignment" / "han-am.xml")
     assert [b["kind"] for b in beads] == ["1-1", "2-1", "1-1", "1-0"]
     assert beads[-1]["flags"] == ["unaligned"]
     export.main(["--work-id", WORK, "--data-root", str(root), "--pair", "han-am"])
@@ -172,7 +173,7 @@ def test_han_nghia_length_baseline_covers_everything(root):
     run_clean(root, "nghia", "--drop-pattern", "^Phần II")
     assert align.main(["--work-id", WORK, "--data-root", str(root), "--pair", "han-nghia",
                        "--method", "length"]) == 0
-    beads = read_jsonl(root / WORK / "06_alignment" / "han-nghia.jsonl")
+    beads = read_alignments(root / WORK / "06_alignment" / "han-nghia.xml")
     assert sum(len(b["src_ids"]) for b in beads) == 5
     assert sum(len(b["tgt_ids"]) for b in beads) == len(texts(root, "nghia"))
 
@@ -231,6 +232,21 @@ def test_pipeline_new_config_uses_two_ocr_runs(tmp_path, capsys):
     assert out.count("--writing-system vie") == 1
     assert out.count("--no-metadata") == 3
     assert "--config" in out.split("src.segmentation.pipeline")[1]
+
+
+def test_pipeline_plans_consolidated_han_viet_export(tmp_path, capsys):
+    import json
+    from src import pipeline
+    cfg = {"common": {"work_id": "T_01", "data_root": str(tmp_path)},
+           "pairs": {"han-viet": {}},
+           "consolidated": {"name": "T_01_han-viet_parallel"}}
+    path = tmp_path / "cfg.json"
+    path.write_text(json.dumps(cfg), encoding="utf-8")
+    assert pipeline.main(["--config", str(path), "--steps", "export", "--dry-run"]) == 0
+    out = capsys.readouterr().out
+    assert out.count("src.alignment.export") == 1
+    assert "--pair han-viet" in out
+    assert "--name T_01_han-viet_parallel" in out
 
 
 def test_pipeline_runs_clean_align_export(root):

@@ -1,74 +1,59 @@
-# Hán–Việt Alignment: Extraction Pipeline
+# Xây dựng ngữ liệu song song Hán - Việt
 
-Turns raw sources (PDF, scanned pages, web pages) into raw XML per text layer, ready for cleaning and alignment.
+## 1. Giới thiệu
 
-## Layout
+Dự án hướng đến xây dựng ngữ liệu song song Hán - Việt ở cấp câu/đoạn, phục vụ nghiên cứu và ứng dụng trong lĩnh vực Xử lý ngôn ngữ tự nhiên (NLP).
 
-```
-src/
-  common/corpus.py             shared schema, paths, XML writer, metadata, CLI helpers
-  extraction/pdf_extraction.py PDF -> page images (+ optional Google Drive upload)
-  extraction/web_extraction.py web page -> raw HTML -> XML
-  ocr/ocr.py                   page image directory -> raw OCR JSON -> XML
-configs/CPO_18.json            example shared config
-data/<WORK_ID>/
-  01_sources/                  original files (never edited)
-  02_extraction/               <layer>.xml, metadata.json, 01_page_image/, 02_ocr_raw/
-```
+## 2. Quy trình xử lý
 
-Layers: `han`, `am`, `nghia`, `tho`. Run all commands from the repo root.
+Dự án được chia thành 7 giai đoạn:
 
+| Thư mục           | Chức năng                                            |
+| ----------------- | ---------------------------------------------------- |
+| `01_sources`      | Lưu trữ tài liệu nguồn (`.pdf`, `.html`, ...)        |
+| `02_extraction`   | Trích xuất PDF thành hình ảnh                        |
+| `03_ocr`          | Nhận dạng ký tự, lưu kết quả OCR thô dưới dạng XML   |
+| `04_segmentation` | Phân đoạn tài liệu, văn bản và câu                   |
+| `05_cleaning`     | Làm sạch, loại bỏ nội dung thừa và lỗi OCR           |
+| `06_alignment`    | Dóng hàng Hán - phiên âm, dịch nghĩa và dịch thơ     |
+| `07_export`       | Xuất dữ liệu dóng hàng thành TSV và XLSX             |
 
-## Usage
+Các lớp dữ liệu:
 
-**PDF to page images** (optionally upload to Drive for bulk OCR)
+- `han`: Hán văn nguyên bản.
+- `am`: Phiên âm Hán - Việt.
+- `nghia`: Dịch nghĩa.
+- `tho`: Dịch thơ.
 
-```bash
-python -m src.extraction.pdf_extraction --layer han --work-id CPO_18 \
-  --source data/CPO_18/01_sources/book.pdf --start 205 --end 400 \
-  --upload drive --drive-folder-id <ID> --drive-credentials credentials.json
-```
+## 3. So sánh với Guidelines
 
-Output: `02_extraction/01_page_image/<layer>/page_205.png`, plus an image manifest (with Drive IDs) in `metadata.json` under `<layer>_images`.
+| Guidelines     | Cấu trúc của nhóm                 |
+| -------------- | --------------------------------- |
+| `01_nguon`     | `01_sources` + `02_extraction`    |
+| `02_ocr_tho`   | `03_ocr`                          |
+| `03_text_sach` | `04_segmentation` + `05_cleaning` |
+| `04_dong_hang` | `06_alignment` + `07_export`      |
 
-To let Google Drive for desktop sync the images without configuring the Drive API, pass a local folder inside the mounted `My Drive`:
+Nhóm chủ động chia nhỏ quy trình để dễ quản lý, kiểm tra lỗi và mở rộng từng giai đoạn.
 
-```powershell
-python -m src.extraction.pdf_extraction `
-  --layer han --work-id OPO18 `
-  --source "data/book.pdf" --pages "1-3" `
-  --upload sync --drive-sync-dir "G:\My Drive\Corpus"
-```
+## 4. Các quyết định thiết kế
 
-This copies images into `<drive-sync-dir>/<WORK_ID>_<layer>/`; Drive for desktop handles cloud sync.
+- Sử dụng **XML** cho dữ liệu trung gian nhằm tổ chức cấu trúc rõ ràng, bảo toàn metadata và hỗ trợ truy vết.
+- Chỉ giữ nội dung chính của tác phẩm trong dữ liệu dóng hàng; header, footer và tiêu đề được tách riêng hoặc loại bỏ.
+- Dữ liệu dóng hàng không bắt buộc hiển thị ID tác phẩm. Thông tin truy vết vẫn được lưu trong dữ liệu trung gian.
+- Sử dụng TSV và XLSX làm định dạng xuất dữ liệu cuối cùng.
 
-**Web page to XML**
+## 5. Công cụ và định hướng phát triển
 
-```bash
-python -m src.extraction.web_extraction --layer han --work-id CPO_17 --url <URL>
-python -m src.extraction.web_extraction --layer tho --work-id CPO_17 --html data/CPO_17/01_sources/viet.html
-```
+**Hiện tại:**
 
-Output: `01_sources/<layer>.html` (original HTML) and `02_extraction/<layer>.xml`.
+- OCR: Tesseract.
 
-**OCR to XML**
+**Dự định:**
 
-```bash
-python -m src.ocr.ocr --layer han --work-id MY_WORK \
-  --source data/MY_WORK/01_sources/pages --pages 205-210 \
-  --workers 1
-```
+- Tích hợp thêm PaddleOCR và CLC API của Lab.
+- Mở rộng thử nghiệm OCR trên khoảng 5-10 bài/tài liệu cho mỗi tác phẩm.
 
-Input: local page images only; split PDFs first. Output: per-page raw OCR in `02_ocr_raw/page_0205.json` and `02_extraction/<layer>.xml`. Pages with low confidence or no retained text are listed in `metadata.json` for review. OCR is a draft and must be checked by a human.
+## Note
 
-The selected OCR engine is **Tesseract** for all layers. See [OCR setup and usage](docs/ocr.md). Replace `MY_WORK`, the image directory and the page range with your source information. Source page IDs come from image filenames.
-
-**Shared config**: `--config configs/CPO_18.json --layer han`. Priority: defaults < `common` < `layers.<layer>` < CLI flags.
-
-## Notes
-
-- Existing outputs are not overwritten without `--force`.
-- For OCR, `--force` permits rebuilding XML and metadata; it reuses valid OCR cache entries. New recognition parameters append a new raw result rather than replacing older results.
-- Re-runs resume: existing images, uploads and OCR results (same parameters) are skipped.
-- Extraction only: no cleaning, footnote removal or sentence splitting. That belongs to `03_cleaned`.
-- To add an OCR engine, subclass `OcrEngine` and use `@register_engine`. To add a website, add a `SiteProfile` in `web_extraction.py`. To add a layer, add a line to `LAYERS` in `corpus.py`.
+AI được sử dụng để hỗ trợ biên soạn README. Nhóm đã kiểm tra và rà soát lại nội dung.

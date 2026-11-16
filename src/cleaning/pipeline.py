@@ -19,9 +19,9 @@ import xml.etree.ElementTree as ET
 from dataclasses import dataclass
 from pathlib import Path
 
+from src.common import deps
 from src.common.corpus import DataLayout, MetadataStore, base_parser, parse_args, parse_pages
-from src.common.sentences import (Sentence, atomic_write_text, cleaned_dir, read_jsonl,
-                                  save_sentences)
+from src.common.sentences import Sentence, atomic_write_text, cleaned_dir, save_sentences
 
 from src.cleaning.model import (DEFAULT_DROP, DUPLICATE_LINE, UNCERTAIN, VI_ABBREV, CleanConfig,
                                 FootnoteConfig, MetadataConfig, OCRCleaningConfig, RawLine)
@@ -59,15 +59,14 @@ def read_raw_lines(xml_path: Path) -> list[RawLine]:
 
 
 def read_segmentation_lines(path: Path) -> list[RawLine]:
-    """04_segmentation/layers/<layer>.jsonl -> RawLine (đã cắt tài liệu/lớp ở bước trước)."""
+    """04_segmentation/layers/<layer>.xml -> RawLine (đã cắt tài liệu/lớp ở bước trước)."""
     if not path.exists():
         raise FileNotFoundError(f"Chưa có {path}; chạy bước segment trước")
-    out: list[RawLine] = []
-    for row in read_jsonl(path):
-        text = row.get("text", "")
-        out.append(RawLine(row["id"], int(row["page"]), text, raw_text=text,
-                           flags=list(row.get("flags") or [])))
-    return out
+    from src.segmentation.serialization import read_layer
+
+    return [RawLine(row["id"], int(row["page"]), row.get("text", ""),
+                    raw_text=row.get("text", ""), flags=list(row.get("flags") or []))
+            for row in read_layer(path)]
 
 
 # --------------------------------------------------------------------------- #
@@ -246,9 +245,7 @@ def run(args) -> Path:
     layer = args.layer
     layout = DataLayout(Path(args.data_root), args.work_id)
     out_dir = cleaned_dir(layout)
-    out_jsonl = out_dir / f"{layer}.jsonl"
-    if out_jsonl.exists() and not args.force:
-        raise FileExistsError(f"{out_jsonl} đã tồn tại; dùng --force để ghi đè (hoặc lưu bản cũ: v01, v02...)")
+    out_xml = out_dir / f"{layer}.xml"
 
     cfg = build_config(args, layer)
     cfg.footnotes.enabled = not args.no_footnotes
@@ -262,21 +259,29 @@ def run(args) -> Path:
     segmented = seg_path.exists()
     input_path = seg_path if segmented else xml_path
     raw = read_segmentation_lines(seg_path) if segmented else read_raw_lines(xml_path)
+    inputs = [input_path]
+    if getattr(args, "config", None):
+        inputs.append(Path(args.config))
+    outputs = [out_xml, out_dir / f"{layer}.txt", out_dir / f"{layer}.dropped.tsv",
+               out_dir / "review_required.xml", out_dir / "cleaning_audit.xml"]
+    deps.check_fresh(layout, f"clean:{layer}", inputs, outputs, args.force,
+                     f"{out_xml} đã tồn tại; dùng --force để ghi đè (hoặc lưu bản cũ: v01, v02...)")
     out = run_cleaning(args.work_id, layer, raw, cfg)
-    if not out.sentences:
+    if not out.sentences and raw:
         raise ValueError(f"Không còn câu nào sau khi làm sạch {input_path}; xem lại --drop-pattern/--start-after")
 
     save_sentences(layout, layer, out.sentences)
     atomic_write_text(out_dir / f"{layer}.txt", "".join(s.text + "\n" for s in out.sentences))
     if not segmented:
-        write_layer_metadata(out_dir, layer, out.metadata_docs)  # <layer>.metadata.jsonl
-        aggregate_document_metadata(out_dir, args.work_id)  # gộp mọi lớp -> document_metadata.jsonl
+        write_layer_metadata(out_dir, layer, out.metadata_docs)  # <layer>.metadata.xml
+        aggregate_document_metadata(out_dir, args.work_id)  # gộp mọi lớp -> document_metadata.xml
         aggregate_file_metadata(layout, out_dir)            # <FILE><meta> mọi lớp -> file_metadata.json
     atomic_write_text(out_dir / f"{layer}.dropped.tsv", "id\tpage\treason\ttext\n" + "".join(
         f"{i}\t{p}\t{r}\t{t.replace(chr(9), ' ').replace(chr(10), ' ')}\n" for i, p, r, t in out.dropped_rows))
     write_audit_files(out_dir, out.audit, out.notes, out.duplicates, out.reconstructions)
+    deps.record(layout, f"clean:{layer}", inputs, outputs)
     MetadataStore(layout).update(f"{layer}_cleaned", {
-        "input": layout.rel(input_path), "output": layout.rel(out_jsonl), "stats": out.stats,
+        "input": layout.rel(input_path), "output": layout.rel(out_xml), "stats": out.stats,
         "parameters": {"split": cfg.split, "split_colon": cfg.split_colon,
                        "drop_patterns": cfg.drop_patterns, "heading_heuristic": cfg.heading_heuristic,
                        "strip_markers": cfg.strip_markers,
@@ -300,8 +305,8 @@ def run(args) -> Path:
         log.info("[%s] Xem lại các dòng bị loại: %s", layer, out_dir / f"{layer}.dropped.tsv")
     if out.stats["review_flags"]:
         log.info("[%s] %d trường hợp không chắc: %s", layer, out.stats["review_flags"],
-                 out_dir / "review_required.tsv")
-    return out_jsonl
+                 out_dir / "review_required.xml")
+    return out_xml
 
 
 def create_parser():

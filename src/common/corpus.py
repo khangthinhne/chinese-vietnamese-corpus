@@ -95,6 +95,12 @@ class DataLayout:
     def ocr_raw_root(self) -> Path: return self.ocr_root / "raw"
     @property
     def ocr_manifest_dir(self) -> Path: return self.ocr_root / "manifests"
+    @property
+    def ocr_raw_xml(self) -> Path: return self.ocr_root / "ocr_raw"
+
+    def ocr_raw_xml_path(self, writing_system: str) -> Path:
+        name = {"chi_tra": "han", "vie": "vi"}.get(writing_system, writing_system)
+        return self.ocr_raw_xml / f"{name}.xml"
     # --- phân đoạn tài liệu/lớp ---
     @property
     def segmentation_dir(self) -> Path: return self.work_dir / "04_segmentation"
@@ -102,7 +108,7 @@ class DataLayout:
     def segmentation_layers(self) -> Path: return self.segmentation_dir / "layers"
 
     def segmentation_layer(self, layer: str) -> Path:
-        return self.segmentation_layers / f"{layer}.jsonl"
+        return self.segmentation_layers / f"{layer}.xml"
 
     # --- các tầng sau (giữ 03_cleaned/04_alignment cũ làm bản đọc tương thích) ---
     @property

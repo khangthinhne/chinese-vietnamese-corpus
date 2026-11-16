@@ -1,5 +1,5 @@
 """
-05_cleaning/<layer>.jsonl (2 lớp) -> dóng hàng THEO TỪNG TÀI LIỆU -> 06_alignment/<pair>.jsonl
+05_cleaning/<layer>.xml (2 lớp) -> dóng hàng THEO TỪNG TÀI LIỆU -> 06_alignment/<pair>.xml
 
 INPUT
     --work-id CPO_18  --pair han-am | han-nghia | han-tho   [--data-root data]
@@ -8,9 +8,12 @@ INPUT
     --low-score 0.6        cặp có score thấp hơn bị gắn cờ low_score
 
 OUTPUT (data/<WORK_ID>/06_alignment/)
-    <pair>.jsonl    mỗi dòng 1 Bead: id, document_id, kind, score, flags,
-                    src_ids/tgt_ids (ID câu ở 05_cleaning), pages, src_text, tgt_text
+    <pair>.xml    mỗi Bead: id, document_id, kind, score, flags,
+                  src_ids/tgt_ids (ID câu ở 05_cleaning), pages, src_text, tgt_text
     02_extraction/metadata.json -> layers["<pair>_alignment"]
+
+Nếu lớp đích không tồn tại/rỗng (vd. tác phẩm không có DỊCH THƠ), bước này bỏ qua
+thay vì tạo file rỗng hoặc lỗi; các artifact cũ không bị xoá.
 
 Sentence.document_id (từ 04_segmentation) chia nhóm; aligner chạy riêng từng tài liệu,
 không bao giờ bắc cầu hai tài liệu. Dữ liệu cũ document_id rỗng = một nhóm duy nhất.
@@ -24,10 +27,12 @@ import sys
 from collections import Counter
 from pathlib import Path
 
+from src.alignment import serialization
 from src.alignment.aligners import ALIGNERS
+from src.common import deps
 from src.common.corpus import DataLayout, MetadataStore
-from src.common.sentences import (alignment_dir, join_texts, load_sentences, parse_args_by_pair,
-                                  parse_pair, write_jsonl)
+from src.common.sentences import (alignment_dir, find_cleaned_file, join_texts, load_sentences,
+                                  parse_args_by_pair, parse_pair)
 
 log = logging.getLogger("align")
 
@@ -46,18 +51,27 @@ def parse_opts(items: list[str] | None) -> dict[str, str]:
     return out
 
 
-def run(args) -> Path:
+def run(args) -> Path | None:
     src_layer, tgt_layer = parse_pair(args.pair)
     method = args.method or default_method(args.pair)
     if method not in ALIGNERS:
         raise ValueError(f"Phương pháp không hợp lệ: {method}. Có sẵn: {', '.join(sorted(ALIGNERS))}")
     layout = DataLayout(Path(args.data_root), args.work_id)
-    out = alignment_dir(layout) / f"{args.pair}.jsonl"
-    if out.exists() and not args.force:
-        raise FileExistsError(f"{out} đã tồn tại; dùng --force để ghi đè")
+    out = alignment_dir(layout) / f"{args.pair}.xml"
 
     src = load_sentences(layout, src_layer)
-    tgt = load_sentences(layout, tgt_layer)
+    try:
+        tgt = load_sentences(layout, tgt_layer)
+    except FileNotFoundError:
+        log.warning("Bỏ qua %s: chưa có lớp %s (tác phẩm không có phần này?)",
+                    args.pair, tgt_layer)
+        return None
+    if not tgt:
+        log.warning("Bỏ qua %s: lớp %s rỗng; không tạo alignment giả", args.pair, tgt_layer)
+        return None
+    inputs = [find_cleaned_file(layout, src_layer), find_cleaned_file(layout, tgt_layer)]
+    deps.check_fresh(layout, f"align:{args.pair}", inputs, [out], args.force,
+                     f"{out} đã tồn tại; dùng --force để ghi đè")
     aligner = ALIGNERS[method](**parse_opts(args.opt))
     groups: dict[str, tuple[list[int], list[int]]] = {}
     for i, s in enumerate(src):
@@ -95,7 +109,8 @@ def run(args) -> Path:
                 "src_text": join_texts(src_layer, (x.text for x in s_items)),
                 "tgt_text": join_texts(tgt_layer, (x.text for x in t_items)),
             })
-    write_jsonl(out, rows)
+    serialization.write_alignments(out, args.work_id, args.pair, src_layer, tgt_layer, rows)
+    deps.record(layout, f"align:{args.pair}", inputs, [out])
 
     stats = {"src_sentences": len(src), "tgt_sentences": len(tgt), "beads": len(rows),
              "documents": len(groups),

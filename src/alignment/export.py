@@ -1,21 +1,23 @@
 """
-06_alignment/<pair>.jsonl -> file bàn giao .tsv + .xlsx (+ báo cáo tự kiểm tra)
+06_alignment/<pair>.xml -> file bàn giao .tsv + .xlsx (+ báo cáo tự kiểm tra)
+hoặc --pair han-viet -> một workbook 4 cột Hán | Dịch âm | Dịch nghĩa | Dịch thơ.
 
 INPUT
-    --work-id CPO_18 --pair han-am     [--data-root data]
+    --work-id CPO_18 --pair han-am|han-nghia|han-tho|han-viet     [--data-root data]
     --name CPO_18_parallel             tên file (mặc định <work-id>_<pair>_parallel)
     --min-score 0.0                    chỉ xuất cặp có score >= ngưỡng
     --exclude-flag low_score           (lặp lại) bỏ cặp mang cờ này
 
 OUTPUT (data/<WORK_ID>/07_export/)
-    <name>.tsv           <CÂU_HÁN>\\t<CÂU_VIỆT>, UTF-8, LF, không header
-    <name>.xlsx          sheet DONG_HANG (2 cột) + sheet REVIEW (có document_id)
+    <name>.tsv           <CÂU_HÁN>\\t<CÂU_VIỆT>, UTF-8, LF, không header (cặp đôi)
+    <name>.xlsx          DONG_HANG + REVIEW (cặp đôi); 4 cột cho han-viet
     <name>_report.json   số cặp, số câu, câu bị bỏ, phân bố kind, tự kiểm tra
     <name>_report.md     bản đọc được của báo cáo
 """
 
 from __future__ import annotations
 
+import csv 
 import argparse
 import json
 import logging
@@ -27,9 +29,12 @@ from pathlib import Path
 
 from openpyxl import Workbook, load_workbook
 
+from src.common import deps
 from src.common.corpus import DataLayout, MetadataStore
-from src.common.sentences import (atomic_write_text, export_dir, find_alignment_dir,
-                                  load_sentences, parse_args_by_pair, parse_pair, read_jsonl)
+from src.common.sentences import (atomic_write_text, export_dir, find_alignment_file,
+                                  find_cleaned_file, load_sentences, parse_args_by_pair,
+                                  parse_pair)
+from src.alignment.serialization import read_alignments
 
 log = logging.getLogger("export")
 
@@ -103,17 +108,27 @@ def verify_outputs(tsv: Path, xlsx: Path, rows: list[tuple[str, str]]) -> list[s
     return errors
 
 
-def run(args) -> Path:
+def run(args) -> Path | None:
+    if args.pair == "han-viet":
+        return run_consolidated(args)
     src_layer, tgt_layer = parse_pair(args.pair)
     if src_layer != "han":
         raise ValueError("Cột Hán phải đứng trước: dùng --pair han-<lớp>")
     layout = DataLayout(Path(args.data_root), args.work_id)
     out_dir = export_dir(layout)
-    beads = read_jsonl(find_alignment_dir(layout) / f"{args.pair}.jsonl")
+    alignment_path = find_alignment_file(layout, args.pair)
     name = args.name or f"{args.work_id}_{args.pair}_parallel"
     tsv, xlsx = out_dir / f"{name}.tsv", out_dir / f"{name}.xlsx"
-    if (tsv.exists() or xlsx.exists()) and not args.force:
-        raise FileExistsError(f"{tsv.name}/{xlsx.name} đã tồn tại; dùng --force để ghi đè")
+    if not alignment_path.exists():
+        log.warning("Bỏ qua xuất %s: chưa có %s (lớp đích có thể vắng mặt)",
+                    args.pair, alignment_path.name)
+        return None
+    deps.check_fresh(layout, f"export:{args.pair}",
+                     [alignment_path, find_cleaned_file(layout, src_layer),
+                      find_cleaned_file(layout, tgt_layer)],
+                     [tsv, xlsx], args.force,
+                     f"{tsv.name}/{xlsx.name} đã tồn tại; dùng --force để ghi đè")
+    beads = read_alignments(alignment_path)
 
     exclude = set(args.exclude_flag or [])
     rows, review, skipped = [], [], Counter()
@@ -144,6 +159,9 @@ def run(args) -> Path:
     errors = verify_outputs(tsv, xlsx, rows)
     if errors:
         raise RuntimeError("Tự kiểm tra thất bại:\n  " + "\n  ".join(errors[:10]))
+    deps.record(layout, f"export:{args.pair}",
+                [alignment_path, find_cleaned_file(layout, src_layer),
+                 find_cleaned_file(layout, tgt_layer)], [tsv, xlsx])
 
     n_src, n_tgt = len(load_sentences(layout, src_layer)), len(load_sentences(layout, tgt_layer))
     report = {
@@ -164,6 +182,165 @@ def run(args) -> Path:
     return tsv
 
 
+VIET_LAYERS = ("am", "nghia", "tho")
+
+
+def _consolidated_rows(layout: DataLayout, args) -> tuple[list[tuple], list[list], dict]:
+    han = load_sentences(layout, "han")
+    if not han:
+        raise ValueError("Không có câu Hán để xuất workbook tổng hợp")
+    index = {s.id: i for i, s in enumerate(han)}
+    exclude = set(args.exclude_flag or [])
+    translations: dict[str, dict[str, list[str]]] = {layer: {} for layer in VIET_LAYERS}
+    review: list[list] = []
+    skipped = Counter()
+    for layer in VIET_LAYERS:
+        pair = f"han-{layer}"
+        path = find_alignment_file(layout, pair)
+        if not path.exists():
+            log.warning("Không có %s; cột %s để trống", path.name, layer)
+            skipped[f"{layer}:missing_alignment"] += 1
+            continue
+        for bead in read_alignments(path):
+            status = "included"
+            if "unaligned" in bead["flags"]:
+                status = "skipped:unaligned"
+            elif bead["score"] < args.min_score:
+                status = "skipped:below_min_score"
+            elif exclude & set(bead["flags"]):
+                status = f"skipped:flag:{sorted(exclude & set(bead['flags']))[0]}"
+            if status != "included":
+                skipped[status] += 1
+            first = index.get(bead["src_ids"][0]) if bead["src_ids"] else None
+            review.append([
+                first + 2 if first is not None else None, pair, bead["id"],
+                bead.get("document_id", ""), bead["kind"], bead["score"],
+                ",".join(bead["flags"]), ",".join(bead["src_ids"]),
+                ",".join(bead["tgt_ids"]),
+                "; ".join(f"{k}={','.join(map(str, v))}" for k, v in bead["pages"].items()),
+                status])
+            if status != "included":
+                continue
+            text = sanitize(bead["tgt_text"])
+            for sid in bead["src_ids"]:
+                values = translations[layer].setdefault(sid, [])
+                if text and text not in values:
+                    values.append(text)
+    rows = []
+    for sentence in han:
+        rows.append((sanitize(sentence.text),
+                     *[" ".join(translations[layer].get(sentence.id, [])) or None
+                       for layer in VIET_LAYERS]))
+    return rows, review, dict(skipped)
+
+
+def write_consolidated(path: Path, rows: list[tuple],  review: list[list]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+
+    headers = ["Hán", "Dịch âm", "Dịch nghĩa", "Dịch thơ"]
+
+    # 1. Export TSV
+    tsv_path = path.with_suffix(".tsv")
+    tsv_tmp = tsv_path.with_suffix(".tsv.tmp")
+    print(f"[TESTTTTTTTTTT] Writing TSV to {tsv_tmp}")
+    with tsv_tmp.open("w", encoding="utf-8-sig", newline="") as f:
+        writer = csv.writer(
+            f,
+            delimiter="\t",
+            quoting=csv.QUOTE_MINIMAL,
+            lineterminator="\n"
+        )
+        writer.writerow(headers)
+        writer.writerows([
+            ["" if value is None else str(value) for value in row]
+            for row in rows
+        ])
+
+    # 2. Export XLSX
+    wb = Workbook()
+    ws = wb.active
+    ws.title = "DONG_HANG"
+    ws.append(headers)
+
+    for values in rows:
+        ws.append([
+            "" if value is None else str(value)
+            for value in values
+        ])
+
+    for col, width in zip("ABCD", (60, 60, 60, 60)):
+        ws.column_dimensions[col].width = width
+
+    rv = wb.create_sheet("REVIEW")
+    rv.append([
+        "row", "pair", "alignment_id", "document_id", "kind",
+        "score", "flags", "src_ids", "tgt_ids", "pages", "status"
+    ])
+
+    for row in review:
+        rv.append(row)
+
+    xlsx_tmp = path.with_suffix(".xlsx.tmp")
+    wb.save(xlsx_tmp)
+
+    # 3. Replace output files after successful generation
+    print(f"Writing TSV to {tsv_path}")
+    xlsx_tmp.replace(path)
+    tsv_tmp.replace(tsv_path)
+
+
+def verify_consolidated(path: Path, rows: list[tuple]) -> list[str]:
+    errors = []
+    wb = load_workbook(path)
+    if "DONG_HANG" not in wb.sheetnames:
+        return ["XLSX thiếu sheet DONG_HANG"]
+    ws = wb["DONG_HANG"]
+    if ws.merged_cells.ranges:
+        errors.append("DONG_HANG có ô gộp")
+    if [c.value for c in ws[1]] != ["Hán", "Dịch âm", "Dịch nghĩa", "Dịch thơ"]:
+        errors.append("DONG_HANG phải có đúng 4 cột Hán | Dịch âm | Dịch nghĩa | Dịch thơ")
+    if ws.max_column != 4:
+        errors.append(f"DONG_HANG có {ws.max_column} cột, kỳ vọng 4")
+    if ws.max_row != len(rows) + 1:
+        errors.append(f"DONG_HANG có {ws.max_row - 1} dòng, kỳ vọng {len(rows)}")
+    for n, row in enumerate(ws.iter_rows(min_row=2), 2):
+        if any(c.data_type == "f" for c in row):
+            errors.append("DONG_HANG có công thức")
+            break
+        if not row[0].value:
+            errors.append(f"dòng {n}: thiếu câu Hán")
+    return errors
+
+
+def run_consolidated(args) -> Path:
+    layout = DataLayout(Path(args.data_root), args.work_id)
+    out_dir = export_dir(layout)
+    name = args.name or f"{args.work_id}_han-viet_parallel"
+    xlsx = out_dir / f"{name}.xlsx"
+    inputs = [find_cleaned_file(layout, "han")]
+    for layer in VIET_LAYERS:
+        path = find_alignment_file(layout, f"han-{layer}")
+        if path.exists():
+            inputs.append(path)
+    deps.check_fresh(layout, "export:han-viet", inputs, [xlsx], args.force,
+                     f"{xlsx.name} đã tồn tại; dùng --force để ghi đè")
+    rows, review, skipped = _consolidated_rows(layout, args)
+    # print(f"[TESTTTTTTTTTT] Writing consolidated XLSX to {xlsx}")
+    write_consolidated(xlsx, rows, review)
+    errors = verify_consolidated(xlsx, rows)
+    if errors:
+        raise RuntimeError("Tự kiểm tra workbook tổng hợp thất bại:\n  " + "\n  ".join(errors[:10]))
+    deps.record(layout, "export:han-viet", inputs, [xlsx])
+    MetadataStore(layout).update("han-viet_export", {
+        "name": name, "output": layout.rel(xlsx), "rows": len(rows),
+        "missing_translations": {
+            layer: sum(1 for row in rows if row[1 + VIET_LAYERS.index(layer)] is None)
+            for layer in VIET_LAYERS},
+        "skipped": skipped, "review_required": True})
+    log.info("Đã xuất %d dòng Hán -> %s", len(rows), xlsx)
+    return xlsx
+
+
 def render_report(r: dict) -> str:
     skipped = ", ".join(f"{k}={v}" for k, v in r["skipped"].items()) or "không"
     return (f"# Báo cáo dóng hàng {r['name']}\n\n"
@@ -178,7 +355,8 @@ def render_report(r: dict) -> str:
 
 
 def create_parser() -> argparse.ArgumentParser:
-    p = argparse.ArgumentParser(description="Xuất TSV + XLSX + báo cáo từ 04_alignment/<pair>.jsonl",
+    p = argparse.ArgumentParser(description="Xuất TSV/XLSX từ 06_alignment/<pair>.xml; "
+                                            "han-viet = workbook 4 cột",
                                 formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     p.add_argument("--config")
     p.add_argument("--work-id")

@@ -4,7 +4,7 @@
     "data_root": "data",
     "title": "Demo CPO_18 (chế độ mới: OCR theo hệ chữ -> phân đoạn tài liệu/lớp)",
     "source": "data/CPO_18/01_sources/CPO18.pdf",
-    "pages": "205-212",
+    "pages": "205-206",
     "dpi": 300,
     "workers": 4
   },
@@ -74,6 +74,21 @@
         "attribution_patterns": [
           "^\\*"
         ]
+      },
+      "tho": {
+        "source": "vie",
+        "optional": true,
+        "heading_mode": true,
+        "start_patterns": [
+          "^DỊCH\\s+THƠ\\b"
+        ],
+        "end_patterns": [
+          "^CHÚ\\s+THÍCH\\b"
+        ],
+        "attribution_patterns": [
+          "^\\*"
+        ],
+        "metadata": false
       }
     }
   },
@@ -104,6 +119,13 @@
     "han-nghia": {
       "method": "length",
       "name": "CPO_18_han-nghia_parallel"
+    },
+    "han-tho": {
+      "method": "length",
+      "name": "CPO_18_han-tho_parallel"
+    },
+    "han-viet": {
+      "name": "CPO_18_parallel"
     }
   }
 }

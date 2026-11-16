@@ -321,3 +321,22 @@ def test_run_cleaning_end_to_end_synthetic():
     assert any(n.category == "bibliographic_note" for n in out.notes)  # note 2 dòng/qua trang
     assert any(r["reason"] == "uncertain" for r in out.audit.reviews)  # ` được trình review (® bị xoá)
     assert any(r[2].startswith("section_") for r in out.dropped_rows)
+
+def test_audit_xml_keeps_rows_from_other_layers(tmp_path):
+    from src.cleaning.audit import write_audit_files
+    from src.common.xmlstore import file_element, read_root
+
+    for layer, reason in (("han", "han_reason"), ("am", "am_reason")):
+        audit = Audit(WORK, layer)
+        audit.add("remove_line", reason, line=rl(1, 1, f"{layer} line"))
+        audit.flag_review(rl(2, 1, f"{layer} uncertain"), "uncertain")
+        write_audit_files(tmp_path, audit, [], [], [])
+
+    records = file_element(read_root(tmp_path / "cleaning_audit.xml")).findall("RECORD")
+    assert {(r.get("LAYER"), r.get("REASON")) for r in records} == {
+        ("han", "han_reason"), ("am", "am_reason")}
+    reviews = file_element(read_root(tmp_path / "review_required.xml")).findall("REVIEW")
+    assert {r.get("LAYER") for r in reviews} == {"han", "am"}
+    tsv = (tmp_path / "review_required.tsv").read_text(encoding="utf-8")
+    assert "layer" in tsv.splitlines()[0]
+    assert "\tam\n" in tsv and "\than\n" in tsv

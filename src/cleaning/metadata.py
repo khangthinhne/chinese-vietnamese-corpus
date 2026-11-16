@@ -25,7 +25,7 @@ from dataclasses import dataclass, field
 from pathlib import Path
 
 from src.common.corpus import LAYERS, DataLayout, cjk_ratio, write_json
-from src.common.sentences import cleaned_dir, read_jsonl, write_jsonl
+from src.common.sentences import cleaned_dir
 from src.cleaning.model import (AFTER_SECTION_END, FRONT_MATTER, METADATA_ATTRIBUTION,
                                 METADATA_AUTHOR, METADATA_TITLE, METADATA_UNCERTAIN, OCR_NOISE,
                                 SECTION_MARKER, MetadataConfig, RawLine)
@@ -341,27 +341,35 @@ def classify_leading_block(lines: list[RawLine], cfg: MetadataConfig, layer: str
 
 
 # --------------------------------------------------------------------------- #
-# Ghi file: <layer>.metadata.jsonl + gộp document_metadata.jsonl + file_metadata.json
+# Ghi file: <layer>.metadata.xml + gộp document_metadata.xml + file_metadata.json
 # --------------------------------------------------------------------------- #
 def write_layer_metadata(out_dir: Path, layer: str, rows: list[dict]) -> Path:
-    """Ghi các dòng metadata per-document của lớp vừa clean (luôn ghi, kể cả rỗng,
+    """Ghi metadata per-document của lớp vừa clean (luôn ghi, kể cả rỗng,
     để bước gộp không đọc phải dữ liệu cũ của lần chạy trước)."""
-    out = out_dir / f"{layer}.metadata.jsonl"
-    write_jsonl(out, rows)
-    return out
+    from src.segmentation.serialization import write_layer_metadata as write_xml
+
+    out = out_dir / f"{layer}.metadata.xml"
+    return write_xml(out, rows[0]["work_id"] if rows else
+                     _work_id_from_out_dir(out_dir), layer, rows)
+
+
+def _work_id_from_out_dir(out_dir: Path) -> str:
+    return Path(out_dir).parent.name
 
 
 def aggregate_document_metadata(out_dir: Path, work_id: str) -> Path:
-    """Gộp các <layer>.metadata.jsonl đang có -> document_metadata.jsonl (mỗi SECT một dòng).
+    """Gộp các <layer>.metadata.xml đang có -> document_metadata.xml (mỗi SECT một dòng).
 
     Lớp chưa chạy/không có metadata không chặn lớp khác; không bao giờ trộn 2 tài liệu.
     """
+    from src.segmentation.serialization import read_layer_metadata, write_document_metadata
+
     merged: dict[str, dict] = {}
-    for path in sorted(out_dir.glob("*.metadata.jsonl")):
-        layer = path.name[: -len(".metadata.jsonl")]
+    for path in sorted(out_dir.glob("*.metadata.xml")):
+        layer = path.name[: -len(".metadata.xml")]
         if layer not in LAYERS:
             continue
-        for rec in read_jsonl(path):
+        for rec in read_layer_metadata(path):
             did = rec.get("document_id", "")
             row = merged.setdefault(did, {"work_id": work_id, "document_id": did,
                                           "metadata": {}, "uncertain": {}})
@@ -385,8 +393,8 @@ def aggregate_document_metadata(out_dir: Path, work_id: str) -> Path:
                 pages.update(u.get("pages", []))
         row["source_pages"] = sorted(pages)
         rows.append(row)
-    out = out_dir / "document_metadata.jsonl"
-    write_jsonl(out, rows)
+    out = out_dir / "document_metadata.xml"
+    write_document_metadata(out, work_id, rows)
     return out
 
 

@@ -2,11 +2,29 @@ import csv
 import json
 
 from src.alignment import align
+from src.alignment.serialization import read_alignments
 from src.cleaning import pipeline as cleaning
 from src.common.corpus import DataLayout
-from src.common.sentences import alignment_dir, load_sentences, read_jsonl
+from src.common.sentences import alignment_dir, load_sentences
 from src.ocr import raw_store
 from src.segmentation import pipeline as segmentation
+from src.segmentation import serialization as segxml
+
+
+def read_docs(layout):
+    return segxml.read_documents(layout.segmentation_dir / "documents.xml")
+
+
+def read_layer(layout, name):
+    return segxml.read_layer(layout.segmentation_layer(name))
+
+
+def read_headings(layout):
+    return segxml.read_headings(layout.segmentation_dir / "section_headings.xml")
+
+
+def read_document_meta(layout):
+    return segxml.read_document_metadata(layout.segmentation_dir / "document_metadata.xml")
 
 
 def read_tsv(path):
@@ -57,7 +75,7 @@ def seg_config(tmp_path, layers_extra=None, metadata=None, document=None):
         "nghia": {"source": "vie", "start_patterns": ["^DỊCH NGHĨA"], "end_patterns": ["^CHÚ THÍCH"]},
     }
     for name, extra in (layers_extra or {}).items():
-        layers[name].update(extra)
+        layers.setdefault(name, {}).update(extra)
     cfg = {"common": {"work_id": "T_01", "data_root": str(tmp_path), "pages": "1-2"},
            "segmentation": {"document": document or {"start_patterns": ["^第[一二]回"]},
                             "layers": layers},
@@ -74,28 +92,60 @@ def test_segments_documents_and_layers(tmp_path):
     path, _ = seg_config(tmp_path)
     assert segmentation.main(["--config", str(path), "--work-id", "T_01",
                               "--data-root", str(tmp_path)]) == 0
-    docs = read_jsonl(layout.segmentation_dir / "documents.jsonl")
+    docs = read_docs(layout)
     assert [d["document_id"] for d in docs] == ["T_01.001", "T_01.002"]
     assert docs[0]["pages"] == [1] and docs[1]["pages"] == [2]
 
-    han = read_jsonl(layout.segmentation_layer("han"))
+    han = read_layer(layout, "han")
     assert [r["id"] for r in han] == ["T_01.001.P001.S001", "T_01.001.P001.S002",
                                       "T_01.002.P002.S001", "T_01.002.P002.S002"]
     assert {r["writing_system"] for r in han} == {"chi_tra"}
     assert all(r["bbox"] and r["confidence"] == 90.0 for r in han)
-    am = read_jsonl(layout.segmentation_layer("am"))
+    am = read_layer(layout, "am")
     assert [r["text"] for r in am] == ["phien am mot", "phien am hai"]
-    nghia = read_jsonl(layout.segmentation_layer("nghia"))
+    nghia = read_layer(layout, "nghia")
     assert [r["text"] for r in nghia] == ["nghia mot"]
     assert all(r["document_id"] == "T_01.001" for r in nghia)
 
-    headings = read_jsonl(layout.segmentation_dir / "section_headings.jsonl")
+    headings = read_headings(layout)
     assert [(h["layer"], h["kind"]) for h in headings if h["kind"] != "document_start"] == [
         ("am", "start"), ("am", "end"), ("nghia", "start"), ("nghia", "end"),
         ("am", "start")]
     review = (layout.segmentation_dir / "review_required.tsv").read_text(encoding="utf-8")
     assert "unassigned_line" in review and "ghi chu" in review
     assert "missing_heading" in review
+
+
+def test_tho_layer_is_optional_and_ignores_poetry_mentions(tmp_path):
+    layout = DataLayout(tmp_path, "T_01")
+    add_ocr(layout, "chi_tra", 1, ["第一回", "正文甲。"], "cjk")
+    add_ocr(layout, "vie", 1, ["PHIÊN ÂM", "bài thơ này chỉ được nhắc trong lời kể",
+                               "DỊCH NGHĨA", "nghia mot", "DỊCH THƠ", "tho mot",
+                               "CHÚ THÍCH", "ghi chu"], "latin")
+    path, _ = seg_config(
+        tmp_path,
+        layers_extra={"tho": {"source": "vie", "optional": True,
+                              "start_patterns": ["^DỊCH THƠ"], "end_patterns": ["^CHÚ THÍCH"]}})
+    assert segmentation.main(["--config", str(path), "--work-id", "T_01",
+                              "--data-root", str(tmp_path)]) == 0
+    assert [r["text"] for r in read_layer(layout, "tho")] == ["tho mot"]
+    review = (layout.segmentation_dir / "review_required.tsv").read_text(encoding="utf-8")
+    assert not any(line.startswith("missing_heading") and "\ttho\t" in line
+                   for line in review.splitlines())
+
+
+def test_missing_poetry_only_writes_empty_optional_layer(tmp_path):
+    layout = make_docs(tmp_path)
+    path, _ = seg_config(
+        tmp_path,
+        layers_extra={"tho": {"source": "vie", "optional": True,
+                              "start_patterns": ["^DỊCH THƠ"], "end_patterns": ["^CHÚ THÍCH"]}})
+    assert segmentation.main(["--config", str(path), "--work-id", "T_01",
+                              "--data-root", str(tmp_path)]) == 0
+    assert read_layer(layout, "tho") == []
+    review = (layout.segmentation_dir / "review_required.tsv").read_text(encoding="utf-8")
+    assert not any(line.startswith("missing_heading") and "\ttho\t" in line
+                   for line in review.splitlines())
 
 
 def test_metadata_extracted_from_segmented_layer(tmp_path):
@@ -110,9 +160,9 @@ def test_metadata_extracted_from_segmented_layer(tmp_path):
     path.write_text(json.dumps(cfg, ensure_ascii=False), encoding="utf-8")
     assert segmentation.main(["--config", str(path), "--work-id", "T_01",
                               "--data-root", str(tmp_path)]) == 0
-    han = read_jsonl(layout.segmentation_layer("han"))
+    han = read_layer(layout, "han")
     assert [r["text"] for r in han] == ["正文。"]
-    meta = read_jsonl(layout.segmentation_dir / "document_metadata.jsonl")
+    meta = read_document_meta(layout)
     assert meta[0]["metadata"]["title"]["han"][0]["text"] == "一、標題"
     assert meta[0]["metadata"]["author"]["han"][0]["text"] == "作者名"
 
@@ -125,13 +175,13 @@ def test_cleaning_consumes_segmentation_and_alignment_is_per_document(tmp_path):
     for layer in ("han", "am", "nghia"):
         assert cleaning.main(["--work-id", "T_01", "--data-root", str(tmp_path),
                               "--layer", layer, "--no-metadata", "--force"]) == 0
-        assert (layout.cleaning_root / f"{layer}.jsonl").exists()
+        assert (layout.cleaning_root / f"{layer}.xml").exists()
     assert {s.document_id for s in load_sentences(layout, "han")} == {"T_01.001", "T_01.002"}
     assert {s.document_id for s in load_sentences(layout, "am")} == {"T_01.001", "T_01.002"}
 
     assert align.main(["--work-id", "T_01", "--data-root", str(tmp_path),
                        "--pair", "han-am", "--method", "length"]) == 0
-    beads = read_jsonl(alignment_dir(layout) / "han-am.jsonl")
+    beads = read_alignments(alignment_dir(layout) / "han-am.xml")
     assert {b["document_id"] for b in beads} == {"T_01.001", "T_01.002"}
     assert sum(len(b["src_ids"]) for b in beads) == 2
     assert sum(len(b["tgt_ids"]) for b in beads) == 2
@@ -158,10 +208,10 @@ def test_numbered_heading_same_page_two_documents(tmp_path):
     add_ocr(layout, "chi_tra", 1,
             ["1. Bài một", "nội dung một", "2. Bài hai", "nội dung hai"], "cjk")
     layout = run_numbered(tmp_path, {"han": {"source": "chi_tra"}}, {"numbered_heading": True})
-    docs = read_jsonl(layout.segmentation_dir / "documents.jsonl")
+    docs = read_docs(layout)
     assert [d["document_id"] for d in docs] == ["T_01.001", "T_01.002"]
     assert [d["heading"]["text"] for d in docs] == ["1. Bài một", "2. Bài hai"]
-    han = read_jsonl(layout.segmentation_layer("han"))
+    han = read_layer(layout, "han")
     assert [(r["document_id"], r["text"]) for r in han] == [
         ("T_01.001", "1. Bài một"), ("T_01.001", "nội dung một"),
         ("T_01.002", "2. Bài hai"), ("T_01.002", "nội dung hai")]
@@ -172,7 +222,7 @@ def test_numbered_heading_punctuation_variants_and_leading_space(tmp_path):
     add_ocr(layout, "chi_tra", 1,
             ["1. Một", "2． Hai", "3﹒ Ba", "4· Bốn", "5。 Năm", "6. Sáu"], "cjk")
     layout = run_numbered(tmp_path, {"han": {"source": "chi_tra"}}, {"numbered_heading": True})
-    docs = read_jsonl(layout.segmentation_dir / "documents.jsonl")
+    docs = read_docs(layout)
     assert [d["document_id"] for d in docs] == [f"T_01.{i:03d}" for i in range(1, 7)]
     assert [d["heading"]["text"] for d in docs][-2:] == ["5。 Năm", "6. Sáu"]
 
@@ -182,7 +232,7 @@ def test_numbered_heading_requires_space_and_three_digits(tmp_path):
     add_ocr(layout, "chi_tra", 1,
             ["1.Bài", "1.2 Mục", "1920. Sự kiện", "12 Trang", "2．Hai"], "cjk")
     layout = run_numbered(tmp_path, {"han": {"source": "chi_tra"}}, {"numbered_heading": True})
-    docs = read_jsonl(layout.segmentation_dir / "documents.jsonl")
+    docs = read_docs(layout)
     assert [d["document_id"] for d in docs] == ["T_01.001"]
     assert docs[0]["heading"] is None
     review = read_tsv(layout.segmentation_dir / "review_required.tsv")
@@ -194,7 +244,7 @@ def test_numbered_heading_single_article_can_span_pages(tmp_path):
     add_ocr(layout, "chi_tra", 1, ["1. Một bài", "phần đầu"], "cjk")
     add_ocr(layout, "chi_tra", 2, ["phần tiếp", "phần cuối"], "cjk")
     layout = run_numbered(tmp_path, {"han": {"source": "chi_tra"}}, {"numbered_heading": True})
-    docs = read_jsonl(layout.segmentation_dir / "documents.jsonl")
+    docs = read_docs(layout)
     assert len(docs) == 1 and docs[0]["pages"] == [1, 2]
 
 
@@ -204,7 +254,7 @@ def test_numbered_heading_disabled_on_single_article_without_heading(tmp_path):
     add_ocr(layout, "chi_tra", 2, ["dòng ba"], "cjk")
     layout = run_numbered(tmp_path, {"han": {"source": "chi_tra"}},
                           {"numbered_heading": False})
-    docs = read_jsonl(layout.segmentation_dir / "documents.jsonl")
+    docs = read_docs(layout)
     assert len(docs) == 1 and docs[0]["heading"] is None
 
 
@@ -215,7 +265,7 @@ def test_numbered_heading_custom_convention_and_prefix_review(tmp_path):
     layout = run_numbered(tmp_path, {"han": {"source": "chi_tra"}},
                           {"numbered_heading": False,
                            "start_patterns": [r"^Article \d+$"]})
-    docs = read_jsonl(layout.segmentation_dir / "documents.jsonl")
+    docs = read_docs(layout)
     assert [d["heading"]["text"] for d in docs] == ["Article 1", "Article 2"]
     review = read_tsv(layout.segmentation_dir / "review_required.tsv")
     assert any(r["reason"] == "unassigned_line" and
@@ -231,7 +281,7 @@ def test_same_page_split_across_writing_systems(tmp_path):
                           {"han": {"source": "chi_tra"}, "am": {"source": "vie"},
                            "nghia": {"source": "none"}},
                           {"numbered_heading": True})
-    am = read_jsonl(layout.segmentation_layer("am"))
+    am = read_layer(layout, "am")
     assert [r["document_id"] for r in am] == ["T_01.001"] * 3 + ["T_01.002"] * 3
     review = read_tsv(layout.segmentation_dir / "review_required.tsv")
     assert any(r["reason"] == "document_match_estimated" for r in review)
@@ -249,10 +299,10 @@ def test_numbered_heading_ids_stable_on_rerun(tmp_path):
     args = ["--config", str(path), "--work-id", "T_01", "--data-root", str(tmp_path),
             "--force"]
     assert segmentation.main(args) == 0
-    first = read_jsonl(layout.segmentation_dir / "documents.jsonl")
+    first = read_docs(layout)
     assert [d["document_id"] for d in first] == ["T_01.001", "T_01.002", "T_01.003"]
     assert segmentation.main(args) == 0
-    second = read_jsonl(layout.segmentation_dir / "documents.jsonl")
+    second = read_docs(layout)
     assert second == first
 
 def test_numbered_heading_string_and_dict_pattern_forms(tmp_path):
@@ -266,7 +316,7 @@ def test_numbered_heading_string_and_dict_pattern_forms(tmp_path):
         layout = DataLayout(root, "T_01")
         add_ocr(layout, "chi_tra", 1, lines, "latin")
         layout = run_numbered(root, {"han": {"source": "chi_tra"}}, document, pages="1")
-        docs = read_jsonl(layout.segmentation_dir / "documents.jsonl")
+        docs = read_docs(layout)
         assert [d["document_id"] for d in docs] == ["T_01.001", "T_01.002"]
         assert [d["heading"]["text"] for d in docs] == [lines[0], lines[2]]
 
@@ -301,19 +351,19 @@ def test_vie_heading_sections_and_state_machine(tmp_path):
     layout = run_numbered(tmp_path, _vie_heading_layers(),
                           {"numbered_heading": True}, pages="1-3")
 
-    am = read_jsonl(layout.segmentation_layer("am"))
+    am = read_layer(layout, "am")
     assert [r["text"] for r in am] == ["Phù Đạo xứ thanh hư",
                                        "pháp môn diệu xuất quần vực"]
     assert [r["source_ids"] for r in am] == [["vie.P001.L004"], ["vie.P002.L001"]]
     assert {r["document_id"] for r in am} == {"T_01.001"}
     assert [r["id"] for r in am] == ["T_01.001.P001.L001", "T_01.001.P002.L002"]
 
-    nghia = read_jsonl(layout.segmentation_layer("nghia"))
+    nghia = read_layer(layout, "nghia")
     assert [r["text"] for r in nghia] == ["Rằng chỗ Đạo thanh hư",
                                           "tứ đại lý thường"]
     assert [r["source_ids"] for r in nghia] == [["vie.P002.L003"], ["vie.P002.L004"]]
 
-    headings = read_jsonl(layout.segmentation_dir / "section_headings.jsonl")
+    headings = read_headings(layout)
     starts = [(h["layer"], h["kind"], h["text"], h["source_ids"][0])
               for h in headings if h["kind"] in ("start", "end")]
     assert ("am", "start", "l PHIÊN ÂM : |", "vie.P001.L003") in starts
@@ -335,8 +385,8 @@ def test_vie_missing_headings_are_reviewed_not_silently_dropped(tmp_path):
     layout = run_numbered(tmp_path, _vie_heading_layers(),
                           {"numbered_heading": True}, pages="1")
 
-    assert read_jsonl(layout.segmentation_layer("am")) == []
-    assert read_jsonl(layout.segmentation_layer("nghia")) == []
+    assert read_layer(layout, "am") == []
+    assert read_layer(layout, "nghia") == []
     review = read_tsv(layout.segmentation_dir / "review_required.tsv")
     reasons = [r["reason"] for r in review]
     assert reasons.count("missing_heading") == 2

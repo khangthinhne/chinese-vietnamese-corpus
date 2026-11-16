@@ -22,7 +22,7 @@ from src.segmentation.patterns import (
     matched_labels,
 )
 
-DEFAULT_SOURCE = {"han": "chi_tra", "am": "vie", "nghia": "vie"}
+DEFAULT_SOURCE = {"han": "chi_tra", "am": "vie", "nghia": "vie", "tho": "vie"}
 
 
 def _compile_layer_matcher(layer_cfg: dict, kind: str, name: str):
@@ -133,17 +133,20 @@ def assign_document(work_id: str, doc: Document, layer_cfg: dict, meta_cfg: dict
                 continue
             grouped.setdefault(target, []).append(ln)
         for n in names:
-            if starts[n] and n not in started:
+            optional = bool(layer_cfg[n].get("optional"))
+            if starts[n] and n not in started and not optional:
                 review.append(review_row(work_id, doc.id, n, "missing_heading",
                                          doc.pages, ""))
-            if ends[n] and n in started and current == n:
+            if ends[n] and n in started and current == n and not optional:
                 review.append(review_row(work_id, doc.id, n, "missing_end_heading",
                                          doc.pages, ""))
 
     for name, (ws, _) in sources.items():
+        optional = bool(layer_cfg[name].get("optional"))
         if ws not in doc.lines:
-            review.append(review_row(work_id, doc.id, name, "missing_source", doc.pages, ws))
-        elif name not in grouped:
+            if not optional:
+                review.append(review_row(work_id, doc.id, name, "missing_source", doc.pages, ws))
+        elif name not in grouped and not optional:
             review.append(review_row(work_id, doc.id, name, "missing_layer", doc.pages, ""))
 
     lines_by_layer: dict[str, list[LayerLine]] = {}

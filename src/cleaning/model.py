@@ -12,7 +12,7 @@ from dataclasses import dataclass, field
 # --------------------------------------------------------------------------- #
 # Hằng số dấu câu / ký tự (tách từ clean.py cũ, giữ nguyên hành vi)
 # --------------------------------------------------------------------------- #
-HAN_TERMINATORS = "。！？；﹖﹕﹒"
+HAN_TERMINATORS = "。！？；﹖﹕﹒﹤"
 HAN_CLOSERS = "」』”’）)》〉"
 HAN_PUNCT = "，。！？；：、"        # dấu ngắt câu/ý; ngoặc, nháy, gạch KHÔNG tính khi nhận diện tiêu đề
 ASCII_TO_HAN = {",": "，", ".": "。", ";": "；", ":": "：", "?": "？", "!": "！", "、": "、"}
@@ -30,7 +30,7 @@ MARKER_RE = re.compile(r"\[\d{1,3}\]|［\d{1,3}］|\(\d{1,3}\)|（\d{1,3}）|[�
 LEADING_NUM_RE = re.compile(r"^\s*\d{1,3}\s*[·.．、﹒)]\s*")
 
 # ký tự nhiễu OCR biết chắc: XOÁ khi làm sạch (rule noise_char:<ch>)
-NOISE_CHARS = "®°Øø‡†§¤µ¶`^~¦"
+NOISE_CHARS = "®°Øø‡†§¤µ¶`^~¦" 
 # ký tự nghi ngờ: CHỈ ĐÁNH DẤU review, không xoá
 SUSPECT_CHARS = "\""
 

@@ -315,29 +315,26 @@
       "run_at": "2026-11-15T12:24:25+00:00"
     },
     "han_cleaned": {
-      "input": "04_segmentation/layers/han.jsonl",
-      "output": "05_cleaning/han.jsonl",
+      "input": "04_segmentation/layers/han.xml",
+      "output": "05_cleaning/han.xml",
       "stats": {
-        "raw_lines": 35,
-        "kept_lines": 29,
-        "dropped_lines": 7,
-        "sentences": 30,
-        "cross_page": 1,
-        "no_terminal_punct": 1,
+        "raw_lines": 8,
+        "kept_lines": 6,
+        "dropped_lines": 2,
+        "sentences": 5,
+        "cross_page": 0,
+        "no_terminal_punct": 0,
         "long": 0,
-        "section_lines": 35,
+        "section_lines": 8,
         "pages_removed": 0,
         "duplicates": 0,
         "metadata_fields": {},
         "metadata_excluded": 0,
         "notes": {
-          "bibliographic_note": 1,
-          "uncertain_note": 1
+          "bibliographic_note": 1
         },
-        "reconstructions": {
-          "sentence_continuation": 2
-        },
-        "review_flags": 3
+        "reconstructions": {},
+        "review_flags": 0
       },
       "parameters": {
         "split": "punct",
@@ -373,13 +370,13 @@
         "start_found": false,
         "end_found": false,
         "first_page": 205,
-        "last_page": 209,
-        "n_selected": 35,
+        "last_page": 205,
+        "n_selected": 8,
         "n_excluded": 0
       },
       "pages_removed": [],
       "review_required": true,
-      "run_at": "2026-11-15T20:56:53+00:00"
+      "run_at": "2026-11-16T11:45:38+00:00"
     },
     "am_images": {
       "source": {
@@ -416,30 +413,28 @@
       "run_at": "2026-11-15T09:39:05+00:00"
     },
     "am_cleaned": {
-      "input": "04_segmentation/layers/am.jsonl",
-      "output": "05_cleaning/am.jsonl",
+      "input": "04_segmentation/layers/am.xml",
+      "output": "05_cleaning/am.xml",
       "stats": {
-        "raw_lines": 50,
-        "kept_lines": 45,
-        "dropped_lines": 5,
-        "sentences": 28,
-        "cross_page": 2,
+        "raw_lines": 12,
+        "kept_lines": 8,
+        "dropped_lines": 4,
+        "sentences": 5,
+        "cross_page": 1,
         "no_terminal_punct": 0,
         "long": 0,
-        "section_lines": 50,
+        "section_lines": 12,
         "pages_removed": 0,
         "duplicates": 0,
         "metadata_fields": {},
         "metadata_excluded": 0,
         "notes": {
-          "footnote": 1,
           "bibliographic_note": 1
         },
         "reconstructions": {
-          "ambiguous_join": 1,
-          "sentence_continuation": 1
+          "ambiguous_join": 1
         },
-        "review_flags": 10
+        "review_flags": 2
       },
       "parameters": {
         "split": "punct",
@@ -476,13 +471,13 @@
         "start_found": false,
         "end_found": false,
         "first_page": 205,
-        "last_page": 210,
-        "n_selected": 50,
+        "last_page": 206,
+        "n_selected": 12,
         "n_excluded": 0
       },
       "pages_removed": [],
       "review_required": true,
-      "run_at": "2026-11-15T20:56:53+00:00"
+      "run_at": "2026-11-16T11:45:38+00:00"
     },
     "nghia_images": {
       "source": {
@@ -578,29 +573,26 @@
       "run_at": "2026-11-15T12:24:25+00:00"
     },
     "nghia_cleaned": {
-      "input": "04_segmentation/layers/nghia.jsonl",
-      "output": "05_cleaning/nghia.jsonl",
+      "input": "04_segmentation/layers/nghia.xml",
+      "output": "05_cleaning/nghia.xml",
       "stats": {
-        "raw_lines": 65,
-        "kept_lines": 61,
-        "dropped_lines": 4,
-        "sentences": 26,
-        "cross_page": 2,
+        "raw_lines": 13,
+        "kept_lines": 10,
+        "dropped_lines": 3,
+        "sentences": 5,
+        "cross_page": 0,
         "no_terminal_punct": 1,
         "long": 0,
-        "section_lines": 65,
+        "section_lines": 13,
         "pages_removed": 0,
         "duplicates": 0,
         "metadata_fields": {},
         "metadata_excluded": 0,
         "notes": {
-          "footnote": 1,
           "bibliographic_note": 1
         },
-        "reconstructions": {
-          "ambiguous_join": 3
-        },
-        "review_flags": 12
+        "reconstructions": {},
+        "review_flags": 1
       },
       "parameters": {
         "split": "punct",
@@ -637,16 +629,16 @@
         "start_found": false,
         "end_found": false,
         "first_page": 206,
-        "last_page": 212,
-        "n_selected": 65,
+        "last_page": 206,
+        "n_selected": 13,
         "n_excluded": 0
       },
       "pages_removed": [],
       "review_required": true,
-      "run_at": "2026-11-15T20:56:54+00:00"
+      "run_at": "2026-11-16T11:45:38+00:00"
     },
     "han-am_alignment": {
-      "output": "06_alignment/han-am.jsonl",
+      "output": "06_alignment/han-am.xml",
       "aligner": {
         "name": "levenshtein",
         "options": {
@@ -659,62 +651,22 @@
         }
       },
       "stats": {
-        "src_sentences": 30,
-        "tgt_sentences": 28,
-        "beads": 24,
-        "documents": 2,
+        "src_sentences": 5,
+        "tgt_sentences": 5,
+        "beads": 5,
+        "documents": 1,
         "kinds": {
-          "1-1": 15,
-          "1-2": 2,
-          "2-1": 3,
-          "1-3": 1,
-          "0-1": 1,
-          "3-1": 2
+          "1-1": 5
         },
-        "unaligned": 1,
-        "low_score": 8
+        "unaligned": 0,
+        "low_score": 0
       },
       "low_score_threshold": 0.6,
       "review_required": true,
-      "run_at": "2026-11-15T20:56:55+00:00"
-    },
-    "han-am_export": {
-      "name": "CPO_18_han-am_parallel",
-      "report": {
-        "name": "CPO_18_han-am_parallel",
-        "pair": "han-am",
-        "generated_at": "2026-11-15T20:56:57+00:00",
-        "pairs_exported": 23,
-        "han_sentences": 30,
-        "am_sentences": 28,
-        "kinds_exported": {
-          "1-1": 15,
-          "1-2": 2,
-          "2-1": 3,
-          "1-3": 1,
-          "3-1": 2
-        },
-        "skipped": {
-          "unaligned": 1
-        },
-        "low_score_exported": 8,
-        "cross_page_exported": 3,
-        "self_check": {
-          "no_empty_cell": true,
-          "no_tab_or_newline_in_cell": true,
-          "tsv_xlsx_identical": true,
-          "no_formula_or_merged_cell": true
-        },
-        "params": {
-          "min_score": 0.0,
-          "exclude_flag": []
-        }
-      },
-      "review_required": true,
-      "run_at": "2026-11-15T20:56:57+00:00"
+      "run_at": "2026-11-16T11:45:38+00:00"
     },
     "han-nghia_alignment": {
-      "output": "06_alignment/han-nghia.jsonl",
+      "output": "06_alignment/han-nghia.xml",
       "aligner": {
         "name": "length",
         "options": {
@@ -724,52 +676,19 @@
         }
       },
       "stats": {
-        "src_sentences": 30,
-        "tgt_sentences": 26,
-        "beads": 25,
-        "documents": 2,
+        "src_sentences": 5,
+        "tgt_sentences": 5,
+        "beads": 5,
+        "documents": 1,
         "kinds": {
-          "1-1": 19,
-          "1-2": 1,
-          "2-1": 5
+          "1-1": 5
         },
         "unaligned": 0,
-        "low_score": 13
+        "low_score": 0
       },
       "low_score_threshold": 0.6,
       "review_required": true,
-      "run_at": "2026-11-15T20:56:57+00:00"
-    },
-    "han-nghia_export": {
-      "name": "CPO_18_han-nghia_parallel",
-      "report": {
-        "name": "CPO_18_han-nghia_parallel",
-        "pair": "han-nghia",
-        "generated_at": "2026-11-15T20:56:57+00:00",
-        "pairs_exported": 25,
-        "han_sentences": 30,
-        "nghia_sentences": 26,
-        "kinds_exported": {
-          "1-1": 19,
-          "1-2": 1,
-          "2-1": 5
-        },
-        "skipped": {},
-        "low_score_exported": 13,
-        "cross_page_exported": 2,
-        "self_check": {
-          "no_empty_cell": true,
-          "no_tab_or_newline_in_cell": true,
-          "tsv_xlsx_identical": true,
-          "no_formula_or_merged_cell": true
-        },
-        "params": {
-          "min_score": 0.0,
-          "exclude_flag": []
-        }
-      },
-      "review_required": true,
-      "run_at": "2026-11-15T20:56:57+00:00"
+      "run_at": "2026-11-16T11:45:39+00:00"
     },
     "pages": {
       "source": {
@@ -845,27 +764,22 @@
       ],
       "drive_parent_id": null,
       "drive_folder_id": null,
-      "run_at": "2026-11-15T20:56:45+00:00"
+      "run_at": "2026-11-16T11:45:36+00:00"
     },
     "chi_tra_ocr": {
       "output": "03_ocr/manifests/chi_tra.json",
+      "xml": "03_ocr/ocr_raw/han.xml",
       "source": {
         "path": "E:\\Projects\\han-viet-corpus\\data\\CPO_18\\02_extraction\\pages"
       },
       "counts": {
-        "pages": 8,
-        "lines": 41
+        "pages": 2,
+        "lines": 11
       },
       "parameters": {
         "pages": [
           205,
-          206,
-          207,
-          208,
-          209,
-          210,
-          211,
-          212
+          206
         ],
         "region": [
           0.0,
@@ -879,42 +793,31 @@
         "select": "first",
         "low_conf": 60.0,
         "workers_requested": 4,
-        "workers_used": 4
+        "workers_used": 2
       },
       "low_conf_pages": [
-        206,
-        210,
-        211,
-        212
+        206
       ],
       "empty_pages": [
-        206,
-        210,
-        211,
-        212
+        206
       ],
       "review_required": true,
-      "run_at": "2026-11-15T20:56:52+00:00"
+      "run_at": "2026-11-16T12:49:17+00:00"
     },
     "vie_ocr": {
       "output": "03_ocr/manifests/vie.json",
+      "xml": "03_ocr/ocr_raw/vi.xml",
       "source": {
         "path": "E:\\Projects\\han-viet-corpus\\data\\CPO_18\\02_extraction\\pages"
       },
       "counts": {
-        "pages": 8,
-        "lines": 227
+        "pages": 2,
+        "lines": 53
       },
       "parameters": {
         "pages": [
           205,
-          206,
-          207,
-          208,
-          209,
-          210,
-          211,
-          212
+          206
         ],
         "region": [
           0.0,
@@ -928,30 +831,325 @@
         "select": "first",
         "low_conf": 60.0,
         "workers_requested": 4,
-        "workers_used": 4
+        "workers_used": 2
       },
-      "low_conf_pages": [
-        208
-      ],
+      "low_conf_pages": [],
       "empty_pages": [],
       "review_required": true,
-      "run_at": "2026-11-15T20:56:53+00:00"
+      "run_at": "2026-11-16T12:49:17+00:00"
     },
     "segmentation": {
-      "documents": 2,
+      "documents": 1,
       "lines": {
-        "han": 35,
-        "am": 50,
-        "nghia": 65
+        "han": 8,
+        "am": 12,
+        "nghia": 13,
+        "tho": 0
       },
-      "headings": 10,
-      "review_required": 98,
+      "headings": 5,
+      "review_required": 17,
       "sources": [
         "chi_tra",
         "vie"
       ],
-      "run_at": "2026-11-15T20:56:53+00:00"
+      "run_at": "2026-11-16T11:45:38+00:00"
+    },
+    "tho_cleaned": {
+      "input": "04_segmentation/layers/tho.xml",
+      "output": "05_cleaning/tho.xml",
+      "stats": {
+        "raw_lines": 0,
+        "kept_lines": 0,
+        "dropped_lines": 0,
+        "sentences": 0,
+        "cross_page": 0,
+        "no_terminal_punct": 0,
+        "long": 0,
+        "section_lines": 0,
+        "pages_removed": 0,
+        "duplicates": 0,
+        "metadata_fields": {},
+        "metadata_excluded": 0,
+        "notes": {},
+        "reconstructions": {},
+        "review_flags": 0
+      },
+      "parameters": {
+        "split": "line",
+        "split_colon": false,
+        "drop_patterns": [
+          "^[\\-–—\\s]*\\d{1,4}[\\-–—\\s]*$"
+        ],
+        "heading_heuristic": true,
+        "strip_markers": true,
+        "excluded_pages": [],
+        "remove_headers": true,
+        "remove_footers": true,
+        "remove_duplicates": true,
+        "reconstruct_page_boundaries": true,
+        "footnotes": {
+          "enabled": true,
+          "policy": "exclude"
+        },
+        "metadata": {
+          "enabled": false,
+          "exclude_from_main_text": true,
+          "section_start": [],
+          "section_end": [],
+          "title_patterns": [],
+          "author_patterns": [],
+          "attribution_patterns": []
+        }
+      },
+      "section": {
+        "status": "unbounded",
+        "start_pattern": null,
+        "end_pattern": null,
+        "start_found": false,
+        "end_found": false,
+        "first_page": null,
+        "last_page": null,
+        "n_selected": 0,
+        "n_excluded": 0
+      },
+      "pages_removed": [],
+      "review_required": true,
+      "run_at": "2026-11-16T11:45:38+00:00"
+    },
+    "han-viet_export": {
+      "name": "CPO_18_parallel",
+      "output": "07_export/CPO_18_parallel.xlsx",
+      "rows": 5,
+      "missing_translations": {
+        "am": 0,
+        "nghia": 0,
+        "tho": 5
+      },
+      "skipped": {
+        "tho:missing_alignment": 1
+      },
+      "review_required": true,
+      "run_at": "2026-11-16T11:45:39+00:00"
+    },
+    "han-am_export": {
+      "name": "CPO_18_han-am_parallel",
+      "report": {
+        "name": "CPO_18_han-am_parallel",
+        "pair": "han-am",
+        "generated_at": "2026-11-16T11:45:39+00:00",
+        "pairs_exported": 5,
+        "han_sentences": 5,
+        "am_sentences": 5,
+        "kinds_exported": {
+          "1-1": 5
+        },
+        "skipped": {},
+        "low_score_exported": 0,
+        "cross_page_exported": 1,
+        "self_check": {
+          "no_empty_cell": true,
+          "no_tab_or_newline_in_cell": true,
+          "tsv_xlsx_identical": true,
+          "no_formula_or_merged_cell": true
+        },
+        "params": {
+          "min_score": 0.0,
+          "exclude_flag": []
+        }
+      },
+      "review_required": true,
+      "run_at": "2026-11-16T11:45:39+00:00"
+    },
+    "han-nghia_export": {
+      "name": "CPO_18_han-nghia_parallel",
+      "report": {
+        "name": "CPO_18_han-nghia_parallel",
+        "pair": "han-nghia",
+        "generated_at": "2026-11-16T11:45:39+00:00",
+        "pairs_exported": 5,
+        "han_sentences": 5,
+        "nghia_sentences": 5,
+        "kinds_exported": {
+          "1-1": 5
+        },
+        "skipped": {},
+        "low_score_exported": 0,
+        "cross_page_exported": 0,
+        "self_check": {
+          "no_empty_cell": true,
+          "no_tab_or_newline_in_cell": true,
+          "tsv_xlsx_identical": true,
+          "no_formula_or_merged_cell": true
+        },
+        "params": {
+          "min_score": 0.0,
+          "exclude_flag": []
+        }
+      },
+      "review_required": true,
+      "run_at": "2026-11-16T11:45:39+00:00"
     }
   },
-  "work_id": "CPO_18"
+  "work_id": "CPO_18",
+  "dependencies": {
+    "ocr:chi_tra": {
+      "fingerprint": "2ea29318c72cb14e6bb5f9c14df26930f0218206de132a1c25c6a39e191469bc",
+      "inputs": [
+        "02_extraction/pages/page_205.png",
+        "02_extraction/pages/page_206.png"
+      ],
+      "outputs": [
+        "03_ocr/manifests/chi_tra.json",
+        "03_ocr/ocr_raw/han.xml",
+        "03_ocr/raw/chi_tra/page_0205.json",
+        "03_ocr/raw/chi_tra/page_0206.json",
+        "03_ocr/ocr_raw/han.xml"
+      ]
+    },
+    "ocr:vie": {
+      "fingerprint": "2ea29318c72cb14e6bb5f9c14df26930f0218206de132a1c25c6a39e191469bc",
+      "inputs": [
+        "02_extraction/pages/page_205.png",
+        "02_extraction/pages/page_206.png"
+      ],
+      "outputs": [
+        "03_ocr/manifests/vie.json",
+        "03_ocr/ocr_raw/vi.xml",
+        "03_ocr/raw/vie/page_0205.json",
+        "03_ocr/raw/vie/page_0206.json",
+        "03_ocr/ocr_raw/vi.xml"
+      ]
+    },
+    "segmentation": {
+      "fingerprint": "a4746bfa5fb8f836638aa421b35255dc8666bc70992b54978c3d78ac85855c75",
+      "inputs": [
+        "03_ocr/ocr_raw/han.xml",
+        "03_ocr/ocr_raw/vi.xml",
+        "03_ocr/manifests/chi_tra.json",
+        "03_ocr/manifests/vie.json",
+        "configs/CPO_18_demo.json"
+      ],
+      "outputs": [
+        "04_segmentation/documents.xml",
+        "04_segmentation/document_metadata.xml",
+        "04_segmentation/review_required.xml",
+        "04_segmentation/section_headings.xml",
+        "04_segmentation/layers/han.xml",
+        "04_segmentation/layers/am.xml",
+        "04_segmentation/layers/nghia.xml",
+        "04_segmentation/layers/tho.xml",
+        "04_segmentation/han.metadata.xml",
+        "04_segmentation/am.metadata.xml",
+        "04_segmentation/nghia.metadata.xml",
+        "04_segmentation/tho.metadata.xml"
+      ]
+    },
+    "clean:han": {
+      "fingerprint": "c6e6beeba028f011d825db90059fec8edc908326f19216b9814baf48baa1db1d",
+      "inputs": [
+        "04_segmentation/layers/han.xml"
+      ],
+      "outputs": [
+        "05_cleaning/han.xml",
+        "05_cleaning/han.txt",
+        "05_cleaning/han.dropped.tsv",
+        "05_cleaning/review_required.xml",
+        "05_cleaning/cleaning_audit.xml"
+      ]
+    },
+    "clean:am": {
+      "fingerprint": "176f88c8b7ce81785bffd4b6665cf3c0e8105d548775bea0b08f94c649fe0809",
+      "inputs": [
+        "04_segmentation/layers/am.xml"
+      ],
+      "outputs": [
+        "05_cleaning/am.xml",
+        "05_cleaning/am.txt",
+        "05_cleaning/am.dropped.tsv",
+        "05_cleaning/review_required.xml",
+        "05_cleaning/cleaning_audit.xml"
+      ]
+    },
+    "clean:nghia": {
+      "fingerprint": "f28779e3253d5477fb79cffa661aec4f608187b7a15812c2c3028b4169e08d03",
+      "inputs": [
+        "04_segmentation/layers/nghia.xml"
+      ],
+      "outputs": [
+        "05_cleaning/nghia.xml",
+        "05_cleaning/nghia.txt",
+        "05_cleaning/nghia.dropped.tsv",
+        "05_cleaning/review_required.xml",
+        "05_cleaning/cleaning_audit.xml"
+      ]
+    },
+    "clean:tho": {
+      "fingerprint": "973bd33d068b95334b01d48780ac6a7550d139eec11d74fd983ecab4e9d5c7be",
+      "inputs": [
+        "04_segmentation/layers/tho.xml"
+      ],
+      "outputs": [
+        "05_cleaning/tho.xml",
+        "05_cleaning/tho.txt",
+        "05_cleaning/tho.dropped.tsv",
+        "05_cleaning/review_required.xml",
+        "05_cleaning/cleaning_audit.xml"
+      ]
+    },
+    "align:han-am": {
+      "fingerprint": "11001b2a5524d102d72fc8fef412cd20dbd9020cdb3744f458b1bbc9e6f9d887",
+      "inputs": [
+        "05_cleaning/han.xml",
+        "05_cleaning/am.xml"
+      ],
+      "outputs": [
+        "06_alignment/han-am.xml"
+      ]
+    },
+    "align:han-nghia": {
+      "fingerprint": "e4c7cb0269fa1e5006d6dfd603ca5625c17786a06f0df72860ecdb057d9753ef",
+      "inputs": [
+        "05_cleaning/han.xml",
+        "05_cleaning/nghia.xml"
+      ],
+      "outputs": [
+        "06_alignment/han-nghia.xml"
+      ]
+    },
+    "export:han-viet": {
+      "fingerprint": "e72f0047e1e295396202cd63d5cfa972af6138560a4b781f1dff365be4a93215",
+      "inputs": [
+        "05_cleaning/han.xml",
+        "06_alignment/han-am.xml",
+        "06_alignment/han-nghia.xml"
+      ],
+      "outputs": [
+        "07_export/CPO_18_parallel.xlsx"
+      ]
+    },
+    "export:han-am": {
+      "fingerprint": "0773ddd1f1ba404a69eb22759541d8886b710dfd7ff3ac914ac318150a80ffce",
+      "inputs": [
+        "06_alignment/han-am.xml",
+        "05_cleaning/han.xml",
+        "05_cleaning/am.xml"
+      ],
+      "outputs": [
+        "07_export/CPO_18_han-am_parallel.tsv",
+        "07_export/CPO_18_han-am_parallel.xlsx"
+      ]
+    },
+    "export:han-nghia": {
+      "fingerprint": "1de71a91bed085e95a848ec5e57fd5a7bccef5061c2d664fddaaa4dbb0e10efc",
+      "inputs": [
+        "06_alignment/han-nghia.xml",
+        "05_cleaning/han.xml",
+        "05_cleaning/nghia.xml"
+      ],
+      "outputs": [
+        "07_export/CPO_18_han-nghia_parallel.tsv",
+        "07_export/CPO_18_han-nghia_parallel.xlsx"
+      ]
+    }
+  }
 }

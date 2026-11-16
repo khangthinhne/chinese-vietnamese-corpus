@@ -4,7 +4,8 @@ from pathlib import Path
 from PIL import Image
 
 from src.common.corpus import DataLayout
-from src.ocr import ocr, raw_store
+from src.common.xmlstore import read_root
+from src.ocr import ocr, raw_store, raw_xml
 from src.ocr.engines import OcrEngine, OcrLine, OcrResult, register_engine
 
 
@@ -65,6 +66,22 @@ def test_writing_system_ocr_stores_raw_and_reuses_cache(tmp_path):
     assert [line["text"] for line in vie["pages"][0]["lines"]] == ["phien am", "nghia"]
     assert len(list(layout.ocr_raw_root.rglob("page_*.json"))) == 4
     assert len(list(layout.ocr_manifest_dir.glob("*.json"))) == 2
+
+    xml_path = layout.ocr_raw_xml_path("chi_tra")
+    assert xml_path.name == "han.xml" and xml_path.exists()
+    root = read_root(xml_path)
+    assert "DOCUMENT_ID" not in xml_path.read_text(encoding="utf-8")
+    ocr_el = root.find(".//OCR")
+    assert ocr_el is not None and ocr_el.get("WRITING_SYSTEM") == "chi_tra"
+    pages = ocr_el.findall("PAGE")
+    assert [int(p.get("NUMBER")) for p in pages] == [1, 2]
+    expected = [FakeWritingSystemEngine.texts_by_lang["chi_tra"][0],
+                FakeWritingSystemEngine.texts_by_lang["chi_tra"][2]]
+    assert [line.text for line in pages[0].findall("LINE")] == expected
+    assert pages[0].find("RUNS/RUN/RAW") is not None
+    lines = raw_xml.load_writing_system(layout, "chi_tra", [1])
+    assert [line.text for line in lines] == expected
+    assert lines[0].confidence == 88.0 and lines[0].bbox == (0, 0, 10, 8)
 
 
 def test_writing_system_ocr_rejects_missing_pages(tmp_path):

@@ -17,10 +17,11 @@ import pytest
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from src.common.corpus import DataLayout, RawPage, build_document, make_meta, write_xml  # noqa: E402
-from src.common.sentences import load_sentences, read_jsonl                              # noqa: E402
+from src.common.sentences import load_sentences                                         # noqa: E402
+from src.segmentation import serialization as segxml                                    # noqa: E402
 from src.cleaning import MetadataConfig, RawLine, extract_metadata, read_raw_lines   # noqa: E402
 from src.cleaning.metadata import (aggregate_document_metadata, aggregate_file_metadata,   # noqa: E402
-                                   read_file_meta)
+                                   read_file_meta, write_layer_metadata)
 from src.preprocessing import clean                                                       # noqa: E402
 
 WORK = "CPO_18"
@@ -242,11 +243,10 @@ def test_aggregate_document_and_file_metadata(root, tmp_path):
         raw = read_raw_lines(layout.layer_xml(layer))
         kept, res = extract_metadata(raw, cfg, layer)
         rows = [d.to_row(WORK, layer) for d in res.documents]
-        (out_dir / f"{layer}.metadata.jsonl").write_text(
-            "".join(json.dumps(r, ensure_ascii=False) + "\n" for r in rows), encoding="utf-8")
+        write_layer_metadata(out_dir, layer, rows)
     aggregate_document_metadata(out_dir, WORK)
     aggregate_file_metadata(layout, out_dir)
-    rows = read_jsonl(out_dir / "document_metadata.jsonl")
+    rows = segxml.read_document_metadata(out_dir / "document_metadata.xml")
     assert len(rows) == 1 and rows[0]["document_id"] == DOC
     meta = rows[0]["metadata"]
     assert meta["title"]["han"][0]["text"] == "1﹒ 與高明二法師雙佛不見形書 |"
@@ -277,7 +277,7 @@ def test_clean_cli_metadata_end_to_end(root):
     run_clean(root, "nghia", "--meta-section-start", r"^DỊCH NGHĨA\s*:?$",
               "--meta-section-end", r"^CHÚ THÍCH\s*:?$", "--meta-attribution-pattern", r"^\*")
     out = root / WORK / "05_cleaning"
-    rows = read_jsonl(out / "document_metadata.jsonl")
+    rows = segxml.read_document_metadata(out / "document_metadata.xml")
     assert len(rows) == 1 and rows[0]["document_id"] == DOC
     assert set(rows[0]["metadata"]["title"]) == {"han", "am", "nghia"}
     assert set(rows[0]["metadata"]["author"]) == {"han", "am", "nghia"}
