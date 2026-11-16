@@ -2,9 +2,9 @@
     "common": {
       "work_id": "CPO_19",
       "data_root": "data",
-      "title": "Demo CPO_19",
+      "title": "Ngô Thì Nhậm Toàn Tập - Tập III",
       "source": "E:/HCMUS/Third Year/HK1/CS418 - NLP/midterm/NgoThiNhamToanTap3_LamGiang.pdf",
-      "pages": "15-16",
+      "pages": "15-17",
       "dpi": 300,
       "workers": 4
     },
@@ -42,7 +42,7 @@
         "han": {
           "source": "chi_tra",
           "title_patterns": [
-            "^\\s*\\d{1,3}\\s*[·.．、﹒)]"
+            "^\\s*\\d{1,3}\\s*[·.．、﹒。)]"
           ],
           "attribution_patterns": [
             "^.{0,3}\\*"
@@ -53,26 +53,26 @@
           "source": "vie",
           "heading_mode": true,
           "start_patterns": [
-            "^PHIÊN\\s+ÂM\\b"
+            "^\\s*PHI[ÊỀ]N\\s+ÂM\\s*[:：]?\\s*$"
           ],
           "end_patterns": [
-            "^DỊCH\\s+NGHĨA\\b"
+            "^\\s*DỊCH\\s+NGHĨA\\b"
           ],
           "attribution_patterns": [
-            "^\\*"
+            "^\\s*\\*"
           ]
         },
         "nghia": {
           "source": "vie",
           "heading_mode": true,
           "start_patterns": [
-            "^DỊCH\\s+NGHĨA\\b"
+            "^\\s*DỊCH\\s+NGHĨA\\b"
           ],
           "end_patterns": [
-            "^KHẢO\\s+DỊ\\b"
+            "^\\s*KHẢO\\s+DỊ\\b"
           ],
           "attribution_patterns": [
-            "^\\*"
+            "^\\s*\\*"
           ]
         },
         "tho": {
@@ -80,13 +80,13 @@
           "optional": true,
           "heading_mode": true,
           "start_patterns": [
-            "^DỊCH\\s+THƠ\\b"
+            "^\\s*DỊCH\\s+THƠ\\b"
           ],
           "end_patterns": [
-            "^CHÚ\\s+THÍCH\\b"
+            "^\\s*\\d{1,3}\\s*[·.．、﹒。)]"
           ],
           "attribution_patterns": [
-            "^\\*"
+            "^\\s*\\*"
           ],
           "metadata": false
         }
@@ -99,6 +99,11 @@
         ]
       },
       "nghia": {
+        "drop_pattern": [
+          "^Phần II"
+        ]
+      },
+      "tho": {
         "drop_pattern": [
           "^Phần II"
         ]
@@ -119,6 +124,13 @@
       "han-nghia": {
         "method": "length",
         "name": "CPO_19_han-nghia_parallel"
+      },
+      "han-tho": {
+        "method": "length",
+        "name": "CPO_19_han-tho_parallel"
+      },
+      "han-viet": {
+        "name": "CPO_19_parallel"
       }
     }
   }

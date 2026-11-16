@@ -99,7 +99,7 @@ def write_layer(path: Path, work_id: str, layer: str, rows: Iterable[dict]) -> P
     root = write_file_root(path, work_id)
     layer_el = add(file_element(root), "LAYER", NAME=layer)
     for row in rows:
-        add(layer_el, "SEG", row.get("text", ""), ID=row.get("id"),
+        add(layer_el, "SEGMENT", row.get("text", ""), ID=row.get("id"),
             DOCUMENT_ID=row.get("document_id"), PAGE=row.get("page"),
             WRITING_SYSTEM=row.get("writing_system"),
             BBOX=bbox_attr(row.get("bbox")), CONFIDENCE=row.get("confidence"),
@@ -113,7 +113,7 @@ def read_layer(path: Path) -> list[dict]:
     file_el = file_element(root)
     layer_el = file_el.find("LAYER")
     layer = layer_el.get("NAME", "") if layer_el is not None else ""
-    segments = layer_el.findall("SEG") if layer_el is not None else []
+    segments = layer_el.findall("SEGMENT") if layer_el is not None else []
     return [{
         "id": el.get("ID", ""), "document_id": el.get("DOCUMENT_ID", ""), "layer": layer,
         "page": opt_int(el, "PAGE") or 0, "text": text_of(el),

@@ -1,129 +1,496 @@
 {
   "work_id": "CPO_19",
   "layers": {
-    "am": {
-      "output": "02_extraction/am.xml",
+    "pages": {
       "source": {
-        "path": "01_sources/data"
+        "path": "01_sources/NgoThiNhamToanTap3_LamGiang.pdf",
+        "sha256": "07b443fda96ca3f3491f0fc7031bbeeca428f9127228167f620dd0513c2501a0",
+        "bytes": 33570189
       },
-      "counts": {
-        "sections": 1,
-        "pages": 1,
-        "units": 10
-      },
-      "status": "Raw extraction, not cleaned",
-      "method": "ocr",
-      "engines": {
-        "tesseract": {
-          "name": "tesseract",
-          "version": "5.5.3.20260724",
-          "wrapper_version": "0.3.13",
-          "models": {
-            "vie": "164d9bed7e5a6444586d39434cc1adf4df976cfe23cffd6468e444c94703640a"
-          },
-          "oem": 1,
-          "adapter_version": 1
-        }
-      },
+      "total_pages": 850,
       "parameters": {
-        "pages": [
-          1
-        ],
-        "region": null,
-        "lang": "vie",
-        "psm": 6,
         "dpi": 300,
-        "keep": "latin",
-        "select": "first",
-        "low_conf": 60,
-        "workers_requested": 4,
-        "workers_used": 1
+        "format": "png",
+        "workers": 4
       },
-      "low_conf_pages": [
-        1
-      ],
-      "empty_pages": [],
       "pages": [
+        15,
+        16,
+        17
+      ],
+      "images": [
         {
-          "page": 1,
-          "image": "01_sources/data/page_001.png",
-          "image_sha256": "9a1eb9c733fb655acdd83d91509ce5f46aef1fa1a84961660469039e9b36c09c",
-          "raw": "02_extraction/02_ocr_raw/page_0001.json",
-          "selected_engine": "tesseract",
-          "confidence": 24.43638730315608,
-          "empty": false,
-          "engines": [
-            {
-              "engine": "tesseract",
-              "key": "4f29ddfce5aad88f6f2add56d9d9dd9788b418984054ee2aedbb79658dfd71e8",
-              "cache_hit": false
-            }
-          ]
+          "page": 15,
+          "file": "02_extraction/pages/page_015.png",
+          "drive_id": null,
+          "drive_url": null
+        },
+        {
+          "page": 16,
+          "file": "02_extraction/pages/page_016.png",
+          "drive_id": null,
+          "drive_url": null
+        },
+        {
+          "page": 17,
+          "file": "02_extraction/pages/page_017.png",
+          "drive_id": null,
+          "drive_url": null
         }
       ],
-      "review_required": true,
-      "run_at": "2026-11-11T09:52:54+00:00"
+      "drive_parent_id": null,
+      "drive_folder_id": null,
+      "run_at": "2026-11-16T13:55:11+00:00"
     },
-    "han": {
-      "output": "02_extraction/han.xml",
+    "chi_tra_ocr": {
+      "output": "03_ocr/manifests/chi_tra.json",
+      "xml": "03_ocr/ocr_raw/han.xml",
       "source": {
-        "path": "01_sources/processed"
+        "path": "E:\\Projects\\han-viet-corpus\\data\\CPO_19\\02_extraction\\pages"
       },
       "counts": {
-        "sections": 1,
-        "pages": 1,
-        "units": 10
-      },
-      "status": "Raw extraction, not cleaned",
-      "method": "ocr",
-      "engines": {
-        "tesseract": {
-          "name": "tesseract",
-          "version": "5.5.3.20260724",
-          "wrapper_version": "0.3.13",
-          "models": {
-            "chi_tra": "559067dc0f7c94788884742129d66a0117dde7f4ff12b263d92147173497db14"
-          },
-          "oem": 1,
-          "adapter_version": 1
-        }
+        "pages": 3,
+        "lines": 19
       },
       "parameters": {
         "pages": [
-          2
+          15,
+          16,
+          17
         ],
-        "region": null,
-        "lang": "chi_tra",
+        "region": [
+          0.0,
+          0.08,
+          1.0,
+          0.93
+        ],
         "psm": 6,
         "dpi": 300,
         "keep": "cjk",
         "select": "first",
-        "low_conf": 60,
+        "low_conf": 60.0,
         "workers_requested": 4,
-        "workers_used": 1
+        "workers_used": 3
+      },
+      "low_conf_pages": [
+        16
+      ],
+      "empty_pages": [
+        16
+      ],
+      "review_required": true,
+      "run_at": "2026-11-16T13:55:12+00:00"
+    },
+    "vie_ocr": {
+      "output": "03_ocr/manifests/vie.json",
+      "xml": "03_ocr/ocr_raw/vi.xml",
+      "source": {
+        "path": "E:\\Projects\\han-viet-corpus\\data\\CPO_19\\02_extraction\\pages"
+      },
+      "counts": {
+        "pages": 3,
+        "lines": 83
+      },
+      "parameters": {
+        "pages": [
+          15,
+          16,
+          17
+        ],
+        "region": [
+          0.0,
+          0.08,
+          1.0,
+          0.93
+        ],
+        "psm": 6,
+        "dpi": 300,
+        "keep": "latin",
+        "select": "first",
+        "low_conf": 60.0,
+        "workers_requested": 4,
+        "workers_used": 3
       },
       "low_conf_pages": [],
       "empty_pages": [],
-      "pages": [
-        {
-          "page": 2,
-          "image": "01_sources/processed/page_002.png",
-          "image_sha256": "8fdd65abb4affcd93a9966feaf06ec6aecc44bdc68287a471e7e820a631b5b2c",
-          "raw": "02_extraction/02_ocr_raw/page_0002.json",
-          "selected_engine": "tesseract",
-          "confidence": 69.84219663195701,
-          "empty": false,
-          "engines": [
-            {
-              "engine": "tesseract",
-              "key": "c8e85c730f668acce245acc6fd0be0d24d638f220df517204bf99f2e74f196cd",
-              "cache_hit": false
-            }
-          ]
-        }
-      ],
       "review_required": true,
-      "run_at": "2026-11-11T10:23:57+00:00"
+      "run_at": "2026-11-16T13:55:12+00:00"
+    },
+    "segmentation": {
+      "documents": 1,
+      "lines": {
+        "han": 5,
+        "am": 8,
+        "nghia": 8,
+        "tho": 25
+      },
+      "headings": 5,
+      "review_required": 35,
+      "sources": [
+        "chi_tra",
+        "vie"
+      ],
+      "run_at": "2026-11-16T13:55:13+00:00"
+    },
+    "han_cleaned": {
+      "input": "04_segmentation/layers/han.xml",
+      "output": "05_cleaning/han.xml",
+      "stats": {
+        "raw_lines": 0,
+        "kept_lines": 0,
+        "dropped_lines": 0,
+        "sentences": 0,
+        "cross_page": 0,
+        "no_terminal_punct": 0,
+        "long": 0,
+        "section_lines": 0,
+        "pages_removed": 0,
+        "duplicates": 0,
+        "metadata_fields": {},
+        "metadata_excluded": 0,
+        "notes": {},
+        "reconstructions": {},
+        "review_flags": 0
+      },
+      "parameters": {
+        "split": "punct",
+        "split_colon": false,
+        "drop_patterns": [
+          "^[\\-–—\\s]*\\d{1,4}[\\-–—\\s]*$"
+        ],
+        "heading_heuristic": true,
+        "strip_markers": true,
+        "excluded_pages": [],
+        "remove_headers": true,
+        "remove_footers": true,
+        "remove_duplicates": true,
+        "reconstruct_page_boundaries": true,
+        "footnotes": {
+          "enabled": true,
+          "policy": "exclude"
+        },
+        "metadata": {
+          "enabled": false,
+          "exclude_from_main_text": true,
+          "section_start": [],
+          "section_end": [],
+          "title_patterns": [],
+          "author_patterns": [],
+          "attribution_patterns": []
+        }
+      },
+      "section": {
+        "status": "unbounded",
+        "start_pattern": null,
+        "end_pattern": null,
+        "start_found": false,
+        "end_found": false,
+        "first_page": null,
+        "last_page": null,
+        "n_selected": 0,
+        "n_excluded": 0
+      },
+      "pages_removed": [],
+      "review_required": true,
+      "run_at": "2026-11-16T13:33:33+00:00"
+    },
+    "am_cleaned": {
+      "input": "04_segmentation/layers/am.xml",
+      "output": "05_cleaning/am.xml",
+      "stats": {
+        "raw_lines": 0,
+        "kept_lines": 0,
+        "dropped_lines": 0,
+        "sentences": 0,
+        "cross_page": 0,
+        "no_terminal_punct": 0,
+        "long": 0,
+        "section_lines": 0,
+        "pages_removed": 0,
+        "duplicates": 0,
+        "metadata_fields": {},
+        "metadata_excluded": 0,
+        "notes": {},
+        "reconstructions": {},
+        "review_flags": 0
+      },
+      "parameters": {
+        "split": "punct",
+        "split_colon": false,
+        "drop_patterns": [
+          "^[\\-–—\\s]*\\d{1,4}[\\-–—\\s]*$",
+          "^Phần II"
+        ],
+        "heading_heuristic": true,
+        "strip_markers": true,
+        "excluded_pages": [],
+        "remove_headers": true,
+        "remove_footers": true,
+        "remove_duplicates": true,
+        "reconstruct_page_boundaries": true,
+        "footnotes": {
+          "enabled": true,
+          "policy": "exclude"
+        },
+        "metadata": {
+          "enabled": false,
+          "exclude_from_main_text": true,
+          "section_start": [],
+          "section_end": [],
+          "title_patterns": [],
+          "author_patterns": [],
+          "attribution_patterns": []
+        }
+      },
+      "section": {
+        "status": "unbounded",
+        "start_pattern": null,
+        "end_pattern": null,
+        "start_found": false,
+        "end_found": false,
+        "first_page": null,
+        "last_page": null,
+        "n_selected": 0,
+        "n_excluded": 0
+      },
+      "pages_removed": [],
+      "review_required": true,
+      "run_at": "2026-11-16T13:33:33+00:00"
+    },
+    "nghia_cleaned": {
+      "input": "04_segmentation/layers/nghia.xml",
+      "output": "05_cleaning/nghia.xml",
+      "stats": {
+        "raw_lines": 8,
+        "kept_lines": 8,
+        "dropped_lines": 0,
+        "sentences": 6,
+        "cross_page": 0,
+        "no_terminal_punct": 0,
+        "long": 0,
+        "section_lines": 8,
+        "pages_removed": 0,
+        "duplicates": 0,
+        "metadata_fields": {},
+        "metadata_excluded": 0,
+        "notes": {},
+        "reconstructions": {},
+        "review_flags": 1
+      },
+      "parameters": {
+        "split": "punct",
+        "split_colon": false,
+        "drop_patterns": [
+          "^[\\-–—\\s]*\\d{1,4}[\\-–—\\s]*$",
+          "^Phần II"
+        ],
+        "heading_heuristic": true,
+        "strip_markers": true,
+        "excluded_pages": [],
+        "remove_headers": true,
+        "remove_footers": true,
+        "remove_duplicates": true,
+        "reconstruct_page_boundaries": true,
+        "footnotes": {
+          "enabled": true,
+          "policy": "exclude"
+        },
+        "metadata": {
+          "enabled": false,
+          "exclude_from_main_text": true,
+          "section_start": [],
+          "section_end": [],
+          "title_patterns": [],
+          "author_patterns": [],
+          "attribution_patterns": []
+        }
+      },
+      "section": {
+        "status": "unbounded",
+        "start_pattern": null,
+        "end_pattern": null,
+        "start_found": false,
+        "end_found": false,
+        "first_page": 16,
+        "last_page": 16,
+        "n_selected": 8,
+        "n_excluded": 0
+      },
+      "pages_removed": [],
+      "review_required": true,
+      "run_at": "2026-11-16T13:33:33+00:00"
+    },
+    "tho_cleaned": {
+      "input": "04_segmentation/layers/tho.xml",
+      "output": "05_cleaning/tho.xml",
+      "stats": {
+        "raw_lines": 0,
+        "kept_lines": 0,
+        "dropped_lines": 0,
+        "sentences": 0,
+        "cross_page": 0,
+        "no_terminal_punct": 0,
+        "long": 0,
+        "section_lines": 0,
+        "pages_removed": 0,
+        "duplicates": 0,
+        "metadata_fields": {},
+        "metadata_excluded": 0,
+        "notes": {},
+        "reconstructions": {},
+        "review_flags": 0
+      },
+      "parameters": {
+        "split": "line",
+        "split_colon": false,
+        "drop_patterns": [
+          "^[\\-–—\\s]*\\d{1,4}[\\-–—\\s]*$"
+        ],
+        "heading_heuristic": true,
+        "strip_markers": true,
+        "excluded_pages": [],
+        "remove_headers": true,
+        "remove_footers": true,
+        "remove_duplicates": true,
+        "reconstruct_page_boundaries": true,
+        "footnotes": {
+          "enabled": true,
+          "policy": "exclude"
+        },
+        "metadata": {
+          "enabled": false,
+          "exclude_from_main_text": true,
+          "section_start": [],
+          "section_end": [],
+          "title_patterns": [],
+          "author_patterns": [],
+          "attribution_patterns": []
+        }
+      },
+      "section": {
+        "status": "unbounded",
+        "start_pattern": null,
+        "end_pattern": null,
+        "start_found": false,
+        "end_found": false,
+        "first_page": null,
+        "last_page": null,
+        "n_selected": 0,
+        "n_excluded": 0
+      },
+      "pages_removed": [],
+      "review_required": true,
+      "run_at": "2026-11-16T13:33:33+00:00"
+    }
+  },
+  "dependencies": {
+    "ocr:chi_tra": {
+      "fingerprint": "3c5c4a8e15cb58bb3a04e248fae04fce32760de1e663ee7ad275907b5a2edd95",
+      "inputs": [
+        "02_extraction/pages/page_015.png",
+        "02_extraction/pages/page_016.png",
+        "02_extraction/pages/page_017.png"
+      ],
+      "outputs": [
+        "03_ocr/manifests/chi_tra.json",
+        "03_ocr/ocr_raw/han.xml",
+        "03_ocr/raw/chi_tra/page_0015.json",
+        "03_ocr/raw/chi_tra/page_0016.json",
+        "03_ocr/raw/chi_tra/page_0017.json",
+        "03_ocr/ocr_raw/han.xml"
+      ]
+    },
+    "ocr:vie": {
+      "fingerprint": "3c5c4a8e15cb58bb3a04e248fae04fce32760de1e663ee7ad275907b5a2edd95",
+      "inputs": [
+        "02_extraction/pages/page_015.png",
+        "02_extraction/pages/page_016.png",
+        "02_extraction/pages/page_017.png"
+      ],
+      "outputs": [
+        "03_ocr/manifests/vie.json",
+        "03_ocr/ocr_raw/vi.xml",
+        "03_ocr/raw/vie/page_0015.json",
+        "03_ocr/raw/vie/page_0016.json",
+        "03_ocr/raw/vie/page_0017.json",
+        "03_ocr/ocr_raw/vi.xml"
+      ]
+    },
+    "segmentation": {
+      "fingerprint": "3765e80d87bb1cca7efcae4a440dc14d241dd3a6f882c51342bb109b99fe7035",
+      "inputs": [
+        "03_ocr/ocr_raw/han.xml",
+        "03_ocr/ocr_raw/vi.xml",
+        "03_ocr/manifests/chi_tra.json",
+        "03_ocr/manifests/vie.json",
+        "configs/CPO_19.json"
+      ],
+      "outputs": [
+        "04_segmentation/documents.xml",
+        "04_segmentation/document_metadata.xml",
+        "04_segmentation/review_required.xml",
+        "04_segmentation/section_headings.xml",
+        "04_segmentation/layers/han.xml",
+        "04_segmentation/layers/am.xml",
+        "04_segmentation/layers/nghia.xml",
+        "04_segmentation/layers/tho.xml",
+        "04_segmentation/han.metadata.xml",
+        "04_segmentation/am.metadata.xml",
+        "04_segmentation/nghia.metadata.xml",
+        "04_segmentation/tho.metadata.xml"
+      ]
+    },
+    "clean:han": {
+      "fingerprint": "a939632f0dfb2047f8eff2554104b6ea22b80a25a46756a7c298f4eb09cd6e75",
+      "inputs": [
+        "04_segmentation/layers/han.xml"
+      ],
+      "outputs": [
+        "05_cleaning/han.xml",
+        "05_cleaning/han.txt",
+        "05_cleaning/han.dropped.tsv",
+        "05_cleaning/review_required.xml",
+        "05_cleaning/cleaning_audit.xml"
+      ]
+    },
+    "clean:am": {
+      "fingerprint": "2dce8cbdbfd8a9a5378841f92e0d913e788f5e2d97ed7a0f8cf8c46de1c815c8",
+      "inputs": [
+        "04_segmentation/layers/am.xml"
+      ],
+      "outputs": [
+        "05_cleaning/am.xml",
+        "05_cleaning/am.txt",
+        "05_cleaning/am.dropped.tsv",
+        "05_cleaning/review_required.xml",
+        "05_cleaning/cleaning_audit.xml"
+      ]
+    },
+    "clean:nghia": {
+      "fingerprint": "af98bf7fa5ed02cb5b018171e425a9648e839d27eb9767c9019d45957bc7c9ac",
+      "inputs": [
+        "04_segmentation/layers/nghia.xml"
+      ],
+      "outputs": [
+        "05_cleaning/nghia.xml",
+        "05_cleaning/nghia.txt",
+        "05_cleaning/nghia.dropped.tsv",
+        "05_cleaning/review_required.xml",
+        "05_cleaning/cleaning_audit.xml"
+      ]
+    },
+    "clean:tho": {
+      "fingerprint": "9a3988c7af4506379ebac79cda4848ab0b5f3ad172e882d91a875dd599f548e7",
+      "inputs": [
+        "04_segmentation/layers/tho.xml"
+      ],
+      "outputs": [
+        "05_cleaning/tho.xml",
+        "05_cleaning/tho.txt",
+        "05_cleaning/tho.dropped.tsv",
+        "05_cleaning/review_required.xml",
+        "05_cleaning/cleaning_audit.xml"
+      ]
     }
   }
 }

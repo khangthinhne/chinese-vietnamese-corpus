@@ -7,6 +7,24 @@
         <RECORD LAYER="han" ACTION="remove_line" REASON="bibliographic_note" RULE="note:FN001" PAGE="205" LINE_ID="CPO_18.001.P205.S011">
             <ORIGINAL>三 國 公 鞮 文 ﹒ 全 宅 文 卻 五 十 七 ﹚</ORIGINAL>
         </RECORD>
+        <RECORD LAYER="han" ACTION="reconstruct" REASON="sentence_continuation" RULE="cross_page_continuation" PAGE="207" LINE_ID="CPO_18.001.P207.S012" NOTE="next=CPO_18.001.P208.S013">
+            <ORIGINAL>臾 造 高 法 明 二 法 師 書 難 佛 不 見 形 = TThu g hai vi</ORIGINAL>
+        </RECORD>
+        <RECORD LAYER="han" ACTION="reconstruct" REASON="sentence_continuation" RULE="cross_page_continuation" PAGE="208" LINE_ID="CPO_18.002.P208.S017" NOTE="next=CPO_18.002.P209.S018">
+            <ORIGINAL>禁 ﹣ 苦 耶 史 箱 ﹣ 孰 師 之 甜 ! 糕 氏 念 水 缽 犯 康 | 勾 鈍 C</ORIGINAL>
+        </RECORD>
+        <RECORD LAYER="han" ACTION="remove_line" REASON="heading" RULE="heuristic" PAGE="207" LINE_ID="CPO_18.001.P207.S012">
+            <ORIGINAL>臾造高法明二法師書難佛不見形</ORIGINAL>
+        </RECORD>
+        <RECORD LAYER="han" ACTION="remove_line" REASON="heading" RULE="heuristic" PAGE="208" LINE_ID="CPO_18.001.P208.S013">
+            <ORIGINAL>尕作倉同泰千周柏來</ORIGINAL>
+        </RECORD>
+        <RECORD LAYER="han" ACTION="remove_line" REASON="heading" RULE="heuristic" PAGE="209" LINE_ID="CPO_18.002.P209.S026">
+            <ORIGINAL>弘明岔即十一﹕見全上古三代秦漢</ORIGINAL>
+        </RECORD>
+        <RECORD LAYER="han" ACTION="remove_line" REASON="heading" RULE="heuristic" PAGE="209" LINE_ID="CPO_18.002.P209.S027">
+            <ORIGINAL>乏盼為務欠參來江者﹕交汛三貝</ORIGINAL>
+        </RECORD>
         <RECORD LAYER="am" ACTION="remove_line" REASON="bibliographic_note" RULE="note:FN001" PAGE="206" LINE_ID="CPO_18.001.P206.L013">
             <ORIGINAL>( Hoằng minh tập, Quyển thập nhất ;</ORIGINAL>
         </RECORD>
@@ -19,12 +37,22 @@
         <RECORD LAYER="am" ACTION="remove_line" REASON="bibliographic_note" RULE="note:FN001" PAGE="206" LINE_ID="CPO_18.001.P206.L016">
             <ORIGINAL>uăn. Quyên ngũ thập thất )</ORIGINAL>
         </RECORD>
+        <RECORD LAYER="am" ACTION="remove_line" REASON="footnote" RULE="note:FN002" PAGE="209" LINE_ID="CPO_18.002.P209.L003">
+            <ORIGINAL>* Đạo Cao : Giao Châu Pháp sư</ORIGINAL>
+        </RECORD>
         <RECORD LAYER="am" ACTION="remove_artifact" REASON="ocr_artifact" RULE="noise_char:~" PAGE="205" LINE_ID="CPO_18.001.P205.L010">
             <ORIGINAL>nguyện Đại hòa thượng thùy hoài, doãn nạp hạ tâm, vô ~</ORIGINAL>
             <PROCESSED>nguyện Đại hòa thượng thùy hoài, doãn nạp hạ tâm, vô </PROCESSED>
         </RECORD>
+        <RECORD LAYER="am" ACTION="remove_artifact" REASON="ocr_artifact" RULE="noise_char:^" PAGE="209" LINE_ID="CPO_18.002.P209.L015">
+            <ORIGINAL>£N4 wv^À UY 4 “SI S:S-,ON . NET NI NGỸ 7 qPENE lEA "4H, “SH, HỆ ca ÂN</ORIGINAL>
+            <PROCESSED>£N4 wvÀ UY 4 “SI S:S-,ON . NET NI NGỸ 7 qPENE lEA "4H, “SH, HỆ ca ÂN</PROCESSED>
+        </RECORD>
         <RECORD LAYER="am" ACTION="reconstruct" REASON="ambiguous_join" RULE="cross_page_continuation" PAGE="205" LINE_ID="CPO_18.001.P205.L011" NOTE="next=CPO_18.001.P206.L012">
             <ORIGINAL>tích thần cáo. SN</ORIGINAL>
+        </RECORD>
+        <RECORD LAYER="am" ACTION="reconstruct" REASON="sentence_continuation" RULE="cross_page_continuation" PAGE="209" LINE_ID="CPO_18.002.P209.L015" NOTE="next=CPO_18.002.P210.L016">
+            <ORIGINAL>£N4 wvÀ UY 4 “SI S:S-,ON . NET NI NGỸ 7 qPENE lEA "4H, “SH, HỆ ca ÂN</ORIGINAL>
         </RECORD>
         <RECORD LAYER="nghia" ACTION="remove_line" REASON="bibliographic_note" RULE="note:FN001" PAGE="206" LINE_ID="CPO_18.001.P206.L015">
             <ORIGINAL>( Hoằng minh tập, Q. 11 ; Toàn Thương</ORIGINAL>
@@ -34,6 +62,9 @@
         </RECORD>
         <RECORD LAYER="nghia" ACTION="remove_line" REASON="bibliographic_note" RULE="note:FN001" PAGE="206" LINE_ID="CPO_18.001.P206.L017">
             <ORIGINAL>triều uăn, phần Toàn Tống uăn, Q.57 )</ORIGINAL>
+        </RECORD>
+        <RECORD LAYER="nghia" ACTION="remove_line" REASON="footnote" RULE="note:FN002" PAGE="210" LINE_ID="CPO_18.002.P210.L004">
+            <ORIGINAL>* Đạo Cao là Pháp sư người Giao Châu '\Ở</ORIGINAL>
         </RECORD>
         <RECORD LAYER="nghia" ACTION="remove_artifact" REASON="ocr_artifact" RULE="noise_char:®" PAGE="206" LINE_ID="CPO_18.001.P206.L005">
             <ORIGINAL>Rằng, chỗ Đạo thanh hư !, tứ đại ® lẽ thường, nhờ</ORIGINAL>
@@ -62,6 +93,63 @@
         <RECORD LAYER="nghia" ACTION="remove_artifact" REASON="ocr_artifact" RULE="noise_char:®" PAGE="206" LINE_ID="CPO_18.001.P206.L012">
             <ORIGINAL>mong Đại hòa thượng ®? rủ lòng, chấp nhận nỗi băn</ORIGINAL>
             <PROCESSED>mong Đại hòa thượng ? rủ lòng, chấp nhận nỗi băn</PROCESSED>
+        </RECORD>
+        <RECORD LAYER="nghia" ACTION="remove_artifact" REASON="ocr_artifact" RULE="noise_char:®" PAGE="211" LINE_ID="CPO_18.002.P211.L006">
+            <ORIGINAL>tích khi hiện rõ, khi ân khuất của đấng chí thánh ®, ý</ORIGINAL>
+            <PROCESSED>tích khi hiện rõ, khi ân khuất của đấng chí thánh , ý</PROCESSED>
+        </RECORD>
+        <RECORD LAYER="nghia" ACTION="remove_artifact" REASON="ocr_artifact" RULE="noise_char:®" PAGE="211" LINE_ID="CPO_18.002.P211.L009">
+            <ORIGINAL>Sứ quân ® tường vách cao kín ®, hiểu cho được giáo</ORIGINAL>
+            <PROCESSED>Sứ quân  tường vách cao kín , hiểu cho được giáo</PROCESSED>
+        </RECORD>
+        <RECORD LAYER="nghia" ACTION="remove_artifact" REASON="ocr_artifact" RULE="noise_char:®" PAGE="211" LINE_ID="CPO_18.002.P211.L013">
+            <ORIGINAL>Xét ra, Như Lai ® ứng vật gồm có ba cách : một là</ORIGINAL>
+            <PROCESSED>Xét ra, Như Lai  ứng vật gồm có ba cách : một là</PROCESSED>
+        </RECORD>
+        <RECORD LAYER="nghia" ACTION="remove_artifact" REASON="ocr_artifact" RULE="noise_char:®" PAGE="211" LINE_ID="CPO_18.002.P211.L015">
+            <ORIGINAL>hai là để lại chính pháp ®, cũng như có Phật ở đời ; ba</ORIGINAL>
+            <PROCESSED>hai là để lại chính pháp , cũng như có Phật ở đời ; ba</PROCESSED>
+        </RECORD>
+        <RECORD LAYER="nghia" ACTION="remove_artifact" REASON="ocr_artifact" RULE="noise_char:®" PAGE="211" LINE_ID="CPO_18.002.P211.L016">
+            <ORIGINAL>là để lại tượng giáo ®, từa tựa như dung nghi khuôn |</ORIGINAL>
+            <PROCESSED>là để lại tượng giáo , từa tựa như dung nghi khuôn |</PROCESSED>
+        </RECORD>
+        <RECORD LAYER="nghia" ACTION="remove_artifact" REASON="ocr_artifact" RULE="noise_char:®" PAGE="211" LINE_ID="CPO_18.002.P211.L020">
+            <ORIGINAL>: xuất hiện ? Cho nên kinh 7ÿnh danh ® nói : “Khéo hiểu</ORIGINAL>
+            <PROCESSED>: xuất hiện ? Cho nên kinh 7ÿnh danh  nói : “Khéo hiểu</PROCESSED>
+        </RECORD>
+        <RECORD LAYER="nghia" ACTION="remove_artifact" REASON="ocr_artifact" RULE="noise_char:©" PAGE="211" LINE_ID="CPO_18.002.P211.L031">
+            <ORIGINAL>Kìa chuyện Tam Hoàng Ngủ Đế ©, Tam đại Ngũ</ORIGINAL>
+            <PROCESSED>Kìa chuyện Tam Hoàng Ngủ Đế , Tam đại Ngũ</PROCESSED>
+        </RECORD>
+        <RECORD LAYER="nghia" ACTION="remove_artifact" REASON="ocr_artifact" RULE="noise_char:®" PAGE="211" LINE_ID="CPO_18.002.P211.L032">
+            <ORIGINAL>Bá (!? Cơ Đán Khổng Khâu !'® biên tập Kinh Thi, chế</ORIGINAL>
+            <PROCESSED>Bá (!? Cơ Đán Khổng Khâu !' biên tập Kinh Thi, chế</PROCESSED>
+        </RECORD>
+        <RECORD LAYER="nghia" ACTION="remove_artifact" REASON="ocr_artifact" RULE="noise_char:°" PAGE="211" LINE_ID="CPO_18.002.P211.L034">
+            <ORIGINAL>thấy dâu ! Chuyện họ Thích !° gióng trống pháp 9 ở li</ORIGINAL>
+            <PROCESSED>thấy dâu ! Chuyện họ Thích ! gióng trống pháp 9 ở li</PROCESSED>
+        </RECORD>
+        <RECORD LAYER="nghia" ACTION="remove_artifact" REASON="ocr_artifact" RULE="noise_char:®" PAGE="212" LINE_ID="CPO_18.002.P212.L042">
+            <ORIGINAL>ngài tìm hiểu lời dạy 77o lượng ®® chưa dứt, gần thì</ORIGINAL>
+            <PROCESSED>ngài tìm hiểu lời dạy 77o lượng  chưa dứt, gần thì</PROCESSED>
+        </RECORD>
+        <RECORD LAYER="nghia" ACTION="remove_artifact" REASON="ocr_artifact" RULE="noise_char:®" PAGE="212" LINE_ID="CPO_18.002.P212.L043">
+            <ORIGINAL>theo dấu tích Định Quang, Nho Đồng ®?, giữa thì suy</ORIGINAL>
+            <PROCESSED>theo dấu tích Định Quang, Nho Đồng ?, giữa thì suy</PROCESSED>
+        </RECORD>
+        <RECORD LAYER="nghia" ACTION="remove_artifact" REASON="ocr_artifact" RULE="noise_char:®" PAGE="212" LINE_ID="CPO_18.002.P212.L047">
+            <ORIGINAL>Bần đạo ®® ý nông lời vụng, e nói chưa thật rõ lòng,</ORIGINAL>
+            <PROCESSED>Bần đạo  ý nông lời vụng, e nói chưa thật rõ lòng,</PROCESSED>
+        </RECORD>
+        <RECORD LAYER="nghia" ACTION="reconstruct" REASON="ambiguous_join" RULE="cross_page_continuation" PAGE="206" LINE_ID="CPO_18.001.P206.L014" NOTE="next=CPO_18.002.P210.L002">
+            <ORIGINAL>Đệ tử Lý Miễu kính lễ !,</ORIGINAL>
+        </RECORD>
+        <RECORD LAYER="nghia" ACTION="reconstruct" REASON="ambiguous_join" RULE="cross_page_continuation" PAGE="210" LINE_ID="CPO_18.002.P210.L003" NOTE="next=CPO_18.002.P211.L005">
+            <ORIGINAL>THÍCH ĐẠO CAO &lt;</ORIGINAL>
+        </RECORD>
+        <RECORD LAYER="nghia" ACTION="reconstruct" REASON="ambiguous_join" RULE="cross_page_continuation" PAGE="211" LINE_ID="CPO_18.002.P211.L035" NOTE="next=CPO_18.002.P212.L036">
+            <ORIGINAL>s\</ORIGINAL>
         </RECORD>
     </FILE>
 </root>

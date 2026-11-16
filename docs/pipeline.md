@@ -22,8 +22,8 @@ các bước đọc tự lùi về thư mục cũ nếu thư mục mới chưa c
 | align | `python -m src.alignment.align` | 2 lớp đã clean | `06_alignment/<pair>.jsonl` |
 | export | `python -m src.alignment.export` | `<pair>.jsonl` | `07_export/<name>.{tsv,xlsx}`, report |
 
-Chạy cả chuỗi: `python -m src.pipeline --config configs/CPO_18_demo.json` (config mới);
-`configs/CPO_18_demo_legacy.json` minh hoạ chế độ cũ. Thêm `--dry-run` để xem lệnh.
+Chạy cả chuỗi: `python -m src.pipeline --config configs/CPO_18.json` 
+Nếu muốn chạy riêng từng step thì thêm `--steps <step>` với <step> là `"extract", "ocr", "segment", "clean", "align", "export"`
 
 ## Kiến trúc mới: OCR theo hệ chữ + phân đoạn
 - **Config**: có khối `ocr` và/hoặc `segmentation` -> chế độ mới; còn `layers` -> chế độ cũ.

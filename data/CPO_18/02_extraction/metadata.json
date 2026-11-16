@@ -1,695 +1,6 @@
 {
-  "dataset_id": "CPO_18",
-  "title": "Sưu tầm và khảo luận tác phẩm chữ Hán của người Việt Nam trước thế kỷ X",
-  "source_file": "Sưu tầm và khảo luận tác phẩm chữ Hán của người Việt Nam trước thế kỷ X.pdf",
-  "source_type": "scanned_pdf",
-  "page_count": 1000,
-  "extraction_method": "OCR",
-  "ocr_engine": "...",
-  "ocr_languages": [
-    "ch"
-  ],
-  "extracted_at": "yyyy-mm-dd",
-  "status": "raw_extraction",
+  "work_id": "CPO_18",
   "layers": {
-    "han_images": {
-      "source": {
-        "path": "01_sources/CPO18.pdf",
-        "sha256": "02097c62708a086d9c83e3ca404e3fef187c217e9efb6a40e3586612e2233396",
-        "bytes": 135237721
-      },
-      "total_pages": 565,
-      "parameters": {
-        "dpi": 300,
-        "format": "png",
-        "workers": 4
-      },
-      "pages": [
-        205,
-        206,
-        207,
-        208,
-        209,
-        210
-      ],
-      "images": [
-        {
-          "page": 205,
-          "file": "02_extraction/01_page_image/han/page_205.png",
-          "drive_id": null,
-          "drive_url": null
-        },
-        {
-          "page": 206,
-          "file": "02_extraction/01_page_image/han/page_206.png",
-          "drive_id": null,
-          "drive_url": null
-        },
-        {
-          "page": 207,
-          "file": "02_extraction/01_page_image/han/page_207.png",
-          "drive_id": null,
-          "drive_url": null
-        },
-        {
-          "page": 208,
-          "file": "02_extraction/01_page_image/han/page_208.png",
-          "drive_id": null,
-          "drive_url": null
-        },
-        {
-          "page": 209,
-          "file": "02_extraction/01_page_image/han/page_209.png",
-          "drive_id": null,
-          "drive_url": null
-        },
-        {
-          "page": 210,
-          "file": "02_extraction/01_page_image/han/page_210.png",
-          "drive_id": null,
-          "drive_url": null
-        }
-      ],
-      "drive_parent_id": null,
-      "drive_folder_id": null,
-      "run_at": "2026-11-15T17:05:42+00:00"
-    },
-    "han": {
-      "output": "02_extraction/han.xml",
-      "source": {
-        "path": "01_sources/han"
-      },
-      "counts": {
-        "sections": 1,
-        "pages": 4,
-        "units": 41
-      },
-      "status": "Raw extraction, not cleaned",
-      "method": "ocr",
-      "engines": {
-        "tesseract": {
-          "name": "tesseract",
-          "version": "5.5.3.20260724",
-          "wrapper_version": "0.3.13",
-          "models": {
-            "chi_tra": "559067dc0f7c94788884742129d66a0117dde7f4ff12b263d92147173497db14"
-          },
-          "oem": 1,
-          "adapter_version": 1
-        }
-      },
-      "parameters": {
-        "pages": [
-          205,
-          206,
-          207,
-          208,
-          209,
-          210
-        ],
-        "region": [
-          0.0,
-          0.08,
-          1.0,
-          0.93
-        ],
-        "lang": "chi_tra",
-        "psm": 6,
-        "dpi": 300,
-        "keep": "cjk",
-        "select": "first",
-        "low_conf": 60,
-        "workers_requested": 4,
-        "workers_used": 4
-      },
-      "low_conf_pages": [
-        206,
-        210
-      ],
-      "empty_pages": [
-        206,
-        210
-      ],
-      "pages": [
-        {
-          "page": 205,
-          "image": "01_sources/han/page_205.png",
-          "image_sha256": "5afb8b82d045bf87f457e4285f977c608023a2e74a49f37199f54817e1218e72",
-          "raw": "02_extraction/02_ocr_raw/page_0205.json",
-          "selected_engine": "tesseract",
-          "confidence": 88.39974668108326,
-          "empty": false,
-          "engines": [
-            {
-              "engine": "tesseract",
-              "key": "80871be07387e7df84b2b8e6caca23bae465189e85d2a9e883ece9d540e1b4b9",
-              "cache_hit": true
-            }
-          ]
-        },
-        {
-          "page": 206,
-          "image": "01_sources/han/page_206.png",
-          "image_sha256": "fed77272d9e993999a8d2d3890ab340d1c1b0b312d145ff1c8c528eb188a8ddc",
-          "raw": "02_extraction/02_ocr_raw/page_0206.json",
-          "selected_engine": "tesseract",
-          "confidence": null,
-          "empty": true,
-          "engines": [
-            {
-              "engine": "tesseract",
-              "key": "adea81510b5056116b64fa13a57cac27611d16d2db398bf278af44258eeeb1b7",
-              "cache_hit": false
-            }
-          ]
-        },
-        {
-          "page": 207,
-          "image": "01_sources/han/page_207.png",
-          "image_sha256": "f494be772212d386652db632fd2fe7095a93d2791d1aee46fba1dd374ad5d571",
-          "raw": "02_extraction/02_ocr_raw/page_0207.json",
-          "selected_engine": "tesseract",
-          "confidence": 81.44,
-          "empty": false,
-          "engines": [
-            {
-              "engine": "tesseract",
-              "key": "d8a4ad3a2dde5df2dd2a668d87c2fe3704e2298333ec5f58c512f04ac62bfbfe",
-              "cache_hit": false
-            }
-          ]
-        },
-        {
-          "page": 208,
-          "image": "01_sources/han/page_208.png",
-          "image_sha256": "e5661834fd45b1d00adddded488760bbcf7f94fe8287c328a201ed918a69fb74",
-          "raw": "02_extraction/02_ocr_raw/page_0208.json",
-          "selected_engine": "tesseract",
-          "confidence": 84.55440143011634,
-          "empty": false,
-          "engines": [
-            {
-              "engine": "tesseract",
-              "key": "dcfe687632597301b0c8a5f6560c7c66dffbd294279623a1c8a4cd9066927477",
-              "cache_hit": false
-            }
-          ]
-        },
-        {
-          "page": 209,
-          "image": "01_sources/han/page_209.png",
-          "image_sha256": "96954f5f44b2492cfcfbafb0ff6f0bb6b2663351439d2c5bf67b615cc7724a87",
-          "raw": "02_extraction/02_ocr_raw/page_0209.json",
-          "selected_engine": "tesseract",
-          "confidence": 70.05073913628827,
-          "empty": false,
-          "engines": [
-            {
-              "engine": "tesseract",
-              "key": "7eb3667cb914d00e0ffcb0b465837e85a025109e87c475a49f2b94ed849458f7",
-              "cache_hit": false
-            }
-          ]
-        },
-        {
-          "page": 210,
-          "image": "01_sources/han/page_210.png",
-          "image_sha256": "13b28c0741438cc418c13bf911105d9e9a9fd5da0d1bbe878010eac09da1b806",
-          "raw": "02_extraction/02_ocr_raw/page_0210.json",
-          "selected_engine": "tesseract",
-          "confidence": null,
-          "empty": true,
-          "engines": [
-            {
-              "engine": "tesseract",
-              "key": "217176f1b6f8b0adc44c41901af4bf82957c897993193c552cd0eb43642e29b8",
-              "cache_hit": false
-            }
-          ]
-        }
-      ],
-      "review_required": true,
-      "run_at": "2026-11-15T17:36:28+00:00"
-    },
-    "am": {
-      "output": "02_extraction/am.xml",
-      "source": {
-        "path": "01_sources/am"
-      },
-      "counts": {
-        "sections": 1,
-        "pages": 2,
-        "units": 53
-      },
-      "status": "Raw extraction, not cleaned",
-      "method": "ocr",
-      "engines": {
-        "tesseract": {
-          "name": "tesseract",
-          "version": "5.5.3.20260724",
-          "wrapper_version": "0.3.13",
-          "models": {
-            "vie": "164d9bed7e5a6444586d39434cc1adf4df976cfe23cffd6468e444c94703640a"
-          },
-          "oem": 1,
-          "adapter_version": 1
-        }
-      },
-      "parameters": {
-        "pages": [
-          205,
-          206
-        ],
-        "region": [
-          0.0,
-          0.08,
-          1.0,
-          0.93
-        ],
-        "lang": "vie",
-        "psm": 6,
-        "dpi": 300,
-        "keep": "latin",
-        "select": "first",
-        "low_conf": 60,
-        "workers_requested": 4,
-        "workers_used": 2
-      },
-      "low_conf_pages": [],
-      "empty_pages": [],
-      "pages": [
-        {
-          "page": 205,
-          "image": "01_sources/am/page_205.png",
-          "image_sha256": "5afb8b82d045bf87f457e4285f977c608023a2e74a49f37199f54817e1218e72",
-          "raw": "02_extraction/02_ocr_raw/page_0205.json",
-          "selected_engine": "tesseract",
-          "confidence": 72.13793045367423,
-          "empty": false,
-          "engines": [
-            {
-              "engine": "tesseract",
-              "key": "1d5e500c5f7ec88ee1d94ae2eef496aa95c84c9d098a420c2ce0c3001078e06a",
-              "cache_hit": true
-            }
-          ]
-        },
-        {
-          "page": 206,
-          "image": "01_sources/am/page_206.png",
-          "image_sha256": "fed77272d9e993999a8d2d3890ab340d1c1b0b312d145ff1c8c528eb188a8ddc",
-          "raw": "02_extraction/02_ocr_raw/page_0206.json",
-          "selected_engine": "tesseract",
-          "confidence": 92.00762829898034,
-          "empty": false,
-          "engines": [
-            {
-              "engine": "tesseract",
-              "key": "d0351e60bd7ed12aabb01051f96caf696bde76ccc730a5a6cf755b280f24481b",
-              "cache_hit": true
-            }
-          ]
-        }
-      ],
-      "review_required": true,
-      "run_at": "2026-11-15T12:24:25+00:00"
-    },
-    "han_cleaned": {
-      "input": "04_segmentation/layers/han.xml",
-      "output": "05_cleaning/han.xml",
-      "stats": {
-        "raw_lines": 8,
-        "kept_lines": 6,
-        "dropped_lines": 2,
-        "sentences": 5,
-        "cross_page": 0,
-        "no_terminal_punct": 0,
-        "long": 0,
-        "section_lines": 8,
-        "pages_removed": 0,
-        "duplicates": 0,
-        "metadata_fields": {},
-        "metadata_excluded": 0,
-        "notes": {
-          "bibliographic_note": 1
-        },
-        "reconstructions": {},
-        "review_flags": 0
-      },
-      "parameters": {
-        "split": "punct",
-        "split_colon": false,
-        "drop_patterns": [
-          "^[\\-–—\\s]*\\d{1,4}[\\-–—\\s]*$"
-        ],
-        "heading_heuristic": true,
-        "strip_markers": true,
-        "excluded_pages": [],
-        "remove_headers": true,
-        "remove_footers": true,
-        "remove_duplicates": true,
-        "reconstruct_page_boundaries": true,
-        "footnotes": {
-          "enabled": true,
-          "policy": "exclude"
-        },
-        "metadata": {
-          "enabled": false,
-          "exclude_from_main_text": true,
-          "section_start": [],
-          "section_end": [],
-          "title_patterns": [],
-          "author_patterns": [],
-          "attribution_patterns": []
-        }
-      },
-      "section": {
-        "status": "unbounded",
-        "start_pattern": null,
-        "end_pattern": null,
-        "start_found": false,
-        "end_found": false,
-        "first_page": 205,
-        "last_page": 205,
-        "n_selected": 8,
-        "n_excluded": 0
-      },
-      "pages_removed": [],
-      "review_required": true,
-      "run_at": "2026-11-16T11:45:38+00:00"
-    },
-    "am_images": {
-      "source": {
-        "path": "01_sources/CPO18.pdf",
-        "sha256": "02097c62708a086d9c83e3ca404e3fef187c217e9efb6a40e3586612e2233396",
-        "bytes": 135237721
-      },
-      "total_pages": 565,
-      "parameters": {
-        "dpi": 300,
-        "format": "png",
-        "workers": 4
-      },
-      "pages": [
-        205,
-        206
-      ],
-      "images": [
-        {
-          "page": 205,
-          "file": "02_extraction/01_page_image/am/page_205.png",
-          "drive_id": null,
-          "drive_url": null
-        },
-        {
-          "page": 206,
-          "file": "02_extraction/01_page_image/am/page_206.png",
-          "drive_id": null,
-          "drive_url": null
-        }
-      ],
-      "drive_parent_id": null,
-      "drive_folder_id": null,
-      "run_at": "2026-11-15T09:39:05+00:00"
-    },
-    "am_cleaned": {
-      "input": "04_segmentation/layers/am.xml",
-      "output": "05_cleaning/am.xml",
-      "stats": {
-        "raw_lines": 12,
-        "kept_lines": 8,
-        "dropped_lines": 4,
-        "sentences": 5,
-        "cross_page": 1,
-        "no_terminal_punct": 0,
-        "long": 0,
-        "section_lines": 12,
-        "pages_removed": 0,
-        "duplicates": 0,
-        "metadata_fields": {},
-        "metadata_excluded": 0,
-        "notes": {
-          "bibliographic_note": 1
-        },
-        "reconstructions": {
-          "ambiguous_join": 1
-        },
-        "review_flags": 2
-      },
-      "parameters": {
-        "split": "punct",
-        "split_colon": false,
-        "drop_patterns": [
-          "^[\\-–—\\s]*\\d{1,4}[\\-–—\\s]*$",
-          "^Phần II"
-        ],
-        "heading_heuristic": true,
-        "strip_markers": true,
-        "excluded_pages": [],
-        "remove_headers": true,
-        "remove_footers": true,
-        "remove_duplicates": true,
-        "reconstruct_page_boundaries": true,
-        "footnotes": {
-          "enabled": true,
-          "policy": "exclude"
-        },
-        "metadata": {
-          "enabled": false,
-          "exclude_from_main_text": true,
-          "section_start": [],
-          "section_end": [],
-          "title_patterns": [],
-          "author_patterns": [],
-          "attribution_patterns": []
-        }
-      },
-      "section": {
-        "status": "unbounded",
-        "start_pattern": null,
-        "end_pattern": null,
-        "start_found": false,
-        "end_found": false,
-        "first_page": 205,
-        "last_page": 206,
-        "n_selected": 12,
-        "n_excluded": 0
-      },
-      "pages_removed": [],
-      "review_required": true,
-      "run_at": "2026-11-16T11:45:38+00:00"
-    },
-    "nghia_images": {
-      "source": {
-        "path": "01_sources/CPO18.pdf",
-        "sha256": "02097c62708a086d9c83e3ca404e3fef187c217e9efb6a40e3586612e2233396",
-        "bytes": 135237721
-      },
-      "total_pages": 565,
-      "parameters": {
-        "dpi": 300,
-        "format": "png",
-        "workers": 4
-      },
-      "pages": [
-        206
-      ],
-      "images": [
-        {
-          "page": 206,
-          "file": "02_extraction/01_page_image/nghia/page_206.png",
-          "drive_id": null,
-          "drive_url": null
-        }
-      ],
-      "drive_parent_id": null,
-      "drive_folder_id": null,
-      "run_at": "2026-11-15T09:39:09+00:00"
-    },
-    "nghia": {
-      "output": "02_extraction/nghia.xml",
-      "source": {
-        "path": "01_sources/nghia"
-      },
-      "counts": {
-        "sections": 1,
-        "pages": 1,
-        "units": 28
-      },
-      "status": "Raw extraction, not cleaned",
-      "method": "ocr",
-      "engines": {
-        "tesseract": {
-          "name": "tesseract",
-          "version": "5.5.3.20260724",
-          "wrapper_version": "0.3.13",
-          "models": {
-            "vie": "164d9bed7e5a6444586d39434cc1adf4df976cfe23cffd6468e444c94703640a"
-          },
-          "oem": 1,
-          "adapter_version": 1
-        }
-      },
-      "parameters": {
-        "pages": [
-          206
-        ],
-        "region": [
-          0.0,
-          0.08,
-          1.0,
-          0.93
-        ],
-        "lang": "vie",
-        "psm": 6,
-        "dpi": 300,
-        "keep": "latin",
-        "select": "first",
-        "low_conf": 60,
-        "workers_requested": 4,
-        "workers_used": 1
-      },
-      "low_conf_pages": [],
-      "empty_pages": [],
-      "pages": [
-        {
-          "page": 206,
-          "image": "01_sources/nghia/page_206.png",
-          "image_sha256": "fed77272d9e993999a8d2d3890ab340d1c1b0b312d145ff1c8c528eb188a8ddc",
-          "raw": "02_extraction/02_ocr_raw/page_0206.json",
-          "selected_engine": "tesseract",
-          "confidence": 92.00762829898034,
-          "empty": false,
-          "engines": [
-            {
-              "engine": "tesseract",
-              "key": "a9ab67d08d63bbfd966ca9caa3c5999ad0d5098400ddc0a8dbd120f95697af7b",
-              "cache_hit": true
-            }
-          ]
-        }
-      ],
-      "review_required": true,
-      "run_at": "2026-11-15T12:24:25+00:00"
-    },
-    "nghia_cleaned": {
-      "input": "04_segmentation/layers/nghia.xml",
-      "output": "05_cleaning/nghia.xml",
-      "stats": {
-        "raw_lines": 13,
-        "kept_lines": 10,
-        "dropped_lines": 3,
-        "sentences": 5,
-        "cross_page": 0,
-        "no_terminal_punct": 1,
-        "long": 0,
-        "section_lines": 13,
-        "pages_removed": 0,
-        "duplicates": 0,
-        "metadata_fields": {},
-        "metadata_excluded": 0,
-        "notes": {
-          "bibliographic_note": 1
-        },
-        "reconstructions": {},
-        "review_flags": 1
-      },
-      "parameters": {
-        "split": "punct",
-        "split_colon": false,
-        "drop_patterns": [
-          "^[\\-–—\\s]*\\d{1,4}[\\-–—\\s]*$",
-          "^Phần II"
-        ],
-        "heading_heuristic": true,
-        "strip_markers": true,
-        "excluded_pages": [],
-        "remove_headers": true,
-        "remove_footers": true,
-        "remove_duplicates": true,
-        "reconstruct_page_boundaries": true,
-        "footnotes": {
-          "enabled": true,
-          "policy": "exclude"
-        },
-        "metadata": {
-          "enabled": false,
-          "exclude_from_main_text": true,
-          "section_start": [],
-          "section_end": [],
-          "title_patterns": [],
-          "author_patterns": [],
-          "attribution_patterns": []
-        }
-      },
-      "section": {
-        "status": "unbounded",
-        "start_pattern": null,
-        "end_pattern": null,
-        "start_found": false,
-        "end_found": false,
-        "first_page": 206,
-        "last_page": 206,
-        "n_selected": 13,
-        "n_excluded": 0
-      },
-      "pages_removed": [],
-      "review_required": true,
-      "run_at": "2026-11-16T11:45:38+00:00"
-    },
-    "han-am_alignment": {
-      "output": "06_alignment/han-am.xml",
-      "aligner": {
-        "name": "levenshtein",
-        "options": {
-          "reading_dict": "resources/han_viet.tsv",
-          "unknown_cost": 0.5,
-          "bare_cost": 0.3,
-          "merge_penalty": 2.0,
-          "skip_penalty": 1.0,
-          "band": 30
-        }
-      },
-      "stats": {
-        "src_sentences": 5,
-        "tgt_sentences": 5,
-        "beads": 5,
-        "documents": 1,
-        "kinds": {
-          "1-1": 5
-        },
-        "unaligned": 0,
-        "low_score": 0
-      },
-      "low_score_threshold": 0.6,
-      "review_required": true,
-      "run_at": "2026-11-16T11:45:38+00:00"
-    },
-    "han-nghia_alignment": {
-      "output": "06_alignment/han-nghia.xml",
-      "aligner": {
-        "name": "length",
-        "options": {
-          "variance": 6.8,
-          "skip_cost": 6.0,
-          "band": 30
-        }
-      },
-      "stats": {
-        "src_sentences": 5,
-        "tgt_sentences": 5,
-        "beads": 5,
-        "documents": 1,
-        "kinds": {
-          "1-1": 5
-        },
-        "unaligned": 0,
-        "low_score": 0
-      },
-      "low_score_threshold": 0.6,
-      "review_required": true,
-      "run_at": "2026-11-16T11:45:39+00:00"
-    },
     "pages": {
       "source": {
         "path": "01_sources/CPO18.pdf",
@@ -764,7 +75,7 @@
       ],
       "drive_parent_id": null,
       "drive_folder_id": null,
-      "run_at": "2026-11-16T11:45:36+00:00"
+      "run_at": "2026-11-16T14:16:53+00:00"
     },
     "chi_tra_ocr": {
       "output": "03_ocr/manifests/chi_tra.json",
@@ -773,13 +84,19 @@
         "path": "E:\\Projects\\han-viet-corpus\\data\\CPO_18\\02_extraction\\pages"
       },
       "counts": {
-        "pages": 2,
-        "lines": 11
+        "pages": 8,
+        "lines": 41
       },
       "parameters": {
         "pages": [
           205,
-          206
+          206,
+          207,
+          208,
+          209,
+          210,
+          211,
+          212
         ],
         "region": [
           0.0,
@@ -793,16 +110,22 @@
         "select": "first",
         "low_conf": 60.0,
         "workers_requested": 4,
-        "workers_used": 2
+        "workers_used": 4
       },
       "low_conf_pages": [
-        206
+        206,
+        210,
+        211,
+        212
       ],
       "empty_pages": [
-        206
+        206,
+        210,
+        211,
+        212
       ],
       "review_required": true,
-      "run_at": "2026-11-16T12:49:17+00:00"
+      "run_at": "2026-11-16T14:17:00+00:00"
     },
     "vie_ocr": {
       "output": "03_ocr/manifests/vie.json",
@@ -811,13 +134,19 @@
         "path": "E:\\Projects\\han-viet-corpus\\data\\CPO_18\\02_extraction\\pages"
       },
       "counts": {
-        "pages": 2,
-        "lines": 53
+        "pages": 8,
+        "lines": 227
       },
       "parameters": {
         "pages": [
           205,
-          206
+          206,
+          207,
+          208,
+          209,
+          210,
+          211,
+          212
         ],
         "region": [
           0.0,
@@ -831,28 +160,234 @@
         "select": "first",
         "low_conf": 60.0,
         "workers_requested": 4,
-        "workers_used": 2
+        "workers_used": 4
       },
-      "low_conf_pages": [],
+      "low_conf_pages": [
+        208
+      ],
       "empty_pages": [],
       "review_required": true,
-      "run_at": "2026-11-16T12:49:17+00:00"
+      "run_at": "2026-11-16T14:17:05+00:00"
     },
     "segmentation": {
-      "documents": 1,
+      "documents": 2,
       "lines": {
-        "han": 8,
-        "am": 12,
-        "nghia": 13,
+        "han": 35,
+        "am": 50,
+        "nghia": 65,
         "tho": 0
       },
-      "headings": 5,
-      "review_required": 17,
+      "headings": 10,
+      "review_required": 98,
       "sources": [
         "chi_tra",
         "vie"
       ],
-      "run_at": "2026-11-16T11:45:38+00:00"
+      "run_at": "2026-11-16T14:17:05+00:00"
+    },
+    "han_cleaned": {
+      "input": "04_segmentation/layers/han.xml",
+      "output": "05_cleaning/han.xml",
+      "stats": {
+        "raw_lines": 35,
+        "kept_lines": 29,
+        "dropped_lines": 7,
+        "sentences": 31,
+        "cross_page": 1,
+        "no_terminal_punct": 1,
+        "long": 0,
+        "section_lines": 35,
+        "pages_removed": 0,
+        "duplicates": 0,
+        "metadata_fields": {},
+        "metadata_excluded": 0,
+        "notes": {
+          "bibliographic_note": 1,
+          "uncertain_note": 1
+        },
+        "reconstructions": {
+          "sentence_continuation": 2
+        },
+        "review_flags": 3
+      },
+      "parameters": {
+        "split": "punct",
+        "split_colon": false,
+        "drop_patterns": [
+          "^[\\-–—\\s]*\\d{1,4}[\\-–—\\s]*$"
+        ],
+        "heading_heuristic": true,
+        "strip_markers": true,
+        "excluded_pages": [],
+        "remove_headers": true,
+        "remove_footers": true,
+        "remove_duplicates": true,
+        "reconstruct_page_boundaries": true,
+        "footnotes": {
+          "enabled": true,
+          "policy": "exclude"
+        },
+        "metadata": {
+          "enabled": false,
+          "exclude_from_main_text": true,
+          "section_start": [],
+          "section_end": [],
+          "title_patterns": [],
+          "author_patterns": [],
+          "attribution_patterns": []
+        }
+      },
+      "section": {
+        "status": "unbounded",
+        "start_pattern": null,
+        "end_pattern": null,
+        "start_found": false,
+        "end_found": false,
+        "first_page": 205,
+        "last_page": 209,
+        "n_selected": 35,
+        "n_excluded": 0
+      },
+      "pages_removed": [],
+      "review_required": true,
+      "run_at": "2026-11-16T14:17:05+00:00"
+    },
+    "am_cleaned": {
+      "input": "04_segmentation/layers/am.xml",
+      "output": "05_cleaning/am.xml",
+      "stats": {
+        "raw_lines": 50,
+        "kept_lines": 45,
+        "dropped_lines": 5,
+        "sentences": 28,
+        "cross_page": 2,
+        "no_terminal_punct": 0,
+        "long": 0,
+        "section_lines": 50,
+        "pages_removed": 0,
+        "duplicates": 0,
+        "metadata_fields": {},
+        "metadata_excluded": 0,
+        "notes": {
+          "footnote": 1,
+          "bibliographic_note": 1
+        },
+        "reconstructions": {
+          "sentence_continuation": 1,
+          "ambiguous_join": 1
+        },
+        "review_flags": 10
+      },
+      "parameters": {
+        "split": "punct",
+        "split_colon": false,
+        "drop_patterns": [
+          "^[\\-–—\\s]*\\d{1,4}[\\-–—\\s]*$",
+          "^Phần II"
+        ],
+        "heading_heuristic": true,
+        "strip_markers": true,
+        "excluded_pages": [],
+        "remove_headers": true,
+        "remove_footers": true,
+        "remove_duplicates": true,
+        "reconstruct_page_boundaries": true,
+        "footnotes": {
+          "enabled": true,
+          "policy": "exclude"
+        },
+        "metadata": {
+          "enabled": false,
+          "exclude_from_main_text": true,
+          "section_start": [],
+          "section_end": [],
+          "title_patterns": [],
+          "author_patterns": [],
+          "attribution_patterns": []
+        }
+      },
+      "section": {
+        "status": "unbounded",
+        "start_pattern": null,
+        "end_pattern": null,
+        "start_found": false,
+        "end_found": false,
+        "first_page": 205,
+        "last_page": 210,
+        "n_selected": 50,
+        "n_excluded": 0
+      },
+      "pages_removed": [],
+      "review_required": true,
+      "run_at": "2026-11-16T14:17:05+00:00"
+    },
+    "nghia_cleaned": {
+      "input": "04_segmentation/layers/nghia.xml",
+      "output": "05_cleaning/nghia.xml",
+      "stats": {
+        "raw_lines": 65,
+        "kept_lines": 61,
+        "dropped_lines": 4,
+        "sentences": 26,
+        "cross_page": 2,
+        "no_terminal_punct": 1,
+        "long": 0,
+        "section_lines": 65,
+        "pages_removed": 0,
+        "duplicates": 0,
+        "metadata_fields": {},
+        "metadata_excluded": 0,
+        "notes": {
+          "footnote": 1,
+          "bibliographic_note": 1
+        },
+        "reconstructions": {
+          "ambiguous_join": 3
+        },
+        "review_flags": 12
+      },
+      "parameters": {
+        "split": "punct",
+        "split_colon": false,
+        "drop_patterns": [
+          "^[\\-–—\\s]*\\d{1,4}[\\-–—\\s]*$",
+          "^Phần II"
+        ],
+        "heading_heuristic": true,
+        "strip_markers": true,
+        "excluded_pages": [],
+        "remove_headers": true,
+        "remove_footers": true,
+        "remove_duplicates": true,
+        "reconstruct_page_boundaries": true,
+        "footnotes": {
+          "enabled": true,
+          "policy": "exclude"
+        },
+        "metadata": {
+          "enabled": false,
+          "exclude_from_main_text": true,
+          "section_start": [],
+          "section_end": [],
+          "title_patterns": [],
+          "author_patterns": [],
+          "attribution_patterns": []
+        }
+      },
+      "section": {
+        "status": "unbounded",
+        "start_pattern": null,
+        "end_pattern": null,
+        "start_found": false,
+        "end_found": false,
+        "first_page": 206,
+        "last_page": 212,
+        "n_selected": 65,
+        "n_excluded": 0
+      },
+      "pages_removed": [],
+      "review_required": true,
+      "run_at": "2026-11-16T14:17:05+00:00"
     },
     "tho_cleaned": {
       "input": "04_segmentation/layers/tho.xml",
@@ -914,38 +449,62 @@
       },
       "pages_removed": [],
       "review_required": true,
-      "run_at": "2026-11-16T11:45:38+00:00"
+      "run_at": "2026-11-16T14:17:05+00:00"
     },
-    "han-viet_export": {
-      "name": "CPO_18_parallel",
-      "output": "07_export/CPO_18_parallel.xlsx",
-      "rows": 5,
-      "missing_translations": {
-        "am": 0,
-        "nghia": 0,
-        "tho": 5
+    "han-am_alignment": {
+      "output": "06_alignment/han-am.xml",
+      "aligner": {
+        "name": "levenshtein",
+        "options": {
+          "reading_dict": "resources/han_viet.tsv",
+          "unknown_cost": 0.5,
+          "bare_cost": 0.3,
+          "merge_penalty": 2.0,
+          "skip_penalty": 1.0,
+          "band": 30
+        }
       },
-      "skipped": {
-        "tho:missing_alignment": 1
+      "stats": {
+        "src_sentences": 31,
+        "tgt_sentences": 28,
+        "beads": 25,
+        "documents": 2,
+        "kinds": {
+          "1-1": 17,
+          "2-1": 3,
+          "1-3": 1,
+          "0-1": 1,
+          "3-1": 2,
+          "1-2": 1
+        },
+        "unaligned": 1,
+        "low_score": 8
       },
+      "low_score_threshold": 0.6,
       "review_required": true,
-      "run_at": "2026-11-16T11:45:39+00:00"
+      "run_at": "2026-11-16T14:17:06+00:00"
     },
     "han-am_export": {
       "name": "CPO_18_han-am_parallel",
       "report": {
         "name": "CPO_18_han-am_parallel",
         "pair": "han-am",
-        "generated_at": "2026-11-16T11:45:39+00:00",
-        "pairs_exported": 5,
-        "han_sentences": 5,
-        "am_sentences": 5,
+        "generated_at": "2026-11-16T14:17:07+00:00",
+        "pairs_exported": 24,
+        "han_sentences": 31,
+        "am_sentences": 28,
         "kinds_exported": {
-          "1-1": 5
+          "1-1": 17,
+          "2-1": 3,
+          "1-3": 1,
+          "3-1": 2,
+          "1-2": 1
         },
-        "skipped": {},
-        "low_score_exported": 0,
-        "cross_page_exported": 1,
+        "skipped": {
+          "unaligned": 1
+        },
+        "low_score_exported": 8,
+        "cross_page_exported": 3,
         "self_check": {
           "no_empty_cell": true,
           "no_tab_or_newline_in_cell": true,
@@ -958,23 +517,50 @@
         }
       },
       "review_required": true,
-      "run_at": "2026-11-16T11:45:39+00:00"
+      "run_at": "2026-11-16T14:17:07+00:00"
+    },
+    "han-nghia_alignment": {
+      "output": "06_alignment/han-nghia.xml",
+      "aligner": {
+        "name": "length",
+        "options": {
+          "variance": 6.8,
+          "skip_cost": 6.0,
+          "band": 30
+        }
+      },
+      "stats": {
+        "src_sentences": 31,
+        "tgt_sentences": 26,
+        "beads": 26,
+        "documents": 2,
+        "kinds": {
+          "1-1": 21,
+          "2-1": 5
+        },
+        "unaligned": 0,
+        "low_score": 13
+      },
+      "low_score_threshold": 0.6,
+      "review_required": true,
+      "run_at": "2026-11-16T14:17:07+00:00"
     },
     "han-nghia_export": {
       "name": "CPO_18_han-nghia_parallel",
       "report": {
         "name": "CPO_18_han-nghia_parallel",
         "pair": "han-nghia",
-        "generated_at": "2026-11-16T11:45:39+00:00",
-        "pairs_exported": 5,
-        "han_sentences": 5,
-        "nghia_sentences": 5,
+        "generated_at": "2026-11-16T14:17:07+00:00",
+        "pairs_exported": 26,
+        "han_sentences": 31,
+        "nghia_sentences": 26,
         "kinds_exported": {
-          "1-1": 5
+          "1-1": 21,
+          "2-1": 5
         },
         "skipped": {},
-        "low_score_exported": 0,
-        "cross_page_exported": 0,
+        "low_score_exported": 13,
+        "cross_page_exported": 2,
         "self_check": {
           "no_empty_cell": true,
           "no_tab_or_newline_in_cell": true,
@@ -987,47 +573,86 @@
         }
       },
       "review_required": true,
-      "run_at": "2026-11-16T11:45:39+00:00"
+      "run_at": "2026-11-16T14:17:07+00:00"
+    },
+    "han-viet_export": {
+      "name": "CPO_18_parallel",
+      "output": "07_export/CPO_18_parallel.xlsx",
+      "rows": 31,
+      "missing_translations": {
+        "am": 0,
+        "nghia": 0,
+        "tho": 31
+      },
+      "skipped": {
+        "skipped:unaligned": 1,
+        "tho:missing_alignment": 1
+      },
+      "review_required": true,
+      "run_at": "2026-11-16T14:17:07+00:00"
     }
   },
-  "work_id": "CPO_18",
   "dependencies": {
     "ocr:chi_tra": {
-      "fingerprint": "2ea29318c72cb14e6bb5f9c14df26930f0218206de132a1c25c6a39e191469bc",
+      "fingerprint": "e2d903bcb4ec6fc5cc85e8df84e3247929622347596db33f97c7b652db62e055",
       "inputs": [
         "02_extraction/pages/page_205.png",
-        "02_extraction/pages/page_206.png"
+        "02_extraction/pages/page_206.png",
+        "02_extraction/pages/page_207.png",
+        "02_extraction/pages/page_208.png",
+        "02_extraction/pages/page_209.png",
+        "02_extraction/pages/page_210.png",
+        "02_extraction/pages/page_211.png",
+        "02_extraction/pages/page_212.png"
       ],
       "outputs": [
         "03_ocr/manifests/chi_tra.json",
         "03_ocr/ocr_raw/han.xml",
         "03_ocr/raw/chi_tra/page_0205.json",
         "03_ocr/raw/chi_tra/page_0206.json",
+        "03_ocr/raw/chi_tra/page_0207.json",
+        "03_ocr/raw/chi_tra/page_0208.json",
+        "03_ocr/raw/chi_tra/page_0209.json",
+        "03_ocr/raw/chi_tra/page_0210.json",
+        "03_ocr/raw/chi_tra/page_0211.json",
+        "03_ocr/raw/chi_tra/page_0212.json",
         "03_ocr/ocr_raw/han.xml"
       ]
     },
     "ocr:vie": {
-      "fingerprint": "2ea29318c72cb14e6bb5f9c14df26930f0218206de132a1c25c6a39e191469bc",
+      "fingerprint": "e2d903bcb4ec6fc5cc85e8df84e3247929622347596db33f97c7b652db62e055",
       "inputs": [
         "02_extraction/pages/page_205.png",
-        "02_extraction/pages/page_206.png"
+        "02_extraction/pages/page_206.png",
+        "02_extraction/pages/page_207.png",
+        "02_extraction/pages/page_208.png",
+        "02_extraction/pages/page_209.png",
+        "02_extraction/pages/page_210.png",
+        "02_extraction/pages/page_211.png",
+        "02_extraction/pages/page_212.png"
       ],
       "outputs": [
         "03_ocr/manifests/vie.json",
         "03_ocr/ocr_raw/vi.xml",
         "03_ocr/raw/vie/page_0205.json",
         "03_ocr/raw/vie/page_0206.json",
+        "03_ocr/raw/vie/page_0207.json",
+        "03_ocr/raw/vie/page_0208.json",
+        "03_ocr/raw/vie/page_0209.json",
+        "03_ocr/raw/vie/page_0210.json",
+        "03_ocr/raw/vie/page_0211.json",
+        "03_ocr/raw/vie/page_0212.json",
         "03_ocr/ocr_raw/vi.xml"
       ]
     },
     "segmentation": {
-      "fingerprint": "a4746bfa5fb8f836638aa421b35255dc8666bc70992b54978c3d78ac85855c75",
+      "fingerprint": "cabd35afd17fd638a9310350047854f163ed2904ed6aa0230407896d3cc29593",
       "inputs": [
         "03_ocr/ocr_raw/han.xml",
         "03_ocr/ocr_raw/vi.xml",
         "03_ocr/manifests/chi_tra.json",
         "03_ocr/manifests/vie.json",
-        "configs/CPO_18_demo.json"
+        "configs/CPO_18.json"
       ],
       "outputs": [
         "04_segmentation/documents.xml",
@@ -1045,7 +670,7 @@
       ]
     },
     "clean:han": {
-      "fingerprint": "c6e6beeba028f011d825db90059fec8edc908326f19216b9814baf48baa1db1d",
+      "fingerprint": "051ca7db34a1fd25cd53bcb9d6dace06b976d2721cfdf51cc4f1175f3ef112d5",
       "inputs": [
         "04_segmentation/layers/han.xml"
       ],
@@ -1058,7 +683,7 @@
       ]
     },
     "clean:am": {
-      "fingerprint": "176f88c8b7ce81785bffd4b6665cf3c0e8105d548775bea0b08f94c649fe0809",
+      "fingerprint": "c54c4707735e771479dae37cab651a609b24e5fe1a5e7aed757161137fb82ea4",
       "inputs": [
         "04_segmentation/layers/am.xml"
       ],
@@ -1071,7 +696,7 @@
       ]
     },
     "clean:nghia": {
-      "fingerprint": "f28779e3253d5477fb79cffa661aec4f608187b7a15812c2c3028b4169e08d03",
+      "fingerprint": "aa2b730ad0bd601da82bccabc328df035b992652a4af05cc40300112b56fa5c0",
       "inputs": [
         "04_segmentation/layers/nghia.xml"
       ],
@@ -1097,7 +722,7 @@
       ]
     },
     "align:han-am": {
-      "fingerprint": "11001b2a5524d102d72fc8fef412cd20dbd9020cdb3744f458b1bbc9e6f9d887",
+      "fingerprint": "d4a59ba23e31787053aeb222ac285bb9df0055dfcff1bb18e120e770c493988a",
       "inputs": [
         "05_cleaning/han.xml",
         "05_cleaning/am.xml"
@@ -1106,29 +731,8 @@
         "06_alignment/han-am.xml"
       ]
     },
-    "align:han-nghia": {
-      "fingerprint": "e4c7cb0269fa1e5006d6dfd603ca5625c17786a06f0df72860ecdb057d9753ef",
-      "inputs": [
-        "05_cleaning/han.xml",
-        "05_cleaning/nghia.xml"
-      ],
-      "outputs": [
-        "06_alignment/han-nghia.xml"
-      ]
-    },
-    "export:han-viet": {
-      "fingerprint": "e72f0047e1e295396202cd63d5cfa972af6138560a4b781f1dff365be4a93215",
-      "inputs": [
-        "05_cleaning/han.xml",
-        "06_alignment/han-am.xml",
-        "06_alignment/han-nghia.xml"
-      ],
-      "outputs": [
-        "07_export/CPO_18_parallel.xlsx"
-      ]
-    },
     "export:han-am": {
-      "fingerprint": "0773ddd1f1ba404a69eb22759541d8886b710dfd7ff3ac914ac318150a80ffce",
+      "fingerprint": "fcec9fdc92323f2900b41b9e98eb545fae5eb296a16caa8e853362803012b44e",
       "inputs": [
         "06_alignment/han-am.xml",
         "05_cleaning/han.xml",
@@ -1139,8 +743,18 @@
         "07_export/CPO_18_han-am_parallel.xlsx"
       ]
     },
+    "align:han-nghia": {
+      "fingerprint": "45178c02a33963bcf6b491e81b6ff9f3fcc33d9e6bcb23392d67b87cd01bd4b0",
+      "inputs": [
+        "05_cleaning/han.xml",
+        "05_cleaning/nghia.xml"
+      ],
+      "outputs": [
+        "06_alignment/han-nghia.xml"
+      ]
+    },
     "export:han-nghia": {
-      "fingerprint": "1de71a91bed085e95a848ec5e57fd5a7bccef5061c2d664fddaaa4dbb0e10efc",
+      "fingerprint": "bbbfe4e38ae5fe726e8b8d4455b3096bdf41b4c6c8c55e0546b6aac9a43bde35",
       "inputs": [
         "06_alignment/han-nghia.xml",
         "05_cleaning/han.xml",
@@ -1149,6 +763,17 @@
       "outputs": [
         "07_export/CPO_18_han-nghia_parallel.tsv",
         "07_export/CPO_18_han-nghia_parallel.xlsx"
+      ]
+    },
+    "export:han-viet": {
+      "fingerprint": "688687b9cb31994cc6fb659d54192297d5792db3fd3a08b86a170649d1422dd5",
+      "inputs": [
+        "05_cleaning/han.xml",
+        "06_alignment/han-am.xml",
+        "06_alignment/han-nghia.xml"
+      ],
+      "outputs": [
+        "07_export/CPO_18_parallel.xlsx"
       ]
     }
   }

@@ -30,7 +30,7 @@ MARKER_RE = re.compile(r"\[\d{1,3}\]|［\d{1,3}］|\(\d{1,3}\)|（\d{1,3}）|[�
 LEADING_NUM_RE = re.compile(r"^\s*\d{1,3}\s*[·.．、﹒)]\s*")
 
 # ký tự nhiễu OCR biết chắc: XOÁ khi làm sạch (rule noise_char:<ch>)
-NOISE_CHARS = "®°Øø‡†§¤µ¶`^~¦" 
+NOISE_CHARS = "®°Øø‡†§¤µ¶`^~¦©" 
 # ký tự nghi ngờ: CHỈ ĐÁNH DẤU review, không xoá
 SUSPECT_CHARS = "\""
 
