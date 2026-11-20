@@ -109,6 +109,3 @@ class TesseractEngine(OcrEngine):
             lines.append(OcrLine(" ".join(data["text"][i] for i in indexes),
                                  (x0, y0, x1, y1), confidence))
         return OcrResult(self.name, lines, data)
-
-
-DEFAULT_ENGINE = "tesseract"
