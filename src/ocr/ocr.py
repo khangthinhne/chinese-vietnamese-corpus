@@ -193,6 +193,7 @@ def process_page(page: int, image_path: Path, layout: DataLayout, args,
             lines = [OcrLine(x["text"], tuple(x["bbox"]), x["confidence"]) for x in record["lines"]]
             candidates.append(OcrResult(name, lines, record["raw"]))
             records.append({"engine": name, "key": key, "cache_hit": hit})
+        
         filtered = [OcrResult(result.engine, [line for line in result.lines
                     if line.text.strip() and filter_lines([line.text], args.keep)], result.raw)
                     for result in candidates]
@@ -266,9 +267,42 @@ def process_writing_system_page(page: int, image_path: Path, layout: DataLayout,
             lines = [OcrLine(x["text"], tuple(x["bbox"]), x["confidence"]) for x in record["lines"]]
             candidates.append(OcrResult(name, lines, record["raw"]))
             records.append({"engine": name, "key": key, "cache_hit": hit})
-        filtered = [OcrResult(result.engine, [line for line in result.lines
-                    if line.text.strip() and filter_lines([line.text], keep)], result.raw)
-                    for result in candidates]
+        # for result in candidates:
+        #     print(f"\n[DEBUG] Engine: {result.engine}")
+        #     print(f"[DEBUG] Number of lines: {len(result.lines)}")
+
+        #     for i, line in enumerate(result.lines):
+        #         print(f"[DEBUG] Line {i}: {line.text[:500]!r}")
+        #         print(f"[DEBUG] CJK filtered: {filter_lines([line.text], keep)}")
+
+        # print(f"[DEBUG] keep = {keep!r}")
+        # filtered = [OcrResult(result.engine, [line for line in result.lines
+        #             if line.text.strip() and filter_lines([line.text], keep)], result.raw)
+        #             for result in candidates]
+        filtered = []
+
+        for result in candidates:
+            if result.engine == "qwen":
+                # Qwen returns page-level text, not individual text lines.
+                # Preserve the full transcription for downstream processing.
+                lines = [
+                    line for line in result.lines
+                    if line.text.strip()
+                ]
+            else:
+                lines = [
+                    line for line in result.lines
+                    if line.text.strip()
+                    and filter_lines([line.text], keep)
+                ]
+
+            filtered.append(
+                OcrResult(
+                    result.engine,
+                    lines,
+                    result.raw
+                )
+            )
         selected = SELECTORS[args.select](filtered)
         confidence = mean_confidence(selected.lines)
         selected_key = next(r["key"] for r in records if r["engine"] == selected.engine)

@@ -5340,6 +5340,77 @@
           "8"
         ]
       }
+    },
+    {
+      "key": "43c23111a96f64ad20db298b1b2974107e76275aeec171489ad6f46998ac3049",
+      "parameters": {
+        "image_sha256": "f494be772212d386652db632fd2fe7095a93d2791d1aee46fba1dd374ad5d571",
+        "writing_system": "chi_tra",
+        "engine": {
+          "name": "qwen",
+          "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "model_revision": "main",
+          "transformers_version": "4.57.6",
+          "torch_version": "2.5.1+cu121",
+          "cuda_version": "12.1",
+          "bitsandbytes_version": "0.50.2",
+          "quantization": {
+            "load_in_4bit": true,
+            "quant_type": "nf4",
+            "double_quant": true,
+            "compute_dtype": "float16"
+          },
+          "min_pixels": 200704,
+          "max_pixels": 301056,
+          "max_new_tokens": 1024,
+          "adapter_version": 1
+        },
+        "lang": "chi_tra",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-20T22:17:34+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_18\\02_extraction\\pages\\page_207.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        0,
+        2480,
+        3509
+      ],
+      "lines": [
+        {
+          "text": "Phần II: Nguyên văn tác phẩm dịch và chú thích\n\n(3) Bản Mạc Tư Khoa chép đầu để bức thư này là: \"Dữ Đạo Cao Pháp Minh nhị Pháp sư thứ hai Phát bất kiến hình. Bất kiến hình thì không thấy hình thật Phật.\"\n\n(4) Thanh hít: trong trời trống không.\n\n(5) Từ đại bốn yếu tố lớn, gồm đất, nước, lửa, gió tạo nên vạn vật, theo quan niệm Phật giáo.\n\n(6) Giáo pháp (pháp môn): khoa dạy về cách tu luyện để thành Phật. Theo quan niệm nhà Phật, thì những giáo lý mà Phật giảng giải được coi như pháp tắc, nên gọi là \"pháp\". Pháp ấy dẫn dắt chúng sinh vào Đạo và đạo đạo, nên gọi là \"môn\". Có rất nhiều \"pháp môn\", tức nhiều kiểu tu luyện để thành Phật, như niệm Phật, thiền định, cùng đàng, bố thí, trì giới với Vô. Do đó, người ta hay nói tới \"tâm văn bốn nghìn pháp môn\", \"biên pháp môn\", \"vô số pháp môn\".\n\n(7) Nguyên văn chép là chân đế (thực), coi là nền tảng. Cụ thể ngữ cảnh, thì chỗ này phải là chữ trục đế nghĩa như thế hoặc đế, đích là chữ đế đúng. Đây dịch chữa lại. Bản Đại Chánh cũng chép là trục.\n\n(8) Nguyên văn câu này là \"Chân (trực) không thuyết nhi vô thực da\" \"Vô thực da (không có thực)\", bản Mạc Tư Khoa chép là \"Vô thuật tà vũ衙\".\n\n(9) Phương tay (Tây phương): còn gọi là Tây Thiên hay Tây Trúc, chỉ ấn Đỏ, nơi phát tích của đạo Phật. Chữ \"Tây phương\" ở đây còn có nghĩa là Thế giới gốc lúa của Phật A Di Đà (Amida). Vì cối ấy, theo Phật giáo, ở về phía tây cối Tà Bà (Saha) của chúng ta, nên gọi là \"Tây phương\".\n\n(10) Hoa tượng (Upādhyāya): có nghĩa là \"thầy tu\" dâng lên phiên thành \"Ô xá\", thì lại phiên chệch dần thành \"Hoa thượng\", lâu ngày hóa quen, dễ chỉ thấy tu. Chữ \"đại\"",
+          "bbox": [
+            0,
+            0,
+            2480,
+            3509
+          ],
+          "confidence": null
+        }
+      ],
+      "raw": {
+        "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+        "model_revision": "main",
+        "lang": "chi_tra",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          3509
+        ],
+        "prompt": "\nYou are an OCR engine specialized in historical Chinese literature.\n\nTranscribe the Chinese text visible in this image.\n\nRules:\n1. Transcribe the original Chinese characters (Hanzi) only.\n2. Do not transcribe Vietnamese pronunciation, Vietnamese translation,\n   Latin text, page headers, or unrelated notes.\n3. Preserve the original characters, punctuation, and reading order.\n4. Preserve paragraph and line boundaries where possible.\n5. Do not translate, explain, modernize, or normalize historical characters.\n6. Do not guess illegible characters. Use [UNCLEAR].\n7. Ignore faint bleed-through, stains, handwritten marks, and page numbers\n   unless they are clearly part of the original printed Chinese text.\n\nReturn only the transcription. Do not add explanations.\n",
+        "generated_text": "Phần II: Nguyên văn tác phẩm dịch và chú thích\n\n(3) Bản Mạc Tư Khoa chép đầu để bức thư này là: \"Dữ Đạo Cao Pháp Minh nhị Pháp sư thứ hai Phát bất kiến hình. Bất kiến hình thì không thấy hình thật Phật.\"\n\n(4) Thanh hít: trong trời trống không.\n\n(5) Từ đại bốn yếu tố lớn, gồm đất, nước, lửa, gió tạo nên vạn vật, theo quan niệm Phật giáo.\n\n(6) Giáo pháp (pháp môn): khoa dạy về cách tu luyện để thành Phật. Theo quan niệm nhà Phật, thì những giáo lý mà Phật giảng giải được coi như pháp tắc, nên gọi là \"pháp\". Pháp ấy dẫn dắt chúng sinh vào Đạo và đạo đạo, nên gọi là \"môn\". Có rất nhiều \"pháp môn\", tức nhiều kiểu tu luyện để thành Phật, như niệm Phật, thiền định, cùng đàng, bố thí, trì giới với Vô. Do đó, người ta hay nói tới \"tâm văn bốn nghìn pháp môn\", \"biên pháp môn\", \"vô số pháp môn\".\n\n(7) Nguyên văn chép là chân đế (thực), coi là nền tảng. Cụ thể ngữ cảnh, thì chỗ này phải là chữ trục đế nghĩa như thế hoặc đế, đích là chữ đế đúng. Đây dịch chữa lại. Bản Đại Chánh cũng chép là trục.\n\n(8) Nguyên văn câu này là \"Chân (trực) không thuyết nhi vô thực da\" \"Vô thực da (không có thực)\", bản Mạc Tư Khoa chép là \"Vô thuật tà vũ衙\".\n\n(9) Phương tay (Tây phương): còn gọi là Tây Thiên hay Tây Trúc, chỉ ấn Đỏ, nơi phát tích của đạo Phật. Chữ \"Tây phương\" ở đây còn có nghĩa là Thế giới gốc lúa của Phật A Di Đà (Amida). Vì cối ấy, theo Phật giáo, ở về phía tây cối Tà Bà (Saha) của chúng ta, nên gọi là \"Tây phương\".\n\n(10) Hoa tượng (Upādhyāya): có nghĩa là \"thầy tu\" dâng lên phiên thành \"Ô xá\", thì lại phiên chệch dần thành \"Hoa thượng\", lâu ngày hóa quen, dễ chỉ thấy tu. Chữ \"đại\"",
+        "inference_seconds": 29.5711,
+        "max_new_tokens": 1024,
+        "quantization": "4bit-nf4",
+        "bbox_granularity": "whole_crop"
+      }
     }
   ]
 }

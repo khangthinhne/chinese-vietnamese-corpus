@@ -84,36 +84,32 @@
         "path": "E:\\Projects\\han-viet-corpus\\data\\CPO_18\\02_extraction\\pages"
       },
       "counts": {
-        "pages": 2,
-        "lines": 11
+        "pages": 3,
+        "lines": 3
       },
       "parameters": {
         "pages": [
           205,
-          206
+          206,
+          207
         ],
-        "region": [
-          0.0,
-          0.08,
-          1.0,
-          0.93
-        ],
+        "region": null,
         "psm": 6,
         "dpi": 300,
         "keep": "cjk",
         "select": "first",
-        "low_conf": 60.0,
-        "workers_requested": 4,
-        "workers_used": 2
+        "low_conf": 60,
+        "workers_requested": 1,
+        "workers_used": 1
       },
       "low_conf_pages": [
-        206
+        205,
+        206,
+        207
       ],
-      "empty_pages": [
-        206
-      ],
+      "empty_pages": [],
       "review_required": true,
-      "run_at": "2026-11-16T14:22:16+00:00"
+      "run_at": "2026-11-20T22:28:35+00:00"
     },
     "vie_ocr": {
       "output": "03_ocr/manifests/vie.json",
@@ -552,16 +548,18 @@
   },
   "dependencies": {
     "ocr:chi_tra": {
-      "fingerprint": "2ea29318c72cb14e6bb5f9c14df26930f0218206de132a1c25c6a39e191469bc",
+      "fingerprint": "9119bf689c8a01b2d0dfcebe8bbcf8de1da8bdd86ef5aa9014c1e317a8501ffe",
       "inputs": [
         "02_extraction/pages/page_205.png",
-        "02_extraction/pages/page_206.png"
+        "02_extraction/pages/page_206.png",
+        "02_extraction/pages/page_207.png"
       ],
       "outputs": [
         "03_ocr/manifests/chi_tra.json",
         "03_ocr/ocr_raw/han.xml",
         "03_ocr/raw/chi_tra/page_0205.json",
         "03_ocr/raw/chi_tra/page_0206.json",
+        "03_ocr/raw/chi_tra/page_0207.json",
         "03_ocr/ocr_raw/han.xml"
       ]
     },

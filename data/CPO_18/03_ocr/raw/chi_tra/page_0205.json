@@ -3608,6 +3608,77 @@
           "ˋ"
         ]
       }
+    },
+    {
+      "key": "2b6281b6d17f0e7571d7dd3eec901827e6f22865330f437e88b5890cdcc45e25",
+      "parameters": {
+        "image_sha256": "5afb8b82d045bf87f457e4285f977c608023a2e74a49f37199f54817e1218e72",
+        "writing_system": "chi_tra",
+        "engine": {
+          "name": "qwen",
+          "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "model_revision": "main",
+          "transformers_version": "4.57.6",
+          "torch_version": "2.5.1+cu121",
+          "cuda_version": "12.1",
+          "bitsandbytes_version": "0.50.2",
+          "quantization": {
+            "load_in_4bit": true,
+            "quant_type": "nf4",
+            "double_quant": true,
+            "compute_dtype": "float16"
+          },
+          "min_pixels": 200704,
+          "max_pixels": 301056,
+          "max_new_tokens": 1024,
+          "adapter_version": 1
+        },
+        "lang": "chi_tra",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-20T22:16:40+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_18\\02_extraction\\pages\\page_205.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        0,
+        2480,
+        3509
+      ],
+      "lines": [
+        {
+          "text": "Phần II: Nguyên văn tác phẩm dịch và chú thích\n\nSau đây là toàn văn Sáu bức thư, có kèm theo phần phiên âm, dịch nghĩa và chú thích của chúng tôi.\n\n1. 與高明二法師難佛不見形書\n\n李叡\n*森対交州刺史\n夫道處清虛，四大理常，而有法門，妙出群城。若稱其巧能利物，度脫無量爲教，何日不見真形於世？真空說而無實耶？\n\n今正就尊西方根源，伏願大和尚垂懐，允納下心，無措神語。\n\n弟子李淼和南：\n\n（“弘明集”卷十一：見“全上古三代秦漢三國六朝文、全宋文”卷五十七）\n\nPHIÊN ÂM:\n\nDỤ CAO, MINH NHỊ PHẠP SƯ\nNAN PHẠT BẤT KIẾN HÌNH THƯ\n\nLÝ MIỆU\n* Miêu vi Giao Châu Thư sú\nPhù Dao xử thanh hư, tử đại lý thường, nhi hữu pháp môn, diệu xuất quần vực. Nhục xung kỳ xảo năng lợi vật, độ thoát vô lượng vì giáo, hà đi bất kiến chân hình ư thế? Chân không thuyết nhi vô thực da?\n\nKim chính tuu tần tây phương càn nguyên, phục nguyên Đại hòn thượng thủy hải, doãn nạp hạ tâm, về tích thân cáo.",
+          "bbox": [
+            0,
+            0,
+            2480,
+            3509
+          ],
+          "confidence": null
+        }
+      ],
+      "raw": {
+        "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+        "model_revision": "main",
+        "lang": "chi_tra",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          3509
+        ],
+        "prompt": "\nYou are an OCR engine specialized in historical Chinese literature.\n\nTranscribe the Chinese text visible in this image.\n\nRules:\n1. Transcribe the original Chinese characters (Hanzi) only.\n2. Do not transcribe Vietnamese pronunciation, Vietnamese translation,\n   Latin text, page headers, or unrelated notes.\n3. Preserve the original characters, punctuation, and reading order.\n4. Preserve paragraph and line boundaries where possible.\n5. Do not translate, explain, modernize, or normalize historical characters.\n6. Do not guess illegible characters. Use [UNCLEAR].\n7. Ignore faint bleed-through, stains, handwritten marks, and page numbers\n   unless they are clearly part of the original printed Chinese text.\n\nReturn only the transcription. Do not add explanations.\n",
+        "generated_text": "Phần II: Nguyên văn tác phẩm dịch và chú thích\n\nSau đây là toàn văn Sáu bức thư, có kèm theo phần phiên âm, dịch nghĩa và chú thích của chúng tôi.\n\n1. 與高明二法師難佛不見形書\n\n李叡\n*森対交州刺史\n夫道處清虛，四大理常，而有法門，妙出群城。若稱其巧能利物，度脫無量爲教，何日不見真形於世？真空說而無實耶？\n\n今正就尊西方根源，伏願大和尚垂懐，允納下心，無措神語。\n\n弟子李淼和南：\n\n（“弘明集”卷十一：見“全上古三代秦漢三國六朝文、全宋文”卷五十七）\n\nPHIÊN ÂM:\n\nDỤ CAO, MINH NHỊ PHẠP SƯ\nNAN PHẠT BẤT KIẾN HÌNH THƯ\n\nLÝ MIỆU\n* Miêu vi Giao Châu Thư sú\nPhù Dao xử thanh hư, tử đại lý thường, nhi hữu pháp môn, diệu xuất quần vực. Nhục xung kỳ xảo năng lợi vật, độ thoát vô lượng vì giáo, hà đi bất kiến chân hình ư thế? Chân không thuyết nhi vô thực da?\n\nKim chính tuu tần tây phương càn nguyên, phục nguyên Đại hòn thượng thủy hải, doãn nạp hạ tâm, về tích thân cáo.",
+        "inference_seconds": 20.4364,
+        "max_new_tokens": 1024,
+        "quantization": "4bit-nf4",
+        "bbox_granularity": "whole_crop"
+      }
     }
   ]
 }

@@ -1,55 +1,13 @@
-"""OCR extension interface. Optional dependencies are imported only on use."""
-from __future__ import annotations
+
 
 import os
 import re
 import shutil
 import subprocess
-from abc import ABC, abstractmethod
-from dataclasses import dataclass
 from pathlib import Path
-
-from PIL import Image
-from src.common.corpus import sha256_file
 from dotenv import load_dotenv
-
-@dataclass
-class OcrLine:
-    text: str
-    bbox: tuple[int, int, int, int]  # x0,y0,x1,y1 in pixels, engine reading order
-    confidence: float | None      # display scale 0..100, not accuracy
-
-
-@dataclass
-class OcrResult:
-    engine: str
-    lines: list[OcrLine]
-    raw: dict
-
-
-class OcrEngine(ABC):
-    name: str
-    max_workers = 4
-
-    @classmethod
-    @abstractmethod
-    def describe(cls, lang: str) -> dict:
-        """Validate setup; fingerprint versions/model bytes without loading a model."""
-
-    @abstractmethod
-    def recognize(self, image: Image.Image, *, lang: str, psm: int, dpi: int) -> OcrResult:
-        """Return ordered lines in crop coordinates and unmodified engine data."""
-
-
-ENGINES: dict[str, type[OcrEngine]] = {}
-
-
-def register_engine(cls: type[OcrEngine]):
-    if cls.name in ENGINES:
-        raise ValueError(f"Engine đã đăng ký: {cls.name}")
-    ENGINES[cls.name] = cls
-    return cls
-
+from src.common.corpus import sha256_file
+from src.ocr.engines import OcrEngine, OcrLine, OcrResult, register_engine
 
 def tesseract_setup():
     try:
@@ -109,3 +67,4 @@ class TesseractEngine(OcrEngine):
             lines.append(OcrLine(" ".join(data["text"][i] for i in indexes),
                                  (x0, y0, x1, y1), confidence))
         return OcrResult(self.name, lines, data)
+

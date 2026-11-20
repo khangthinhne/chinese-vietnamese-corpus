@@ -8,35 +8,40 @@
     "path": "E:\\Projects\\han-viet-corpus\\data\\CPO_18\\02_extraction\\pages"
   },
   "engines": {
-    "tesseract": {
-      "name": "tesseract",
-      "version": "5.5.3.20260724",
-      "wrapper_version": "0.3.13",
-      "models": {
-        "chi_tra": "559067dc0f7c94788884742129d66a0117dde7f4ff12b263d92147173497db14"
+    "qwen": {
+      "name": "qwen",
+      "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+      "model_revision": "main",
+      "transformers_version": "4.57.6",
+      "torch_version": "2.5.1+cu121",
+      "cuda_version": "12.1",
+      "bitsandbytes_version": "0.50.2",
+      "quantization": {
+        "load_in_4bit": true,
+        "quant_type": "nf4",
+        "double_quant": true,
+        "compute_dtype": "float16"
       },
-      "oem": 1,
+      "min_pixels": 200704,
+      "max_pixels": 301056,
+      "max_new_tokens": 1024,
       "adapter_version": 1
     }
   },
   "parameters": {
     "pages": [
       205,
-      206
+      206,
+      207
     ],
-    "region": [
-      0.0,
-      0.08,
-      1.0,
-      0.93
-    ],
+    "region": null,
     "psm": 6,
     "dpi": 300,
     "keep": "cjk",
     "select": "first",
-    "low_conf": 60.0,
-    "workers_requested": 4,
-    "workers_used": 2
+    "low_conf": 60,
+    "workers_requested": 1,
+    "workers_used": 1
   },
   "pages": [
     {
@@ -44,127 +49,27 @@
       "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_18\\02_extraction\\pages\\page_205.png",
       "image_sha256": "5afb8b82d045bf87f457e4285f977c608023a2e74a49f37199f54817e1218e72",
       "raw": "03_ocr/raw/chi_tra/page_0205.json",
-      "selected_engine": "tesseract",
-      "selected_key": "5847695957af69e9ea914f0f968d08267a0d4c7c712745b9a1e9e920ad2fd1b1",
-      "confidence": 88.39974668108326,
+      "selected_engine": "qwen",
+      "selected_key": "2b6281b6d17f0e7571d7dd3eec901827e6f22865330f437e88b5890cdcc45e25",
+      "confidence": null,
       "empty": false,
-      "n_lines": 11,
+      "n_lines": 1,
       "lines": [
         {
-          "text": "1﹒ 與 高 明 二 法 師 雙 佛 不 見 形 書 |",
+          "text": "Phần II: Nguyên văn tác phẩm dịch và chú thích\n\nSau đây là toàn văn Sáu bức thư, có kèm theo phần phiên âm, dịch nghĩa và chú thích của chúng tôi.\n\n1. 與高明二法師難佛不見形書\n\n李叡\n*森対交州刺史\n夫道處清虛，四大理常，而有法門，妙出群城。若稱其巧能利物，度脫無量爲教，何日不見真形於世？真空說而無實耶？\n\n今正就尊西方根源，伏願大和尚垂懐，允納下心，無措神語。\n\n弟子李淼和南：\n\n（“弘明集”卷十一：見“全上古三代秦漢三國六朝文、全宋文”卷五十七）\n\nPHIÊN ÂM:\n\nDỤ CAO, MINH NHỊ PHẠP SƯ\nNAN PHẠT BẤT KIẾN HÌNH THƯ\n\nLÝ MIỆU\n* Miêu vi Giao Châu Thư sú\nPhù Dao xử thanh hư, tử đại lý thường, nhi hữu pháp môn, diệu xuất quần vực. Nhục xung kỳ xảo năng lợi vật, độ thoát vô lượng vì giáo, hà đi bất kiến chân hình ư thế? Chân không thuyết nhi vô thực da?\n\nKim chính tuu tần tây phương càn nguyên, phục nguyên Đại hòn thượng thủy hải, doãn nạp hạ tâm, về tích thân cáo.",
           "bbox": [
-            419,
-            620,
-            2476,
-            798
+            0,
+            0,
+            2480,
+            3509
           ],
-          "confidence": 88.93333333333334
-        },
-        {
-          "text": "李 深",
-          "bbox": [
-            1682,
-            786,
-            1828,
-            878
-          ],
-          "confidence": 75.0
-        },
-        {
-          "text": "一 * 流 炳 交 州 刺 史",
-          "bbox": [
-            551,
-            891,
-            1981,
-            974
-          ],
-          "confidence": 73.875
-        },
-        {
-          "text": "夫 這 處 清 虛 ， 四 大 理 常 ， 而 有 法 門 ， 妙 山 群",
-          "bbox": [
-            414,
-            1004,
-            2194,
-            1162
-          ],
-          "confidence": 89.15789473684211
-        },
-        {
-          "text": "域 。 若 稱 其 巨 能 利 物 ， 度 脫 無 量 炳 教 ， 何 早 不 見",
-          "bbox": [
-            276,
-            1156,
-            2197,
-            1261
-          ],
-          "confidence": 90.19047619047619
-        },
-        {
-          "text": "真 形 於 世 ﹖ 真 空 說 而 無 實 耶 ﹖",
-          "bbox": [
-            282,
-            1276,
-            1431,
-            1382
-          ],
-          "confidence": 94.61538461538461
-        },
-        {
-          "text": "今 正 就 尋 西 方 根 深 ， 伕 願 大 和 尚 垂 懷 ， 允 紊",
-          "bbox": [
-            406,
-            1440,
-            2198,
-            1546
-          ],
-          "confidence": 87.15789473684211
-        },
-        {
-          "text": "下 心 ， 無 惜 神 誥 ﹤",
-          "bbox": [
-            277,
-            1570,
-            955,
-            1655
-          ],
-          "confidence": 90.875
-        },
-        {
-          "text": "弟 子 李 淼 和 南 ﹕",
-          "bbox": [
-            414,
-            1725,
-            1043,
-            1834
-          ],
-          "confidence": 89.85714285714286
-        },
-        {
-          "text": "( 弘 明 集 卷 十 一 = 見 ” 全 上 古 三 代 秦 漢",
-          "bbox": [
-            821,
-            1901,
-            2189,
-            1996
-          ],
-          "confidence": 88.58823529411765
-        },
-        {
-          "text": "三 國 公 鞮 文 ﹒ 全 宅 文 卻 五 十 七 ﹚",
-          "bbox": [
-            903,
-            2011,
-            1987,
-            2100
-          ],
-          "confidence": 87.28571428571429
+          "confidence": null
         }
       ],
       "engines": [
         {
-          "engine": "tesseract",
-          "key": "5847695957af69e9ea914f0f968d08267a0d4c7c712745b9a1e9e920ad2fd1b1",
+          "engine": "qwen",
+          "key": "2b6281b6d17f0e7571d7dd3eec901827e6f22865330f437e88b5890cdcc45e25",
           "cache_hit": true
         }
       ]
@@ -174,26 +79,67 @@
       "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_18\\02_extraction\\pages\\page_206.png",
       "image_sha256": "fed77272d9e993999a8d2d3890ab340d1c1b0b312d145ff1c8c528eb188a8ddc",
       "raw": "03_ocr/raw/chi_tra/page_0206.json",
-      "selected_engine": "tesseract",
-      "selected_key": "58f60ce277638e19c591046b06ab6d2ae1bd26df5cd22fdd538f0d810da1700f",
+      "selected_engine": "qwen",
+      "selected_key": "413d5e06cc5359fb914af5e025a286fe0e2bbff19757966e712d26109d7c1530",
       "confidence": null,
-      "empty": true,
-      "n_lines": 0,
-      "lines": [],
+      "empty": false,
+      "n_lines": 1,
+      "lines": [
+        {
+          "text": "Đệ tử Lý Miếu hòa nam.\n( Hoàng minh tập, Quyền thập nhất; Toàn Thượng cố, Tam đại, Tấn, Hán, Tam quốc, Lục triều văn, Toàn Tống văn. Quyền ngũ thập thất.)\nDJCH NGHỊA:\nTHƯ GỬI HAI VI PHÁP SƯ (**) CAO VÀ MINH (2)\nĐỂ VẤN HỎI VỀ VIỆC KHÔNG THẤY HÌNH THẾ PHẬT (3)\nLÝ MIẾU\n* Miêu là Thư sứ Giao Châu\nRằng, chỗ Đạo thanh hư (4), từ đại (5) lẽ thường, nhờ có giáo pháp (6) mà sự nhiệm màu lan khắp mọi cõi. Nếu nói Đạo [Phật] là khéo giỏi, có thể lập giáo để làm cho [mười] vất, giải thoát cho vô số [người], thì tại sao không thấy chân Phật ở trên đời? Hay là chỉ (7) nói suông mà không có thực (8)?\nNay đang lúc đi tìm nguồn cội Phương tây (9), cúi mong Đại hòa thượng (10) rủ lòng, chấp nhận nỗi băn khoăn của kẻ đuối, không tiếc lời chỉ bảo thân tình.\nĐệ tử Lý Miếu kinh lễ (11).\n( Hoàng minh tập, Q. 11; Toàn Thượng cố, Tam đại, Tấn, Hán, Tam quốc, Lục triều văn, phần Toàn Tống văn, Q. 57)\nCHÚ THÍCH:\n(1) Pháp sư: người am tường kính Phật, có khả năng giảng dạy cho người khác.\n(2) Cao và Minh: tức Đạo Cao và Pháp Minh, hai nhà sư nước ta.",
+          "bbox": [
+            0,
+            0,
+            2480,
+            3509
+          ],
+          "confidence": null
+        }
+      ],
       "engines": [
         {
-          "engine": "tesseract",
-          "key": "58f60ce277638e19c591046b06ab6d2ae1bd26df5cd22fdd538f0d810da1700f",
+          "engine": "qwen",
+          "key": "413d5e06cc5359fb914af5e025a286fe0e2bbff19757966e712d26109d7c1530",
+          "cache_hit": true
+        }
+      ]
+    },
+    {
+      "page": 207,
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_18\\02_extraction\\pages\\page_207.png",
+      "image_sha256": "f494be772212d386652db632fd2fe7095a93d2791d1aee46fba1dd374ad5d571",
+      "raw": "03_ocr/raw/chi_tra/page_0207.json",
+      "selected_engine": "qwen",
+      "selected_key": "43c23111a96f64ad20db298b1b2974107e76275aeec171489ad6f46998ac3049",
+      "confidence": null,
+      "empty": false,
+      "n_lines": 1,
+      "lines": [
+        {
+          "text": "Phần II: Nguyên văn tác phẩm dịch và chú thích\n\n(3) Bản Mạc Tư Khoa chép đầu để bức thư này là: \"Dữ Đạo Cao Pháp Minh nhị Pháp sư thứ hai Phát bất kiến hình. Bất kiến hình thì không thấy hình thật Phật.\"\n\n(4) Thanh hít: trong trời trống không.\n\n(5) Từ đại bốn yếu tố lớn, gồm đất, nước, lửa, gió tạo nên vạn vật, theo quan niệm Phật giáo.\n\n(6) Giáo pháp (pháp môn): khoa dạy về cách tu luyện để thành Phật. Theo quan niệm nhà Phật, thì những giáo lý mà Phật giảng giải được coi như pháp tắc, nên gọi là \"pháp\". Pháp ấy dẫn dắt chúng sinh vào Đạo và đạo đạo, nên gọi là \"môn\". Có rất nhiều \"pháp môn\", tức nhiều kiểu tu luyện để thành Phật, như niệm Phật, thiền định, cùng đàng, bố thí, trì giới với Vô. Do đó, người ta hay nói tới \"tâm văn bốn nghìn pháp môn\", \"biên pháp môn\", \"vô số pháp môn\".\n\n(7) Nguyên văn chép là chân đế (thực), coi là nền tảng. Cụ thể ngữ cảnh, thì chỗ này phải là chữ trục đế nghĩa như thế hoặc đế, đích là chữ đế đúng. Đây dịch chữa lại. Bản Đại Chánh cũng chép là trục.\n\n(8) Nguyên văn câu này là \"Chân (trực) không thuyết nhi vô thực da\" \"Vô thực da (không có thực)\", bản Mạc Tư Khoa chép là \"Vô thuật tà vũ衙\".\n\n(9) Phương tay (Tây phương): còn gọi là Tây Thiên hay Tây Trúc, chỉ ấn Đỏ, nơi phát tích của đạo Phật. Chữ \"Tây phương\" ở đây còn có nghĩa là Thế giới gốc lúa của Phật A Di Đà (Amida). Vì cối ấy, theo Phật giáo, ở về phía tây cối Tà Bà (Saha) của chúng ta, nên gọi là \"Tây phương\".\n\n(10) Hoa tượng (Upādhyāya): có nghĩa là \"thầy tu\" dâng lên phiên thành \"Ô xá\", thì lại phiên chệch dần thành \"Hoa thượng\", lâu ngày hóa quen, dễ chỉ thấy tu. Chữ \"đại\"",
+          "bbox": [
+            0,
+            0,
+            2480,
+            3509
+          ],
+          "confidence": null
+        }
+      ],
+      "engines": [
+        {
+          "engine": "qwen",
+          "key": "43c23111a96f64ad20db298b1b2974107e76275aeec171489ad6f46998ac3049",
           "cache_hit": true
         }
       ]
     }
   ],
   "low_conf_pages": [
-    206
+    205,
+    206,
+    207
   ],
-  "empty_pages": [
-    206
-  ],
+  "empty_pages": [],
   "review_required": true
 }
