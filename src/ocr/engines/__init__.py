@@ -1,17 +1,8 @@
 """OCR extension interface. Optional dependencies are imported only on use."""
 from __future__ import annotations
-
-import os
-import re
-import shutil
-import subprocess
 from abc import ABC, abstractmethod
 from dataclasses import dataclass
-from pathlib import Path
-
 from PIL import Image
-from src.common.corpus import sha256_file
-from dotenv import load_dotenv
 
 @dataclass
 class OcrLine:

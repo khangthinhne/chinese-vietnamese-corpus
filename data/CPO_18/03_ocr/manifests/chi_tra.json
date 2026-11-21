@@ -3,7 +3,7 @@
   "work_id": "CPO_18",
   "writing_system": "chi_tra",
   "lang": "chi_tra",
-  "keep": "cjk",
+  "keep": null,
   "source": {
     "path": "E:\\Projects\\han-viet-corpus\\data\\CPO_18\\02_extraction\\pages"
   },
@@ -22,22 +22,31 @@
         "double_quant": true,
         "compute_dtype": "float16"
       },
+      "mode": "all",
       "min_pixels": 200704,
-      "max_pixels": 301056,
-      "max_new_tokens": 1024,
-      "adapter_version": 1
+      "max_pixels": 802816,
+      "band_inches": 2.0,
+      "max_new_tokens": 768,
+      "repetition_penalty": 1.05,
+      "adapter_version": 3,
+      "prompt_version": 3,
+      "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74"
     }
   },
   "parameters": {
     "pages": [
       205,
-      206,
-      207
+      206
     ],
-    "region": null,
+    "region": [
+      0.0,
+      0.08,
+      1.0,
+      0.93
+    ],
     "psm": 6,
     "dpi": 300,
-    "keep": "cjk",
+    "keep": null,
     "select": "first",
     "low_conf": 60,
     "workers_requested": 1,
@@ -50,27 +59,157 @@
       "image_sha256": "5afb8b82d045bf87f457e4285f977c608023a2e74a49f37199f54817e1218e72",
       "raw": "03_ocr/raw/chi_tra/page_0205.json",
       "selected_engine": "qwen",
-      "selected_key": "2b6281b6d17f0e7571d7dd3eec901827e6f22865330f437e88b5890cdcc45e25",
-      "confidence": null,
+      "selected_key": "28b491c2577de8e218b9519830e1221344d2c29f6617bc4dd960bfcd2d9a7f32",
+      "confidence": 88.68084019769357,
       "empty": false,
-      "n_lines": 1,
+      "n_lines": 14,
       "lines": [
         {
-          "text": "Phần II: Nguyên văn tác phẩm dịch và chú thích\n\nSau đây là toàn văn Sáu bức thư, có kèm theo phần phiên âm, dịch nghĩa và chú thích của chúng tôi.\n\n1. 與高明二法師難佛不見形書\n\n李叡\n*森対交州刺史\n夫道處清虛，四大理常，而有法門，妙出群城。若稱其巧能利物，度脫無量爲教，何日不見真形於世？真空說而無實耶？\n\n今正就尊西方根源，伏願大和尚垂懐，允納下心，無措神語。\n\n弟子李淼和南：\n\n（“弘明集”卷十一：見“全上古三代秦漢三國六朝文、全宋文”卷五十七）\n\nPHIÊN ÂM:\n\nDỤ CAO, MINH NHỊ PHẠP SƯ\nNAN PHẠT BẤT KIẾN HÌNH THƯ\n\nLÝ MIỆU\n* Miêu vi Giao Châu Thư sú\nPhù Dao xử thanh hư, tử đại lý thường, nhi hữu pháp môn, diệu xuất quần vực. Nhục xung kỳ xảo năng lợi vật, độ thoát vô lượng vì giáo, hà đi bất kiến chân hình ư thế? Chân không thuyết nhi vô thực da?\n\nKim chính tuu tần tây phương càn nguyên, phục nguyên Đại hòn thượng thủy hải, doãn nạp hạ tâm, về tích thân cáo.",
+          "text": "Sau đây là toàn văn Sáu bức thư, có kèm theo phần phiên âm, dịch nghĩa và chú thích của chúng tôi.",
           "bbox": [
             0,
-            0,
-            2480,
-            3509
+            280,
+            2198,
+            474
           ],
-          "confidence": null
+          "confidence": 95.1
+        },
+        {
+          "text": "1. 與高明二法師難佛不見形書",
+          "bbox": [
+            0,
+            474,
+            2198,
+            668
+          ],
+          "confidence": 95.1
+        },
+        {
+          "text": "李淼",
+          "bbox": [
+            0,
+            668,
+            2198,
+            862
+          ],
+          "confidence": 95.1
+        },
+        {
+          "text": "夫道至虚，四大理，而有法门，妙群域。 若其巧能利物，度脱无量，何吕不见真形耶？",
+          "bbox": [
+            272,
+            887,
+            2200,
+            1368
+          ],
+          "confidence": 67.5
+        },
+        {
+          "text": "今就尋西方根源，伏願大和尚垂懷，允納下心，無惜神誥。",
+          "bbox": [
+            9,
+            1441,
+            2202,
+            1712
+          ],
+          "confidence": 81.99
+        },
+        {
+          "text": "弟子李森和南。",
+          "bbox": [
+            9,
+            1712,
+            2202,
+            1983
+          ],
+          "confidence": 81.99
+        },
+        {
+          "text": "三国六朝文.全宋文卷五十七)",
+          "bbox": [
+            409,
+            2011,
+            1990,
+            2114
+          ],
+          "confidence": 89.78
+        },
+        {
+          "text": "PHIÊN ÂM:",
+          "bbox": [
+            409,
+            2114,
+            1990,
+            2217
+          ],
+          "confidence": 89.78
+        },
+        {
+          "text": "DỤ CAO, MINH NHỊ PHÁP SƯ",
+          "bbox": [
+            409,
+            2217,
+            1990,
+            2319
+          ],
+          "confidence": 89.78
+        },
+        {
+          "text": "NẠN PHẬT BẤT KIẾN HÌNH THƯ",
+          "bbox": [
+            409,
+            2319,
+            1990,
+            2422
+          ],
+          "confidence": 89.78
+        },
+        {
+          "text": "LÝ MIỄU",
+          "bbox": [
+            409,
+            2422,
+            1990,
+            2525
+          ],
+          "confidence": 89.78
+        },
+        {
+          "text": "* Miễu vi Giao Châu Thứ sử",
+          "bbox": [
+            272,
+            2534,
+            2480,
+            2777
+          ],
+          "confidence": 89.33
+        },
+        {
+          "text": "Phù Đạo xứ thanh hư, tứ đại lý thường, nhi hữu pháp môn, diệu xuất quần vực. Nhược xưng kỳ xảo năng lợi vật, độ thoát vô lượng vì giáo, hà dĩ bất kiến chân hình ư thế? Chân không thuyết nhi vô thực da?",
+          "bbox": [
+            272,
+            2777,
+            2480,
+            3021
+          ],
+          "confidence": 89.33
+        },
+        {
+          "text": "Kim chính tựu tầm tay phương căn nguyên, phục nguyện Đại hòa thượng thủy hoài, doãn nạp hạ tâm, vô tích thần cáo.",
+          "bbox": [
+            272,
+            3021,
+            2480,
+            3264
+          ],
+          "confidence": 89.33
         }
       ],
       "engines": [
         {
           "engine": "qwen",
-          "key": "2b6281b6d17f0e7571d7dd3eec901827e6f22865330f437e88b5890cdcc45e25",
-          "cache_hit": true
+          "key": "28b491c2577de8e218b9519830e1221344d2c29f6617bc4dd960bfcd2d9a7f32",
+          "cache_hit": false
         }
       ]
     },
@@ -80,66 +219,202 @@
       "image_sha256": "fed77272d9e993999a8d2d3890ab340d1c1b0b312d145ff1c8c528eb188a8ddc",
       "raw": "03_ocr/raw/chi_tra/page_0206.json",
       "selected_engine": "qwen",
-      "selected_key": "413d5e06cc5359fb914af5e025a286fe0e2bbff19757966e712d26109d7c1530",
-      "confidence": null,
+      "selected_key": "3df14e2406a24cecae9758056f80fbaf6a1e4f882d70def3368700ba28f3c1a9",
+      "confidence": 95.2504678362573,
       "empty": false,
-      "n_lines": 1,
+      "n_lines": 18,
       "lines": [
         {
-          "text": "Đệ tử Lý Miếu hòa nam.\n( Hoàng minh tập, Quyền thập nhất; Toàn Thượng cố, Tam đại, Tấn, Hán, Tam quốc, Lục triều văn, Toàn Tống văn. Quyền ngũ thập thất.)\nDJCH NGHỊA:\nTHƯ GỬI HAI VI PHÁP SƯ (**) CAO VÀ MINH (2)\nĐỂ VẤN HỎI VỀ VIỆC KHÔNG THẤY HÌNH THẾ PHẬT (3)\nLÝ MIẾU\n* Miêu là Thư sứ Giao Châu\nRằng, chỗ Đạo thanh hư (4), từ đại (5) lẽ thường, nhờ có giáo pháp (6) mà sự nhiệm màu lan khắp mọi cõi. Nếu nói Đạo [Phật] là khéo giỏi, có thể lập giáo để làm cho [mười] vất, giải thoát cho vô số [người], thì tại sao không thấy chân Phật ở trên đời? Hay là chỉ (7) nói suông mà không có thực (8)?\nNay đang lúc đi tìm nguồn cội Phương tây (9), cúi mong Đại hòa thượng (10) rủ lòng, chấp nhận nỗi băn khoăn của kẻ đuối, không tiếc lời chỉ bảo thân tình.\nĐệ tử Lý Miếu kinh lễ (11).\n( Hoàng minh tập, Q. 11; Toàn Thượng cố, Tam đại, Tấn, Hán, Tam quốc, Lục triều văn, phần Toàn Tống văn, Q. 57)\nCHÚ THÍCH:\n(1) Pháp sư: người am tường kính Phật, có khả năng giảng dạy cho người khác.\n(2) Cao và Minh: tức Đạo Cao và Pháp Minh, hai nhà sư nước ta.",
+          "text": "Đệ tử Lý Miễ hòa nam.",
           "bbox": [
-            0,
-            0,
-            2480,
-            3509
+            412,
+            318,
+            2446,
+            414
           ],
-          "confidence": null
+          "confidence": 94.11
+        },
+        {
+          "text": "(Hoằng minh tập, Quyển thập nhất;",
+          "bbox": [
+            412,
+            414,
+            2446,
+            509
+          ],
+          "confidence": 94.11
+        },
+        {
+          "text": "Toàn Thượng cổ, Tam đại, Tần, Hán,",
+          "bbox": [
+            412,
+            509,
+            2446,
+            605
+          ],
+          "confidence": 94.11
+        },
+        {
+          "text": "Tam quốc, Lục triều văn, Toàn Tống",
+          "bbox": [
+            412,
+            605,
+            2446,
+            700
+          ],
+          "confidence": 94.11
+        },
+        {
+          "text": "văn. Quyển ngũ thập thất)",
+          "bbox": [
+            412,
+            700,
+            2446,
+            796
+          ],
+          "confidence": 94.11
+        },
+        {
+          "text": "DỊCH NGHĨA :",
+          "bbox": [
+            408,
+            848,
+            2090,
+            952
+          ],
+          "confidence": 95.96
+        },
+        {
+          "text": "THƯ GỬI HAI VỊ PHÁP SƯ (1) CAO VÀ MINH (2)",
+          "bbox": [
+            408,
+            952,
+            2090,
+            1056
+          ],
+          "confidence": 95.96
+        },
+        {
+          "text": "ĐỂ VẠN HỎI VỀ VIỆC KHÔNG THẤY HÌNH THỂ PHẬT (3)",
+          "bbox": [
+            408,
+            1056,
+            2090,
+            1159
+          ],
+          "confidence": 95.96
+        },
+        {
+          "text": "LÝ MIỄU",
+          "bbox": [
+            408,
+            1159,
+            2090,
+            1263
+          ],
+          "confidence": 95.96
+        },
+        {
+          "text": "* Miễu là Thứ sử Giao Châu",
+          "bbox": [
+            408,
+            1263,
+            2090,
+            1367
+          ],
+          "confidence": 95.96
+        },
+        {
+          "text": "Rằng, chỗ Đạo thanh hư (4), tứ đại (5) lẽ thường, nhờ có giáo pháp (6) mà sự nhiệm màu lan khắp mọi cõi. Nếu nói Đạo [Phật] là khéo giỏi, có thể lập giáo để làm lợi cho [muôn]vật, giải thoát cho vô số [người], thì tại sao không thấy chân hình Phật ở trên đời? Hay là chỉ (7) nói suông mà không có thực (8)?",
+          "bbox": [
+            73,
+            1416,
+            2446,
+            1971
+          ],
+          "confidence": 96.22
+        },
+        {
+          "text": "Nay đang lúc đi tìm nguồn cội Phương tây (9), cúi mong Đại hòa thượng (10) rủ lòng, chấp nhận nỗi băn khoăn của kẻ dưới, không tiếc lời chỉ bảo thần tình.",
+          "bbox": [
+            280,
+            2014,
+            2183,
+            2183
+          ],
+          "confidence": 93.41
+        },
+        {
+          "text": "Đệ tử Lý Miễu kính lễ (11).",
+          "bbox": [
+            280,
+            2183,
+            2183,
+            2351
+          ],
+          "confidence": 93.41
+        },
+        {
+          "text": "(Hoằng minh tập, Q. 11; Toàn Thượng)",
+          "bbox": [
+            280,
+            2351,
+            2183,
+            2520
+          ],
+          "confidence": 93.41
+        },
+        {
+          "text": "cổ, Tam đại, Tần, Hán, Tam quốc, Lục triều văn, phần Toàn Tống văn, Q. 57)",
+          "bbox": [
+            295,
+            2516,
+            2475,
+            2703
+          ],
+          "confidence": 96.04
+        },
+        {
+          "text": "CHÚ THÍCH:",
+          "bbox": [
+            295,
+            2703,
+            2475,
+            2890
+          ],
+          "confidence": 96.04
+        },
+        {
+          "text": "(1) Pháp sư: người am tường kinh Phật, có khả năng giảng dạy cho người khác.",
+          "bbox": [
+            295,
+            2890,
+            2475,
+            3077
+          ],
+          "confidence": 96.04
+        },
+        {
+          "text": "(2) Cao và Minh: tức Đạo Cao và Pháp Minh, hai nhà sư nước ta.",
+          "bbox": [
+            295,
+            3077,
+            2475,
+            3264
+          ],
+          "confidence": 96.04
         }
       ],
       "engines": [
         {
           "engine": "qwen",
-          "key": "413d5e06cc5359fb914af5e025a286fe0e2bbff19757966e712d26109d7c1530",
-          "cache_hit": true
-        }
-      ]
-    },
-    {
-      "page": 207,
-      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_18\\02_extraction\\pages\\page_207.png",
-      "image_sha256": "f494be772212d386652db632fd2fe7095a93d2791d1aee46fba1dd374ad5d571",
-      "raw": "03_ocr/raw/chi_tra/page_0207.json",
-      "selected_engine": "qwen",
-      "selected_key": "43c23111a96f64ad20db298b1b2974107e76275aeec171489ad6f46998ac3049",
-      "confidence": null,
-      "empty": false,
-      "n_lines": 1,
-      "lines": [
-        {
-          "text": "Phần II: Nguyên văn tác phẩm dịch và chú thích\n\n(3) Bản Mạc Tư Khoa chép đầu để bức thư này là: \"Dữ Đạo Cao Pháp Minh nhị Pháp sư thứ hai Phát bất kiến hình. Bất kiến hình thì không thấy hình thật Phật.\"\n\n(4) Thanh hít: trong trời trống không.\n\n(5) Từ đại bốn yếu tố lớn, gồm đất, nước, lửa, gió tạo nên vạn vật, theo quan niệm Phật giáo.\n\n(6) Giáo pháp (pháp môn): khoa dạy về cách tu luyện để thành Phật. Theo quan niệm nhà Phật, thì những giáo lý mà Phật giảng giải được coi như pháp tắc, nên gọi là \"pháp\". Pháp ấy dẫn dắt chúng sinh vào Đạo và đạo đạo, nên gọi là \"môn\". Có rất nhiều \"pháp môn\", tức nhiều kiểu tu luyện để thành Phật, như niệm Phật, thiền định, cùng đàng, bố thí, trì giới với Vô. Do đó, người ta hay nói tới \"tâm văn bốn nghìn pháp môn\", \"biên pháp môn\", \"vô số pháp môn\".\n\n(7) Nguyên văn chép là chân đế (thực), coi là nền tảng. Cụ thể ngữ cảnh, thì chỗ này phải là chữ trục đế nghĩa như thế hoặc đế, đích là chữ đế đúng. Đây dịch chữa lại. Bản Đại Chánh cũng chép là trục.\n\n(8) Nguyên văn câu này là \"Chân (trực) không thuyết nhi vô thực da\" \"Vô thực da (không có thực)\", bản Mạc Tư Khoa chép là \"Vô thuật tà vũ衙\".\n\n(9) Phương tay (Tây phương): còn gọi là Tây Thiên hay Tây Trúc, chỉ ấn Đỏ, nơi phát tích của đạo Phật. Chữ \"Tây phương\" ở đây còn có nghĩa là Thế giới gốc lúa của Phật A Di Đà (Amida). Vì cối ấy, theo Phật giáo, ở về phía tây cối Tà Bà (Saha) của chúng ta, nên gọi là \"Tây phương\".\n\n(10) Hoa tượng (Upādhyāya): có nghĩa là \"thầy tu\" dâng lên phiên thành \"Ô xá\", thì lại phiên chệch dần thành \"Hoa thượng\", lâu ngày hóa quen, dễ chỉ thấy tu. Chữ \"đại\"",
-          "bbox": [
-            0,
-            0,
-            2480,
-            3509
-          ],
-          "confidence": null
-        }
-      ],
-      "engines": [
-        {
-          "engine": "qwen",
-          "key": "43c23111a96f64ad20db298b1b2974107e76275aeec171489ad6f46998ac3049",
-          "cache_hit": true
+          "key": "3df14e2406a24cecae9758056f80fbaf6a1e4f882d70def3368700ba28f3c1a9",
+          "cache_hit": false
         }
       ]
     }
   ],
-  "low_conf_pages": [
-    205,
-    206,
-    207
-  ],
+  "low_conf_pages": [],
   "empty_pages": [],
   "review_required": true
 }

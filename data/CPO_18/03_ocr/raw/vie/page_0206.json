@@ -3638,6 +3638,815 @@
           "M4"
         ]
       }
+    },
+    {
+      "key": "9718e2a2f3271371787821ece0c51275fdd6d0ba39518a69f190d31565a5c28a",
+      "parameters": {
+        "image_sha256": "fed77272d9e993999a8d2d3890ab340d1c1b0b312d145ff1c8c528eb188a8ddc",
+        "writing_system": "vie",
+        "engine": {
+          "name": "qwen",
+          "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "model_revision": "main",
+          "transformers_version": "4.57.6",
+          "torch_version": "2.5.1+cu121",
+          "cuda_version": "12.1",
+          "bitsandbytes_version": "0.50.2",
+          "quantization": {
+            "load_in_4bit": true,
+            "quant_type": "nf4",
+            "double_quant": true,
+            "compute_dtype": "float16"
+          },
+          "min_pixels": 200704,
+          "max_pixels": 301056,
+          "max_new_tokens": 1024,
+          "adapter_version": 1
+        },
+        "lang": "vie",
+        "region": [
+          0.0,
+          0.08,
+          1.0,
+          0.93
+        ],
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-21T08:14:39+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_18\\02_extraction\\pages\\page_206.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        280,
+        2480,
+        3264
+      ],
+      "lines": [
+        {
+          "text": "Đệ tử Lý Miếu hòa nam.\n(Thượng minh tập, Quyền tháp nhật;\nToàn Thượng cố, Tam đại, Tần, Hán,\nTam quốc, Lục triều văn, Toàn Tống văn, Quyền ngũ tháp nhật)\nDỊCH NGHĨA :\nTHƯ GỬI HAI VI PHÁP SƯ (1) CAO VÀ MINH (2)\nĐỂ VĂN HỌI VỀ VIỆC KHÔNG THẤY HÌNH THẾ PHẬT (3)\nLÝ MIỄU\n* Miếu là Thú Sứ Giao Châu\nRằng, chủ Đạo thanh hư (4), tứ đại (5) là thường, nhờ có giáo pháp (6) mà sự nhiệm mâu lau khắp mọi cõi. Nếu nói Đạo (Phật) là khéo giỏi, có thể lập giáo để làm lợi cho [muôn]vật, giải giới cho vô số [người], thì tại sao không thấy chân hình Phật ở trên đời? Hay là chỉ (7) nói suông mà không có thực?\nNay đang lúc đi tìm nguồn cội Phương tây (8), cúi mong Đại hòa thượng (9) rủ lòng, chấp nhận nỗi băn khoăn của kẻ dưới, không tiếc lời chỉ bảo thân tình.\nĐệ tử Lý Miếu kính lễ (10).\n(Thượng minh tập, Q. 11; Toàn Thượng cố, Tam đại, Tần, Hán, Tam quốc, Lục triều văn, phần Toàn Tống văn, Q. 57)\nCHÚ THÍCH :\n(1) Pháp sư: người am tường kính Phật, có khả năng giảng dạy cho người khác.\n(2) Cao và Minh: tức Đạo Cao và Pháp Minh, hai nhà sư nước ta.",
+          "bbox": [
+            0,
+            280,
+            2480,
+            3264
+          ],
+          "confidence": null
+        }
+      ],
+      "raw": {
+        "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+        "model_revision": "main",
+        "lang": "vie",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          2984
+        ],
+        "prompt": "\nYou are an OCR engine specialized in historical Chinese literature.\n\nTranscribe the Traditional Vietnamese text visible in this image.\n\nRules:\n1. Transcribe the original Vietnamese characters (Hanzi) only.\n2. Do not transcribe Chinese pronunciation, Chinese translation page headers, or unrelated notes.\n3. Preserve the original characters, punctuation, and reading order.\n4. Preserve paragraph and line boundaries where possible.\n5. Do not translate, explain, modernize, or normalize historical characters.\n6. Do not guess illegible characters. Use [UNCLEAR].\n7. Ignore faint bleed-through, stains, handwritten marks, and page numbers\n   unless they are clearly part of the original printed Chinese text.\n\nReturn only the transcription. Do not add explanations.\n",
+        "generated_text": "Đệ tử Lý Miếu hòa nam.\n(Thượng minh tập, Quyền tháp nhật;\nToàn Thượng cố, Tam đại, Tần, Hán,\nTam quốc, Lục triều văn, Toàn Tống văn, Quyền ngũ tháp nhật)\nDỊCH NGHĨA :\nTHƯ GỬI HAI VI PHÁP SƯ (1) CAO VÀ MINH (2)\nĐỂ VĂN HỌI VỀ VIỆC KHÔNG THẤY HÌNH THẾ PHẬT (3)\nLÝ MIỄU\n* Miếu là Thú Sứ Giao Châu\nRằng, chủ Đạo thanh hư (4), tứ đại (5) là thường, nhờ có giáo pháp (6) mà sự nhiệm mâu lau khắp mọi cõi. Nếu nói Đạo (Phật) là khéo giỏi, có thể lập giáo để làm lợi cho [muôn]vật, giải giới cho vô số [người], thì tại sao không thấy chân hình Phật ở trên đời? Hay là chỉ (7) nói suông mà không có thực?\nNay đang lúc đi tìm nguồn cội Phương tây (8), cúi mong Đại hòa thượng (9) rủ lòng, chấp nhận nỗi băn khoăn của kẻ dưới, không tiếc lời chỉ bảo thân tình.\nĐệ tử Lý Miếu kính lễ (10).\n(Thượng minh tập, Q. 11; Toàn Thượng cố, Tam đại, Tần, Hán, Tam quốc, Lục triều văn, phần Toàn Tống văn, Q. 57)\nCHÚ THÍCH :\n(1) Pháp sư: người am tường kính Phật, có khả năng giảng dạy cho người khác.\n(2) Cao và Minh: tức Đạo Cao và Pháp Minh, hai nhà sư nước ta.",
+        "inference_seconds": 26.7422,
+        "max_new_tokens": 1024,
+        "quantization": "4bit-nf4",
+        "bbox_granularity": "whole_crop"
+      }
+    },
+    {
+      "key": "9718e2a2f3271371787821ece0c51275fdd6d0ba39518a69f190d31565a5c28a",
+      "parameters": {
+        "image_sha256": "fed77272d9e993999a8d2d3890ab340d1c1b0b312d145ff1c8c528eb188a8ddc",
+        "writing_system": "vie",
+        "engine": {
+          "name": "qwen",
+          "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "model_revision": "main",
+          "transformers_version": "4.57.6",
+          "torch_version": "2.5.1+cu121",
+          "cuda_version": "12.1",
+          "bitsandbytes_version": "0.50.2",
+          "quantization": {
+            "load_in_4bit": true,
+            "quant_type": "nf4",
+            "double_quant": true,
+            "compute_dtype": "float16"
+          },
+          "min_pixels": 200704,
+          "max_pixels": 301056,
+          "max_new_tokens": 1024,
+          "adapter_version": 1
+        },
+        "lang": "vie",
+        "region": [
+          0.0,
+          0.08,
+          1.0,
+          0.93
+        ],
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-21T09:59:20+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_18\\02_extraction\\pages\\page_206.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        280,
+        2480,
+        3264
+      ],
+      "lines": [
+        {
+          "text": "Đệ tử Lý Miếu hòa nam.",
+          "bbox": [
+            0,
+            280,
+            2480,
+            3264
+          ],
+          "confidence": null
+        },
+        {
+          "text": "(Thường minh tập, Quyền tháp nhất; Toàn Thượng cố, Tam đại, Tần, Hán, Tam quốc, Lục triều văn, Toàn Tống văn. Quyền ngũ tháp thất)",
+          "bbox": [
+            0,
+            280,
+            2480,
+            3264
+          ],
+          "confidence": null
+        },
+        {
+          "text": "DỊCH NGHĨA:",
+          "bbox": [
+            0,
+            280,
+            2480,
+            3264
+          ],
+          "confidence": null
+        },
+        {
+          "text": "THƯ GỬI HAI VI PHÁP SƯ (1) CAO VÀ MINH (2) ĐỂ VĂN HỌI VỀ VIỆC KHÔNG THẤY HÌNH THẾ PHẬT (3)",
+          "bbox": [
+            0,
+            280,
+            2480,
+            3264
+          ],
+          "confidence": null
+        },
+        {
+          "text": "LÝ MIẾU",
+          "bbox": [
+            0,
+            280,
+            2480,
+            3264
+          ],
+          "confidence": null
+        },
+        {
+          "text": "* Miếu là Thú Sứ Giao Châu",
+          "bbox": [
+            0,
+            280,
+            2480,
+            3264
+          ],
+          "confidence": null
+        },
+        {
+          "text": "Rằng, chủ Đạo thanh hư (4), tứ đại (5) là thường, nhờ có giáo pháp (6) mà sự nhiệm mâu lau khắp mọi cõi. Nếu nói Đạo (Phật) là khéo giỏi, có thể lập giáo để làm lợi cho [muôn]vật, giải giới cho vô số [người], thì tại sao không thấy chân hình Phật ở trên đời? Hay là chỉ (7) nói suông mà không có thực?",
+          "bbox": [
+            0,
+            280,
+            2480,
+            3264
+          ],
+          "confidence": null
+        },
+        {
+          "text": "Nay đang lúc đi tìm nguồn cội Phương tây (9), cúi mong Đại hòa thượng (10) rủ lòng, chấp nhận nỗi băn khoăn của kẻ dưới, không tiếc lời chỉ bảo thân tình.",
+          "bbox": [
+            0,
+            280,
+            2480,
+            3264
+          ],
+          "confidence": null
+        },
+        {
+          "text": "Đệ tử Lý Miếu kính lễ (11).",
+          "bbox": [
+            0,
+            280,
+            2480,
+            3264
+          ],
+          "confidence": null
+        },
+        {
+          "text": "(Thường minh tập, Q. 11; Toàn Thượng cố, Tam đại, Tần, Hán, Tam quốc, Lục triều văn, phần Toàn Tống văn, Q. 57)",
+          "bbox": [
+            0,
+            280,
+            2480,
+            3264
+          ],
+          "confidence": null
+        },
+        {
+          "text": "CHÚ THÍCH:",
+          "bbox": [
+            0,
+            280,
+            2480,
+            3264
+          ],
+          "confidence": null
+        },
+        {
+          "text": "(1) Pháp sư: người am tưởng kính Phật, có khả năng giảng dạy cho người khác.",
+          "bbox": [
+            0,
+            280,
+            2480,
+            3264
+          ],
+          "confidence": null
+        },
+        {
+          "text": "(2) Cao và Minh: tức Đạo Cao và Pháp Minh, hai nhà sư nước ta.",
+          "bbox": [
+            0,
+            280,
+            2480,
+            3264
+          ],
+          "confidence": null
+        }
+      ],
+      "raw": {
+        "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+        "model_revision": "main",
+        "lang": "vie",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          2984
+        ],
+        "prompt": "\nYou are an OCR engine specialized in historical Chinese literature.\n\nTranscribe the Traditional Vietnamese text visible in this image.\n\nRules:\n1. Transcribe the original Vietnamese characters only.\n2. Do not transcribe Chinese pronunciation, Chinese translation page headers, or unrelated notes.\n3. Preserve the original characters, punctuation, and reading order.\n4. Preserve paragraph and line boundaries where possible.\n5. Do not translate, explain, modernize, or normalize historical characters.\n6. Do not guess illegible characters. Use [UNCLEAR].\n7. Ignore faint bleed-through, stains, handwritten marks, and page numbers\n   unless they are clearly part of the original printed Chinese text.\n\nReturn only the transcription. Do not add explanations.\n",
+        "generated_text": "Đệ tử Lý Miếu hòa nam.\n(Thường minh tập, Quyền tháp nhất; Toàn Thượng cố, Tam đại, Tần, Hán, Tam quốc, Lục triều văn, Toàn Tống văn. Quyền ngũ tháp thất)\nDỊCH NGHĨA:\nTHƯ GỬI HAI VI PHÁP SƯ (1) CAO VÀ MINH (2) ĐỂ VĂN HỌI VỀ VIỆC KHÔNG THẤY HÌNH THẾ PHẬT (3)\nLÝ MIẾU\n* Miếu là Thú Sứ Giao Châu\nRằng, chủ Đạo thanh hư (4), tứ đại (5) là thường, nhờ có giáo pháp (6) mà sự nhiệm mâu lau khắp mọi cõi. Nếu nói Đạo (Phật) là khéo giỏi, có thể lập giáo để làm lợi cho [muôn]vật, giải giới cho vô số [người], thì tại sao không thấy chân hình Phật ở trên đời? Hay là chỉ (7) nói suông mà không có thực?\nNay đang lúc đi tìm nguồn cội Phương tây (9), cúi mong Đại hòa thượng (10) rủ lòng, chấp nhận nỗi băn khoăn của kẻ dưới, không tiếc lời chỉ bảo thân tình.\nĐệ tử Lý Miếu kính lễ (11).\n(Thường minh tập, Q. 11; Toàn Thượng cố, Tam đại, Tần, Hán, Tam quốc, Lục triều văn, phần Toàn Tống văn, Q. 57)\nCHÚ THÍCH:\n(1) Pháp sư: người am tưởng kính Phật, có khả năng giảng dạy cho người khác.\n(2) Cao và Minh: tức Đạo Cao và Pháp Minh, hai nhà sư nước ta.",
+        "inference_seconds": 31.7393,
+        "max_new_tokens": 1024,
+        "quantization": "4bit-nf4",
+        "bbox_granularity": "whole_crop"
+      }
+    },
+    {
+      "key": "9718e2a2f3271371787821ece0c51275fdd6d0ba39518a69f190d31565a5c28a",
+      "parameters": {
+        "image_sha256": "fed77272d9e993999a8d2d3890ab340d1c1b0b312d145ff1c8c528eb188a8ddc",
+        "writing_system": "vie",
+        "engine": {
+          "name": "qwen",
+          "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "model_revision": "main",
+          "transformers_version": "4.57.6",
+          "torch_version": "2.5.1+cu121",
+          "cuda_version": "12.1",
+          "bitsandbytes_version": "0.50.2",
+          "quantization": {
+            "load_in_4bit": true,
+            "quant_type": "nf4",
+            "double_quant": true,
+            "compute_dtype": "float16"
+          },
+          "min_pixels": 200704,
+          "max_pixels": 301056,
+          "max_new_tokens": 1024,
+          "adapter_version": 1
+        },
+        "lang": "vie",
+        "region": [
+          0.0,
+          0.08,
+          1.0,
+          0.93
+        ],
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-21T12:48:33+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_18\\02_extraction\\pages\\page_206.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        280,
+        2480,
+        3264
+      ],
+      "lines": [
+        {
+          "text": "Đệ tử Lý Miếu hòa nam.",
+          "bbox": [
+            0,
+            280,
+            2480,
+            3264
+          ],
+          "confidence": null
+        },
+        {
+          "text": "(Thường minh tập, Quyền tháp nhất; Toàn Thượng cố, Tam đại, Tần, Hán, Tam quốc, Lục triều văn, Toàn Tống văn. Quyền ngũ tháp thất)",
+          "bbox": [
+            0,
+            280,
+            2480,
+            3264
+          ],
+          "confidence": null
+        },
+        {
+          "text": "DỊCH NGHĨA:",
+          "bbox": [
+            0,
+            280,
+            2480,
+            3264
+          ],
+          "confidence": null
+        },
+        {
+          "text": "THƯ GỬI HAI VI PHÁP SƯ (1) CAO VÀ MINH (2) ĐỂ VĂN HỌI VỀ VIỆC KHÔNG THẤY HÌNH THẾ PHẬT (3)",
+          "bbox": [
+            0,
+            280,
+            2480,
+            3264
+          ],
+          "confidence": null
+        },
+        {
+          "text": "LÝ MIẾU",
+          "bbox": [
+            0,
+            280,
+            2480,
+            3264
+          ],
+          "confidence": null
+        },
+        {
+          "text": "* Miếu là Thú Sứ Giao Châu",
+          "bbox": [
+            0,
+            280,
+            2480,
+            3264
+          ],
+          "confidence": null
+        },
+        {
+          "text": "Rằng, chủ Đạo thanh hư (4), tứ đại (5) là thường, nhờ có giáo pháp (6) mà sự nhiệm mâu lau khắp mọi cõi. Nếu nói Đạo (Phật) là khéo giỏi, có thể lập giáo để làm lợi cho [muôn]vật, giải giới cho vô số [người], thì tại sao không thấy chân hình Phật ở trên đời? Hay là chỉ (7) nói suông mà không có thực?",
+          "bbox": [
+            0,
+            280,
+            2480,
+            3264
+          ],
+          "confidence": null
+        },
+        {
+          "text": "Nay đang lúc đi tìm nguồn cội Phương tây (9), cúi mong Đại hòa thượng (10) rủ lòng, chấp nhận nỗi băn khoăn của kẻ dưới, không tiếc lời chỉ bảo thân tình.",
+          "bbox": [
+            0,
+            280,
+            2480,
+            3264
+          ],
+          "confidence": null
+        },
+        {
+          "text": "Đệ tử Lý Miếu kính lễ (11).",
+          "bbox": [
+            0,
+            280,
+            2480,
+            3264
+          ],
+          "confidence": null
+        },
+        {
+          "text": "(Thường minh tập, Q. 11; Toàn Thượng cố, Tam đại, Tần, Hán, Tam quốc, Lục triều văn, phần Toàn Tống văn, Q. 57)",
+          "bbox": [
+            0,
+            280,
+            2480,
+            3264
+          ],
+          "confidence": null
+        },
+        {
+          "text": "CHÚ THÍCH:",
+          "bbox": [
+            0,
+            280,
+            2480,
+            3264
+          ],
+          "confidence": null
+        },
+        {
+          "text": "(1) Pháp sư: người am tưởng kính Phật, có khả năng giảng dạy cho người khác.",
+          "bbox": [
+            0,
+            280,
+            2480,
+            3264
+          ],
+          "confidence": null
+        },
+        {
+          "text": "(2) Cao và Minh: tức Đạo Cao và Pháp Minh, hai nhà sư nước ta.",
+          "bbox": [
+            0,
+            280,
+            2480,
+            3264
+          ],
+          "confidence": null
+        }
+      ],
+      "raw": {
+        "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+        "model_revision": "main",
+        "lang": "vie",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          2984
+        ],
+        "prompt": "\nYou are an OCR engine specialized in historical Chinese literature.\n\nTranscribe the Traditional Vietnamese text visible in this image.\n\nRules:\n1. Transcribe the original Vietnamese characters only.\n2. Do not transcribe Chinese pronunciation, Chinese translation page headers, or unrelated notes.\n3. Preserve the original characters, punctuation, and reading order.\n4. Preserve paragraph and line boundaries where possible.\n5. Do not translate, explain, modernize, or normalize historical characters.\n6. Do not guess illegible characters. Use [UNCLEAR].\n7. Ignore faint bleed-through, stains, handwritten marks, and page numbers\n   unless they are clearly part of the original printed Chinese text.\n\nReturn only the transcription. Do not add explanations.\n",
+        "generated_text": "Đệ tử Lý Miếu hòa nam.\n(Thường minh tập, Quyền tháp nhất; Toàn Thượng cố, Tam đại, Tần, Hán, Tam quốc, Lục triều văn, Toàn Tống văn. Quyền ngũ tháp thất)\nDỊCH NGHĨA:\nTHƯ GỬI HAI VI PHÁP SƯ (1) CAO VÀ MINH (2) ĐỂ VĂN HỌI VỀ VIỆC KHÔNG THẤY HÌNH THẾ PHẬT (3)\nLÝ MIẾU\n* Miếu là Thú Sứ Giao Châu\nRằng, chủ Đạo thanh hư (4), tứ đại (5) là thường, nhờ có giáo pháp (6) mà sự nhiệm mâu lau khắp mọi cõi. Nếu nói Đạo (Phật) là khéo giỏi, có thể lập giáo để làm lợi cho [muôn]vật, giải giới cho vô số [người], thì tại sao không thấy chân hình Phật ở trên đời? Hay là chỉ (7) nói suông mà không có thực?\nNay đang lúc đi tìm nguồn cội Phương tây (9), cúi mong Đại hòa thượng (10) rủ lòng, chấp nhận nỗi băn khoăn của kẻ dưới, không tiếc lời chỉ bảo thân tình.\nĐệ tử Lý Miếu kính lễ (11).\n(Thường minh tập, Q. 11; Toàn Thượng cố, Tam đại, Tần, Hán, Tam quốc, Lục triều văn, phần Toàn Tống văn, Q. 57)\nCHÚ THÍCH:\n(1) Pháp sư: người am tưởng kính Phật, có khả năng giảng dạy cho người khác.\n(2) Cao và Minh: tức Đạo Cao và Pháp Minh, hai nhà sư nước ta.",
+        "inference_seconds": 58.4468,
+        "max_new_tokens": 1024,
+        "quantization": "4bit-nf4",
+        "bbox_granularity": "whole_crop"
+      }
+    },
+    {
+      "key": "fffcbd8bca83ece04d9b3ac651b956ae4f99c71357f1b2d706df587325a6eb6e",
+      "parameters": {
+        "image_sha256": "fed77272d9e993999a8d2d3890ab340d1c1b0b312d145ff1c8c528eb188a8ddc",
+        "writing_system": "vie",
+        "engine": {
+          "name": "qwen",
+          "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "model_revision": "main",
+          "transformers_version": "4.57.6",
+          "torch_version": "2.5.1+cu121",
+          "cuda_version": "12.1",
+          "bitsandbytes_version": "0.50.2",
+          "quantization": {
+            "load_in_4bit": true,
+            "quant_type": "nf4",
+            "double_quant": true,
+            "compute_dtype": "float16"
+          },
+          "mode": "all",
+          "min_pixels": 200704,
+          "max_pixels": 802816,
+          "band_inches": 2.0,
+          "max_new_tokens": 768,
+          "repetition_penalty": 1.05,
+          "adapter_version": 3,
+          "prompt_version": 3,
+          "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74"
+        },
+        "lang": "vie",
+        "region": [
+          0.0,
+          0.08,
+          1.0,
+          0.93
+        ],
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-21T19:43:33+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_18\\02_extraction\\pages\\page_206.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        280,
+        2480,
+        3264
+      ],
+      "lines": [
+        {
+          "text": "Đệ tử Lý Miễ hòa nam.",
+          "bbox": [
+            412,
+            318,
+            2446,
+            414
+          ],
+          "confidence": 94.11
+        },
+        {
+          "text": "(Hoằng minh tập, Quyển thập nhất;",
+          "bbox": [
+            412,
+            414,
+            2446,
+            509
+          ],
+          "confidence": 94.11
+        },
+        {
+          "text": "Toàn Thượng cổ, Tam đại, Tần, Hán,",
+          "bbox": [
+            412,
+            509,
+            2446,
+            605
+          ],
+          "confidence": 94.11
+        },
+        {
+          "text": "Tam quốc, Lục triều văn, Toàn Tống",
+          "bbox": [
+            412,
+            605,
+            2446,
+            700
+          ],
+          "confidence": 94.11
+        },
+        {
+          "text": "văn. Quyển ngũ thập thất)",
+          "bbox": [
+            412,
+            700,
+            2446,
+            796
+          ],
+          "confidence": 94.11
+        },
+        {
+          "text": "DỊCH NGHĨA :",
+          "bbox": [
+            408,
+            848,
+            2090,
+            952
+          ],
+          "confidence": 95.96
+        },
+        {
+          "text": "THƯ GỬI HAI VỊ PHÁP SƯ (1) CAO VÀ MINH (2)",
+          "bbox": [
+            408,
+            952,
+            2090,
+            1056
+          ],
+          "confidence": 95.96
+        },
+        {
+          "text": "ĐỂ VẠN HỎI VỀ VIỆC KHÔNG THẤY HÌNH THỂ PHẬT (3)",
+          "bbox": [
+            408,
+            1056,
+            2090,
+            1159
+          ],
+          "confidence": 95.96
+        },
+        {
+          "text": "LÝ MIỄU",
+          "bbox": [
+            408,
+            1159,
+            2090,
+            1263
+          ],
+          "confidence": 95.96
+        },
+        {
+          "text": "* Miễu là Thứ sử Giao Châu",
+          "bbox": [
+            408,
+            1263,
+            2090,
+            1367
+          ],
+          "confidence": 95.96
+        },
+        {
+          "text": "Rằng, chỗ Đạo thanh hư (4), tứ đại (5) lẽ thường, nhờ có giáo pháp (6) mà sự nhiệm màu lan khắp mọi cõi. Nếu nói Đạo [Phật] là khéo giỏi, có thể lập giáo để làm lợi cho [muôn]vật, giải thoát cho vô số [người], thì tại sao không thấy chân hình Phật ở trên đời? Hay là chỉ (7) nói suông mà không có thực (8)?",
+          "bbox": [
+            73,
+            1416,
+            2446,
+            1971
+          ],
+          "confidence": 96.22
+        },
+        {
+          "text": "Nay đang lúc đi tìm nguồn cội Phương tây (9), cúi mong Đại hòa thượng (10) rủ lòng, chấp nhận nỗi băn khoăn của kẻ dưới, không tiếc lời chỉ bảo thần tình.",
+          "bbox": [
+            280,
+            2014,
+            2183,
+            2183
+          ],
+          "confidence": 93.41
+        },
+        {
+          "text": "Đệ tử Lý Miễu kính lễ (11).",
+          "bbox": [
+            280,
+            2183,
+            2183,
+            2351
+          ],
+          "confidence": 93.41
+        },
+        {
+          "text": "(Hoằng minh tập, Q. 11; Toàn Thượng)",
+          "bbox": [
+            280,
+            2351,
+            2183,
+            2520
+          ],
+          "confidence": 93.41
+        },
+        {
+          "text": "cổ, Tam đại, Tần, Hán, Tam quốc, Lục triều văn, phần Toàn Tống văn, Q. 57)",
+          "bbox": [
+            295,
+            2516,
+            2475,
+            2703
+          ],
+          "confidence": 96.04
+        },
+        {
+          "text": "CHÚ THÍCH:",
+          "bbox": [
+            295,
+            2703,
+            2475,
+            2890
+          ],
+          "confidence": 96.04
+        },
+        {
+          "text": "(1) Pháp sư: người am tường kinh Phật, có khả năng giảng dạy cho người khác.",
+          "bbox": [
+            295,
+            2890,
+            2475,
+            3077
+          ],
+          "confidence": 96.04
+        },
+        {
+          "text": "(2) Cao và Minh: tức Đạo Cao và Pháp Minh, hai nhà sư nước ta.",
+          "bbox": [
+            295,
+            3077,
+            2475,
+            3264
+          ],
+          "confidence": 96.04
+        }
+      ],
+      "raw": {
+        "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+        "model_revision": "main",
+        "mode": "all",
+        "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          2984
+        ],
+        "band_target_height": 600,
+        "bbox_granularity": "band_even_split",
+        "max_new_tokens": 768,
+        "max_pixels": 802816,
+        "inference_seconds": 29.256,
+        "bands": [
+          {
+            "band": 1,
+            "y0": 42,
+            "y1": 542,
+            "ink_box": [
+              412,
+              38,
+              2446,
+              516
+            ],
+            "generated_text": "Đệ tử Lý Miễ hòa nam.\n\n(Hoằng minh tập, Quyển thập nhất;\nToàn Thượng cổ, Tam đại, Tần, Hán,\nTam quốc, Lục triều văn, Toàn Tống\nvăn. Quyển ngũ thập thất)",
+            "n_lines": 5,
+            "tokens": 62,
+            "seconds": 4.838,
+            "confidence": 94.11,
+            "flags": []
+          },
+          {
+            "band": 2,
+            "y0": 542,
+            "y1": 1112,
+            "ink_box": [
+              408,
+              568,
+              2090,
+              1087
+            ],
+            "generated_text": "DỊCH NGHĨA :\nTHƯ GỬI HAI VỊ PHÁP SƯ (1) CAO VÀ MINH (2)\nĐỂ VẠN HỎI VỀ VIỆC KHÔNG THẤY HÌNH THỂ PHẬT (3)\nLÝ MIỄU\n* Miễu là Thứ sử Giao Châu",
+            "n_lines": 5,
+            "tokens": 81,
+            "seconds": 5.674,
+            "confidence": 95.96,
+            "flags": []
+          },
+          {
+            "band": 3,
+            "y0": 1112,
+            "y1": 1712,
+            "ink_box": [
+              73,
+              1136,
+              2446,
+              1691
+            ],
+            "generated_text": "Rằng, chỗ Đạo thanh hư (4), tứ đại (5) lẽ thường, nhờ có giáo pháp (6) mà sự nhiệm màu lan khắp mọi cõi. Nếu nói Đạo [Phật] là khéo giỏi, có thể lập giáo để làm lợi cho [muôn]vật, giải thoát cho vô số [người], thì tại sao không thấy chân hình Phật ở trên đời? Hay là chỉ (7) nói suông mà không có thực (8)?",
+            "n_lines": 1,
+            "tokens": 105,
+            "seconds": 6.824,
+            "confidence": 96.22,
+            "flags": []
+          },
+          {
+            "band": 4,
+            "y0": 1712,
+            "y1": 2238,
+            "ink_box": [
+              280,
+              1734,
+              2183,
+              2240
+            ],
+            "generated_text": "Nay đang lúc đi tìm nguồn cội Phương tây (9), cúi mong Đại hòa thượng (10) rủ lòng, chấp nhận nỗi băn khoăn của kẻ dưới, không tiếc lời chỉ bảo thần tình.\nĐệ tử Lý Miễu kính lễ (11).\n(Hoằng minh tập, Q. 11; Toàn Thượng)",
+            "n_lines": 3,
+            "tokens": 81,
+            "seconds": 5.892,
+            "confidence": 93.41,
+            "flags": []
+          },
+          {
+            "band": 5,
+            "y0": 2238,
+            "y1": 2984,
+            "ink_box": [
+              295,
+              2236,
+              2475,
+              2984
+            ],
+            "generated_text": "cổ, Tam đại, Tần, Hán, Tam quốc, Lục triều văn, phần Toàn Tống văn, Q. 57)\nCHÚ THÍCH:\n(1) Pháp sư: người am tường kinh Phật, có khả năng giảng dạy cho người khác.\n(2) Cao và Minh: tức Đạo Cao và Pháp Minh, hai nhà sư nước ta.",
+            "n_lines": 4,
+            "tokens": 86,
+            "seconds": 6.005,
+            "confidence": 96.04,
+            "flags": []
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "vie"
+      }
     }
   ]
 }

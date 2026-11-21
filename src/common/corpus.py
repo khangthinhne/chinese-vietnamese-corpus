@@ -475,21 +475,68 @@ def base_parser(description: str, layer_required: bool = True) -> argparse.Argum
     return p
  
  
+ 
 def parse_args(parser: argparse.ArgumentParser, argv: list[str] | None = None):
-    """Ưu tiên: mặc định < config.common < config.layers[layer] < CLI."""
+    """
+    Priority:
+        parser defaults
+        < config.common
+        < config.layers[layer]
+        < config.ocr[writing_system]
+        < CLI arguments
+    """
     pre, _ = parser.parse_known_args(argv)
+
     if pre.config:
-        cfg = json.loads(Path(pre.config).read_text(encoding="utf-8"))
-        merged = {**cfg.get("common", {}), **cfg.get("layers", {}).get(pre.layer, {})}
-        known = {a.dest for a in parser._actions}
-        # Một config dùng chung cho cả 3 tool: khoá không thuộc tool này thì bỏ qua.
-        parser.set_defaults(**{k: v for k, v in merged.items() if k in known})
+        cfg = json.loads(
+            Path(pre.config).read_text(encoding="utf-8")
+        )
+
+        if not isinstance(cfg, dict):
+            parser.error("Config phải là JSON object")
+
+        merged = {}
+
+        # 1. Shared configuration
+        merged.update(cfg.get("common", {}))
+
+        # 2. Legacy layer-based configuration
+        layer = getattr(pre, "layer", None)
+        if layer:
+            merged.update(
+                cfg.get("layers", {}).get(layer, {})
+            )
+
+        # 3. OCR configuration for the selected writing system
+        writing_system = getattr(pre, "writing_system", None)
+        if writing_system:
+            merged.update(
+                cfg.get("ocr", {}).get(writing_system, {})
+            )
+
+        # Only apply keys supported by the current parser.
+        known = {
+            action.dest
+            for action in parser._actions
+        }
+
+        parser.set_defaults(**{
+            key: value
+            for key, value in merged.items()
+            if key in known
+        })
+
     args = parser.parse_args(argv)
-    logging.basicConfig(level=logging.DEBUG if args.verbose else logging.INFO,
-                        format="%(asctime)s %(levelname)s %(name)s: %(message)s")
+
+    logging.basicConfig(
+        level=logging.DEBUG if args.verbose else logging.INFO,
+        format="%(asctime)s %(levelname)s %(name)s: %(message)s"
+    )
+
     if getattr(args, "_layer_required", True) and not args.layer:
         parser.error("Thiếu --layer (CLI hoặc config)")
+
     if not args.work_id:
         parser.error("Thiếu --work-id (CLI hoặc config)")
+
     return args
- 

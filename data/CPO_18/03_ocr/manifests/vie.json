@@ -3,20 +3,34 @@
   "work_id": "CPO_18",
   "writing_system": "vie",
   "lang": "vie",
-  "keep": "latin",
+  "keep": null,
   "source": {
     "path": "E:\\Projects\\han-viet-corpus\\data\\CPO_18\\02_extraction\\pages"
   },
   "engines": {
-    "tesseract": {
-      "name": "tesseract",
-      "version": "5.5.3.20260724",
-      "wrapper_version": "0.3.13",
-      "models": {
-        "vie": "164d9bed7e5a6444586d39434cc1adf4df976cfe23cffd6468e444c94703640a"
+    "qwen": {
+      "name": "qwen",
+      "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+      "model_revision": "main",
+      "transformers_version": "4.57.6",
+      "torch_version": "2.5.1+cu121",
+      "cuda_version": "12.1",
+      "bitsandbytes_version": "0.50.2",
+      "quantization": {
+        "load_in_4bit": true,
+        "quant_type": "nf4",
+        "double_quant": true,
+        "compute_dtype": "float16"
       },
-      "oem": 1,
-      "adapter_version": 1
+      "mode": "all",
+      "min_pixels": 200704,
+      "max_pixels": 802816,
+      "band_inches": 2.0,
+      "max_new_tokens": 768,
+      "repetition_penalty": 1.05,
+      "adapter_version": 3,
+      "prompt_version": 3,
+      "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74"
     }
   },
   "parameters": {
@@ -32,11 +46,11 @@
     ],
     "psm": 6,
     "dpi": 300,
-    "keep": "latin",
+    "keep": null,
     "select": "first",
-    "low_conf": 60.0,
-    "workers_requested": 4,
-    "workers_used": 2
+    "low_conf": 60,
+    "workers_requested": 1,
+    "workers_used": 1
   },
   "pages": [
     {
@@ -44,268 +58,158 @@
       "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_18\\02_extraction\\pages\\page_205.png",
       "image_sha256": "5afb8b82d045bf87f457e4285f977c608023a2e74a49f37199f54817e1218e72",
       "raw": "03_ocr/raw/vie/page_0205.json",
-      "selected_engine": "tesseract",
-      "selected_key": "4d31600f2a6003493d14fc83b02eb0896206f4272d4daa166f9ac7ce6843c392",
-      "confidence": 72.13793045367423,
+      "selected_engine": "qwen",
+      "selected_key": "705a6d41af73af9ce3544c083ec1496a4ed20e3292ac14aafb95735332cad1f7",
+      "confidence": 88.68084019769357,
       "empty": false,
-      "n_lines": 25,
+      "n_lines": 14,
       "lines": [
         {
-          "text": "5au đây là toàn văn Sáu bức thư, có kèm theo phần",
+          "text": "Sau đây là toàn văn Sáu bức thư, có kèm theo phần phiên âm, dịch nghĩa và chú thích của chúng tôi.",
           "bbox": [
-            414,
-            376,
-            2187,
-            453
-          ],
-          "confidence": 92.02631578947368
-        },
-        {
-          "text": "phiên âm, dịch nghĩa và chú thích của chúng tôi.",
-          "bbox": [
-            278,
-            464,
-            1933,
-            541
-          ],
-          "confidence": 96.0
-        },
-        {
-          "text": ": 1. 9U ở) B]— 2 ÉP ## 1$ “1,7 $ |",
-          "bbox": [
-            3,
-            612,
-            2476,
-            798
-          ],
-          "confidence": 41.17391304347826
-        },
-        {
-          "text": "2á",
-          "bbox": [
-            1682,
-            791,
-            1823,
-            858
-          ],
-          "confidence": 81.0
-        },
-        {
-          "text": "- \"&&zxxẩẫ?it",
-          "bbox": [
-            551,
-            891,
-            1982,
-            974
-          ],
-          "confidence": 21.166666666666668
-        },
-        {
-          "text": "vn",
-          "bbox": [
-            414,
-            1032,
-            2194,
-            1158
-          ],
-          "confidence": 19.0
-        },
-        {
-          "text": "là e 2 1%23756624)32), Z3 # $ đ 3 ÍTBMADAX",
-          "bbox": [
-            276,
-            1156,
-            2197,
-            1258
-          ],
-          "confidence": 12.303030303030303
-        },
-        {
-          "text": "lễ. 77 2À tử ? Š 2£ Đ, ấn & TẾ Tí?",
-          "bbox": [
-            282,
-            1274,
-            1431,
-            1384
-          ],
-          "confidence": 34.08695652173913
-        },
-        {
-          "text": "42Xx‡Ÿ3.}mg2‡t27,$XXXƯIỏảdTlT,fh",
-          "bbox": [
-            406,
-            1444,
+            0,
+            280,
             2198,
-            1534
+            474
           ],
-          "confidence": 0.0
+          "confidence": 95.1
         },
         {
-          "text": "Từ, ,#&H7Ÿ: °",
+          "text": "1. 與高明二法師難佛不見形書",
           "bbox": [
-            277,
-            1570,
-            955,
-            1655
+            0,
+            474,
+            2198,
+            668
           ],
-          "confidence": 32.18181818181818
+          "confidence": 95.1
         },
         {
-          "text": "2# h -",
+          "text": "李淼",
           "bbox": [
-            414,
-            1729,
-            1043,
-            1813
+            0,
+            668,
+            2198,
+            862
           ],
-          "confidence": 34.25
+          "confidence": 95.1
         },
         {
-          "text": "(2503%3#+—- : 1“ Lở z3",
+          "text": "夫道至虚，四大理，而有法门，妙群域。 若其巧能利物，度脱无量，何吕不见真形耶？",
           "bbox": [
-            821,
-            1905,
-            2189,
-            1980
+            272,
+            887,
+            2200,
+            1368
           ],
-          "confidence": 5.611111111111111
+          "confidence": 67.5
         },
         {
-          "text": "=EBz.z9x.^^*x\"#zZ -)",
+          "text": "今就尋西方根源，伏願大和尚垂懷，允納下心，無惜神誥。",
           "bbox": [
-            903,
+            9,
+            1441,
+            2202,
+            1712
+          ],
+          "confidence": 81.99
+        },
+        {
+          "text": "弟子李森和南。",
+          "bbox": [
+            9,
+            1712,
+            2202,
+            1983
+          ],
+          "confidence": 81.99
+        },
+        {
+          "text": "三国六朝文.全宋文卷五十七)",
+          "bbox": [
+            409,
             2011,
-            1987,
-            2098
+            1990,
+            2114
           ],
-          "confidence": 31.94736842105263
+          "confidence": 89.78
         },
         {
-          "text": "PHIÊN ÂM :",
+          "text": "PHIÊN ÂM:",
           "bbox": [
-            412,
-            2132,
-            785,
-            2196
+            409,
+            2114,
+            1990,
+            2217
           ],
-          "confidence": 92.0
+          "confidence": 89.78
         },
         {
-          "text": "DỮ CAO, MINH NHỊ PHÁP SƯ",
+          "text": "DỤ CAO, MINH NHỊ PHÁP SƯ",
           "bbox": [
-            870,
-            2248,
-            1626,
-            2324
+            409,
+            2217,
+            1990,
+            2319
           ],
-          "confidence": 92.73684210526316
+          "confidence": 89.78
         },
         {
           "text": "NẠN PHẬT BẤT KIẾN HÌNH THƯ",
           "bbox": [
-            835,
-            2335,
-            1660,
-            2410
+            409,
+            2319,
+            1990,
+            2422
           ],
-          "confidence": 90.0952380952381
+          "confidence": 89.78
         },
         {
-          "text": "LÝ MIỀU",
+          "text": "LÝ MIỄU",
           "bbox": [
-            1552,
-            2457,
-            1796,
-            2521
+            409,
+            2422,
+            1990,
+            2525
           ],
-          "confidence": 81.66666666666667
+          "confidence": 89.78
         },
         {
-          "text": "* Miễu vì Giao Châu Thứ sử |",
+          "text": "* Miễu vi Giao Châu Thứ sử",
           "bbox": [
-            1297,
-            2538,
-            2476,
-            2660
+            272,
+            2534,
+            2480,
+            2777
           ],
-          "confidence": 92.61904761904762
+          "confidence": 89.33
         },
         {
-          "text": "Phù Đạo xứ thanh hư, tứ đại lý thường, nhi hữu",
+          "text": "Phù Đạo xứ thanh hư, tứ đại lý thường, nhi hữu pháp môn, diệu xuất quần vực. Nhược xưng kỳ xảo năng lợi vật, độ thoát vô lượng vì giáo, hà dĩ bất kiến chân hình ư thế? Chân không thuyết nhi vô thực da?",
           "bbox": [
-            414,
-            2641,
-            2191,
-            2714
+            272,
+            2777,
+            2480,
+            3021
           ],
-          "confidence": 95.75
+          "confidence": 89.33
         },
         {
-          "text": "pháp môn, diệu xuất quần vực. Nhược xưng kỳ xảo năng",
+          "text": "Kim chính tựu tầm tay phương căn nguyên, phục nguyện Đại hòa thượng thủy hoài, doãn nạp hạ tâm, vô tích thần cáo.",
           "bbox": [
-            278,
-            2727,
-            2195,
-            2806
-          ],
-          "confidence": 94.35714285714286
-        },
-        {
-          "text": "lợi vật, độ thoát vô lượng vì giáo, hà dĩ bất kiến chân |",
-          "bbox": [
-            277,
-            2820,
-            2476,
-            2917
-          ],
-          "confidence": 95.54545454545455
-        },
-        {
-          "text": "hình ư thế ? Chân không thuyết nhi vô thực da ?",
-          "bbox": [
-            278,
-            2908,
-            1933,
-            2982
-          ],
-          "confidence": 94.77777777777777
-        },
-        {
-          "text": "Kim chính tựu tẨm tây phương căn nguyên, phục c",
-          "bbox": [
-            414,
-            2994,
-            2437,
-            3108
-          ],
-          "confidence": 92.02631578947368
-        },
-        {
-          "text": "nguyện Đại hòa thượng thùy hoài, doãn nạp hạ tâm, vô ~",
-          "bbox": [
-            276,
-            3107,
-            2351,
-            3215
-          ],
-          "confidence": 93.02325581395348
-        },
-        {
-          "text": "tích thần cáo. SN",
-          "bbox": [
-            276,
-            3192,
-            2237,
+            272,
+            3021,
+            2480,
             3264
           ],
-          "confidence": 90.42857142857143
+          "confidence": 89.33
         }
       ],
       "engines": [
         {
-          "engine": "tesseract",
-          "key": "4d31600f2a6003493d14fc83b02eb0896206f4272d4daa166f9ac7ce6843c392",
-          "cache_hit": true
+          "engine": "qwen",
+          "key": "705a6d41af73af9ce3544c083ec1496a4ed20e3292ac14aafb95735332cad1f7",
+          "cache_hit": false
         }
       ]
     },
@@ -314,298 +218,198 @@
       "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_18\\02_extraction\\pages\\page_206.png",
       "image_sha256": "fed77272d9e993999a8d2d3890ab340d1c1b0b312d145ff1c8c528eb188a8ddc",
       "raw": "03_ocr/raw/vie/page_0206.json",
-      "selected_engine": "tesseract",
-      "selected_key": "ce25c26b744b55fc418e5bea5b96f3634cd41166cf91c31cab39206cfcb0fac2",
-      "confidence": 92.00762829898034,
+      "selected_engine": "qwen",
+      "selected_key": "fffcbd8bca83ece04d9b3ac651b956ae4f99c71357f1b2d706df587325a6eb6e",
+      "confidence": 95.2504678362573,
       "empty": false,
-      "n_lines": 28,
+      "n_lines": 18,
       "lines": [
         {
-          "text": "Đệ tử Lý Miễu hòa nam.",
+          "text": "Đệ tử Lý Miễ hòa nam.",
           "bbox": [
-            416,
-            321,
-            1218,
-            404
+            412,
+            318,
+            2446,
+            414
           ],
-          "confidence": 94.11764705882354
+          "confidence": 94.11
         },
         {
-          "text": "( Hoằng minh tập, Quyển thập nhất ;",
+          "text": "(Hoằng minh tập, Quyển thập nhất;",
           "bbox": [
-            1010,
-            448,
-            2196,
-            532
+            412,
+            414,
+            2446,
+            509
           ],
-          "confidence": 89.03571428571429
+          "confidence": 94.11
         },
         {
           "text": "Toàn Thượng cổ, Tam đại, Tần, Hán,",
           "bbox": [
-            1005,
-            538,
-            2190,
-            618
+            412,
+            509,
+            2446,
+            605
           ],
-          "confidence": 93.64285714285714
+          "confidence": 94.11
         },
         {
-          "text": "Tam quốc, Lục triều uăn,Toàn Tổng ,",
+          "text": "Tam quốc, Lục triều văn, Toàn Tống",
           "bbox": [
-            1005,
-            628,
-            2443,
-            707
+            412,
+            605,
+            2446,
+            700
           ],
-          "confidence": 88.58620689655173
+          "confidence": 94.11
         },
         {
-          "text": "uăn. Quyên ngũ thập thất )",
+          "text": "văn. Quyển ngũ thập thất)",
           "bbox": [
-            1002,
-            719,
-            1858,
-            793
+            412,
+            700,
+            2446,
+            796
           ],
-          "confidence": 92.71428571428571
+          "confidence": 94.11
         },
         {
           "text": "DỊCH NGHĨA :",
           "bbox": [
-            412,
-            851,
-            835,
-            923
+            408,
+            848,
+            2090,
+            952
           ],
-          "confidence": 94.0
+          "confidence": 95.96
         },
         {
-          "text": "THƯ GỬI HAI VỊ PHÁP SƯ “` CAO VÀ MINH `",
+          "text": "THƯ GỬI HAI VỊ PHÁP SƯ (1) CAO VÀ MINH (2)",
           "bbox": [
-            637,
-            972,
-            1809,
-            1052
+            408,
+            952,
+            2090,
+            1056
           ],
-          "confidence": 89.51724137931035
+          "confidence": 95.96
         },
         {
-          "text": "ĐỀ VẶN HỎI VỀ VIỆC KHÔNG THẤY HÌNH THỂ PHẬT °°",
+          "text": "ĐỂ VẠN HỎI VỀ VIỆC KHÔNG THẤY HÌNH THỂ PHẬT (3)",
           "bbox": [
-            508,
-            1072,
-            1947,
-            1164
+            408,
+            1056,
+            2090,
+            1159
           ],
-          "confidence": 87.22222222222223
+          "confidence": 95.96
         },
         {
           "text": "LÝ MIỄU",
           "bbox": [
-            1520,
-            1211,
-            1772,
-            1279
+            408,
+            1159,
+            2090,
+            1263
           ],
-          "confidence": 59.0
+          "confidence": 95.96
         },
         {
           "text": "* Miễu là Thứ sử Giao Châu",
           "bbox": [
-            1262,
-            1304,
-            2086,
-            1363
+            408,
+            1263,
+            2090,
+            1367
           ],
-          "confidence": 94.8
+          "confidence": 95.96
         },
         {
-          "text": "Rằng, chỗ Đạo thanh hư !, tứ đại ® lẽ thường, nhờ",
+          "text": "Rằng, chỗ Đạo thanh hư (4), tứ đại (5) lẽ thường, nhờ có giáo pháp (6) mà sự nhiệm màu lan khắp mọi cõi. Nếu nói Đạo [Phật] là khéo giỏi, có thể lập giáo để làm lợi cho [muôn]vật, giải thoát cho vô số [người], thì tại sao không thấy chân hình Phật ở trên đời? Hay là chỉ (7) nói suông mà không có thực (8)?",
           "bbox": [
-            410,
-            1419,
-            2195,
-            1505
+            73,
+            1416,
+            2446,
+            1971
           ],
-          "confidence": 93.8157894736842
+          "confidence": 96.22
         },
         {
-          "text": "có giáo pháp !® mà sự nhiệm màu lan khắp mọi cõi. Nếu",
+          "text": "Nay đang lúc đi tìm nguồn cội Phương tây (9), cúi mong Đại hòa thượng (10) rủ lòng, chấp nhận nỗi băn khoăn của kẻ dưới, không tiếc lời chỉ bảo thần tình.",
           "bbox": [
-            283,
-            1518,
-            2188,
-            1604
+            280,
+            2014,
+            2183,
+            2183
           ],
-          "confidence": 93.1951219512195
+          "confidence": 93.41
         },
         {
-          "text": "nói Đạo [Phật] là khéo giỏi, có thể lập giáo để làm lợi",
+          "text": "Đệ tử Lý Miễu kính lễ (11).",
           "bbox": [
-            284,
-            1607,
-            2188,
-            1695
+            280,
+            2183,
+            2183,
+            2351
           ],
-          "confidence": 95.79069767441861
+          "confidence": 93.41
         },
         {
-          "text": "N cho [muôn]vật, giải thoát cho vô số [người], thì tại sao",
+          "text": "(Hoằng minh tập, Q. 11; Toàn Thượng)",
           "bbox": [
-            77,
-            1661,
-            2188,
-            1858
+            280,
+            2351,
+            2183,
+            2520
           ],
-          "confidence": 93.61702127659575
+          "confidence": 93.41
         },
         {
-          "text": "không thấy chân hình Phật ở trên đời ? Hay là chỉ Ø nói ‡",
+          "text": "cổ, Tam đại, Tần, Hán, Tam quốc, Lục triều văn, phần Toàn Tống văn, Q. 57)",
           "bbox": [
-            281,
-            1798,
-            2443,
-            1878
-          ],
-          "confidence": 92.90697674418605
-        },
-        {
-          "text": "suông mà không có thực ®?",
-          "bbox": [
-            284,
-            1889,
-            1181,
-            1967
-          ],
-          "confidence": 94.8
-        },
-        {
-          "text": "Nay đang lúc di tìm nguồn cội Phương tây ®, cúi",
-          "bbox": [
-            413,
-            2018,
-            2180,
-            2101
-          ],
-          "confidence": 93.67567567567568
-        },
-        {
-          "text": "mong Đại hòa thượng ®? rủ lòng, chấp nhận nỗi băn",
-          "bbox": [
-            287,
-            2111,
-            2177,
-            2195
-          ],
-          "confidence": 89.97435897435898
-        },
-        {
-          "text": "khoăn của kẻ dưới, không tiếc lời chỉ bảo thần tình.",
-          "bbox": [
-            283,
-            2201,
-            1989,
-            2281
-          ],
-          "confidence": 95.28571428571429
-        },
-        {
-          "text": "Đệ tử Lý Miễu kính lễ !,",
-          "bbox": [
-            412,
-            2331,
-            1253,
-            2408
-          ],
-          "confidence": 83.44444444444444
-        },
-        {
-          "text": "( Hoằng minh tập, Q. 11 ; Toàn Thương",
-          "bbox": [
-            873,
-            2437,
-            2085,
-            2516
-          ],
-          "confidence": 91.79310344827586
-        },
-        {
-          "text": "cổ, Tam đại, Tôn, Hán, Tam quốc, Lục",
-          "bbox": [
-            910,
+            295,
             2516,
-            2093,
-            2613
+            2475,
+            2703
           ],
-          "confidence": 92.27586206896552
+          "confidence": 96.04
         },
         {
-          "text": "triều uăn, phần Toàn Tống uăn, Q.57 )",
+          "text": "CHÚ THÍCH:",
           "bbox": [
-            916,
-            2605,
-            2098,
-            2681
+            295,
+            2703,
+            2475,
+            2890
           ],
-          "confidence": 86.6
+          "confidence": 96.04
         },
         {
-          "text": "CHÚ THÍCH :",
+          "text": "(1) Pháp sư: người am tường kinh Phật, có khả năng giảng dạy cho người khác.",
           "bbox": [
-            427,
-            2749,
-            825,
-            2814
+            295,
+            2890,
+            2475,
+            3077
           ],
-          "confidence": 92.33333333333333
+          "confidence": 96.04
         },
         {
-          "text": "(1) Pháp sư : người am tường kinh Phật, có khả năng giảng",
+          "text": "(2) Cao và Minh: tức Đạo Cao và Pháp Minh, hai nhà sư nước ta.",
           "bbox": [
-            304,
-            2877,
-            2167,
-            2961
-          ],
-          "confidence": 95.71111111111111
-        },
-        {
-          "text": "dạy cho người khác. e",
-          "bbox": [
-            432,
-            2952,
-            2472,
-            3055
-          ],
-          "confidence": 91.05882352941177
-        },
-        {
-          "text": "(2) Cao uà Minh : tức Đạo Cao và Pháp Minh, hai nhà sư `",
-          "bbox": [
-            298,
-            3038,
-            2396,
-            3177
-          ],
-          "confidence": 94.61904761904762
-        },
-        {
-          "text": "nước ta. M4",
-          "bbox": [
-            424,
-            3154,
-            2277,
+            295,
+            3077,
+            2475,
             3264
           ],
-          "confidence": 82.44444444444444
+          "confidence": 96.04
         }
       ],
       "engines": [
         {
-          "engine": "tesseract",
-          "key": "ce25c26b744b55fc418e5bea5b96f3634cd41166cf91c31cab39206cfcb0fac2",
-          "cache_hit": true
+          "engine": "qwen",
+          "key": "fffcbd8bca83ece04d9b3ac651b956ae4f99c71357f1b2d706df587325a6eb6e",
+          "cache_hit": false
         }
       ]
     }

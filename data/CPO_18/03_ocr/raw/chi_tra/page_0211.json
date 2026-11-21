@@ -4928,6 +4928,77 @@
           "《ˋ﹨﹨"
         ]
       }
+    },
+    {
+      "key": "27137e729f9789a1278cab26071cdf3d6d6e2cbde2eb1820d2c4158d4e1ac970",
+      "parameters": {
+        "image_sha256": "a79096af54358fb45ba03a921d8854992469a466ca25a859e848ceffe56f12aa",
+        "writing_system": "chi_tra",
+        "engine": {
+          "name": "qwen",
+          "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "model_revision": "main",
+          "transformers_version": "4.57.6",
+          "torch_version": "2.5.1+cu121",
+          "cuda_version": "12.1",
+          "bitsandbytes_version": "0.50.2",
+          "quantization": {
+            "load_in_4bit": true,
+            "quant_type": "nf4",
+            "double_quant": true,
+            "compute_dtype": "float16"
+          },
+          "min_pixels": 200704,
+          "max_pixels": 301056,
+          "max_new_tokens": 1024,
+          "adapter_version": 1
+        },
+        "lang": "chi_tra",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-20T22:42:50+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_18\\02_extraction\\pages\\page_211.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        0,
+        2480,
+        3509
+      ],
+      "lines": [
+        {
+          "text": "Phần II: Nguyễn văn tác phẩm dịch và chủ thích\n\nThích Đạo Cao xin thưa: Được bèn hỏi tôi đầu\ntích khi hiện rõ, khi ẩn khuyết của dâng chí thành\n(1), ý vị sâu rộng, lời lẽ sáng sủa, kính cẩn xem đi\nmẹi lại, thấy ngài thanh danh tột tốt tông cao.\nSử quan (2) tưởng vách cách cao kín (3), hiểu cho được giáo\npháp tất nhiên khó khăn; vậy xin dốc hết chút hiểu biết\nchất hẹp của kẻ ngu đại này, những mong giống như\nchuyện tượng võng tìm được huyền châu (4).\n\nXét ra, Như Lai (5) ứng vật gồm có ba cách: một là\nhiện rõ thân hình, tỏa ánh sáng, chuyển rung mặt đất (6);\nhai là để lại chính pháp (7), cũng như có Phật ở đời;\nbà là để lại tượng giáo (8), tấu tẩu như dùng nghi khuôn\nphép của Phật. Dung nghi khuôn phép tấu tẩu ấy đang\nđáp ứng đối hỏi của nhân sinh ngày nay. Nhân tình đã\ncảm được qua tượng giáo, ai bảo phải chờ đến khi Phật\nxuất hiện? Cho nên kinh Tịnh danh (9) nói: \"Khéo hiểu\nđược Pháp tướng, thì biết nguồn gốc của chúng sinh\" (10).\nĐến như ba kỳ hội Long hoa (11) ở thành Sĩ Đản Mật (12)\nthì nhân tình đều cảm được qua việc tròng thấy, ai bảo\nrằng Phật ẩn khuyết? Cho nên kinh Pháp hoa (13) nói:\n\"Lúc bấy giờ ta và các tảng đỗ đều ra núi Như Thúi\" (14).\nCung vua Như Tương Khu (15) còn có thể lăn ra, thì người\ncội Tây phong làm sao không thấy? Nhưng kẻ nghi ngờ ở đời\nphần nhiều cho lời kinh không phù hợp sự thật nên đâm ra mỏ ấm ít tin tưởng, lấy cố không tròng thấy Phật mà chênh mảng việc tu hành.\n\nKhi chuyên Tam Hoàng Ngũ Đế (16) Tam đại Ngũ\nBá (17) Cơ Dưn Khang Khâu (18) biên tập Kinh Thi, chế\ntác Kinh Lê, đều nghe nói qua sử sách, nào ai trống\nthấy dấu! Chuyên họ Thích (19) giảng trống pháp (20)",
+          "bbox": [
+            0,
+            0,
+            2480,
+            3509
+          ],
+          "confidence": null
+        }
+      ],
+      "raw": {
+        "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+        "model_revision": "main",
+        "lang": "chi_tra",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          3509
+        ],
+        "prompt": "\nYou are an OCR engine specialized in historical Chinese literature.\n\nTranscribe the Chinese text visible in this image.\n\nRules:\n1. Transcribe the original Chinese characters (Hanzi) only.\n2. Do not transcribe Vietnamese pronunciation, Vietnamese translation,\n   Latin text, page headers, or unrelated notes.\n3. Preserve the original characters, punctuation, and reading order.\n4. Preserve paragraph and line boundaries where possible.\n5. Do not translate, explain, modernize, or normalize historical characters.\n6. Do not guess illegible characters. Use [UNCLEAR].\n7. Ignore faint bleed-through, stains, handwritten marks, and page numbers\n   unless they are clearly part of the original printed Chinese text.\n\nReturn only the transcription. Do not add explanations.\n",
+        "generated_text": "Phần II: Nguyễn văn tác phẩm dịch và chủ thích\n\nThích Đạo Cao xin thưa: Được bèn hỏi tôi đầu\ntích khi hiện rõ, khi ẩn khuyết của dâng chí thành\n(1), ý vị sâu rộng, lời lẽ sáng sủa, kính cẩn xem đi\nmẹi lại, thấy ngài thanh danh tột tốt tông cao.\nSử quan (2) tưởng vách cách cao kín (3), hiểu cho được giáo\npháp tất nhiên khó khăn; vậy xin dốc hết chút hiểu biết\nchất hẹp của kẻ ngu đại này, những mong giống như\nchuyện tượng võng tìm được huyền châu (4).\n\nXét ra, Như Lai (5) ứng vật gồm có ba cách: một là\nhiện rõ thân hình, tỏa ánh sáng, chuyển rung mặt đất (6);\nhai là để lại chính pháp (7), cũng như có Phật ở đời;\nbà là để lại tượng giáo (8), tấu tẩu như dùng nghi khuôn\nphép của Phật. Dung nghi khuôn phép tấu tẩu ấy đang\nđáp ứng đối hỏi của nhân sinh ngày nay. Nhân tình đã\ncảm được qua tượng giáo, ai bảo phải chờ đến khi Phật\nxuất hiện? Cho nên kinh Tịnh danh (9) nói: \"Khéo hiểu\nđược Pháp tướng, thì biết nguồn gốc của chúng sinh\" (10).\nĐến như ba kỳ hội Long hoa (11) ở thành Sĩ Đản Mật (12)\nthì nhân tình đều cảm được qua việc tròng thấy, ai bảo\nrằng Phật ẩn khuyết? Cho nên kinh Pháp hoa (13) nói:\n\"Lúc bấy giờ ta và các tảng đỗ đều ra núi Như Thúi\" (14).\nCung vua Như Tương Khu (15) còn có thể lăn ra, thì người\ncội Tây phong làm sao không thấy? Nhưng kẻ nghi ngờ ở đời\nphần nhiều cho lời kinh không phù hợp sự thật nên đâm ra mỏ ấm ít tin tưởng, lấy cố không tròng thấy Phật mà chênh mảng việc tu hành.\n\nKhi chuyên Tam Hoàng Ngũ Đế (16) Tam đại Ngũ\nBá (17) Cơ Dưn Khang Khâu (18) biên tập Kinh Thi, chế\ntác Kinh Lê, đều nghe nói qua sử sách, nào ai trống\nthấy dấu! Chuyên họ Thích (19) giảng trống pháp (20)",
+        "inference_seconds": 32.2494,
+        "max_new_tokens": 1024,
+        "quantization": "4bit-nf4",
+        "bbox_granularity": "whole_crop"
+      }
     }
   ]
 }

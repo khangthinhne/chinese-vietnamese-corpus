@@ -66,8 +66,10 @@ def save_page(layout: DataLayout, writing_system: str, page: int, data: dict) ->
 
 
 def find_run(store: dict, key: str) -> dict | None:
-    return next((r for r in store["runs"] if r.get("key") == key), None)
-
+    return next(
+        (r for r in reversed(store["runs"]) if r.get("key") == key),
+        None
+    )
 
 def write_manifest(layout: DataLayout, writing_system: str, record: dict) -> Path:
     path = manifest_path(layout, writing_system)

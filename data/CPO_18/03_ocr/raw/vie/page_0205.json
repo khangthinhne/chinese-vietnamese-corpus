@@ -2732,6 +2732,775 @@
           "SN"
         ]
       }
+    },
+    {
+      "key": "cde770a5bba3418d0591960ee0e981fb8d63bf46ca924668ab6f9b0e4a0537d9",
+      "parameters": {
+        "image_sha256": "5afb8b82d045bf87f457e4285f977c608023a2e74a49f37199f54817e1218e72",
+        "writing_system": "vie",
+        "engine": {
+          "name": "qwen",
+          "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "model_revision": "main",
+          "transformers_version": "4.57.6",
+          "torch_version": "2.5.1+cu121",
+          "cuda_version": "12.1",
+          "bitsandbytes_version": "0.50.2",
+          "quantization": {
+            "load_in_4bit": true,
+            "quant_type": "nf4",
+            "double_quant": true,
+            "compute_dtype": "float16"
+          },
+          "min_pixels": 200704,
+          "max_pixels": 301056,
+          "max_new_tokens": 1024,
+          "adapter_version": 1
+        },
+        "lang": "vie",
+        "region": [
+          0.0,
+          0.08,
+          1.0,
+          0.93
+        ],
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-21T08:14:12+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_18\\02_extraction\\pages\\page_205.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        280,
+        2480,
+        3264
+      ],
+      "lines": [
+        {
+          "text": "Sau đây là toàn văn Sáu bức thư, có kèm theo phần phiên âm, dịch nghĩa và chú thích của chúng tôi.\n\n1. 與高明二法師難佛不見形書\n\n李森\n*森為交州刺史\n\n夫道處清虛，四大理常，而有法門，妙出群域。若稱其巧能利物，度脫無量爲教，何由不見真形於世？真空說而無實耶？\n\n今正就尋西方根源，伏願大和尚垂懷，允納下心，無惜神誥。\n\n弟子李森和南：\n\n（“弘明集”卷十一：見“全上古三代秦漢三國六朝文、全宋文”卷五十七）\n\nPHIÊN ÂM:\n\n杜高，明非法施\n南法不別言真書\n\n*梅與郭州忠士\n\n傅道處天乎，處太代所，非有法門，度出群域。若能出於天，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有",
+          "bbox": [
+            0,
+            280,
+            2480,
+            3264
+          ],
+          "confidence": null
+        }
+      ],
+      "raw": {
+        "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+        "model_revision": "main",
+        "lang": "vie",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          2984
+        ],
+        "prompt": "\nYou are an OCR engine specialized in historical Chinese literature.\n\nTranscribe the Traditional Vietnamese text visible in this image.\n\nRules:\n1. Transcribe the original Vietnamese characters (Hanzi) only.\n2. Do not transcribe Chinese pronunciation, Chinese translation page headers, or unrelated notes.\n3. Preserve the original characters, punctuation, and reading order.\n4. Preserve paragraph and line boundaries where possible.\n5. Do not translate, explain, modernize, or normalize historical characters.\n6. Do not guess illegible characters. Use [UNCLEAR].\n7. Ignore faint bleed-through, stains, handwritten marks, and page numbers\n   unless they are clearly part of the original printed Chinese text.\n\nReturn only the transcription. Do not add explanations.\n",
+        "generated_text": "Sau đây là toàn văn Sáu bức thư, có kèm theo phần phiên âm, dịch nghĩa và chú thích của chúng tôi.\n\n1. 與高明二法師難佛不見形書\n\n李森\n*森為交州刺史\n\n夫道處清虛，四大理常，而有法門，妙出群域。若稱其巧能利物，度脫無量爲教，何由不見真形於世？真空說而無實耶？\n\n今正就尋西方根源，伏願大和尚垂懷，允納下心，無惜神誥。\n\n弟子李森和南：\n\n（“弘明集”卷十一：見“全上古三代秦漢三國六朝文、全宋文”卷五十七）\n\nPHIÊN ÂM:\n\n杜高，明非法施\n南法不別言真書\n\n*梅與郭州忠士\n\n傅道處天乎，處太代所，非有法門，度出群域。若能出於天，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有",
+        "inference_seconds": 56.7731,
+        "max_new_tokens": 1024,
+        "quantization": "4bit-nf4",
+        "bbox_granularity": "whole_crop"
+      }
+    },
+    {
+      "key": "cde770a5bba3418d0591960ee0e981fb8d63bf46ca924668ab6f9b0e4a0537d9",
+      "parameters": {
+        "image_sha256": "5afb8b82d045bf87f457e4285f977c608023a2e74a49f37199f54817e1218e72",
+        "writing_system": "vie",
+        "engine": {
+          "name": "qwen",
+          "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "model_revision": "main",
+          "transformers_version": "4.57.6",
+          "torch_version": "2.5.1+cu121",
+          "cuda_version": "12.1",
+          "bitsandbytes_version": "0.50.2",
+          "quantization": {
+            "load_in_4bit": true,
+            "quant_type": "nf4",
+            "double_quant": true,
+            "compute_dtype": "float16"
+          },
+          "min_pixels": 200704,
+          "max_pixels": 301056,
+          "max_new_tokens": 1024,
+          "adapter_version": 1
+        },
+        "lang": "vie",
+        "region": [
+          0.0,
+          0.08,
+          1.0,
+          0.93
+        ],
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-21T09:58:48+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_18\\02_extraction\\pages\\page_205.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        280,
+        2480,
+        3264
+      ],
+      "lines": [
+        {
+          "text": "Sau đây là toàn văn Sáu bức thư, có kèm theo phần phiên âm, dịch nghĩa và chú thích của chúng tôi.",
+          "bbox": [
+            0,
+            280,
+            2480,
+            3264
+          ],
+          "confidence": null
+        },
+        {
+          "text": "1. 與高明二法師難佛不見形書",
+          "bbox": [
+            0,
+            280,
+            2480,
+            3264
+          ],
+          "confidence": null
+        },
+        {
+          "text": "李森",
+          "bbox": [
+            0,
+            280,
+            2480,
+            3264
+          ],
+          "confidence": null
+        },
+        {
+          "text": "*森為交州刺史",
+          "bbox": [
+            0,
+            280,
+            2480,
+            3264
+          ],
+          "confidence": null
+        },
+        {
+          "text": "夫道處清虛，四大理常，而有法門，妙出群域。若稱其巧能利物，度脫無量爲教，何由不見真形於世？真空說而無實耶？",
+          "bbox": [
+            0,
+            280,
+            2480,
+            3264
+          ],
+          "confidence": null
+        },
+        {
+          "text": "今正就尋西方根源，伏願大和尚垂懷，允納下心，無惜神誥。",
+          "bbox": [
+            0,
+            280,
+            2480,
+            3264
+          ],
+          "confidence": null
+        },
+        {
+          "text": "弟子李森和南：",
+          "bbox": [
+            0,
+            280,
+            2480,
+            3264
+          ],
+          "confidence": null
+        },
+        {
+          "text": "（“弘明集”卷十一：見“全上古三代秦漢三國六朝文、全宋文”卷五十七）",
+          "bbox": [
+            0,
+            280,
+            2480,
+            3264
+          ],
+          "confidence": null
+        },
+        {
+          "text": "PHIÊN ÂM:",
+          "bbox": [
+            0,
+            280,
+            2480,
+            3264
+          ],
+          "confidence": null
+        },
+        {
+          "text": "杜高，明非法施",
+          "bbox": [
+            0,
+            280,
+            2480,
+            3264
+          ],
+          "confidence": null
+        },
+        {
+          "text": "南法不別言真書",
+          "bbox": [
+            0,
+            280,
+            2480,
+            3264
+          ],
+          "confidence": null
+        },
+        {
+          "text": "*梅與郭州忠士",
+          "bbox": [
+            0,
+            280,
+            2480,
+            3264
+          ],
+          "confidence": null
+        },
+        {
+          "text": "傅道處天乎，處太代所，非有法門，度出群域。若能出於天，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有",
+          "bbox": [
+            0,
+            280,
+            2480,
+            3264
+          ],
+          "confidence": null
+        }
+      ],
+      "raw": {
+        "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+        "model_revision": "main",
+        "lang": "vie",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          2984
+        ],
+        "prompt": "\nYou are an OCR engine specialized in historical Chinese literature.\n\nTranscribe the Traditional Vietnamese text visible in this image.\n\nRules:\n1. Transcribe the original Vietnamese characters only.\n2. Do not transcribe Chinese pronunciation, Chinese translation page headers, or unrelated notes.\n3. Preserve the original characters, punctuation, and reading order.\n4. Preserve paragraph and line boundaries where possible.\n5. Do not translate, explain, modernize, or normalize historical characters.\n6. Do not guess illegible characters. Use [UNCLEAR].\n7. Ignore faint bleed-through, stains, handwritten marks, and page numbers\n   unless they are clearly part of the original printed Chinese text.\n\nReturn only the transcription. Do not add explanations.\n",
+        "generated_text": "Sau đây là toàn văn Sáu bức thư, có kèm theo phần phiên âm, dịch nghĩa và chú thích của chúng tôi.\n\n1. 與高明二法師難佛不見形書\n\n李森\n*森為交州刺史\n\n夫道處清虛，四大理常，而有法門，妙出群域。若稱其巧能利物，度脫無量爲教，何由不見真形於世？真空說而無實耶？\n\n今正就尋西方根源，伏願大和尚垂懷，允納下心，無惜神誥。\n\n弟子李森和南：\n\n（“弘明集”卷十一：見“全上古三代秦漢三國六朝文、全宋文”卷五十七）\n\nPHIÊN ÂM:\n\n杜高，明非法施\n南法不別言真書\n\n*梅與郭州忠士\n\n傅道處天乎，處太代所，非有法門，度出群域。若能出於天，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有",
+        "inference_seconds": 195.5463,
+        "max_new_tokens": 1024,
+        "quantization": "4bit-nf4",
+        "bbox_granularity": "whole_crop"
+      }
+    },
+    {
+      "key": "cde770a5bba3418d0591960ee0e981fb8d63bf46ca924668ab6f9b0e4a0537d9",
+      "parameters": {
+        "image_sha256": "5afb8b82d045bf87f457e4285f977c608023a2e74a49f37199f54817e1218e72",
+        "writing_system": "vie",
+        "engine": {
+          "name": "qwen",
+          "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "model_revision": "main",
+          "transformers_version": "4.57.6",
+          "torch_version": "2.5.1+cu121",
+          "cuda_version": "12.1",
+          "bitsandbytes_version": "0.50.2",
+          "quantization": {
+            "load_in_4bit": true,
+            "quant_type": "nf4",
+            "double_quant": true,
+            "compute_dtype": "float16"
+          },
+          "min_pixels": 200704,
+          "max_pixels": 301056,
+          "max_new_tokens": 1024,
+          "adapter_version": 1
+        },
+        "lang": "vie",
+        "region": [
+          0.0,
+          0.08,
+          1.0,
+          0.93
+        ],
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-21T12:47:35+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_18\\02_extraction\\pages\\page_205.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        280,
+        2480,
+        3264
+      ],
+      "lines": [
+        {
+          "text": "Sau đây là toàn văn Sáu bức thư, có kèm theo phần phiên âm, dịch nghĩa và chú thích của chúng tôi.",
+          "bbox": [
+            0,
+            280,
+            2480,
+            3264
+          ],
+          "confidence": null
+        },
+        {
+          "text": "1. 與高明二法師難佛不見形書",
+          "bbox": [
+            0,
+            280,
+            2480,
+            3264
+          ],
+          "confidence": null
+        },
+        {
+          "text": "李森",
+          "bbox": [
+            0,
+            280,
+            2480,
+            3264
+          ],
+          "confidence": null
+        },
+        {
+          "text": "*森為交州刺史",
+          "bbox": [
+            0,
+            280,
+            2480,
+            3264
+          ],
+          "confidence": null
+        },
+        {
+          "text": "夫道處清虛，四大理常，而有法門，妙出群域。若稱其巧能利物，度脫無量爲教，何由不見真形於世？真空說而無實耶？",
+          "bbox": [
+            0,
+            280,
+            2480,
+            3264
+          ],
+          "confidence": null
+        },
+        {
+          "text": "今正就尋西方根源，伏願大和尚垂懷，允納下心，無惜神誥。",
+          "bbox": [
+            0,
+            280,
+            2480,
+            3264
+          ],
+          "confidence": null
+        },
+        {
+          "text": "弟子李森和南：",
+          "bbox": [
+            0,
+            280,
+            2480,
+            3264
+          ],
+          "confidence": null
+        },
+        {
+          "text": "（“弘明集”卷十一：見“全上古三代秦漢三國六朝文、全宋文”卷五十七）",
+          "bbox": [
+            0,
+            280,
+            2480,
+            3264
+          ],
+          "confidence": null
+        },
+        {
+          "text": "PHIÊN ÂM:",
+          "bbox": [
+            0,
+            280,
+            2480,
+            3264
+          ],
+          "confidence": null
+        },
+        {
+          "text": "杜高，明非法施",
+          "bbox": [
+            0,
+            280,
+            2480,
+            3264
+          ],
+          "confidence": null
+        },
+        {
+          "text": "南法不別言真書",
+          "bbox": [
+            0,
+            280,
+            2480,
+            3264
+          ],
+          "confidence": null
+        },
+        {
+          "text": "*梅與郭州忠士",
+          "bbox": [
+            0,
+            280,
+            2480,
+            3264
+          ],
+          "confidence": null
+        },
+        {
+          "text": "傅道處天乎，處太代所，非有法門，度出群域。若能出於天，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有",
+          "bbox": [
+            0,
+            280,
+            2480,
+            3264
+          ],
+          "confidence": null
+        }
+      ],
+      "raw": {
+        "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+        "model_revision": "main",
+        "lang": "vie",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          2984
+        ],
+        "prompt": "\nYou are an OCR engine specialized in historical Chinese literature.\n\nTranscribe the Traditional Vietnamese text visible in this image.\n\nRules:\n1. Transcribe the original Vietnamese characters only.\n2. Do not transcribe Chinese pronunciation, Chinese translation page headers, or unrelated notes.\n3. Preserve the original characters, punctuation, and reading order.\n4. Preserve paragraph and line boundaries where possible.\n5. Do not translate, explain, modernize, or normalize historical characters.\n6. Do not guess illegible characters. Use [UNCLEAR].\n7. Ignore faint bleed-through, stains, handwritten marks, and page numbers\n   unless they are clearly part of the original printed Chinese text.\n\nReturn only the transcription. Do not add explanations.\n",
+        "generated_text": "Sau đây là toàn văn Sáu bức thư, có kèm theo phần phiên âm, dịch nghĩa và chú thích của chúng tôi.\n\n1. 與高明二法師難佛不見形書\n\n李森\n*森為交州刺史\n\n夫道處清虛，四大理常，而有法門，妙出群域。若稱其巧能利物，度脫無量爲教，何由不見真形於世？真空說而無實耶？\n\n今正就尋西方根源，伏願大和尚垂懷，允納下心，無惜神誥。\n\n弟子李森和南：\n\n（“弘明集”卷十一：見“全上古三代秦漢三國六朝文、全宋文”卷五十七）\n\nPHIÊN ÂM:\n\n杜高，明非法施\n南法不別言真書\n\n*梅與郭州忠士\n\n傅道處天乎，處太代所，非有法門，度出群域。若能出於天，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有法門，度出群域，非有",
+        "inference_seconds": 148.0259,
+        "max_new_tokens": 1024,
+        "quantization": "4bit-nf4",
+        "bbox_granularity": "whole_crop"
+      }
+    },
+    {
+      "key": "705a6d41af73af9ce3544c083ec1496a4ed20e3292ac14aafb95735332cad1f7",
+      "parameters": {
+        "image_sha256": "5afb8b82d045bf87f457e4285f977c608023a2e74a49f37199f54817e1218e72",
+        "writing_system": "vie",
+        "engine": {
+          "name": "qwen",
+          "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "model_revision": "main",
+          "transformers_version": "4.57.6",
+          "torch_version": "2.5.1+cu121",
+          "cuda_version": "12.1",
+          "bitsandbytes_version": "0.50.2",
+          "quantization": {
+            "load_in_4bit": true,
+            "quant_type": "nf4",
+            "double_quant": true,
+            "compute_dtype": "float16"
+          },
+          "mode": "all",
+          "min_pixels": 200704,
+          "max_pixels": 802816,
+          "band_inches": 2.0,
+          "max_new_tokens": 768,
+          "repetition_penalty": 1.05,
+          "adapter_version": 3,
+          "prompt_version": 3,
+          "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74"
+        },
+        "lang": "vie",
+        "region": [
+          0.0,
+          0.08,
+          1.0,
+          0.93
+        ],
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-21T19:43:03+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_18\\02_extraction\\pages\\page_205.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        280,
+        2480,
+        3264
+      ],
+      "lines": [
+        {
+          "text": "Sau đây là toàn văn Sáu bức thư, có kèm theo phần phiên âm, dịch nghĩa và chú thích của chúng tôi.",
+          "bbox": [
+            0,
+            280,
+            2198,
+            474
+          ],
+          "confidence": 95.1
+        },
+        {
+          "text": "1. 與高明二法師難佛不見形書",
+          "bbox": [
+            0,
+            474,
+            2198,
+            668
+          ],
+          "confidence": 95.1
+        },
+        {
+          "text": "李淼",
+          "bbox": [
+            0,
+            668,
+            2198,
+            862
+          ],
+          "confidence": 95.1
+        },
+        {
+          "text": "夫道至虚，四大理，而有法门，妙群域。 若其巧能利物，度脱无量，何吕不见真形耶？",
+          "bbox": [
+            272,
+            887,
+            2200,
+            1368
+          ],
+          "confidence": 67.5
+        },
+        {
+          "text": "今就尋西方根源，伏願大和尚垂懷，允納下心，無惜神誥。",
+          "bbox": [
+            9,
+            1441,
+            2202,
+            1712
+          ],
+          "confidence": 81.99
+        },
+        {
+          "text": "弟子李森和南。",
+          "bbox": [
+            9,
+            1712,
+            2202,
+            1983
+          ],
+          "confidence": 81.99
+        },
+        {
+          "text": "三国六朝文.全宋文卷五十七)",
+          "bbox": [
+            409,
+            2011,
+            1990,
+            2114
+          ],
+          "confidence": 89.78
+        },
+        {
+          "text": "PHIÊN ÂM:",
+          "bbox": [
+            409,
+            2114,
+            1990,
+            2217
+          ],
+          "confidence": 89.78
+        },
+        {
+          "text": "DỤ CAO, MINH NHỊ PHÁP SƯ",
+          "bbox": [
+            409,
+            2217,
+            1990,
+            2319
+          ],
+          "confidence": 89.78
+        },
+        {
+          "text": "NẠN PHẬT BẤT KIẾN HÌNH THƯ",
+          "bbox": [
+            409,
+            2319,
+            1990,
+            2422
+          ],
+          "confidence": 89.78
+        },
+        {
+          "text": "LÝ MIỄU",
+          "bbox": [
+            409,
+            2422,
+            1990,
+            2525
+          ],
+          "confidence": 89.78
+        },
+        {
+          "text": "* Miễu vi Giao Châu Thứ sử",
+          "bbox": [
+            272,
+            2534,
+            2480,
+            2777
+          ],
+          "confidence": 89.33
+        },
+        {
+          "text": "Phù Đạo xứ thanh hư, tứ đại lý thường, nhi hữu pháp môn, diệu xuất quần vực. Nhược xưng kỳ xảo năng lợi vật, độ thoát vô lượng vì giáo, hà dĩ bất kiến chân hình ư thế? Chân không thuyết nhi vô thực da?",
+          "bbox": [
+            272,
+            2777,
+            2480,
+            3021
+          ],
+          "confidence": 89.33
+        },
+        {
+          "text": "Kim chính tựu tầm tay phương căn nguyên, phục nguyện Đại hòa thượng thủy hoài, doãn nạp hạ tâm, vô tích thần cáo.",
+          "bbox": [
+            272,
+            3021,
+            2480,
+            3264
+          ],
+          "confidence": 89.33
+        }
+      ],
+      "raw": {
+        "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+        "model_revision": "main",
+        "mode": "all",
+        "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          2984
+        ],
+        "band_target_height": 600,
+        "bbox_granularity": "band_even_split",
+        "max_new_tokens": 768,
+        "max_pixels": 802816,
+        "inference_seconds": 39.301,
+        "bands": [
+          {
+            "band": 1,
+            "y0": 0,
+            "y1": 594,
+            "ink_box": [
+              0,
+              0,
+              2198,
+              582
+            ],
+            "generated_text": "Sau đây là toàn văn Sáu bức thư, có kèm theo phần phiên âm, dịch nghĩa và chú thích của chúng tôi.\n1. 與高明二法師難佛不見形書\n李淼",
+            "n_lines": 3,
+            "tokens": 49,
+            "seconds": 20.78,
+            "confidence": 95.1,
+            "flags": []
+          },
+          {
+            "band": 2,
+            "y0": 594,
+            "y1": 1124,
+            "ink_box": [
+              272,
+              607,
+              2200,
+              1088
+            ],
+            "generated_text": "夫道至虚，四大理，而有法门，妙群域。 若其巧能利物，度脱无量，何吕不见真形耶？",
+            "n_lines": 1,
+            "tokens": 37,
+            "seconds": 3.608,
+            "confidence": 67.5,
+            "flags": []
+          },
+          {
+            "band": 3,
+            "y0": 1124,
+            "y1": 1717,
+            "ink_box": [
+              9,
+              1161,
+              2202,
+              1703
+            ],
+            "generated_text": "今就尋西方根源，伏願大和尚垂懷，允納下心，無惜神誥。\n弟子李森和南。",
+            "n_lines": 2,
+            "tokens": 31,
+            "seconds": 3.243,
+            "confidence": 81.99,
+            "flags": []
+          },
+          {
+            "band": 4,
+            "y0": 1717,
+            "y1": 2250,
+            "ink_box": [
+              409,
+              1731,
+              1990,
+              2245
+            ],
+            "generated_text": "三国六朝文.全宋文卷五十七)\nPHIÊN ÂM:\nDỤ CAO, MINH NHỊ PHÁP SƯ\nNẠN PHẬT BẤT KIẾN HÌNH THƯ\nLÝ MIỄU",
+            "n_lines": 5,
+            "tokens": 57,
+            "seconds": 4.527,
+            "confidence": 89.78,
+            "flags": []
+          },
+          {
+            "band": 5,
+            "y0": 2250,
+            "y1": 2984,
+            "ink_box": [
+              272,
+              2254,
+              2480,
+              2984
+            ],
+            "generated_text": "* Miễu vi Giao Châu Thứ sử\n\nPhù Đạo xứ thanh hư, tứ đại lý thường, nhi hữu pháp môn, diệu xuất quần vực. Nhược xưng kỳ xảo năng lợi vật, độ thoát vô lượng vì giáo, hà dĩ bất kiến chân hình ư thế? Chân không thuyết nhi vô thực da?\n\nKim chính tựu tầm tay phương căn nguyên, phục nguyện Đại hòa thượng thủy hoài, doãn nạp hạ tâm, vô tích thần cáo.",
+            "n_lines": 3,
+            "tokens": 107,
+            "seconds": 7.12,
+            "confidence": 89.33,
+            "flags": []
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "vie"
+      }
     }
   ]
 }

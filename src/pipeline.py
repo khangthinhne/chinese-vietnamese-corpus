@@ -46,6 +46,8 @@ from src.segmentation.patterns import compile_matcher
 
 log = logging.getLogger("pipeline")
 
+# python -m src.pipeline --config configs/CPO_18.json --force
+
 STEPS = ("extract", "ocr", "segment", "clean", "align", "export")
 MODULES = {"extract": "src.extraction.pdf_extraction", "ocr": "src.ocr.ocr",
            "segment": "src.segmentation.pipeline", "clean": "src.preprocessing.clean",

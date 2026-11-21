@@ -150,61 +150,61 @@ def validate_result(result: OcrResult, size: tuple[int, int]) -> None:
     json.dumps(result.raw, ensure_ascii=False, allow_nan=False)
 
 
-def process_page(page: int, image_path: Path, layout: DataLayout, args,
-                 descriptors: dict, worker_state: threading.local) -> dict:
-    path = layout.ocr_raw / f"page_{page:04d}.json"
-    try:
-        cache = load_cache(path, page)
-        digest = sha256_file(image_path)
-        with Image.open(image_path) as opened:
-            image = opened.convert("RGB")
-        cropped, box = crop_image(image, args.region)
-        candidates, records = [], []
-        for name in args.engines:
-            parameters = {
-                "image_sha256": digest, "layer": args.layer,
-                "engine": descriptors[name], "lang": args.lang,
-                "region": args.region, "psm": args.psm, "dpi": args.dpi,
-                "preprocessing": "rgb-crop-v1",
-            }
-            key = cache_key(parameters)
-            record = next((r for r in cache["runs"] if r.get("key") == key), None)
-            hit = record is not None
-            if record is None:
-                if not hasattr(worker_state, "engines"):
-                    worker_state.engines = {}
-                if name not in worker_state.engines:
-                    worker_state.engines[name] = ENGINES[name]()
-                result = worker_state.engines[name].recognize(
-                    cropped, lang=args.lang, psm=args.psm, dpi=args.dpi)
-                validate_result(result, cropped.size)
-                lines = [OcrLine(x.text, (x.bbox[0] + box[0], x.bbox[1] + box[1],
-                                         x.bbox[2] + box[0], x.bbox[3] + box[1]),
-                                 x.confidence) for x in result.lines]
-                record = {
-                    "key": key, "parameters": parameters,
-                    "created_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
-                    "image": layout.rel(image_path), "image_size": list(image.size),
-                    "crop_box": list(box), "lines": [asdict(x) for x in lines],
-                    "raw": result.raw,
-                }
-                cache["runs"].append(record)
-                write_json(path, cache)
-            lines = [OcrLine(x["text"], tuple(x["bbox"]), x["confidence"]) for x in record["lines"]]
-            candidates.append(OcrResult(name, lines, record["raw"]))
-            records.append({"engine": name, "key": key, "cache_hit": hit})
+# def process_page(page: int, image_path: Path, layout: DataLayout, args,
+#                  descriptors: dict, worker_state: threading.local) -> dict:
+#     path = layout.ocr_raw / f"page_{page:04d}.json"
+#     try:
+#         cache = load_cache(path, page)
+#         digest = sha256_file(image_path)
+#         with Image.open(image_path) as opened:
+#             image = opened.convert("RGB")
+#         cropped, box = crop_image(image, args.region)
+#         candidates, records = [], []
+#         for name in args.engines:
+#             parameters = {
+#                 "image_sha256": digest, "layer": args.layer,
+#                 "engine": descriptors[name], "lang": args.lang,
+#                 "region": args.region, "psm": args.psm, "dpi": args.dpi,
+#                 "preprocessing": "rgb-crop-v1",
+#             }
+#             key = cache_key(parameters)
+#             record = next((r for r in cache["runs"] if r.get("key") == key), None)
+#             hit = record is not None
+#             if record is None:
+#                 if not hasattr(worker_state, "engines"):
+#                     worker_state.engines = {}
+#                 if name not in worker_state.engines:
+#                     worker_state.engines[name] = ENGINES[name]()
+#                 result = worker_state.engines[name].recognize(
+#                     cropped, lang=args.lang, psm=args.psm, dpi=args.dpi)
+#                 validate_result(result, cropped.size)
+#                 lines = [OcrLine(x.text, (x.bbox[0] + box[0], x.bbox[1] + box[1],
+#                                          x.bbox[2] + box[0], x.bbox[3] + box[1]),
+#                                  x.confidence) for x in result.lines]
+#                 record = {
+#                     "key": key, "parameters": parameters,
+#                     "created_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+#                     "image": layout.rel(image_path), "image_size": list(image.size),
+#                     "crop_box": list(box), "lines": [asdict(x) for x in lines],
+#                     "raw": result.raw,
+#                 }
+#                 cache["runs"].append(record)
+#                 write_json(path, cache)
+#             lines = [OcrLine(x["text"], tuple(x["bbox"]), x["confidence"]) for x in record["lines"]]
+#             candidates.append(OcrResult(name, lines, record["raw"]))
+#             records.append({"engine": name, "key": key, "cache_hit": hit})
         
-        filtered = [OcrResult(result.engine, [line for line in result.lines
-                    if line.text.strip() and filter_lines([line.text], args.keep)], result.raw)
-                    for result in candidates]
-        selected = SELECTORS[args.select](filtered)
-        confidence = mean_confidence(selected.lines)
-        return {"page": page, "image": layout.rel(image_path), "image_sha256": digest,
-                "raw": layout.rel(path), "selected_engine": selected.engine,
-                "confidence": confidence, "empty": not selected.lines,
-                "lines": [line.text for line in selected.lines], "engines": records}
-    except Exception as exc:
-        raise RuntimeError(f"OCR trang {page} ({image_path.name}) thất bại: {exc}") from exc
+#         filtered = [OcrResult(result.engine, [line for line in result.lines
+#                     if line.text.strip() and filter_lines([line.text], args.keep)], result.raw)
+#                     for result in candidates]
+#         selected = SELECTORS[args.select](filtered)
+#         confidence = mean_confidence(selected.lines)
+#         return {"page": page, "image": layout.rel(image_path), "image_sha256": digest,
+#                 "raw": layout.rel(path), "selected_engine": selected.engine,
+#                 "confidence": confidence, "empty": not selected.lines,
+#                 "lines": [line.text for line in selected.lines], "engines": records}
+#     except Exception as exc:
+#         raise RuntimeError(f"OCR trang {page} ({image_path.name}) thất bại: {exc}") from exc
 
 
 def create_parser() -> argparse.ArgumentParser:
@@ -223,6 +223,7 @@ def create_parser() -> argparse.ArgumentParser:
     parser.add_argument("--dpi", type=int, default=300, help="DPI khai báo, không resample ảnh")
     parser.add_argument("--workers", type=int, default=4)
     parser.add_argument("--low-conf", type=float, default=60)
+    parser.add_argument("--force-reocr", action="store_true", help="ignore cache runs")
     return parser
 
 
@@ -243,13 +244,15 @@ def process_writing_system_page(page: int, image_path: Path, layout: DataLayout,
                 "psm": args.psm, "dpi": args.dpi, "preprocessing": "rgb-crop-v1",
             }
             key = raw_store.cache_key(parameters)
-            record = raw_store.find_run(store, key)
+            record = None if args.force_reocr else raw_store.find_run(store, key)
             hit = record is not None
+
             if record is None:
                 if not hasattr(worker_state, "engines"):
                     worker_state.engines = {}
                 if name not in worker_state.engines:
                     worker_state.engines[name] = ENGINES[name]()
+                
                 result = worker_state.engines[name].recognize(
                     cropped, lang=lang, psm=args.psm, dpi=args.dpi)
                 validate_result(result, cropped.size)
@@ -276,34 +279,55 @@ def process_writing_system_page(page: int, image_path: Path, layout: DataLayout,
         #         print(f"[DEBUG] CJK filtered: {filter_lines([line.text], keep)}")
 
         # print(f"[DEBUG] keep = {keep!r}")
+     
+     
         # filtered = [OcrResult(result.engine, [line for line in result.lines
         #             if line.text.strip() and filter_lines([line.text], keep)], result.raw)
         #             for result in candidates]
-        filtered = []
+     
+     
+        # filtered = []
 
-        for result in candidates:
-            if result.engine == "qwen":
-                # Qwen returns page-level text, not individual text lines.
-                # Preserve the full transcription for downstream processing.
-                lines = [
+        # for result in candidates:
+        #     if result.engine == "qwen":
+        #         # Qwen returns page-level text, not individual text lines.
+        #         # Preserve the full transcription for downstream processing.
+        #         lines = [
+        #             line for line in result.lines
+        #             if line.text.strip()
+        #         ]
+        #     else:
+        #         lines = [
+        #             line for line in result.lines
+        #             if line.text.strip()
+        #             and filter_lines([line.text], keep)
+        #         ]
+
+        #     filtered.append(
+        #         OcrResult(
+        #             result.engine,
+        #             lines,
+        #             result.raw
+        #         )
+        #     )
+
+
+# OCR stage: preserve all non-empty lines.
+# Script/layer classification belongs to the segmentation stage.
+        candidates = [
+            OcrResult(
+                result.engine,
+                [
                     line for line in result.lines
                     if line.text.strip()
-                ]
-            else:
-                lines = [
-                    line for line in result.lines
-                    if line.text.strip()
-                    and filter_lines([line.text], keep)
-                ]
-
-            filtered.append(
-                OcrResult(
-                    result.engine,
-                    lines,
-                    result.raw
-                )
+                ],
+                result.raw
             )
-        selected = SELECTORS[args.select](filtered)
+            for result in candidates
+        ]
+
+        # selected = SELECTORS[args.select](filtered)
+        selected = SELECTORS[args.select](candidates)
         confidence = mean_confidence(selected.lines)
         selected_key = next(r["key"] for r in records if r["engine"] == selected.engine)
         return {"page": page, "image": str(image_path), "image_sha256": digest,
@@ -339,8 +363,17 @@ def run_writing_system(args) -> Path:
     if args.keep is not None and args.keep not in ("cjk", "latin", "none"):
         raise ValueError("--keep phải là cjk, latin hoặc none")
     lang = args.lang or writing_system
-    keep = args.keep or ("cjk" if writing_system == "chi_tra" else "latin")
+    # keep = args.keep or ("cjk" if writing_system == "chi_tra" else "latin")
+    # Filtering is deferred to segmentation.
+    keep = None
+
+    if args.keep in ("cjk", "latin"):
+        log.warning(
+            "--keep is deprecated in writing-system mode; "
+            "all OCR lines will be preserved."
+        )
     keep = None if keep == "none" else keep
+    print(f"[DEBUG] OCR {writing_system} trang {pages}, region={args.region}, lang={lang}, keep={keep}")
     layout = DataLayout(Path(args.data_root), args.work_id)
     target = raw_store.manifest_path(layout, writing_system)
     xml_path = layout.ocr_raw_xml_path(writing_system)
@@ -361,6 +394,11 @@ def run_writing_system(args) -> Path:
             lambda p: process_writing_system_page(p, images[p], layout, args, writing_system,
                                                   lang, keep, descriptors, worker_state),
             pages))
+    print(f"[DEBUG] Results: {results}")
+    
+    # output result json
+
+
     low_conf = [r["page"] for r in results if r["confidence"] is None or r["confidence"] < args.low_conf]
     empty = [r["page"] for r in results if r["empty"]]
     if empty:
@@ -371,11 +409,13 @@ def run_writing_system(args) -> Path:
         "source": {"path": str(source)},
         "engines": descriptors,
         "parameters": {"pages": pages, "region": args.region, "psm": args.psm,
-                       "dpi": args.dpi, "keep": keep, "select": args.select,
+                       "dpi": args.dpi, "keep": None, "select": args.select,
                        "low_conf": args.low_conf, "workers_requested": args.workers,
                        "workers_used": workers},
         "pages": results, "low_conf_pages": low_conf, "empty_pages": empty,
-        "review_required": True,
+        "review_required": True,   
+        "lang": lang,
+         "keep": None, 
     }
     path = raw_store.write_manifest(layout, writing_system, record)
     xml_path = raw_xml.write_writing_system(layout, writing_system, pages)
@@ -393,69 +433,69 @@ def run_writing_system(args) -> Path:
 def run(args) -> Path:
     if args.writing_system:
         return run_writing_system(args)
-    if not args.layer:
-        raise ValueError("Cần --writing-system chi_tra|vie (chế độ mới) hoặc --layer (chế độ cũ)")
-    return run_legacy(args)
+    # if not args.layer:
+    raise ValueError("Cần --writing-system chi_tra|vie (chế độ mới) hoặc --layer (chế độ cũ)")
+    # return run_legacy(args)
 
 
-def run_legacy(args) -> Path:
-    pages = requested_pages(args.pages)
-    args.region = parse_region(args.region)
-    if not args.source:
-        raise ValueError("Thiếu --source (CLI hoặc config)")
-    # print(f"Pages: {pages}")
+# def run_legacy(args) -> Path:
+#     pages = requested_pages(args.pages)
+#     args.region = parse_region(args.region)
+#     if not args.source:
+#         raise ValueError("Thiếu --source (CLI hoặc config)")
+#     # print(f"Pages: {pages}")
     
-    source = Path(args.source).resolve()
-    images = discover_images(source, pages)
-    args.engines = list(dict.fromkeys(x.strip() for x in args.engines.split(",") if x.strip()))
-    if not args.engines or any(name not in ENGINES for name in args.engines):
-        raise ValueError(f"Engine không hợp lệ. Có sẵn: {', '.join(ENGINES)}")
-    if args.select not in SELECTORS:
-        raise ValueError("Selector không hợp lệ")
-    if args.workers < 1 or args.dpi < 1 or not 0 <= args.psm <= 13:
-        raise ValueError("Cần workers >= 1, dpi >= 1, psm trong 0..13")
-    if not math.isfinite(args.low_conf) or not 0 <= args.low_conf <= 100:
-        raise ValueError("--low-conf phải trong 0..100")
-    if args.keep is not None and args.keep not in ("cjk", "latin", "none"):
-        raise ValueError("--keep phải là cjk, latin hoặc none")
-    args.lang = args.lang or LAYERS[args.layer].ocr_lang
-    args.keep = LAYERS[args.layer].keep if args.keep is None else (None if args.keep == "none" else args.keep)
-    layout = DataLayout(Path(args.data_root), args.work_id)
-    if layout.layer_xml(args.layer).exists() and not args.force:
-        raise FileExistsError(f"{layout.layer_xml(args.layer)} đã tồn tại; dùng --force để xuất lại XML")
-    MetadataStore(layout).load()
-    descriptors = {name: ENGINES[name].describe(args.lang) for name in args.engines}
-    source_info = register_source(layout, source)
-    registered = layout.work_dir / source_info["path"]
-    print(f"[TEST] {pages} trang từ {source} -> {registered}")
-    registered_images = discover_images(registered, pages)
+#     source = Path(args.source).resolve()
+#     images = discover_images(source, pages)
+#     args.engines = list(dict.fromkeys(x.strip() for x in args.engines.split(",") if x.strip()))
+#     if not args.engines or any(name not in ENGINES for name in args.engines):
+#         raise ValueError(f"Engine không hợp lệ. Có sẵn: {', '.join(ENGINES)}")
+#     if args.select not in SELECTORS:
+#         raise ValueError("Selector không hợp lệ")
+#     if args.workers < 1 or args.dpi < 1 or not 0 <= args.psm <= 13:
+#         raise ValueError("Cần workers >= 1, dpi >= 1, psm trong 0..13")
+#     if not math.isfinite(args.low_conf) or not 0 <= args.low_conf <= 100:
+#         raise ValueError("--low-conf phải trong 0..100")
+#     if args.keep is not None and args.keep not in ("cjk", "latin", "none"):
+#         raise ValueError("--keep phải là cjk, latin hoặc none")
+#     args.lang = args.lang or LAYERS[args.layer].ocr_lang
+#     args.keep = LAYERS[args.layer].keep if args.keep is None else (None if args.keep == "none" else args.keep)
+#     layout = DataLayout(Path(args.data_root), args.work_id)
+#     if layout.layer_xml(args.layer).exists() and not args.force:
+#         raise FileExistsError(f"{layout.layer_xml(args.layer)} đã tồn tại; dùng --force để xuất lại XML")
+#     MetadataStore(layout).load()
+#     descriptors = {name: ENGINES[name].describe(args.lang) for name in args.engines}
+#     source_info = register_source(layout, source)
+#     registered = layout.work_dir / source_info["path"]
+#     print(f"[TEST] {pages} trang từ {source} -> {registered}")
+#     registered_images = discover_images(registered, pages)
     
-    for page in pages:
-        if sha256_file(images[page]) != sha256_file(registered_images[page]):
-            raise ValueError(f"Nguồn lưu trữ khác ảnh trang {page}; dùng tên thư mục nguồn mới")
-    workers = min(args.workers, len(pages), *(ENGINES[n].max_workers for n in args.engines))
-    worker_state = threading.local()
-    with ThreadPoolExecutor(max_workers=workers) as pool:
-        results = list(pool.map(lambda p: process_page(p, registered_images[p], layout,
-                            args, descriptors, worker_state), pages))
-    low_conf = [r["page"] for r in results if r["confidence"] is None or r["confidence"] < args.low_conf]
-    empty = [r["page"] for r in results if r["empty"]]
-    if empty: 
-        log.warning("Trang không có dòng sau lọc: %s", empty)
-    doc = build_document(args.work_id, args.layer, make_meta(
-        args.layer, title=args.title, source=args.source_label or source.name,
-        method="OCR: " + ", ".join(args.engines), version=args.version, translator=args.translator),
-        [RawPage(r["page"], r["lines"]) for r in results])
-    return finalize(doc, layout, source_info, {
-        "method": "ocr", "engines": descriptors,
-        "parameters": {"pages": pages, "region": args.region, "lang": args.lang,
-                       "psm": args.psm, "dpi": args.dpi, "keep": args.keep,
-                       "select": args.select, "low_conf": args.low_conf,
-                       "workers_requested": args.workers, "workers_used": workers},
-        "low_conf_pages": low_conf, "empty_pages": empty,
-        "pages": [{k: v for k, v in r.items() if k != "lines"} for r in results],
-        "review_required": True,
-    }, force=args.force)
+#     for page in pages:
+#         if sha256_file(images[page]) != sha256_file(registered_images[page]):
+#             raise ValueError(f"Nguồn lưu trữ khác ảnh trang {page}; dùng tên thư mục nguồn mới")
+#     workers = min(args.workers, len(pages), *(ENGINES[n].max_workers for n in args.engines))
+#     worker_state = threading.local()
+#     with ThreadPoolExecutor(max_workers=workers) as pool:
+#         results = list(pool.map(lambda p: process_page(p, registered_images[p], layout,
+#                             args, descriptors, worker_state), pages))
+#     low_conf = [r["page"] for r in results if r["confidence"] is None or r["confidence"] < args.low_conf]
+#     empty = [r["page"] for r in results if r["empty"]]
+#     if empty: 
+#         log.warning("Trang không có dòng sau lọc: %s", empty)
+#     doc = build_document(args.work_id, args.layer, make_meta(
+#         args.layer, title=args.title, source=args.source_label or source.name,
+#         method="OCR: " + ", ".join(args.engines), version=args.version, translator=args.translator),
+#         [RawPage(r["page"], r["lines"]) for r in results])
+#     return finalize(doc, layout, source_info, {
+#         "method": "ocr", "engines": descriptors,
+#         "parameters": {"pages": pages, "region": args.region, "lang": args.lang,
+#                        "psm": args.psm, "dpi": args.dpi, "keep": args.keep,
+#                        "select": args.select, "low_conf": args.low_conf,
+#                        "workers_requested": args.workers, "workers_used": workers},
+#         "low_conf_pages": low_conf, "empty_pages": empty,
+#         "pages": [{k: v for k, v in r.items() if k != "lines"} for r in results],
+#         "review_required": True,
+#     }, force=args.force)
 
 
 def main(argv: list[str] | None = None) -> int:
