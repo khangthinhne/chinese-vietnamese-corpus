@@ -1,4 +1,103 @@
-# Hướng dẫn chạy OCR bằng Tesseract
+# OCR và weighted voting
+
+## Weighted voting độc lập (v1)
+
+Khi đã có kết quả từ nhiều engine, dùng module voting mà không cần cài/chạy engine OCR:
+
+```powershell
+python -m src.ocr.voting --input input.json --output voted.json
+```
+
+Thêm `--force` để ghi đè output. Input và output phải là hai file khác nhau. CLI đọc/ghi
+UTF-8, xuất chữ Hán trực tiếp, báo lỗi trên stderr và trả mã 1 khi dữ liệu/I/O không hợp lệ.
+V1 chưa nối vào `--select` của pipeline OCR hiện tại.
+
+Ví dụ `input.json` (mỗi file chứa một trang):
+
+```json
+{
+  "page_id": "CPO_19_page_001",
+  "engine_weights": {"paddleocr": 0.25, "qwen": 0.50, "tesseract": 0.25},
+  "engine_results": [
+    {"engine": "paddleocr", "lines": [
+      {"line_id": "line_001", "text": "天地玄黃", "bbox": [100, 120, 400, 160], "confidence": 0.96}
+    ]},
+    {"engine": "qwen", "lines": [
+      {"line_id": "line_001", "text": "天地玄黄", "bbox": [102, 121, 402, 161], "confidence": null}
+    ]},
+    {"engine": "tesseract", "lines": [
+      {"line_id": "line_001", "text": "天地玄黃", "bbox": [99, 119, 401, 160], "confidence": 0.89}
+    ]}
+  ]
+}
+```
+
+API Python thuần, không sửa input và không đọc/ghi file:
+
+```python
+from src.ocr.voting import vote_page
+
+result = vote_page(payload)  # dict -> dict; dữ liệu sai gây ValueError kèm đường dẫn trường
+```
+
+Hợp đồng đầu vào:
+
+- `line_id` giống nhau phải trỏ tới cùng một dòng ảnh; bước ghép dòng thuộc phía xuất
+  dữ liệu. Voting không đối sánh bbox. ID đầu ra được sắp theo chuỗi; dùng số có đệm 0
+  như `line_001` để giữ thứ tự đọc. Bbox phải dùng cùng hệ tọa độ ảnh gốc.
+- `page_id`, tên engine, `line_id` là chuỗi không rỗng; `text` là chuỗi, được phép rỗng.
+  `bbox` và `confidence` có thể thiếu/null. Bbox có dạng `[x0,y0,x1,y1]`, tọa độ hữu hạn,
+  không âm, `x0<x1`, `y0<y1`.
+- Trọng số hữu hạn, không âm, tổng lớn hơn 0; không cần tổng bằng 1. Mỗi engine có kết quả
+  phải có trọng số. Không chấp nhận engine trùng tên hoặc ID dòng trùng trong một engine.
+  Engine mới không cần đăng ký trong registry OCR của repo.
+- Confidence chỉ là số hữu hạn hoặc null, giữ nguyên thang riêng của nguồn (0..1 hoặc
+  0..100), không nhân vào phiếu và không so sánh giữa engine.
+- Engine thiếu kết quả/dòng không bỏ phiếu cho dòng đó. `text=""` là một phiếu rỗng rõ
+  ràng, tham gia bằng GAP. Engine trọng số 0 không tạo dòng/cột hoặc ảnh hưởng kết quả.
+
+Thuật toán chuẩn hóa NFC rồi căn chỉnh ký tự Unicode bằng progressive global alignment
+với chi phí weighted sum-of-pairs. Engine được thêm theo trọng số giảm dần, rồi tên tăng
+dần. Đường alignment bằng điểm ưu tiên ghép chéo, tiêu thụ cột cũ, rồi chèn ký tự mới.
+Do là progressive alignment, đây không phải bảo đảm tối ưu toàn cục cho mọi chuỗi; các
+đoạn ký tự lặp hoặc OCR khác nhau nhiều vẫn cần đối chiếu ảnh. Không chuyển giản/phồn,
+không bỏ khoảng trắng/dấu câu và không dùng mô hình ngôn ngữ để sửa chữ.
+
+Mỗi cột cộng trọng số cho các ký tự, kể cả GAP (`null`). Hòa tổng điểm thì ưu tiên ứng
+viên được engine có trọng số riêng cao nhất ủng hộ; nếu vẫn hòa thì theo tên engine tăng
+dần. GAP thắng sẽ không sinh ký tự. Cộng điểm bằng Decimal để tránh sai lệch float khi
+xét hòa; các tỷ lệ đầu ra là số JSON.
+
+Đầu ra có `schema_version`, `algorithm_version`, `page_id`, `method`, `engine_weights`,
+`lines`, `needs_review`, `review_reasons`. Mỗi dòng gồm:
+
+| Trường | Ý nghĩa |
+|---|---|
+| `text`, `line_id` | Văn bản hợp nhất và ID nguồn chung |
+| `bbox`, `bbox_engine` | Bbox từ nguồn có trọng số cao nhất có bbox hợp lệ; null nếu thiếu |
+| `sources` | Bản sao các dòng gốc kèm tên engine, giữ text/bbox/confidence để truy vết |
+| `columns` | Từng cột alignment: `selected`, `support`, `tie`, các `candidates` có token/trọng số/engine ủng hộ |
+| `agreement` | Trung bình tỷ lệ phiếu thắng trên mọi cột, kể cả GAP thắng; null nếu không có cột |
+| `coverage` | Trọng số engine có dòng / tổng trọng số cấu hình, tính cả engine vắng trong mẫu số |
+| `needs_review`, `review_reasons` | Cờ và lý do cần đối chiếu ảnh |
+
+`alignment_index` và `output_index` trong mỗi cột bắt đầu từ 0; `output_index=null` khi
+GAP thắng. `support` là điểm thắng chia tổng trọng số tham gia dòng. Không sinh
+`confidence` tổng hợp: mức đồng thuận không phải xác suất nhận dạng đúng.
+
+Lý do review gồm `disagreement`, `tie`, `incomplete_coverage`, `single_engine`,
+`empty_text`; trang không có dòng từ engine trọng số dương có lý do `empty_page`.
+Không tự loại các dòng cần review khỏi kết quả.
+
+Ví dụ trên xuất `天地玄黄`, `agreement=0.875`, `coverage=1`, bbox của Qwen và
+`review_reasons=["disagreement", "tie"]`: chữ cuối hòa 0.50–0.50, Qwen có trọng số
+riêng lớn nhất. Nếu Qwen vắng, hai engine còn lại xuất `天地玄黃`, `agreement=1` nhưng
+`coverage=0.50` và vẫn cần review.
+
+Chạy kiểm thử voting bằng `python -m pytest tests/test_ocr_voting.py`. Trọng số hiện do
+người dùng cấu hình; cần ground truth và đánh giá CER riêng để kiểm chứng cải thiện OCR.
+
+## Chạy OCR bằng Tesseract
 
 Chạy lệnh từ thư mục gốc repo. Module nhận thư mục ảnh, lưu OCR thô dạng JSON; chế độ mới
 xuất kho thô theo hệ chữ (`chi_tra`, `vie`) cho bước phân đoạn, chế độ cũ xuất XML cho từng
