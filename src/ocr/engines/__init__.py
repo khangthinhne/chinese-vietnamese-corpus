@@ -7,7 +7,7 @@ from PIL import Image
 @dataclass
 class OcrLine:
     text: str
-    bbox: tuple[int, int, int, int]  # x0,y0,x1,y1 in pixels, engine reading order
+    bbox: tuple[int, int, int, int] | None  # x0,y0,x1,y1 in pixels, engine reading order, or None
     confidence: float | None      # display scale 0..100, not accuracy
 
 
@@ -43,9 +43,11 @@ def register_engine(cls: type[OcrEngine]):
 
 
 try:
+    from . import kimhannom as _kimhannom  # noqa: E402,F401
     from . import qwen as _qwen  # noqa: E402,F401
     from . import tesseract as _tesseract  # noqa: E402,F401
 except ImportError as exc:
     # Do not hide genuine adapter errors; only make missing optional dependencies
     # explicit. The Qwen module should not load the model at import time.
+    pass
     raise

@@ -142,9 +142,10 @@ def validate_result(result: OcrResult, size: tuple[int, int]) -> None:
     if not isinstance(result, OcrResult):
         raise ValueError("Engine phải trả về OcrResult")
     for line in result.lines:
-        x0, y0, x1, y1 = line.bbox
-        if not (0 <= x0 < x1 <= size[0] and 0 <= y0 < y1 <= size[1]):
-            raise ValueError(f"Engine trả bbox ngoài ảnh crop: {line.bbox}")
+        if line.bbox is not None:
+            x0, y0, x1, y1 = line.bbox
+            if not (0 <= x0 < x1 <= size[0] and 0 <= y0 < y1 <= size[1]):
+                raise ValueError(f"Engine trả bbox ngoài ảnh crop: {line.bbox}")
         if line.confidence is not None and not (0 <= line.confidence <= 100):
             raise ValueError("Confidence chuẩn hóa phải nằm trong 0..100")
     json.dumps(result.raw, ensure_ascii=False, allow_nan=False)
@@ -257,7 +258,7 @@ def process_writing_system_page(page: int, image_path: Path, layout: DataLayout,
                     cropped, lang=lang, psm=args.psm, dpi=args.dpi)
                 validate_result(result, cropped.size)
                 lines = [OcrLine(x.text, (x.bbox[0] + box[0], x.bbox[1] + box[1],
-                                         x.bbox[2] + box[0], x.bbox[3] + box[1]),
+                                         x.bbox[2] + box[0], x.bbox[3] + box[1]) if x.bbox is not None else None,
                                  x.confidence) for x in result.lines]
                 record = {
                     "key": key, "parameters": parameters, "created_at": raw_store.now(),
@@ -267,7 +268,7 @@ def process_writing_system_page(page: int, image_path: Path, layout: DataLayout,
                 }
                 store["runs"].append(record)
                 raw_store.save_page(layout, writing_system, page, store)
-            lines = [OcrLine(x["text"], tuple(x["bbox"]), x["confidence"]) for x in record["lines"]]
+            lines = [OcrLine(x["text"], tuple(x["bbox"]) if x.get("bbox") is not None else None, x.get("confidence")) for x in record["lines"]]
             candidates.append(OcrResult(name, lines, record["raw"]))
             records.append({"engine": name, "key": key, "cache_hit": hit})
         # for result in candidates:
@@ -335,7 +336,7 @@ def process_writing_system_page(page: int, image_path: Path, layout: DataLayout,
                 "selected_engine": selected.engine, "selected_key": selected_key,
                 "confidence": confidence, "empty": not selected.lines,
                 "n_lines": len(selected.lines),
-                "lines": [{"text": x.text, "bbox": list(x.bbox), "confidence": x.confidence}
+                "lines": [{"text": x.text, "bbox": list(x.bbox) if x.bbox is not None else None, "confidence": x.confidence}
                           for x in selected.lines],
                 "engines": records}
     except Exception as exc:

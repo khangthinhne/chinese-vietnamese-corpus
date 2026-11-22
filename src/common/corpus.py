@@ -101,6 +101,11 @@ class DataLayout:
     def ocr_raw_xml_path(self, writing_system: str) -> Path:
         name = {"chi_tra": "han", "vie": "vi"}.get(writing_system, writing_system)
         return self.ocr_raw_xml / f"{name}.xml"
+    @property
+    def ocr_normalized_root(self) -> Path: return self.ocr_root / "normalized"
+
+    def ocr_normalized_path(self, writing_system: str, page: int) -> Path:
+        return self.ocr_normalized_root / writing_system / f"page_{page:04d}.json"
     # --- phân đoạn tài liệu/lớp ---
     @property
     def segmentation_dir(self) -> Path: return self.work_dir / "04_segmentation"
