@@ -28,8 +28,8 @@ from src.cleaning.metadata import (DocumentMetadata, MetadataConfig, MetadataOcc
                                    MetadataResult, aggregate_document_metadata,
                                    aggregate_file_metadata, extract_metadata,
                                    write_layer_metadata)
-from src.cleaning.pipeline import (CleanOutput, clean_layer, create_parser, main,  # noqa: F401
-                                   read_raw_lines, run, run_cleaning)
+from src.cleaning.pipeline import (CleanOutput, StructuralCleanOutput, clean_layer, create_parser, main,  # noqa: F401
+                                   read_raw_lines, run, run_cleaning, run_structural_cleaning)
 
 __all__ = ["CleanConfig", "RawLine", "Audit", "normalize_unicode", "filter_pages",
            "extract_section", "SectionInfo", "detect_duplicates", "detect_footnotes",
@@ -39,4 +39,4 @@ __all__ = ["CleanConfig", "RawLine", "Audit", "normalize_unicode", "filter_pages
            "run", "main", "create_parser", "read_raw_lines", "is_parenthesized",
            "MetadataConfig", "extract_metadata", "MetadataResult", "DocumentMetadata",
            "MetadataOccurrence", "aggregate_document_metadata", "aggregate_file_metadata",
-           "write_layer_metadata"]
+           "write_layer_metadata", "StructuralCleanOutput", "run_structural_cleaning"]

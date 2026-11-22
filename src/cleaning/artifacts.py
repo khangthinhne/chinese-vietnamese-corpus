@@ -87,7 +87,8 @@ def clean_lines(lines: list[RawLine], cfg: OCRCleaningConfig, audit: Audit, laye
     out: list[RawLine] = []
     for ln in lines:
         res = clean_ocr_artifacts(ln.text, cfg, audit, ln)
-        new = RawLine(ln.id, ln.page, res.text, ln.is_last_on_page, ln.raw_text, list(ln.flags))
+        new = RawLine(ln.id, ln.page, res.text, ln.is_last_on_page, ln.raw_text, list(ln.flags),
+                      list(ln.source_ids), ln.document_id)
         for ch in res.uncertain:
             flag = f"uncertain:{ch}"
             if flag not in new.flags:

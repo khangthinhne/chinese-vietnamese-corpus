@@ -204,8 +204,8 @@ def test_pipeline_plan_and_dry_run(tmp_path, capsys):
     out = capsys.readouterr().out
     steps = [line.split()[3] for line in out.splitlines() if line.startswith("$")]
     # han: extract, ocr, clean; am (không có pdf): chỉ clean; cặp: align, export
-    assert steps == ["src.extraction.pdf_extraction", "src.ocr.ocr", "src.preprocessing.clean",
-                     "src.preprocessing.clean", "src.alignment.align", "src.alignment.export"]
+    assert steps == ["src.extraction.pdf_extraction", "src.ocr.ocr", "src.cleaning.pipeline",
+                     "src.cleaning.pipeline", "src.alignment.align", "src.alignment.export"]
     assert "--region 0,0.1,1,0.9" in out and "--drop-pattern '^Phần II'" in out
 
 
@@ -225,8 +225,10 @@ def test_pipeline_new_config_uses_two_ocr_runs(tmp_path, capsys):
     out = capsys.readouterr().out
     steps = [line.split()[3] for line in out.splitlines() if line.startswith("$")]
     assert steps == ["src.extraction.pdf_extraction", "src.ocr.ocr", "src.ocr.ocr",
-                     "src.segmentation.pipeline", "src.preprocessing.clean",
-                     "src.preprocessing.clean", "src.preprocessing.clean",
+                     "src.segmentation.pipeline", "src.cleaning.pipeline",
+                     "src.cleaning.pipeline", "src.cleaning.pipeline",
+                     "src.segmentation.sentences", "src.segmentation.sentences", "src.segmentation.sentences",
+                     "src.validation.validate",
                      "src.alignment.align", "src.alignment.export"]
     assert out.count("--writing-system chi_tra") == 1
     assert out.count("--writing-system vie") == 1

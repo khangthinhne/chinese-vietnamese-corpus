@@ -110,9 +110,21 @@ class DataLayout:
     def segmentation_layer(self, layer: str) -> Path:
         return self.segmentation_layers / f"{layer}.xml"
 
+    @property
+    def segmentation_sentences(self) -> Path: return self.segmentation_dir / "sentences"
+
+    def segmentation_sentence(self, layer: str) -> Path:
+        return self.segmentation_sentences / f"{layer}.xml"
+
     # --- các tầng sau (giữ 03_cleaned/04_alignment cũ làm bản đọc tương thích) ---
     @property
     def cleaning_root(self) -> Path: return self.work_dir / "05_cleaning"
+    @property
+    def cleaning_structural_dir(self) -> Path: return self.cleaning_root / "structural"
+
+    def cleaning_structural(self, layer: str) -> Path:
+        return self.cleaning_structural_dir / f"{layer}.xml"
+
     @property
     def alignment_root(self) -> Path: return self.work_dir / "06_alignment"
     @property

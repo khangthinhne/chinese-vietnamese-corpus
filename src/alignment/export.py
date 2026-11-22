@@ -242,7 +242,6 @@ def write_consolidated(path: Path, rows: list[tuple],  review: list[list]) -> No
     # 1. Export TSV
     tsv_path = path.with_suffix(".tsv")
     tsv_tmp = tsv_path.with_suffix(".tsv.tmp")
-    print(f"[TESTTTTTTTTTT] Writing TSV to {tsv_tmp}")
     with tsv_tmp.open("w", encoding="utf-8-sig", newline="") as f:
         writer = csv.writer(
             f,
@@ -284,7 +283,6 @@ def write_consolidated(path: Path, rows: list[tuple],  review: list[list]) -> No
     wb.save(xlsx_tmp)
 
     # 3. Replace output files after successful generation
-    print(f"Writing TSV to {tsv_path}")
     xlsx_tmp.replace(path)
     tsv_tmp.replace(tsv_path)
 

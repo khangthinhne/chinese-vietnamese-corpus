@@ -134,6 +134,26 @@ def detect_footnotes(lines: list[RawLine], cfg: FootnoteConfig, layer: str,
                     idxs = []
                     i += 1
                     continue
+                # Kiểm tra các dòng kế tiếp có phải là phần nối tiếp của chú thích/trích dẫn này
+                next_j = j_close + 1
+                while next_j < len(lines) and next_j not in consumed:
+                    next_t = lines[next_j].text.strip()
+                    if not next_t:
+                        break
+                    next_open = sum(next_t.count(c) for c in OPEN_PAREN)
+                    next_close = sum(next_t.count(c) for c in CLOSE_PAREN)
+                    is_cont = False
+                    if next_close > next_open and (next_t[-1] in CLOSE_PAREN or is_bib(next_t)):
+                        is_cont = True
+                    elif layer != "han" and next_t[:1].islower() and (is_bib(next_t) or next_t[-1] in CLOSE_PAREN):
+                        is_cont = True
+                    if is_cont:
+                        idxs.append(next_j)
+                        next_j += 1
+                    else:
+                        break
+                j_close = idxs[-1]
+                closed_at = (j_close, len(lines[j_close].text) - 1)
             consumed.update(idxs)
             if closed_at is None:
                 # mở ngoặc không bao giờ đóng: KHÔNG loại, trình review
@@ -148,13 +168,24 @@ def detect_footnotes(lines: list[RawLine], cfg: FootnoteConfig, layer: str,
                     make(FOOTNOTE, idxs)
             i = (closed_at[0] if closed_at else idxs[-1]) + 1
 
-    # ---- 2+3. heuristic cũ và mục chú thích đánh số ----
+    # ---- 2+3. heuristic cũ, trích dẫn không mở ngoặc đầu dòng và mục chú thích đánh số ----
     last_kept: RawLine | None = None
     for i, ln in enumerate(lines):
         if i in consumed:
             continue
         probe = ln.text.strip()
+        open_c = sum(probe.count(c) for c in OPEN_PAREN)
+        close_c = sum(probe.count(c) for c in CLOSE_PAREN)
+
+        # Trích dẫn nguồn kết thúc bằng ngoặc đóng đơn lẻ hoặc chứa mẫu thư mục Hán rõ ràng
+        if cfg.detect_bibliographic and is_bib(probe):
+            if (close_c > open_c and probe[-1] in CLOSE_PAREN) or (layer == "han" and re.search(r"[集卷]\s*([0-9一二三四五六七八九十百]+|第)", probe)):
+                consumed.add(i)
+                make(BIB_NOTE, [i])
+                continue
+
         if layer != "han" and (probe.startswith(("*", "＊")) or re.match(r"^\s*\[\d{1,3}\]", probe)):
+            consumed.add(i)
             make(FOOTNOTE, [i])
             continue
         if _prev_complete(last_kept, layer) and any(r.search(probe) for r in item_res):
@@ -165,6 +196,7 @@ def detect_footnotes(lines: list[RawLine], cfg: FootnoteConfig, layer: str,
                 j += 1
                 idxs.append(j)
             unterminated = j == len(lines) - 1 and not _complete(lines[j].text, layer)
+            consumed.update(idxs)
             make(FOOTNOTE, idxs, confidence="low" if unterminated else "high")
             last_kept = None
             continue

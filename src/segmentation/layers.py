@@ -166,7 +166,8 @@ def assign_document(work_id: str, doc: Document, layer_cfg: dict, meta_cfg: dict
     uncertain: list[dict] = []
     for layer, rows in list(lines_by_layer.items()):
         cfg = metadata_config(layer, layer_cfg[layer], meta_cfg or {})
-        raw = [RawLine(id=x.id, page=x.page, text=x.text, raw_text=x.text) for x in rows]
+        raw = [RawLine(id=x.id, page=x.page, text=x.text, raw_text=x.text,
+                       source_ids=list(x.source_ids), document_id=x.document_id) for x in rows]
         kept, md = classify_leading_block(raw, cfg, layer, doc.id)
         kept_ids = {r.id for r in kept}
         lines_by_layer[layer] = [x for x in rows if x.id in kept_ids]

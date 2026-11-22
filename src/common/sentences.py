@@ -87,9 +87,18 @@ class Sentence:
     id: str                                    # CPO_18.han.00001
     text: str
     pages: list[int]                           # trang nguồn (>1 phần tử = câu bị cắt qua trang)
-    src_ids: list[str]                         # ID dòng ở 02_extraction đã tạo nên câu này
+    segment_ids: list[str] = field(default_factory=list)
+    source_ids: list[str] = field(default_factory=list)
     flags: list[str] = field(default_factory=list)
     document_id: str = ""                      # CPO_18.001 (dữ liệu cũ có thể để trống)
+    raw_text: str = ""
+    src_ids: list[str] = field(default_factory=list)
+
+    def __post_init__(self):
+        if self.src_ids and not self.segment_ids:
+            self.segment_ids = list(self.src_ids)
+        elif self.segment_ids and not self.src_ids:
+            self.src_ids = list(self.segment_ids)
 
 
 @dataclass
@@ -132,33 +141,45 @@ def read_jsonl(path: Path) -> list[dict]:
     return [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines() if line.strip()]
 
 
-def save_sentences(layout: DataLayout, layer: str, sentences: list[Sentence]) -> Path:
-    out = cleaned_dir(layout) / f"{layer}.xml"
+def save_sentences(layout: DataLayout, layer: str, sentences: list[Sentence],
+                   out_path: Path | None = None) -> Path:
+    out = out_path or (cleaned_dir(layout) / f"{layer}.xml")
     root = write_file_root(out, layout.work_id)
     layer_el = add(file_element(root), "LAYER", NAME=layer)
     for sentence in sentences:
+        segment_ids = getattr(sentence, "segment_ids", []) or getattr(sentence, "src_ids", [])
+        source_ids = getattr(sentence, "source_ids", [])
         add(layer_el, "SENTENCE", sentence.text, ID=sentence.id,
             DOCUMENT_ID=sentence.document_id or None,
             PAGES=",".join(str(p) for p in sentence.pages) or None,
-            SRC_IDS=",".join(sentence.src_ids) or None,
-            FLAGS=",".join(sentence.flags) or None)
+            SEGMENT_IDS=",".join(segment_ids) if segment_ids else None,
+            SOURCE_IDS=",".join(source_ids) if source_ids else None,
+            FLAGS=",".join(sentence.flags) or None,
+            RAW_TEXT=getattr(sentence, "raw_text", "") or None)
     return write_root(out, root)
 
 
-def load_sentences(layout: DataLayout, layer: str) -> list[Sentence]:
-    directory = find_cleaned_dir(layout)
-    xml_path = directory / f"{layer}.xml"
+def load_sentences(layout: DataLayout, layer: str, path: Path | None = None) -> list[Sentence]:
+    if path is not None:
+        xml_path = Path(path)
+    else:
+        directory = find_cleaned_dir(layout)
+        xml_path = directory / f"{layer}.xml"
     if xml_path.exists():
         root = read_root(xml_path)
         layer_el = file_element(root).find("LAYER")
         units = layer_el.findall("SENTENCE") if layer_el is not None else []
         return [Sentence(id=el.get("ID", ""), text=text_of(el),
                          pages=int_list_attr(el, "PAGES"),
-                         src_ids=list_attr(el, "SRC_IDS"), flags=list_attr(el, "FLAGS"),
-                         document_id=el.get("DOCUMENT_ID", "")) for el in units]
-    path = directory / f"{layer}.jsonl"
+                         segment_ids=list_attr(el, "SEGMENT_IDS") or list_attr(el, "SRC_IDS"),
+                         source_ids=list_attr(el, "SOURCE_IDS"),
+                         flags=list_attr(el, "FLAGS"),
+                         document_id=el.get("DOCUMENT_ID", ""),
+                         raw_text=el.get("RAW_TEXT", "")) for el in units]
+    directory = find_cleaned_dir(layout)
+    jsonl_path = directory / f"{layer}.jsonl"
     try:
-        rows = read_jsonl(path)
+        rows = read_jsonl(jsonl_path)
     except FileNotFoundError:
         raise FileNotFoundError(
             f"Chưa có {xml_path}; chạy clean --layer {layer} (hoặc pipeline) trước") from None

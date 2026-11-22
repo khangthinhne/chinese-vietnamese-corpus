@@ -207,3 +207,86 @@ def read_document_metadata(path: Path) -> list[dict]:
                     "metadata": metadata, "uncertain": uncertain,
                     "source_pages": int_list_attr(doc, "SOURCE_PAGES")})
     return out
+
+
+def write_sentences(path: Path, work_id: str, layer: str, rows: Iterable[dict]) -> Path:
+    root = write_file_root(path, work_id)
+    layer_el = add(file_element(root), "LAYER", NAME=layer)
+    for row in rows:
+        pages = row.get("pages") or []
+        pages_str = ",".join(str(p) for p in sorted(set(pages))) if pages else None
+        segment_ids = row.get("segment_ids") or row.get("src_ids") or []
+        segment_ids_str = ",".join(segment_ids) if segment_ids else None
+        source_ids = row.get("source_ids") or []
+        source_ids_str = ",".join(source_ids) if source_ids else None
+        flags = row.get("flags") or []
+        flags_str = ",".join(flags) if flags else None
+        add(layer_el, "SENTENCE", row.get("text", ""),
+            ID=row.get("id"),
+            DOCUMENT_ID=row.get("document_id") or None,
+            PAGES=pages_str,
+            SEGMENT_IDS=segment_ids_str,
+            SOURCE_IDS=source_ids_str,
+            FLAGS=flags_str,
+            RAW_TEXT=row.get("raw_text") or None)
+    return write_root(path, root)
+
+
+def read_sentences(path: Path) -> list[dict]:
+    root = read_root(path)
+    file_el = file_element(root)
+    layer_el = file_el.find("LAYER")
+    layer = layer_el.get("NAME", "") if layer_el is not None else ""
+    units = layer_el.findall("SENTENCE") if layer_el is not None else []
+    out = []
+    for el in units:
+        seg_ids = list_attr(el, "SEGMENT_IDS") or list_attr(el, "SRC_IDS")
+        out.append({
+            "id": el.get("ID", ""),
+            "document_id": el.get("DOCUMENT_ID", ""),
+            "layer": layer,
+            "text": text_of(el),
+            "pages": int_list_attr(el, "PAGES"),
+            "segment_ids": seg_ids,
+            "source_ids": list_attr(el, "SOURCE_IDS"),
+            "src_ids": seg_ids,
+            "flags": list_attr(el, "FLAGS"),
+            "raw_text": el.get("RAW_TEXT", ""),
+        })
+    return out
+
+
+def write_structural_layer(path: Path, work_id: str, layer: str, rows: Iterable[dict]) -> Path:
+    root = write_file_root(path, work_id)
+    layer_el = add(file_element(root), "LAYER", NAME=layer)
+    for row in rows:
+        source_ids = row.get("source_ids") or []
+        flags = row.get("flags") or []
+        add(layer_el, "SEGMENT", row.get("text", ""),
+            ID=row.get("id"),
+            DOCUMENT_ID=row.get("document_id"),
+            PAGE=row.get("page"),
+            WRITING_SYSTEM=row.get("writing_system"),
+            SOURCE_IDS=",".join(source_ids) if source_ids else None,
+            FLAGS=",".join(flags) if flags else None,
+            RAW_TEXT=row.get("raw_text") or None)
+    return write_root(path, root)
+
+
+def read_structural_layer(path: Path) -> list[dict]:
+    root = read_root(path)
+    file_el = file_element(root)
+    layer_el = file_el.find("LAYER")
+    layer = layer_el.get("NAME", "") if layer_el is not None else ""
+    segments = layer_el.findall("SEGMENT") if layer_el is not None else []
+    return [{
+        "id": el.get("ID", ""),
+        "document_id": el.get("DOCUMENT_ID", ""),
+        "layer": layer,
+        "page": opt_int(el, "PAGE") or 0,
+        "text": text_of(el),
+        "writing_system": el.get("WRITING_SYSTEM", ""),
+        "source_ids": list_attr(el, "SOURCE_IDS"),
+        "flags": list_attr(el, "FLAGS"),
+        "raw_text": el.get("RAW_TEXT", ""),
+    } for el in segments]

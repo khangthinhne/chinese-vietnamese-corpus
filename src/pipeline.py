@@ -48,9 +48,10 @@ log = logging.getLogger("pipeline")
 
 # python -m src.pipeline --config configs/CPO_18.json --force
 
-STEPS = ("extract", "ocr", "segment", "clean", "align", "export")
+STEPS = ("extract", "ocr", "segment", "clean", "sentence", "validate", "align", "export")
 MODULES = {"extract": "src.extraction.pdf_extraction", "ocr": "src.ocr.ocr",
-           "segment": "src.segmentation.pipeline", "clean": "src.preprocessing.clean",
+           "segment": "src.segmentation.pipeline", "clean": "src.cleaning.pipeline",
+           "sentence": "src.segmentation.sentences", "validate": "src.validation.validate",
            "align": "src.alignment.align", "export": "src.alignment.export"}
 
 
@@ -270,8 +271,29 @@ def _new_plan(cfg: dict, steps: list[str], layers: list[str] | None, pairs: list
         needed = layers or seg_layers or ["han", "am", "nghia"]
         for layer in needed:
             plan.append(("clean", _clean_argv(cfg, layer, base, force,
-                                              extra.get("clean", []),
+                                              ["--structural-only", *extra.get("clean", [])],
                                               boundaries=False, metadata=False)))
+
+    if "sentence" in steps:
+        seg_layers = list(cfg.get("segmentation", {}).get("layers", {}))
+        needed = layers or seg_layers or ["han", "am", "nghia"]
+        for layer in needed:
+            argv = ["--layer", layer, *base]
+            if config_path:
+                argv += ["--config", str(config_path)]
+            argv += (["--force"] if force else []) + list(extra.get("sentence", []))
+            plan.append(("sentence", argv))
+
+    if "validate" in steps:
+        argv = [*base]
+        if config_path:
+            argv += ["--config", str(config_path)]
+        if layers:
+            argv += ["--layers", ",".join(layers)]
+        if pairs:
+            argv += ["--pairs", ",".join(pairs)]
+        argv += (["--force"] if force else []) + list(extra.get("validate", []))
+        plan.append(("validate", argv))
 
     plan += _pair_steps(cfg, steps, pairs, base, force, extra)
     plan += _consolidated_steps(cfg, steps, pairs, base, force, extra)

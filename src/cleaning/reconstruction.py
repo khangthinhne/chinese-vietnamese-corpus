@@ -43,7 +43,8 @@ def reconstruct_page_boundaries(lines: list[RawLine], cfg: CleanConfig, audit: A
         if prev_t and prev_t[-1] in HYPHENS and layer != "han" \
                 and cur.text.lstrip()[:1].islower():
             fixed = RawLine(prev.id, prev.page, prev_t[:-1].rstrip(), prev.is_last_on_page,
-                            prev.raw_text, prev.flags + ["dehyphenated"])
+                            prev.raw_text, prev.flags + ["dehyphenated"],
+                            list(prev.source_ids), prev.document_id)
             lines[i] = fixed
             prev = fixed
             ops.append({"type": "dehyphenate", "from_id": prev.id, "to_id": cur.id,

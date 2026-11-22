@@ -43,7 +43,8 @@ def normalize_lines(lines: list[RawLine], cfg: CleanConfig, layer: str) -> list[
     out = []
     for ln in lines:
         cleaned = clean_han_line(ln.text, cfg) if layer == "han" else clean_vi_line(ln.text, cfg)
-        out.append(RawLine(ln.id, ln.page, cleaned, ln.is_last_on_page, ln.raw_text, ln.flags))
+        out.append(RawLine(ln.id, ln.page, cleaned, ln.is_last_on_page, ln.raw_text, ln.flags,
+                           list(ln.source_ids), ln.document_id))
     return out
 
 

@@ -68,6 +68,8 @@ class RawLine:
     is_last_on_page: bool = False
     raw_text: str = ""                       # bản OCR gốc, KHÔNG bao giờ bị sửa
     flags: list[str] = field(default_factory=list)   # "uncertain:<c>" | "review:<tok>" | "dehyphenated" | ...
+    source_ids: list[str] = field(default_factory=list)
+    document_id: str = ""
 
 
 def has_flag(line: RawLine, name: str) -> bool:
@@ -94,7 +96,10 @@ class FootnoteConfig:
     item_patterns: list[str] = field(default_factory=lambda: [
         r"^\(\d{1,3}\)\s", r"^\（\d{1,3}）\s", r"^\[\d{1,3}\]\s", r"^［\d{1,3}］\s"])
     bib_patterns: list[str] = field(default_factory=lambda: [
-        r"Q\.\s*\d", r"Quyển\s+\S", r"Quyên\s+\S", r"[集卷]", r"\btập\b"])
+        r"Q\.\s*\d", r"Quyển\s+\S", r"Quyên\s+\S", r"[集卷]", r"\btập\b",
+        r"(三国|三國|六朝|全宋|全唐|弘明|高僧|文苑).*?[集卷文]",
+        r"全[宋唐]文",
+    ])
 
 
 @dataclass

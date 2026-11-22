@@ -54,7 +54,9 @@ def read_raw_lines(xml_path: Path) -> list[RawLine]:
         page_no = int(page.get("SOURCE_PAGE", "0"))
         units = [u for u in page if u.get("ID")]
         for i, u in enumerate(units):
-            out.append(RawLine(u.get("ID"), page_no, u.text or "", is_last_on_page=(i == len(units) - 1)))
+            uid = u.get("ID", "")
+            out.append(RawLine(uid, page_no, u.text or "", is_last_on_page=(i == len(units) - 1),
+                               source_ids=[uid] if uid else []))
     return out
 
 
@@ -65,13 +67,29 @@ def read_segmentation_lines(path: Path) -> list[RawLine]:
     from src.segmentation.serialization import read_layer
 
     return [RawLine(row["id"], int(row["page"]), row.get("text", ""),
-                    raw_text=row.get("text", ""), flags=list(row.get("flags") or []))
+                    raw_text=row.get("text", ""), flags=list(row.get("flags") or []),
+                    source_ids=list(row.get("source_ids") or []),
+                    document_id=row.get("document_id") or "")
             for row in read_layer(path)]
 
 
 # --------------------------------------------------------------------------- #
 # Điều phối
 # --------------------------------------------------------------------------- #
+@dataclass
+class StructuralCleanOutput:
+    kept: list[RawLine]
+    dropped_rows: list[tuple[str, int, str, str]]
+    stats: dict
+    audit: Audit
+    section: SectionInfo
+    notes: list
+    duplicates: list[dict]
+    reconstructions: list[dict]
+    pages: list[dict]
+    metadata_docs: list[dict]
+
+
 @dataclass
 class CleanOutput:
     sentences: list[Sentence]
@@ -86,14 +104,20 @@ class CleanOutput:
     metadata_docs: list[dict]
 
 
-def run_cleaning(work_id: str, layer: str, raw_lines: list[RawLine], cfg: CleanConfig) -> CleanOutput:
+def run_structural_cleaning(work_id: str, layer: str, raw_lines: list[RawLine], cfg: CleanConfig) -> StructuralCleanOutput:
+    """Làm sạch cấu trúc (bước 1..9): unicode, trang, metadata, đoạn, trùng lặp,
+    chú thích, nhiễu OCR, nối trang, chuẩn hoá, lọc dòng.
+    
+    KHÔNG tách câu ở giai đoạn này.
+    """
     audit = Audit(work_id, layer)
 
     # 1. Unicode: giữ nguyên bản gốc trong raw_text
     lines: list[RawLine] = []
     for ln in raw_lines:
         lines.append(RawLine(ln.id, ln.page, normalize_unicode(ln.text), ln.is_last_on_page,
-                             ln.text, list(ln.flags)))
+                             ln.raw_text or ln.text, list(ln.flags),
+                             list(ln.source_ids), ln.document_id))
 
     # 2. Trang: loại thủ công / trắng / header-footer lặp
     lines, page_records = filter_pages(lines, cfg, audit)
@@ -156,21 +180,14 @@ def run_cleaning(work_id: str, layer: str, raw_lines: list[RawLine], cfg: CleanC
     kept, dropped_rows = filter_invalid_lines(lines, cfg, audit)
     dup_rows = [(r["removed_id"], r["page"], DUPLICATE_LINE, r["text"]) for r in dup_records]
 
-    # 10. Tách câu
-    sentences, dropped_sent = make_sentences(work_id, layer, kept, cfg)
-
     dropped_all = [(ln.id, ln.page, reason, ln.raw_text or ln.text)
                    for ln, reason in meta_removed] + \
         [(ln.id, ln.page, f"section_{reason}", ln.raw_text or ln.text)
-         for ln, reason in sec_info.excluded] + fn_rows + dup_rows \
-        + dropped_rows + dropped_sent
+         for ln, reason in sec_info.excluded] + fn_rows + dup_rows + dropped_rows
+
     stats = {
         "raw_lines": len(raw_lines), "kept_lines": len(kept),
         "dropped_lines": len(dropped_all),
-        "sentences": len(sentences),
-        "cross_page": sum("cross_page" in s.flags for s in sentences),
-        "no_terminal_punct": sum("no_terminal_punct" in s.flags for s in sentences),
-        "long": sum("long" in s.flags for s in sentences),
         "section_lines": sec_info.n_selected,
         "pages_removed": len(page_records),
         "duplicates": len(dup_records),
@@ -186,8 +203,32 @@ def run_cleaning(work_id: str, layer: str, raw_lines: list[RawLine], cfg: CleanC
         "review_flags": len(audit.reviews),
     }
     metadata_docs = [meta.doc_row(work_id, d) for d in meta.documents]
-    return CleanOutput(sentences, dropped_all, stats, audit, sec_info,
-                       fn_res.notes, dup_records, recon_records, page_records, metadata_docs)
+    return StructuralCleanOutput(kept, dropped_all, stats, audit, sec_info,
+                                 fn_res.notes, dup_records, recon_records, page_records, metadata_docs)
+
+
+def run_cleaning(work_id: str, layer: str, raw_lines: list[RawLine], cfg: CleanConfig) -> CleanOutput:
+    """Toàn bộ pipeline làm sạch cấu trúc + tách câu (giữ tương thích ngược)."""
+    struct = run_structural_cleaning(work_id, layer, raw_lines, cfg)
+
+    # 10. Tách câu
+    from src.segmentation.sentences import make_sentences
+    from src.cleaning.sentence_cleaner import clean_sentences
+    raw_sentences, dropped_sent = make_sentences(work_id, layer, struct.kept, cfg)
+    sentences, dropped_clean = clean_sentences(raw_sentences, layer, cfg)
+
+    dropped_all = list(struct.dropped_rows) + dropped_sent + dropped_clean
+    stats = dict(struct.stats)
+    stats.update({
+        "dropped_lines": len(dropped_all),
+        "sentences": len(sentences),
+        "cross_page": sum("cross_page" in s.flags for s in sentences),
+        "no_terminal_punct": sum("no_terminal_punct" in s.flags for s in sentences),
+        "long": sum("long" in s.flags for s in sentences),
+    })
+    return CleanOutput(sentences, dropped_all, stats, struct.audit, struct.section,
+                       struct.notes, struct.duplicates, struct.reconstructions,
+                       struct.pages, struct.metadata_docs)
 
 
 def clean_layer(work_id: str, layer: str, raw_lines: list[RawLine], cfg: CleanConfig):
@@ -245,14 +286,8 @@ def run(args) -> Path:
     layer = args.layer
     layout = DataLayout(Path(args.data_root), args.work_id)
     out_dir = cleaned_dir(layout)
-    out_xml = out_dir / f"{layer}.xml"
-
-    cfg = build_config(args, layer)
-    cfg.footnotes.enabled = not args.no_footnotes
-    cfg.footnotes.policy = args.footnote_policy
-    cfg.footnotes.detect_parentheses = not args.no_paren_notes
-    cfg.footnotes.detect_bibliographic = not args.no_bib_notes
-    cfg.footnotes.remove_in_text_markers = not args.keep_markers
+    layout.ensure(out_dir)
+    structural_only = getattr(args, "structural_only", False)
 
     xml_path = layout.layer_xml(layer)
     seg_path = layout.segmentation_layer(layer)
@@ -262,6 +297,46 @@ def run(args) -> Path:
     inputs = [input_path]
     if getattr(args, "config", None):
         inputs.append(Path(args.config))
+
+    cfg = build_config(args, layer)
+    cfg.footnotes.enabled = not args.no_footnotes
+    cfg.footnotes.policy = args.footnote_policy
+    cfg.footnotes.detect_parentheses = not args.no_paren_notes
+    cfg.footnotes.detect_bibliographic = not args.no_bib_notes
+    cfg.footnotes.remove_in_text_markers = not args.keep_markers
+
+    if structural_only:
+        layout.ensure(layout.cleaning_structural_dir)
+        struct_xml = layout.cleaning_structural(layer)
+        outputs = [struct_xml, out_dir / f"{layer}.dropped.tsv",
+                   out_dir / "review_required.xml", out_dir / "cleaning_audit.xml"]
+        deps.check_fresh(layout, f"clean_structural:{layer}", inputs, outputs, args.force,
+                         f"{struct_xml} đã tồn tại; dùng --force để ghi đè")
+        struct = run_structural_cleaning(args.work_id, layer, raw, cfg)
+        from src.segmentation import serialization
+        serialization.write_structural_layer(
+            struct_xml, args.work_id, layer,
+            [{"id": ln.id, "document_id": ln.document_id or ln.id.rsplit(".", 2)[0],
+              "page": ln.page, "text": ln.text, "raw_text": ln.raw_text,
+              "flags": ln.flags, "source_ids": list(ln.source_ids)}
+             for ln in struct.kept])
+        if not segmented:
+            write_layer_metadata(out_dir, layer, struct.metadata_docs)
+            aggregate_document_metadata(out_dir, args.work_id)
+            aggregate_file_metadata(layout, out_dir)
+        atomic_write_text(out_dir / f"{layer}.dropped.tsv", "id\tpage\treason\ttext\n" + "".join(
+            f"{i}\t{p}\t{r}\t{t.replace(chr(9), ' ').replace(chr(10), ' ')}\n" for i, p, r, t in struct.dropped_rows))
+        write_audit_files(out_dir, struct.audit, struct.notes, struct.duplicates, struct.reconstructions)
+        deps.record(layout, f"clean_structural:{layer}", inputs, outputs)
+        MetadataStore(layout).update(f"{layer}_structural_cleaned", {
+            "input": layout.rel(input_path), "output": layout.rel(struct_xml), "stats": struct.stats,
+            "section": struct.section.as_dict(),
+            "pages_removed": struct.pages,
+            "review_required": True})
+        log.info("[%s] Làm sạch cấu trúc: %d dòng giữ lại -> %s", layer, len(struct.kept), struct_xml)
+        return struct_xml
+
+    out_xml = out_dir / f"{layer}.xml"
     outputs = [out_xml, out_dir / f"{layer}.txt", out_dir / f"{layer}.dropped.tsv",
                out_dir / "review_required.xml", out_dir / "cleaning_audit.xml"]
     deps.check_fresh(layout, f"clean:{layer}", inputs, outputs, args.force,
@@ -311,6 +386,8 @@ def run(args) -> Path:
 
 def create_parser():
     p = base_parser("02_extraction XML -> làm sạch + tách câu -> 03_cleaned (+ audit)")
+    p.add_argument("--structural-only", action="store_true",
+                   help="Chỉ thực hiện làm sạch cấu trúc, không tách câu")
     p.add_argument("--split", choices=["punct", "line"], help="Mặc định: line cho tho, punct cho lớp khác")
     p.add_argument("--split-colon", action="store_true")
     p.add_argument("--drop-pattern", action="append", help="Regex dòng cần bỏ (lặp lại được)")

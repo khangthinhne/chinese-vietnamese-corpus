@@ -1,11 +1,14 @@
 # Pipeline dóng hàng Hán-Việt
 
-Chế độ mới (khuyến nghị): OCR MỘT lần cho mỗi HỆ CHỮ, rồi phân đoạn tài liệu/lớp:
+Chế độ mới (khuyến nghị): OCR MỘT lần cho mỗi HỆ CHỮ, phân đoạn 3 cấp độc lập:
 
 ```
 PDF ─extract─▶ 02_extraction/pages ─ocr(chi_tra|vie)─▶ 03_ocr/raw + manifests
-    ─segment─▶ 04_segmentation/{documents,layers} ─clean─▶ 05_cleaning/<layer>.jsonl
-    ─align─▶ 06_alignment/<pair>.jsonl ─export─▶ 07_export/*.tsv + *.xlsx + report
+    ─segment─▶ 04_segmentation/{documents,layers}.xml
+    ─clean─▶ 05_cleaning/structural/<layer>.xml
+    ─sentence─▶ 04_segmentation/sentences/<layer>.xml ─▶ 05_cleaning/<layer>.xml
+    ─validate─▶ 05_cleaning/validation_report.json
+    ─align─▶ 06_alignment/<pair>.xml ─export─▶ 07_export/*.tsv + *.xlsx + report
 ```
 
 Chế độ cũ (vẫn chạy, đọc/ghi tương thích): OCR 3 lần theo lớp `han/am/nghia` ->
@@ -17,13 +20,15 @@ các bước đọc tự lùi về thư mục cũ nếu thư mục mới chưa c
 |---|---|---|---|
 | extract | `python -m src.extraction.pdf_extraction` | PDF | `02_extraction/pages/page_205.png` (mới) hoặc `02_extraction/01_page_image/<layer>/` (cũ) |
 | ocr | `python -m src.ocr.ocr --writing-system chi_tra\|vie` | `02_extraction/pages` | `03_ocr/raw/<ws>/page_XXXX.json` + `03_ocr/manifests/<ws>.json` |
-| segment | `python -m src.segmentation.pipeline --config ...` | `03_ocr` | `04_segmentation/` |
-| clean | `python -m src.preprocessing.clean --layer L` | `04_segmentation/layers/<L>.jsonl` (mới) hoặc XML (cũ) | `05_cleaning/<L>.{jsonl,txt,dropped.tsv}` |
-| align | `python -m src.alignment.align` | 2 lớp đã clean | `06_alignment/<pair>.jsonl` |
-| export | `python -m src.alignment.export` | `<pair>.jsonl` | `07_export/<name>.{tsv,xlsx}`, report |
+| segment | `python -m src.segmentation.pipeline --config ...` | `03_ocr` | `04_segmentation/{documents,layers/<layer>}.xml` |
+| clean | `python -m src.cleaning.pipeline --layer L --structural-only` | `04_segmentation/layers/<L>.xml` | `05_cleaning/structural/<L>.xml` + audit files |
+| sentence | `python -m src.segmentation.sentences --layer L` | `05_cleaning/structural/<L>.xml` | `04_segmentation/sentences/<L>.xml` + `05_cleaning/<L>.xml` |
+| validate | `python -m src.validation.validate --config ...` | segmentation & cleaning | `05_cleaning/validation_report.json` |
+| align | `python -m src.alignment.align` | 2 lớp câu đã clean | `06_alignment/<pair>.xml` |
+| export | `python -m src.alignment.export` | `<pair>.xml` | `07_export/<name>.{tsv,xlsx}`, report |
 
 Chạy cả chuỗi: `python -m src.pipeline --config configs/CPO_18.json` 
-Nếu muốn chạy riêng từng step thì thêm `--steps <step>` với <step> là `"extract", "ocr", "segment", "clean", "align", "export"`
+Nếu muốn chạy riêng từng step thì thêm `--steps <step>` với <step> là `"extract", "ocr", "segment", "clean", "sentence", "validate", "align", "export"`
 
 ## Kiến trúc mới: OCR theo hệ chữ + phân đoạn
 - **Config**: có khối `ocr` và/hoặc `segmentation` -> chế độ mới; còn `layers` -> chế độ cũ.
