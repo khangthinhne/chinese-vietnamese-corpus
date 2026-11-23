@@ -31,16 +31,6 @@
       "adapter_version": 3,
       "prompt_version": 3,
       "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74"
-    },
-    "kimhannom": {
-      "name": "kimhannom",
-      "version": "1.0",
-      "api_endpoint": "https://kimhannom.fit.hcmus.edu.vn",
-      "ocr_id": 1,
-      "lang_type": 1,
-      "reading_direction": 1,
-      "epitaph": 0,
-      "adapter_version": 1
     }
   },
   "parameters": {
@@ -58,7 +48,7 @@
     "dpi": 300,
     "keep": null,
     "select": "first",
-    "low_conf": 60,
+    "low_conf": 60.0,
     "workers_requested": 1,
     "workers_used": 1
   },
@@ -219,12 +209,7 @@
         {
           "engine": "qwen",
           "key": "705a6d41af73af9ce3544c083ec1496a4ed20e3292ac14aafb95735332cad1f7",
-          "cache_hit": false
-        },
-        {
-          "engine": "kimhannom",
-          "key": "d8c7df11b9225e3edadba8fc787c995980270721cf3e426815140a1dd8f9996d",
-          "cache_hit": false
+          "cache_hit": true
         }
       ]
     },
@@ -424,12 +409,7 @@
         {
           "engine": "qwen",
           "key": "fffcbd8bca83ece04d9b3ac651b956ae4f99c71357f1b2d706df587325a6eb6e",
-          "cache_hit": false
-        },
-        {
-          "engine": "kimhannom",
-          "key": "233ef17b59067447825b66d0c96812eb8b7fc89a52d19265ed74449fa3209050",
-          "cache_hit": false
+          "cache_hit": true
         }
       ]
     }

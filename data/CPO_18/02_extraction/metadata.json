@@ -75,7 +75,7 @@
       ],
       "drive_parent_id": null,
       "drive_folder_id": null,
-      "run_at": "2026-11-21T08:11:33+00:00"
+      "run_at": "2026-11-22T22:13:43+00:00"
     },
     "chi_tra_ocr": {
       "output": "03_ocr/manifests/chi_tra.json",
@@ -102,14 +102,14 @@
         "dpi": 300,
         "keep": null,
         "select": "first",
-        "low_conf": 60,
+        "low_conf": 60.0,
         "workers_requested": 1,
         "workers_used": 1
       },
       "low_conf_pages": [],
       "empty_pages": [],
       "review_required": true,
-      "run_at": "2026-11-21T19:38:04+00:00"
+      "run_at": "2026-11-22T22:14:13+00:00"
     },
     "vie_ocr": {
       "output": "03_ocr/manifests/vie.json",
@@ -136,14 +136,14 @@
         "dpi": 300,
         "keep": null,
         "select": "first",
-        "low_conf": 60,
+        "low_conf": 60.0,
         "workers_requested": 1,
         "workers_used": 1
       },
       "low_conf_pages": [],
       "empty_pages": [],
       "review_required": true,
-      "run_at": "2026-11-21T19:43:33+00:00"
+      "run_at": "2026-11-22T22:14:14+00:00"
     },
     "segmentation": {
       "documents": 1,
@@ -159,7 +159,7 @@
         "chi_tra",
         "vie"
       ],
-      "run_at": "2026-11-22T04:00:26+00:00"
+      "run_at": "2026-11-22T22:14:14+00:00"
     },
     "han_cleaned": {
       "input": "04_segmentation/layers/han.xml",
@@ -442,14 +442,14 @@
       },
       "low_score_threshold": 0.6,
       "review_required": true,
-      "run_at": "2026-11-22T04:00:27+00:00"
+      "run_at": "2026-11-22T22:14:14+00:00"
     },
     "han-am_export": {
       "name": "CPO_18_han-am_parallel",
       "report": {
         "name": "CPO_18_han-am_parallel",
         "pair": "han-am",
-        "generated_at": "2026-11-22T04:00:27+00:00",
+        "generated_at": "2026-11-22T22:14:15+00:00",
         "pairs_exported": 4,
         "han_sentences": 4,
         "am_sentences": 5,
@@ -473,7 +473,7 @@
         }
       },
       "review_required": true,
-      "run_at": "2026-11-22T04:00:27+00:00"
+      "run_at": "2026-11-22T22:14:15+00:00"
     },
     "han-nghia_alignment": {
       "output": "06_alignment/han-nghia.xml",
@@ -499,14 +499,14 @@
       },
       "low_score_threshold": 0.6,
       "review_required": true,
-      "run_at": "2026-11-22T04:00:27+00:00"
+      "run_at": "2026-11-22T22:14:15+00:00"
     },
     "han-nghia_export": {
       "name": "CPO_18_han-nghia_parallel",
       "report": {
         "name": "CPO_18_han-nghia_parallel",
         "pair": "han-nghia",
-        "generated_at": "2026-11-22T04:00:28+00:00",
+        "generated_at": "2026-11-22T22:14:15+00:00",
         "pairs_exported": 4,
         "han_sentences": 4,
         "nghia_sentences": 5,
@@ -529,7 +529,7 @@
         }
       },
       "review_required": true,
-      "run_at": "2026-11-22T04:00:28+00:00"
+      "run_at": "2026-11-22T22:14:15+00:00"
     },
     "han-viet_export": {
       "name": "CPO_18_parallel",
@@ -545,7 +545,7 @@
         "tho:missing_alignment": 1
       },
       "review_required": true,
-      "run_at": "2026-11-22T04:00:28+00:00"
+      "run_at": "2026-11-22T22:14:15+00:00"
     },
     "han_structural_cleaned": {
       "input": "04_segmentation/layers/han.xml",
@@ -578,7 +578,7 @@
       },
       "pages_removed": [],
       "review_required": true,
-      "run_at": "2026-11-22T04:00:26+00:00"
+      "run_at": "2026-11-22T22:14:14+00:00"
     },
     "am_structural_cleaned": {
       "input": "04_segmentation/layers/am.xml",
@@ -611,7 +611,7 @@
       },
       "pages_removed": [],
       "review_required": true,
-      "run_at": "2026-11-22T04:00:26+00:00"
+      "run_at": "2026-11-22T22:14:14+00:00"
     },
     "nghia_structural_cleaned": {
       "input": "04_segmentation/layers/nghia.xml",
@@ -644,7 +644,7 @@
       },
       "pages_removed": [],
       "review_required": true,
-      "run_at": "2026-11-22T04:00:26+00:00"
+      "run_at": "2026-11-22T22:14:14+00:00"
     },
     "tho_structural_cleaned": {
       "input": "04_segmentation/layers/tho.xml",
@@ -675,7 +675,7 @@
       },
       "pages_removed": [],
       "review_required": true,
-      "run_at": "2026-11-22T04:00:26+00:00"
+      "run_at": "2026-11-22T22:14:14+00:00"
     },
     "sentence_han": {
       "output": "04_segmentation/sentences/han.xml",
@@ -689,7 +689,7 @@
         "long": 0,
         "dropped": 0
       },
-      "run_at": "2026-11-22T04:00:26+00:00"
+      "run_at": "2026-11-22T22:14:14+00:00"
     },
     "sentence_am": {
       "output": "04_segmentation/sentences/am.xml",
@@ -703,7 +703,7 @@
         "long": 0,
         "dropped": 0
       },
-      "run_at": "2026-11-22T04:00:26+00:00"
+      "run_at": "2026-11-22T22:14:14+00:00"
     },
     "sentence_nghia": {
       "output": "04_segmentation/sentences/nghia.xml",
@@ -717,7 +717,7 @@
         "long": 0,
         "dropped": 0
       },
-      "run_at": "2026-11-22T04:00:26+00:00"
+      "run_at": "2026-11-22T22:14:14+00:00"
     },
     "sentence_tho": {
       "output": "04_segmentation/sentences/tho.xml",
@@ -731,7 +731,7 @@
         "long": 0,
         "dropped": 0
       },
-      "run_at": "2026-11-22T04:00:27+00:00"
+      "run_at": "2026-11-22T22:14:14+00:00"
     },
     "validation": {
       "valid": true,
@@ -749,16 +749,15 @@
       },
       "report_path": "05_cleaning/validation_report.json",
       "review_required": true,
-      "run_at": "2026-11-22T04:00:27+00:00"
+      "run_at": "2026-11-22T22:14:14+00:00"
     }
   },
   "dependencies": {
     "ocr:chi_tra": {
-      "fingerprint": "dd4daceda19f44abea2bf7faab24bb2b2fb92662e45db5f03f47a244d31fe2be",
+      "fingerprint": "2ea29318c72cb14e6bb5f9c14df26930f0218206de132a1c25c6a39e191469bc",
       "inputs": [
         "02_extraction/pages/page_205.png",
-        "02_extraction/pages/page_206.png",
-        "configs/CPO_18.json"
+        "02_extraction/pages/page_206.png"
       ],
       "outputs": [
         "03_ocr/manifests/chi_tra.json",
@@ -769,11 +768,10 @@
       ]
     },
     "ocr:vie": {
-      "fingerprint": "dd4daceda19f44abea2bf7faab24bb2b2fb92662e45db5f03f47a244d31fe2be",
+      "fingerprint": "2ea29318c72cb14e6bb5f9c14df26930f0218206de132a1c25c6a39e191469bc",
       "inputs": [
         "02_extraction/pages/page_205.png",
-        "02_extraction/pages/page_206.png",
-        "configs/CPO_18.json"
+        "02_extraction/pages/page_206.png"
       ],
       "outputs": [
         "03_ocr/manifests/vie.json",
@@ -784,7 +782,7 @@
       ]
     },
     "segmentation": {
-      "fingerprint": "b9bfd0d5c7e468d8229b853dd001f758e7ea84c5f2b6fbd5655867049adeeb97",
+      "fingerprint": "109cf9456fd5578447652f96edbf24341d9e311cfa18d16bd539ee6a12c60214",
       "inputs": [
         "03_ocr/ocr_raw/han.xml",
         "03_ocr/ocr_raw/vi.xml",

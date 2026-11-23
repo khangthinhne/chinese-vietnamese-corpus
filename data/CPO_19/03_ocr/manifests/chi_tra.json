@@ -3,20 +3,34 @@
   "work_id": "CPO_19",
   "writing_system": "chi_tra",
   "lang": "chi_tra",
-  "keep": "cjk",
+  "keep": null,
   "source": {
     "path": "E:\\Projects\\han-viet-corpus\\data\\CPO_19\\02_extraction\\pages"
   },
   "engines": {
-    "tesseract": {
-      "name": "tesseract",
-      "version": "5.5.3.20260724",
-      "wrapper_version": "0.3.13",
-      "models": {
-        "chi_tra": "559067dc0f7c94788884742129d66a0117dde7f4ff12b263d92147173497db14"
+    "qwen": {
+      "name": "qwen",
+      "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+      "model_revision": "main",
+      "transformers_version": "4.57.6",
+      "torch_version": "2.5.1+cu121",
+      "cuda_version": "12.1",
+      "bitsandbytes_version": "0.50.2",
+      "quantization": {
+        "load_in_4bit": true,
+        "quant_type": "nf4",
+        "double_quant": true,
+        "compute_dtype": "float16"
       },
-      "oem": 1,
-      "adapter_version": 1
+      "mode": "all",
+      "min_pixels": 200704,
+      "max_pixels": 802816,
+      "band_inches": 2.0,
+      "max_new_tokens": 768,
+      "repetition_penalty": 1.05,
+      "adapter_version": 3,
+      "prompt_version": 3,
+      "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74"
     }
   },
   "parameters": {
@@ -33,11 +47,11 @@
     ],
     "psm": 6,
     "dpi": 300,
-    "keep": "cjk",
+    "keep": null,
     "select": "first",
     "low_conf": 60.0,
     "workers_requested": 4,
-    "workers_used": 3
+    "workers_used": 1
   },
   "pages": [
     {
@@ -45,107 +59,187 @@
       "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_19\\02_extraction\\pages\\page_015.png",
       "image_sha256": "66c28553ad15cb33c10c0296f75397384a68f84ea44214f99c3ce63482ecc57e",
       "raw": "03_ocr/raw/chi_tra/page_0015.json",
-      "selected_engine": "tesseract",
-      "selected_key": "8547b93083abcac825f994a677bb937bf4bf088608d5b83bbb0407e2511685e7",
-      "confidence": 87.23497997329774,
+      "selected_engine": "qwen",
+      "selected_key": "bcfee46ca67ad4f92bf6bd90f94bb3b5ed9fd0fc254b2c6bf01eafb1c5fbbdb7",
+      "confidence": 92.53187350835326,
       "empty": false,
-      "n_lines": 9,
+      "n_lines": 17,
       "lines": [
         {
-          "text": "其 一",
+          "text": "mùa thu về đến kinh đô. [Sứ bộ] đã đi qua các đất: Việt, Sở, Tống, Ngụy, Trịnh, Triệu, Yên, tính ra đường đi dài hơn một vạn hai ngàn hai trăm dặm, kể cả đường về thì tăng gấp đôi, ngày đêm giông ruổi không lúc nào nghỉ ngơi, không được ung dung làm phú ở Kim Lăng, để thơ ở Xích Bích như lần trước.",
           "bbox": [
-            1131,
-            1362,
-            1296,
-            1434
+            365,
+            256,
+            2084,
+            553
           ],
-          "confidence": 96.0
+          "confidence": 93.47
         },
         {
-          "text": "二 諒 江 山 境 界 連",
+          "text": "Trên đường đi, phạm những nơi núi sông hiểm yếu, dịch quán dừng chân; những di tích của người xưa, những cảnh người nay trông",
           "bbox": [
-            920,
-            1502,
-            1503,
-            1563
+            365,
+            553,
+            2084,
+            850
           ],
-          "confidence": 92.57142857142857
+          "confidence": 93.47
         },
         {
-          "text": "旁 通 剌 廣 接 高 宣",
+          "text": "thấy, nhất nhất đều vẽ lại, rồi đem những vần thơ đã làm được, cùng những điều ghi chép được ở trên lầu vách, bia kệ, chép lại ở phía trên bản đồ, để sau này có ai được vào công việc ấy, có thể lấy đó làm kim chỉ nam cho đường đi sứ chàng?",
           "bbox": [
-            924,
-            1618,
-            1498,
-            1682
+            368,
+            853,
+            2081,
+            1301
           ],
-          "confidence": 87.85714285714286
+          "confidence": 94.23
         },
         {
-          "text": "溪 流 奔 駛 爭 歸 海",
+          "text": "其一",
           "bbox": [
-            923,
-            1737,
-            1502,
-            1800
+            916,
+            1358,
+            1507,
+            1470
           ],
-          "confidence": 73.71428571428571
+          "confidence": 89.38
         },
         {
-          "text": "嶺 道 垂 梯 直 上 天",
+          "text": "二諒江山境界連",
           "bbox": [
-            921,
-            1857,
-            1500,
-            1918
+            916,
+            1470,
+            1507,
+            1581
           ],
-          "confidence": 85.57142857142857
+          "confidence": 89.38
         },
         {
-          "text": "神 剩 尚 留 明 將 石",
+          "text": "旁通荆廣接高宣",
           "bbox": [
-            921,
-            1972,
-            1498,
-            2051
+            916,
+            1581,
+            1507,
+            1692
           ],
-          "confidence": 87.14285714285714
+          "confidence": 89.38
         },
         {
-          "text": "儿 門 空 鎖 漢 祠 煙",
+          "text": "溪流奔馳爭歸海",
           "bbox": [
-            914,
-            2089,
-            1492,
-            2167
+            916,
+            1692,
+            1507,
+            1804
           ],
-          "confidence": 80.28571428571429
+          "confidence": 89.38
         },
         {
-          "text": "自 從 南 北 通 關 後",
+          "text": "嶺道垂梯直上天",
           "bbox": [
-            933,
-            2210,
-            1502,
-            2270
+            910,
+            1853,
+            1747,
+            1958
           ],
-          "confidence": 95.28571428571429
+          "confidence": 95.79
         },
         {
-          "text": "指 點 星 駢 到 自 燕",
+          "text": "神劍尚留明將石",
           "bbox": [
-            922,
-            2330,
-            1498,
-            2388
+            910,
+            1958,
+            1747,
+            2063
           ],
-          "confidence": 93.42857142857143
+          "confidence": 95.79
+        },
+        {
+          "text": "鬼門空鎖漢祠煙",
+          "bbox": [
+            910,
+            2063,
+            1747,
+            2169
+          ],
+          "confidence": 95.79
+        },
+        {
+          "text": "自從南北通關後",
+          "bbox": [
+            910,
+            2169,
+            1747,
+            2274
+          ],
+          "confidence": 95.79
+        },
+        {
+          "text": "指点星騄到自燕",
+          "bbox": [
+            334,
+            2326,
+            2076,
+            2434
+          ],
+          "confidence": 85.9
+        },
+        {
+          "text": "PHIÊN ÂM:",
+          "bbox": [
+            334,
+            2434,
+            2076,
+            2543
+          ],
+          "confidence": 85.9
+        },
+        {
+          "text": "LẠNG SƠN ĐẠO TRUNG (NHỊ THỦ)",
+          "bbox": [
+            334,
+            2543,
+            2076,
+            2652
+          ],
+          "confidence": 85.9
+        },
+        {
+          "text": "KỲ NHẤT",
+          "bbox": [
+            334,
+            2652,
+            2076,
+            2760
+          ],
+          "confidence": 85.9
+        },
+        {
+          "text": "Nhị Lạng giang sơn cảnh giới liên,",
+          "bbox": [
+            334,
+            2760,
+            2076,
+            2868
+          ],
+          "confidence": 85.9
+        },
+        {
+          "text": "Bàng thông Kinh, Quảng tiếp Cao, Tuyên.",
+          "bbox": [
+            334,
+            2868,
+            2076,
+            2977
+          ],
+          "confidence": 85.9
         }
       ],
       "engines": [
         {
-          "engine": "tesseract",
-          "key": "8547b93083abcac825f994a677bb937bf4bf088608d5b83bbb0407e2511685e7",
+          "engine": "qwen",
+          "key": "bcfee46ca67ad4f92bf6bd90f94bb3b5ed9fd0fc254b2c6bf01eafb1c5fbbdb7",
           "cache_hit": true
         }
       ]
@@ -155,16 +249,317 @@
       "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_19\\02_extraction\\pages\\page_016.png",
       "image_sha256": "27d806672f62d7997558ce8e2373eee3a203268f67ce275e805b48dc944d0715",
       "raw": "03_ocr/raw/chi_tra/page_0016.json",
-      "selected_engine": "tesseract",
-      "selected_key": "3d2accd776ff61a48e2636f07713158a294ecc8366f3e1bc466ccf421fe3663d",
-      "confidence": null,
-      "empty": true,
-      "n_lines": 0,
-      "lines": [],
+      "selected_engine": "qwen",
+      "selected_key": "8fc1f6181df06c7f39ff0f98cc0d35e02d51013cf6c9c4c53883ecfa29cabf40",
+      "confidence": 93.77288888888887,
+      "empty": false,
+      "n_lines": 30,
+      "lines": [
+        {
+          "text": "Khê lưu bôn sử tranh quy hài;",
+          "bbox": [
+            338,
+            265,
+            2086,
+            351
+          ],
+          "confidence": 89.93
+        },
+        {
+          "text": "Lĩnh đạo thù thê trực thường thiên.",
+          "bbox": [
+            338,
+            351,
+            2086,
+            436
+          ],
+          "confidence": 89.93
+        },
+        {
+          "text": "Thần kiếm thượng lưu Minh tướng thạch;",
+          "bbox": [
+            338,
+            436,
+            2086,
+            522
+          ],
+          "confidence": 89.93
+        },
+        {
+          "text": "Quỷ môn không tỏa Hán từ yên.",
+          "bbox": [
+            338,
+            522,
+            2086,
+            608
+          ],
+          "confidence": 89.93
+        },
+        {
+          "text": "Tự từng Nam Bắc thông quan hậu,",
+          "bbox": [
+            338,
+            608,
+            2086,
+            693
+          ],
+          "confidence": 89.93
+        },
+        {
+          "text": "Chỉ điểm tinh biên đáo tự Yên.",
+          "bbox": [
+            338,
+            693,
+            2086,
+            779
+          ],
+          "confidence": 89.93
+        },
+        {
+          "text": "DỊCH NGHĨA:",
+          "bbox": [
+            279,
+            827,
+            2325,
+            890
+          ],
+          "confidence": 92.47
+        },
+        {
+          "text": "ĐỌC ĐƯỜNG LẠNG SƠN (HAI BÀI)",
+          "bbox": [
+            279,
+            890,
+            2325,
+            953
+          ],
+          "confidence": 92.47
+        },
+        {
+          "text": "BÀI 1",
+          "bbox": [
+            279,
+            953,
+            2325,
+            1016
+          ],
+          "confidence": 92.47
+        },
+        {
+          "text": "Núi sông hai xứ Lạng, bờ cõi tiếp nối,",
+          "bbox": [
+            279,
+            1016,
+            2325,
+            1079
+          ],
+          "confidence": 92.47
+        },
+        {
+          "text": "(1)",
+          "bbox": [
+            279,
+            1079,
+            2325,
+            1143
+          ],
+          "confidence": 92.47
+        },
+        {
+          "text": "Thống với Kinh, Quảng, liền với Cao, Tuyên.",
+          "bbox": [
+            279,
+            1143,
+            2325,
+            1206
+          ],
+          "confidence": 92.47
+        },
+        {
+          "text": "(2)",
+          "bbox": [
+            279,
+            1206,
+            2325,
+            1269
+          ],
+          "confidence": 92.47
+        },
+        {
+          "text": "Tranh đổ ra biển, dòng khe chảy xiết;",
+          "bbox": [
+            279,
+            1269,
+            2325,
+            1332
+          ],
+          "confidence": 92.47
+        },
+        {
+          "text": "Vươn thẳng lên trời, đường núi thang treo.",
+          "bbox": [
+            377,
+            1351,
+            1657,
+            1430
+          ],
+          "confidence": 92.61
+        },
+        {
+          "text": "Hòn đá tướng Minh, còn hằn vết chém;",
+          "bbox": [
+            377,
+            1430,
+            1657,
+            1508
+          ],
+          "confidence": 92.61
+        },
+        {
+          "text": "Khói đền tướng Hán, tỏa chặt Quỷ môn.",
+          "bbox": [
+            377,
+            1508,
+            1657,
+            1587
+          ],
+          "confidence": 92.61
+        },
+        {
+          "text": "Nam Bắc sau khi mở thông cửa ải,",
+          "bbox": [
+            377,
+            1587,
+            1657,
+            1666
+          ],
+          "confidence": 92.61
+        },
+        {
+          "text": "Có người đưa xe sứ đến Yên Kinh.",
+          "bbox": [
+            377,
+            1666,
+            1657,
+            1745
+          ],
+          "confidence": 92.61
+        },
+        {
+          "text": "KHẢO DỊ:",
+          "bbox": [
+            377,
+            1745,
+            1657,
+            1823
+          ],
+          "confidence": 92.61
+        },
+        {
+          "text": "a. Bản A.117c/1: Khai 开.",
+          "bbox": [
+            377,
+            1823,
+            1657,
+            1902
+          ],
+          "confidence": 92.61
+        },
+        {
+          "text": "CHÚ THÍCH:",
+          "bbox": [
+            377,
+            1939,
+            2085,
+            2038
+          ],
+          "confidence": 95.99
+        },
+        {
+          "text": "1. Hai xứ Lạng: Túc Lạng Giang và Lạng Sơn. Lạng Giang thuộc Bắc Giang.",
+          "bbox": [
+            377,
+            2038,
+            2085,
+            2137
+          ],
+          "confidence": 95.99
+        },
+        {
+          "text": "2. Kinh, Quảng: Túc Kinh Châu và Quảng Đông, Quảng Tây.",
+          "bbox": [
+            377,
+            2137,
+            2085,
+            2236
+          ],
+          "confidence": 95.99
+        },
+        {
+          "text": "Cao, Tuyên: Là hai tỉnh Cao Bằng và Tuyên Quang.",
+          "bbox": [
+            377,
+            2236,
+            2085,
+            2335
+          ],
+          "confidence": 95.99
+        },
+        {
+          "text": "3. Hòn đá tướng Minh: Tại đèo Yên Ngựa nơi Lê Lợi phục binh giết chết Liễu Thăng. Tương truyền linh hồn của Liễu Thăng kết thành một hòn đá hình người không đầu, trên mình còn hằn những vết gươm.",
+          "bbox": [
+            377,
+            2335,
+            2085,
+            2434
+          ],
+          "confidence": 95.99
+        },
+        {
+          "text": "4.Mã Viện sau khi đàn áp cuộc khởi nghĩa Hai Bà Trưng đã vơ vét rất nhiều ý dĩ chở về Trung Quốc, khi qua cửa Quỷ bị tố cáo là chở mấy xe ngọc trai.",
+          "bbox": [
+            377,
+            2451,
+            2084,
+            2597
+          ],
+          "confidence": 94.94
+        },
+        {
+          "text": "Cửa Quỷ: Thuộc Chi Lăng (Lạng Sơn).",
+          "bbox": [
+            377,
+            2597,
+            2084,
+            2744
+          ],
+          "confidence": 94.94
+        },
+        {
+          "text": "Quan nhà Hán: Chỉ Mã Viện.",
+          "bbox": [
+            377,
+            2744,
+            2084,
+            2891
+          ],
+          "confidence": 94.94
+        },
+        {
+          "text": "5.Theo thể thức bang giao xưa, nước tiếp nhận sứ thần cử người đến cửa ải đón tiếp và đưa về kinh đô.",
+          "bbox": [
+            377,
+            2891,
+            2084,
+            3037
+          ],
+          "confidence": 94.94
+        }
+      ],
       "engines": [
         {
-          "engine": "tesseract",
-          "key": "3d2accd776ff61a48e2636f07713158a294ecc8366f3e1bc466ccf421fe3663d",
+          "engine": "qwen",
+          "key": "8fc1f6181df06c7f39ff0f98cc0d35e02d51013cf6c9c4c53883ecfa29cabf40",
           "cache_hit": true
         }
       ]
@@ -174,127 +569,273 @@
       "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_19\\02_extraction\\pages\\page_017.png",
       "image_sha256": "cef6cf35780eff6d3a7c80ca9d7ca072ac00324e2462c68fa3553cf6f542c667",
       "raw": "03_ocr/raw/chi_tra/page_0017.json",
-      "selected_engine": "tesseract",
-      "selected_key": "f84633989e465146afa1a9cbbb9187aca1d9034216f9c0909f8366d5647bf298",
-      "confidence": 71.8906227883935,
+      "selected_engine": "qwen",
+      "selected_key": "532591c648d1e47f1a9b32c9dafaa56ca1bf0b3dcd6427f7a02afb3938225588",
+      "confidence": 93.04184381778742,
       "empty": false,
-      "n_lines": 10,
+      "n_lines": 25,
       "lines": [
         {
-          "text": "北 諒 交 驚 漢 將 臺",
+          "text": "DỊCH THO:",
           "bbox": [
-            926,
-            1344,
-            1503,
-            1406
+            379,
+            306,
+            2089,
+            382
           ],
-          "confidence": 81.57142857142857
+          "confidence": 94.62
         },
         {
-          "text": "錯 疑 薏 苗 落 污 菜 ˍ",
+          "text": "Núi sông xứ Lạng kế liền nhau,",
           "bbox": [
-            942,
-            1468,
-            1759,
-            1543
+            379,
+            382,
+            2089,
+            457
           ],
-          "confidence": 77.125
+          "confidence": 94.62
         },
         {
-          "text": "無 窮 今 古 樹 榮 謝 ﹒",
+          "text": "Tiếp với Kinh Tuyên nối Quảng Cao.",
           "bbox": [
-            948,
-            1587,
-            1612,
-            1665
+            379,
+            457,
+            2089,
+            532
           ],
-          "confidence": 85.875
+          "confidence": 94.62
         },
         {
-          "text": "不 老 溏 山 人 往 來 0",
+          "text": "Suối nước băng băng dồn biển cả;",
           "bbox": [
-            955,
-            1716,
-            2075,
-            1787
+            379,
+            532,
+            2089,
+            608
           ],
-          "confidence": 84.75
+          "confidence": 94.62
         },
         {
-          "text": "逞 路 見 從 青 荔 出",
+          "text": "Núi non sừng sừng vút trời sao.",
           "bbox": [
-            949,
-            1842,
-            1497,
-            1905
+            379,
+            608,
+            2089,
+            684
           ],
-          "confidence": 85.42857142857143
+          "confidence": 94.62
         },
         {
-          "text": "0 曰 嚓 閘 自 緣 雲 閞 ， ，",
+          "text": "Hòn đá tướng Minh còn vết chém;",
           "bbox": [
-            419,
-            1938,
-            1779,
-            2051
+            379,
+            684,
+            2089,
+            759
           ],
-          "confidence": 61.1
+          "confidence": 94.62
         },
         {
-          "text": "太 s 日 一 吳 ﹍ 早 代 ， 0 60",
+          "text": "Khói đền tướng Hán khoá chặt vào.",
           "bbox": [
-            966,
-            2066,
-            1818,
-            2130
+            379,
+            759,
+            2089,
+            834
           ],
-          "confidence": 45.333333333333336
+          "confidence": 94.62
         },
         {
-          "text": "﹍ 奇 觀 歌 茅 長 天 色 ﹍ 0",
+          "text": "Sau khi Nam Bắc thông quan ải,",
           "bbox": [
-            909,
-            2096,
-            1818,
-            2169
+            379,
+            834,
+            2089,
+            910
           ],
-          "confidence": 77.1
+          "confidence": 94.62
         },
         {
-          "text": "中 楹 絕 星 納 斗 台 ﹍ 0",
+          "text": "Sử gia Yên Kính đến đón chào.",
           "bbox": [
-            946,
-            2218,
-            1873,
-            2281
+            820,
+            902,
+            2090,
+            1029
           ],
-          "confidence": 78.55555555555556
+          "confidence": 84.72
         },
         {
-          "text": "﹣ 硒 八 君 5",
+          "text": "Lâm Giang",
           "bbox": [
-            963,
-            2442,
-            1517,
-            2514
+            820,
+            1029,
+            2090,
+            1156
           ],
-          "confidence": 49.0
+          "confidence": 84.72
+        },
+        {
+          "text": "2. 其二",
+          "bbox": [
+            820,
+            1156,
+            2090,
+            1283
+          ],
+          "confidence": 84.72
+        },
+        {
+          "text": "北諒交疆漢將臺",
+          "bbox": [
+            820,
+            1283,
+            2090,
+            1410
+          ],
+          "confidence": 84.72
+        },
+        {
+          "text": "錯疑意政落污萊",
+          "bbox": [
+            879,
+            1430,
+            2090,
+            1565
+          ],
+          "confidence": 87.09
+        },
+        {
+          "text": "無窮今古樹榮謝",
+          "bbox": [
+            879,
+            1565,
+            2090,
+            1700
+          ],
+          "confidence": 87.09
+        },
+        {
+          "text": "不老溪山人往來",
+          "bbox": [
+            879,
+            1700,
+            2090,
+            1834
+          ],
+          "confidence": 87.09
+        },
+        {
+          "text": "道路見從青草出",
+          "bbox": [
+            879,
+            1834,
+            2090,
+            1969
+          ],
+          "confidence": 87.09
+        },
+        {
+          "text": "田疇聞自綠雲開",
+          "bbox": [
+            388,
+            1963,
+            2080,
+            2081
+          ],
+          "confidence": 91.71
+        },
+        {
+          "text": "奇觀最是長天色",
+          "bbox": [
+            388,
+            2081,
+            2080,
+            2199
+          ],
+          "confidence": 91.71
+        },
+        {
+          "text": "中極經星絢斗台",
+          "bbox": [
+            388,
+            2199,
+            2080,
+            2316
+          ],
+          "confidence": 91.71
+        },
+        {
+          "text": "PHIÊN ÂM:",
+          "bbox": [
+            388,
+            2316,
+            2080,
+            2434
+          ],
+          "confidence": 91.71
+        },
+        {
+          "text": "KỲ NHỊ",
+          "bbox": [
+            388,
+            2434,
+            2080,
+            2552
+          ],
+          "confidence": 91.71
+        },
+        {
+          "text": "Bắc Lạng giao cương Hán tướng đài,",
+          "bbox": [
+            395,
+            2546,
+            2055,
+            2657
+          ],
+          "confidence": 95.33
+        },
+        {
+          "text": "Thác nghi ý dĩ lạc vu lai.",
+          "bbox": [
+            395,
+            2657,
+            2055,
+            2768
+          ],
+          "confidence": 95.33
+        },
+        {
+          "text": "Vô cùng kim cổ thụ vinh tạ;",
+          "bbox": [
+            395,
+            2768,
+            2055,
+            2878
+          ],
+          "confidence": 95.33
+        },
+        {
+          "text": "Bất lão khê sơn nhân vãng lai.",
+          "bbox": [
+            395,
+            2878,
+            2055,
+            2989
+          ],
+          "confidence": 95.33
         }
       ],
       "engines": [
         {
-          "engine": "tesseract",
-          "key": "f84633989e465146afa1a9cbbb9187aca1d9034216f9c0909f8366d5647bf298",
+          "engine": "qwen",
+          "key": "532591c648d1e47f1a9b32c9dafaa56ca1bf0b3dcd6427f7a02afb3938225588",
           "cache_hit": true
         }
       ]
     }
   ],
-  "low_conf_pages": [
-    16
-  ],
-  "empty_pages": [
-    16
-  ],
+  "low_conf_pages": [],
+  "empty_pages": [],
   "review_required": true
 }
