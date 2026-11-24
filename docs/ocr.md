@@ -1,137 +1,120 @@
-# Hướng dẫn chạy OCR bằng Tesseract
+# Hướng Dẫn OCR: Single-Stream Qwen VLM & Tesseract Legacy
 
-Chạy lệnh từ thư mục gốc repo. Module nhận thư mục ảnh, lưu OCR thô dạng JSON; chế độ mới
-xuất kho thô theo hệ chữ (`chi_tra`, `vie`) cho bước phân đoạn, chế độ cũ xuất XML cho từng
-lớp `han`, `am`, `nghia`, `tho`.
+Tài liệu này mô tả chi tiết hệ thống OCR trong dự án ngữ liệu song song Hán - Việt.
 
-## 1. Cài môi trường
+---
 
-Dùng Python 3.11 trở lên; ví dụ dưới đây dùng Python 3.13:
+## 1. Triết Lý Thiết Kế: Single-Stream OCR (Khuyến nghị)
 
-```powershell
-py -3.13 -m venv .venv-ocr
-.venv-ocr/Scripts/python.exe -m pip install -r requirements-ocr.txt
+> **"OCR nhận dạng ký tự. Segmentation hiểu cấu trúc tài liệu."**
+
+Trong kiến trúc mới, quá trình OCR được thực hiện **đúng 1 lần duy nhất cho mỗi trang** thông qua mô hình thị giác ngôn ngữ lớn **Qwen VLM** (hoặc engine đa ngôn ngữ).
+- Mô hình nhận dạng tất cả chữ viết trên trang: chữ Hán/Nôm, phiên âm, dịch nghĩa, dịch thơ, chú thích, số trang, tiêu đề...
+- Không có bước tiền phân loại hay lọc script (`cjk` / `latin`) ở tầng OCR.
+- Dòng OCR thô được bảo toàn nguyên vẹn trong một luồng thống nhất.
+- Việc phân chia nội dung vào các lớp ngữ nghĩa (`han`, `am`, `nghia`, `tho`) do bước phân đoạn tiếp theo (`src.segmentation`) đảm nhiệm.
+
+---
+
+## 2. Quy Ước Đặt Tên & Cấu Trúc Thư Mục OCR
+
+### 2.1. Đặt tên trang 4 chữ số (4-Digit Zero-Padding)
+Tất cả các tệp theo trang đều dùng định dạng 4 chữ số: `0001`, `0015`, `0206`, `9999`.
+
+### 2.2. Bố cục thư mục `03_ocr/`
+```text
+03_ocr/
+    raw/
+        0015.json               # Raw JSON từ Qwen VLM (immutable)
+        0016.json
+        manifest.json           # Manifest theo dõi các lượt OCR unified
+    ocr_raw/
+        raw.xml                 # XML chuẩn hoá toàn bộ dòng của tác phẩm
+    ocr_raw_text/
+        0015.txt                # Văn bản thô từng trang phục vụ tra cứu nhanh
+        0016.txt
+    metadata.json               # Metadata tổng hợp của OCR run
 ```
 
-Cài [Tesseract 5](https://tesseract-ocr.github.io/tessdoc/Installation.html) nếu máy chưa có.
+---
 
-Khai báo đường dẫn và tải model `tessdata_best` vào môi trường local:
+## 3. Lược Đồ Dữ Liệu XML Chuẩn Hóa (`03_ocr/ocr_raw/raw.xml`)
 
-```powershell
-$env:TESSERACT_CMD = 'C:/Program Files/Tesseract-OCR/tesseract.exe'
-$ocrTessdata = Join-Path (Resolve-Path .venv-ocr).Path 'tessdata'
-New-Item -ItemType Directory -Path $ocrTessdata -Force | Out-Null
-Invoke-WebRequest -UseBasicParsing -Uri 'https://raw.githubusercontent.com/tesseract-ocr/tessdata_best/main/chi_tra.traineddata' -OutFile (Join-Path $ocrTessdata 'chi_tra.traineddata')
-Invoke-WebRequest -UseBasicParsing -Uri 'https://raw.githubusercontent.com/tesseract-ocr/tessdata_best/main/vie.traineddata' -OutFile (Join-Path $ocrTessdata 'vie.traineddata')
-$env:TESSDATA_PREFIX = $ocrTessdata
-& $env:TESSERACT_CMD --list-langs
+Tệp `raw.xml` đại diện cho toàn bộ luồng OCR thống nhất của tác phẩm:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<CORPUS WORK_ID="CPO_19">
+    <PAGE NUMBER="0015">
+        <LINE ID="P0015.L001" BBOX="272,887,2200,920" CONFIDENCE="0.95">夫道至虚，四大理，而有法门，妙群域。</LINE>
+        <LINE ID="P0015.L002" BBOX="272,930,2200,965" CONFIDENCE="0.98">PHIÊN ÂM</LINE>
+        <LINE ID="P0015.L003" BBOX="272,970,2200,1010" CONFIDENCE="0.94">Phù Đạo chí hư, tứ đại lý thường...</LINE>
+    </PAGE>
+</CORPUS>
 ```
 
-Chỉ cần tải model một lần. Mỗi khi mở terminal mới, khai báo lại `TESSERACT_CMD` và `TESSDATA_PREFIX`; ví dụ:
+- `ID`: Mã duy nhất cho từng dòng theo cấu trúc `P<trang:04d>.L<thứ_tự:03d>` (ví dụ: `P0015.L001`).
+- `BBOX`: Tọa độ bounding box dạng `x0,y0,x1,y1` (tương đối theo kích thước ảnh hoặc pixel chuẩn hoá).
+- `CONFIDENCE`: Độ tin cậy nhận dạng (từ 0.0 đến 1.0).
+
+---
+
+## 4. Chạy OCR Single-Stream
+
+### 4.1. Lệnh CLI
+Để chạy OCR single-stream với Qwen VLM:
 
 ```powershell
-$env:TESSERACT_CMD = 'C:/Program Files/Tesseract-OCR/tesseract.exe'
-$env:TESSDATA_PREFIX = (Resolve-Path .venv-ocr/tessdata).Path
+python -m src.ocr.ocr --unified --work-id CPO_19 --pages 15-20 --engine qwen --workers 4
 ```
 
-Module chỉ dùng Tesseract, không cần cài PaddleOCR. Adapter dùng LSTM (`--oem 1`), ghi hash model để truy vết và đặt timeout 180 giây cho mỗi lần nhận dạng.
+Các tham số chính:
+| Tham số | Ý nghĩa | Mặc định |
+|---|---|---|
+| `--unified` | Bật chế độ OCR single-stream | `False` |
+| `--engine` / `--engines` | Tên engine nhận dạng (`qwen`, `kimhannom`, `tesseract`) | `qwen` |
+| `--pages` | Danh sách trang (ví dụ: `15-20,25`) | Bắt buộc |
+| `--source` | Thư mục ảnh nguồn | `data/<WORK>/02_extraction/pages` |
+| `--force` | Ghi đè XML và manifest (vẫn tái sử dụng raw cache nếu hash khớp) | `False` |
+| `--workers` | Số luồng xử lý song song | `4` |
 
-## 2. Chuẩn bị ảnh và chạy
-
-Mỗi file là một trang, định dạng PNG/JPG/JPEG/TIF/TIFF/BMP. Số cuối trong tên file là số trang nguồn: `page_0205.png` tương ứng trang 205. Không dùng số in trên sách để tự đổi ID. Ảnh không có số bị bỏ qua kèm cảnh báo; thiếu trang, trùng số trang hoặc ảnh nhiều frame sẽ báo lỗi.
-
-Thay `MY_WORK`, đường dẫn ảnh và phạm vi trang bằng dữ liệu của bạn:
-
-```powershell
-.venv-ocr/Scripts/python.exe -m src.ocr.ocr --layer han --work-id MY_WORK --source data/MY_WORK/01_sources/pages --pages 205-210 --workers 1
-```
-
-Các tham số thường dùng:
-
-| Tham số | Ý nghĩa |
-|---|---|
-| `--layer` | `han`, `am`, `nghia` hoặc `tho` |
-| `--pages` | Bắt buộc, ví dụ `205-210,212` |
-| `--region` | Vùng crop `x0,y0,x1,y1`, theo tỉ lệ 0..1; mặc định toàn trang |
-| `--lang` | Mặc định `chi_tra` cho Hán, `vie` cho ba lớp còn lại |
-| `--keep` | `cjk`, `latin`, `none`; mặc định theo lớp |
-| `--psm` | Mặc định 6 cho khối văn bản; có thể thử 3 khi bố cục phức tạp |
-| `--dpi` | Mặc định 300; chỉ khai báo độ phân giải, không phóng ảnh |
-| `--workers` | Mặc định 4; dùng 1 nếu muốn hạn chế tài nguyên |
-| `--low-conf` | Ngưỡng đưa trang vào danh sách rà soát, mặc định 60 |
-| `--force` | Cho phép xuất lại XML và metadata, vẫn dùng cache OCR hợp lệ |
-
-Ví dụ OCR nửa trên trang:
-
-```powershell
-.venv-ocr/Scripts/python.exe -m src.ocr.ocr --layer han --work-id MY_WORK --source data/MY_WORK/01_sources/pages --pages 205 --region 0,0,1,0.5 --workers 1
-```
-
-Nếu cần `chi_tra_vert` hoặc kết hợp ngôn ngữ như `chi_tra+vie`, cài đủ các model tương ứng. Tách Hán/Việt theo vùng ảnh hoặc bộ lọc chữ viết. Phân biệt âm/nghĩa/thơ cần chọn đúng nội dung nguồn; bộ lọc Latin không tự phân biệt ba lớp này.
-
-## 2b. Chế độ mới: OCR theo HỆ CHỮ (khuyến nghị)
-
-Chế độ mới chạy OCR đúng MỘT lần cho mỗi hệ chữ viết (`chi_tra`, `vie`) thay vì 3 lần cho
-`han/am/nghia`, rồi để bước phân đoạn cắt tài liệu/lớp:
-
-```powershell
-.venv-ocr/Scripts/python.exe -m src.ocr.ocr --writing-system chi_tra --work-id MY_WORK `
-  --source data/MY_WORK/02_extraction/pages --pages 205-210 --workers 4
-.venv-ocr/Scripts/python.exe -m src.ocr.ocr --writing-system vie --work-id MY_WORK `
-  --source data/MY_WORK/02_extraction/pages --pages 205-210 --workers 4
-```
-
-- `--writing-system` thay cho `--layer`; không tạo `<layer>.xml`.
-- Mặc định `lang` = hệ chữ, `keep` = `cjk` (chi_tra) / `latin` (vie); có thể ghi đè.
-- Output: `03_ocr/raw/<writing_system>/page_XXXX.json` (append-only, giữ bbox/confidence/payload
-  engine) và `03_ocr/manifests/<writing_system>.json` (engine, tham số, trang lỗi/rỗng).
-- Vì ảnh nằm trong `02_extraction/pages` của chính work, chế độ mới KHÔNG copy lại vào
-  `01_sources`; nguồn PDF/ảnh gốc đã được extract đăng ký trước đó.
-- Cache dùng băm tham số (ảnh, hệ chữ, engine/model, lang, crop, psm, dpi). Chạy lại cùng tham
-  số chỉ đọc cache. `--force` ghi lại manifest nhưng KHÔNG xoá run cũ; muốn nhận dạng lại với
-  cùng tham số phải xoá thủ công tệp raw tương ứng (có chủ đích, tránh mất dữ liệu).
-- Manifest ghi đè cần `--force`. Nếu chưa có `04_segmentation`, chạy
-  `python -m src.segmentation.pipeline --config <config> --work-id MY_WORK` tiếp theo.
-
-## 3. Dùng config
-
-Có thể lưu cấu hình riêng theo cấu trúc sau, dùng dấu `/` trong đường dẫn JSON:
-
+### 4.2. Cấu hình qua file JSON (`configs/CPO_19.json`)
 ```json
 {
-  "common": {
-    "work_id": "MY_WORK",
-    "source": "data/MY_WORK/01_sources/pages",
-    "pages": "205-210",
-    "workers": 1
-  },
-  "layers": {
-    "han": { "lang": "chi_tra", "region": "0,0,1,0.5" },
-    "am": { "lang": "vie", "region": "0,0.5,1,1" }
+  "ocr": {
+    "engine": "qwen",
+    "mode": "all",
+    "prompt_type": "all",
+    "keep_raw": true
   }
 }
 ```
 
-Vùng crop trên chỉ là ví dụ; cần xác định theo bố cục thật. Sau khi lưu config:
+Hệ thống sẽ tự động phát hiện cấu hình OCR unified khi không có các trường phân hệ chữ (`chi_tra`/`vie`).
 
-```powershell
-.venv-ocr/Scripts/python.exe -m src.ocr.ocr --config configs/my_ocr.json --layer han
-```
+---
 
-Ưu tiên cấu hình: mặc định < `common` < `layers.<layer>` < CLI. `configs/CPO_18.json` là ví dụ nguồn PDF dùng chung của repo; khi OCR phải ghi đè `--source` thành thư mục ảnh hoặc dùng config riêng.
+## 5. Cơ Chế Cache & Bảo Tồn Dữ Liệu Thô (Immutability)
 
-## 4. Output và chạy lại
+- **Immutable Raw Data**: Mỗi phản hồi thô từ Qwen VLM được lưu vào `03_ocr/raw/<NNNN>.json`. Tệp này không bao giờ bị chỉnh sửa hoặc lọc bỏ.
+- **Cache Key**: Cache phân biệt dựa trên hash nội dung ảnh, engine, model version, prompt và vùng crop. Nếu ảnh và cấu hình không đổi, OCR sẽ tái sử dụng cache mà không gọi lại mô hình.
+- **Tạo lại XML và Text**: Khi cần cập nhật lại `raw.xml` hoặc `NNNN.txt` từ cache thô đã có, chỉ cần chạy lại lệnh kèm cờ `--force`.
 
-Trong `data/<WORK_ID>/02_extraction/`:
+---
 
-- `02_ocr_raw/page_0205.json`: các lần nhận dạng, từng dòng, bbox theo pixel ảnh gốc, confidence và payload gốc của engine.
-- `<layer>.xml`: XML thô do schema chung trong `corpus.py` tạo.
-- `metadata.json`: nguồn, hash ảnh/model, tham số, thống kê, cache và các trang cần kiểm tra.
+## 6. Chế Độ Cũ (Dual-Stream & Layer-Based Tesseract - Tương Thích Ngược)
 
-Nguồn nằm ngoài `01_sources` được sao lưu bằng helper dùng chung. Nếu thư mục đã sao lưu cùng tên có nội dung khác, dùng tên nguồn mới để tránh ghi đè nguồn cũ.
+Hệ thống vẫn giữ toàn bộ code và cấu trúc hỗ trợ chế độ cũ:
+- Dual-stream theo hệ chữ:
+  ```powershell
+  python -m src.ocr.ocr --writing-system chi_tra --work-id MY_WORK --pages 205-210
+  python -m src.ocr.ocr --writing-system vie --work-id MY_WORK --pages 205-210
+  ```
+  Lưu tại `03_ocr/raw/chi_tra/` và `03_ocr/raw/vie/`.
+- Single-layer legacy:
+  ```powershell
+  python -m src.ocr.ocr --layer han --work-id MY_WORK --pages 205-210
+  ```
+  Lưu tại `02_extraction/<layer>.xml`.
 
-Cache phân biệt theo ảnh, lớp, phiên bản engine/model, ngôn ngữ, crop, PSM và DPI. Cùng cấu hình thì tái sử dụng; thay đổi tham số nhận dạng thì thêm kết quả mới, giữ kết quả cũ. Đổi bộ lọc, selector hoặc ngưỡng confidence không chạy OCR lại. Chạy lại khi XML đã tồn tại cần `--force`.
-
-Khi một trang lỗi, module dừng xuất XML và giữ raw JSON đã hoàn thành để tiếp tục lần sau. Trang không có dòng sau lọc được liệt kê trong `empty_pages`; confidence thấp hoặc không xác định được liệt kê trong `low_conf_pages`. Confidence không phải độ chính xác đã kiểm chứng.
-
-Chạy lần lượt từng lớp trong cùng tác phẩm để tránh ghi đè metadata giữa các tiến trình. OCR chỉ tạo bản nháp: chưa sửa lỗi chữ, xóa chú thích, tách câu hay dóng hàng; cần đối chiếu ảnh trước bước làm sạch.
+Dữ liệu lịch sử đã chạy trong các thư mục này được giữ nguyên vẹn và an toàn.

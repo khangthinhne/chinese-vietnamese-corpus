@@ -56,8 +56,18 @@ MODULES = {"extract": "src.extraction.pdf_extraction", "ocr": "src.ocr.ocr",
 
 
 def uses_writing_system_config(cfg: dict) -> bool:
-    """Config kiểu mới có khối 'ocr' (OCR theo hệ chữ) và/hoặc 'segmentation'."""
+    """Config kiểu mới có khối 'ocr' (OCR theo hệ chữ hoặc unified) và/hoặc 'segmentation'."""
     return "ocr" in cfg or "segmentation" in cfg
+
+
+def is_unified_ocr_config(cfg: dict) -> bool:
+    """Config OCR kiểu mới unified (single-stream): ocr có 'engine' thay vì các hệ chữ 'chi_tra'/'vie'."""
+    ocr = cfg.get("ocr", {})
+    if not ocr:
+        return False
+    if "engine" in ocr or "engines" in ocr:
+        return True
+    return any(k not in raw_store.WRITING_SYSTEMS for k in ocr)
 
 
 def validate_config(cfg: dict) -> None:
@@ -68,19 +78,29 @@ def validate_config(cfg: dict) -> None:
     if common.get("pages"):
         parse_pages(str(common["pages"]))
 
-    for writing_system in cfg.get("ocr", {}):
-        if writing_system not in raw_store.WRITING_SYSTEMS:
-            raise ValueError(f"ocr.{writing_system}: hệ chữ phải thuộc {raw_store.WRITING_SYSTEMS}")
+    if is_unified_ocr_config(cfg):
+        ocr = cfg.get("ocr", {})
+        engine = ocr.get("engine") or ocr.get("engines")
+        if not engine:
+            raise ValueError("ocr.engine là bắt buộc trong chế độ unified")
+    else:
+        for writing_system in cfg.get("ocr", {}):
+            if writing_system not in raw_store.WRITING_SYSTEMS:
+                raise ValueError(f"ocr.{writing_system}: hệ chữ phải thuộc {raw_store.WRITING_SYSTEMS}")
 
     seg = cfg.get("segmentation", {})
     for name, layer in seg.get("layers", {}).items():
         if name not in LAYERS:
             raise ValueError(f"segmentation.layers.{name}: lớp không hợp lệ; có {sorted(LAYERS)}")
-        source = layer.get("source") or ("chi_tra" if name == "han" else "vie")
-        if source not in raw_store.WRITING_SYSTEMS:
-            raise ValueError(f"segmentation.layers.{name}.source phải thuộc {raw_store.WRITING_SYSTEMS}")
-        if name == "tho" and source != "vie":
-            raise ValueError("segmentation.layers.tho phải lấy từ hệ chữ 'vie'")
+        if is_unified_ocr_config(cfg):
+            if layer.get("source"):
+                log.warning("segmentation.layers.%s.source không còn cần thiết trong chế độ single-stream", name)
+        else:
+            source = layer.get("source") or ("chi_tra" if name == "han" else "vie")
+            if source not in raw_store.WRITING_SYSTEMS:
+                raise ValueError(f"segmentation.layers.{name}.source phải thuộc {raw_store.WRITING_SYSTEMS}")
+            if name == "tho" and source != "vie":
+                raise ValueError("segmentation.layers.tho phải lấy từ hệ chữ 'vie'")
         for kind in ("start_patterns", "end_patterns"):
             compile_matcher(layer.get(kind), f"segmentation.layers.{name}.{kind}",
                             bool(layer.get("case_sensitive")),
@@ -242,22 +262,35 @@ def _new_plan(cfg: dict, steps: list[str], layers: list[str] | None, pairs: list
     if "ocr" in steps:
         ocr_cfgs = cfg.get("ocr", {})
         if not ocr_cfgs:
-            raise ValueError("Config kiểu mới cần khối 'ocr' với các hệ chữ (chi_tra, vie)")
+            raise ValueError("Config kiểu mới cần khối 'ocr'")
         images = f"{root}/{work}/02_extraction/pages"
-        for ws, oc in ocr_cfgs.items():
-            argv = [*base, "--writing-system", ws, "--source", images]
+        if is_unified_ocr_config(cfg):
+            argv = [*base, "--unified", "--source", images]
             _opt(argv, "--pages", pages)
-            _opt(argv, "--engines", oc.get("engines") or oc.get("engine"))
-            _opt(argv, "--select", oc.get("select"))
-            _opt(argv, "--lang", oc.get("lang"))
-            _opt(argv, "--region", oc.get("region"))
-            _opt(argv, "--psm", oc.get("psm"))
-            _opt(argv, "--dpi", oc.get("dpi", common.get("dpi")))
-            _opt(argv, "--workers", oc.get("workers", common.get("workers")))
-            _opt(argv, "--low-conf", oc.get("low_conf"))
-            _opt(argv, "--keep", oc.get("keep"))
+            _opt(argv, "--engines", ocr_cfgs.get("engine") or ocr_cfgs.get("engines"))
+            _opt(argv, "--select", ocr_cfgs.get("select"))
+            _opt(argv, "--region", ocr_cfgs.get("region"))
+            _opt(argv, "--psm", ocr_cfgs.get("psm"))
+            _opt(argv, "--dpi", ocr_cfgs.get("dpi", common.get("dpi")))
+            _opt(argv, "--workers", ocr_cfgs.get("workers", common.get("workers")))
+            _opt(argv, "--low-conf", ocr_cfgs.get("low_conf"))
             argv += (["--force"] if force else []) + list(extra.get("ocr", []))
             plan.append(("ocr", argv))
+        else:
+            for ws, oc in ocr_cfgs.items():
+                argv = [*base, "--writing-system", ws, "--source", images]
+                _opt(argv, "--pages", pages)
+                _opt(argv, "--engines", oc.get("engines") or oc.get("engine"))
+                _opt(argv, "--select", oc.get("select"))
+                _opt(argv, "--lang", oc.get("lang"))
+                _opt(argv, "--region", oc.get("region"))
+                _opt(argv, "--psm", oc.get("psm"))
+                _opt(argv, "--dpi", oc.get("dpi", common.get("dpi")))
+                _opt(argv, "--workers", oc.get("workers", common.get("workers")))
+                _opt(argv, "--low-conf", oc.get("low_conf"))
+                _opt(argv, "--keep", oc.get("keep"))
+                argv += (["--force"] if force else []) + list(extra.get("ocr", []))
+                plan.append(("ocr", argv))
 
     if "segment" in steps:
         if not config_path:

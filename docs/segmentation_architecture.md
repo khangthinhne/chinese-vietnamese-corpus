@@ -2,36 +2,38 @@
 
 ## 1. Tổng quan kiến trúc
 
-Kiến trúc xử lý corpus Hán - Việt được tái cấu trúc để tách biệt hoàn toàn ba cấp phân đoạn:
+Kiến trúc xử lý corpus Hán - Việt được cấu trúc thành ba cấp phân đoạn độc lập, hỗ trợ cả luồng **Single-Stream Qwen VLM** (khuyến nghị) lẫn luồng Dual-Stream truyền thống:
+
 1. **Phân đoạn Tài liệu (Document Segmentation)**
 2. **Phân đoạn Lớp / Đoạn (Layer / Paragraph Segmentation)**
 3. **Phân đoạn Câu (Sentence Segmentation)**
 
-Quy trình dữ liệu chuẩn:
+Quy trình dữ liệu chuẩn cho Single-Stream:
 
 ```
-OCR Raw (03_ocr/raw + manifests)
+OCR Unified XML (03_ocr/ocr_raw/raw.xml)
    │
    ▼
 [1] Document Segmentation (src/segmentation/documents.py)
+   │ ──▶ 04_segmentation/documents.xml
    │
    ▼
-[2] Layer / Paragraph Segmentation (src/segmentation/layers.py)
-   │ ──▶ 04_segmentation/documents.xml
-   │ ──▶ 04_segmentation/layers/<layer>.xml (Paragraph/Layer segments)
+[2] Layer Segmentation - State Machine (src/segmentation/layers.py)
+   │ ──▶ 04_segmentation/layers/<layer>.xml (han, am, nghia, tho)
+   │ ──▶ 04_segmentation/section_headings.xml (các dòng tiêu đề mục)
    │
    ▼
 [3] Structural Cleaning (src/cleaning/pipeline.py --structural-only)
    │ ──▶ 05_cleaning/structural/<layer>.xml
-   │ ──▶ 05_cleaning/cleaning_audit.xml, review_required.xml, footnotes.xml...
+   │ ──▶ 05_cleaning/cleaning_audit.xml, footnotes.xml...
    │
    ▼
 [4] Sentence Segmentation (src/segmentation/sentences.py)
-   │ ──▶ 04_segmentation/sentences/<layer>.xml (Sentence records độc lập)
+   │ ──▶ 04_segmentation/sentences/<layer>.xml (bản ghi câu độc lập)
    │
    ▼
 [5] Sentence-level Cleaning (src/cleaning/sentence_cleaner.py)
-   │ ──▶ 05_cleaning/<layer>.xml (Cleaned sentences cho aligner)
+   │ ──▶ 05_cleaning/<layer>.xml
    │ ──▶ 05_cleaning/<layer>.txt
    │
    ▼
@@ -49,152 +51,125 @@ OCR Raw (03_ocr/raw + manifests)
 
 ---
 
-## 2. Chi tiết từng cấp phân đoạn & làm sạch
+## 2. Chi tiết phân đoạn Single-Stream
 
-### Cấp 1: Phân đoạn Tài liệu (Document Segmentation)
-- **Module**: `src/segmentation/documents.py`
-- **Nhiệm vụ**: Xác định ranh giới tài liệu độc lập trong tập trang PDF/OCR dựa trên hệ chữ chính (`chi_tra` nếu có, ngược lại `vie`).
-- **Nguyên tắc**: Sử dụng `segmentation.document.start_patterns` hoặc quy ước đánh số `numbered_heading`. Ghép trang system phụ với tài liệu.
-- **Đầu ra**: `04_segmentation/documents.xml` (danh sách tài liệu, `document_id` ổn định, vd `CPO_18.001`, `CPO_18.002`).
+### Cấp 1: Phân đoạn Tài liệu Single-Stream (Document Segmentation)
+- **Module**: `src/segmentation/documents.py` (`load_unified_stream`, `segment_documents_unified`)
+- **Nguyên tắc**: Đọc luồng dòng duy nhất từ `03_ocr/ocr_raw/raw.xml`. Không cần phân tách primary/secondary writing system (`chi_tra` vs `vie`).
+- **Nhận diện ranh giới**:
+  - Dựa trên quy ước tiêu đề đánh số `numbered_heading` (ví dụ: `^\\s*(\\d{1,3})\\s*[.．﹒·。]\\s+`).
+  - Hoặc danh sách regex `segmentation.document.start_patterns`.
+  - Hỗ trợ tài liệu kéo dài nhiều trang và nhiều tài liệu trên cùng một trang.
+  - Phân biệt chính xác giữa tiêu đề tài liệu và số thứ tự của chú thích dưới chân trang (`numbered footnotes`).
+- **Đầu ra**: `04_segmentation/documents.xml` (danh sách tài liệu, `document_id` ổn định, ví dụ `CPO_19.001`).
 
-### Cấp 2: Phân đoạn Lớp / Đoạn (Layer / Paragraph Segmentation)
-- **Module**: `src/segmentation/layers.py`, `src/segmentation/pipeline.py`
-- **Nhiệm vụ**: Phân bổ dòng OCR vào các lớp văn bản (`han`, `am`, `nghia`, `tho`) theo cấu hình state machine và pattern mở/đóng section (`start_patterns`, `end_patterns`).
-- **Nguyên tắc**: Bảo tồn ranh giới đoạn/dòng OCR gốc, bounding box, độ tin cậy và `source_ids`.
-- **Đầu ra**: `04_segmentation/layers/<layer>.xml` với thẻ `<SEGMENT>`. **Không bị ghi đè bởi bước tách câu.**
-
-### Cấp 3: Làm sạch Cấu trúc (Structural Cleaning)
-- **Module**: `src/cleaning/pipeline.py` (`run_structural_cleaning`, CLI `--structural-only`)
-- **Nhiệm vụ**: Thực hiện các phép làm sạch phụ thuộc ngữ cảnh trang, khối hoặc đoạn:
-  - Chuẩn hoá Unicode NFC
-  - Lọc trang (trang trắng, trang loại thủ công, header/footer lặp)
-  - Trích xuất metadata cấp tài liệu (tiêu đề, tác giả, quy trách)
-  - Phát hiện và loại bỏ dòng trùng lặp OCR
-  - Phát hiện và xử lý chú thích (đơn dòng, nhiều dòng, trích dẫn thư mục, qua trang)
-  - Khử nhiễu ký tự OCR và chỉ mục chú thích trong dòng
-  - Tái tạo ranh giới trang (nối từ đứt gãy `dehyphenated`, đánh cờ `sentence_continuation`)
-  - Lọc dòng theo pattern
-- **Nguyên tắc**: **Không tách câu ở giai đoạn này.**
-- **Đầu ra**: `05_cleaning/structural/<layer>.xml`, nhật ký kiểm toán `cleaning_audit.xml`, `review_required.xml`, `footnotes.xml`, `duplicates.xml`, `reconstruction.xml`.
-
-### Cấp 4: Phân đoạn Câu (Sentence Segmentation)
-- **Module**: `src/segmentation/sentences.py`
-- **Nhiệm vụ**:
-  - Dựng dòng chảy ký tự (`build_stream`) theo từng tài liệu độc lập (`document_id`).
-  - Tách câu chữ Hán (`split_han`): dựa trên dấu chấm ngắt câu CJK (`。！？；﹖﹕﹒﹤`) và dấu đóng ngoặc (`」』”’）》`).
-  - Tách câu tiếng Việt / âm (`split_vi`): dựa trên dấu câu `.?!…;:` kết hợp từ điển viết tắt (`VI_ABBREV`), số thứ tự, tên riêng.
-  - Hỗ trợ câu trải dài nhiều dòng và nhiều trang (`cross_page`).
-  - Giữ nguyên truy vết: `document_id`, `segment_ids`, `source_ids`, `pages`, `raw_text`.
-  - Đánh cờ cảnh báo (`no_terminal_punct`, `long`, `uncertain`, `cross_page`) thay vì âm thầm sửa.
-- **Đầu ra**: `04_segmentation/sentences/<layer>.xml`.
-
-### Cấp 5: Làm sạch Cấp câu (Sentence-level Cleaning)
-- **Module**: `src/cleaning/sentence_cleaner.py`
-- **Nhiệm vụ**:
-  - Chuẩn hoá dấu câu, khoảng cách, khoảng trắng CJK ở cấp câu đơn lẻ mà không làm mất truy vết nguồn.
-  - Kiểm tra điều kiện tối thiểu của câu (tỉ lệ CJK cho chữ Hán, ký tự chữ-số cho tiếng Việt).
-  - Gắn cờ cảnh báo câu thiếu dấu kết thúc hoặc quá dài.
-- **Đầu ra**: `05_cleaning/<layer>.xml` (bản câu chuẩn cho dóng hàng) và `05_cleaning/<layer>.txt`.
-
-### Cấp 6: Kiểm tra Hợp lệ (Validation)
-- **Module**: `src/validation/validate.py`
-- **Nhiệm vụ**: Kiểm tra tính toàn vẹn của documents, paragraph segments, sentence records, cleaned sentences và tính sẵn sàng của các cặp dóng hàng.
-- **Đầu ra**: `05_cleaning/validation_report.json`.
+### Cấp 2: Phân đoạn Lớp Tuần Tự (Sequential Layer Segmentation State Machine)
+- **Module**: `src/segmentation/layers.py` (`assign_document_unified`)
+- **Nguyên tắc**: Trong một tài liệu, các lớp nội dung xuất hiện theo thứ tự cấu trúc logic:
+  1. `han`: Nội dung Hán văn nguyên bản (mở đầu tài liệu, không phụ thuộc tiêu đề).
+  2. `am`: Phiên âm Hán - Việt, mở đầu bằng tiêu đề mục `PHIÊN ÂM`.
+  3. `nghia`: Dịch nghĩa, mở đầu bằng tiêu đề mục `DỊCH NGHĨA`.
+  4. `tho`: Dịch thơ (tùy chọn), mở đầu bằng tiêu đề mục `DỊCH THƠ`.
+  5. `end_patterns`: Ví dụ `CHÚ THÍCH` đóng lớp thơ hoặc nghĩa.
+- **Tách Tiêu Đề Mục (Section Headings Separation)**:
+  - Khi một dòng khớp với tiêu đề của lớp có `heading_mode=True` (như `am`, `nghia`, `tho`), dòng đó được tách riêng vào `04_segmentation/section_headings.xml`.
+  - Nội dung của lớp chỉ chứa các câu văn thực tế, không bị nhiễm các từ khoá tiêu đề.
+  - Đối với lớp `han` (không bật `heading_mode`), các dòng chữ Hán của văn bản được giữ nguyên vẹn.
+- **Đầu ra**:
+  - `04_segmentation/layers/han.xml`
+  - `04_segmentation/layers/am.xml`
+  - `04_segmentation/layers/nghia.xml`
+  - `04_segmentation/layers/tho.xml` (tùy chọn)
+  - `04_segmentation/section_headings.xml`
+  - `04_segmentation/review_required.tsv` (các dòng nghi vấn hoặc chưa phân lớp)
 
 ---
 
-## 3. Lược đồ XML & Ví dụ
+## 3. Lược Đồ XML & Truy Vết Nguồn Dòng Gốc (Provenance)
 
-### 3.1. Phân đoạn Đoạn/Lớp (`04_segmentation/layers/<layer>.xml`)
+### 3.1. Phân đoạn Lớp (`04_segmentation/layers/<layer>.xml`)
+Mỗi đoạn văn bản mang định danh truy vết trực tiếp về dòng OCR thô:
 
 ```xml
 <?xml version='1.0' encoding='utf-8'?>
 <root>
-    <FILE ID="CPO_18">
+    <FILE ID="CPO_19">
         <LAYER NAME="han">
-            <SEGMENT ID="CPO_18.001.P205.S002" DOCUMENT_ID="CPO_18.001" PAGE="205" WRITING_SYSTEM="chi_tra" BBOX="272,887,2200,1368" CONFIDENCE="67.5" SOURCE_IDS="chi_tra.P205.L004">夫道至虚，四大理，而有法门，妙群域。 若其巧能利物，度脱无量，何吕不见真形耶？</SEGMENT>
-            <SEGMENT ID="CPO_18.001.P205.S003" DOCUMENT_ID="CPO_18.001" PAGE="205" WRITING_SYSTEM="chi_tra" BBOX="9,1441,2202,1712" CONFIDENCE="81.99" SOURCE_IDS="chi_tra.P205.L005">今就尋西方根源，伏願大和尚垂懷，允納下心，無惜神誥。</SEGMENT>
+            <SEGMENT ID="CPO_19.001.P0015.S001" DOCUMENT_ID="CPO_19.001" PAGE="15" BBOX="272,887,2200,920" CONFIDENCE="0.95" SOURCE_IDS="P0015.L001">夫道至虚，四大理，而有法门，妙群域。</SEGMENT>
+            <SEGMENT ID="CPO_19.001.P0015.S002" DOCUMENT_ID="CPO_19.001" PAGE="15" BBOX="272,930,2200,965" CONFIDENCE="0.98" SOURCE_IDS="P0015.L002">若其巧能利物，度脱无量，何吕不见真形耶？</SEGMENT>
         </LAYER>
     </FILE>
 </root>
 ```
 
-### 3.2. Phân đoạn Câu (`04_segmentation/sentences/<layer>.xml`)
-
+### 3.2. Tiêu Đề Mục Được Tách Riêng (`04_segmentation/section_headings.xml`)
 ```xml
 <?xml version='1.0' encoding='utf-8'?>
 <root>
-    <FILE ID="CPO_18">
-        <LAYER NAME="han">
-            <SENTENCE ID="CPO_18.han.00001" DOCUMENT_ID="CPO_18.001" PAGES="205" SEGMENT_IDS="CPO_18.001.P205.S002" SOURCE_IDS="chi_tra.P205.L004" FLAGS="">夫道至虚，四大理，而有法门，妙群域。</SENTENCE>
-            <SENTENCE ID="CPO_18.han.00002" DOCUMENT_ID="CPO_18.001" PAGES="205" SEGMENT_IDS="CPO_18.001.P205.S002" SOURCE_IDS="chi_tra.P205.L004" FLAGS="">若其巧能利物，度脱无量，何吕不见真形耶？</SENTENCE>
-            <SENTENCE ID="CPO_18.han.00003" DOCUMENT_ID="CPO_18.001" PAGES="205" SEGMENT_IDS="CPO_18.001.P205.S003" SOURCE_IDS="chi_tra.P205.L005" FLAGS="">今就尋西方根源，伏願大和尚垂懷，允納下心，無惜神誥。</SENTENCE>
-        </LAYER>
+    <FILE ID="CPO_19">
+        <HEADING ID="CPO_19.001.P0015.H001" DOCUMENT_ID="CPO_19.001" LAYER="am" PAGE="15" BBOX="272,1400,1000,1430" SOURCE_IDS="P0015.L005">PHIÊN ÂM</HEADING>
+        <HEADING ID="CPO_19.001.P0015.H002" DOCUMENT_ID="CPO_19.001" LAYER="nghia" PAGE="15" BBOX="272,1700,1000,1730" SOURCE_IDS="P0015.L012">DỊCH NGHĨA</HEADING>
     </FILE>
 </root>
 ```
 
-### 3.3. Quy ước Lược đồ Thuộc tính XML Chuẩn (Canonical XML Schema)
-
-| Thuộc tính | Ý nghĩa | Phạm vi áp dụng | Ví dụ |
-|---|---|---|---|
-| `ID` | Định danh duy nhất của bản ghi hiện tại | Mọi bản ghi (segment, sentence, alignment) | `ID="CPO_18.han.00001"` |
-| `DOCUMENT_ID` | Mã tài liệu cha sở hữu bản ghi | Segment, Sentence | `DOCUMENT_ID="CPO_18.001"` |
-| `SEGMENT_IDS` | Danh sách ID phân đoạn đoạn/lớp đóng góp vào câu | Bản ghi câu (`SENTENCE`) | `SEGMENT_IDS="CPO_18.001.P205.S002"` |
-| `SOURCE_IDS` | Danh sách ID dòng OCR thô ban đầu | Segment, Sentence | `SOURCE_IDS="chi_tra.P205.L004"` |
-| `PAGES` | Danh sách trang PDF/ảnh nguồn | Bản ghi câu (`SENTENCE`) | `PAGES="205"` |
-| `SRC_IDS` | Danh sách ID câu nguồn của cặp dóng | Cặp dóng hàng (`ALIGNMENT`) | `SRC_IDS="CPO_18.han.00001"` |
-| `TGT_IDS` | Danh sách ID câu đích của cặp dóng | Cặp dóng hàng (`ALIGNMENT`) | `TGT_IDS="CPO_18.nghia.00001"` |
-
-> [!NOTE]
-> Thuộc tính `SRC_IDS` **tuyệt đối không** được dùng trong bản ghi `<SENTENCE>` (đã thay bằng `SEGMENT_IDS` và `SOURCE_IDS`). `SRC_IDS` và `TGT_IDS` chỉ dành riêng cho thẻ `<ALIGNMENT>` trong file dóng hàng parallel.
-
-### 3.4. Câu đã Làm sạch cho Dóng hàng (`05_cleaning/<layer>.xml`)
-
+### 3.3. Phân đoạn Câu (`04_segmentation/sentences/<layer>.xml`)
 ```xml
 <?xml version='1.0' encoding='utf-8'?>
 <root>
-    <FILE ID="CPO_18">
+    <FILE ID="CPO_19">
         <LAYER NAME="am">
-            <SENTENCE ID="CPO_18.am.00001" DOCUMENT_ID="CPO_18.001" PAGES="205" SEGMENT_IDS="CPO_18.001.P205.L005" SOURCE_IDS="vie.P205.L013">Phù Đạo xứ thanh hư, tứ đại lý thường, nhi hữu pháp môn, diệu xuất quần vực.</SENTENCE>
-            <SENTENCE ID="CPO_18.am.00002" DOCUMENT_ID="CPO_18.001" PAGES="205" SEGMENT_IDS="CPO_18.001.P205.L005" SOURCE_IDS="vie.P205.L013">Nhược xưng kỳ xảo năng lợi vật, độ thoát vô lượng vì giáo, hà dĩ bất kiến chân hình ư thế?</SENTENCE>
+            <SENTENCE ID="CPO_19.am.00001" DOCUMENT_ID="CPO_19.001" PAGES="15" SEGMENT_IDS="CPO_19.001.P0015.S003" SOURCE_IDS="P0015.L006" FLAGS="">Phù Đạo chí hư, tứ đại lý thường...</SENTENCE>
         </LAYER>
     </FILE>
 </root>
 ```
 
+### 3.4. Bảng Thuộc Tính Chuẩn
+
+| Thuộc tính | Ý nghĩa | Ví dụ Single-Stream | Ví dụ Legacy Dual-Stream |
+|---|---|---|---|
+| `ID` | Định danh bản ghi | `CPO_19.am.00001` | `CPO_18.am.00001` |
+| `DOCUMENT_ID` | Mã tài liệu cha | `CPO_19.001` | `CPO_18.001` |
+| `SOURCE_IDS` | ID dòng OCR thô ban đầu | `P0015.L001` | `chi_tra.P205.L004`, `vie.P205.L005` |
+| `SEGMENT_IDS` | ID phân đoạn đóng góp | `CPO_19.001.P0015.S001` | `CPO_18.001.P205.S002` |
+| `PAGES` | Trang nguồn | `15` | `205` |
+
 ---
 
-## 4. Lệnh CLI Điều phối
+## 4. Cấu Hình State Machine Trong Pipeline
 
-Chạy toàn bộ pipeline tự động:
-```bash
-python -m src.pipeline --config configs/CPO_18.json
-```
-
-Chạy từng bước độc lập:
-```bash
-# 1. Phân đoạn tài liệu và lớp
-python -m src.pipeline --config configs/CPO_18.json --steps segment
-
-# 2. Làm sạch cấu trúc
-python -m src.pipeline --config configs/CPO_18.json --steps clean
-
-# 3. Phân đoạn câu và làm sạch câu
-python -m src.pipeline --config configs/CPO_18.json --steps sentence
-
-# 4. Kiểm tra tính hợp lệ
-python -m src.pipeline --config configs/CPO_18.json --steps validate
-
-# 5. Dóng hàng
-python -m src.pipeline --config configs/CPO_18.json --steps align
-
-# 6. Xuất bản bàn giao
-python -m src.pipeline --config configs/CPO_18.json --steps export
-```
-
-Lọc theo lớp hoặc cặp:
-```bash
-python -m src.pipeline --config configs/CPO_18.json --steps clean,sentence --layers han
-python -m src.pipeline --config configs/CPO_18.json --steps align,export --pairs han-am
+Cấu hình mẫu trong tệp JSON:
+```json
+{
+  "segmentation": {
+    "document": {
+      "numbered_heading": {
+        "enabled": true,
+        "pattern": "^\\s*(\\d{1,3})\\s*[.．﹒·。]\\s+"
+      }
+    },
+    "layers": {
+      "han": {
+        "description": "Nội dung Hán văn chính"
+      },
+      "am": {
+        "heading_mode": true,
+        "start_patterns": ["^[lI|]?\\s*PHIÊN ÂM"],
+        "end_patterns": ["^[lI|]?\\s*DỊCH NGHĨA", "^[lI|]?\\s*DỊCH THƠ", "^[lI|]?\\s*CHÚ THÍCH"]
+      },
+      "nghia": {
+        "heading_mode": true,
+        "start_patterns": ["^[lI|]?\\s*DỊCH NGHĨA"],
+        "end_patterns": ["^[lI|]?\\s*DỊCH THƠ", "^[lI|]?\\s*CHÚ THÍCH"]
+      },
+      "tho": {
+        "optional": true,
+        "heading_mode": true,
+        "start_patterns": ["^[lI|]?\\s*DỊCH THƠ"],
+        "end_patterns": ["^[lI|]?\\s*CHÚ THÍCH"]
+      }
+    }
+  }
+}
 ```

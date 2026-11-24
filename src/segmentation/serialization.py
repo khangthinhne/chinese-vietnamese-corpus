@@ -57,8 +57,11 @@ def write_headings(path: Path, work_id: str, rows: Iterable[dict]) -> Path:
     root = write_file_root(path, work_id)
     file_el = file_element(root)
     for row in rows:
-        add(file_el, "HEADING", row.get("text", ""), DOCUMENT_ID=row.get("document_id"),
+        add(file_el, "HEADING", row.get("text", ""),
+            ID=row.get("heading_id") or row.get("id"),
+            DOCUMENT_ID=row.get("document_id"),
             LAYER=row.get("layer"), KIND=row.get("kind"), PAGE=row.get("page"),
+            BBOX=bbox_attr(row.get("bbox")),
             WRITING_SYSTEM=row.get("writing_system"),
             SOURCE_IDS=",".join(row.get("source_ids") or []) or None)
     return write_root(path, root)
@@ -68,8 +71,11 @@ def read_headings(path: Path) -> list[dict]:
     root = read_root(path)
     return [{
         "work_id": file_element(root).get("ID", ""),
+        "id": el.get("ID", ""),
+        "heading_id": el.get("ID", ""),
         "document_id": el.get("DOCUMENT_ID", ""), "layer": el.get("LAYER", ""),
         "kind": el.get("KIND", ""), "text": text_of(el), "page": opt_int(el, "PAGE"),
+        "bbox": bbox_from_attr(el.get("BBOX")),
         "writing_system": el.get("WRITING_SYSTEM", ""),
         "source_ids": list_attr(el, "SOURCE_IDS"),
     } for el in file_element(root).findall("HEADING")]

@@ -215,6 +215,8 @@ def create_parser() -> argparse.ArgumentParser:
     parser.add_argument("--pages", help="Bắt buộc, ví dụ 205-210,212")
     parser.add_argument("--writing-system", choices=list(raw_store.WRITING_SYSTEMS),
                         help="chế độ mới: chi_tra | vie (mỗi hệ chữ OCR MỘT lần)")
+    parser.add_argument("--unified", action="store_true",
+                        help="chế độ unified (single-stream): OCR một lần cho tất cả hệ chữ")
     parser.add_argument("--engines", default=DEFAULT_ENGINE, help="Tên registry, phân cách bằng dấu phẩy")
     parser.add_argument("--select", choices=sorted(SELECTORS), default="first")
     parser.add_argument("--lang", help="Mặc định: hệ chữ (mới) hoặc theo lớp (cũ)")
@@ -257,6 +259,7 @@ def process_writing_system_page(page: int, image_path: Path, layout: DataLayout,
                 result = worker_state.engines[name].recognize(
                     cropped, lang=lang, psm=args.psm, dpi=args.dpi)
                 validate_result(result, cropped.size)
+                
                 lines = [OcrLine(x.text, (x.bbox[0] + box[0], x.bbox[1] + box[1],
                                          x.bbox[2] + box[0], x.bbox[3] + box[1]) if x.bbox is not None else None,
                                  x.confidence) for x in result.lines]
@@ -313,19 +316,30 @@ def process_writing_system_page(page: int, image_path: Path, layout: DataLayout,
         #     )
 
 
-# OCR stage: preserve all non-empty lines.
-# Script/layer classification belongs to the segmentation stage.
-        candidates = [
-            OcrResult(
-                result.engine,
-                [
-                    line for line in result.lines
-                    if line.text.strip()
-                ],
-                result.raw
-            )
-            for result in candidates
-        ]
+        if keep:
+            candidates = [
+                OcrResult(
+                    result.engine,
+                    [
+                        line for line in result.lines
+                        if line.text.strip() and filter_lines([line.text], keep)
+                    ],
+                    result.raw
+                )
+                for result in candidates
+            ]
+        else:
+            candidates = [
+                OcrResult(
+                    result.engine,
+                    [
+                        line for line in result.lines
+                        if line.text.strip()
+                    ],
+                    result.raw
+                )
+                for result in candidates
+            ]
 
         # selected = SELECTORS[args.select](filtered)
         selected = SELECTORS[args.select](candidates)
@@ -364,15 +378,7 @@ def run_writing_system(args) -> Path:
     if args.keep is not None and args.keep not in ("cjk", "latin", "none"):
         raise ValueError("--keep phải là cjk, latin hoặc none")
     lang = args.lang or writing_system
-    # keep = args.keep or ("cjk" if writing_system == "chi_tra" else "latin")
-    # Filtering is deferred to segmentation.
-    keep = None
-
-    if args.keep in ("cjk", "latin"):
-        log.warning(
-            "--keep is deprecated in writing-system mode; "
-            "all OCR lines will be preserved."
-        )
+    keep = args.keep or ("cjk" if writing_system == "chi_tra" else "latin")
     keep = None if keep == "none" else keep
     print(f"[DEBUG] OCR {writing_system} trang {pages}, region={args.region}, lang={lang}, keep={keep}")
     layout = DataLayout(Path(args.data_root), args.work_id)
@@ -410,13 +416,11 @@ def run_writing_system(args) -> Path:
         "source": {"path": str(source)},
         "engines": descriptors,
         "parameters": {"pages": pages, "region": args.region, "psm": args.psm,
-                       "dpi": args.dpi, "keep": None, "select": args.select,
+                       "dpi": args.dpi, "keep": keep, "select": args.select,
                        "low_conf": args.low_conf, "workers_requested": args.workers,
                        "workers_used": workers},
         "pages": results, "low_conf_pages": low_conf, "empty_pages": empty,
-        "review_required": True,   
-        "lang": lang,
-         "keep": None, 
+        "review_required": True,
     }
     path = raw_store.write_manifest(layout, writing_system, record)
     xml_path = raw_xml.write_writing_system(layout, writing_system, pages)
@@ -431,11 +435,173 @@ def run_writing_system(args) -> Path:
     return path
 
 
+def recognize_page(
+    image: Image.Image,
+    page_number: int,
+    config: dict | None = None,
+) -> OcrResult:
+    """Page-oriented execution interface for single-stream Qwen VLM OCR."""
+    cfg = config or {}
+    engine_name = cfg.get("engine", "qwen")
+    if engine_name not in ENGINES:
+        raise ValueError(f"Engine {engine_name} không hợp lệ")
+    engine = ENGINES[engine_name]()
+    region = cfg.get("region")
+    if isinstance(region, str):
+        region = parse_region(region)
+    image_rgb = image.convert("RGB")
+    cropped, box = crop_image(image_rgb, region)
+    result = engine.recognize(cropped, lang=cfg.get("lang", "all"),
+                              psm=cfg.get("psm", 6), dpi=cfg.get("dpi", 300))
+    validate_result(result, cropped.size)
+    lines = [OcrLine(x.text, (x.bbox[0] + box[0], x.bbox[1] + box[1],
+                             x.bbox[2] + box[0], x.bbox[3] + box[1]) if x.bbox is not None else None,
+                     x.confidence) for x in result.lines]
+    return OcrResult(engine_name, lines, result.raw)
+
+
+def process_unified_page(page: int, image_path: Path, layout: DataLayout, args,
+                         descriptors: dict, worker_state: threading.local) -> dict:
+    try:
+        store = raw_store.load_unified_page(layout, page, args.work_id)
+        digest = sha256_file(image_path)
+        with Image.open(image_path) as opened:
+            image = opened.convert("RGB")
+        cropped, box = crop_image(image, args.region)
+        candidates, records = [], []
+        for name in args.engines:
+            parameters = {
+                "image_sha256": digest,
+                "engine": descriptors[name], "lang": "all", "region": args.region,
+                "psm": args.psm, "dpi": args.dpi, "preprocessing": "rgb-crop-v1",
+            }
+            key = raw_store.cache_key(parameters)
+            record = None if args.force_reocr else raw_store.find_run(store, key)
+            hit = record is not None
+
+            if record is None:
+                if not hasattr(worker_state, "engines"):
+                    worker_state.engines = {}
+                if name not in worker_state.engines:
+                    worker_state.engines[name] = ENGINES[name]()
+
+                result = worker_state.engines[name].recognize(
+                    cropped, lang="all", psm=args.psm, dpi=args.dpi)
+                validate_result(result, cropped.size)
+                lines = [OcrLine(x.text, (x.bbox[0] + box[0], x.bbox[1] + box[1],
+                                         x.bbox[2] + box[0], x.bbox[3] + box[1]) if x.bbox is not None else None,
+                                 x.confidence) for x in result.lines]
+                record = {
+                    "key": key, "parameters": parameters, "created_at": raw_store.now(),
+                    "image": str(image_path), "image_size": list(image.size),
+                    "crop_box": list(box), "lines": [asdict(x) for x in lines],
+                    "raw": result.raw,
+                }
+                store["runs"].append(record)
+                raw_store.save_unified_page(layout, page, store)
+            lines = [OcrLine(x["text"], tuple(x["bbox"]) if x.get("bbox") is not None else None, x.get("confidence")) for x in record["lines"]]
+            candidates.append(OcrResult(name, lines, record["raw"]))
+            records.append({"engine": name, "key": key, "cache_hit": hit})
+
+        # OCR preservation: preserve all non-empty lines in original reading order
+        candidates = [
+            OcrResult(
+                result.engine,
+                [line for line in result.lines if line.text.strip()],
+                result.raw
+            )
+            for result in candidates
+        ]
+
+        selected = SELECTORS[args.select](candidates)
+        confidence = mean_confidence(selected.lines)
+        selected_key = next(r["key"] for r in records if r["engine"] == selected.engine)
+        return {"page": page, "image": str(image_path), "image_sha256": digest,
+                "raw": layout.rel(raw_store.unified_raw_path(layout, page)),
+                "selected_engine": selected.engine, "selected_key": selected_key,
+                "confidence": confidence, "empty": not selected.lines,
+                "n_lines": len(selected.lines),
+                "lines": [{"text": x.text, "bbox": list(x.bbox) if x.bbox is not None else None, "confidence": x.confidence}
+                          for x in selected.lines],
+                "engines": records}
+    except Exception as exc:
+        raise RuntimeError(f"OCR trang {page} ({image_path.name}) thất bại: {exc}") from exc
+
+
+def run_unified(args) -> Path:
+    """OCR single-stream (all scripts recognized once per page) -> 03_ocr/."""
+    pages = requested_pages(args.pages)
+    args.region = parse_region(args.region)
+    if not args.source:
+        raise ValueError("Thiếu --source (thư mục ảnh)")
+    source = Path(args.source).resolve()
+    images = discover_images(source, pages)
+    args.engines = list(dict.fromkeys(x.strip() for x in args.engines.split(",") if x.strip()))
+    if not args.engines or any(name not in ENGINES for name in args.engines):
+        raise ValueError(f"Engine không hợp lệ. Có sẵn: {', '.join(ENGINES)}")
+    if args.select not in SELECTORS:
+        raise ValueError("Selector không hợp lệ")
+    if args.workers < 1 or args.dpi < 1 or not 0 <= args.psm <= 13:
+        raise ValueError("Cần workers >= 1, dpi >= 1, psm trong 0..13")
+    if not math.isfinite(args.low_conf) or not 0 <= args.low_conf <= 100:
+        raise ValueError("--low-conf phải trong 0..100")
+
+    layout = DataLayout(Path(args.data_root), args.work_id)
+    target = raw_store.unified_manifest_path(layout)
+    xml_path = layout.ocr_unified_xml_path
+    outputs = [target, xml_path, *(raw_store.unified_raw_path(layout, p) for p in pages)]
+    inputs = [*images.values()]
+    if getattr(args, "config", None):
+        inputs.append(Path(args.config))
+    deps.check_fresh(
+        layout, "ocr:unified", inputs, outputs, args.force,
+        f"{target} đã tồn tại; dùng --force để ghi lại manifest (cache vẫn dùng lại)")
+    layout.ensure(layout.ocr_raw_unified_dir, layout.ocr_manifest_dir,
+                  layout.ocr_raw_xml, layout.ocr_unified_text_dir)
+    descriptors = {name: ENGINES[name].describe("all") for name in args.engines}
+    workers = min(args.workers, len(pages), *(ENGINES[n].max_workers for n in args.engines))
+    worker_state = threading.local()
+    with ThreadPoolExecutor(max_workers=workers) as pool:
+        results = list(pool.map(
+            lambda p: process_unified_page(p, images[p], layout, args,
+                                           descriptors, worker_state),
+            pages))
+
+    low_conf = [r["page"] for r in results if r["confidence"] is None or r["confidence"] < args.low_conf]
+    empty = [r["page"] for r in results if r["empty"]]
+    if empty:
+        log.warning("Trang không có dòng sau OCR: %s", empty)
+    record = {
+        "schema_version": raw_store.UNIFIED_SCHEMA_VERSION, "work_id": args.work_id,
+        "mode": "unified",
+        "source": {"path": str(source)},
+        "engines": descriptors,
+        "parameters": {"pages": pages, "region": args.region, "psm": args.psm,
+                       "dpi": args.dpi, "select": args.select,
+                       "low_conf": args.low_conf, "workers_requested": args.workers,
+                       "workers_used": workers},
+        "pages": results, "low_conf_pages": low_conf, "empty_pages": empty,
+        "review_required": True,
+    }
+    path = raw_store.write_unified_manifest(layout, record)
+    xml_path = raw_xml.write_unified(layout, pages)
+    deps.record(layout, "ocr:unified", inputs, [*outputs, xml_path])
+    MetadataStore(layout).update("unified_ocr", {
+        "output": layout.rel(path), "xml": layout.rel(xml_path),
+        "source": {"path": str(source)},
+        "counts": {"pages": len(pages), "lines": sum(r["n_lines"] for r in results)},
+        "parameters": record["parameters"], "low_conf_pages": low_conf,
+        "empty_pages": empty, "review_required": True})
+    log.info("[unified] OCR %d trang -> %s", len(pages), path)
+    return path
+
+
 def run(args) -> Path:
+    if getattr(args, "unified", False) or (not getattr(args, "writing_system", None) and not getattr(args, "layer", None)):
+        return run_unified(args)
     if args.writing_system:
         return run_writing_system(args)
-    # if not args.layer:
-    raise ValueError("Cần --writing-system chi_tra|vie (chế độ mới) hoặc --layer (chế độ cũ)")
+    raise ValueError("Cần --unified hoặc --writing-system chi_tra|vie (chế độ mới) hoặc --layer (chế độ cũ)")
     # return run_legacy(args)
 
 

@@ -223,3 +223,69 @@ def segment_documents(work_id: str, streams: dict[str, list[OcrLine]], cfg: dict
         docs.append(Document(id=doc_id, pages=doc_pages, lines=doc_lines,
                              heading=sp.get("heading")))
     return docs, review
+
+
+# --- UNIFIED (Single-stream) DOCUMENT SEGMENTATION ---
+
+def load_unified_stream(layout: DataLayout, pages: list[int] | None = None) -> list[OcrLine]:
+    """Đọc OCR stream duy nhất từ 03_ocr/ocr_raw/raw.xml."""
+    xml_path = layout.ocr_unified_xml_path
+    if xml_path.exists():
+        from src.ocr.raw_xml import load_unified
+        return load_unified(layout, pages)
+    from src.ocr import raw_store
+    manifest = raw_store.load_unified_manifest(layout)
+    if manifest is None:
+        return []
+    page_records = {p["page"]: p for p in manifest.get("pages", [])}
+    out: list[OcrLine] = []
+    target_pages = pages if pages is not None else sorted(page_records.keys())
+    for page in target_pages:
+        rec = page_records.get(page)
+        if rec is None:
+            continue
+        store = raw_store.load_unified_page(layout, page, layout.work_id)
+        run = next((r for r in store.get("runs", []) if r.get("key") == rec.get("selected_key")), None)
+        if run is None and store.get("runs"):
+            run = store["runs"][-1]
+        lines_source = run.get("lines", []) if run else rec.get("lines", [])
+        for index, item in enumerate(lines_source, 1):
+            text = item.get("text", "")
+            bbox = item.get("bbox")
+            line_id = f"P{page:04d}.L{index:03d}"
+            out.append(OcrLine(page=page, index=index, text=text,
+                               bbox=tuple(bbox) if bbox else None,
+                               confidence=item.get("confidence"),
+                               source_id=line_id,
+                               writing_system="",
+                               engine=rec.get("selected_engine", ""),
+                               cache_key=rec.get("selected_key", ""),
+                               image=rec.get("image", "")))
+    return out
+
+
+def segment_documents_unified(work_id: str, lines: list[OcrLine], cfg: dict,
+                              pages: list[int]) -> tuple[list[Document], list[dict]]:
+    """Phân đoạn tài liệu trực tiếp từ stream OCR duy nhất (single-stream).
+
+    - Không chọn primary/secondary system.
+    - Không lọc hay phân tách theo hệ chữ.
+    - Phát hiện ranh giới tài liệu từ start_patterns/end_patterns cấu hình.
+    """
+    review: list[dict] = []
+    if not lines:
+        return [], [review_row(work_id, "", "", "no_lines", [], "")]
+
+    spans = detect_spans(work_id, "unified", lines, cfg, review, pages)
+
+    docs: list[Document] = []
+    for i, sp in enumerate(spans, 1):
+        doc_id = f"{work_id}.{i:03d}"
+        doc_lines = lines[sp["start"]:sp["end"]]
+        doc_pages = sorted({ln.page for ln in doc_lines})
+        if not doc_lines and sp["pages"]:
+            review.append(review_row(work_id, doc_id, "", "document_empty", sp["pages"], ""))
+            continue
+        docs.append(Document(id=doc_id, pages=doc_pages, lines=doc_lines,
+                             heading=sp.get("heading")))
+    return docs, review

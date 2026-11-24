@@ -64,7 +64,8 @@ def metadata_config(layer: str, layer_cfg: dict, meta_cfg: dict) -> MetadataConf
 
 def _heading(work_id: str, doc: Document, layer: str, kind: str, line: OcrLine) -> dict:
     return {"work_id": work_id, "document_id": doc.id, "layer": layer, "kind": kind,
-            "text": line.text, "page": line.page, "writing_system": line.writing_system,
+            "text": line.text, "page": line.page, "bbox": line.bbox,
+            "writing_system": line.writing_system,
             "source_ids": [line.source_id]}
 
 
@@ -169,6 +170,144 @@ def assign_document(work_id: str, doc: Document, layer_cfg: dict, meta_cfg: dict
         raw = [RawLine(id=x.id, page=x.page, text=x.text, raw_text=x.text,
                        source_ids=list(x.source_ids), document_id=x.document_id) for x in rows]
         kept, md = classify_leading_block(raw, cfg, layer, doc.id)
+        kept_ids = {r.id for r in kept}
+        lines_by_layer[layer] = [x for x in rows if x.id in kept_ids]
+        if not lines_by_layer[layer]:
+            del lines_by_layer[layer]
+        row = md.to_row(work_id, layer)
+        metadata_rows.append(row)
+        for u in row.get("uncertain", []):
+            uncertain.append(u)
+            review.append(review_row(work_id, doc.id, layer,
+                                     "metadata_uncertain", u.get("pages", []),
+                                     u.get("text", ""), u.get("source_ids", [])))
+
+    return DocumentLayers(lines=lines_by_layer, headings=headings,
+                          metadata_rows=metadata_rows, uncertain=uncertain, review=review)
+
+
+# --- UNIFIED (Single-stream) LAYER SEGMENTATION ---
+
+def assign_document_unified(work_id: str, doc: Document, layer_cfg: dict, meta_cfg: dict
+                            ) -> DocumentLayers:
+    """Gán dòng của MỘT tài liệu vào các lớp (han/am/nghia/tho) từ stream OCR duy nhất.
+
+    - Không phụ thuộc vào 'source' (chi_tra/vie).
+    - Duyệt tuần tự các dòng theo thứ tự đọc ban đầu bằng state machine.
+    - Tách riêng dòng heading vào `section_headings`.
+    - Hỗ trợ các lớp tuỳ chọn (optional: true) và bắt lỗi dòng không gán được vào review.
+    """
+    review: list[dict] = []
+    headings: list[dict] = []
+    grouped: dict[str, list[OcrLine]] = {}
+
+    all_lines = doc.all_lines if hasattr(doc, "all_lines") else (
+        doc.lines if isinstance(doc.lines, list) else
+        sorted([ln for lns in doc.lines.values() for ln in lns], key=lambda x: (x.page, x.index))
+    )
+
+    if not all_lines:
+        return DocumentLayers(lines={}, headings=[], metadata_rows=[], uncertain=[], review=[])
+
+    names = list(layer_cfg.keys())
+    starts = {n: _compile_layer_matcher(
+        layer_cfg[n], "start_patterns", f"segmentation.layers.{n}.start_patterns")
+        for n in names}
+    ends = {n: _compile_layer_matcher(
+        layer_cfg[n], "end_patterns", f"segmentation.layers.{n}.end_patterns")
+        for n in names}
+
+    # Lớp khởi đầu mặc định: lớp đầu tiên không có start_patterns bắt buộc (thường là 'han')
+    default_start = None
+    for n in names:
+        if not starts[n]:
+            default_start = n
+            break
+    if default_start is None and names:
+        default_start = names[0]
+
+    current: str | None = default_start
+    started: set[str] = {default_start} if default_start else set()
+
+    for ln in all_lines:
+        starts_hit = matched_labels(starts, ln.text)
+        ends_hit = matched_labels(ends, ln.text)
+
+        if len(starts_hit) > 1:
+            review.append(review_row(work_id, doc.id, "", "layer_overlap",
+                                     [ln.page], ln.text, [ln.source_id]))
+
+        if starts_hit:
+            target = starts_hit[0]
+            is_heading = bool(layer_cfg.get(target, {}).get("heading_mode", False))
+            if is_heading:
+                if current and current != target:
+                    for n in ends_hit:
+                        if n != target:
+                            h_info = _heading(work_id, doc, n, "end", ln)
+                            h_info["heading_id"] = f"{doc.id}.P{ln.page:04d}.H{len(headings) + 1:03d}"
+                            headings.append(h_info)
+                current = target
+                started.add(target)
+                h_info = _heading(work_id, doc, target, "start", ln)
+                h_info["heading_id"] = f"{doc.id}.P{ln.page:04d}.H{len(headings) + 1:03d}"
+                headings.append(h_info)
+                continue
+            else:
+                current = target
+                started.add(target)
+                # Dòng nội dung (như tiêu đề thơ Hán không dùng heading_mode): giữ trong lớp
+                grouped.setdefault(target, []).append(ln)
+                continue
+
+        if ends_hit:
+            target = current if current in ends_hit else ends_hit[0]
+            if current is None:
+                review.append(review_row(work_id, doc.id, target,
+                                         "missing_start_heading", [ln.page], ln.text,
+                                         [ln.source_id]))
+            h_info = _heading(work_id, doc, target, "end", ln)
+            h_info["heading_id"] = f"{doc.id}.P{ln.page:04d}.H{len(headings) + 1:03d}"
+            headings.append(h_info)
+            if current in ends_hit:
+                current = None
+            continue
+
+        target = current
+        if target is None:
+            review.append(review_row(work_id, doc.id, "", "unassigned_line",
+                                     [ln.page], ln.text, [ln.source_id]))
+            continue
+        grouped.setdefault(target, []).append(ln)
+
+    for n in names:
+        optional = bool(layer_cfg[n].get("optional"))
+        if starts[n] and n not in started and not optional:
+            review.append(review_row(work_id, doc.id, n, "missing_heading",
+                                     doc.pages, ""))
+        elif n not in grouped and not optional:
+            review.append(review_row(work_id, doc.id, n, "missing_layer", doc.pages, ""))
+
+    lines_by_layer: dict[str, list[LayerLine]] = {}
+    for layer, items in grouped.items():
+        prefix = "S" if layer == "han" else "L"
+        ordered = sorted(items, key=lambda x: (x.page, x.index))
+        rows = []
+        for seq, ln in enumerate(ordered, 1):
+            rows.append(LayerLine(
+                id=f"{doc.id}.P{ln.page:04d}.{prefix}{seq:03d}", document_id=doc.id,
+                layer=layer, page=ln.page, text=ln.text, bbox=ln.bbox,
+                confidence=ln.confidence, writing_system=ln.writing_system,
+                source_ids=[ln.source_id]))
+        lines_by_layer[layer] = rows
+
+    metadata_rows: list[dict] = []
+    uncertain: list[dict] = []
+    for layer, rows in list(lines_by_layer.items()):
+        cfg_meta = metadata_config(layer, layer_cfg.get(layer, {}), meta_cfg or {})
+        raw = [RawLine(id=x.id, page=x.page, text=x.text, raw_text=x.text,
+                       source_ids=list(x.source_ids), document_id=x.document_id) for x in rows]
+        kept, md = classify_leading_block(raw, cfg_meta, layer, doc.id)
         kept_ids = {r.id for r in kept}
         lines_by_layer[layer] = [x for x in rows if x.id in kept_ids]
         if not lines_by_layer[layer]:

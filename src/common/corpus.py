@@ -106,6 +106,30 @@ class DataLayout:
 
     def ocr_normalized_path(self, writing_system: str, page: int) -> Path:
         return self.ocr_normalized_root / writing_system / f"page_{page:04d}.json"
+    # --- pipeline OCR UNIFIED (chế độ mới single-stream) ---
+    @property
+    def ocr_raw_unified_dir(self) -> Path:
+        return self.ocr_root / "raw"
+
+    def ocr_raw_unified_path(self, page: int) -> Path:
+        from src.common.page_naming import page_filename
+        return self.ocr_raw_unified_dir / page_filename(page, ".json")
+
+    @property
+    def ocr_unified_xml_path(self) -> Path:
+        return self.ocr_raw_xml / "raw.xml"
+
+    @property
+    def ocr_unified_text_dir(self) -> Path:
+        return self.ocr_root / "ocr_raw_text"
+
+    def ocr_unified_text_path(self, page: int) -> Path:
+        from src.common.page_naming import page_filename
+        return self.ocr_unified_text_dir / page_filename(page, ".txt")
+
+    @property
+    def ocr_metadata_path(self) -> Path:
+        return self.ocr_root / "metadata.json"
     # --- phân đoạn tài liệu/lớp ---
     @property
     def segmentation_dir(self) -> Path: return self.work_dir / "04_segmentation"

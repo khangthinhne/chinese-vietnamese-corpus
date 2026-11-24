@@ -84,6 +84,24 @@ def validate_corpus(layout: DataLayout, layers: list[str] | None = None,
 
     # 1.5. Thu thập OCR line IDs nếu có
     raw_ocr_line_ids: set[str] = set()
+    unified_ocr_path = layout.ocr_unified_xml_path
+    if unified_ocr_path.exists():
+        try:
+            root = segxml.read_root(unified_ocr_path)
+            file_el = segxml.file_element(root)
+            for page_el in file_el.findall("PAGE"):
+                p_no = page_el.get("NUMBER", "")
+                for line_el in page_el.findall("LINE"):
+                    l_id = line_el.get("ID", "")
+                    if l_id:
+                        raw_ocr_line_ids.add(l_id)
+                    l_no = line_el.get("ORDER", line_el.get("NO", ""))
+                    if p_no and l_no:
+                        raw_ocr_line_ids.add(f"P{int(p_no):04d}.L{int(l_no):03d}")
+                        raw_ocr_line_ids.add(f"P{int(p_no):03d}.L{int(l_no):03d}")
+        except Exception:
+            pass
+
     for ws in ("chi_tra", "vie"):
         ocr_path = layout.ocr_raw_xml_path(ws)
         if ocr_path.exists():

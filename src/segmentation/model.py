@@ -10,16 +10,20 @@ class OcrLine:
     page: int
     index: int                       # thứ tự dòng trong run đã chọn (1-based)
     text: str
-    bbox: tuple[int, int, int, int] | None
-    confidence: float | None
-    writing_system: str
-    engine: str
-    cache_key: str
-    image: str
+    bbox: tuple[int, int, int, int] | None = None
+    confidence: float | None = None
+    source_id: str = ""
+    writing_system: str = ""
+    engine: str = ""
+    cache_key: str = ""
+    image: str = ""
 
-    @property
-    def source_id(self) -> str:
-        return f"{self.writing_system}.P{self.page:03d}.L{self.index:03d}"
+    def __post_init__(self):
+        if not self.source_id:
+            if self.writing_system:
+                self.source_id = f"{self.writing_system}.P{self.page:03d}.L{self.index:03d}"
+            else:
+                self.source_id = f"P{self.page:04d}.L{self.index:03d}"
 
 
 @dataclass
@@ -29,9 +33,9 @@ class LayerLine:
     layer: str
     page: int
     text: str
-    bbox: tuple[int, int, int, int] | None
-    confidence: float | None
-    writing_system: str
+    bbox: tuple[int, int, int, int] | None = None
+    confidence: float | None = None
+    writing_system: str = ""
     source_ids: list[str] = field(default_factory=list)
     flags: list[str] = field(default_factory=list)
 
@@ -48,9 +52,24 @@ class LayerLine:
 class Document:
     id: str
     pages: list[int]
-    lines: dict[str, list[OcrLine]] = field(default_factory=dict)
+    lines: dict[str, list[OcrLine]] | list[OcrLine] = field(default_factory=dict)
     heading: dict | None = None
     review: list[dict] = field(default_factory=list)
+
+    @property
+    def all_lines(self) -> list[OcrLine]:
+        """Get all lines regardless of storage format."""
+        if isinstance(self.lines, list):
+            return self.lines
+        result = []
+        for ws_lines in self.lines.values():
+            result.extend(ws_lines)
+        return sorted(result, key=lambda x: (x.page, x.index))
+
+    @property
+    def unified_lines(self) -> list[OcrLine]:
+        """Alias for all_lines - unified stream."""
+        return self.all_lines
 
 
 @dataclass

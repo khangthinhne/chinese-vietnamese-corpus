@@ -26,8 +26,10 @@ from src.common.corpus import (DataLayout, MetadataStore, base_parser, parse_arg
                                parse_pages)
 from src.ocr import raw_store
 from src.segmentation import serialization
-from src.segmentation.documents import load_writing_system, segment_documents
-from src.segmentation.layers import assign_document
+from src.segmentation.documents import (load_unified_stream, load_writing_system,
+                                        segment_documents,
+                                        segment_documents_unified)
+from src.segmentation.layers import assign_document, assign_document_unified
 
 log = logging.getLogger("segmentation")
 
@@ -73,23 +75,39 @@ def run(args) -> None:
                seg_dir / "review_required.xml", seg_dir / "section_headings.xml",
                *(layout.segmentation_layer(name) for name in layer_cfg),
                *(seg_dir / f"{name}.metadata.xml" for name in layer_cfg)]
-    inputs = [layout.ocr_raw_xml_path(ws) for ws in raw_store.WRITING_SYSTEMS
-              if layout.ocr_raw_xml_path(ws).exists()]
-    inputs += [raw_store.manifest_path(layout, ws) for ws in raw_store.WRITING_SYSTEMS
-               if raw_store.manifest_path(layout, ws).exists()]
+    is_unified = (layout.ocr_unified_xml_path.exists() or
+                  raw_store.unified_manifest_path(layout).exists() or
+                  (cfg.get("ocr", {}).get("engine") is not None and not any(k in raw_store.WRITING_SYSTEMS for k in cfg.get("ocr", {}))))
+
+    if is_unified:
+        inputs = [p for p in (layout.ocr_unified_xml_path, raw_store.unified_manifest_path(layout))
+                  if p.exists()]
+    else:
+        inputs = [layout.ocr_raw_xml_path(ws) for ws in raw_store.WRITING_SYSTEMS
+                  if layout.ocr_raw_xml_path(ws).exists()]
+        inputs += [raw_store.manifest_path(layout, ws) for ws in raw_store.WRITING_SYSTEMS
+                   if raw_store.manifest_path(layout, ws).exists()]
     inputs.append(Path(args.config))
     deps.check_fresh(layout, "segmentation", inputs, targets, args.force,
                      f"{targets[0]} đã tồn tại; dùng --force để phân đoạn lại")
     if not inputs[:-1]:
         raise ValueError("Chưa có 03_ocr/ocr_raw/*.xml hoặc manifest; chạy ocr trước")
 
-    streams = {ws: load_writing_system(layout, ws, pages)
-               for ws in raw_store.WRITING_SYSTEMS
-               if raw_store.manifest_path(layout, ws).exists()
-               or layout.ocr_raw_xml_path(ws).exists()}
-    if not any(streams.values()):
-        raise ValueError("Chưa có dòng OCR thô; chạy ocr --writing-system chi_tra|vie trước")
-    docs, review = segment_documents(args.work_id, streams, seg.get("document", {}), pages)
+    if is_unified:
+        unified_lines = load_unified_stream(layout, pages)
+        if not unified_lines:
+            raise ValueError("Chưa có dòng OCR thô unified; chạy ocr --unified trước")
+        docs, review = segment_documents_unified(args.work_id, unified_lines, seg.get("document", {}), pages)
+        sources_used = ["unified"]
+    else:
+        streams = {ws: load_writing_system(layout, ws, pages)
+                   for ws in raw_store.WRITING_SYSTEMS
+                   if raw_store.manifest_path(layout, ws).exists()
+                   or layout.ocr_raw_xml_path(ws).exists()}
+        if not any(streams.values()):
+            raise ValueError("Chưa có dòng OCR thô; chạy ocr --writing-system chi_tra|vie trước")
+        docs, review = segment_documents(args.work_id, streams, seg.get("document", {}), pages)
+        sources_used = sorted(streams)
 
     meta_cfg = cfg.get("metadata_extraction", {})
     layer_rows: dict[str, list] = {name: [] for name in layer_cfg}
@@ -97,7 +115,10 @@ def run(args) -> None:
     headings: list[dict] = []
     doc_rows: list[dict] = []
     for doc in docs:
-        assigned = assign_document(args.work_id, doc, layer_cfg, meta_cfg)
+        if is_unified:
+            assigned = assign_document_unified(args.work_id, doc, layer_cfg, meta_cfg)
+        else:
+            assigned = assign_document(args.work_id, doc, layer_cfg, meta_cfg)
         layer_rows.update({k: layer_rows.get(k, []) + v for k, v in assigned.lines.items()})
         headings.extend(assigned.headings)
         for row in assigned.metadata_rows:
@@ -127,7 +148,7 @@ def run(args) -> None:
         "documents": len(docs),
         "lines": {name: len(rows) for name, rows in layer_rows.items()},
         "headings": len(headings), "review_required": len(review),
-        "sources": sorted(streams)})
+        "sources": sources_used})
     log.info("Phân đoạn %d tài liệu, %d dòng, %d review -> %s", len(docs),
              sum(len(v) for v in layer_rows.values()), len(review), seg_dir)
 

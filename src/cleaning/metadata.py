@@ -147,15 +147,19 @@ def _han_metadata_like(text: str) -> bool:
 
 def _han_author_shape(text: str, cfg: MetadataConfig) -> bool:
     probe = text.strip()
-    return (bool(probe) and len(probe) <= cfg.author_max_len
+    max_len = min(cfg.author_max_len, 4) if cfg.author_max_len > 4 else cfg.author_max_len
+    return (bool(probe) and len(probe) <= max_len
             and cjk_ratio(probe) >= 0.5
             and not re.search(f"[{re.escape(_HAN_BODY_PUNCT)}{re.escape('。！？；﹖﹕﹒')}]", probe))
 
 
 def _body_start(text: str, han: bool) -> bool:
-    """Dòng đầu của NỘI DUNG CHÍNH: Hán = có dấu ngắt câu; Việt = có chữ thường."""
+    """Dòng đầu của NỘI DUNG CHÍNH: Hán = có dấu ngắt câu hoặc thể thơ chuẩn (5/7 chữ); Việt = có chữ thường."""
     if han:
-        return bool(re.search(f"[{re.escape(_HAN_BODY_PUNCT)}]", text))
+        probe = text.strip()
+        if re.search(f"[{re.escape(_HAN_BODY_PUNCT)}]", probe):
+            return True
+        return len(probe) in (5, 7) and cjk_ratio(probe) >= 0.8
     return any(c.islower() for c in text)
 
 
@@ -253,6 +257,15 @@ def _classify_document(doc_id: str, lines: list[RawLine], cfg: MetadataConfig, h
             continue
         if any(r.search(probe) for r in author_res):
             explicit_author.append(ln)
+            continue
+        if any(explicit for _, explicit in block):
+            # Tiêu đề tường minh đã có -> dòng kế tiếp nếu không phải tác giả/quy trách thì là thân bài
+            if not explicit_author and ((_han_author_shape if han else _vi_author_shape)(probe, cfg)):
+                explicit_author.append(ln)
+                continue
+            flush()
+            state = "body"
+            kept.append(ln)
             continue
         if (_han_metadata_like if han else _vi_metadata_like)(ln.text):
             block.append((ln, False))

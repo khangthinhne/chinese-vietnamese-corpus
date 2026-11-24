@@ -3,17 +3,49 @@
   "valid": false,
   "summary": {
     "errors": 3,
-    "warnings": 1,
+    "warnings": 2,
     "infos": 0,
     "cleaned_sentences": {
       "han": 0,
-      "am": 6,
-      "nghia": 6,
-      "tho": 0
+      "am": 464,
+      "nghia": 352,
+      "tho": 268
     },
-    "documents": 2
+    "documents": 9
   },
   "issues": [
+    {
+      "severity": "warning",
+      "scope": "cleaning",
+      "target": "tho",
+      "message": "Phát hiện câu trùng lặp văn bản trong tài liệu CPO_19.003: các ID CPO_19.tho.00038, CPO_19.tho.00066",
+      "details": {
+        "sentence_ids": [
+          "CPO_19.tho.00038",
+          "CPO_19.tho.00066"
+        ]
+      }
+    },
+    {
+      "severity": "warning",
+      "scope": "cleaning",
+      "target": "tho",
+      "message": "Phát hiện câu trùng lặp văn bản trong tài liệu CPO_19.003: các ID CPO_19.tho.00069, CPO_19.tho.00118, CPO_19.tho.00127, CPO_19.tho.00136, CPO_19.tho.00145, CPO_19.tho.00154, CPO_19.tho.00163, CPO_19.tho.00172, CPO_19.tho.00181, CPO_19.tho.00190",
+      "details": {
+        "sentence_ids": [
+          "CPO_19.tho.00069",
+          "CPO_19.tho.00118",
+          "CPO_19.tho.00127",
+          "CPO_19.tho.00136",
+          "CPO_19.tho.00145",
+          "CPO_19.tho.00154",
+          "CPO_19.tho.00163",
+          "CPO_19.tho.00172",
+          "CPO_19.tho.00181",
+          "CPO_19.tho.00190"
+        ]
+      }
+    },
     {
       "severity": "error",
       "scope": "alignment",
@@ -33,13 +65,6 @@
       "scope": "alignment",
       "target": "han-tho",
       "message": "Lớp nguồn han chưa có câu đã làm sạch",
-      "details": {}
-    },
-    {
-      "severity": "warning",
-      "scope": "alignment",
-      "target": "han-tho",
-      "message": "Lớp đích tho rỗng hoặc chưa có câu đã làm sạch",
       "details": {}
     }
   ]

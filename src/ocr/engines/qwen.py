@@ -46,7 +46,7 @@ ADAPTER_VERSION = 3
 PROMPT_VERSION = 3
 
 # Cấu hình cho RTX 3050 6GB + 32GB RAM.
-MIN_PIXELS = 256 * 28 * 28
+MIN_PIXELS = 64 * 28 * 28 
 GPU_MEMORY_LIMIT = "4GiB"
 CPU_MEMORY_LIMIT = "24GiB"
 REPETITION_PENALTY = 1.05
@@ -123,13 +123,13 @@ def settings() -> dict[str, Any]:
 
 
 def get_prompt(lang: str, mode: str) -> str:
-    if mode == "all":
+    if mode == "all" or lang == "all":
         return PROMPT_ALL
     if lang == "chi_tra":
         return PROMPT_CHI_TRA
     if lang == "vie":
         return PROMPT_VIE
-    raise ValueError(f"Chế độ script chỉ hỗ trợ lang chi_tra hoặc vie, nhận {lang!r}")
+    return PROMPT_ALL
 
 
 def _sha(text: str) -> str:
@@ -412,7 +412,7 @@ class QwenEngine(OcrEngine):
             ink = band_ink_box(mask, y0, y1)
             if ink is None:
                 continue
-            crop = pad_to_min_side(image.crop((0, y0, width, y1)))
+            crop = pad_to_min_side(image.crop(ink))
             t0 = time.perf_counter()
             text, tokens, logprobs = _generate(crop, prompt, max_new_tokens=cfg["max_new_tokens"],
                                                max_pixels=cfg["max_pixels"])

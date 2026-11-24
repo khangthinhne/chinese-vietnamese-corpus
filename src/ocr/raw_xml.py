@@ -200,3 +200,132 @@ def load_writing_system(layout: DataLayout, writing_system: str,
                 cache_key=page_el.get("SELECTED_KEY", ""),
                 image=page_el.get("IMAGE", "")))
     return out
+
+
+# --- UNIFIED OCR XML & TXT EXPORT ---
+_FOUR_DIGIT_PAGE_TXT_RE = re.compile(r"^\d{4}\.txt$")
+
+
+def write_unified(layout: DataLayout, pages: list[int] | None = None) -> Path:
+    """Xuất XML cho kho OCR thô unified (single-stream).
+
+    Đầu ra: data/<WORK_ID>/03_ocr/ocr_raw/raw.xml
+    """
+    manifest = raw_store.load_unified_manifest(layout)
+    if manifest is None:
+        raise ValueError("Chưa có manifest OCR unified")
+    wanted = set(pages) if pages else None
+    xml_path = layout.ocr_unified_xml_path
+    root = write_file_root(xml_path, layout.work_id)
+    file_el = file_element(root)
+    file_el.set("SCHEMA_VERSION", "1.0")
+
+    ocr_meta = add(file_el, "OCR", MODE="unified",
+                   SCHEMA_VERSION=str(manifest.get("schema_version", "1")))
+    source = manifest.get("source")
+    if isinstance(source, dict):
+        add(ocr_meta, "SOURCE", **{k.upper(): v for k, v in source.items()})
+    engines = add(ocr_meta, "ENGINES")
+    for name, desc in (manifest.get("engines") or {}).items():
+        _add_engine(engines, {"name": name, **(desc or {})})
+    _add_parameters(ocr_meta, manifest.get("parameters"))
+
+    for rec in manifest.get("pages", []):
+        page = rec["page"]
+        if wanted is not None and page not in wanted:
+            continue
+        page_el = add(file_el, "PAGE", NUMBER=page, IMAGE=rec.get("image"),
+                      IMAGE_SHA256=rec.get("image_sha256"), RAW=rec.get("raw"),
+                      SELECTED_ENGINE=rec.get("selected_engine"),
+                      SELECTED_KEY=rec.get("selected_key"),
+                      CONFIDENCE=rec.get("confidence"), EMPTY=rec.get("empty"),
+                      N_LINES=rec.get("n_lines"))
+        for index, line in enumerate(rec.get("lines", []), 1):
+            line_id = f"P{page:04d}.L{index:03d}"
+            add(page_el, "LINE", line.get("text", ""),
+                ID=line_id, ORDER=index, NO=index,
+                BBOX=bbox_attr(line.get("bbox")), CONFIDENCE=line.get("confidence"))
+        store = raw_store.load_unified_page(layout, page, layout.work_id)
+        runs = add(page_el, "RUNS")
+        for run in store.get("runs", []):
+            _add_run(runs, run)
+
+    xml_path = write_root(xml_path, root)
+    write_unified_page_texts(layout)
+    return xml_path
+
+
+def write_unified_page_texts(layout: DataLayout) -> list[Path]:
+    """Sinh mỗi trang một file TXT (03_ocr/ocr_raw_text/NNNN.txt) từ raw.xml.
+
+    - Tên file = số trang 4 chữ số, vd 0015.txt.
+    - Một dòng OCR một dòng TXT, giữ nguyên văn UTF-8.
+    """
+    from src.common.page_naming import page_filename
+
+    xml_path = layout.ocr_unified_xml_path
+    if not xml_path.is_file():
+        raise FileNotFoundError(f"Chưa có XML OCR unified: {xml_path}")
+    try:
+        root = read_root(xml_path)
+    except ET.ParseError as exc:
+        raise ValueError(f"XML OCR unified bị hỏng: {xml_path}: {exc}") from exc
+
+    file_el = file_element(root)
+    pages: dict[int, list[str]] = {}
+    for page_el in file_el.findall("PAGE"):
+        try:
+            number = int(page_el.get("NUMBER", ""))
+        except ValueError:
+            raise ValueError(f"<PAGE> thiếu hoặc sai NUMBER trong {xml_path}") from None
+        if number < 1:
+            raise ValueError(f"NUMBER không hợp lệ ({number}) trong {xml_path}")
+        if number in pages:
+            raise ValueError(f"Trùng số trang {number} trong {xml_path}")
+        pages[number] = [line.text or "" for line in page_el.findall("LINE")]
+
+    out_dir = layout.ocr_unified_text_dir
+    out_dir.mkdir(parents=True, exist_ok=True)
+
+    written: list[Path] = []
+    for number, lines in pages.items():
+        path = out_dir / page_filename(number, ".txt")
+        text = "\n".join(lines) + ("\n" if lines else "")
+        tmp = path.with_name(path.name + ".tmp")
+        with open(tmp, "w", encoding="utf-8", newline="") as fh:
+            fh.write(text)
+        os.replace(tmp, path)
+        written.append(path)
+
+    keep = set(written)
+    for entry in out_dir.iterdir():
+        if (entry.is_file() and not entry.is_symlink()
+                and _FOUR_DIGIT_PAGE_TXT_RE.match(entry.name) and entry not in keep):
+            entry.unlink()
+    return written
+
+
+def load_unified(layout: DataLayout, pages: list[int] | None = None) -> list[OcrLine]:
+    """Đọc toàn bộ dòng OCR thô từ raw.xml theo thứ tự đọc gốc."""
+    path = layout.ocr_unified_xml_path
+    root = read_root(path)
+    file_el = file_element(root)
+    wanted = set(pages) if pages is not None else None
+    out: list[OcrLine] = []
+    for page_el in file_el.findall("PAGE"):
+        page = int(page_el.get("NUMBER", "0"))
+        if wanted is not None and page not in wanted:
+            continue
+        for line in page_el.findall("LINE"):
+            index = int(line.get("ORDER", line.get("NO", "0")))
+            line_id = line.get("ID") or f"P{page:04d}.L{index:03d}"
+            out.append(OcrLine(
+                page=page, index=index, text=text_of(line),
+                bbox=bbox_from_attr(line.get("BBOX")),
+                confidence=opt_float(line, "CONFIDENCE"),
+                source_id=line_id,
+                writing_system="",
+                engine=page_el.get("SELECTED_ENGINE", ""),
+                cache_key=page_el.get("SELECTED_KEY", ""),
+                image=page_el.get("IMAGE", "")))
+    return out
