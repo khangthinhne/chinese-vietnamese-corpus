@@ -77,7 +77,10 @@ Quy ước bắt buộc khi sửa một engine:
 - Hạt nhiễu của bản quét lấp kẽ giữa dòng/cột: ngưỡng tách phải theo mật độ tương đối, không dùng ngưỡng tuyệt đối vài pixel.
 - `PADDLEVL_ORIENTATION=auto` đoán hướng bằng heuristic. Trang lạ nên mở ảnh xem trước, rồi đặt `horizontal` hoặc `vertical`.
 - Qwen2.5-VL-3B (4-bit): hay lặp vô hạn trên chữ Hán và đổi sang chữ giản thể. Chữ Việt tốt hơn (conf ~90).
-- Chữ giản thể lẫn vào output Hán (ví dụ `数`): chuẩn hoá ở bước làm sạch, không ở bước OCR.
+- Chữ giản thể lẫn vào output Hán (ví dụ `数`): chuẩn hoá ở bước làm sạch, không ở bước OCR. Bước dóng `han-am`
+  tra từ điển bằng dạng phồn thể (OpenCC) khi chữ gốc không có trong từ điển, không sửa văn bản xuất ra.
+- Thơ Hán không chấm câu: tách câu `han` mặc định `--split auto` (theo dòng nếu < 1 dấu 。！？； mỗi 4 dòng).
+- Bước `ocr` chỉ bị chặn bởi manifest/XML đã có; cache `raw/*.json` không bắt phải `--force`.
 - Số trang và chú thích dạng `(奇華海口門)` bị OCR kèm vào; loại ở `05_cleaning`.
 
 ## Tách lớp (segmentation)

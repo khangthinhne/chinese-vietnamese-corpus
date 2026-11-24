@@ -125,6 +125,17 @@ Mỗi đoạn văn bản mang định danh truy vết trực tiếp về dòng O
 </root>
 ```
 
+Chế độ tách câu (`--split`, mặc định theo lớp):
+- `han`: `auto`. Theo từng `DOCUMENT_ID`: tài liệu có < 1 dấu kết câu (`。！？；`) mỗi 4 dòng (thơ không
+  chấm câu) thì mỗi dòng là một câu; ngược lại tách theo dấu câu. Không có `auto`, thơ Hán bị gộp cả bài
+  thành một câu trong khi phiên âm tách theo câu thơ, nên dóng `han-am` hỏng.
+- `tho`: `line`; các lớp khác: `punct`. `punct`/`line` vẫn chọn tay được cho mọi lớp.
+- Khi tách xong `han` hoặc `am` mà lớp kia đã có, tài liệu có số câu han/am lệch > 30% bị ghi cảnh báo
+  (và vào `stats.han_am_mismatch_documents` trong metadata).
+
+Bước dóng hàng tra từ điển âm Hán-Việt: chữ KHÔNG có trong từ điển (thường là giản thể OCR đọc nhầm) được
+thử lại ở dạng phồn thể (OpenCC `s2t`, `pip install opencc`). Chỉ dùng khi tra; văn bản xuất ra không đổi.
+
 ### 3.4. Bảng Thuộc Tính Chuẩn
 
 | Thuộc tính | Ý nghĩa | Ví dụ Single-Stream | Ví dụ Legacy Dual-Stream |

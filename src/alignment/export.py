@@ -34,6 +34,7 @@ from src.common.corpus import DataLayout, MetadataStore
 from src.common.sentences import (atomic_write_text, export_dir, find_alignment_file,
                                   find_cleaned_file, load_sentences, parse_args_by_pair,
                                   parse_pair)
+from src.alignment.align import COLUMN_NAMES
 from src.alignment.serialization import read_alignments
 
 log = logging.getLogger("export")
@@ -198,7 +199,7 @@ def _consolidated_rows(layout: DataLayout, args) -> tuple[list[tuple], list[list
         pair = f"han-{layer}"
         path = find_alignment_file(layout, pair)
         if not path.exists():
-            log.warning("Không có %s; cột %s để trống", path.name, layer)
+            log.warning("Không có %s; cột '%s' để trống", path.name, COLUMN_NAMES.get(layer, layer))
             skipped[f"{layer}:missing_alignment"] += 1
             continue
         for bead in read_alignments(path):
@@ -310,6 +311,24 @@ def verify_consolidated(path: Path, rows: list[tuple]) -> list[str]:
     return errors
 
 
+def empty_column_counts(rows: list[tuple]) -> dict[str, int]:
+    """Số dòng Hán có ô trống ở từng cột dịch (theo thứ tự VIET_LAYERS)."""
+    return {layer: sum(1 for row in rows if not row[1 + k]) for k, layer in enumerate(VIET_LAYERS)}
+
+
+def warn_empty_columns(rows: list[tuple]) -> dict[str, int]:
+    """Cảnh báo rõ khi một cột Dịch âm/Dịch nghĩa/Dịch thơ trống toàn bộ hoặc một phần."""
+    counts = empty_column_counts(rows)
+    for layer, empty in counts.items():
+        column = COLUMN_NAMES.get(layer, layer)
+        if rows and empty == len(rows):
+            log.warning("Cột '%s' TRỐNG HOÀN TOÀN (0/%d dòng Hán có bản dịch): kiểm tra bước align han-%s",
+                        column, len(rows), layer)
+        elif empty:
+            log.warning("Cột '%s' trống ở %d/%d dòng Hán", column, empty, len(rows))
+    return counts
+
+
 def run_consolidated(args) -> Path:
     layout = DataLayout(Path(args.data_root), args.work_id)
     out_dir = export_dir(layout)
@@ -323,6 +342,7 @@ def run_consolidated(args) -> Path:
     deps.check_fresh(layout, "export:han-viet", inputs, [xlsx], args.force,
                      f"{xlsx.name} đã tồn tại; dùng --force để ghi đè")
     rows, review, skipped = _consolidated_rows(layout, args)
+    warn_empty_columns(rows)
     # print(f"[TESTTTTTTTTTT] Writing consolidated XLSX to {xlsx}")
     write_consolidated(xlsx, rows, review)
     errors = verify_consolidated(xlsx, rows)

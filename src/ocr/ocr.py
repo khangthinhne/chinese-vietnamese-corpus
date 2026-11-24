@@ -390,9 +390,12 @@ def run_writing_system(args) -> Path:
     inputs = [*images.values()]
     if getattr(args, "config", None):
         inputs.append(Path(args.config))
+    # Chỉ manifest/XML mới chặn chạy lại. raw/*.json là cache append-only, có nó KHÔNG phải lý do cần --force.
+    blocking = [target, xml_path]
     deps.check_fresh(
-        layout, f"ocr:{writing_system}", inputs, outputs, args.force,
-        f"{target} đã tồn tại; dùng --force để ghi lại manifest (cache vẫn dùng lại)")
+        layout, f"ocr:{writing_system}", inputs, blocking, args.force,
+        f"{next((p for p in blocking if p.exists()), target)} đã tồn tại; "
+        "dùng --force để ghi lại manifest/XML (cache raw vẫn dùng lại)")
     layout.ensure(layout.ocr_raw_root / writing_system, layout.ocr_manifest_dir,
                   layout.ocr_raw_xml)
     descriptors = {name: ENGINES[name].describe(lang) for name in args.engines}
@@ -555,9 +558,12 @@ def run_unified(args) -> Path:
     inputs = [*images.values()]
     if getattr(args, "config", None):
         inputs.append(Path(args.config))
+    # Chỉ manifest/XML mới chặn chạy lại. raw/*.json là cache append-only, có nó KHÔNG phải lý do cần --force.
+    blocking = [target, xml_path]
     deps.check_fresh(
-        layout, "ocr:unified", inputs, outputs, args.force,
-        f"{target} đã tồn tại; dùng --force để ghi lại manifest (cache vẫn dùng lại)")
+        layout, "ocr:unified", inputs, blocking, args.force,
+        f"{next((p for p in blocking if p.exists()), target)} đã tồn tại; "
+        "dùng --force để ghi lại manifest/XML (cache raw vẫn dùng lại)")
     layout.ensure(layout.ocr_raw_unified_dir, layout.ocr_manifest_dir,
                   layout.ocr_raw_xml, layout.ocr_unified_text_dir)
     descriptors = {name: ENGINES[name].describe("all") for name in args.engines}

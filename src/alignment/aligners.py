@@ -58,6 +58,12 @@ class Aligner(ABC):
         ...
 
 
+def one_sided_beads(n_src: int, n_tgt: int) -> list[Bead]:
+    """Bead 1-0 cho mọi câu nguồn rồi 0-1 cho mọi câu đích, đều gắn cờ 'unaligned' (score 0)."""
+    return ([Bead((i,), (), 0.0, ("unaligned",)) for i in range(n_src)]
+            + [Bead((), (j,), 0.0, ("unaligned",)) for j in range(n_tgt)])
+
+
 def spans_to_beads(spans, score_fn) -> list[Bead]:
     beads = []
     for i0, i1, j0, j1 in spans:
@@ -93,6 +99,36 @@ def lev(a: str, b: str) -> int:
             cur.append(min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + (ca != cb)))
         prev = cur
     return prev[-1]
+
+
+_S2T = None                    # OpenCC s2t, nạp lười; False = không có opencc
+
+
+def to_traditional(ch: str) -> str:
+    """Giản -> phồn cho MỘT chữ (OpenCC s2t). Không có opencc thì trả nguyên chữ (đã cảnh báo một lần).
+
+    Chỉ dùng để tra từ điển âm; KHÔNG dùng để sửa văn bản xuất ra."""
+    global _S2T
+    if _S2T is None:
+        try:
+            import opencc
+            _S2T = opencc.OpenCC("s2t")
+        except Exception as exc:  # thiếu gói (ImportError) hoặc thiếu file cấu hình s2t
+            log.warning("Không dùng được OpenCC (%s); chữ giản thể sẽ không được tra từ điển phồn thể. "
+                        "Cài: pip install opencc", exc)
+            _S2T = False
+    return _S2T.convert(ch) if _S2T else ch
+
+
+def lookup_readings(readings: dict[str, tuple[str, ...]], ch: str) -> tuple[str, ...] | None:
+    """Âm Hán-Việt của một chữ. Chữ không có trong từ điển (thường là giản thể OCR đọc nhầm, vd 数)
+    thì thử dạng phồn thể của nó. Chữ đã có trong từ điển không bao giờ bị đổi (tránh 于 -> 於)."""
+    found = readings.get(ch)
+    if found is None:
+        trad = to_traditional(ch)
+        if trad != ch:
+            found = readings.get(trad)
+    return found
 
 
 def load_reading_dict(path: str | Path) -> dict[str, tuple[str, ...]]:
@@ -143,7 +179,7 @@ class LevenshteinAligner(Aligner):
         han = [han_chars(s.text) for s in src]
         am = [vi_syllables(s.text) for s in tgt]
         total = sum(map(len, han))
-        known = sum(1 for seq in han for c in seq if c in readings)
+        known = sum(1 for seq in han for c in seq if lookup_readings(readings, c))
         if total:
             log.info("Từ điển phủ %.1f%% chữ Hán (%d/%d)", 100 * known / total, known, total)
             if known / total < 0.9:
@@ -161,7 +197,7 @@ class LevenshteinAligner(Aligner):
             key = (ch, syl)
             if key in sub_cache:
                 return sub_cache[key]
-            cands = readings.get(ch)
+            cands = lookup_readings(readings, ch)
             if not cands:
                 v = o["unknown_cost"]
             elif syl in cands:
@@ -232,7 +268,11 @@ class LengthAligner(Aligner):
         ls = [self._length(src_layer, s.text) for s in src]
         lt = [self._length(tgt_layer, s.text) for s in tgt]
         if sum(ls) == 0 or sum(lt) == 0:
-            raise ValueError("Một phía không có nội dung")
+            # Một phía rỗng (vd bài có Hán nhưng không có dịch nghĩa): không dóng được gì, nhưng không
+            # được dừng cả cặp. Mọi câu thành bead một phía "unaligned", giữ đúng hợp đồng chỉ số.
+            log.warning("Một phía không có nội dung (%s: %d câu/%d đơn vị, %s: %d câu/%d đơn vị); "
+                        "mọi câu đánh dấu unaligned", src_layer, len(src), sum(ls), tgt_layer, len(tgt), sum(lt))
+            return one_sided_beads(len(src), len(tgt))
         c = sum(lt) / sum(ls)
         log.info("Tỉ lệ độ dài trung bình đích/nguồn = %.2f", c)
 

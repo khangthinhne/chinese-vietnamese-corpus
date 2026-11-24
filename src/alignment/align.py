@@ -34,6 +34,9 @@ from src.common.corpus import DataLayout, MetadataStore
 from src.common.sentences import (alignment_dir, find_cleaned_file, join_texts, load_sentences,
                                   parse_args_by_pair, parse_pair)
 
+# Tên cột trong workbook han-viet ứng với từng lớp đích (dùng cho cảnh báo).
+COLUMN_NAMES = {"am": "Dịch âm", "nghia": "Dịch nghĩa", "tho": "Dịch thơ"}
+
 log = logging.getLogger("align")
 
 
@@ -80,6 +83,16 @@ def run(args) -> Path | None:
         groups.setdefault(s.document_id, ([], []))[1].append(i)
     log.info("Dóng %s: %d câu %s ↔ %d câu %s bằng %s (%d tài liệu)", args.pair, len(src),
              src_layer, len(tgt), tgt_layer, method, len(groups))
+    column = COLUMN_NAMES.get(tgt_layer, tgt_layer)
+    no_tgt = [doc for doc, (s_idx, t_idx) in groups.items() if s_idx and not t_idx]
+    no_src = [doc for doc, (s_idx, t_idx) in groups.items() if t_idx and not s_idx]
+    if no_tgt:
+        log.warning("%d/%d tài liệu có câu %s nhưng KHÔNG có câu %s -> cột '%s' sẽ trống cho các câu đó: %s",
+                    len(no_tgt), len(groups), src_layer, tgt_layer, column, ", ".join(d or "<trống>" for d in no_tgt))
+    if no_src:
+        log.warning("%d/%d tài liệu có câu %s nhưng KHÔNG có câu %s (câu %s không có cặp): %s",
+                    len(no_src), len(groups), tgt_layer, src_layer, tgt_layer,
+                    ", ".join(d or "<trống>" for d in no_src))
 
     rows = []
     for doc_id, (s_idx, t_idx) in groups.items():
@@ -116,7 +129,8 @@ def run(args) -> Path | None:
              "documents": len(groups),
              "kinds": dict(Counter(r["kind"] for r in rows)),
              "unaligned": sum("unaligned" in r["flags"] for r in rows),
-             "low_score": sum("low_score" in r["flags"] for r in rows)}
+             "low_score": sum("low_score" in r["flags"] for r in rows),
+             "documents_without_tgt": no_tgt, "documents_without_src": no_src}
     MetadataStore(layout).update(f"{args.pair}_alignment", {
         "output": layout.rel(out), "aligner": aligner.describe(), "stats": stats,
         "low_score_threshold": args.low_score, "review_required": True})
