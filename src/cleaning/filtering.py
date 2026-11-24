@@ -32,9 +32,13 @@ def drop_reason(raw: str, cleaned: str, line: RawLine, cfg: CleanConfig,
             return "not_han"
         if is_parenthesized(raw.strip()):
             return "footnote"
-        # tiêu đề/tên tác giả: ngắn, không dấu câu nào, đứng SAU một câu đã trọn (hoặc đầu văn bản),
-        # và KHÔNG phải dòng cuối trang (có thể là đầu một câu còn dang dở sang trang sau)
-        if (cfg.heading_heuristic and prev_complete and not line.is_last_on_page
+        for pat in cfg.han_heading_patterns:
+            if re.search(pat, cleaned):
+                return "heading"
+        # Optional legacy heuristic: short, punctuation-free Hán line after a
+        # complete line.  It is opt-in because it drops most Hán poetry lines.
+        if (cfg.han_heading_heuristic and cfg.heading_heuristic and prev_complete
+                and not line.is_last_on_page
                 and len(cleaned) <= cfg.max_heading_han
                 and not re.search(f"[{re.escape(HAN_PUNCT)}]", cleaned)):
             return "heading"

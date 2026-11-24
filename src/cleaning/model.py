@@ -127,6 +127,12 @@ class CleanConfig:
     split_colon: bool = False
     drop_patterns: list[str] = field(default_factory=lambda: list(DEFAULT_DROP))
     heading_heuristic: bool = True
+    # Hán "short punctuation-free line = heading" is destructive for poetry, so it
+    # is opt-in.  Explicit heading patterns always work.
+    han_heading_heuristic: bool = False
+    han_heading_patterns: list[str] = field(default_factory=list)
+    # Script mismatches are retained and flagged instead of silently dropped.
+    retain_script_mismatch: bool = True
     strip_markers: bool = True
     min_cjk: float = 0.5               # tỉ lệ chữ Hán tối thiểu của một dòng Hán
     max_heading_han: int = 24          # dòng Hán không dấu câu, ngắn hơn ngưỡng này = tiêu đề/tên người viết

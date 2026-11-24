@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
+from typing import Any
 
 
 @dataclass
@@ -17,6 +18,17 @@ class OcrLine:
     engine: str = ""
     cache_key: str = ""
     image: str = ""
+    # --- refactored pipeline provenance (all optional, backward compatible) ---
+    original_text: str = ""          # raw OCR text, never modified
+    script: Any = None               # src.segmentation.script.ScriptInfo
+    marker: str = ""                 # canonical section state, e.g. phien_am
+    marker_raw: str = ""
+    correction: dict = field(default_factory=dict)
+    cleaning: dict = field(default_factory=dict)
+    review_flags: list[str] = field(default_factory=list)
+    document_id: str = ""
+    section: str = ""
+    subwork_id: str = ""
 
     def __post_init__(self):
         if not self.source_id:
@@ -24,6 +36,33 @@ class OcrLine:
                 self.source_id = f"{self.writing_system}.P{self.page:03d}.L{self.index:03d}"
             else:
                 self.source_id = f"P{self.page:04d}.L{self.index:03d}"
+        if not self.original_text:
+            self.original_text = self.text
+
+    @property
+    def script_label(self) -> str:
+        return getattr(self.script, "label", "") if self.script is not None else ""
+
+    def provenance(self) -> dict:
+        return {
+            "line_id": self.source_id,
+            "page": self.page,
+            "order": self.index,
+            "original_text": self.original_text,
+            "corrected_text": self.text,
+            "bbox": list(self.bbox) if self.bbox else None,
+            "ocr_confidence": self.confidence,
+            "writing_system": self.writing_system,
+            "script": self.script.to_dict() if hasattr(self.script, "to_dict") else None,
+            "marker": self.marker,
+            "marker_raw": self.marker_raw,
+            "correction": dict(self.correction),
+            "cleaning": dict(self.cleaning),
+            "review_flags": list(self.review_flags),
+            "document_id": self.document_id,
+            "section": self.section,
+            "subwork_id": self.subwork_id,
+        }
 
 
 @dataclass

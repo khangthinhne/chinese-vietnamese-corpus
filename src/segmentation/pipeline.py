@@ -30,12 +30,21 @@ from src.segmentation.documents import (load_unified_stream, load_writing_system
                                         segment_documents,
                                         segment_documents_unified)
 from src.segmentation.layers import assign_document, assign_document_unified
+from src.segmentation.refactor import run_refactor
 
 log = logging.getLogger("segmentation")
 
 DEFAULT_LAYERS = {"han": {"source": "chi_tra"},
                   "am": {"source": "vie"},
                   "nghia": {"source": "vie"}}
+
+REFACTOR_KEYS = ("script_classification", "markers", "marker_fuzzy",
+                 "document_boundary", "headings", "section_layers")
+
+
+def refactor_enabled(seg: dict) -> bool:
+    """The refactored path is opt-in, so legacy configs keep their behaviour."""
+    return any(key in seg for key in REFACTOR_KEYS)
 
 
 def create_parser():
@@ -71,13 +80,27 @@ def run(args) -> None:
     layout = DataLayout(Path(args.data_root), args.work_id)
     seg_dir = layout.segmentation_dir
     layer_cfg = {**DEFAULT_LAYERS, **seg.get("layers", {})}
-    targets = [seg_dir / "documents.xml", seg_dir / "document_metadata.xml",
-               seg_dir / "review_required.xml", seg_dir / "section_headings.xml",
-               *(layout.segmentation_layer(name) for name in layer_cfg),
-               *(seg_dir / f"{name}.metadata.xml" for name in layer_cfg)]
     is_unified = (layout.ocr_unified_xml_path.exists() or
                   raw_store.unified_manifest_path(layout).exists() or
                   (cfg.get("ocr", {}).get("engine") is not None and not any(k in raw_store.WRITING_SYSTEMS for k in cfg.get("ocr", {}))))
+    use_refactor = is_unified and refactor_enabled(seg)
+    if use_refactor:
+        # Auxiliary and unclassified lines are written to a separate layer.
+        layer_cfg.setdefault("other", {"optional": True})
+    refactor_targets = ([seg_dir / "preprocessing" / "preprocessed.xml",
+                         seg_dir / "preprocessing" / "cleaning_log.json",
+                         seg_dir / "preprocessing" / "correction_log.json",
+                         seg_dir / "classification" / "line_classification.xml",
+                         seg_dir / "boundary_detection" / "boundary_candidates.xml",
+                         seg_dir / "boundary_detection" / "boundary_review.json",
+                         seg_dir / "review" / "segmentation_review.json",
+                         seg_dir / "line_accounting.json"]
+                        if use_refactor else [])
+    targets = [seg_dir / "documents.xml", seg_dir / "document_metadata.xml",
+               seg_dir / "review_required.xml", seg_dir / "section_headings.xml",
+               *(layout.segmentation_layer(name) for name in layer_cfg),
+               *(seg_dir / f"{name}.metadata.xml" for name in layer_cfg),
+               *refactor_targets]
 
     if is_unified:
         inputs = [p for p in (layout.ocr_unified_xml_path, raw_store.unified_manifest_path(layout))
@@ -93,7 +116,16 @@ def run(args) -> None:
     if not inputs[:-1]:
         raise ValueError("Chưa có 03_ocr/ocr_raw/*.xml hoặc manifest; chạy ocr trước")
 
-    if is_unified:
+    refactor_result = None
+    if use_refactor:
+        unified_lines = load_unified_stream(layout, pages)
+        if not unified_lines:
+            raise ValueError("Chưa có dòng OCR thô unified; chạy ocr --unified trước")
+        refactor_result = run_refactor(args.work_id, unified_lines, seg, pages)
+        docs = refactor_result.documents
+        review = list(refactor_result.review)
+        sources_used = ["unified"]
+    elif is_unified:
         unified_lines = load_unified_stream(layout, pages)
         if not unified_lines:
             raise ValueError("Chưa có dòng OCR thô unified; chạy ocr --unified trước")
@@ -109,29 +141,37 @@ def run(args) -> None:
         docs, review = segment_documents(args.work_id, streams, seg.get("document", {}), pages)
         sources_used = sorted(streams)
 
-    meta_cfg = cfg.get("metadata_extraction", {})
-    layer_rows: dict[str, list] = {name: [] for name in layer_cfg}
-    metadata_rows: dict[str, list[dict]] = {name: [] for name in layer_cfg}
-    headings: list[dict] = []
-    doc_rows: list[dict] = []
-    for doc in docs:
-        if is_unified:
-            assigned = assign_document_unified(args.work_id, doc, layer_cfg, meta_cfg)
-        else:
-            assigned = assign_document(args.work_id, doc, layer_cfg, meta_cfg)
-        layer_rows.update({k: layer_rows.get(k, []) + v for k, v in assigned.lines.items()})
-        headings.extend(assigned.headings)
-        for row in assigned.metadata_rows:
-            metadata_rows.setdefault(row["layer"], []).append(row)
-        review.extend(doc.review)
-        review.extend(assigned.review)
-        if doc.heading:
-            headings.append({"work_id": args.work_id, "document_id": doc.id,
-                             "layer": "document", "kind": "document_start", **doc.heading})
-        doc_rows.append({"work_id": args.work_id, "document_id": doc.id,
-                         "pages": doc.pages, "heading": doc.heading,
-                         "layers": {k: len(v) for k, v in assigned.lines.items()},
-                         "status": "ok"})
+    if refactor_result is not None:
+        layer_rows: dict[str, list] = {name: [] for name in layer_cfg}
+        for name, rows in refactor_result.layer_rows.items():
+            layer_rows.setdefault(name, []).extend(rows)
+        metadata_rows: dict[str, list[dict]] = {name: [] for name in layer_cfg}
+        headings = list(refactor_result.headings)
+        doc_rows = list(refactor_result.document_rows)
+    else:
+        meta_cfg = cfg.get("metadata_extraction", {})
+        layer_rows = {name: [] for name in layer_cfg}
+        metadata_rows = {name: [] for name in layer_cfg}
+        headings = []
+        doc_rows = []
+        for doc in docs:
+            if is_unified:
+                assigned = assign_document_unified(args.work_id, doc, layer_cfg, meta_cfg)
+            else:
+                assigned = assign_document(args.work_id, doc, layer_cfg, meta_cfg)
+            layer_rows.update({k: layer_rows.get(k, []) + v for k, v in assigned.lines.items()})
+            headings.extend(assigned.headings)
+            for row in assigned.metadata_rows:
+                metadata_rows.setdefault(row["layer"], []).append(row)
+            review.extend(doc.review)
+            review.extend(assigned.review)
+            if doc.heading:
+                headings.append({"work_id": args.work_id, "document_id": doc.id,
+                                 "layer": "document", "kind": "document_start", **doc.heading})
+            doc_rows.append({"work_id": args.work_id, "document_id": doc.id,
+                             "pages": doc.pages, "heading": doc.heading,
+                             "layers": {k: len(v) for k, v in assigned.lines.items()},
+                             "status": "ok"})
 
     layout.ensure(seg_dir, layout.segmentation_layers)
     serialization.write_documents(seg_dir / "documents.xml", args.work_id, doc_rows)
@@ -143,12 +183,49 @@ def run(args) -> None:
     aggregate_document_metadata(seg_dir, args.work_id)
     serialization.write_review(seg_dir / "review_required.xml", args.work_id, review)
     write_review_tsv(seg_dir / "review_required.tsv", review)
+    if refactor_result is not None:
+        pre_dir = seg_dir / "preprocessing"
+        cls_dir = seg_dir / "classification"
+        bnd_dir = seg_dir / "boundary_detection"
+        rev_dir = seg_dir / "review"
+        layout.ensure(pre_dir, cls_dir, bnd_dir, rev_dir)
+        serialization.write_preprocessed(pre_dir / "preprocessed.xml", args.work_id,
+                                         refactor_result.all_lines)
+        serialization.write_json(pre_dir / "cleaning_log.json",
+                                 {"work_id": args.work_id,
+                                  "records": refactor_result.cleaning_log})
+        serialization.write_json(pre_dir / "correction_log.json",
+                                 {"work_id": args.work_id,
+                                  "records": refactor_result.correction_log})
+        serialization.write_line_classification(cls_dir / "line_classification.xml",
+                                                args.work_id, refactor_result.all_lines)
+        serialization.write_boundary_candidates(
+            bnd_dir / "boundary_candidates.xml", args.work_id,
+            [c.to_dict() for c in refactor_result.boundary.candidates])
+        serialization.write_json(bnd_dir / "boundary_review.json", {
+            "work_id": args.work_id,
+            "summary": refactor_result.boundary.stats,
+            "candidates": [c.to_dict() for c in refactor_result.boundary.candidates],
+            "review": [row for row in refactor_result.review
+                       if row.get("reason") in ("ambiguous_boundary", "unassigned_line",
+                                                "line_accounting_gap")],
+        })
+        serialization.write_json(rev_dir / "segmentation_review.json", {
+            "work_id": args.work_id,
+            "stats": refactor_result.stats,
+            "marker_stats": refactor_result.marker_stats,
+            "sections": refactor_result.section_stats,
+            "review": refactor_result.review,
+        })
+        serialization.write_json(seg_dir / "line_accounting.json",
+                                 refactor_result.line_accounting)
     deps.record(layout, "segmentation", inputs, targets)
     MetadataStore(layout).update("segmentation", {
         "documents": len(docs),
         "lines": {name: len(rows) for name, rows in layer_rows.items()},
         "headings": len(headings), "review_required": len(review),
-        "sources": sources_used})
+        "sources": sources_used,
+        **({"refactor": refactor_result.stats} if refactor_result is not None else {})})
     log.info("Phân đoạn %d tài liệu, %d dòng, %d review -> %s", len(docs),
              sum(len(v) for v in layer_rows.values()), len(review), seg_dir)
 
