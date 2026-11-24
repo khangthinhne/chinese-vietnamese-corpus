@@ -1,0 +1,515 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_20",
+  "engine": "paddlevl",
+  "page": 59,
+  "runs": [
+    {
+      "key": "730a383ef9f02a913fbd7ed982d1f43fbead4b3c921c23303a46d957da124fae",
+      "parameters": {
+        "image_sha256": "79394cd77ac5bb1a47c4cacbc3c4e1aa732b17fb640768a5117442f1da778ed2",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "adapter_version": 4
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-24T18:29:15+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_059.png",
+      "image_size": [
+        1865,
+        2851
+      ],
+      "crop_box": [
+        0,
+        0,
+        1865,
+        2851
+      ],
+      "lines": [
+        {
+          "text": "VI",
+          "bbox": [
+            823,
+            310,
+            1127,
+            357
+          ],
+          "confidence": 57.29
+        },
+        {
+          "text": "ĐỀ BỤC TRANH PHAO SƠN",
+          "bbox": [
+            479,
+            379,
+            1294,
+            443
+          ],
+          "confidence": 83.74
+        },
+        {
+          "text": "Núi biếc chót vót gối trên dòng sông lạnh,",
+          "bbox": [
+            477,
+            521,
+            1356,
+            580
+          ],
+          "confidence": 93.76
+        },
+        {
+          "text": "Khói sóng mệnh mông cuộn lên của Luc Đầu.",
+          "bbox": [
+            477,
+            577,
+            1413,
+            633
+          ],
+          "confidence": 86.11
+        },
+        {
+          "text": "Quang cảnh qua mấy độ thay đổi kiếp trần.",
+          "bbox": [
+            477,
+            638,
+            1377,
+            691
+          ],
+          "confidence": 86.9
+        },
+        {
+          "text": "Đây là chốn du lăm xưa kia của vua tôi Đông A.",
+          "bbox": [
+            476,
+            695,
+            1461,
+            750
+          ],
+          "confidence": 91.32
+        },
+        {
+          "text": "Dich thơ:",
+          "bbox": [
+            240,
+            827,
+            1222,
+            856
+          ],
+          "confidence": 91.14
+        },
+        {
+          "text": "Bám dây vin đá gặp nàng tiên.",
+          "bbox": [
+            466,
+            1107,
+            1533,
+            1156
+          ],
+          "confidence": 92.6
+        },
+        {
+          "text": "An chán vững rang nhớ cõi phạm",
+          "bbox": [
+            463,
+            1172,
+            1156,
+            1209
+          ],
+          "confidence": 68.35
+        },
+        {
+          "text": "Gặp gỡ duyên tiên khôn gặp lại.",
+          "bbox": [
+            466,
+            1225,
+            1672,
+            1270
+          ],
+          "confidence": 95.78
+        },
+        {
+          "text": "Còn hơn chung giấc móng Vu Sơn.",
+          "bbox": [
+            466,
+            1281,
+            1174,
+            1330
+          ],
+          "confidence": 92.18
+        },
+        {
+          "text": "Cao vút non xanh gối dài sông,",
+          "bbox": [
+            462,
+            1559,
+            1102,
+            1604
+          ],
+          "confidence": 91.5
+        },
+        {
+          "text": "Lục Đầu khói sóng cuộn mệnh mông.",
+          "bbox": [
+            457,
+            1611,
+            1430,
+            1664
+          ],
+          "confidence": 87.09
+        },
+        {
+          "text": "Kiếp trần máy độ thay quang cảnh,",
+          "bbox": [
+            457,
+            1668,
+            1313,
+            1725
+          ],
+          "confidence": 96.09
+        },
+        {
+          "text": "Nào thấy Đông A đạo gót rồng.",
+          "bbox": [
+            455,
+            1728,
+            1402,
+            1778
+          ],
+          "confidence": 89.98
+        },
+        {
+          "text": "Đào Phương Bình dịch",
+          "bbox": [
+            293,
+            1810,
+            1664,
+            1852
+          ],
+          "confidence": 96.01
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          1865,
+          2851
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 7.498,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              823,
+              310,
+              1127,
+              357
+            ],
+            "generated_text": "VI",
+            "n_lines": 1,
+            "tokens": 2,
+            "seconds": 0.176,
+            "confidence": 57.29,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              479,
+              379,
+              1294,
+              443
+            ],
+            "generated_text": "ĐỀ BỤC TRANH PHAO SƠN",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.602,
+            "confidence": 83.74,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              477,
+              521,
+              1356,
+              580
+            ],
+            "generated_text": "Núi biếc chót vót gối trên dòng sông lạnh,",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.622,
+            "confidence": 93.76,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              477,
+              577,
+              1413,
+              633
+            ],
+            "generated_text": "Khói sóng mệnh mông cuộn lên của Luc Đầu.",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.561,
+            "confidence": 86.11,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              477,
+              638,
+              1377,
+              691
+            ],
+            "generated_text": "Quang cảnh qua mấy độ thay đổi kiếp trần.",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.577,
+            "confidence": 86.9,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              476,
+              695,
+              1461,
+              750
+            ],
+            "generated_text": "Đây là chốn du lăm xưa kia của vua tôi Đông A.",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.601,
+            "confidence": 91.32,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              240,
+              827,
+              1222,
+              856
+            ],
+            "generated_text": "Dich thơ:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.302,
+            "confidence": 91.14,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              466,
+              1107,
+              1533,
+              1156
+            ],
+            "generated_text": "Bám dây vin đá gặp nàng tiên.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.488,
+            "confidence": 92.6,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              463,
+              1172,
+              1156,
+              1209
+            ],
+            "generated_text": "An chán vững rang nhớ cõi phạm",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.439,
+            "confidence": 68.35,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              466,
+              1225,
+              1672,
+              1270
+            ],
+            "generated_text": "Gặp gỡ duyên tiên khôn gặp lại.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.505,
+            "confidence": 95.78,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              466,
+              1281,
+              1174,
+              1330
+            ],
+            "generated_text": "Còn hơn chung giấc móng Vu Sơn.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.438,
+            "confidence": 92.18,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              462,
+              1559,
+              1102,
+              1604
+            ],
+            "generated_text": "Cao vút non xanh gối dài sông,",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.477,
+            "confidence": 91.5,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              457,
+              1611,
+              1430,
+              1664
+            ],
+            "generated_text": "Lục Đầu khói sóng cuộn mệnh mông.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.526,
+            "confidence": 87.09,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              457,
+              1668,
+              1313,
+              1725
+            ],
+            "generated_text": "Kiếp trần máy độ thay quang cảnh,",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.442,
+            "confidence": 96.09,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              455,
+              1728,
+              1402,
+              1778
+            ],
+            "generated_text": "Nào thấy Đông A đạo gót rồng.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.432,
+            "confidence": 89.98,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              293,
+              1810,
+              1664,
+              1852
+            ],
+            "generated_text": "Đào Phương Bình dịch",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.309,
+            "confidence": 96.01,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              246,
+              816,
+              389,
+              826
+            ],
+            "ink": 232
+          },
+          {
+            "box": [
+              804,
+              1429,
+              878,
+              1445
+            ],
+            "ink": 600
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      }
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+    "common": {
+      "work_id": "CPO_20",
+      "data_root": "data",
+      "title": "Tổng Tập Văn học Việt Nam - Tập 8 (Thơ văn Phan Huy Ích)",
+      "source": "data/CPO_20/01_sources/Tong Tap Van Hoc Viet Nam 08.pdf",
+      "pages": "5-806", 
+      "dpi": 300,
+      "workers": 4
+    },
+    "ocr": {
+      "engine": "qwen",
+      "workers": 4,
+      "keep_raw_response": true
+    },
+    "segmentation": {
+      "enabled": true,
+      "document": {
+        "start_patterns": [
+          "^\\s*[\\u4e00-\\u9fff]{2,12}\\s*$"
+        ],
+        "end_patterns": [],
+        "case_sensitive": false
+      },
+      "layers": {
+        "han": {
+          "title_patterns": [
+            "^\\s*[\\u4e00-\\u9fff]{2,12}\\s*$"
+          ],
+          "attribution_patterns": [],
+          "author_max_len": 8,
+          "start_patterns": [
+            "^\\s*[\\u4e00-\\u9fff]{2,12}\\s*$"
+          ],
+          "end_patterns": [
+            "^\\s*PHI[ÊE]N\\s+ÂM\\s*[:：]?\\s*$"
+          ],
+          "optional": false
+        },
+        "am": {
+          "heading_mode": true,
+          "start_patterns": [
+            "^\\s*PHI[ÊE]N\\s+ÂM\\s*[:：]?\\s*$"
+          ],
+          "end_patterns": [
+            "^\\s*DỊCH\\s+NGHĨA\\s*[:：]?\\s*$"
+          ],
+          "attribution_patterns": [
+            "^\\s*(?:Trích|Theo)\\b"
+          ],
+          "optional": false
+        },
+        "nghia": {
+          "heading_mode": true,
+          "start_patterns": [
+            "^\\s*DỊCH\\s+NGHĨA\\s*[:：]?\\s*$"
+          ],
+          "end_patterns": [
+            "^\\s*DỊCH\\s+THƠ\\s*[:：]?\\s*$",
+            "^\\s*[\\u4e00-\\u9fff]{2,12}\\s*$"
+          ],
+          "attribution_patterns": [
+            "^\\s*[^\\n]{1,40}\\s+(?:dịch|biên dịch)\\s*$"
+          ],
+          "optional": true
+        },
+        "tho": {
+          "heading_mode": true,
+          "start_patterns": [
+            "^\\s*DỊCH\\s+THƠ\\s*[:：]?\\s*$"
+          ],
+          "end_patterns": [
+            "^\\s*[\\u4e00-\\u9fff]{2,12}\\s*$"
+          ],
+          "attribution_patterns": [
+            "^\\s*[^\\n]{1,40}\\s+(?:dịch|biên dịch)\\s*$"
+          ],
+          "optional": true,
+          "metadata": false
+        }
+      }
+    },
+    "clean": {
+      "am": {
+        "drop_pattern": [
+          "^\\s*Phần\\s+(?:I|II|III|IV|V)\\s*$"
+        ]
+      },
+      "nghia": {
+        "drop_pattern": [
+          "^\\s*Phần\\s+(?:I|II|III|IV|V)\\s*$"
+        ]
+      },
+      "tho": {
+        "drop_pattern": [
+          "^\\s*Phần\\s+(?:I|II|III|IV|V)\\s*$"
+        ]
+      }
+    },
+    "metadata_extraction": {
+      "enabled": true,
+      "exclude_from_main_text": true
+    },
+    "pairs": {
+      "han-am": {
+        "method": "levenshtein",
+        "opt": [
+          "reading_dict=resources/han_viet.tsv"
+        ],
+        "name": "CPO_20_han-am_parallel"
+      },
+      "han-nghia": {
+        "method": "length",
+        "name": "CPO_20_han-nghia_parallel"
+      },
+      "han-tho": {
+        "method": "length",
+        "name": "CPO_20_han-tho_parallel"
+      },
+      "han-viet": {
+        "name": "CPO_20_parallel"
+      }
+    }
+  }
+  

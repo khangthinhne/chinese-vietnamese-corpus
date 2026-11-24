@@ -1,0 +1,240 @@
+<?xml version='1.0' encoding='utf-8'?>
+<root>
+    <FILE ID="CPO_18" SCHEMA_VERSION="1.0">
+        <OCR MODE="layer" LAYER="vie" ENGINE="qwen" SCHEMA_VERSION="1">
+            <ENGINES>
+                <ENGINE NAME="qwen" MODEL_ID="Qwen/Qwen2.5-VL-3B-Instruct" MODEL_REVISION="main" TRANSFORMERS_VERSION="4.57.6" TORCH_VERSION="2.5.1+cu121" CUDA_VERSION="12.1" BITSANDBYTES_VERSION="0.50.2" MODE="all" MIN_PIXELS="50176" MAX_PIXELS="802816" BAND_INCHES="2.0" MAX_NEW_TOKENS="768" REPETITION_PENALTY="1.05" ADAPTER_VERSION="3" PROMPT_VERSION="3" PROMPT_SHA256="b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74">
+                    <QUANTIZATION>{"compute_dtype": "float16", "double_quant": true, "load_in_4bit": true, "quant_type": "nf4"}</QUANTIZATION>
+                </ENGINE>
+            </ENGINES>
+            <FILTER MODULE="src.ocr.script_filter" LAYER="vie" NORMALIZATION="NFC" />
+        </OCR>
+        <PAGE NUMBER="205" IMAGE="E:\Projects\han-viet-corpus\data\CPO_18\02_extraction\pages\page_205.png" IMAGE_SHA256="5afb8b82d045bf87f457e4285f977c608023a2e74a49f37199f54817e1218e72" RAW="03_ocr/raw/qwen/0205.json" SELECTED_ENGINE="qwen" SELECTED_KEY="6d13a6357fd81ab8cd68f2fc58e3c89c7550ae99219b9ffbf1cfe581435b2189" CONFIDENCE="91.84" EMPTY="false" N_LINES="10" N_SRC_LINES="17" N_DROPPED="7" CJK_REMOVED="112">
+            <LINE ID="P0205.L001" ORDER="1" NO="1" SRC_LINE="1" BBOX="3,0,2480,272" CONFIDENCE="98.92">Phần II: Nguyên văn tác phẩm dịch và chú thích</LINE>
+            <LINE ID="P0205.L002" ORDER="2" NO="2" SRC_LINE="2" BBOX="3,272,2480,545" CONFIDENCE="98.92">Sau đây là toàn văn Sáu bức thư, có kèm theo phần phiên âm, dịch nghĩa và chú thích của chúng tôi.</LINE>
+            <LINE ID="P0205.L003" ORDER="3" NO="3" SRC_LINE="10" BBOX="9,2041,2193,2199" CONFIDENCE="87.93">PHIÊN ÂM:</LINE>
+            <LINE ID="P0205.L004" ORDER="4" NO="4" SRC_LINE="11" BBOX="275,2244,2480,2357" CONFIDENCE="89.17">DỮ CAO, MINH NHỊ PHÁP SƯ</LINE>
+            <LINE ID="P0205.L005" ORDER="5" NO="5" SRC_LINE="12" BBOX="275,2357,2480,2470" CONFIDENCE="89.17">NẠN PHẬT BẤT KIẾN HÌNH THƯ</LINE>
+            <LINE ID="P0205.L006" ORDER="6" NO="6" SRC_LINE="13" BBOX="275,2470,2480,2584" CONFIDENCE="89.17">LÝ MIỄU</LINE>
+            <LINE ID="P0205.L007" ORDER="7" NO="7" SRC_LINE="14" BBOX="275,2584,2480,2697" CONFIDENCE="89.17">• Miễu vi Giao Châu Thứ sử</LINE>
+            <LINE ID="P0205.L008" ORDER="8" NO="8" SRC_LINE="15" BBOX="275,2697,2480,2810" CONFIDENCE="89.17">Phù Đạo xứ thanh hư, tứ đại lý thường, nhi hữu pháp môn, diệu xuất quần vực. Nhược xưng kỳ xảo năng</LINE>
+            <LINE ID="P0205.L009" ORDER="9" NO="9" SRC_LINE="16" BBOX="272,2816,2480,3158" CONFIDENCE="89.52">lợi vật, độ thoát vô lượng vi giáo, hà dĩ bất kiến chân hình ư thế? Chân không thuyết nhi vô thực da?</LINE>
+            <LINE ID="P0205.L010" ORDER="10" NO="10" SRC_LINE="17" BBOX="272,3158,2480,3499" CONFIDENCE="89.52">Kim chính tụt tầm tây phương căn nguyên, phục nguyện Đại hòa thượng thủy hoài, doãn nạp hạ tâm, vô tích thần cáo.</LINE>
+            <RUNS>
+                <RUN KEY="6d13a6357fd81ab8cd68f2fc58e3c89c7550ae99219b9ffbf1cfe581435b2189" CREATED_AT="2026-11-24T18:07:02+00:00" IMAGE="E:\Projects\han-viet-corpus\data\CPO_18\02_extraction\pages\page_205.png" IMAGE_WIDTH="2480" IMAGE_HEIGHT="3509" CROP_BOX="0,0,2480,3509" SOURCE="03_ocr/raw/qwen/0205.json" SELECTION="manifest">
+                    <PARAMETERS>
+                        <PARAM NAME="image_sha256">5afb8b82d045bf87f457e4285f977c608023a2e74a49f37199f54817e1218e72</PARAM>
+                        <ENGINE NAME="qwen" MODEL_ID="Qwen/Qwen2.5-VL-3B-Instruct" MODEL_REVISION="main" TRANSFORMERS_VERSION="4.57.6" TORCH_VERSION="2.5.1+cu121" CUDA_VERSION="12.1" BITSANDBYTES_VERSION="0.50.2" MODE="all" MIN_PIXELS="50176" MAX_PIXELS="802816" BAND_INCHES="2.0" MAX_NEW_TOKENS="768" REPETITION_PENALTY="1.05" ADAPTER_VERSION="3" PROMPT_VERSION="3" PROMPT_SHA256="b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74">
+                            <QUANTIZATION>{"compute_dtype": "float16", "double_quant": true, "load_in_4bit": true, "quant_type": "nf4"}</QUANTIZATION>
+                        </ENGINE>
+                        <PARAM NAME="lang">all</PARAM>
+                        <PARAM NAME="region" />
+                        <PARAM NAME="psm">6</PARAM>
+                        <PARAM NAME="dpi">300</PARAM>
+                        <PARAM NAME="preprocessing">rgb-crop-v1</PARAM>
+                    </PARAMETERS>
+                </RUN>
+            </RUNS>
+        </PAGE>
+        <PAGE NUMBER="206" IMAGE="E:\Projects\han-viet-corpus\data\CPO_18\02_extraction\pages\page_206.png" IMAGE_SHA256="fed77272d9e993999a8d2d3890ab340d1c1b0b312d145ff1c8c528eb188a8ddc" RAW="03_ocr/raw/qwen/0206.json" SELECTED_ENGINE="qwen" SELECTED_KEY="e1cbb96b278aff146de2bbcfbdd2ecbfe3b27f2d1e1c35ca9ac315b63c041596" CONFIDENCE="93.38" EMPTY="false" N_LINES="17" N_SRC_LINES="17" N_DROPPED="0" CJK_REMOVED="0">
+            <LINE ID="P0206.L001" ORDER="1" NO="1" SRC_LINE="1" BBOX="23,0,2446,178" CONFIDENCE="90.34">Sưu tầm và khảo luận tác phẩm chữ Hán của người Việt Nam trước TK 10</LINE>
+            <LINE ID="P0206.L002" ORDER="2" NO="2" SRC_LINE="2" BBOX="23,178,2446,357" CONFIDENCE="90.34">Đệ tử Lý Miễu hòa nam.</LINE>
+            <LINE ID="P0206.L003" ORDER="3" NO="3" SRC_LINE="3" BBOX="23,357,2446,535" CONFIDENCE="90.34">( Hoằng minh tập, Quyển thập nhất ;</LINE>
+            <LINE ID="P0206.L004" ORDER="4" NO="4" SRC_LINE="4" BBOX="408,534,2446,795" CONFIDENCE="93.74">Toàn Thượng cổ, Tam đại, Tần, Hán, Tam quốc, Lục triều văn, Toàn Tống văn. Quyển ngũ thập thất</LINE>
+            <LINE ID="P0206.L005" ORDER="5" NO="5" SRC_LINE="5" BBOX="408,795,2446,1056" CONFIDENCE="93.74">THƯ GỬI HAI VỊ PHÁP SƯ (1) CAO VÀ MINH (2)</LINE>
+            <LINE ID="P0206.L006" ORDER="6" NO="6" SRC_LINE="6" BBOX="406,1069,2199,1179" CONFIDENCE="91.1">ĐỂ VẠN HỎI VỀ VIỆC KHÔNG THẤY HÌNH THỂ PHẬT (3)</LINE>
+            <LINE ID="P0206.L007" ORDER="7" NO="7" SRC_LINE="7" BBOX="406,1179,2199,1289" CONFIDENCE="91.1">LÝ MIỄU</LINE>
+            <LINE ID="P0206.L008" ORDER="8" NO="8" SRC_LINE="8" BBOX="406,1289,2199,1399" CONFIDENCE="91.1">* Miễu là Thứ sử Giao Châu</LINE>
+            <LINE ID="P0206.L009" ORDER="9" NO="9" SRC_LINE="9" BBOX="406,1399,2199,1509" CONFIDENCE="91.1">Rằng, chỗ Đạo thanh hư (4), tứ đại (5) lê thường, nhở</LINE>
+            <LINE ID="P0206.L010" ORDER="10" NO="10" SRC_LINE="10" BBOX="73,1514,2447,1810" CONFIDENCE="95.16">có giáo pháp (6) mà sự nhiệm màu lan khắp mọi cõi. Nếu nói Đạo [Phật] là khéo giỏi, có thể lập giáo để làm lợi cho [muôn]vật, giải thoát cho vô số [người], thì tại sao không thấy chân hình Phật ở trên đời? Hay là chỉ (7) nói suông mà không có thực (8).</LINE>
+            <LINE ID="P0206.L011" ORDER="11" NO="11" SRC_LINE="11" BBOX="73,1810,2447,2105" CONFIDENCE="95.16">Nay đang lúc đi tìm nguồn cội Phương tây (9), cúi</LINE>
+            <LINE ID="P0206.L012" ORDER="12" NO="12" SRC_LINE="12" BBOX="280,2107,2180,2245" CONFIDENCE="91.16">mong Đại hòa thượng (10) rủ lòng, chấp nhận nỗi băn khoăn của kẻ dưới, không tiếc lời chỉ bảo thân tình.</LINE>
+            <LINE ID="P0206.L013" ORDER="13" NO="13" SRC_LINE="13" BBOX="280,2245,2180,2382" CONFIDENCE="91.16">Đệ tử Lý Miễu kính lễ (11).</LINE>
+            <LINE ID="P0206.L014" ORDER="14" NO="14" SRC_LINE="14" BBOX="280,2382,2180,2520" CONFIDENCE="91.16">(Hoằng minh tập, Q. 11; Toàn Thượng)</LINE>
+            <LINE ID="P0206.L015" ORDER="15" NO="15" SRC_LINE="15" BBOX="423,2516,2102,2818" CONFIDENCE="92.83">cổ, Tam đại, Tần, Hán, Tam quốc, Lục triều văn, phần Toàn Tống văn, Q. 57)</LINE>
+            <LINE ID="P0206.L016" ORDER="16" NO="16" SRC_LINE="16" BBOX="290,2874,2475,3186" CONFIDENCE="97.04">(1) Pháp sư: người am tường kinh Phật, có khả năng giảng dạy cho người khác.</LINE>
+            <LINE ID="P0206.L017" ORDER="17" NO="17" SRC_LINE="17" BBOX="290,3186,2475,3499" CONFIDENCE="97.04">(2) Cao và Minh: tức Đạo Cao và Pháp Minh, hai nhà sư nước ta.</LINE>
+            <RUNS>
+                <RUN KEY="e1cbb96b278aff146de2bbcfbdd2ecbfe3b27f2d1e1c35ca9ac315b63c041596" CREATED_AT="2026-11-24T18:07:36+00:00" IMAGE="E:\Projects\han-viet-corpus\data\CPO_18\02_extraction\pages\page_206.png" IMAGE_WIDTH="2480" IMAGE_HEIGHT="3509" CROP_BOX="0,0,2480,3509" SOURCE="03_ocr/raw/qwen/0206.json" SELECTION="manifest">
+                    <PARAMETERS>
+                        <PARAM NAME="image_sha256">fed77272d9e993999a8d2d3890ab340d1c1b0b312d145ff1c8c528eb188a8ddc</PARAM>
+                        <ENGINE NAME="qwen" MODEL_ID="Qwen/Qwen2.5-VL-3B-Instruct" MODEL_REVISION="main" TRANSFORMERS_VERSION="4.57.6" TORCH_VERSION="2.5.1+cu121" CUDA_VERSION="12.1" BITSANDBYTES_VERSION="0.50.2" MODE="all" MIN_PIXELS="50176" MAX_PIXELS="802816" BAND_INCHES="2.0" MAX_NEW_TOKENS="768" REPETITION_PENALTY="1.05" ADAPTER_VERSION="3" PROMPT_VERSION="3" PROMPT_SHA256="b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74">
+                            <QUANTIZATION>{"compute_dtype": "float16", "double_quant": true, "load_in_4bit": true, "quant_type": "nf4"}</QUANTIZATION>
+                        </ENGINE>
+                        <PARAM NAME="lang">all</PARAM>
+                        <PARAM NAME="region" />
+                        <PARAM NAME="psm">6</PARAM>
+                        <PARAM NAME="dpi">300</PARAM>
+                        <PARAM NAME="preprocessing">rgb-crop-v1</PARAM>
+                    </PARAMETERS>
+                </RUN>
+            </RUNS>
+        </PAGE>
+        <PAGE NUMBER="207" IMAGE="E:\Projects\han-viet-corpus\data\CPO_18\02_extraction\pages\page_207.png" IMAGE_SHA256="f494be772212d386652db632fd2fe7095a93d2791d1aee46fba1dd374ad5d571" RAW="03_ocr/raw/qwen/0207.json" SELECTED_ENGINE="qwen" SELECTED_KEY="8f2dfb0f0830d4a1904665f08f524f8f74ebbef4d8bb047811a175fdd027397c" CONFIDENCE="94.94" EMPTY="false" N_LINES="11" N_SRC_LINES="11" N_DROPPED="0" CJK_REMOVED="20">
+            <LINE ID="P0207.L001" ORDER="1" NO="1" SRC_LINE="1" BBOX="0,7,2480,269" CONFIDENCE="95.35">Phần II: Nguyên văn tác phẩm dịch và chú thích</LINE>
+            <LINE ID="P0207.L002" ORDER="2" NO="2" SRC_LINE="2" BBOX="0,269,2480,530" CONFIDENCE="95.35">(3) Bản Mạc Tư Khoa chép đầu đề bức thư này là: "Dữ Đạo Cao Pháp Minh nhị Pháp sư thư nạn Phật bất kiến hình"</LINE>
+            <LINE ID="P0207.L003" ORDER="3" NO="3" SRC_LINE="3" BBOX="0,532,2480,1062" CONFIDENCE="81.67">= Thư gửi hai vị Pháp sư là Đạo Cao và Pháp Minh để vă</LINE>
+            <LINE ID="P0207.L004" ORDER="4" NO="4" SRC_LINE="4" BBOX="264,1075,2205,1575" CONFIDENCE="97.95">(6) Giáo pháp (pháp môn): khoa dạy về cách tu luyện để thành Phật. Theo quan niệm nhà Phật, thì những giáo lý mà Phật giảng giải được coi như phép tắc, nên gọi là "pháp". Pháp ấy dẫn dắt chúng sinh vào Đạo và đắc đạo, nên gọi là "môn". Có rất nhiều "pháp môn", tức nhiều kiểu tu luyện để thành Phật, như niệm Phật, thiền định,</LINE>
+            <LINE ID="P0207.L005" ORDER="5" NO="5" SRC_LINE="5" BBOX="0,1577,2480,1833" CONFIDENCE="93.63">cúng dàng, bố thí, trì giới v.v. Do đó, người ta hay nói tới "tám vạn bốn nghìn pháp môn", "biển pháp môn", "vô số pháp môn", v.v.</LINE>
+            <LINE ID="P0207.L006" ORDER="6" NO="6" SRC_LINE="6" BBOX="0,1833,2480,2089" CONFIDENCE="93.63">(7) Nguyên văn chép là chân (thực), có lẽ nhầm. Cứ theo ngữ cảnh, thì chỗ này phải là chữ trực (nghĩa như hoặc, dịch là chỉ) mới đúng. Đây dịch chưa lại. Bản</LINE>
+            <LINE ID="P0207.L007" ORDER="7" NO="7" SRC_LINE="7" BBOX="268,2098,2195,2272" CONFIDENCE="96.4">Đại Chính cũng chép là trực.</LINE>
+            <LINE ID="P0207.L008" ORDER="8" NO="8" SRC_LINE="8" BBOX="268,2272,2195,2446" CONFIDENCE="96.4">(8) Nguyên văn câu này là "Chân (trực) không thuyết nhi vô thực da". "Vô thực da" (= không có thực), bản Mạc Tư Khoa chép là "Vô thuật tà ".</LINE>
+            <LINE ID="P0207.L009" ORDER="9" NO="9" SRC_LINE="9" BBOX="268,2446,2195,2620" CONFIDENCE="96.4">(9) Phương tây (Tây phương): còn gọi là Tây Thiên hay Tây Trúc, chỉ Ấn Độ, nơi phát tích của đạo Phật. Chữ "Tây</LINE>
+            <LINE ID="P0207.L010" ORDER="10" NO="10" SRC_LINE="10" BBOX="8,2618,2480,3060" CONFIDENCE="93.86">phương" ở đây còn có nghĩa là Thế giới cực lạc của Phật A Di Đà (Amitabha); vì cõi ấy, theo Phật giáo, ở về phía tây cõi Tà Bà (Saha) của chúng ta, nên gọi là "Tây phương".</LINE>
+            <LINE ID="P0207.L011" ORDER="11" NO="11" SRC_LINE="11" BBOX="8,3060,2480,3501" CONFIDENCE="93.86">(10) Hòa thượng (Upadhyaya): có nghĩa là "thầy tu" đáng lẽ phiên thành "Ô xã", thì lại phiên chệch dần thành "Hòa thượng", lâu ngày hóa quen, để chỉ thầy tu. Chữ</LINE>
+            <RUNS>
+                <RUN KEY="8f2dfb0f0830d4a1904665f08f524f8f74ebbef4d8bb047811a175fdd027397c" CREATED_AT="2026-11-24T18:08:14+00:00" IMAGE="E:\Projects\han-viet-corpus\data\CPO_18\02_extraction\pages\page_207.png" IMAGE_WIDTH="2480" IMAGE_HEIGHT="3509" CROP_BOX="0,0,2480,3509" SOURCE="03_ocr/raw/qwen/0207.json" SELECTION="manifest">
+                    <PARAMETERS>
+                        <PARAM NAME="image_sha256">f494be772212d386652db632fd2fe7095a93d2791d1aee46fba1dd374ad5d571</PARAM>
+                        <ENGINE NAME="qwen" MODEL_ID="Qwen/Qwen2.5-VL-3B-Instruct" MODEL_REVISION="main" TRANSFORMERS_VERSION="4.57.6" TORCH_VERSION="2.5.1+cu121" CUDA_VERSION="12.1" BITSANDBYTES_VERSION="0.50.2" MODE="all" MIN_PIXELS="50176" MAX_PIXELS="802816" BAND_INCHES="2.0" MAX_NEW_TOKENS="768" REPETITION_PENALTY="1.05" ADAPTER_VERSION="3" PROMPT_VERSION="3" PROMPT_SHA256="b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74">
+                            <QUANTIZATION>{"compute_dtype": "float16", "double_quant": true, "load_in_4bit": true, "quant_type": "nf4"}</QUANTIZATION>
+                        </ENGINE>
+                        <PARAM NAME="lang">all</PARAM>
+                        <PARAM NAME="region" />
+                        <PARAM NAME="psm">6</PARAM>
+                        <PARAM NAME="dpi">300</PARAM>
+                        <PARAM NAME="preprocessing">rgb-crop-v1</PARAM>
+                    </PARAMETERS>
+                </RUN>
+            </RUNS>
+        </PAGE>
+        <PAGE NUMBER="208" IMAGE="E:\Projects\han-viet-corpus\data\CPO_18\02_extraction\pages\page_208.png" IMAGE_SHA256="e5661834fd45b1d00adddded488760bbcf7f94fe8287c328a201ed918a69fb74" RAW="03_ocr/raw/qwen/0208.json" SELECTED_ENGINE="qwen" SELECTED_KEY="524a26ece604c0a40cd3e358e12ad7b3f5136dec862179eb51026a6488030220" CONFIDENCE="60.62" EMPTY="false" N_LINES="5" N_SRC_LINES="11" N_DROPPED="6" CJK_REMOVED="180">
+            <LINE ID="P0208.L001" ORDER="1" NO="1" SRC_LINE="1" BBOX="13,0,2269,197" CONFIDENCE="93.8">Sưu tầm và khảo luận tác phẩm chữ Hán của người Việt Nam trước TK 10</LINE>
+            <LINE ID="P0208.L002" ORDER="2" NO="2" SRC_LINE="2" BBOX="13,197,2269,395" CONFIDENCE="93.8">thượng", bản Mạc Tư Khoa chép là, cũng đọc là thượng.</LINE>
+            <LINE ID="P0208.L003" ORDER="3" NO="3" SRC_LINE="3" BBOX="13,395,2269,592" CONFIDENCE="93.8">(11) Kính lễ: nguyên văn là "hòa nam" (Vandana) có nghĩa là</LINE>
+            <LINE ID="P0208.L004" ORDER="4" NO="4" SRC_LINE="4" BBOX="119,595,2455,869" CONFIDENCE="10.0">kính lễ. Theo Tăng sử lược thì người Tây Vực mỗi khi gặp nhau, thường chắp tay chào bằng hai tiếng "hòa nam".</LINE>
+            <LINE ID="P0208.L005" ORDER="5" NO="5" SRC_LINE="5" BBOX="119,869,2455,1143" CONFIDENCE="10.0">Vandana =</LINE>
+            <RUNS>
+                <RUN KEY="524a26ece604c0a40cd3e358e12ad7b3f5136dec862179eb51026a6488030220" CREATED_AT="2026-11-24T18:09:20+00:00" IMAGE="E:\Projects\han-viet-corpus\data\CPO_18\02_extraction\pages\page_208.png" IMAGE_WIDTH="2480" IMAGE_HEIGHT="3509" CROP_BOX="0,0,2480,3509" SOURCE="03_ocr/raw/qwen/0208.json" SELECTION="manifest">
+                    <PARAMETERS>
+                        <PARAM NAME="image_sha256">e5661834fd45b1d00adddded488760bbcf7f94fe8287c328a201ed918a69fb74</PARAM>
+                        <ENGINE NAME="qwen" MODEL_ID="Qwen/Qwen2.5-VL-3B-Instruct" MODEL_REVISION="main" TRANSFORMERS_VERSION="4.57.6" TORCH_VERSION="2.5.1+cu121" CUDA_VERSION="12.1" BITSANDBYTES_VERSION="0.50.2" MODE="all" MIN_PIXELS="50176" MAX_PIXELS="802816" BAND_INCHES="2.0" MAX_NEW_TOKENS="768" REPETITION_PENALTY="1.05" ADAPTER_VERSION="3" PROMPT_VERSION="3" PROMPT_SHA256="b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74">
+                            <QUANTIZATION>{"compute_dtype": "float16", "double_quant": true, "load_in_4bit": true, "quant_type": "nf4"}</QUANTIZATION>
+                        </ENGINE>
+                        <PARAM NAME="lang">all</PARAM>
+                        <PARAM NAME="region" />
+                        <PARAM NAME="psm">6</PARAM>
+                        <PARAM NAME="dpi">300</PARAM>
+                        <PARAM NAME="preprocessing">rgb-crop-v1</PARAM>
+                    </PARAMETERS>
+                </RUN>
+            </RUNS>
+        </PAGE>
+        <PAGE NUMBER="209" IMAGE="E:\Projects\han-viet-corpus\data\CPO_18\02_extraction\pages\page_209.png" IMAGE_SHA256="96954f5f44b2492cfcfbafb0ff6f0bb6b2663351439d2c5bf67b615cc7724a87" RAW="03_ocr/raw/qwen/0209.json" SELECTED_ENGINE="qwen" SELECTED_KEY="bdb5a309fff4b5dbc4a546aa8a7b4da6f20877a3f974e8a72345673b3197e4f4" CONFIDENCE="88.82" EMPTY="false" N_LINES="8" N_SRC_LINES="13" N_DROPPED="5" CJK_REMOVED="119">
+            <LINE ID="P0209.L001" ORDER="1" NO="1" SRC_LINE="1" BBOX="22,4,2480,237" CONFIDENCE="84.65">Phần II: Nguyên văn tác phẩm dịch và chú thích</LINE>
+            <LINE ID="P0209.L002" ORDER="2" NO="2" SRC_LINE="7" BBOX="0,1712,2480,1813" CONFIDENCE="92.14">PHIÊN ÂM:</LINE>
+            <LINE ID="P0209.L003" ORDER="3" NO="3" SRC_LINE="8" BBOX="0,1813,2480,1914" CONFIDENCE="92.14">ĐÁP LÝ GIAO CHÂU MIỄU NẠN PHẬT BẤT KIẾN HÌNH</LINE>
+            <LINE ID="P0209.L004" ORDER="4" NO="4" SRC_LINE="9" BBOX="0,1914,2480,2016" CONFIDENCE="92.14">THÍCH ĐẠO CAO</LINE>
+            <LINE ID="P0209.L005" ORDER="5" NO="5" SRC_LINE="10" BBOX="0,2016,2480,2117" CONFIDENCE="92.14">* Đạo Cao: Giao Châu Pháp sư</LINE>
+            <LINE ID="P0209.L006" ORDER="6" NO="6" SRC_LINE="11" BBOX="284,2163,2480,2409" CONFIDENCE="81.65">Thích Đạo Cao bạch: Phục thày văn chí thánh hiển hối chi tích, lý vị uyên bác, từ nghĩa chiếu tẩy; kính lâm phản phúc, dị cao đức âm.</LINE>
+            <LINE ID="P0209.L007" ORDER="7" NO="7" SRC_LINE="12" BBOX="284,2409,2480,2655" CONFIDENCE="81.65">Sử quân viên tường sùng thúy, đắc môn tự nan; triết khánh ngu quản, vông tượng huyền châu.</LINE>
+            <LINE ID="P0209.L008" ORDER="8" NO="8" SRC_LINE="13" BBOX="292,2675,2480,3499" CONFIDENCE="92.9">Phù Như Lai ứng vật, phàm hữu tam yên: nhất giả hiện thân, phóng quang động địa; nhị giả chính pháp, như Phật tại thế; tam giả tượng giáo, phóng phất nghi quỹ. Phảng phất nghi quỹ, ứng kim nhân tình. Nhân tình cảm tượng, thục vi hiện tai! Cố Tịnh danh kinh văn: "Thiện giải pháp tướng, tri chúng sinh căn". Chí ư Sí Đầu Mạt thành, Long hoa tam hội, nhân tình cảm</LINE>
+            <RUNS>
+                <RUN KEY="bdb5a309fff4b5dbc4a546aa8a7b4da6f20877a3f974e8a72345673b3197e4f4" CREATED_AT="2026-11-24T17:52:29+00:00" IMAGE="E:\Projects\han-viet-corpus\data\CPO_18\02_extraction\pages\page_209.png" IMAGE_WIDTH="2480" IMAGE_HEIGHT="3509" CROP_BOX="0,0,2480,3509" SOURCE="03_ocr/raw/qwen/0209.json" SELECTION="manifest">
+                    <PARAMETERS>
+                        <PARAM NAME="image_sha256">96954f5f44b2492cfcfbafb0ff6f0bb6b2663351439d2c5bf67b615cc7724a87</PARAM>
+                        <ENGINE NAME="qwen" MODEL_ID="Qwen/Qwen2.5-VL-3B-Instruct" MODEL_REVISION="main" TRANSFORMERS_VERSION="4.57.6" TORCH_VERSION="2.5.1+cu121" CUDA_VERSION="12.1" BITSANDBYTES_VERSION="0.50.2" MODE="all" MIN_PIXELS="50176" MAX_PIXELS="802816" BAND_INCHES="2.0" MAX_NEW_TOKENS="768" REPETITION_PENALTY="1.05" ADAPTER_VERSION="3" PROMPT_VERSION="3" PROMPT_SHA256="b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74">
+                            <QUANTIZATION>{"compute_dtype": "float16", "double_quant": true, "load_in_4bit": true, "quant_type": "nf4"}</QUANTIZATION>
+                        </ENGINE>
+                        <PARAM NAME="lang">all</PARAM>
+                        <PARAM NAME="region" />
+                        <PARAM NAME="psm">6</PARAM>
+                        <PARAM NAME="dpi">300</PARAM>
+                        <PARAM NAME="preprocessing">rgb-crop-v1</PARAM>
+                    </PARAMETERS>
+                </RUN>
+            </RUNS>
+        </PAGE>
+        <PAGE NUMBER="210" IMAGE="E:\Projects\han-viet-corpus\data\CPO_18\02_extraction\pages\page_210.png" IMAGE_SHA256="13b28c0741438cc418c13bf911105d9e9a9fd5da0d1bbe878010eac09da1b806" RAW="03_ocr/raw/qwen/0210.json" SELECTED_ENGINE="qwen" SELECTED_KEY="87e100d0063d0e3451745c3e9a5aced43f53524e238202530d6ddce12ceed5fc" CONFIDENCE="90.3" EMPTY="false" N_LINES="18" N_SRC_LINES="18" N_DROPPED="0" CJK_REMOVED="0">
+            <LINE ID="P0210.L001" ORDER="1" NO="1" SRC_LINE="1" BBOX="259,65,2207,305" CONFIDENCE="87.75">Sưu tầm và khảo luận tác phẩm chữ Hán của người Việt Nam trước TK 10</LINE>
+            <LINE ID="P0210.L002" ORDER="2" NO="2" SRC_LINE="2" BBOX="259,305,2207,544" CONFIDENCE="87.75">kiến, thục vi ẩn tai! Cố Pháp Hoa kinh văn: "Thời ngã cập chúng tăng câu xuất Linh Thử Sơn". Nhượng Khu chi cung, sành nhiên khả kỳ; Tây phương căn nguyên,</LINE>
+            <LINE ID="P0210.L003" ORDER="3" NO="3" SRC_LINE="3" BBOX="272,541,2398,799" CONFIDENCE="93.45">hà vi bất đổ? Nhi thế chi nghi giả, đa vị kinh ngữ bất phù, ám ký tình thiếu, hàm dĩ bất đổ sinh trệ.</LINE>
+            <LINE ID="P0210.L004" ORDER="4" NO="4" SRC_LINE="4" BBOX="272,799,2398,1057" CONFIDENCE="93.45">Phù Tam Hoàng Ngũ Đế, Tam đại Ngũ Bá, Cơ Đán Khổng Khâu san Thi chế Lễ, tịnh văn sử tịch, thực đổ chi tai! Thích thị chấn pháp cổ ư Lộc Viên, Phu tử</LINE>
+            <LINE ID="P0210.L005" ORDER="5" NO="5" SRC_LINE="5" BBOX="270,1055,2199,1310" CONFIDENCE="89.73">dương đức âm ư Tưu Lỗ, giai nhĩ nhân sở bất đắc, câu tín chi ư thư khế. Nhược bất tín bỉ, bất hoạn nghi thử. Ký năng liễu bỉ, hà độc trệ thử?</LINE>
+            <LINE ID="P0210.L006" ORDER="6" NO="6" SRC_LINE="6" BBOX="270,1310,2199,1565" CONFIDENCE="89.73">Sứ quân thánh tư uyên viễn, động giám tam thế, ngự tâm Thọ lượng vị tận chi giáo, cận thủ Định</LINE>
+            <LINE ID="P0210.L007" ORDER="7" NO="7" SRC_LINE="7" BBOX="268,1565,2409,1819" CONFIDENCE="87.36">Quang, Nho Đồng chi tích, trung suy Đại Thông Trí Thắng chi tập, dĩ thích chúng nhân chi u trệ, nhược phi trùng tiêu ư thái dương.</LINE>
+            <LINE ID="P0210.L008" ORDER="8" NO="8" SRC_LINE="8" BBOX="268,1819,2409,2074" CONFIDENCE="87.36">Bần đạo ngôn thển từ chuyết, ngữ bất tuyên tâm, ký phụng kiến chi nhật, dương thân chi ư luận nạn nhĩ.</LINE>
+            <LINE ID="P0210.L009" ORDER="9" NO="9" SRC_LINE="9" BBOX="394,2115,2125,2208" CONFIDENCE="90.57">Cẩn bạch.</LINE>
+            <LINE ID="P0210.L010" ORDER="10" NO="10" SRC_LINE="10" BBOX="394,2208,2125,2300" CONFIDENCE="90.57">( Hoằng minh tập quyển thập nhất.</LINE>
+            <LINE ID="P0210.L011" ORDER="11" NO="11" SRC_LINE="11" BBOX="394,2300,2125,2393" CONFIDENCE="90.57">Kiến Toàn Thượng cổ, Tam đại, Tần,</LINE>
+            <LINE ID="P0210.L012" ORDER="12" NO="12" SRC_LINE="12" BBOX="394,2393,2125,2485" CONFIDENCE="90.57">Hán, Tam quốc, Lục triều văn ; Toàn</LINE>
+            <LINE ID="P0210.L013" ORDER="13" NO="13" SRC_LINE="13" BBOX="394,2485,2125,2578" CONFIDENCE="90.57">Tống văn, quyển lục thập tam )</LINE>
+            <LINE ID="P0210.L014" ORDER="14" NO="14" SRC_LINE="14" BBOX="288,2725,2475,2882" CONFIDENCE="94.28">DỊCH NGHĨA :</LINE>
+            <LINE ID="P0210.L015" ORDER="15" NO="15" SRC_LINE="15" BBOX="288,2882,2475,3039" CONFIDENCE="94.28">TRẢ LỜI NGÀI LÝ MIỄU LÀM QUAN Ở GIAO CHÂU</LINE>
+            <LINE ID="P0210.L016" ORDER="16" NO="16" SRC_LINE="16" BBOX="288,3039,2475,3195" CONFIDENCE="94.28">VẠN HỎI VỀ VIỆC KHÔNG THẤY HÌNH THỂ PHẬT</LINE>
+            <LINE ID="P0210.L017" ORDER="17" NO="17" SRC_LINE="17" BBOX="288,3195,2475,3352" CONFIDENCE="94.28">THÍCH ĐẠO CAO</LINE>
+            <LINE ID="P0210.L018" ORDER="18" NO="18" SRC_LINE="18" BBOX="288,3352,2475,3509" CONFIDENCE="94.28">* Đạo Cao là Pháp sư người Giao Châu</LINE>
+            <RUNS>
+                <RUN KEY="87e100d0063d0e3451745c3e9a5aced43f53524e238202530d6ddce12ceed5fc" CREATED_AT="2026-11-24T17:53:05+00:00" IMAGE="E:\Projects\han-viet-corpus\data\CPO_18\02_extraction\pages\page_210.png" IMAGE_WIDTH="2480" IMAGE_HEIGHT="3509" CROP_BOX="0,0,2480,3509" SOURCE="03_ocr/raw/qwen/0210.json" SELECTION="manifest">
+                    <PARAMETERS>
+                        <PARAM NAME="image_sha256">13b28c0741438cc418c13bf911105d9e9a9fd5da0d1bbe878010eac09da1b806</PARAM>
+                        <ENGINE NAME="qwen" MODEL_ID="Qwen/Qwen2.5-VL-3B-Instruct" MODEL_REVISION="main" TRANSFORMERS_VERSION="4.57.6" TORCH_VERSION="2.5.1+cu121" CUDA_VERSION="12.1" BITSANDBYTES_VERSION="0.50.2" MODE="all" MIN_PIXELS="50176" MAX_PIXELS="802816" BAND_INCHES="2.0" MAX_NEW_TOKENS="768" REPETITION_PENALTY="1.05" ADAPTER_VERSION="3" PROMPT_VERSION="3" PROMPT_SHA256="b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74">
+                            <QUANTIZATION>{"compute_dtype": "float16", "double_quant": true, "load_in_4bit": true, "quant_type": "nf4"}</QUANTIZATION>
+                        </ENGINE>
+                        <PARAM NAME="lang">all</PARAM>
+                        <PARAM NAME="region" />
+                        <PARAM NAME="psm">6</PARAM>
+                        <PARAM NAME="dpi">300</PARAM>
+                        <PARAM NAME="preprocessing">rgb-crop-v1</PARAM>
+                    </PARAMETERS>
+                </RUN>
+            </RUNS>
+        </PAGE>
+        <PAGE NUMBER="211" IMAGE="E:\Projects\han-viet-corpus\data\CPO_18\02_extraction\pages\page_211.png" IMAGE_SHA256="a79096af54358fb45ba03a921d8854992469a466ca25a859e848ceffe56f12aa" RAW="03_ocr/raw/qwen/0211.json" SELECTED_ENGINE="qwen" SELECTED_KEY="dfbf97be1130e62c2910d0fdf155f6d6ff49816eb1830764462cb87e28ee36a5" CONFIDENCE="93.63" EMPTY="false" N_LINES="10" N_SRC_LINES="10" N_DROPPED="0" CJK_REMOVED="0">
+            <LINE ID="P0211.L001" ORDER="1" NO="1" SRC_LINE="1" BBOX="302,0,2428,260" CONFIDENCE="94.58">Phần II: Nguyên văn tác phẩm dịch và chú thích</LINE>
+            <LINE ID="P0211.L002" ORDER="2" NO="2" SRC_LINE="2" BBOX="302,260,2428,521" CONFIDENCE="94.58">Thích Đạo Cao xin thưa: Được bề trên hỏi tới dấu tích khi hiện rõ, khi ẩn khuất của đáng chí thánh (1), ý</LINE>
+            <LINE ID="P0211.L003" ORDER="3" NO="3" SRC_LINE="3" BBOX="326,519,2428,723" CONFIDENCE="94.94">vị sâu rộng, lời lẽ sáng sủa, kính cẩn xem đi xem lại, thấy ngài thanh danh tiếng tốt càng cao.</LINE>
+            <LINE ID="P0211.L004" ORDER="4" NO="4" SRC_LINE="4" BBOX="326,723,2428,927" CONFIDENCE="94.94">Sứ quân (2) tường vách cao kín (3), hiểu cho được giáo pháp tất nhiên khó khăn; vậy xin dốc hết chút hiểu biết</LINE>
+            <LINE ID="P0211.L005" ORDER="5" NO="5" SRC_LINE="5" BBOX="333,931,2428,1226" CONFIDENCE="92.04">chật hẹp của kẻ ngu dại này, những mong giống như chuyện tượng vỡ được huyền châu (4).</LINE>
+            <LINE ID="P0211.L006" ORDER="6" NO="6" SRC_LINE="6" BBOX="333,1226,2428,1521" CONFIDENCE="92.04">Xét ra, Như Lai (5) ứng vật gồm có ba cách: một là hiện rõ thân hình, tỏa ánh sáng, chuyển rung mặt đất (6); hai là để lại chính pháp (7), cũng như có Phật ở đời; ba là để lại tượng giáo (8), từ tựa như dung nghi khuôn.</LINE>
+            <LINE ID="P0211.L007" ORDER="7" NO="7" SRC_LINE="7" BBOX="61,1531,2428,2079" CONFIDENCE="93.64">phép của Phật. Dung nghi khuôn phép từ tựa ấy đang đáp ứng đòi hỏi của nhân tình ngày nay. Nhân tình đã cảm được qua tượng giáo, ai bảo phải chờ đến khi Phật xuất hiện? Cho nên kinh Tịnh danh (9) nói: "Khéo hiểu được Pháp tướng, thì biết nguồn gốc của chúng sinh" (10). Đến như ba kỳ hội Long hoa (11) ở thành Sí Đầu Mạt (12)</LINE>
+            <LINE ID="P0211.L008" ORDER="8" NO="8" SRC_LINE="8" BBOX="338,2088,2428,2641" CONFIDENCE="92.98">thì nhân tình đều cảm được qua việc trông thấy, ai bảo rằng Phật ẩn khuất? Cho nên kinh Pháp hoa (13) nói: "Lúc bấy giờ ta và các tăng đồ đều ra núi Linh Thủy (14). Cung vua Nhương Khư (15) còn có thể lần ra, thì nguồn cội Tây phương làm sao không thấy? Nhưng kẻ nghi ngờ ở đời phần nhiều cho lời kinh không phù hợp sự</LINE>
+            <LINE ID="P0211.L009" ORDER="9" NO="9" SRC_LINE="9" BBOX="344,2646,2475,3072" CONFIDENCE="94.54">thật nên đâm ra mờ ám ít tin tưởng, lấy cớ không trông thấy Phật mà chểnh mảng việc tu hành.</LINE>
+            <LINE ID="P0211.L010" ORDER="10" NO="10" SRC_LINE="10" BBOX="344,3072,2475,3499" CONFIDENCE="94.54">Kìa chuyện Tam Hoàng Ngũ Đế (16), Tam đại Ngũ Bá (17) Cơ Đán Khổng Khâu (18) biên tập Kinh Thi, chế tác Kinh Lễ, đều nghe nói qua sử sách, nào ai trông thấy đâu! Chuyện họ Thích (19) gióng trống pháp (20) ở</LINE>
+            <RUNS>
+                <RUN KEY="dfbf97be1130e62c2910d0fdf155f6d6ff49816eb1830764462cb87e28ee36a5" CREATED_AT="2026-11-24T17:53:43+00:00" IMAGE="E:\Projects\han-viet-corpus\data\CPO_18\02_extraction\pages\page_211.png" IMAGE_WIDTH="2480" IMAGE_HEIGHT="3509" CROP_BOX="0,0,2480,3509" SOURCE="03_ocr/raw/qwen/0211.json" SELECTION="manifest">
+                    <PARAMETERS>
+                        <PARAM NAME="image_sha256">a79096af54358fb45ba03a921d8854992469a466ca25a859e848ceffe56f12aa</PARAM>
+                        <ENGINE NAME="qwen" MODEL_ID="Qwen/Qwen2.5-VL-3B-Instruct" MODEL_REVISION="main" TRANSFORMERS_VERSION="4.57.6" TORCH_VERSION="2.5.1+cu121" CUDA_VERSION="12.1" BITSANDBYTES_VERSION="0.50.2" MODE="all" MIN_PIXELS="50176" MAX_PIXELS="802816" BAND_INCHES="2.0" MAX_NEW_TOKENS="768" REPETITION_PENALTY="1.05" ADAPTER_VERSION="3" PROMPT_VERSION="3" PROMPT_SHA256="b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74">
+                            <QUANTIZATION>{"compute_dtype": "float16", "double_quant": true, "load_in_4bit": true, "quant_type": "nf4"}</QUANTIZATION>
+                        </ENGINE>
+                        <PARAM NAME="lang">all</PARAM>
+                        <PARAM NAME="region" />
+                        <PARAM NAME="psm">6</PARAM>
+                        <PARAM NAME="dpi">300</PARAM>
+                        <PARAM NAME="preprocessing">rgb-crop-v1</PARAM>
+                    </PARAMETERS>
+                </RUN>
+            </RUNS>
+        </PAGE>
+        <PAGE NUMBER="212" IMAGE="E:\Projects\han-viet-corpus\data\CPO_18\02_extraction\pages\page_212.png" IMAGE_SHA256="159c075c4b06d6ccf2b27df7850b18b0eb6f5ba2d8c77637850e109ed0627667" RAW="03_ocr/raw/qwen/0212.json" SELECTED_ENGINE="qwen" SELECTED_KEY="8ffe16ac535c18ed5bdb2b6fcb6e3af541699fb09e201f55623048cd250bf0e7" CONFIDENCE="93.06" EMPTY="false" N_LINES="12" N_SRC_LINES="12" N_DROPPED="0" CJK_REMOVED="0">
+            <LINE ID="P0212.L001" ORDER="1" NO="1" SRC_LINE="1" BBOX="258,74,2207,355" CONFIDENCE="93.94">Sưu tầm và khảo luận tác phẩm chữ Hán của người Việt Nam trước TK 10</LINE>
+            <LINE ID="P0212.L002" ORDER="2" NO="2" SRC_LINE="2" BBOX="258,355,2207,636" CONFIDENCE="93.94">Lộc Viên (21), Phu tử (22) nêu đức âm ở TƯU LỘ (23), tai ta không trực tiếp được nghe, mắt ta không trực tiếp được thấy, đều là tin theo sách vở cả. Nếu không tin bên kia thì ngờ bên này cũng phải. Nhưng nếu đã có thể thông</LINE>
+            <LINE ID="P0212.L003" ORDER="3" NO="3" SRC_LINE="3" BBOX="265,633,2200,1233" CONFIDENCE="89.23">sử quân suy nghĩ sâu xa, xét rõ tam thế (24), mong ngài tìm hiểu lời dạy Thọ lượng (25) chưa dứt, gần thì theo dấu tích Định Quang, Nho Đồng (26), giữa thì suy xét các sách chép về Đại Thông Trí Thắng (27), để cởi bỏ sự tối tăm trì trệ cho mọi người, như vén mấy tầng mây</LINE>
+            <LINE ID="P0212.L004" ORDER="4" NO="4" SRC_LINE="4" BBOX="260,1234,2195,1412" CONFIDENCE="88.57">khỏi vâng thái dương vậy.</LINE>
+            <LINE ID="P0212.L005" ORDER="5" NO="5" SRC_LINE="5" BBOX="260,1412,2195,1589" CONFIDENCE="88.57">Bần đạo (28) ý nông lời vụng, e nói chưa thật rõ lòng, mong ngày gặp ngài sẽ trao đổi thêm những điều còn khúc mắc.</LINE>
+            <LINE ID="P0212.L006" ORDER="6" NO="6" SRC_LINE="6" BBOX="260,1589,2195,1767" CONFIDENCE="88.57">Nay kính thư.</LINE>
+            <LINE ID="P0212.L007" ORDER="7" NO="7" SRC_LINE="7" BBOX="261,1790,2185,1961" CONFIDENCE="92.2">( Hoằng minh tập, Q. 11 ; xem Toàn Thượng cổ, Tam đại, Tần, Hán, Tam quốc, Lục triều văn, phần Toàn Tống văn, Q. 63 )</LINE>
+            <LINE ID="P0212.L008" ORDER="8" NO="8" SRC_LINE="8" BBOX="261,1961,2185,2133" CONFIDENCE="92.2">CHÚ THÍCH :</LINE>
+            <LINE ID="P0212.L009" ORDER="9" NO="9" SRC_LINE="9" BBOX="261,2133,2185,2304" CONFIDENCE="92.2">(1) Chí thánh : đây chỉ Phật .</LINE>
+            <LINE ID="P0212.L010" ORDER="10" NO="10" SRC_LINE="10" BBOX="263,2338,2188,2613" CONFIDENCE="97.76">(2) Sứ quân: tiếng dùng để gọi một cách trân trọng các sứ giả, hoặc kẻ đứng đầu các châu, quận. Đây được dùng theo nghĩa thứ hai.</LINE>
+            <LINE ID="P0212.L011" ORDER="11" NO="11" SRC_LINE="11" BBOX="263,2613,2188,2888" CONFIDENCE="97.76">(3) Tường vách cao kín: sách Thích thị thông giám kể rằng, Vương Ngạn Siêu lúc hàn vi, muốn theo một vị Thiền sư tên là Du đi tu, nhưng Thiền sư bảo: "Nhữ thế duyên</LINE>
+            <LINE ID="P0212.L012" ORDER="12" NO="12" SRC_LINE="12" BBOX="286,2893,2475,3509" CONFIDENCE="94.08">thâm, đương vi ngã gia viên tường", ý nói Ngạn Siêu còn nhiều duyên nợ với cõi đời lầm, chưa thể tu hành được, chỉ nên đứng ngoài làm "tường vách" để bảo vệ cho đạo Phật thôi! Đạo Cao gợi lại tích ấy, có ý bảo Lý Miễu</LINE>
+            <RUNS>
+                <RUN KEY="8ffe16ac535c18ed5bdb2b6fcb6e3af541699fb09e201f55623048cd250bf0e7" CREATED_AT="2026-11-24T18:09:56+00:00" IMAGE="E:\Projects\han-viet-corpus\data\CPO_18\02_extraction\pages\page_212.png" IMAGE_WIDTH="2480" IMAGE_HEIGHT="3509" CROP_BOX="0,0,2480,3509" SOURCE="03_ocr/raw/qwen/0212.json" SELECTION="manifest">
+                    <PARAMETERS>
+                        <PARAM NAME="image_sha256">159c075c4b06d6ccf2b27df7850b18b0eb6f5ba2d8c77637850e109ed0627667</PARAM>
+                        <ENGINE NAME="qwen" MODEL_ID="Qwen/Qwen2.5-VL-3B-Instruct" MODEL_REVISION="main" TRANSFORMERS_VERSION="4.57.6" TORCH_VERSION="2.5.1+cu121" CUDA_VERSION="12.1" BITSANDBYTES_VERSION="0.50.2" MODE="all" MIN_PIXELS="50176" MAX_PIXELS="802816" BAND_INCHES="2.0" MAX_NEW_TOKENS="768" REPETITION_PENALTY="1.05" ADAPTER_VERSION="3" PROMPT_VERSION="3" PROMPT_SHA256="b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74">
+                            <QUANTIZATION>{"compute_dtype": "float16", "double_quant": true, "load_in_4bit": true, "quant_type": "nf4"}</QUANTIZATION>
+                        </ENGINE>
+                        <PARAM NAME="lang">all</PARAM>
+                        <PARAM NAME="region" />
+                        <PARAM NAME="psm">6</PARAM>
+                        <PARAM NAME="dpi">300</PARAM>
+                        <PARAM NAME="preprocessing">rgb-crop-v1</PARAM>
+                    </PARAMETERS>
+                </RUN>
+            </RUNS>
+        </PAGE>
+    </FILE>
+</root>

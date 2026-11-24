@@ -1,0 +1,382 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_20",
+  "engine": "paddlevl",
+  "page": 134,
+  "runs": [
+    {
+      "key": "7339d01fdabe25afc76721798c9ff6383c69c4efd29fabdf773e6689ccb7c649",
+      "parameters": {
+        "image_sha256": "53e919b6a5c4b7e9ccf1bf5c83cece565d576bd087ea1669b62b7bb607505efa",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "adapter_version": 4
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-24T19:13:04+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_134.png",
+      "image_size": [
+        1840,
+        2803
+      ],
+      "crop_box": [
+        0,
+        0,
+        1840,
+        2803
+      ],
+      "lines": [
+        {
+          "text": "Kày nhắn:",
+          "bbox": [
+            291,
+            279,
+            510,
+            308
+          ],
+          "confidence": 61.52
+        },
+        {
+          "text": "Hầu cách linh dư. ¹ Kính bày điện lễ.",
+          "bbox": [
+            291,
+            336,
+            1063,
+            380
+          ],
+          "confidence": 89.55
+        },
+        {
+          "text": "Trông đóa bach vân ² thăm thẳm, tình nghĩa xưa lia dứt vì đâu?",
+          "bbox": [
+            291,
+            407,
+            1655,
+            451
+          ],
+          "confidence": 85.64
+        },
+        {
+          "text": "Đang tuần hoàng thủy³ với vời, nghi vấn ấy thấu soi chăng nhẽ?",
+          "bbox": [
+            204,
+            464,
+            1561,
+            516
+          ],
+          "confidence": 79.48
+        },
+        {
+          "text": "Hội ôi! Cảm thay!",
+          "bbox": [
+            293,
+            539,
+            666,
+            581
+          ],
+          "confidence": 85.6
+        },
+        {
+          "text": "Trích Dụ Am văn tập, quyền VII",
+          "bbox": [
+            1047,
+            619,
+            1656,
+            659
+          ],
+          "confidence": 94.37
+        },
+        {
+          "text": "1. Linh dư Chiếc xe chở linh cũu. Ý trong bài nói: Nay sắp sửa xa cách linh cũu.",
+          "bbox": [
+            301,
+            2275,
+            1633,
+            2314
+          ],
+          "confidence": 92.1
+        },
+        {
+          "text": "2. Đóa bạch vân: Đóa mây trắng.",
+          "bbox": [
+            299,
+            2323,
+            852,
+            2359
+          ],
+          "confidence": 92.72
+        },
+        {
+          "text": "3. Hoàng thủy: Tả truyện chép \"Gián mao, hoàng thủy khả tiến vu quý thân\"",
+          "bbox": [
+            298,
+            2371,
+            1658,
+            2410
+          ],
+          "confidence": 91.22
+        },
+        {
+          "text": "(Rau khe nước sưới cũng có thể tiến đăng quỹ thần). Ý nói thức đăng cung xuyênh",
+          "bbox": [
+            209,
+            2418,
+            1658,
+            2459
+          ],
+          "confidence": 83.69
+        },
+        {
+          "text": "xoang, nhưng lòng thành kinh.",
+          "bbox": [
+            209,
+            2472,
+            728,
+            2498
+          ],
+          "confidence": 91.05
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          1840,
+          2803
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 6.61,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              291,
+              279,
+              510,
+              308
+            ],
+            "generated_text": "Kày nhắn:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.236,
+            "confidence": 61.52,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              291,
+              336,
+              1063,
+              380
+            ],
+            "generated_text": "Hầu cách linh dư. ¹ Kính bày điện lễ.",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.512,
+            "confidence": 89.55,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              291,
+              407,
+              1655,
+              451
+            ],
+            "generated_text": "Trông đóa bach vân ² thăm thẳm, tình nghĩa xưa lia dứt vì đâu?",
+            "n_lines": 1,
+            "tokens": 32,
+            "seconds": 0.79,
+            "confidence": 85.64,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              204,
+              464,
+              1561,
+              516
+            ],
+            "generated_text": "Đang tuần hoàng thủy³ với vời, nghi vấn ấy thấu soi chăng nhẽ?",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.735,
+            "confidence": 79.48,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              293,
+              539,
+              666,
+              581
+            ],
+            "generated_text": "Hội ôi! Cảm thay!",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.378,
+            "confidence": 85.6,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              1047,
+              619,
+              1656,
+              659
+            ],
+            "generated_text": "Trích Dụ Am văn tập, quyền VII",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 0.403,
+            "confidence": 94.37,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              209,
+              2240,
+              804,
+              2254
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.146,
+            "confidence": 8.21,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              301,
+              2275,
+              1633,
+              2314
+            ],
+            "generated_text": "1. Linh dư Chiếc xe chở linh cũu. Ý trong bài nói: Nay sắp sửa xa cách linh cũu.",
+            "n_lines": 1,
+            "tokens": 39,
+            "seconds": 0.919,
+            "confidence": 92.1,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              299,
+              2323,
+              852,
+              2359
+            ],
+            "generated_text": "2. Đóa bạch vân: Đóa mây trắng.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.512,
+            "confidence": 92.72,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              298,
+              2371,
+              1658,
+              2410
+            ],
+            "generated_text": "3. Hoàng thủy: Tả truyện chép \"Gián mao, hoàng thủy khả tiến vu quý thân\"",
+            "n_lines": 1,
+            "tokens": 33,
+            "seconds": 0.828,
+            "confidence": 91.22,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              209,
+              2418,
+              1658,
+              2459
+            ],
+            "generated_text": "(Rau khe nước sưới cũng có thể tiến đăng quỹ thần). Ý nói thức đăng cung xuyênh",
+            "n_lines": 1,
+            "tokens": 34,
+            "seconds": 0.819,
+            "confidence": 83.69,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              209,
+              2472,
+              728,
+              2498
+            ],
+            "generated_text": "xoang, nhưng lòng thành kinh.",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.331,
+            "confidence": 91.05,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      }
+    }
+  ]
+}

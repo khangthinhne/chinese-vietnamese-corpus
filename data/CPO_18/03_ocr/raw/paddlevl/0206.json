@@ -1,0 +1,959 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_18",
+  "engine": "paddlevl",
+  "page": 206,
+  "runs": [
+    {
+      "key": "a2e0c1815f62142aacef2209384f0f0e4d8fb8583e7409ec0f5a856fb5489117",
+      "parameters": {
+        "image_sha256": "fed77272d9e993999a8d2d3890ab340d1c1b0b312d145ff1c8c528eb188a8ddc",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "adapter_version": 4
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-24T17:45:34+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_18\\02_extraction\\pages\\page_206.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        0,
+        2480,
+        3509
+      ],
+      "lines": [
+        {
+          "text": "Sưu tấm và khảo luận tác phẩm chủ Hán của người Việt Nam trước TK 10",
+          "bbox": [
+            293,
+            127,
+            1850,
+            187
+          ],
+          "confidence": 92.37
+        },
+        {
+          "text": "[",
+          "bbox": [
+            275,
+            219,
+            2226,
+            240
+          ],
+          "confidence": 14.52
+        },
+        {
+          "text": "Đê tủ Lý Miêu hòa nam.",
+          "bbox": [
+            412,
+            327,
+            1222,
+            393
+          ],
+          "confidence": 90.59
+        },
+        {
+          "text": "( Hoàng mình tập, Quyền thấp nhất :",
+          "bbox": [
+            1006,
+            459,
+            2199,
+            521
+          ],
+          "confidence": 82.12
+        },
+        {
+          "text": "Toàn Thương có, Tam đai, Tân, Hán,",
+          "bbox": [
+            1002,
+            545,
+            2193,
+            608
+          ],
+          "confidence": 92.0
+        },
+        {
+          "text": "Tam quốc, Luc triệu văn, Toàn Tổng",
+          "bbox": [
+            1002,
+            632,
+            2446,
+            694
+          ],
+          "confidence": 95.58
+        },
+        {
+          "text": "văn. Quyên ngũ thập thất",
+          "bbox": [
+            999,
+            722,
+            1862,
+            782
+          ],
+          "confidence": 83.63
+        },
+        {
+          "text": "DICH NGHIA:",
+          "bbox": [
+            408,
+            860,
+            838,
+            915
+          ],
+          "confidence": 94.02
+        },
+        {
+          "text": "THƯ GỮHAI VI PHẠP SƯ (1) CAO VÀ MINH (2)",
+          "bbox": [
+            633,
+            982,
+            1813,
+            1044
+          ],
+          "confidence": 86.49
+        },
+        {
+          "text": "ĐỀ VĂN HỒI VỀ VIỆC KHÔNG THẤY HÌNH THẾ PHẬT (3)",
+          "bbox": [
+            504,
+            1083,
+            1950,
+            1155
+          ],
+          "confidence": 89.09
+        },
+        {
+          "text": "LY MIEU",
+          "bbox": [
+            1517,
+            1230,
+            1776,
+            1281
+          ],
+          "confidence": 98.6
+        },
+        {
+          "text": "Miêu là Thứ sử Giao Châu",
+          "bbox": [
+            1258,
+            1309,
+            2090,
+            1366
+          ],
+          "confidence": 82.6
+        },
+        {
+          "text": "Răng, chỗ Đao thanh hư (4), tứ đại (5) lẽ thường, nhờ",
+          "bbox": [
+            406,
+            1425,
+            2199,
+            1496
+          ],
+          "confidence": 86.04
+        },
+        {
+          "text": "có giáo pháp (6) mà sự nhiệm mẫu lan khắp mọi cõi. Nếu",
+          "bbox": [
+            280,
+            1524,
+            2192,
+            1591
+          ],
+          "confidence": 91.59
+        },
+        {
+          "text": "nói Đạo [Phát] là khéo giỏi, có thể lập giáo dễ làm lợi",
+          "bbox": [
+            73,
+            1616,
+            2191,
+            1696
+          ],
+          "confidence": 93.19
+        },
+        {
+          "text": "cho [muôn] vật, giải thoát cho vô số [người], thì tại sao",
+          "bbox": [
+            116,
+            1709,
+            2191,
+            1789
+          ],
+          "confidence": 94.42
+        },
+        {
+          "text": "không thấy chân hình Phát ở trên đời ? Hay là chỉ (?) nói",
+          "bbox": [
+            176,
+            1797,
+            2447,
+            1869
+          ],
+          "confidence": 91.26
+        },
+        {
+          "text": "suông mà không có thực (8)?",
+          "bbox": [
+            281,
+            1892,
+            1185,
+            1957
+          ],
+          "confidence": 88.99
+        },
+        {
+          "text": "Nay đang lúc đi tìm nguồn cội Phương tây (9), cúi",
+          "bbox": [
+            410,
+            2019,
+            2183,
+            2100
+          ],
+          "confidence": 93.33
+        },
+        {
+          "text": "mong Đại hòa thượng (10) rủ lòng, chấp nhận nỗi băn",
+          "bbox": [
+            283,
+            2112,
+            2180,
+            2193
+          ],
+          "confidence": 92.37
+        },
+        {
+          "text": "khoăn của kế dưới, không tiếc lời chỉ bảo thân tình.",
+          "bbox": [
+            280,
+            2203,
+            1993,
+            2273
+          ],
+          "confidence": 88.62
+        },
+        {
+          "text": "Đê tủ Lý Miếu kính lễ (11).",
+          "bbox": [
+            408,
+            2332,
+            1256,
+            2402
+          ],
+          "confidence": 87.9
+        },
+        {
+          "text": "( Hoàng minh tập, Q. 11 ; Toàn Thương",
+          "bbox": [
+            870,
+            2448,
+            2088,
+            2517
+          ],
+          "confidence": 92.32
+        },
+        {
+          "text": "có, Tam đai, Tân, Hán, Tam quốc, Luc",
+          "bbox": [
+            906,
+            2529,
+            2096,
+            2590
+          ],
+          "confidence": 95.11
+        },
+        {
+          "text": "triệu văn, phần Toàn Tổng văn, Q. 57)",
+          "bbox": [
+            912,
+            2611,
+            2102,
+            2672
+          ],
+          "confidence": 96.21
+        },
+        {
+          "text": "CHU THICH:",
+          "bbox": [
+            423,
+            2762,
+            829,
+            2815
+          ],
+          "confidence": 94.21
+        },
+        {
+          "text": "(1) Pháp sư : người am tưởng kinh Phật, có khả năng giảng",
+          "bbox": [
+            300,
+            2878,
+            2171,
+            2952
+          ],
+          "confidence": 90.71
+        },
+        {
+          "text": "day cho người khác.",
+          "bbox": [
+            428,
+            2970,
+            2475,
+            3014
+          ],
+          "confidence": 97.81
+        },
+        {
+          "text": "(2) Cao và Minh : tức Đạo Cao và Pháp Minh, hai nhà sư",
+          "bbox": [
+            295,
+            3073,
+            2398,
+            3150
+          ],
+          "confidence": 95.69
+        },
+        {
+          "text": "nước ta.",
+          "bbox": [
+            420,
+            3171,
+            2301,
+            3212
+          ],
+          "confidence": 97.86
+        },
+        {
+          "text": "208",
+          "bbox": [
+            290,
+            3346,
+            2108,
+            3390
+          ],
+          "confidence": 97.38
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          3509
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 15.228,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              293,
+              127,
+              1850,
+              187
+            ],
+            "generated_text": "Sưu tấm và khảo luận tác phẩm chủ Hán của người Việt Nam trước TK 10",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.608,
+            "confidence": 92.37,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              275,
+              219,
+              2226,
+              240
+            ],
+            "generated_text": "[",
+            "n_lines": 1,
+            "tokens": 2,
+            "seconds": 0.17,
+            "confidence": 14.52,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              412,
+              327,
+              1222,
+              393
+            ],
+            "generated_text": "Đê tủ Lý Miêu hòa nam.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 0.39,
+            "confidence": 90.59,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              1006,
+              459,
+              2199,
+              521
+            ],
+            "generated_text": "( Hoàng mình tập, Quyền thấp nhất :",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.441,
+            "confidence": 82.12,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              1002,
+              545,
+              2193,
+              608
+            ],
+            "generated_text": "Toàn Thương có, Tam đai, Tân, Hán,",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.504,
+            "confidence": 92.0,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              1002,
+              632,
+              2446,
+              694
+            ],
+            "generated_text": "Tam quốc, Luc triệu văn, Toàn Tổng",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.438,
+            "confidence": 95.58,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              999,
+              722,
+              1862,
+              782
+            ],
+            "generated_text": "văn. Quyên ngũ thập thất",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 0.37,
+            "confidence": 83.63,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              408,
+              860,
+              838,
+              915
+            ],
+            "generated_text": "DICH NGHIA:",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.252,
+            "confidence": 94.02,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              633,
+              982,
+              1813,
+              1044
+            ],
+            "generated_text": "THƯ GỮHAI VI PHẠP SƯ (1) CAO VÀ MINH (2)",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 0.825,
+            "confidence": 86.49,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              504,
+              1083,
+              1950,
+              1155
+            ],
+            "generated_text": "ĐỀ VĂN HỒI VỀ VIỆC KHÔNG THẤY HÌNH THẾ PHẬT (3)",
+            "n_lines": 1,
+            "tokens": 47,
+            "seconds": 1.206,
+            "confidence": 89.09,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              1517,
+              1230,
+              1776,
+              1281
+            ],
+            "generated_text": "LY MIEU",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.218,
+            "confidence": 98.6,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              1258,
+              1309,
+              2090,
+              1366
+            ],
+            "generated_text": "Miêu là Thứ sử Giao Châu",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.364,
+            "confidence": 82.6,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              406,
+              1425,
+              2199,
+              1496
+            ],
+            "generated_text": "Răng, chỗ Đao thanh hư (4), tứ đại (5) lẽ thường, nhờ",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.675,
+            "confidence": 86.04,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              280,
+              1524,
+              2192,
+              1591
+            ],
+            "generated_text": "có giáo pháp (6) mà sự nhiệm mẫu lan khắp mọi cõi. Nếu",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 0.712,
+            "confidence": 91.59,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              73,
+              1616,
+              2191,
+              1696
+            ],
+            "generated_text": "nói Đạo [Phát] là khéo giỏi, có thể lập giáo dễ làm lợi",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.695,
+            "confidence": 93.19,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              116,
+              1709,
+              2191,
+              1789
+            ],
+            "generated_text": "cho [muôn] vật, giải thoát cho vô số [người], thì tại sao",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.549,
+            "confidence": 94.42,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              176,
+              1797,
+              2447,
+              1869
+            ],
+            "generated_text": "không thấy chân hình Phát ở trên đời ? Hay là chỉ (?) nói",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.59,
+            "confidence": 91.26,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              281,
+              1892,
+              1185,
+              1957
+            ],
+            "generated_text": "suông mà không có thực (8)?",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.317,
+            "confidence": 88.99,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              410,
+              2019,
+              2183,
+              2100
+            ],
+            "generated_text": "Nay đang lúc đi tìm nguồn cội Phương tây (9), cúi",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.56,
+            "confidence": 93.33,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              283,
+              2112,
+              2180,
+              2193
+            ],
+            "generated_text": "mong Đại hòa thượng (10) rủ lòng, chấp nhận nỗi băn",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.587,
+            "confidence": 92.37,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              280,
+              2203,
+              1993,
+              2273
+            ],
+            "generated_text": "khoăn của kế dưới, không tiếc lời chỉ bảo thân tình.",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.577,
+            "confidence": 88.62,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              408,
+              2332,
+              1256,
+              2402
+            ],
+            "generated_text": "Đê tủ Lý Miếu kính lễ (11).",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.444,
+            "confidence": 87.9,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              870,
+              2448,
+              2088,
+              2517
+            ],
+            "generated_text": "( Hoàng minh tập, Q. 11 ; Toàn Thương",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.507,
+            "confidence": 92.32,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              906,
+              2529,
+              2096,
+              2590
+            ],
+            "generated_text": "có, Tam đai, Tân, Hán, Tam quốc, Luc",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.535,
+            "confidence": 95.11,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              912,
+              2611,
+              2102,
+              2672
+            ],
+            "generated_text": "triệu văn, phần Toàn Tổng văn, Q. 57)",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.595,
+            "confidence": 96.21,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              423,
+              2762,
+              829,
+              2815
+            ],
+            "generated_text": "CHU THICH:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.242,
+            "confidence": 94.21,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              300,
+              2878,
+              2171,
+              2952
+            ],
+            "generated_text": "(1) Pháp sư : người am tưởng kinh Phật, có khả năng giảng",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.563,
+            "confidence": 90.71,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              428,
+              2970,
+              2475,
+              3014
+            ],
+            "generated_text": "day cho người khác.",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.264,
+            "confidence": 97.81,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              295,
+              3073,
+              2398,
+              3150
+            ],
+            "generated_text": "(2) Cao và Minh : tức Đạo Cao và Pháp Minh, hai nhà sư",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.581,
+            "confidence": 95.69,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              420,
+              3171,
+              2301,
+              3212
+            ],
+            "generated_text": "nước ta.",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.233,
+            "confidence": 97.86,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              290,
+              3346,
+              2108,
+              3390
+            ],
+            "generated_text": "208",
+            "n_lines": 1,
+            "tokens": 4,
+            "seconds": 0.215,
+            "confidence": 97.38,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              1017,
+              521,
+              2194,
+              532
+            ],
+            "ink": 553
+          },
+          {
+            "box": [
+              1183,
+              781,
+              1850,
+              791
+            ],
+            "ink": 520
+          },
+          {
+            "box": [
+              542,
+              1493,
+              2027,
+              1505
+            ],
+            "ink": 665
+          },
+          {
+            "box": [
+              369,
+              1588,
+              1841,
+              1601
+            ],
+            "ink": 705
+          },
+          {
+            "box": [
+              445,
+              2949,
+              2416,
+              2962
+            ],
+            "ink": 862
+          },
+          {
+            "box": [
+              448,
+              2958,
+              2438,
+              2972
+            ],
+            "ink": 935
+          },
+          {
+            "box": [
+              2334,
+              3042,
+              2432,
+              3052
+            ],
+            "ink": 588
+          },
+          {
+            "box": [
+              2067,
+              3307,
+              2189,
+              3319
+            ],
+            "ink": 768
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      }
+    }
+  ]
+}

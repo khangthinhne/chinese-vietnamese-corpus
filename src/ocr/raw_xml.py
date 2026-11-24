@@ -1,6 +1,7 @@
 """Xuất/đọc XML cho kho OCR thô theo hệ chữ.
 
-Đầu ra: data/<WORK_ID>/03_ocr/ocr_raw/han.xml | vi.xml
+Đầu ra: data/<WORK_ID>/03_ocr/ocr_raw/chi_tra.xml | vi.xml
+(han.xml / ocr_raw_text/han/ thuộc luồng Hán của src.ocr.build_layers, không phải chế độ này)
 
 
 XML giữ:
@@ -106,18 +107,18 @@ def write_writing_system(layout: DataLayout, writing_system: str,
 _PAGE_TXT_RE = re.compile(r"^\d{3,}\.txt$")
 
 _TEXT_DIR_NAMES = {
-    "han": "han", "chi_tra": "han", "chi_trad": "han",
+    "chi_tra": "chi_tra", "chi_trad": "chi_tra",
     "vi": "vi", "vie": "vi",
 }
 
 
 def text_dir_name(writing_system: str) -> str:
-    """Tên thư mục TXT: han | vie (writing system lạ thì giữ nguyên tên)."""
+    """Tên thư mục TXT: chi_tra | vi (writing system lạ thì giữ nguyên tên)."""
     return _TEXT_DIR_NAMES.get(writing_system.lower(), writing_system)
 
 
 def ocr_raw_text_dir(layout: DataLayout, writing_system: str) -> Path:
-    """data/<WORK_ID>/03_ocr/ocr_raw_text/<han|vie>/"""
+    """data/<WORK_ID>/03_ocr/ocr_raw_text/<chi_tra|vi>/"""
     return (layout.ocr_raw_xml_path(writing_system).parent.parent
             / "ocr_raw_text" / text_dir_name(writing_system))
 

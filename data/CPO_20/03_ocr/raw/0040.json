@@ -1,0 +1,228 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_20",
+  "page": 40,
+  "runs": [
+    {
+      "key": "53b32bef136748d052628ff87f922ba59476911e0dccbf9f2613f8c88c3b7447",
+      "parameters": {
+        "image_sha256": "d6af54d9a8b0aa23a68ec1598afea024790b4c2c563da9559bedea2742cf85f4",
+        "engine": {
+          "name": "qwen",
+          "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "model_revision": "main",
+          "transformers_version": "4.57.6",
+          "torch_version": "2.5.1+cu121",
+          "cuda_version": "12.1",
+          "bitsandbytes_version": "0.50.2",
+          "quantization": {
+            "load_in_4bit": true,
+            "quant_type": "nf4",
+            "double_quant": true,
+            "compute_dtype": "float16"
+          },
+          "mode": "all",
+          "min_pixels": 50176,
+          "max_pixels": 802816,
+          "band_inches": 2.0,
+          "max_new_tokens": 768,
+          "repetition_penalty": 1.05,
+          "adapter_version": 3,
+          "prompt_version": 3,
+          "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74"
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-24T05:08:12+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_040.png",
+      "image_size": [
+        1865,
+        2834
+      ],
+      "crop_box": [
+        0,
+        0,
+        1865,
+        2834
+      ],
+      "lines": [
+        {
+          "text": "秋感国风海",
+          "bbox": [
+            654,
+            594,
+            1788,
+            695
+          ],
+          "confidence": 55.02
+        },
+        {
+          "text": "述哀陪结幻催",
+          "bbox": [
+            654,
+            695,
+            1788,
+            796
+          ],
+          "confidence": 55.02
+        },
+        {
+          "text": "施奉纠生梦",
+          "bbox": [
+            654,
+            796,
+            1788,
+            896
+          ],
+          "confidence": 55.02
+        },
+        {
+          "text": "未失多独浮旅",
+          "bbox": [
+            654,
+            896,
+            1788,
+            997
+          ],
+          "confidence": 55.02
+        },
+        {
+          "text": "白弓情夕影蓬",
+          "bbox": [
+            654,
+            997,
+            1788,
+            1098
+          ],
+          "confidence": 55.02
+        },
+        {
+          "text": "成重计晨宴旬",
+          "bbox": [
+            654,
+            1098,
+            1788,
+            1199
+          ],
+          "confidence": 55.02
+        },
+        {
+          "text": "孤蹤自要向故山來",
+          "bbox": [
+            640,
+            1191,
+            1788,
+            1363
+          ],
+          "confidence": 54.01
+        },
+        {
+          "text": "鴻遷始登鼎閣",
+          "bbox": [
+            640,
+            1363,
+            1788,
+            1536
+          ],
+          "confidence": 54.01
+        },
+        {
+          "text": "龍去何難再得機緣",
+          "bbox": [
+            640,
+            1536,
+            1788,
+            1708
+          ],
+          "confidence": 54.01
+        },
+        {
+          "text": "從今羈旅雁臣孤",
+          "bbox": [
+            170,
+            1700,
+            1788,
+            2527
+          ],
+          "confidence": 75.77
+        }
+      ],
+      "raw": {
+        "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+        "model_revision": "main",
+        "mode": "all",
+        "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74",
+        "dpi": 300,
+        "image_size": [
+          1865,
+          2834
+        ],
+        "band_target_height": 600,
+        "bbox_granularity": "band_even_split",
+        "max_new_tokens": 768,
+        "max_pixels": 802816,
+        "inference_seconds": 23.488,
+        "bands": [
+          {
+            "band": 1,
+            "y0": 598,
+            "y1": 1195,
+            "ink_box": [
+              654,
+              594,
+              1788,
+              1199
+            ],
+            "generated_text": "秋感国风海\n述哀陪结幻催\n施奉纠生梦\n未失多独浮旅\n白弓情夕影蓬\n成重计晨宴旬",
+            "n_lines": 6,
+            "tokens": 40,
+            "seconds": 11.177,
+            "confidence": 55.02,
+            "flags": []
+          },
+          {
+            "band": 2,
+            "y0": 1195,
+            "y1": 1704,
+            "ink_box": [
+              640,
+              1191,
+              1788,
+              1708
+            ],
+            "generated_text": "孤蹤自要向故山來\n鴻遷始登鼎閣\n龍去何難再得機緣",
+            "n_lines": 3,
+            "tokens": 28,
+            "seconds": 7.902,
+            "confidence": 54.01,
+            "flags": []
+          },
+          {
+            "band": 3,
+            "y0": 1704,
+            "y1": 2523,
+            "ink_box": [
+              170,
+              1700,
+              1788,
+              2527
+            ],
+            "generated_text": "從今羈旅雁臣孤",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 4.384,
+            "confidence": 75.77,
+            "flags": []
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      }
+    }
+  ]
+}

@@ -72,7 +72,7 @@ Các tham số chính:
 | Tham số | Ý nghĩa | Mặc định |
 |---|---|---|
 | `--unified` | Bật chế độ OCR single-stream | `False` |
-| `--engine` / `--engines` | Tên engine nhận dạng (`qwen`, `kimhannom`, `tesseract`) | `qwen` |
+| `--engine` / `--engines` | Tên engine nhận dạng (`qwen`, `kimhannom`, `tesseract`, `paddlevl`) | `qwen` |
 | `--pages` | Danh sách trang (ví dụ: `15-20,25`) | Bắt buộc |
 | `--source` | Thư mục ảnh nguồn | `data/<WORK>/02_extraction/pages` |
 | `--force` | Ghi đè XML và manifest (vẫn tái sử dụng raw cache nếu hash khớp) | `False` |
@@ -110,11 +110,99 @@ Hệ thống vẫn giữ toàn bộ code và cấu trúc hỗ trợ chế độ 
   python -m src.ocr.ocr --writing-system chi_tra --work-id MY_WORK --pages 205-210
   python -m src.ocr.ocr --writing-system vie --work-id MY_WORK --pages 205-210
   ```
-  Lưu tại `03_ocr/raw/chi_tra/` và `03_ocr/raw/vie/`.
-- Single-layer legacy:
-  ```powershell
-  python -m src.ocr.ocr --layer han --work-id MY_WORK --pages 205-210
-  ```
-  Lưu tại `02_extraction/<layer>.xml`.
+  Lưu tại `03_ocr/raw/chi_tra/` và `03_ocr/raw/vie/`; XML là `ocr_raw/chi_tra.xml` và `ocr_raw/vi.xml`.
+- Single-layer legacy (`--layer han|am|nghia|tho` ghi `02_extraction/<layer>.xml`) đã bị tắt.
+  `--layer han|vie` giờ là OCR theo luồng Hán/Việt, xem mục 7.
 
 Dữ liệu lịch sử đã chạy trong các thư mục này được giữ nguyên vẹn và an toàn.
+---
+
+## 7. Hai Luồng Hán / Việt (`han.xml`, `vie.xml`)
+
+Thay đổi có chủ đích so với nguyên tắc Single-Stream: ngoài `raw.xml`, mỗi trang có thể được OCR thêm bằng
+engine chuyên cho từng hệ chữ, rồi lọc theo hệ chữ thành hai luồng riêng. `raw.xml`, `ocr_raw_text/NNNN.txt`
+và segmentation hiện tại **không đổi**; việc nối `han`/`vie` vào segmentation chưa làm.
+
+| Luồng | Engine | Môi trường | Bộ lọc (`src/ocr/script_filter.py`) |
+|---|---|---|---|
+| `han` | `paddlevl` (PaddleOCR-VL-1.6) | `.venv-paddle` | giữ dòng có >= 1 chữ Hán; trong dòng chỉ giữ chữ Hán + dấu câu CJK |
+| `vie` | `qwen` (Qwen2.5-VL-3B) | `my_nlp` | xoá mọi chữ Hán + dấu câu CJK/full-width, dọn ngoặc rỗng/nháy mồ côi/khoảng trắng; bỏ dòng không còn chữ cái Latin |
+
+Cả hai chuẩn hoá NFC (NFC ánh xạ chữ CJK Compatibility U+F900–FAFF về chữ Unified tương ứng); không đổi
+giản thể/phồn thể. Mỗi trang dùng đúng MỘT run của engine của luồng, không bỏ phiếu theo dòng.
+
+### 7.1. Bố cục
+```text
+03_ocr/
+    raw/
+        0015.json               # run cũ (unified), CHỈ ĐỌC: tra cache + chọn run Qwen
+        paddlevl/0015.json      # run mới của paddlevl (append-only, cùng schema)
+        qwen/0015.json          # run Qwen mới, chỉ khi chưa có run cùng khoá trong raw/0015.json
+    manifests/
+        ocr_han.json            # lần OCR luồng han gần nhất theo trang (khoá run, trạng thái, lỗi)
+        ocr_vie.json
+        build_han.json          # số liệu lọc theo trang + cảnh báo
+        build_vie.json
+    ocr_raw/
+        raw.xml                 # không đổi
+        han.xml                 # chỉ chữ Hán, nguồn paddlevl
+        vie.xml                 # chỉ chữ Latin/Việt, nguồn qwen
+    ocr_raw_text/
+        0015.txt                # không đổi
+        han/0015.txt            # chỉ tạo cho trang CÓ dòng Hán
+        vie/0015.txt            # chỉ tạo cho trang CÓ dòng Việt
+```
+Run mới không bao giờ được ghi vào `raw/NNNN.json`: file đó bất biến, và `raw.xml` nhúng mọi run của nó
+trong `<RUNS>`, nên thêm run paddlevl vào đó sẽ làm đổi `raw.xml` ở lần dựng sau. Khoá cache (`describe()`)
+tính y hệt chế độ unified, nên run Qwen đã có được dùng lại nguyên vẹn.
+
+### 7.2. Lệnh
+OCR và dựng XML tách riêng. Dựng XML/TXT chỉ đọc JSON thô, không import engine/torch, chạy ở môi trường nào cũng được.
+```powershell
+# .venv-paddle (Hán in ngang cả ở CPO_18/19/20 -> horizontal)
+$env:PADDLEVL_ORIENTATION = "horizontal"
+python -m src.ocr.ocr --config configs/CPO_20.json --layer han --engines paddlevl --pages 1-280
+
+# my_nlp
+python -m src.ocr.ocr --config configs/CPO_20.json --layer vie --engines qwen --pages 1-280
+
+# môi trường bất kỳ
+python -m src.ocr.build_layers --config configs/CPO_20.json               # JSON thô -> han.xml, vie.xml, TXT
+python -m src.ocr.build_layers --config configs/CPO_20.json --layers vie --pages 5-60
+python -m src.ocr.build_layers --config configs/CPO_20.json --report-only # chỉ kiểm tra + bảng tổng hợp
+```
+- `--layer han` chỉ nhận `--engines paddlevl`, `--layer vie` chỉ nhận `--engines qwen`.
+- Ảnh lấy từ `--source` nếu là thư mục, ngược lại từ `02_extraction/pages` (config trỏ `source` tới PDF).
+  Trang chưa có ảnh được bỏ qua và ghi vào `manifests/ocr_<layer>.json` (`missing_images`).
+- Resume: trang đã có run cùng khoá (cùng `describe()`/`ADAPTER_VERSION`) thì bỏ qua; `--force-reocr`
+  chạy lại và APPEND run mới. Trang lỗi được ghi log + `error_pages`, batch chạy tiếp; lệnh trả mã 1 ở cuối.
+- `build_layers` mặc định dựng mọi trang có JSON thô; `--pages` của config không giới hạn bước này.
+- Chế độ hệ chữ cũ (`--writing-system chi_tra`) nay ghi `ocr_raw/chi_tra.xml` + `ocr_raw_text/chi_tra/NNN.txt`
+  (trước đây là `han.xml` + `ocr_raw_text/han/`, trùng tên với luồng Hán). CPO_18 đã được chuyển: file giữ
+  nguyên từng byte, `02_extraction/metadata.json` cập nhật đường dẫn + fingerprint của bước segmentation.
+- Với dữ liệu cũ chưa chuyển, `build_layers` không ghi đè `han.xml` không phải của nó nếu không có `--force`.
+
+### 7.3. Chọn run cho mỗi trang
+1. Khoá ghi trong `manifests/ocr_<layer>.json` (lần OCR luồng gần nhất).
+2. Khoá `selected_key` trong manifest unified nếu `selected_engine` trùng engine (Qwen của `raw.xml`).
+3. Nếu chỉ có một khoá: run đó; nhiều khoá khác nhau: run mới nhất (`created_at`) kèm cảnh báo.
+
+Kho hệ chữ cũ chỉ được đọc theo đúng luồng: `han` đọc `raw/chi_tra/`, `vie` đọc `raw/vie/`.
+
+### 7.4. Schema XML
+Giống `raw.xml` (`root/FILE/OCR` rồi `PAGE/LINE`), `OCR` có `MODE="layer" LAYER="han|vie" ENGINE=...`.
+`LINE` có `ID="PNNNN.LNNN"` đánh lại tuần tự SAU khi lọc, `ORDER`, `NO`, `SRC_LINE` (số thứ tự dòng gốc của
+engine, 1-based, trước khi lọc; một dòng engine chứa ký tự xuống dòng, như run Qwen cũ của CPO_18, được tách
+thành nhiều LINE cùng `SRC_LINE`), `BBOX`, `CONFIDENCE` (của dòng gốc). `PAGE` thêm `N_SRC_LINES`, `N_DROPPED`,
+`CJK_REMOVED` (vie). `RUNS/RUN` chỉ giữ provenance (khoá, tham số, nguồn, `SELECTION`), không chép lại dòng
+hay payload chưa lọc, nên `vie.xml` không chứa ký tự CJK nào. Chỉ trang có ít nhất một dòng mới có `PAGE`.
+
+### 7.5. Kiểm tra và cảnh báo
+Sau mỗi lần dựng (và với `--report-only`): `vie.xml` 0 ký tự CJK; mọi dòng `han.xml` có chữ Hán; ID đúng định
+dạng, đúng trang/thứ tự, không trùng; TXT tồn tại đúng cho các trang có `PAGE` và trùng nội dung; tổng dòng XML
+= tổng dòng TXT; không trộn engine. Lỗi -> mã thoát 1. Cảnh báo (không chặn):
+- trang có run nhưng không ra dòng Hán lẫn dòng Việt;
+- trang có run paddlevl nhưng không ra dòng Hán nào;
+- trang vie mất > 30% dòng KHÔNG chứa chữ Hán (tối thiểu 2 dòng). Dòng Hán thuần bị bỏ khỏi vie là đúng thiết
+  kế nên không tính; dòng có chữ Latin không bao giờ bị bỏ.
+

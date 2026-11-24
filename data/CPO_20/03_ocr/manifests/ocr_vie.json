@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_20",
+  "layer": "vie",
+  "engine": "qwen",
+  "engine_descriptor": {
+    "name": "qwen",
+    "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+    "model_revision": "main",
+    "transformers_version": "4.57.6",
+    "torch_version": "2.5.1+cu121",
+    "cuda_version": "12.1",
+    "bitsandbytes_version": "0.50.2",
+    "quantization": {
+      "load_in_4bit": true,
+      "quant_type": "nf4",
+      "double_quant": true,
+      "compute_dtype": "float16"
+    },
+    "mode": "all",
+    "min_pixels": 50176,
+    "max_pixels": 802816,
+    "band_inches": 2.0,
+    "max_new_tokens": 768,
+    "repetition_penalty": 1.05,
+    "adapter_version": 3,
+    "prompt_version": 3,
+    "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74"
+  },
+  "updated_at": "2026-11-24T17:46:30+00:00",
+  "source": {
+    "path": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages"
+  },
+  "parameters": {
+    "region": null,
+    "psm": 6,
+    "dpi": 300,
+    "force_reocr": false
+  },
+  "pages": [
+    {
+      "page": 9,
+      "engine": "qwen",
+      "key": "e16556fe3fb1c861a3614e4adcafe76f8b1cc7f59f78616c3af5c21691ad81d5",
+      "status": "cached",
+      "raw": "03_ocr/raw/0009.json",
+      "n_lines": 20
+    },
+    {
+      "page": 15,
+      "engine": "qwen",
+      "key": "d529ba9e4d98085f0675aa3e09c3b1baa7f88ea0e2d2762bb0fb29c3afd46e91",
+      "status": "cached",
+      "raw": "03_ocr/raw/0015.json",
+      "n_lines": 19
+    },
+    {
+      "page": 34,
+      "engine": "qwen",
+      "key": "142335b10e4d69d1e4f6e10a4df9b122d57932cd9364d66b295a566b2276e1e8",
+      "status": "cached",
+      "raw": "03_ocr/raw/0034.json",
+      "n_lines": 23
+    }
+  ],
+  "missing_images": [],
+  "error_pages": []
+}

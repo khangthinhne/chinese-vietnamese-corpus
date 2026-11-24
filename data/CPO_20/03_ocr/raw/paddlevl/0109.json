@@ -1,0 +1,444 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_20",
+  "engine": "paddlevl",
+  "page": 109,
+  "runs": [
+    {
+      "key": "cceef61312b771fde8a9cedf9e2a7f69ea31ff41b19eb70cf3d73e825224af85",
+      "parameters": {
+        "image_sha256": "ee7b63a6fd93828c8de3ff29e300f27c30370bdce055697fd85a9ad5cd68086e",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "adapter_version": 4
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-24T19:04:42+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_109.png",
+      "image_size": [
+        1865,
+        2851
+      ],
+      "crop_box": [
+        0,
+        0,
+        1865,
+        2851
+      ],
+      "lines": [
+        {
+          "text": "theo đạo Thiên. Dựa vào những câu sáo ấy không thể nào hiểu ông",
+          "bbox": [
+            238,
+            302,
+            1688,
+            357
+          ],
+          "confidence": 96.89
+        },
+        {
+          "text": "được. Bộ sách này thấu triệt được tính trời, suy cùng được đạo lý.",
+          "bbox": [
+            237,
+            361,
+            1684,
+            413
+          ],
+          "confidence": 92.41
+        },
+        {
+          "text": "đưa đạo Thiên nhập vào đạo Nho, khiến cho tấm bộ Phan vương",
+          "bbox": [
+            237,
+            416,
+            1686,
+            472
+          ],
+          "confidence": 91.66
+        },
+        {
+          "text": "không ra ngoài cung tương Tổ vương 1. Thế thì thuyết tán thanh",
+          "bbox": [
+            235,
+            480,
+            1684,
+            532
+          ],
+          "confidence": 89.43
+        },
+        {
+          "text": "này là ý chí đấu tiên để phù trì cho chính đạo, không giống như",
+          "bbox": [
+            234,
+            534,
+            1688,
+            594
+          ],
+          "confidence": 95.6
+        },
+        {
+          "text": "những thuyết lờ mờ làm cho người xem không nắm được điều gì.",
+          "bbox": [
+            234,
+            594,
+            1680,
+            647
+          ],
+          "confidence": 92.93
+        },
+        {
+          "text": "Điều này chỉ có thể nói với những người hiểu đạo thôi. Tôi với ông",
+          "bbox": [
+            232,
+            650,
+            1684,
+            707
+          ],
+          "confidence": 96.46
+        },
+        {
+          "text": "hợp nhau cả hình lẫn thần và hiểu sâu cái ý làm ra thanh này của",
+          "bbox": [
+            231,
+            710,
+            1681,
+            766
+          ],
+          "confidence": 92.93
+        },
+        {
+          "text": "ông, nên mới nêu máy lời lên đầu sách. Xin chờ các bác quân tử",
+          "bbox": [
+            231,
+            773,
+            1681,
+            825
+          ],
+          "confidence": 92.02
+        },
+        {
+          "text": "hiểu đạo chỉ bảo thêm cho. Nay làm bài tụa.",
+          "bbox": [
+            229,
+            829,
+            1169,
+            876
+          ],
+          "confidence": 88.79
+        },
+        {
+          "text": "Trích Dụ Am văn tập quyền V",
+          "bbox": [
+            942,
+            920,
+            1680,
+            962
+          ],
+          "confidence": 89.81
+        },
+        {
+          "text": "Đỗ Ngọc Toại dịch",
+          "bbox": [
+            1327,
+            989,
+            1672,
+            1028
+          ],
+          "confidence": 93.26
+        },
+        {
+          "text": "1. Tổ vương: Ông vua không ngói, không quyền. Đó là tên nhà Nho đời sau đặt ra để gọi Khổng Tử.",
+          "bbox": [
+            196,
+            2441,
+            1639,
+            2515
+          ],
+          "confidence": 91.88
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          1865,
+          2851
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 8.06,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              238,
+              302,
+              1688,
+              357
+            ],
+            "generated_text": "theo đạo Thiên. Dựa vào những câu sáo ấy không thể nào hiểu ông",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.618,
+            "confidence": 96.89,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              237,
+              361,
+              1684,
+              413
+            ],
+            "generated_text": "được. Bộ sách này thấu triệt được tính trời, suy cùng được đạo lý.",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.649,
+            "confidence": 92.41,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              237,
+              416,
+              1686,
+              472
+            ],
+            "generated_text": "đưa đạo Thiên nhập vào đạo Nho, khiến cho tấm bộ Phan vương",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.675,
+            "confidence": 91.66,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              235,
+              480,
+              1684,
+              532
+            ],
+            "generated_text": "không ra ngoài cung tương Tổ vương 1. Thế thì thuyết tán thanh",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.66,
+            "confidence": 89.43,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              234,
+              534,
+              1688,
+              594
+            ],
+            "generated_text": "này là ý chí đấu tiên để phù trì cho chính đạo, không giống như",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.613,
+            "confidence": 95.6,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              234,
+              594,
+              1680,
+              647
+            ],
+            "generated_text": "những thuyết lờ mờ làm cho người xem không nắm được điều gì.",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.571,
+            "confidence": 92.93,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              232,
+              650,
+              1684,
+              707
+            ],
+            "generated_text": "Điều này chỉ có thể nói với những người hiểu đạo thôi. Tôi với ông",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.59,
+            "confidence": 96.46,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              231,
+              710,
+              1681,
+              766
+            ],
+            "generated_text": "hợp nhau cả hình lẫn thần và hiểu sâu cái ý làm ra thanh này của",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.589,
+            "confidence": 92.93,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              231,
+              773,
+              1681,
+              825
+            ],
+            "generated_text": "ông, nên mới nêu máy lời lên đầu sách. Xin chờ các bác quân tử",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.623,
+            "confidence": 92.02,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              229,
+              829,
+              1169,
+              876
+            ],
+            "generated_text": "hiểu đạo chỉ bảo thêm cho. Nay làm bài tụa.",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.551,
+            "confidence": 88.79,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              942,
+              920,
+              1680,
+              962
+            ],
+            "generated_text": "Trích Dụ Am văn tập quyền V",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.36,
+            "confidence": 89.81,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              1327,
+              989,
+              1672,
+              1028
+            ],
+            "generated_text": "Đỗ Ngọc Toại dịch",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.312,
+            "confidence": 93.26,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              198,
+              2394,
+              1652,
+              2418
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.142,
+            "confidence": 38.72,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              196,
+              2441,
+              1639,
+              2515
+            ],
+            "generated_text": "1. Tổ vương: Ông vua không ngói, không quyền. Đó là tên nhà Nho đời sau đặt ra để gọi Khổng Tử.",
+            "n_lines": 1,
+            "tokens": 42,
+            "seconds": 1.107,
+            "confidence": 91.88,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              78,
+              2761,
+              256,
+              2774
+            ],
+            "ink": 661
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      }
+    }
+  ]
+}
