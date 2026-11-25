@@ -29,6 +29,7 @@ from src.common.corpus import DataLayout, base_parser, parse_args, parse_pages, 
 from src.common.xmlstore import add, bbox_attr, file_element, read_root, write_file_root, write_root
 from src.ocr import raw_store
 from src.ocr.raw_xml import _add_engine, _add_parameters
+from src.ocr.run_quality import run_is_valid
 from src.ocr.script_filter import (HAN_MIN_CJK_SHARE, HAN_MIN_CJK_WITH_LATIN, LAYERS, PageFilterResult,
                                    count_cjk, filter_page, has_cjk)
 
@@ -58,8 +59,13 @@ def run_engine(run: dict) -> str | None:
     return engine if isinstance(engine, str) else run.get("engine")
 
 
-def select_run(runs: list[dict], engine: str, preferred_keys: list[str | None]) -> tuple[dict | None, str]:
-    """Một run của `engine` cho một trang. Ưu tiên khoá do manifest chỉ định, sau đó run mới nhất.
+def select_run(runs: list[dict], engine: str, preferred_keys: list[str | None],
+               layer: str | None = None) -> tuple[dict | None, str]:
+    """Một run của `engine` cho một trang, xác định hoàn toàn từ dữ liệu:
+
+    1. khoá do manifest chỉ định (manifest OCR luồng, rồi manifest unified);
+    2. nếu biết `layer`: chỉ xét run HỢP LỆ cho luồng đó (`run_quality.run_is_valid`) khi có ít nhất một;
+    3. run mới nhất theo `created_at` (hoà thì run đọc sau).
 
     Trả về (run, lý do): manifest | only | latest_of_many | none."""
     mine = [r for r in runs if run_engine(r) == engine]
@@ -70,6 +76,9 @@ def select_run(runs: list[dict], engine: str, preferred_keys: list[str | None]) 
     if not mine:
         return None, "none"
     reason = "only" if len({r.get("key") for r in mine}) == 1 else "latest_of_many"
+    if layer is not None:
+        valid = [r for r in mine if run_is_valid(r, layer)]
+        mine = valid or mine
     latest = max(range(len(mine)), key=lambda i: (mine[i].get("created_at") or "", i))
     return mine[latest], reason
 
@@ -261,7 +270,7 @@ def build_layer(layout: DataLayout, layer: str, pages: list[int], *, force: bool
     outs: list[PageOut] = []
     for page in pages:
         runs = raw_store.page_runs(layout, engine, page, layout.work_id, LAYER_WRITING_SYSTEMS[layer])
-        run, reason = select_run(runs, engine, prefs.get(page, []))
+        run, reason = select_run(runs, engine, prefs.get(page, []), layer=layer)
         if reason == "latest_of_many":
             log.warning("[%s] trang %04d có nhiều run %s khác khoá; dùng run mới nhất %s",
                         layer, page, engine, run.get("key", "")[:12])

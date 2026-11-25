@@ -304,3 +304,50 @@ def test_build_records_rejected_and_merged_lines(tmp_path):
                               "--han-min-cjk-share", "0", "--han-min-cjk-with-latin", "0"]) == 0
     han = file_element(read_root(layout.ocr_layer_xml_path("han")))
     assert len(han.findall("PAGE/LINE")) == 3
+
+
+# --------------------------------------------------------------------------- resume / chọn run
+def test_skip_done_resumes_by_page_across_adapter_versions(tmp_path, monkeypatch):
+    make_images(tmp_path, [1, 2, 3])
+    layout = DataLayout(tmp_path, WORK)
+    old = make_run("paddlevl", ["天地"], "oldkey")
+    old["raw"] = {"bands": [{"unit": 1, "flags": [], "generated_text": "天地"}]}
+    write_engine(layout, "paddlevl", 1, [old])
+    empty = make_run("paddlevl", [], "oldempty")                  # run cũ không có đơn vị nào (trang bị bỏ trắng)
+    empty["raw"] = {"bands": []}
+    write_engine(layout, "paddlevl", 2, [empty])
+    fake = fake_engine("paddlevl", ["玄黃"])
+    monkeypatch.setitem(ENGINES, "paddlevl", fake)
+    argv = ["--work-id", WORK, "--data-root", str(tmp_path), "--layer", "han", "--engines", "paddlevl",
+            "--pages", "1-3"]
+    assert ocr.main([*argv, "--skip-done"]) == 0
+    assert fake.calls == [2, 3]                                   # trang 1 đã xong ở phiên bản cũ
+    manifest = json.loads(layout.ocr_layer_manifest_path("ocr", "han").read_text(encoding="utf-8"))
+    assert [(p["page"], p["status"]) for p in manifest["pages"]] == [(1, "done"), (2, "ocr"), (3, "ocr")]
+    assert manifest["pages"][0]["key"] == "oldkey"
+    fake.calls.clear()
+    assert ocr.main(argv) == 0                                     # không --skip-done: khoá khác -> OCR lại trang 1
+    assert fake.calls == [1]
+
+
+def test_pages_auto_uses_extracted_images(tmp_path, monkeypatch):
+    make_images(tmp_path, [4, 5, 7])
+    fake = fake_engine("paddlevl", ["玄黃"])
+    monkeypatch.setitem(ENGINES, "paddlevl", fake)
+    assert ocr.main(["--work-id", WORK, "--data-root", str(tmp_path), "--layer", "han", "--engines", "paddlevl",
+                     "--pages", "auto"]) == 0
+    assert fake.calls == [4, 5, 7]
+
+
+def test_select_run_prefers_valid_run_over_newer_degenerate():
+    good = make_run("qwen", ["Phiên âm"], "good", "2026-01-01T00:00:00+00:00")
+    bad = make_run("qwen", ["Phiên âm"], "bad", "2026-02-01T00:00:00+00:00")
+    bad["raw"] = {"bands": [{"band": 1, "flags": ["truncated"], "generated_text": "Theo Tăng sử lược " * 3}]}
+    han_loop = make_run("qwen", ["x"], "hanloop", "2026-03-01T00:00:00+00:00")
+    han_loop["raw"] = {"bands": [{"band": 1, "flags": ["truncated"], "generated_text": "江江江江江江"}]}
+    assert build_layers.select_run([good, bad], "qwen", [], layer="vie") == (good, "latest_of_many")
+    assert build_layers.select_run([good, bad], "qwen", [])[0] is bad          # không biết luồng: mới nhất
+    assert build_layers.select_run([good, bad], "qwen", ["bad"], layer="vie") == (bad, "manifest")
+    assert build_layers.select_run([bad], "qwen", [], layer="vie") == (bad, "only")   # không có run hợp lệ
+    # Qwen lặp trên dải toàn chữ Hán không làm hỏng luồng vie
+    assert build_layers.select_run([good, han_loop], "qwen", [], layer="vie")[0] is han_loop

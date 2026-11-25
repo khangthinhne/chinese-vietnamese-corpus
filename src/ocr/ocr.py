@@ -30,7 +30,8 @@ from src.common.corpus import (
     register_source, sha256_file, write_json,
 )
 from src.ocr import raw_store, raw_xml, work_config
-from src.ocr.build_layers import ENGINE_ENVS, LAYER_ENGINES
+from src.ocr.build_layers import ENGINE_ENVS, LAYER_ENGINES, run_engine
+from src.ocr.run_quality import run_units
 from src.ocr.engines import (ENGINES, DEFAULT_ENGINE, OcrEngine, OcrLine, OcrResult, register_engine,
                              require_engine)
 
@@ -230,6 +231,9 @@ def create_parser() -> argparse.ArgumentParser:
     parser.add_argument("--workers", type=int, default=4)
     parser.add_argument("--low-conf", type=float, default=60)
     parser.add_argument("--force-reocr", action="store_true", help="ignore cache runs")
+    parser.add_argument("--skip-done", action="store_true",
+                        help="--layer: bỏ qua trang đã có run của engine (BẤT KỲ khoá/phiên bản adapter nào) "
+                             "có ít nhất một đơn vị ảnh; dùng khi resume sau khi tăng ADAPTER_VERSION")
     return parser
 
 
@@ -648,10 +652,16 @@ def ocr_layer_page(page: int, image_path: Path, layout: DataLayout, args, engine
     parameters = run_parameters(digest, descriptor, args)
     key = raw_store.cache_key(parameters)
     if not args.force_reocr:
-        cached = [r for r in raw_store.page_runs(layout, engine, page, args.work_id) if r.get("key") == key]
+        runs = raw_store.page_runs(layout, engine, page, args.work_id)
+        cached = [r for r in runs if r.get("key") == key]
         if cached:
             return {"page": page, "engine": engine, "key": key, "status": "cached",
                     "raw": cached[-1]["_source"], "n_lines": len(cached[-1].get("lines", []))}
+        done = [r for r in runs if run_engine(r) == engine and run_units(r)] if getattr(args, "skip_done", False) \
+            else []
+        if done:
+            return {"page": page, "engine": engine, "key": done[-1].get("key"), "status": "done",
+                    "raw": done[-1]["_source"], "n_lines": len(done[-1].get("lines", []))}
     with Image.open(image_path) as opened:
         image = opened.convert("RGB")
     cropped, box = crop_image(image, args.region)
@@ -736,7 +746,7 @@ def run_layer_ocr(args) -> Path:
         "missing_images": missing,
         "error_pages": sorted(p for p, r in merged.items() if r.get("status") == "error"),
     })
-    counts = {s: sum(1 for r in records if r["status"] == s) for s in ("ocr", "cached", "error")}
+    counts = {s: sum(1 for r in records if r["status"] == s) for s in ("ocr", "cached", "done", "error")}
     log.info("[%s] xong: %s, thiếu ảnh %d -> %s", layer, counts, len(missing), path)
     if failed:
         raise RuntimeError(f"[{layer}] {len(failed)} trang lỗi OCR (đã chạy hết các trang còn lại): "
