@@ -138,9 +138,13 @@ def run(args) -> None:
         if not merged:
             raise ValueError("han.xml/vie.xml không có dòng nào trong phạm vi trang")
         coverage = ocr_streams.coverage_review(args.work_id, han_lines, vie_lines, pages)
-        allowed = ocr_streams.allowed_document_starts(merged)
-        docs, review = segment_documents_unified(args.work_id, merged, seg.get("document", {}), pages,
-                                                 allowed_starts=allowed)
+        allowed = ocr_streams.allowed_document_starts(
+            merged, min_block_lines=int(seg.get("document", {}).get("min_han_block_lines",
+                                                                   ocr_streams.MIN_HAN_BLOCK_LINES)))
+        is_header = ocr_streams.header_predicate(merged)
+        docs, review = segment_documents_unified(args.work_id, merged,
+                                                 ocr_streams.document_config(seg.get("document", {})),
+                                                 pages, allowed_starts=allowed)
         review = coverage + review
         sources_used = ["han", "vie"]
         stream_info = {"mode": streams_mode, "lines": ocr_streams.stream_stats(merged),
@@ -186,9 +190,17 @@ def run(args) -> None:
         doc_rows = []
         for doc in docs:
             if streams_mode:
+                implicit = seg.get("implicit_after_han", ocr_streams.IMPLICIT_AFTER_HAN)
                 assigned = assign_document_unified(args.work_id, doc, layer_cfg, meta_cfg,
                                                    keep_line=ocr_streams.keep_line,
-                                                   dropped=stream_info["dropped_cross_stream"])
+                                                   dropped=stream_info["dropped_cross_stream"],
+                                                   implicit_next={"han": implicit} if implicit else None,
+                                                   is_header=is_header,
+                                                   title_next=seg.get("implicit_title_next",
+                                                                      ocr_streams.IMPLICIT_TITLE_NEXT),
+                                                   notes_after_attribution=set(seg.get(
+                                                       "notes_after_attribution",
+                                                       ocr_streams.NOTES_AFTER_ATTRIBUTION)))
             elif is_unified:
                 assigned = assign_document_unified(args.work_id, doc, layer_cfg, meta_cfg)
             else:

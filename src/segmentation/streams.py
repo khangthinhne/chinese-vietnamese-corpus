@@ -6,10 +6,14 @@ work cũ (raw.xml unified, chi_tra.xml/vi.xml của CPO_18) chạy y như trư�
 Cách làm:
 1. Đọc dòng của từng luồng (`03_ocr/ocr_raw/{han,vie}.xml`). source_id = "<luồng>.<ID dòng>", vd
    "han.P0015.L003", để không trùng ID giữa hai file.
-2. Trộn hai luồng theo TRANG rồi theo vị trí dọc (tâm bbox), giữ nguyên thứ tự nội bộ của mỗi luồng
-   (merge ổn định). Kết quả thay cho raw.xml ở chế độ unified: máy trạng thái theo tiêu đề mục chạy y như cũ.
-3. Ranh giới tài liệu: start_patterns chỉ được tính ở dòng ĐẦU của một khối Hán liên tiếp (bỏ qua tiêu đề chạy
-   lặp lại ở đầu/chân trang). paddlevl không chấm câu, nên câu thơ 7 chữ khớp mẫu tiêu đề kiểu `^[Hán]{2,12}$`.
+2. Trộn hai luồng theo TRANG rồi theo MÉP TRÊN bbox, giữ nguyên thứ tự nội bộ của mỗi luồng (merge ổn định).
+   Dùng mép trên chứ không dùng tâm: Qwen hay gộp nhiều dòng in vào một dòng (bbox cao vài trăm px), tâm của nó
+   rơi xuống dưới tiêu đề Hán đứng sau. Kết quả thay cho raw.xml ở chế độ unified: máy trạng thái chạy y như cũ.
+3. Ranh giới tài liệu: chỉ dòng ĐẦU của một khối Hán liên tiếp được mở tài liệu (bỏ qua tiêu đề chạy lặp lại ở
+   đầu/chân trang). Mặc định (`document.start_on_han_block`, true) MỌI khối Hán đứng sau phần Việt mở tài liệu
+   mới, không cần khớp start_patterns: mẫu tiêu đề dễ vỡ vì lỗi OCR ("4 谒關..." mất dấu chấm, "5. 其二" bị đọc
+   thành rác), còn cấu trúc "khối Hán -> các khối Việt" của mỗi bài thì ổn định. Đặt false để chỉ dùng
+   start_patterns (vẫn giới hạn ở dòng đầu khối Hán: câu thơ không chấm câu khớp mẫu kiểu `^[Hán]{2,12}$`).
 4. Sau khi gán lớp: lớp han chỉ giữ dòng từ luồng han; am/nghia/tho chỉ giữ dòng từ luồng vie. Chữ Hán trong
    khảo dị/chú thích nằm trong khối Việt nên không mở khối Hán mới và bị loại khỏi lớp Việt (bản Việt của dòng đó
    đã có trong vie.xml, không còn chữ Hán).
@@ -30,6 +34,16 @@ from src.segmentation.model import OcrLine
 log = logging.getLogger("segmentation.streams")
 
 STREAM_LAYERS = {"han": ("han",), "vie": ("am", "nghia", "tho")}   # luồng -> các lớp được nhận
+# Phần Việt đứng ngay sau khối Hán mà không có tiêu đề mục là phiên âm (thứ tự in Hán -> âm -> nghĩa -> thơ).
+# Đổi/tắt bằng segmentation.implicit_after_han ("" để tắt).
+IMPLICIT_AFTER_HAN = "am"
+# Đang ở am mà gặp tiêu đề viết hoa (vd "LÊN NÚI MẪU TỬ") khi OCR mất chữ "DỊCH NGHĨA" -> mở nghia.
+# Đổi bằng segmentation.implicit_title_next ({} để tắt).
+IMPLICIT_TITLE_NEXT = {"am": "nghia"}
+# Sau dòng nguồn ("Trích Dật thi lược toản") trong lớp am là chú thích -> không gán lớp. Phụ thuộc cách in của
+# từng work (CPO_18 dùng "*" cho chú thích tác giả ở ĐẦU bài), nên mặc định TẮT; bật bằng
+# segmentation.notes_after_attribution = ["am"] (CPO_20).
+NOTES_AFTER_ATTRIBUTION: tuple[str, ...] = ()
 MODE = "han_vie"
 HEADER_MIN_PAGES = 3                     # dòng lặp lại trên >= 3 trang = tiêu đề chạy (đầu/chân trang)
 
@@ -68,14 +82,12 @@ def load_stream(layout: DataLayout, stream: str, pages: list[int] | None = None)
     return out
 
 
-def _y_center(line: OcrLine) -> float | None:
-    if not line.bbox:
-        return None
-    return (line.bbox[1] + line.bbox[3]) / 2
+def _y_top(line: OcrLine) -> float | None:
+    return float(line.bbox[1]) if line.bbox else None
 
 
 def merge_streams(han: list[OcrLine], vie: list[OcrLine]) -> list[OcrLine]:
-    """Trộn theo trang, rồi theo tâm bbox dọc; mỗi luồng giữ nguyên thứ tự nội bộ. Dòng thiếu bbox đi theo dòng
+    """Trộn theo trang, rồi theo mép trên bbox; mỗi luồng giữ nguyên thứ tự nội bộ. Dòng thiếu bbox đi theo dòng
     trước nó trong cùng luồng. `index` được đánh lại theo thứ tự đã trộn trong trang (dùng để sắp xếp lớp)."""
     by_page: dict[int, tuple[list[OcrLine], list[OcrLine]]] = defaultdict(lambda: ([], []))
     for ln in han:
@@ -100,10 +112,10 @@ def merge_streams(han: list[OcrLine], vie: list[OcrLine]) -> list[OcrLine]:
 
 
 def _keys(lines: list[OcrLine]) -> list[float]:
-    """Khoá sắp xếp không giảm trong một luồng: tâm bbox, lấp chỗ thiếu bằng khoá của dòng trước."""
+    """Khoá sắp xếp không giảm trong một luồng: mép trên bbox, lấp chỗ thiếu bằng khoá của dòng trước."""
     keys, last = [], float("-inf")
     for ln in lines:
-        y = _y_center(ln)
+        y = _y_top(ln)
         last = max(last, y) if y is not None else last
         keys.append(last)
     return keys
@@ -112,6 +124,12 @@ def _keys(lines: list[OcrLine]) -> list[float]:
 def _norm(text: str) -> str:
     text = unicodedata.normalize("NFC", text).lower()
     return re.sub(r"[\d\W_]+", "", text)
+
+
+def header_predicate(lines: list[OcrLine]):
+    """Hàm ln -> bool: dòng là tiêu đề chạy (lặp trên nhiều trang)."""
+    headers = running_headers(lines)
+    return lambda ln: _norm(ln.text) in headers
 
 
 def running_headers(lines: list[OcrLine], min_pages: int = HEADER_MIN_PAGES) -> set[str]:
@@ -124,19 +142,33 @@ def running_headers(lines: list[OcrLine], min_pages: int = HEADER_MIN_PAGES) -> 
     return {k for k, v in pages.items() if len(v) >= min_pages}
 
 
-def allowed_document_starts(merged: list[OcrLine], headers: set[str] | None = None) -> set[int]:
-    """Chỉ số dòng được phép mở tài liệu: dòng Hán đầu tiên của một khối Hán liên tiếp. Dòng tiêu đề chạy
-    (lặp trên nhiều trang) không làm đứt khối Hán, để bài thơ sang trang không bị tách đôi."""
+MIN_HAN_BLOCK_LINES = 2                  # khối Hán 1 dòng (trích dẫn trong chú thích) không mở tài liệu
+
+
+def allowed_document_starts(merged: list[OcrLine], headers: set[str] | None = None,
+                            min_block_lines: int = MIN_HAN_BLOCK_LINES) -> set[int]:
+    """Chỉ số dòng được phép mở tài liệu: dòng Hán đầu tiên của một khối Hán liên tiếp có >= min_block_lines
+    dòng. Dòng tiêu đề chạy (lặp trên nhiều trang) không làm đứt khối Hán, để bài thơ sang trang không bị tách
+    đôi. Khối Hán 1 dòng giữa phần Việt thường là chữ Hán trích trong chú thích/khảo dị: không mở tài liệu."""
     headers = headers if headers is not None else running_headers(merged)
-    allowed: set[int] = set()
+    blocks: list[list[int]] = []
     previous = None                      # luồng của dòng nội dung gần nhất
     for i, ln in enumerate(merged):
         if _norm(ln.text) in headers:
             continue
-        if ln.writing_system == "han" and previous != "han":
-            allowed.add(i)
+        if ln.writing_system == "han":
+            if previous != "han":
+                blocks.append([])
+            blocks[-1].append(i)
         previous = ln.writing_system
-    return allowed
+    return {b[0] for b in blocks if len(b) >= min_block_lines}
+
+
+def document_config(doc_cfg: dict) -> dict:
+    """Cấu hình tìm ranh giới tài liệu cho chế độ luồng (xem mục 3 ở đầu module)."""
+    if doc_cfg.get("start_on_han_block", True):
+        return {**doc_cfg, "start_patterns": [r"\S"], "numbered_heading": False, "end_patterns": []}
+    return doc_cfg
 
 
 def keep_line(layer: str, line: OcrLine) -> bool:

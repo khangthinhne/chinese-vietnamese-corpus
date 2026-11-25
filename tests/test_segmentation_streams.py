@@ -40,7 +40,8 @@ def test_allowed_document_starts_only_first_line_of_han_block_and_skip_headers()
     merged = [merged[0], line("han", 1, 2, "諒山道中", 50), line("han", 1, 3, "二諒江山境界連", 60),
               merged[1], line("han", 2, 2, "旁通荆廣接高宣", 50),                  # bài thơ sang trang
               line("vie", 2, 3, "PHIÊN ÂM:", 80), line("han", 2, 4, "其二", 90), merged[2]]
-    assert streams.allowed_document_starts(merged) == {1, 6}
+    assert streams.allowed_document_starts(merged, min_block_lines=1) == {1, 6}
+    assert streams.allowed_document_starts(merged) == {1}           # khối 1 dòng (其二) không mở tài liệu
 
 
 def test_keep_line_routes_layers_to_streams():
@@ -159,3 +160,142 @@ def test_pipeline_plans_layers_step_only_when_streams_enabled():
     plan = build_plan(cfg, steps=steps, layers=None, pairs=None, force=False, config_path="cfg.json")
     assert [s for s, _ in plan] == ["ocr", "layers", "segment"]
     assert plan[1][1] == ["--work-id", "W", "--data-root", "data"]
+
+
+def test_merge_uses_bbox_top_for_tall_qwen_lines():
+    # Qwen gộp nhiều dòng in: bbox 1080-1566 nằm TRÊN tiêu đề Hán (1221-1289) dù tâm của nó thấp hơn
+    han = [OcrLine(page=15, index=1, text="1. 諒山道中", bbox=(0, 1221, 10, 1289), writing_system="han"),
+           OcrLine(page=15, index=2, text="二諒江山境界連", bbox=(0, 1503, 10, 1563), writing_system="han")]
+    vie = [OcrLine(page=15, index=1, text="cho đường đi sứ chăng?", bbox=(0, 1080, 10, 1566),
+                   writing_system="vie")]
+    assert [ln.text for ln in streams.merge_streams(han, vie)] == ["cho đường đi sứ chăng?", "1. 諒山道中",
+                                                                  "二諒江山境界連"]
+
+
+def test_document_config_starts_on_every_han_block_by_default():
+    cfg = {"start_patterns": [r"^\d+\."], "numbered_heading": True}
+    assert streams.document_config(cfg)["start_patterns"] == [r"\S"]
+    assert streams.document_config({**cfg, "start_on_han_block": False}) == {**cfg, "start_on_han_block": False}
+
+
+def test_implicit_am_after_han_block_without_heading():
+    from src.segmentation.layers import assign_document_unified
+    from src.segmentation.model import Document
+    lines = [line("han", 12, 1, "歲晚題廳廨", 100), line("han", 12, 2, "江次聯排數四舟", 150),
+             line("vie", 12, 3, "TUẾ VĂN ĐỀ THINH GIẢI", 300), line("vie", 12, 4, "Giang thứ liên bài số tứ chu,", 350),
+             line("vie", 12, 5, "DỊCH NGHĨA:", 500), line("vie", 12, 6, "Thuyền đậu bên sông.", 550)]
+    cfg = {"han": {"start_patterns": [r"^\s*[一-鿿]{2,12}\s*$"]},
+           "am": {"heading_mode": True, "start_patterns": [r"^PHIÊN ÂM"]},
+           "nghia": {"heading_mode": True, "start_patterns": [r"^DỊCH NGHĨA"]}}
+    doc = Document(id="W.001", pages=[12], lines=lines)
+    res = assign_document_unified("W", doc, cfg, {}, keep_line=streams.keep_line, dropped={},
+                                  implicit_next={"han": "am"})
+    assert [r.text for r in res.lines["am"]] == ["TUẾ VĂN ĐỀ THINH GIẢI", "Giang thứ liên bài số tứ chu,"]
+    assert [r.text for r in res.lines["nghia"]] == ["Thuyền đậu bên sông."]
+    assert any(r["reason"] == "implicit_layer_start" for r in res.review)
+    # không bật implicit -> dòng Việt sau khối Hán bị bỏ như trước
+    res = assign_document_unified("W", doc, cfg, {}, keep_line=streams.keep_line, dropped={})
+    assert "am" not in res.lines
+
+
+def test_implicit_am_not_triggered_by_running_header():
+    from src.segmentation.layers import assign_document_unified
+    from src.segmentation.model import Document
+    lines = [line("han", 1, 1, "旁通荆廣接高宣", 100), line("vie", 2, 1, "NGÔ THÌ NHẬM TOÀN TẬP", 10),
+             line("han", 2, 2, "溪流奔駛爭歸海", 100), line("vie", 2, 3, "Bàng thông Kinh,", 300)]
+    cfg = {"han": {}, "am": {"heading_mode": True, "start_patterns": [r"^PHIÊN ÂM"]}}
+    res = assign_document_unified("W", Document(id="W.001", pages=[1, 2], lines=lines), cfg, {},
+                                  keep_line=streams.keep_line, dropped={}, implicit_next={"han": "am"},
+                                  is_header=lambda ln: ln.text.startswith("NGÔ THÌ"))
+    assert [r.text for r in res.lines["han"]] == ["旁通荆廣接高宣", "溪流奔駛爭歸海"]
+    assert [r.text for r in res.lines["am"]] == ["Bàng thông Kinh,"]
+
+
+def test_is_upper_title():
+    from src.segmentation.layers import is_upper_title
+    assert is_upper_title("LÊN NÚI MẪU TỬ (1)") and is_upper_title("THỜ MÙNG MƯA") and is_upper_title("KỲ NHẤT")
+    assert not is_upper_title("Cờ sứ buổi sớm lên đường,") and not is_upper_title("17")
+    assert not is_upper_title("NHỊ LẠNG GIANG SƠN CẢNH GIỚI LIÊN,")
+
+
+def _cpo_like_doc():
+    from src.segmentation.model import Document
+    texts = [("han", "登母子山"), ("han", "旌旄曉發度穹窿"), ("han", "雲物橫斜指顧中"),
+             ("vie", "ĐĂNG MẪU TỬ SƠN"), ("vie", "Tinh mao hiểu phát độ khung lung,"),
+             ("vie", "Vân vật hoành tà chỉ cố trung."),
+             ("vie", "Trích Dật thi lược toản"), ("vie", "1. Nguyên chú: Mẫu Tử là tên núi."),
+             ("vie", "LÊN NÚI MẪU TỬ (1)"), ("vie", "Cờ sứ buổi sớm lên đường, vượt vòm trời cao,"),
+             ("vie", "Dịch thơ:"), ("vie", "Sáng ra cờ sứ vượt non cao,")]
+    lines = [line(s, 19, i, t, 100 * i) for i, (s, t) in enumerate(texts, 1)]
+    return Document(id="W.003", pages=[19], lines=lines)
+
+
+CFG = {"han": {"start_patterns": [r"^\s*[一-鿿]{2,12}\s*$"]},
+       "am": {"heading_mode": True, "start_patterns": [r"^PHI[ÊE]N\s+ÂM"],
+              "attribution_patterns": [r"^\s*(?:Trích|Theo)\b"]},
+       "nghia": {"heading_mode": True, "start_patterns": [r"^DỊCH\s+NGHĨA"]},
+       "tho": {"heading_mode": True, "start_patterns": [r"^DỊCH\s+THƠ"]}}
+
+
+def test_headings_missing_upper_titles_and_source_line_split_sections():
+    from src.segmentation.layers import assign_document_unified
+    res = assign_document_unified("W", _cpo_like_doc(), CFG, {}, keep_line=streams.keep_line, dropped={},
+                                  implicit_next={"han": "am"}, title_next={"am": "nghia"},
+                                  notes_after_attribution={"am"})
+    text = {k: [r.text for r in v] for k, v in res.lines.items()}
+    assert text["han"] == ["登母子山", "旌旄曉發度穹窿", "雲物橫斜指顧中"]
+    # tiêu đề viết hoa ở đầu lớp được bước metadata tách ra; dòng nguồn ở lại lớp am; chú thích không gán lớp
+    assert text["am"][:2] == ["Tinh mao hiểu phát độ khung lung,", "Vân vật hoành tà chỉ cố trung."]
+    assert not any("Nguyên chú" in t for t in sum(text.values(), []))
+    assert text["nghia"][-1] == "Cờ sứ buổi sớm lên đường, vượt vòm trời cao,"
+    assert text["tho"] == ["Sáng ra cờ sứ vượt non cao,"]
+    reasons = [r["reason"] for r in res.review]
+    assert reasons.count("implicit_layer_start") == 2 and "unassigned_line" in reasons   # chú thích
+
+
+def test_upper_title_right_after_am_title_does_not_open_nghia():
+    from src.segmentation.layers import assign_document_unified
+    from src.segmentation.model import Document
+    texts = [("han", "諒山道中"), ("vie", "PHIÊN ÂM:"), ("vie", "LẠNG SƠN ĐẠO TRUNG (NHỊ THỦ)"),
+             ("vie", "KỲ NHẤT"), ("vie", "Nhị Lạng giang sơn cảnh giới liên,")]
+    doc = Document(id="W.001", pages=[15], lines=[line(s, 15, i, t, 100 * i) for i, (s, t) in enumerate(texts, 1)])
+    res = assign_document_unified("W", doc, CFG, {}, keep_line=streams.keep_line, dropped={},
+                                  implicit_next={"han": "am"}, title_next={"am": "nghia"})
+    assert [r.text for r in res.lines["am"]] == ["Nhị Lạng giang sơn cảnh giới liên,"]   # 2 tiêu đề -> metadata
+    assert "nghia" not in res.lines
+    assert not any(r["reason"] == "implicit_layer_start" and r["layer"] == "nghia" for r in res.review)
+
+
+def test_running_header_does_not_open_nghia():
+    from src.segmentation.layers import assign_document_unified
+    from src.segmentation.model import Document
+    texts = [("han", "諒山道中"), ("vie", "PHIÊN ÂM:"), ("vie", "Nhị Lạng giang sơn cảnh giới liên,"),
+             ("vie", "HOÀNG HOA ĐỒ PHẢ"), ("vie", "Bàng thông Kinh, Quảng tiếp Cao, Tuyên.")]
+    doc = Document(id="W.001", pages=[15, 16],
+                   lines=[line(s, 15, i, t, 100 * i) for i, (s, t) in enumerate(texts, 1)])
+    res = assign_document_unified("W", doc, CFG, {}, keep_line=streams.keep_line, dropped={},
+                                  implicit_next={"han": "am"}, title_next={"am": "nghia"},
+                                  is_header=lambda ln: ln.text == "HOÀNG HOA ĐỒ PHẢ")
+    assert "nghia" not in res.lines
+    assert res.lines["am"][-1].text == "Bàng thông Kinh, Quảng tiếp Cao, Tuyên."
+
+
+def test_two_line_upper_title_with_comma_does_not_open_nghia():
+    from src.segmentation.layers import assign_document_unified
+    from src.segmentation.model import Document
+    texts = [("han", "謁關留贈潘御史"), ("vie", "YẾT QUAN LƯU TẶNG PHAN NGỰ SỬ,"),
+             ("vie", "VŨ CÔNG BỘ, NGÔ HIỆP TRẤN CHƯ CÔNG (NHỊ THỦ)"), ("vie", "Kỳ nhất"),
+             ("vie", "Tinh mao liệp liệp xuất Dương Quan,")]
+    doc = Document(id="W.004", pages=[21], lines=[line(s, 21, i, t, 100 * i) for i, (s, t) in enumerate(texts, 1)])
+    res = assign_document_unified("W", doc, CFG, {}, keep_line=streams.keep_line, dropped={},
+                                  implicit_next={"han": "am"}, title_next={"am": "nghia"})
+    assert "nghia" not in res.lines
+    assert res.lines["am"][-1].text == "Tinh mao liệp liệp xuất Dương Quan,"
+
+
+def test_single_han_line_quoted_in_notes_does_not_open_document():
+    merged = [line("han", 207, 1, "與高明二法師難佛不見形書", 50), line("han", 207, 2, "夫道處清虛", 60),
+              line("vie", 207, 3, "(3) Bản Mạc Tư Khoa chép đầu đề là:", 300),
+              line("han", 207, 4, "與道高法明二法師書難佛不見形", 320),
+              line("vie", 207, 5, "(4) Thanh hư: trong trời trống không.", 340)]
+    assert streams.allowed_document_starts(merged) == {0}
