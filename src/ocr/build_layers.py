@@ -83,13 +83,29 @@ def select_run(runs: list[dict], engine: str, preferred_keys: list[str | None],
     return mine[latest], reason
 
 
+def layer_manifest_paths(layout: DataLayout, layer: str) -> list[Path]:
+    """manifests/ocr_<layer>.json (gộp, của máy này) rồi ocr_<layer>_<đầu>-<cuối>.json (theo khoảng trang, có thể từ
+    gói của máy khác), khoảng cập nhật gần nhất trước."""
+    merged = layout.ocr_layer_manifest_path("ocr", layer)
+    ranges = []
+    for path in sorted(layout.ocr_manifest_dir.glob(f"ocr_{layer}_*-*.json")) if layout.ocr_manifest_dir.is_dir() else []:
+        if re.fullmatch(rf"ocr_{layer}_\d{{4}}-\d{{4}}", path.stem):
+            try:
+                updated = json.loads(path.read_text(encoding="utf-8")).get("updated_at") or ""
+            except (OSError, ValueError):
+                log.warning("Bỏ qua manifest hỏng %s", path)
+                continue
+            ranges.append((updated, path))
+    ranges.sort(key=lambda x: x[0], reverse=True)
+    return ([merged] if merged.exists() else []) + [p for _, p in ranges]
+
+
 def preferred_keys(layout: DataLayout, layer: str, engine: str) -> dict[int, list[str]]:
     """Khoá run do manifest chỉ định theo trang: manifest OCR luồng trước, manifest unified sau."""
     out: dict[int, list[str]] = {}
-    path = layout.ocr_layer_manifest_path("ocr", layer)
-    if path.exists():
+    for path in layer_manifest_paths(layout, layer):
         for rec in json.loads(path.read_text(encoding="utf-8")).get("pages", []):
-            if rec.get("engine") == engine and rec.get("key"):
+            if rec.get("engine") == engine and rec.get("key") and rec["key"] not in out.get(rec["page"], []):
                 out.setdefault(rec["page"], []).append(rec["key"])
     unified = raw_store.load_unified_manifest(layout)
     for rec in (unified or {}).get("pages", []):

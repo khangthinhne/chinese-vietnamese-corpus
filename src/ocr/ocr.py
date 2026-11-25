@@ -14,6 +14,7 @@ import logging
 import math
 import re
 import subprocess
+import sys
 import threading
 import time
 from concurrent.futures import ThreadPoolExecutor
@@ -25,6 +26,7 @@ from typing import Callable
 from PIL import Image
 
 from src.common import deps
+from src.common.page_naming import page_stem
 from src.common.corpus import (
     LAYERS, DataLayout, MetadataStore, RawPage, base_parser, build_document,
     filter_lines, finalize, make_meta, parse_args, parse_pages, parse_region,
@@ -236,6 +238,8 @@ def create_parser() -> argparse.ArgumentParser:
     parser.add_argument("--skip-done", action="store_true",
                         help="--layer: bỏ qua trang đã có run của engine (BẤT KỲ khoá/phiên bản adapter nào) "
                              "có ít nhất một đơn vị ảnh; dùng khi resume sau khi tăng ADAPTER_VERSION")
+    parser.add_argument("--dry-run", action="store_true",
+                        help="--layer: không nạp model, chỉ in trang nào đã có (cached/done) và trang nào sẽ OCR")
     return parser
 
 
@@ -677,6 +681,8 @@ def ocr_layer_page(page: int, image_path: Path, layout: DataLayout, args, engine
     record = {"key": key, "parameters": parameters, "created_at": raw_store.now(),
               "image": str(image_path), "image_size": list(image.size), "crop_box": list(box),
               "lines": [asdict(x) for x in lines], "raw": result.raw}
+    if state.get("provenance"):                       # commit/GPU: không thuộc khoá cache, chỉ để truy vết
+        record["provenance"] = state["provenance"]
     store = raw_store.load_engine_page(layout, engine, page, args.work_id)
     store["runs"].append(record)
     path = raw_store.save_engine_page(layout, engine, page, store)
@@ -696,7 +702,8 @@ def run_layer_ocr(args) -> Path:
         raise ValueError(f"Luồng {layer} lấy từ đúng một engine: --engines {expected} (nhận {args.engines!r})")
     engine = expected
     print(f"[{layer}] engine {engine}: chạy lệnh này trong môi trường {ENGINE_ENVS.get(engine, '?')}")
-    require_engine(engine)
+    if not getattr(args, "dry_run", False):
+        require_engine(engine)
     # Cấu hình theo work (ocr.streams): hướng chữ paddlevl, khoảng trang. Biến môi trường luôn thắng config.
     settings = work_config.stream_settings(work_config.load_config(getattr(args, "config", None)))
     if str(args.pages or "").strip().lower() == "auto":
@@ -714,14 +721,22 @@ def run_layer_ocr(args) -> Path:
     if missing:
         log.warning("[%s] Bỏ qua %d trang chưa có ảnh trong %s: %s", layer, len(missing), source,
                     compact_pages(missing))
+    dry_run = getattr(args, "dry_run", False)
     try:
         descriptor = ENGINES[engine].describe("all")
     except Exception as exc:
+        if dry_run:                                   # không GPU / sai môi trường: vẫn đếm được trang đã xong
+            log.warning("[%s] không tính được khoá cache (%s); chỉ xét run đã có theo trang", layer, exc)
+            return dry_run_layer(layout, args, layer, engine, pages, images, None)
         raise RuntimeError(f"Engine {engine} không sẵn sàng ({exc}). "
                            f"Hãy chạy trong môi trường {ENGINE_ENVS.get(engine, '?')}.") from exc
+    if dry_run:
+        return dry_run_layer(layout, args, layer, engine, pages, images, descriptor)
     log.info("[%s] %d trang có ảnh; engine %s adapter_version=%s", layer, len(images), engine,
              descriptor.get("adapter_version"))
-    records, failed, state = [], [], {}
+    provenance = run_provenance(descriptor)
+    log.info("[%s] provenance: %s", layer, json.dumps(provenance, ensure_ascii=False))
+    records, failed, state = [], [], {"provenance": provenance}
     ocr_seconds: list[float] = []
     for index, (page, image_path) in enumerate(images.items(), 1):
         try:
@@ -738,20 +753,26 @@ def run_layer_ocr(args) -> Path:
             failed.append(page)
         records.append(rec)
 
+    # Hai manifest: ocr_<layer>.json (gộp mọi lần chạy trên máy này) và ocr_<layer>_<đầu>-<cuối>.json (chỉ khoảng
+    # trang của lệnh này), để gói của nhiều máy/khoảng trang không đè lên nhau khi ghép.
     path = layout.ocr_layer_manifest_path("ocr", layer)
-    previous = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
-    merged = {r["page"]: r for r in previous.get("pages", []) if isinstance(r, dict) and "page" in r}
-    merged.update({r["page"]: r for r in records})   # cập nhật trang vừa chạy, giữ trang của lần trước
-    write_json(path, {
-        "schema_version": 1, "work_id": args.work_id, "layer": layer, "engine": engine,
-        "engine_descriptor": descriptor, "updated_at": raw_store.now(),
-        "source": {"path": str(source)},
-        "parameters": {"region": args.region, "psm": args.psm, "dpi": args.dpi,
-                       "force_reocr": bool(args.force_reocr)},
-        "pages": [merged[p] for p in sorted(merged)],
-        "missing_images": missing,
-        "error_pages": sorted(p for p, r in merged.items() if r.get("status") == "error"),
-    })
+    for target in (path, range_manifest_path(layout, layer, pages)):
+        previous = json.loads(target.read_text(encoding="utf-8")) if target.exists() else {}
+        merged = {r["page"]: r for r in previous.get("pages", []) if isinstance(r, dict) and "page" in r}
+        merged.update({r["page"]: r for r in records})   # cập nhật trang vừa chạy, giữ trang của lần trước
+        body = {
+            "schema_version": 1, "work_id": args.work_id, "layer": layer, "engine": engine,
+            "engine_descriptor": descriptor, "updated_at": raw_store.now(),
+            "source": {"path": str(source)}, "provenance": provenance,
+            "parameters": {"region": args.region, "psm": args.psm, "dpi": args.dpi,
+                           "force_reocr": bool(args.force_reocr)},
+            "pages": [merged[p] for p in sorted(merged)],
+            "missing_images": missing,
+            "error_pages": sorted(p for p, r in merged.items() if r.get("status") == "error"),
+        }
+        if target != path:
+            body["pages_requested"] = compact_pages(pages)
+        write_json(target, body)
     counts = {s: sum(1 for r in records if r["status"] == s) for s in ("ocr", "cached", "done", "error")}
     log.info("[%s] xong: %s, thiếu ảnh %d -> %s", layer, counts, len(missing), path)
     if failed:
@@ -766,9 +787,91 @@ def eta_text(ocr_seconds: list[float], done: int, total: int) -> str:
     if not timed or done >= total:
         return ""
     per_page = sum(timed[-50:]) / len(timed[-50:])
-    remaining = (total - done) * per_page * len(ocr_seconds) / done   # trang cached/done gần như tức thì
+    # Giả định mọi trang còn lại phải OCR (resume --skip-done đi theo thứ tự trang: trang đã xong nằm ở đầu).
+    remaining = (total - done) * per_page
     hours, rest = divmod(int(remaining), 3600)
     return f", ~{per_page:.0f}s/trang, còn ~{hours}h{rest // 60:02d}m"
+
+
+# Thời gian thực đo trên RTX 3050 6GB (reports/ocr_inventory_20261125.md, trung bình s/trang); chỉ để ước lượng.
+MEASURED_SECONDS = {"paddlevl": 22.0, "qwen": 35.0}
+REPO_ROOT = Path(__file__).resolve().parents[2]
+
+
+def range_manifest_path(layout: DataLayout, layer: str, pages: list[int]) -> Path:
+    """manifests/ocr_<layer>_<đầu>-<cuối>.json theo khoảng trang của một lệnh (vd ocr_han_0005-0623.json)."""
+    return layout.ocr_manifest_dir / f"ocr_{layer}_{page_stem(min(pages))}-{page_stem(max(pages))}.json"
+
+
+def _git(*argv: str) -> str | None:
+    try:
+        out = subprocess.run(["git", *argv], cwd=REPO_ROOT, capture_output=True, text=True, timeout=10)
+    except (OSError, subprocess.SubprocessError):
+        return None
+    return out.stdout.strip() if out.returncode == 0 else None
+
+
+def run_provenance(descriptor: dict | None) -> dict:
+    """Commit của repo, GPU, dtype của lần chạy: ghi vào run/manifest để truy vết khi ghép kết quả nhiều máy.
+    KHÔNG thuộc khoá cache (đã có phiên bản thư viện + adapter trong describe())."""
+    descriptor = descriptor or {}
+    dirty = _git("status", "--porcelain", "--untracked-files=no", "--", "src", "configs", "scripts")
+    gpu = None
+    torch = sys.modules.get("torch")
+    try:
+        if torch is not None and torch.cuda.is_available():
+            gpu = torch.cuda.get_device_name(0)
+    except Exception:                                 # noqa: BLE001 - chỉ là thông tin phụ
+        gpu = None
+    quant = descriptor.get("quantization") or {}
+    return {"git_commit": _git("rev-parse", "HEAD"), "git_describe": _git("describe", "--tags", "--always"),
+            "git_dirty": None if dirty is None else bool(dirty), "gpu": gpu,
+            "dtype": descriptor.get("dtype") or quant.get("compute_dtype"),
+            "adapter_version": descriptor.get("adapter_version")}
+
+
+def dry_run_layer(layout: DataLayout, args, layer: str, engine: str, pages: list[int],
+                  images: dict[int, Path], descriptor: dict | None) -> Path | None:
+    """Không nạp model: phân loại từng trang như lệnh thật sẽ làm.
+
+    cached  = có run cùng khoá (cần ảnh + describe() tính được, tức đúng môi trường và có GPU)
+    done    = có run của engine với >= 1 đơn vị ảnh; được bỏ qua khi có --skip-done (khoá có thể khác máy)
+    todo    = sẽ OCR;  no_image = chưa trích ảnh (bước extract) và chưa có run nào
+    """
+    status: dict[str, list[int]] = {"cached": [], "done": [], "todo": [], "no_image": []}
+    seconds: list[float] = []
+    for page in pages:
+        runs = raw_store.page_runs(layout, engine, page, args.work_id)
+        mine = [r for r in runs if run_engine(r) == engine]
+        seconds += [float(s) for r in mine if isinstance(s := (r.get("raw") or {}).get("inference_seconds"),
+                                                          (int, float))]
+        if descriptor is not None and page in images:
+            key = raw_store.cache_key(run_parameters(sha256_file(images[page]), descriptor, args))
+            if any(r.get("key") == key for r in runs) and not args.force_reocr:
+                status["cached"].append(page)
+                continue
+        if mine and any(run_units(r) for r in mine) and getattr(args, "skip_done", False) and not args.force_reocr:
+            status["done"].append(page)
+        elif page in images:
+            status["todo"].append(page)
+        else:
+            status["no_image"].append(page)
+    per_page = (sorted(seconds)[len(seconds) // 2] if len(seconds) >= 5 else MEASURED_SECONDS.get(engine, 30.0))
+    pending = len(status["todo"]) + len(status["no_image"])
+    hours, rest = divmod(int(pending * per_page), 3600)
+    log.info("[%s] DRY-RUN %s: %d trang yêu cầu; khoá cache %s", layer, engine, len(pages),
+             "tính được" if descriptor else "KHÔNG tính được (không GPU/sai môi trường): chỉ xét run theo trang")
+    for name in ("cached", "done", "todo", "no_image"):
+        log.info("[%s]   %-8s %4d  %s", layer, name, len(status[name]), compact_pages(status[name]) or "-")
+    log.info("[%s]   sẽ OCR %d trang, ~%.0fs/trang -> ~%dh%02dm (ước lượng)", layer, pending, per_page,
+             hours, rest // 60)
+    if not getattr(args, "skip_done", False):
+        log.info("[%s]   (không có --skip-done: trang chỉ có run khác khoá sẽ bị OCR lại)", layer)
+    print(json.dumps({"layer": layer, "engine": engine, "dry_run": True,
+                      **{k: compact_pages(v) for k, v in status.items()},
+                      "counts": {k: len(v) for k, v in status.items()},
+                      "pending": pending, "seconds_per_page": round(per_page, 1)}, ensure_ascii=False))
+    return None
 
 
 def compact_pages(pages: list[int]) -> str:

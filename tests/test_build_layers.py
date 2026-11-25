@@ -365,3 +365,60 @@ def test_eta_text_and_log_file(tmp_path, monkeypatch):
                      "--pages", "1", "--log-file", str(log_file)]) == 0
     assert log_file.exists()                                    # handler file được tạo...
     assert logging.getLogger().handlers == before               # ...và gỡ ra sau khi chạy
+
+
+def test_range_manifest_and_provenance(tmp_path, monkeypatch):
+    make_images(tmp_path, [1, 2, 3, 4])
+    monkeypatch.setitem(ENGINES, "paddlevl", fake_engine("paddlevl", ["玄黃"]))
+    layout = DataLayout(tmp_path, WORK)
+    base = ["--work-id", WORK, "--data-root", str(tmp_path), "--layer", "han", "--engines", "paddlevl"]
+    assert ocr.main([*base, "--pages", "1-2"]) == 0
+    assert ocr.main([*base, "--pages", "3-4"]) == 0
+    first = json.loads((layout.ocr_manifest_dir / "ocr_han_0001-0002.json").read_text(encoding="utf-8"))
+    second = json.loads((layout.ocr_manifest_dir / "ocr_han_0003-0004.json").read_text(encoding="utf-8"))
+    merged = json.loads(layout.ocr_layer_manifest_path("ocr", "han").read_text(encoding="utf-8"))
+    assert [p["page"] for p in first["pages"]] == [1, 2] and [p["page"] for p in second["pages"]] == [3, 4]
+    assert [p["page"] for p in merged["pages"]] == [1, 2, 3, 4]               # gộp vẫn đủ (tương thích ngược)
+    assert first["pages_requested"] == "1-2"
+    run = json.loads(layout.ocr_raw_engine_path("paddlevl", 3).read_text(encoding="utf-8"))["runs"][0]
+    assert set(run["provenance"]) >= {"git_commit", "gpu", "dtype", "adapter_version"}
+    assert run["provenance"]["adapter_version"] == 99
+    # manifest theo khoảng (vd từ gói của máy khác) cũng chỉ định khoá cho build_layers
+    merged_path = layout.ocr_layer_manifest_path("ocr", "han")
+    merged_path.unlink()
+    prefs = build_layers.preferred_keys(layout, "han", "paddlevl")
+    assert sorted(prefs) == [1, 2, 3, 4]
+
+
+def test_dry_run_counts_seeded_pages_without_engine(tmp_path, monkeypatch, capsys):
+    make_images(tmp_path, [1, 2, 3])
+    layout = DataLayout(tmp_path, WORK)
+    seeded = make_run("paddlevl", ["天地"], "other-machine-key")
+    seeded["raw"] = {"bands": [{"unit": 1, "flags": [], "generated_text": "天地"}]}
+    write_engine(layout, "paddlevl", 1, [seeded])
+    write_engine(layout, "paddlevl", 5, [seeded | {"key": "k5"}])              # trang 5: có run, chưa có ảnh
+
+    class Broken(OcrEngine):                                                   # như máy không GPU
+        name = "paddlevl"
+
+        @classmethod
+        def describe(cls, lang):
+            raise RuntimeError("PaddleOCR-VL engine hiện yêu cầu CUDA GPU.")
+
+        def recognize(self, *a, **k):
+            raise AssertionError("dry-run không được OCR")
+    monkeypatch.setitem(ENGINES, "paddlevl", Broken)
+    argv = ["--work-id", WORK, "--data-root", str(tmp_path), "--layer", "han", "--engines", "paddlevl",
+            "--pages", "1-6", "--skip-done", "--dry-run"]
+    assert ocr.main(argv) == 0
+    out = json.loads([x for x in capsys.readouterr().out.splitlines() if x.startswith("{")][-1])
+    assert out["done"] == "1,5" and out["todo"] == "2-3" and out["no_image"] == "4,6" and out["cached"] == ""
+    assert not layout.ocr_layer_manifest_path("ocr", "han").exists()          # dry-run không ghi gì
+    # có engine tính được khoá: trang cùng khoá -> cached
+    fake = fake_engine("paddlevl", ["玄黃"])
+    monkeypatch.setitem(ENGINES, "paddlevl", fake)
+    assert ocr.main(argv[:-2] + ["--pages", "2"]) == 0                         # OCR thật trang 2
+    capsys.readouterr()
+    assert ocr.main(argv) == 0
+    out = json.loads([x for x in capsys.readouterr().out.splitlines() if x.startswith("{")][-1])
+    assert out["cached"] == "2" and out["done"] == "1,5" and fake.calls == [2]
