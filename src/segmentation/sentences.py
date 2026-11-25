@@ -167,8 +167,12 @@ AUTO_LINES_PER_TERMINATOR = 4            # < 1 dấu kết câu mỗi 4 dòng ->
 HAN_AM_MISMATCH = 0.30                   # cảnh báo khi số câu han/am của một tài liệu lệch > 30%
 
 
+AM_VERSE_MAX_SYLLABLES = 12            # dòng phiên âm thơ: <= 12 âm tiết
+AM_VERSE_SHARE = 0.75                    # >= 75% dòng của tài liệu có dạng câu thơ -> tách theo dòng
+
+
 def default_split(layer: str) -> str:
-    return {"han": "auto", "tho": "line"}.get(layer, "punct")
+    return {"han": "auto", "am": "auto", "tho": "line"}.get(layer, "punct")
 
 
 def choose_han_split(lines: list[RawLine]) -> str:
@@ -180,6 +184,20 @@ def choose_han_split(lines: list[RawLine]) -> str:
         return "punct"
     terminators = sum(ln.text.count(c) for ln in lines for c in AUTO_HAN_TERMINATORS)
     return "line" if terminators * AUTO_LINES_PER_TERMINATOR < len(lines) else "punct"
+
+
+def choose_am_split(lines: list[RawLine]) -> str:
+    """'line' nếu tài liệu phiên âm là văn vần: >= 75% dòng ngắn (<= 12 âm tiết) và kết thúc bằng dấu câu.
+
+    Phiên âm thơ có sách đặt dấu phẩy sau câu lẻ, dấu chấm sau câu chẵn (CPO_20): tách theo dấu câu ra từng CẶP
+    câu thơ, trong khi chữ Hán (không chấm câu) tách theo dòng -> số câu lệch đúng 2:1. Văn xuôi (CPO_18) giữ
+    'punct'. Dòng tiêu đề viết hoa không tính."""
+    body = [ln.text.strip() for ln in lines if ln.text.strip() and not ln.text.strip().isupper()]
+    if not body:
+        return "punct"
+    verse = sum(1 for t in body if len(re.findall(r"[^\W\d_]+", t)) <= AM_VERSE_MAX_SYLLABLES
+                and t[-1] in ",.;:!?")
+    return "line" if verse >= AM_VERSE_SHARE * len(body) else "punct"
 
 
 def sentence_count_mismatches(han: dict[str, int], am: dict[str, int],
@@ -206,8 +224,8 @@ def make_sentences(work_id: str, layer: str, lines: list[RawLine],
     dropped: list[tuple[str, int, str, str]] = []
     sentences: list[Sentence] = []
     split_mode = getattr(cfg, "split", None) or default_split(layer)
-    if split_mode == "auto" and layer != "han":
-        split_mode = "punct"                 # auto chỉ quyết định cho chữ Hán
+    if split_mode == "auto" and layer not in ("han", "am"):
+        split_mode = "punct"                 # auto chỉ quyết định cho chữ Hán và phiên âm
     max_len = 200 if layer == "han" else 600
 
     def emit(text: str, idxs: list[int]) -> None:
@@ -288,7 +306,7 @@ def make_sentences(work_id: str, layer: str, lines: list[RawLine],
     for start, end in runs:
         group = lines[start:end]
         if split_mode == "auto":
-            mode = choose_han_split(group)
+            mode = choose_han_split(group) if layer == "han" else choose_am_split(group)
             if decisions is not None:
                 decisions[_document_id(group[0].id)] = mode
             if mode == "line":
@@ -361,7 +379,8 @@ def create_parser():
     p = base_parser("Phân đoạn cấp câu độc lập -> 04_segmentation/sentences/<layer>.xml")
     p.add_argument("--split", choices=["auto", "punct", "line"],
                    help="Mặc định: auto cho han (theo từng tài liệu: < 1 dấu 。！？； mỗi 4 dòng thì tách "
-                        "theo dòng, ngược lại theo dấu câu), line cho tho, punct cho lớp khác")
+                        "theo dòng, ngược lại theo dấu câu), auto cho am (văn vần: >= 75% dòng <= 12 âm tiết có dấu "
+                        "câu cuối dòng thì tách theo dòng), line cho tho, punct cho lớp khác")
     p.add_argument("--split-colon", action="store_true",
                    help="Coi ':' là ranh giới câu (Việt)")
     p.add_argument("--abbrev", help="Viết tắt Việt bổ sung, phân cách dấu phẩy")

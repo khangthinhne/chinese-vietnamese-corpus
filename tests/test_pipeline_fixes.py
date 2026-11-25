@@ -29,7 +29,7 @@ def lines(doc: str, texts: list[str], page: int = 1) -> list[RawLine]:
 # --------------------------------------------------------------------------- 1. tách câu Hán
 def test_default_split_per_layer():
     assert (default_split("han"), default_split("am"), default_split("nghia"), default_split("tho")) == \
-        ("auto", "punct", "punct", "line")
+        ("auto", "auto", "punct", "line")
 
 
 def test_choose_han_split_threshold():
@@ -61,10 +61,23 @@ def test_punct_and_line_modes_unchanged():
     assert [s.text for s in line] == POEM
 
 
-def test_auto_is_punct_for_vietnamese_layers():
+def test_auto_is_punct_for_nghia_layer():
     raw = lines("W.001", ["Nhị Lạng giang sơn cảnh giới liên,", "Bàng thông Kinh, Quảng tiếp Cao, Tuyên."])
-    sents, _ = make_sentences("W", "am", raw, SentenceConfig(layer="am", split="auto"))
+    sents, _ = make_sentences("W", "nghia", raw, SentenceConfig(layer="nghia", split="auto"))
     assert [s.text for s in sents] == ["Nhị Lạng giang sơn cảnh giới liên, Bàng thông Kinh, Quảng tiếp Cao, Tuyên."]
+
+
+def test_auto_am_splits_verse_by_line_and_prose_by_punctuation():
+    verse = ["Giang thứ liên bài số tứ chu,", "Quan thịnh cô ỷ thảo đê đầu.",
+             "Tùy nha tảo bích, yêu xuân tín,", "Hãn tốt bằng lan thủ dạ trù."]
+    prose = ["Phù Đạo xứ thanh hư, tứ đại lý thường, nhi hữu pháp môn, diệu xuất quần vực. Nhược xưng",
+             "kỳ xảo năng lợi vật, độ thoát vô lượng vi giáo, hà dĩ bất kiến chân hình ư thế?"]
+    raw = lines("W.001", verse) + lines("W.002", prose, page=2)
+    decisions: dict[str, str] = {}
+    sents, _ = make_sentences("W", "am", raw, SentenceConfig(layer="am", split="auto"), decisions)
+    assert decisions == {"W.001": "line", "W.002": "punct"}
+    assert [s.text for s in sents if s.document_id == "W.001"] == verse
+    assert len([s for s in sents if s.document_id == "W.002"]) == 2
 
 
 def test_sentence_count_mismatch_over_30_percent():
