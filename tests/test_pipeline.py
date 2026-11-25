@@ -89,7 +89,8 @@ def texts(root, layer):
 
 # --------------------------------------------------------------------------- #
 def test_clean_han_cross_page_and_noise(root):
-    run_clean(root, "han")
+    # văn xuôi có tiêu đề/tên người viết ngắn: luật tiêu đề Hán là tuỳ chọn (mặc định tắt vì phá thơ)
+    run_clean(root, "han", "--han-heading-heuristic")
     assert texts(root, "han") == [
         "夫道處清虛，四大理常，而有法門，妙出群域。",
         "若稱其功能利物，度脫無量爲教，何居不見真形於世？",
@@ -127,7 +128,7 @@ def test_tho_defaults_to_line_split(root):
 
 
 def test_han_am_levenshtein_then_export(root):
-    run_clean(root, "han")
+    run_clean(root, "han", "--han-heading-heuristic")
     run_clean(root, "am", "--drop-pattern", "^Phần II")
     argv = ["--work-id", WORK, "--data-root", str(root), "--pair", "han-am", "--method", "levenshtein",
             "--opt", f"reading_dict={root / 'han_viet.tsv'}"]
@@ -143,7 +144,14 @@ def test_han_am_levenshtein_then_export(root):
     assert len(lines) == 5 and all(l.count("\t") == 1 for l in lines)
     ws = load_workbook(out / "T_01_parallel.xlsx")["DONG_HANG"]
     assert [c.value for c in ws[1]] == ["Hán", "Việt"] and ws.max_row == 6
-    # không ghi đè ngầm
+    # chạy lại khi đầu vào không đổi: bỏ qua êm (mã 0), không ghi lại file
+    before = (out / "T_01_parallel.tsv").stat().st_mtime_ns
+    assert export.main(["--work-id", WORK, "--data-root", str(root), "--pair", "han-am",
+                        "--name", "T_01_parallel"]) == 0
+    assert (out / "T_01_parallel.tsv").stat().st_mtime_ns == before
+    # đầu vào đổi mà không --force: vẫn chặn, không ghi đè ngầm
+    am = root / WORK / "05_cleaning" / "am.xml"
+    am.write_text(am.read_text(encoding="utf-8").replace("Lý Sâm", "Lý Sâm "), encoding="utf-8")
     assert export.main(["--work-id", WORK, "--data-root", str(root), "--pair", "han-am",
                         "--name", "T_01_parallel"]) == 1
 

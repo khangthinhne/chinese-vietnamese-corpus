@@ -201,6 +201,8 @@ def test_unified_ocr_not_blocked_by_raw_cache(tmp_path):
     assert FakeUnifiedEngine.calls == [1, 1]
     assert {p: p.read_bytes() for p in layout.ocr_raw_unified_dir.glob("*.json")} == raw_before
 
-    # manifest/XML đã có thì vẫn chặn như cũ; --force ghi lại được
-    assert ocr.main(base) == 1
+    # manifest/XML đã có, đầu vào không đổi: bỏ qua êm (mã 0, không ghi lại); --force ghi lại được
+    xml_before = layout.ocr_unified_xml_path.read_bytes()
+    assert ocr.main(base) == 0
+    assert layout.ocr_unified_xml_path.read_bytes() == xml_before
     assert ocr.main([*base, "--force"]) == 0

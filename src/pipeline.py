@@ -152,7 +152,9 @@ def _clean_argv(cfg: dict, layer: str, base: list[str], force: bool, extra: list
         _opt(argv, "--end-before", cc.get("end_before"))
     _opt(argv, "--abbrev", cc.get("abbrev"))
     for flag, key in (("--split-colon", "split_colon"), ("--no-heading-heuristic", "no_heading_heuristic"),
-                      ("--keep-markers", "keep_markers"), ("--no-headers", "remove_headers"),
+                      ("--keep-markers", "keep_markers"), ("--keep-letter-markers", "strip_letter_markers"),
+                      ("--no-headers", "remove_headers"),
+                      ("--keep-single-line-pages", "drop_recurring_single_lines"),
                       ("--no-footers", "remove_footers"), ("--no-duplicates", "remove_duplicates"),
                       ("--no-reconstruct", "reconstruct_page_boundaries"),
                       ("--no-footnotes", "enabled")):
@@ -168,6 +170,8 @@ def _clean_argv(cfg: dict, layer: str, base: list[str], force: bool, extra: list
     _opt(argv, "--header-footer-min-pages", cc.get("header_footer_min_pages"))
     _opt(argv, "--dup-threshold", cc.get("duplicate_threshold"))
     _opt(argv, "--dup-min-len", cc.get("duplicate_min_len"))
+    if cc.get("footnotes", {}).get("note_entries") is True:
+        argv.append("--note-entries")
     for flag, key in (("--no-paren-notes", "detect_parentheses"),
                       ("--no-bib-notes", "detect_bibliographic_notes")):
         if cc.get("footnotes", {}).get(key) is False:

@@ -294,6 +294,9 @@ def main(argv: list[str] | None = None) -> int:
         args = parse_args(parser, argv)
         run(args)
         return 0
+    except deps.UpToDate as exc:          # đầu ra còn mới: bỏ qua, không phải lỗi
+        log.info("%s", exc)
+        return 0
     except (ValueError, FileExistsError, OSError) as exc:
         log.error("%s", exc)
         return 2

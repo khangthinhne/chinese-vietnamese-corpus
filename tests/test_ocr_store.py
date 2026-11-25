@@ -59,7 +59,8 @@ def test_writing_system_ocr_stores_raw_and_reuses_cache(tmp_path):
     assert len(FakeWritingSystemEngine.calls) == calls
     assert len(raw_store.load_page(layout, "chi_tra", 1, "T_01")["runs"]) == 1
 
-    assert ocr.main([*base, "--writing-system", "chi_tra"]) == 1
+    assert ocr.main([*base, "--writing-system", "chi_tra"]) == 0            # đầu vào không đổi: bỏ qua êm
+    assert len(FakeWritingSystemEngine.calls) == calls
     assert ocr.main([*base, "--writing-system", "vie"]) == 0
     vie = raw_store.load_manifest(layout, "vie")
     assert vie and vie["keep"] == "latin"

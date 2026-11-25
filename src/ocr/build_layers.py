@@ -25,6 +25,7 @@ import xml.etree.ElementTree as ET
 from dataclasses import dataclass, field
 from pathlib import Path
 
+from src.common import deps
 from src.common.corpus import DataLayout, base_parser, parse_args, parse_pages, write_json
 from src.common.xmlstore import add, bbox_attr, file_element, read_root, write_file_root, write_root
 from src.ocr import raw_store
@@ -495,6 +496,13 @@ def create_parser():
     return parser
 
 
+def build_inputs(layout: DataLayout, layer: str) -> list[Path]:
+    """Đầu vào của build_layer: toàn bộ raw/ (append-only) + manifest OCR của luồng (gộp, theo khoảng, unified)."""
+    inputs = [layout.ocr_raw_root, *layer_manifest_paths(layout, layer)]
+    unified = raw_store.unified_manifest_path(layout)
+    return inputs + ([unified] if unified.exists() else [])
+
+
 def run(args) -> dict:
     layers = [x.strip() for x in args.layers.split(",") if x.strip()]
     if not layers or any(x not in LAYERS for x in layers):
@@ -506,8 +514,17 @@ def run(args) -> dict:
         if not pages:
             raise ValueError(f"Không có JSON OCR thô nào trong {layout.ocr_raw_unified_dir}")
         for layer in layers:
+            # Bỏ qua khi raw/ + manifest OCR + tham số lọc không đổi kể từ lần dựng trước (chạy lại pipeline êm).
+            stage = (f"layers:{layer}:{args.build_pages or 'all'}:"
+                     f"{args.han_min_cjk_share}:{args.han_min_cjk_with_latin}")
+            inputs = build_inputs(layout, layer)
+            outputs = [layout.ocr_layer_xml_path(layer), layout.ocr_layer_manifest_path("build", layer)]
+            if not args.force and outputs[0].exists() and deps.is_fresh(layout, stage, inputs, outputs[1]):
+                log.info("[%s] %s: %s đã có, đầu vào không đổi: bỏ qua", layout.work_id, layer, outputs[0].name)
+                continue
             build_layer(layout, layer, pages, force=args.force, han_min_cjk_share=args.han_min_cjk_share,
                         han_min_cjk_with_latin=args.han_min_cjk_with_latin)
+            deps.record(layout, stage, inputs, outputs)
     errors = []
     for layer in layers:
         layer_errors, stats = verify_layer(layout, layer)

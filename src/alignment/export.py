@@ -393,6 +393,9 @@ def main(argv: list[str] | None = None) -> int:
     args = parse_args_by_pair(parser, argv)
     try:
         run(args)
+    except deps.UpToDate as exc:          # đầu ra còn mới: bỏ qua, không phải lỗi
+        log.info("%s", exc)
+        return 0
     except (OSError, ValueError, RuntimeError) as exc:
         log.error("%s", exc)
         return 1

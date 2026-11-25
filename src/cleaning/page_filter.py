@@ -61,7 +61,16 @@ def filter_pages(lines: list[RawLine], cfg: CleanConfig, audit: Audit
 
     headers = recurring(0, cfg.remove_headers, PAGE_HEADER)
     footers = recurring(-1, cfg.remove_footers, PAGE_FOOTER)
-    if headers or footers:
+    # Trang mà lớp này chỉ có ĐÚNG MỘT dòng, và dòng đó giống hệt dòng duy nhất của >= N trang khác: tiêu đề chạy
+    # hoặc dòng OCR tự sinh (CPO_20: paddlevl đọc "欽定四庫全書" trên 7 trang chỉ có chữ Việt, tr.347-407).
+    singles: set[str] = set()
+    if cfg.remove_headers and getattr(cfg, "drop_recurring_single_lines", True):
+        counts: dict[str, int] = {}
+        for pls in content.values():
+            if len(pls) == 1:
+                counts[_key(pls[0].text)] = counts.get(_key(pls[0].text), 0) + 1
+        singles = {k for k, n in counts.items() if n >= cfg.header_footer_min_pages and len(k) <= 120}
+    if headers or footers or singles:
         kept = []
         for page, pls in pages.items():
             if page not in content:
@@ -70,6 +79,10 @@ def filter_pages(lines: list[RawLine], cfg: CleanConfig, audit: Audit
             for ln in pls:
                 if ln.text.strip():
                     k = _key(ln.text)
+                    if len(nonempty) == 1 and k in singles:
+                        page_records.append({"page": page, "reason": PAGE_HEADER, "lines": 1, "text": ln.text})
+                        audit.add("remove_line", PAGE_HEADER, rule="recurring_single_line", line=ln)
+                        continue
                     edge_first = ln is nonempty[0]
                     edge_last = ln is nonempty[-1]
                     if (edge_first and k in headers) or (edge_last and k in footers):

@@ -26,6 +26,13 @@ from src.cleaning.model import (BIB_NOTE, EDITORIAL_NOTE, FOOTNOTE, UNCERTAIN_NO
 
 OPEN_PAREN = "（(﹙"
 CLOSE_PAREN = "）)﹚"
+# FootnoteConfig.note_entries (tuỳ chọn, lớp Việt): "1. Côn Lôn: Tức ...", "1. 2. Bản A.603 chép là ...",
+# "3. Trong câu thơ này tác giả ...". Mục = số thứ tự + chữ đầu viết hoa, rồi "Thuật ngữ:" (<= 60 ký tự) hoặc
+# câu khảo dị bắt đầu "Bản"/"Trong"/"Câu"/"Chữ"/"Nguyên".
+NOTE_ENTRY_PATTERNS = [
+    r"^\d{1,3}\s*\.\s*(?:\d{1,3}\s*\.\s*)*[A-ZĐÀ-Ỹ][^:：.?!]{0,60}[:：]\s",
+    r"^\d{1,3}\s*\.\s*(?:\d{1,3}\s*\.\s*)*(?:Bản|Trong|Câu|Chữ|Nguyên|Tức|Xem)\s",
+]
 VI_COMPLETE = re.compile(r"[.?!…;:\"”’')﹚\]]$")   # dòng đã trọn câu (gồm ':')
 HAN_COMPLETE_CH = "。！？；﹖﹕﹒」』”’）﹚"
 
@@ -79,6 +86,8 @@ def detect_footnotes(lines: list[RawLine], cfg: FootnoteConfig, layer: str,
     consumed: set[int] = set()         # chỉ số dòng đã thuộc một chú thích (kể cả được giữ)
     bib_res = [re.compile(p, re.IGNORECASE) for p in cfg.bib_patterns] if cfg.detect_bibliographic else []
     item_res = [re.compile(p) for p in cfg.item_patterns]
+    if getattr(cfg, "note_entries", False) and layer != "han":
+        item_res += [re.compile(p) for p in NOTE_ENTRY_PATTERNS]
     counter = 0
 
     def is_bib(text: str) -> bool:

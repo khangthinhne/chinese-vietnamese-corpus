@@ -30,6 +30,10 @@ DEFAULT_DROP = [r"^[\-–—\s]*\d{1,4}[\-–—\s]*$"]
 # Chữ số mũ ăn luôn khoảng trắng đứng trước để không để lại hai dấu cách.
 MARKER_RE = re.compile(r"\[\d{1,3}\]|［\d{1,3}］|\(\d{1,3}\)|（\d{1,3}）|[①-⑳㉑-㉟]"
                        r"|[ \t]*[⁰¹²³⁴⁵⁶⁷⁸⁹]{1,3}(?=[\s,.;:!?)\]]|$)")
+# Chỉ mục khảo dị dạng CHỮ CÁI trong lớp tiếng Việt (am/nghia/tho): "tòng(b) lĩnh", "Tiên hoàng (a) uy",
+# "triện^{(b)} ấn" (Qwen viết chỉ số trên kiểu LaTeX). Chỉ xoá khi đứng SAU một chữ (không ở đầu dòng: "(a) ..." đầu
+# dòng là mục liệt kê) và trước khoảng trắng/dấu câu/cuối dòng. Đo trên CPO_18/19/20: 44/44 lần là chỉ mục thật.
+LETTER_MARKER_RE = re.compile(r"(?<=\S)[ \t]*(?:\\\(\s*)?\^?\{?\(\^?[a-zđ]\)\}?(?:\s*\\\))?(?=[\s,.;:!?)\]]|$)")
 LEADING_NUM_RE = re.compile(r"^\s*\d{1,3}\s*[·.．、﹒)]\s*")
 
 # ký tự nhiễu OCR biết chắc: XOÁ khi làm sạch (rule noise_char:<ch>)
@@ -86,7 +90,8 @@ class OCRCleaningConfig:
     replace_patterns: list[tuple[str, str]] = field(default_factory=list)  # (regex, thay thế)
     suspect_chars: str = SUSPECT_CHARS
     strip_markers: bool = True             # xoá chỉ mục chú thích [1], (1), ① trong dòng
-    noise_chars: str = NOISE_CHARS          
+    strip_letter_markers: bool = True      # lớp am/nghia/tho: xoá chỉ mục khảo dị (a), (b) sau chữ (LETTER_MARKER_RE)
+    noise_chars: str = NOISE_CHARS
 
 
 @dataclass
@@ -98,6 +103,9 @@ class FootnoteConfig:
     remove_in_text_markers: bool = True    # xoá [1], (1)... (nhờ artifacts.strip_markers)
     item_patterns: list[str] = field(default_factory=lambda: [
         r"^\(\d{1,3}\)\s", r"^\（\d{1,3}）\s", r"^\[\d{1,3}\]\s", r"^［\d{1,3}］\s"])
+    # Mục chú thích/khảo dị dạng "1. Côn Lôn: Tức dãy...", "1. 2. Bản A.603 chép là..." lọt vào lớp am/nghia/tho
+    # khi OCR thiếu tiêu đề "CHÚ THÍCH". TUỲ CHỌN (mặc định tắt): bản dịch có thể có danh sách đánh số thật.
+    note_entries: bool = False
     bib_patterns: list[str] = field(default_factory=lambda: [
         r"Q\.\s*\d", r"Quyển\s+\S", r"Quyên\s+\S", r"[集卷]", r"\btập\b",
         r"(三国|三國|六朝|全宋|全唐|弘明|高僧|文苑).*?[集卷文]",
@@ -149,6 +157,7 @@ class CleanConfig:
     remove_headers: bool = True          # dòng đầu trang lặp lại >= header_footer_min_pages trang
     remove_footers: bool = True
     header_footer_min_pages: int = 3
+    drop_recurring_single_lines: bool = True   # trang chỉ có 1 dòng, dòng đó lặp y hệt trên >= min_pages trang
     remove_duplicates: bool = True       # dòng OCR trùng/near-dup
     duplicate_threshold: float = 0.9     # tỉ lệ giống tối thiểu (difflib) tính là near-dup
     duplicate_min_len: int = 20          # cụm ngắn hơn KHÔNG bao giờ bị coi là trùng (câu lặp hợp lệ)

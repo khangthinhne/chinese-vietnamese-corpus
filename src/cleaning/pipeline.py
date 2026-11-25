@@ -251,6 +251,7 @@ def build_config(args, layer: str) -> CleanConfig:
         split_colon=args.split_colon,
         drop_patterns=list(DEFAULT_DROP) + list(args.drop_pattern or []),
         heading_heuristic=not args.no_heading_heuristic,
+        han_heading_heuristic=getattr(args, "han_heading_heuristic", False),
         strip_markers=not args.keep_markers,
         abbrev=set(VI_ABBREV) | {a.strip().lower() for a in (args.abbrev or "").split(",") if a.strip()},
         start_after=args.start_after,
@@ -259,6 +260,7 @@ def build_config(args, layer: str) -> CleanConfig:
         remove_headers=not args.no_headers,
         remove_footers=not args.no_footers,
         header_footer_min_pages=args.header_footer_min_pages,
+        drop_recurring_single_lines=not getattr(args, "keep_single_line_pages", False),
         remove_duplicates=not args.no_duplicates,
         duplicate_threshold=args.dup_threshold,
         duplicate_min_len=args.dup_min_len,
@@ -266,8 +268,9 @@ def build_config(args, layer: str) -> CleanConfig:
         ocr=OCRCleaningConfig(
             remove_patterns=list(args.ocr_remove or []),
             replace_patterns=[_parse_replace(r) for r in (args.ocr_replace or [])],
+            strip_letter_markers=not getattr(args, "keep_letter_markers", False),
         ),
-        footnotes=FootnoteConfig(),
+        footnotes=FootnoteConfig(note_entries=getattr(args, "note_entries", False)),
         metadata=MetadataConfig(
             enabled=not args.no_metadata,
             exclude_from_main_text=not args.metadata_keep,
@@ -405,6 +408,14 @@ def create_parser():
     p.add_argument("--end-before", help="Regex ranh giới cuối đoạn: ngừng lấy trước dòng khớp (không gồm dòng khớp)")
     p.add_argument("--no-heading-heuristic", action="store_true")
     p.add_argument("--keep-markers", action="store_true")
+    p.add_argument("--note-entries", action="store_true",
+                   help="Lớp am/nghia/tho: coi dòng '1. Thuật ngữ: ...' / '1. Bản A... chép' là mục chú thích (tuỳ chọn)")
+    p.add_argument("--keep-single-line-pages", action="store_true",
+                   help="Không bỏ dòng duy nhất của trang dù nó lặp y hệt trên >= --header-footer-min-pages trang")
+    p.add_argument("--han-heading-heuristic", action="store_true",
+                   help="Lớp han: bỏ dòng Hán ngắn không dấu câu như tiêu đề/tên người viết (mặc định TẮT: phá thơ)")
+    p.add_argument("--keep-letter-markers", action="store_true",
+                   help="Giữ chỉ mục khảo dị dạng chữ cái (a), (b) trong lớp am/nghia/tho (mặc định xoá)")
     p.add_argument("--abbrev", help="Viết tắt Việt thêm, phân cách dấu phẩy")
     # trang / trùng / nối
     p.add_argument("--exclude-pages", help="Trang loại thủ công, vd '205,210-212'")
@@ -450,6 +461,9 @@ def main(argv: list[str] | None = None) -> int:
     args = parse_args(parser, argv)
     try:
         run(args)
+    except deps.UpToDate as exc:          # đầu ra còn mới: bỏ qua, không phải lỗi
+        log.info("%s", exc)
+        return 0
     except (OSError, ValueError) as exc:
         log.error("%s", exc)
         return 1

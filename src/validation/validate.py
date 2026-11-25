@@ -264,6 +264,18 @@ def create_parser():
     return p
 
 
+def validation_inputs(layout: DataLayout, config: str | None) -> list[Path]:
+    """Mọi file validate đọc: 04_segmentation/, 05_cleaning/ (trừ chính báo cáo), config. Kiểm tra cặp chỉ đọc câu
+    đã làm sạch, không đọc 06_alignment/ (bước align chạy SAU validate)."""
+    files: list[Path] = [layout.segmentation_dir]
+    if layout.cleaning_root.is_dir():
+        files += [p for p in layout.cleaning_root.rglob("*")
+                  if p.is_file() and p.name != "validation_report.json"]
+    if config:
+        files.append(Path(config))
+    return files
+
+
 def run(args) -> Path:
     layout = DataLayout(Path(args.data_root), args.work_id)
     layers = [l.strip() for l in args.layers.split(",")] if getattr(args, "layers", None) else None
@@ -276,11 +288,20 @@ def run(args) -> Path:
         if not pairs:
             pairs = list(cfg.get("pairs", {})) or None
 
+    out_dir = layout.cleaning_root
+    report_path = out_dir / "validation_report.json"
+    stage = f"validate:{','.join(layers or [])}:{','.join(pairs or [])}"
+    inputs = validation_inputs(layout, getattr(args, "config", None))
+    if not getattr(args, "force", False) and deps.is_fresh(layout, stage, inputs, report_path):
+        previous = json.loads(report_path.read_text(encoding="utf-8"))
+        log.info("%s đã có, đầu vào không đổi: bỏ qua kiểm tra", report_path.name)
+        if previous.get("valid") is False:
+            raise ValueError(f"Corpus {args.work_id} không vượt qua kiểm tra hợp lệ (báo cáo cũ, đầu vào không đổi)")
+        return report_path
+
     report = validate_corpus(layout, layers, pairs)
 
-    out_dir = layout.cleaning_root
     layout.ensure(out_dir)
-    report_path = out_dir / "validation_report.json"
     atomic_write_text(report_path, json.dumps(report.as_dict(), ensure_ascii=False, indent=2))
 
     MetadataStore(layout).update("validation", {
@@ -289,6 +310,7 @@ def run(args) -> Path:
         "report_path": layout.rel(report_path),
         "review_required": bool(report.summary["warnings"] or report.summary["errors"]),
     })
+    deps.record(layout, stage, inputs, [report_path])
 
     log.info("Validation %s: %d errors, %d warnings, %d infos -> %s",
              "PASSED" if report.valid else "FAILED",
