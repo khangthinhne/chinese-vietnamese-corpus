@@ -45,6 +45,9 @@ python -m src.ocr.ocr --config configs/CPO_20.json --layer han --engines paddlev
 python -m src.ocr.ocr --config configs/CPO_20.json --layer vie --engines qwen --pages 1-280       # my_nlp
 python -m src.ocr.build_layers --config configs/CPO_20.json        # JSON thô -> han.xml, vie.xml, TXT + kiểm tra
 python -m src.ocr.build_layers --config configs/CPO_20.json --report-only   # chỉ kiểm tra + bảng tổng hợp
+powershell -File scripts\ocr_work.ps1 -Work CPO_19                # OCR cả work một mạch (resume được), docs/ocr_runbook.md
+python scripts/check_ocr_complete.py --work-id CPO_19 [--sample 5] # OCR thô đã đủ chưa (0 error = đủ)
+python scripts/pack_ocr.py --work-id CPO_19                        # dist/CPO_19_ocr_<ngày>.zip; unpack_ocr.py để giải
 python -m src.segmentation.pipeline --config configs/CPO_20.json --ocr-streams han_vie   # segmentation từ han/vie.xml
 python scripts/audit_clean.py --work-id CPO_20 [--data-root ...]   # kiểm toán bước clean (đọc lại được)
 python -m src.alignment.lab_han_am --work-id CPO_19 [--dry-run|--quick N|--force]   # dóng Hán-âm bằng tool Lab
@@ -86,6 +89,12 @@ Quy ước bắt buộc khi sửa một engine:
   tra từ điển bằng dạng phồn thể (OpenCC) khi chữ gốc không có trong từ điển, không sửa văn bản xuất ra.
 - Thơ Hán không chấm câu: tách câu `han` mặc định `--split auto` (theo dòng nếu < 1 dấu 。！？； mỗi 4 dòng).
 - Bước `ocr` chỉ bị chặn bởi manifest/XML đã có; cache `raw/*.json` không bắt phải `--force`.
+- Hướng chữ paddlevl và khoảng trang OCR đặt trong `ocr.streams` của config (env vẫn thắng); `--pages auto`.
+  Tăng `ADAPTER_VERSION` thì resume bằng `--skip-done` để không OCR lại trang đã xong.
+- Trang thưa mực (vài cột thơ) từng bị coi là trắng (`ink_mask`, sửa ở paddlevl adapter 5). Qwen còn cùng lỗi
+  (chỉ ảnh hưởng trang gần như trắng); đổi thì tăng `ADAPTER_VERSION` của qwen.
+- Qwen đôi khi chèn lời dẫn/bản dịch tiếng Anh: `script_filter.vie_reject_reason` loại, checker cảnh báo
+  `vie_english_like`.
 - Số trang và chú thích dạng `(奇華海口門)` bị OCR kèm vào; loại ở `05_cleaning`.
 
 ## Tách lớp (segmentation)

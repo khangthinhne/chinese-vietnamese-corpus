@@ -167,6 +167,8 @@ trong `<RUNS>`, nên thêm run paddlevl vào đó sẽ làm đổi `raw.xml` ở
 tính y hệt chế độ unified, nên run Qwen đã có được dùng lại nguyên vẹn.
 
 ### 7.2. Lệnh
+Cả một work (trích ảnh -> han -> vie -> build -> check, resume được): `scripts/ocr_work.ps1` / `scripts/ocr_work.sh`,
+hướng dẫn đầy đủ cho thành viên nhóm ở `docs/ocr_runbook.md`. Từng bước:
 OCR và dựng XML tách riêng. Dựng XML/TXT chỉ đọc JSON thô, không import engine/torch, chạy ở môi trường nào cũng được.
 ```powershell
 # .venv-paddle (Hán in ngang cả ở CPO_18/19/20 -> horizontal)
@@ -182,6 +184,11 @@ python -m src.ocr.build_layers --config configs/CPO_20.json --layers vie --pages
 python -m src.ocr.build_layers --config configs/CPO_20.json --report-only # chỉ kiểm tra + bảng tổng hợp
 ```
 - `--layer han` chỉ nhận `--engines paddlevl`, `--layer vie` chỉ nhận `--engines qwen`.
+- `--pages auto` = `ocr.streams.pages` của config (thiếu thì mọi ảnh đã trích). Hướng chữ paddlevl lấy từ
+  `ocr.streams.paddlevl_orientation` nếu chưa đặt `PADDLEVL_ORIENTATION` (biến môi trường luôn thắng).
+- `--skip-done`: bỏ qua trang đã có run của engine ở BẤT KỲ khoá/phiên bản adapter nào (có >= 1 đơn vị ảnh), để
+  resume sau khi tăng `ADAPTER_VERSION` mà không OCR lại cả work. Trạng thái `done` trong manifest.
+- `--log-file`: ghi thêm log ra file. Mỗi dòng tiến độ có s/trang và thời gian còn lại ước tính.
 - Ảnh lấy từ `--source` nếu là thư mục, ngược lại từ `02_extraction/pages` (config trỏ `source` tới PDF).
   Trang chưa có ảnh được bỏ qua và ghi vào `manifests/ocr_<layer>.json` (`missing_images`).
 - Resume: trang đã có run cùng khoá (cùng `describe()`/`ADAPTER_VERSION`) thì bỏ qua; `--force-reocr`
@@ -195,7 +202,9 @@ python -m src.ocr.build_layers --config configs/CPO_20.json --report-only # ch�
 ### 7.3. Chọn run cho mỗi trang
 1. Khoá ghi trong `manifests/ocr_<layer>.json` (lần OCR luồng gần nhất).
 2. Khoá `selected_key` trong manifest unified nếu `selected_engine` trùng engine (Qwen của `raw.xml`).
-3. Nếu chỉ có một khoá: run đó; nhiều khoá khác nhau: run mới nhất (`created_at`) kèm cảnh báo.
+3. Nếu chỉ có một khoá: run đó; nhiều khoá khác nhau: trong các run HỢP LỆ cho luồng (`src/ocr/run_quality.py`:
+   không có đơn vị `truncated`/`loop_stopped` chứa chữ của luồng đó; Qwen lặp trên dải toàn chữ Hán không làm hỏng
+   luồng vie), lấy run mới nhất (`created_at`); không run nào hợp lệ thì lấy run mới nhất.
 
 Kho hệ chữ cũ chỉ được đọc theo đúng luồng: `han` đọc `raw/chi_tra/`, `vie` đọc `raw/vie/`.
 
