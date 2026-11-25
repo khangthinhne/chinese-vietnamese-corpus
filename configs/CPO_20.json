@@ -9,6 +9,12 @@
       "workers": 4
     },
     "ocr": {
+      "streams": {
+        "pages": "5-806",
+        "paddlevl_orientation": "horizontal",
+        "engines": {"han": "paddlevl", "vie": "qwen"},
+        "check": {"qwen_low_conf": 60}
+      },
       "engine": "qwen",
       "workers": 4,
       "keep_raw_response": true

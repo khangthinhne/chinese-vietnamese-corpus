@@ -29,7 +29,7 @@ from src.common.corpus import (
     filter_lines, finalize, make_meta, parse_args, parse_pages, parse_region,
     register_source, sha256_file, write_json,
 )
-from src.ocr import raw_store, raw_xml
+from src.ocr import raw_store, raw_xml, work_config
 from src.ocr.build_layers import ENGINE_ENVS, LAYER_ENGINES
 from src.ocr.engines import (ENGINES, DEFAULT_ENGINE, OcrEngine, OcrLine, OcrResult, register_engine,
                              require_engine)
@@ -214,7 +214,8 @@ def create_parser() -> argparse.ArgumentParser:
     parser = base_parser("OCR ảnh -> kho thô unified, theo HỆ CHỮ, hoặc theo LUỒNG han/vie (--layer)",
                          layer_required=False, layer_choices=[*LAYERS, *LAYER_ENGINES])
     parser.add_argument("--source", help="Thư mục ảnh, mỗi file là một trang")
-    parser.add_argument("--pages", help="Bắt buộc, ví dụ 205-210,212")
+    parser.add_argument("--pages", help="Bắt buộc, ví dụ 205-210,212. Với --layer: 'auto' = ocr.streams.pages "
+                        "của config (thiếu thì mọi ảnh đã trích)")
     parser.add_argument("--writing-system", choices=list(raw_store.WRITING_SYSTEMS),
                         help="chế độ mới: chi_tra | vie (mỗi hệ chữ OCR MỘT lần)")
     parser.add_argument("--unified", action="store_true",
@@ -684,6 +685,13 @@ def run_layer_ocr(args) -> Path:
     engine = expected
     print(f"[{layer}] engine {engine}: chạy lệnh này trong môi trường {ENGINE_ENVS.get(engine, '?')}")
     require_engine(engine)
+    # Cấu hình theo work (ocr.streams): hướng chữ paddlevl, khoảng trang. Biến môi trường luôn thắng config.
+    settings = work_config.stream_settings(work_config.load_config(getattr(args, "config", None)))
+    if str(args.pages or "").strip().lower() == "auto":
+        args.pages = work_config.resolve_pages(settings, DataLayout(Path(args.data_root), args.work_id))
+        log.info("[%s] --pages auto -> %s", layer, args.pages)
+    for var, origin in work_config.apply_engine_env(settings, engine).items():
+        log.info("[%s] %s: %s", layer, var, origin)
     pages = requested_pages(args.pages)
     args.region = parse_region(args.region)
     if args.dpi < 1 or not 0 <= args.psm <= 13:
