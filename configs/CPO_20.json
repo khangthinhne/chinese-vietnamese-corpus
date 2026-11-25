@@ -4,13 +4,13 @@
       "data_root": "data",
       "title": "Tổng Tập Văn học Việt Nam - Tập 8 (Thơ văn Phan Huy Ích)",
       "source": "data/CPO_20/01_sources/Tong Tap Van Hoc Viet Nam 08.pdf",
-      "pages": "5-806", 
+      "pages": "5-320,622-806",
       "dpi": 300,
       "workers": 4
     },
     "ocr": {
       "streams": {
-        "pages": "5-806",
+        "pages": "5-320,622-806",
         "paddlevl_orientation": "horizontal",
         "engines": {"han": "paddlevl", "vie": "qwen"},
         "check": {"qwen_low_conf": 60},
@@ -91,6 +91,9 @@
       }
     },
     "clean": {
+      "common": {
+        "excluded_pages": "321-621"
+      },
       "am": {
         "drop_pattern": [
           "^\\s*Phần\\s+(?:I|II|III|IV|V)\\s*$"

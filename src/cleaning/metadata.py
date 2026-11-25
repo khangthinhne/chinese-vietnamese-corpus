@@ -358,6 +358,45 @@ def extract_metadata(lines: list[RawLine], cfg: MetadataConfig, layer: str
     return kept, MetadataResult(layer=layer, status="ok", documents=docs)
 
 
+# Dòng ghi chú của bài nằm giữa chính văn: niên đại sáng tác "(Làm mùa thu năm Bính Thìn 1796)" và người dịch
+# "Ngô Linh Ngọc dịch". Trước đây bị bỏ như chú thích/cuối trang; giờ ra khỏi chính văn nhưng VÀO metadata.
+COMPOSITION_RE = re.compile(r"^\s*[(（]\s*(?:Làm|Viết|Soạn|Sáng tác|Thơ làm|Bài này làm)\b[^()（）]{0,120}[)）]\s*\.?\s*$")
+TRANSLATOR_RE = re.compile(r"^\s*(?:[A-ZĐÀ-Ỹ][^\s,.;:!?()]*\s+){1,4}dịch(?:\s+thơ)?\s*\.?\s*$")
+
+
+def capture_note_lines(lines: list[RawLine], cfg: MetadataConfig, layer: str
+                       ) -> tuple[list[RawLine], list[tuple[str, RawLine]]]:
+    """Tách dòng niên đại sáng tác / người dịch (lớp Việt) ra khỏi chính văn: [(field, dòng)].
+    `cfg.translator_names`: tên người dịch đứng MỘT MÌNH trên dòng (vd "Lâm Giang"), so khớp nguyên dòng."""
+    if layer == "han" or not getattr(cfg, "capture_notes", True):
+        return list(lines), []
+    names = {n.strip().casefold() for n in getattr(cfg, "translator_names", []) or [] if n.strip()}
+    kept, captured = [], []
+    for ln in lines:
+        text = ln.text.strip()
+        if COMPOSITION_RE.match(text):
+            captured.append(("composition", ln))
+        elif TRANSLATOR_RE.match(text) or (names and text.rstrip(".").casefold() in names):
+            captured.append(("translator", ln))
+        else:
+            kept.append(ln)
+    return kept, captured
+
+
+def attach_captured(meta: MetadataResult, captured: list[tuple[str, RawLine]]) -> None:
+    """Gắn dòng đã tách vào metadata của đúng tài liệu (tạo bản ghi tài liệu nếu chưa có)."""
+    docs = {d.document_id: d for d in meta.documents}
+    for fld, ln in captured:
+        did = document_id_of(ln)
+        if did not in docs:
+            docs[did] = DocumentMetadata(document_id=did)
+            meta.documents.append(docs[did])
+        docs[did].fields.append(MetadataOccurrence(field=fld, text=(ln.raw_text or ln.text).strip(),
+                                                   source_ids=list(ln.source_ids), pages=[ln.page], lines=[ln]))
+    if captured and meta.status == "no_op":
+        meta.status = "ok"
+
+
 def classify_leading_block(lines: list[RawLine], cfg: MetadataConfig, layer: str,
                            document_id: str = "") -> tuple[list[RawLine], DocumentMetadata]:
     """Dùng cho bước segmentation: dòng đã thuộc ĐÚNG một tài liệu + lớp.

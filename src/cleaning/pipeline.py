@@ -36,8 +36,8 @@ from src.cleaning.reconstruction import reconstruct_page_boundaries
 from src.cleaning.normalization import normalize_lines
 from src.cleaning.filtering import filter_invalid_lines
 from src.cleaning.segmentation import make_sentences
-from src.cleaning.metadata import (aggregate_document_metadata, aggregate_file_metadata,
-                                   extract_metadata, write_layer_metadata)
+from src.cleaning.metadata import (aggregate_document_metadata, aggregate_file_metadata, attach_captured,
+                                   capture_note_lines, extract_metadata, write_layer_metadata)
 
 log = logging.getLogger("clean")
 
@@ -119,12 +119,18 @@ def run_structural_cleaning(work_id: str, layer: str, raw_lines: list[RawLine], 
                              ln.raw_text or ln.text, list(ln.flags),
                              list(ln.source_ids), ln.document_id))
 
+    # 1.5 Niên đại sáng tác / người dịch: ra khỏi chính văn nhưng vào metadata (không bị bỏ như chú thích/cuối trang)
+    lines, captured = capture_note_lines(lines, cfg.metadata, layer)
+    for fld, ln in captured:
+        audit.add("extract_metadata", f"metadata_{fld}", rule=f"metadata:{fld}", line=ln, note=ln.text)
+
     # 2. Trang: loại thủ công / trắng / header-footer lặp
     lines, page_records = filter_pages(lines, cfg, audit)
 
     # 2.5 Metadata cấp tài liệu: tiêu đề/tác giả/quy trách + ranh giới PHIÊN ÂM/DỊCH NGHĨA/CHÚ THÍCH.
     #     Không cấu hình gì -> no-op (không xoá gì); dòng trích được KHÔNG đi vào corpus chính.
     meta_lines, meta = extract_metadata(lines, cfg.metadata, layer)
+    attach_captured(meta, captured)
     meta_rows: list[tuple[str, int, str, str]] = []
     meta_removed = meta.excluded + meta.uncertain if cfg.metadata.exclude_from_main_text else []
     for ln, reason in meta_removed:
@@ -279,6 +285,8 @@ def build_config(args, layer: str) -> CleanConfig:
             title_patterns=list(args.meta_title_pattern or []),
             author_patterns=list(args.meta_author_pattern or []),
             attribution_patterns=list(args.meta_attribution_pattern or []),
+            capture_notes=not getattr(args, "no_capture_notes", False),
+            translator_names=list(getattr(args, "translator_name", None) or []),
             author_max_tokens=args.meta_author_max_tokens,
             author_max_len=args.meta_author_max_len,
         ),
@@ -337,6 +345,11 @@ def run(args) -> Path:
             write_layer_metadata(out_dir, layer, struct.metadata_docs)
             aggregate_document_metadata(out_dir, args.work_id)
             aggregate_file_metadata(layout, out_dir)
+        elif struct.metadata_docs:
+            # đã phân đoạn: metadata tài liệu do segmentation ghi; ở đây chỉ có niên đại sáng tác / người dịch
+            # tách ra ở bước 1.5 -> 05_cleaning/<lớp>.metadata.xml + document_metadata.xml
+            write_layer_metadata(out_dir, layer, struct.metadata_docs)
+            aggregate_document_metadata(out_dir, args.work_id)
         atomic_write_text(out_dir / f"{layer}.dropped.tsv", "id\tpage\treason\ttext\n" + "".join(
             f"{i}\t{p}\t{r}\t{t.replace(chr(9), ' ').replace(chr(10), ' ')}\n" for i, p, r, t in struct.dropped_rows))
         write_audit_files(out_dir, struct.audit, struct.notes, struct.duplicates, struct.reconstructions)
@@ -442,6 +455,10 @@ def create_parser():
                    help="Marker đóng (vd '^CHÚ THÍCH\\s*:'); phần SAU marker bị loại khỏi corpus chính")
     p.add_argument("--meta-title-pattern", action="append", metavar="REGEX",
                    help="Regex ép phân loại dòng là TIÊU ĐỀ (lặp lại được)")
+    p.add_argument("--translator-name", action="append", metavar="TÊN",
+                   help="Dòng chỉ gồm tên người dịch này (vd 'Lâm Giang') -> metadata 'translator' (lặp lại được)")
+    p.add_argument("--no-capture-notes", action="store_true",
+                   help="Không tách dòng niên đại sáng tác / người dịch sang metadata (hành vi cũ)")
     p.add_argument("--meta-author-pattern", action="append", metavar="REGEX",
                    help="Regex ép phân loại dòng là TÁC GIẢ (lặp lại được)")
     p.add_argument("--meta-attribution-pattern", action="append", metavar="REGEX",

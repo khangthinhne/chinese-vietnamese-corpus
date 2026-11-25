@@ -127,6 +127,8 @@ class MetadataConfig:
     title_patterns: list[str] = field(default_factory=list)  # regex ÉP phân loại tiêu đề
     author_patterns: list[str] = field(default_factory=list)
     attribution_patterns: list[str] = field(default_factory=list)  # vd r"^\*" dòng quy trách
+    capture_notes: bool = True                  # niên đại sáng tác / "X dịch" -> metadata (thay vì bị bỏ)
+    translator_names: list[str] = field(default_factory=list)      # tên người dịch đứng một mình, vd "Lâm Giang"
     author_max_tokens: int = 4                  # "dạng tên người": tối đa bao nhiêu token
     author_max_len: int = 24                    # và độ dài ký tự tối đa (lớp Hán nên đặt nhỏ hơn)
 

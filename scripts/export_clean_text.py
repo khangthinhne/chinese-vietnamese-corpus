@@ -1,11 +1,12 @@
-"""Xuất bản text sạch theo cấu trúc nộp bài: 03_text_sach/han.txt + viet.txt (mỗi câu một dòng).
+"""Xuất bản text sạch theo cấu trúc nộp bài: 03_text_sach/han.txt + viet_<lớp>.txt (mỗi câu một dòng).
 
     python scripts/export_clean_text.py --work-id CPO_19 [--data-root data] [--out DIR] [--viet-layers am,nghia,tho]
+    python scripts/export_clean_text.py --work-id CPO_19 --combined      # thêm viet.txt gộp
 
 Đọc câu đã làm sạch ở `05_cleaning/<lớp>.xml` (không chuẩn hoá thêm gì), giữ thứ tự tài liệu như trong file.
 - `han.txt`: lớp han.
-- `viet.txt`: các lớp tiếng Việt theo `--viet-layers`, trong từng tài liệu theo thứ tự lớp đã cho
-  (mặc định am -> nghia -> tho); thêm `am.txt`, `nghia.txt`, `tho.txt` riêng từng lớp.
+- `viet_am.txt`, `viet_nghia.txt`, `viet_tho.txt`: từng lớp tiếng Việt (theo `--viet-layers`).
+- `viet.txt` (chỉ khi `--combined`): gộp các lớp, trong từng tài liệu theo thứ tự lớp đã cho (mặc định am -> nghia -> tho).
 - `mapping.tsv`: file, dòng (1-based), ID câu, tài liệu, lớp, trang, SOURCE_IDS (truy vết về dòng OCR).
 Mặc định ghi vào `<data-root>/<WORK>/07_export/03_text_sach/`. Dòng rỗng/không có câu không được ghi.
 """
@@ -25,14 +26,21 @@ from src.common.sentences import atomic_write_text, find_cleaned_dir, load_sente
 VIET_LAYERS = ("am", "nghia", "tho")
 
 
-def export(layout: DataLayout, out_dir: Path, viet_layers: list[str]) -> dict:
+def export(layout: DataLayout, out_dir: Path, viet_layers: list[str], combined: bool = False) -> dict:
+    mapping: list[list[str]] = []
+    counts = _export(layout, out_dir, viet_layers, combined, mapping)
+    write_mapping(out_dir, mapping)
+    return counts
+
+
+def _export(layout: DataLayout, out_dir: Path, viet_layers: list[str], combined: bool,
+            mapping: list[list[str]]) -> dict:
     directory = find_cleaned_dir(layout)
     sentences = {layer: (load_sentences(layout, layer) if (directory / f"{layer}.xml").exists() else [])
                  for layer in ("han", *VIET_LAYERS)}
     if not sentences["han"] and not any(sentences[l] for l in viet_layers):
         raise SystemExit(f"Không có câu đã làm sạch trong {directory}; chạy bước clean/sentence trước")
     out_dir.mkdir(parents=True, exist_ok=True)
-    mapping: list[list[str]] = []
     counts: dict[str, int] = {}
 
     def write(name: str, items: list[tuple[str, object]]) -> None:
@@ -48,10 +56,12 @@ def export(layout: DataLayout, out_dir: Path, viet_layers: list[str]) -> dict:
         counts[name] = len(lines)
 
     write("han.txt", [("han", s) for s in sentences["han"]])
-    for layer in VIET_LAYERS:
+    for layer in viet_layers:
         if sentences[layer]:
-            write(f"{layer}.txt", [(layer, s) for s in sentences[layer]])
-    # viet.txt: theo thứ tự tài liệu xuất hiện, trong mỗi tài liệu theo thứ tự lớp đã chọn
+            write(f"viet_{layer}.txt", [(layer, s) for s in sentences[layer]])
+    if not combined:
+        return counts
+    # viet.txt (tuỳ chọn --combined): theo thứ tự tài liệu, trong mỗi tài liệu theo thứ tự lớp đã chọn
     order: list[str] = []
     for layer in viet_layers:
         for s in sentences[layer]:
@@ -59,11 +69,14 @@ def export(layout: DataLayout, out_dir: Path, viet_layers: list[str]) -> dict:
                 order.append(s.document_id)
     items = [(layer, s) for doc in order for layer in viet_layers for s in sentences[layer] if s.document_id == doc]
     write("viet.txt", items)
+    return counts
+
+
+def write_mapping(out_dir: Path, mapping: list[list[str]]) -> None:
     with open(out_dir / "mapping.tsv", "w", encoding="utf-8", newline="") as fh:
         w = csv.writer(fh, delimiter="\t", lineterminator="\n")
         w.writerow(["file", "line", "sentence_id", "document_id", "layer", "pages", "source_ids"])
         w.writerows(mapping)
-    return counts
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -73,7 +86,8 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--work-id", required=True)
     p.add_argument("--data-root", default="data")
     p.add_argument("--out", help="Thư mục ra (mặc định <data-root>/<WORK>/07_export/03_text_sach)")
-    p.add_argument("--viet-layers", default="am,nghia,tho", help="Lớp tiếng Việt gộp vào viet.txt, theo thứ tự")
+    p.add_argument("--viet-layers", default="am,nghia,tho", help="Lớp tiếng Việt xuất ra, theo thứ tự")
+    p.add_argument("--combined", action="store_true", help="Ghi thêm viet.txt gộp các lớp tiếng Việt")
     args = p.parse_args(argv)
     layout = DataLayout(Path(args.data_root), args.work_id)
     viet = [x.strip() for x in args.viet_layers.split(",") if x.strip()]
@@ -81,7 +95,7 @@ def main(argv: list[str] | None = None) -> int:
     if bad:
         p.error(f"--viet-layers chỉ nhận {VIET_LAYERS}, nhận {bad}")
     out = Path(args.out) if args.out else layout.work_dir / "07_export" / "03_text_sach"
-    counts = export(layout, out, viet)
+    counts = export(layout, out, viet, combined=args.combined)
     print(f"{out}: " + ", ".join(f"{k} {v} dòng" for k, v in counts.items()) + "; mapping.tsv")
     return 0
 

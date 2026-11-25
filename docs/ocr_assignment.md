@@ -11,13 +11,15 @@ Số trang = chỉ số trang trong file PDF (1-based), trùng tên ảnh `page_
 | Thành viên 1 (`tv1`) | CPO_18 | `205-544` | 340 | 205–212 | 332 |
 | Thành viên 2 (`tv2`) | CPO_19 | `5-623` | 619 | 15–121 | 512 |
 | Thành viên 3 (`tv3`) | CPO_19 | `624-833` | 210 | – | 210 |
-| Người dùng (`tv4`) | CPO_20 | `5-806` | 802 | 5–806 (chạy trên máy điều phối) | 0 |
+| Người dùng (`tv4`) | CPO_20 | `5-320,622-806` | 501 | 5–320, 622–806 (chạy trên máy điều phối) | 0 |
 
 Giả định đã dùng (hỏi lại người điều phối nếu sai):
 - **Thành viên 3:** đề bài ghi "623 tới 633". Mình hiểu là trang **624–833**: chạy tới hết CPO_19 và không trùng
   trang 623 của thành viên 2.
-- **CPO_20:** phạm vi lấy theo `ocr.streams.pages` đã có trong config (5–806). Trang 3–4 là phần giới thiệu, không
-  có chữ Hán; từ trang 807 là tác giả khác.
+- **CPO_20:** phạm vi **5–320 và 622–806** (quyết định của người dùng 2026-11-26). Trang 321–621 là văn xuôi chỉ có tiếng
+  Việt, không có bản Hán, nên bỏ hẳn: không OCR thêm, không dựng XML (`build_layers --pages`), không làm sạch
+  (`clean.common.excluded_pages`). Raw đã có của các trang này được giữ nguyên, không xoá. Trang 3–4 là phần giới thiệu;
+  từ trang 807 là tác giả khác.
 - **CPO_19:** trang 5–14 nằm ngoài phần đã OCR thử (15–121). Riêng trang 14 có "小引" (lời dẫn chữ Hán).
 
 **Đề xuất cân bằng lại, chưa áp dụng:** thành viên 2 còn phải OCR khoảng 512 trang, thành viên 3 khoảng 210 trang.
@@ -60,7 +62,7 @@ Chạy thật cả quy trình (extract → han → vie → build → check → p
 | Thành viên 1 | `powershell -ExecutionPolicy Bypass -File scripts\ocr_work.ps1 -Work CPO_18 -Pages 205-544 -Pack -Member tv1` | `PACK=1 MEMBER=tv1 bash scripts/ocr_work.sh CPO_18 205-544` |
 | Thành viên 2 | `powershell -ExecutionPolicy Bypass -File scripts\ocr_work.ps1 -Work CPO_19 -Pages 5-623 -Pack -Member tv2` | `PACK=1 MEMBER=tv2 bash scripts/ocr_work.sh CPO_19 5-623` |
 | Thành viên 3 | `powershell -ExecutionPolicy Bypass -File scripts\ocr_work.ps1 -Work CPO_19 -Pages 624-833 -Pack -Member tv3` | `PACK=1 MEMBER=tv3 bash scripts/ocr_work.sh CPO_19 624-833` |
-| Người dùng | `powershell -ExecutionPolicy Bypass -File scripts\ocr_work.ps1 -Work CPO_20 -Pages 5-806 -Pack -Member tv4` | `PACK=1 MEMBER=tv4 bash scripts/ocr_work.sh CPO_20 5-806` |
+| Người dùng | `powershell -ExecutionPolicy Bypass -File scripts\ocr_work.ps1 -Work CPO_20 -Pages 5-320,622-806 -Pack -Member tv4` | `PACK=1 MEMBER=tv4 bash scripts/ocr_work.sh CPO_20 5-320,622-806` |
 
 Thiếu `-Work` hoặc `-Pages` thì script dừng và in cách dùng; script không bao giờ tự OCR cả work. Hướng chữ Hán
 (`horizontal`) lấy từ config, không cần đặt biến môi trường.

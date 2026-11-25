@@ -147,6 +147,10 @@ def _clean_argv(cfg: dict, layer: str, base: list[str], force: bool, extra: list
     _opt(argv, "--split", cc.get("split"))
     for pat in cc.get("drop_pattern", []):
         argv += ["--drop-pattern", pat]
+    for name in cc.get("translator_names", []) or []:      # tên người dịch đứng một mình -> metadata
+        argv += ["--translator-name", name]
+    if cc.get("capture_notes") is False:
+        argv.append("--no-capture-notes")
     if boundaries:
         _opt(argv, "--start-after", cc.get("start_after"))
         _opt(argv, "--end-before", cc.get("end_before"))
@@ -164,7 +168,8 @@ def _clean_argv(cfg: dict, layer: str, base: list[str], force: bool, extra: list
         elif cc.get(key) is False:
             argv.append(flag)
     if cc.get("excluded_pages"):
-        argv += ["--exclude-pages", ",".join(str(p) for p in cc["excluded_pages"])]
+        pages = cc["excluded_pages"]          # danh sách [5, 6] hoặc chuỗi khoảng "321-621"
+        argv += ["--exclude-pages", pages if isinstance(pages, str) else ",".join(str(p) for p in pages)]
     _opt(argv, "--footnote-policy", cc.get("footnote_policy")
          or cc.get("footnotes", {}).get("policy"))
     _opt(argv, "--header-footer-min-pages", cc.get("header_footer_min_pages"))
@@ -311,6 +316,9 @@ def _new_plan(cfg: dict, steps: list[str], layers: list[str] | None, pairs: list
 
     if "layers" in steps and cfg.get("segmentation", {}).get("ocr_streams"):
         argv = [*base] + list(extra.get("layers", []))
+        streams_pages = ((cfg.get("ocr") or {}).get("streams") or {}).get("pages")
+        if streams_pages:                     # cùng phạm vi trang với OCR (vd CPO_20 bỏ 321-621)
+            argv += ["--pages", str(streams_pages)]
         if force:
             argv.append("--force")
         plan.append(("layers", argv))

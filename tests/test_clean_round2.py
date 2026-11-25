@@ -121,11 +121,76 @@ def test_export_clean_text_one_sentence_per_line_with_mapping(tmp_path):
     out = tmp_path / "03_text_sach"
     assert mod.main(["--work-id", "W", "--data-root", str(tmp_path), "--out", str(out)]) == 0
     assert (out / "han.txt").read_text(encoding="utf-8") == "天地玄黃\n宇宙 洪荒\n"
+    assert (out / "viet_am.txt").read_text(encoding="utf-8").splitlines() == [
+        "Thiên địa huyền hoàng", "Vũ trụ hồng hoang"]
+    assert (out / "viet_nghia.txt").read_text(encoding="utf-8") == "Trời đất đen vàng\n"
+    assert not (out / "viet.txt").exists() and not (out / "viet_tho.txt").exists()
+    rows = (out / "mapping.tsv").read_text(encoding="utf-8").splitlines()
+    assert rows[1] == "han.txt\t1\tW.han.00001\tW.001\than\t1\than.P0001.L001"
+    assert mod.main(["--work-id", "W", "--data-root", str(tmp_path), "--out", str(out), "--combined"]) == 0
     assert (out / "viet.txt").read_text(encoding="utf-8").splitlines() == [
         "Thiên địa huyền hoàng", "Trời đất đen vàng", "Vũ trụ hồng hoang"]      # theo tài liệu, rồi theo lớp
     rows = (out / "mapping.tsv").read_text(encoding="utf-8").splitlines()
-    assert rows[1] == "han.txt\t1\tW.han.00001\tW.001\than\t1\than.P0001.L001"
     assert sum(r.startswith("viet.txt\t") for r in rows) == 3
+
+
+def test_composition_date_and_translator_go_to_metadata():
+    from src.cleaning.metadata import MetadataResult, attach_captured, capture_note_lines
+    from src.cleaning.model import MetadataConfig, RawLine
+
+    def ln(i, text):
+        return RawLine(f"W.001.P0001.L{i:03d}", 1, text, False, text, [], [f"vie.P0001.L{i:03d}"], "W.001")
+    lines = [ln(1, "Trung thu vô nguyệt"), ln(2, "(Làm mùa thu năm Bính Thìn 1796)"), ln(3, "Đêm thu không trăng,"),
+             ln(4, "Ngô Linh Ngọc dịch"), ln(5, "Lâm Giang"), ln(6, "(Bản A.603 chép khác)")]
+    kept, captured = capture_note_lines(lines, MetadataConfig(translator_names=["Lâm Giang"]), "am")
+    assert [x.text for x in kept] == ["Trung thu vô nguyệt", "Đêm thu không trăng,", "(Bản A.603 chép khác)"]
+    assert [(f, x.text) for f, x in captured] == [("composition", "(Làm mùa thu năm Bính Thìn 1796)"),
+                                                  ("translator", "Ngô Linh Ngọc dịch"), ("translator", "Lâm Giang")]
+    meta = MetadataResult(layer="am")
+    attach_captured(meta, captured)
+    row = meta.doc_row("W", meta.documents[0])
+    assert row["document_id"] == "W.001" and [f["field"] for f in row["fields"]] == [
+        "composition", "translator", "translator"]
+    assert row["fields"][0]["source_ids"] == ["vie.P0001.L002"]
+    # tắt / lớp han / không khai báo tên: giữ hành vi cũ
+    assert capture_note_lines(lines, MetadataConfig(capture_notes=False), "am")[1] == []
+    assert capture_note_lines(lines, MetadataConfig(), "han")[1] == []
+    assert [f for f, _ in capture_note_lines(lines, MetadataConfig(), "am")[1]] == ["composition", "translator"]
+
+
+@pytest.mark.parametrize("text, hit", [
+    ("KHẢO DỊ:", True), ("KHÁO DỊ:", True), ("KHẢO DỊC: a. Bản A.404: Xanh không chương.", True),
+    ("KHAO DI", True), ("NGUYÊN CHÚ: A. Miếu nằm trên bờ sông", True), ("CHÚ THÍCH:", True),
+    ("Chú thích của người dịch rất dài", False), ("Khảo dị các bản cho thấy", False), ("DỊCH THƠ", False),
+])
+def test_nghia_note_heading_fuzzy_end(text, hit):
+    from src.segmentation.layers import _compile_layer_matcher
+    m = _compile_layer_matcher({"end_patterns": ["^\\s*DỊCH\\s+TH[ƠO]\\b"], "heading_mode": True},
+                               "end_patterns", "segmentation.layers.nghia.end_patterns")
+    assert m.matches(text) is (hit or text == "DỊCH THƠ")
+    other = _compile_layer_matcher({"end_patterns": []}, "end_patterns", "segmentation.layers.am.end_patterns")
+    assert not other.matches("KHẢO DỊ:")                                     # chỉ lớp nghia
+    off = _compile_layer_matcher({"end_patterns": [], "note_heading_end": False}, "end_patterns",
+                                 "segmentation.layers.nghia.end_patterns")
+    assert not off.matches("KHẢO DỊC: a.")
+
+
+def test_pipeline_page_range_excludes_pages_consistently(tmp_path, capsys):
+    from src import pipeline
+    cfg = {"common": {"work_id": "W", "data_root": str(tmp_path), "pages": "5-320,622-806"},
+           "ocr": {"streams": {"pages": "5-320,622-806"}},
+           "segmentation": {"ocr_streams": "han_vie", "layers": {"han": {}, "am": {}}},
+           "clean": {"common": {"excluded_pages": "321-621"}}}
+    path = tmp_path / "W.json"
+    path.write_text(json.dumps(cfg), encoding="utf-8")
+    assert pipeline.main(["--config", str(path), "--steps", "layers,clean", "--dry-run"]) == 0
+    out = capsys.readouterr().out
+    assert "build_layers --work-id W" in out and "--pages 5-320,622-806" in out
+    assert out.count("--exclude-pages 321-621") == 2                        # mọi lớp clean
+    cfg["clean"]["common"]["excluded_pages"] = [5, 6]                       # dạng danh sách cũ vẫn chạy
+    path.write_text(json.dumps(cfg), encoding="utf-8")
+    assert pipeline.main(["--config", str(path), "--steps", "clean", "--dry-run"]) == 0
+    assert "--exclude-pages 5,6" in capsys.readouterr().out
 
 
 def _audit():

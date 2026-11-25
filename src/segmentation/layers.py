@@ -21,6 +21,7 @@ from src.segmentation.documents import review_row
 from src.segmentation.model import Document, DocumentLayers, LayerLine, OcrLine
 from src.segmentation.patterns import (
     DEFAULT_HEADING_PREFIX,
+    Matcher,
     compile_matcher,
     compile_patterns,
     matched_labels,
@@ -30,7 +31,37 @@ from src.segmentation.patterns import (
 DEFAULT_SOURCE = {"han": "chi_tra", "am": "vie", "nghia": "vie", "tho": "vie"}
 
 
+# Tiêu đề khối ghi chú kết thúc lớp nghia, so khớp mờ theo lỗi OCR thường gặp: KHẢO DỊ / KHÁO DỊ / KHAO DI /
+# KHẢO DỊC (CPO_19), NGUYÊN CHÚ, CHÚ THÍCH; phải theo sau là ':' hoặc hết dòng, được phép có nội dung cùng dòng
+# ("KHẢO DỊC: a. Bản A.404: ..."). Tắt bằng `segmentation.layers.nghia.note_heading_end: false`.
+NOTE_HEADING_RE = re.compile(
+    r"^(?:[lI|]\s+)?(?:KH[ẢAÁÃẠÀ]O\s*D[ỊIÍÌĨ]C?|NGUY[ÊEỀẾ]N\s+CH[ÚUÙỦ]|CH[ÚUÙ]\s+TH[ÍIÌ]CH)\s*(?:[:：]|$)",
+    re.IGNORECASE)
+
+
+class _NoteHeadingMatcher(Matcher):
+    """end_patterns của lớp nghia + NOTE_HEADING_RE (không đòi heading đứng một mình)."""
+
+    def __init__(self, base: Matcher):
+        self.base = base
+        self.patterns = list(base.patterns) + [NOTE_HEADING_RE]
+        self.heading, self.prefix = base.heading, base.prefix
+
+    def __len__(self) -> int:              # "có end_patterns cấu hình không" giữ nguyên nghĩa cũ (luật review)
+        return len(self.base)
+
+    def matches_probe(self, probe: str) -> bool:
+        return self.base.matches_probe(probe) or bool(NOTE_HEADING_RE.match(probe))
+
+
 def _compile_layer_matcher(layer_cfg: dict, kind: str, name: str):
+    matcher = _compile_layer_matcher_base(layer_cfg, kind, name)
+    if kind == "end_patterns" and name.endswith(".nghia.end_patterns") and layer_cfg.get("note_heading_end", True):
+        return _NoteHeadingMatcher(matcher)
+    return matcher
+
+
+def _compile_layer_matcher_base(layer_cfg: dict, kind: str, name: str):
     case_sensitive = bool(layer_cfg.get("case_sensitive", False))
     mode = layer_cfg.get("heading_mode")
     heading = bool(mode) if not isinstance(mode, dict) else mode.get("enabled", True)
