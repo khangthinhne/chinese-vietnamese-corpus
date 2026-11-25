@@ -90,10 +90,18 @@ HAN_MIN_CJK_SHARE = 0.3          # chữ Hán / (chữ Hán + chữ cái Latin) 
 HAN_MIN_CJK_WITH_LATIN = 2       # dòng có chữ cái Latin phải có ít nhất ngần này chữ Hán
 
 
+# Lời tự nói của model bằng tiếng Trung hiện đại (giản thể) lọt vào luồng Hán, đã gặp ở CPO_20:
+# tr.450 "这里原文本可能存在识别偏差…", tr.679/703 "作为一个人工智能语言模型，我还没学习如何…".
+# Các cụm này không thể có trong văn bản Hán cổ của corpus.
+HAN_CHATTER_RE = re.compile(r"人工智能|语言模型|語言模型|原文本|识别|識別偏差|无法识别|很抱歉|作为一个|我还没|按要求")
+
+
 def han_reject_reason(text: str, min_cjk_share: float = HAN_MIN_CJK_SHARE,
                       min_cjk_with_latin: int = HAN_MIN_CJK_WITH_LATIN) -> str | None:
     """Lý do loại một dòng có chữ Hán khỏi lớp han (None = giữ). Xét trên dòng GỐC, trước khi cắt Latin."""
     text = unicodedata.normalize("NFC", text)
+    if HAN_CHATTER_RE.search(text):
+        return "model_chatter"
     cjk = len(CJK_IDEOGRAPH_RE.findall(text))
     latin = sum(1 for c in text if is_latin_letter(c))
     if not cjk or not latin:
@@ -152,6 +160,25 @@ def filter_vie_line(text: str) -> tuple[str | None, int]:
     if not has_latin(text):
         return None, removed
     return text, removed
+
+
+# Dòng Hán "lẻ" do paddlevl tự sinh trên trang chỉ có chữ Việt (đã mở ảnh xác nhận, CPO_20: 一 ×7, 也, 隠, và
+# 欽定四庫全書 ở tr.321-621). Chỉ loại khi trang còn ĐÚNG MỘT dòng Hán, dòng đó ngắn (<= LONE_HAN_MAX_CHARS chữ Hán)
+# hoặc thuộc danh sách đã biết, VÀ luồng Việt cùng trang có >= min_vie_lines dòng (trang thật sự là trang chữ Việt).
+LONE_HAN_MAX_CHARS = 3
+LONE_HAN_KNOWN = frozenset({"欽定四庫全書"})
+LONE_HAN_MIN_VIE_LINES = 8
+
+
+def lone_han_reason(han_lines: list[str], vie_lines: int | None, *, min_vie_lines: int = LONE_HAN_MIN_VIE_LINES,
+                    max_chars: int = LONE_HAN_MAX_CHARS) -> str | None:
+    """Lý do loại dòng Hán duy nhất của trang, hoặc None. `vie_lines` None = chưa có OCR Việt -> không loại."""
+    if min_vie_lines <= 0 or len(han_lines) != 1 or vie_lines is None or vie_lines < min_vie_lines:
+        return None
+    text = han_lines[0].strip()
+    if count_cjk(text) <= max_chars or text in LONE_HAN_KNOWN:
+        return "lone_han_on_vie_page"
+    return None
 
 
 @dataclass

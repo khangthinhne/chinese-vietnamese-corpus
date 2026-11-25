@@ -193,6 +193,93 @@ def test_pipeline_page_range_excludes_pages_consistently(tmp_path, capsys):
     assert "--exclude-pages 5,6" in capsys.readouterr().out
 
 
+@pytest.mark.parametrize("line, hit", [
+    ("Lâm Giang", True), ("  Lâm Giang.", True), ("- Lâm  Giang -", True), ("LÂM GIANG", True),
+    ("(Lâm Giang)", True),
+    ("Theo Lâm Giang, bài này làm năm 1793.", False),          # tên nằm trong câu: giữ
+    ("Lâm Giang chú thích thêm", False), ("Lâm", False), ("Lâm Giang Tây", False),
+])
+def test_translator_name_matches_only_standalone_line(line, hit):
+    from src.cleaning.metadata import capture_note_lines
+    from src.cleaning.model import MetadataConfig, RawLine
+    ln = RawLine("W.001.P0001.L001", 1, line, False, line, [], [], "W.001")
+    kept, captured = capture_note_lines([ln], MetadataConfig(translator_names=["Lâm Giang"]), "tho")
+    assert (captured == [("translator", ln)]) is hit and (kept == []) is hit
+
+
+@pytest.mark.parametrize("han, vie, why", [
+    (["一"], 22, "lone_han_on_vie_page"), (["隠"], 8, "lone_han_on_vie_page"),
+    (["欽定四庫全書"], 30, "lone_han_on_vie_page"),
+    (["其二"], 3, None),                     # trang ít chữ Việt: có thể là tiêu đề thật -> giữ
+    (["春眠不覺曉"], 25, None),              # câu thơ 5 chữ: giữ
+    (["一", "二"], 25, None),               # trang có 2 dòng Hán: không áp
+    (["一"], None, None),                   # chưa có OCR Việt: không loại
+])
+def test_lone_han_reason(han, vie, why):
+    from src.ocr.script_filter import lone_han_reason
+    assert lone_han_reason(han, vie) == why
+    assert lone_han_reason(han, vie, min_vie_lines=0) is None              # tắt
+
+
+def test_build_layers_drops_lone_han_on_vie_page(tmp_path):
+    from src.ocr import build_layers
+    layout = DataLayout(tmp_path, "W")
+    _write_raw(layout, "paddlevl", 1, "一")
+    _write_raw_lines(layout, "qwen", 1, [f"Dòng chữ Việt thứ {i} của trang." for i in range(10)])
+    _write_raw(layout, "paddlevl", 2, "一")                                 # trang 2: ít chữ Việt -> giữ
+    _write_raw_lines(layout, "qwen", 2, ["Một dòng."])
+    assert build_layers.main(["--work-id", "W", "--data-root", str(tmp_path), "--force"]) == 0
+    han = layout.ocr_layer_xml_path("han").read_text(encoding="utf-8")
+    assert han.count(">一<") == 1
+    manifest = json.loads(layout.ocr_layer_manifest_path("build", "han").read_text(encoding="utf-8"))
+    page1 = next(p for p in manifest["pages"] if p["page"] == 1)
+    assert page1["rejected"][0]["reason"] == "lone_han_on_vie_page"
+    assert build_layers.main(["--work-id", "W", "--data-root", str(tmp_path), "--force",
+                              "--lone-han-min-vie-lines", "0"]) == 0          # tắt: giữ cả hai
+    assert layout.ocr_layer_xml_path("han").read_text(encoding="utf-8").count(">一<") == 2
+
+
+def _write_raw_lines(layout, engine, page, texts):
+    from src.ocr import raw_store
+    run = {"key": f"{engine}{page}", "parameters": {"engine": {"name": engine, "adapter_version": 1}},
+           "created_at": "2026-01-01T00:00:00+00:00",
+           "lines": [{"text": t, "bbox": [0, i * 10, 10, i * 10 + 9], "confidence": 90.0} for i, t in enumerate(texts)],
+           "raw": {"bands": [{"band": 1, "flags": [], "generated_text": "x"}]}}
+    raw_store.save_engine_page(layout, engine, page, {"schema_version": 1, "work_id": "W", "engine": engine,
+                                                      "page": page, "runs": [run]})
+
+
+def test_replace_with_retry_survives_transient_permission_error(tmp_path, monkeypatch):
+    import os
+    from src.common import corpus
+    calls = []
+    real = os.replace
+
+    def flaky(src, dst):
+        calls.append(1)
+        if len(calls) < 3:
+            raise PermissionError(5, "Access is denied")
+        return real(src, dst)
+    monkeypatch.setattr(corpus.os, "replace", flaky)
+    corpus.write_json(tmp_path / "m.json", {"a": 1})
+    assert len(calls) == 3 and json.loads((tmp_path / "m.json").read_text(encoding="utf-8")) == {"a": 1}
+    calls.clear()
+    monkeypatch.setattr(corpus.os, "replace", lambda s, d: (_ for _ in ()).throw(PermissionError(5, "x")))
+    with pytest.raises(PermissionError):
+        corpus.replace_with_retry(tmp_path / "a", tmp_path / "b", attempts=2, delay=0)
+
+
+@pytest.mark.parametrize("text, why", [
+    ("作为一个人工智能语言模型，我还没学习如何回答这个问题", "model_chatter"),
+    ("这里原文本可能存在识别偏差或表意不完整，但按要求照识别结果处理", "model_chatter"),
+    ("春眠不覺曉，處處聞啼鳥。", None), ("欲識廬山真面目", None), ("天地玄黃", None),
+])
+def test_han_model_chatter_rejected(text, why):
+    from src.ocr.script_filter import filter_page, han_reject_reason
+    assert han_reject_reason(text) == why
+    assert (filter_page("han", [text]).kept == []) is (why is not None)
+
+
 def _audit():
     spec = importlib.util.spec_from_file_location("audit_clean", Path("scripts") / "audit_clean.py")
     mod = importlib.util.module_from_spec(spec)

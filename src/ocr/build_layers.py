@@ -31,8 +31,8 @@ from src.common.xmlstore import add, bbox_attr, file_element, read_root, write_f
 from src.ocr import raw_store
 from src.ocr.raw_xml import _add_engine, _add_parameters
 from src.ocr.run_quality import run_is_valid
-from src.ocr.script_filter import (HAN_MIN_CJK_SHARE, HAN_MIN_CJK_WITH_LATIN, LAYERS, PageFilterResult,
-                                   count_cjk, filter_page, has_cjk)
+from src.ocr.script_filter import (HAN_MIN_CJK_SHARE, HAN_MIN_CJK_WITH_LATIN, LAYERS, LONE_HAN_MIN_VIE_LINES,
+                                   PageFilterResult, count_cjk, filter_page, has_cjk, lone_han_reason)
 
 log = logging.getLogger(__name__)
 
@@ -278,12 +278,34 @@ def write_layer_texts(layout: DataLayout, layer: str, pages: list[PageOut]) -> l
     return written
 
 
+def vie_line_count(layout: DataLayout, page: int, prefs: dict[int, list[str]]) -> int | None:
+    """Số dòng giữ lại của luồng vie trên trang (cùng quy tắc chọn run/lọc như khi dựng vie.xml); None = chưa có run."""
+    engine = LAYER_ENGINES["vie"]
+    runs = raw_store.page_runs(layout, engine, page, layout.work_id, LAYER_WRITING_SYSTEMS["vie"])
+    run, reason = select_run(runs, engine, prefs.get(page, []), layer="vie")
+    if run is None:
+        return None
+    return build_page("vie", page, run, reason).filtered.n_kept
+
+
+def drop_lone_han(layout: DataLayout, page: int, out: PageOut, vie_prefs: dict[int, list[str]],
+                  min_vie_lines: int) -> None:
+    """Trang còn đúng 1 dòng Hán ngắn mà luồng Việt nhiều dòng: dòng Hán là ảo giác OCR -> chuyển sang rejected."""
+    src, text = out.filtered.kept[0]
+    why = lone_han_reason([text], vie_line_count(layout, page, vie_prefs), min_vie_lines=min_vie_lines)
+    if why:
+        out.filtered.kept.clear()
+        out.filtered.rejected.append((src, why, text))
+
+
 def build_layer(layout: DataLayout, layer: str, pages: list[int], *, force: bool = False,
                 han_min_cjk_share: float = HAN_MIN_CJK_SHARE,
-                han_min_cjk_with_latin: int = HAN_MIN_CJK_WITH_LATIN) -> dict:
+                han_min_cjk_with_latin: int = HAN_MIN_CJK_WITH_LATIN,
+                lone_han_min_vie_lines: int = LONE_HAN_MIN_VIE_LINES) -> dict:
     engine = LAYER_ENGINES[layer]
     check_target(layout, layer, force)
     prefs = preferred_keys(layout, layer, engine)
+    vie_prefs = preferred_keys(layout, "vie", LAYER_ENGINES["vie"]) if layer == "han" else {}
     outs: list[PageOut] = []
     for page in pages:
         runs = raw_store.page_runs(layout, engine, page, layout.work_id, LAYER_WRITING_SYSTEMS[layer])
@@ -293,6 +315,8 @@ def build_layer(layout: DataLayout, layer: str, pages: list[int], *, force: bool
                         layer, page, engine, run.get("key", "")[:12])
         out = build_page(layer, page, run, reason, han_min_cjk_share=han_min_cjk_share,
                          han_min_cjk_with_latin=han_min_cjk_with_latin)
+        if layer == "han" and len(out.filtered.kept) == 1:
+            drop_lone_han(layout, page, out, vie_prefs, lone_han_min_vie_lines)
         outs.append(out)
         for src, why, text in out.filtered.rejected:
             log.info("[%s] P%04d loại dòng %d (%s): %s", layer, page,
@@ -491,14 +515,20 @@ def create_parser():
                         help="Lớp han: loại dòng có chữ Latin mà chữ Hán/(chữ Hán + chữ Latin) nhỏ hơn mức này")
     parser.add_argument("--han-min-cjk-with-latin", type=int, default=HAN_MIN_CJK_WITH_LATIN,
                         help="Lớp han: dòng có chữ Latin phải có ít nhất ngần này chữ Hán")
+    parser.add_argument("--lone-han-min-vie-lines", type=int, default=LONE_HAN_MIN_VIE_LINES,
+                        help="Lớp han: trang chỉ còn 1 dòng Hán ngắn (<= 3 chữ / 欽定四庫全書) mà luồng Việt có >= N "
+                             "dòng -> loại dòng Hán đó (ảo giác OCR). 0 = tắt")
     parser.add_argument("--report-only", action="store_true",
                         help="Không dựng lại; chỉ kiểm tra output hiện có và in bảng tổng hợp")
     return parser
 
 
 def build_inputs(layout: DataLayout, layer: str) -> list[Path]:
-    """Đầu vào của build_layer: toàn bộ raw/ (append-only) + manifest OCR của luồng (gộp, theo khoảng, unified)."""
+    """Đầu vào của build_layer: toàn bộ raw/ (append-only) + manifest OCR của luồng (gộp, theo khoảng, unified).
+    Luồng han đọc thêm manifest vie (luật dòng Hán lẻ đếm dòng Việt cùng trang)."""
     inputs = [layout.ocr_raw_root, *layer_manifest_paths(layout, layer)]
+    if layer == "han":
+        inputs += layer_manifest_paths(layout, "vie")
     unified = raw_store.unified_manifest_path(layout)
     return inputs + ([unified] if unified.exists() else [])
 
@@ -515,15 +545,16 @@ def run(args) -> dict:
             raise ValueError(f"Không có JSON OCR thô nào trong {layout.ocr_raw_unified_dir}")
         for layer in layers:
             # Bỏ qua khi raw/ + manifest OCR + tham số lọc không đổi kể từ lần dựng trước (chạy lại pipeline êm).
+            lone = getattr(args, "lone_han_min_vie_lines", LONE_HAN_MIN_VIE_LINES)
             stage = (f"layers:{layer}:{args.build_pages or 'all'}:"
-                     f"{args.han_min_cjk_share}:{args.han_min_cjk_with_latin}")
+                     f"{args.han_min_cjk_share}:{args.han_min_cjk_with_latin}:{lone}")
             inputs = build_inputs(layout, layer)
             outputs = [layout.ocr_layer_xml_path(layer), layout.ocr_layer_manifest_path("build", layer)]
             if not args.force and outputs[0].exists() and deps.is_fresh(layout, stage, inputs, outputs[1]):
                 log.info("[%s] %s: %s đã có, đầu vào không đổi: bỏ qua", layout.work_id, layer, outputs[0].name)
                 continue
             build_layer(layout, layer, pages, force=args.force, han_min_cjk_share=args.han_min_cjk_share,
-                        han_min_cjk_with_latin=args.han_min_cjk_with_latin)
+                        han_min_cjk_with_latin=args.han_min_cjk_with_latin, lone_han_min_vie_lines=lone)
             deps.record(layout, stage, inputs, outputs)
     errors = []
     for layer in layers:

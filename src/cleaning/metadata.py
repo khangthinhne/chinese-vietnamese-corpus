@@ -364,19 +364,32 @@ COMPOSITION_RE = re.compile(r"^\s*[(（]\s*(?:Làm|Viết|Soạn|Sáng tác|Thơ
 TRANSLATOR_RE = re.compile(r"^\s*(?:[A-ZĐÀ-Ỹ][^\s,.;:!?()]*\s+){1,4}dịch(?:\s+thơ)?\s*\.?\s*$")
 
 
+def _name_key(text: str) -> str:
+    """Khoá so khớp tên đứng riêng một dòng: NFC, bỏ khoảng trắng và dấu câu/ký hiệu ở HAI ĐẦU, gộp khoảng trắng,
+    không phân biệt hoa thường. Chữ ở giữa giữ nguyên, nên tên nằm trong câu không bao giờ khớp."""
+    import unicodedata
+    t = unicodedata.normalize("NFC", text)
+    i, j = 0, len(t)
+    while i < j and (t[i].isspace() or unicodedata.category(t[i])[0] in "PS"):
+        i += 1
+    while j > i and (t[j - 1].isspace() or unicodedata.category(t[j - 1])[0] in "PS"):
+        j -= 1
+    return " ".join(t[i:j].split()).casefold()
+
+
 def capture_note_lines(lines: list[RawLine], cfg: MetadataConfig, layer: str
                        ) -> tuple[list[RawLine], list[tuple[str, RawLine]]]:
     """Tách dòng niên đại sáng tác / người dịch (lớp Việt) ra khỏi chính văn: [(field, dòng)].
     `cfg.translator_names`: tên người dịch đứng MỘT MÌNH trên dòng (vd "Lâm Giang"), so khớp nguyên dòng."""
     if layer == "han" or not getattr(cfg, "capture_notes", True):
         return list(lines), []
-    names = {n.strip().casefold() for n in getattr(cfg, "translator_names", []) or [] if n.strip()}
+    names = {_name_key(n) for n in getattr(cfg, "translator_names", []) or [] if _name_key(n)}
     kept, captured = [], []
     for ln in lines:
         text = ln.text.strip()
         if COMPOSITION_RE.match(text):
             captured.append(("composition", ln))
-        elif TRANSLATOR_RE.match(text) or (names and text.rstrip(".").casefold() in names):
+        elif TRANSLATOR_RE.match(text) or (names and _name_key(text) in names):
             captured.append(("translator", ln))
         else:
             kept.append(ln)

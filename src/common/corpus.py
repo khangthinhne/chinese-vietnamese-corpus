@@ -437,13 +437,27 @@ def validate_document(doc: Document) -> list[str]:
 # --------------------------------------------------------------------------- #
 # 5. Ghi file (atomic) + metadata
 # --------------------------------------------------------------------------- #
+def replace_with_retry(src: str | Path, dst: str | Path, attempts: int = 6, delay: float = 0.25) -> None:
+    """os.replace, thử lại khi Windows báo PermissionError (WinError 5/32): antivirus/trình index giữ file đích
+    trong chốc lát. Đã gặp 2 lần với 02_extraction/metadata.json khi chạy pipeline (2026-11-25/26)."""
+    import time
+    for i in range(attempts):
+        try:
+            os.replace(src, dst)
+            return
+        except PermissionError:
+            if i == attempts - 1:
+                raise
+            time.sleep(delay * (i + 1))
+
+
 def _atomic_write(path: Path, data: bytes) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     fd, tmp = tempfile.mkstemp(dir=path.parent, suffix=".tmp")
     try:
         with os.fdopen(fd, "wb") as f:
             f.write(data)
-        os.replace(tmp, path)
+        replace_with_retry(tmp, path)
     finally:
         if os.path.exists(tmp):
             os.unlink(tmp)
