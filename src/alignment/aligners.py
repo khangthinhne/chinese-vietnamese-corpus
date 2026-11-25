@@ -146,6 +146,60 @@ def load_reading_dict(path: str | Path) -> dict[str, tuple[str, ...]]:
     return readings
 
 
+_LAB_CACHE: dict[tuple[str, str], object] = {}
+
+
+def load_lab_readings(path: str | Path) -> dict[str, tuple[str, ...]]:
+    """Từ điển dịch của Lab (QuocNgu_SinoNom_TongHop3.csv, utf-8-sig, cột QuocNgu,SinoNom) đảo thành chữ -> âm
+    (NFC, chữ thường), cùng dạng với load_reading_dict. Có cache theo đường dẫn."""
+    import csv
+    key = ("readings", str(Path(path).resolve()))
+    if key not in _LAB_CACHE:
+        readings: dict[str, list[str]] = {}
+        with open(path, encoding="utf-8-sig", newline="") as fh:
+            for row in csv.DictReader(fh):
+                ch, qn = (row.get("SinoNom") or "").strip(), (row.get("QuocNgu") or "").strip()
+                if ch and qn:
+                    syl = unicodedata.normalize("NFC", qn.lower())
+                    if syl not in readings.setdefault(ch, []):
+                        readings[ch].append(syl)
+        if not readings:
+            raise ValueError(f"Từ điển Lab rỗng: {path}")
+        _LAB_CACHE[key] = {k: tuple(v) for k, v in readings.items()}
+    return _LAB_CACHE[key]
+
+
+def load_lab_similar(path: str | Path) -> dict[str, tuple[str, ...]]:
+    """SinoNom_Similar_Dic_v2.csv: chữ -> chữ tương tự hình dáng. Cột sau là chuỗi danh sách kiểu Python, parse
+    bằng ast.literal_eval; dòng hỏng bị bỏ qua (đếm và cảnh báo). Có cache theo đường dẫn."""
+    import ast
+    import csv
+    key = ("similar", str(Path(path).resolve()))
+    if key not in _LAB_CACHE:
+        similar: dict[str, tuple[str, ...]] = {}
+        bad = 0
+        with open(path, encoding="utf-8-sig", newline="") as fh:
+            for row in csv.DictReader(fh):
+                try:
+                    items = ast.literal_eval(row["Top 20 Similar Characters"])
+                    similar[row["Input Character"]] = tuple(str(x) for x in items)
+                except (ValueError, SyntaxError, KeyError, TypeError):
+                    bad += 1
+        if bad:
+            log.warning("Bỏ %d dòng hỏng trong %s", bad, path)
+        _LAB_CACHE[key] = similar
+    return _LAB_CACHE[key]
+
+
+def merge_readings(*dicts: dict[str, tuple[str, ...]]) -> dict[str, tuple[str, ...]]:
+    """Hợp các từ điển chữ -> âm (giữ thứ tự: từ điển trước, âm trước)."""
+    out: dict[str, tuple[str, ...]] = {}
+    for d in dicts:
+        for ch, vals in d.items():
+            out[ch] = tuple(dict.fromkeys(out.get(ch, ()) + tuple(vals)))
+    return out
+
+
 # --------------------------------------------------------------------------- #
 # 1. Levenshtein: Hán <-> phiên âm
 # --------------------------------------------------------------------------- #
@@ -162,24 +216,38 @@ class LevenshteinAligner(Aligner):
     skip_penalty phải NHỎ HƠN merge_penalty: nếu không, một câu thừa không có đối ứng sẽ bị "nuốt" vào
     cặp bên cạnh (gộp) thay vì được đánh dấu unaligned.
     score = 1 - khoảng cách/độ dài dài hơn  (≈ tỉ lệ âm tiết khớp).
+
+    Tuỳ chọn từ điển của Lab (không truyền thì hành vi y như cũ):
+        lab_translation_dict   QuocNgu_SinoNom_TongHop3.csv, hợp với reading_dict (Unihan) nếu có cả hai
+        lab_similarity_dict    SinoNom_Similar_Dic_v2.csv: chưa khớp nhưng có chữ tương tự hình dáng của ch mà âm
+                               của chữ đó chứa syl -> chi phí similar_cost (chịu lỗi OCR)
     """
     name = "levenshtein"
     options = {
         "reading_dict": (str, ""), "unknown_cost": (float, 0.5), "bare_cost": (float, 0.3),
         "merge_penalty": (float, 2.0), "skip_penalty": (float, 1.0), "band": (int, 30),
+        "lab_translation_dict": (str, ""), "lab_similarity_dict": (str, ""), "similar_cost": (float, 0.2),
     }
 
     def align(self, src_layer, tgt_layer, src, tgt):
         if (src_layer, tgt_layer) != ("han", "am"):
             raise ValueError("levenshtein chỉ dùng cho cặp han-am")
         o = self.opts
-        if not o["reading_dict"]:
-            raise ValueError("Cần --opt reading_dict=<file.tsv> (xem scripts/build_han_viet_dict.py)")
-        readings = load_reading_dict(o["reading_dict"])
+        if not o["reading_dict"] and not o["lab_translation_dict"]:
+            raise ValueError("Cần --opt reading_dict=<file.tsv> (xem scripts/build_han_viet_dict.py) "
+                             "hoặc --opt lab_translation_dict=<QuocNgu_SinoNom_TongHop3.csv>")
+        unihan = load_reading_dict(o["reading_dict"]) if o["reading_dict"] else {}
+        lab = load_lab_readings(o["lab_translation_dict"]) if o["lab_translation_dict"] else {}
+        readings = merge_readings(unihan, lab) if lab else unihan
+        similar = load_lab_similar(o["lab_similarity_dict"]) if o["lab_similarity_dict"] else {}
         han = [han_chars(s.text) for s in src]
         am = [vi_syllables(s.text) for s in tgt]
         total = sum(map(len, han))
         known = sum(1 for seq in han for c in seq if lookup_readings(readings, c))
+        if total and lab:
+            for label, d in (("Unihan", unihan), ("Lab", lab)):
+                n = sum(1 for seq in han for c in seq if d and lookup_readings(d, c))
+                log.info("Từ điển %s phủ %.1f%% chữ Hán (%d/%d)", label, 100 * n / total, n, total)
         if total:
             log.info("Từ điển phủ %.1f%% chữ Hán (%d/%d)", 100 * known / total, known, total)
             if known / total < 0.9:
@@ -208,6 +276,9 @@ class LevenshteinAligner(Aligner):
                 for c in cands:
                     bc = bare(c)
                     v = min(v, o["bare_cost"] if bc == bs else min(1.0, lev(bc, bs) / max(len(bc), len(bs), 1)))
+            if similar and v > o["similar_cost"]:
+                if any(syl in (lookup_readings(readings, c2) or ()) for c2 in similar.get(ch, ())):
+                    v = o["similar_cost"]
             sub_cache[key] = v
             return v
 
