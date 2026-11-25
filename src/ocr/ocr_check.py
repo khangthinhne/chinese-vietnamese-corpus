@@ -158,9 +158,14 @@ def check_work(layout: DataLayout, pages_spec: str | None, check: dict | None = 
         ocr_errors[layer] = set(manifest.get("error_pages", []))
 
     # --- XML/TXT
-    xml_lines = {layer: layer_lines(layout, layer) for layer in LAYERS}
+    xml_lines: dict[str, dict[int, list[str]]] = {}
     for layer in LAYERS:
-        errors, stats = verify_layer(layout, layer)
+        try:
+            xml_lines[layer] = layer_lines(layout, layer)
+            errors, _ = verify_layer(layout, layer)
+        except (ValueError, ET.ParseError, OSError) as exc:          # XML hỏng: báo lỗi, không dừng kiểm tra
+            xml_lines[layer] = {}
+            errors = [f"không đọc được {layout.ocr_layer_xml_path(layer).name}: {exc}"]
         for e in errors:
             issues.append(Issue(None, "error", f"{layer}_xml", e))
         text_dir = layout.ocr_layer_text_dir(layer)

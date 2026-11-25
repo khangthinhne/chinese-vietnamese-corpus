@@ -15,6 +15,7 @@ import math
 import re
 import subprocess
 import threading
+import time
 from concurrent.futures import ThreadPoolExecutor
 from dataclasses import asdict
 from datetime import datetime, timezone
@@ -231,6 +232,7 @@ def create_parser() -> argparse.ArgumentParser:
     parser.add_argument("--workers", type=int, default=4)
     parser.add_argument("--low-conf", type=float, default=60)
     parser.add_argument("--force-reocr", action="store_true", help="ignore cache runs")
+    parser.add_argument("--log-file", help="Ghi thêm log ra file (append), ngoài stderr")
     parser.add_argument("--skip-done", action="store_true",
                         help="--layer: bỏ qua trang đã có run của engine (BẤT KỲ khoá/phiên bản adapter nào) "
                              "có ít nhất một đơn vị ảnh; dùng khi resume sau khi tăng ADAPTER_VERSION")
@@ -720,11 +722,15 @@ def run_layer_ocr(args) -> Path:
     log.info("[%s] %d trang có ảnh; engine %s adapter_version=%s", layer, len(images), engine,
              descriptor.get("adapter_version"))
     records, failed, state = [], [], {}
+    ocr_seconds: list[float] = []
     for index, (page, image_path) in enumerate(images.items(), 1):
         try:
+            started = time.perf_counter()
             rec = ocr_layer_page(page, image_path, layout, args, engine, descriptor, state)
-            log.info("[%s] %d/%d trang %04d: %s, %d dòng", layer, index, len(images), page,
-                     rec["status"], rec["n_lines"])
+            if rec["status"] == "ocr":
+                ocr_seconds.append(time.perf_counter() - started)
+            log.info("[%s] %d/%d trang %04d: %s, %d dòng%s", layer, index, len(images), page,
+                     rec["status"], rec["n_lines"], eta_text(ocr_seconds, index, len(images)))
         except Exception as exc:                     # một trang lỗi không dừng cả batch
             log.error("[%s] trang %04d lỗi OCR: %s: %s", layer, page, type(exc).__name__, exc)
             rec = {"page": page, "engine": engine, "status": "error",
@@ -752,6 +758,17 @@ def run_layer_ocr(args) -> Path:
         raise RuntimeError(f"[{layer}] {len(failed)} trang lỗi OCR (đã chạy hết các trang còn lại): "
                            f"{compact_pages(failed)}")
     return path
+
+
+def eta_text(ocr_seconds: list[float], done: int, total: int) -> str:
+    """', ~X s/trang, còn ~Y' theo thời gian các trang vừa OCR (bỏ trang đầu: có thời gian nạp model)."""
+    timed = ocr_seconds[1:] or ocr_seconds
+    if not timed or done >= total:
+        return ""
+    per_page = sum(timed[-50:]) / len(timed[-50:])
+    remaining = (total - done) * per_page * len(ocr_seconds) / done   # trang cached/done gần như tức thì
+    hours, rest = divmod(int(remaining), 3600)
+    return f", ~{per_page:.0f}s/trang, còn ~{hours}h{rest // 60:02d}m"
 
 
 def compact_pages(pages: list[int]) -> str:
@@ -840,7 +857,18 @@ def main(argv: list[str] | None = None) -> int:
     parser = create_parser()
     try:
         args = parse_args(parser, argv)
-        run(args)
+        handler = None
+        if getattr(args, "log_file", None):
+            Path(args.log_file).parent.mkdir(parents=True, exist_ok=True)
+            handler = logging.FileHandler(args.log_file, encoding="utf-8")
+            handler.setFormatter(logging.Formatter("%(asctime)s %(levelname)s %(name)s: %(message)s"))
+            logging.getLogger().addHandler(handler)
+        try:
+            run(args)
+        finally:
+            if handler is not None:
+                logging.getLogger().removeHandler(handler)
+                handler.close()
     except (OSError, ValueError, RuntimeError, KeyError, TypeError, subprocess.SubprocessError) as exc:
         log.error("%s", exc)
         return 1

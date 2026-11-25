@@ -351,3 +351,17 @@ def test_select_run_prefers_valid_run_over_newer_degenerate():
     assert build_layers.select_run([bad], "qwen", [], layer="vie") == (bad, "only")   # không có run hợp lệ
     # Qwen lặp trên dải toàn chữ Hán không làm hỏng luồng vie
     assert build_layers.select_run([good, han_loop], "qwen", [], layer="vie")[0] is han_loop
+
+
+def test_eta_text_and_log_file(tmp_path, monkeypatch):
+    import logging
+    assert ocr.eta_text([], 3, 10) == "" and ocr.eta_text([5.0], 10, 10) == ""
+    assert ocr.eta_text([60.0, 20.0, 20.0], 3, 103) == ", ~20s/trang, còn ~0h33m"
+    make_images(tmp_path, [1])
+    monkeypatch.setitem(ENGINES, "paddlevl", fake_engine("paddlevl", ["玄黃"]))
+    log_file = tmp_path / "logs" / "ocr.log"
+    before = list(logging.getLogger().handlers)
+    assert ocr.main(["--work-id", WORK, "--data-root", str(tmp_path), "--layer", "han", "--engines", "paddlevl",
+                     "--pages", "1", "--log-file", str(log_file)]) == 0
+    assert log_file.exists()                                    # handler file được tạo...
+    assert logging.getLogger().handlers == before               # ...và gỡ ra sau khi chạy
