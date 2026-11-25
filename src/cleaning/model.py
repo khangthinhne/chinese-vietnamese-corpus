@@ -26,7 +26,10 @@ VI_CLOSERS = "\"”’')»]"
 # số trang đứng một mình: "205", "- 205 -"
 DEFAULT_DROP = [r"^[\-–—\s]*\d{1,4}[\-–—\s]*$"]
 
-MARKER_RE = re.compile(r"\[\d{1,3}\]|［\d{1,3}］|\(\d{1,3}\)|（\d{1,3}）|[①-⑳㉑-㉟]")
+# Chỉ mục chú thích trong dòng: [1] ［1］ (1) （1） ① và chữ số mũ Unicode (OCR Qwen: "Sài Sơn ² đệ nhất phong").
+# Chữ số mũ ăn luôn khoảng trắng đứng trước để không để lại hai dấu cách.
+MARKER_RE = re.compile(r"\[\d{1,3}\]|［\d{1,3}］|\(\d{1,3}\)|（\d{1,3}）|[①-⑳㉑-㉟]"
+                       r"|[ \t]*[⁰¹²³⁴⁵⁶⁷⁸⁹]{1,3}(?=[\s,.;:!?)\]]|$)")
 LEADING_NUM_RE = re.compile(r"^\s*\d{1,3}\s*[·.．、﹒)]\s*")
 
 # ký tự nhiễu OCR biết chắc: XOÁ khi làm sạch (rule noise_char:<ch>)
