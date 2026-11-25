@@ -83,14 +83,17 @@ def _page_span(all_pages: list[int], start_page: int, next_page: int | None) -> 
 
 
 def detect_spans(work_id: str, primary: str, lines: list[OcrLine], cfg: dict,
-                 review: list[dict], all_pages: list[int]) -> list[dict]:
+                 review: list[dict], all_pages: list[int],
+                 allowed_starts: set[int] | None = None) -> list[dict]:
+    """`allowed_starts` (nếu có) giới hạn dòng được phép mở tài liệu, vd chỉ dòng đầu khối Hán (streams.py)."""
     case_sensitive = bool(cfg.get("case_sensitive", False))
     configured = start_patterns(cfg)
     start_res = compile_patterns(configured, "segmentation.document.start_patterns",
                                  case_sensitive)
     end_res = compile_patterns(cfg.get("end_patterns"), "segmentation.document.end_patterns",
                                case_sensitive)
-    starts = [i for i, ln in enumerate(lines) if matches(start_res, ln.text)]
+    starts = [i for i, ln in enumerate(lines) if matches(start_res, ln.text)
+              and (allowed_starts is None or i in allowed_starts)]
     explicit = bool(starts)
     if not starts:
         starts = [0]
@@ -265,7 +268,8 @@ def load_unified_stream(layout: DataLayout, pages: list[int] | None = None) -> l
 
 
 def segment_documents_unified(work_id: str, lines: list[OcrLine], cfg: dict,
-                              pages: list[int]) -> tuple[list[Document], list[dict]]:
+                              pages: list[int], allowed_starts: set[int] | None = None
+                              ) -> tuple[list[Document], list[dict]]:
     """Phân đoạn tài liệu trực tiếp từ stream OCR duy nhất (single-stream).
 
     - Không chọn primary/secondary system.
@@ -276,7 +280,7 @@ def segment_documents_unified(work_id: str, lines: list[OcrLine], cfg: dict,
     if not lines:
         return [], [review_row(work_id, "", "", "no_lines", [], "")]
 
-    spans = detect_spans(work_id, "unified", lines, cfg, review, pages)
+    spans = detect_spans(work_id, "unified", lines, cfg, review, pages, allowed_starts)
 
     docs: list[Document] = []
     for i, sp in enumerate(spans, 1):

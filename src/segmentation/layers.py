@@ -188,14 +188,16 @@ def assign_document(work_id: str, doc: Document, layer_cfg: dict, meta_cfg: dict
 
 # --- UNIFIED (Single-stream) LAYER SEGMENTATION ---
 
-def assign_document_unified(work_id: str, doc: Document, layer_cfg: dict, meta_cfg: dict
-                            ) -> DocumentLayers:
+def assign_document_unified(work_id: str, doc: Document, layer_cfg: dict, meta_cfg: dict,
+                            keep_line=None, dropped: dict[str, int] | None = None) -> DocumentLayers:
     """Gán dòng của MỘT tài liệu vào các lớp (han/am/nghia/tho) từ stream OCR duy nhất.
 
     - Không phụ thuộc vào 'source' (chi_tra/vie).
     - Duyệt tuần tự các dòng theo thứ tự đọc ban đầu bằng state machine.
     - Tách riêng dòng heading vào `section_headings`.
     - Hỗ trợ các lớp tuỳ chọn (optional: true) và bắt lỗi dòng không gán được vào review.
+    - `keep_line(layer, line) -> bool` (tuỳ chọn): bỏ dòng đã gán lớp nhưng không thuộc lớp đó (vd chữ Hán trong
+      khảo dị khi chạy hai luồng han/vie), TRƯỚC khi trích metadata; số dòng bỏ cộng vào `dropped[layer]`.
     """
     review: list[dict] = []
     headings: list[dict] = []
@@ -279,6 +281,16 @@ def assign_document_unified(work_id: str, doc: Document, layer_cfg: dict, meta_c
                                      [ln.page], ln.text, [ln.source_id]))
             continue
         grouped.setdefault(target, []).append(ln)
+
+    if keep_line is not None:
+        for layer in list(grouped):
+            kept = [ln for ln in grouped[layer] if keep_line(layer, ln)]
+            if dropped is not None and len(kept) != len(grouped[layer]):
+                dropped[layer] = dropped.get(layer, 0) + len(grouped[layer]) - len(kept)
+            if kept:
+                grouped[layer] = kept
+            else:
+                del grouped[layer]
 
     for n in names:
         optional = bool(layer_cfg[n].get("optional"))

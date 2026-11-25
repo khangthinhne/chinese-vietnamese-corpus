@@ -218,7 +218,10 @@ def write_layer_xml(layout: DataLayout, layer: str, engine: str, pages: list[Pag
         for order, (src, text) in enumerate(kept, 1):
             src_line = out.src_lines[src - 1]
             add(page_el, "LINE", text, ID=f"P{out.page:04d}.L{order:03d}", ORDER=order, NO=order,
-                SRC_LINE=src_line["src_line"], BBOX=bbox_attr(src_line.get("bbox")), CONFIDENCE=src_line.get("confidence"))
+                SRC_LINE=src_line["src_line"], BBOX=bbox_attr(src_line.get("bbox")), CONFIDENCE=src_line.get("confidence"),
+                # han: giữ dòng gốc (số thứ tự "1.", dấu ASCII) để segmentation nhận tiêu đề; vie thì không,
+                # vì dòng gốc của vie có chữ Hán.
+                RAW_TEXT=src_line["text"] if layer == "han" and src_line["text"] != text else None)
         runs = add(page_el, "RUNS")
         size = run.get("image_size") or [None, None]
         run_el = add(runs, "RUN", KEY=run.get("key"), CREATED_AT=run.get("created_at"),
