@@ -4,6 +4,7 @@ import pytest
 
 from src.ocr.script_filter import (
     count_cjk, filter_han_line, filter_page, filter_vie_line, han_reject_reason, has_cjk,
+    vie_reject_reason,
 )
 
 
@@ -142,3 +143,25 @@ def test_han_reject_thresholds_are_configurable():
     assert filter_page("han", [line], han_min_cjk_share=0.0, han_min_cjk_with_latin=0).n_kept == 1
     assert han_reject_reason("Kỳ 其二", min_cjk_share=0.3, min_cjk_with_latin=3).startswith("few_cjk")
     assert filter_page("han", [line]).stats()["n_rejected"] == 1
+
+
+# --------------------------------------------------------------------------- vie: lời dẫn của mô hình
+@pytest.mark.parametrize("line", [
+    "The image contains Chinese text. I will transcribe it accurately according to the provided rules:",
+    "The text provided is already transcribed accurately from the image. Here's the transcription:",
+    "Here is the transcription of the text:", "Sure, here's the text:",
+])
+def test_vie_rejects_model_chatter(line):
+    assert vie_reject_reason(line) == "model_chatter"
+    res = filter_page("vie", ["Phiên âm:", line, "Dịch nghĩa"])
+    assert [t for _, t in res.kept] == ["Phiên âm:", "Dịch nghĩa"]
+    assert res.rejected == [(2, "model_chatter", line)] and res.stats()["n_rejected"] == 1
+
+
+@pytest.mark.parametrize("line", [
+    "TRÍCH DẬT THI LƯỢC TOÀN", "The Ngoc Hoa temple", "Ngô Linh Ngọc dịch",
+    "1. Hà Đình: tên đất", "I. HOÀNG HOA ĐỒ PHẢ", "Trần Văn Giáp, The Vietnamese transcription", "Theo bản A.",
+])
+def test_vie_keeps_vietnamese_and_ordinary_latin(line):
+    assert vie_reject_reason(line) is None
+    assert filter_page("vie", [line]).n_kept == 1

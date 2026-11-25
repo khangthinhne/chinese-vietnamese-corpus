@@ -3,7 +3,8 @@
 - ``han``: giữ dòng có >= 1 chữ Hán (CJK Unified); trong dòng chỉ giữ chữ Hán và dấu câu CJK,
   cắt mọi ký tự Latin/số/khoảng trắng/dấu ASCII. Dòng toàn Latin/số bị bỏ.
 - ``vie``: xoá MỌI chữ Hán và dấu câu CJK/full-width, rồi dọn ngoặc rỗng, dấu nháy mồ côi,
-  khoảng trắng thừa (chỉ trên dòng thực sự bị xoá ký tự). Bỏ dòng không còn chữ cái Latin nào.
+  khoảng trắng thừa (chỉ trên dòng thực sự bị xoá ký tự). Bỏ dòng không còn chữ cái Latin nào, và dòng
+  lời dẫn tiếng Anh của mô hình ("The image contains ..."; ghi vào `rejected`).
 
 Cả hai luồng chuẩn hoá Unicode NFC. Không đổi giản thể/phồn thể ở bước này.
 Lưu ý: NFC ánh xạ CJK Compatibility Ideographs (U+F900–FAFF) về chữ Unified tương ứng.
@@ -118,6 +119,25 @@ def _tidy_vie(text: str) -> str:
     return text.strip()
 
 
+# Câu "trò chuyện" của mô hình (Qwen đôi khi mở đầu bằng lời dẫn tiếng Anh thay vì chép ảnh), vd
+# "The image contains Chinese text. I will transcribe it ...". Chỉ xét dòng KHÔNG có chữ cái Việt có dấu/đ,
+# nên câu tiếng Việt (kể cả viết hoa) không bao giờ bị loại.
+_VIE_SPECIFIC_RE = re.compile(r"[À-ỹĐđ]")
+_CHATTER_RE = re.compile(
+    r"^\W*(?:the\s+(?:image|text|provided|transcription|following)\b|here(?:'s|\s+is|\s+are)\b"
+    r"|i\s+(?:will|can|'ll|have)\b|sure\b|certainly\b|below\s+is\b|this\s+(?:image|text)\b)"
+    r"|\btranscri(?:be|bed|ption|bing)\b",
+    re.IGNORECASE)
+
+
+def vie_reject_reason(text: str) -> str | None:
+    """Lý do loại một dòng khỏi lớp vie (None = giữ): hiện chỉ có lời dẫn tiếng Anh của mô hình."""
+    text = unicodedata.normalize("NFC", text)
+    if _VIE_SPECIFIC_RE.search(text):
+        return None
+    return "model_chatter" if _CHATTER_RE.search(text) else None
+
+
 def filter_vie_line(text: str) -> tuple[str | None, int]:
     """Trả về (dòng đã lọc hoặc None, số ký tự CJK đã xoá).
 
@@ -141,7 +161,7 @@ class PageFilterResult:
     kept: list[tuple[int, str]] = field(default_factory=list)
     n_src: int = 0
     cjk_removed: int = 0                         # chỉ có nghĩa với vie
-    rejected: list[tuple[int, str, str]] = field(default_factory=list)   # han: (src_line, lý do, dòng gốc)
+    rejected: list[tuple[int, str, str]] = field(default_factory=list)   # (src_line, lý do, dòng gốc)
 
     @property
     def n_kept(self) -> int:
@@ -160,7 +180,7 @@ def filter_page(layer: str, lines: Iterable[str], *, han_min_cjk_share: float = 
                 han_min_cjk_with_latin: int = HAN_MIN_CJK_WITH_LATIN) -> PageFilterResult:
     """Lọc toàn bộ dòng của một trang. Dòng trắng của engine vẫn được đếm trong `n_src`.
 
-    Lớp han: dòng có chữ Hán nhưng bị `han_reject_reason` loại được ghi vào `rejected` (không mất dấu)."""
+    Dòng bị `han_reject_reason` (han) hoặc `vie_reject_reason` (vie) loại được ghi vào `rejected` (không mất dấu)."""
     if layer not in LAYERS:
         raise ValueError(f"Lớp lọc phải là {LAYERS}, nhận {layer!r}")
     result = PageFilterResult(layer)
@@ -175,6 +195,10 @@ def filter_page(layer: str, lines: Iterable[str], *, han_min_cjk_share: float = 
         else:
             kept, removed = filter_vie_line(text)
             result.cjk_removed += removed
+            reason = vie_reject_reason(text) if kept else None
+            if reason:
+                result.rejected.append((index, reason, text))
+                kept = None
         if kept:
             result.kept.append((index, kept))
     if layer == "vie":
