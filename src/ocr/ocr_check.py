@@ -22,8 +22,8 @@ from pathlib import Path
 from src.common.corpus import DataLayout, parse_pages
 from src.common.xmlstore import file_element
 from src.ocr import raw_store
-from src.ocr.build_layers import (LAYER_ENGINES, LAYER_WRITING_SYSTEMS, PAGE_TXT_RE, preferred_keys,
-                                  select_run, verify_layer)
+from src.ocr.build_layers import (LAYER_ENGINES, LAYER_WRITING_SYSTEMS, PAGE_TXT_RE, layer_manifest_paths,
+                                  preferred_keys, select_run, verify_layer)
 from src.ocr.run_quality import bad_units, run_units
 from src.ocr.script_filter import CJK_IDEOGRAPH_RE, LAYERS, count_cjk
 from src.ocr.work_config import CHECK_DEFAULTS, compact, image_pages
@@ -137,6 +137,11 @@ def check_work(layout: DataLayout, pages_spec: str | None, check: dict | None = 
         if not re.fullmatch(r"page_\d{3,4}\.(png|jpg)", name):
             issues.append(Issue(None, "warning", "image_name", name))
     extra_images = sorted(set(images) - set(pages))
+    outside = sorted(set(raw_store.available_pages(layout, list(LAYER_ENGINES.values()))) - set(pages))
+    if outside and pages_spec:
+        issues.append(Issue(None, "warning", "outside_range",
+                            f"{len(outside)} trang có OCR thô ngoài khoảng kiểm tra {compact(pages)}: "
+                            f"{compact(outside)[:120]} (không được kiểm tra)"))
 
     # --- run được chọn cho mỗi trang, mỗi luồng
     selected: dict[str, dict[int, dict | None]] = {}
@@ -153,9 +158,7 @@ def check_work(layout: DataLayout, pages_spec: str | None, check: dict | None = 
             if why == "latest_of_many":
                 issues.append(Issue(p, "info", f"{layer}_multi_run",
                                     f"nhiều run {engine} khác khoá, không có manifest chỉ định; chọn theo quy tắc"))
-        mpath = layout.ocr_layer_manifest_path("ocr", layer)
-        manifest = json.loads(mpath.read_text(encoding="utf-8")) if mpath.exists() else {}
-        ocr_errors[layer] = set(manifest.get("error_pages", []))
+        ocr_errors[layer] = manifest_error_pages(layout, layer)
 
     # --- XML/TXT
     xml_lines: dict[str, dict[int, list[str]]] = {}
@@ -266,6 +269,7 @@ def check_work(layout: DataLayout, pages_spec: str | None, check: dict | None = 
     totals = {
         "pages": len(pages), "range": compact(pages),
         "images": sum(1 for p in pages if p in images), "extra_images": compact(extra_images),
+        "raw_outside_range": compact(outside),
         "han_run": sum(1 for r in page_rows if r["han_run"]), "vie_run": sum(1 for r in page_rows if r["vie_run"]),
         "han_pages": sum(1 for r in page_rows if r["han_lines"]), "vie_pages": sum(1 for r in page_rows if r["vie_lines"]),
         "han_lines": sum(r["han_lines"] for r in page_rows), "vie_lines": sum(r["vie_lines"] for r in page_rows),
@@ -277,6 +281,20 @@ def check_work(layout: DataLayout, pages_spec: str | None, check: dict | None = 
     }
     return {"work_id": layout.work_id, "check": check, "totals": totals, "counts": counts,
             "complete": totals["errors"] == 0, "issues": [asdict(i) for i in issues], "pages": page_rows}
+
+
+def manifest_error_pages(layout: DataLayout, layer: str) -> set[int]:
+    """Trang mà bản ghi MỚI NHẤT (manifest gộp, rồi manifest theo khoảng mới trước) ghi status=error."""
+    seen: dict[int, str] = {}
+    for path in layer_manifest_paths(layout, layer):
+        try:
+            records = json.loads(path.read_text(encoding="utf-8")).get("pages", [])
+        except (OSError, ValueError):
+            continue
+        for rec in records:
+            if isinstance(rec, dict) and isinstance(rec.get("page"), int):
+                seen.setdefault(rec["page"], str(rec.get("status")))
+    return {p for p, status in seen.items() if status == "error"}
 
 
 def sample_pages(report: dict, n: int, seed: int) -> list[int]:

@@ -5,7 +5,9 @@
         "pages": "5-806",                        # khoảng trang cần OCR (mặc định: mọi ảnh đã trích)
         "paddlevl_orientation": "horizontal",    # auto | horizontal | vertical (hướng chữ Hán)
         "engines": {"han": "paddlevl", "vie": "qwen"},
-        "check": {"qwen_low_conf": 60}           # ngưỡng của scripts/check_ocr_complete.py
+        "check": {"qwen_low_conf": 60},          # ngưỡng của scripts/check_ocr_complete.py
+        "source_sha256": "1c08...",              # SHA-256 của PDF nguồn: mọi máy phải dùng ĐÚNG file này
+        "source_pages": 854                      # số trang PDF (pdfinfo); số trang OCR = chỉ số trang PDF
       }
     }
 
@@ -14,11 +16,13 @@ chạy như trước (tương thích ngược). Không import engine nào: dùng
 
     python -m src.ocr.work_config --config configs/CPO_20.json --get pages
     python -m src.ocr.work_config --config configs/CPO_20.json --show
+    python -m src.ocr.work_config --config configs/CPO_20.json --verify-source   # so SHA-256 của PDF
 """
 
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import logging
 import os
@@ -61,7 +65,7 @@ def stream_settings(cfg: dict) -> dict:
     raw = ((cfg.get("ocr") or {}).get("streams") or {})
     if not isinstance(raw, dict):
         raise ValueError("ocr.streams phải là object")
-    unknown = set(raw) - {"pages", "paddlevl_orientation", "engines", "check"}
+    unknown = set(raw) - {"pages", "paddlevl_orientation", "engines", "check", "source_sha256", "source_pages"}
     if unknown:
         raise ValueError(f"ocr.streams có khoá lạ: {sorted(unknown)}")
     orientation = str(raw.get("paddlevl_orientation", "auto")).strip().lower()
@@ -77,8 +81,43 @@ def stream_settings(cfg: dict) -> dict:
     bad = set(check) - set(CHECK_DEFAULTS)
     if bad:
         raise ValueError(f"ocr.streams.check có khoá lạ: {sorted(bad)}")
+    sha = raw.get("source_sha256")
+    if sha is not None and not (isinstance(sha, str) and len(sha) == 64 and all(c in "0123456789abcdef" for c in sha)):
+        raise ValueError("ocr.streams.source_sha256 phải là 64 ký tự hex thường")
+    n_pages = raw.get("source_pages")
+    if n_pages is not None and (not isinstance(n_pages, int) or n_pages < 1):
+        raise ValueError("ocr.streams.source_pages phải là số nguyên dương")
+    if n_pages and pages is not None and max(parse_pages(str(pages))) > n_pages:
+        raise ValueError(f"ocr.streams.pages {pages} vượt quá số trang PDF ({n_pages})")
     return {"pages": str(pages) if pages is not None else None, "paddlevl_orientation": orientation,
-            "engines": engines, "check": check}
+            "engines": engines, "check": check, "source_sha256": sha, "source_pages": n_pages}
+
+
+def file_sha256(path: str | Path) -> str:
+    digest = hashlib.sha256()
+    with open(path, "rb") as fh:
+        for block in iter(lambda: fh.read(1 << 20), b""):
+            digest.update(block)
+    return digest.hexdigest()
+
+
+def verify_source(cfg: dict, settings: dict, root: Path = Path(".")) -> tuple[bool, str]:
+    """PDF nguồn (common.source) có đúng SHA-256 trong config không. (ok, thông báo)"""
+    source = (cfg.get("common") or {}).get("source")
+    if not source:
+        return False, "config không có common.source"
+    path = Path(source) if Path(source).is_absolute() else root / source
+    if not path.is_file():
+        return False, f"không thấy PDF nguồn {path} (đặt file vào đúng chỗ, xem docs/ocr_assignment.md)"
+    expected = settings.get("source_sha256")
+    if not expected:
+        return True, f"{path}: config chưa ghi source_sha256, bỏ qua so khớp"
+    actual = file_sha256(path)
+    if actual != expected:
+        return False, (f"{path}: SHA-256 {actual} KHÁC config ({expected}). Sai bản PDF -> số trang sẽ lệch; "
+                       "lấy đúng file từ nhóm")
+    return True, f"{path}: SHA-256 khớp ({actual[:12]}...)"
+
 
 
 def image_pages(layout: DataLayout) -> list[int]:
@@ -138,16 +177,24 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="In cấu hình OCR hai luồng của một work")
     parser.add_argument("--config", required=True)
     parser.add_argument("--data-root", default="data")
-    parser.add_argument("--get", choices=["pages", "paddlevl_orientation", "work_id", "source", "dpi"])
+    parser.add_argument("--get", choices=["pages", "paddlevl_orientation", "work_id", "source", "dpi",
+                                          "source_sha256", "source_pages"])
     parser.add_argument("--show", action="store_true")
+    parser.add_argument("--verify-source", action="store_true",
+                        help="So SHA-256 của common.source với ocr.streams.source_sha256; mã thoát 1 nếu sai/thiếu")
     args = parser.parse_args(argv)
     cfg = load_config(args.config)
     common = cfg.get("common") or {}
     work_id = common.get("work_id") or Path(args.config).stem
     settings = stream_settings(cfg)
+    if args.verify_source:
+        ok, message = verify_source(cfg, settings)
+        print(("OK " if ok else "LỖI ") + message)
+        return 0 if ok else 1
     layout = DataLayout(Path(common.get("data_root") or args.data_root), work_id)
     values = {"work_id": work_id, "source": common.get("source", ""), "dpi": common.get("dpi", 300),
-              "paddlevl_orientation": settings["paddlevl_orientation"]}
+              "paddlevl_orientation": settings["paddlevl_orientation"],
+              "source_sha256": settings["source_sha256"] or "", "source_pages": settings["source_pages"] or ""}
     if args.get == "pages" or args.show:
         values["pages"] = resolve_pages(settings, layout)
     if args.get:
