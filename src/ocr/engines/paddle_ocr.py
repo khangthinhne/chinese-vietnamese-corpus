@@ -46,7 +46,7 @@ log = logging.getLogger("paddlevl")
 
 MODEL_ID = "PaddlePaddle/PaddleOCR-VL-1.6"
 MODEL_REVISION = "main"
-ADAPTER_VERSION = 4
+ADAPTER_VERSION = 5                     # 5: ink_mask không còn bỏ trắng trang thưa mực
 PROMPT = "OCR:"
 MIN_PIXELS = 384 * 384                  # mặc định của image processor (transformers 5 không còn thuộc tính min_pixels)
 COL_REL_THRESHOLD = 0.05                # cột "trắng" nếu mực <= 5% mực cột chữ điển hình (bỏ qua hạt nhiễu của bản quét)
@@ -121,11 +121,20 @@ def _sha(text: str) -> str:
 # --------------------------------------------------------------------------- #
 # Hình học trang: mặt nạ mực, dải ngang, cột dọc, đoán hướng
 # --------------------------------------------------------------------------- #
+INK_PERCENTILES = (2.0, 98.0)
+SPARSE_INK_PERCENTILE = 0.1             # trang thưa mực (< ~2% điểm mực): phân vị 2 vẫn là giấy trắng
+
+
 def ink_mask(gray):
-    """True ở điểm ảnh 'mực'. Ngưỡng thích nghi theo phân vị nên chịu được giấy ngả vàng."""
+    """True ở điểm ảnh 'mực'. Ngưỡng thích nghi theo phân vị nên chịu được giấy ngả vàng.
+
+    Trang thưa mực (vd vài cột thơ Hán ngắn, CPO_19 tr.41) có phân vị 2 = phân vị 98 = giấy; trước adapter 5
+    trang đó bị coi là trắng và không OCR dòng nào. Khi đó lấy phân vị SPARSE_INK_PERCENTILE làm mức mực."""
     import numpy as np
-    lo, hi = np.percentile(gray, [2, 98])
+    lo, hi = np.percentile(gray, INK_PERCENTILES)
     if hi - lo < 30:
+        lo = float(np.percentile(gray, SPARSE_INK_PERCENTILE))
+    if hi - lo < 30:                      # ảnh trắng/không tương phản
         return np.zeros(gray.shape, dtype=bool)
     return gray < (lo + hi) / 2
 
@@ -512,6 +521,7 @@ class PaddleVLEngine(OcrEngine):
             "prompt": PROMPT, "col_rel_threshold": COL_REL_THRESHOLD, "min_unit_ink_rel": MIN_UNIT_INK_REL, "min_pixels": MIN_PIXELS, "min_band_side": MIN_BAND_SIDE, "min_span_px": MIN_SPAN_PX,
             "loop_pattern": _LOOP_RE.pattern, "max_identical_run": MAX_IDENTICAL_RUN,
             "confidence_caps": [DEGENERATE_CONFIDENCE_CAP, TRUNCATED_CONFIDENCE_CAP],
+            "ink_percentiles": [*INK_PERCENTILES, SPARSE_INK_PERCENTILE],
             "adapter_version": ADAPTER_VERSION,
         }
 
