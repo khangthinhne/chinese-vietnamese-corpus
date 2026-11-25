@@ -147,3 +147,15 @@ def test_streams_mode_warns_han_without_am(tmp_path, caplog):
                                         {"document_id": "W.003", "pages": [3], "layers": {"han": 1, "am": 1}}])
     assert [(r["document_id"], r["reason"]) for r in rows] == [("W.001", "han_without_am"),
                                                                  ("W.002", "am_without_han")]
+
+
+def test_pipeline_plans_layers_step_only_when_streams_enabled():
+    from src.pipeline import build_plan
+    cfg = {"common": {"work_id": "W", "source": "x.pdf", "pages": "1-2", "data_root": "data"},
+           "ocr": {"engine": "qwen"}, "segmentation": {"layers": {"han": {}, "am": {}}}}
+    steps = ["ocr", "layers", "segment"]
+    assert [s for s, _ in build_plan(cfg, steps=steps, layers=None, pairs=None, force=False, config_path="cfg.json")] == ["ocr", "segment"]
+    cfg["segmentation"]["ocr_streams"] = "han_vie"
+    plan = build_plan(cfg, steps=steps, layers=None, pairs=None, force=False, config_path="cfg.json")
+    assert [s for s, _ in plan] == ["ocr", "layers", "segment"]
+    assert plan[1][1] == ["--work-id", "W", "--data-root", "data"]

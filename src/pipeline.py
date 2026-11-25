@@ -48,8 +48,11 @@ log = logging.getLogger("pipeline")
 
 # python -m src.pipeline --config configs/CPO_18.json --force
 
-STEPS = ("extract", "ocr", "segment", "clean", "sentence", "validate", "align", "export")
+# "layers" (JSON thô -> han.xml/vie.xml) chỉ được lên kế hoạch khi segmentation.ocr_streams = "han_vie".
+# OCR paddlevl cho luồng han chạy riêng trong .venv-paddle (python -m src.ocr.ocr --layer han ...).
+STEPS = ("extract", "ocr", "layers", "segment", "clean", "sentence", "validate", "align", "export")
 MODULES = {"extract": "src.extraction.pdf_extraction", "ocr": "src.ocr.ocr",
+           "layers": "src.ocr.build_layers",
            "segment": "src.segmentation.pipeline", "clean": "src.cleaning.pipeline",
            "sentence": "src.segmentation.sentences", "validate": "src.validation.validate",
            "align": "src.alignment.align", "export": "src.alignment.export"}
@@ -291,6 +294,12 @@ def _new_plan(cfg: dict, steps: list[str], layers: list[str] | None, pairs: list
                 _opt(argv, "--keep", oc.get("keep"))
                 argv += (["--force"] if force else []) + list(extra.get("ocr", []))
                 plan.append(("ocr", argv))
+
+    if "layers" in steps and cfg.get("segmentation", {}).get("ocr_streams"):
+        argv = [*base] + list(extra.get("layers", []))
+        if force:
+            argv.append("--force")
+        plan.append(("layers", argv))
 
     if "segment" in steps:
         if not config_path:
