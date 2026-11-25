@@ -25,10 +25,14 @@ bash scripts/ocr_work.sh CPO_19 5-623
 DRY_RUN=1 bash scripts/ocr_work.sh CPO_19 5-623
 STEPS="han build check" PACK=1 MEMBER=tv2 bash scripts/ocr_work.sh CPO_19 5-623
 ```
-**Colab (T4):** mở `notebooks/ocr_colab.ipynb` trên Colab, chỉ sửa ô 1 (`WORK`, `PAGES`, `MEMBER`, đường dẫn PDF
-trên Drive), rồi *Run all*. Notebook làm hết các bước trong runbook này: cài hai môi trường, tải model, kiểm tra
-SHA-256 của PDF, giải gói hạt giống, dry-run, extract, han, vie, build, check, pack. Kết quả và gói nằm trên Drive,
-nên phiên bị ngắt chỉ cần *Run all* lại.
+**Notebook (Colab T4 hoặc local):** `notebooks/ocr_work.ipynb`. Chỉ sửa ô 1 (`WORK`, `PAGES`, `MEMBER`, đường dẫn
+PDF), rồi *Run all*. Notebook tự nhận nơi chạy.
+- Colab: cài hai môi trường, tải model, lưu kết quả và gói lên Drive.
+- Local (kernel `my_nlp`): bỏ qua cài đặt, dùng `.venv-paddle` + `my_nlp` có sẵn, gọi đúng `ocr_work.ps1`/`.sh` ở trên;
+  kết quả ở `data/`, gói ở `dist/`.
+
+Cả hai đều làm: kiểm tra SHA-256 của PDF, giải gói hạt giống, dry-run, extract, han, vie, build, check, pack.
+Bị ngắt thì *Run all* lại.
 Các bước: `extract` (trích ảnh còn thiếu) -> `han` -> `vie` -> `build` -> `check` (-> `pack`). Bị ngắt (tắt máy,
 OOM, Ctrl+C) thì CHẠY LẠI ĐÚNG LỆNH ĐÓ: trang đã có run được bỏ qua (`--skip-done`), không mất gì
 (`raw/*.json` chỉ được thêm run, không bao giờ bị sửa/xoá). Hai model không bao giờ chạy cùng lúc.
