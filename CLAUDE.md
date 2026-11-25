@@ -47,6 +47,7 @@ python -m src.ocr.build_layers --config configs/CPO_20.json        # JSON thô -
 python -m src.ocr.build_layers --config configs/CPO_20.json --report-only   # chỉ kiểm tra + bảng tổng hợp
 python -m src.segmentation.pipeline --config configs/CPO_20.json --ocr-streams han_vie   # segmentation từ han/vie.xml
 python scripts/audit_clean.py --work-id CPO_20 [--data-root ...]   # kiểm toán bước clean (đọc lại được)
+python -m src.alignment.lab_han_am --work-id CPO_19 [--dry-run|--quick N|--force]   # dóng Hán-âm bằng tool Lab
 python -m src.segmentation.pipeline --config configs/CPO_19.json
 python -m src.cleaning.pipeline --work-id CPO_19 --structural-only
 python -m src.validation.validate --config configs/CPO_19.json
@@ -101,5 +102,11 @@ Chữ Hán trong khảo dị/chú thích không có nghĩa là bắt đầu kh�
 - Không dùng LLM để phân loại dòng ở các bước xử lý văn bản; dùng luật + kiểm tra.
 - Cảnh báo chất lượng (thiếu lớp, lệch số dòng giữa các lớp, conf thấp) phải ghi lại, không âm thầm vá dữ liệu.
 
+## Tool dóng Hán–Âm của Lab
+`third_party/SN-QN-alignment/` (không sửa code tool) + `dict/QuocNgu_SinoNom_TongHop3.csv`, `dict/SinoNom_Similar_Dic_v2.csv`
+(gitignored, không commit). Wrapper `src/alignment/lab_han_am.py` sinh config với ĐƯỜNG DẪN TUYỆT ĐỐI (tool hiểu
+đường dẫn tương đối theo thư mục cha của nó). Aligner `levenshtein` chỉ ghép cặp câu; kết quả dóng chữ là của tool
+Lab. Bàn giao `07_export/han-am/`. Xem `docs/han_am_lab_tool.md`.
+
 ## Tài liệu
-`docs/ocr.md`, `docs/segmentation_architecture.md`, `docs/pipeline.md`, `docs/migration.md`.
+`docs/ocr.md`, `docs/segmentation_architecture.md`, `docs/pipeline.md`, `docs/migration.md`, `docs/han_am_lab_tool.md`.
