@@ -11,17 +11,24 @@ PDF -> 02_extraction/pages/page_NNN.png -> paddlevl (Hán) -> raw/paddlevl/NNNN.
 
 ## 1. Lệnh một mạch
 
+`-Work` và `-Pages` là BẮT BUỘC (không có mặc định "cả work"); khoảng trang của từng người: `docs/ocr_assignment.md`.
 ```powershell
 # Windows (PowerShell), từ gốc repo
-powershell -ExecutionPolicy Bypass -File scripts\ocr_work.ps1 -Work CPO_19
-powershell -ExecutionPolicy Bypass -File scripts\ocr_work.ps1 -Work CPO_19 -Steps han,build,check   # chỉ vài bước
-powershell -ExecutionPolicy Bypass -File scripts\ocr_work.ps1 -Work CPO_19 -Pack                    # kèm đóng gói
+powershell -ExecutionPolicy Bypass -File scripts\ocr_work.ps1 -Work CPO_19 -Pages 5-623
+powershell -ExecutionPolicy Bypass -File scripts\ocr_work.ps1 -Work CPO_19 -Pages 5-623 -DryRun          # không GPU: trang nào sẽ OCR
+powershell -ExecutionPolicy Bypass -File scripts\ocr_work.ps1 -Work CPO_19 -Pages 5-623 -Steps han,build,check
+powershell -ExecutionPolicy Bypass -File scripts\ocr_work.ps1 -Work CPO_19 -Pages 5-623 -Pack -Member tv2
 ```
 ```bash
-# Linux / Colab / Git Bash
-bash scripts/ocr_work.sh CPO_19
-STEPS="han build check" PACK=1 bash scripts/ocr_work.sh CPO_19
+# Linux / Git Bash
+bash scripts/ocr_work.sh CPO_19 5-623
+DRY_RUN=1 bash scripts/ocr_work.sh CPO_19 5-623
+STEPS="han build check" PACK=1 MEMBER=tv2 bash scripts/ocr_work.sh CPO_19 5-623
 ```
+**Colab (T4):** mở `notebooks/ocr_colab.ipynb` trên Colab, chỉ sửa ô 1 (`WORK`, `PAGES`, `MEMBER`, đường dẫn PDF
+trên Drive), rồi *Run all*. Notebook làm hết các bước trong runbook này: cài hai môi trường, tải model, kiểm tra
+SHA-256 của PDF, giải gói hạt giống, dry-run, extract, han, vie, build, check, pack. Kết quả và gói nằm trên Drive,
+nên phiên bị ngắt chỉ cần *Run all* lại.
 Các bước: `extract` (trích ảnh còn thiếu) -> `han` -> `vie` -> `build` -> `check` (-> `pack`). Bị ngắt (tắt máy,
 OOM, Ctrl+C) thì CHẠY LẠI ĐÚNG LỆNH ĐÓ: trang đã có run được bỏ qua (`--skip-done`), không mất gì
 (`raw/*.json` chỉ được thêm run, không bao giờ bị sửa/xoá). Hai model không bao giờ chạy cùng lúc.
