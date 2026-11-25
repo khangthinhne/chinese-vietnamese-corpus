@@ -208,6 +208,28 @@ def _flush_block(doc: DocumentMetadata, block: list[tuple[RawLine, bool]],
     _emit("title", title_lines, METADATA_TITLE, title_conf)
 
 
+VERSE_LENGTHS = range(4, 8)                      # câu thơ Hán 4/5/6/7 chữ
+
+
+def _han_len(text: str) -> int:
+    return sum(1 for c in text if "\u3400" <= c <= "\u9fff" or "\uf900" <= c <= "\ufaff")
+
+
+def verse_starts(lines: list[RawLine], title_res: list[re.Pattern]) -> set[int]:
+    """Chỉ số dòng Hán trông như tiêu đề (khớp mẫu tiêu đề, hoặc "giống metadata": ngắn, không chấm câu) nhưng
+    thực ra là CÂU THƠ: dòng kế tiếp cũng vậy và có CÙNG số chữ Hán (4..7). Thơ in không chấm câu (paddlevl)
+    khớp mẫu kiểu ^[Hán]{2,12}$ và qua được _han_metadata_like, nên nếu không chặn thì cả bài bị gom thành
+    "tiêu đề" và mất khỏi thân bài."""
+    probes = [(ln.raw_text or ln.text).strip() for ln in lines]
+    hit = [any(r.search(p) for r in title_res) or _han_metadata_like(p) for p in probes]
+    out = set()
+    for i in range(len(lines) - 1):
+        n = _han_len(probes[i])
+        if hit[i] and hit[i + 1] and n in VERSE_LENGTHS and n == _han_len(probes[i + 1]):
+            out.add(i)
+    return out
+
+
 def _classify_document(doc_id: str, lines: list[RawLine], cfg: MetadataConfig, han: bool,
                        start_res: list[re.Pattern], end_res: list[re.Pattern],
                        title_res: list[re.Pattern], author_res: list[re.Pattern],
@@ -225,7 +247,8 @@ def _classify_document(doc_id: str, lines: list[RawLine], cfg: MetadataConfig, h
         explicit_author.clear()
         attr_lines.clear()
 
-    for ln in lines:
+    verse = verse_starts(lines, title_res) if han else set()
+    for index, ln in enumerate(lines):
         probe = (ln.raw_text or ln.text).strip()
         if state == "front":
             if any(r.search(probe) for r in start_res):
@@ -251,6 +274,11 @@ def _classify_document(doc_id: str, lines: list[RawLine], cfg: MetadataConfig, h
         # ---- state "meta": phân loại khối metadata ----
         if any(r.search(probe) for r in attr_res):
             attr_lines.append(ln)
+            continue
+        if index in verse:                        # câu thơ mở đầu thân bài, không phải tiêu đề
+            flush()
+            state = "body"
+            kept.append(ln)
             continue
         if any(r.search(probe) for r in title_res):
             block.append((ln, True))
