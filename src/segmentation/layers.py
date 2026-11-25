@@ -12,6 +12,9 @@
 
 from __future__ import annotations
 
+import re
+import unicodedata
+
 from src.cleaning.metadata import classify_leading_block
 from src.cleaning.model import MetadataConfig, RawLine
 from src.segmentation.documents import review_row
@@ -19,7 +22,9 @@ from src.segmentation.model import Document, DocumentLayers, LayerLine, OcrLine
 from src.segmentation.patterns import (
     DEFAULT_HEADING_PREFIX,
     compile_matcher,
+    compile_patterns,
     matched_labels,
+    matches,
 )
 
 DEFAULT_SOURCE = {"han": "chi_tra", "am": "vie", "nghia": "vie", "tho": "vie"}
@@ -188,14 +193,40 @@ def assign_document(work_id: str, doc: Document, layer_cfg: dict, meta_cfg: dict
 
 # --- UNIFIED (Single-stream) LAYER SEGMENTATION ---
 
-def assign_document_unified(work_id: str, doc: Document, layer_cfg: dict, meta_cfg: dict
-                            ) -> DocumentLayers:
+_TITLE_SUFFIX_RE = re.compile(r"\s*[\(\[]\s*\w{1,3}\s*[\)\]]\s*$")
+
+
+def is_upper_title(text: str) -> bool:
+    """Dòng tiêu đề Việt viết hoa toàn bộ (vd "LÊN NÚI MẪU TỬ (1)", "THỜ MÙNG MƯA"): >= 2 chữ cái Latin, không
+    chữ thường, <= 12 từ, không kết thúc bằng dấu phẩy/chấm phẩy (câu thơ viết hoa nhầm)."""
+    probe = _TITLE_SUFFIX_RE.sub("", text.strip())
+    letters = [c for c in probe if c.isalpha() and unicodedata.name(c, "").startswith("LATIN")]
+    if len(letters) < 2 or any(c.islower() for c in letters):
+        return False
+    return len(probe.split()) <= 12 and not probe.endswith((",", ";"))
+
+
+def assign_document_unified(work_id: str, doc: Document, layer_cfg: dict, meta_cfg: dict,
+                            keep_line=None, dropped: dict[str, int] | None = None,
+                            implicit_next: dict[str, str] | None = None,
+                            is_header=None, title_next: dict[str, str] | None = None,
+                            notes_after_attribution: set[str] | frozenset[str] = frozenset()) -> DocumentLayers:
     """Gán dòng của MỘT tài liệu vào các lớp (han/am/nghia/tho) từ stream OCR duy nhất.
 
     - Không phụ thuộc vào 'source' (chi_tra/vie).
     - Duyệt tuần tự các dòng theo thứ tự đọc ban đầu bằng state machine.
     - Tách riêng dòng heading vào `section_headings`.
     - Hỗ trợ các lớp tuỳ chọn (optional: true) và bắt lỗi dòng không gán được vào review.
+    - `keep_line(layer, line) -> bool` (tuỳ chọn): bỏ dòng đã gán lớp nhưng không thuộc lớp đó (vd chữ Hán trong
+      khảo dị khi chạy hai luồng han/vie), TRƯỚC khi trích metadata; số dòng bỏ cộng vào `dropped[layer]`.
+    - `implicit_next` (tuỳ chọn, cần `keep_line`): vd {"han": "am"}. Đang ở lớp han mà gặp dòng không thuộc
+      han nhưng thuộc am, và am CHƯA bắt đầu trong tài liệu -> coi như mở lớp am không có tiêu đề mục (sách in
+      phần phiên âm ngay sau chữ Hán, không có chữ "PHIÊN ÂM"). Ghi review `implicit_layer_start`.
+    - `title_next` (tuỳ chọn), vd {"am": "nghia"}: đang ở am (hoặc vừa rời am để vào chú thích), am đã có ít nhất
+      một dòng nội dung KHÔNG viết hoa, gặp dòng tiêu đề viết hoa toàn bộ -> mở lớp kế tiếp (sách in tiêu đề dịch
+      "LÊN NÚI MẪU TỬ" mà OCR làm mất chữ "DỊCH NGHĨA"). Review `implicit_layer_start`.
+    - `notes_after_attribution` (tuỳ chọn), vd {"am"}: trong lớp đó, sau dòng khớp `attribution_patterns` (dòng
+      nguồn "Trích ..."), các dòng tiếp theo là chú thích: không gán lớp cho tới tiêu đề/tiêu đề viết hoa kế tiếp.
     """
     review: list[dict] = []
     headings: list[dict] = []
@@ -228,6 +259,11 @@ def assign_document_unified(work_id: str, doc: Document, layer_cfg: dict, meta_c
 
     current: str | None = default_start
     started: set[str] = {default_start} if default_start else set()
+    body_lines: dict[str, int] = {}              # số dòng nội dung không viết hoa đã gán cho mỗi lớp
+    last_layer: str | None = current             # lớp nội dung gần nhất (để thoát khỏi đoạn chú thích)
+    attribution = {n: compile_patterns(layer_cfg[n].get("attribution_patterns"),
+                                       f"segmentation.layers.{n}.attribution_patterns", False)
+                   for n in notes_after_attribution if n in layer_cfg}
 
     for ln in all_lines:
         starts_hit = matched_labels(starts, ln.text)
@@ -273,12 +309,48 @@ def assign_document_unified(work_id: str, doc: Document, layer_cfg: dict, meta_c
                 current = None
             continue
 
+        if (implicit_next and keep_line is not None and current in implicit_next
+                and not keep_line(current, ln) and not (is_header and is_header(ln))):
+            nxt = implicit_next[current]
+            if nxt not in started and keep_line(nxt, ln):
+                review.append(review_row(work_id, doc.id, nxt, "implicit_layer_start",
+                                         [ln.page], ln.text, [ln.source_id]))
+                current = nxt
+                started.add(nxt)
+
+        if title_next and is_upper_title(ln.text) and not (is_header and is_header(ln)):
+            prev = current or last_layer
+            nxt = title_next.get(prev or "")
+            if (nxt and nxt not in started and body_lines.get(prev, 0) > 0
+                    and (keep_line is None or keep_line(nxt, ln))):
+                review.append(review_row(work_id, doc.id, nxt, "implicit_layer_start",
+                                         [ln.page], ln.text, [ln.source_id]))
+                current = nxt
+                started.add(nxt)
+
         target = current
         if target is None:
             review.append(review_row(work_id, doc.id, "", "unassigned_line",
                                      [ln.page], ln.text, [ln.source_id]))
             continue
         grouped.setdefault(target, []).append(ln)
+        last_layer = target
+        # dòng nội dung = có chữ thường (tiêu đề viết hoa nhiều dòng, kể cả dòng kết thúc bằng dấu phẩy, không tính)
+        if any(c.islower() for c in ln.text) and (keep_line is None or keep_line(target, ln)):
+            body_lines[target] = body_lines.get(target, 0) + 1
+        if (target in attribution and body_lines.get(target, 0) > 0
+                and matches(attribution[target], ln.text)):
+            current = None                       # sau dòng nguồn: chú thích, không gán lớp
+
+    if keep_line is not None:
+        for layer in list(grouped):
+            kept = [ln for ln in grouped[layer] if keep_line(layer, ln)]
+            if dropped is not None and len(kept) != len(grouped[layer]):
+                dropped[layer] = dropped.get(layer, 0) + len(grouped[layer]) - len(kept)
+            if kept:
+                grouped[layer] = kept
+            else:
+                del grouped[layer]
 
     for n in names:
         optional = bool(layer_cfg[n].get("optional"))

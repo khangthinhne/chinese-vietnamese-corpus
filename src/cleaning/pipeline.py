@@ -282,6 +282,14 @@ def build_config(args, layer: str) -> CleanConfig:
     )
 
 
+SHARED_CLEANING_OUTPUTS = ("review_required.xml", "cleaning_audit.xml")
+
+
+def layer_outputs(outputs: list[Path]) -> list[Path]:
+    """Bỏ các file kiểm toán dùng chung giữa các lớp khỏi danh sách dùng để chặn chạy lại."""
+    return [p for p in outputs if Path(p).name not in SHARED_CLEANING_OUTPUTS]
+
+
 def run(args) -> Path:
     layer = args.layer
     layout = DataLayout(Path(args.data_root), args.work_id)
@@ -310,7 +318,9 @@ def run(args) -> Path:
         struct_xml = layout.cleaning_structural(layer)
         outputs = [struct_xml, out_dir / f"{layer}.dropped.tsv",
                    out_dir / "review_required.xml", out_dir / "cleaning_audit.xml"]
-        deps.check_fresh(layout, f"clean_structural:{layer}", inputs, outputs, args.force,
+        # Chỉ output RIÊNG của lớp này mới chặn chạy lại. review_required.xml / cleaning_audit.xml dùng chung
+        # giữa các lớp (ghi gộp theo lớp), nên lớp chạy trước không được chặn lớp chạy sau.
+        deps.check_fresh(layout, f"clean_structural:{layer}", inputs, layer_outputs(outputs), args.force,
                          f"{struct_xml} đã tồn tại; dùng --force để ghi đè")
         struct = run_structural_cleaning(args.work_id, layer, raw, cfg)
         from src.segmentation import serialization
@@ -339,7 +349,7 @@ def run(args) -> Path:
     out_xml = out_dir / f"{layer}.xml"
     outputs = [out_xml, out_dir / f"{layer}.txt", out_dir / f"{layer}.dropped.tsv",
                out_dir / "review_required.xml", out_dir / "cleaning_audit.xml"]
-    deps.check_fresh(layout, f"clean:{layer}", inputs, outputs, args.force,
+    deps.check_fresh(layout, f"clean:{layer}", inputs, layer_outputs(outputs), args.force,
                      f"{out_xml} đã tồn tại; dùng --force để ghi đè (hoặc lưu bản cũ: v01, v02...)")
     out = run_cleaning(args.work_id, layer, raw, cfg)
     if not out.sentences and raw:

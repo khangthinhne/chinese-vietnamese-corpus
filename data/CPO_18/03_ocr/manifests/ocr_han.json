@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_18",
+  "layer": "han",
+  "engine": "paddlevl",
+  "engine_descriptor": {
+    "name": "paddlevl",
+    "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+    "model_revision": "main",
+    "transformers_version": "5.24.0",
+    "torch_version": "2.14.1+cu126",
+    "cuda_version": "12.6",
+    "dtype": "bfloat16",
+    "orientation": "horizontal",
+    "max_pixels": 1003520,
+    "band_inches": 2.0,
+    "max_new_tokens": 512,
+    "prompt": "OCR:",
+    "col_rel_threshold": 0.05,
+    "min_unit_ink_rel": 0.08,
+    "min_pixels": 147456,
+    "min_band_side": 56,
+    "min_span_px": 14,
+    "loop_pattern": "(.{6,80}?)\\1{3,}",
+    "max_identical_run": 2,
+    "confidence_caps": [
+      10.0,
+      30.0
+    ],
+    "adapter_version": 4
+  },
+  "updated_at": "2026-11-24T18:05:56+00:00",
+  "source": {
+    "path": "E:\\Projects\\han-viet-corpus\\data\\CPO_18\\02_extraction\\pages"
+  },
+  "parameters": {
+    "region": null,
+    "psm": 6,
+    "dpi": 300,
+    "force_reocr": false
+  },
+  "pages": [
+    {
+      "page": 205,
+      "engine": "paddlevl",
+      "key": "72551b741ff2136e22807a5864a3d814bf7a7bfdbdcd1bc9ac712373b5ed9123",
+      "status": "cached",
+      "raw": "03_ocr/raw/paddlevl/0205.json",
+      "n_lines": 26
+    },
+    {
+      "page": 206,
+      "engine": "paddlevl",
+      "key": "a2e0c1815f62142aacef2209384f0f0e4d8fb8583e7409ec0f5a856fb5489117",
+      "status": "cached",
+      "raw": "03_ocr/raw/paddlevl/0206.json",
+      "n_lines": 31
+    },
+    {
+      "page": 207,
+      "engine": "paddlevl",
+      "key": "f9bc275cf3620e305dfe745b8adc6832160e8be4fdd1fc122480ade9d98166ce",
+      "status": "cached",
+      "raw": "03_ocr/raw/paddlevl/0207.json",
+      "n_lines": 35
+    },
+    {
+      "page": 208,
+      "engine": "paddlevl",
+      "key": "fdf017b955fc1ba7f1cb63ec8ac3ad9a615551ecde794adfa6dbf8c072d10089",
+      "status": "ocr",
+      "raw": "03_ocr/raw/paddlevl/0208.json",
+      "n_lines": 27,
+      "confidence": 88.74677621283257,
+      "created_at": "2026-11-24T18:04:49+00:00"
+    },
+    {
+      "page": 209,
+      "engine": "paddlevl",
+      "key": "a53ad8bf21d1538bc533e5bea9b999f3da9b0cb71889f45b80cfe7ba5d171295",
+      "status": "ocr",
+      "raw": "03_ocr/raw/paddlevl/0209.json",
+      "n_lines": 29,
+      "confidence": 90.10340757238308,
+      "created_at": "2026-11-24T18:05:05+00:00"
+    },
+    {
+      "page": 210,
+      "engine": "paddlevl",
+      "key": "b75c65df083a340467c41e03870382e88a5bf2d0819e363454cd07e56bd4b6dc",
+      "status": "ocr",
+      "raw": "03_ocr/raw/paddlevl/0210.json",
+      "n_lines": 30,
+      "confidence": 87.25779786359902,
+      "created_at": "2026-11-24T18:05:21+00:00"
+    },
+    {
+      "page": 211,
+      "engine": "paddlevl",
+      "key": "0991e50645d9c265afc154a70830ba038fd8fa6bfa97bf05abb9d1ce94756156",
+      "status": "ocr",
+      "raw": "03_ocr/raw/paddlevl/0211.json",
+      "n_lines": 32,
+      "confidence": 89.67607254534079,
+      "created_at": "2026-11-24T18:05:39+00:00"
+    },
+    {
+      "page": 212,
+      "engine": "paddlevl",
+      "key": "585832420eeb8bd417515772d13f0ee7857368cd235b41eb8ff35e3aafd2f0a1",
+      "status": "ocr",
+      "raw": "03_ocr/raw/paddlevl/0212.json",
+      "n_lines": 32,
+      "confidence": 91.85512552301255,
+      "created_at": "2026-11-24T18:05:56+00:00"
+    }
+  ],
+  "missing_images": [],
+  "error_pages": []
+}

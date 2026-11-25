@@ -1,0 +1,235 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_20",
+  "page": 178,
+  "runs": [
+    {
+      "key": "094f31ef421e71b88168f7d09627968d84573489902612060149c6264627b599",
+      "parameters": {
+        "image_sha256": "7dc0c6d718e67c768981118ff9637dbd6588ae5dfb812bacef1ca4197efd3d42",
+        "engine": {
+          "name": "qwen",
+          "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "model_revision": "main",
+          "transformers_version": "4.57.6",
+          "torch_version": "2.5.1+cu121",
+          "cuda_version": "12.1",
+          "bitsandbytes_version": "0.50.2",
+          "quantization": {
+            "load_in_4bit": true,
+            "quant_type": "nf4",
+            "double_quant": true,
+            "compute_dtype": "float16"
+          },
+          "mode": "all",
+          "min_pixels": 50176,
+          "max_pixels": 802816,
+          "band_inches": 2.0,
+          "max_new_tokens": 768,
+          "repetition_penalty": 1.05,
+          "adapter_version": 3,
+          "prompt_version": 3,
+          "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74"
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-24T06:36:19+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_178.png",
+      "image_size": [
+        1840,
+        2803
+      ],
+      "crop_box": [
+        0,
+        0,
+        1840,
+        2803
+      ],
+      "lines": [
+        {
+          "text": "奉撰尊祭北来阵亡诸征不服，岂容国之交争",
+          "bbox": [
+            318,
+            77,
+            1763,
+            655
+          ],
+          "confidence": 45.37
+        },
+        {
+          "text": "然一視同仁寧忍羈繫之魂山巒血河淚",
+          "bbox": [
+            376,
+            647,
+            1763,
+            765
+          ],
+          "confidence": 51.0
+        },
+        {
+          "text": "聖人堪雷號將士等",
+          "bbox": [
+            376,
+            765,
+            1763,
+            883
+          ],
+          "confidence": 51.0
+        },
+        {
+          "text": "時勁北來中土俊髮大邦瓜距",
+          "bbox": [
+            376,
+            883,
+            1763,
+            1000
+          ],
+          "confidence": 51.0
+        },
+        {
+          "text": "久荷天心好治，不識兵殆已百年",
+          "bbox": [
+            376,
+            1000,
+            1763,
+            1118
+          ],
+          "confidence": 51.0
+        },
+        {
+          "text": "因孫氏邀功，胡轉恤動經千里",
+          "bbox": [
+            376,
+            1118,
+            1763,
+            1236
+          ],
+          "confidence": 51.0
+        },
+        {
+          "text": "責勞離設自迷犯我方知",
+          "bbox": [
+            371,
+            1228,
+            1763,
+            1522
+          ],
+          "confidence": 46.09
+        },
+        {
+          "text": "雨霽以鄉族師兵偏育為直心，豈忍以鯨鯢為爲驅観美。",
+          "bbox": [
+            371,
+            1522,
+            1763,
+            1815
+          ],
+          "confidence": 46.09
+        },
+        {
+          "text": "乃行間之橫羅，非夫子之止。交遇於象，自顛覆於橋。或失心於富良，雖是表。志於寒歲。",
+          "bbox": [
+            234,
+            1807,
+            1763,
+            2535
+          ],
+          "confidence": 39.34
+        }
+      ],
+      "raw": {
+        "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+        "model_revision": "main",
+        "mode": "all",
+        "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74",
+        "dpi": 300,
+        "image_size": [
+          1840,
+          2803
+        ],
+        "band_target_height": 600,
+        "bbox_granularity": "band_even_split",
+        "max_new_tokens": 768,
+        "max_pixels": 802816,
+        "inference_seconds": 15.811,
+        "bands": [
+          {
+            "band": 1,
+            "y0": 81,
+            "y1": 651,
+            "ink_box": [
+              318,
+              77,
+              1763,
+              655
+            ],
+            "generated_text": "奉撰尊祭北来阵亡诸征不服，岂容国之交争",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 2.721,
+            "confidence": 45.37,
+            "flags": []
+          },
+          {
+            "band": 2,
+            "y0": 651,
+            "y1": 1232,
+            "ink_box": [
+              376,
+              647,
+              1763,
+              1236
+            ],
+            "generated_text": "然一視同仁寧忍羈繫之魂山巒血河淚\n聖人堪雷號將士等\n時勁北來中土俊髮大邦瓜距\n久荷天心好治，不識兵殆已百年\n因孫氏邀功，胡轉恤動經千里",
+            "n_lines": 5,
+            "tokens": 69,
+            "seconds": 5.321,
+            "confidence": 51.0,
+            "flags": []
+          },
+          {
+            "band": 3,
+            "y0": 1232,
+            "y1": 1811,
+            "ink_box": [
+              371,
+              1228,
+              1763,
+              1815
+            ],
+            "generated_text": "責勞離設自迷犯我方知\n雨霽以鄉族師兵偏育為直心，豈忍以鯨鯢為爲驅観美。",
+            "n_lines": 2,
+            "tokens": 44,
+            "seconds": 3.917,
+            "confidence": 46.09,
+            "flags": []
+          },
+          {
+            "band": 4,
+            "y0": 1811,
+            "y1": 2531,
+            "ink_box": [
+              234,
+              1807,
+              1763,
+              2535
+            ],
+            "generated_text": "乃行間之橫羅，非夫子之止。交遇於象，自顛覆於橋。或失心於富良，雖是表。志於寒歲。",
+            "n_lines": 1,
+            "tokens": 42,
+            "seconds": 3.839,
+            "confidence": 39.34,
+            "flags": []
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      }
+    }
+  ]
+}

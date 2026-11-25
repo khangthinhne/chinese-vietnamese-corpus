@@ -99,7 +99,8 @@ class DataLayout:
     def ocr_raw_xml(self) -> Path: return self.ocr_root / "ocr_raw"
 
     def ocr_raw_xml_path(self, writing_system: str) -> Path:
-        name = {"chi_tra": "han", "vie": "vi"}.get(writing_system, writing_system)
+        # chi_tra -> chi_tra.xml (KHÔNG phải han.xml: han.xml là luồng Hán của src.ocr.build_layers)
+        name = {"vie": "vi"}.get(writing_system, writing_system)
         return self.ocr_raw_xml / f"{name}.xml"
     @property
     def ocr_normalized_root(self) -> Path: return self.ocr_root / "normalized"
@@ -130,6 +131,28 @@ class DataLayout:
     @property
     def ocr_metadata_path(self) -> Path:
         return self.ocr_root / "metadata.json"
+
+    # --- OCR theo luồng han/vie: mỗi engine một kho run riêng, không chạm raw/NNNN.json ---
+    def ocr_raw_engine_dir(self, engine: str) -> Path:
+        return self.ocr_raw_unified_dir / engine
+
+    def ocr_raw_engine_path(self, engine: str, page: int) -> Path:
+        from src.common.page_naming import page_filename
+        return self.ocr_raw_engine_dir(engine) / page_filename(page, ".json")
+
+    def ocr_layer_xml_path(self, layer: str) -> Path:
+        return self.ocr_raw_xml / f"{layer}.xml"
+
+    def ocr_layer_text_dir(self, layer: str) -> Path:
+        return self.ocr_unified_text_dir / layer
+
+    def ocr_layer_text_path(self, layer: str, page: int) -> Path:
+        from src.common.page_naming import page_filename
+        return self.ocr_layer_text_dir(layer) / page_filename(page, ".txt")
+
+    def ocr_layer_manifest_path(self, kind: str, layer: str) -> Path:
+        """kind = 'ocr' (lần chạy OCR theo luồng) | 'build' (số liệu dựng XML/TXT)."""
+        return self.ocr_manifest_dir / f"{kind}_{layer}.json"
     # --- phân đoạn tài liệu/lớp ---
     @property
     def segmentation_dir(self) -> Path: return self.work_dir / "04_segmentation"
@@ -498,11 +521,13 @@ def finalize(doc: Document, layout: DataLayout, source_info: dict, run_info: dic
 # --------------------------------------------------------------------------- #
 # 6. CLI dùng chung: tham số + file config JSON
 # --------------------------------------------------------------------------- #
-def base_parser(description: str, layer_required: bool = True) -> argparse.ArgumentParser:
+def base_parser(description: str, layer_required: bool = True,
+                layer_choices: Iterable[str] | None = None) -> argparse.ArgumentParser:
     p = argparse.ArgumentParser(description=description,
                                 formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     p.add_argument("--config", help="JSON: {'common': {...}, 'layers': {'han': {...}}}")
-    p.add_argument("--layer", required=layer_required, choices=sorted(LAYERS),
+    p.add_argument("--layer", required=layer_required,
+                   choices=sorted(layer_choices) if layer_choices else sorted(LAYERS),
                    help="Lớp văn bản; bỏ trống ở chế độ ảnh dùng chung (02_extraction/pages)")
     p.set_defaults(_layer_required=layer_required)
     p.add_argument("--work-id", help="Mã tác phẩm, vd CPO_18")

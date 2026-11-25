@@ -140,3 +140,87 @@ def load_unified_manifest(layout: DataLayout) -> dict | None:
     if data.get("schema_version") != UNIFIED_SCHEMA_VERSION:
         raise ValueError(f"Schema manifest không phù hợp: {path}")
     return data
+
+
+# --- OCR THEO LUỒNG (han/vie): kho run riêng theo engine ---
+# data/<WORK_ID>/03_ocr/raw/<engine>/NNNN.json, cùng schema với raw/NNNN.json (unified).
+# raw/NNNN.json cũ chỉ được ĐỌC (tra cache, chọn run), không bao giờ bị ghi.
+ENGINE_SCHEMA_VERSION = UNIFIED_SCHEMA_VERSION
+
+
+def check_engine_dir_name(engine: str) -> str:
+    if not engine or engine in WRITING_SYSTEMS or not engine.replace("_", "").isalnum():
+        raise ValueError(f"Tên engine không dùng được làm thư mục kho OCR: {engine!r}")
+    return engine
+
+
+def engine_raw_path(layout: DataLayout, engine: str, page: int) -> Path:
+    return layout.ocr_raw_engine_path(check_engine_dir_name(engine), page)
+
+
+def load_engine_page(layout: DataLayout, engine: str, page: int, work_id: str) -> dict:
+    path = engine_raw_path(layout, engine, page)
+    if not path.exists():
+        return {"schema_version": ENGINE_SCHEMA_VERSION, "work_id": work_id,
+                "engine": engine, "page": page, "runs": []}
+    data = json.loads(path.read_text(encoding="utf-8"))
+    if not isinstance(data, dict) or data.get("schema_version") != ENGINE_SCHEMA_VERSION:
+        raise ValueError(f"Schema OCR thô không phù hợp: {path}")
+    if data.get("page") != page or data.get("engine") != engine:
+        raise ValueError(f"Trang/engine trong {path} không khớp yêu cầu")
+    if not isinstance(data.get("runs"), list):
+        raise ValueError(f"OCR thô thiếu danh sách runs: {path}")
+    return data
+
+
+def save_engine_page(layout: DataLayout, engine: str, page: int, data: dict) -> Path:
+    path = engine_raw_path(layout, engine, page)
+    if path.exists():                     # append-only: không bao giờ làm mất run đã có
+        old = load_engine_page(layout, engine, page, data.get("work_id", ""))
+        if data["runs"][:len(old["runs"])] != old["runs"]:
+            raise ValueError(f"Từ chối ghi {path}: danh sách runs cũ bị thay đổi")
+    write_json(path, data)
+    return path
+
+
+def legacy_runs(layout: DataLayout, page: int, work_id: str,
+                writing_systems: tuple[str, ...] = WRITING_SYSTEMS) -> list[dict]:
+    """Run trong raw/NNNN.json (unified) và raw/<chi_tra|vie>/page_NNNN.json (chế độ hệ chữ cũ).
+
+    Chỉ đọc. Mỗi run được gắn `_source` (đường dẫn tương đối) để ghi provenance; khoá này
+    không bao giờ được ghi ngược lại vào file thô."""
+    out: list[dict] = []
+    path = unified_raw_path(layout, page)
+    if path.exists():
+        out += [{**r, "_source": layout.rel(path)} for r in load_unified_page(layout, page, work_id)["runs"]]
+    for ws in writing_systems:
+        path = raw_path(layout, ws, page)
+        if path.exists():
+            out += [{**r, "_source": layout.rel(path)} for r in load_page(layout, ws, page, work_id)["runs"]]
+    return out
+
+
+def page_runs(layout: DataLayout, engine: str, page: int, work_id: str,
+              writing_systems: tuple[str, ...] = WRITING_SYSTEMS) -> list[dict]:
+    """Mọi run đọc được cho một trang: file cũ trước, kho của engine sau (run mới nhất ở cuối).
+
+    `writing_systems` giới hạn kho hệ chữ cũ được đọc (vd luồng vie không lấy run của raw/chi_tra)."""
+    path = engine_raw_path(layout, engine, page)
+    own = load_engine_page(layout, engine, page, work_id)["runs"]
+    return legacy_runs(layout, page, work_id, writing_systems) + [{**r, "_source": layout.rel(path)} for r in own]
+
+
+def available_pages(layout: DataLayout, engines: list[str] | tuple[str, ...] = ()) -> list[int]:
+    """Số trang có ít nhất một file OCR thô (unified, kho engine hoặc kho hệ chữ cũ)."""
+    import re as _re
+    pages: set[int] = set()
+    dirs = [layout.ocr_raw_unified_dir, *(layout.ocr_raw_engine_dir(e) for e in engines),
+            *(layout.ocr_raw_root / ws for ws in WRITING_SYSTEMS)]
+    for folder in dirs:
+        if not folder.is_dir():
+            continue
+        for entry in folder.iterdir():
+            match = _re.fullmatch(r"(?:page_)?(\d{4})\.json", entry.name)
+            if entry.is_file() and match:
+                pages.add(int(match[1]))
+    return sorted(pages)

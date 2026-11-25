@@ -48,8 +48,11 @@ log = logging.getLogger("pipeline")
 
 # python -m src.pipeline --config configs/CPO_18.json --force
 
-STEPS = ("extract", "ocr", "segment", "clean", "sentence", "validate", "align", "export")
+# "layers" (JSON thô -> han.xml/vie.xml) chỉ được lên kế hoạch khi segmentation.ocr_streams = "han_vie".
+# OCR paddlevl cho luồng han chạy riêng trong .venv-paddle (python -m src.ocr.ocr --layer han ...).
+STEPS = ("extract", "ocr", "layers", "segment", "clean", "sentence", "validate", "align", "export")
 MODULES = {"extract": "src.extraction.pdf_extraction", "ocr": "src.ocr.ocr",
+           "layers": "src.ocr.build_layers",
            "segment": "src.segmentation.pipeline", "clean": "src.cleaning.pipeline",
            "sentence": "src.segmentation.sentences", "validate": "src.validation.validate",
            "align": "src.alignment.align", "export": "src.alignment.export"}
@@ -60,9 +63,19 @@ def uses_writing_system_config(cfg: dict) -> bool:
     return "ocr" in cfg or "segmentation" in cfg
 
 
+# Khoá của khối 'ocr' KHÔNG thuộc chế độ unified/hệ chữ: ocr.streams = cấu hình OCR hai luồng han/vie
+# (src/ocr/work_config.py), không ảnh hưởng bước 'ocr' của pipeline này.
+OCR_STREAM_KEYS = ("streams",)
+
+
+def ocr_block(cfg: dict) -> dict:
+    """Khối 'ocr' bỏ các khoá của OCR hai luồng."""
+    return {k: v for k, v in (cfg.get("ocr") or {}).items() if k not in OCR_STREAM_KEYS}
+
+
 def is_unified_ocr_config(cfg: dict) -> bool:
     """Config OCR kiểu mới unified (single-stream): ocr có 'engine' thay vì các hệ chữ 'chi_tra'/'vie'."""
-    ocr = cfg.get("ocr", {})
+    ocr = ocr_block(cfg)
     if not ocr:
         return False
     if "engine" in ocr or "engines" in ocr:
@@ -79,12 +92,12 @@ def validate_config(cfg: dict) -> None:
         parse_pages(str(common["pages"]))
 
     if is_unified_ocr_config(cfg):
-        ocr = cfg.get("ocr", {})
+        ocr = ocr_block(cfg)
         engine = ocr.get("engine") or ocr.get("engines")
         if not engine:
             raise ValueError("ocr.engine là bắt buộc trong chế độ unified")
     else:
-        for writing_system in cfg.get("ocr", {}):
+        for writing_system in ocr_block(cfg):
             if writing_system not in raw_store.WRITING_SYSTEMS:
                 raise ValueError(f"ocr.{writing_system}: hệ chữ phải thuộc {raw_store.WRITING_SYSTEMS}")
 
@@ -260,7 +273,7 @@ def _new_plan(cfg: dict, steps: list[str], layers: list[str] | None, pairs: list
         plan.append(("extract", argv))
 
     if "ocr" in steps:
-        ocr_cfgs = cfg.get("ocr", {})
+        ocr_cfgs = ocr_block(cfg)
         if not ocr_cfgs:
             raise ValueError("Config kiểu mới cần khối 'ocr'")
         images = f"{root}/{work}/02_extraction/pages"
@@ -291,6 +304,12 @@ def _new_plan(cfg: dict, steps: list[str], layers: list[str] | None, pairs: list
                 _opt(argv, "--keep", oc.get("keep"))
                 argv += (["--force"] if force else []) + list(extra.get("ocr", []))
                 plan.append(("ocr", argv))
+
+    if "layers" in steps and cfg.get("segmentation", {}).get("ocr_streams"):
+        argv = [*base] + list(extra.get("layers", []))
+        if force:
+            argv.append("--force")
+        plan.append(("layers", argv))
 
     if "segment" in steps:
         if not config_path:

@@ -68,7 +68,7 @@ def test_writing_system_ocr_stores_raw_and_reuses_cache(tmp_path):
     assert len(list(layout.ocr_manifest_dir.glob("*.json"))) == 2
 
     xml_path = layout.ocr_raw_xml_path("chi_tra")
-    assert xml_path.name == "han.xml" and xml_path.exists()
+    assert xml_path.name == "chi_tra.xml" and xml_path.exists()
     root = read_root(xml_path)
     assert "DOCUMENT_ID" not in xml_path.read_text(encoding="utf-8")
     ocr_el = root.find(".//OCR")

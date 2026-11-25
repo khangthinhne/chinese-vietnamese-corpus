@@ -31,6 +31,7 @@ from src.segmentation.documents import (load_unified_stream, load_writing_system
                                         segment_documents_unified)
 from src.segmentation.layers import assign_document, assign_document_unified
 from src.segmentation.refactor import run_refactor
+from src.segmentation import streams as ocr_streams
 
 log = logging.getLogger("segmentation")
 
@@ -50,6 +51,9 @@ def refactor_enabled(seg: dict) -> bool:
 def create_parser():
     p = base_parser("Phân đoạn tài liệu/lớp từ kho OCR thô (03_ocr) -> 04_segmentation",
                     layer_required=False)
+    p.add_argument("--ocr-streams", choices=[ocr_streams.MODE],
+                   help="han_vie: lớp han từ 03_ocr/ocr_raw/han.xml (paddlevl), am/nghia/tho từ vie.xml (qwen). "
+                        "Mặc định lấy segmentation.ocr_streams trong config; không có thì dùng chế độ cũ")
     return p
 
 
@@ -80,7 +84,13 @@ def run(args) -> None:
     layout = DataLayout(Path(args.data_root), args.work_id)
     seg_dir = layout.segmentation_dir
     layer_cfg = {**DEFAULT_LAYERS, **seg.get("layers", {})}
-    is_unified = (layout.ocr_unified_xml_path.exists() or
+    streams_mode = getattr(args, "ocr_streams", None) or seg.get("ocr_streams")
+    if streams_mode not in (None, ocr_streams.MODE):
+        raise ValueError(f"segmentation.ocr_streams chỉ nhận '{ocr_streams.MODE}', nhận {streams_mode!r}")
+    if streams_mode and refactor_enabled(seg):
+        raise ValueError("ocr_streams=han_vie chưa hỗ trợ cùng các khoá refactor "
+                         f"({', '.join(k for k in REFACTOR_KEYS if k in seg)})")
+    is_unified = bool(streams_mode) or (layout.ocr_unified_xml_path.exists() or
                   raw_store.unified_manifest_path(layout).exists() or
                   (cfg.get("ocr", {}).get("engine") is not None and not any(k in raw_store.WRITING_SYSTEMS for k in cfg.get("ocr", {}))))
     use_refactor = is_unified and refactor_enabled(seg)
@@ -102,7 +112,10 @@ def run(args) -> None:
                *(seg_dir / f"{name}.metadata.xml" for name in layer_cfg),
                *refactor_targets]
 
-    if is_unified:
+    if streams_mode:
+        inputs = [p for p in (layout.ocr_layer_xml_path("han"), layout.ocr_layer_xml_path("vie"))
+                  if p.exists()]
+    elif is_unified:
         inputs = [p for p in (layout.ocr_unified_xml_path, raw_store.unified_manifest_path(layout))
                   if p.exists()]
     else:
@@ -117,7 +130,28 @@ def run(args) -> None:
         raise ValueError("Chưa có 03_ocr/ocr_raw/*.xml hoặc manifest; chạy ocr trước")
 
     refactor_result = None
-    if use_refactor:
+    stream_info: dict = {}
+    if streams_mode:
+        han_lines = ocr_streams.load_stream(layout, "han", pages)
+        vie_lines = ocr_streams.load_stream(layout, "vie", pages)
+        merged = ocr_streams.merge_streams(han_lines, vie_lines)
+        if not merged:
+            raise ValueError("han.xml/vie.xml không có dòng nào trong phạm vi trang")
+        coverage = ocr_streams.coverage_review(args.work_id, han_lines, vie_lines, pages)
+        allowed = ocr_streams.allowed_document_starts(
+            merged, min_block_lines=int(seg.get("document", {}).get("min_han_block_lines",
+                                                                   ocr_streams.MIN_HAN_BLOCK_LINES)))
+        is_header = ocr_streams.header_predicate(merged)
+        docs, review = segment_documents_unified(args.work_id, merged,
+                                                 ocr_streams.document_config(seg.get("document", {})),
+                                                 pages, allowed_starts=allowed)
+        review = coverage + review
+        sources_used = ["han", "vie"]
+        stream_info = {"mode": streams_mode, "lines": ocr_streams.stream_stats(merged),
+                       "han_pages": sorted({ln.page for ln in han_lines}),
+                       "vie_pages": sorted({ln.page for ln in vie_lines}),
+                       "dropped_cross_stream": {}}
+    elif use_refactor:
         unified_lines = load_unified_stream(layout, pages)
         if not unified_lines:
             raise ValueError("Chưa có dòng OCR thô unified; chạy ocr --unified trước")
@@ -155,7 +189,19 @@ def run(args) -> None:
         headings = []
         doc_rows = []
         for doc in docs:
-            if is_unified:
+            if streams_mode:
+                implicit = seg.get("implicit_after_han", ocr_streams.IMPLICIT_AFTER_HAN)
+                assigned = assign_document_unified(args.work_id, doc, layer_cfg, meta_cfg,
+                                                   keep_line=ocr_streams.keep_line,
+                                                   dropped=stream_info["dropped_cross_stream"],
+                                                   implicit_next={"han": implicit} if implicit else None,
+                                                   is_header=is_header,
+                                                   title_next=seg.get("implicit_title_next",
+                                                                      ocr_streams.IMPLICIT_TITLE_NEXT),
+                                                   notes_after_attribution=set(seg.get(
+                                                       "notes_after_attribution",
+                                                       ocr_streams.NOTES_AFTER_ATTRIBUTION)))
+            elif is_unified:
                 assigned = assign_document_unified(args.work_id, doc, layer_cfg, meta_cfg)
             else:
                 assigned = assign_document(args.work_id, doc, layer_cfg, meta_cfg)
@@ -172,6 +218,17 @@ def run(args) -> None:
                              "pages": doc.pages, "heading": doc.heading,
                              "layers": {k: len(v) for k, v in assigned.lines.items()},
                              "status": "ok"})
+
+    if streams_mode:
+        review.extend(ocr_streams.pairing_review(args.work_id, doc_rows))
+        outside = ocr_streams.document_page_check(layer_rows, doc_rows)
+        if outside:
+            log.warning("%d dòng lớp han nằm ngoài khoảng trang của tài liệu: %s", len(outside),
+                        ", ".join(outside[:10]))
+        stream_info["han_rows_outside_document_pages"] = outside
+        if stream_info["dropped_cross_stream"]:
+            log.info("Bỏ dòng khác luồng sau khi gán lớp (vd chữ Hán trong khảo dị): %s",
+                     stream_info["dropped_cross_stream"])
 
     layout.ensure(seg_dir, layout.segmentation_layers)
     serialization.write_documents(seg_dir / "documents.xml", args.work_id, doc_rows)
@@ -225,6 +282,7 @@ def run(args) -> None:
         "lines": {name: len(rows) for name, rows in layer_rows.items()},
         "headings": len(headings), "review_required": len(review),
         "sources": sources_used,
+        **({"ocr_streams": stream_info} if stream_info else {}),
         **({"refactor": refactor_result.stats} if refactor_result is not None else {})})
     log.info("Phân đoạn %d tài liệu, %d dòng, %d review -> %s", len(docs),
              sum(len(v) for v in layer_rows.values()), len(review), seg_dir)

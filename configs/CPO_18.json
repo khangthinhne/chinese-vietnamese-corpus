@@ -9,6 +9,12 @@
     "dpi": 300
   },
   "ocr": {
+    "streams": {
+      "pages": "205-212",
+      "paddlevl_orientation": "horizontal",
+      "engines": {"han": "paddlevl", "vie": "qwen"},
+      "check": {"qwen_low_conf": 60}
+    },
     "chi_tra": {
       "engines": "qwen",
       "select": "first",

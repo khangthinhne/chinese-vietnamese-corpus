@@ -26,6 +26,7 @@ import json
 import logging
 import re
 import sys
+from collections import Counter
 from dataclasses import dataclass, field
 from pathlib import Path
 
@@ -56,7 +57,7 @@ log = logging.getLogger("sentence_segmentation")
 @dataclass
 class SentenceConfig:
     layer: str = "han"
-    split: str = "punct"                 # "punct" | "line"
+    split: str = "punct"                 # "punct" | "line" | "auto" (auto chỉ có nghĩa với lớp han)
     split_colon: bool = False
     abbrev: set[str] = field(default_factory=lambda: set(VI_ABBREV))
     max_han_len: int = 200
@@ -160,16 +161,71 @@ def _document_id(line_id: str) -> str:
     return parts[0] if len(parts) == 3 else line_id
 
 
+# Dấu kết câu dùng để quyết định chế độ tách của --split auto (lớp han).
+AUTO_HAN_TERMINATORS = "。！？；"
+AUTO_LINES_PER_TERMINATOR = 4            # < 1 dấu kết câu mỗi 4 dòng -> thơ không chấm câu -> tách theo dòng
+HAN_AM_MISMATCH = 0.30                   # cảnh báo khi số câu han/am của một tài liệu lệch > 30%
+
+
+AM_VERSE_MAX_SYLLABLES = 12            # dòng phiên âm thơ: <= 12 âm tiết
+AM_VERSE_SHARE = 0.75                    # >= 75% dòng của tài liệu có dạng câu thơ -> tách theo dòng
+
+
+def default_split(layer: str) -> str:
+    return {"han": "auto", "am": "auto", "tho": "line"}.get(layer, "punct")
+
+
+def choose_han_split(lines: list[RawLine]) -> str:
+    """'line' nếu tài liệu có < 1 dấu kết câu (。！？；) mỗi 4 dòng, ngược lại 'punct'.
+
+    Thơ Hán in không chấm câu: tách theo dấu câu sẽ gộp cả bài thành một câu, trong khi phiên âm
+    được tách theo từng câu thơ -> dóng han-am hỏng. Văn xuôi có chấm câu thì tách theo dấu câu."""
+    if not lines:
+        return "punct"
+    terminators = sum(ln.text.count(c) for ln in lines for c in AUTO_HAN_TERMINATORS)
+    return "line" if terminators * AUTO_LINES_PER_TERMINATOR < len(lines) else "punct"
+
+
+def choose_am_split(lines: list[RawLine]) -> str:
+    """'line' nếu tài liệu phiên âm là văn vần: >= 75% dòng ngắn (<= 12 âm tiết) và kết thúc bằng dấu câu.
+
+    Phiên âm thơ có sách đặt dấu phẩy sau câu lẻ, dấu chấm sau câu chẵn (CPO_20): tách theo dấu câu ra từng CẶP
+    câu thơ, trong khi chữ Hán (không chấm câu) tách theo dòng -> số câu lệch đúng 2:1. Văn xuôi (CPO_18) giữ
+    'punct'. Dòng tiêu đề viết hoa không tính."""
+    body = [ln.text.strip() for ln in lines if ln.text.strip() and not ln.text.strip().isupper()]
+    if not body:
+        return "punct"
+    verse = sum(1 for t in body if len(re.findall(r"[^\W\d_]+", t)) <= AM_VERSE_MAX_SYLLABLES
+                and t[-1] in ",.;:!?")
+    return "line" if verse >= AM_VERSE_SHARE * len(body) else "punct"
+
+
+def sentence_count_mismatches(han: dict[str, int], am: dict[str, int],
+                              threshold: float = HAN_AM_MISMATCH) -> list[tuple[str, int, int]]:
+    """[(document_id, số câu han, số câu am)] cho tài liệu có cả hai lớp và lệch > threshold
+    (|han - am| / max(han, am))."""
+    out = []
+    for doc in sorted(set(han) & set(am)):
+        h, a = han[doc], am[doc]
+        if max(h, a) and abs(h - a) / max(h, a) > threshold:
+            out.append((doc, h, a))
+    return out
+
+
 def make_sentences(work_id: str, layer: str, lines: list[RawLine],
-                   cfg: SentenceConfig | CleanConfig
+                   cfg: SentenceConfig | CleanConfig,
+                   decisions: dict[str, str] | None = None,
                    ) -> tuple[list[Sentence], list[tuple[str, int, str, str]]]:
     """Sinh các câu Sentence độc lập từ danh sách dòng/segment.
-    
+
+    `decisions` (nếu truyền vào) nhận chế độ tách thực tế theo document_id khi split='auto'.
     Trả về (sentences, dropped_rows).
     """
     dropped: list[tuple[str, int, str, str]] = []
     sentences: list[Sentence] = []
-    split_mode = getattr(cfg, "split", "line" if layer == "tho" else "punct")
+    split_mode = getattr(cfg, "split", None) or default_split(layer)
+    if split_mode == "auto" and layer not in ("han", "am"):
+        split_mode = "punct"                 # auto chỉ quyết định cho chữ Hán và phiên âm
     max_len = 200 if layer == "han" else 600
 
     def emit(text: str, idxs: list[int]) -> None:
@@ -249,6 +305,14 @@ def make_sentences(work_id: str, layer: str, lines: list[RawLine],
 
     for start, end in runs:
         group = lines[start:end]
+        if split_mode == "auto":
+            mode = choose_han_split(group) if layer == "han" else choose_am_split(group)
+            if decisions is not None:
+                decisions[_document_id(group[0].id)] = mode
+            if mode == "line":
+                for k in range(start, end):
+                    emit(lines[k].text, [k])
+                continue
         text, owner = build_stream(group, layer)
         spans = split_han(text) if layer == "han" else split_vi(text, cfg)
         for a, b in spans:
@@ -296,10 +360,27 @@ def read_segment_input(layout: DataLayout, layer: str) -> list[RawLine]:
     )
 
 
+def han_am_mismatches(layout: DataLayout, layer: str,
+                      sentences: list[Sentence]) -> list[tuple[str, int, int]]:
+    """So số câu han/am theo tài liệu khi vừa tách xong một trong hai lớp và lớp kia đã có."""
+    if layer not in ("han", "am"):
+        return []
+    other = "am" if layer == "han" else "han"
+    path = layout.segmentation_sentence(other)
+    if not path.exists():
+        return []
+    mine = Counter(s.document_id for s in sentences)
+    theirs = Counter(r.get("document_id") or "" for r in serialization.read_sentences(path))
+    han, am = (mine, theirs) if layer == "han" else (theirs, mine)
+    return sentence_count_mismatches(dict(han), dict(am))
+
+
 def create_parser():
     p = base_parser("Phân đoạn cấp câu độc lập -> 04_segmentation/sentences/<layer>.xml")
-    p.add_argument("--split", choices=["punct", "line"],
-                   help="Mặc định: line cho tho, punct cho lớp khác")
+    p.add_argument("--split", choices=["auto", "punct", "line"],
+                   help="Mặc định: auto cho han (theo từng tài liệu: < 1 dấu 。！？； mỗi 4 dòng thì tách "
+                        "theo dòng, ngược lại theo dấu câu), auto cho am (văn vần: >= 75% dòng <= 12 âm tiết có dấu "
+                        "câu cuối dòng thì tách theo dòng), line cho tho, punct cho lớp khác")
     p.add_argument("--split-colon", action="store_true",
                    help="Coi ':' là ranh giới câu (Việt)")
     p.add_argument("--abbrev", help="Viết tắt Việt bổ sung, phân cách dấu phẩy")
@@ -315,7 +396,7 @@ def run(args) -> Path:
 
     cfg = SentenceConfig(
         layer=layer,
-        split=args.split or ("line" if layer == "tho" else "punct"),
+        split=args.split or default_split(layer),
         split_colon=getattr(args, "split_colon", False),
         abbrev=set(VI_ABBREV) | {a.strip().lower() for a in (getattr(args, "abbrev", "") or "").split(",") if a.strip()},
     )
@@ -329,7 +410,12 @@ def run(args) -> Path:
     deps.check_fresh(layout, f"sentence:{layer}", inputs, [out_xml], args.force,
                      f"{out_xml} đã tồn tại; dùng --force để chạy lại")
 
-    sentences, dropped = make_sentences(args.work_id, layer, raw_lines, cfg)
+    decisions: dict[str, str] = {}
+    sentences, dropped = make_sentences(args.work_id, layer, raw_lines, cfg, decisions)
+    if decisions:
+        modes = Counter(decisions.values())
+        log.info("[%s] split=auto: %d tài liệu tách theo dòng, %d theo dấu câu", layer,
+                 modes.get("line", 0), modes.get("punct", 0))
 
     # Ghi bản ghi câu vào 04_segmentation/sentences/<layer>.xml
     serialization.write_sentences(out_xml, args.work_id, layer, [
@@ -363,6 +449,14 @@ def run(args) -> Path:
         "long": sum("long" in s.flags for s in sentences),
         "dropped": len(dropped) + len(dropped_clean),
     }
+    if decisions:
+        stats["split_auto"] = dict(Counter(decisions.values()))
+    mismatches = han_am_mismatches(layout, layer, sentences)
+    for doc, h, a in mismatches:
+        log.warning("[%s] Tài liệu %s: số câu han=%d, am=%d lệch > %d%%; kiểm tra tách câu trước khi dóng",
+                    layer, doc or "<trống>", h, a, round(HAN_AM_MISMATCH * 100))
+    if layer in ("han", "am"):
+        stats["han_am_mismatch_documents"] = [d for d, _, _ in mismatches]
     MetadataStore(layout).update(f"sentence_{layer}", {
         "output": layout.rel(out_xml),
         "cleaned_output": layout.rel(layout.cleaning_root / f"{layer}.xml"),

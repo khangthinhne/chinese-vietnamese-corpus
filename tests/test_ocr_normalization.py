@@ -36,9 +36,9 @@ from src.ocr.normalization.normalizer import (
 # ============================================================================
 
 def test_active_engines_registry():
-    """Verify registry contains exactly the three active engines without live API calls."""
-    active_keys = sorted(ENGINES.keys())
-    assert active_keys == ["kimhannom", "qwen", "tesseract"]
+    """Verify registry contains exactly the four active engines without live API calls."""
+    active_keys = sorted(k for k in ENGINES.keys() if not k.startswith("fake"))
+    assert active_keys == ["kimhannom", "paddlevl", "qwen", "tesseract"]
     assert issubclass(ENGINES["kimhannom"], OcrEngine)
     assert issubclass(ENGINES["qwen"], OcrEngine)
     assert issubclass(ENGINES["tesseract"], OcrEngine)

@@ -1,0 +1,245 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_20",
+  "page": 134,
+  "runs": [
+    {
+      "key": "fb3c9292d32eb5614e5e583c7e8313ec28fadb1ea2b7476c9aa5e5af96cbe00e",
+      "parameters": {
+        "image_sha256": "53e919b6a5c4b7e9ccf1bf5c83cece565d576bd087ea1669b62b7bb607505efa",
+        "engine": {
+          "name": "qwen",
+          "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "model_revision": "main",
+          "transformers_version": "4.57.6",
+          "torch_version": "2.5.1+cu121",
+          "cuda_version": "12.1",
+          "bitsandbytes_version": "0.50.2",
+          "quantization": {
+            "load_in_4bit": true,
+            "quant_type": "nf4",
+            "double_quant": true,
+            "compute_dtype": "float16"
+          },
+          "mode": "all",
+          "min_pixels": 50176,
+          "max_pixels": 802816,
+          "band_inches": 2.0,
+          "max_new_tokens": 768,
+          "repetition_penalty": 1.05,
+          "adapter_version": 3,
+          "prompt_version": 3,
+          "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74"
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-24T06:21:02+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_134.png",
+      "image_size": [
+        1840,
+        2803
+      ],
+      "crop_box": [
+        0,
+        0,
+        1840,
+        2803
+      ],
+      "lines": [
+        {
+          "text": "Rày nhân:",
+          "bbox": [
+            204,
+            79,
+            1763,
+            184
+          ],
+          "confidence": 86.02
+        },
+        {
+          "text": "Hầu cách linh dư. 1 Kính bày điện lễ.",
+          "bbox": [
+            204,
+            184,
+            1763,
+            289
+          ],
+          "confidence": 86.02
+        },
+        {
+          "text": "Trông đóa bạch văn 2 thăm thâm, tình nghĩa xưa lìa dứt vì đâu?",
+          "bbox": [
+            204,
+            289,
+            1763,
+            395
+          ],
+          "confidence": 86.02
+        },
+        {
+          "text": "Dáng tuần hoàng thủy 3 vời vời, nghi văn ấy thấu soi chăng nhẽ?",
+          "bbox": [
+            204,
+            395,
+            1763,
+            500
+          ],
+          "confidence": 86.02
+        },
+        {
+          "text": "Hồi ôi! Cảm thay!",
+          "bbox": [
+            204,
+            500,
+            1763,
+            605
+          ],
+          "confidence": 86.02
+        },
+        {
+          "text": "Trích Dụ Am văn tập, quyển VII",
+          "bbox": [
+            1047,
+            597,
+            1763,
+            1175
+          ],
+          "confidence": 98.14
+        },
+        {
+          "text": ".",
+          "bbox": [
+            710,
+            1167,
+            1763,
+            1871
+          ],
+          "confidence": 71.85
+        },
+        {
+          "text": "1. Linh du: Chiếc xe chở linh cữu. Ý trong bài nói: Nay sắp sửa xa cách linh cữu.",
+          "bbox": [
+            209,
+            1863,
+            1763,
+            2094
+          ],
+          "confidence": 89.26
+        },
+        {
+          "text": "2. Đóa bạch vân: Đóa mây trắng.",
+          "bbox": [
+            209,
+            2094,
+            1763,
+            2325
+          ],
+          "confidence": 89.26
+        },
+        {
+          "text": "3. Hoàng thủy: Tả truyện chép \"Gián mạo, hoàng thủy khả tiến vu quý thần\" (Rau khe nước suối cũng có thể tiến dâng quý thần). Ý nói thực dâng cúng xuyến xào, nhưng lòng thành kính.",
+          "bbox": [
+            209,
+            2325,
+            1763,
+            2556
+          ],
+          "confidence": 89.26
+        }
+      ],
+      "raw": {
+        "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+        "model_revision": "main",
+        "mode": "all",
+        "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74",
+        "dpi": 300,
+        "image_size": [
+          1840,
+          2803
+        ],
+        "band_target_height": 600,
+        "bbox_granularity": "band_even_split",
+        "max_new_tokens": 768,
+        "max_pixels": 802816,
+        "inference_seconds": 15.926,
+        "bands": [
+          {
+            "band": 1,
+            "y0": 83,
+            "y1": 601,
+            "ink_box": [
+              204,
+              79,
+              1763,
+              605
+            ],
+            "generated_text": "Rày nhân:\nHầu cách linh dư. 1 Kính bày điện lễ.\nTrông đóa bạch văn 2 thăm thâm, tình nghĩa xưa lìa dứt vì đâu?\nDáng tuần hoàng thủy 3 vời vời, nghi văn ấy thấu soi chăng nhẽ?\nHồi ôi! Cảm thay!",
+            "n_lines": 5,
+            "tokens": 77,
+            "seconds": 5.517,
+            "confidence": 86.02,
+            "flags": []
+          },
+          {
+            "band": 2,
+            "y0": 601,
+            "y1": 1171,
+            "ink_box": [
+              1047,
+              597,
+              1763,
+              1175
+            ],
+            "generated_text": "Trích Dụ Am văn tập, quyển VII",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.517,
+            "confidence": 98.14,
+            "flags": []
+          },
+          {
+            "band": 3,
+            "y0": 1171,
+            "y1": 1867,
+            "ink_box": [
+              710,
+              1167,
+              1763,
+              1871
+            ],
+            "generated_text": ".",
+            "n_lines": 1,
+            "tokens": 2,
+            "seconds": 1.768,
+            "confidence": 71.85,
+            "flags": []
+          },
+          {
+            "band": 4,
+            "y0": 1867,
+            "y1": 2552,
+            "ink_box": [
+              209,
+              1863,
+              1763,
+              2556
+            ],
+            "generated_text": "1. Linh du: Chiếc xe chở linh cữu. Ý trong bài nói: Nay sắp sửa xa cách linh cữu.\n2. Đóa bạch vân: Đóa mây trắng.\n3. Hoàng thủy: Tả truyện chép \"Gián mạo, hoàng thủy khả tiến vu quý thần\" (Rau khe nước suối cũng có thể tiến dâng quý thần). Ý nói thực dâng cúng xuyến xào, nhưng lòng thành kính.",
+            "n_lines": 3,
+            "tokens": 110,
+            "seconds": 7.113,
+            "confidence": 89.26,
+            "flags": []
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      }
+    }
+  ]
+}

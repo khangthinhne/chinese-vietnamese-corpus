@@ -1,0 +1,514 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_20",
+  "engine": "paddlevl",
+  "page": 40,
+  "runs": [
+    {
+      "key": "241fd59c60ee6a74be381368c277a4babeb9256938215b71228824452aa34104",
+      "parameters": {
+        "image_sha256": "d6af54d9a8b0aa23a68ec1598afea024790b4c2c563da9559bedea2742cf85f4",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "adapter_version": 4
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-24T18:24:37+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_040.png",
+      "image_size": [
+        1865,
+        2834
+      ],
+      "crop_box": [
+        0,
+        0,
+        1865,
+        2834
+      ],
+      "lines": [
+        {
+          "text": "秋奉國喪感述",
+          "bbox": [
+            726,
+            597,
+            1470,
+            687
+          ],
+          "confidence": 94.53
+        },
+        {
+          "text": "梦成",
+          "bbox": [
+            662,
+            766,
+            1260,
+            777
+          ],
+          "confidence": 91.42
+        },
+        {
+          "text": "炊",
+          "bbox": [
+            662,
+            777,
+            1260,
+            788
+          ],
+          "confidence": 91.42
+        },
+        {
+          "text": "臼",
+          "bbox": [
+            662,
+            788,
+            1260,
+            800
+          ],
+          "confidence": 91.42
+        },
+        {
+          "text": "未",
+          "bbox": [
+            662,
+            800,
+            1260,
+            811
+          ],
+          "confidence": 91.42
+        },
+        {
+          "text": "施",
+          "bbox": [
+            662,
+            811,
+            1260,
+            822
+          ],
+          "confidence": 91.42
+        },
+        {
+          "text": "哀",
+          "bbox": [
+            662,
+            822,
+            1260,
+            833
+          ],
+          "confidence": 91.42
+        },
+        {
+          "text": "感重遣弓失奉陪",
+          "bbox": [
+            660,
+            838,
+            1256,
+            906
+          ],
+          "confidence": 93.75
+        },
+        {
+          "text": "國計家情多糾結",
+          "bbox": [
+            660,
+            908,
+            1508,
+            980
+          ],
+          "confidence": 92.27
+        },
+        {
+          "text": "風晨月夕獨徘徊",
+          "bbox": [
+            657,
+            983,
+            1255,
+            1052
+          ],
+          "confidence": 99.76
+        },
+        {
+          "text": "塵寰泡影浮生幻",
+          "bbox": [
+            655,
+            1058,
+            1252,
+            1122
+          ],
+          "confidence": 98.85
+        },
+        {
+          "text": "海甸萍蓬旅夢催",
+          "bbox": [
+            654,
+            1129,
+            1249,
+            1195
+          ],
+          "confidence": 89.34
+        },
+        {
+          "text": "嗇遇自慚暌分誼",
+          "bbox": [
+            652,
+            1198,
+            1247,
+            1266
+          ],
+          "confidence": 87.58
+        },
+        {
+          "text": "孤蹤要向故山來",
+          "bbox": [
+            649,
+            1268,
+            1244,
+            1336
+          ],
+          "confidence": 99.58
+        },
+        {
+          "text": "鴻遷始預登綸閣",
+          "bbox": [
+            644,
+            1490,
+            1238,
+            1558
+          ],
+          "confidence": 98.59
+        },
+        {
+          "text": "龍去何堪望鼎湖",
+          "bbox": [
+            641,
+            1562,
+            1236,
+            1631
+          ],
+          "confidence": 99.64
+        },
+        {
+          "text": "遭際機緣難再得",
+          "bbox": [
+            640,
+            1636,
+            1233,
+            1701
+          ],
+          "confidence": 94.53
+        },
+        {
+          "text": "從今羈旅鴈臣孤",
+          "bbox": [
+            638,
+            1706,
+            1231,
+            1772
+          ],
+          "confidence": 98.15
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          1865,
+          2834
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 17.571,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              726,
+              597,
+              1470,
+              687
+            ],
+            "generated_text": "秋奉國喪感述",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 1.08,
+            "confidence": 94.53,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              662,
+              766,
+              1260,
+              833
+            ],
+            "generated_text": "梦成\n炊\n臼\n未\n施\n哀",
+            "n_lines": 6,
+            "tokens": 17,
+            "seconds": 1.859,
+            "confidence": 91.42,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              660,
+              838,
+              1256,
+              906
+            ],
+            "generated_text": "感重遣弓失奉陪",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 1.145,
+            "confidence": 93.75,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              660,
+              908,
+              1508,
+              980
+            ],
+            "generated_text": "國計家情多糾結",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 1.362,
+            "confidence": 92.27,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              657,
+              983,
+              1255,
+              1052
+            ],
+            "generated_text": "風晨月夕獨徘徊",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.723,
+            "confidence": 99.76,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              655,
+              1058,
+              1252,
+              1122
+            ],
+            "generated_text": "塵寰泡影浮生幻",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.361,
+            "confidence": 98.85,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              654,
+              1129,
+              1249,
+              1195
+            ],
+            "generated_text": "海甸萍蓬旅夢催",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 1.244,
+            "confidence": 89.34,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              652,
+              1198,
+              1247,
+              1266
+            ],
+            "generated_text": "嗇遇自慚暌分誼",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.902,
+            "confidence": 87.58,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              649,
+              1268,
+              1244,
+              1336
+            ],
+            "generated_text": "孤蹤要向故山來",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 1.289,
+            "confidence": 99.58,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              644,
+              1490,
+              1238,
+              1558
+            ],
+            "generated_text": "鴻遷始預登綸閣",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.95,
+            "confidence": 98.59,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              641,
+              1562,
+              1236,
+              1631
+            ],
+            "generated_text": "龍去何堪望鼎湖",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.963,
+            "confidence": 99.64,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              640,
+              1636,
+              1233,
+              1701
+            ],
+            "generated_text": "遭際機緣難再得",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 1.159,
+            "confidence": 94.53,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              638,
+              1706,
+              1231,
+              1772
+            ],
+            "generated_text": "從今羈旅鴈臣孤",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.532,
+            "confidence": 98.15,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              916,
+              1364,
+              949,
+              1373
+            ],
+            "ink": 144
+          },
+          {
+            "box": [
+              854,
+              1434,
+              1036,
+              1448
+            ],
+            "ink": 286
+          },
+          {
+            "box": [
+              854,
+              1450,
+              1036,
+              1466
+            ],
+            "ink": 339
+          },
+          {
+            "box": [
+              176,
+              2497,
+              221,
+              2507
+            ],
+            "ink": 206
+          },
+          {
+            "box": [
+              170,
+              2504,
+              226,
+              2527
+            ],
+            "ink": 524
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      }
+    }
+  ]
+}

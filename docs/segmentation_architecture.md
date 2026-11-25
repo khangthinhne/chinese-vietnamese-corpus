@@ -125,6 +125,41 @@ Mỗi đoạn văn bản mang định danh truy vết trực tiếp về dòng O
 </root>
 ```
 
+Chế độ tách câu (`--split`, mặc định theo lớp):
+- `han`: `auto`. Theo từng `DOCUMENT_ID`: tài liệu có < 1 dấu kết câu (`。！？；`) mỗi 4 dòng (thơ không
+  chấm câu) thì mỗi dòng là một câu; ngược lại tách theo dấu câu. Không có `auto`, thơ Hán bị gộp cả bài
+  thành một câu trong khi phiên âm tách theo câu thơ, nên dóng `han-am` hỏng.
+- `tho`: `line`; các lớp khác: `punct`. `punct`/`line` vẫn chọn tay được cho mọi lớp.
+- Khi tách xong `han` hoặc `am` mà lớp kia đã có, tài liệu có số câu han/am lệch > 30% bị ghi cảnh báo
+  (và vào `stats.han_am_mismatch_documents` trong metadata).
+
+Bước dóng hàng tra từ điển âm Hán-Việt: chữ KHÔNG có trong từ điển (thường là giản thể OCR đọc nhầm) được
+thử lại ở dạng phồn thể (OpenCC `s2t`, `pip install opencc`). Chỉ dùng khi tra; văn bản xuất ra không đổi.
+
+### Hai luồng han.xml / vie.xml (`segmentation.ocr_streams = "han_vie"`)
+Bật trong config (hoặc `--ocr-streams han_vie`); mặc định tắt, chế độ raw.xml và chi_tra.xml/vi.xml không đổi.
+`src/segmentation/streams.py`:
+1. Đọc `03_ocr/ocr_raw/han.xml` (paddlevl) và `vie.xml` (qwen); source_id `han.P0015.L003` / `vie.P0015.L003`.
+   Dòng Hán dùng `RAW_TEXT` (giữ "1." của tiêu đề có số) nếu dòng gốc không có chữ cái Latin.
+2. Trộn theo trang rồi theo MÉP TRÊN bbox (merge ổn định, mỗi luồng giữ thứ tự riêng). Không dùng tâm bbox:
+   Qwen gộp nhiều dòng in vào một dòng cao, tâm rơi xuống dưới tiêu đề Hán đứng sau.
+3. Ranh giới tài liệu: mỗi khối Hán >= `document.min_han_block_lines` (2) dòng đứng sau phần Việt mở tài liệu
+   (`document.start_on_han_block`, mặc định true; false = chỉ start_patterns, vẫn giới hạn ở dòng đầu khối
+   Hán). Khối Hán 1 dòng (chữ Hán trích trong chú thích) không mở tài liệu. Tiêu đề chạy (lặp >= 3 trang) bị bỏ qua.
+4. Gán lớp bằng máy trạng thái unified, thêm:
+   - lớp han chỉ nhận dòng luồng han, am/nghia/tho chỉ nhận dòng luồng vie (lọc TRƯỚC khi trích metadata);
+   - `implicit_after_han` ("am"): phần Việt ngay sau khối Hán mà không có tiêu đề mục là phiên âm;
+   - `implicit_title_next` ({"am": "nghia"}): tiêu đề viết hoa toàn bộ sau khi âm đã có dòng nội dung (có
+     chữ thường) mở nghĩa, khi OCR làm mất chữ "DỊCH NGHĨA";
+   - `notes_after_attribution` (mặc định []; CPO_20 dùng ["am"]): sau dòng nguồn "Trích ..." là chú thích.
+   Mọi chuyển lớp ngầm ghi review `implicit_layer_start`.
+5. Cảnh báo: hai luồng khác phạm vi trang, tài liệu có Hán mà không có âm (và ngược lại), dòng han nằm ngoài
+   khoảng trang của tài liệu (`metadata.json` -> `segmentation.ocr_streams`).
+
+Metadata lớp han: dòng trông như tiêu đề mà dòng kế tiếp cũng vậy và cùng số chữ Hán (4..7) là câu thơ, không
+gom vào tiêu đề (thơ không chấm câu). Tách câu `am` mặc định `auto`: văn vần (>= 75% dòng <= 12 âm tiết có dấu
+cuối dòng) tách theo dòng, văn xuôi theo dấu câu.
+
 ### 3.4. Bảng Thuộc Tính Chuẩn
 
 | Thuộc tính | Ý nghĩa | Ví dụ Single-Stream | Ví dụ Legacy Dual-Stream |

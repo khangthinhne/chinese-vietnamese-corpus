@@ -1,0 +1,783 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 19,
+  "runs": [
+    {
+      "key": "05d260474288a41aa9dedc47d052c2f1d0ea755c68d9ecc7994020d16a4db4b8",
+      "parameters": {
+        "image_sha256": "0854df57d901b65ba878f16fb76114ebe869721bbbdf45e7619c0e4483a179c3",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "adapter_version": 4
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-24T17:43:02+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_19\\02_extraction\\pages\\page_019.png",
+      "image_size": [
+        2594,
+        3217
+      ],
+      "crop_box": [
+        0,
+        0,
+        2594,
+        3217
+      ],
+      "lines": [
+        {
+          "text": "ngothinhamch1.pdf",
+          "bbox": [
+            6,
+            15,
+            297,
+            45
+          ],
+          "confidence": 98.91
+        },
+        {
+          "text": "NGÔ THI NHÂM TOÀN TẬP - TẬP III",
+          "bbox": [
+            344,
+            197,
+            1401,
+            244
+          ],
+          "confidence": 92.45
+        },
+        {
+          "text": "3. 登母子山",
+          "bbox": [
+            952,
+            291,
+            1418,
+            364
+          ],
+          "confidence": 95.12
+        },
+        {
+          "text": "旌旄曉發度穹窿",
+          "bbox": [
+            906,
+            447,
+            1470,
+            512
+          ],
+          "confidence": 99.88
+        },
+        {
+          "text": "雲物橫斜指顧中",
+          "bbox": [
+            909,
+            580,
+            1468,
+            644
+          ],
+          "confidence": 99.4
+        },
+        {
+          "text": "疊峙謾傳山母子",
+          "bbox": [
+            909,
+            712,
+            1472,
+            777
+          ],
+          "confidence": 99.92
+        },
+        {
+          "text": "迴流不辨水西東",
+          "bbox": [
+            907,
+            845,
+            1472,
+            906
+          ],
+          "confidence": 99.63
+        },
+        {
+          "text": "七州滿眼無夷地",
+          "bbox": [
+            909,
+            976,
+            1475,
+            1037
+          ],
+          "confidence": 99.6
+        },
+        {
+          "text": "萬里掀髯有谷風",
+          "bbox": [
+            912,
+            1105,
+            1474,
+            1169
+          ],
+          "confidence": 99.86
+        },
+        {
+          "text": "開鑿何年移到此",
+          "bbox": [
+            912,
+            1237,
+            1474,
+            1303
+          ],
+          "confidence": 99.6
+        },
+        {
+          "text": "欲馮夸父問愚公",
+          "bbox": [
+            906,
+            1367,
+            1543,
+            1432
+          ],
+          "confidence": 99.49
+        },
+        {
+          "text": "PHIEN AM:",
+          "bbox": [
+            347,
+            1539,
+            603,
+            1578
+          ],
+          "confidence": 98.92
+        },
+        {
+          "text": "ĐĂNG MẦU TỬ SƠN",
+          "bbox": [
+            945,
+            1614,
+            1452,
+            1666
+          ],
+          "confidence": 84.33
+        },
+        {
+          "text": "Tinh mao hiểu phát độ khung lung,",
+          "bbox": [
+            796,
+            1760,
+            1613,
+            1815
+          ],
+          "confidence": 87.85
+        },
+        {
+          "text": "Vân vật hoành tà chỉ có trung.",
+          "bbox": [
+            795,
+            1852,
+            1492,
+            1897
+          ],
+          "confidence": 92.71
+        },
+        {
+          "text": "Điệp trĩ(a) mạn truyền sơn Mẫu Tử;",
+          "bbox": [
+            791,
+            1941,
+            1593,
+            1996
+          ],
+          "confidence": 86.34
+        },
+        {
+          "text": "Hôi lưu (b) bất biện thủy tây động.",
+          "bbox": [
+            791,
+            2039,
+            1547,
+            2092
+          ],
+          "confidence": 83.99
+        },
+        {
+          "text": "Thất châu măn nhăn vô di đia;",
+          "bbox": [
+            796,
+            2134,
+            1517,
+            2179
+          ],
+          "confidence": 87.66
+        },
+        {
+          "text": "Van lý hàn (c) nhiệm hữu cốc phong.",
+          "bbox": [
+            796,
+            2228,
+            1594,
+            2274
+          ],
+          "confidence": 88.32
+        },
+        {
+          "text": "Khai tac hà niên di đáo thử,",
+          "bbox": [
+            792,
+            2325,
+            1442,
+            2371
+          ],
+          "confidence": 88.25
+        },
+        {
+          "text": "Dục bằng Khoa Phụ vấn Ngu Công.",
+          "bbox": [
+            791,
+            2421,
+            1611,
+            2475
+          ],
+          "confidence": 93.68
+        },
+        {
+          "text": "DICH NGHIA:",
+          "bbox": [
+            348,
+            2518,
+            658,
+            2557
+          ],
+          "confidence": 99.16
+        },
+        {
+          "text": "LÊN NÚI MÂU TỬ\\(^{(1)}\\)",
+          "bbox": [
+            955,
+            2597,
+            1442,
+            2648
+          ],
+          "confidence": 87.13
+        },
+        {
+          "text": "Cò sú bưới sớm lên đường, vượt vòm trời cao,",
+          "bbox": [
+            573,
+            2748,
+            1594,
+            2793
+          ],
+          "confidence": 85.44
+        },
+        {
+          "text": "Mây khói, cảnh vật sát trong tâm mất.",
+          "bbox": [
+            572,
+            2844,
+            1457,
+            2888
+          ],
+          "confidence": 88.7
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2594,
+          3217
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 10.095,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              6,
+              15,
+              297,
+              45
+            ],
+            "generated_text": "ngothinhamch1.pdf",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.316,
+            "confidence": 98.91,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              344,
+              197,
+              1401,
+              244
+            ],
+            "generated_text": "NGÔ THI NHÂM TOÀN TẬP - TẬP III",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.658,
+            "confidence": 92.45,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              348,
+              248,
+              2060,
+              262
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.146,
+            "confidence": 95.1,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              952,
+              291,
+              1418,
+              364
+            ],
+            "generated_text": "3. 登母子山",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.291,
+            "confidence": 95.12,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              906,
+              447,
+              1470,
+              512
+            ],
+            "generated_text": "旌旄曉發度穹窿",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.437,
+            "confidence": 99.88,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              909,
+              580,
+              1468,
+              644
+            ],
+            "generated_text": "雲物橫斜指顧中",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.363,
+            "confidence": 99.4,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              909,
+              712,
+              1472,
+              777
+            ],
+            "generated_text": "疊峙謾傳山母子",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.391,
+            "confidence": 99.92,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              907,
+              845,
+              1472,
+              906
+            ],
+            "generated_text": "迴流不辨水西東",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.312,
+            "confidence": 99.63,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              909,
+              976,
+              1475,
+              1037
+            ],
+            "generated_text": "七州滿眼無夷地",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.274,
+            "confidence": 99.6,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              912,
+              1105,
+              1474,
+              1169
+            ],
+            "generated_text": "萬里掀髯有谷風",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.315,
+            "confidence": 99.86,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              912,
+              1237,
+              1474,
+              1303
+            ],
+            "generated_text": "開鑿何年移到此",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.337,
+            "confidence": 99.6,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              906,
+              1367,
+              1543,
+              1432
+            ],
+            "generated_text": "欲馮夸父問愚公",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.321,
+            "confidence": 99.49,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              347,
+              1539,
+              603,
+              1578
+            ],
+            "generated_text": "PHIEN AM:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.246,
+            "confidence": 98.92,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              945,
+              1614,
+              1452,
+              1666
+            ],
+            "generated_text": "ĐĂNG MẦU TỬ SƠN",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.472,
+            "confidence": 84.33,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              796,
+              1760,
+              1613,
+              1815
+            ],
+            "generated_text": "Tinh mao hiểu phát độ khung lung,",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.355,
+            "confidence": 87.85,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              795,
+              1852,
+              1492,
+              1897
+            ],
+            "generated_text": "Vân vật hoành tà chỉ có trung.",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.392,
+            "confidence": 92.71,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              791,
+              1941,
+              1593,
+              1996
+            ],
+            "generated_text": "Điệp trĩ(a) mạn truyền sơn Mẫu Tử;",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.525,
+            "confidence": 86.34,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              791,
+              2039,
+              1547,
+              2092
+            ],
+            "generated_text": "Hôi lưu (b) bất biện thủy tây động.",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.468,
+            "confidence": 83.99,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              796,
+              2134,
+              1517,
+              2179
+            ],
+            "generated_text": "Thất châu măn nhăn vô di đia;",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.388,
+            "confidence": 87.66,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              796,
+              2228,
+              1594,
+              2274
+            ],
+            "generated_text": "Van lý hàn (c) nhiệm hữu cốc phong.",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.467,
+            "confidence": 88.32,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              792,
+              2325,
+              1442,
+              2371
+            ],
+            "generated_text": "Khai tac hà niên di đáo thử,",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.421,
+            "confidence": 88.25,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              791,
+              2421,
+              1611,
+              2475
+            ],
+            "generated_text": "Dục bằng Khoa Phụ vấn Ngu Công.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.412,
+            "confidence": 93.68,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              348,
+              2518,
+              658,
+              2557
+            ],
+            "generated_text": "DICH NGHIA:",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.255,
+            "confidence": 99.16,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              955,
+              2597,
+              1442,
+              2648
+            ],
+            "generated_text": "LÊN NÚI MÂU TỬ\\(^{(1)}\\)",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.488,
+            "confidence": 87.13,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              573,
+              2748,
+              1594,
+              2793
+            ],
+            "generated_text": "Cò sú bưới sớm lên đường, vượt vòm trời cao,",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.605,
+            "confidence": 85.44,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              572,
+              2844,
+              1457,
+              2888
+            ],
+            "generated_text": "Mây khói, cảnh vật sát trong tâm mất.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.438,
+            "confidence": 88.7,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              834,
+              2272,
+              1577,
+              2283
+            ],
+            "ink": 218
+          },
+          {
+            "box": [
+              646,
+              2884,
+              1232,
+              2893
+            ],
+            "ink": 162
+          },
+          {
+            "box": [
+              358,
+              2972,
+              414,
+              2982
+            ],
+            "ink": 202
+          },
+          {
+            "box": [
+              356,
+              3004,
+              416,
+              3015
+            ],
+            "ink": 211
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      }
+    }
+  ]
+}
