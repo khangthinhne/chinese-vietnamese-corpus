@@ -15,7 +15,9 @@ rồi câu) -> `05_cleaning/` -> `06_alignment/` -> `07_export/`.
 - Không bao giờ sửa hoặc xoá `03_ocr/raw/NNNN.json`. Bản đã sửa lưu riêng.
 - Ngoại lệ có chủ đích: hai luồng `03_ocr/ocr_raw/han.xml` (paddlevl, chỉ chữ Hán) và `vie.xml` (qwen, chỉ
   chữ Latin/Việt) + `ocr_raw_text/{han,vie}/NNNN.txt`, sinh SONG SONG với `raw.xml` (không thay thế).
-  Run mới nằm ở `03_ocr/raw/<engine>/NNNN.json`. Segmentation chưa đọc hai luồng này. Xem `docs/ocr.md` mục 7.
+  Run mới nằm ở `03_ocr/raw/<engine>/NNNN.json`. Segmentation đọc hai luồng này khi bật
+  `segmentation.ocr_streams = "han_vie"` (mặc định tắt). Xem `docs/ocr.md` mục 7 và
+  `docs/segmentation_architecture.md` mục "Hai luồng".
 - Chế độ hệ chữ cũ (`--writing-system`, CPO_18) dùng `ocr_raw/chi_tra.xml` + `vi.xml`, KHÔNG dùng `han.xml`.
 - Đường dẫn do `DataLayout` (`src/common/corpus.py`) quản lý. Đừng ghép đường dẫn bằng tay.
 
@@ -43,6 +45,8 @@ python -m src.ocr.ocr --config configs/CPO_20.json --layer han --engines paddlev
 python -m src.ocr.ocr --config configs/CPO_20.json --layer vie --engines qwen --pages 1-280       # my_nlp
 python -m src.ocr.build_layers --config configs/CPO_20.json        # JSON thô -> han.xml, vie.xml, TXT + kiểm tra
 python -m src.ocr.build_layers --config configs/CPO_20.json --report-only   # chỉ kiểm tra + bảng tổng hợp
+python -m src.segmentation.pipeline --config configs/CPO_20.json --ocr-streams han_vie   # segmentation từ han/vie.xml
+python scripts/audit_clean.py --work-id CPO_20 [--data-root ...]   # kiểm toán bước clean (đọc lại được)
 python -m src.segmentation.pipeline --config configs/CPO_19.json
 python -m src.cleaning.pipeline --work-id CPO_19 --structural-only
 python -m src.validation.validate --config configs/CPO_19.json
@@ -85,6 +89,9 @@ Quy ước bắt buộc khi sửa một engine:
 
 ## Tách lớp (segmentation)
 Máy trạng thái tuần tự theo tiêu đề mục (`PHIÊN ÂM`, `DỊCH NGHĨA`, `KHẢO DỊ`, `CHÚ THÍCH`, `DỊCH THƠ`).
+Chế độ hai luồng (`ocr_streams: han_vie`): trộn han.xml + vie.xml theo mép trên bbox; mỗi khối Hán >= 2 dòng sau
+phần Việt mở tài liệu mới; thiếu tiêu đề mục thì phần Việt ngay sau Hán là âm, tiêu đề VIẾT HOA sau thân âm mở
+nghĩa (đều ghi review `implicit_layer_start`). `src.pipeline` thêm bước `layers` (build_layers) khi bật.
 OCR hay sai tiêu đề (`KHÁO DỊ`, `DỊCH THOẠI`), nên so khớp mờ, không so chuỗi chính xác.
 Chữ Hán trong khảo dị/chú thích không có nghĩa là bắt đầu khối Hán mới. Xem `docs/segmentation_architecture.md`.
 
