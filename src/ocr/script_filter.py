@@ -82,6 +82,29 @@ def filter_han_line(text: str) -> str | None:
     return _NOT_HAN_RE.sub("", text).replace("　", "") or None   # bỏ cả khoảng trắng ý văn
 
 
+# Dòng Hán "giả": dòng tiếng Việt (khảo dị/chú thích) có trích vài chữ Hán, hoặc paddlevl đọc nhầm một dòng
+# thành 1 chữ Hán lẫn ký tự Latin (vd "J. 一", "山 [r]"). Chỉ xét chữ cái Latin, không xét số/dấu câu, nên
+# "2. 其二", "1. 與高明..." vẫn được giữ. Mặc định bảo thủ; đổi qua build_layers --han-min-cjk-share/...
+HAN_MIN_CJK_SHARE = 0.3          # chữ Hán / (chữ Hán + chữ cái Latin) tối thiểu của dòng GỐC
+HAN_MIN_CJK_WITH_LATIN = 2       # dòng có chữ cái Latin phải có ít nhất ngần này chữ Hán
+
+
+def han_reject_reason(text: str, min_cjk_share: float = HAN_MIN_CJK_SHARE,
+                      min_cjk_with_latin: int = HAN_MIN_CJK_WITH_LATIN) -> str | None:
+    """Lý do loại một dòng có chữ Hán khỏi lớp han (None = giữ). Xét trên dòng GỐC, trước khi cắt Latin."""
+    text = unicodedata.normalize("NFC", text)
+    cjk = len(CJK_IDEOGRAPH_RE.findall(text))
+    latin = sum(1 for c in text if is_latin_letter(c))
+    if not cjk or not latin:
+        return None
+    if cjk < min_cjk_with_latin:
+        return f"few_cjk_with_latin:{cjk}<{min_cjk_with_latin}"
+    share = cjk / (cjk + latin)
+    if share < min_cjk_share:
+        return f"low_cjk_share:{share:.2f}<{min_cjk_share}"
+    return None
+
+
 def _tidy_vie(text: str) -> str:
     previous = None
     while previous != text:                      # ngoặc/nháy lồng nhau: lặp đến điểm dừng
@@ -118,6 +141,7 @@ class PageFilterResult:
     kept: list[tuple[int, str]] = field(default_factory=list)
     n_src: int = 0
     cjk_removed: int = 0                         # chỉ có nghĩa với vie
+    rejected: list[tuple[int, str, str]] = field(default_factory=list)   # han: (src_line, lý do, dòng gốc)
 
     @property
     def n_kept(self) -> int:
@@ -129,11 +153,14 @@ class PageFilterResult:
 
     def stats(self) -> dict[str, int]:
         return {"n_src": self.n_src, "n_kept": self.n_kept, "n_dropped": self.n_dropped,
-                "cjk_removed": self.cjk_removed}
+                "cjk_removed": self.cjk_removed, "n_rejected": len(self.rejected)}
 
 
-def filter_page(layer: str, lines: Iterable[str]) -> PageFilterResult:
-    """Lọc toàn bộ dòng của một trang. Dòng trắng của engine vẫn được đếm trong `n_src`."""
+def filter_page(layer: str, lines: Iterable[str], *, han_min_cjk_share: float = HAN_MIN_CJK_SHARE,
+                han_min_cjk_with_latin: int = HAN_MIN_CJK_WITH_LATIN) -> PageFilterResult:
+    """Lọc toàn bộ dòng của một trang. Dòng trắng của engine vẫn được đếm trong `n_src`.
+
+    Lớp han: dòng có chữ Hán nhưng bị `han_reject_reason` loại được ghi vào `rejected` (không mất dấu)."""
     if layer not in LAYERS:
         raise ValueError(f"Lớp lọc phải là {LAYERS}, nhận {layer!r}")
     result = PageFilterResult(layer)
@@ -141,6 +168,10 @@ def filter_page(layer: str, lines: Iterable[str]) -> PageFilterResult:
         result.n_src += 1
         if layer == "han":
             kept = filter_han_line(text)
+            reason = han_reject_reason(text, han_min_cjk_share, han_min_cjk_with_latin) if kept else None
+            if reason:
+                result.rejected.append((index, reason, text))
+                kept = None
         else:
             kept, removed = filter_vie_line(text)
             result.cjk_removed += removed

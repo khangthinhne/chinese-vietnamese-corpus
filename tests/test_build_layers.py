@@ -259,3 +259,48 @@ def test_legacy_writing_system_store_read_only_by_matching_layer(tmp_path):
                                     "runs": [run]}, ensure_ascii=False), encoding="utf-8")
     assert build_layers.main(["--work-id", WORK, "--data-root", str(tmp_path), "--layers", "vie"]) == 0
     assert layout.ocr_layer_text_path("vie", 5).read_text(encoding="utf-8") == "Bài Việt\n"
+
+
+def paddle_run(units: list[list[str]], orientation: str = "horizontal") -> dict:
+    texts = [t for unit in units for t in unit]
+    run = make_run("paddlevl", texts, "p")
+    run["raw"] = {"orientation": orientation, "bands": [{"unit": i, "n_lines": len(u), "flags": []}
+                                                        for i, u in enumerate(units, 1)]}
+    return run
+
+
+def test_merge_char_split_units_only_when_every_line_is_one_char():
+    run = paddle_run([["樂歲預徵膏澤遍"], ["玄", "麻", "蛋", "副", "璽", "書", "來"], ["官廳", "亦作"]])
+    lines, merged = build_layers.merge_char_split_units(run)
+    assert [x["text"] for x in lines] == ["樂歲預徵膏澤遍", "玄麻蛋副璽書來", "官廳", "亦作"]
+    assert [x["src_line"] for x in lines] == [1, 2, 9, 10]
+    assert merged == [{"src_lines": [2, 3, 4, 5, 6, 7, 8], "text": "玄麻蛋副璽書來"}]
+    assert lines[1]["bbox"] == [0, 1, 10, 8]                     # hộp bao các dòng con
+
+
+def test_merge_skipped_for_vertical_or_inconsistent_runs():
+    assert build_layers.merge_char_split_units(paddle_run([["玄", "麻"]], "vertical"))[1] == []
+    broken = paddle_run([["玄", "麻"]])
+    broken["raw"]["bands"][0]["n_lines"] = 5                      # không khớp số dòng -> không đoán
+    assert build_layers.merge_char_split_units(broken)[1] == []
+    assert build_layers.merge_char_split_units(make_run("qwen", ["玄", "麻"], "q"))[1] == []
+
+
+def test_build_records_rejected_and_merged_lines(tmp_path):
+    layout = DataLayout(tmp_path, WORK)
+    run = paddle_run([["二諒江山境界連"], ["a. Bản A.404: Hội khê 洄溪."], ["玄", "麻", "蛋"]])
+    write_engine(layout, "paddlevl", 1, [run])
+    assert build_layers.main(["--work-id", WORK, "--data-root", str(tmp_path), "--layers", "han"]) == 0
+    han = file_element(read_root(layout.ocr_layer_xml_path("han")))
+    assert [(x.text, x.get("SRC_LINE")) for x in han.findall("PAGE/LINE")] == [("二諒江山境界連", "1"), ("玄麻蛋", "3")]
+    assert han.find("OCR/FILTER").get("HAN_MIN_CJK_SHARE") == "0.3"
+    manifest = json.loads(layout.ocr_layer_manifest_path("build", "han").read_text(encoding="utf-8"))
+    page = manifest["pages"][0]
+    assert page["rejected"] == [{"src_line": 2, "reason": "low_cjk_share:0.15<0.3", "text": "a. Bản A.404: Hội khê 洄溪."}]
+    assert page["merged"][0]["src_lines"] == [3, 4, 5]
+    assert manifest["totals"]["n_rejected"] == 1 and manifest["totals"]["n_merged_units"] == 1
+    # tắt luật bằng CLI
+    assert build_layers.main(["--work-id", WORK, "--data-root", str(tmp_path), "--layers", "han",
+                              "--han-min-cjk-share", "0", "--han-min-cjk-with-latin", "0"]) == 0
+    han = file_element(read_root(layout.ocr_layer_xml_path("han")))
+    assert len(han.findall("PAGE/LINE")) == 3

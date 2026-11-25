@@ -29,7 +29,8 @@ from src.common.corpus import DataLayout, base_parser, parse_args, parse_pages, 
 from src.common.xmlstore import add, bbox_attr, file_element, read_root, write_file_root, write_root
 from src.ocr import raw_store
 from src.ocr.raw_xml import _add_engine, _add_parameters
-from src.ocr.script_filter import LAYERS, PageFilterResult, count_cjk, filter_page, has_cjk
+from src.ocr.script_filter import (HAN_MIN_CJK_SHARE, HAN_MIN_CJK_WITH_LATIN, LAYERS, PageFilterResult,
+                                   count_cjk, filter_page, has_cjk)
 
 log = logging.getLogger(__name__)
 
@@ -98,6 +99,7 @@ class PageOut:
     reason: str
     filtered: PageFilterResult
     src_lines: list[dict] = field(default_factory=list)
+    merged: list[dict] = field(default_factory=list)     # dòng một chữ đã gộp (merge_char_split_units)
 
     @property
     def status(self) -> str:
@@ -116,10 +118,49 @@ def split_source_lines(lines: list[dict]) -> list[dict]:
     return out
 
 
-def build_page(layer: str, page: int, run: dict | None, reason: str) -> PageOut:
-    src_lines = split_source_lines(list((run or {}).get("lines") or []))
-    filtered = filter_page(layer, [x["text"] for x in src_lines])
-    return PageOut(page, run, reason, filtered, src_lines)
+def merge_char_split_units(run: dict | None) -> tuple[list[dict], list[dict]]:
+    """paddlevl chế độ ngang: mỗi đơn vị (dải) là MỘT dòng in. Đôi khi model xuất từng chữ trên một dòng
+    (vd "玄\n麻\n...\n來" cho dòng 玄麻蛋副璽書來), làm một câu thơ thành 7 "dòng" một chữ.
+
+    Chỉ gộp khi MỌI dòng của đơn vị đều đúng 1 ký tự (không đoán gì khác). Trả về (dòng, nhật ký gộp).
+    Dòng gộp giữ `src_line` của dòng đầu; bbox = hộp bao các dòng con."""
+    lines = list((run or {}).get("lines") or [])
+    raw = (run or {}).get("raw") or {}
+    units = raw.get("bands") or []
+    engine = run_engine(run or {})
+    if (engine != "paddlevl" or raw.get("orientation") != "horizontal" or not units
+            or sum(int(u.get("n_lines") or 0) for u in units) != len(lines)):
+        return [{**x, "src_line": i} for i, x in enumerate(lines, 1)], []
+    out, merged, pos = [], [], 0
+    for unit in units:
+        n = int(unit.get("n_lines") or 0)
+        group = [{**lines[pos + k], "src_line": pos + k + 1} for k in range(n)]
+        pos += n
+        texts = [str(x.get("text") or "").strip() for x in group]
+        if n >= 2 and all(len(t) == 1 for t in texts):
+            boxes = [x["bbox"] for x in group if x.get("bbox")]
+            bbox = ([min(b[0] for b in boxes), min(b[1] for b in boxes), max(b[2] for b in boxes),
+                     max(b[3] for b in boxes)] if boxes else None)
+            out.append({**group[0], "text": "".join(texts), "bbox": bbox})
+            merged.append({"src_lines": [x["src_line"] for x in group], "text": "".join(texts)})
+        else:
+            out.extend(group)
+    return out, merged
+
+
+def build_page(layer: str, page: int, run: dict | None, reason: str, *,
+               han_min_cjk_share: float = HAN_MIN_CJK_SHARE,
+               han_min_cjk_with_latin: int = HAN_MIN_CJK_WITH_LATIN) -> PageOut:
+    lines, merged = merge_char_split_units(run)
+    src_lines = []
+    for line in lines:                         # tách dòng có ký tự xuống dòng, giữ src_line gốc
+        for piece in str(line.get("text") or "").splitlines() or [""]:
+            src_lines.append({**line, "text": piece})
+    filtered = filter_page(layer, [x["text"] for x in src_lines], han_min_cjk_share=han_min_cjk_share,
+                           han_min_cjk_with_latin=han_min_cjk_with_latin)
+    out = PageOut(page, run, reason, filtered, src_lines)
+    out.merged = merged
+    return out
 
 
 def mean_confidence(lines: list[tuple[str, float | None]]) -> float | None:
@@ -146,7 +187,8 @@ def check_target(layout: DataLayout, layer: str, force: bool) -> None:
         log.warning("[%s] %s còn TXT 3 chữ số của chế độ cũ; build_layers không xoá chúng", layer, text_dir)
 
 
-def write_layer_xml(layout: DataLayout, layer: str, engine: str, pages: list[PageOut]) -> Path:
+def write_layer_xml(layout: DataLayout, layer: str, engine: str, pages: list[PageOut],
+                    filter_options: dict | None = None) -> Path:
     xml_path = layout.ocr_layer_xml_path(layer)
     root = write_file_root(xml_path, layout.work_id)
     file_el = file_element(root)
@@ -159,7 +201,8 @@ def write_layer_xml(layout: DataLayout, layer: str, engine: str, pages: list[Pag
         if isinstance(desc, dict) and desc not in seen:
             seen.append(desc)
             _add_engine(engines, desc)
-    add(ocr_meta, "FILTER", MODULE="src.ocr.script_filter", LAYER=layer, NORMALIZATION="NFC")
+    add(ocr_meta, "FILTER", MODULE="src.ocr.script_filter", LAYER=layer, NORMALIZATION="NFC",
+        **({k.upper(): v for k, v in (filter_options or {}).items()} if layer == "han" else {}))
 
     for out in pages:
         if out.status != "ok":
@@ -206,7 +249,9 @@ def write_layer_texts(layout: DataLayout, layer: str, pages: list[PageOut]) -> l
     return written
 
 
-def build_layer(layout: DataLayout, layer: str, pages: list[int], *, force: bool = False) -> dict:
+def build_layer(layout: DataLayout, layer: str, pages: list[int], *, force: bool = False,
+                han_min_cjk_share: float = HAN_MIN_CJK_SHARE,
+                han_min_cjk_with_latin: int = HAN_MIN_CJK_WITH_LATIN) -> dict:
     engine = LAYER_ENGINES[layer]
     check_target(layout, layer, force)
     prefs = preferred_keys(layout, layer, engine)
@@ -217,17 +262,28 @@ def build_layer(layout: DataLayout, layer: str, pages: list[int], *, force: bool
         if reason == "latest_of_many":
             log.warning("[%s] trang %04d có nhiều run %s khác khoá; dùng run mới nhất %s",
                         layer, page, engine, run.get("key", "")[:12])
-        out = build_page(layer, page, run, reason)
+        out = build_page(layer, page, run, reason, han_min_cjk_share=han_min_cjk_share,
+                         han_min_cjk_with_latin=han_min_cjk_with_latin)
         outs.append(out)
+        for src, why, text in out.filtered.rejected:
+            log.info("[%s] P%04d loại dòng %d (%s): %s", layer, page,
+                     out.src_lines[src - 1]["src_line"], why, text[:80])
+        for item in out.merged:
+            log.info("[%s] P%04d gộp %d dòng một chữ (dòng %s) thành một dòng", layer, page,
+                     len(item["src_lines"]), ",".join(map(str, item["src_lines"])))
         if run is not None:
             s = out.filtered.stats()
             log.info("[%s] P%04d nguồn=%d giữ=%d bỏ=%d cjk_xoá=%d", layer, page, s["n_src"],
                      s["n_kept"], s["n_dropped"], s["cjk_removed"])
-    xml_path = write_layer_xml(layout, layer, engine, outs)
+    xml_path = write_layer_xml(layout, layer, engine, outs, {
+        "han_min_cjk_share": han_min_cjk_share, "han_min_cjk_with_latin": han_min_cjk_with_latin})
     texts = write_layer_texts(layout, layer, outs)
     records = [{"page": o.page, "status": o.status, "selection": o.reason,
                 "key": (o.run or {}).get("key"), "raw": (o.run or {}).get("_source"),
-                **o.filtered.stats(), **non_han_counts(o)} for o in outs]
+                **o.filtered.stats(), **non_han_counts(o),
+                "rejected": [{"src_line": o.src_lines[i - 1]["src_line"], "reason": why, "text": t}
+                             for i, why, t in o.filtered.rejected],
+                "merged": o.merged} for o in outs]
     with_run = [r for r in records if r["status"] != "no_run"]
     summary = {
         "schema_version": 1, "work_id": layout.work_id, "layer": layer, "engine": engine,
@@ -237,7 +293,10 @@ def build_layer(layout: DataLayout, layer: str, pages: list[int], *, force: bool
                    "pages_with_lines": len(texts),
                    "n_src": sum(r["n_src"] for r in with_run), "n_kept": sum(r["n_kept"] for r in with_run),
                    "n_dropped": sum(r["n_dropped"] for r in with_run),
-                   "cjk_removed": sum(r["cjk_removed"] for r in with_run)},
+                   "cjk_removed": sum(r["cjk_removed"] for r in with_run),
+                   "n_rejected": sum(r["n_rejected"] for r in with_run),
+                   "n_merged_units": sum(len(r["merged"]) for r in with_run)},
+        "filter": {"han_min_cjk_share": han_min_cjk_share, "han_min_cjk_with_latin": han_min_cjk_with_latin},
         "warnings": layer_warnings(layer, records),
         "pages": records,
     }
@@ -399,6 +458,10 @@ def create_parser():
     parser.add_argument("--pages", dest="build_pages",
                         help="Mặc định: mọi trang có JSON thô. Ví dụ 5-60,62")
     parser.add_argument("--layers", default="han,vie", help="han,vie | han | vie")
+    parser.add_argument("--han-min-cjk-share", type=float, default=HAN_MIN_CJK_SHARE,
+                        help="Lớp han: loại dòng có chữ Latin mà chữ Hán/(chữ Hán + chữ Latin) nhỏ hơn mức này")
+    parser.add_argument("--han-min-cjk-with-latin", type=int, default=HAN_MIN_CJK_WITH_LATIN,
+                        help="Lớp han: dòng có chữ Latin phải có ít nhất ngần này chữ Hán")
     parser.add_argument("--report-only", action="store_true",
                         help="Không dựng lại; chỉ kiểm tra output hiện có và in bảng tổng hợp")
     return parser
@@ -415,7 +478,8 @@ def run(args) -> dict:
         if not pages:
             raise ValueError(f"Không có JSON OCR thô nào trong {layout.ocr_raw_unified_dir}")
         for layer in layers:
-            build_layer(layout, layer, pages, force=args.force)
+            build_layer(layout, layer, pages, force=args.force, han_min_cjk_share=args.han_min_cjk_share,
+                        han_min_cjk_with_latin=args.han_min_cjk_with_latin)
     errors = []
     for layer in layers:
         layer_errors, stats = verify_layer(layout, layer)

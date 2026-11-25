@@ -3,7 +3,7 @@ import unicodedata
 import pytest
 
 from src.ocr.script_filter import (
-    count_cjk, filter_han_line, filter_page, filter_vie_line, has_cjk,
+    count_cjk, filter_han_line, filter_page, filter_vie_line, han_reject_reason, has_cjk,
 )
 
 
@@ -93,7 +93,7 @@ def test_filter_page_han_records_source_line_numbers():
     lines = ["57", "初聞其語半疑信", "PHIÊN ÂM:", "發世懷囊如是哉 (1)"]
     res = filter_page("han", lines)
     assert res.kept == [(2, "初聞其語半疑信"), (4, "發世懷囊如是哉")]
-    assert res.stats() == {"n_src": 4, "n_kept": 2, "n_dropped": 2, "cjk_removed": 0}
+    assert res.stats() == {"n_src": 4, "n_kept": 2, "n_dropped": 2, "cjk_removed": 0, "n_rejected": 0}
 
 
 def test_filter_page_vie_never_leaks_cjk():
@@ -110,3 +110,35 @@ def test_filter_page_vie_never_leaks_cjk():
 def test_filter_page_rejects_unknown_layer():
     with pytest.raises(ValueError):
         filter_page("am", ["x"])
+
+
+# --------------------------------------------------------------------------- dòng Hán giả
+@pytest.mark.parametrize("line", [
+    "a. Bản A.404: Hội khê 洄溪.",                              # khảo dị tiếng Việt trích chữ Hán
+    "d. Bản A.1579: Phục trung tín 伏忠信.",
+    "Khoa chép là “Vô thuật tà 無術邪”.",
+    "c. Bản A.404: Phiêu 飘.",
+    "J. 一",                                                    # paddlevl đọc nhầm "5. 其二"
+    "山 [r]",
+    "nam\". Van Lama is a people that are波杰丹答时",
+])
+def test_han_rejects_vietnamese_annotation_and_garbage(line):
+    assert han_reject_reason(line) is not None
+    res = filter_page("han", [line])
+    assert res.kept == [] and len(res.rejected) == 1 and res.rejected[0][2] == line
+
+
+@pytest.mark.parametrize("line", [
+    "二諒江山境界連", "2. 其二", "6. 受降城", "1. 與高明二法師難佛不見形書", "謹白。", "喜雨作",
+    r"\(^{*}\)森爲交州刺史", "海口千家逐波開 (奇華海口門)", "玄",
+])
+def test_han_keeps_real_han_lines(line):
+    assert han_reject_reason(line) is None
+    assert filter_page("han", [line]).n_kept == 1
+
+
+def test_han_reject_thresholds_are_configurable():
+    line = "a. Bản A.404: Hội khê 洄溪."
+    assert filter_page("han", [line], han_min_cjk_share=0.0, han_min_cjk_with_latin=0).n_kept == 1
+    assert han_reject_reason("Kỳ 其二", min_cjk_share=0.3, min_cjk_with_latin=3).startswith("few_cjk")
+    assert filter_page("han", [line]).stats()["n_rejected"] == 1

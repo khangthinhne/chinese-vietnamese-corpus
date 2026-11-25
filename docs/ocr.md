@@ -128,6 +128,16 @@ và segmentation hiện tại **không đổi**; việc nối `han`/`vie` vào s
 | `han` | `paddlevl` (PaddleOCR-VL-1.6) | `.venv-paddle` | giữ dòng có >= 1 chữ Hán; trong dòng chỉ giữ chữ Hán + dấu câu CJK |
 | `vie` | `qwen` (Qwen2.5-VL-3B) | `my_nlp` | xoá mọi chữ Hán + dấu câu CJK/full-width, dọn ngoặc rỗng/nháy mồ côi/khoảng trắng; bỏ dòng không còn chữ cái Latin |
 
+Lớp `han` còn loại (và ghi vào `manifests/build_han.json` -> `rejected`, kèm log) dòng có chữ Hán nhưng thực
+chất là dòng tiếng Việt hoặc rác OCR, xét trên dòng GỐC (chỉ đếm chữ cái Latin, không đếm số/dấu câu):
+- chữ Hán / (chữ Hán + chữ Latin) < 0.3 (`--han-min-cjk-share`), vd khảo dị `a. Bản A.404: Hội khê 洄溪.`;
+- có chữ Latin mà < 2 chữ Hán (`--han-min-cjk-with-latin`), vd paddlevl đọc nhầm `5. 其二` thành `J. 一`.
+Trên mẫu 20 trang của CPO_18/19/20 luật loại 29 dòng, không dòng Hán thật nào. Đặt cả hai về 0 để tắt.
+paddlevl ngang đôi khi xuất MỘT dòng in thành nhiều dòng một chữ (`玄
+麻
+...`); `build_layers` gộp lại khi
+MỌI dòng của đơn vị (dải) đều đúng 1 ký tự (`merged` trong manifest).
+
 Cả hai chuẩn hoá NFC (NFC ánh xạ chữ CJK Compatibility U+F900–FAFF về chữ Unified tương ứng); không đổi
 giản thể/phồn thể. Mỗi trang dùng đúng MỘT run của engine của luồng, không bỏ phiếu theo dòng.
 
