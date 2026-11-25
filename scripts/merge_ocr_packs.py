@@ -29,7 +29,26 @@ ALLOWED_TOP = "03_ocr"
 SUMS_NAMES = ("MANIFEST.sha256", "SHA256SUMS")
 INFO_NAME = "PACK_INFO.json"
 ENGINE_LAYER = {"paddlevl": "han", "qwen": "vie"}
-RAW_ENGINE_RE = re.compile(r"[^/]+/03_ocr/raw/(paddlevl|qwen)/(\d{4})\.json")
+RAW_FILE_RE = re.compile(r"[^/]+/03_ocr/raw/(?:[^/]+/)?(?:page_)?(\d{4})\.json")
+
+
+def raw_engines(arc: str, data: bytes) -> set[tuple[str, int]]:
+    """(engine, trang) có run trong một file raw: kho engine mới lẫn raw/NNNN.json (unified) cũ."""
+    m = RAW_FILE_RE.fullmatch(arc)
+    if not m:
+        return set()
+    try:
+        body = json.loads(data)
+    except ValueError:
+        return set()
+    from src.ocr.build_layers import run_engine
+    out = set()
+    for run in (body.get("runs") or []) if isinstance(body, dict) else []:
+        engine = run_engine(run) if isinstance(run, dict) else None
+        engine = engine or body.get("engine")
+        if engine in ENGINE_LAYER:
+            out.add((engine, int(m[1])))
+    return out
 
 
 def safe_target(arc: str, data_root: Path) -> Path | None:
@@ -123,9 +142,8 @@ class Plan:
                     self.problems.append(f"{path.name}: checksum sai: {arc}")
                     continue
                 staged.append((arc, target, data))
-                m = RAW_ENGINE_RE.fullmatch(arc)
-                if m:
-                    record["raw_pages"][ENGINE_LAYER[m[1]]].add(int(m[2]))
+                for engine, page in raw_engines(arc, data):
+                    record["raw_pages"][ENGINE_LAYER[engine]].add(page)
             for arc, target, data in staged:
                 old = self.current(target)
                 if old is None:
