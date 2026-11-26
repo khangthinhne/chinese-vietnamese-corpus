@@ -24,8 +24,11 @@ from src.ocr.script_filter import CJK_IDEOGRAPH_RE
 
 DEFAULT_MIN_MATCH = 0.35
 DEFAULT_READING_DICT = "resources/han_viet.tsv"
-MAX_SYLLABLES = 150
-MAX_HAN = 250
+MAX_SYLLABLES = 400
+MAX_HAN = 400
+# Dòng không phải nội dung khi chấm điểm: mục chú thích "1. Thuật ngữ: ..." / "2. Nguyên bản chép ..." và tiêu đề
+# viết hoa (CPO_20.067: hai mục chú thích đứng trước phiên âm từng kéo điểm xuống 0,10).
+NOTE_LINE_RE = re.compile(r"^\s*\(?\d{1,3}[.)]\s*\S")
 MIN_UNITS = 6                       # quá ít chữ/âm tiết thì không kết luận
 SYLLABLE_RE = re.compile(r"[^\W\d_]+")
 
@@ -33,6 +36,11 @@ SYLLABLE_RE = re.compile(r"[^\W\d_]+")
 def fold(text: str) -> str:
     text = unicodedata.normalize("NFD", unicodedata.normalize("NFC", text).lower().replace("đ", "d"))
     return "".join(c for c in text if not unicodedata.combining(c))
+
+
+def _is_upper_title(text: str) -> bool:
+    letters = [c for c in text if c.isalpha()]
+    return len(letters) >= 3 and all(c.isupper() for c in letters)
 
 
 @lru_cache(maxsize=4)
@@ -52,7 +60,8 @@ def _readings_of(readings: dict[str, frozenset[str]], ch: str) -> frozenset[str]
 def reading_match(han_texts: list[str], am_texts: list[str], readings: dict[str, frozenset[str]]) -> float | None:
     """Điểm 0..1 (None nếu quá ít dữ liệu)."""
     han = [c for t in han_texts for c in CJK_IDEOGRAPH_RE.findall(t)][:MAX_HAN]
-    am = [fold(s) for t in am_texts for s in SYLLABLE_RE.findall(t)][:MAX_SYLLABLES]
+    body = [t for t in am_texts if not NOTE_LINE_RE.match(t) and not _is_upper_title(t)]
+    am = [fold(s) for t in body for s in SYLLABLE_RE.findall(t)][:MAX_SYLLABLES]
     if len(han) < MIN_UNITS or len(am) < MIN_UNITS:
         return None
     rd = [_readings_of(readings, c) for c in han]

@@ -190,3 +190,12 @@ def test_am_detector_moves_implicit_translation_to_nghia_and_honors_overrides():
     assert any(r["reason"] == "am_reassigned_to_nghia" for r in res.review)
     off = assign(texts, am_detector=AmDetector({}))
     assert len(off.lines["am"]) == 2
+
+
+def test_reading_match_ignores_note_lines_before_phien_am():
+    from src.segmentation.am_detect import fold, reading_match
+    rd = {k: frozenset({fold(v)}) for k, v in {"扇": "phiến", "值": "trị", "清": "thanh", "秋": "thu", "盡": "tận",
+                                                "日": "nhật", "閒": "nhàn"}.items()}
+    notes = ['1. Nguyên bản chép "trú nhật gian", không có nghĩa. Ngờ là chép nhầm chữ nhàn ' * 3,
+             "2. Nguyên bản chép chữ ánh không hợp nghĩa."]
+    assert reading_match(["扇值清秋盡日閒"], notes + ["ĐỀ THU PHIẾN", "Phiến trị thanh thu tận nhật nhàn,"], rd) == 1.0
