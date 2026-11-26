@@ -22,6 +22,7 @@ from pathlib import Path
 from src.common.corpus import DataLayout, parse_pages
 from src.common.xmlstore import file_element
 from src.ocr import raw_store
+from src.ocr.cross_check import compare_page, latin_lines
 from src.ocr.build_layers import (LAYER_ENGINES, LAYER_WRITING_SYSTEMS, PAGE_TXT_RE, layer_manifest_paths,
                                   preferred_keys, select_run, verify_layer)
 from src.ocr.run_quality import bad_units, run_units
@@ -278,6 +279,20 @@ def check_work(layout: DataLayout, pages_spec: str | None, check: dict | None = 
                 if r is not None and r >= check["vie_min_lines_ink"] and vie_lines:
                     issues.append(Issue(p, "error", "vie_too_few_lines",
                                         f"{len(vie_lines)} dòng Việt, không có Hán, mực {r:.3f}"))
+        if han_run and vie_lines:
+            cross = compare_page(latin_lines(han_run), vie_lines,
+                                 line_min_precision=check["vie_cross_line_precision"])
+            if cross is not None:
+                row["vie_cross"] = {k: cross[k] for k in ("precision", "recall", "f1")}
+                if cross["precision"] < check["vie_cross_min_precision"]:
+                    issues.append(Issue(p, "warning", "vie_cross_low_precision",
+                                        f"chỉ {cross['precision']:.2f} chữ Qwen có trong bản paddlevl (nghi bịa/lặp)"))
+                if cross["recall"] < check["vie_cross_min_recall"]:
+                    issues.append(Issue(p, "warning", "vie_cross_low_recall",
+                                        f"chỉ {cross['recall']:.2f} chữ paddlevl có trong Qwen (nghi bỏ sót)"))
+                for u in cross["unsupported"]:
+                    issues.append(Issue(p, "warning", "vie_unconfirmed_line",
+                                        f"L{u['line']:03d} ({u['precision']:.2f}): {u['text'][:70]}"))
         if vie_run and row["vie_conf"] is not None and vie_lines and row["vie_conf"] < check["qwen_low_conf"]:
             issues.append(Issue(p, "warning", "vie_low_conf", f"conf {row['vie_conf']}"))
         if han_run and han_lines:
