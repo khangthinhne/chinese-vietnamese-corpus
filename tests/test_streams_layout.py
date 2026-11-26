@@ -92,3 +92,15 @@ def test_vietnamese_model_chatter_rejected_but_editor_text_kept():
     assert vie_reject_reason("Dòng văn dưới đó có thể được dịch như sau:") == "model_chatter"
     assert vie_reject_reason("Bản giới thiệu dưới đây là trích từ sách nói trên.") is None
     assert vie_reject_reason("và đáp án, chúng tôi không nêu cả.") is None
+
+
+def test_junk_han_line_at_top_does_not_glue_bottom_han_block_over_vietnamese():
+    # CPO_18 tr.492: rác "一" (y=156), đuôi phiên âm + DỊCH NGHĨA của bài trước, 2 dòng Hán bài sau ở cuối trang
+    han = [line("han", 492, 1, "一", 156), line("han", 492, 2, "問曰：子云佛經如江海", 2962),
+           line("han", 492, 3, "佛經答吾問，而復引詩書", 3081)]
+    vie = [line("vie", 492, 1, "hĩ. Ngũ kinh tắc ngũ vị, Phật đạo tắc ngũ cốc hĩ.", 293),
+           line("vie", 492, 2, "DỊCH NGHĨA:", 716), line("vie", 492, 3, "Hỏi rằng: Ông dùng Kinh truyện", 923)]
+    merged = streams.merge_streams(han, vie)
+    assert [ln.writing_system for ln in merged] == ["han", "vie", "vie", "vie", "han", "han"]
+    starts = streams.allowed_document_starts(merged)
+    assert starts == {4}

@@ -133,9 +133,13 @@ def _keys(lines: list[OcrLine]) -> list[float]:
 
 
 def _han_pitch(keys: list[float]) -> float | None:
-    """Bước dòng Hán của trang: trung vị khoảng cách dương giữa hai mép trên liên tiếp (cần >= 2 khoảng)."""
+    """Bước dòng Hán của trang: trung vị DƯỚI của khoảng cách dương giữa hai mép trên liên tiếp (cần >= 2 khoảng).
+
+    Trung vị dưới: trang chỉ có 2 khoảng thì lấy khoảng nhỏ. CPO_18 tr.492 có dòng rác "一" ở đầu trang và 2 dòng
+    Hán ở cuối trang (khoảng 2806 và 119 px): trung vị trên 2806 làm hai dòng cuối bị "dán" lên đầu trang, trước đuôi
+    phiên âm của bài trước, và mở nhầm tài liệu ở đó (CPO_18.054)."""
     gaps = sorted(b - a for a, b in zip(keys, keys[1:]) if b > a)
-    return gaps[len(gaps) // 2] if len(gaps) >= 2 else None
+    return gaps[(len(gaps) - 1) // 2] if len(gaps) >= 2 else None
 
 
 def _norm(text: str) -> str:
