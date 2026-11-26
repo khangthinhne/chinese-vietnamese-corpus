@@ -288,6 +288,299 @@
         "any_truncated": true,
         "lang": "all"
       }
+    },
+    {
+      "key": "37cf41a00a7921dbc36a7d301e0c41c2f2e6b90db602151b60839a112e1dcc6e",
+      "parameters": {
+        "image_sha256": "e5661834fd45b1d00adddded488760bbcf7f94fe8287c328a201ed918a69fb74",
+        "engine": {
+          "name": "qwen",
+          "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "model_revision": "main",
+          "transformers_version": "4.57.6",
+          "torch_version": "2.5.1+cu121",
+          "cuda_version": "12.1",
+          "bitsandbytes_version": "0.50.2",
+          "quantization": {
+            "load_in_4bit": true,
+            "quant_type": "nf4",
+            "double_quant": true,
+            "compute_dtype": "float16"
+          },
+          "mode": "all",
+          "min_pixels": 50176,
+          "max_pixels": 802816,
+          "band_inches": 2.0,
+          "max_new_tokens": 768,
+          "repetition_penalty": 1.05,
+          "adapter_version": 4,
+          "prompt_version": 3,
+          "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74"
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-26T09:15:44+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_18\\02_extraction\\pages\\page_208.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        0,
+        2480,
+        3509
+      ],
+      "lines": [
+        {
+          "text": "Sưu tầm và khảo luận tác phẩm chữ Hán của người Việt Nam trước TK 10",
+          "bbox": [
+            13,
+            0,
+            2269,
+            197
+          ],
+          "confidence": 93.8
+        },
+        {
+          "text": "thượng\", bản Mạc Tư Khoa chép là \"上\", cũng đọc là thượng.",
+          "bbox": [
+            13,
+            197,
+            2269,
+            395
+          ],
+          "confidence": 93.8
+        },
+        {
+          "text": "(11) Kính lễ: nguyên văn là \"hòa nam\" (Vandana) có nghĩa là",
+          "bbox": [
+            13,
+            395,
+            2269,
+            592
+          ],
+          "confidence": 93.8
+        },
+        {
+          "text": "kính lễ. Theo Tăng sử lược thì người Tây Vực mỗi khi gặp nhau, thường chắp tay chào bằng hai tiếng \"hòa nam\".",
+          "bbox": [
+            119,
+            595,
+            2455,
+            869
+          ],
+          "confidence": 10.0
+        },
+        {
+          "text": "Vandana = ？？？？？",
+          "bbox": [
+            119,
+            869,
+            2455,
+            1143
+          ],
+          "confidence": 10.0
+        },
+        {
+          "text": "*道高師",
+          "bbox": [
+            280,
+            1183,
+            2245,
+            1415
+          ],
+          "confidence": 21.81
+        },
+        {
+          "text": ",交州至垂問晦之迹,理味渊博,辞览,彌尔德因",
+          "bbox": [
+            280,
+            1415,
+            2245,
+            1648
+          ],
+          "confidence": 21.81
+        },
+        {
+          "text": "使君垣墙崇邃，得門自難，輒罄愚管，罔象玄珠。",
+          "bbox": [
+            276,
+            1717,
+            2239,
+            2249
+          ],
+          "confidence": 82.54
+        },
+        {
+          "text": "髮髪儀軌應今人情。人情感像,孰爲見哉!故淨經城,龍人情感見,孰爲隱哉!故法華経云:\"時我及眾僧,俱出靈騫山\"。懷依之宮,屛",
+          "bbox": [
+            287,
+            2274,
+            2234,
+            2750
+          ],
+          "confidence": 60.72
+        },
+        {
+          "text": "然可期；西方根源，何爲不覩？而世之疑者，多謂經語不符；閻寄情少，咸呂不覀生滯。",
+          "bbox": [
+            282,
+            2778,
+            2475,
+            3138
+          ],
+          "confidence": 87.19
+        },
+        {
+          "text": "夫三皇五帝，三代五霸，姬旦孔丘，删詩制禮，並聞史籍，孰覀之哉！釋氏震法鼓於鹿園，求",
+          "bbox": [
+            282,
+            3138,
+            2475,
+            3499
+          ],
+          "confidence": 87.19
+        }
+      ],
+      "raw": {
+        "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+        "model_revision": "main",
+        "mode": "all",
+        "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          3509
+        ],
+        "band_target_height": 600,
+        "bbox_granularity": "band_even_split",
+        "max_new_tokens": 768,
+        "max_pixels": 802816,
+        "inference_seconds": 84.595,
+        "bands": [
+          {
+            "band": 1,
+            "y0": 0,
+            "y1": 593,
+            "ink_box": [
+              13,
+              0,
+              2269,
+              592
+            ],
+            "generated_text": "Sưu tầm và khảo luận tác phẩm chữ Hán của người Việt Nam trước TK 10\n\nthượng\", bản Mạc Tư Khoa chép là \"上\", cũng đọc là thượng.\n\n(11) Kính lễ: nguyên văn là \"hòa nam\" (Vandana) có nghĩa là",
+            "n_lines": 3,
+            "tokens": 67,
+            "seconds": 21.632,
+            "confidence": 93.8,
+            "flags": []
+          },
+          {
+            "band": 2,
+            "y0": 593,
+            "y1": 1163,
+            "ink_box": [
+              119,
+              595,
+              2455,
+              1143
+            ],
+            "generated_text": "kính lễ. Theo Tăng sử lược thì người Tây Vực mỗi khi gặp nhau, thường chắp tay chào bằng hai tiếng \"hòa nam\".\nVandana = ？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？",
+            "n_lines": 2,
+            "tokens": 768,
+            "seconds": 45.241,
+            "confidence": 10.0,
+            "flags": [
+              "repetition_collapsed",
+              "truncated"
+            ]
+          },
+          {
+            "band": 3,
+            "y0": 1163,
+            "y1": 1682,
+            "ink_box": [
+              280,
+              1183,
+              2245,
+              1648
+            ],
+            "generated_text": "*道高師\n,交州至垂問晦之迹,理味渊博,辞览,彌尔德因",
+            "n_lines": 2,
+            "tokens": 29,
+            "seconds": 3.209,
+            "confidence": 21.81,
+            "flags": []
+          },
+          {
+            "band": 4,
+            "y0": 1682,
+            "y1": 2261,
+            "ink_box": [
+              276,
+              1717,
+              2239,
+              2249
+            ],
+            "generated_text": "使君垣墙崇邃，得門自難，輒罄愚管，罔象玄珠。",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 2.988,
+            "confidence": 82.54,
+            "flags": []
+          },
+          {
+            "band": 5,
+            "y0": 2261,
+            "y1": 2764,
+            "ink_box": [
+              287,
+              2274,
+              2234,
+              2750
+            ],
+            "generated_text": "髮髪儀軌應今人情。人情感像,孰爲見哉!故淨經城,龍人情感見,孰爲隱哉!故法華経云:\"時我及眾僧,俱出靈騫山\"。懷依之宮,屛",
+            "n_lines": 1,
+            "tokens": 65,
+            "seconds": 5.231,
+            "confidence": 60.72,
+            "flags": []
+          },
+          {
+            "band": 6,
+            "y0": 2764,
+            "y1": 3495,
+            "ink_box": [
+              282,
+              2778,
+              2475,
+              3499
+            ],
+            "generated_text": "然可期；西方根源，何爲不覩？而世之疑者，多謂經語不符；閻寄情少，咸呂不覀生滯。\n夫三皇五帝，三代五霸，姬旦孔丘，删詩制禮，並聞史籍，孰覀之哉！釋氏震法鼓於鹿園，求",
+            "n_lines": 2,
+            "tokens": 83,
+            "seconds": 6.267,
+            "confidence": 87.19,
+            "flags": []
+          }
+        ],
+        "any_degenerate": true,
+        "any_truncated": true,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "a14f00840383ca282ccb519580df107802486602",
+        "git_describe": "a14f008",
+        "git_dirty": false,
+        "gpu": "NVIDIA GeForce RTX 3050 6GB Laptop GPU",
+        "dtype": "float16",
+        "adapter_version": 4
+      }
     }
   ]
 }

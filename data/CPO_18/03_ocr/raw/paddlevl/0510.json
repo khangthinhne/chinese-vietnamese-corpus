@@ -1,0 +1,877 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_18",
+  "engine": "paddlevl",
+  "page": 510,
+  "runs": [
+    {
+      "key": "ed664127279e640c4114938eab9d7793b4dbf750b5b769cf77c0442ccf3991ee",
+      "parameters": {
+        "image_sha256": "cba67a7c0fdea48b8b2830c5abb623979c81ada5416099d9cfa24431523305fa",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T18:58:37+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_510.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        0,
+        2480,
+        3509
+      ],
+      "lines": [
+        {
+          "text": "Sưu tấm và khảo luận tác phẩm chủ Hán của người Việt Nam trước TK 10",
+          "bbox": [
+            302,
+            97,
+            1837,
+            156
+          ],
+          "confidence": 92.44
+        },
+        {
+          "text": "___",
+          "bbox": [
+            286,
+            186,
+            2204,
+            207
+          ],
+          "confidence": 27.65
+        },
+        {
+          "text": "các bóng râm che lấp ánh sáng của nó. Đao Phát không",
+          "bbox": [
+            301,
+            292,
+            2202,
+            360
+          ],
+          "confidence": 90.78
+        },
+        {
+          "text": "phải không thắng ngay, chỉ tại lòng tự dục che đấy tính",
+          "bbox": [
+            302,
+            384,
+            2201,
+            465
+          ],
+          "confidence": 88.45
+        },
+        {
+          "text": "công minh của nó. Vì vậy mà tôi phải phân tích, để thấy",
+          "bbox": [
+            302,
+            479,
+            2202,
+            547
+          ],
+          "confidence": 98.86
+        },
+        {
+          "text": "sự khác nhau. Cái khôn ngoan của Tang Văn (172), cái",
+          "bbox": [
+            304,
+            569,
+            2200,
+            641
+          ],
+          "confidence": 99.1
+        },
+        {
+          "text": "thắng thắn của Vi Sinh (173) đều không được Trong Ni",
+          "bbox": [
+            302,
+            661,
+            2200,
+            735
+          ],
+          "confidence": 97.97
+        },
+        {
+          "text": "chấp nhận. Tất cả đều là lời lẽ nhằm uốn năn thế tục, có",
+          "bbox": [
+            301,
+            756,
+            2382,
+            829
+          ],
+          "confidence": 92.71
+        },
+        {
+          "text": "gi la phi cong vo ich ?",
+          "bbox": [
+            304,
+            868,
+            990,
+            916
+          ],
+          "confidence": 79.57
+        },
+        {
+          "text": "CHU THICH:",
+          "bbox": [
+            424,
+            1049,
+            818,
+            1105
+          ],
+          "confidence": 93.48
+        },
+        {
+          "text": "(170) Dương, Mặc : Dương Chu và Mặc Đich. Xem lai chủ",
+          "bbox": [
+            305,
+            1155,
+            2192,
+            1220
+          ],
+          "confidence": 91.24
+        },
+        {
+          "text": "thích 11. Tưa đế.",
+          "bbox": [
+            424,
+            1239,
+            922,
+            1298
+          ],
+          "confidence": 90.02
+        },
+        {
+          "text": "(171) Y Đốn : người nước Lỗ, sống vào thời Xuân thu. Ông lúc",
+          "bbox": [
+            303,
+            1344,
+            2192,
+            1411
+          ],
+          "confidence": 95.42
+        },
+        {
+          "text": "đầu là một người hoc trò nghèo, sau nhờ vào nghề muối",
+          "bbox": [
+            424,
+            1433,
+            2194,
+            1497
+          ],
+          "confidence": 89.66
+        },
+        {
+          "text": "mam, chan nuol ma trổ nên giàu có.",
+          "bbox": [
+            424,
+            1533,
+            1508,
+            1578
+          ],
+          "confidence": 78.96
+        },
+        {
+          "text": "(172) Tang Văn : tổ tiên ho Tang là Khu, tên chủ là Tử Tang,",
+          "bbox": [
+            301,
+            1621,
+            2190,
+            1687
+          ],
+          "confidence": 94.37
+        },
+        {
+          "text": "con cua Lo Hieu Cong.",
+          "bbox": [
+            420,
+            1723,
+            1093,
+            1766
+          ],
+          "confidence": 95.92
+        },
+        {
+          "text": "(173) Vi Sinh : ho kép. Ô nước Lô thời Xuân thu có Vi Sinh",
+          "bbox": [
+            301,
+            1825,
+            2191,
+            1889
+          ],
+          "confidence": 94.89
+        },
+        {
+          "text": "Cao nổi tiếng là người thắng thắn. Lai có nhà ăn đất tên",
+          "bbox": [
+            423,
+            1911,
+            2192,
+            1974
+          ],
+          "confidence": 92.86
+        },
+        {
+          "text": "là Vi Sinh Mâu chê Không Từ là hấp tấp.",
+          "bbox": [
+            423,
+            1992,
+            1669,
+            2056
+          ],
+          "confidence": 91.59
+        },
+        {
+          "text": "問曰：吾子訕神僊，抑奇怪，不信有不死之",
+          "bbox": [
+            434,
+            2371,
+            2188,
+            2452
+          ],
+          "confidence": 97.27
+        },
+        {
+          "text": "道。是也，何爲獨信佛道當得度世乎？佛在異",
+          "bbox": [
+            306,
+            2497,
+            2185,
+            2582
+          ],
+          "confidence": 97.92
+        },
+        {
+          "text": "域，子足未履其地，目不见其所，徒观其文而信",
+          "bbox": [
+            306,
+            2624,
+            2188,
+            2712
+          ],
+          "confidence": 94.03
+        },
+        {
+          "text": "其行。夫觀華者，不能知實；視影者，不能審",
+          "bbox": [
+            310,
+            2753,
+            2186,
+            2838
+          ],
+          "confidence": 98.96
+        },
+        {
+          "text": "形殆其不誠乎？",
+          "bbox": [
+            314,
+            2876,
+            930,
+            2950
+          ],
+          "confidence": 96.24
+        },
+        {
+          "text": "牟子曰：孔子曰：“视其所以，观其所由，察其",
+          "bbox": [
+            436,
+            3039,
+            2434,
+            3127
+          ],
+          "confidence": 96.96
+        },
+        {
+          "text": "所安，人焉廋哉！”昔吕望，周公問於施政，各知",
+          "bbox": [
+            315,
+            3166,
+            2306,
+            3252
+          ],
+          "confidence": 94.24
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          3509
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 11.371,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              302,
+              97,
+              1837,
+              156
+            ],
+            "generated_text": "Sưu tấm và khảo luận tác phẩm chủ Hán của người Việt Nam trước TK 10",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.546,
+            "confidence": 92.44,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              286,
+              186,
+              2204,
+              207
+            ],
+            "generated_text": "___",
+            "n_lines": 1,
+            "tokens": 2,
+            "seconds": 0.088,
+            "confidence": 27.65,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              301,
+              292,
+              2202,
+              360
+            ],
+            "generated_text": "các bóng râm che lấp ánh sáng của nó. Đao Phát không",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.447,
+            "confidence": 90.78,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              302,
+              384,
+              2201,
+              465
+            ],
+            "generated_text": "phải không thắng ngay, chỉ tại lòng tự dục che đấy tính",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.447,
+            "confidence": 88.45,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              302,
+              479,
+              2202,
+              547
+            ],
+            "generated_text": "công minh của nó. Vì vậy mà tôi phải phân tích, để thấy",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.445,
+            "confidence": 98.86,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              304,
+              569,
+              2200,
+              641
+            ],
+            "generated_text": "sự khác nhau. Cái khôn ngoan của Tang Văn (172), cái",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.487,
+            "confidence": 99.1,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              302,
+              661,
+              2200,
+              735
+            ],
+            "generated_text": "thắng thắn của Vi Sinh (173) đều không được Trong Ni",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.465,
+            "confidence": 97.97,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              301,
+              756,
+              2382,
+              829
+            ],
+            "generated_text": "chấp nhận. Tất cả đều là lời lẽ nhằm uốn năn thế tục, có",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.589,
+            "confidence": 92.71,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              304,
+              868,
+              990,
+              916
+            ],
+            "generated_text": "gi la phi cong vo ich ?",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.22,
+            "confidence": 79.57,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              424,
+              1049,
+              818,
+              1105
+            ],
+            "generated_text": "CHU THICH:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.165,
+            "confidence": 93.48,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              305,
+              1155,
+              2192,
+              1220
+            ],
+            "generated_text": "(170) Dương, Mặc : Dương Chu và Mặc Đich. Xem lai chủ",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.551,
+            "confidence": 91.24,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              424,
+              1239,
+              922,
+              1298
+            ],
+            "generated_text": "thích 11. Tưa đế.",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.287,
+            "confidence": 90.02,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              303,
+              1344,
+              2192,
+              1411
+            ],
+            "generated_text": "(171) Y Đốn : người nước Lỗ, sống vào thời Xuân thu. Ông lúc",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.574,
+            "confidence": 95.42,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              424,
+              1433,
+              2194,
+              1497
+            ],
+            "generated_text": "đầu là một người hoc trò nghèo, sau nhờ vào nghề muối",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.473,
+            "confidence": 89.66,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              424,
+              1533,
+              1508,
+              1578
+            ],
+            "generated_text": "mam, chan nuol ma trổ nên giàu có.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.326,
+            "confidence": 78.96,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              301,
+              1621,
+              2190,
+              1687
+            ],
+            "generated_text": "(172) Tang Văn : tổ tiên ho Tang là Khu, tên chủ là Tử Tang,",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.552,
+            "confidence": 94.37,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              420,
+              1723,
+              1093,
+              1766
+            ],
+            "generated_text": "con cua Lo Hieu Cong.",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.221,
+            "confidence": 95.92,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              301,
+              1825,
+              2191,
+              1889
+            ],
+            "generated_text": "(173) Vi Sinh : ho kép. Ô nước Lô thời Xuân thu có Vi Sinh",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.544,
+            "confidence": 94.89,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              423,
+              1911,
+              2192,
+              1974
+            ],
+            "generated_text": "Cao nổi tiếng là người thắng thắn. Lai có nhà ăn đất tên",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.443,
+            "confidence": 92.86,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              423,
+              1992,
+              1669,
+              2056
+            ],
+            "generated_text": "là Vi Sinh Mâu chê Không Từ là hấp tấp.",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.425,
+            "confidence": 91.59,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              434,
+              2371,
+              2188,
+              2452
+            ],
+            "generated_text": "問曰：吾子訕神僊，抑奇怪，不信有不死之",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.462,
+            "confidence": 97.27,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              306,
+              2497,
+              2185,
+              2582
+            ],
+            "generated_text": "道。是也，何爲獨信佛道當得度世乎？佛在異",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.466,
+            "confidence": 97.92,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              306,
+              2624,
+              2188,
+              2712
+            ],
+            "generated_text": "域，子足未履其地，目不见其所，徒观其文而信",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.441,
+            "confidence": 94.03,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              310,
+              2753,
+              2186,
+              2838
+            ],
+            "generated_text": "其行。夫觀華者，不能知實；視影者，不能審",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.472,
+            "confidence": 98.96,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              314,
+              2876,
+              930,
+              2950
+            ],
+            "generated_text": "形殆其不誠乎？",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.285,
+            "confidence": 96.24,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              436,
+              3039,
+              2434,
+              3127
+            ],
+            "generated_text": "牟子曰：孔子曰：“视其所以，观其所由，察其",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.409,
+            "confidence": 96.96,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              315,
+              3166,
+              2306,
+              3252
+            ],
+            "generated_text": "所安，人焉廋哉！”昔吕望，周公問於施政，各知",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.535,
+            "confidence": 94.24,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              540,
+              357,
+              2199,
+              368
+            ],
+            "ink": 696
+          },
+          {
+            "box": [
+              412,
+              544,
+              2181,
+              556
+            ],
+            "ink": 691
+          },
+          {
+            "box": [
+              337,
+              852,
+              990,
+              871
+            ],
+            "ink": 1456
+          },
+          {
+            "box": [
+              486,
+              1520,
+              1486,
+              1535
+            ],
+            "ink": 1011
+          },
+          {
+            "box": [
+              580,
+              1684,
+              2167,
+              1694
+            ],
+            "ink": 499
+          },
+          {
+            "box": [
+              578,
+              1706,
+              996,
+              1724
+            ],
+            "ink": 1321
+          },
+          {
+            "box": [
+              787,
+              1971,
+              2018,
+              1981
+            ],
+            "ink": 542
+          },
+          {
+            "box": [
+              1169,
+              2247,
+              1269,
+              2261
+            ],
+            "ink": 866
+          },
+          {
+            "box": [
+              320,
+              3352,
+              2108,
+              3372
+            ],
+            "ink": 1484
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "61cbea5c0055c260ccfc12f884e0febca7b2783b",
+        "git_describe": "61cbea5",
+        "git_dirty": true,
+        "gpu": "NVIDIA L4",
+        "dtype": "bfloat16",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

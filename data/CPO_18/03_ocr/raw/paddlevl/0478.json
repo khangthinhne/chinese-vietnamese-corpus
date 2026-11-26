@@ -1,0 +1,1201 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_18",
+  "engine": "paddlevl",
+  "page": 478,
+  "runs": [
+    {
+      "key": "552853a281576aba3a302a781003f2fa5234ec66eb84240b98c8d697324ebe6e",
+      "parameters": {
+        "image_sha256": "7ba72dd8fa4bb6af1d2f0f9901ed6f7ab74fad5ab0325181c82bf8ad56aeaa7c",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T16:32:48+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_478.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        0,
+        2480,
+        3509
+      ],
+      "lines": [
+        {
+          "text": "Sưu tầm và khảo luận tác phẩm chủ Hán của người Việt Nam trước TK 10",
+          "bbox": [
+            288,
+            85,
+            1873,
+            146
+          ],
+          "confidence": 93.66
+        },
+        {
+          "text": "___",
+          "bbox": [
+            270,
+            177,
+            2247,
+            199
+          ],
+          "confidence": 32.6
+        },
+        {
+          "text": "CHU THICH:",
+          "bbox": [
+            412,
+            297,
+            812,
+            353
+          ],
+          "confidence": 93.24
+        },
+        {
+          "text": "(128) Trở đầu : \"trở\" là cái thót : \"đầu\" là một vật dùng để",
+          "bbox": [
+            288,
+            418,
+            2243,
+            481
+          ],
+          "confidence": 88.38
+        },
+        {
+          "text": "đóm đổ cúng, có chân đứng. \"Trở đầu\" ở đây, có nghĩa là",
+          "bbox": [
+            414,
+            507,
+            2241,
+            570
+          ],
+          "confidence": 86.51
+        },
+        {
+          "text": "do thọ nơi chung.",
+          "bbox": [
+            414,
+            612,
+            929,
+            655
+          ],
+          "confidence": 86.66
+        },
+        {
+          "text": "(129) Nhuy tân : dung cu do thời tiết, tương ứng với tháng 5",
+          "bbox": [
+            287,
+            702,
+            2245,
+            766
+          ],
+          "confidence": 90.48
+        },
+        {
+          "text": "Am lịch, tiết he.",
+          "bbox": [
+            408,
+            820,
+            892,
+            864
+          ],
+          "confidence": 88.35
+        },
+        {
+          "text": "(130) Hoàng chung : dung cu do thòi tiết, tương ứng với",
+          "bbox": [
+            286,
+            913,
+            2242,
+            976
+          ],
+          "confidence": 92.32
+        },
+        {
+          "text": "tháng 11 Am lich, tiết động.",
+          "bbox": [
+            409,
+            1014,
+            1266,
+            1073
+          ],
+          "confidence": 94.66
+        },
+        {
+          "text": "(131) Thương Ướng : ho Công Tôn Thi, người nước Vê, sống",
+          "bbox": [
+            287,
+            1121,
+            2243,
+            1186
+          ],
+          "confidence": 91.89
+        },
+        {
+          "text": "vào thời Chiến quốc, thích cai tri bằng pháp luật (hình",
+          "bbox": [
+            410,
+            1209,
+            2240,
+            1272
+          ],
+          "confidence": 98.7
+        },
+        {
+          "text": "danh pháp thuật), giúp Tân Hiếu Công đinh ra biến",
+          "bbox": [
+            413,
+            1297,
+            2242,
+            1361
+          ],
+          "confidence": 90.7
+        },
+        {
+          "text": "pháp, lập kế sách giàu manh, được Tân phong cho đất",
+          "bbox": [
+            411,
+            1386,
+            2240,
+            1449
+          ],
+          "confidence": 95.33
+        },
+        {
+          "text": "Thương, nên lấy hiệu là Thương Quân, giúp Tân mười",
+          "bbox": [
+            411,
+            1473,
+            2240,
+            1536
+          ],
+          "confidence": 95.7
+        },
+        {
+          "text": "năm, của rơi ngoài đường không ai nhất, nhưng bởi dùng",
+          "bbox": [
+            410,
+            1561,
+            2240,
+            1623
+          ],
+          "confidence": 94.8
+        },
+        {
+          "text": "1/101/1*11*1",
+          "bbox": [
+            447,
+            1648,
+            2203,
+            1668
+          ],
+          "confidence": 60.65
+        },
+        {
+          "text": "pháp lệnh qua nghiêm, khiên bon quan to và hoàng tộc",
+          "bbox": [
+            410,
+            1664,
+            2239,
+            1709
+          ],
+          "confidence": 89.64
+        },
+        {
+          "text": "oán ghét, nên bi dùng xe xé xác sau khi Hiệu Công mất.",
+          "bbox": [
+            410,
+            1734,
+            2193,
+            1795
+          ],
+          "confidence": 91.84
+        },
+        {
+          "text": "(132) Tó, Trương : Tô Tân và Trương Nghi, hai nhà thuyết",
+          "bbox": [
+            284,
+            1861,
+            2241,
+            1924
+          ],
+          "confidence": 95.43
+        },
+        {
+          "text": "khách nội tiếng thời Chiến quốc. Tô Tân tên chủ là Quý",
+          "bbox": [
+            410,
+            1948,
+            2241,
+            2012
+          ],
+          "confidence": 88.74
+        },
+        {
+          "text": "Tù, người Lac Dương, theo học Quỹ Cốc Từ, chuyên",
+          "bbox": [
+            411,
+            2036,
+            2243,
+            2098
+          ],
+          "confidence": 87.71
+        },
+        {
+          "text": "nghiên cứu về phương pháp “hợp tung, liên hoành”. Lúc",
+          "bbox": [
+            413,
+            2123,
+            2240,
+            2186
+          ],
+          "confidence": 96.85
+        },
+        {
+          "text": "đầu đi thuyết Tân Huê Vương, nhưng kế sách không",
+          "bbox": [
+            413,
+            2210,
+            2241,
+            2272
+          ],
+          "confidence": 94.79
+        },
+        {
+          "text": "được dùng, bèn chuyên sang thuyết phục Tê, Sở, Yên,",
+          "bbox": [
+            413,
+            2297,
+            2238,
+            2360
+          ],
+          "confidence": 92.83
+        },
+        {
+          "text": "Triệu, Hàn, Nguy, xui các nước này liên kết với nhau đế",
+          "bbox": [
+            410,
+            2384,
+            2240,
+            2446
+          ],
+          "confidence": 95.71
+        },
+        {
+          "text": "chống Tần. Tô Tần từ đó được phong làm Tướng quốc sáu",
+          "bbox": [
+            411,
+            2470,
+            2240,
+            2533
+          ],
+          "confidence": 81.5
+        },
+        {
+          "text": "nước, làm Trường minh ước hợp tung, khiến Tân suốt",
+          "bbox": [
+            413,
+            2559,
+            2242,
+            2622
+          ],
+          "confidence": 93.78
+        },
+        {
+          "text": "mười lăm năm không đám nhòm ngó ải Hàm Cốc. Sau",
+          "bbox": [
+            415,
+            2646,
+            2239,
+            2708
+          ],
+          "confidence": 90.34
+        },
+        {
+          "text": "sang làm khách nước Tê, bi viên dai phu nước này sai",
+          "bbox": [
+            414,
+            2733,
+            2241,
+            2795
+          ],
+          "confidence": 94.28
+        },
+        {
+          "text": "người đảm chết. Trương Nghi người nước Nguy, lúc đầu",
+          "bbox": [
+            413,
+            2819,
+            2240,
+            2882
+          ],
+          "confidence": 92.4
+        },
+        {
+          "text": "cùng Tô Tần hoc ở Quỷ Cốc Tử. It lâu sau, Tô Tần làm",
+          "bbox": [
+            413,
+            2918,
+            2436,
+            2981
+          ],
+          "confidence": 85.96
+        },
+        {
+          "text": "Tướng quốc nước Triệu, Nghi tôi yết kiến, không được",
+          "bbox": [
+            414,
+            3007,
+            2465,
+            3079
+          ],
+          "confidence": 88.04
+        },
+        {
+          "text": "thu dùng, bèn bỏ đến nước Tân, được Tân Huê Vương cứ",
+          "bbox": [
+            415,
+            3092,
+            2374,
+            3156
+          ],
+          "confidence": 89.91
+        },
+        {
+          "text": "làm Tương quốc, đi du thuyết sáu nước, xui rồi bỏ mình",
+          "bbox": [
+            414,
+            3177,
+            2281,
+            3243
+          ],
+          "confidence": 92.43
+        },
+        {
+          "text": "ước hợp tung để liên hoành với Tần. Ông được Tần gọi là",
+          "bbox": [
+            414,
+            3263,
+            2237,
+            3340
+          ],
+          "confidence": 94.39
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          3509
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 57.09,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              288,
+              85,
+              1873,
+              146
+            ],
+            "generated_text": "Sưu tầm và khảo luận tác phẩm chủ Hán của người Việt Nam trước TK 10",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.75,
+            "confidence": 93.66,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              270,
+              177,
+              2247,
+              199
+            ],
+            "generated_text": "___",
+            "n_lines": 1,
+            "tokens": 2,
+            "seconds": 0.481,
+            "confidence": 32.6,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              412,
+              297,
+              812,
+              353
+            ],
+            "generated_text": "CHU THICH:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.692,
+            "confidence": 93.24,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              288,
+              418,
+              2243,
+              481
+            ],
+            "generated_text": "(128) Trở đầu : \"trở\" là cái thót : \"đầu\" là một vật dùng để",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 2.205,
+            "confidence": 88.38,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              414,
+              507,
+              2241,
+              570
+            ],
+            "generated_text": "đóm đổ cúng, có chân đứng. \"Trở đầu\" ở đây, có nghĩa là",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 1.927,
+            "confidence": 86.51,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              414,
+              612,
+              929,
+              655
+            ],
+            "generated_text": "do thọ nơi chung.",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.852,
+            "confidence": 86.66,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              287,
+              702,
+              2245,
+              766
+            ],
+            "generated_text": "(129) Nhuy tân : dung cu do thời tiết, tương ứng với tháng 5",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.132,
+            "confidence": 90.48,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              408,
+              820,
+              892,
+              864
+            ],
+            "generated_text": "Am lịch, tiết he.",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.84,
+            "confidence": 88.35,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              286,
+              913,
+              2242,
+              976
+            ],
+            "generated_text": "(130) Hoàng chung : dung cu do thòi tiết, tương ứng với",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 1.95,
+            "confidence": 92.32,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              409,
+              1014,
+              1266,
+              1073
+            ],
+            "generated_text": "tháng 11 Am lich, tiết động.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.151,
+            "confidence": 94.66,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              287,
+              1121,
+              2243,
+              1186
+            ],
+            "generated_text": "(131) Thương Ướng : ho Công Tôn Thi, người nước Vê, sống",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 2.062,
+            "confidence": 91.89,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              410,
+              1209,
+              2240,
+              1272
+            ],
+            "generated_text": "vào thời Chiến quốc, thích cai tri bằng pháp luật (hình",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.624,
+            "confidence": 98.7,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              413,
+              1297,
+              2242,
+              1361
+            ],
+            "generated_text": "danh pháp thuật), giúp Tân Hiếu Công đinh ra biến",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.613,
+            "confidence": 90.7,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              411,
+              1386,
+              2240,
+              1449
+            ],
+            "generated_text": "pháp, lập kế sách giàu manh, được Tân phong cho đất",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.729,
+            "confidence": 95.33,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              411,
+              1473,
+              2240,
+              1536
+            ],
+            "generated_text": "Thương, nên lấy hiệu là Thương Quân, giúp Tân mười",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.556,
+            "confidence": 95.7,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              410,
+              1561,
+              2240,
+              1623
+            ],
+            "generated_text": "năm, của rơi ngoài đường không ai nhất, nhưng bởi dùng",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.477,
+            "confidence": 94.8,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              447,
+              1648,
+              2203,
+              1668
+            ],
+            "generated_text": "1/101/1*11*1",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.176,
+            "confidence": 60.65,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              410,
+              1664,
+              2239,
+              1709
+            ],
+            "generated_text": "pháp lệnh qua nghiêm, khiên bon quan to và hoàng tộc",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.581,
+            "confidence": 89.64,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              410,
+              1734,
+              2193,
+              1795
+            ],
+            "generated_text": "oán ghét, nên bi dùng xe xé xác sau khi Hiệu Công mất.",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.843,
+            "confidence": 91.84,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              284,
+              1861,
+              2241,
+              1924
+            ],
+            "generated_text": "(132) Tó, Trương : Tô Tân và Trương Nghi, hai nhà thuyết",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 2.102,
+            "confidence": 95.43,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              410,
+              1948,
+              2241,
+              2012
+            ],
+            "generated_text": "khách nội tiếng thời Chiến quốc. Tô Tân tên chủ là Quý",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.557,
+            "confidence": 88.74,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              411,
+              2036,
+              2243,
+              2098
+            ],
+            "generated_text": "Tù, người Lac Dương, theo học Quỹ Cốc Từ, chuyên",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.604,
+            "confidence": 87.71,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              413,
+              2123,
+              2240,
+              2186
+            ],
+            "generated_text": "nghiên cứu về phương pháp “hợp tung, liên hoành”. Lúc",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.805,
+            "confidence": 96.85,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              413,
+              2210,
+              2241,
+              2272
+            ],
+            "generated_text": "đầu đi thuyết Tân Huê Vương, nhưng kế sách không",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.599,
+            "confidence": 94.79,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              413,
+              2297,
+              2238,
+              2360
+            ],
+            "generated_text": "được dùng, bèn chuyên sang thuyết phục Tê, Sở, Yên,",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 1.87,
+            "confidence": 92.83,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              410,
+              2384,
+              2240,
+              2446
+            ],
+            "generated_text": "Triệu, Hàn, Nguy, xui các nước này liên kết với nhau đế",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.652,
+            "confidence": 95.71,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              411,
+              2470,
+              2240,
+              2533
+            ],
+            "generated_text": "chống Tần. Tô Tần từ đó được phong làm Tướng quốc sáu",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.606,
+            "confidence": 81.5,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              413,
+              2559,
+              2242,
+              2622
+            ],
+            "generated_text": "nước, làm Trường minh ước hợp tung, khiến Tân suốt",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.555,
+            "confidence": 93.78,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              415,
+              2646,
+              2239,
+              2708
+            ],
+            "generated_text": "mười lăm năm không đám nhòm ngó ải Hàm Cốc. Sau",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.671,
+            "confidence": 90.34,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              414,
+              2733,
+              2241,
+              2795
+            ],
+            "generated_text": "sang làm khách nước Tê, bi viên dai phu nước này sai",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.419,
+            "confidence": 94.28,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              413,
+              2819,
+              2240,
+              2882
+            ],
+            "generated_text": "người đảm chết. Trương Nghi người nước Nguy, lúc đầu",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.555,
+            "confidence": 92.4,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 32,
+            "box": [
+              413,
+              2918,
+              2436,
+              2981
+            ],
+            "generated_text": "cùng Tô Tần hoc ở Quỷ Cốc Tử. It lâu sau, Tô Tần làm",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 1.981,
+            "confidence": 85.96,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 33,
+            "box": [
+              414,
+              3007,
+              2465,
+              3079
+            ],
+            "generated_text": "Tướng quốc nước Triệu, Nghi tôi yết kiến, không được",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.424,
+            "confidence": 88.04,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 34,
+            "box": [
+              415,
+              3092,
+              2374,
+              3156
+            ],
+            "generated_text": "thu dùng, bèn bỏ đến nước Tân, được Tân Huê Vương cứ",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.807,
+            "confidence": 89.91,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 35,
+            "box": [
+              414,
+              3177,
+              2281,
+              3243
+            ],
+            "generated_text": "làm Tương quốc, đi du thuyết sáu nước, xui rồi bỏ mình",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.717,
+            "confidence": 92.43,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 36,
+            "box": [
+              414,
+              3263,
+              2237,
+              3340
+            ],
+            "generated_text": "ước hợp tung để liên hoành với Tần. Ông được Tần gọi là",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.517,
+            "confidence": 94.39,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              295,
+              763,
+              2174,
+              775
+            ],
+            "ink": 668
+          },
+          {
+            "box": [
+              296,
+              973,
+              2105,
+              986
+            ],
+            "ink": 810
+          },
+          {
+            "box": [
+              299,
+              1184,
+              2237,
+              1195
+            ],
+            "ink": 672
+          },
+          {
+            "box": [
+              600,
+              1360,
+              1856,
+              1371
+            ],
+            "ink": 606
+          },
+          {
+            "box": [
+              411,
+              1447,
+              1955,
+              1461
+            ],
+            "ink": 861
+          },
+          {
+            "box": [
+              608,
+              1533,
+              1860,
+              1547
+            ],
+            "ink": 901
+          },
+          {
+            "box": [
+              850,
+              1622,
+              2232,
+              1634
+            ],
+            "ink": 704
+          },
+          {
+            "box": [
+              411,
+              1708,
+              2199,
+              1722
+            ],
+            "ink": 925
+          },
+          {
+            "box": [
+              540,
+              1796,
+              2018,
+              1805
+            ],
+            "ink": 415
+          },
+          {
+            "box": [
+              503,
+              2096,
+              2142,
+              2109
+            ],
+            "ink": 785
+          },
+          {
+            "box": [
+              453,
+              2184,
+              1647,
+              2198
+            ],
+            "ink": 973
+          },
+          {
+            "box": [
+              499,
+              2358,
+              2240,
+              2371
+            ],
+            "ink": 789
+          },
+          {
+            "box": [
+              554,
+              2532,
+              1988,
+              2544
+            ],
+            "ink": 691
+          },
+          {
+            "box": [
+              454,
+              2879,
+              1954,
+              2893
+            ],
+            "ink": 932
+          },
+          {
+            "box": [
+              523,
+              2981,
+              2443,
+              2990
+            ],
+            "ink": 526
+          },
+          {
+            "box": [
+              660,
+              3152,
+              2297,
+              3165
+            ],
+            "ink": 889
+          },
+          {
+            "box": [
+              712,
+              3241,
+              2204,
+              3250
+            ],
+            "ink": 561
+          },
+          {
+            "box": [
+              308,
+              3419,
+              2036,
+              3429
+            ],
+            "ink": 675
+          },
+          {
+            "box": [
+              297,
+              3437,
+              2025,
+              3453
+            ],
+            "ink": 1233
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

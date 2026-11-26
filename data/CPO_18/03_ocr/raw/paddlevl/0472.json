@@ -1,0 +1,802 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_18",
+  "engine": "paddlevl",
+  "page": 472,
+  "runs": [
+    {
+      "key": "90d834051ca58479aaeca004cf81873508cbde5c144e0abbd34b4fdbafb28632",
+      "parameters": {
+        "image_sha256": "a430656dc9a5f9409b1f440f7a7af497e0b89bf2d5d49a1d600b4f63c39bc4db",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T16:26:55+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_472.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        0,
+        2480,
+        3509
+      ],
+      "lines": [
+        {
+          "text": "Sụu tấm và khảo luận tác phẩm chủ Hán của người Việt Nam trước TK 10",
+          "bbox": [
+            310,
+            93,
+            1857,
+            154
+          ],
+          "confidence": 92.6
+        },
+        {
+          "text": "[",
+          "bbox": [
+            294,
+            182,
+            2222,
+            194
+          ],
+          "confidence": 30.0
+        },
+        {
+          "text": "$\\begin{aligned}&\\int_{0}^{\\pi}\\frac{1}{x^{2}}dx=\\int_{0}^{\\pi}\\frac{1}{x^{3}}+\\int_{0}^{\\pi}\\frac{1}{x^{4}}+\\cdots+\\int_{0}^{\\pi}\\frac{1}{x^{n}}=\\frac{1}{2}\\int_{0}^{\\pi}\\frac{1}{x^{n}}dx=\\frac{1}{2}\\int_{0}^{\\pi}\\frac{1}{x^{2}}dx=\\frac{1}{2}\\int_{0}^{\\pi}\\frac{1}{x^{3}}dx=\\frac{1}{2}\\int_{0}^{\\pi}\\frac{1}{x^{4}}dx=\\frac{1}{2}\\int_{0}^{\\pi}\\frac{1}{x^{5}}dx=\\frac{1}{2}\\int_{0}^{\\pi}\\frac{1}{x^{6}}dx=\\frac{1}{2}\\int_{0}^{\\pi}\\frac{1}{x^{7}}dx=\\frac{1}{2}\\int_{0}^{\\pi}\\frac{1}{x^{8}}dx=\\frac{1}{2}\\int_{0}^{\\pi}\\frac{1}{x^{9}}dx=\\frac{1}{2}\\int_{0}^{\\pi}\\frac{1}{x^{10}}dx=\\frac{1}{2}\\int_{0}^{\\pi}\\frac{1}{x^{11}}dx=\\frac{1}{2}\\int_{0}^{\\pi}\\frac{1}{x^{12}}dx=\\frac{1}{2}\\int_{0}^{\\pi}\\frac{1}{x^{13}}dx=\\frac{1}{2}\\int_{0}^{\\pi}\\frac{1}{x^{14}}dx=\\frac{1}{2}\\int_{0}^{\\pi}\\frac{1}{x^{15}}dx=\\frac{1}{2}\\int_{0}^{\\pi}\\frac{1}{x^{16}}dx=\\frac{1}{2}\\int_{0}^{\\pi}\\frac{1}{x^{17}}dx=\\frac{1}{2}\\int_{0}^{\\pi}\\frac{1}{x^{18}}dx=\\frac{1}{2}\\int_{0}^{\\pi}\\frac{1}{x^{19}}dx=\\frac{1}{2}\\int_{0}^{\\pi}\\frac{",
+          "bbox": [
+            294,
+            194,
+            2222,
+            206
+          ],
+          "confidence": 30.0
+        },
+        {
+          "text": "thiên ha, giống như ngòi lạch so với sông biên\". Lẽ nào",
+          "bbox": [
+            312,
+            289,
+            2216,
+            364
+          ],
+          "confidence": 87.87
+        },
+        {
+          "text": "đấy là những lời hoa hòe ư ? Sách Luân ngũ nói : \"Dùng",
+          "bbox": [
+            311,
+            380,
+            2216,
+            446
+          ],
+          "confidence": 87.65
+        },
+        {
+          "text": "đức đê cai tri thì cũng ví như sao Bắc thân\", dân trời đê",
+          "bbox": [
+            310,
+            473,
+            2214,
+            537
+          ],
+          "confidence": 85.72
+        },
+        {
+          "text": "so với người vây. Từ Ha nói : \"Ví như cây cỏ\", khoanh",
+          "bbox": [
+            310,
+            563,
+            2213,
+            629
+          ],
+          "confidence": 88.97
+        },
+        {
+          "text": "vùng dễ phân biệt. Ba trăm bài thơ trong Kinh Thi đệu",
+          "bbox": [
+            307,
+            657,
+            2213,
+            723
+          ],
+          "confidence": 86.84
+        },
+        {
+          "text": "viên dân vật cùng loại. Từ sấm vĩ (116) của Chu từ đến",
+          "bbox": [
+            308,
+            748,
+            2213,
+            815
+          ],
+          "confidence": 86.8
+        },
+        {
+          "text": "vếu mất của thánh nhân, không đâu là không đăn dung",
+          "bbox": [
+            309,
+            842,
+            2216,
+            908
+          ],
+          "confidence": 81.51
+        },
+        {
+          "text": "các thí du. Sao ông riêng ghét việc Phát dùng thí du để",
+          "bbox": [
+            309,
+            935,
+            2215,
+            1001
+          ],
+          "confidence": 92.58
+        },
+        {
+          "text": "giang kinh!",
+          "bbox": [
+            312,
+            1046,
+            693,
+            1091
+          ],
+          "confidence": 79.63
+        },
+        {
+          "text": "CHU THICH:",
+          "bbox": [
+            432,
+            1279,
+            823,
+            1334
+          ],
+          "confidence": 92.56
+        },
+        {
+          "text": "(116) Sám vĩ : sách sắm và sách vĩ, những công cụ dùng để",
+          "bbox": [
+            309,
+            1419,
+            2216,
+            1490
+          ],
+          "confidence": 89.21
+        },
+        {
+          "text": "bói toán, dư báo tương lai.",
+          "bbox": [
+            428,
+            1505,
+            1211,
+            1562
+          ],
+          "confidence": 87.42
+        },
+        {
+          "text": "問曰：人之處世，莫不好富貴而惡貧賤，樂歡",
+          "bbox": [
+            439,
+            1905,
+            2212,
+            1992
+          ],
+          "confidence": 99.21
+        },
+        {
+          "text": "逸而憚勞倦。黄帝養性以五肴爲上。孔子曰：",
+          "bbox": [
+            313,
+            2036,
+            2201,
+            2121
+          ],
+          "confidence": 97.81
+        },
+        {
+          "text": "“食不厭精，鱠不厭細”。今沙門被赤布，日一",
+          "bbox": [
+            310,
+            2164,
+            2207,
+            2245
+          ],
+          "confidence": 98.86
+        },
+        {
+          "text": "食，閉六情，自畢於世若茲，何聊之有？",
+          "bbox": [
+            314,
+            2289,
+            1787,
+            2371
+          ],
+          "confidence": 98.72
+        },
+        {
+          "text": "牟子曰：富與貴是人[之]所欲，不以其道得",
+          "bbox": [
+            440,
+            2455,
+            2212,
+            2538
+          ],
+          "confidence": 97.55
+        },
+        {
+          "text": "之，不處也。貧與賤是人之所惡，不以其道得",
+          "bbox": [
+            313,
+            2584,
+            2213,
+            2667
+          ],
+          "confidence": 97.64
+        },
+        {
+          "text": "之，不去也。老子曰：“五色令人目盲，五音令人",
+          "bbox": [
+            315,
+            2712,
+            2214,
+            2794
+          ],
+          "confidence": 99.28
+        },
+        {
+          "text": "耳聾，五味令人口爽，馳騁畋獵令人心發狂，難",
+          "bbox": [
+            319,
+            2836,
+            2207,
+            2921
+          ],
+          "confidence": 99.3
+        },
+        {
+          "text": "得之貨令人行妨。聖人爲腹不爲目”。此言豈",
+          "bbox": [
+            318,
+            2958,
+            2475,
+            3049
+          ],
+          "confidence": 97.49
+        },
+        {
+          "text": "虚哉！柳下惠不以三公之位易其行段干木不以",
+          "bbox": [
+            320,
+            3087,
+            2374,
+            3172
+          ],
+          "confidence": 99.06
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          3509
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 96.434,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              310,
+              93,
+              1857,
+              154
+            ],
+            "generated_text": "Sụu tấm và khảo luận tác phẩm chủ Hán của người Việt Nam trước TK 10",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 1.846,
+            "confidence": 92.6,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              294,
+              182,
+              2222,
+              206
+            ],
+            "generated_text": "[\n$\\begin{aligned}&\\int_{0}^{\\pi}\\frac{1}{x^{2}}dx=\\int_{0}^{\\pi}\\frac{1}{x^{3}}+\\int_{0}^{\\pi}\\frac{1}{x^{4}}+\\cdots+\\int_{0}^{\\pi}\\frac{1}{x^{n}}=\\frac{1}{2}\\int_{0}^{\\pi}\\frac{1}{x^{n}}dx=\\frac{1}{2}\\int_{0}^{\\pi}\\frac{1}{x^{2}}dx=\\frac{1}{2}\\int_{0}^{\\pi}\\frac{1}{x^{3}}dx=\\frac{1}{2}\\int_{0}^{\\pi}\\frac{1}{x^{4}}dx=\\frac{1}{2}\\int_{0}^{\\pi}\\frac{1}{x^{5}}dx=\\frac{1}{2}\\int_{0}^{\\pi}\\frac{1}{x^{6}}dx=\\frac{1}{2}\\int_{0}^{\\pi}\\frac{1}{x^{7}}dx=\\frac{1}{2}\\int_{0}^{\\pi}\\frac{1}{x^{8}}dx=\\frac{1}{2}\\int_{0}^{\\pi}\\frac{1}{x^{9}}dx=\\frac{1}{2}\\int_{0}^{\\pi}\\frac{1}{x^{10}}dx=\\frac{1}{2}\\int_{0}^{\\pi}\\frac{1}{x^{11}}dx=\\frac{1}{2}\\int_{0}^{\\pi}\\frac{1}{x^{12}}dx=\\frac{1}{2}\\int_{0}^{\\pi}\\frac{1}{x^{13}}dx=\\frac{1}{2}\\int_{0}^{\\pi}\\frac{1}{x^{14}}dx=\\frac{1}{2}\\int_{0}^{\\pi}\\frac{1}{x^{15}}dx=\\frac{1}{2}\\int_{0}^{\\pi}\\frac{1}{x^{16}}dx=\\frac{1}{2}\\int_{0}^{\\pi}\\frac{1}{x^{17}}dx=\\frac{1}{2}\\int_{0}^{\\pi}\\frac{1}{x^{18}}dx=\\frac{1}{2}\\int_{0}^{\\pi}\\frac{1}{x^{19}}dx=\\frac{1}{2}\\int_{0}^{\\pi}\\frac{",
+            "n_lines": 2,
+            "tokens": 512,
+            "seconds": 59.229,
+            "confidence": 30.0,
+            "flags": [
+              "truncated"
+            ],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              312,
+              289,
+              2216,
+              364
+            ],
+            "generated_text": "thiên ha, giống như ngòi lạch so với sông biên\". Lẽ nào",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.61,
+            "confidence": 87.87,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              311,
+              380,
+              2216,
+              446
+            ],
+            "generated_text": "đấy là những lời hoa hòe ư ? Sách Luân ngũ nói : \"Dùng",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 1.868,
+            "confidence": 87.65,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              310,
+              473,
+              2214,
+              537
+            ],
+            "generated_text": "đức đê cai tri thì cũng ví như sao Bắc thân\", dân trời đê",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.784,
+            "confidence": 85.72,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              310,
+              563,
+              2213,
+              629
+            ],
+            "generated_text": "so với người vây. Từ Ha nói : \"Ví như cây cỏ\", khoanh",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.74,
+            "confidence": 88.97,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              307,
+              657,
+              2213,
+              723
+            ],
+            "generated_text": "vùng dễ phân biệt. Ba trăm bài thơ trong Kinh Thi đệu",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.609,
+            "confidence": 86.84,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              308,
+              748,
+              2213,
+              815
+            ],
+            "generated_text": "viên dân vật cùng loại. Từ sấm vĩ (116) của Chu từ đến",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.814,
+            "confidence": 86.8,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              309,
+              842,
+              2216,
+              908
+            ],
+            "generated_text": "vếu mất của thánh nhân, không đâu là không đăn dung",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.476,
+            "confidence": 81.51,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              309,
+              935,
+              2215,
+              1001
+            ],
+            "generated_text": "các thí du. Sao ông riêng ghét việc Phát dùng thí du để",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.731,
+            "confidence": 92.58,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              312,
+              1046,
+              693,
+              1091
+            ],
+            "generated_text": "giang kinh!",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.632,
+            "confidence": 79.63,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              432,
+              1279,
+              823,
+              1334
+            ],
+            "generated_text": "CHU THICH:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.69,
+            "confidence": 92.56,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              309,
+              1419,
+              2216,
+              1490
+            ],
+            "generated_text": "(116) Sám vĩ : sách sắm và sách vĩ, những công cụ dùng để",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 2.021,
+            "confidence": 89.21,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              428,
+              1505,
+              1211,
+              1562
+            ],
+            "generated_text": "bói toán, dư báo tương lai.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.132,
+            "confidence": 87.42,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              439,
+              1905,
+              2212,
+              1992
+            ],
+            "generated_text": "問曰：人之處世，莫不好富貴而惡貧賤，樂歡",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 1.826,
+            "confidence": 99.21,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              313,
+              2036,
+              2201,
+              2121
+            ],
+            "generated_text": "逸而憚勞倦。黄帝養性以五肴爲上。孔子曰：",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.659,
+            "confidence": 97.81,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              310,
+              2164,
+              2207,
+              2245
+            ],
+            "generated_text": "“食不厭精，鱠不厭細”。今沙門被赤布，日一",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 1.921,
+            "confidence": 98.86,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              314,
+              2289,
+              1787,
+              2371
+            ],
+            "generated_text": "食，閉六情，自畢於世若茲，何聊之有？",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 1.968,
+            "confidence": 98.72,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              440,
+              2455,
+              2212,
+              2538
+            ],
+            "generated_text": "牟子曰：富與貴是人[之]所欲，不以其道得",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.411,
+            "confidence": 97.55,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              313,
+              2584,
+              2213,
+              2667
+            ],
+            "generated_text": "之，不處也。貧與賤是人之所惡，不以其道得",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.721,
+            "confidence": 97.64,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              315,
+              2712,
+              2214,
+              2794
+            ],
+            "generated_text": "之，不去也。老子曰：“五色令人目盲，五音令人",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.369,
+            "confidence": 99.28,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              319,
+              2836,
+              2207,
+              2921
+            ],
+            "generated_text": "耳聾，五味令人口爽，馳騁畋獵令人心發狂，難",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 2.066,
+            "confidence": 99.3,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              318,
+              2958,
+              2475,
+              3049
+            ],
+            "generated_text": "得之貨令人行妨。聖人爲腹不爲目”。此言豈",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.818,
+            "confidence": 97.49,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              320,
+              3087,
+              2374,
+              3172
+            ],
+            "generated_text": "虚哉！柳下惠不以三公之位易其行段干木不以",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.486,
+            "confidence": 99.06,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              386,
+              446,
+              2209,
+              455
+            ],
+            "ink": 360
+          },
+          {
+            "box": [
+              436,
+              724,
+              1703,
+              733
+            ],
+            "ink": 401
+          },
+          {
+            "box": [
+              308,
+              908,
+              2210,
+              920
+            ],
+            "ink": 597
+          },
+          {
+            "box": [
+              601,
+              997,
+              2092,
+              1012
+            ],
+            "ink": 946
+          },
+          {
+            "box": [
+              1181,
+              1804,
+              1266,
+              1813
+            ],
+            "ink": 464
+          },
+          {
+            "box": [
+              338,
+              3305,
+              2190,
+              3326
+            ],
+            "ink": 1562
+          },
+          {
+            "box": [
+              328,
+              3322,
+              2184,
+              3344
+            ],
+            "ink": 1721
+          },
+          {
+            "box": [
+              44,
+              3483,
+              2022,
+              3496
+            ],
+            "ink": 876
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": true,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

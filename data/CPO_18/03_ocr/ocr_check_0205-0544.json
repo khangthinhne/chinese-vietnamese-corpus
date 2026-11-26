@@ -1,0 +1,5182 @@
+{
+  "work_id": "CPO_18",
+  "check": {
+    "qwen_low_conf": 60,
+    "han_line_factor": 2.5,
+    "han_max_line_chars": 40,
+    "han_single_char_share": 0.5,
+    "han_gap_unit_share": 0.5,
+    "vie_min_lines_ink": 0.05,
+    "vie_min_lines": 3,
+    "blank_ink": 0.004
+  },
+  "totals": {
+    "pages": 340,
+    "range": "205-544",
+    "images": 340,
+    "extra_images": "",
+    "raw_outside_range": "",
+    "han_run": 340,
+    "vie_run": 340,
+    "han_pages": 160,
+    "vie_pages": 331,
+    "han_lines": 2881,
+    "vie_lines": 3439,
+    "classes": {
+      "bilingual": 156,
+      "han_only": 4,
+      "vie_only": 175,
+      "blank": 3,
+      "": 2
+    },
+    "han_median_lines": 11.0,
+    "errors": 36,
+    "warnings": 60,
+    "infos": 134
+  },
+  "counts": {
+    "error": {
+      "vie_degenerate": 3,
+      "han_degenerate": 31,
+      "no_text": 2
+    },
+    "warning": {
+      "vie_english_like": 1,
+      "han_long_line": 10,
+      "vie_run_no_lines": 6,
+      "han_many_lines": 23,
+      "vie_low_conf": 19,
+      "han_single_char_lines": 1
+    },
+    "info": {
+      "han_simplified": 127,
+      "blank_page": 3,
+      "han_only_page": 4
+    }
+  },
+  "complete": false,
+  "issues": [
+    {
+      "page": 470,
+      "level": "warning",
+      "code": "vie_english_like",
+      "detail": "L002: \", the three hundred and first verse of the poem \"The Three Hundred an"
+    },
+    {
+      "page": 205,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "群"
+    },
+    {
+      "page": 208,
+      "level": "error",
+      "code": "vie_degenerate",
+      "detail": "đơn vị 2 ['repetition_collapsed', 'truncated']: 'kính lễ. Theo Tăng sử lược thì người Tây'"
+    },
+    {
+      "page": 208,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "优么军礼迹墙云咸删"
+    },
+    {
+      "page": 209,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "迹吕"
+    },
+    {
+      "page": 218,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "内鉴观吕迹群释验"
+    },
+    {
+      "page": 221,
+      "level": "warning",
+      "code": "han_long_line",
+      "detail": "1 dòng > 40 chữ, vd 作为一个人工智能语言模型，我还没学习如何..."
+    },
+    {
+      "page": 221,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "为个语还没学习这问题会尽帮决"
+    },
+    {
+      "page": 224,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "诲测奥则"
+    },
+    {
+      "page": 225,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "群吕脱侧"
+    },
+    {
+      "page": 234,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "咸吕诲云"
+    },
+    {
+      "page": 241,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "疱骇"
+    },
+    {
+      "page": 242,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "绝隐显顺云群"
+    },
+    {
+      "page": 243,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "干吕虚钵见吴"
+    },
+    {
+      "page": 244,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "群迹咸兹吕"
+    },
+    {
+      "page": 260,
+      "level": "warning",
+      "code": "vie_run_no_lines",
+      "detail": "run qwen không có dòng nào"
+    },
+    {
+      "page": 260,
+      "level": "info",
+      "code": "blank_page",
+      "detail": "mực 0.0010"
+    },
+    {
+      "page": 261,
+      "level": "error",
+      "code": "han_degenerate",
+      "detail": "đơn vị 13 ['loop_stopped']: '既ＳＰＨＤＥＩＡＥＳＳ2����������������������������'"
+    },
+    {
+      "page": 262,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "个图绪黄冈"
+    },
+    {
+      "page": 263,
+      "level": "error",
+      "code": "han_degenerate",
+      "detail": "đơn vị 12 ['loop_stopped']: '四万七千零九千零九千零九千零九千零九千零九千零九'"
+    },
+    {
+      "page": 263,
+      "level": "error",
+      "code": "han_degenerate",
+      "detail": "đơn vị 20 ['loop_stopped']: '一州一州一府一州一州一州一州一州一州一州一州一州'"
+    },
+    {
+      "page": 263,
+      "level": "error",
+      "code": "han_degenerate",
+      "detail": "đơn vị 43 ['loop_stopped']: '，在「「「「「「「「「「「「「「「「「「「「「「'"
+    },
+    {
+      "page": 263,
+      "level": "warning",
+      "code": "han_many_lines",
+      "detail": "49 dòng > 2.5 x trung vị 11"
+    },
+    {
+      "page": 263,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "长电国对独体过禄纳册参计划总写栖历画图迹"
+    },
+    {
+      "page": 264,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "虚吕亘师见书内兹顼陈范"
+    },
+    {
+      "page": 265,
+      "level": "warning",
+      "code": "vie_low_conf",
+      "detail": "conf 37.28"
+    },
+    {
+      "page": 265,
+      "level": "warning",
+      "code": "han_many_lines",
+      "detail": "53 dòng > 2.5 x trung vị 11"
+    },
+    {
+      "page": 265,
+      "level": "warning",
+      "code": "han_long_line",
+      "detail": "1 dòng > 40 chữ, vd 年，他开始写诗，写诗时，他发现他的诗内容..."
+    },
+    {
+      "page": 265,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "发继历辉画桥别学庙当从军征范隐亚辞于摄占"
+    },
+    {
+      "page": 266,
+      "level": "error",
+      "code": "han_degenerate",
+      "detail": "đơn vị 16 ['truncated']: '3. 空 2. 空 3. 空 4. 空 5. 空 6. 空 7. 空 8. 空 '"
+    },
+    {
+      "page": 266,
+      "level": "error",
+      "code": "han_degenerate",
+      "detail": "đơn vị 35 ['repetition_collapsed', 'loop_stopped']: '（一）历史大历史大历史大历史大历史大历史大历史大历史大历史大历史大历史'"
+    },
+    {
+      "page": 266,
+      "level": "error",
+      "code": "han_degenerate",
+      "detail": "đơn vị 95 ['loop_stopped']: 'A 1 (美) 1 1 1 1 1 1 1 1 1'"
+    },
+    {
+      "page": 266,
+      "level": "error",
+      "code": "han_degenerate",
+      "detail": "đơn vị 119 ['loop_stopped']: '对 1000000000000000000000'"
+    },
+    {
+      "page": 266,
+      "level": "warning",
+      "code": "han_many_lines",
+      "detail": "72 dòng > 2.5 x trung vị 11"
+    },
+    {
+      "page": 266,
+      "level": "warning",
+      "code": "han_long_line",
+      "detail": "2 dòng > 40 chữ, vd 空空空空空空空空空空空空空空空空空空空空..."
+    },
+    {
+      "page": 266,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "亿万准却浑宝义当献怀终时点书赋状写尔于无"
+    },
+    {
+      "page": 267,
+      "level": "error",
+      "code": "han_degenerate",
+      "detail": "đơn vị 27 ['repetition_collapsed', 'loop_stopped']: '「お知らせ」が「お知らせ」が「お知らせ」が「お知らせ」が「お知ら'"
+    },
+    {
+      "page": 267,
+      "level": "error",
+      "code": "han_degenerate",
+      "detail": "đơn vị 28 ['loop_stopped']: '5. 0.301541天(25)天(30)天(1)天(1)天(1)天(1)天(1'"
+    },
+    {
+      "page": 267,
+      "level": "error",
+      "code": "han_degenerate",
+      "detail": "đơn vị 72 ['loop_stopped']: '■ 1515年，阿富汗的国王阿富汗国王阿富汗国王阿富汗国王阿富汗国王阿富汗'"
+    },
+    {
+      "page": 267,
+      "level": "warning",
+      "code": "vie_low_conf",
+      "detail": "conf 38.0"
+    },
+    {
+      "page": 267,
+      "level": "warning",
+      "code": "han_many_lines",
+      "detail": "65 dòng > 2.5 x trung vị 11"
+    },
+    {
+      "page": 267,
+      "level": "warning",
+      "code": "han_long_line",
+      "detail": "1 dòng > 40 chữ, vd 作为一个人工智能语言模型，我还没学习如何..."
+    },
+    {
+      "page": 267,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "沥陈审隐树万战学几悦业记么谁泪坏轴处画轨"
+    },
+    {
+      "page": 268,
+      "level": "warning",
+      "code": "han_many_lines",
+      "detail": "28 dòng > 2.5 x trung vị 11"
+    },
+    {
+      "page": 268,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "迹"
+    },
+    {
+      "page": 269,
+      "level": "error",
+      "code": "han_degenerate",
+      "detail": "đơn vị 9 ['han_gap_removed', 'loop_stopped']: '☑ 17月2日 法国 7 7 7 7 7 7 7 7 7 7'"
+    },
+    {
+      "page": 269,
+      "level": "error",
+      "code": "han_degenerate",
+      "detail": "đơn vị 44 ['repetition_collapsed', 'loop_stopped']: '曰曰曰曰曰曰曰曰曰曰曰曰曰曰曰曰曰曰曰曰曰曰曰曰'"
+    },
+    {
+      "page": 269,
+      "level": "error",
+      "code": "han_degenerate",
+      "detail": "đơn vị 71 ['loop_stopped']: '日宿宿宿宿宿宿宿宿宿宿宿宿宿宿宿宿宿宿宿宿宿宿宿'"
+    },
+    {
+      "page": 269,
+      "level": "error",
+      "code": "han_degenerate",
+      "detail": "đơn vị 82 ['han_gap_removed', 'loop_stopped']: '[ 答 答 答 答 答 答 答 答 答 答 答'"
+    },
+    {
+      "page": 269,
+      "level": "warning",
+      "code": "han_many_lines",
+      "detail": "68 dòng > 2.5 x trung vị 11"
+    },
+    {
+      "page": 269,
+      "level": "warning",
+      "code": "han_long_line",
+      "detail": "1 dòng > 40 chữ, vd 今天有诗，但不知其作者为何。诗中常有作者..."
+    },
+    {
+      "page": 269,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "动诗为对评论没发说图财饥长诺国调广温张书"
+    },
+    {
+      "page": 270,
+      "level": "error",
+      "code": "han_degenerate",
+      "detail": "đơn vị 34 ['loop_stopped']: '【木】木|木|木|木|木|木|木|木|木|木|木'"
+    },
+    {
+      "page": 270,
+      "level": "warning",
+      "code": "han_many_lines",
+      "detail": "56 dòng > 2.5 x trung vị 11"
+    },
+    {
+      "page": 270,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "咸图极块谁设举干尝虚诚里问获师册认识台虬"
+    },
+    {
+      "page": 271,
+      "level": "error",
+      "code": "han_degenerate",
+      "detail": "đơn vị 22 ['repetition_collapsed', 'loop_stopped']: '【守旧建筑】建筑建筑建筑建筑建筑建筑建筑建筑建筑建筑建筑建筑建筑建筑建筑建筑建筑'"
+    },
+    {
+      "page": 271,
+      "level": "error",
+      "code": "han_degenerate",
+      "detail": "đơn vị 46 ['loop_stopped']: '1. 自然，你！你！你！你！你！你！你！你！你！你'"
+    },
+    {
+      "page": 271,
+      "level": "error",
+      "code": "han_degenerate",
+      "detail": "đơn vị 71 ['han_gap_removed', 'loop_stopped']: '2 真 世 界 1 大 1 身 故 1 世 1 世 1 世 1 世'"
+    },
+    {
+      "page": 271,
+      "level": "error",
+      "code": "han_degenerate",
+      "detail": "đơn vị 97 ['han_gap_removed', 'loop_stopped']: '1 江苏 浙江 福建 福建 福建 福建 福建 福建 福建 福建 福建'"
+    },
+    {
+      "page": 271,
+      "level": "warning",
+      "code": "han_many_lines",
+      "detail": "76 dòng > 2.5 x trung vị 11"
+    },
+    {
+      "page": 271,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "孙圣却药来仪万门节缰为据问学杂证册传号语"
+    },
+    {
+      "page": 272,
+      "level": "info",
+      "code": "han_only_page",
+      "detail": "14 dòng Hán, không có chữ Việt"
+    },
+    {
+      "page": 273,
+      "level": "warning",
+      "code": "vie_low_conf",
+      "detail": "conf 42.23"
+    },
+    {
+      "page": 273,
+      "level": "warning",
+      "code": "han_many_lines",
+      "detail": "58 dòng > 2.5 x trung vị 11"
+    },
+    {
+      "page": 273,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "范朴"
+    },
+    {
+      "page": 274,
+      "level": "warning",
+      "code": "han_many_lines",
+      "detail": "36 dòng > 2.5 x trung vị 11"
+    },
+    {
+      "page": 274,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "递个异见则难轶数叁损谢书骂题开为图恒"
+    },
+    {
+      "page": 275,
+      "level": "warning",
+      "code": "vie_low_conf",
+      "detail": "conf 42.84"
+    },
+    {
+      "page": 275,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "云"
+    },
+    {
+      "page": 276,
+      "level": "warning",
+      "code": "vie_low_conf",
+      "detail": "conf 44.31"
+    },
+    {
+      "page": 276,
+      "level": "warning",
+      "code": "han_many_lines",
+      "detail": "39 dòng > 2.5 x trung vị 11"
+    },
+    {
+      "page": 276,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "迹"
+    },
+    {
+      "page": 277,
+      "level": "warning",
+      "code": "vie_low_conf",
+      "detail": "conf 44.1"
+    },
+    {
+      "page": 277,
+      "level": "warning",
+      "code": "han_many_lines",
+      "detail": "51 dòng > 2.5 x trung vị 11"
+    },
+    {
+      "page": 277,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "决岂访剑门会长为经济论坛伟镇阴众还国权卫"
+    },
+    {
+      "page": 278,
+      "level": "error",
+      "code": "han_degenerate",
+      "detail": "đơn vị 23 ['repetition_collapsed', 'loop_stopped']: '本本本本本本本本本本本本本本本本本本本本本本本本'"
+    },
+    {
+      "page": 278,
+      "level": "warning",
+      "code": "vie_low_conf",
+      "detail": "conf 48.84"
+    },
+    {
+      "page": 278,
+      "level": "warning",
+      "code": "han_many_lines",
+      "detail": "38 dòng > 2.5 x trung vị 11"
+    },
+    {
+      "page": 278,
+      "level": "warning",
+      "code": "han_long_line",
+      "detail": "1 dòng > 40 chữ, vd 在物理学中，是一个著名的公式，它描述了能..."
+    },
+    {
+      "page": 278,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "药颖于记闻处讼号内细鉴开写诗热测单无变叙"
+    },
+    {
+      "page": 279,
+      "level": "warning",
+      "code": "vie_low_conf",
+      "detail": "conf 47.45"
+    },
+    {
+      "page": 279,
+      "level": "warning",
+      "code": "han_many_lines",
+      "detail": "69 dòng > 2.5 x trung vị 11"
+    },
+    {
+      "page": 279,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "据干云"
+    },
+    {
+      "page": 280,
+      "level": "warning",
+      "code": "vie_low_conf",
+      "detail": "conf 46.19"
+    },
+    {
+      "page": 280,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "迹咸"
+    },
+    {
+      "page": 281,
+      "level": "error",
+      "code": "han_degenerate",
+      "detail": "đơn vị 46 ['repetition_collapsed', 'loop_stopped']: '日の本の内容は、日の本の内容は、日の本の内容は、日の本の内容は、日の本の'"
+    },
+    {
+      "page": 281,
+      "level": "warning",
+      "code": "vie_low_conf",
+      "detail": "conf 34.39"
+    },
+    {
+      "page": 281,
+      "level": "warning",
+      "code": "han_many_lines",
+      "detail": "64 dòng > 2.5 x trung vị 11"
+    },
+    {
+      "page": 281,
+      "level": "warning",
+      "code": "han_long_line",
+      "detail": "1 dòng > 40 chữ, vd 作为一个人工智能语言模型，我还没学习如何..."
+    },
+    {
+      "page": 281,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "语闻发谢长诗里权导处干艺温于应证书网为个"
+    },
+    {
+      "page": 283,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "内"
+    },
+    {
+      "page": 284,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "爱将静长军"
+    },
+    {
+      "page": 285,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "迹场兹"
+    },
+    {
+      "page": 286,
+      "level": "error",
+      "code": "vie_degenerate",
+      "detail": "đơn vị 2 ['truncated']: '四ier\\nCn\\nCn\\nCn\\nCn\\nCn\\nCn\\nCn\\nCn\\nCn\\nCn\\nCn\\nCn'"
+    },
+    {
+      "page": 286,
+      "level": "warning",
+      "code": "vie_low_conf",
+      "detail": "conf 45.25"
+    },
+    {
+      "page": 290,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "广"
+    },
+    {
+      "page": 293,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "师并云尸国于尔断馀"
+    },
+    {
+      "page": 299,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "鲜镜辅云摇纷纭横"
+    },
+    {
+      "page": 300,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "咸悦兹"
+    },
+    {
+      "page": 306,
+      "level": "warning",
+      "code": "han_many_lines",
+      "detail": "46 dòng > 2.5 x trung vị 11"
+    },
+    {
+      "page": 306,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "虚云随宁对学笺则书显卫给写绿邮别愤长峦环"
+    },
+    {
+      "page": 307,
+      "level": "error",
+      "code": "han_degenerate",
+      "detail": "đơn vị 42 ['repetition_collapsed', 'loop_stopped']: 'にある地区にあるとは、この地区にあるとは、この地区にあるとは、この地区にあるとは'"
+    },
+    {
+      "page": 307,
+      "level": "error",
+      "code": "han_degenerate",
+      "detail": "đơn vị 64 ['loop_stopped']: '下颦弯弯弯弯弯弯弯弯弯弯弯弯弯弯弯弯弯弯弯弯'"
+    },
+    {
+      "page": 307,
+      "level": "warning",
+      "code": "vie_low_conf",
+      "detail": "conf 36.33"
+    },
+    {
+      "page": 307,
+      "level": "warning",
+      "code": "han_many_lines",
+      "detail": "55 dòng > 2.5 x trung vị 11"
+    },
+    {
+      "page": 307,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "滨远犹叹别谢见门获诺贝尔学奖国铜于欧区亚"
+    },
+    {
+      "page": 308,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "辅户谏从谁"
+    },
+    {
+      "page": 309,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "统咨盗龙于礼贤"
+    },
+    {
+      "page": 310,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "户"
+    },
+    {
+      "page": 311,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "户干云"
+    },
+    {
+      "page": 312,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "侧群渐云终"
+    },
+    {
+      "page": 327,
+      "level": "error",
+      "code": "han_degenerate",
+      "detail": "đơn vị 16 ['duplicate_lines_dropped', 'loop_stopped']: '为公\\n書\\n書\\n書\\n書\\n書\\n書\\n書\\n書\\n書\\n書\\n書'"
+    },
+    {
+      "page": 327,
+      "level": "warning",
+      "code": "vie_low_conf",
+      "detail": "conf 44.25"
+    },
+    {
+      "page": 327,
+      "level": "warning",
+      "code": "han_many_lines",
+      "detail": "148 dòng > 2.5 x trung vị 11"
+    },
+    {
+      "page": 327,
+      "level": "warning",
+      "code": "han_single_char_lines",
+      "detail": "81/148 dòng chỉ một chữ (nghi đọc theo cột)"
+    },
+    {
+      "page": 327,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "当马转师这静预场群员现区则与虽节犹庄径昙"
+    },
+    {
+      "page": 328,
+      "level": "error",
+      "code": "han_degenerate",
+      "detail": "đơn vị 13 ['repetition_collapsed', 'loop_stopped']: '1000年，张骞遣使求救，张骞遣使求救。张骞遣使求救。张骞遣使求救。张骞遣使求救'"
+    },
+    {
+      "page": 328,
+      "level": "warning",
+      "code": "vie_low_conf",
+      "detail": "conf 35.61"
+    },
+    {
+      "page": 328,
+      "level": "warning",
+      "code": "han_many_lines",
+      "detail": "69 dòng > 2.5 x trung vị 11"
+    },
+    {
+      "page": 328,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "来万于里国扩为孙诸请违计壮将运愿须征号户"
+    },
+    {
+      "page": 329,
+      "level": "warning",
+      "code": "vie_low_conf",
+      "detail": "conf 40.28"
+    },
+    {
+      "page": 329,
+      "level": "warning",
+      "code": "han_many_lines",
+      "detail": "62 dòng > 2.5 x trung vị 11"
+    },
+    {
+      "page": 329,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "协书写则干项范马云来国劳苍庄寻须虏满诗还"
+    },
+    {
+      "page": 330,
+      "level": "warning",
+      "code": "vie_run_no_lines",
+      "detail": "run qwen không có dòng nào"
+    },
+    {
+      "page": 330,
+      "level": "info",
+      "code": "blank_page",
+      "detail": "mực 0.0010"
+    },
+    {
+      "page": 331,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "采鸣"
+    },
+    {
+      "page": 335,
+      "level": "error",
+      "code": "han_degenerate",
+      "detail": "đơn vị 9 ['duplicate_lines_dropped', 'loop_stopped']: '三子\\n三\\n三\\n三\\n三\\n三\\n三\\n三\\n三\\n三\\n三\\n三'"
+    },
+    {
+      "page": 335,
+      "level": "error",
+      "code": "han_degenerate",
+      "detail": "đơn vị 33 ['duplicate_lines_dropped', 'loop_stopped']: '卯之\\n卯之\\n太公\\n天而\\n榮安\\n太\\n辰\\n辰\\n辰\\n貞\\n貞\\n貞\\n貞'"
+    },
+    {
+      "page": 335,
+      "level": "warning",
+      "code": "vie_low_conf",
+      "detail": "conf 42.36"
+    },
+    {
+      "page": 335,
+      "level": "warning",
+      "code": "han_many_lines",
+      "detail": "148 dòng > 2.5 x trung vị 11"
+    },
+    {
+      "page": 335,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "则国无义汉说经师尔灵团环车时卫开终数应宝"
+    },
+    {
+      "page": 336,
+      "level": "warning",
+      "code": "vie_run_no_lines",
+      "detail": "run qwen không có dòng nào"
+    },
+    {
+      "page": 336,
+      "level": "info",
+      "code": "blank_page",
+      "detail": "mực 0.0011"
+    },
+    {
+      "page": 338,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "别将户参军"
+    },
+    {
+      "page": 339,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "参军将别黄赏绯鱼国驾内"
+    },
+    {
+      "page": 340,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "参黄"
+    },
+    {
+      "page": 341,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "黄庄临"
+    },
+    {
+      "page": 342,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "欧别将"
+    },
+    {
+      "page": 357,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "余征数没"
+    },
+    {
+      "page": 358,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "内"
+    },
+    {
+      "page": 361,
+      "level": "error",
+      "code": "han_degenerate",
+      "detail": "đơn vị 39 ['truncated']: '1.2. 1981年12月15日，1982年12月15日，1983年12月15日'"
+    },
+    {
+      "page": 361,
+      "level": "error",
+      "code": "han_degenerate",
+      "detail": "đơn vị 86 ['repetition_collapsed', 'loop_stopped']: 'en consé候の債務の従来の債務の従来の債務の従来の債務の従来の債'"
+    },
+    {
+      "page": 361,
+      "level": "warning",
+      "code": "han_many_lines",
+      "detail": "39 dòng > 2.5 x trung vị 11"
+    },
+    {
+      "page": 361,
+      "level": "warning",
+      "code": "han_long_line",
+      "detail": "1 dòng > 40 chữ, vd 年月日，年月日，年月日，年月日，年月日，..."
+    },
+    {
+      "page": 361,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "个连云来题铁苍凉时宫据将选项号实数为节语"
+    },
+    {
+      "page": 362,
+      "level": "warning",
+      "code": "vie_low_conf",
+      "detail": "conf 47.71"
+    },
+    {
+      "page": 362,
+      "level": "warning",
+      "code": "han_many_lines",
+      "detail": "60 dòng > 2.5 x trung vị 11"
+    },
+    {
+      "page": 362,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "征云卧余没占"
+    },
+    {
+      "page": 367,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "云"
+    },
+    {
+      "page": 368,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "麽云滞"
+    },
+    {
+      "page": 369,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "云"
+    },
+    {
+      "page": 372,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "云"
+    },
+    {
+      "page": 373,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "云来麽竖"
+    },
+    {
+      "page": 375,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "于云"
+    },
+    {
+      "page": 377,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "禅云来时师"
+    },
+    {
+      "page": 378,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "云却"
+    },
+    {
+      "page": 382,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "咸云"
+    },
+    {
+      "page": 383,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "里坏"
+    },
+    {
+      "page": 388,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "参云于门嘱则骈"
+    },
+    {
+      "page": 389,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "没云虬内"
+    },
+    {
+      "page": 393,
+      "level": "warning",
+      "code": "vie_run_no_lines",
+      "detail": "run qwen không có dòng nào"
+    },
+    {
+      "page": 393,
+      "level": "error",
+      "code": "no_text",
+      "detail": "không ra dòng Hán lẫn Việt, mực 0.008126106194690265"
+    },
+    {
+      "page": 394,
+      "level": "warning",
+      "code": "vie_run_no_lines",
+      "detail": "run qwen không có dòng nào"
+    },
+    {
+      "page": 394,
+      "level": "info",
+      "code": "han_only_page",
+      "detail": "1 dòng Hán, không có chữ Việt"
+    },
+    {
+      "page": 394,
+      "level": "warning",
+      "code": "han_long_line",
+      "detail": "1 dòng > 40 chữ, vd 作为一个人工智能语言模型，我还没学习如何..."
+    },
+    {
+      "page": 394,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "为个语还没学习这问题会尽帮决"
+    },
+    {
+      "page": 396,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "粤坏内后众娱里"
+    },
+    {
+      "page": 397,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "于寝视"
+    },
+    {
+      "page": 402,
+      "level": "warning",
+      "code": "vie_low_conf",
+      "detail": "conf 58.52"
+    },
+    {
+      "page": 406,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "咸辟"
+    },
+    {
+      "page": 407,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "干"
+    },
+    {
+      "page": 413,
+      "level": "info",
+      "code": "han_only_page",
+      "detail": "22 dòng Hán, không có chữ Việt"
+    },
+    {
+      "page": 413,
+      "level": "warning",
+      "code": "han_long_line",
+      "detail": "1 dòng > 40 chữ, vd 作为一个人工智能语言模型，我还没学习如何..."
+    },
+    {
+      "page": 413,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "状记临时为个语还没学习这问题会尽帮决里宫"
+    },
+    {
+      "page": 415,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "状悦里宫"
+    },
+    {
+      "page": 416,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "吕脱"
+    },
+    {
+      "page": 421,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "谥绪"
+    },
+    {
+      "page": 422,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "烧"
+    },
+    {
+      "page": 424,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "时"
+    },
+    {
+      "page": 427,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "别绝凤却内"
+    },
+    {
+      "page": 430,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "游"
+    },
+    {
+      "page": 432,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "云"
+    },
+    {
+      "page": 434,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "云参"
+    },
+    {
+      "page": 436,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "绝毁"
+    },
+    {
+      "page": 440,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "门来财"
+    },
+    {
+      "page": 441,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "栖"
+    },
+    {
+      "page": 444,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "黄"
+    },
+    {
+      "page": 445,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "云朴则黄栖于贵"
+    },
+    {
+      "page": 449,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "临复终国际经济论坛"
+    },
+    {
+      "page": 451,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "云朴"
+    },
+    {
+      "page": 452,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "内云爱岂凶"
+    },
+    {
+      "page": 455,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "轲云鲁余"
+    },
+    {
+      "page": 459,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "云伦干则"
+    },
+    {
+      "page": 463,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "盗贪为齐诛无谓"
+    },
+    {
+      "page": 466,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "时里户"
+    },
+    {
+      "page": 469,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "朴当见说实"
+    },
+    {
+      "page": 470,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "云愠别"
+    },
+    {
+      "page": 472,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "黄肴虚干"
+    },
+    {
+      "page": 473,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "栖"
+    },
+    {
+      "page": 479,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "悦群虚将币"
+    },
+    {
+      "page": 482,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "云耻来黄悦贱"
+    },
+    {
+      "page": 486,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "云咸里干悦贱视"
+    },
+    {
+      "page": 491,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "见经时来"
+    },
+    {
+      "page": 492,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "云"
+    },
+    {
+      "page": 493,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "须饮闻"
+    },
+    {
+      "page": 498,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "吁"
+    },
+    {
+      "page": 501,
+      "level": "error",
+      "code": "han_degenerate",
+      "detail": "đơn vị 36 ['repetition_collapsed', 'loop_stopped']: 'In the city of Paris, it is known that t'"
+    },
+    {
+      "page": 501,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "钱坚书马师责将潜"
+    },
+    {
+      "page": 502,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "辟云"
+    },
+    {
+      "page": 504,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "辟数盖绝则饮"
+    },
+    {
+      "page": 506,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "云却"
+    },
+    {
+      "page": 508,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "别云群"
+    },
+    {
+      "page": 510,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "见观视吕"
+    },
+    {
+      "page": 513,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "于则"
+    },
+    {
+      "page": 514,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "跖"
+    },
+    {
+      "page": 518,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "云参"
+    },
+    {
+      "page": 521,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "洒"
+    },
+    {
+      "page": 523,
+      "level": "error",
+      "code": "vie_degenerate",
+      "detail": "đơn vị 4 ['duplicate_lines_dropped', 'repetition_collapsed', 'truncated']: '三、gōng gōng gōng qì\\ngōng gōng gōng qì\\ngō'"
+    },
+    {
+      "page": 525,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "蓝"
+    },
+    {
+      "page": 529,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "里"
+    },
+    {
+      "page": 530,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "来"
+    },
+    {
+      "page": 531,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "黄"
+    },
+    {
+      "page": 532,
+      "level": "warning",
+      "code": "vie_low_conf",
+      "detail": "conf 50.3"
+    },
+    {
+      "page": 533,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "胜"
+    },
+    {
+      "page": 535,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "里"
+    },
+    {
+      "page": 537,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "华云"
+    },
+    {
+      "page": 539,
+      "level": "warning",
+      "code": "vie_run_no_lines",
+      "detail": "run qwen không có dòng nào"
+    },
+    {
+      "page": 539,
+      "level": "error",
+      "code": "no_text",
+      "detail": "không ra dòng Hán lẫn Việt, mực 0.007422566371681416"
+    },
+    {
+      "page": 541,
+      "level": "info",
+      "code": "han_only_page",
+      "detail": "23 dòng Hán, không có chữ Việt"
+    },
+    {
+      "page": 541,
+      "level": "info",
+      "code": "han_simplified",
+      "detail": "斗户里听军"
+    }
+  ],
+  "pages": [
+    {
+      "page": 205,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 10,
+      "vie_lines": 10,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 88.41,
+      "class": "bilingual"
+    },
+    {
+      "page": 206,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 17,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 93.38,
+      "class": "vie_only"
+    },
+    {
+      "page": 207,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 1,
+      "vie_lines": 11,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 94.81,
+      "class": "bilingual"
+    },
+    {
+      "page": 208,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 18,
+      "vie_lines": 5,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 63.5,
+      "class": "bilingual"
+    },
+    {
+      "page": 209,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 10,
+      "vie_lines": 8,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 88.42,
+      "class": "bilingual"
+    },
+    {
+      "page": 210,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 18,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 90.3,
+      "class": "vie_only"
+    },
+    {
+      "page": 211,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 10,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 93.63,
+      "class": "vie_only"
+    },
+    {
+      "page": 212,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 12,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 93.06,
+      "class": "vie_only"
+    },
+    {
+      "page": 213,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 10,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 86.81,
+      "class": "vie_only"
+    },
+    {
+      "page": 214,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 9,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 96.46,
+      "class": "vie_only"
+    },
+    {
+      "page": 215,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 12,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 93.47,
+      "class": "vie_only"
+    },
+    {
+      "page": 216,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 14,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 96.27,
+      "class": "vie_only"
+    },
+    {
+      "page": 217,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 7,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 94.89,
+      "class": "vie_only"
+    },
+    {
+      "page": 218,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 21,
+      "vie_lines": 2,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 79.59,
+      "class": "bilingual"
+    },
+    {
+      "page": 219,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 3,
+      "vie_lines": 9,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 87.89,
+      "class": "bilingual"
+    },
+    {
+      "page": 220,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 17,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 92.69,
+      "class": "vie_only"
+    },
+    {
+      "page": 221,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 1,
+      "vie_lines": 8,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 93.48,
+      "class": "bilingual"
+    },
+    {
+      "page": 222,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 13,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 95.05,
+      "class": "vie_only"
+    },
+    {
+      "page": 223,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 11,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 95.18,
+      "class": "vie_only"
+    },
+    {
+      "page": 224,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 15,
+      "vie_lines": 4,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 87.05,
+      "class": "bilingual"
+    },
+    {
+      "page": 225,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 21,
+      "vie_lines": 2,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 65.63,
+      "class": "bilingual"
+    },
+    {
+      "page": 226,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 13,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 89.87,
+      "class": "vie_only"
+    },
+    {
+      "page": 227,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 12,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 89.42,
+      "class": "vie_only"
+    },
+    {
+      "page": 228,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 12,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 92.82,
+      "class": "vie_only"
+    },
+    {
+      "page": 229,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 9,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 93.56,
+      "class": "vie_only"
+    },
+    {
+      "page": 230,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 12,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 93.4,
+      "class": "vie_only"
+    },
+    {
+      "page": 231,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 11,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 93.2,
+      "class": "vie_only"
+    },
+    {
+      "page": 232,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 14,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 95.02,
+      "class": "vie_only"
+    },
+    {
+      "page": 233,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 16,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 92.54,
+      "class": "vie_only"
+    },
+    {
+      "page": 234,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 20,
+      "vie_lines": 2,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 73.94,
+      "class": "bilingual"
+    },
+    {
+      "page": 235,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 3,
+      "vie_lines": 12,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 87.44,
+      "class": "bilingual"
+    },
+    {
+      "page": 236,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 13,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 92.12,
+      "class": "vie_only"
+    },
+    {
+      "page": 237,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 10,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 94.47,
+      "class": "vie_only"
+    },
+    {
+      "page": 238,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 11,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 95.63,
+      "class": "vie_only"
+    },
+    {
+      "page": 239,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 12,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 94.64,
+      "class": "vie_only"
+    },
+    {
+      "page": 240,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 13,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 94.5,
+      "class": "vie_only"
+    },
+    {
+      "page": 241,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 7,
+      "vie_lines": 8,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 92.77,
+      "class": "bilingual"
+    },
+    {
+      "page": 242,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 22,
+      "vie_lines": 1,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 72.42,
+      "class": "bilingual"
+    },
+    {
+      "page": 243,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 21,
+      "vie_lines": 1,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 74.65,
+      "class": "bilingual"
+    },
+    {
+      "page": 244,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 11,
+      "vie_lines": 10,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 85.52,
+      "class": "bilingual"
+    },
+    {
+      "page": 245,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 12,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 85.73,
+      "class": "vie_only"
+    },
+    {
+      "page": 246,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 10,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 90.14,
+      "class": "vie_only"
+    },
+    {
+      "page": 247,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 19,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 90.76,
+      "class": "vie_only"
+    },
+    {
+      "page": 248,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 10,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 91.67,
+      "class": "vie_only"
+    },
+    {
+      "page": 249,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 14,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 93.78,
+      "class": "vie_only"
+    },
+    {
+      "page": 250,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 8,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 93.49,
+      "class": "vie_only"
+    },
+    {
+      "page": 251,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 10,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 93.2,
+      "class": "vie_only"
+    },
+    {
+      "page": 252,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 11,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 95.17,
+      "class": "vie_only"
+    },
+    {
+      "page": 253,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 11,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 95.14,
+      "class": "vie_only"
+    },
+    {
+      "page": 254,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 13,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 94.88,
+      "class": "vie_only"
+    },
+    {
+      "page": 255,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 18,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 89.58,
+      "class": "vie_only"
+    },
+    {
+      "page": 256,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 12,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 95.2,
+      "class": "vie_only"
+    },
+    {
+      "page": 257,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 13,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 95.05,
+      "class": "vie_only"
+    },
+    {
+      "page": 258,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 13,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 95.03,
+      "class": "vie_only"
+    },
+    {
+      "page": 259,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 10,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 94.02,
+      "class": "vie_only"
+    },
+    {
+      "page": 260,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 0,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": null,
+      "class": "blank"
+    },
+    {
+      "page": 261,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 2,
+      "vie_lines": 4,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 86.84,
+      "class": "bilingual"
+    },
+    {
+      "page": 262,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 4,
+      "vie_lines": 1,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 86.21,
+      "class": "bilingual"
+    },
+    {
+      "page": 263,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 49,
+      "vie_lines": 1,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 70.91,
+      "class": "bilingual"
+    },
+    {
+      "page": 264,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 26,
+      "vie_lines": 1,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 60.1,
+      "class": "bilingual"
+    },
+    {
+      "page": 265,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 53,
+      "vie_lines": 1,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 37.28,
+      "class": "bilingual"
+    },
+    {
+      "page": 266,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 72,
+      "vie_lines": 1,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 65.27,
+      "class": "bilingual"
+    },
+    {
+      "page": 267,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 65,
+      "vie_lines": 2,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 38.0,
+      "class": "bilingual"
+    },
+    {
+      "page": 268,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 28,
+      "vie_lines": 1,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 64.05,
+      "class": "bilingual"
+    },
+    {
+      "page": 269,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 68,
+      "vie_lines": 1,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 65.85,
+      "class": "bilingual"
+    },
+    {
+      "page": 270,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 56,
+      "vie_lines": 1,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 64.15,
+      "class": "bilingual"
+    },
+    {
+      "page": 271,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 76,
+      "vie_lines": 2,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 66.92,
+      "class": "bilingual"
+    },
+    {
+      "page": 272,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 14,
+      "vie_lines": 0,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 66.59,
+      "class": "han_only"
+    },
+    {
+      "page": 273,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 58,
+      "vie_lines": 2,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 42.23,
+      "class": "bilingual"
+    },
+    {
+      "page": 274,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 36,
+      "vie_lines": 1,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 81.72,
+      "class": "bilingual"
+    },
+    {
+      "page": 275,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 16,
+      "vie_lines": 2,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 42.84,
+      "class": "bilingual"
+    },
+    {
+      "page": 276,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 39,
+      "vie_lines": 1,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 44.31,
+      "class": "bilingual"
+    },
+    {
+      "page": 277,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 51,
+      "vie_lines": 2,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 44.1,
+      "class": "bilingual"
+    },
+    {
+      "page": 278,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 38,
+      "vie_lines": 1,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 48.84,
+      "class": "bilingual"
+    },
+    {
+      "page": 279,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 69,
+      "vie_lines": 2,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 47.45,
+      "class": "bilingual"
+    },
+    {
+      "page": 280,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 13,
+      "vie_lines": 1,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 46.19,
+      "class": "bilingual"
+    },
+    {
+      "page": 281,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 64,
+      "vie_lines": 1,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 34.39,
+      "class": "bilingual"
+    },
+    {
+      "page": 282,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 11,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 96.82,
+      "class": "vie_only"
+    },
+    {
+      "page": 283,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 12,
+      "vie_lines": 7,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 88.44,
+      "class": "bilingual"
+    },
+    {
+      "page": 284,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 24,
+      "vie_lines": 1,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 76.42,
+      "class": "bilingual"
+    },
+    {
+      "page": 285,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 24,
+      "vie_lines": 2,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 60.08,
+      "class": "bilingual"
+    },
+    {
+      "page": 286,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 18,
+      "vie_lines": 260,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 45.25,
+      "class": "bilingual"
+    },
+    {
+      "page": 287,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 9,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 92.15,
+      "class": "vie_only"
+    },
+    {
+      "page": 288,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 12,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 94.12,
+      "class": "vie_only"
+    },
+    {
+      "page": 289,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 30,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 90.18,
+      "class": "vie_only"
+    },
+    {
+      "page": 290,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 1,
+      "vie_lines": 23,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 90.21,
+      "class": "bilingual"
+    },
+    {
+      "page": 291,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 10,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 82.5,
+      "class": "vie_only"
+    },
+    {
+      "page": 292,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 9,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 93.62,
+      "class": "vie_only"
+    },
+    {
+      "page": 293,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 20,
+      "vie_lines": 1,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 67.42,
+      "class": "bilingual"
+    },
+    {
+      "page": 294,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 17,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 87.76,
+      "class": "vie_only"
+    },
+    {
+      "page": 295,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 13,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 91.4,
+      "class": "vie_only"
+    },
+    {
+      "page": 296,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 21,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 92.74,
+      "class": "vie_only"
+    },
+    {
+      "page": 297,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 12,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 92.53,
+      "class": "vie_only"
+    },
+    {
+      "page": 298,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 12,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 94.49,
+      "class": "vie_only"
+    },
+    {
+      "page": 299,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 16,
+      "vie_lines": 4,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 87.1,
+      "class": "bilingual"
+    },
+    {
+      "page": 300,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 9,
+      "vie_lines": 8,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 89.61,
+      "class": "bilingual"
+    },
+    {
+      "page": 301,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 14,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 89.0,
+      "class": "vie_only"
+    },
+    {
+      "page": 302,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 26,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 88.91,
+      "class": "vie_only"
+    },
+    {
+      "page": 303,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 24,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 87.55,
+      "class": "vie_only"
+    },
+    {
+      "page": 304,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 11,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 88.93,
+      "class": "vie_only"
+    },
+    {
+      "page": 305,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 12,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 93.46,
+      "class": "vie_only"
+    },
+    {
+      "page": 306,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 46,
+      "vie_lines": 2,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 65.43,
+      "class": "bilingual"
+    },
+    {
+      "page": 307,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 55,
+      "vie_lines": 1,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 36.33,
+      "class": "bilingual"
+    },
+    {
+      "page": 308,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 12,
+      "vie_lines": 4,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 81.46,
+      "class": "bilingual"
+    },
+    {
+      "page": 309,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 19,
+      "vie_lines": 1,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 80.78,
+      "class": "bilingual"
+    },
+    {
+      "page": 310,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 23,
+      "vie_lines": 1,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 80.56,
+      "class": "bilingual"
+    },
+    {
+      "page": 311,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 22,
+      "vie_lines": 1,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 69.13,
+      "class": "bilingual"
+    },
+    {
+      "page": 312,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 19,
+      "vie_lines": 1,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 70.22,
+      "class": "bilingual"
+    },
+    {
+      "page": 313,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 1,
+      "vie_lines": 8,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 87.82,
+      "class": "bilingual"
+    },
+    {
+      "page": 314,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 14,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 90.94,
+      "class": "vie_only"
+    },
+    {
+      "page": 315,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 12,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 88.84,
+      "class": "vie_only"
+    },
+    {
+      "page": 316,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 11,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 90.25,
+      "class": "vie_only"
+    },
+    {
+      "page": 317,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 14,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 90.97,
+      "class": "vie_only"
+    },
+    {
+      "page": 318,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 7,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 94.68,
+      "class": "vie_only"
+    },
+    {
+      "page": 319,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 10,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 92.42,
+      "class": "vie_only"
+    },
+    {
+      "page": 320,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 7,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 94.51,
+      "class": "vie_only"
+    },
+    {
+      "page": 321,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 9,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 91.82,
+      "class": "vie_only"
+    },
+    {
+      "page": 322,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 14,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 92.11,
+      "class": "vie_only"
+    },
+    {
+      "page": 323,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 10,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 87.25,
+      "class": "vie_only"
+    },
+    {
+      "page": 324,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 14,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 93.22,
+      "class": "vie_only"
+    },
+    {
+      "page": 325,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 15,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 93.78,
+      "class": "vie_only"
+    },
+    {
+      "page": 326,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 12,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 94.74,
+      "class": "vie_only"
+    },
+    {
+      "page": 327,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 148,
+      "vie_lines": 1,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 44.25,
+      "class": "bilingual"
+    },
+    {
+      "page": 328,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 69,
+      "vie_lines": 1,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 35.61,
+      "class": "bilingual"
+    },
+    {
+      "page": 329,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 62,
+      "vie_lines": 2,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 40.28,
+      "class": "bilingual"
+    },
+    {
+      "page": 330,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 0,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": null,
+      "class": "blank"
+    },
+    {
+      "page": 331,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 11,
+      "vie_lines": 4,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 91.2,
+      "class": "bilingual"
+    },
+    {
+      "page": 332,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 15,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 90.03,
+      "class": "vie_only"
+    },
+    {
+      "page": 333,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 14,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 93.16,
+      "class": "vie_only"
+    },
+    {
+      "page": 334,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 11,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 93.55,
+      "class": "vie_only"
+    },
+    {
+      "page": 335,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 148,
+      "vie_lines": 1,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 42.36,
+      "class": "bilingual"
+    },
+    {
+      "page": 336,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 0,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": null,
+      "class": "blank"
+    },
+    {
+      "page": 337,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 5,
+      "vie_lines": 5,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 89.61,
+      "class": "bilingual"
+    },
+    {
+      "page": 338,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 23,
+      "vie_lines": 1,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 76.49,
+      "class": "bilingual"
+    },
+    {
+      "page": 339,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 23,
+      "vie_lines": 2,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 73.43,
+      "class": "bilingual"
+    },
+    {
+      "page": 340,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 23,
+      "vie_lines": 1,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 85.84,
+      "class": "bilingual"
+    },
+    {
+      "page": 341,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 22,
+      "vie_lines": 2,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 65.09,
+      "class": "bilingual"
+    },
+    {
+      "page": 342,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 12,
+      "vie_lines": 15,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 90.12,
+      "class": "bilingual"
+    },
+    {
+      "page": 343,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 1,
+      "vie_lines": 32,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 89.94,
+      "class": "bilingual"
+    },
+    {
+      "page": 344,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 12,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 91.7,
+      "class": "vie_only"
+    },
+    {
+      "page": 345,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 14,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 93.37,
+      "class": "vie_only"
+    },
+    {
+      "page": 346,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 9,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 92.53,
+      "class": "vie_only"
+    },
+    {
+      "page": 347,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 16,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 91.58,
+      "class": "vie_only"
+    },
+    {
+      "page": 348,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 19,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 95.03,
+      "class": "vie_only"
+    },
+    {
+      "page": 349,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 12,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 93.69,
+      "class": "vie_only"
+    },
+    {
+      "page": 350,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 11,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 94.46,
+      "class": "vie_only"
+    },
+    {
+      "page": 351,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 11,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 92.68,
+      "class": "vie_only"
+    },
+    {
+      "page": 352,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 9,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 95.11,
+      "class": "vie_only"
+    },
+    {
+      "page": 353,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 14,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 92.67,
+      "class": "vie_only"
+    },
+    {
+      "page": 354,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 20,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 94.58,
+      "class": "vie_only"
+    },
+    {
+      "page": 355,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 10,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 95.45,
+      "class": "vie_only"
+    },
+    {
+      "page": 356,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 9,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 95.5,
+      "class": "vie_only"
+    },
+    {
+      "page": 357,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 12,
+      "vie_lines": 6,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 81.72,
+      "class": "bilingual"
+    },
+    {
+      "page": 358,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 3,
+      "vie_lines": 18,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 87.32,
+      "class": "bilingual"
+    },
+    {
+      "page": 359,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 3,
+      "vie_lines": 15,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 88.73,
+      "class": "bilingual"
+    },
+    {
+      "page": 360,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 13,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 77.28,
+      "class": "vie_only"
+    },
+    {
+      "page": 361,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 39,
+      "vie_lines": 2,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 65.48,
+      "class": "bilingual"
+    },
+    {
+      "page": 362,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 60,
+      "vie_lines": 1,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 47.71,
+      "class": "bilingual"
+    },
+    {
+      "page": 363,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 9,
+      "vie_lines": 7,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 87.02,
+      "class": "bilingual"
+    },
+    {
+      "page": 364,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 22,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 90.76,
+      "class": "vie_only"
+    },
+    {
+      "page": 365,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 13,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 94.69,
+      "class": "vie_only"
+    },
+    {
+      "page": 366,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 9,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 96.49,
+      "class": "vie_only"
+    },
+    {
+      "page": 367,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 5,
+      "vie_lines": 9,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 89.28,
+      "class": "bilingual"
+    },
+    {
+      "page": 368,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 16,
+      "vie_lines": 6,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 88.41,
+      "class": "bilingual"
+    },
+    {
+      "page": 369,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 3,
+      "vie_lines": 9,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 83.94,
+      "class": "bilingual"
+    },
+    {
+      "page": 370,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 15,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 92.04,
+      "class": "vie_only"
+    },
+    {
+      "page": 371,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 15,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 93.7,
+      "class": "vie_only"
+    },
+    {
+      "page": 372,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 4,
+      "vie_lines": 8,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 92.98,
+      "class": "bilingual"
+    },
+    {
+      "page": 373,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 8,
+      "vie_lines": 7,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 89.69,
+      "class": "bilingual"
+    },
+    {
+      "page": 374,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 16,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 92.98,
+      "class": "vie_only"
+    },
+    {
+      "page": 375,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 9,
+      "vie_lines": 9,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 90.73,
+      "class": "bilingual"
+    },
+    {
+      "page": 376,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 13,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 91.52,
+      "class": "vie_only"
+    },
+    {
+      "page": 377,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 14,
+      "vie_lines": 8,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 94.45,
+      "class": "bilingual"
+    },
+    {
+      "page": 378,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 16,
+      "vie_lines": 7,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 90.99,
+      "class": "bilingual"
+    },
+    {
+      "page": 379,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 10,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 89.01,
+      "class": "vie_only"
+    },
+    {
+      "page": 380,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 19,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 92.77,
+      "class": "vie_only"
+    },
+    {
+      "page": 381,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 13,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 93.07,
+      "class": "vie_only"
+    },
+    {
+      "page": 382,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 17,
+      "vie_lines": 2,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 88.75,
+      "class": "bilingual"
+    },
+    {
+      "page": 383,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 11,
+      "vie_lines": 7,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 88.82,
+      "class": "bilingual"
+    },
+    {
+      "page": 384,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 23,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 92.26,
+      "class": "vie_only"
+    },
+    {
+      "page": 385,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 1,
+      "vie_lines": 14,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 94.24,
+      "class": "bilingual"
+    },
+    {
+      "page": 386,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 18,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 94.57,
+      "class": "vie_only"
+    },
+    {
+      "page": 387,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 15,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 94.78,
+      "class": "vie_only"
+    },
+    {
+      "page": 388,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 13,
+      "vie_lines": 5,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 86.95,
+      "class": "bilingual"
+    },
+    {
+      "page": 389,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 11,
+      "vie_lines": 8,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 85.1,
+      "class": "bilingual"
+    },
+    {
+      "page": 390,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 18,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 89.37,
+      "class": "vie_only"
+    },
+    {
+      "page": 391,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 12,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 94.03,
+      "class": "vie_only"
+    },
+    {
+      "page": 392,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 17,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 94.23,
+      "class": "vie_only"
+    },
+    {
+      "page": 393,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 0,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": null,
+      "class": ""
+    },
+    {
+      "page": 394,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 1,
+      "vie_lines": 0,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": null,
+      "class": "han_only"
+    },
+    {
+      "page": 395,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 9,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 97.31,
+      "class": "vie_only"
+    },
+    {
+      "page": 396,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 20,
+      "vie_lines": 1,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 70.22,
+      "class": "bilingual"
+    },
+    {
+      "page": 397,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 7,
+      "vie_lines": 8,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 87.41,
+      "class": "bilingual"
+    },
+    {
+      "page": 398,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 11,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 90.1,
+      "class": "vie_only"
+    },
+    {
+      "page": 399,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 13,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 93.66,
+      "class": "vie_only"
+    },
+    {
+      "page": 400,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 8,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 95.78,
+      "class": "vie_only"
+    },
+    {
+      "page": 401,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 18,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 93.96,
+      "class": "vie_only"
+    },
+    {
+      "page": 402,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 7,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 58.52,
+      "class": "vie_only"
+    },
+    {
+      "page": 403,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 11,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 94.38,
+      "class": "vie_only"
+    },
+    {
+      "page": 404,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 12,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 96.4,
+      "class": "vie_only"
+    },
+    {
+      "page": 405,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 13,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 94.85,
+      "class": "vie_only"
+    },
+    {
+      "page": 406,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 19,
+      "vie_lines": 1,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 86.43,
+      "class": "bilingual"
+    },
+    {
+      "page": 407,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 11,
+      "vie_lines": 7,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 88.45,
+      "class": "bilingual"
+    },
+    {
+      "page": 408,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 9,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 89.79,
+      "class": "vie_only"
+    },
+    {
+      "page": 409,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 13,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 93.92,
+      "class": "vie_only"
+    },
+    {
+      "page": 410,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 9,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 93.41,
+      "class": "vie_only"
+    },
+    {
+      "page": 411,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 1,
+      "vie_lines": 17,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 93.86,
+      "class": "bilingual"
+    },
+    {
+      "page": 412,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 14,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 96.51,
+      "class": "vie_only"
+    },
+    {
+      "page": 413,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 22,
+      "vie_lines": 0,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 59.64,
+      "class": "han_only"
+    },
+    {
+      "page": 414,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 14,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 96.25,
+      "class": "vie_only"
+    },
+    {
+      "page": 415,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 21,
+      "vie_lines": 1,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 66.33,
+      "class": "bilingual"
+    },
+    {
+      "page": 416,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 15,
+      "vie_lines": 4,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 79.15,
+      "class": "bilingual"
+    },
+    {
+      "page": 417,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 8,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 91.02,
+      "class": "vie_only"
+    },
+    {
+      "page": 418,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 8,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 92.24,
+      "class": "vie_only"
+    },
+    {
+      "page": 419,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 8,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 94.47,
+      "class": "vie_only"
+    },
+    {
+      "page": 420,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 10,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 94.49,
+      "class": "vie_only"
+    },
+    {
+      "page": 421,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 5,
+      "vie_lines": 11,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 89.3,
+      "class": "bilingual"
+    },
+    {
+      "page": 422,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 2,
+      "vie_lines": 10,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 92.3,
+      "class": "bilingual"
+    },
+    {
+      "page": 423,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 5,
+      "vie_lines": 9,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 93.73,
+      "class": "bilingual"
+    },
+    {
+      "page": 424,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 8,
+      "vie_lines": 8,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 88.61,
+      "class": "bilingual"
+    },
+    {
+      "page": 425,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 2,
+      "vie_lines": 9,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 94.33,
+      "class": "bilingual"
+    },
+    {
+      "page": 426,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 3,
+      "vie_lines": 12,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 95.21,
+      "class": "bilingual"
+    },
+    {
+      "page": 427,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 14,
+      "vie_lines": 6,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 76.12,
+      "class": "bilingual"
+    },
+    {
+      "page": 428,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 9,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 89.5,
+      "class": "vie_only"
+    },
+    {
+      "page": 429,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 10,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 92.77,
+      "class": "vie_only"
+    },
+    {
+      "page": 430,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 10,
+      "vie_lines": 6,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 85.62,
+      "class": "bilingual"
+    },
+    {
+      "page": 431,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 13,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 91.65,
+      "class": "vie_only"
+    },
+    {
+      "page": 432,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 12,
+      "vie_lines": 7,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 83.35,
+      "class": "bilingual"
+    },
+    {
+      "page": 433,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 9,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 91.85,
+      "class": "vie_only"
+    },
+    {
+      "page": 434,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 7,
+      "vie_lines": 9,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 92.17,
+      "class": "bilingual"
+    },
+    {
+      "page": 435,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 12,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 90.04,
+      "class": "vie_only"
+    },
+    {
+      "page": 436,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 16,
+      "vie_lines": 3,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 89.52,
+      "class": "bilingual"
+    },
+    {
+      "page": 437,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 3,
+      "vie_lines": 8,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 87.84,
+      "class": "bilingual"
+    },
+    {
+      "page": 438,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 8,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 93.32,
+      "class": "vie_only"
+    },
+    {
+      "page": 439,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 10,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 94.03,
+      "class": "vie_only"
+    },
+    {
+      "page": 440,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 4,
+      "vie_lines": 8,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 93.87,
+      "class": "bilingual"
+    },
+    {
+      "page": 441,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 12,
+      "vie_lines": 4,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 87.29,
+      "class": "bilingual"
+    },
+    {
+      "page": 442,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 9,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 91.95,
+      "class": "vie_only"
+    },
+    {
+      "page": 443,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 12,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 95.3,
+      "class": "vie_only"
+    },
+    {
+      "page": 444,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 6,
+      "vie_lines": 7,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 93.51,
+      "class": "bilingual"
+    },
+    {
+      "page": 445,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 12,
+      "vie_lines": 4,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 85.83,
+      "class": "bilingual"
+    },
+    {
+      "page": 446,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 10,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 92.02,
+      "class": "vie_only"
+    },
+    {
+      "page": 447,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 11,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 94.42,
+      "class": "vie_only"
+    },
+    {
+      "page": 448,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 12,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 94.85,
+      "class": "vie_only"
+    },
+    {
+      "page": 449,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 17,
+      "vie_lines": 3,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 70.9,
+      "class": "bilingual"
+    },
+    {
+      "page": 450,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 12,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 91.01,
+      "class": "vie_only"
+    },
+    {
+      "page": 451,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 5,
+      "vie_lines": 8,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 91.88,
+      "class": "bilingual"
+    },
+    {
+      "page": 452,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 11,
+      "vie_lines": 5,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 85.54,
+      "class": "bilingual"
+    },
+    {
+      "page": 453,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 9,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 91.17,
+      "class": "vie_only"
+    },
+    {
+      "page": 454,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 4,
+      "vie_lines": 7,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 90.71,
+      "class": "bilingual"
+    },
+    {
+      "page": 455,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 12,
+      "vie_lines": 4,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 86.41,
+      "class": "bilingual"
+    },
+    {
+      "page": 456,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 11,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 92.45,
+      "class": "vie_only"
+    },
+    {
+      "page": 457,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 12,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 94.27,
+      "class": "vie_only"
+    },
+    {
+      "page": 458,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 10,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 95.79,
+      "class": "vie_only"
+    },
+    {
+      "page": 459,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 13,
+      "vie_lines": 6,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 79.11,
+      "class": "bilingual"
+    },
+    {
+      "page": 460,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 4,
+      "vie_lines": 10,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 88.25,
+      "class": "bilingual"
+    },
+    {
+      "page": 461,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 8,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 94.07,
+      "class": "vie_only"
+    },
+    {
+      "page": 462,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 11,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 95.89,
+      "class": "vie_only"
+    },
+    {
+      "page": 463,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 12,
+      "vie_lines": 5,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 82.71,
+      "class": "bilingual"
+    },
+    {
+      "page": 464,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 11,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 91.32,
+      "class": "vie_only"
+    },
+    {
+      "page": 465,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 14,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 90.79,
+      "class": "vie_only"
+    },
+    {
+      "page": 466,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 16,
+      "vie_lines": 4,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 80.98,
+      "class": "bilingual"
+    },
+    {
+      "page": 467,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 10,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 90.46,
+      "class": "vie_only"
+    },
+    {
+      "page": 468,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 10,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 94.94,
+      "class": "vie_only"
+    },
+    {
+      "page": 469,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 6,
+      "vie_lines": 7,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 93.19,
+      "class": "bilingual"
+    },
+    {
+      "page": 470,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 10,
+      "vie_lines": 8,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 83.9,
+      "class": "bilingual"
+    },
+    {
+      "page": 471,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 9,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 92.75,
+      "class": "vie_only"
+    },
+    {
+      "page": 472,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 10,
+      "vie_lines": 7,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 90.22,
+      "class": "bilingual"
+    },
+    {
+      "page": 473,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 3,
+      "vie_lines": 9,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 88.98,
+      "class": "bilingual"
+    },
+    {
+      "page": 474,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 13,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 92.96,
+      "class": "vie_only"
+    },
+    {
+      "page": 475,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 1,
+      "vie_lines": 8,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 95.67,
+      "class": "bilingual"
+    },
+    {
+      "page": 476,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 11,
+      "vie_lines": 4,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 88.08,
+      "class": "bilingual"
+    },
+    {
+      "page": 477,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 11,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 90.29,
+      "class": "vie_only"
+    },
+    {
+      "page": 478,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 11,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 95.8,
+      "class": "vie_only"
+    },
+    {
+      "page": 479,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 12,
+      "vie_lines": 5,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 92.04,
+      "class": "bilingual"
+    },
+    {
+      "page": 480,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 9,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 91.18,
+      "class": "vie_only"
+    },
+    {
+      "page": 481,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 10,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 95.34,
+      "class": "vie_only"
+    },
+    {
+      "page": 482,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 15,
+      "vie_lines": 5,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 89.22,
+      "class": "bilingual"
+    },
+    {
+      "page": 483,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 8,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 89.18,
+      "class": "vie_only"
+    },
+    {
+      "page": 484,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 9,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 94.17,
+      "class": "vie_only"
+    },
+    {
+      "page": 485,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 8,
+      "vie_lines": 9,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 88.33,
+      "class": "bilingual"
+    },
+    {
+      "page": 486,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 11,
+      "vie_lines": 3,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 93.49,
+      "class": "bilingual"
+    },
+    {
+      "page": 487,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 4,
+      "vie_lines": 9,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 87.21,
+      "class": "bilingual"
+    },
+    {
+      "page": 488,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 9,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 92.98,
+      "class": "vie_only"
+    },
+    {
+      "page": 489,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 14,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 89.52,
+      "class": "vie_only"
+    },
+    {
+      "page": 490,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 10,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 94.4,
+      "class": "vie_only"
+    },
+    {
+      "page": 491,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 10,
+      "vie_lines": 6,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 79.52,
+      "class": "bilingual"
+    },
+    {
+      "page": 492,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 3,
+      "vie_lines": 9,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 94.75,
+      "class": "bilingual"
+    },
+    {
+      "page": 493,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 9,
+      "vie_lines": 4,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 81.53,
+      "class": "bilingual"
+    },
+    {
+      "page": 494,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 10,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 93.89,
+      "class": "vie_only"
+    },
+    {
+      "page": 495,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 14,
+      "vie_lines": 4,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 82.49,
+      "class": "bilingual"
+    },
+    {
+      "page": 496,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 8,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 87.12,
+      "class": "vie_only"
+    },
+    {
+      "page": 497,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 3,
+      "vie_lines": 9,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 92.41,
+      "class": "bilingual"
+    },
+    {
+      "page": 498,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 4,
+      "vie_lines": 10,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 86.22,
+      "class": "bilingual"
+    },
+    {
+      "page": 499,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 8,
+      "vie_lines": 7,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 77.19,
+      "class": "bilingual"
+    },
+    {
+      "page": 500,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 10,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 93.19,
+      "class": "vie_only"
+    },
+    {
+      "page": 501,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 3,
+      "vie_lines": 16,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 84.38,
+      "class": "bilingual"
+    },
+    {
+      "page": 502,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 11,
+      "vie_lines": 4,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 87.0,
+      "class": "bilingual"
+    },
+    {
+      "page": 503,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 12,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 93.23,
+      "class": "vie_only"
+    },
+    {
+      "page": 504,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 12,
+      "vie_lines": 5,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 87.79,
+      "class": "bilingual"
+    },
+    {
+      "page": 505,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 10,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 92.47,
+      "class": "vie_only"
+    },
+    {
+      "page": 506,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 9,
+      "vie_lines": 8,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 90.91,
+      "class": "bilingual"
+    },
+    {
+      "page": 507,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 8,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 91.89,
+      "class": "vie_only"
+    },
+    {
+      "page": 508,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 11,
+      "vie_lines": 6,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 84.93,
+      "class": "bilingual"
+    },
+    {
+      "page": 509,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 10,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 90.93,
+      "class": "vie_only"
+    },
+    {
+      "page": 510,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 7,
+      "vie_lines": 8,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 94.66,
+      "class": "bilingual"
+    },
+    {
+      "page": 511,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 4,
+      "vie_lines": 9,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 91.46,
+      "class": "bilingual"
+    },
+    {
+      "page": 512,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 10,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 94.87,
+      "class": "vie_only"
+    },
+    {
+      "page": 513,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 7,
+      "vie_lines": 7,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 92.77,
+      "class": "bilingual"
+    },
+    {
+      "page": 514,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 2,
+      "vie_lines": 14,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 91.51,
+      "class": "bilingual"
+    },
+    {
+      "page": 515,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 3,
+      "vie_lines": 8,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 93.82,
+      "class": "bilingual"
+    },
+    {
+      "page": 516,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 8,
+      "vie_lines": 4,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 85.91,
+      "class": "bilingual"
+    },
+    {
+      "page": 517,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 10,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 91.07,
+      "class": "vie_only"
+    },
+    {
+      "page": 518,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 12,
+      "vie_lines": 4,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 87.39,
+      "class": "bilingual"
+    },
+    {
+      "page": 519,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 8,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 90.92,
+      "class": "vie_only"
+    },
+    {
+      "page": 520,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 12,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 95.73,
+      "class": "vie_only"
+    },
+    {
+      "page": 521,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 10,
+      "vie_lines": 6,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 89.67,
+      "class": "bilingual"
+    },
+    {
+      "page": 522,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 16,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 91.02,
+      "class": "vie_only"
+    },
+    {
+      "page": 523,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 8,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 76.76,
+      "class": "vie_only"
+    },
+    {
+      "page": 524,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 3,
+      "vie_lines": 9,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 92.73,
+      "class": "bilingual"
+    },
+    {
+      "page": 525,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 21,
+      "vie_lines": 1,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 80.06,
+      "class": "bilingual"
+    },
+    {
+      "page": 526,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 31,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 93.7,
+      "class": "vie_only"
+    },
+    {
+      "page": 527,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 24,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 93.47,
+      "class": "vie_only"
+    },
+    {
+      "page": 528,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 5,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 80.97,
+      "class": "vie_only"
+    },
+    {
+      "page": 529,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 7,
+      "vie_lines": 8,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 90.99,
+      "class": "bilingual"
+    },
+    {
+      "page": 530,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 2,
+      "vie_lines": 22,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 92.69,
+      "class": "bilingual"
+    },
+    {
+      "page": 531,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 9,
+      "vie_lines": 18,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 83.03,
+      "class": "bilingual"
+    },
+    {
+      "page": 532,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 15,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 50.3,
+      "class": "vie_only"
+    },
+    {
+      "page": 533,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 7,
+      "vie_lines": 6,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 92.31,
+      "class": "bilingual"
+    },
+    {
+      "page": 534,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 2,
+      "vie_lines": 20,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 93.25,
+      "class": "bilingual"
+    },
+    {
+      "page": 535,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 9,
+      "vie_lines": 5,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 90.54,
+      "class": "bilingual"
+    },
+    {
+      "page": 536,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 25,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 94.14,
+      "class": "vie_only"
+    },
+    {
+      "page": 537,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 10,
+      "vie_lines": 6,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 91.88,
+      "class": "bilingual"
+    },
+    {
+      "page": 538,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 26,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 92.68,
+      "class": "vie_only"
+    },
+    {
+      "page": 539,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 0,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": null,
+      "class": ""
+    },
+    {
+      "page": 540,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 5,
+      "vie_lines": 8,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 88.51,
+      "class": "bilingual"
+    },
+    {
+      "page": 541,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 23,
+      "vie_lines": 0,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 76.07,
+      "class": "han_only"
+    },
+    {
+      "page": 542,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 7,
+      "vie_lines": 21,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 90.94,
+      "class": "bilingual"
+    },
+    {
+      "page": 543,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 29,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 92.11,
+      "class": "vie_only"
+    },
+    {
+      "page": 544,
+      "han_run": true,
+      "vie_run": true,
+      "han_lines": 0,
+      "vie_lines": 30,
+      "han_selection": "manifest",
+      "vie_selection": "manifest",
+      "vie_conf": 94.65,
+      "class": "vie_only"
+    }
+  ]
+}

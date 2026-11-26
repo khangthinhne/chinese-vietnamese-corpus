@@ -1,0 +1,268 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_18",
+  "engine": "qwen",
+  "page": 312,
+  "runs": [
+    {
+      "key": "4f11435d69e5269a58a58f9522d5837208c1b5ea173456d9a2ce4c62d8446d2d",
+      "parameters": {
+        "image_sha256": "5c01d797f76307ddd95cb0ef2dd24e721281d7359f0533b975fe6cd773a23b12",
+        "engine": {
+          "name": "qwen",
+          "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "model_revision": "main",
+          "transformers_version": "4.57.6",
+          "torch_version": "2.5.1+cu121",
+          "cuda_version": "12.1",
+          "bitsandbytes_version": "0.50.2",
+          "quantization": {
+            "load_in_4bit": true,
+            "quant_type": "nf4",
+            "double_quant": true,
+            "compute_dtype": "float16"
+          },
+          "mode": "all",
+          "min_pixels": 50176,
+          "max_pixels": 802816,
+          "band_inches": 2.0,
+          "max_new_tokens": 768,
+          "repetition_penalty": 1.05,
+          "adapter_version": 3,
+          "prompt_version": 3,
+          "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74"
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T20:02:30+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_312.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        0,
+        2480,
+        3509
+      ],
+      "lines": [
+        {
+          "text": "Sưu tầm và khảo luận tác phẩm chữ Hán của người Việt Nam trước TK 10",
+          "bbox": [
+            98,
+            105,
+            2371,
+            336
+          ],
+          "confidence": 90.07
+        },
+        {
+          "text": "感君之未寤，致理於昇平；絕好惡之門，傳和之代；名高終古，傳在策書；巍巍三代，斯爲",
+          "bbox": [
+            98,
+            336,
+            2371,
+            567
+          ],
+          "confidence": 90.07
+        },
+        {
+          "text": "臣无学术，謬对欺；若变其微，斯言玷。使臣以礼，晋武宁于汉高；鼓怒抗辞，昌不优于刘毅！",
+          "bbox": [
+            395,
+            594,
+            2364,
+            1153
+          ],
+          "confidence": 71.96
+        },
+        {
+          "text": "悉書之;必無面從，以重不德",
+          "bbox": [
+            110,
+            1183,
+            2364,
+            1396
+          ],
+          "confidence": 79.1
+        },
+        {
+          "text": "臣固凡陋，越在側微。仰天地之大，化；體陰有廣，每荷陶甄。豈意詔",
+          "bbox": [
+            110,
+            1396,
+            2364,
+            1609
+          ],
+          "confidence": 79.1
+        },
+        {
+          "text": "临，猥垂下问，心虑陨越。夏虫不覩春水；士申微素，进退畏。伏下以道生成，以春夏，刑以秋冬；金见江，反着泽；委符草，",
+          "bbox": [
+            399,
+            1638,
+            2371,
+            2132
+          ],
+          "confidence": 48.1
+        },
+        {
+          "text": "忠良爲靈,惠惠人以厚德,刑措之渐,臣下胜怯。.太平之道,惠惠必是初,克终之可以存義,其",
+          "bbox": [
+            386,
+            2154,
+            2363,
+            2648
+          ],
+          "confidence": 35.3
+        },
+        {
+          "text": "聖人乎？伏惟陛下終之，臣不勝葵藿傾心。",
+          "bbox": [
+            98,
+            2668,
+            2475,
+            3509
+          ],
+          "confidence": 77.13
+        }
+      ],
+      "raw": {
+        "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+        "model_revision": "main",
+        "mode": "all",
+        "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          3509
+        ],
+        "band_target_height": 600,
+        "bbox_granularity": "band_even_split",
+        "max_new_tokens": 768,
+        "max_pixels": 802816,
+        "inference_seconds": 20.118,
+        "bands": [
+          {
+            "band": 1,
+            "y0": 109,
+            "y1": 580,
+            "ink_box": [
+              98,
+              105,
+              2371,
+              567
+            ],
+            "generated_text": "Sưu tầm và khảo luận tác phẩm chữ Hán của người Việt Nam trước TK 10\n\n感君之未寤，致理於昇平；絕好惡之門，傳和之代；名高終古，傳在策書；巍巍三代，斯爲",
+            "n_lines": 2,
+            "tokens": 61,
+            "seconds": 4.344,
+            "confidence": 90.07,
+            "flags": []
+          },
+          {
+            "band": 2,
+            "y0": 580,
+            "y1": 1168,
+            "ink_box": [
+              395,
+              594,
+              2364,
+              1153
+            ],
+            "generated_text": "臣无学术，謬对欺；若变其微，斯言玷。使臣以礼，晋武宁于汉高；鼓怒抗辞，昌不优于刘毅！",
+            "n_lines": 1,
+            "tokens": 43,
+            "seconds": 3.21,
+            "confidence": 71.96,
+            "flags": []
+          },
+          {
+            "band": 3,
+            "y0": 1168,
+            "y1": 1623,
+            "ink_box": [
+              110,
+              1183,
+              2364,
+              1609
+            ],
+            "generated_text": "悉書之;必無面從，以重不德\n臣固凡陋，越在側微。仰天地之大，化；體陰有廣，每荷陶甄。豈意詔",
+            "n_lines": 2,
+            "tokens": 47,
+            "seconds": 3.534,
+            "confidence": 79.1,
+            "flags": []
+          },
+          {
+            "band": 4,
+            "y0": 1623,
+            "y1": 2142,
+            "ink_box": [
+              399,
+              1638,
+              2371,
+              2132
+            ],
+            "generated_text": "临，猥垂下问，心虑陨越。夏虫不覩春水；士申微素，进退畏。伏下以道生成，以春夏，刑以秋冬；金见江，反着泽；委符草，",
+            "n_lines": 1,
+            "tokens": 57,
+            "seconds": 4.176,
+            "confidence": 48.1,
+            "flags": []
+          },
+          {
+            "band": 5,
+            "y0": 2142,
+            "y1": 2657,
+            "ink_box": [
+              386,
+              2154,
+              2363,
+              2648
+            ],
+            "generated_text": "忠良爲靈,惠惠人以厚德,刑措之渐,臣下胜怯。.太平之道,惠惠必是初,克终之可以存義,其",
+            "n_lines": 1,
+            "tokens": 41,
+            "seconds": 3.11,
+            "confidence": 35.3,
+            "flags": []
+          },
+          {
+            "band": 6,
+            "y0": 2657,
+            "y1": 3509,
+            "ink_box": [
+              98,
+              2668,
+              2475,
+              3509
+            ],
+            "generated_text": "聖人乎？伏惟陛下終之，臣不勝葵藿傾心。",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.707,
+            "confidence": 77.13,
+            "flags": []
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "61cbea5c0055c260ccfc12f884e0febca7b2783b",
+        "git_describe": "61cbea5",
+        "git_dirty": true,
+        "gpu": "NVIDIA L4",
+        "dtype": "float16",
+        "adapter_version": 3
+      }
+    }
+  ]
+}

@@ -1,0 +1,298 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_18",
+  "engine": "qwen",
+  "page": 300,
+  "runs": [
+    {
+      "key": "e2e273ad44dce921809343b8876d8b3870539873a4910bf80a325816298f7d02",
+      "parameters": {
+        "image_sha256": "633442fd1b96ea6519b633c2df8b0dce69b86ab6aa837b8afcb4f26b0025ca28",
+        "engine": {
+          "name": "qwen",
+          "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "model_revision": "main",
+          "transformers_version": "4.57.6",
+          "torch_version": "2.5.1+cu121",
+          "cuda_version": "12.1",
+          "bitsandbytes_version": "0.50.2",
+          "quantization": {
+            "load_in_4bit": true,
+            "quant_type": "nf4",
+            "double_quant": true,
+            "compute_dtype": "float16"
+          },
+          "mode": "all",
+          "min_pixels": 50176,
+          "max_pixels": 802816,
+          "band_inches": 2.0,
+          "max_new_tokens": 768,
+          "repetition_penalty": 1.05,
+          "adapter_version": 3,
+          "prompt_version": 3,
+          "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74"
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T19:56:38+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_300.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        0,
+        2480,
+        3509
+      ],
+      "lines": [
+        {
+          "text": "映。鳥頎頎以追飛;魚從容以涵泳。莫不各得其適;咸悅乎性。",
+          "bbox": [
+            238,
+            164,
+            2220,
+            613
+          ],
+          "confidence": 87.44
+        },
+        {
+          "text": "登夫爽塭，望兹云海。雲則連锦以離披；海則蓄瑰之翠翠;",
+          "bbox": [
+            248,
+            657,
+            2397,
+            1224
+          ],
+          "confidence": 42.17
+        },
+        {
+          "text": "无伦！扬檄，掉青。",
+          "bbox": [
+            247,
+            1235,
+            2384,
+            1766
+          ],
+          "confidence": 43.84
+        },
+        {
+          "text": "PHIÊN ÂM:",
+          "bbox": [
+            383,
+            1763,
+            2419,
+            1873
+          ],
+          "confidence": 90.02
+        },
+        {
+          "text": "BẠCH VÂN CHIẾU XUÂN HẢI PHÚ",
+          "bbox": [
+            383,
+            1873,
+            2419,
+            1982
+          ],
+          "confidence": 90.02
+        },
+        {
+          "text": "(Dĩ không, bích, tiên, kính, hải, xuân vi vận) (1)",
+          "bbox": [
+            383,
+            1982,
+            2419,
+            2092
+          ],
+          "confidence": 90.02
+        },
+        {
+          "text": "KHƯƠNG CÔNG PHỤ",
+          "bbox": [
+            383,
+            2092,
+            2419,
+            2201
+          ],
+          "confidence": 90.02
+        },
+        {
+          "text": "Bạch văn dung dung, dao duệ hồ xuân hải chi",
+          "bbox": [
+            383,
+            2201,
+            2419,
+            2311
+          ],
+          "confidence": 90.02
+        },
+        {
+          "text": "trung, phân văn tầng hán, hiệu khiết trường không. Tế ảnh sâm si, tấp (2) vi minh (3) ư nhật vực; khinh văn (4) lân (5) loạn, phân quỳnh hoảng (6) ư tiên cung.",
+          "bbox": [
+            262,
+            2312,
+            2200,
+            2604
+          ],
+          "confidence": 92.34
+        },
+        {
+          "text": "Thủy nhi: Kiền môn tịch, dương (7) quang tích. Nãi phiêu diêu (8) dĩ tòng long; toại khinh doanh nhi phất thạch (9). Xuất khung (10) loạn dĩ cao chữ; khóa hoành",
+          "bbox": [
+            262,
+            2604,
+            2200,
+            2895
+          ],
+          "confidence": 92.34
+        },
+        {
+          "text": "hải (11) nhi viễn chích. Cố: Hải ánh vân nhi tự xuân, vân chiếu hải nhi sinh bạch. Hoặc cảo cảo (12) dĩ tích tố; hoặc trầm trầm dĩ ngưng bích. Viên hư sạ khải (13), quân thụy (14) sắc nhi chu (15) lưu ; thần khí sơ thu, dữ thanh",
+          "bbox": [
+            262,
+            2898,
+            2475,
+            3498
+          ],
+          "confidence": 93.01
+        }
+      ],
+      "raw": {
+        "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+        "model_revision": "main",
+        "mode": "all",
+        "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          3509
+        ],
+        "band_target_height": 600,
+        "bbox_granularity": "band_even_split",
+        "max_new_tokens": 768,
+        "max_pixels": 802816,
+        "inference_seconds": 26.465,
+        "bands": [
+          {
+            "band": 1,
+            "y0": 168,
+            "y1": 646,
+            "ink_box": [
+              238,
+              164,
+              2220,
+              613
+            ],
+            "generated_text": "映。鳥頎頎以追飛;魚從容以涵泳。莫不各得其適;咸悅乎性。",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 2.525,
+            "confidence": 87.44,
+            "flags": []
+          },
+          {
+            "band": 2,
+            "y0": 646,
+            "y1": 1225,
+            "ink_box": [
+              248,
+              657,
+              2397,
+              1224
+            ],
+            "generated_text": "登夫爽塭，望兹云海。雲則連锦以離披；海則蓄瑰之翠翠;",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.269,
+            "confidence": 42.17,
+            "flags": []
+          },
+          {
+            "band": 3,
+            "y0": 1225,
+            "y1": 1764,
+            "ink_box": [
+              247,
+              1235,
+              2384,
+              1766
+            ],
+            "generated_text": "无伦！扬檄，掉青。",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 1.108,
+            "confidence": 43.84,
+            "flags": []
+          },
+          {
+            "band": 4,
+            "y0": 1764,
+            "y1": 2312,
+            "ink_box": [
+              383,
+              1763,
+              2419,
+              2311
+            ],
+            "generated_text": "PHIÊN ÂM:\n\nBẠCH VÂN CHIẾU XUÂN HẢI PHÚ\n(Dĩ không, bích, tiên, kính, hải, xuân vi vận) (1)\nKHƯƠNG CÔNG PHỤ\nBạch văn dung dung, dao duệ hồ xuân hải chi",
+            "n_lines": 5,
+            "tokens": 69,
+            "seconds": 4.878,
+            "confidence": 90.02,
+            "flags": []
+          },
+          {
+            "band": 5,
+            "y0": 2312,
+            "y1": 2897,
+            "ink_box": [
+              262,
+              2312,
+              2200,
+              2895
+            ],
+            "generated_text": "trung, phân văn tầng hán, hiệu khiết trường không. Tế ảnh sâm si, tấp (2) vi minh (3) ư nhật vực; khinh văn (4) lân (5) loạn, phân quỳnh hoảng (6) ư tiên cung.\n\nThủy nhi: Kiền môn tịch, dương (7) quang tích. Nãi phiêu diêu (8) dĩ tòng long; toại khinh doanh nhi phất thạch (9). Xuất khung (10) loạn dĩ cao chữ; khóa hoành",
+            "n_lines": 2,
+            "tokens": 131,
+            "seconds": 8.99,
+            "confidence": 92.34,
+            "flags": []
+          },
+          {
+            "band": 6,
+            "y0": 2897,
+            "y1": 3494,
+            "ink_box": [
+              262,
+              2898,
+              2475,
+              3498
+            ],
+            "generated_text": "hải (11) nhi viễn chích. Cố: Hải ánh vân nhi tự xuân, vân chiếu hải nhi sinh bạch. Hoặc cảo cảo (12) dĩ tích tố; hoặc trầm trầm dĩ ngưng bích. Viên hư sạ khải (13), quân thụy (14) sắc nhi chu (15) lưu ; thần khí sơ thu, dữ thanh",
+            "n_lines": 1,
+            "tokens": 95,
+            "seconds": 6.658,
+            "confidence": 93.01,
+            "flags": []
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "61cbea5c0055c260ccfc12f884e0febca7b2783b",
+        "git_describe": "61cbea5",
+        "git_dirty": true,
+        "gpu": "NVIDIA L4",
+        "dtype": "float16",
+        "adapter_version": 3
+      }
+    }
+  ]
+}

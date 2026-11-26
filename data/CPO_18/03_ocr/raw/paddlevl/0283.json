@@ -1,0 +1,861 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_18",
+  "engine": "paddlevl",
+  "page": 283,
+  "runs": [
+    {
+      "key": "34f63d43c9c87c9f730686dc521b085a603e48020c6ee146b614893825a2564c",
+      "parameters": {
+        "image_sha256": "9aad7971f5c89a79031a5c068f190fcf90e352c5a743021f0ff6012754d55da2",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T13:47:56+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_283.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        0,
+        2480,
+        3509
+      ],
+      "lines": [
+        {
+          "text": "Phân II : Nguyên văn tác phẩm dịch và chủ thích",
+          "bbox": [
+            1125,
+            143,
+            2109,
+            195
+          ],
+          "confidence": 92.5
+        },
+        {
+          "text": "[",
+          "bbox": [
+            231,
+            231,
+            2111,
+            243
+          ],
+          "confidence": 21.11
+        },
+        {
+          "text": "]",
+          "bbox": [
+            231,
+            243,
+            2111,
+            256
+          ],
+          "confidence": 21.11
+        },
+        {
+          "text": "Bài văn bia ở dao tràng Bảo An dưới đây được chính",
+          "bbox": [
+            415,
+            332,
+            2106,
+            399
+          ],
+          "confidence": 88.12
+        },
+        {
+          "text": "lý từ 2 văn bản chủ yếu : bản hiện khắc trên bia (goi là",
+          "bbox": [
+            256,
+            425,
+            2107,
+            492
+          ],
+          "confidence": 97.53
+        },
+        {
+          "text": "Bản A) và bản sao lúc từ năm Vĩnh Khánh 3 mà bản",
+          "bbox": [
+            256,
+            519,
+            2107,
+            586
+          ],
+          "confidence": 94.16
+        },
+        {
+          "text": "VHv. 2369 có thể xem như là một truyền bản (goi là",
+          "bbox": [
+            255,
+            612,
+            2112,
+            678
+          ],
+          "confidence": 96.59
+        },
+        {
+          "text": "Ban B).",
+          "bbox": [
+            254,
+            725,
+            539,
+            771
+          ],
+          "confidence": 99.34
+        },
+        {
+          "text": "Trong quá trình chính lý, chúng tôi có tham khảo",
+          "bbox": [
+            400,
+            838,
+            2112,
+            904
+          ],
+          "confidence": 95.23
+        },
+        {
+          "text": "bản in trong Văn khác Hán Nôm Việt Nam, Tập 1.",
+          "bbox": [
+            254,
+            930,
+            1926,
+            998
+          ],
+          "confidence": 97.32
+        },
+        {
+          "text": "Sau đây là nguyên văn bài văn bia đã được chính lý,",
+          "bbox": [
+            401,
+            1064,
+            2112,
+            1130
+          ],
+          "confidence": 95.81
+        },
+        {
+          "text": "cùng phần phiên âm và khảo di do chúng tôi thực hiện.",
+          "bbox": [
+            253,
+            1159,
+            2114,
+            1226
+          ],
+          "confidence": 94.14
+        },
+        {
+          "text": "Do văn bản mất quá nhiều chủ, nên sẽ không có phần",
+          "bbox": [
+            253,
+            1253,
+            2114,
+            1318
+          ],
+          "confidence": 94.16
+        },
+        {
+          "text": "dịch nghĩa.",
+          "bbox": [
+            255,
+            1362,
+            658,
+            1407
+          ],
+          "confidence": 88.58
+        },
+        {
+          "text": "大隋九眞郡寶安道場之碑文",
+          "bbox": [
+            580,
+            1661,
+            1835,
+            1757
+          ],
+          "confidence": 96.37
+        },
+        {
+          "text": "檢校交趾郡、贊治日南郡丞、前兼内史舍人",
+          "bbox": [
+            397,
+            1837,
+            2114,
+            1920
+          ],
+          "confidence": 94.75
+        },
+        {
+          "text": "河南元仁器撰。",
+          "bbox": [
+            255,
+            1965,
+            918,
+            2042
+          ],
+          "confidence": 98.19
+        },
+        {
+          "text": "夫法理靈符，非世智之可求：法性幽深，豈石",
+          "bbox": [
+            402,
+            2135,
+            2109,
+            2216
+          ],
+          "confidence": 93.8
+        },
+        {
+          "text": "言之所測。故梵魔之境，猶爲化城；三界之",
+          "bbox": [
+            260,
+            2261,
+            2111,
+            2349
+          ],
+          "confidence": 98.18
+        },
+        {
+          "text": "間，方稱火宅。鄭引疾怠逆謗□道□使□□□□",
+          "bbox": [
+            264,
+            2387,
+            2109,
+            2474
+          ],
+          "confidence": 96.79
+        },
+        {
+          "text": "徇。隨機利物，式育王寶。繙帝擇仁祠，皆仰則",
+          "bbox": [
+            257,
+            2518,
+            2109,
+            2602
+          ],
+          "confidence": 97.61
+        },
+        {
+          "text": "尊容，津梁庶品。其迴迴福淨土者，維黎侯□□",
+          "bbox": [
+            259,
+            2646,
+            2105,
+            2728
+          ],
+          "confidence": 97.12
+        },
+        {
+          "text": "□□天機學道漸具。",
+          "bbox": [
+            257,
+            2774,
+            1076,
+            2851
+          ],
+          "confidence": 93.64
+        },
+        {
+          "text": "先號刺史，是曰黎侯，哲玉鄁鄘，因乃命",
+          "bbox": [
+            405,
+            2938,
+            2475,
+            3021
+          ],
+          "confidence": 93.44
+        },
+        {
+          "text": "氏，永嘉之□。□□□□，□□□□，□□□□□，□社",
+          "bbox": [
+            258,
+            3065,
+            2402,
+            3147
+          ],
+          "confidence": 95.83
+        },
+        {
+          "text": "高爲宣總將帥潮州刺史。有梁馭曆，都督",
+          "bbox": [
+            261,
+            3185,
+            2281,
+            3276
+          ],
+          "confidence": 93.95
+        },
+        {
+          "text": "263",
+          "bbox": [
+            1953,
+            3397,
+            2102,
+            3431
+          ],
+          "confidence": 92.08
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          3509
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 36.398,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              1125,
+              143,
+              2109,
+              195
+            ],
+            "generated_text": "Phân II : Nguyên văn tác phẩm dịch và chủ thích",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.42,
+            "confidence": 92.5,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              231,
+              231,
+              2111,
+              256
+            ],
+            "generated_text": "[\n]",
+            "n_lines": 2,
+            "tokens": 4,
+            "seconds": 0.606,
+            "confidence": 21.11,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              415,
+              332,
+              2106,
+              399
+            ],
+            "generated_text": "Bài văn bia ở dao tràng Bảo An dưới đây được chính",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.489,
+            "confidence": 88.12,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              256,
+              425,
+              2107,
+              492
+            ],
+            "generated_text": "lý từ 2 văn bản chủ yếu : bản hiện khắc trên bia (goi là",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.769,
+            "confidence": 97.53,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              256,
+              519,
+              2107,
+              586
+            ],
+            "generated_text": "Bản A) và bản sao lúc từ năm Vĩnh Khánh 3 mà bản",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.577,
+            "confidence": 94.16,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              255,
+              612,
+              2112,
+              678
+            ],
+            "generated_text": "VHv. 2369 có thể xem như là một truyền bản (goi là",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.639,
+            "confidence": 96.59,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              254,
+              725,
+              539,
+              771
+            ],
+            "generated_text": "Ban B).",
+            "n_lines": 1,
+            "tokens": 4,
+            "seconds": 0.557,
+            "confidence": 99.34,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              400,
+              838,
+              2112,
+              904
+            ],
+            "generated_text": "Trong quá trình chính lý, chúng tôi có tham khảo",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.152,
+            "confidence": 95.23,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              254,
+              930,
+              1926,
+              998
+            ],
+            "generated_text": "bản in trong Văn khác Hán Nôm Việt Nam, Tập 1.",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.551,
+            "confidence": 97.32,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              401,
+              1064,
+              2112,
+              1130
+            ],
+            "generated_text": "Sau đây là nguyên văn bài văn bia đã được chính lý,",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.447,
+            "confidence": 95.81,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              253,
+              1159,
+              2114,
+              1226
+            ],
+            "generated_text": "cùng phần phiên âm và khảo di do chúng tôi thực hiện.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.35,
+            "confidence": 94.14,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              253,
+              1253,
+              2114,
+              1318
+            ],
+            "generated_text": "Do văn bản mất quá nhiều chủ, nên sẽ không có phần",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.296,
+            "confidence": 94.16,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              255,
+              1362,
+              658,
+              1407
+            ],
+            "generated_text": "dịch nghĩa.",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.689,
+            "confidence": 88.58,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              580,
+              1661,
+              1835,
+              1757
+            ],
+            "generated_text": "大隋九眞郡寶安道場之碑文",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.17,
+            "confidence": 96.37,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              397,
+              1837,
+              2114,
+              1920
+            ],
+            "generated_text": "檢校交趾郡、贊治日南郡丞、前兼内史舍人",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.945,
+            "confidence": 94.75,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              255,
+              1965,
+              918,
+              2042
+            ],
+            "generated_text": "河南元仁器撰。",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.718,
+            "confidence": 98.19,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              402,
+              2135,
+              2109,
+              2216
+            ],
+            "generated_text": "夫法理靈符，非世智之可求：法性幽深，豈石",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 1.699,
+            "confidence": 93.8,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              260,
+              2261,
+              2111,
+              2349
+            ],
+            "generated_text": "言之所測。故梵魔之境，猶爲化城；三界之",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.516,
+            "confidence": 98.18,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              264,
+              2387,
+              2109,
+              2474
+            ],
+            "generated_text": "間，方稱火宅。鄭引疾怠逆謗□道□使□□□□",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 1.817,
+            "confidence": 96.79,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              257,
+              2518,
+              2109,
+              2602
+            ],
+            "generated_text": "徇。隨機利物，式育王寶。繙帝擇仁祠，皆仰則",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 1.941,
+            "confidence": 97.61,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              259,
+              2646,
+              2105,
+              2728
+            ],
+            "generated_text": "尊容，津梁庶品。其迴迴福淨土者，維黎侯□□",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 1.943,
+            "confidence": 97.12,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              257,
+              2774,
+              1076,
+              2851
+            ],
+            "generated_text": "□□天機學道漸具。",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.093,
+            "confidence": 93.64,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              405,
+              2938,
+              2475,
+              3021
+            ],
+            "generated_text": "先號刺史，是曰黎侯，哲玉鄁鄘，因乃命",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.663,
+            "confidence": 93.44,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              258,
+              3065,
+              2402,
+              3147
+            ],
+            "generated_text": "氏，永嘉之□。□□□□，□□□□，□□□□□，□社",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 2.027,
+            "confidence": 95.83,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              261,
+              3185,
+              2281,
+              3276
+            ],
+            "generated_text": "高爲宣總將帥潮州刺史。有梁馭曆，都督",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.771,
+            "confidence": 93.95,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              1953,
+              3397,
+              2102,
+              3431
+            ],
+            "generated_text": "263",
+            "n_lines": 1,
+            "tokens": 4,
+            "seconds": 0.549,
+            "confidence": 92.08,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              263,
+              708,
+              509,
+              722
+            ],
+            "ink": 831
+          },
+          {
+            "box": [
+              575,
+              902,
+              1533,
+              914
+            ],
+            "ink": 596
+          },
+          {
+            "box": [
+              646,
+              1128,
+              2108,
+              1140
+            ],
+            "ink": 508
+          },
+          {
+            "box": [
+              391,
+              1223,
+              2047,
+              1237
+            ],
+            "ink": 777
+          },
+          {
+            "box": [
+              896,
+              1318,
+              1978,
+              1328
+            ],
+            "ink": 393
+          },
+          {
+            "box": [
+              279,
+              1348,
+              598,
+              1359
+            ],
+            "ink": 577
+          },
+          {
+            "box": [
+              1328,
+              1815,
+              1445,
+              1827
+            ],
+            "ink": 467
+          },
+          {
+            "box": [
+              2333,
+              3041,
+              2433,
+              3052
+            ],
+            "ink": 603
+          },
+          {
+            "box": [
+              2065,
+              3305,
+              2190,
+              3321
+            ],
+            "ink": 928
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

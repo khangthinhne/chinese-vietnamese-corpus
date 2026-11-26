@@ -1,0 +1,676 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_18",
+  "engine": "paddlevl",
+  "page": 331,
+  "runs": [
+    {
+      "key": "6458eb5182c7ac560a3dafdb78f87986057999506596882970619ce42dc8930e",
+      "parameters": {
+        "image_sha256": "7b7c5f635f546613f289ff2c6323e7feb4aadc1ba43e0d09ad9e133e9e7305d4",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T14:28:57+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_331.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        0,
+        2480,
+        3509
+      ],
+      "lines": [
+        {
+          "text": "2023年1月1日星期一",
+          "bbox": [
+            6,
+            36,
+            2480,
+            53
+          ],
+          "confidence": 43.6
+        },
+        {
+          "text": "VI. BAI PHẦN CỦA KHUỔNG CONG PHUC-",
+          "bbox": [
+            458,
+            748,
+            2480,
+            820
+          ],
+          "confidence": 84.94
+        },
+        {
+          "text": "Bài Đối Binh bô thí xa phán của Khuông Công Phuc",
+          "bbox": [
+            414,
+            1013,
+            2480,
+            1079
+          ],
+          "confidence": 87.37
+        },
+        {
+          "text": "hiên được chép trong Toàn Đường văn Q. 622, và đây là",
+          "bbox": [
+            276,
+            1110,
+            2227,
+            1178
+          ],
+          "confidence": 95.49
+        },
+        {
+          "text": "bản duy nhất mà ngày nay còn có thể tìm thấy.",
+          "bbox": [
+            276,
+            1201,
+            1914,
+            1266
+          ],
+          "confidence": 96.55
+        },
+        {
+          "text": "Bản giới thiệu dưới đây là trích tư sách nói trên.",
+          "bbox": [
+            414,
+            1326,
+            2227,
+            1393
+          ],
+          "confidence": 89.41
+        },
+        {
+          "text": "Các phần phiên âm, dich nghĩa, chủ thích là do chúng",
+          "bbox": [
+            280,
+            1417,
+            2229,
+            1483
+          ],
+          "confidence": 96.77
+        },
+        {
+          "text": "toi thực hiện.",
+          "bbox": [
+            278,
+            1526,
+            739,
+            1570
+          ],
+          "confidence": 79.08
+        },
+        {
+          "text": "對兵部試射判",
+          "bbox": [
+            8,
+            1813,
+            1575,
+            1898
+          ],
+          "confidence": 97.83
+        },
+        {
+          "text": "(得兵部試舉人長垛，請用樂節、太常稱",
+          "bbox": [
+            590,
+            1990,
+            1943,
+            2060
+          ],
+          "confidence": 92.94
+        },
+        {
+          "text": "格令無文，此乃選士之禮)",
+          "bbox": [
+            858,
+            2094,
+            1760,
+            2160
+          ],
+          "confidence": 96.84
+        },
+        {
+          "text": "射以觀德，樂以和聲。將選士於澤宮，必張",
+          "bbox": [
+            414,
+            2397,
+            2217,
+            2478
+          ],
+          "confidence": 99.37
+        },
+        {
+          "text": "侯於相圃。所以：誓宗廟之賓客，備饗宴之威",
+          "bbox": [
+            285,
+            2523,
+            2480,
+            2607
+          ],
+          "confidence": 98.2
+        },
+        {
+          "text": "儀。何忽武夫而要雅頌？豈徒強飲強食，勞",
+          "bbox": [
+            283,
+            2652,
+            2480,
+            2731
+          ],
+          "confidence": 98.14
+        },
+        {
+          "text": "祝，史之正辭：采蘋、采蘩，令太常之奏曲！",
+          "bbox": [
+            282,
+            2774,
+            1999,
+            2855
+          ],
+          "confidence": 93.85
+        },
+        {
+          "text": "且五善之禮，無“赳赳之武夫”；三耦之間，盡",
+          "bbox": [
+            414,
+            2940,
+            2480,
+            3020
+          ],
+          "confidence": 97.7
+        },
+        {
+          "text": "“呦呦之鸣鹿”。苟用捨而有異，在格令而無",
+          "bbox": [
+            278,
+            3062,
+            2480,
+            3144
+          ],
+          "confidence": 97.03
+        },
+        {
+          "text": "文。責乃其不然乎？訴之又益恥也。",
+          "bbox": [
+            286,
+            3184,
+            2480,
+            3264
+          ],
+          "confidence": 95.32
+        },
+        {
+          "text": "o a 305",
+          "bbox": [
+            1823,
+            3391,
+            2221,
+            3421
+          ],
+          "confidence": 70.55
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          3509
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 29.282,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              6,
+              29,
+              2480,
+              40
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.507,
+            "confidence": 86.88,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              6,
+              36,
+              2480,
+              53
+            ],
+            "generated_text": "2023年1月1日星期一",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.248,
+            "confidence": 43.6,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              458,
+              748,
+              2480,
+              820
+            ],
+            "generated_text": "VI. BAI PHẦN CỦA KHUỔNG CONG PHUC-",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 1.876,
+            "confidence": 84.94,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              414,
+              1013,
+              2480,
+              1079
+            ],
+            "generated_text": "Bài Đối Binh bô thí xa phán của Khuông Công Phuc",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.738,
+            "confidence": 87.37,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              276,
+              1110,
+              2227,
+              1178
+            ],
+            "generated_text": "hiên được chép trong Toàn Đường văn Q. 622, và đây là",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.728,
+            "confidence": 95.49,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              276,
+              1201,
+              1914,
+              1266
+            ],
+            "generated_text": "bản duy nhất mà ngày nay còn có thể tìm thấy.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.189,
+            "confidence": 96.55,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              414,
+              1326,
+              2227,
+              1393
+            ],
+            "generated_text": "Bản giới thiệu dưới đây là trích tư sách nói trên.",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.528,
+            "confidence": 89.41,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              280,
+              1417,
+              2229,
+              1483
+            ],
+            "generated_text": "Các phần phiên âm, dich nghĩa, chủ thích là do chúng",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.461,
+            "confidence": 96.77,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              278,
+              1526,
+              739,
+              1570
+            ],
+            "generated_text": "toi thực hiện.",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.598,
+            "confidence": 79.08,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              8,
+              1813,
+              1575,
+              1898
+            ],
+            "generated_text": "對兵部試射判",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.8,
+            "confidence": 97.83,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              590,
+              1990,
+              1943,
+              2060
+            ],
+            "generated_text": "(得兵部試舉人長垛，請用樂節、太常稱",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.722,
+            "confidence": 92.94,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              858,
+              2094,
+              1760,
+              2160
+            ],
+            "generated_text": "格令無文，此乃選士之禮)",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.061,
+            "confidence": 96.84,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              414,
+              2397,
+              2217,
+              2478
+            ],
+            "generated_text": "射以觀德，樂以和聲。將選士於澤宮，必張",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.525,
+            "confidence": 99.37,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              285,
+              2523,
+              2480,
+              2607
+            ],
+            "generated_text": "侯於相圃。所以：誓宗廟之賓客，備饗宴之威",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.157,
+            "confidence": 98.2,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              283,
+              2652,
+              2480,
+              2731
+            ],
+            "generated_text": "儀。何忽武夫而要雅頌？豈徒強飲強食，勞",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 2.291,
+            "confidence": 98.14,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              282,
+              2774,
+              1999,
+              2855
+            ],
+            "generated_text": "祝，史之正辭：采蘋、采蘩，令太常之奏曲！",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 1.824,
+            "confidence": 93.85,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              414,
+              2940,
+              2480,
+              3020
+            ],
+            "generated_text": "且五善之禮，無“赳赳之武夫”；三耦之間，盡",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 1.926,
+            "confidence": 97.7,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              278,
+              3062,
+              2480,
+              3144
+            ],
+            "generated_text": "“呦呦之鸣鹿”。苟用捨而有異，在格令而無",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.709,
+            "confidence": 97.03,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              286,
+              3184,
+              2480,
+              3264
+            ],
+            "generated_text": "文。責乃其不然乎？訴之又益恥也。",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.638,
+            "confidence": 95.32,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              1823,
+              3391,
+              2221,
+              3421
+            ],
+            "generated_text": "o a 305",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.754,
+            "confidence": 70.55,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              698,
+              735,
+              2480,
+              751
+            ],
+            "ink": 1003
+          },
+          {
+            "box": [
+              960,
+              1077,
+              2175,
+              1087
+            ],
+            "ink": 461
+          },
+          {
+            "box": [
+              362,
+              1174,
+              2116,
+              1185
+            ],
+            "ink": 713
+          },
+          {
+            "box": [
+              438,
+              1479,
+              2222,
+              1491
+            ],
+            "ink": 755
+          },
+          {
+            "box": [
+              288,
+              1514,
+              667,
+              1523
+            ],
+            "ink": 621
+          },
+          {
+            "box": [
+              1540,
+              2258,
+              1745,
+              2268
+            ],
+            "ink": 655
+          },
+          {
+            "box": [
+              1520,
+              2282,
+              1744,
+              2304
+            ],
+            "ink": 1609
+          },
+          {
+            "box": [
+              1970,
+              3374,
+              2220,
+              3390
+            ],
+            "ink": 1117
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

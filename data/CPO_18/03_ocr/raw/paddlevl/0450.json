@@ -1,0 +1,964 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_18",
+  "engine": "paddlevl",
+  "page": 450,
+  "runs": [
+    {
+      "key": "a8073fc752f57b6861e5b7262a017d6aa3649e0e11bbebb1efdafa09c48d0e86",
+      "parameters": {
+        "image_sha256": "f23f1ef67a4b9e2cfa4dc4989b1a44367c2883d846aa11da45374df5fa9ab235",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T16:08:15+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_450.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        0,
+        2480,
+        3509
+      ],
+      "lines": [
+        {
+          "text": "Sụu tấm và khảo luận tác phẩm chủ Hán của người Việt Nam trước TK 10",
+          "bbox": [
+            296,
+            76,
+            2422,
+            136
+          ],
+          "confidence": 92.92
+        },
+        {
+          "text": "___",
+          "bbox": [
+            280,
+            165,
+            2214,
+            190
+          ],
+          "confidence": 29.6
+        },
+        {
+          "text": "Từ viết : Thân hoàn tác sinh, bất hoàn, thân hà chi hộ ?",
+          "bbox": [
+            295,
+            273,
+            2422,
+            341
+          ],
+          "confidence": 90.56
+        },
+        {
+          "text": "Viết : Thành quỷ thân. Mâu Từ viết : Thi giả. Hồn thân",
+          "bbox": [
+            291,
+            368,
+            2422,
+            435
+          ],
+          "confidence": 85.28
+        },
+        {
+          "text": "có bất diệt hì, đản thân tự hũ lan nhĩ. Thân thí như ngũ",
+          "bbox": [
+            290,
+            463,
+            2423,
+            530
+          ],
+          "confidence": 83.77
+        },
+        {
+          "text": "cốc chi căn diệp, hôn thân như ngũ cốc chi chủng thức.",
+          "bbox": [
+            290,
+            558,
+            2430,
+            625
+          ],
+          "confidence": 88.04
+        },
+        {
+          "text": "Căn diệp sinh tác động tử, chủng thức khởi hữu chung",
+          "bbox": [
+            293,
+            653,
+            2423,
+            720
+          ],
+          "confidence": 85.29
+        },
+        {
+          "text": "vong ? Đặc đảo thân diệt nhĩ ! Lão Từ viết : “Ngô sở dĩ",
+          "bbox": [
+            286,
+            746,
+            2423,
+            814
+          ],
+          "confidence": 85.93
+        },
+        {
+          "text": "hũu đai hoan, đi ngô hũu thân giả. Nhước ngô vô thân,",
+          "bbox": [
+            287,
+            843,
+            2423,
+            910
+          ],
+          "confidence": 83.75
+        },
+        {
+          "text": "ngô hũu hà hoan ?\" Hưu viết : \"Công thành, danh toai,",
+          "bbox": [
+            286,
+            937,
+            2423,
+            1004
+          ],
+          "confidence": 93.23
+        },
+        {
+          "text": "than thoai, thien chi dao gia.",
+          "bbox": [
+            286,
+            1047,
+            2424,
+            1094
+          ],
+          "confidence": 78.57
+        },
+        {
+          "text": "Hoặc viết : Vi đạo diếc tủ, bất vi đạo diếc tủ, hữu hà",
+          "bbox": [
+            410,
+            1164,
+            2424,
+            1231
+          ],
+          "confidence": 87.87
+        },
+        {
+          "text": "Mâu Tử viết : Sở vi vô nhất nhất chi thiên nhi vấn",
+          "bbox": [
+            404,
+            1395,
+            2229,
+            1462
+          ],
+          "confidence": 90.75
+        },
+        {
+          "text": "chung thân chi dự giả giả. Hữu đạo tuyệt tử, thân quy",
+          "bbox": [
+            281,
+            1491,
+            2231,
+            1570
+          ],
+          "confidence": 88.78
+        },
+        {
+          "text": "Phát động. Vi ác ký tử, thân động kỳ ương. Ngu phu",
+          "bbox": [
+            284,
+            1587,
+            2230,
+            1666
+          ],
+          "confidence": 89.82
+        },
+        {
+          "text": "ám ư thành sư, hiện trí dụ ư vi manh. Đao dũ bất đạo",
+          "bbox": [
+            283,
+            1681,
+            2232,
+            1750
+          ],
+          "confidence": 82.32
+        },
+        {
+          "text": "như kim tỉ thảo, thiên chi dũ hoa, như bach phương hắc,",
+          "bbox": [
+            282,
+            1775,
+            2446,
+            1845
+          ],
+          "confidence": 89.96
+        },
+        {
+          "text": "vên đặc bất di, nhi ngôn hà di hô?",
+          "bbox": [
+            281,
+            1869,
+            1429,
+            1935
+          ],
+          "confidence": 87.72
+        },
+        {
+          "text": "DICH NGHIA:",
+          "bbox": [
+            408,
+            2153,
+            831,
+            2209
+          ],
+          "confidence": 93.96
+        },
+        {
+          "text": "Hỏi rằng : Đạo Phật nói người ta chết rồi sẽ thác",
+          "bbox": [
+            408,
+            2275,
+            2232,
+            2342
+          ],
+          "confidence": 91.86
+        },
+        {
+          "text": "sinh trò lai, tôi không tin đấy là lời nói có suy xét.",
+          "bbox": [
+            283,
+            2370,
+            1976,
+            2436
+          ],
+          "confidence": 89.97
+        },
+        {
+          "text": "Mâu Tử nói : Khi có kế sắp chết, người nhà trèo lên",
+          "bbox": [
+            407,
+            2485,
+            2229,
+            2551
+          ],
+          "confidence": 90.28
+        },
+        {
+          "text": "mái nhà mà goi. Đã chết, còn goi ai nữa ? Có người nói :",
+          "bbox": [
+            285,
+            2580,
+            2229,
+            2646
+          ],
+          "confidence": 98.32
+        },
+        {
+          "text": "goi hồn vía người áy. Mâu Tử bảo : Thân hồn trỏ về thì",
+          "bbox": [
+            285,
+            2671,
+            2230,
+            2740
+          ],
+          "confidence": 80.5
+        },
+        {
+          "text": "sống, còn nếu không trở về, thì thân hôn đi đâu? Đáp :",
+          "bbox": [
+            285,
+            2769,
+            2229,
+            2834
+          ],
+          "confidence": 88.65
+        },
+        {
+          "text": "Thành quý thần. Mâu Từ nói : Đúng như vây. Thần hồn",
+          "bbox": [
+            283,
+            2859,
+            2230,
+            2929
+          ],
+          "confidence": 86.6
+        },
+        {
+          "text": "vốn bất diệt, chỉ có thân thể là tư rũa nát thôi. Thân",
+          "bbox": [
+            280,
+            2955,
+            2475,
+            3022
+          ],
+          "confidence": 92.31
+        },
+        {
+          "text": "người tỉ như rẽ và lá của ngũ cốc, còn thân hồn thì như",
+          "bbox": [
+            281,
+            3042,
+            2431,
+            3116
+          ],
+          "confidence": 88.75
+        },
+        {
+          "text": "là hạt giống. Rẽ, lá có sổng thì có chết, nhưng lẽ nào hạt",
+          "bbox": [
+            281,
+            3139,
+            2333,
+            3220
+          ],
+          "confidence": 95.43
+        },
+        {
+          "text": "giống cũng tiêu vong ? Khi đặc đạo chỉ có thân thể là",
+          "bbox": [
+            286,
+            3237,
+            2236,
+            3316
+          ],
+          "confidence": 96.26
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          3509
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 52.71,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              296,
+              76,
+              2422,
+              136
+            ],
+            "generated_text": "Sụu tấm và khảo luận tác phẩm chủ Hán của người Việt Nam trước TK 10",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 2.067,
+            "confidence": 92.92,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              280,
+              165,
+              2214,
+              190
+            ],
+            "generated_text": "___",
+            "n_lines": 1,
+            "tokens": 2,
+            "seconds": 0.49,
+            "confidence": 29.6,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              295,
+              273,
+              2422,
+              341
+            ],
+            "generated_text": "Từ viết : Thân hoàn tác sinh, bất hoàn, thân hà chi hộ ?",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 2.023,
+            "confidence": 90.56,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              291,
+              368,
+              2422,
+              435
+            ],
+            "generated_text": "Viết : Thành quỷ thân. Mâu Từ viết : Thi giả. Hồn thân",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 1.998,
+            "confidence": 85.28,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              290,
+              463,
+              2423,
+              530
+            ],
+            "generated_text": "có bất diệt hì, đản thân tự hũ lan nhĩ. Thân thí như ngũ",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.181,
+            "confidence": 83.77,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              290,
+              558,
+              2430,
+              625
+            ],
+            "generated_text": "cốc chi căn diệp, hôn thân như ngũ cốc chi chủng thức.",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.848,
+            "confidence": 88.04,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              293,
+              653,
+              2423,
+              720
+            ],
+            "generated_text": "Căn diệp sinh tác động tử, chủng thức khởi hữu chung",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.716,
+            "confidence": 85.29,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              286,
+              746,
+              2423,
+              814
+            ],
+            "generated_text": "vong ? Đặc đảo thân diệt nhĩ ! Lão Từ viết : “Ngô sở dĩ",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 2.228,
+            "confidence": 85.93,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              287,
+              843,
+              2423,
+              910
+            ],
+            "generated_text": "hũu đai hoan, đi ngô hũu thân giả. Nhước ngô vô thân,",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 2.109,
+            "confidence": 83.75,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              286,
+              937,
+              2423,
+              1004
+            ],
+            "generated_text": "ngô hũu hà hoan ?\" Hưu viết : \"Công thành, danh toai,",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 2.12,
+            "confidence": 93.23,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              286,
+              1047,
+              2424,
+              1094
+            ],
+            "generated_text": "than thoai, thien chi dao gia.",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 1.103,
+            "confidence": 78.57,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              410,
+              1164,
+              2424,
+              1231
+            ],
+            "generated_text": "Hoặc viết : Vi đạo diếc tủ, bất vi đạo diếc tủ, hữu hà",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 2.357,
+            "confidence": 87.87,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              404,
+              1395,
+              2229,
+              1462
+            ],
+            "generated_text": "Mâu Tử viết : Sở vi vô nhất nhất chi thiên nhi vấn",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.548,
+            "confidence": 90.75,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              281,
+              1491,
+              2231,
+              1570
+            ],
+            "generated_text": "chung thân chi dự giả giả. Hữu đạo tuyệt tử, thân quy",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.698,
+            "confidence": 88.78,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              284,
+              1587,
+              2230,
+              1666
+            ],
+            "generated_text": "Phát động. Vi ác ký tử, thân động kỳ ương. Ngu phu",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.759,
+            "confidence": 89.82,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              283,
+              1681,
+              2232,
+              1750
+            ],
+            "generated_text": "ám ư thành sư, hiện trí dụ ư vi manh. Đao dũ bất đạo",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 1.848,
+            "confidence": 82.32,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              282,
+              1775,
+              2446,
+              1845
+            ],
+            "generated_text": "như kim tỉ thảo, thiên chi dũ hoa, như bach phương hắc,",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.896,
+            "confidence": 89.96,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              281,
+              1869,
+              1429,
+              1935
+            ],
+            "generated_text": "vên đặc bất di, nhi ngôn hà di hô?",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.441,
+            "confidence": 87.72,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              408,
+              2153,
+              831,
+              2209
+            ],
+            "generated_text": "DICH NGHIA:",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.692,
+            "confidence": 93.96,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              408,
+              2275,
+              2232,
+              2342
+            ],
+            "generated_text": "Hỏi rằng : Đạo Phật nói người ta chết rồi sẽ thác",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.497,
+            "confidence": 91.86,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              283,
+              2370,
+              1976,
+              2436
+            ],
+            "generated_text": "sinh trò lai, tôi không tin đấy là lời nói có suy xét.",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.533,
+            "confidence": 89.97,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              407,
+              2485,
+              2229,
+              2551
+            ],
+            "generated_text": "Mâu Tử nói : Khi có kế sắp chết, người nhà trèo lên",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.786,
+            "confidence": 90.28,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              285,
+              2580,
+              2229,
+              2646
+            ],
+            "generated_text": "mái nhà mà goi. Đã chết, còn goi ai nữa ? Có người nói :",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.865,
+            "confidence": 98.32,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              285,
+              2671,
+              2230,
+              2740
+            ],
+            "generated_text": "goi hồn vía người áy. Mâu Tử bảo : Thân hồn trỏ về thì",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 1.922,
+            "confidence": 80.5,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              285,
+              2769,
+              2229,
+              2834
+            ],
+            "generated_text": "sống, còn nếu không trở về, thì thân hôn đi đâu? Đáp :",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.81,
+            "confidence": 88.65,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              283,
+              2859,
+              2230,
+              2929
+            ],
+            "generated_text": "Thành quý thần. Mâu Từ nói : Đúng như vây. Thần hồn",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.79,
+            "confidence": 86.6,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              280,
+              2955,
+              2475,
+              3022
+            ],
+            "generated_text": "vốn bất diệt, chỉ có thân thể là tư rũa nát thôi. Thân",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 2.054,
+            "confidence": 92.31,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              281,
+              3042,
+              2431,
+              3116
+            ],
+            "generated_text": "người tỉ như rẽ và lá của ngũ cốc, còn thân hồn thì như",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.821,
+            "confidence": 88.75,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              281,
+              3139,
+              2333,
+              3220
+            ],
+            "generated_text": "là hạt giống. Rẽ, lá có sổng thì có chết, nhưng lẽ nào hạt",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 1.921,
+            "confidence": 95.43,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              286,
+              3237,
+              2236,
+              3316
+            ],
+            "generated_text": "giống cũng tiêu vong ? Khi đặc đạo chỉ có thân thể là",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.584,
+            "confidence": 96.26,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              513,
+              720,
+              2422,
+              731
+            ],
+            "ink": 610
+          },
+          {
+            "box": [
+              487,
+              908,
+              2422,
+              921
+            ],
+            "ink": 737
+          },
+          {
+            "box": [
+              331,
+              1005,
+              2423,
+              1014
+            ],
+            "ink": 487
+          },
+          {
+            "box": [
+              294,
+              1030,
+              2423,
+              1050
+            ],
+            "ink": 1774
+          },
+          {
+            "box": [
+              288,
+              1284,
+              2424,
+              1297
+            ],
+            "ink": 852
+          },
+          {
+            "box": [
+              288,
+              1312,
+              485,
+              1326
+            ],
+            "ink": 843
+          },
+          {
+            "box": [
+              699,
+              2645,
+              1922,
+              2656
+            ],
+            "ink": 617
+          },
+          {
+            "box": [
+              539,
+              2929,
+              1806,
+              2938
+            ],
+            "ink": 447
+          },
+          {
+            "box": [
+              326,
+              3112,
+              2351,
+              3122
+            ],
+            "ink": 701
+          },
+          {
+            "box": [
+              289,
+              3400,
+              2072,
+              3418
+            ],
+            "ink": 1427
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

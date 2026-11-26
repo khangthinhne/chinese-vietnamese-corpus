@@ -1,0 +1,999 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_18",
+  "engine": "paddlevl",
+  "page": 438,
+  "runs": [
+    {
+      "key": "646d0e8aba5a4b24b3d405c60e10d1df7c24c625eea2eaa627c2997b60fd9178",
+      "parameters": {
+        "image_sha256": "a71bfc2ec15f4e9d8c66fbe0092dc71a1f63962698d154fb9b9952786f5e40d2",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T15:57:23+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_438.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        0,
+        2480,
+        3509
+      ],
+      "lines": [
+        {
+          "text": "Sưu tầm và khảo luận tác phẩm chủ Hán của người Việt Nam trước TK 10",
+          "bbox": [
+            311,
+            87,
+            1876,
+            152
+          ],
+          "confidence": 93.22
+        },
+        {
+          "text": "___",
+          "bbox": [
+            292,
+            178,
+            2251,
+            205
+          ],
+          "confidence": 25.15
+        },
+        {
+          "text": "tự hình, Bá Cơ đạo hỏa, Cao Hanh tiết dung, quân tử vi",
+          "bbox": [
+            306,
+            286,
+            2243,
+            355
+          ],
+          "confidence": 88.55
+        },
+        {
+          "text": "dũng nhi hữu nghĩa, bất văn cơ kỳ tử hủy một giả. Sa",
+          "bbox": [
+            304,
+            382,
+            2244,
+            449
+          ],
+          "confidence": 92.26
+        },
+        {
+          "text": "môn thế trừ tu phát nhi tỉ chi ư tử nhân bất dĩ viên hộ?",
+          "bbox": [
+            303,
+            472,
+            2231,
+            540
+          ],
+          "confidence": 81.69
+        },
+        {
+          "text": "DICH NGHIA:",
+          "bbox": [
+            422,
+            770,
+            855,
+            826
+          ],
+          "confidence": 91.4
+        },
+        {
+          "text": "Hỏi rằng : Sách Hiếu kinh nói : \"Thân thế, tóc da",
+          "bbox": [
+            423,
+            894,
+            2245,
+            962
+          ],
+          "confidence": 91.34
+        },
+        {
+          "text": "được cha me cho, không dám làm thương tồn\" (61). Tăng",
+          "bbox": [
+            301,
+            990,
+            2247,
+            1058
+          ],
+          "confidence": 91.23
+        },
+        {
+          "text": "Từ khi sắp mất, có bảo : “Cối dây buộc tay cho ta, cối",
+          "bbox": [
+            299,
+            1085,
+            2245,
+            1153
+          ],
+          "confidence": 92.64
+        },
+        {
+          "text": "dây bước chân cho ta (62). Nay các nhà sự lai cắt tóc, sao",
+          "bbox": [
+            303,
+            1179,
+            2245,
+            1246
+          ],
+          "confidence": 90.47
+        },
+        {
+          "text": "làm trái lời thánh nhân, không hợp đạo người con có",
+          "bbox": [
+            299,
+            1273,
+            2245,
+            1341
+          ],
+          "confidence": 88.63
+        },
+        {
+          "text": "hiểu đến thế ? Ông hay thích biên luận về điều phải",
+          "bbox": [
+            297,
+            1367,
+            2244,
+            1434
+          ],
+          "confidence": 90.02
+        },
+        {
+          "text": "điều quấy, phẩm bình về việc ngay thẳng, việc quanh",
+          "bbox": [
+            302,
+            1461,
+            2245,
+            1540
+          ],
+          "confidence": 93.97
+        },
+        {
+          "text": "co, thế mà lại biểu động tình với các nhà sự sao?",
+          "bbox": [
+            298,
+            1554,
+            1962,
+            1621
+          ],
+          "confidence": 88.79
+        },
+        {
+          "text": "Mâu Tử đáp : Ổi ! Cười chê thánh hiên thì là bất",
+          "bbox": [
+            425,
+            1707,
+            2245,
+            1775
+          ],
+          "confidence": 81.39
+        },
+        {
+          "text": "nhân ; phẩm bình không trúng thì là bất trí. Bất nhân,",
+          "bbox": [
+            298,
+            1801,
+            2241,
+            1870
+          ],
+          "confidence": 90.71
+        },
+        {
+          "text": "bất trí, lấy gì tao dụng đức ? Đức mà không tao dụng",
+          "bbox": [
+            298,
+            1896,
+            2245,
+            1963
+          ],
+          "confidence": 89.87
+        },
+        {
+          "text": "được thì là loại người ương ngụ. Lập luận sao mà dê dãi",
+          "bbox": [
+            304,
+            1989,
+            2243,
+            2056
+          ],
+          "confidence": 86.06
+        },
+        {
+          "text": "thế ! Xưa kia người nước Tê chèo thuyền qua sông, cha",
+          "bbox": [
+            301,
+            2083,
+            2242,
+            2149
+          ],
+          "confidence": 96.41
+        },
+        {
+          "text": "bi ngã xuống nước, con nắm cánh tay kéo đầu cha lật",
+          "bbox": [
+            300,
+            2177,
+            2243,
+            2242
+          ],
+          "confidence": 88.84
+        },
+        {
+          "text": "ngược xuống cho nước từ môi ôc hết ra, thân phụ nhỏ",
+          "bbox": [
+            299,
+            2272,
+            2244,
+            2336
+          ],
+          "confidence": 81.27
+        },
+        {
+          "text": "vậy được cứu sống. Kéo dầu lật ngược xương thật không",
+          "bbox": [
+            298,
+            2363,
+            2243,
+            2440
+          ],
+          "confidence": 81.52
+        },
+        {
+          "text": "còn gì bất hiểu hơn, nhưng là để bảo toàn tính mệnh cho",
+          "bbox": [
+            301,
+            2455,
+            2243,
+            2521
+          ],
+          "confidence": 93.24
+        },
+        {
+          "text": "cha. Nếu cứ chấp tay giữ tròn đạo hiếu, thì cha sẽ bi",
+          "bbox": [
+            302,
+            2546,
+            2239,
+            2614
+          ],
+          "confidence": 84.63
+        },
+        {
+          "text": "chết đuối mất. Không Từ nói : \"Mói có khả năng thích",
+          "bbox": [
+            303,
+            2638,
+            2241,
+            2705
+          ],
+          "confidence": 92.4
+        },
+        {
+          "text": "nghi với đạo lý, mà chưa có khả năng quyền biến” (63) tức",
+          "bbox": [
+            305,
+            2730,
+            2242,
+            2798
+          ],
+          "confidence": 92.39
+        },
+        {
+          "text": "tùy theo từng lúc mà đưa ra biên pháp thích hợp. Và,",
+          "bbox": [
+            305,
+            2824,
+            2238,
+            2892
+          ],
+          "confidence": 97.98
+        },
+        {
+          "text": "Hiếu kinh nói : “Các vua đòi trước, đạo cao đức cả”. Thế",
+          "bbox": [
+            298,
+            2915,
+            2436,
+            2983
+          ],
+          "confidence": 89.31
+        },
+        {
+          "text": "mà Thái Bá (64) phải cắt tóc ngắn, vẽ mình, tự nguyện",
+          "bbox": [
+            304,
+            3003,
+            2470,
+            3085
+          ],
+          "confidence": 93.27
+        },
+        {
+          "text": "theo phong tục Ngô Việt trái với cái nghĩa “thân thể, tóc",
+          "bbox": [
+            301,
+            3100,
+            2371,
+            3176
+          ],
+          "confidence": 90.36
+        },
+        {
+          "text": "da\". Những Không Từ vấn ca ngợi ông. Có thể nói ông là",
+          "bbox": [
+            302,
+            3190,
+            2280,
+            3267
+          ],
+          "confidence": 92.94
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          3509
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 50.664,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              311,
+              87,
+              1876,
+              152
+            ],
+            "generated_text": "Sưu tầm và khảo luận tác phẩm chủ Hán của người Việt Nam trước TK 10",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.692,
+            "confidence": 93.22,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              292,
+              178,
+              2251,
+              205
+            ],
+            "generated_text": "___",
+            "n_lines": 1,
+            "tokens": 2,
+            "seconds": 0.477,
+            "confidence": 25.15,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              306,
+              286,
+              2243,
+              355
+            ],
+            "generated_text": "tự hình, Bá Cơ đạo hỏa, Cao Hanh tiết dung, quân tử vi",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.021,
+            "confidence": 88.55,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              304,
+              382,
+              2244,
+              449
+            ],
+            "generated_text": "dũng nhi hữu nghĩa, bất văn cơ kỳ tử hủy một giả. Sa",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 1.922,
+            "confidence": 92.26,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              303,
+              472,
+              2231,
+              540
+            ],
+            "generated_text": "môn thế trừ tu phát nhi tỉ chi ư tử nhân bất dĩ viên hộ?",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 1.855,
+            "confidence": 81.69,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              422,
+              770,
+              855,
+              826
+            ],
+            "generated_text": "DICH NGHIA:",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.7,
+            "confidence": 91.4,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              423,
+              894,
+              2245,
+              962
+            ],
+            "generated_text": "Hỏi rằng : Sách Hiếu kinh nói : \"Thân thế, tóc da",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.504,
+            "confidence": 91.34,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              301,
+              990,
+              2247,
+              1058
+            ],
+            "generated_text": "được cha me cho, không dám làm thương tồn\" (61). Tăng",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.666,
+            "confidence": 91.23,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              299,
+              1085,
+              2245,
+              1153
+            ],
+            "generated_text": "Từ khi sắp mất, có bảo : “Cối dây buộc tay cho ta, cối",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 1.977,
+            "confidence": 92.64,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              303,
+              1179,
+              2245,
+              1246
+            ],
+            "generated_text": "dây bước chân cho ta (62). Nay các nhà sự lai cắt tóc, sao",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.769,
+            "confidence": 90.47,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              299,
+              1273,
+              2245,
+              1341
+            ],
+            "generated_text": "làm trái lời thánh nhân, không hợp đạo người con có",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.425,
+            "confidence": 88.63,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              297,
+              1367,
+              2244,
+              1434
+            ],
+            "generated_text": "hiểu đến thế ? Ông hay thích biên luận về điều phải",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.418,
+            "confidence": 90.02,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              302,
+              1461,
+              2245,
+              1540
+            ],
+            "generated_text": "điều quấy, phẩm bình về việc ngay thẳng, việc quanh",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.671,
+            "confidence": 93.97,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              298,
+              1554,
+              1962,
+              1621
+            ],
+            "generated_text": "co, thế mà lại biểu động tình với các nhà sự sao?",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.252,
+            "confidence": 88.79,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              425,
+              1707,
+              2245,
+              1775
+            ],
+            "generated_text": "Mâu Tử đáp : Ổi ! Cười chê thánh hiên thì là bất",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 1.878,
+            "confidence": 81.39,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              298,
+              1801,
+              2241,
+              1870
+            ],
+            "generated_text": "nhân ; phẩm bình không trúng thì là bất trí. Bất nhân,",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.52,
+            "confidence": 90.71,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              298,
+              1896,
+              2245,
+              1963
+            ],
+            "generated_text": "bất trí, lấy gì tao dụng đức ? Đức mà không tao dụng",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.474,
+            "confidence": 89.87,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              304,
+              1989,
+              2243,
+              2056
+            ],
+            "generated_text": "được thì là loại người ương ngụ. Lập luận sao mà dê dãi",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.663,
+            "confidence": 86.06,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              301,
+              2083,
+              2242,
+              2149
+            ],
+            "generated_text": "thế ! Xưa kia người nước Tê chèo thuyền qua sông, cha",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.648,
+            "confidence": 96.41,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              300,
+              2177,
+              2243,
+              2242
+            ],
+            "generated_text": "bi ngã xuống nước, con nắm cánh tay kéo đầu cha lật",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.656,
+            "confidence": 88.84,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              299,
+              2272,
+              2244,
+              2336
+            ],
+            "generated_text": "ngược xuống cho nước từ môi ôc hết ra, thân phụ nhỏ",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.741,
+            "confidence": 81.27,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              298,
+              2363,
+              2243,
+              2440
+            ],
+            "generated_text": "vậy được cứu sống. Kéo dầu lật ngược xương thật không",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.622,
+            "confidence": 81.52,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              301,
+              2455,
+              2243,
+              2521
+            ],
+            "generated_text": "còn gì bất hiểu hơn, nhưng là để bảo toàn tính mệnh cho",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.589,
+            "confidence": 93.24,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              302,
+              2546,
+              2239,
+              2614
+            ],
+            "generated_text": "cha. Nếu cứ chấp tay giữ tròn đạo hiếu, thì cha sẽ bi",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.731,
+            "confidence": 84.63,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              303,
+              2638,
+              2241,
+              2705
+            ],
+            "generated_text": "chết đuối mất. Không Từ nói : \"Mói có khả năng thích",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.787,
+            "confidence": 92.4,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              305,
+              2730,
+              2242,
+              2798
+            ],
+            "generated_text": "nghi với đạo lý, mà chưa có khả năng quyền biến” (63) tức",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 1.922,
+            "confidence": 92.39,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              305,
+              2824,
+              2238,
+              2892
+            ],
+            "generated_text": "tùy theo từng lúc mà đưa ra biên pháp thích hợp. Và,",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.791,
+            "confidence": 97.98,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              298,
+              2915,
+              2436,
+              2983
+            ],
+            "generated_text": "Hiếu kinh nói : “Các vua đòi trước, đạo cao đức cả”. Thế",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.888,
+            "confidence": 89.31,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              304,
+              3003,
+              2470,
+              3085
+            ],
+            "generated_text": "mà Thái Bá (64) phải cắt tóc ngắn, vẽ mình, tự nguyện",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 2.031,
+            "confidence": 93.27,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              301,
+              3100,
+              2371,
+              3176
+            ],
+            "generated_text": "theo phong tục Ngô Việt trái với cái nghĩa “thân thể, tóc",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.726,
+            "confidence": 90.36,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              302,
+              3190,
+              2280,
+              3267
+            ],
+            "generated_text": "da\". Những Không Từ vấn ca ngợi ông. Có thể nói ông là",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.643,
+            "confidence": 92.94,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              348,
+              353,
+              1911,
+              362
+            ],
+            "ink": 609
+          },
+          {
+            "box": [
+              426,
+              446,
+              2026,
+              458
+            ],
+            "ink": 895
+          },
+          {
+            "box": [
+              394,
+              1056,
+              2241,
+              1068
+            ],
+            "ink": 820
+          },
+          {
+            "box": [
+              1132,
+              1340,
+              1852,
+              1351
+            ],
+            "ink": 700
+          },
+          {
+            "box": [
+              521,
+              1959,
+              2227,
+              1973
+            ],
+            "ink": 1135
+          },
+          {
+            "box": [
+              398,
+              2054,
+              1648,
+              2068
+            ],
+            "ink": 1060
+          },
+          {
+            "box": [
+              345,
+              2336,
+              2052,
+              2347
+            ],
+            "ink": 720
+          },
+          {
+            "box": [
+              352,
+              2794,
+              1685,
+              2807
+            ],
+            "ink": 908
+          },
+          {
+            "box": [
+              377,
+              2888,
+              2032,
+              2899
+            ],
+            "ink": 795
+          },
+          {
+            "box": [
+              308,
+              3375,
+              2096,
+              3388
+            ],
+            "ink": 1095
+          },
+          {
+            "box": [
+              302,
+              3391,
+              2076,
+              3400
+            ],
+            "ink": 737
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

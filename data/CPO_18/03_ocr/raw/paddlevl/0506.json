@@ -1,0 +1,747 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_18",
+  "engine": "paddlevl",
+  "page": 506,
+  "runs": [
+    {
+      "key": "6b650d9d25dcf408342756428b1e6b083e96d77947f498090bbee1276398a2f4",
+      "parameters": {
+        "image_sha256": "9cb8aaf99c05069c8ef36967045c16df577769b12922aa1f04de032f5804557e",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T18:57:46+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_506.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        0,
+        2480,
+        3509
+      ],
+      "lines": [
+        {
+          "text": "Sưu tấm và khảo luận tác phẩm chủ Hán của người Việt Nam trước TK 10",
+          "bbox": [
+            295,
+            110,
+            1886,
+            164
+          ],
+          "confidence": 93.35
+        },
+        {
+          "text": "：",
+          "bbox": [
+            278,
+            202,
+            2252,
+            223
+          ],
+          "confidence": 28.05
+        },
+        {
+          "text": "kẻ ngu ngốc ở đời mat thế (168) lai muốn phuc thuốc, tich",
+          "bbox": [
+            292,
+            303,
+            2254,
+            376
+          ],
+          "confidence": 87.45
+        },
+        {
+          "text": "cốc, câu mong sổng mãi, thì thất buôn thay !",
+          "bbox": [
+            291,
+            401,
+            1817,
+            468
+          ],
+          "confidence": 86.82
+        },
+        {
+          "text": "CHU THICH :",
+          "bbox": [
+            422,
+            604,
+            2418,
+            661
+          ],
+          "confidence": 83.19
+        },
+        {
+          "text": "(166) Đao đức kinh, Chương 48.",
+          "bbox": [
+            296,
+            709,
+            1282,
+            770
+          ],
+          "confidence": 98.08
+        },
+        {
+          "text": "(167) Tuổi \"tri mệnh\" : tức tuổi 50. Không Từ nói : \"Ngũ thập",
+          "bbox": [
+            295,
+            817,
+            2263,
+            889
+          ],
+          "confidence": 91.26
+        },
+        {
+          "text": "nhi tri thiên mệnh = 50 mà biết được mệnh trời\" (Luân",
+          "bbox": [
+            421,
+            906,
+            2265,
+            971
+          ],
+          "confidence": 97.74
+        },
+        {
+          "text": "(168) Mat thế: đòi suy loan.",
+          "bbox": [
+            297,
+            1101,
+            1159,
+            1162
+          ],
+          "confidence": 93.87
+        },
+        {
+          "text": "問曰：爲道之人云能却疾不病，弗御針藥而",
+          "bbox": [
+            435,
+            1493,
+            2262,
+            1578
+          ],
+          "confidence": 96.01
+        },
+        {
+          "text": "愈，信有之乎？何以佛家有病而進針藥耶？",
+          "bbox": [
+            305,
+            1621,
+            2007,
+            1708
+          ],
+          "confidence": 98.38
+        },
+        {
+          "text": "牟子曰：老子云：“物壯則老，謂之不道，早",
+          "bbox": [
+            435,
+            1776,
+            2271,
+            1862
+          ],
+          "confidence": 97.13
+        },
+        {
+          "text": "已”。唯有得道者不生，亦不壯；不壯，亦不老；不",
+          "bbox": [
+            310,
+            1905,
+            2267,
+            1992
+          ],
+          "confidence": 96.32
+        },
+        {
+          "text": "老，亦不病；不病，亦不朽。是以老子以身爲大",
+          "bbox": [
+            306,
+            2039,
+            2273,
+            2124
+          ],
+          "confidence": 97.51
+        },
+        {
+          "text": "患焉。武王居病，周公乞命；仲尼有疾，子路請",
+          "bbox": [
+            310,
+            2168,
+            2276,
+            2257
+          ],
+          "confidence": 96.74
+        },
+        {
+          "text": "禱。吾見聖人皆有疾矣，未覩其無病也。神農",
+          "bbox": [
+            307,
+            2300,
+            2275,
+            2389
+          ],
+          "confidence": 99.3
+        },
+        {
+          "text": "嘗草殆死者數十；黃帝稽首受針於岐伯。此之",
+          "bbox": [
+            313,
+            2433,
+            2280,
+            2518
+          ],
+          "confidence": 96.08
+        },
+        {
+          "text": "三聖豈當不如今之道士乎?察省斯言，亦足以廢",
+          "bbox": [
+            313,
+            2564,
+            2283,
+            2649
+          ],
+          "confidence": 96.06
+        },
+        {
+          "text": "PHIEN AM :",
+          "bbox": [
+            449,
+            2960,
+            2475,
+            3017
+          ],
+          "confidence": 92.95
+        },
+        {
+          "text": "Ván viết : Vi đạo chi nhân vân năng khuốc tất bất",
+          "bbox": [
+            445,
+            3066,
+            2402,
+            3136
+          ],
+          "confidence": 84.92
+        },
+        {
+          "text": "bệnh, phát ngụ châm dược nhi dũ, tín hữu chi hồ ?",
+          "bbox": [
+            308,
+            3157,
+            2306,
+            3242
+          ],
+          "confidence": 79.46
+        },
+        {
+          "text": "dĩ Phát gia hữu bệnh nhi tiến châm dược da?",
+          "bbox": [
+            312,
+            3253,
+            2212,
+            3329
+          ],
+          "confidence": 85.65
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          3509
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 9.924,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              295,
+              110,
+              1886,
+              164
+            ],
+            "generated_text": "Sưu tấm và khảo luận tác phẩm chủ Hán của người Việt Nam trước TK 10",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.551,
+            "confidence": 93.35,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              278,
+              202,
+              2252,
+              223
+            ],
+            "generated_text": "：",
+            "n_lines": 1,
+            "tokens": 2,
+            "seconds": 0.088,
+            "confidence": 28.05,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              292,
+              303,
+              2254,
+              376
+            ],
+            "generated_text": "kẻ ngu ngốc ở đời mat thế (168) lai muốn phuc thuốc, tich",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.549,
+            "confidence": 87.45,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              291,
+              401,
+              1817,
+              468
+            ],
+            "generated_text": "cốc, câu mong sổng mãi, thì thất buôn thay !",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.463,
+            "confidence": 86.82,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              422,
+              604,
+              2418,
+              661
+            ],
+            "generated_text": "CHU THICH :",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.167,
+            "confidence": 83.19,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              296,
+              709,
+              1282,
+              770
+            ],
+            "generated_text": "(166) Đao đức kinh, Chương 48.",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.4,
+            "confidence": 98.08,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              295,
+              817,
+              2263,
+              889
+            ],
+            "generated_text": "(167) Tuổi \"tri mệnh\" : tức tuổi 50. Không Từ nói : \"Ngũ thập",
+            "n_lines": 1,
+            "tokens": 32,
+            "seconds": 0.678,
+            "confidence": 91.26,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              421,
+              906,
+              2265,
+              971
+            ],
+            "generated_text": "nhi tri thiên mệnh = 50 mà biết được mệnh trời\" (Luân",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.501,
+            "confidence": 97.74,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              297,
+              1101,
+              1159,
+              1162
+            ],
+            "generated_text": "(168) Mat thế: đòi suy loan.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.322,
+            "confidence": 93.87,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              435,
+              1493,
+              2262,
+              1578
+            ],
+            "generated_text": "問曰：爲道之人云能却疾不病，弗御針藥而",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.502,
+            "confidence": 96.01,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              305,
+              1621,
+              2007,
+              1708
+            ],
+            "generated_text": "愈，信有之乎？何以佛家有病而進針藥耶？",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.5,
+            "confidence": 98.38,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              435,
+              1776,
+              2271,
+              1862
+            ],
+            "generated_text": "牟子曰：老子云：“物壯則老，謂之不道，早",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.501,
+            "confidence": 97.13,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              310,
+              1905,
+              2267,
+              1992
+            ],
+            "generated_text": "已”。唯有得道者不生，亦不壯；不壯，亦不老；不",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.567,
+            "confidence": 96.32,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              306,
+              2039,
+              2273,
+              2124
+            ],
+            "generated_text": "老，亦不病；不病，亦不朽。是以老子以身爲大",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.425,
+            "confidence": 97.51,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              310,
+              2168,
+              2276,
+              2257
+            ],
+            "generated_text": "患焉。武王居病，周公乞命；仲尼有疾，子路請",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.484,
+            "confidence": 96.74,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              307,
+              2300,
+              2275,
+              2389
+            ],
+            "generated_text": "禱。吾見聖人皆有疾矣，未覩其無病也。神農",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.542,
+            "confidence": 99.3,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              313,
+              2433,
+              2280,
+              2518
+            ],
+            "generated_text": "嘗草殆死者數十；黃帝稽首受針於岐伯。此之",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.569,
+            "confidence": 96.08,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              313,
+              2564,
+              2283,
+              2649
+            ],
+            "generated_text": "三聖豈當不如今之道士乎?察省斯言，亦足以廢",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.508,
+            "confidence": 96.06,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              449,
+              2960,
+              2475,
+              3017
+            ],
+            "generated_text": "PHIEN AM :",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.172,
+            "confidence": 92.95,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              445,
+              3066,
+              2402,
+              3136
+            ],
+            "generated_text": "Ván viết : Vi đạo chi nhân vân năng khuốc tất bất",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.453,
+            "confidence": 84.92,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              308,
+              3157,
+              2306,
+              3242
+            ],
+            "generated_text": "bệnh, phát ngụ châm dược nhi dũ, tín hữu chi hồ ?",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.534,
+            "confidence": 79.46,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              312,
+              3253,
+              2212,
+              3329
+            ],
+            "generated_text": "dĩ Phát gia hữu bệnh nhi tiến châm dược da?",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.446,
+            "confidence": 85.65,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              439,
+              373,
+              2171,
+              386
+            ],
+            "ink": 725
+          },
+          {
+            "box": [
+              393,
+              467,
+              1750,
+              477
+            ],
+            "ink": 522
+          },
+          {
+            "box": [
+              423,
+              1013,
+              1315,
+              1027
+            ],
+            "ink": 887
+          },
+          {
+            "box": [
+              421,
+              1038,
+              563,
+              1053
+            ],
+            "ink": 936
+          },
+          {
+            "box": [
+              1203,
+              1395,
+              1306,
+              1415
+            ],
+            "ink": 1227
+          },
+          {
+            "box": [
+              992,
+              3135,
+              2333,
+              3146
+            ],
+            "ink": 599
+          },
+          {
+            "box": [
+              509,
+              3325,
+              2181,
+              3339
+            ],
+            "ink": 912
+          },
+          {
+            "box": [
+              325,
+              3443,
+              2029,
+              3458
+            ],
+            "ink": 943
+          },
+          {
+            "box": [
+              314,
+              3464,
+              2034,
+              3479
+            ],
+            "ink": 837
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "61cbea5c0055c260ccfc12f884e0febca7b2783b",
+        "git_describe": "61cbea5",
+        "git_dirty": true,
+        "gpu": "NVIDIA L4",
+        "dtype": "bfloat16",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

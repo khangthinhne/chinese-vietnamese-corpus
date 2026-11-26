@@ -1,0 +1,258 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_18",
+  "engine": "qwen",
+  "page": 466,
+  "runs": [
+    {
+      "key": "4b81674b8d71e79acb64e8ddcfacdacf4d3620cb79661430cae2f4f633792628",
+      "parameters": {
+        "image_sha256": "b25d26f0b8f393738809f99a15d510f3f109b4639e45397d9e74532ddd92003e",
+        "engine": {
+          "name": "qwen",
+          "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "model_revision": "main",
+          "transformers_version": "4.57.6",
+          "torch_version": "2.5.1+cu121",
+          "cuda_version": "12.1",
+          "bitsandbytes_version": "0.50.2",
+          "quantization": {
+            "load_in_4bit": true,
+            "quant_type": "nf4",
+            "double_quant": true,
+            "compute_dtype": "float16"
+          },
+          "mode": "all",
+          "min_pixels": 50176,
+          "max_pixels": 802816,
+          "band_inches": 2.0,
+          "max_new_tokens": 768,
+          "repetition_penalty": 1.05,
+          "adapter_version": 3,
+          "prompt_version": 3,
+          "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74"
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T21:29:32+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_466.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        0,
+        2480,
+        3509
+      ],
+      "lines": [
+        {
+          "text": "Sưu tầm và khảo luận tác phẩm chữ Hán của người Việt Nam trước TK 10",
+          "bbox": [
+            180,
+            0,
+            2299,
+            434
+          ],
+          "confidence": 95.46
+        },
+        {
+          "text": "問",
+          "bbox": [
+            353,
+            524,
+            2283,
+            996
+          ],
+          "confidence": 33.5
+        },
+        {
+          "text": "牟子曰：彼一时也，此一時也。。尼之言，刺嚴公之刻檻，非禁布施也。舜耕歴業，恩不及州里。太公屠，惠不逮妻子。及其見用，惠流於海。饒財多",
+          "bbox": [
+            351,
+            1058,
+            2090,
+            1533
+          ],
+          "confidence": 58.08
+        },
+        {
+          "text": "貴其能與貧困屢空，貴其履道。許由不貪四海，伯夷不甘其國。 倍負羈以壺餐之惠全其所不負之，故出於",
+          "bbox": [
+            354,
+            1562,
+            2280,
+            2039
+          ],
+          "confidence": 60.66
+        },
+        {
+          "text": "不意，陽ly 白日。倾家财发善意，其功德巍巍如嵩泰，悠悠如江海。怀善者应以祚，挟恶者报之以殃。未有种稻而得，施祸而",
+          "bbox": [
+            357,
+            2056,
+            2098,
+            2534
+          ],
+          "confidence": 62.08
+        },
+        {
+          "text": "PHIÊN ÂM:",
+          "bbox": [
+            366,
+            2699,
+            2475,
+            3098
+          ],
+          "confidence": 91.88
+        },
+        {
+          "text": "Vấn viết: Khổng Tử xưng: \"Xa tắc bất tốn, kiệm tắc cố. Dữ kỳ bất tốn giã, nịnh cố\". Thúc Tôn viết: \"Kiệm giả đức chi cung, xỉ giả ác chi đại\" giã. Kim Phật gia dĩ không tài bố thí vi danh, tận hóa dữ nhân vi quý, khỉ hữu phúc tai?",
+          "bbox": [
+            366,
+            3098,
+            2475,
+            3497
+          ],
+          "confidence": 91.88
+        }
+      ],
+      "raw": {
+        "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+        "model_revision": "main",
+        "mode": "all",
+        "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          3509
+        ],
+        "band_target_height": 600,
+        "bbox_granularity": "band_even_split",
+        "max_new_tokens": 768,
+        "max_pixels": 802816,
+        "inference_seconds": 21.239,
+        "bands": [
+          {
+            "band": 1,
+            "y0": 0,
+            "y1": 479,
+            "ink_box": [
+              180,
+              0,
+              2299,
+              434
+            ],
+            "generated_text": "Sưu tầm và khảo luận tác phẩm chữ Hán của người Việt Nam trước TK 10",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.777,
+            "confidence": 95.46,
+            "flags": []
+          },
+          {
+            "band": 2,
+            "y0": 479,
+            "y1": 1026,
+            "ink_box": [
+              353,
+              524,
+              2283,
+              996
+            ],
+            "generated_text": "問",
+            "n_lines": 1,
+            "tokens": 2,
+            "seconds": 0.567,
+            "confidence": 33.5,
+            "flags": []
+          },
+          {
+            "band": 3,
+            "y0": 1026,
+            "y1": 1547,
+            "ink_box": [
+              351,
+              1058,
+              2090,
+              1533
+            ],
+            "generated_text": "牟子曰：彼一时也，此一時也。。尼之言，刺嚴公之刻檻，非禁布施也。舜耕歴業，恩不及州里。太公屠，惠不逮妻子。及其見用，惠流於海。饒財多",
+            "n_lines": 1,
+            "tokens": 67,
+            "seconds": 4.756,
+            "confidence": 58.08,
+            "flags": []
+          },
+          {
+            "band": 4,
+            "y0": 1547,
+            "y1": 2047,
+            "ink_box": [
+              354,
+              1562,
+              2280,
+              2039
+            ],
+            "generated_text": "貴其能與貧困屢空，貴其履道。許由不貪四海，伯夷不甘其國。 倍負羈以壺餐之惠全其所不負之，故出於",
+            "n_lines": 1,
+            "tokens": 51,
+            "seconds": 3.705,
+            "confidence": 60.66,
+            "flags": []
+          },
+          {
+            "band": 5,
+            "y0": 2047,
+            "y1": 2617,
+            "ink_box": [
+              357,
+              2056,
+              2098,
+              2534
+            ],
+            "generated_text": "不意，陽ly 白日。倾家财发善意，其功德巍巍如嵩泰，悠悠如江海。怀善者应以祚，挟恶者报之以殃。未有种稻而得，施祸而",
+            "n_lines": 1,
+            "tokens": 54,
+            "seconds": 3.859,
+            "confidence": 62.08,
+            "flags": []
+          },
+          {
+            "band": 6,
+            "y0": 2617,
+            "y1": 3493,
+            "ink_box": [
+              366,
+              2699,
+              2475,
+              3497
+            ],
+            "generated_text": "PHIÊN ÂM:\n\nVấn viết: Khổng Tử xưng: \"Xa tắc bất tốn, kiệm tắc cố. Dữ kỳ bất tốn giã, nịnh cố\". Thúc Tôn viết: \"Kiệm giả đức chi cung, xỉ giả ác chi đại\" giã. Kim Phật gia dĩ không tài bố thí vi danh, tận hóa dữ nhân vi quý, khỉ hữu phúc tai?",
+            "n_lines": 2,
+            "tokens": 95,
+            "seconds": 6.539,
+            "confidence": 91.88,
+            "flags": []
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "61cbea5c0055c260ccfc12f884e0febca7b2783b",
+        "git_describe": "61cbea5",
+        "git_dirty": true,
+        "gpu": "NVIDIA L4",
+        "dtype": "float16",
+        "adapter_version": 3
+      }
+    }
+  ]
+}

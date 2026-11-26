@@ -1,0 +1,278 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_18",
+  "engine": "qwen",
+  "page": 416,
+  "runs": [
+    {
+      "key": "f79a2e64c4d34e366f807fbd8ba9702e682125cb873b8d34e1290372e8f53255",
+      "parameters": {
+        "image_sha256": "027f961be0ca65714d8d5de8e3f6cc2e5919a714d01e819e26088b2f1eb61909",
+        "engine": {
+          "name": "qwen",
+          "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "model_revision": "main",
+          "transformers_version": "4.57.6",
+          "torch_version": "2.5.1+cu121",
+          "cuda_version": "12.1",
+          "bitsandbytes_version": "0.50.2",
+          "quantization": {
+            "load_in_4bit": true,
+            "quant_type": "nf4",
+            "double_quant": true,
+            "compute_dtype": "float16"
+          },
+          "mode": "all",
+          "min_pixels": 50176,
+          "max_pixels": 802816,
+          "band_inches": 2.0,
+          "max_new_tokens": 768,
+          "repetition_penalty": 1.05,
+          "adapter_version": 3,
+          "prompt_version": 3,
+          "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74"
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T20:58:35+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_416.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        0,
+        2480,
+        3509
+      ],
+      "lines": [
+        {
+          "text": "有尔，如玉如珪。当续禄位而去何为？太子曰：“万物无常，有存当亡。今欲学道度脱十方。”",
+          "bbox": [
+            287,
+            81,
+            2306,
+            596
+          ],
+          "confidence": 84.47
+        },
+        {
+          "text": "王知其彌堅，遂起而還。太子徑去。六年，遂成佛。。",
+          "bbox": [
+            300,
+            624,
+            2285,
+            1155
+          ],
+          "confidence": 58.25
+        },
+        {
+          "text": "地之中處，其中和也。所著經，凡有十二部，合八千萬卷。小學千言�，大教授天下，度脱人民。因二五而，履能行的，故",
+          "bbox": [
+            301,
+            1183,
+            2280,
+            1672
+          ],
+          "confidence": 42.1
+        },
+        {
+          "text": "流後世。。",
+          "bbox": [
+            301,
+            1696,
+            2268,
+            2181
+          ],
+          "confidence": 47.61
+        },
+        {
+          "text": "孔德之容，唯道是从，其斯之谓乎？",
+          "bbox": [
+            239,
+            2204,
+            2258,
+            2385
+          ],
+          "confidence": 83.1
+        },
+        {
+          "text": "PHIÊN ÂM:",
+          "bbox": [
+            239,
+            2385,
+            2258,
+            2565
+          ],
+          "confidence": 83.1
+        },
+        {
+          "text": "Hoặc viết: Phật tông hà xuất sinh? Ninh hữu tiên tổ cấp quốc ấp phủ? Giai hà thi hành? Trạng hà",
+          "bbox": [
+            239,
+            2565,
+            2258,
+            2746
+          ],
+          "confidence": 83.1
+        },
+        {
+          "text": "loại hồ?",
+          "bbox": [
+            301,
+            2746,
+            2475,
+            3128
+          ],
+          "confidence": 88.12
+        },
+        {
+          "text": "Mâu Tử viết: Phú tai vấn gia. Thỉnh dĩ bất mẫn lược thuyết kỳ yếu. Cái văn: vật hóa chi vi trạng giai, tích lũy đạo đức số thiên ức tải bất khả kỷ ký. Nhiên, lâm đắc Phật thời, sinh ư Thiên Trúc, giả hình ư Bạch",
+          "bbox": [
+            301,
+            3128,
+            2475,
+            3509
+          ],
+          "confidence": 88.12
+        }
+      ],
+      "raw": {
+        "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+        "model_revision": "main",
+        "mode": "all",
+        "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          3509
+        ],
+        "band_target_height": 600,
+        "bbox_granularity": "band_even_split",
+        "max_new_tokens": 768,
+        "max_pixels": 802816,
+        "inference_seconds": 18.886,
+        "bands": [
+          {
+            "band": 1,
+            "y0": 85,
+            "y1": 609,
+            "ink_box": [
+              287,
+              81,
+              2306,
+              596
+            ],
+            "generated_text": "有尔，如玉如珪。当续禄位而去何为？太子曰：“万物无常，有存当亡。今欲学道度脱十方。”",
+            "n_lines": 1,
+            "tokens": 38,
+            "seconds": 2.931,
+            "confidence": 84.47,
+            "flags": []
+          },
+          {
+            "band": 2,
+            "y0": 609,
+            "y1": 1168,
+            "ink_box": [
+              300,
+              624,
+              2285,
+              1155
+            ],
+            "generated_text": "王知其彌堅，遂起而還。太子徑去。六年，遂成佛。。",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 2.039,
+            "confidence": 58.25,
+            "flags": []
+          },
+          {
+            "band": 3,
+            "y0": 1168,
+            "y1": 1684,
+            "ink_box": [
+              301,
+              1183,
+              2280,
+              1672
+            ],
+            "generated_text": "地之中處，其中和也。所著經，凡有十二部，合八千萬卷。小學千言�，大教授天下，度脱人民。因二五而，履能行的，故",
+            "n_lines": 1,
+            "tokens": 50,
+            "seconds": 3.625,
+            "confidence": 42.1,
+            "flags": []
+          },
+          {
+            "band": 4,
+            "y0": 1684,
+            "y1": 2193,
+            "ink_box": [
+              301,
+              1696,
+              2268,
+              2181
+            ],
+            "generated_text": "流後世。。",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.83,
+            "confidence": 47.61,
+            "flags": []
+          },
+          {
+            "band": 5,
+            "y0": 2193,
+            "y1": 2745,
+            "ink_box": [
+              239,
+              2204,
+              2258,
+              2746
+            ],
+            "generated_text": "孔德之容，唯道是从，其斯之谓乎？\n\nPHIÊN ÂM:\nHoặc viết: Phật tông hà xuất sinh? Ninh hữu tiên tổ cấp quốc ấp phủ? Giai hà thi hành? Trạng hà",
+            "n_lines": 3,
+            "tokens": 55,
+            "seconds": 3.952,
+            "confidence": 83.1,
+            "flags": []
+          },
+          {
+            "band": 6,
+            "y0": 2745,
+            "y1": 3509,
+            "ink_box": [
+              301,
+              2746,
+              2475,
+              3509
+            ],
+            "generated_text": "loại hồ?\n\nMâu Tử viết: Phú tai vấn gia. Thỉnh dĩ bất mẫn lược thuyết kỳ yếu. Cái văn: vật hóa chi vi trạng giai, tích lũy đạo đức số thiên ức tải bất khả kỷ ký. Nhiên, lâm đắc Phật thời, sinh ư Thiên Trúc, giả hình ư Bạch",
+            "n_lines": 2,
+            "tokens": 78,
+            "seconds": 5.471,
+            "confidence": 88.12,
+            "flags": []
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "61cbea5c0055c260ccfc12f884e0febca7b2783b",
+        "git_describe": "61cbea5",
+        "git_dirty": true,
+        "gpu": "NVIDIA L4",
+        "dtype": "float16",
+        "adapter_version": 3
+      }
+    }
+  ]
+}

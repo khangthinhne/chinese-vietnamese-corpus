@@ -1,0 +1,965 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_18",
+  "engine": "paddlevl",
+  "page": 392,
+  "runs": [
+    {
+      "key": "b84021af649fc8c352190aec29fb98534feff3bcbc51b22648c08a4ecd0f243e",
+      "parameters": {
+        "image_sha256": "edb19fd31e4d7552d97dca2d2a756d94b13f2101b149e455cb49206557498c83",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T15:21:35+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_392.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        0,
+        2480,
+        3509
+      ],
+      "lines": [
+        {
+          "text": "Sụu tấm và khảo luận tác phẩm chủ Hán của người Việt Nam trước TK 10",
+          "bbox": [
+            274,
+            111,
+            2452,
+            178
+          ],
+          "confidence": 93.53
+        },
+        {
+          "text": "[",
+          "bbox": [
+            256,
+            206,
+            2451,
+            232
+          ],
+          "confidence": 49.85
+        },
+        {
+          "text": "Núi lòn dàu rong ngang,",
+          "bbox": [
+            786,
+            337,
+            2449,
+            388
+          ],
+          "confidence": 78.93
+        },
+        {
+          "text": "Duoi cu an chau minh.",
+          "bbox": [
+            784,
+            434,
+            2448,
+            481
+          ],
+          "confidence": 93.92
+        },
+        {
+          "text": "Tháp bát tủ chắc thành (6),",
+          "bbox": [
+            783,
+            510,
+            2448,
+            579
+          ],
+          "confidence": 93.27
+        },
+        {
+          "text": "Cây gao hien hinh rong.",
+          "bbox": [
+            785,
+            627,
+            1621,
+            675
+          ],
+          "confidence": 80.44
+        },
+        {
+          "text": "Thỏ gà cùng tháng chuột (?)",
+          "bbox": [
+            782,
+            705,
+            1751,
+            772
+          ],
+          "confidence": 87.38
+        },
+        {
+          "text": "Chắc thấy mất trời lên.",
+          "bbox": [
+            783,
+            800,
+            1593,
+            866
+          ],
+          "confidence": 88.56
+        },
+        {
+          "text": "(Thiên uyên tập anh, quyền Ha, một",
+          "bbox": [
+            960,
+            934,
+            2444,
+            996
+          ],
+          "confidence": 90.85
+        },
+        {
+          "text": "trong số bốn người thuộc đời thứ mười)",
+          "bbox": [
+            958,
+            1019,
+            2444,
+            1084
+          ],
+          "confidence": 92.06
+        },
+        {
+          "text": "CHU THICH :",
+          "bbox": [
+            399,
+            1224,
+            2442,
+            1282
+          ],
+          "confidence": 80.66
+        },
+        {
+          "text": "(1) Đầu để do chúng tôi đặt.",
+          "bbox": [
+            273,
+            1349,
+            2441,
+            1412
+          ],
+          "confidence": 97.41
+        },
+        {
+          "text": "(2) Chân nhân : người tu hành đã chứng nghiệm chân lý.",
+          "bbox": [
+            274,
+            1476,
+            2439,
+            1549
+          ],
+          "confidence": 93.73
+        },
+        {
+          "text": "(3) Sông Điểm : phải chăng là sông Đuống ?",
+          "bbox": [
+            275,
+            1601,
+            1668,
+            1675
+          ],
+          "confidence": 86.49
+        },
+        {
+          "text": "(4) Ao Phù Chán : ở vùng Từ Sơn, Bắc Ninh, nay không còn",
+          "bbox": [
+            277,
+            1725,
+            2243,
+            1789
+          ],
+          "confidence": 95.77
+        },
+        {
+          "text": "thay vet tích.",
+          "bbox": [
+            401,
+            1832,
+            2459,
+            1875
+          ],
+          "confidence": 91.74
+        },
+        {
+          "text": "(5) Chùa Minh Châu : chúa rõ ở đâu.",
+          "bbox": [
+            280,
+            1941,
+            1447,
+            2002
+          ],
+          "confidence": 89.12
+        },
+        {
+          "text": "(6) Tháp bát tủ: chiết tự chũ Lý 李, gôm chũ tháp +, chũ",
+          "bbox": [
+            283,
+            2064,
+            2238,
+            2138
+          ],
+          "confidence": 85.67
+        },
+        {
+          "text": "bát 八 và chũ tử 子 ghép lại mà thành, ám chỉ việc Lý",
+          "bbox": [
+            410,
+            2152,
+            2236,
+            2216
+          ],
+          "confidence": 84.4
+        },
+        {
+          "text": "Công Uân người hướng Có Pháp lên làm vua về sau. Có",
+          "bbox": [
+            413,
+            2238,
+            2235,
+            2303
+          ],
+          "confidence": 91.6
+        },
+        {
+          "text": "người cho rằng bài kệ trên “thuộc hệ thống thơ động dao,",
+          "bbox": [
+            411,
+            2325,
+            2231,
+            2399
+          ],
+          "confidence": 87.53
+        },
+        {
+          "text": "săm vi liên quan đến việc suy tôn Lý Công Uẩn lên ngôi,",
+          "bbox": [
+            414,
+            2410,
+            2233,
+            2483
+          ],
+          "confidence": 90.17
+        },
+        {
+          "text": "chỉ nên coi là một truyền thuyết được gán cho La Quý",
+          "bbox": [
+            412,
+            2494,
+            2235,
+            2565
+          ],
+          "confidence": 99.34
+        },
+        {
+          "text": "An\" (Xem Thiên uyên tập anh, Bd. của Ngô Đức Thọ -",
+          "bbox": [
+            411,
+            2575,
+            2233,
+            2643
+          ],
+          "confidence": 93.81
+        },
+        {
+          "text": "Nguyên Thúy Nga. Nxb. Văn học, Hà Nội, 1990, tr. 178,",
+          "bbox": [
+            413,
+            2658,
+            2232,
+            2729
+          ],
+          "confidence": 98.58
+        },
+        {
+          "text": "chu thich 1).",
+          "bbox": [
+            410,
+            2755,
+            801,
+            2796
+          ],
+          "confidence": 94.55
+        },
+        {
+          "text": "(7) Thỏ gà cùng tháng chuột : ngày thỏ (mão), tháng chuột",
+          "bbox": [
+            282,
+            2859,
+            2234,
+            2939
+          ],
+          "confidence": 97.55
+        },
+        {
+          "text": "(ti), năm ga (dậu).",
+          "bbox": [
+            412,
+            2957,
+            2475,
+            3010
+          ],
+          "confidence": 79.3
+        },
+        {
+          "text": "367",
+          "bbox": [
+            277,
+            3406,
+            2067,
+            3439
+          ],
+          "confidence": 83.49
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          3509
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 38.465,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              274,
+              111,
+              2452,
+              178
+            ],
+            "generated_text": "Sụu tấm và khảo luận tác phẩm chủ Hán của người Việt Nam trước TK 10",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 2.047,
+            "confidence": 93.53,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              256,
+              206,
+              2451,
+              232
+            ],
+            "generated_text": "[",
+            "n_lines": 1,
+            "tokens": 2,
+            "seconds": 0.547,
+            "confidence": 49.85,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              786,
+              337,
+              2449,
+              388
+            ],
+            "generated_text": "Núi lòn dàu rong ngang,",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.163,
+            "confidence": 78.93,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              784,
+              434,
+              2448,
+              481
+            ],
+            "generated_text": "Duoi cu an chau minh.",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.969,
+            "confidence": 93.92,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              783,
+              510,
+              2448,
+              579
+            ],
+            "generated_text": "Tháp bát tủ chắc thành (6),",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.067,
+            "confidence": 93.27,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              785,
+              627,
+              1621,
+              675
+            ],
+            "generated_text": "Cây gao hien hinh rong.",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.039,
+            "confidence": 80.44,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              782,
+              705,
+              1751,
+              772
+            ],
+            "generated_text": "Thỏ gà cùng tháng chuột (?)",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.967,
+            "confidence": 87.38,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              783,
+              800,
+              1593,
+              866
+            ],
+            "generated_text": "Chắc thấy mất trời lên.",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.876,
+            "confidence": 88.56,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              960,
+              934,
+              2444,
+              996
+            ],
+            "generated_text": "(Thiên uyên tập anh, quyền Ha, một",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.181,
+            "confidence": 90.85,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              958,
+              1019,
+              2444,
+              1084
+            ],
+            "generated_text": "trong số bốn người thuộc đời thứ mười)",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.113,
+            "confidence": 92.06,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              399,
+              1224,
+              2442,
+              1282
+            ],
+            "generated_text": "CHU THICH :",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.741,
+            "confidence": 80.66,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              273,
+              1349,
+              2441,
+              1412
+            ],
+            "generated_text": "(1) Đầu để do chúng tôi đặt.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.203,
+            "confidence": 97.41,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              274,
+              1476,
+              2439,
+              1549
+            ],
+            "generated_text": "(2) Chân nhân : người tu hành đã chứng nghiệm chân lý.",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.612,
+            "confidence": 93.73,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              275,
+              1601,
+              1668,
+              1675
+            ],
+            "generated_text": "(3) Sông Điểm : phải chăng là sông Đuống ?",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.668,
+            "confidence": 86.49,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              277,
+              1725,
+              2243,
+              1789
+            ],
+            "generated_text": "(4) Ao Phù Chán : ở vùng Từ Sơn, Bắc Ninh, nay không còn",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 2.009,
+            "confidence": 95.77,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              401,
+              1832,
+              2459,
+              1875
+            ],
+            "generated_text": "thay vet tích.",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.748,
+            "confidence": 91.74,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              280,
+              1941,
+              1447,
+              2002
+            ],
+            "generated_text": "(5) Chùa Minh Châu : chúa rõ ở đâu.",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.531,
+            "confidence": 89.12,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              283,
+              2064,
+              2238,
+              2138
+            ],
+            "generated_text": "(6) Tháp bát tủ: chiết tự chũ Lý 李, gôm chũ tháp +, chũ",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 2.177,
+            "confidence": 85.67,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              410,
+              2152,
+              2236,
+              2216
+            ],
+            "generated_text": "bát 八 và chũ tử 子 ghép lại mà thành, ám chỉ việc Lý",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.664,
+            "confidence": 84.4,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              413,
+              2238,
+              2235,
+              2303
+            ],
+            "generated_text": "Công Uân người hướng Có Pháp lên làm vua về sau. Có",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.473,
+            "confidence": 91.6,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              411,
+              2325,
+              2231,
+              2399
+            ],
+            "generated_text": "người cho rằng bài kệ trên “thuộc hệ thống thơ động dao,",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.448,
+            "confidence": 87.53,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              414,
+              2410,
+              2233,
+              2483
+            ],
+            "generated_text": "săm vi liên quan đến việc suy tôn Lý Công Uẩn lên ngôi,",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.635,
+            "confidence": 90.17,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              412,
+              2494,
+              2235,
+              2565
+            ],
+            "generated_text": "chỉ nên coi là một truyền thuyết được gán cho La Quý",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.458,
+            "confidence": 99.34,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              411,
+              2575,
+              2233,
+              2643
+            ],
+            "generated_text": "An\" (Xem Thiên uyên tập anh, Bd. của Ngô Đức Thọ -",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.77,
+            "confidence": 93.81,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              413,
+              2658,
+              2232,
+              2729
+            ],
+            "generated_text": "Nguyên Thúy Nga. Nxb. Văn học, Hà Nội, 1990, tr. 178,",
+            "n_lines": 1,
+            "tokens": 33,
+            "seconds": 2.223,
+            "confidence": 98.58,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              410,
+              2755,
+              801,
+              2796
+            ],
+            "generated_text": "chu thich 1).",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.747,
+            "confidence": 94.55,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              282,
+              2859,
+              2234,
+              2939
+            ],
+            "generated_text": "(7) Thỏ gà cùng tháng chuột : ngày thỏ (mão), tháng chuột",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.686,
+            "confidence": 97.55,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              412,
+              2957,
+              2475,
+              3010
+            ],
+            "generated_text": "(ti), năm ga (dậu).",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 1.08,
+            "confidence": 79.3,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              277,
+              3406,
+              2067,
+              3439
+            ],
+            "generated_text": "367",
+            "n_lines": 1,
+            "tokens": 4,
+            "seconds": 0.619,
+            "confidence": 83.49,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              786,
+              321,
+              2449,
+              340
+            ],
+            "ink": 1488
+          },
+          {
+            "box": [
+              1332,
+              384,
+              2449,
+              396
+            ],
+            "ink": 621
+          },
+          {
+            "box": [
+              785,
+              417,
+              2448,
+              437
+            ],
+            "ink": 1533
+          },
+          {
+            "box": [
+              790,
+              610,
+              1506,
+              630
+            ],
+            "ink": 1526
+          },
+          {
+            "box": [
+              874,
+              674,
+              2458,
+              687
+            ],
+            "ink": 599
+          },
+          {
+            "box": [
+              933,
+              770,
+              1746,
+              783
+            ],
+            "ink": 781
+          },
+          {
+            "box": [
+              969,
+              994,
+              2443,
+              1008
+            ],
+            "ink": 822
+          },
+          {
+            "box": [
+              286,
+              1786,
+              2096,
+              1798
+            ],
+            "ink": 657
+          },
+          {
+            "box": [
+              990,
+              2212,
+              2211,
+              2223
+            ],
+            "ink": 711
+          },
+          {
+            "box": [
+              535,
+              2300,
+              1412,
+              2311
+            ],
+            "ink": 596
+          },
+          {
+            "box": [
+              418,
+              2946,
+              952,
+              2960
+            ],
+            "ink": 933
+          },
+          {
+            "box": [
+              2067,
+              3309,
+              2190,
+              3318
+            ],
+            "ink": 563
+          },
+          {
+            "box": [
+              274,
+              3437,
+              2026,
+              3454
+            ],
+            "ink": 1188
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

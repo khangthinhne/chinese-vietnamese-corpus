@@ -1,0 +1,963 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_18",
+  "engine": "paddlevl",
+  "page": 386,
+  "runs": [
+    {
+      "key": "93ddcd06b878a6e7f7ca498c90d4bab9c32eea75573f531d3f76df3b47e1fd5c",
+      "parameters": {
+        "image_sha256": "9417d4854f6d317709349a3eaa722b43da7d9b9420781b1d1e974e0dc41e78b2",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T15:17:11+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_386.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        0,
+        2480,
+        3509
+      ],
+      "lines": [
+        {
+          "text": "Sụu tấm và khảo luận tác phẩm chủ Hán của người Việt Nam trước TK 10",
+          "bbox": [
+            246,
+            110,
+            1855,
+            171
+          ],
+          "confidence": 92.51
+        },
+        {
+          "text": "___",
+          "bbox": [
+            227,
+            202,
+            2243,
+            225
+          ],
+          "confidence": 37.08
+        },
+        {
+          "text": "đào đất được một cái lư hương và mười chiếc khánh, sai",
+          "bbox": [
+            243,
+            310,
+            2235,
+            378
+          ],
+          "confidence": 96.14
+        },
+        {
+          "text": "người mang ra mé nước mà rửa. Một chiếc khánh rơi",
+          "bbox": [
+            239,
+            405,
+            2234,
+            472
+          ],
+          "confidence": 94.28
+        },
+        {
+          "text": "xưởng nước, đến đất thì dùng lại. Nhà sư giải thích",
+          "bbox": [
+            238,
+            500,
+            2234,
+            567
+          ],
+          "confidence": 85.63
+        },
+        {
+          "text": "rằng: \"Thập, khấu ghép thành chủ cổ ; thủy, khứ ghép",
+          "bbox": [
+            240,
+            593,
+            2433,
+            673
+          ],
+          "confidence": 86.94
+        },
+        {
+          "text": "thành chủ pháp ; còn thổ tức nội ta đang ở, từ bản địa",
+          "bbox": [
+            240,
+            688,
+            2421,
+            757
+          ],
+          "confidence": 86.68
+        },
+        {
+          "text": "mà ra\". Nhân đó đối tên hướng là Cổ Pháp (tên cũ là",
+          "bbox": [
+            240,
+            783,
+            2233,
+            851
+          ],
+          "confidence": 94.03
+        },
+        {
+          "text": "Dien Uan).",
+          "bbox": [
+            239,
+            899,
+            606,
+            944
+          ],
+          "confidence": 97.07
+        },
+        {
+          "text": "Lại làm bài tung rang :",
+          "bbox": [
+            367,
+            1033,
+            1159,
+            1082
+          ],
+          "confidence": 78.57
+        },
+        {
+          "text": "Đất bày pháp khí (4),",
+          "bbox": [
+            757,
+            1147,
+            1460,
+            1213
+          ],
+          "confidence": 95.63
+        },
+        {
+          "text": "Mót mondong rong,",
+          "bbox": [
+            758,
+            1261,
+            1435,
+            1309
+          ],
+          "confidence": 74.8
+        },
+        {
+          "text": "Để cho Phát thinh hưng,",
+          "bbox": [
+            758,
+            1335,
+            1617,
+            1402
+          ],
+          "confidence": 84.87
+        },
+        {
+          "text": "Đặt tên làng là Cổ Pháp.",
+          "bbox": [
+            757,
+            1427,
+            1621,
+            1494
+          ],
+          "confidence": 88.75
+        },
+        {
+          "text": "Lai rang :",
+          "bbox": [
+            370,
+            1592,
+            702,
+            1637
+          ],
+          "confidence": 87.48
+        },
+        {
+          "text": "Pháp khí xuất hiện,",
+          "bbox": [
+            760,
+            1699,
+            1449,
+            1763
+          ],
+          "confidence": 98.97
+        },
+        {
+          "text": "Mười chiếc chuông đông,",
+          "bbox": [
+            760,
+            1791,
+            2439,
+            1859
+          ],
+          "confidence": 92.07
+        },
+        {
+          "text": "Ho Ly hưng vương,",
+          "bbox": [
+            763,
+            1903,
+            1423,
+            1952
+          ],
+          "confidence": 82.06
+        },
+        {
+          "text": "Ba phạm (5) thành công.",
+          "bbox": [
+            764,
+            1976,
+            1579,
+            2040
+          ],
+          "confidence": 83.82
+        },
+        {
+          "text": "Lại rang :",
+          "bbox": [
+            376,
+            2136,
+            708,
+            2180
+          ],
+          "confidence": 76.54
+        },
+        {
+          "text": "Mười chiếc xuống nước, đất,",
+          "bbox": [
+            763,
+            2240,
+            1726,
+            2306
+          ],
+          "confidence": 96.11
+        },
+        {
+          "text": "Cô Pháp đặt tên hướng,",
+          "bbox": [
+            766,
+            2334,
+            1580,
+            2397
+          ],
+          "confidence": 90.75
+        },
+        {
+          "text": "Gà ở sau tháng loan (6),",
+          "bbox": [
+            768,
+            2426,
+            1552,
+            2486
+          ],
+          "confidence": 89.21
+        },
+        {
+          "text": "Chính là hưng tam bảo (7).",
+          "bbox": [
+            771,
+            2512,
+            1658,
+            2575
+          ],
+          "confidence": 90.03
+        },
+        {
+          "text": "Lúc nhà sư sắp tích, có nói với đề tử Thông Thiên",
+          "bbox": [
+            379,
+            2641,
+            2215,
+            2708
+          ],
+          "confidence": 85.78
+        },
+        {
+          "text": "rằng : “Ta muốn mở rộng làng xóm, nhưng trong khi",
+          "bbox": [
+            246,
+            2734,
+            2216,
+            2810
+          ],
+          "confidence": 92.96
+        },
+        {
+          "text": "thực hiện, e gặp tai nạn, thế nào cũng có kẻ lạ đến phá",
+          "bbox": [
+            246,
+            2824,
+            2214,
+            2900
+          ],
+          "confidence": 92.83
+        },
+        {
+          "text": "hoai lãnh thổ ta (sau có Cao Biên đến trấn giữ, lời sự",
+          "bbox": [
+            244,
+            2914,
+            2436,
+            2980
+          ],
+          "confidence": 94.7
+        },
+        {
+          "text": "quả nhiên ứng nghiệm). Sau khi ta qua đời, người khéo",
+          "bbox": [
+            244,
+            3003,
+            2470,
+            3079
+          ],
+          "confidence": 96.68
+        },
+        {
+          "text": "giũ lấy phép, gặp người họ Đinh⁽⁸⁾ thì truyền, điều mong",
+          "bbox": [
+            238,
+            3092,
+            2374,
+            3171
+          ],
+          "confidence": 96.15
+        },
+        {
+          "text": "ước của ta được thực hiện\". Nói xong, nhà sự cáo biết mà",
+          "bbox": [
+            236,
+            3182,
+            2281,
+            3257
+          ],
+          "confidence": 94.07
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          3509
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 38.926,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              246,
+              110,
+              1855,
+              171
+            ],
+            "generated_text": "Sụu tấm và khảo luận tác phẩm chủ Hán của người Việt Nam trước TK 10",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 1.885,
+            "confidence": 92.51,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              227,
+              202,
+              2243,
+              225
+            ],
+            "generated_text": "___",
+            "n_lines": 1,
+            "tokens": 2,
+            "seconds": 0.481,
+            "confidence": 37.08,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              243,
+              310,
+              2235,
+              378
+            ],
+            "generated_text": "đào đất được một cái lư hương và mười chiếc khánh, sai",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.723,
+            "confidence": 96.14,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              239,
+              405,
+              2234,
+              472
+            ],
+            "generated_text": "người mang ra mé nước mà rửa. Một chiếc khánh rơi",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.59,
+            "confidence": 94.28,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              238,
+              500,
+              2234,
+              567
+            ],
+            "generated_text": "xưởng nước, đến đất thì dùng lại. Nhà sư giải thích",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.596,
+            "confidence": 85.63,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              240,
+              593,
+              2433,
+              673
+            ],
+            "generated_text": "rằng: \"Thập, khấu ghép thành chủ cổ ; thủy, khứ ghép",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.925,
+            "confidence": 86.94,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              240,
+              688,
+              2421,
+              757
+            ],
+            "generated_text": "thành chủ pháp ; còn thổ tức nội ta đang ở, từ bản địa",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.793,
+            "confidence": 86.68,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              240,
+              783,
+              2233,
+              851
+            ],
+            "generated_text": "mà ra\". Nhân đó đối tên hướng là Cổ Pháp (tên cũ là",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.797,
+            "confidence": 94.03,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              239,
+              899,
+              606,
+              944
+            ],
+            "generated_text": "Dien Uan).",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.693,
+            "confidence": 97.07,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              367,
+              1033,
+              1159,
+              1082
+            ],
+            "generated_text": "Lại làm bài tung rang :",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.793,
+            "confidence": 78.57,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              757,
+              1147,
+              1460,
+              1213
+            ],
+            "generated_text": "Đất bày pháp khí (4),",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.098,
+            "confidence": 95.63,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              758,
+              1261,
+              1435,
+              1309
+            ],
+            "generated_text": "Mót mondong rong,",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.805,
+            "confidence": 74.8,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              758,
+              1335,
+              1617,
+              1402
+            ],
+            "generated_text": "Để cho Phát thinh hưng,",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.942,
+            "confidence": 84.87,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              757,
+              1427,
+              1621,
+              1494
+            ],
+            "generated_text": "Đặt tên làng là Cổ Pháp.",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.004,
+            "confidence": 88.75,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              370,
+              1592,
+              702,
+              1637
+            ],
+            "generated_text": "Lai rang :",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.611,
+            "confidence": 87.48,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              760,
+              1699,
+              1449,
+              1763
+            ],
+            "generated_text": "Pháp khí xuất hiện,",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.854,
+            "confidence": 98.97,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              760,
+              1791,
+              2439,
+              1859
+            ],
+            "generated_text": "Mười chiếc chuông đông,",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.967,
+            "confidence": 92.07,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              763,
+              1903,
+              1423,
+              1952
+            ],
+            "generated_text": "Ho Ly hưng vương,",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.748,
+            "confidence": 82.06,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              764,
+              1976,
+              1579,
+              2040
+            ],
+            "generated_text": "Ba phạm (5) thành công.",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.888,
+            "confidence": 83.82,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              376,
+              2136,
+              708,
+              2180
+            ],
+            "generated_text": "Lại rang :",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.613,
+            "confidence": 76.54,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              763,
+              2240,
+              1726,
+              2306
+            ],
+            "generated_text": "Mười chiếc xuống nước, đất,",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.109,
+            "confidence": 96.11,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              766,
+              2334,
+              1580,
+              2397
+            ],
+            "generated_text": "Cô Pháp đặt tên hướng,",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.951,
+            "confidence": 90.75,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              768,
+              2426,
+              1552,
+              2486
+            ],
+            "generated_text": "Gà ở sau tháng loan (6),",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.897,
+            "confidence": 89.21,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              771,
+              2512,
+              1658,
+              2575
+            ],
+            "generated_text": "Chính là hưng tam bảo (7).",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.022,
+            "confidence": 90.03,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              379,
+              2641,
+              2215,
+              2708
+            ],
+            "generated_text": "Lúc nhà sư sắp tích, có nói với đề tử Thông Thiên",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.61,
+            "confidence": 85.78,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              246,
+              2734,
+              2216,
+              2810
+            ],
+            "generated_text": "rằng : “Ta muốn mở rộng làng xóm, nhưng trong khi",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.453,
+            "confidence": 92.96,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              246,
+              2824,
+              2214,
+              2900
+            ],
+            "generated_text": "thực hiện, e gặp tai nạn, thế nào cũng có kẻ lạ đến phá",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.761,
+            "confidence": 92.83,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              244,
+              2914,
+              2436,
+              2980
+            ],
+            "generated_text": "hoai lãnh thổ ta (sau có Cao Biên đến trấn giữ, lời sự",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.947,
+            "confidence": 94.7,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              244,
+              3003,
+              2470,
+              3079
+            ],
+            "generated_text": "quả nhiên ứng nghiệm). Sau khi ta qua đời, người khéo",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.599,
+            "confidence": 96.68,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              238,
+              3092,
+              2374,
+              3171
+            ],
+            "generated_text": "giũ lấy phép, gặp người họ Đinh⁽⁸⁾ thì truyền, điều mong",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 2.29,
+            "confidence": 96.15,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              236,
+              3182,
+              2281,
+              3257
+            ],
+            "generated_text": "ước của ta được thực hiện\". Nói xong, nhà sự cáo biết mà",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.477,
+            "confidence": 94.07,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              403,
+              566,
+              1892,
+              577
+            ],
+            "ink": 630
+          },
+          {
+            "box": [
+              238,
+              880,
+              579,
+              898
+            ],
+            "ink": 1352
+          },
+          {
+            "box": [
+              758,
+              1245,
+              1318,
+              1264
+            ],
+            "ink": 1513
+          },
+          {
+            "box": [
+              763,
+              1889,
+              1011,
+              1898
+            ],
+            "ink": 555
+          },
+          {
+            "box": [
+              838,
+              1949,
+              1418,
+              1959
+            ],
+            "ink": 609
+          },
+          {
+            "box": [
+              250,
+              3372,
+              2096,
+              3387
+            ],
+            "ink": 1156
+          },
+          {
+            "box": [
+              247,
+              3402,
+              2071,
+              3418
+            ],
+            "ink": 1292
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

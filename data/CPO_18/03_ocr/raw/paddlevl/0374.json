@@ -1,0 +1,947 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_18",
+  "engine": "paddlevl",
+  "page": 374,
+  "runs": [
+    {
+      "key": "cb6905b81d01afc05e05d12a47190d82ca8888225e1954e9f4cc7be369a88e32",
+      "parameters": {
+        "image_sha256": "3719f147351f040e6f3626a5d40302ee0376c789f39c0738dcda9cc9c20356ac",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T15:08:01+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_374.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        0,
+        2480,
+        3509
+      ],
+      "lines": [
+        {
+          "text": "Sưu tấm và khảo luận tác phẩm chủ Hán của người Việt Nam trước TK 10",
+          "bbox": [
+            315,
+            88,
+            1911,
+            156
+          ],
+          "confidence": 93.68
+        },
+        {
+          "text": "___",
+          "bbox": [
+            295,
+            182,
+            2294,
+            210
+          ],
+          "confidence": 44.52
+        },
+        {
+          "text": "KHAO DI:",
+          "bbox": [
+            436,
+            306,
+            753,
+            364
+          ],
+          "confidence": 95.47
+        },
+        {
+          "text": "(1) Bản A: thi 侍.",
+          "bbox": [
+            311,
+            413,
+            943,
+            480
+          ],
+          "confidence": 95.19
+        },
+        {
+          "text": "(2) Bản A, Bản B : giá 遮 . Đúng ra phải là giá 這 có",
+          "bbox": [
+            313,
+            509,
+            2287,
+            590
+          ],
+          "confidence": 96.03
+        },
+        {
+          "text": "nghĩa là “này”. Chúng tôi đã chữa lại.",
+          "bbox": [
+            430,
+            610,
+            1727,
+            678
+          ],
+          "confidence": 96.28
+        },
+        {
+          "text": "DICH NGHIA:",
+          "bbox": [
+            436,
+            833,
+            877,
+            890
+          ],
+          "confidence": 96.44
+        },
+        {
+          "text": "SÔNG CHẾT LA VIỆC LƠN (1)",
+          "bbox": [
+            877,
+            966,
+            1660,
+            1028
+          ],
+          "confidence": 90.42
+        },
+        {
+          "text": "THIEN HOI-VAN PHONG",
+          "bbox": [
+            1309,
+            1123,
+            2073,
+            1176
+          ],
+          "confidence": 98.32
+        },
+        {
+          "text": "... Thiên sự Vân Phong (còn một tên nữa là Chủ",
+          "bbox": [
+            446,
+            1241,
+            2279,
+            1308
+          ],
+          "confidence": 93.47
+        },
+        {
+          "text": "Phong) người Từ Liêm, quân Vĩnh Khang (2) (...) Hội (3)",
+          "bbox": [
+            316,
+            1336,
+            2280,
+            1416
+          ],
+          "confidence": 90.03
+        },
+        {
+          "text": "từng bảo sư : \"Sống chết là việc lớn, cần phải đế tâm",
+          "bbox": [
+            313,
+            1431,
+            2280,
+            1499
+          ],
+          "confidence": 83.17
+        },
+        {
+          "text": "tối\". Sự hỏi rằng : \"Sống chết xảy tối, làm sao tránh",
+          "bbox": [
+            313,
+            1526,
+            2278,
+            1593
+          ],
+          "confidence": 88.04
+        },
+        {
+          "text": "khỏi?\" Hôi đáp : \"Tránh khỏi bằng cách nắm lấy chỗ",
+          "bbox": [
+            312,
+            1619,
+            2278,
+            1686
+          ],
+          "confidence": 87.32
+        },
+        {
+          "text": "không sống chết\". Lai hỏi : \"Thế nào là chỗ không sống",
+          "bbox": [
+            312,
+            1713,
+            2278,
+            1780
+          ],
+          "confidence": 91.26
+        },
+        {
+          "text": "chết ?\" Hôi đáp : \"Biết lấy từ trong sổng chết mới được\".",
+          "bbox": [
+            313,
+            1808,
+            2274,
+            1875
+          ],
+          "confidence": 87.54
+        },
+        {
+          "text": "Nhà sự hồi : “Làm thế nào để biết lấy ?” Hôi đáp : “Thôi",
+          "bbox": [
+            316,
+            1902,
+            2275,
+            1968
+          ],
+          "confidence": 91.15
+        },
+        {
+          "text": "người đi đi, chặp tối hãy tối\". Nhà sư làm theo lời dăn.",
+          "bbox": [
+            317,
+            1996,
+            2273,
+            2062
+          ],
+          "confidence": 86.64
+        },
+        {
+          "text": "Hôi bảo : \"Đời sáng ngày mai (4), người ta sẽ chúng mình",
+          "bbox": [
+            320,
+            2088,
+            2275,
+            2156
+          ],
+          "confidence": 80.93
+        },
+        {
+          "text": "cho người\". Nhà sư bùng tỉnh ngô, bèn sup lay. Hôi hỏi:",
+          "bbox": [
+            317,
+            2182,
+            2270,
+            2249
+          ],
+          "confidence": 83.75
+        },
+        {
+          "text": "“Người đã thấy điều gì?” Nhà sư đáp : “Con lĩnh hôi",
+          "bbox": [
+            315,
+            2275,
+            2273,
+            2343
+          ],
+          "confidence": 88.35
+        },
+        {
+          "text": "được rồi a\". Hôi bảo : \"Người lĩnh hôi như thế nào ?\"",
+          "bbox": [
+            320,
+            2368,
+            2273,
+            2435
+          ],
+          "confidence": 86.21
+        },
+        {
+          "text": "Nhà sự giả năm tay lên nói : “Ngu con phen này bèn",
+          "bbox": [
+            322,
+            2460,
+            2269,
+            2528
+          ],
+          "confidence": 86.17
+        },
+        {
+          "text": "(Thiên uyên tập anh, quyền Thương.",
+          "bbox": [
+            1109,
+            2683,
+            2163,
+            2746
+          ],
+          "confidence": 89.43
+        },
+        {
+          "text": "một người thuộc đời thứ ba)",
+          "bbox": [
+            1133,
+            2771,
+            2086,
+            2827
+          ],
+          "confidence": 88.01
+        },
+        {
+          "text": "CHU THICH:",
+          "bbox": [
+            457,
+            2898,
+            874,
+            2953
+          ],
+          "confidence": 94.07
+        },
+        {
+          "text": "(1) Đầu để do chúng tôi đặt.",
+          "bbox": [
+            322,
+            2995,
+            2475,
+            3057
+          ],
+          "confidence": 96.8
+        },
+        {
+          "text": "(2) Vinh Khang : theo sách Kiến văn tiêu lục, trán Vinh",
+          "bbox": [
+            319,
+            3102,
+            2369,
+            3168
+          ],
+          "confidence": 92.63
+        },
+        {
+          "text": "Khang ở Từ Liêm (Hà Nội) được đặt ra từ thời Lý Trần",
+          "bbox": [
+            468,
+            3182,
+            2281,
+            3247
+          ],
+          "confidence": 95.11
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          3509
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 43.32,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              315,
+              88,
+              1911,
+              156
+            ],
+            "generated_text": "Sưu tấm và khảo luận tác phẩm chủ Hán của người Việt Nam trước TK 10",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 1.768,
+            "confidence": 93.68,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              295,
+              182,
+              2294,
+              210
+            ],
+            "generated_text": "___",
+            "n_lines": 1,
+            "tokens": 2,
+            "seconds": 0.477,
+            "confidence": 44.52,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              436,
+              306,
+              753,
+              364
+            ],
+            "generated_text": "KHAO DI:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.653,
+            "confidence": 95.47,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              311,
+              413,
+              943,
+              480
+            ],
+            "generated_text": "(1) Bản A: thi 侍.",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.072,
+            "confidence": 95.19,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              313,
+              509,
+              2287,
+              590
+            ],
+            "generated_text": "(2) Bản A, Bản B : giá 遮 . Đúng ra phải là giá 這 có",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 1.823,
+            "confidence": 96.03,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              430,
+              610,
+              1727,
+              678
+            ],
+            "generated_text": "nghĩa là “này”. Chúng tôi đã chữa lại.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.481,
+            "confidence": 96.28,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              436,
+              833,
+              877,
+              890
+            ],
+            "generated_text": "DICH NGHIA:",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.713,
+            "confidence": 96.44,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              877,
+              966,
+              1660,
+              1028
+            ],
+            "generated_text": "SÔNG CHẾT LA VIỆC LƠN (1)",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.58,
+            "confidence": 90.42,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              1309,
+              1123,
+              2073,
+              1176
+            ],
+            "generated_text": "THIEN HOI-VAN PHONG",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.956,
+            "confidence": 98.32,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              446,
+              1241,
+              2279,
+              1308
+            ],
+            "generated_text": "... Thiên sự Vân Phong (còn một tên nữa là Chủ",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.49,
+            "confidence": 93.47,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              316,
+              1336,
+              2280,
+              1416
+            ],
+            "generated_text": "Phong) người Từ Liêm, quân Vĩnh Khang (2) (...) Hội (3)",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 1.879,
+            "confidence": 90.03,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              313,
+              1431,
+              2280,
+              1499
+            ],
+            "generated_text": "từng bảo sư : \"Sống chết là việc lớn, cần phải đế tâm",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.664,
+            "confidence": 83.17,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              313,
+              1526,
+              2278,
+              1593
+            ],
+            "generated_text": "tối\". Sự hỏi rằng : \"Sống chết xảy tối, làm sao tránh",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 1.928,
+            "confidence": 88.04,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              312,
+              1619,
+              2278,
+              1686
+            ],
+            "generated_text": "khỏi?\" Hôi đáp : \"Tránh khỏi bằng cách nắm lấy chỗ",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.793,
+            "confidence": 87.32,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              312,
+              1713,
+              2278,
+              1780
+            ],
+            "generated_text": "không sống chết\". Lai hỏi : \"Thế nào là chỗ không sống",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.579,
+            "confidence": 91.26,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              313,
+              1808,
+              2274,
+              1875
+            ],
+            "generated_text": "chết ?\" Hôi đáp : \"Biết lấy từ trong sổng chết mới được\".",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 1.923,
+            "confidence": 87.54,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              316,
+              1902,
+              2275,
+              1968
+            ],
+            "generated_text": "Nhà sự hồi : “Làm thế nào để biết lấy ?” Hôi đáp : “Thôi",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 1.989,
+            "confidence": 91.15,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              317,
+              1996,
+              2273,
+              2062
+            ],
+            "generated_text": "người đi đi, chặp tối hãy tối\". Nhà sư làm theo lời dăn.",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.109,
+            "confidence": 86.64,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              320,
+              2088,
+              2275,
+              2156
+            ],
+            "generated_text": "Hôi bảo : \"Đời sáng ngày mai (4), người ta sẽ chúng mình",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.546,
+            "confidence": 80.93,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              317,
+              2182,
+              2270,
+              2249
+            ],
+            "generated_text": "cho người\". Nhà sư bùng tỉnh ngô, bèn sup lay. Hôi hỏi:",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.85,
+            "confidence": 83.75,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              315,
+              2275,
+              2273,
+              2343
+            ],
+            "generated_text": "“Người đã thấy điều gì?” Nhà sư đáp : “Con lĩnh hôi",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.735,
+            "confidence": 88.35,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              320,
+              2368,
+              2273,
+              2435
+            ],
+            "generated_text": "được rồi a\". Hôi bảo : \"Người lĩnh hôi như thế nào ?\"",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 1.926,
+            "confidence": 86.21,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              322,
+              2460,
+              2269,
+              2528
+            ],
+            "generated_text": "Nhà sự giả năm tay lên nói : “Ngu con phen này bèn",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.421,
+            "confidence": 86.17,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              1109,
+              2683,
+              2163,
+              2746
+            ],
+            "generated_text": "(Thiên uyên tập anh, quyền Thương.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.281,
+            "confidence": 89.43,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              1133,
+              2771,
+              2086,
+              2827
+            ],
+            "generated_text": "một người thuộc đời thứ ba)",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.989,
+            "confidence": 88.01,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              457,
+              2898,
+              874,
+              2953
+            ],
+            "generated_text": "CHU THICH:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.731,
+            "confidence": 94.07,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              322,
+              2995,
+              2475,
+              3057
+            ],
+            "generated_text": "(1) Đầu để do chúng tôi đặt.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.222,
+            "confidence": 96.8,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              319,
+              3102,
+              2369,
+              3168
+            ],
+            "generated_text": "(2) Vinh Khang : theo sách Kiến văn tiêu lục, trán Vinh",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 1.957,
+            "confidence": 92.63,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              468,
+              3182,
+              2281,
+              3247
+            ],
+            "generated_text": "Khang ở Từ Liêm (Hà Nội) được đặt ra từ thời Lý Trần",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.781,
+            "confidence": 95.11,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              432,
+              1499,
+              1840,
+              1509
+            ],
+            "ink": 584
+          },
+          {
+            "box": [
+              483,
+              1779,
+              2270,
+              1792
+            ],
+            "ink": 803
+          },
+          {
+            "box": [
+              632,
+              1874,
+              2178,
+              1886
+            ],
+            "ink": 697
+          },
+          {
+            "box": [
+              390,
+              2152,
+              2056,
+              2166
+            ],
+            "ink": 996
+          },
+          {
+            "box": [
+              499,
+              2246,
+              2052,
+              2260
+            ],
+            "ink": 1006
+          },
+          {
+            "box": [
+              406,
+              2340,
+              2236,
+              2350
+            ],
+            "ink": 561
+          },
+          {
+            "box": [
+              614,
+              2526,
+              2082,
+              2535
+            ],
+            "ink": 551
+          },
+          {
+            "box": [
+              327,
+              2597,
+              567,
+              2612
+            ],
+            "ink": 1002
+          },
+          {
+            "box": [
+              647,
+              3244,
+              2206,
+              3255
+            ],
+            "ink": 726
+          },
+          {
+            "box": [
+              325,
+              3402,
+              2071,
+              3418
+            ],
+            "ink": 1161
+          },
+          {
+            "box": [
+              322,
+              3418,
+              2044,
+              3438
+            ],
+            "ink": 1654
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

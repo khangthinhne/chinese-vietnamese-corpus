@@ -1,0 +1,834 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_18",
+  "engine": "paddlevl",
+  "page": 445,
+  "runs": [
+    {
+      "key": "922ff08392548520f6aa0d0e040a5ba90b1616131307bd1f2e8efec528002acd",
+      "parameters": {
+        "image_sha256": "7286477b350720c5963ac4ecdef953fbc0e1658f8c85eb8ca906808c50255dcf",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T16:04:00+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_445.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        0,
+        2480,
+        3509
+      ],
+      "lines": [
+        {
+          "text": "<image>",
+          "bbox": [
+            287,
+            191,
+            2125,
+            215
+          ],
+          "confidence": 19.11
+        },
+        {
+          "text": "牟子曰：老子云：“上德不德，是以有德；下德",
+          "bbox": [
+            441,
+            312,
+            2435,
+            392
+          ],
+          "confidence": 99.48
+        },
+        {
+          "text": "不失德，是以無德”。三皇之時，食肉衣皮，巢居",
+          "bbox": [
+            314,
+            433,
+            2116,
+            515
+          ],
+          "confidence": 99.04
+        },
+        {
+          "text": "穴處，以崇質朴，豈復須章黼之冠，曲裘之飾",
+          "bbox": [
+            310,
+            557,
+            2438,
+            638
+          ],
+          "confidence": 99.42
+        },
+        {
+          "text": "哉？然其人稱有德而敦厚，允信而無爲。沙門之",
+          "bbox": [
+            310,
+            680,
+            2438,
+            761
+          ],
+          "confidence": 98.58
+        },
+        {
+          "text": "行有似之矣。",
+          "bbox": [
+            308,
+            811,
+            2438,
+            878
+          ],
+          "confidence": 97.67
+        },
+        {
+          "text": "或曰：如子之言，则黄帝堯舜周孔之儔棄而",
+          "bbox": [
+            440,
+            967,
+            2438,
+            1049
+          ],
+          "confidence": 97.5
+        },
+        {
+          "text": "不足法也？",
+          "bbox": [
+            315,
+            1094,
+            2438,
+            1168
+          ],
+          "confidence": 97.37
+        },
+        {
+          "text": "牟子曰：夫見博則不迷，聽聰則不惑。堯舜",
+          "bbox": [
+            443,
+            1251,
+            2438,
+            1333
+          ],
+          "confidence": 98.89
+        },
+        {
+          "text": "周孔修世事也；佛與老子無爲志也；仲尼栖栖七",
+          "bbox": [
+            317,
+            1377,
+            2438,
+            1458
+          ],
+          "confidence": 97.83
+        },
+        {
+          "text": "十餘國；許由聞禪，洗耳于淵。君子之道或出或",
+          "bbox": [
+            317,
+            1499,
+            2138,
+            1580
+          ],
+          "confidence": 96.39
+        },
+        {
+          "text": "處，或默或語，不溢其情，不淫其性。故其道爲",
+          "bbox": [
+            312,
+            1623,
+            2137,
+            1706
+          ],
+          "confidence": 99.36
+        },
+        {
+          "text": "贵在乎所用，何棄之有乎？",
+          "bbox": [
+            314,
+            1747,
+            1347,
+            1827
+          ],
+          "confidence": 93.46
+        },
+        {
+          "text": "PHIEN AM:",
+          "bbox": [
+            448,
+            2024,
+            827,
+            2080
+          ],
+          "confidence": 90.97
+        },
+        {
+          "text": "Vấn viết : Hoàng Đế thùy v thương, chế phục sức.",
+          "bbox": [
+            447,
+            2143,
+            2150,
+            2208
+          ],
+          "confidence": 89.43
+        },
+        {
+          "text": "Cơ Tử trần hồng phạm, mạo vi ngũ sự thù. Không Từ",
+          "bbox": [
+            318,
+            2231,
+            2152,
+            2309
+          ],
+          "confidence": 83.89
+        },
+        {
+          "text": "tác Hiếu kinh, phục vi tam đức thủy, hữu viết : \"Chính",
+          "bbox": [
+            317,
+            2323,
+            2155,
+            2389
+          ],
+          "confidence": 85.34
+        },
+        {
+          "text": "kỳ y quan, tôn kỳ chiêm thi\". Nguyên Hiến tuy bản, bất",
+          "bbox": [
+            316,
+            2413,
+            2158,
+            2479
+          ],
+          "confidence": 95.79
+        },
+        {
+          "text": "ly hoa quan. Từ Lô ngô nan, bất vong kết anh. Kim sa",
+          "bbox": [
+            317,
+            2502,
+            2157,
+            2569
+          ],
+          "confidence": 97.24
+        },
+        {
+          "text": "môn thế đậu phát, bi xích bố; kiến nhân vô quý khởi chi",
+          "bbox": [
+            320,
+            2590,
+            2158,
+            2658
+          ],
+          "confidence": 83.07
+        },
+        {
+          "text": "lê ; uy nghi vô bàn tuyên chi dung chỉ. Hà kỳ vi mao",
+          "bbox": [
+            318,
+            2680,
+            2160,
+            2748
+          ],
+          "confidence": 76.03
+        },
+        {
+          "text": "phuc chi chế, quai tấn thân chi sức giả?",
+          "bbox": [
+            319,
+            2772,
+            1649,
+            2836
+          ],
+          "confidence": 85.99
+        },
+        {
+          "text": "Mâu Từ viết : Lão Từ vân : “Thương đức bất đức, thi",
+          "bbox": [
+            455,
+            2880,
+            2438,
+            2946
+          ],
+          "confidence": 92.69
+        },
+        {
+          "text": "đi hữu đức ; ha đức bất thất đức, thi đi vô đức\". Tam",
+          "bbox": [
+            320,
+            2968,
+            2475,
+            3036
+          ],
+          "confidence": 90.16
+        },
+        {
+          "text": "hoàng chi thòi, thực nhục ý bì, sào cứ huyệt xử, dĩ sùng",
+          "bbox": [
+            320,
+            3058,
+            2438,
+            3133
+          ],
+          "confidence": 86.1
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          3509
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 39.549,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              287,
+              191,
+              2125,
+              215
+            ],
+            "generated_text": "<image>",
+            "n_lines": 1,
+            "tokens": 4,
+            "seconds": 0.611,
+            "confidence": 19.11,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              441,
+              312,
+              2435,
+              392
+            ],
+            "generated_text": "牟子曰：老子云：“上德不德，是以有德；下德",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.47,
+            "confidence": 99.48,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              314,
+              433,
+              2116,
+              515
+            ],
+            "generated_text": "不失德，是以無德”。三皇之時，食肉衣皮，巢居",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.43,
+            "confidence": 99.04,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              310,
+              557,
+              2438,
+              638
+            ],
+            "generated_text": "穴處，以崇質朴，豈復須章黼之冠，曲裘之飾",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 2.338,
+            "confidence": 99.42,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              310,
+              680,
+              2438,
+              761
+            ],
+            "generated_text": "哉？然其人稱有德而敦厚，允信而無爲。沙門之",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.748,
+            "confidence": 98.58,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              308,
+              811,
+              2438,
+              878
+            ],
+            "generated_text": "行有似之矣。",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.818,
+            "confidence": 97.67,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              440,
+              967,
+              2438,
+              1049
+            ],
+            "generated_text": "或曰：如子之言，则黄帝堯舜周孔之儔棄而",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 1.839,
+            "confidence": 97.5,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              315,
+              1094,
+              2438,
+              1168
+            ],
+            "generated_text": "不足法也？",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.671,
+            "confidence": 97.37,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              443,
+              1251,
+              2438,
+              1333
+            ],
+            "generated_text": "牟子曰：夫見博則不迷，聽聰則不惑。堯舜",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 1.893,
+            "confidence": 98.89,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              317,
+              1377,
+              2438,
+              1458
+            ],
+            "generated_text": "周孔修世事也；佛與老子無爲志也；仲尼栖栖七",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.667,
+            "confidence": 97.83,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              317,
+              1499,
+              2138,
+              1580
+            ],
+            "generated_text": "十餘國；許由聞禪，洗耳于淵。君子之道或出或",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 1.808,
+            "confidence": 96.39,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              312,
+              1623,
+              2137,
+              1706
+            ],
+            "generated_text": "處，或默或語，不溢其情，不淫其性。故其道爲",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.569,
+            "confidence": 99.36,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              314,
+              1747,
+              1347,
+              1827
+            ],
+            "generated_text": "贵在乎所用，何棄之有乎？",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.075,
+            "confidence": 93.46,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              448,
+              2024,
+              827,
+              2080
+            ],
+            "generated_text": "PHIEN AM:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.694,
+            "confidence": 90.97,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              447,
+              2143,
+              2150,
+              2208
+            ],
+            "generated_text": "Vấn viết : Hoàng Đế thùy v thương, chế phục sức.",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.801,
+            "confidence": 89.43,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              318,
+              2231,
+              2152,
+              2309
+            ],
+            "generated_text": "Cơ Tử trần hồng phạm, mạo vi ngũ sự thù. Không Từ",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 1.772,
+            "confidence": 83.89,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              317,
+              2323,
+              2155,
+              2389
+            ],
+            "generated_text": "tác Hiếu kinh, phục vi tam đức thủy, hữu viết : \"Chính",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 1.85,
+            "confidence": 85.34,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              316,
+              2413,
+              2158,
+              2479
+            ],
+            "generated_text": "kỳ y quan, tôn kỳ chiêm thi\". Nguyên Hiến tuy bản, bất",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.74,
+            "confidence": 95.79,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              317,
+              2502,
+              2157,
+              2569
+            ],
+            "generated_text": "ly hoa quan. Từ Lô ngô nan, bất vong kết anh. Kim sa",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.656,
+            "confidence": 97.24,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              320,
+              2590,
+              2158,
+              2658
+            ],
+            "generated_text": "môn thế đậu phát, bi xích bố; kiến nhân vô quý khởi chi",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.732,
+            "confidence": 83.07,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              318,
+              2680,
+              2160,
+              2748
+            ],
+            "generated_text": "lê ; uy nghi vô bàn tuyên chi dung chỉ. Hà kỳ vi mao",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.596,
+            "confidence": 76.03,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              319,
+              2772,
+              1649,
+              2836
+            ],
+            "generated_text": "phuc chi chế, quai tấn thân chi sức giả?",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.567,
+            "confidence": 85.99,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              455,
+              2880,
+              2438,
+              2946
+            ],
+            "generated_text": "Mâu Từ viết : Lão Từ vân : “Thương đức bất đức, thi",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 2.012,
+            "confidence": 92.69,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              320,
+              2968,
+              2475,
+              3036
+            ],
+            "generated_text": "đi hữu đức ; ha đức bất thất đức, thi đi vô đức\". Tam",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 2.046,
+            "confidence": 90.16,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              320,
+              3058,
+              2438,
+              3133
+            ],
+            "generated_text": "hoàng chi thòi, thực nhục ý bì, sào cứ huyệt xử, dĩ sùng",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.142,
+            "confidence": 86.1,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              57,
+              0,
+              171,
+              14
+            ],
+            "ink": 1091
+          },
+          {
+            "box": [
+              1972,
+              131,
+              2121,
+              145
+            ],
+            "ink": 795
+          },
+          {
+            "box": [
+              1971,
+              151,
+              2121,
+              163
+            ],
+            "ink": 571
+          },
+          {
+            "box": [
+              1016,
+              2206,
+              1960,
+              2219
+            ],
+            "ink": 637
+          },
+          {
+            "box": [
+              360,
+              2475,
+              2031,
+              2490
+            ],
+            "ink": 950
+          },
+          {
+            "box": [
+              338,
+              2565,
+              1603,
+              2579
+            ],
+            "ink": 762
+          },
+          {
+            "box": [
+              415,
+              2744,
+              2111,
+              2757
+            ],
+            "ink": 725
+          },
+          {
+            "box": [
+              2332,
+              3041,
+              2438,
+              3053
+            ],
+            "ink": 704
+          },
+          {
+            "box": [
+              2071,
+              3248,
+              2212,
+              3273
+            ],
+            "ink": 1685
+          },
+          {
+            "box": [
+              2066,
+              3306,
+              2190,
+              3319
+            ],
+            "ink": 781
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

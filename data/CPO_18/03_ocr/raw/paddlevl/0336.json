@@ -1,0 +1,317 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_18",
+  "engine": "paddlevl",
+  "page": 336,
+  "runs": [
+    {
+      "key": "788a3e5b41dac70a04bd9398da3912168c146cafd128b318d6bcc52679af9d6c",
+      "parameters": {
+        "image_sha256": "a4f06146be2d4fa51efe7243a45a17bc5d928074ce9d6f266321d5f12bd1dd1b",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T14:32:35+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_336.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        0,
+        2480,
+        3509
+      ],
+      "lines": [
+        {
+          "text": "-",
+          "bbox": [
+            2391,
+            724,
+            2410,
+            738
+          ],
+          "confidence": 77.92
+        },
+        {
+          "text": "*",
+          "bbox": [
+            839,
+            845,
+            853,
+            854
+          ],
+          "confidence": 65.81
+        },
+        {
+          "text": "The image is too blurry to recognize any text content.",
+          "bbox": [
+            1490,
+            1563,
+            1887,
+            1581
+          ],
+          "confidence": 69.05
+        },
+        {
+          "text": ".",
+          "bbox": [
+            540,
+            1723,
+            561,
+            1741
+          ],
+          "confidence": 78.37
+        },
+        {
+          "text": ":",
+          "bbox": [
+            2411,
+            1945,
+            2425,
+            1956
+          ],
+          "confidence": 61.15
+        },
+        {
+          "text": "1",
+          "bbox": [
+            2407,
+            2242,
+            2421,
+            2252
+          ],
+          "confidence": 82.88
+        },
+        {
+          "text": "-",
+          "bbox": [
+            1426,
+            2305,
+            1443,
+            2314
+          ],
+          "confidence": 93.64
+        },
+        {
+          "text": "giangvien.net",
+          "bbox": [
+            1947,
+            2954,
+            2476,
+            3498
+          ],
+          "confidence": 93.57
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          3509
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 5.198,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              33,
+              0,
+              2326,
+              14
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.479,
+            "confidence": 18.7,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              2391,
+              724,
+              2410,
+              738
+            ],
+            "generated_text": "-",
+            "n_lines": 1,
+            "tokens": 2,
+            "seconds": 0.414,
+            "confidence": 77.92,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              839,
+              845,
+              853,
+              854
+            ],
+            "generated_text": "*",
+            "n_lines": 1,
+            "tokens": 2,
+            "seconds": 0.419,
+            "confidence": 65.81,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              1490,
+              1563,
+              1887,
+              1581
+            ],
+            "generated_text": "The image is too blurry to recognize any text content.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.096,
+            "confidence": 69.05,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              540,
+              1723,
+              561,
+              1741
+            ],
+            "generated_text": ".",
+            "n_lines": 1,
+            "tokens": 2,
+            "seconds": 0.42,
+            "confidence": 78.37,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              2411,
+              1945,
+              2425,
+              1956
+            ],
+            "generated_text": ":",
+            "n_lines": 1,
+            "tokens": 2,
+            "seconds": 0.42,
+            "confidence": 61.15,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              2407,
+              2242,
+              2421,
+              2252
+            ],
+            "generated_text": "1",
+            "n_lines": 1,
+            "tokens": 2,
+            "seconds": 0.418,
+            "confidence": 82.88,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              1426,
+              2305,
+              1443,
+              2314
+            ],
+            "generated_text": "-",
+            "n_lines": 1,
+            "tokens": 2,
+            "seconds": 0.419,
+            "confidence": 93.64,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              1947,
+              2954,
+              2476,
+              3498
+            ],
+            "generated_text": "giangvien.net",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 1.111,
+            "confidence": 93.57,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

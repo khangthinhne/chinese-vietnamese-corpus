@@ -1,0 +1,311 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_18",
+  "engine": "qwen",
+  "page": 283,
+  "runs": [
+    {
+      "key": "a3afaea3f37a05be19015b0e6498d36fe7f1a71d3acac6e8ded316243aa5d8db",
+      "parameters": {
+        "image_sha256": "9aad7971f5c89a79031a5c068f190fcf90e352c5a743021f0ff6012754d55da2",
+        "engine": {
+          "name": "qwen",
+          "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "model_revision": "main",
+          "transformers_version": "4.57.6",
+          "torch_version": "2.5.1+cu121",
+          "cuda_version": "12.1",
+          "bitsandbytes_version": "0.50.2",
+          "quantization": {
+            "load_in_4bit": true,
+            "quant_type": "nf4",
+            "double_quant": true,
+            "compute_dtype": "float16"
+          },
+          "mode": "all",
+          "min_pixels": 50176,
+          "max_pixels": 802816,
+          "band_inches": 2.0,
+          "max_new_tokens": 768,
+          "repetition_penalty": 1.05,
+          "adapter_version": 3,
+          "prompt_version": 3,
+          "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74"
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T19:47:29+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_283.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        0,
+        2480,
+        3509
+      ],
+      "lines": [
+        {
+          "text": "Phần II: Nguyên văn tác phẩm dịch và chú thích",
+          "bbox": [
+            41,
+            0,
+            2111,
+            298
+          ],
+          "confidence": 86.11
+        },
+        {
+          "text": "Bài văn bia ở đạo tràng Bảo An dưới đây được chỉnh lý từ 2 văn bản chủ yếu: bản hiện khắc trên bia (gọi là Bản A) và bản sao lục từ năm Vĩnh Khánh 3 mà bản A có thay đổi.",
+          "bbox": [
+            41,
+            298,
+            2111,
+            596
+          ],
+          "confidence": 86.11
+        },
+        {
+          "text": "VHv. 2369 có thể xem như là một truyền bản (gọi là Bản B).",
+          "bbox": [
+            252,
+            598,
+            2112,
+            780
+          ],
+          "confidence": 97.08
+        },
+        {
+          "text": "Trong quá trình chỉnh lý, chúng tôi có tham khảo bản in trong Văn khắc Hán Nôm Việt Nam, Tập 1.",
+          "bbox": [
+            252,
+            780,
+            2112,
+            963
+          ],
+          "confidence": 97.08
+        },
+        {
+          "text": "Sau đây là nguyên văn bài văn bia đã được chỉnh lý,",
+          "bbox": [
+            252,
+            963,
+            2112,
+            1145
+          ],
+          "confidence": 97.08
+        },
+        {
+          "text": "Cùng phần phiên âm và khảo dị do chúng tôi thực hiện.",
+          "bbox": [
+            253,
+            1149,
+            2114,
+            1373
+          ],
+          "confidence": 92.67
+        },
+        {
+          "text": "Do văn bản mất quá nhiều chữ, nên sẽ không có phần dịch nghĩa.",
+          "bbox": [
+            253,
+            1373,
+            2114,
+            1597
+          ],
+          "confidence": 92.67
+        },
+        {
+          "text": "大隋九真郡寶安道場之碑",
+          "bbox": [
+            255,
+            1657,
+            2114,
+            1883
+          ],
+          "confidence": 70.01
+        },
+        {
+          "text": "校交趾郡, 赞治日天丞, 前兼内舍人",
+          "bbox": [
+            255,
+            1883,
+            2114,
+            2108
+          ],
+          "confidence": 70.01
+        },
+        {
+          "text": "夫夫夫夫",
+          "bbox": [
+            257,
+            2123,
+            2111,
+            2606
+          ],
+          "confidence": 10.0
+        },
+        {
+          "text": "尊容，津梁庶品。其迴迴福淨土者，維黎侯□□□□天學道漸。",
+          "bbox": [
+            257,
+            2636,
+            2475,
+            3066
+          ],
+          "confidence": 76.82
+        },
+        {
+          "text": "先號刺史，是曰黎侯，哲玉廊，因命氏，永嘉□□，□□□□，□□□□，高宣總將帥潮州刺史。有驭馭，都督",
+          "bbox": [
+            257,
+            3066,
+            2475,
+            3497
+          ],
+          "confidence": 76.82
+        }
+      ],
+      "raw": {
+        "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+        "model_revision": "main",
+        "mode": "all",
+        "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          3509
+        ],
+        "band_target_height": 600,
+        "bbox_granularity": "band_even_split",
+        "max_new_tokens": 768,
+        "max_pixels": 802816,
+        "inference_seconds": 70.173,
+        "bands": [
+          {
+            "band": 1,
+            "y0": 0,
+            "y1": 598,
+            "ink_box": [
+              41,
+              0,
+              2111,
+              596
+            ],
+            "generated_text": "Phần II: Nguyên văn tác phẩm dịch và chú thích\n\nBài văn bia ở đạo tràng Bảo An dưới đây được chỉnh lý từ 2 văn bản chủ yếu: bản hiện khắc trên bia (gọi là Bản A) và bản sao lục từ năm Vĩnh Khánh 3 mà bản A có thay đổi.",
+            "n_lines": 2,
+            "tokens": 71,
+            "seconds": 5.057,
+            "confidence": 86.11,
+            "flags": []
+          },
+          {
+            "band": 2,
+            "y0": 598,
+            "y1": 1147,
+            "ink_box": [
+              252,
+              598,
+              2112,
+              1145
+            ],
+            "generated_text": "VHv. 2369 có thể xem như là một truyền bản (gọi là Bản B).\nTrong quá trình chỉnh lý, chúng tôi có tham khảo bản in trong Văn khắc Hán Nôm Việt Nam, Tập 1.\nSau đây là nguyên văn bài văn bia đã được chỉnh lý,",
+            "n_lines": 3,
+            "tokens": 70,
+            "seconds": 4.961,
+            "confidence": 97.08,
+            "flags": []
+          },
+          {
+            "band": 3,
+            "y0": 1147,
+            "y1": 1621,
+            "ink_box": [
+              253,
+              1149,
+              2114,
+              1597
+            ],
+            "generated_text": "Cùng phần phiên âm và khảo dị do chúng tôi thực hiện.\nDo văn bản mất quá nhiều chữ, nên sẽ không có phần dịch nghĩa.",
+            "n_lines": 2,
+            "tokens": 31,
+            "seconds": 2.451,
+            "confidence": 92.67,
+            "flags": []
+          },
+          {
+            "band": 4,
+            "y0": 1621,
+            "y1": 2115,
+            "ink_box": [
+              255,
+              1657,
+              2114,
+              2108
+            ],
+            "generated_text": "大隋九真郡寶安道場之碑\n校交趾郡, 赞治日天丞, 前兼内舍人",
+            "n_lines": 2,
+            "tokens": 33,
+            "seconds": 2.57,
+            "confidence": 70.01,
+            "flags": []
+          },
+          {
+            "band": 5,
+            "y0": 2115,
+            "y1": 2621,
+            "ink_box": [
+              257,
+              2123,
+              2111,
+              2606
+            ],
+            "generated_text": "夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫夫",
+            "n_lines": 1,
+            "tokens": 768,
+            "seconds": 49.491,
+            "confidence": 10.0,
+            "flags": [
+              "repetition_collapsed",
+              "truncated"
+            ]
+          },
+          {
+            "band": 6,
+            "y0": 2621,
+            "y1": 3493,
+            "ink_box": [
+              257,
+              2636,
+              2475,
+              3497
+            ],
+            "generated_text": "尊容，津梁庶品。其迴迴福淨土者，維黎侯□□□□天學道漸。\n先號刺史，是曰黎侯，哲玉廊，因命氏，永嘉□□，□□□□，□□□□，高宣總將帥潮州刺史。有驭馭，都督",
+            "n_lines": 2,
+            "tokens": 80,
+            "seconds": 5.605,
+            "confidence": 76.82,
+            "flags": []
+          }
+        ],
+        "any_degenerate": true,
+        "any_truncated": true,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "61cbea5c0055c260ccfc12f884e0febca7b2783b",
+        "git_describe": "61cbea5",
+        "git_dirty": true,
+        "gpu": "NVIDIA L4",
+        "dtype": "float16",
+        "adapter_version": 3
+      }
+    }
+  ]
+}

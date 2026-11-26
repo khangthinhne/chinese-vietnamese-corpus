@@ -1,0 +1,894 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_18",
+  "engine": "paddlevl",
+  "page": 303,
+  "runs": [
+    {
+      "key": "9674a7fd6e525b47af7c8dd1758a0671ade8244e0b1675ce468639115e73c735",
+      "parameters": {
+        "image_sha256": "843bb1760b339f5bfc56d00ae98580b7790a5166b4ff80aec3c93236f566f6e7",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T14:01:54+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_303.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        0,
+        2480,
+        3509
+      ],
+      "lines": [
+        {
+          "text": "Phần II: Nguyên văn tác phẩm dịch và chủ thích",
+          "bbox": [
+            1133,
+            196,
+            2205,
+            257
+          ],
+          "confidence": 88.8
+        },
+        {
+          "text": "：",
+          "bbox": [
+            248,
+            264,
+            2209,
+            306
+          ],
+          "confidence": 37.87
+        },
+        {
+          "text": "(31) Bản D: cánh 境.",
+          "bbox": [
+            270,
+            365,
+            1011,
+            432
+          ],
+          "confidence": 87.58
+        },
+        {
+          "text": "(32) Bản B: dĩ 以",
+          "bbox": [
+            270,
+            470,
+            923,
+            536
+          ],
+          "confidence": 81.89
+        },
+        {
+          "text": "(33) Bản E : chiếu hàn 炤昕.",
+          "bbox": [
+            270,
+            579,
+            1280,
+            653
+          ],
+          "confidence": 88.07
+        },
+        {
+          "text": "(34) Bản D : xế ấn",
+          "bbox": [
+            269,
+            687,
+            883,
+            754
+          ],
+          "confidence": 79.21
+        },
+        {
+          "text": "(35) Bản C : triết 徹.",
+          "bbox": [
+            269,
+            798,
+            994,
+            873
+          ],
+          "confidence": 93.18
+        },
+        {
+          "text": "(36) Bản C: an 安; Bản D: toai 遂.",
+          "bbox": [
+            269,
+            909,
+            1515,
+            989
+          ],
+          "confidence": 96.62
+        },
+        {
+          "text": "(37) Bản D: kỳ 2.",
+          "bbox": [
+            269,
+            1019,
+            931,
+            1094
+          ],
+          "confidence": 74.98
+        },
+        {
+          "text": "(38) Bản C : hộ 平.",
+          "bbox": [
+            268,
+            1130,
+            931,
+            1194
+          ],
+          "confidence": 79.42
+        },
+        {
+          "text": "(39) Bản C: ký 既.",
+          "bbox": [
+            268,
+            1240,
+            929,
+            1311
+          ],
+          "confidence": 94.17
+        },
+        {
+          "text": "(40) Bản A : cánh 景 . Đây theo các bản còn lai.",
+          "bbox": [
+            268,
+            1346,
+            1884,
+            1421
+          ],
+          "confidence": 90.91
+        },
+        {
+          "text": "(41) Các bản B, D : mac 莫.",
+          "bbox": [
+            268,
+            1457,
+            1202,
+            1530
+          ],
+          "confidence": 98.13
+        },
+        {
+          "text": "(42) Bản C : thiếu chũ gia ẳng.",
+          "bbox": [
+            268,
+            1563,
+            1295,
+            1642
+          ],
+          "confidence": 76.52
+        },
+        {
+          "text": "(43) Bản C: khả 可.",
+          "bbox": [
+            270,
+            1672,
+            975,
+            1737
+          ],
+          "confidence": 94.71
+        },
+        {
+          "text": "(44) Các bản D, E : tần 新.",
+          "bbox": [
+            271,
+            1781,
+            1188,
+            1850
+          ],
+          "confidence": 93.47
+        },
+        {
+          "text": "(45) Bản C : kỳ 其 ; Bản D : nghĩa 義.",
+          "bbox": [
+            272,
+            1890,
+            1579,
+            1976
+          ],
+          "confidence": 91.51
+        },
+        {
+          "text": "(46) Bản C : nguyên 願.",
+          "bbox": [
+            273,
+            2001,
+            1097,
+            2079
+          ],
+          "confidence": 91.8
+        },
+        {
+          "text": "(47) Bản E : muc 目.",
+          "bbox": [
+            273,
+            2111,
+            986,
+            2176
+          ],
+          "confidence": 77.66
+        },
+        {
+          "text": "(48) Bản C: du 偷.",
+          "bbox": [
+            273,
+            2221,
+            948,
+            2292
+          ],
+          "confidence": 93.42
+        },
+        {
+          "text": "(49) Bản C : mất chủ.",
+          "bbox": [
+            274,
+            2332,
+            1007,
+            2399
+          ],
+          "confidence": 92.44
+        },
+        {
+          "text": "(50) Các bản B, C, D, E đều không có chủ khuyết 闕.",
+          "bbox": [
+            275,
+            2440,
+            2050,
+            2521
+          ],
+          "confidence": 91.62
+        },
+        {
+          "text": "DICH NGHIA:",
+          "bbox": [
+            272,
+            2675,
+            711,
+            2732
+          ],
+          "confidence": 96.16
+        },
+        {
+          "text": "PHÚ MÀY TRĂNG ROI BIỆN XUẤN",
+          "bbox": [
+            755,
+            2798,
+            1730,
+            2870
+          ],
+          "confidence": 90.07
+        },
+        {
+          "text": "(Lấy các chủ không, bích, tiên,",
+          "bbox": [
+            727,
+            2934,
+            2476,
+            3011
+          ],
+          "confidence": 96.19
+        },
+        {
+          "text": "kính, hải, xuân làm vân) (1).",
+          "bbox": [
+            768,
+            3014,
+            2441,
+            3083
+          ],
+          "confidence": 88.55
+        },
+        {
+          "text": "KHUỒNG CÔNG PHỤ",
+          "bbox": [
+            1373,
+            3142,
+            2480,
+            3198
+          ],
+          "confidence": 89.45
+        },
+        {
+          "text": "283",
+          "bbox": [
+            2051,
+            3284,
+            2190,
+            3339
+          ],
+          "confidence": 99.96
+        },
+        {
+          "text": "ཀྱི་ཆོས་ཀྱི་རྒྱལ་པོའི་ཆོས་ཀྱི་རྒྱལ་པོའི་ཆོས་ཀྱི་རྒྱལ་པོ་ཆེ་�",
+          "bbox": [
+            0,
+            3480,
+            2034,
+            3509
+          ],
+          "confidence": 10.0
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          3509
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 46.285,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              0,
+              0,
+              1720,
+              14
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.436,
+            "confidence": 56.39,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              1133,
+              196,
+              2205,
+              257
+            ],
+            "generated_text": "Phần II: Nguyên văn tác phẩm dịch và chủ thích",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.441,
+            "confidence": 88.8,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              248,
+              264,
+              2209,
+              306
+            ],
+            "generated_text": "：",
+            "n_lines": 1,
+            "tokens": 2,
+            "seconds": 0.487,
+            "confidence": 37.87,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              270,
+              365,
+              1011,
+              432
+            ],
+            "generated_text": "(31) Bản D: cánh 境.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.228,
+            "confidence": 87.58,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              270,
+              470,
+              923,
+              536
+            ],
+            "generated_text": "(32) Bản B: dĩ 以",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.053,
+            "confidence": 81.89,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              270,
+              579,
+              1280,
+              653
+            ],
+            "generated_text": "(33) Bản E : chiếu hàn 炤昕.",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.43,
+            "confidence": 88.07,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              269,
+              687,
+              883,
+              754
+            ],
+            "generated_text": "(34) Bản D : xế ấn",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.102,
+            "confidence": 79.21,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              269,
+              798,
+              994,
+              873
+            ],
+            "generated_text": "(35) Bản C : triết 徹.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.295,
+            "confidence": 93.18,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              269,
+              909,
+              1515,
+              989
+            ],
+            "generated_text": "(36) Bản C: an 安; Bản D: toai 遂.",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.599,
+            "confidence": 96.62,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              269,
+              1019,
+              931,
+              1094
+            ],
+            "generated_text": "(37) Bản D: kỳ 2.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.133,
+            "confidence": 74.98,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              268,
+              1130,
+              931,
+              1194
+            ],
+            "generated_text": "(38) Bản C : hộ 平.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.157,
+            "confidence": 79.42,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              268,
+              1240,
+              929,
+              1311
+            ],
+            "generated_text": "(39) Bản C: ký 既.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.161,
+            "confidence": 94.17,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              268,
+              1346,
+              1884,
+              1421
+            ],
+            "generated_text": "(40) Bản A : cánh 景 . Đây theo các bản còn lai.",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.547,
+            "confidence": 90.91,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              268,
+              1457,
+              1202,
+              1530
+            ],
+            "generated_text": "(41) Các bản B, D : mac 莫.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.243,
+            "confidence": 98.13,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              268,
+              1563,
+              1295,
+              1642
+            ],
+            "generated_text": "(42) Bản C : thiếu chũ gia ẳng.",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.481,
+            "confidence": 76.52,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              270,
+              1672,
+              975,
+              1737
+            ],
+            "generated_text": "(43) Bản C: khả 可.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.159,
+            "confidence": 94.71,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              271,
+              1781,
+              1188,
+              1850
+            ],
+            "generated_text": "(44) Các bản D, E : tần 新.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.233,
+            "confidence": 93.47,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              272,
+              1890,
+              1579,
+              1976
+            ],
+            "generated_text": "(45) Bản C : kỳ 其 ; Bản D : nghĩa 義.",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.653,
+            "confidence": 91.51,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              273,
+              2001,
+              1097,
+              2079
+            ],
+            "generated_text": "(46) Bản C : nguyên 願.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.334,
+            "confidence": 91.8,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              273,
+              2111,
+              986,
+              2176
+            ],
+            "generated_text": "(47) Bản E : muc 目.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.172,
+            "confidence": 77.66,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              273,
+              2221,
+              948,
+              2292
+            ],
+            "generated_text": "(48) Bản C: du 偷.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.108,
+            "confidence": 93.42,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              274,
+              2332,
+              1007,
+              2399
+            ],
+            "generated_text": "(49) Bản C : mất chủ.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.178,
+            "confidence": 92.44,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              275,
+              2440,
+              2050,
+              2521
+            ],
+            "generated_text": "(50) Các bản B, C, D, E đều không có chủ khuyết 闕.",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 1.893,
+            "confidence": 91.62,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              272,
+              2675,
+              711,
+              2732
+            ],
+            "generated_text": "DICH NGHIA:",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.712,
+            "confidence": 96.16,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              755,
+              2798,
+              1730,
+              2870
+            ],
+            "generated_text": "PHÚ MÀY TRĂNG ROI BIỆN XUẤN",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.673,
+            "confidence": 90.07,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              727,
+              2934,
+              2476,
+              3011
+            ],
+            "generated_text": "(Lấy các chủ không, bích, tiên,",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.054,
+            "confidence": 96.19,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              768,
+              3014,
+              2441,
+              3083
+            ],
+            "generated_text": "kính, hải, xuân làm vân) (1).",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.25,
+            "confidence": 88.55,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              1373,
+              3142,
+              2480,
+              3198
+            ],
+            "generated_text": "KHUỒNG CÔNG PHỤ",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.27,
+            "confidence": 89.45,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              2051,
+              3284,
+              2190,
+              3339
+            ],
+            "generated_text": "283",
+            "n_lines": 1,
+            "tokens": 4,
+            "seconds": 0.535,
+            "confidence": 99.96,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              0,
+              3480,
+              2034,
+              3509
+            ],
+            "generated_text": "ཀྱི་ཆོས་ཀྱི་རྒྱལ་པོའི་ཆོས་ཀྱི་རྒྱལ་པོའི་ཆོས་ཀྱི་རྒྱལ་པོ་ཆེ་ཆོས་ཀྱི་རྒྱལ་པོ་ཆེ་ཆོས་ཀྱི་རྒྱལ་པོ་ཆེ་ཆོས་ཀྱི་རྒྱལ་པོ་ཆེ་�",
+            "n_lines": 1,
+            "tokens": 136,
+            "seconds": 11.262,
+            "confidence": 10.0,
+            "flags": [
+              "repetition_collapsed",
+              "loop_stopped"
+            ],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              2172,
+              3202,
+              2272,
+              3215
+            ],
+            "ink": 589
+          },
+          {
+            "box": [
+              1970,
+              3374,
+              2096,
+              3386
+            ],
+            "ink": 540
+          },
+          {
+            "box": [
+              1956,
+              3420,
+              2037,
+              3429
+            ],
+            "ink": 395
+          }
+        ],
+        "any_degenerate": true,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

@@ -1,0 +1,814 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_18",
+  "engine": "paddlevl",
+  "page": 491,
+  "runs": [
+    {
+      "key": "6d5020077a93e96c7ab9ea8eaa0edf8043e3512209e2d5e529fadf30d7dc8159",
+      "parameters": {
+        "image_sha256": "6db200e3df619063e6c85b9e3a37dec36f5a3a239f0e93d07f648f560e6a2b80",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T18:54:06+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_491.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        0,
+        2480,
+        3509
+      ],
+      "lines": [
+        {
+          "text": "Phu Tuc",
+          "bbox": [
+            2038,
+            200,
+            2479,
+            236
+          ],
+          "confidence": 87.65
+        },
+        {
+          "text": "I",
+          "bbox": [
+            244,
+            270,
+            2479,
+            290
+          ],
+          "confidence": 54.67
+        },
+        {
+          "text": "問曰：吾子以經傳理佛之說，其辭富而義",
+          "bbox": [
+            413,
+            535,
+            2479,
+            618
+          ],
+          "confidence": 98.07
+        },
+        {
+          "text": "顯，其文熾而說美，得無非其誠是子之辨也？",
+          "bbox": [
+            272,
+            659,
+            2479,
+            741
+          ],
+          "confidence": 99.15
+        },
+        {
+          "text": "牟子曰：非吾辨也，见博故不惑耳！",
+          "bbox": [
+            413,
+            824,
+            2479,
+            905
+          ],
+          "confidence": 97.28
+        },
+        {
+          "text": "問曰：見博，其有術乎？",
+          "bbox": [
+            418,
+            986,
+            2479,
+            1067
+          ],
+          "confidence": 96.5
+        },
+        {
+          "text": "牟子曰：由佛经也。吾未解佛经之时，惑甚",
+          "bbox": [
+            415,
+            1147,
+            2479,
+            1227
+          ],
+          "confidence": 93.53
+        },
+        {
+          "text": "於子。雖誦五經，適以爲華，未成實矣。吾既覩",
+          "bbox": [
+            274,
+            1274,
+            2479,
+            1356
+          ],
+          "confidence": 99.09
+        },
+        {
+          "text": "佛經之說，覽老子之要，守恬惔之性，觀無爲之",
+          "bbox": [
+            277,
+            1399,
+            2479,
+            1483
+          ],
+          "confidence": 97.9
+        },
+        {
+          "text": "行，還視世事，猶臨天井而闚谿谷，登嵩岱而見",
+          "bbox": [
+            278,
+            1521,
+            2212,
+            1605
+          ],
+          "confidence": 96.8
+        },
+        {
+          "text": "丘垤矣。五經則五味，佛道則五穀矣。吾自聞",
+          "bbox": [
+            279,
+            1647,
+            2208,
+            1728
+          ],
+          "confidence": 99.2
+        },
+        {
+          "text": "道以来，如開雲見白日，炬火入冥室焉。",
+          "bbox": [
+            281,
+            1769,
+            1895,
+            1851
+          ],
+          "confidence": 97.08
+        },
+        {
+          "text": "PHIEN AM:",
+          "bbox": [
+            419,
+            2006,
+            802,
+            2061
+          ],
+          "confidence": 92.75
+        },
+        {
+          "text": "Ván viết : Ngô tử đi Kinh truyền lý Phát chi thuyết,",
+          "bbox": [
+            418,
+            2106,
+            2479,
+            2179
+          ],
+          "confidence": 92.59
+        },
+        {
+          "text": "kỳ tụ phú nhi nghĩa hiện, kỳ văn xí nhi thuyết mỹ, đặc",
+          "bbox": [
+            284,
+            2196,
+            2479,
+            2269
+          ],
+          "confidence": 89.58
+        },
+        {
+          "text": "vô phi thành thi tử chi biên gia ?",
+          "bbox": [
+            284,
+            2284,
+            2479,
+            2346
+          ],
+          "confidence": 74.48
+        },
+        {
+          "text": "Mâu Từ viết : Phi ngô biên gia, kiến bác cổ bất hoặc",
+          "bbox": [
+            423,
+            2389,
+            2479,
+            2456
+          ],
+          "confidence": 86.28
+        },
+        {
+          "text": "Ván viết : Kiến bác, kỳ hữu thuật hổ ?",
+          "bbox": [
+            422,
+            2583,
+            2479,
+            2649
+          ],
+          "confidence": 88.91
+        },
+        {
+          "text": "Mâu Từ viết : Do Phát kinh giã. Ngô vi giải Phát",
+          "bbox": [
+            425,
+            2692,
+            2479,
+            2764
+          ],
+          "confidence": 87.48
+        },
+        {
+          "text": "kinh chi thòi, hoặc thâm ư tử. Tuy tung Ngũ kinh, thích",
+          "bbox": [
+            291,
+            2780,
+            2219,
+            2852
+          ],
+          "confidence": 83.96
+        },
+        {
+          "text": "đi vi hoa, vi thành thực hĩ. Ngô ký đổ Phát kinh chi",
+          "bbox": [
+            292,
+            2868,
+            2479,
+            2939
+          ],
+          "confidence": 81.23
+        },
+        {
+          "text": "thuyết, làm Lão Tử chi yêu, thù điểm dam chi tính,",
+          "bbox": [
+            293,
+            2955,
+            2479,
+            3026
+          ],
+          "confidence": 85.5
+        },
+        {
+          "text": "quan vô vi chi hanh, hoàn thị thế sự, do làm thiên tinh",
+          "bbox": [
+            293,
+            3036,
+            2479,
+            3112
+          ],
+          "confidence": 87.11
+        },
+        {
+          "text": "nhi khuy khê cốc, đăng Tung, Thái nhi kiến khâu diệt",
+          "bbox": [
+            294,
+            3125,
+            2476,
+            3200
+          ],
+          "confidence": 96.1
+        },
+        {
+          "text": "459",
+          "bbox": [
+            2051,
+            3297,
+            2210,
+            3341
+          ],
+          "confidence": 92.56
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          3509
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 10.8,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              10,
+              0,
+              1992,
+              13
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.069,
+            "confidence": 9.35,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              2038,
+              200,
+              2479,
+              236
+            ],
+            "generated_text": "Phu Tuc",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.143,
+            "confidence": 87.65,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              244,
+              270,
+              2479,
+              290
+            ],
+            "generated_text": "I",
+            "n_lines": 1,
+            "tokens": 2,
+            "seconds": 0.089,
+            "confidence": 54.67,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              413,
+              535,
+              2479,
+              618
+            ],
+            "generated_text": "問曰：吾子以經傳理佛之說，其辭富而義",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.47,
+            "confidence": 98.07,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              272,
+              659,
+              2479,
+              741
+            ],
+            "generated_text": "顯，其文熾而說美，得無非其誠是子之辨也？",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.55,
+            "confidence": 99.15,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              413,
+              824,
+              2479,
+              905
+            ],
+            "generated_text": "牟子曰：非吾辨也，见博故不惑耳！",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.387,
+            "confidence": 97.28,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              418,
+              986,
+              2479,
+              1067
+            ],
+            "generated_text": "問曰：見博，其有術乎？",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.288,
+            "confidence": 96.5,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              415,
+              1147,
+              2479,
+              1227
+            ],
+            "generated_text": "牟子曰：由佛经也。吾未解佛经之时，惑甚",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.437,
+            "confidence": 93.53,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              274,
+              1274,
+              2479,
+              1356
+            ],
+            "generated_text": "於子。雖誦五經，適以爲華，未成實矣。吾既覩",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.57,
+            "confidence": 99.09,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              277,
+              1399,
+              2479,
+              1483
+            ],
+            "generated_text": "佛經之說，覽老子之要，守恬惔之性，觀無爲之",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.547,
+            "confidence": 97.9,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              278,
+              1521,
+              2212,
+              1605
+            ],
+            "generated_text": "行，還視世事，猶臨天井而闚谿谷，登嵩岱而見",
+            "n_lines": 1,
+            "tokens": 32,
+            "seconds": 0.695,
+            "confidence": 96.8,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              279,
+              1647,
+              2208,
+              1728
+            ],
+            "generated_text": "丘垤矣。五經則五味，佛道則五穀矣。吾自聞",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.554,
+            "confidence": 99.2,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              281,
+              1769,
+              1895,
+              1851
+            ],
+            "generated_text": "道以来，如開雲見白日，炬火入冥室焉。",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.411,
+            "confidence": 97.08,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              419,
+              2006,
+              802,
+              2061
+            ],
+            "generated_text": "PHIEN AM:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.162,
+            "confidence": 92.75,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              418,
+              2106,
+              2479,
+              2179
+            ],
+            "generated_text": "Ván viết : Ngô tử đi Kinh truyền lý Phát chi thuyết,",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.507,
+            "confidence": 92.59,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              284,
+              2196,
+              2479,
+              2269
+            ],
+            "generated_text": "kỳ tụ phú nhi nghĩa hiện, kỳ văn xí nhi thuyết mỹ, đặc",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.591,
+            "confidence": 89.58,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              284,
+              2284,
+              2479,
+              2346
+            ],
+            "generated_text": "vô phi thành thi tử chi biên gia ?",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 0.307,
+            "confidence": 74.48,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              423,
+              2389,
+              2479,
+              2456
+            ],
+            "generated_text": "Mâu Từ viết : Phi ngô biên gia, kiến bác cổ bất hoặc",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.525,
+            "confidence": 86.28,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              422,
+              2583,
+              2479,
+              2649
+            ],
+            "generated_text": "Ván viết : Kiến bác, kỳ hữu thuật hổ ?",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.465,
+            "confidence": 88.91,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              425,
+              2692,
+              2479,
+              2764
+            ],
+            "generated_text": "Mâu Từ viết : Do Phát kinh giã. Ngô vi giải Phát",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.463,
+            "confidence": 87.48,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              291,
+              2780,
+              2219,
+              2852
+            ],
+            "generated_text": "kinh chi thòi, hoặc thâm ư tử. Tuy tung Ngũ kinh, thích",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.522,
+            "confidence": 83.96,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              292,
+              2868,
+              2479,
+              2939
+            ],
+            "generated_text": "đi vi hoa, vi thành thực hĩ. Ngô ký đổ Phát kinh chi",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.484,
+            "confidence": 81.23,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              293,
+              2955,
+              2479,
+              3026
+            ],
+            "generated_text": "thuyết, làm Lão Tử chi yêu, thù điểm dam chi tính,",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.442,
+            "confidence": 85.5,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              293,
+              3036,
+              2479,
+              3112
+            ],
+            "generated_text": "quan vô vi chi hanh, hoàn thị thế sự, do làm thiên tinh",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.464,
+            "confidence": 87.11,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              294,
+              3125,
+              2476,
+              3200
+            ],
+            "generated_text": "nhi khuy khê cốc, đăng Tung, Thái nhi kiến khâu diệt",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.528,
+            "confidence": 96.1,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              2051,
+              3297,
+              2210,
+              3341
+            ],
+            "generated_text": "459",
+            "n_lines": 1,
+            "tokens": 4,
+            "seconds": 0.124,
+            "confidence": 92.56,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              1204,
+              376,
+              2479,
+              393
+            ],
+            "ink": 893
+          },
+          {
+            "box": [
+              1205,
+              398,
+              2479,
+              407
+            ],
+            "ink": 453
+          },
+          {
+            "box": [
+              1202,
+              423,
+              1299,
+              439
+            ],
+            "ink": 923
+          },
+          {
+            "box": [
+              288,
+              2501,
+              2479,
+              2524
+            ],
+            "ink": 1465
+          },
+          {
+            "box": [
+              289,
+              2527,
+              2479,
+              2543
+            ],
+            "ink": 928
+          },
+          {
+            "box": [
+              2175,
+              3203,
+              2479,
+              3212
+            ],
+            "ink": 484
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "61cbea5c0055c260ccfc12f884e0febca7b2783b",
+        "git_describe": "61cbea5",
+        "git_dirty": true,
+        "gpu": "NVIDIA L4",
+        "dtype": "bfloat16",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

@@ -1,0 +1,763 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_18",
+  "engine": "paddlevl",
+  "page": 434,
+  "runs": [
+    {
+      "key": "2a9c93575b9f8627fd80990621144a5a3a8247e3ee72a5d3f5d54b5bde0f5d3f",
+      "parameters": {
+        "image_sha256": "5f5b7cb5e6943a4f3dd88e1d926be8568699b5357ce2c9bc9c67b1c6bc01c3e9",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T15:54:13+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_434.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        0,
+        2480,
+        3509
+      ],
+      "lines": [
+        {
+          "text": "Sưu tấm và khảo luận tác phẩm chủ Hán của người Việt Nam trước TK 10",
+          "bbox": [
+            262,
+            144,
+            1864,
+            199
+          ],
+          "confidence": 90.35
+        },
+        {
+          "text": "[",
+          "bbox": [
+            243,
+            232,
+            2238,
+            251
+          ],
+          "confidence": 11.53
+        },
+        {
+          "text": "lường, sao có thể bỏ mà không học ? Sự việc và nghĩa lý",
+          "bbox": [
+            251,
+            392,
+            2236,
+            470
+          ],
+          "confidence": 94.64
+        },
+        {
+          "text": "Ngũ kinh hoặc giả có chỗ còn thiếu, trách gì không thấy",
+          "bbox": [
+            249,
+            484,
+            2234,
+            563
+          ],
+          "confidence": 98.79
+        },
+        {
+          "text": "ghi chép về Phát.",
+          "bbox": [
+            248,
+            595,
+            832,
+            642
+          ],
+          "confidence": 85.71
+        },
+        {
+          "text": "CHU THICH:",
+          "bbox": [
+            369,
+            849,
+            787,
+            905
+          ],
+          "confidence": 90.27
+        },
+        {
+          "text": "(52) Nghiêu, Thuấn, Chu, Không : Đường Nghiêu, Ngu",
+          "bbox": [
+            239,
+            969,
+            2239,
+            1044
+          ],
+          "confidence": 94.77
+        },
+        {
+          "text": "Thuán, Chu Công, Không Tử.",
+          "bbox": [
+            364,
+            1058,
+            1310,
+            1120
+          ],
+          "confidence": 87.05
+        },
+        {
+          "text": "(53) Nghiệp thánh : đầy chỉ sự nghiệp của Phật.",
+          "bbox": [
+            238,
+            1163,
+            1776,
+            1238
+          ],
+          "confidence": 91.71
+        },
+        {
+          "text": "(54) Biển Thước : tên một thầy thuốc thời Chiến quốc, nội",
+          "bbox": [
+            237,
+            1288,
+            2240,
+            1352
+          ],
+          "confidence": 94.29
+        },
+        {
+          "text": "tiếng về khoa chan mạch.",
+          "bbox": [
+            366,
+            1394,
+            1175,
+            1438
+          ],
+          "confidence": 81.36
+        },
+        {
+          "text": "(55) Từ Cổng : học trò của Không Tử, có tài ăn nói, giỏi sắp",
+          "bbox": [
+            234,
+            1499,
+            2239,
+            1575
+          ],
+          "confidence": 90.96
+        },
+        {
+          "text": "dat cong việc.",
+          "bbox": [
+            364,
+            1608,
+            791,
+            1651
+          ],
+          "confidence": 86.58
+        },
+        {
+          "text": "(56) Phu tử: đây chỉ Không Từ.",
+          "bbox": [
+            231,
+            1716,
+            1233,
+            1778
+          ],
+          "confidence": 89.93
+        },
+        {
+          "text": "(57) Đán : tức Chu Công, ho Cơ, tên Đán, em Chu Vũ Vương,",
+          "bbox": [
+            229,
+            1839,
+            2417,
+            1905
+          ],
+          "confidence": 94.96
+        },
+        {
+          "text": "chú Chu Thành Vương.",
+          "bbox": [
+            360,
+            1927,
+            1111,
+            1988
+          ],
+          "confidence": 98.36
+        },
+        {
+          "text": "問曰：云佛有三十二相，八十種好，何其異於",
+          "bbox": [
+            373,
+            2402,
+            2238,
+            2485
+          ],
+          "confidence": 96.94
+        },
+        {
+          "text": "人之甚也？殆富耳之語，非實之云也！",
+          "bbox": [
+            231,
+            2530,
+            1759,
+            2610
+          ],
+          "confidence": 99.24
+        },
+        {
+          "text": "牟子曰：諺云：“少所見，多所怪，覩馲駝，言",
+          "bbox": [
+            372,
+            2679,
+            2234,
+            2762
+          ],
+          "confidence": 98.03
+        },
+        {
+          "text": "馬腫背”。堯眉八彩，舜目重瞳子，皋陶馬喙，文",
+          "bbox": [
+            234,
+            2804,
+            2234,
+            2892
+          ],
+          "confidence": 98.89
+        },
+        {
+          "text": "王四乳，禹耳参漏，周公背僂，伏羲龍鼻，仲尼反",
+          "bbox": [
+            230,
+            2934,
+            2475,
+            3021
+          ],
+          "confidence": 96.99
+        },
+        {
+          "text": "頫，老子日角月玄，鼻有雙柱，手把十文，足蹈",
+          "bbox": [
+            221,
+            3063,
+            2402,
+            3150
+          ],
+          "confidence": 92.58
+        },
+        {
+          "text": "二五，此非異於人乎？佛之相好，奚足疑哉！",
+          "bbox": [
+            220,
+            3190,
+            2280,
+            3275
+          ],
+          "confidence": 95.71
+        },
+        {
+          "text": "402",
+          "bbox": [
+            220,
+            3443,
+            2034,
+            3476
+          ],
+          "confidence": 99.36
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          3509
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 34.827,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              262,
+              144,
+              1864,
+              199
+            ],
+            "generated_text": "Sưu tấm và khảo luận tác phẩm chủ Hán của người Việt Nam trước TK 10",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 1.853,
+            "confidence": 90.35,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              243,
+              232,
+              2238,
+              251
+            ],
+            "generated_text": "[",
+            "n_lines": 1,
+            "tokens": 2,
+            "seconds": 0.476,
+            "confidence": 11.53,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              251,
+              392,
+              2236,
+              470
+            ],
+            "generated_text": "lường, sao có thể bỏ mà không học ? Sự việc và nghĩa lý",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.512,
+            "confidence": 94.64,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              249,
+              484,
+              2234,
+              563
+            ],
+            "generated_text": "Ngũ kinh hoặc giả có chỗ còn thiếu, trách gì không thấy",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.403,
+            "confidence": 98.79,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              248,
+              595,
+              832,
+              642
+            ],
+            "generated_text": "ghi chép về Phát.",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.913,
+            "confidence": 85.71,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              369,
+              849,
+              787,
+              905
+            ],
+            "generated_text": "CHU THICH:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.734,
+            "confidence": 90.27,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              239,
+              969,
+              2239,
+              1044
+            ],
+            "generated_text": "(52) Nghiêu, Thuấn, Chu, Không : Đường Nghiêu, Ngu",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.776,
+            "confidence": 94.77,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              364,
+              1058,
+              1310,
+              1120
+            ],
+            "generated_text": "Thuán, Chu Công, Không Tử.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.105,
+            "confidence": 87.05,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              238,
+              1163,
+              1776,
+              1238
+            ],
+            "generated_text": "(53) Nghiệp thánh : đầy chỉ sự nghiệp của Phật.",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.751,
+            "confidence": 91.71,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              237,
+              1288,
+              2240,
+              1352
+            ],
+            "generated_text": "(54) Biển Thước : tên một thầy thuốc thời Chiến quốc, nội",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.884,
+            "confidence": 94.29,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              366,
+              1394,
+              1175,
+              1438
+            ],
+            "generated_text": "tiếng về khoa chan mạch.",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.923,
+            "confidence": 81.36,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              234,
+              1499,
+              2239,
+              1575
+            ],
+            "generated_text": "(55) Từ Cổng : học trò của Không Tử, có tài ăn nói, giỏi sắp",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 2.148,
+            "confidence": 90.96,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              364,
+              1608,
+              791,
+              1651
+            ],
+            "generated_text": "dat cong việc.",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.625,
+            "confidence": 86.58,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              231,
+              1716,
+              1233,
+              1778
+            ],
+            "generated_text": "(56) Phu tử: đây chỉ Không Từ.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.367,
+            "confidence": 89.93,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              229,
+              1839,
+              2417,
+              1905
+            ],
+            "generated_text": "(57) Đán : tức Chu Công, ho Cơ, tên Đán, em Chu Vũ Vương,",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 2.237,
+            "confidence": 94.96,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              360,
+              1927,
+              1111,
+              1988
+            ],
+            "generated_text": "chú Chu Thành Vương.",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.827,
+            "confidence": 98.36,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              373,
+              2402,
+              2238,
+              2485
+            ],
+            "generated_text": "問曰：云佛有三十二相，八十種好，何其異於",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.359,
+            "confidence": 96.94,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              231,
+              2530,
+              1759,
+              2610
+            ],
+            "generated_text": "人之甚也？殆富耳之語，非實之云也！",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.604,
+            "confidence": 99.24,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              372,
+              2679,
+              2234,
+              2762
+            ],
+            "generated_text": "牟子曰：諺云：“少所見，多所怪，覩馲駝，言",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 2.0,
+            "confidence": 98.03,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              234,
+              2804,
+              2234,
+              2892
+            ],
+            "generated_text": "馬腫背”。堯眉八彩，舜目重瞳子，皋陶馬喙，文",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 2.134,
+            "confidence": 98.89,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              230,
+              2934,
+              2475,
+              3021
+            ],
+            "generated_text": "王四乳，禹耳参漏，周公背僂，伏羲龍鼻，仲尼反",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 2.0,
+            "confidence": 96.99,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              221,
+              3063,
+              2402,
+              3150
+            ],
+            "generated_text": "頫，老子日角月玄，鼻有雙柱，手把十文，足蹈",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.828,
+            "confidence": 92.58,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              220,
+              3190,
+              2280,
+              3275
+            ],
+            "generated_text": "二五，此非異於人乎？佛之相好，奚足疑哉！",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.746,
+            "confidence": 95.71,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              220,
+              3443,
+              2034,
+              3476
+            ],
+            "generated_text": "402",
+            "n_lines": 1,
+            "tokens": 4,
+            "seconds": 0.617,
+            "confidence": 99.36,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              285,
+              578,
+              803,
+              598
+            ],
+            "ink": 1370
+          },
+          {
+            "box": [
+              372,
+              1380,
+              1133,
+              1395
+            ],
+            "ink": 940
+          },
+          {
+            "box": [
+              381,
+              1599,
+              739,
+              1608
+            ],
+            "ink": 484
+          },
+          {
+            "box": [
+              2067,
+              3307,
+              2190,
+              3318
+            ],
+            "ink": 678
+          },
+          {
+            "box": [
+              233,
+              3429,
+              2043,
+              3445
+            ],
+            "ink": 1006
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

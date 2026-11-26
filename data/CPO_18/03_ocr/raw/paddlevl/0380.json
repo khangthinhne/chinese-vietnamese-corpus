@@ -1,0 +1,972 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_18",
+  "engine": "paddlevl",
+  "page": 380,
+  "runs": [
+    {
+      "key": "e93412e8b1b11b7ea6b73c56863f92390918e69fad843897ec260d0e5720b665",
+      "parameters": {
+        "image_sha256": "722a018e21e1287e8da1867a165de9030800e8bd354e9568530786de1ca55418",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T15:12:28+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_380.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        0,
+        2480,
+        3509
+      ],
+      "lines": [
+        {
+          "text": "Sưu tấm và khảo luận tác phẩm chủ Hán của người Việt Nam trước TK 10",
+          "bbox": [
+            300,
+            116,
+            1869,
+            175
+          ],
+          "confidence": 95.22
+        },
+        {
+          "text": "：",
+          "bbox": [
+            283,
+            208,
+            2157,
+            231
+          ],
+          "confidence": 26.5
+        },
+        {
+          "text": "KHAO DI:",
+          "bbox": [
+            418,
+            323,
+            892,
+            380
+          ],
+          "confidence": 95.31
+        },
+        {
+          "text": "(1) Bản A: thế 迸.",
+          "bbox": [
+            296,
+            429,
+            919,
+            494
+          ],
+          "confidence": 79.72
+        },
+        {
+          "text": "(2) Bản B: gián 間.",
+          "bbox": [
+            294,
+            546,
+            966,
+            613
+          ],
+          "confidence": 97.19
+        },
+        {
+          "text": "(3) Bản A và Bản B : tư 似 , tôi nghĩa. Có lẽ là chủ tụ 敘",
+          "bbox": [
+            291,
+            666,
+            2227,
+            747
+          ],
+          "confidence": 86.39
+        },
+        {
+          "text": "viết nhâm mà thành. Chúng tôi đã chữa lại.",
+          "bbox": [
+            400,
+            765,
+            1911,
+            833
+          ],
+          "confidence": 92.72
+        },
+        {
+          "text": "(4) Bản A và Bản B : đều không có chủ bất 不 , câu trỏ",
+          "bbox": [
+            285,
+            879,
+            2236,
+            954
+          ],
+          "confidence": 90.19
+        },
+        {
+          "text": "nên trái nghĩa. Cõ lẽ sót. Chúng tôi đã thêm vào.",
+          "bbox": [
+            400,
+            979,
+            2087,
+            1048
+          ],
+          "confidence": 93.33
+        },
+        {
+          "text": "DICH NGHIA:",
+          "bbox": [
+            283,
+            1181,
+            714,
+            1238
+          ],
+          "confidence": 90.11
+        },
+        {
+          "text": "ĐOCRIỆT KINH KIM CƯỜNG (1)",
+          "bbox": [
+            773,
+            1319,
+            1677,
+            1385
+          ],
+          "confidence": 77.36
+        },
+        {
+          "text": "THANH BIEN - PHÁP DẰNG",
+          "bbox": [
+            1261,
+            1461,
+            2078,
+            1515
+          ],
+          "confidence": 89.1
+        },
+        {
+          "text": "THANH BIEN - THIEN KHACH",
+          "bbox": [
+            1261,
+            1541,
+            2158,
+            1594
+          ],
+          "confidence": 96.06
+        },
+        {
+          "text": "THANH BIEN-HUE NGHIEM",
+          "bbox": [
+            1261,
+            1623,
+            2131,
+            1677
+          ],
+          "confidence": 85.85
+        },
+        {
+          "text": "... Thiên sự Thanh Biên, người Cô Giao (2), ho Đô,",
+          "bbox": [
+            402,
+            1738,
+            2226,
+            1806
+          ],
+          "confidence": 88.85
+        },
+        {
+          "text": "năm mười hai tuổi theo hoc Pháp Đăng ở chùa Phố",
+          "bbox": [
+            272,
+            1834,
+            2228,
+            1903
+          ],
+          "confidence": 93.41
+        },
+        {
+          "text": "Quang (3). Lúc Đăng sắp tích, nhà sự hỏi rằng : \"Sau khi",
+          "bbox": [
+            272,
+            1928,
+            2227,
+            1997
+          ],
+          "confidence": 90.84
+        },
+        {
+          "text": "Hòa thương đi rồi, đê tử sẽ nương tựa nơi đâu ?\" Đăng",
+          "bbox": [
+            274,
+            2022,
+            2228,
+            2090
+          ],
+          "confidence": 86.75
+        },
+        {
+          "text": "đáp : “Người chỉ cần Sùng Nghiệp mà thôi”. Nhà sư",
+          "bbox": [
+            274,
+            2116,
+            2228,
+            2184
+          ],
+          "confidence": 93.56
+        },
+        {
+          "text": "hoang mang không hiểu. Sau khi Đăng mất, nhà sự bèn",
+          "bbox": [
+            270,
+            2213,
+            2224,
+            2280
+          ],
+          "confidence": 92.9
+        },
+        {
+          "text": "chuyển việc doạ kinh Kim cương.",
+          "bbox": [
+            269,
+            2320,
+            1376,
+            2370
+          ],
+          "confidence": 69.5
+        },
+        {
+          "text": "Một hôm có vi Thiên khách đến thăm và hỏi rằng :",
+          "bbox": [
+            399,
+            2436,
+            2219,
+            2505
+          ],
+          "confidence": 96.34
+        },
+        {
+          "text": "\"Kinh này là me của chủ Phát ba đời, nghĩa của chủ \"mẹ",
+          "bbox": [
+            269,
+            2529,
+            2223,
+            2599
+          ],
+          "confidence": 90.88
+        },
+        {
+          "text": "Phát\" ở đây là thế nào ?\" Nhà sự đáp : \"Bấy lâu doc riết,",
+          "bbox": [
+            272,
+            2622,
+            2220,
+            2692
+          ],
+          "confidence": 92.11
+        },
+        {
+          "text": "mà chưa hiểu nghĩa của kinh là gì cả\". Khách hỏi : “Đã",
+          "bbox": [
+            271,
+            2718,
+            2221,
+            2786
+          ],
+          "confidence": 92.46
+        },
+        {
+          "text": "doc trong bao nhiêu lâu ?\" Nhà sư đáp : \"Tám năm rồi",
+          "bbox": [
+            271,
+            2813,
+            2220,
+            2878
+          ],
+          "confidence": 90.73
+        },
+        {
+          "text": "đấy\". Khách nói : \"Thế là doc kinh đã tám năm mà một",
+          "bbox": [
+            270,
+            2900,
+            2436,
+            2970
+          ],
+          "confidence": 84.9
+        },
+        {
+          "text": "câu kinh cũng không hiểu, dâu có độc trăm năm chăng",
+          "bbox": [
+            265,
+            2992,
+            2475,
+            3071
+          ],
+          "confidence": 88.52
+        },
+        {
+          "text": "nữa, phòng ích lợi gì ?\" Nhà sự bèn lễ ta và hỏi cách học",
+          "bbox": [
+            264,
+            3086,
+            2374,
+            3164
+          ],
+          "confidence": 85.62
+        },
+        {
+          "text": "làm sao cho tấn tới. Khách bảo đến nhờ Huê Nghiêm",
+          "bbox": [
+            261,
+            3176,
+            2281,
+            3247
+          ],
+          "confidence": 92.74
+        },
+        {
+          "text": "chùa Sùng Nghiệp chỉ vẽ cho. Sự chợt nhớ, nói : “Ta nay",
+          "bbox": [
+            259,
+            3269,
+            2220,
+            3347
+          ],
+          "confidence": 86.46
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          3509
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 46.19,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              300,
+              116,
+              1869,
+              175
+            ],
+            "generated_text": "Sưu tấm và khảo luận tác phẩm chủ Hán của người Việt Nam trước TK 10",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 1.823,
+            "confidence": 95.22,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              283,
+              208,
+              2157,
+              231
+            ],
+            "generated_text": "：",
+            "n_lines": 1,
+            "tokens": 2,
+            "seconds": 0.491,
+            "confidence": 26.5,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              418,
+              323,
+              892,
+              380
+            ],
+            "generated_text": "KHAO DI:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.655,
+            "confidence": 95.31,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              296,
+              429,
+              919,
+              494
+            ],
+            "generated_text": "(1) Bản A: thế 迸.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.166,
+            "confidence": 79.72,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              294,
+              546,
+              966,
+              613
+            ],
+            "generated_text": "(2) Bản B: gián 間.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.116,
+            "confidence": 97.19,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              291,
+              666,
+              2227,
+              747
+            ],
+            "generated_text": "(3) Bản A và Bản B : tư 似 , tôi nghĩa. Có lẽ là chủ tụ 敘",
+            "n_lines": 1,
+            "tokens": 32,
+            "seconds": 2.226,
+            "confidence": 86.39,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              400,
+              765,
+              1911,
+              833
+            ],
+            "generated_text": "viết nhâm mà thành. Chúng tôi đã chữa lại.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.217,
+            "confidence": 92.72,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              285,
+              879,
+              2236,
+              954
+            ],
+            "generated_text": "(4) Bản A và Bản B : đều không có chủ bất 不 , câu trỏ",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 1.81,
+            "confidence": 90.19,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              400,
+              979,
+              2087,
+              1048
+            ],
+            "generated_text": "nên trái nghĩa. Cõ lẽ sót. Chúng tôi đã thêm vào.",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.66,
+            "confidence": 93.33,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              283,
+              1181,
+              714,
+              1238
+            ],
+            "generated_text": "DICH NGHIA:",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.674,
+            "confidence": 90.11,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              773,
+              1319,
+              1677,
+              1385
+            ],
+            "generated_text": "ĐOCRIỆT KINH KIM CƯỜNG (1)",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.728,
+            "confidence": 77.36,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              1261,
+              1461,
+              2078,
+              1515
+            ],
+            "generated_text": "THANH BIEN - PHÁP DẰNG",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.216,
+            "confidence": 89.1,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              1261,
+              1541,
+              2158,
+              1594
+            ],
+            "generated_text": "THANH BIEN - THIEN KHACH",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.109,
+            "confidence": 96.06,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              1261,
+              1623,
+              2131,
+              1677
+            ],
+            "generated_text": "THANH BIEN-HUE NGHIEM",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.113,
+            "confidence": 85.85,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              402,
+              1738,
+              2226,
+              1806
+            ],
+            "generated_text": "... Thiên sự Thanh Biên, người Cô Giao (2), ho Đô,",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.594,
+            "confidence": 88.85,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              272,
+              1834,
+              2228,
+              1903
+            ],
+            "generated_text": "năm mười hai tuổi theo hoc Pháp Đăng ở chùa Phố",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.407,
+            "confidence": 93.41,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              272,
+              1928,
+              2227,
+              1997
+            ],
+            "generated_text": "Quang (3). Lúc Đăng sắp tích, nhà sự hỏi rằng : \"Sau khi",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 1.839,
+            "confidence": 90.84,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              274,
+              2022,
+              2228,
+              2090
+            ],
+            "generated_text": "Hòa thương đi rồi, đê tử sẽ nương tựa nơi đâu ?\" Đăng",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 1.921,
+            "confidence": 86.75,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              274,
+              2116,
+              2228,
+              2184
+            ],
+            "generated_text": "đáp : “Người chỉ cần Sùng Nghiệp mà thôi”. Nhà sư",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.656,
+            "confidence": 93.56,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              270,
+              2213,
+              2224,
+              2280
+            ],
+            "generated_text": "hoang mang không hiểu. Sau khi Đăng mất, nhà sự bèn",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.536,
+            "confidence": 92.9,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              269,
+              2320,
+              1376,
+              2370
+            ],
+            "generated_text": "chuyển việc doạ kinh Kim cương.",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.136,
+            "confidence": 69.5,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              399,
+              2436,
+              2219,
+              2505
+            ],
+            "generated_text": "Một hôm có vi Thiên khách đến thăm và hỏi rằng :",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.406,
+            "confidence": 96.34,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              269,
+              2529,
+              2223,
+              2599
+            ],
+            "generated_text": "\"Kinh này là me của chủ Phát ba đời, nghĩa của chủ \"mẹ",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.66,
+            "confidence": 90.88,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              272,
+              2622,
+              2220,
+              2692
+            ],
+            "generated_text": "Phát\" ở đây là thế nào ?\" Nhà sự đáp : \"Bấy lâu doc riết,",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 1.839,
+            "confidence": 92.11,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              271,
+              2718,
+              2221,
+              2786
+            ],
+            "generated_text": "mà chưa hiểu nghĩa của kinh là gì cả\". Khách hỏi : “Đã",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.727,
+            "confidence": 92.46,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              271,
+              2813,
+              2220,
+              2878
+            ],
+            "generated_text": "doc trong bao nhiêu lâu ?\" Nhà sư đáp : \"Tám năm rồi",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.738,
+            "confidence": 90.73,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              270,
+              2900,
+              2436,
+              2970
+            ],
+            "generated_text": "đấy\". Khách nói : \"Thế là doc kinh đã tám năm mà một",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.617,
+            "confidence": 84.9,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              265,
+              2992,
+              2475,
+              3071
+            ],
+            "generated_text": "câu kinh cũng không hiểu, dâu có độc trăm năm chăng",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.579,
+            "confidence": 88.52,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              264,
+              3086,
+              2374,
+              3164
+            ],
+            "generated_text": "nữa, phòng ích lợi gì ?\" Nhà sự bèn lễ ta và hỏi cách học",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 2.049,
+            "confidence": 85.62,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              261,
+              3176,
+              2281,
+              3247
+            ],
+            "generated_text": "làm sao cho tấn tới. Khách bảo đến nhờ Huê Nghiêm",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.595,
+            "confidence": 92.74,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              259,
+              3269,
+              2220,
+              3347
+            ],
+            "generated_text": "chùa Sùng Nghiệp chỉ vẽ cho. Sự chợt nhớ, nói : “Ta nay",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 1.884,
+            "confidence": 86.46,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              307,
+              1993,
+              1828,
+              2007
+            ],
+            "ink": 941
+          },
+          {
+            "box": [
+              566,
+              2088,
+              2212,
+              2097
+            ],
+            "ink": 597
+          },
+          {
+            "box": [
+              353,
+              2182,
+              1493,
+              2194
+            ],
+            "ink": 837
+          },
+          {
+            "box": [
+              438,
+              2277,
+              1787,
+              2290
+            ],
+            "ink": 770
+          },
+          {
+            "box": [
+              303,
+              2305,
+              1066,
+              2322
+            ],
+            "ink": 1383
+          },
+          {
+            "box": [
+              271,
+              3416,
+              2037,
+              3430
+            ],
+            "ink": 1064
+          },
+          {
+            "box": [
+              277,
+              3427,
+              2044,
+              3442
+            ],
+            "ink": 1142
+          },
+          {
+            "box": [
+              267,
+              3446,
+              2031,
+              3462
+            ],
+            "ink": 1110
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

@@ -1,0 +1,872 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_18",
+  "engine": "paddlevl",
+  "page": 537,
+  "runs": [
+    {
+      "key": "6532b62090874d1ceb61b129fadc6f4c0764ed1b1a52d94a5f131a55b74ecc74",
+      "parameters": {
+        "image_sha256": "17c5c29e83c43ecfb13077f55502d45a4b3f1c552b11af2c25059aa97650a6b7",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T19:03:25+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_537.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        0,
+        2480,
+        3509
+      ],
+      "lines": [
+        {
+          "text": "<--",
+          "bbox": [
+            273,
+            266,
+            2094,
+            285
+          ],
+          "confidence": 10.89
+        },
+        {
+          "text": "(2) Nam Việt : tên nước có của Triệu Đà, gồm 3 quân Quế",
+          "bbox": [
+            293,
+            361,
+            2092,
+            421
+          ],
+          "confidence": 92.48
+        },
+        {
+          "text": "Lâm, Nam Hải và Tương. Pháp sử Đinh quê ở Việt Nam,",
+          "bbox": [
+            409,
+            444,
+            2090,
+            503
+          ],
+          "confidence": 89.91
+        },
+        {
+          "text": "túc “ngoài Nam Việt”.",
+          "bbox": [
+            411,
+            525,
+            1083,
+            583
+          ],
+          "confidence": 93.34
+        },
+        {
+          "text": "(3) Cả câu ý nói : Pháp sư Định sau một thời gian giảng kinh",
+          "bbox": [
+            295,
+            643,
+            2095,
+            713
+          ],
+          "confidence": 93.88
+        },
+        {
+          "text": "điện ở Kinh đô nhà Đường, đã từ giã thiên triệu để trở về",
+          "bbox": [
+            413,
+            728,
+            2097,
+            788
+          ],
+          "confidence": 88.69
+        },
+        {
+          "text": "(4) Cả câu ý nói : Pháp sự Đinh trên đường về băng tàu",
+          "bbox": [
+            295,
+            928,
+            2097,
+            989
+          ],
+          "confidence": 90.62
+        },
+        {
+          "text": "thuyên vượt biển, sẽ gặp cảnh trời nắng ấm, đầy hương",
+          "bbox": [
+            411,
+            1010,
+            2101,
+            1081
+          ],
+          "confidence": 94.74
+        },
+        {
+          "text": "(5) Hơi thắn : bắt nguồn từ cum từ \"hải thi thần lâu = cái",
+          "bbox": [
+            296,
+            1208,
+            2106,
+            1270
+          ],
+          "confidence": 87.73
+        },
+        {
+          "text": "chọ giữa biển, lầu gác của con giao long\" (theo sách Tam",
+          "bbox": [
+            413,
+            1291,
+            2104,
+            1356
+          ],
+          "confidence": 88.24
+        },
+        {
+          "text": "tê lược ký). Kỳ thực, đây là hiện tượng chiết quang của",
+          "bbox": [
+            413,
+            1376,
+            2104,
+            1448
+          ],
+          "confidence": 91.19
+        },
+        {
+          "text": "cảnh vật qua lăng kính hơi nước trên biển mà thành",
+          "bbox": [
+            413,
+            1458,
+            2107,
+            1519
+          ],
+          "confidence": 95.72
+        },
+        {
+          "text": "những hình thù kỳ la đấy thôi.",
+          "bbox": [
+            413,
+            1540,
+            1347,
+            1599
+          ],
+          "confidence": 96.62
+        },
+        {
+          "text": "(6) Trường An : Kinh đô nhà Đường hỏi bấy giờ.",
+          "bbox": [
+            296,
+            1660,
+            1732,
+            1721
+          ],
+          "confidence": 88.3
+        },
+        {
+          "text": "送定法師歸蜀",
+          "bbox": [
+            923,
+            1916,
+            1530,
+            2004
+          ],
+          "confidence": 99.78
+        },
+        {
+          "text": "（法師即紅樓院供俸廣宣上人兄弟）",
+          "bbox": [
+            638,
+            2056,
+            1802,
+            2125
+          ],
+          "confidence": 97.4
+        },
+        {
+          "text": "鳳城初日照紅樓",
+          "bbox": [
+            901,
+            2209,
+            1559,
+            2284
+          ],
+          "confidence": 94.05
+        },
+        {
+          "text": "禁寺公卿識惠休。",
+          "bbox": [
+            907,
+            2333,
+            1581,
+            2408
+          ],
+          "confidence": 98.15
+        },
+        {
+          "text": "詩引棣华沾一雨",
+          "bbox": [
+            900,
+            2454,
+            1560,
+            2528
+          ],
+          "confidence": 93.24
+        },
+        {
+          "text": "經分貝葉向雙流。",
+          "bbox": [
+            901,
+            2578,
+            1583,
+            2654
+          ],
+          "confidence": 99.07
+        },
+        {
+          "text": "孤猿學定前山夕，",
+          "bbox": [
+            899,
+            2702,
+            1557,
+            2775
+          ],
+          "confidence": 98.41
+        },
+        {
+          "text": "遠雁傷離幾地秋。",
+          "bbox": [
+            901,
+            2820,
+            1580,
+            2896
+          ],
+          "confidence": 98.97
+        },
+        {
+          "text": "空性碧云無處所，",
+          "bbox": [
+            905,
+            2942,
+            2475,
+            3020
+          ],
+          "confidence": 82.92
+        },
+        {
+          "text": "約公曾許剡溪遊。",
+          "bbox": [
+            903,
+            3059,
+            2402,
+            3135
+          ],
+          "confidence": 98.91
+        },
+        {
+          "text": "505",
+          "bbox": [
+            2027,
+            3283,
+            2190,
+            3326
+          ],
+          "confidence": 96.47
+        },
+        {
+          "text": "ཀ་ཅན་ཁྱབ་ཁྱབ་ཡིན།་ཀ་ཅན་ཁྱབ་",
+          "bbox": [
+            88,
+            3488,
+            2156,
+            3509
+          ],
+          "confidence": 10.0
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          3509
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 11.115,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              273,
+              266,
+              2094,
+              285
+            ],
+            "generated_text": "<--",
+            "n_lines": 1,
+            "tokens": 3,
+            "seconds": 0.11,
+            "confidence": 10.89,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              293,
+              361,
+              2092,
+              421
+            ],
+            "generated_text": "(2) Nam Việt : tên nước có của Triệu Đà, gồm 3 quân Quế",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.557,
+            "confidence": 92.48,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              409,
+              444,
+              2090,
+              503
+            ],
+            "generated_text": "Lâm, Nam Hải và Tương. Pháp sử Đinh quê ở Việt Nam,",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.49,
+            "confidence": 89.91,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              411,
+              525,
+              1083,
+              583
+            ],
+            "generated_text": "túc “ngoài Nam Việt”.",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.229,
+            "confidence": 93.34,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              295,
+              643,
+              2095,
+              713
+            ],
+            "generated_text": "(3) Cả câu ý nói : Pháp sư Định sau một thời gian giảng kinh",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.552,
+            "confidence": 93.88,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              413,
+              728,
+              2097,
+              788
+            ],
+            "generated_text": "điện ở Kinh đô nhà Đường, đã từ giã thiên triệu để trở về",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.531,
+            "confidence": 88.69,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              295,
+              928,
+              2097,
+              989
+            ],
+            "generated_text": "(4) Cả câu ý nói : Pháp sự Đinh trên đường về băng tàu",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.51,
+            "confidence": 90.62,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              411,
+              1010,
+              2101,
+              1081
+            ],
+            "generated_text": "thuyên vượt biển, sẽ gặp cảnh trời nắng ấm, đầy hương",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.613,
+            "confidence": 94.74,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              296,
+              1208,
+              2106,
+              1270
+            ],
+            "generated_text": "(5) Hơi thắn : bắt nguồn từ cum từ \"hải thi thần lâu = cái",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.536,
+            "confidence": 87.73,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              413,
+              1291,
+              2104,
+              1356
+            ],
+            "generated_text": "chọ giữa biển, lầu gác của con giao long\" (theo sách Tam",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.527,
+            "confidence": 88.24,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              413,
+              1376,
+              2104,
+              1448
+            ],
+            "generated_text": "tê lược ký). Kỳ thực, đây là hiện tượng chiết quang của",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.479,
+            "confidence": 91.19,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              413,
+              1458,
+              2107,
+              1519
+            ],
+            "generated_text": "cảnh vật qua lăng kính hơi nước trên biển mà thành",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.384,
+            "confidence": 95.72,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              413,
+              1540,
+              1347,
+              1599
+            ],
+            "generated_text": "những hình thù kỳ la đấy thôi.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.33,
+            "confidence": 96.62,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              296,
+              1660,
+              1732,
+              1721
+            ],
+            "generated_text": "(6) Trường An : Kinh đô nhà Đường hỏi bấy giờ.",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.469,
+            "confidence": 88.3,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              923,
+              1916,
+              1530,
+              2004
+            ],
+            "generated_text": "送定法師歸蜀",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.226,
+            "confidence": 99.78,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              638,
+              2056,
+              1802,
+              2125
+            ],
+            "generated_text": "（法師即紅樓院供俸廣宣上人兄弟）",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.409,
+            "confidence": 97.4,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              901,
+              2209,
+              1559,
+              2284
+            ],
+            "generated_text": "鳳城初日照紅樓",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.223,
+            "confidence": 94.05,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              907,
+              2333,
+              1581,
+              2408
+            ],
+            "generated_text": "禁寺公卿識惠休。",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.224,
+            "confidence": 98.15,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              900,
+              2454,
+              1560,
+              2528
+            ],
+            "generated_text": "詩引棣华沾一雨",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.283,
+            "confidence": 93.24,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              901,
+              2578,
+              1583,
+              2654
+            ],
+            "generated_text": "經分貝葉向雙流。",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.263,
+            "confidence": 99.07,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              899,
+              2702,
+              1557,
+              2775
+            ],
+            "generated_text": "孤猿學定前山夕，",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.225,
+            "confidence": 98.41,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              901,
+              2820,
+              1580,
+              2896
+            ],
+            "generated_text": "遠雁傷離幾地秋。",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.224,
+            "confidence": 98.97,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              905,
+              2942,
+              2475,
+              3020
+            ],
+            "generated_text": "空性碧云無處所，",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.228,
+            "confidence": 82.92,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              903,
+              3059,
+              2402,
+              3135
+            ],
+            "generated_text": "約公曾許剡溪遊。",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.268,
+            "confidence": 98.91,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              2027,
+              3283,
+              2190,
+              3326
+            ],
+            "generated_text": "505",
+            "n_lines": 1,
+            "tokens": 4,
+            "seconds": 0.124,
+            "confidence": 96.47,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              88,
+              3488,
+              2156,
+              3509
+            ],
+            "generated_text": "ཀ་ཅན་ཁྱབ་ཁྱབ་ཡིན།་ཀ་ཅན་ཁྱབ་ཡིན།་ཀ་ཅན་ཁྱབ་ཡིན།་ཀ་ཅན་ཁྱབ་ཡིན།་ཀ་ཅན་ཁྱབ་",
+            "n_lines": 1,
+            "tokens": 104,
+            "seconds": 2.098,
+            "confidence": 10.0,
+            "flags": [
+              "repetition_collapsed",
+              "loop_stopped"
+            ],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              89,
+              0,
+              226,
+              10
+            ],
+            "ink": 590
+          },
+          {
+            "box": [
+              1941,
+              195,
+              2089,
+              213
+            ],
+            "ink": 1213
+          },
+          {
+            "box": [
+              1941,
+              215,
+              2090,
+              228
+            ],
+            "ink": 793
+          },
+          {
+            "box": [
+              301,
+              419,
+              2024,
+              430
+            ],
+            "ink": 558
+          },
+          {
+            "box": [
+              410,
+              827,
+              561,
+              843
+            ],
+            "ink": 1039
+          },
+          {
+            "box": [
+              410,
+              851,
+              577,
+              867
+            ],
+            "ink": 1027
+          },
+          {
+            "box": [
+              302,
+              985,
+              1970,
+              997
+            ],
+            "ink": 757
+          },
+          {
+            "box": [
+              416,
+              1115,
+              522,
+              1124
+            ],
+            "ink": 532
+          },
+          {
+            "box": [
+              412,
+              1137,
+              545,
+              1150
+            ],
+            "ink": 733
+          },
+          {
+            "box": [
+              495,
+              1352,
+              1690,
+              1366
+            ],
+            "ink": 854
+          },
+          {
+            "box": [
+              308,
+              1718,
+              1662,
+              1730
+            ],
+            "ink": 677
+          }
+        ],
+        "any_degenerate": true,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "61cbea5c0055c260ccfc12f884e0febca7b2783b",
+        "git_describe": "61cbea5",
+        "git_dirty": true,
+        "gpu": "NVIDIA L4",
+        "dtype": "bfloat16",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

@@ -1,0 +1,604 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_18",
+  "engine": "qwen",
+  "page": 523,
+  "runs": [
+    {
+      "key": "ce3021245aa9a26f72724d2a7fc8de1fdecbc6079042e17b6d3de392b9b4e23c",
+      "parameters": {
+        "image_sha256": "f204c39663759cf241fc781d8de554dfb087c388d662e0c4253746d5e13fd2a5",
+        "engine": {
+          "name": "qwen",
+          "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "model_revision": "main",
+          "transformers_version": "4.57.6",
+          "torch_version": "2.5.1+cu121",
+          "cuda_version": "12.1",
+          "bitsandbytes_version": "0.50.2",
+          "quantization": {
+            "load_in_4bit": true,
+            "quant_type": "nf4",
+            "double_quant": true,
+            "compute_dtype": "float16"
+          },
+          "mode": "all",
+          "min_pixels": 50176,
+          "max_pixels": 802816,
+          "band_inches": 2.0,
+          "max_new_tokens": 768,
+          "repetition_penalty": 1.05,
+          "adapter_version": 3,
+          "prompt_version": 3,
+          "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74"
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T22:01:11+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_523.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        0,
+        2480,
+        3509
+      ],
+      "lines": [
+        {
+          "text": "Phụ lục",
+          "bbox": [
+            50,
+            0,
+            2429,
+            188
+          ],
+          "confidence": 94.65
+        },
+        {
+          "text": "CHÚ THÍCH:",
+          "bbox": [
+            50,
+            188,
+            2429,
+            375
+          ],
+          "confidence": 94.65
+        },
+        {
+          "text": "(193) Đạo kinh: tức Đạo đức kinh, tác phẩm của Lão Tử.",
+          "bbox": [
+            50,
+            375,
+            2429,
+            563
+          ],
+          "confidence": 94.65
+        },
+        {
+          "text": "(194) Ngũ giới: năm điều kiêng cấm của đạo Phật, gồm đừng sát sinh, đừng trộm cắp, đừng tà dâm, đừng nói bậy, đừng uống rượu.",
+          "bbox": [
+            286,
+            598,
+            2162,
+            1108
+          ],
+          "confidence": 97.89
+        },
+        {
+          "text": "这是一段中文文本，内容如下：",
+          "bbox": [
+            291,
+            1130,
+            1868,
+            1420
+          ],
+          "confidence": 10.0
+        },
+        {
+          "text": "m 5 5",
+          "bbox": [
+            291,
+            1420,
+            1868,
+            1710
+          ],
+          "confidence": 10.0
+        },
+        {
+          "text": "三、gōng qì",
+          "bbox": [
+            66,
+            1702,
+            995,
+            1900
+          ],
+          "confidence": 10.0
+        },
+        {
+          "text": "gōng qì",
+          "bbox": [
+            66,
+            1900,
+            995,
+            2098
+          ],
+          "confidence": 10.0
+        },
+        {
+          "text": "gōng q",
+          "bbox": [
+            66,
+            2098,
+            995,
+            2296
+          ],
+          "confidence": 10.0
+        },
+        {
+          "text": "坐姿三脚凳子，然后用绳子绑在椅子上。",
+          "bbox": [
+            291,
+            2332,
+            1285,
+            2742
+          ],
+          "confidence": 17.85
+        },
+        {
+          "text": "197",
+          "bbox": [
+            50,
+            2846,
+            2476,
+            3509
+          ],
+          "confidence": 38.67
+        }
+      ],
+      "raw": {
+        "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+        "model_revision": "main",
+        "mode": "all",
+        "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          3509
+        ],
+        "band_target_height": 600,
+        "bbox_granularity": "band_even_split",
+        "max_new_tokens": 768,
+        "max_pixels": 802816,
+        "inference_seconds": 107.969,
+        "bands": [
+          {
+            "band": 1,
+            "y0": 0,
+            "y1": 581,
+            "ink_box": [
+              50,
+              0,
+              2429,
+              563
+            ],
+            "generated_text": "Phụ lục\n\nCHÚ THÍCH:\n\n(193) Đạo kinh: tức Đạo đức kinh, tác phẩm của Lão Tử.",
+            "n_lines": 3,
+            "tokens": 36,
+            "seconds": 2.755,
+            "confidence": 94.65,
+            "flags": []
+          },
+          {
+            "band": 2,
+            "y0": 581,
+            "y1": 1119,
+            "ink_box": [
+              286,
+              598,
+              2162,
+              1108
+            ],
+            "generated_text": "(194) Ngũ giới: năm điều kiêng cấm của đạo Phật, gồm đừng sát sinh, đừng trộm cắp, đừng tà dâm, đừng nói bậy, đừng uống rượu.",
+            "n_lines": 1,
+            "tokens": 47,
+            "seconds": 3.489,
+            "confidence": 97.89,
+            "flags": []
+          },
+          {
+            "band": 3,
+            "y0": 1119,
+            "y1": 1706,
+            "ink_box": [
+              291,
+              1130,
+              1868,
+              1710
+            ],
+            "generated_text": "这是一段中文文本，内容如下：\n\n```\nm 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5",
+            "n_lines": 2,
+            "tokens": 768,
+            "seconds": 49.782,
+            "confidence": 10.0,
+            "flags": [
+              "fence_removed",
+              "repetition_collapsed",
+              "truncated"
+            ]
+          },
+          {
+            "band": 4,
+            "y0": 1706,
+            "y1": 2300,
+            "ink_box": [
+              66,
+              1702,
+              995,
+              2296
+            ],
+            "generated_text": "三、gōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng q",
+            "n_lines": 3,
+            "tokens": 768,
+            "seconds": 49.858,
+            "confidence": 10.0,
+            "flags": [
+              "duplicate_lines_dropped",
+              "repetition_collapsed",
+              "truncated"
+            ]
+          },
+          {
+            "band": 5,
+            "y0": 2300,
+            "y1": 2780,
+            "ink_box": [
+              291,
+              2332,
+              1285,
+              2742
+            ],
+            "generated_text": "坐姿三脚凳子，然后用绳子绑在椅子上。",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.324,
+            "confidence": 17.85,
+            "flags": []
+          },
+          {
+            "band": 6,
+            "y0": 2780,
+            "y1": 3509,
+            "ink_box": [
+              50,
+              2846,
+              2476,
+              3509
+            ],
+            "generated_text": "197",
+            "n_lines": 1,
+            "tokens": 4,
+            "seconds": 0.724,
+            "confidence": 38.67,
+            "flags": []
+          }
+        ],
+        "any_degenerate": true,
+        "any_truncated": true,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "61cbea5c0055c260ccfc12f884e0febca7b2783b",
+        "git_describe": "61cbea5",
+        "git_dirty": true,
+        "gpu": "NVIDIA L4",
+        "dtype": "float16",
+        "adapter_version": 3
+      }
+    },
+    {
+      "key": "6d16219a6c5dd5f49b317d09513dc1334e312f3781a2f688b7a749f84c7be959",
+      "parameters": {
+        "image_sha256": "b22cf60ade13d8fce71d71f703160bc89166903ce58efc149dc51bfc78736f18",
+        "engine": {
+          "name": "qwen",
+          "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "model_revision": "main",
+          "transformers_version": "4.57.6",
+          "torch_version": "2.5.1+cu121",
+          "cuda_version": "12.1",
+          "bitsandbytes_version": "0.50.2",
+          "quantization": {
+            "load_in_4bit": true,
+            "quant_type": "nf4",
+            "double_quant": true,
+            "compute_dtype": "float16"
+          },
+          "mode": "all",
+          "min_pixels": 50176,
+          "max_pixels": 802816,
+          "band_inches": 2.0,
+          "max_new_tokens": 768,
+          "repetition_penalty": 1.05,
+          "adapter_version": 4,
+          "prompt_version": 3,
+          "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74"
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-26T09:19:53+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_18\\02_extraction\\pages\\page_523.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        0,
+        2480,
+        3509
+      ],
+      "lines": [
+        {
+          "text": "Phụ lục",
+          "bbox": [
+            50,
+            0,
+            2429,
+            188
+          ],
+          "confidence": 94.68
+        },
+        {
+          "text": "CHÚ THÍCH:",
+          "bbox": [
+            50,
+            188,
+            2429,
+            375
+          ],
+          "confidence": 94.68
+        },
+        {
+          "text": "(193) Đạo kinh: tức Đạo đức kinh, tác phẩm của Lão Tử.",
+          "bbox": [
+            50,
+            375,
+            2429,
+            563
+          ],
+          "confidence": 94.68
+        },
+        {
+          "text": "(194) Ngũ giới: năm điều kiêng cấm của đạo Phật, gồm đừng sát sinh, đừng trộm cắp, đừng tà dâm, đừng nói bậy, đừng uống rượu.",
+          "bbox": [
+            286,
+            598,
+            2162,
+            1108
+          ],
+          "confidence": 97.88
+        },
+        {
+          "text": "这是一段中文文本，内容如下：",
+          "bbox": [
+            291,
+            1130,
+            1868,
+            1420
+          ],
+          "confidence": 10.0
+        },
+        {
+          "text": "m 5 5",
+          "bbox": [
+            291,
+            1420,
+            1868,
+            1710
+          ],
+          "confidence": 10.0
+        },
+        {
+          "text": "三、gōng qì",
+          "bbox": [
+            66,
+            1702,
+            995,
+            1900
+          ],
+          "confidence": 10.0
+        },
+        {
+          "text": "gōng qì",
+          "bbox": [
+            66,
+            1900,
+            995,
+            2098
+          ],
+          "confidence": 10.0
+        },
+        {
+          "text": "gōng q",
+          "bbox": [
+            66,
+            2098,
+            995,
+            2296
+          ],
+          "confidence": 10.0
+        },
+        {
+          "text": "坐姿三脚凳子，然后用绳子绑在椅子上。",
+          "bbox": [
+            291,
+            2332,
+            1285,
+            2742
+          ],
+          "confidence": 17.79
+        },
+        {
+          "text": "191",
+          "bbox": [
+            50,
+            2846,
+            2476,
+            3509
+          ],
+          "confidence": 45.26
+        }
+      ],
+      "raw": {
+        "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+        "model_revision": "main",
+        "mode": "all",
+        "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          3509
+        ],
+        "band_target_height": 600,
+        "bbox_granularity": "band_even_split",
+        "max_new_tokens": 768,
+        "max_pixels": 802816,
+        "inference_seconds": 181.377,
+        "bands": [
+          {
+            "band": 1,
+            "y0": 0,
+            "y1": 581,
+            "ink_box": [
+              50,
+              0,
+              2429,
+              563
+            ],
+            "generated_text": "Phụ lục\n\nCHÚ THÍCH:\n\n(193) Đạo kinh: tức Đạo đức kinh, tác phẩm của Lão Tử.",
+            "n_lines": 3,
+            "tokens": 36,
+            "seconds": 10.815,
+            "confidence": 94.68,
+            "flags": []
+          },
+          {
+            "band": 2,
+            "y0": 581,
+            "y1": 1119,
+            "ink_box": [
+              286,
+              598,
+              2162,
+              1108
+            ],
+            "generated_text": "(194) Ngũ giới: năm điều kiêng cấm của đạo Phật, gồm đừng sát sinh, đừng trộm cắp, đừng tà dâm, đừng nói bậy, đừng uống rượu.",
+            "n_lines": 1,
+            "tokens": 47,
+            "seconds": 14.819,
+            "confidence": 97.88,
+            "flags": []
+          },
+          {
+            "band": 3,
+            "y0": 1119,
+            "y1": 1706,
+            "ink_box": [
+              291,
+              1130,
+              1868,
+              1710
+            ],
+            "generated_text": "这是一段中文文本，内容如下：\n\n```\nm 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5",
+            "n_lines": 2,
+            "tokens": 768,
+            "seconds": 109.453,
+            "confidence": 10.0,
+            "flags": [
+              "fence_removed",
+              "repetition_collapsed",
+              "truncated"
+            ]
+          },
+          {
+            "band": 4,
+            "y0": 1706,
+            "y1": 2300,
+            "ink_box": [
+              66,
+              1702,
+              995,
+              2296
+            ],
+            "generated_text": "三、gōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng qì\ngōng gōng gōng q",
+            "n_lines": 3,
+            "tokens": 768,
+            "seconds": 42.578,
+            "confidence": 10.0,
+            "flags": [
+              "duplicate_lines_dropped",
+              "repetition_collapsed",
+              "truncated"
+            ]
+          },
+          {
+            "band": 5,
+            "y0": 2300,
+            "y1": 2780,
+            "ink_box": [
+              291,
+              2332,
+              1285,
+              2742
+            ],
+            "generated_text": "坐姿三脚凳子，然后用绳子绑在椅子上。",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.813,
+            "confidence": 17.79,
+            "flags": []
+          },
+          {
+            "band": 6,
+            "y0": 2780,
+            "y1": 3509,
+            "ink_box": [
+              50,
+              2846,
+              2476,
+              3509
+            ],
+            "generated_text": "191",
+            "n_lines": 1,
+            "tokens": 4,
+            "seconds": 1.864,
+            "confidence": 45.26,
+            "flags": []
+          }
+        ],
+        "any_degenerate": true,
+        "any_truncated": true,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "a14f00840383ca282ccb519580df107802486602",
+        "git_describe": "a14f008",
+        "git_dirty": false,
+        "gpu": "NVIDIA GeForce RTX 3050 6GB Laptop GPU",
+        "dtype": "float16",
+        "adapter_version": 4
+      }
+    }
+  ]
+}

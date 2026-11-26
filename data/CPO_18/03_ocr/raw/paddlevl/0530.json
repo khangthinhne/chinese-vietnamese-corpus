@@ -1,0 +1,904 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_18",
+  "engine": "paddlevl",
+  "page": 530,
+  "runs": [
+    {
+      "key": "30a2f9fdd037dba72b4593573d52c1c4fae0e2f5b9a8b4cc59f11f854e45992e",
+      "parameters": {
+        "image_sha256": "58ca8de683b1f28496e828a15f0532e8c4d5579c1d771574e05a30b1ec86da33",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T19:02:26+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_530.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        0,
+        2480,
+        3509
+      ],
+      "lines": [
+        {
+          "text": "Sưu tấm và khảo luận tác phẩm chủ Hán của người Việt Nam trước TK 10",
+          "bbox": [
+            276,
+            95,
+            1911,
+            170
+          ],
+          "confidence": 93.27
+        },
+        {
+          "text": "：",
+          "bbox": [
+            257,
+            189,
+            2295,
+            222
+          ],
+          "confidence": 52.86
+        },
+        {
+          "text": "雲水既如彼(一作雲水路迢遞)，",
+          "bbox": [
+            538,
+            327,
+            1865,
+            412
+          ],
+          "confidence": 96.89
+        },
+        {
+          "text": "往来消息稀。",
+          "bbox": [
+            538,
+            460,
+            1078,
+            540
+          ],
+          "confidence": 85.71
+        },
+        {
+          "text": "PHIEN AM:",
+          "bbox": [
+            404,
+            786,
+            780,
+            845
+          ],
+          "confidence": 96.11
+        },
+        {
+          "text": "TONG AN NAM DUY GIAM PHÁP SU",
+          "bbox": [
+            762,
+            921,
+            1757,
+            984
+          ],
+          "confidence": 91.66
+        },
+        {
+          "text": "Giảng kinh xuân diễn lý.",
+          "bbox": [
+            405,
+            1070,
+            1271,
+            1137
+          ],
+          "confidence": 85.67
+        },
+        {
+          "text": "11",
+          "bbox": [
+            408,
+            1165,
+            1238,
+            1175
+          ],
+          "confidence": 23.35
+        },
+        {
+          "text": "176",
+          "bbox": [
+            408,
+            1175,
+            1238,
+            1186
+          ],
+          "confidence": 23.35
+        },
+        {
+          "text": "Hoa nhieu ngư sang phí.",
+          "bbox": [
+            408,
+            1183,
+            1261,
+            1232
+          ],
+          "confidence": 82.17
+        },
+        {
+          "text": "Nam hải kỳ hồi đô (nhất tác quá).",
+          "bbox": [
+            409,
+            1258,
+            1586,
+            1329
+          ],
+          "confidence": 84.32
+        },
+        {
+          "text": "Cưu sơn lam lao quy.",
+          "bbox": [
+            409,
+            1374,
+            1139,
+            1421
+          ],
+          "confidence": 77.37
+        },
+        {
+          "text": "Triệu dao man thảo lạc (nhất tác Xúc phong hương",
+          "bbox": [
+            406,
+            1451,
+            2285,
+            1532
+          ],
+          "confidence": 93.73
+        },
+        {
+          "text": "ton an),",
+          "bbox": [
+            1898,
+            1572,
+            2192,
+            1618
+          ],
+          "confidence": 98.42
+        },
+        {
+          "text": "Nguyệt thấp đảo tùng ti (nhất tác Triêm vũ khánh",
+          "bbox": [
+            407,
+            1641,
+            2283,
+            1720
+          ],
+          "confidence": 92.38
+        },
+        {
+          "text": "sinh y).",
+          "bbox": [
+            1899,
+            1759,
+            2180,
+            1805
+          ],
+          "confidence": 98.34
+        },
+        {
+          "text": "Vân thủy ký như bị (nhất tác Vân thủy lộ thiếu đế),",
+          "bbox": [
+            404,
+            1828,
+            2249,
+            1908
+          ],
+          "confidence": 86.83
+        },
+        {
+          "text": "Văng lai tiêu tức hi.",
+          "bbox": [
+            403,
+            1925,
+            1099,
+            1989
+          ],
+          "confidence": 86.92
+        },
+        {
+          "text": "nịch",
+          "bbox": [
+            406,
+            2255,
+            621,
+            2288
+          ],
+          "confidence": 39.19
+        },
+        {
+          "text": "THỐ ĐƯỢA PHẠP SƯ DUY GIẢM VỀ AN NAM (1)",
+          "bbox": [
+            647,
+            2401,
+            1873,
+            2464
+          ],
+          "confidence": 87.52
+        },
+        {
+          "text": "Giảng kinh nơi điện các.",
+          "bbox": [
+            720,
+            2508,
+            1566,
+            2573
+          ],
+          "confidence": 84.89
+        },
+        {
+          "text": "Giường ngư núc mùi hoa.",
+          "bbox": [
+            721,
+            2602,
+            1601,
+            2665
+          ],
+          "confidence": 86.71
+        },
+        {
+          "text": "Biên nam chơ thuyên lai.",
+          "bbox": [
+            723,
+            2692,
+            1598,
+            2757
+          ],
+          "confidence": 75.0
+        },
+        {
+          "text": "Non xưa hen tuơi gia.",
+          "bbox": [
+            724,
+            2803,
+            1472,
+            2850
+          ],
+          "confidence": 73.24
+        },
+        {
+          "text": "Hương phai khi gió táp,",
+          "bbox": [
+            725,
+            2878,
+            1546,
+            2953
+          ],
+          "confidence": 93.45
+        },
+        {
+          "text": "Khánh rì, lúc mưa sa.",
+          "bbox": [
+            724,
+            2970,
+            2475,
+            3037
+          ],
+          "confidence": 92.71
+        },
+        {
+          "text": "Mây nước đường với với,",
+          "bbox": [
+            722,
+            3061,
+            2402,
+            3138
+          ],
+          "confidence": 82.93
+        },
+        {
+          "text": "Thư từ khó lai qua.",
+          "bbox": [
+            721,
+            3150,
+            2306,
+            3219
+          ],
+          "confidence": 80.46
+        },
+        {
+          "text": "498",
+          "bbox": [
+            260,
+            3418,
+            2044,
+            3468
+          ],
+          "confidence": 96.4
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          3509
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 7.887,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              276,
+              95,
+              1911,
+              170
+            ],
+            "generated_text": "Sưu tấm và khảo luận tác phẩm chủ Hán của người Việt Nam trước TK 10",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.551,
+            "confidence": 93.27,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              257,
+              189,
+              2295,
+              222
+            ],
+            "generated_text": "：",
+            "n_lines": 1,
+            "tokens": 2,
+            "seconds": 0.088,
+            "confidence": 52.86,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              538,
+              327,
+              1865,
+              412
+            ],
+            "generated_text": "雲水既如彼(一作雲水路迢遞)，",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.43,
+            "confidence": 96.89,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              538,
+              460,
+              1078,
+              540
+            ],
+            "generated_text": "往来消息稀。",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.147,
+            "confidence": 85.71,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              404,
+              786,
+              780,
+              845
+            ],
+            "generated_text": "PHIEN AM:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.163,
+            "confidence": 96.11,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              762,
+              921,
+              1757,
+              984
+            ],
+            "generated_text": "TONG AN NAM DUY GIAM PHÁP SU",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.324,
+            "confidence": 91.66,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              405,
+              1070,
+              1271,
+              1137
+            ],
+            "generated_text": "Giảng kinh xuân diễn lý.",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.226,
+            "confidence": 85.67,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              408,
+              1165,
+              1238,
+              1186
+            ],
+            "generated_text": "11\n176",
+            "n_lines": 2,
+            "tokens": 7,
+            "seconds": 0.185,
+            "confidence": 23.35,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              408,
+              1183,
+              1261,
+              1232
+            ],
+            "generated_text": "Hoa nhieu ngư sang phí.",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.268,
+            "confidence": 82.17,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              409,
+              1258,
+              1586,
+              1329
+            ],
+            "generated_text": "Nam hải kỳ hồi đô (nhất tác quá).",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.365,
+            "confidence": 84.32,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              409,
+              1374,
+              1139,
+              1421
+            ],
+            "generated_text": "Cưu sơn lam lao quy.",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.244,
+            "confidence": 77.37,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              406,
+              1451,
+              2285,
+              1532
+            ],
+            "generated_text": "Triệu dao man thảo lạc (nhất tác Xúc phong hương",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.423,
+            "confidence": 93.73,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              1898,
+              1572,
+              2192,
+              1618
+            ],
+            "generated_text": "ton an),",
+            "n_lines": 1,
+            "tokens": 4,
+            "seconds": 0.121,
+            "confidence": 98.42,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              407,
+              1641,
+              2283,
+              1720
+            ],
+            "generated_text": "Nguyệt thấp đảo tùng ti (nhất tác Triêm vũ khánh",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.465,
+            "confidence": 92.38,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              1899,
+              1759,
+              2180,
+              1805
+            ],
+            "generated_text": "sinh y).",
+            "n_lines": 1,
+            "tokens": 4,
+            "seconds": 0.126,
+            "confidence": 98.34,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              404,
+              1828,
+              2249,
+              1908
+            ],
+            "generated_text": "Vân thủy ký như bị (nhất tác Vân thủy lộ thiếu đế),",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.526,
+            "confidence": 86.83,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              403,
+              1925,
+              1099,
+              1989
+            ],
+            "generated_text": "Văng lai tiêu tức hi.",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.252,
+            "confidence": 86.92,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              406,
+              2255,
+              621,
+              2288
+            ],
+            "generated_text": "nịch",
+            "n_lines": 1,
+            "tokens": 3,
+            "seconds": 0.101,
+            "confidence": 39.19,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              647,
+              2401,
+              1873,
+              2464
+            ],
+            "generated_text": "THỐ ĐƯỢA PHẠP SƯ DUY GIẢM VỀ AN NAM (1)",
+            "n_lines": 1,
+            "tokens": 37,
+            "seconds": 0.797,
+            "confidence": 87.52,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              720,
+              2508,
+              1566,
+              2573
+            ],
+            "generated_text": "Giảng kinh nơi điện các.",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.226,
+            "confidence": 84.89,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              721,
+              2602,
+              1601,
+              2665
+            ],
+            "generated_text": "Giường ngư núc mùi hoa.",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.269,
+            "confidence": 86.71,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              723,
+              2692,
+              1598,
+              2757
+            ],
+            "generated_text": "Biên nam chơ thuyên lai.",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.243,
+            "confidence": 75.0,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              724,
+              2803,
+              1472,
+              2850
+            ],
+            "generated_text": "Non xưa hen tuơi gia.",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.224,
+            "confidence": 73.24,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              725,
+              2878,
+              1546,
+              2953
+            ],
+            "generated_text": "Hương phai khi gió táp,",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.268,
+            "confidence": 93.45,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              724,
+              2970,
+              2475,
+              3037
+            ],
+            "generated_text": "Khánh rì, lúc mưa sa.",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.288,
+            "confidence": 92.71,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              722,
+              3061,
+              2402,
+              3138
+            ],
+            "generated_text": "Mây nước đường với với,",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.206,
+            "confidence": 82.93,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              721,
+              3150,
+              2306,
+              3219
+            ],
+            "generated_text": "Thư từ khó lai qua.",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.227,
+            "confidence": 80.46,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              260,
+              3418,
+              2044,
+              3468
+            ],
+            "generated_text": "498",
+            "n_lines": 1,
+            "tokens": 4,
+            "seconds": 0.129,
+            "confidence": 96.4,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              575,
+              1136,
+              1268,
+              1147
+            ],
+            "ink": 532
+          },
+          {
+            "box": [
+              832,
+              1231,
+              1150,
+              1244
+            ],
+            "ink": 642
+          },
+          {
+            "box": [
+              767,
+              1327,
+              1584,
+              1338
+            ],
+            "ink": 619
+          },
+          {
+            "box": [
+              414,
+              1357,
+              921,
+              1376
+            ],
+            "ink": 1218
+          },
+          {
+            "box": [
+              406,
+              2292,
+              621,
+              2310
+            ],
+            "ink": 1295
+          },
+          {
+            "box": [
+              938,
+              2662,
+              1114,
+              2671
+            ],
+            "ink": 407
+          },
+          {
+            "box": [
+              724,
+              2788,
+              1436,
+              2807
+            ],
+            "ink": 1173
+          },
+          {
+            "box": [
+              2066,
+              3307,
+              2190,
+              3319
+            ],
+            "ink": 730
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "61cbea5c0055c260ccfc12f884e0febca7b2783b",
+        "git_describe": "61cbea5",
+        "git_dirty": true,
+        "gpu": "NVIDIA L4",
+        "dtype": "bfloat16",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

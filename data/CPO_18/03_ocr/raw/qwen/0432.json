@@ -1,0 +1,288 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_18",
+  "engine": "qwen",
+  "page": 432,
+  "runs": [
+    {
+      "key": "f61a458c569b77157bf62242d22e0e2dd5d0cf1ce1ec7d29aa3a042e9f1ca1f4",
+      "parameters": {
+        "image_sha256": "6e599c0d7c31e24bd42b8324f385b989c09d54c8073ae0ef1ffa4f25ec970c59",
+        "engine": {
+          "name": "qwen",
+          "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "model_revision": "main",
+          "transformers_version": "4.57.6",
+          "torch_version": "2.5.1+cu121",
+          "cuda_version": "12.1",
+          "bitsandbytes_version": "0.50.2",
+          "quantization": {
+            "load_in_4bit": true,
+            "quant_type": "nf4",
+            "double_quant": true,
+            "compute_dtype": "float16"
+          },
+          "mode": "all",
+          "min_pixels": 50176,
+          "max_pixels": 802816,
+          "band_inches": 2.0,
+          "max_new_tokens": 768,
+          "repetition_penalty": 1.05,
+          "adapter_version": 3,
+          "prompt_version": 3,
+          "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74"
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T21:08:37+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_432.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        0,
+        2480,
+        3509
+      ],
+      "lines": [
+        {
+          "text": "Sưu tầm và khảo luận tác phẩm chữ Hán của người Việt Nam trước TK 10",
+          "bbox": [
+            0,
+            11,
+            2480,
+            431
+          ],
+          "confidence": 95.33
+        },
+        {
+          "text": "问曰：佛道至尊，至大，堯舜周曷不修之乎？七经之中不见其辞？子既耽詩書，悦禮樂，奚为復好佛，喜異術？豈能淪經業哉？",
+          "bbox": [
+            214,
+            506,
+            2480,
+            991
+          ],
+          "confidence": 69.01
+        },
+        {
+          "text": "牟子曰：書不必孔丘之言，藥不必扁鵲之方。合者從，愈病者良。君子博取善以輔其貢。夫子何常師之有？堯事尹，舜事彥，丘事老聃，亦俱不見於",
+          "bbox": [
+            216,
+            1076,
+            2220,
+            1581
+          ],
+          "confidence": 69.47
+        },
+        {
+          "text": "七經也。四師雖聖於佛，猶白鹿之與麒麟，燕鳥之與鳳凰也。堯舜周孔且猶與身相變化，神無所不學，能捨而不學乎？五經有事，佛不見而足矣！",
+          "bbox": [
+            218,
+            1619,
+            2474,
+            2113
+          ],
+          "confidence": 69.34
+        },
+        {
+          "text": "PHIÊN ÂM:",
+          "bbox": [
+            229,
+            2261,
+            2222,
+            2383
+          ],
+          "confidence": 86.8
+        },
+        {
+          "text": "Văn viết: Phật đạo chí tôn, chí đại, Nghiêu Thuấn",
+          "bbox": [
+            229,
+            2383,
+            2222,
+            2505
+          ],
+          "confidence": 86.8
+        },
+        {
+          "text": "Chu Khổng hạt bất tu chi hồ? Thất kinh chí trung bất kiến kỳ từ?",
+          "bbox": [
+            229,
+            2505,
+            2222,
+            2626
+          ],
+          "confidence": 86.8
+        },
+        {
+          "text": "Tử ký đam Thi, Thư, duyệt Lễ, Nhạc, hể vi phục hiếu Phật đạo, hỉ dị thuật? Khởi năng dũ kinh",
+          "bbox": [
+            229,
+            2626,
+            2222,
+            2748
+          ],
+          "confidence": 86.8
+        },
+        {
+          "text": "truyện mỹ thánh nghiệp tai? Thiết vi ngô tử bất thủ giã!",
+          "bbox": [
+            233,
+            2750,
+            2475,
+            3124
+          ],
+          "confidence": 88.41
+        },
+        {
+          "text": "Mâu Tử viết: Thư bất tất Khổng Khâu chi ngôn, được bất tất Biển Thước chi phương. Hợp nghĩa giả tòng, dũ bệnh giả lương. Quân tử bác thủ chúng thiện dị",
+          "bbox": [
+            233,
+            3124,
+            2475,
+            3497
+          ],
+          "confidence": 88.41
+        }
+      ],
+      "raw": {
+        "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+        "model_revision": "main",
+        "mode": "all",
+        "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          3509
+        ],
+        "band_target_height": 600,
+        "bbox_granularity": "band_even_split",
+        "max_new_tokens": 768,
+        "max_pixels": 802816,
+        "inference_seconds": 25.88,
+        "bands": [
+          {
+            "band": 1,
+            "y0": 15,
+            "y1": 468,
+            "ink_box": [
+              0,
+              11,
+              2480,
+              431
+            ],
+            "generated_text": "Sưu tầm và khảo luận tác phẩm chữ Hán của người Việt Nam trước TK 10",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.813,
+            "confidence": 95.33,
+            "flags": []
+          },
+          {
+            "band": 2,
+            "y0": 468,
+            "y1": 1033,
+            "ink_box": [
+              214,
+              506,
+              2480,
+              991
+            ],
+            "generated_text": "问曰：佛道至尊，至大，堯舜周曷不修之乎？七经之中不见其辞？子既耽詩書，悦禮樂，奚为復好佛，喜異術？豈能淪經業哉？",
+            "n_lines": 1,
+            "tokens": 57,
+            "seconds": 4.119,
+            "confidence": 69.01,
+            "flags": []
+          },
+          {
+            "band": 3,
+            "y0": 1033,
+            "y1": 1600,
+            "ink_box": [
+              216,
+              1076,
+              2220,
+              1581
+            ],
+            "generated_text": "牟子曰：書不必孔丘之言，藥不必扁鵲之方。合者從，愈病者良。君子博取善以輔其貢。夫子何常師之有？堯事尹，舜事彥，丘事老聃，亦俱不見於",
+            "n_lines": 1,
+            "tokens": 68,
+            "seconds": 4.811,
+            "confidence": 69.47,
+            "flags": []
+          },
+          {
+            "band": 4,
+            "y0": 1600,
+            "y1": 2187,
+            "ink_box": [
+              218,
+              1619,
+              2474,
+              2113
+            ],
+            "generated_text": "七經也。四師雖聖於佛，猶白鹿之與麒麟，燕鳥之與鳳凰也。堯舜周孔且猶與身相變化，神無所不學，能捨而不學乎？五經有事，佛不見而足矣！",
+            "n_lines": 1,
+            "tokens": 63,
+            "seconds": 4.542,
+            "confidence": 69.34,
+            "flags": []
+          },
+          {
+            "band": 5,
+            "y0": 2187,
+            "y1": 2748,
+            "ink_box": [
+              229,
+              2261,
+              2222,
+              2748
+            ],
+            "generated_text": "PHIÊN ÂM:\n\nVăn viết: Phật đạo chí tôn, chí đại, Nghiêu Thuấn\nChu Khổng hạt bất tu chi hồ? Thất kinh chí trung bất kiến kỳ từ?\nTử ký đam Thi, Thư, duyệt Lễ, Nhạc, hể vi phục hiếu Phật đạo, hỉ dị thuật? Khởi năng dũ kinh",
+            "n_lines": 4,
+            "tokens": 86,
+            "seconds": 5.944,
+            "confidence": 86.8,
+            "flags": []
+          },
+          {
+            "band": 6,
+            "y0": 2748,
+            "y1": 3493,
+            "ink_box": [
+              233,
+              2750,
+              2475,
+              3497
+            ],
+            "generated_text": "truyện mỹ thánh nghiệp tai? Thiết vi ngô tử bất thủ giã!\nMâu Tử viết: Thư bất tất Khổng Khâu chi ngôn, được bất tất Biển Thước chi phương. Hợp nghĩa giả tòng, dũ bệnh giả lương. Quân tử bác thủ chúng thiện dị",
+            "n_lines": 2,
+            "tokens": 65,
+            "seconds": 4.613,
+            "confidence": 88.41,
+            "flags": []
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "61cbea5c0055c260ccfc12f884e0febca7b2783b",
+        "git_describe": "61cbea5",
+        "git_dirty": true,
+        "gpu": "NVIDIA L4",
+        "dtype": "float16",
+        "adapter_version": 3
+      }
+    }
+  ]
+}

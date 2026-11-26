@@ -1,0 +1,298 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_18",
+  "engine": "qwen",
+  "page": 506,
+  "runs": [
+    {
+      "key": "7764e0b4b1754f6ec47dd4a198e0a43413951542dfbbad074cf1c16764f57b52",
+      "parameters": {
+        "image_sha256": "9cb8aaf99c05069c8ef36967045c16df577769b12922aa1f04de032f5804557e",
+        "engine": {
+          "name": "qwen",
+          "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "model_revision": "main",
+          "transformers_version": "4.57.6",
+          "torch_version": "2.5.1+cu121",
+          "cuda_version": "12.1",
+          "bitsandbytes_version": "0.50.2",
+          "quantization": {
+            "load_in_4bit": true,
+            "quant_type": "nf4",
+            "double_quant": true,
+            "compute_dtype": "float16"
+          },
+          "mode": "all",
+          "min_pixels": 50176,
+          "max_pixels": 802816,
+          "band_inches": 2.0,
+          "max_new_tokens": 768,
+          "repetition_penalty": 1.05,
+          "adapter_version": 3,
+          "prompt_version": 3,
+          "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74"
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T21:51:00+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_506.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        0,
+        2480,
+        3509
+      ],
+      "lines": [
+        {
+          "text": "Sưu tầm và khảo luận tác phẩm chữ Hán của người Việt Nam trước TK 10",
+          "bbox": [
+            278,
+            99,
+            2418,
+            287
+          ],
+          "confidence": 95.51
+        },
+        {
+          "text": "kẻ ngu ngốc ở đời mạt thế (168) lại muốn phục thuốc, tịch cốc, cầu mong sống mãi, thì thật buồn thay!",
+          "bbox": [
+            278,
+            287,
+            2418,
+            475
+          ],
+          "confidence": 95.51
+        },
+        {
+          "text": "CHÚ THÍCH :",
+          "bbox": [
+            278,
+            475,
+            2418,
+            663
+          ],
+          "confidence": 95.51
+        },
+        {
+          "text": "(166) Đạo đức kinh, Chương 48.",
+          "bbox": [
+            295,
+            708,
+            2265,
+            870
+          ],
+          "confidence": 96.41
+        },
+        {
+          "text": "(167) Tuổi \"tri mệnh\": tức tuổi 50. Không Tử nói: \"Ngũ thập nhi tri thiên mệnh = 50 mà biết được mệnh trời\" (Luận ngữ)",
+          "bbox": [
+            295,
+            870,
+            2265,
+            1032
+          ],
+          "confidence": 96.41
+        },
+        {
+          "text": "(168) Mạt thế: đời suy loạn.",
+          "bbox": [
+            295,
+            1032,
+            2265,
+            1194
+          ],
+          "confidence": 96.41
+        },
+        {
+          "text": "問曰：為道之人云能卻疾不病，弗御針藥而愈，信有之乎？何以佛家有病而進針耶？",
+          "bbox": [
+            305,
+            1344,
+            2262,
+            1723
+          ],
+          "confidence": 92.29
+        },
+        {
+          "text": "牟子曰:\"物壮则老，谓之不道，早已。唯有得道者不生，亦不壮；不老，亦不病；不病，亦不朽。是以老子以身爲大患。",
+          "bbox": [
+            306,
+            1768,
+            2276,
+            2270
+          ],
+          "confidence": 78.15
+        },
+        {
+          "text": "吾见圣人皆有疾矣，未覩其无病也。神农尝死者数十；黄帝稽首受针于岐伯。此之三圣岂不当如是之道士乎？察省斯言，亦足以废矣！",
+          "bbox": [
+            307,
+            2287,
+            2283,
+            2774
+          ],
+          "confidence": 83.4
+        },
+        {
+          "text": "PHIÊN ÂM:",
+          "bbox": [
+            308,
+            2945,
+            2475,
+            3221
+          ],
+          "confidence": 86.25
+        },
+        {
+          "text": "Vấn viết: Vi đạo chi nhân văn năng khước tật bất bệnh, phất ngự châm dược nhi dũ, tín hữu chi hồ? Ba dĩ Phật gia hữu bệnh nhi tiến châm dược da?",
+          "bbox": [
+            308,
+            3221,
+            2475,
+            3497
+          ],
+          "confidence": 86.25
+        }
+      ],
+      "raw": {
+        "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+        "model_revision": "main",
+        "mode": "all",
+        "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          3509
+        ],
+        "band_target_height": 600,
+        "bbox_granularity": "band_even_split",
+        "max_new_tokens": 768,
+        "max_pixels": 802816,
+        "inference_seconds": 24.352,
+        "bands": [
+          {
+            "band": 1,
+            "y0": 103,
+            "y1": 685,
+            "ink_box": [
+              278,
+              99,
+              2418,
+              663
+            ],
+            "generated_text": "Sưu tầm và khảo luận tác phẩm chữ Hán của người Việt Nam trước TK 10\n\nkẻ ngu ngốc ở đời mạt thế (168) lại muốn phục thuốc, tịch cốc, cầu mong sống mãi, thì thật buồn thay!\n\nCHÚ THÍCH :",
+            "n_lines": 3,
+            "tokens": 63,
+            "seconds": 4.432,
+            "confidence": 95.51,
+            "flags": []
+          },
+          {
+            "band": 2,
+            "y0": 685,
+            "y1": 1260,
+            "ink_box": [
+              295,
+              708,
+              2265,
+              1194
+            ],
+            "generated_text": "(166) Đạo đức kinh, Chương 48.\n(167) Tuổi \"tri mệnh\": tức tuổi 50. Không Tử nói: \"Ngũ thập nhi tri thiên mệnh = 50 mà biết được mệnh trời\" (Luận ngữ)\n(168) Mạt thế: đời suy loạn.",
+            "n_lines": 3,
+            "tokens": 75,
+            "seconds": 5.187,
+            "confidence": 96.41,
+            "flags": []
+          },
+          {
+            "band": 3,
+            "y0": 1260,
+            "y1": 1745,
+            "ink_box": [
+              305,
+              1344,
+              2262,
+              1723
+            ],
+            "generated_text": "問曰：為道之人云能卻疾不病，弗御針藥而愈，信有之乎？何以佛家有病而進針耶？",
+            "n_lines": 1,
+            "tokens": 37,
+            "seconds": 2.841,
+            "confidence": 92.29,
+            "flags": []
+          },
+          {
+            "band": 4,
+            "y0": 1745,
+            "y1": 2278,
+            "ink_box": [
+              306,
+              1768,
+              2276,
+              2270
+            ],
+            "generated_text": "牟子曰:\"物壮则老，谓之不道，早已。唯有得道者不生，亦不壮；不老，亦不病；不病，亦不朽。是以老子以身爲大患。",
+            "n_lines": 1,
+            "tokens": 51,
+            "seconds": 3.74,
+            "confidence": 78.15,
+            "flags": []
+          },
+          {
+            "band": 5,
+            "y0": 2278,
+            "y1": 2859,
+            "ink_box": [
+              307,
+              2287,
+              2283,
+              2774
+            ],
+            "generated_text": "吾见圣人皆有疾矣，未覩其无病也。神农尝死者数十；黄帝稽首受针于岐伯。此之三圣岂不当如是之道士乎？察省斯言，亦足以废矣！",
+            "n_lines": 1,
+            "tokens": 56,
+            "seconds": 4.016,
+            "confidence": 83.4,
+            "flags": []
+          },
+          {
+            "band": 6,
+            "y0": 2859,
+            "y1": 3493,
+            "ink_box": [
+              308,
+              2945,
+              2475,
+              3497
+            ],
+            "generated_text": "PHIÊN ÂM:\n\nVấn viết: Vi đạo chi nhân văn năng khước tật bất bệnh, phất ngự châm dược nhi dũ, tín hữu chi hồ? Ba dĩ Phật gia hữu bệnh nhi tiến châm dược da?",
+            "n_lines": 2,
+            "tokens": 57,
+            "seconds": 4.1,
+            "confidence": 86.25,
+            "flags": []
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "61cbea5c0055c260ccfc12f884e0febca7b2783b",
+        "git_describe": "61cbea5",
+        "git_dirty": true,
+        "gpu": "NVIDIA L4",
+        "dtype": "float16",
+        "adapter_version": 3
+      }
+    }
+  ]
+}

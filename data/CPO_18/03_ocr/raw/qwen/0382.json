@@ -1,0 +1,288 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_18",
+  "engine": "qwen",
+  "page": 382,
+  "runs": [
+    {
+      "key": "8783a06614ad046c4a0d2e707535f549ca56e3138860c2c1eea06f1097039321",
+      "parameters": {
+        "image_sha256": "ba48165ff021a480270adf0393f502642b80c6509958e7f5e97b9d98b15d4835",
+        "engine": {
+          "name": "qwen",
+          "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "model_revision": "main",
+          "transformers_version": "4.57.6",
+          "torch_version": "2.5.1+cu121",
+          "cuda_version": "12.1",
+          "bitsandbytes_version": "0.50.2",
+          "quantization": {
+            "load_in_4bit": true,
+            "quant_type": "nf4",
+            "double_quant": true,
+            "compute_dtype": "float16"
+          },
+          "mode": "all",
+          "min_pixels": 50176,
+          "max_pixels": 802816,
+          "band_inches": 2.0,
+          "max_new_tokens": 768,
+          "repetition_penalty": 1.05,
+          "adapter_version": 3,
+          "prompt_version": 3,
+          "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74"
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T20:41:38+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_382.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        0,
+        2480,
+        3509
+      ],
+      "lines": [
+        {
+          "text": "Sưu tầm và khảo luận tác phẩm chữ Hán của người Việt Nam trước TK 10",
+          "bbox": [
+            360,
+            106,
+            2281,
+            367
+          ],
+          "confidence": 95.22
+        },
+        {
+          "text": "(4) A nậu đa la tam miếu tam bồ đề: tiếng nhà Phật, có nghĩa là \"vô thượng chính đẳng chính giác\", coi đạo Phật như một học thuyết bao trùm nhất, đúng đắn nhất, đầy đủ nhất...",
+          "bbox": [
+            360,
+            367,
+            2281,
+            628
+          ],
+          "confidence": 95.22
+        },
+        {
+          "text": "古法師,古法師,世間右",
+          "bbox": [
+            493,
+            767,
+            2265,
+            1174
+          ],
+          "confidence": 32.99
+        },
+        {
+          "text": "其人深明世數，動有軌則，鄉人尊事，咸以長老名焉。唐貞元中嘗於本鄉劒璉林寺。基構之始，掘地得香一枚，磬子十口，使人臨水洗。一□下去，至土乃止。師解曰：",
+          "bbox": [
+            376,
+            1195,
+            2267,
+            1666
+          ],
+          "confidence": 76.95
+        },
+        {
+          "text": "十口成古字；水去成法字；土者，我所居，出本地也。",
+          "bbox": [
+            374,
+            1688,
+            2260,
+            2181
+          ],
+          "confidence": 86.86
+        },
+        {
+          "text": "``",
+          "bbox": [
+            514,
+            2211,
+            1628,
+            2692
+          ],
+          "confidence": 43.1
+        },
+        {
+          "text": "法器出现，",
+          "bbox": [
+            78,
+            2791,
+            2475,
+            2971
+          ],
+          "confidence": 91.61
+        },
+        {
+          "text": "十口铜钟。",
+          "bbox": [
+            78,
+            2971,
+            2475,
+            3150
+          ],
+          "confidence": 91.61
+        },
+        {
+          "text": "李兴，",
+          "bbox": [
+            78,
+            3150,
+            2475,
+            3329
+          ],
+          "confidence": 91.61
+        },
+        {
+          "text": "三品成功。",
+          "bbox": [
+            78,
+            3329,
+            2475,
+            3509
+          ],
+          "confidence": 91.61
+        }
+      ],
+      "raw": {
+        "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+        "model_revision": "main",
+        "mode": "all",
+        "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          3509
+        ],
+        "band_target_height": 600,
+        "bbox_granularity": "band_even_split",
+        "max_new_tokens": 768,
+        "max_pixels": 802816,
+        "inference_seconds": 16.066,
+        "bands": [
+          {
+            "band": 1,
+            "y0": 110,
+            "y1": 697,
+            "ink_box": [
+              360,
+              106,
+              2281,
+              628
+            ],
+            "generated_text": "Sưu tầm và khảo luận tác phẩm chữ Hán của người Việt Nam trước TK 10\n\n(4) A nậu đa la tam miếu tam bồ đề: tiếng nhà Phật, có nghĩa là \"vô thượng chính đẳng chính giác\", coi đạo Phật như một học thuyết bao trùm nhất, đúng đắn nhất, đầy đủ nhất...",
+            "n_lines": 2,
+            "tokens": 78,
+            "seconds": 5.382,
+            "confidence": 95.22,
+            "flags": []
+          },
+          {
+            "band": 2,
+            "y0": 697,
+            "y1": 1183,
+            "ink_box": [
+              493,
+              767,
+              2265,
+              1174
+            ],
+            "generated_text": "古法師,古法師,世間右",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.175,
+            "confidence": 32.99,
+            "flags": []
+          },
+          {
+            "band": 3,
+            "y0": 1183,
+            "y1": 1676,
+            "ink_box": [
+              376,
+              1195,
+              2267,
+              1666
+            ],
+            "generated_text": "其人深明世數，動有軌則，鄉人尊事，咸以長老名焉。唐貞元中嘗於本鄉劒璉林寺。基構之始，掘地得香一枚，磬子十口，使人臨水洗。一□下去，至土乃止。師解曰：",
+            "n_lines": 1,
+            "tokens": 78,
+            "seconds": 5.388,
+            "confidence": 76.95,
+            "flags": []
+          },
+          {
+            "band": 4,
+            "y0": 1676,
+            "y1": 2195,
+            "ink_box": [
+              374,
+              1688,
+              2260,
+              2181
+            ],
+            "generated_text": "十口成古字；水去成法字；土者，我所居，出本地也。",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 2.059,
+            "confidence": 86.86,
+            "flags": []
+          },
+          {
+            "band": 5,
+            "y0": 2195,
+            "y1": 2741,
+            "ink_box": [
+              514,
+              2211,
+              1628,
+              2692
+            ],
+            "generated_text": "``",
+            "n_lines": 1,
+            "tokens": 2,
+            "seconds": 0.444,
+            "confidence": 43.1,
+            "flags": []
+          },
+          {
+            "band": 6,
+            "y0": 2741,
+            "y1": 3509,
+            "ink_box": [
+              78,
+              2791,
+              2475,
+              3509
+            ],
+            "generated_text": "法器出现，\n十口铜钟。\n李兴，\n三品成功。",
+            "n_lines": 4,
+            "tokens": 17,
+            "seconds": 1.582,
+            "confidence": 91.61,
+            "flags": []
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "61cbea5c0055c260ccfc12f884e0febca7b2783b",
+        "git_describe": "61cbea5",
+        "git_dirty": true,
+        "gpu": "NVIDIA L4",
+        "dtype": "float16",
+        "adapter_version": 3
+      }
+    }
+  ]
+}

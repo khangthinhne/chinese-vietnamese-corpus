@@ -1,0 +1,278 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_18",
+  "engine": "qwen",
+  "page": 224,
+  "runs": [
+    {
+      "key": "4efd364f177a8f5b53ffd217825bc4b3fc51e4724b73122243ffd89a058d9dd3",
+      "parameters": {
+        "image_sha256": "ffc0f3cb734ada8a512a5b2cdf86396760e1c44bb786c940bef305bff0da3901",
+        "engine": {
+          "name": "qwen",
+          "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "model_revision": "main",
+          "transformers_version": "4.57.6",
+          "torch_version": "2.5.1+cu121",
+          "cuda_version": "12.1",
+          "bitsandbytes_version": "0.50.2",
+          "quantization": {
+            "load_in_4bit": true,
+            "quant_type": "nf4",
+            "double_quant": true,
+            "compute_dtype": "float16"
+          },
+          "mode": "all",
+          "min_pixels": 50176,
+          "max_pixels": 802816,
+          "band_inches": 2.0,
+          "max_new_tokens": 768,
+          "repetition_penalty": 1.05,
+          "adapter_version": 3,
+          "prompt_version": 3,
+          "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74"
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T19:12:03+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_224.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        0,
+        2480,
+        3509
+      ],
+      "lines": [
+        {
+          "text": "Sưu tầm và khảo luận tác phẩm chữ Hán của người Việt Nam trước TK 10",
+          "bbox": [
+            304,
+            101,
+            2218,
+            372
+          ],
+          "confidence": 92.99
+        },
+        {
+          "text": "(17) Nhắc lại câu nói của Đạo Cao trong bức thư trả lời Lý Miễu: \"Chuyện họ Thích gióng trống pháp ở Lộc Viên, Phu Tử nêu đức âm ở Tươ Lỗ, tai ta không trực tiếp được nghe, mắt ta không trực tiếp được thấy, đều là tin theo",
+          "bbox": [
+            304,
+            372,
+            2218,
+            643
+          ],
+          "confidence": 92.99
+        },
+        {
+          "text": "sách vở cả. Nếu không tin bên kia, thì ngờ vực bên này cũng phải. Nhưng nếu đã có thể thông suốt bên kia, thì tại sao lại vướng mắc đối với bên này?",
+          "bbox": [
+            311,
+            644,
+            2389,
+            877
+          ],
+          "confidence": 95.88
+        },
+        {
+          "text": "(18) Khổng và Thích: tức Khổng Tử và Thích Ca, đây chỉ đạo Nho và đạo Phật.",
+          "bbox": [
+            311,
+            877,
+            2389,
+            1110
+          ],
+          "confidence": 95.88
+        },
+        {
+          "text": "4. 重交州",
+          "bbox": [
+            421,
+            1284,
+            1745,
+            1698
+          ],
+          "confidence": 38.01
+        },
+        {
+          "text": "重奉深誦，義華旨遠，三讀九思，方服淵致。故致理，非庸辭，非鄙訥，今万陳，修",
+          "bbox": [
+            301,
+            1752,
+            2390,
+            2248
+          ],
+          "confidence": 49.03
+        },
+        {
+          "text": "城傍，或曲躬弹指，或歌讚颂詠，皆耳目之所，为者无量，斯则受悟之津。",
+          "bbox": [
+            299,
+            2240,
+            2389,
+            2544
+          ],
+          "confidence": 63.82
+        },
+        {
+          "text": "由閭寄称，何必受悟！於因鉴观，何必閭疑。其则受悟，解则受悟，悟则受悟，非悟？",
+          "bbox": [
+            299,
+            2544,
+            2389,
+            2848
+          ],
+          "confidence": 63.82
+        },
+        {
+          "text": "儒墨之競興，九流之是非，乃爝火之不息，非日月之不暉；何急急於示見，而促促於同歸哉！今不同，季俗無證，驗呉微誠，亦不諳。大",
+          "bbox": [
+            295,
+            2840,
+            2475,
+            3509
+          ],
+          "confidence": 81.4
+        }
+      ],
+      "raw": {
+        "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+        "model_revision": "main",
+        "mode": "all",
+        "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          3509
+        ],
+        "band_target_height": 600,
+        "bbox_granularity": "band_even_split",
+        "max_new_tokens": 768,
+        "max_pixels": 802816,
+        "inference_seconds": 25.703,
+        "bands": [
+          {
+            "band": 1,
+            "y0": 105,
+            "y1": 646,
+            "ink_box": [
+              304,
+              101,
+              2218,
+              643
+            ],
+            "generated_text": "Sưu tầm và khảo luận tác phẩm chữ Hán của người Việt Nam trước TK 10\n\n(17) Nhắc lại câu nói của Đạo Cao trong bức thư trả lời Lý Miễu: \"Chuyện họ Thích gióng trống pháp ở Lộc Viên, Phu Tử nêu đức âm ở Tươ Lỗ, tai ta không trực tiếp được nghe, mắt ta không trực tiếp được thấy, đều là tin theo",
+            "n_lines": 2,
+            "tokens": 98,
+            "seconds": 6.86,
+            "confidence": 92.99,
+            "flags": []
+          },
+          {
+            "band": 2,
+            "y0": 646,
+            "y1": 1197,
+            "ink_box": [
+              311,
+              644,
+              2389,
+              1110
+            ],
+            "generated_text": "sách vở cả. Nếu không tin bên kia, thì ngờ vực bên này cũng phải. Nhưng nếu đã có thể thông suốt bên kia, thì tại sao lại vướng mắc đối với bên này?\n(18) Khổng và Thích: tức Khổng Tử và Thích Ca, đây chỉ đạo Nho và đạo Phật.",
+            "n_lines": 2,
+            "tokens": 77,
+            "seconds": 5.406,
+            "confidence": 95.88,
+            "flags": []
+          },
+          {
+            "band": 3,
+            "y0": 1197,
+            "y1": 1724,
+            "ink_box": [
+              421,
+              1284,
+              1745,
+              1698
+            ],
+            "generated_text": "4. 重交州",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.761,
+            "confidence": 38.01,
+            "flags": []
+          },
+          {
+            "band": 4,
+            "y0": 1724,
+            "y1": 2244,
+            "ink_box": [
+              301,
+              1752,
+              2390,
+              2248
+            ],
+            "generated_text": "重奉深誦，義華旨遠，三讀九思，方服淵致。故致理，非庸辭，非鄙訥，今万陳，修",
+            "n_lines": 1,
+            "tokens": 41,
+            "seconds": 3.079,
+            "confidence": 49.03,
+            "flags": []
+          },
+          {
+            "band": 5,
+            "y0": 2244,
+            "y1": 2844,
+            "ink_box": [
+              299,
+              2240,
+              2389,
+              2848
+            ],
+            "generated_text": "城傍，或曲躬弹指，或歌讚颂詠，皆耳目之所，为者无量，斯则受悟之津。\n由閭寄称，何必受悟！於因鉴观，何必閭疑。其则受悟，解则受悟，悟则受悟，非悟？",
+            "n_lines": 2,
+            "tokens": 72,
+            "seconds": 5.134,
+            "confidence": 63.82,
+            "flags": []
+          },
+          {
+            "band": 6,
+            "y0": 2844,
+            "y1": 3509,
+            "ink_box": [
+              295,
+              2840,
+              2475,
+              3509
+            ],
+            "generated_text": "儒墨之競興，九流之是非，乃爝火之不息，非日月之不暉；何急急於示見，而促促於同歸哉！今不同，季俗無證，驗呉微誠，亦不諳。大",
+            "n_lines": 1,
+            "tokens": 62,
+            "seconds": 4.428,
+            "confidence": 81.4,
+            "flags": []
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "61cbea5c0055c260ccfc12f884e0febca7b2783b",
+        "git_describe": "61cbea5",
+        "git_dirty": true,
+        "gpu": "NVIDIA L4",
+        "dtype": "float16",
+        "adapter_version": 3
+      }
+    }
+  ]
+}

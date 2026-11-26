@@ -1,0 +1,307 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_18",
+  "engine": "qwen",
+  "page": 293,
+  "runs": [
+    {
+      "key": "b316f08615711fe7240d92eee6fd05c30e58a0216b4945ddf0cae599f0276f4b",
+      "parameters": {
+        "image_sha256": "2d95db74990a3433a5fa47f691794f4df18b2e3c99d26dfa9a94db84aa9e4c42",
+        "engine": {
+          "name": "qwen",
+          "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "model_revision": "main",
+          "transformers_version": "4.57.6",
+          "torch_version": "2.5.1+cu121",
+          "cuda_version": "12.1",
+          "bitsandbytes_version": "0.50.2",
+          "quantization": {
+            "load_in_4bit": true,
+            "quant_type": "nf4",
+            "double_quant": true,
+            "compute_dtype": "float16"
+          },
+          "mode": "all",
+          "min_pixels": 50176,
+          "max_pixels": 802816,
+          "band_inches": 2.0,
+          "max_new_tokens": 768,
+          "repetition_penalty": 1.05,
+          "adapter_version": 3,
+          "prompt_version": 3,
+          "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74"
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T19:53:25+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_293.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        0,
+        2480,
+        3509
+      ],
+      "lines": [
+        {
+          "text": "Phần II: Nguyên văn tác phẩm dịch và chú thích",
+          "bbox": [
+            24,
+            0,
+            2465,
+            269
+          ],
+          "confidence": 89.0
+        },
+        {
+          "text": "吊道希法师并小引",
+          "bbox": [
+            24,
+            269,
+            2465,
+            538
+          ],
+          "confidence": 89.0
+        },
+        {
+          "text": "大乘燈者，愛之也，梵名夜那鉢地。幼隨父母汛舶向後使刻緒相",
+          "bbox": [
+            272,
+            545,
+            2174,
+            1033
+          ],
+          "confidence": 43.23
+        },
+        {
+          "text": "入京,於慈恩寺三藏法師玄裝處進受具戒。居京載,頗覽經書,而思禮踐,情契西極,遂越師子國觀佛,備盡靈,過南印,既遭摩,唯",
+          "bbox": [
+            275,
+            1067,
+            2177,
+            1532
+          ],
+          "confidence": 59.98
+        },
+        {
+          "text": "身得存。後在具尸城般涅槃寺而歸寂滅。於時年餘耳順。",
+          "bbox": [
+            275,
+            1559,
+            2175,
+            1741
+          ],
+          "confidence": 91.17
+        },
+        {
+          "text": "(中國南洋交通史)",
+          "bbox": [
+            275,
+            1741,
+            2175,
+            1924
+          ],
+          "confidence": 91.17
+        },
+        {
+          "text": "...灯公因道行之次，过道师所住旧房。时，其已亡，汉尚留，梵夹流涕：昔在长安同游法，今遇",
+          "bbox": [
+            277,
+            1985,
+            2462,
+            2509
+          ],
+          "confidence": 44.44
+        },
+        {
+          "text": "嗟矣死矣，其力彌强。",
+          "bbox": [
+            377,
+            2501,
+            2465,
+            2778
+          ],
+          "confidence": 48.14
+        },
+        {
+          "text": "神州望断，圣境魂扬。",
+          "bbox": [
+            14,
+            2816,
+            2475,
+            3162
+          ],
+          "confidence": 81.93
+        },
+        {
+          "text": "眷馀恨而流涕，慨布素而情伤。",
+          "bbox": [
+            14,
+            3162,
+            2475,
+            3509
+          ],
+          "confidence": 81.93
+        }
+      ],
+      "raw": {
+        "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+        "model_revision": "main",
+        "mode": "all",
+        "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          3509
+        ],
+        "band_target_height": 600,
+        "bbox_granularity": "band_even_split",
+        "max_new_tokens": 768,
+        "max_pixels": 802816,
+        "inference_seconds": 17.709,
+        "bands": [
+          {
+            "band": 1,
+            "y0": 0,
+            "y1": 541,
+            "ink_box": [
+              24,
+              0,
+              2465,
+              538
+            ],
+            "generated_text": "Phần II: Nguyên văn tác phẩm dịch và chú thích\n\n吊道希法师 并小引",
+            "n_lines": 2,
+            "tokens": 22,
+            "seconds": 1.842,
+            "confidence": 89.0,
+            "flags": [
+              "han_gap_removed"
+            ]
+          },
+          {
+            "band": 2,
+            "y0": 541,
+            "y1": 1050,
+            "ink_box": [
+              272,
+              545,
+              2174,
+              1033
+            ],
+            "generated_text": "大乘燈者，愛之也，梵名夜那鉢地。幼隨父母汛舶向後使刻緒相",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 2.393,
+            "confidence": 43.23,
+            "flags": []
+          },
+          {
+            "band": 3,
+            "y0": 1050,
+            "y1": 1545,
+            "ink_box": [
+              275,
+              1067,
+              2177,
+              1532
+            ],
+            "generated_text": "入京,於慈恩寺三藏法師玄裝處進受具戒。居京載,頗覽經書,而思禮踐,情契西極,遂越師子國觀佛,備盡靈,過南印,既遭摩,唯",
+            "n_lines": 1,
+            "tokens": 62,
+            "seconds": 4.449,
+            "confidence": 59.98,
+            "flags": []
+          },
+          {
+            "band": 4,
+            "y0": 1545,
+            "y1": 1982,
+            "ink_box": [
+              275,
+              1559,
+              2175,
+              1924
+            ],
+            "generated_text": "身得存。後在具尸城般涅槃寺而歸寂滅。於時年餘耳順。\n(中國南洋交通史)",
+            "n_lines": 2,
+            "tokens": 33,
+            "seconds": 2.537,
+            "confidence": 91.17,
+            "flags": []
+          },
+          {
+            "band": 5,
+            "y0": 1982,
+            "y1": 2505,
+            "ink_box": [
+              277,
+              1985,
+              2462,
+              2509
+            ],
+            "generated_text": "...灯公因道行之次，过道师所住旧房。时，其已亡，汉尚留，梵夹流涕：昔在长安同游法，今遇",
+            "n_lines": 1,
+            "tokens": 43,
+            "seconds": 3.198,
+            "confidence": 44.44,
+            "flags": []
+          },
+          {
+            "band": 6,
+            "y0": 2505,
+            "y1": 2796,
+            "ink_box": [
+              377,
+              2501,
+              2465,
+              2778
+            ],
+            "generated_text": "嗟矣死矣，其力彌强。",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.121,
+            "confidence": 48.14,
+            "flags": []
+          },
+          {
+            "band": 7,
+            "y0": 2796,
+            "y1": 3509,
+            "ink_box": [
+              14,
+              2816,
+              2475,
+              3509
+            ],
+            "generated_text": "神州望断，圣境魂扬。\n眷馀恨而流涕，慨布素而情伤。",
+            "n_lines": 2,
+            "tokens": 25,
+            "seconds": 2.131,
+            "confidence": 81.93,
+            "flags": []
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "61cbea5c0055c260ccfc12f884e0febca7b2783b",
+        "git_describe": "61cbea5",
+        "git_dirty": true,
+        "gpu": "NVIDIA L4",
+        "dtype": "float16",
+        "adapter_version": 3
+      }
+    }
+  ]
+}

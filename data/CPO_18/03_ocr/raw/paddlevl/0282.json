@@ -1,0 +1,754 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_18",
+  "engine": "paddlevl",
+  "page": 282,
+  "runs": [
+    {
+      "key": "0cd1905251a97cf0ce6ea24cda225905ee8da064dfb77e254583822ad6c1d3dd",
+      "parameters": {
+        "image_sha256": "0eb0772e1427d100b71281f5d674e4515ed4192b8a7fc5a1c89d6d501251d333",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T13:47:19+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_282.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        0,
+        2480,
+        3509
+      ],
+      "lines": [
+        {
+          "text": "II. BAI VAN BIA O DAO TRANG BAO AN",
+          "bbox": [
+            454,
+            576,
+            2380,
+            652
+          ],
+          "confidence": 92.95
+        },
+        {
+          "text": "Có tất cả 6 di bản về bài văn bia này :",
+          "bbox": [
+            366,
+            839,
+            1725,
+            908
+          ],
+          "confidence": 96.48
+        },
+        {
+          "text": "1. Bản gốc khác trên tâm bia đá Đại Tùy Cửu Chân",
+          "bbox": [
+            370,
+            975,
+            2254,
+            1049
+          ],
+          "confidence": 84.54
+        },
+        {
+          "text": "quận Bảo An đạo tràng chi bi văn, do Nguyên Nhân Khí",
+          "bbox": [
+            229,
+            1078,
+            2263,
+            1149
+          ],
+          "confidence": 95.43
+        },
+        {
+          "text": "soạn vào năm Tùy Đại Nghiệp 14 (618), bia hiện được",
+          "bbox": [
+            230,
+            1173,
+            2262,
+            1253
+          ],
+          "confidence": 98.68
+        },
+        {
+          "text": "đưa về lưu giữ tại Viên Bảo tàng lịch sử, Hà Nội.",
+          "bbox": [
+            227,
+            1264,
+            1989,
+            1334
+          ],
+          "confidence": 94.28
+        },
+        {
+          "text": "2. Bản cứu lúc bài văn bia, do viên mục tổng Thach",
+          "bbox": [
+            354,
+            1397,
+            2262,
+            1472
+          ],
+          "confidence": 96.3
+        },
+        {
+          "text": "Khê, huyện Đông Sơn, phủ Thiêu Hóa, tỉnh Thanh Hóa",
+          "bbox": [
+            221,
+            1493,
+            2261,
+            1568
+          ],
+          "confidence": 96.25
+        },
+        {
+          "text": "thực hiện vào năm Vĩnh Khánh 3 (1731).",
+          "bbox": [
+            218,
+            1591,
+            1689,
+            1661
+          ],
+          "confidence": 99.34
+        },
+        {
+          "text": "3. Bản sao bài văn bia, do đại diện của 4 xã Phủ",
+          "bbox": [
+            353,
+            1707,
+            2261,
+            1778
+          ],
+          "confidence": 92.54
+        },
+        {
+          "text": "Liên, Đông Phố, Van Lộc và Hữu Bộc tổng Thach Khê,",
+          "bbox": [
+            217,
+            1798,
+            2257,
+            1872
+          ],
+          "confidence": 89.97
+        },
+        {
+          "text": "huyên Đông Sơn, phủ Thiêu Hóa, tỉnh Thanh Hóa thực",
+          "bbox": [
+            215,
+            1895,
+            2259,
+            1967
+          ],
+          "confidence": 92.92
+        },
+        {
+          "text": "hiện vào năm Thiệu Tri 2 (1842), đưa theo bài văn khác",
+          "bbox": [
+            214,
+            1990,
+            2258,
+            2061
+          ],
+          "confidence": 94.08
+        },
+        {
+          "text": "trên bia và bán cứu lúc năm Vĩnh Khánh 3.",
+          "bbox": [
+            212,
+            2089,
+            1784,
+            2155
+          ],
+          "confidence": 92.3
+        },
+        {
+          "text": "4. Bản sao do Chu Văn Liên thực hiện vào năm Việt",
+          "bbox": [
+            348,
+            2204,
+            2257,
+            2273
+          ],
+          "confidence": 97.15
+        },
+        {
+          "text": "Nam dân chủ công hòa Nhâm Dần (1962), mang tiêu đề",
+          "bbox": [
+            199,
+            2295,
+            2260,
+            2369
+          ],
+          "confidence": 93.43
+        },
+        {
+          "text": "Tùy thời Đại Nghiệp bi văn, hiện để tại Viện Nghiên",
+          "bbox": [
+            211,
+            2391,
+            2254,
+            2476
+          ],
+          "confidence": 92.72
+        },
+        {
+          "text": "cứu Hán Nôm, ký hiệu VHv. 2369.",
+          "bbox": [
+            207,
+            2483,
+            1442,
+            2555
+          ],
+          "confidence": 99.14
+        },
+        {
+          "text": "5. Một bản ráp bài văn bia, ký hiệu 20945, hiện đế",
+          "bbox": [
+            347,
+            2604,
+            2254,
+            2677
+          ],
+          "confidence": 94.31
+        },
+        {
+          "text": "tai Viên Nghiên cứu Hán Nôm.",
+          "bbox": [
+            204,
+            2696,
+            1322,
+            2767
+          ],
+          "confidence": 98.8
+        },
+        {
+          "text": "6. Bản in trong Văn khác Hán Nôm Việt Nam, Tập",
+          "bbox": [
+            343,
+            2817,
+            2255,
+            2887
+          ],
+          "confidence": 95.94
+        },
+        {
+          "text": "1. Từ Bắc thuộc đến thời Lý, Học viên Viên động Pháp",
+          "bbox": [
+            204,
+            2910,
+            2447,
+            2994
+          ],
+          "confidence": 93.99
+        },
+        {
+          "text": "và Viên Nghiên cứu Hán Nôm xuất bản, Paris - Hà Nội,",
+          "bbox": [
+            189,
+            3007,
+            2465,
+            3078
+          ],
+          "confidence": 99.38
+        },
+        {
+          "text": "1998, tr. 7 - 9.",
+          "bbox": [
+            193,
+            3106,
+            2355,
+            3171
+          ],
+          "confidence": 98.55
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          3509
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 38.808,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              454,
+              576,
+              2380,
+              652
+            ],
+            "generated_text": "II. BAI VAN BIA O DAO TRANG BAO AN",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.313,
+            "confidence": 92.95,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              366,
+              839,
+              1725,
+              908
+            ],
+            "generated_text": "Có tất cả 6 di bản về bài văn bia này :",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.453,
+            "confidence": 96.48,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              370,
+              975,
+              2254,
+              1049
+            ],
+            "generated_text": "1. Bản gốc khác trên tâm bia đá Đại Tùy Cửu Chân",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.712,
+            "confidence": 84.54,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              229,
+              1078,
+              2263,
+              1149
+            ],
+            "generated_text": "quận Bảo An đạo tràng chi bi văn, do Nguyên Nhân Khí",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.65,
+            "confidence": 95.43,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              230,
+              1173,
+              2262,
+              1253
+            ],
+            "generated_text": "soạn vào năm Tùy Đại Nghiệp 14 (618), bia hiện được",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 1.84,
+            "confidence": 98.68,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              227,
+              1264,
+              1989,
+              1334
+            ],
+            "generated_text": "đưa về lưu giữ tại Viên Bảo tàng lịch sử, Hà Nội.",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.67,
+            "confidence": 94.28,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              354,
+              1397,
+              2262,
+              1472
+            ],
+            "generated_text": "2. Bản cứu lúc bài văn bia, do viên mục tổng Thach",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.721,
+            "confidence": 96.3,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              221,
+              1493,
+              2261,
+              1568
+            ],
+            "generated_text": "Khê, huyện Đông Sơn, phủ Thiêu Hóa, tỉnh Thanh Hóa",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.724,
+            "confidence": 96.25,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              218,
+              1591,
+              1689,
+              1661
+            ],
+            "generated_text": "thực hiện vào năm Vĩnh Khánh 3 (1731).",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.357,
+            "confidence": 99.34,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              353,
+              1707,
+              2261,
+              1778
+            ],
+            "generated_text": "3. Bản sao bài văn bia, do đại diện của 4 xã Phủ",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.534,
+            "confidence": 92.54,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              217,
+              1798,
+              2257,
+              1872
+            ],
+            "generated_text": "Liên, Đông Phố, Van Lộc và Hữu Bộc tổng Thach Khê,",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 1.833,
+            "confidence": 89.97,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              215,
+              1895,
+              2259,
+              1967
+            ],
+            "generated_text": "huyên Đông Sơn, phủ Thiêu Hóa, tỉnh Thanh Hóa thực",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.661,
+            "confidence": 92.92,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              214,
+              1990,
+              2258,
+              2061
+            ],
+            "generated_text": "hiện vào năm Thiệu Tri 2 (1842), đưa theo bài văn khác",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.716,
+            "confidence": 94.08,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              212,
+              2089,
+              1784,
+              2155
+            ],
+            "generated_text": "trên bia và bán cứu lúc năm Vĩnh Khánh 3.",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.533,
+            "confidence": 92.3,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              348,
+              2204,
+              2257,
+              2273
+            ],
+            "generated_text": "4. Bản sao do Chu Văn Liên thực hiện vào năm Việt",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.361,
+            "confidence": 97.15,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              199,
+              2295,
+              2260,
+              2369
+            ],
+            "generated_text": "Nam dân chủ công hòa Nhâm Dần (1962), mang tiêu đề",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.606,
+            "confidence": 93.43,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              211,
+              2391,
+              2254,
+              2476
+            ],
+            "generated_text": "Tùy thời Đại Nghiệp bi văn, hiện để tại Viện Nghiên",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.656,
+            "confidence": 92.72,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              207,
+              2483,
+              1442,
+              2555
+            ],
+            "generated_text": "cứu Hán Nôm, ký hiệu VHv. 2369.",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.796,
+            "confidence": 99.14,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              347,
+              2604,
+              2254,
+              2677
+            ],
+            "generated_text": "5. Một bản ráp bài văn bia, ký hiệu 20945, hiện đế",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 1.843,
+            "confidence": 94.31,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              204,
+              2696,
+              1322,
+              2767
+            ],
+            "generated_text": "tai Viên Nghiên cứu Hán Nôm.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.288,
+            "confidence": 98.8,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              343,
+              2817,
+              2255,
+              2887
+            ],
+            "generated_text": "6. Bản in trong Văn khác Hán Nôm Việt Nam, Tập",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.526,
+            "confidence": 95.94,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              204,
+              2910,
+              2447,
+              2994
+            ],
+            "generated_text": "1. Từ Bắc thuộc đến thời Lý, Học viên Viên động Pháp",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.725,
+            "confidence": 93.99,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              189,
+              3007,
+              2465,
+              3078
+            ],
+            "generated_text": "và Viên Nghiên cứu Hán Nôm xuất bản, Paris - Hà Nội,",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 2.022,
+            "confidence": 99.38,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              193,
+              3106,
+              2355,
+              3171
+            ],
+            "generated_text": "1998, tr. 7 - 9.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.263,
+            "confidence": 98.55,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              631,
+              562,
+              1808,
+              579
+            ],
+            "ink": 1211
+          },
+          {
+            "box": [
+              758,
+              1147,
+              1766,
+              1158
+            ],
+            "ink": 606
+          },
+          {
+            "box": [
+              192,
+              3401,
+              2072,
+              3418
+            ],
+            "ink": 1293
+          },
+          {
+            "box": [
+              182,
+              3414,
+              2038,
+              3431
+            ],
+            "ink": 1422
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

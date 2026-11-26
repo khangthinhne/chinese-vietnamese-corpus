@@ -1,0 +1,937 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_18",
+  "engine": "paddlevl",
+  "page": 509,
+  "runs": [
+    {
+      "key": "99dfbbd24466b5344548aff15d9417d3b52fc6319bb6f97374b81a2d52ebc81a",
+      "parameters": {
+        "image_sha256": "e5e394cedd9bcb4cd44d021aecc67e3de8226099973cc19e76a881102bbb3aed",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T18:58:25+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_509.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        0,
+        2480,
+        3509
+      ],
+      "lines": [
+        {
+          "text": "：",
+          "bbox": [
+            220,
+            227,
+            2137,
+            257
+          ],
+          "confidence": 24.22
+        },
+        {
+          "text": "Mâu Tử viết : Câu vi chi thảo, chúng thảo chi tính",
+          "bbox": [
+            383,
+            334,
+            2133,
+            404
+          ],
+          "confidence": 96.46
+        },
+        {
+          "text": "bất khả thăng ngôn. Câu vi chi kim, chúng kim chi tính",
+          "bbox": [
+            242,
+            430,
+            2132,
+            503
+          ],
+          "confidence": 94.63
+        },
+        {
+          "text": "bất khả thăng ngôn. Động loại thù tính, van vật giai",
+          "bbox": [
+            242,
+            524,
+            2133,
+            600
+          ],
+          "confidence": 93.73
+        },
+        {
+          "text": "nhiên, khi đô đạo hô ? Tích Dương, Mặc tắc chúng Nho",
+          "bbox": [
+            244,
+            617,
+            2135,
+            693
+          ],
+          "confidence": 86.11
+        },
+        {
+          "text": "chi lô, xa bất đắc tiện, nhân bất đắc bô. Manh Kha tích",
+          "bbox": [
+            243,
+            711,
+            2132,
+            782
+          ],
+          "confidence": 94.05
+        },
+        {
+          "text": "chi, nāi tri sở tòng. Sự Khoáng đàn cầm, sī tri âm chi tai",
+          "bbox": [
+            243,
+            805,
+            2130,
+            878
+          ],
+          "confidence": 79.14
+        },
+        {
+          "text": "hâu. Thánh nhân chế pháp, ký quân tử chỉ tương đổ giả.",
+          "bbox": [
+            243,
+            901,
+            2129,
+            978
+          ],
+          "confidence": 84.89
+        },
+        {
+          "text": "Ngọc thạch động quỹ, Y Đốn vị chi ô áp. Chu tử tương",
+          "bbox": [
+            244,
+            993,
+            2132,
+            1072
+          ],
+          "confidence": 87.49
+        },
+        {
+          "text": "doat, Trong Ni vi chi thán túc. Nhất nguyệt phi bất",
+          "bbox": [
+            245,
+            1088,
+            2132,
+            1166
+          ],
+          "confidence": 90.32
+        },
+        {
+          "text": "minh, chúng âm tế kỳ quang. Phát đạo phi bất chính,",
+          "bbox": [
+            243,
+            1181,
+            2131,
+            1259
+          ],
+          "confidence": 98.38
+        },
+        {
+          "text": "chúng tư yêm kỳ công. Thị đi ngô phân nhi biết chi.",
+          "bbox": [
+            240,
+            1273,
+            2130,
+            1352
+          ],
+          "confidence": 89.93
+        },
+        {
+          "text": "Tang Văn chi trí, Vi Sinh chi trực, Trong Ni bất gia già.",
+          "bbox": [
+            241,
+            1367,
+            2128,
+            1444
+          ],
+          "confidence": 88.77
+        },
+        {
+          "text": "Giai chính thế chi ngũ, hà phí nhi vô ích hỗ?",
+          "bbox": [
+            242,
+            1459,
+            1766,
+            1528
+          ],
+          "confidence": 89.13
+        },
+        {
+          "text": "DICH NGHIA:",
+          "bbox": [
+            385,
+            1737,
+            848,
+            1792
+          ],
+          "confidence": 92.82
+        },
+        {
+          "text": "Hỏi rằng : Đạo đều là vô vi cả, ông trình bày la liệt",
+          "bbox": [
+            386,
+            1855,
+            2135,
+            1924
+          ],
+          "confidence": 91.96
+        },
+        {
+          "text": "sự khác nhau giữa chúng làm gì ? Chỉ tổ khiến người",
+          "bbox": [
+            244,
+            1951,
+            2465,
+            2018
+          ],
+          "confidence": 87.89
+        },
+        {
+          "text": "theo hoc thêm ngỏ vực, tôi cho là phí công vô ích.",
+          "bbox": [
+            242,
+            2043,
+            1891,
+            2107
+          ],
+          "confidence": 91.95
+        },
+        {
+          "text": "Mâu Tử đáp : Đều goi là có cả, nhưng đặc tính của",
+          "bbox": [
+            386,
+            2170,
+            2135,
+            2237
+          ],
+          "confidence": 90.13
+        },
+        {
+          "text": "chúng thì không thể nói hết được. Đều goi là kim loại",
+          "bbox": [
+            242,
+            2262,
+            2465,
+            2331
+          ],
+          "confidence": 95.46
+        },
+        {
+          "text": "cả, nhưng đặc tính của chúng cũng không sao kê xiết.",
+          "bbox": [
+            241,
+            2354,
+            2134,
+            2426
+          ],
+          "confidence": 96.43
+        },
+        {
+          "text": "Cùng loại, khác tính, muôn vật đều như vậy, chủ có",
+          "bbox": [
+            244,
+            2450,
+            2139,
+            2515
+          ],
+          "confidence": 92.14
+        },
+        {
+          "text": "riêng gì dao đâu ? Xưa kia Dương, Mặc (170) làm tắc",
+          "bbox": [
+            241,
+            2537,
+            2466,
+            2607
+          ],
+          "confidence": 91.1
+        },
+        {
+          "text": "đường các Nho sĩ, xe không lên nổi, người không đi",
+          "bbox": [
+            242,
+            2629,
+            2468,
+            2701
+          ],
+          "confidence": 93.93
+        },
+        {
+          "text": "được. Đến lúc Manh Kha mở lời, người ta mới biết nên",
+          "bbox": [
+            241,
+            2719,
+            2468,
+            2789
+          ],
+          "confidence": 87.59
+        },
+        {
+          "text": "theo về đầu. Sự Khoáng gây đàn chờ tri âm mai hậu.",
+          "bbox": [
+            241,
+            2811,
+            2139,
+            2880
+          ],
+          "confidence": 86.49
+        },
+        {
+          "text": "Thánh nhân đất phép tác, mong người quân tử sẽ nhìn",
+          "bbox": [
+            237,
+            2905,
+            2468,
+            2973
+          ],
+          "confidence": 92.61
+        },
+        {
+          "text": "ra. Ngọc, đá dễ cùng một tủ, Y Đôn (171) vì thế mà xót xa",
+          "bbox": [
+            239,
+            2989,
+            2475,
+            3069
+          ],
+          "confidence": 92.0
+        },
+        {
+          "text": "đó, tía làm lỗ nhỏ nhau, Trọng Ni vì thế mà than thở.",
+          "bbox": [
+            238,
+            3079,
+            2468,
+            3152
+          ],
+          "confidence": 83.95
+        },
+        {
+          "text": "Mát trời, mặt trăng không phải không sáng tỏ, chỉ tại",
+          "bbox": [
+            234,
+            3161,
+            2468,
+            3251
+          ],
+          "confidence": 90.99
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          3509
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 13.677,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              220,
+              227,
+              2137,
+              257
+            ],
+            "generated_text": "：",
+            "n_lines": 1,
+            "tokens": 2,
+            "seconds": 0.089,
+            "confidence": 24.22,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              383,
+              334,
+              2133,
+              404
+            ],
+            "generated_text": "Mâu Tử viết : Câu vi chi thảo, chúng thảo chi tính",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.456,
+            "confidence": 96.46,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              242,
+              430,
+              2132,
+              503
+            ],
+            "generated_text": "bất khả thăng ngôn. Câu vi chi kim, chúng kim chi tính",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.452,
+            "confidence": 94.63,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              242,
+              524,
+              2133,
+              600
+            ],
+            "generated_text": "bất khả thăng ngôn. Động loại thù tính, van vật giai",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.474,
+            "confidence": 93.73,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              244,
+              617,
+              2135,
+              693
+            ],
+            "generated_text": "nhiên, khi đô đạo hô ? Tích Dương, Mặc tắc chúng Nho",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.528,
+            "confidence": 86.11,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              243,
+              711,
+              2132,
+              782
+            ],
+            "generated_text": "chi lô, xa bất đắc tiện, nhân bất đắc bô. Manh Kha tích",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.563,
+            "confidence": 94.05,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              243,
+              805,
+              2130,
+              878
+            ],
+            "generated_text": "chi, nāi tri sở tòng. Sự Khoáng đàn cầm, sī tri âm chi tai",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.563,
+            "confidence": 79.14,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              243,
+              901,
+              2129,
+              978
+            ],
+            "generated_text": "hâu. Thánh nhân chế pháp, ký quân tử chỉ tương đổ giả.",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.542,
+            "confidence": 84.89,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              244,
+              993,
+              2132,
+              1072
+            ],
+            "generated_text": "Ngọc thạch động quỹ, Y Đốn vị chi ô áp. Chu tử tương",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.503,
+            "confidence": 87.49,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              245,
+              1088,
+              2132,
+              1166
+            ],
+            "generated_text": "doat, Trong Ni vi chi thán túc. Nhất nguyệt phi bất",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.483,
+            "confidence": 90.32,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              243,
+              1181,
+              2131,
+              1259
+            ],
+            "generated_text": "minh, chúng âm tế kỳ quang. Phát đạo phi bất chính,",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.464,
+            "confidence": 98.38,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              240,
+              1273,
+              2130,
+              1352
+            ],
+            "generated_text": "chúng tư yêm kỳ công. Thị đi ngô phân nhi biết chi.",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.489,
+            "confidence": 89.93,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              241,
+              1367,
+              2128,
+              1444
+            ],
+            "generated_text": "Tang Văn chi trí, Vi Sinh chi trực, Trong Ni bất gia già.",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.504,
+            "confidence": 88.77,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              242,
+              1459,
+              1766,
+              1528
+            ],
+            "generated_text": "Giai chính thế chi ngũ, hà phí nhi vô ích hỗ?",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.445,
+            "confidence": 89.13,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              385,
+              1737,
+              848,
+              1792
+            ],
+            "generated_text": "DICH NGHIA:",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.186,
+            "confidence": 92.82,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              386,
+              1855,
+              2135,
+              1924
+            ],
+            "generated_text": "Hỏi rằng : Đạo đều là vô vi cả, ông trình bày la liệt",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.471,
+            "confidence": 91.96,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              244,
+              1951,
+              2465,
+              2018
+            ],
+            "generated_text": "sự khác nhau giữa chúng làm gì ? Chỉ tổ khiến người",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.39,
+            "confidence": 87.89,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              242,
+              2043,
+              1891,
+              2107
+            ],
+            "generated_text": "theo hoc thêm ngỏ vực, tôi cho là phí công vô ích.",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.467,
+            "confidence": 91.95,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              386,
+              2170,
+              2135,
+              2237
+            ],
+            "generated_text": "Mâu Tử đáp : Đều goi là có cả, nhưng đặc tính của",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.47,
+            "confidence": 90.13,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              242,
+              2262,
+              2465,
+              2331
+            ],
+            "generated_text": "chúng thì không thể nói hết được. Đều goi là kim loại",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.413,
+            "confidence": 95.46,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              241,
+              2354,
+              2134,
+              2426
+            ],
+            "generated_text": "cả, nhưng đặc tính của chúng cũng không sao kê xiết.",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.404,
+            "confidence": 96.43,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              244,
+              2450,
+              2139,
+              2515
+            ],
+            "generated_text": "Cùng loại, khác tính, muôn vật đều như vậy, chủ có",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.407,
+            "confidence": 92.14,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              241,
+              2537,
+              2466,
+              2607
+            ],
+            "generated_text": "riêng gì dao đâu ? Xưa kia Dương, Mặc (170) làm tắc",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.524,
+            "confidence": 91.1,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              242,
+              2629,
+              2468,
+              2701
+            ],
+            "generated_text": "đường các Nho sĩ, xe không lên nổi, người không đi",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.387,
+            "confidence": 93.93,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              241,
+              2719,
+              2468,
+              2789
+            ],
+            "generated_text": "được. Đến lúc Manh Kha mở lời, người ta mới biết nên",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.484,
+            "confidence": 87.59,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              241,
+              2811,
+              2139,
+              2880
+            ],
+            "generated_text": "theo về đầu. Sự Khoáng gây đàn chờ tri âm mai hậu.",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.515,
+            "confidence": 86.49,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              237,
+              2905,
+              2468,
+              2973
+            ],
+            "generated_text": "Thánh nhân đất phép tác, mong người quân tử sẽ nhìn",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.434,
+            "confidence": 92.61,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              239,
+              2989,
+              2475,
+              3069
+            ],
+            "generated_text": "ra. Ngọc, đá dễ cùng một tủ, Y Đôn (171) vì thế mà xót xa",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 0.657,
+            "confidence": 92.0,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              238,
+              3079,
+              2468,
+              3152
+            ],
+            "generated_text": "đó, tía làm lỗ nhỏ nhau, Trọng Ni vì thế mà than thở.",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.502,
+            "confidence": 83.95,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              234,
+              3161,
+              2468,
+              3251
+            ],
+            "generated_text": "Mát trời, mặt trăng không phải không sáng tỏ, chỉ tại",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.406,
+            "confidence": 90.99,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              1983,
+              164,
+              2135,
+              179
+            ],
+            "ink": 994
+          },
+          {
+            "box": [
+              1982,
+              184,
+              2135,
+              197
+            ],
+            "ink": 791
+          },
+          {
+            "box": [
+              301,
+              2015,
+              2029,
+              2025
+            ],
+            "ink": 536
+          },
+          {
+            "box": [
+              487,
+              2107,
+              1657,
+              2116
+            ],
+            "ink": 421
+          },
+          {
+            "box": [
+              2066,
+              3305,
+              2468,
+              3320
+            ],
+            "ink": 1037
+          },
+          {
+            "box": [
+              2015,
+              3357,
+              2468,
+              3372
+            ],
+            "ink": 1029
+          },
+          {
+            "box": [
+              1971,
+              3374,
+              2468,
+              3388
+            ],
+            "ink": 957
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "61cbea5c0055c260ccfc12f884e0febca7b2783b",
+        "git_describe": "61cbea5",
+        "git_dirty": true,
+        "gpu": "NVIDIA L4",
+        "dtype": "bfloat16",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

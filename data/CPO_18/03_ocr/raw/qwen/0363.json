@@ -1,0 +1,288 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_18",
+  "engine": "qwen",
+  "page": 363,
+  "runs": [
+    {
+      "key": "60856d91e5d561ebc1cf5da5c85453ff8acb03cc56b47cadc5ee427f32ff05af",
+      "parameters": {
+        "image_sha256": "9c48ed6bc4cf588f77a40a683c48e509303191c20e5f5d50d1d18418f52c2a13",
+        "engine": {
+          "name": "qwen",
+          "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "model_revision": "main",
+          "transformers_version": "4.57.6",
+          "torch_version": "2.5.1+cu121",
+          "cuda_version": "12.1",
+          "bitsandbytes_version": "0.50.2",
+          "quantization": {
+            "load_in_4bit": true,
+            "quant_type": "nf4",
+            "double_quant": true,
+            "compute_dtype": "float16"
+          },
+          "mode": "all",
+          "min_pixels": 50176,
+          "max_pixels": 802816,
+          "band_inches": 2.0,
+          "max_new_tokens": 768,
+          "repetition_penalty": 1.05,
+          "adapter_version": 3,
+          "prompt_version": 3,
+          "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74"
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T20:32:08+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_363.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        0,
+        2480,
+        3509
+      ],
+      "lines": [
+        {
+          "text": "[UNCLEAR]",
+          "bbox": [
+            280,
+            154,
+            355,
+            177
+          ],
+          "confidence": 81.46
+        },
+        {
+          "text": "IX. BÀI THƠ KHUYẾT DANH \"TIẾN MÃ THỰC\"",
+          "bbox": [
+            281,
+            721,
+            2480,
+            1008
+          ],
+          "confidence": 88.04
+        },
+        {
+          "text": "Toàn Đường thi thạo hiện chép một bài thơ khuyết danh, nói về Mã Thực, một viên quan Đô hộ ở nước ta thời Đường. Đến đời nhà Thanh, Từ Diên Húc đã in lại bài thơ này trong cuốn Việt Nam tập lược.",
+          "bbox": [
+            280,
+            1000,
+            2480,
+            1304
+          ],
+          "confidence": 95.82
+        },
+        {
+          "text": "Nguyên văn bài thơ cùng lời tựa giới thiệu dưới đây là trích từ cuốn Việt Nam tập lược của Từ Diên Húc.",
+          "bbox": [
+            280,
+            1304,
+            2480,
+            1608
+          ],
+          "confidence": 95.82
+        },
+        {
+          "text": "送馬归还，故而，寺，见白衣缓堤，",
+          "bbox": [
+            280,
+            1600,
+            2480,
+            2315
+          ],
+          "confidence": 11.14
+        },
+        {
+          "text": "鳳凰飛上天際，更向南去，即到越南。。。。。。",
+          "bbox": [
+            280,
+            2307,
+            2480,
+            2731
+          ],
+          "confidence": 22.07
+        },
+        {
+          "text": "PHIÊN ÂM:",
+          "bbox": [
+            282,
+            2816,
+            2480,
+            2986
+          ],
+          "confidence": 87.94
+        },
+        {
+          "text": "TỐNG MÃ THỰC",
+          "bbox": [
+            282,
+            2986,
+            2480,
+            3157
+          ],
+          "confidence": 87.94
+        },
+        {
+          "text": "KHUYẾT DANH",
+          "bbox": [
+            282,
+            3157,
+            2480,
+            3328
+          ],
+          "confidence": 87.94
+        },
+        {
+          "text": "333",
+          "bbox": [
+            282,
+            3328,
+            2480,
+            3498
+          ],
+          "confidence": 87.94
+        }
+      ],
+      "raw": {
+        "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+        "model_revision": "main",
+        "mode": "all",
+        "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          3509
+        ],
+        "band_target_height": 600,
+        "bbox_granularity": "band_even_split",
+        "max_new_tokens": 768,
+        "max_pixels": 802816,
+        "inference_seconds": 14.222,
+        "bands": [
+          {
+            "band": 1,
+            "y0": 158,
+            "y1": 448,
+            "ink_box": [
+              280,
+              154,
+              355,
+              177
+            ],
+            "generated_text": "[UNCLEAR]",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.449,
+            "confidence": 81.46,
+            "flags": []
+          },
+          {
+            "band": 2,
+            "y0": 448,
+            "y1": 1004,
+            "ink_box": [
+              281,
+              721,
+              2480,
+              1008
+            ],
+            "generated_text": "IX. BÀI THƠ KHUYẾT DANH \"TIẾN MÃ THỰC\"",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 2.002,
+            "confidence": 88.04,
+            "flags": []
+          },
+          {
+            "band": 3,
+            "y0": 1004,
+            "y1": 1604,
+            "ink_box": [
+              280,
+              1000,
+              2480,
+              1608
+            ],
+            "generated_text": "Toàn Đường thi thạo hiện chép một bài thơ khuyết danh, nói về Mã Thực, một viên quan Đô hộ ở nước ta thời Đường. Đến đời nhà Thanh, Từ Diên Húc đã in lại bài thơ này trong cuốn Việt Nam tập lược.\nNguyên văn bài thơ cùng lời tựa giới thiệu dưới đây là trích từ cuốn Việt Nam tập lược của Từ Diên Húc.",
+            "n_lines": 2,
+            "tokens": 89,
+            "seconds": 6.189,
+            "confidence": 95.82,
+            "flags": []
+          },
+          {
+            "band": 4,
+            "y0": 1604,
+            "y1": 2311,
+            "ink_box": [
+              280,
+              1600,
+              2480,
+              2315
+            ],
+            "generated_text": "送馬归还，故而，寺，见白衣缓堤，",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.589,
+            "confidence": 11.14,
+            "flags": []
+          },
+          {
+            "band": 5,
+            "y0": 2311,
+            "y1": 2778,
+            "ink_box": [
+              280,
+              2307,
+              2480,
+              2731
+            ],
+            "generated_text": "鳳凰飛上天際，更向南去，即到越南。。。。。。",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.866,
+            "confidence": 22.07,
+            "flags": []
+          },
+          {
+            "band": 6,
+            "y0": 2778,
+            "y1": 3494,
+            "ink_box": [
+              282,
+              2816,
+              2480,
+              3498
+            ],
+            "generated_text": "PHIÊN ÂM:\nTỐNG MÃ THỰC\nKHUYẾT DANH\n333",
+            "n_lines": 4,
+            "tokens": 25,
+            "seconds": 2.093,
+            "confidence": 87.94,
+            "flags": []
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "61cbea5c0055c260ccfc12f884e0febca7b2783b",
+        "git_describe": "61cbea5",
+        "git_dirty": true,
+        "gpu": "NVIDIA L4",
+        "dtype": "float16",
+        "adapter_version": 3
+      }
+    }
+  ]
+}

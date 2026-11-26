@@ -1,0 +1,998 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_18",
+  "engine": "paddlevl",
+  "page": 287,
+  "runs": [
+    {
+      "key": "2e2d198a1d5af5c0c2cf53fd249ce930eb51879a54d7cd8b903e58e0523d8a8f",
+      "parameters": {
+        "image_sha256": "188307c0f77654ae61d980d055e5c9f7da721b85d1f77b671531b488c9a7abb4",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T13:50:36+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_287.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        0,
+        2480,
+        3509
+      ],
+      "lines": [
+        {
+          "text": "Phán II : Nguyên văn tác phẩm dịch và chủ thích",
+          "bbox": [
+            1179,
+            155,
+            2126,
+            203
+          ],
+          "confidence": 86.93
+        },
+        {
+          "text": "：",
+          "bbox": [
+            298,
+            239,
+            2129,
+            258
+          ],
+          "confidence": 33.37
+        },
+        {
+          "text": "Kiểm hiệu Giao Chỉ quân, Tán tri Nhật Nam quân",
+          "bbox": [
+            460,
+            338,
+            2123,
+            404
+          ],
+          "confidence": 89.87
+        },
+        {
+          "text": "thừa, tiến kiểm Nội sử Xá nhân Hà Nam Nguyên Nhân",
+          "bbox": [
+            323,
+            429,
+            2123,
+            496
+          ],
+          "confidence": 88.04
+        },
+        {
+          "text": "Khi soan.",
+          "bbox": [
+            324,
+            541,
+            666,
+            585
+          ],
+          "confidence": 98.24
+        },
+        {
+          "text": "Phù pháp lý linh phù, phi thế trí chi khả câu ; pháp",
+          "bbox": [
+            462,
+            670,
+            2127,
+            736
+          ],
+          "confidence": 93.6
+        },
+        {
+          "text": "tính u thâm, khởi thach ngôn chi sở trắc. Cổ Phan ma",
+          "bbox": [
+            325,
+            760,
+            2126,
+            827
+          ],
+          "confidence": 88.58
+        },
+        {
+          "text": "chi cảnh, do vi Hóa thành ; Tam giới chi gian, phương",
+          "bbox": [
+            325,
+            853,
+            2127,
+            927
+          ],
+          "confidence": 94.92
+        },
+        {
+          "text": "xưng hỏa trách. Điện (?) (2) (2) (đẫn) tất đài nghịch bảng (mất",
+          "bbox": [
+            324,
+            942,
+            2124,
+            1011
+          ],
+          "confidence": 72.63
+        },
+        {
+          "text": "1 chũ) đạo (mất 1 chũ) sử (mất 4 chũ) tuân. Tùy cơ lợi",
+          "bbox": [
+            333,
+            1033,
+            2127,
+            1101
+          ],
+          "confidence": 92.44
+        },
+        {
+          "text": "vật, thúc dục vương bảo. Phiên dễ trach (3) nhân tử, giai",
+          "bbox": [
+            324,
+            1127,
+            2127,
+            1192
+          ],
+          "confidence": 83.66
+        },
+        {
+          "text": "ngưỡng tác tôn dung, tân lương thú phẩm. Kỳ hồi",
+          "bbox": [
+            327,
+            1216,
+            2125,
+            1294
+          ],
+          "confidence": 87.1
+        },
+        {
+          "text": "quýnh phúc Tĩnh thổ giả, duy Lê hầu (mất 4 chủ) thiên",
+          "bbox": [
+            330,
+            1309,
+            2123,
+            1375
+          ],
+          "confidence": 95.49
+        },
+        {
+          "text": "cơ hoc dao tiêm cu.",
+          "bbox": [
+            328,
+            1418,
+            974,
+            1462
+          ],
+          "confidence": 71.74
+        },
+        {
+          "text": "Tiên hiệu Thứ sử, thi viết Lê hầu, triết ngọc Bôi (4),",
+          "bbox": [
+            465,
+            1547,
+            2121,
+            1613
+          ],
+          "confidence": 92.28
+        },
+        {
+          "text": "Dung, nhân nãi mệnh Thi, Vĩnh Gia chi (mất 2 chủ).",
+          "bbox": [
+            331,
+            1643,
+            2121,
+            1708
+          ],
+          "confidence": 90.93
+        },
+        {
+          "text": "(Mất 12 chữ) xã cao vi tuyên tổng tướng soái Triệu",
+          "bbox": [
+            332,
+            1738,
+            2120,
+            1803
+          ],
+          "confidence": 89.19
+        },
+        {
+          "text": "Châu Thứ sử. Hũu Lương ngư (5) Lich, Đô đốc (6) Ai, Đức,",
+          "bbox": [
+            333,
+            1830,
+            2120,
+            1897
+          ],
+          "confidence": 93.67
+        },
+        {
+          "text": "Minh, Lơi, Hoan ngũ châu chủ quân sự, Ai Châu Thứ",
+          "bbox": [
+            331,
+            1926,
+            2123,
+            1993
+          ],
+          "confidence": 89.73
+        },
+        {
+          "text": "sử⁽⁷⁾ (mất 8 chủ) tướng quân, cải phong Mục Phong Hầu.",
+          "bbox": [
+            335,
+            2017,
+            2122,
+            2096
+          ],
+          "confidence": 89.5
+        },
+        {
+          "text": "Muc tri cổ (mất 1 chủ) tư vi Tam dai, hướng niên mi",
+          "bbox": [
+            334,
+            2115,
+            2122,
+            2179
+          ],
+          "confidence": 87.21
+        },
+        {
+          "text": "tho. Tình cứ sinh đia, tư toai phúc dân. (Mất 6 chủ), học",
+          "bbox": [
+            336,
+            2206,
+            2121,
+            2272
+          ],
+          "confidence": 87.4
+        },
+        {
+          "text": "thời hữu đức hữu pháp môn, gia hành viên măn. Môi",
+          "bbox": [
+            337,
+            2299,
+            2121,
+            2366
+          ],
+          "confidence": 95.97
+        },
+        {
+          "text": "thường sám lê, linh tượng phóng quang, vô môn tùy",
+          "bbox": [
+            338,
+            2395,
+            2123,
+            2467
+          ],
+          "confidence": 91.31
+        },
+        {
+          "text": "tâm, thi yên du xử. Nhi niên thế tâm thủy, (thiếu 2 chủ)",
+          "bbox": [
+            338,
+            2487,
+            2117,
+            2553
+          ],
+          "confidence": 88.52
+        },
+        {
+          "text": "thọ trường, bình (mất 2 chủ) đạo tướng quân, quân châu",
+          "bbox": [
+            340,
+            2580,
+            2114,
+            2653
+          ],
+          "confidence": 96.2
+        },
+        {
+          "text": "Thú sử, trần công thủy phát, tư thưởng thị uy vũ tương",
+          "bbox": [
+            342,
+            2670,
+            2114,
+            2745
+          ],
+          "confidence": 78.38
+        },
+        {
+          "text": "quân, Ai Châu Thứ sử. Lê Mục Phong hầu, tà vệ Sứ",
+          "bbox": [
+            342,
+            2766,
+            2111,
+            2833
+          ],
+          "confidence": 91.4
+        },
+        {
+          "text": "quân chi (mất 2 chủ) định sinh linh, (mất 3 chủ) vọng,",
+          "bbox": [
+            339,
+            2861,
+            2105,
+            2927
+          ],
+          "confidence": 95.32
+        },
+        {
+          "text": "tình dương truy mô, sùng lập động hồi. Nãi thu (mất 5",
+          "bbox": [
+            336,
+            2950,
+            2475,
+            3029
+          ],
+          "confidence": 91.7
+        },
+        {
+          "text": "chũ) từ tổng triết nhân, nghi ủy thi Lê xã dân. Trường",
+          "bbox": [
+            332,
+            3041,
+            2432,
+            3111
+          ],
+          "confidence": 85.25
+        },
+        {
+          "text": "từ ích từ tự (mất 2 chủ) sử (mất 5 chủ) chi đế bát hòa",
+          "bbox": [
+            333,
+            3132,
+            2425,
+            3203
+          ],
+          "confidence": 90.63
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          3509
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 55.612,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              1179,
+              155,
+              2126,
+              203
+            ],
+            "generated_text": "Phán II : Nguyên văn tác phẩm dịch và chủ thích",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.418,
+            "confidence": 86.93,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              298,
+              239,
+              2129,
+              258
+            ],
+            "generated_text": "：",
+            "n_lines": 1,
+            "tokens": 2,
+            "seconds": 0.497,
+            "confidence": 33.37,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              460,
+              338,
+              2123,
+              404
+            ],
+            "generated_text": "Kiểm hiệu Giao Chỉ quân, Tán tri Nhật Nam quân",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.449,
+            "confidence": 89.87,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              323,
+              429,
+              2123,
+              496
+            ],
+            "generated_text": "thừa, tiến kiểm Nội sử Xá nhân Hà Nam Nguyên Nhân",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.538,
+            "confidence": 88.04,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              324,
+              541,
+              666,
+              585
+            ],
+            "generated_text": "Khi soan.",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.666,
+            "confidence": 98.24,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              462,
+              670,
+              2127,
+              736
+            ],
+            "generated_text": "Phù pháp lý linh phù, phi thế trí chi khả câu ; pháp",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.625,
+            "confidence": 93.6,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              325,
+              760,
+              2126,
+              827
+            ],
+            "generated_text": "tính u thâm, khởi thach ngôn chi sở trắc. Cổ Phan ma",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.798,
+            "confidence": 88.58,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              325,
+              853,
+              2127,
+              927
+            ],
+            "generated_text": "chi cảnh, do vi Hóa thành ; Tam giới chi gian, phương",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.324,
+            "confidence": 94.92,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              324,
+              942,
+              2124,
+              1011
+            ],
+            "generated_text": "xưng hỏa trách. Điện (?) (2) (2) (đẫn) tất đài nghịch bảng (mất",
+            "n_lines": 1,
+            "tokens": 35,
+            "seconds": 2.478,
+            "confidence": 72.63,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              333,
+              1033,
+              2127,
+              1101
+            ],
+            "generated_text": "1 chũ) đạo (mất 1 chũ) sử (mất 4 chũ) tuân. Tùy cơ lợi",
+            "n_lines": 1,
+            "tokens": 34,
+            "seconds": 2.42,
+            "confidence": 92.44,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              324,
+              1127,
+              2127,
+              1192
+            ],
+            "generated_text": "vật, thúc dục vương bảo. Phiên dễ trach (3) nhân tử, giai",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.06,
+            "confidence": 83.66,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              327,
+              1216,
+              2125,
+              1294
+            ],
+            "generated_text": "ngưỡng tác tôn dung, tân lương thú phẩm. Kỳ hồi",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.593,
+            "confidence": 87.1,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              330,
+              1309,
+              2123,
+              1375
+            ],
+            "generated_text": "quýnh phúc Tĩnh thổ giả, duy Lê hầu (mất 4 chủ) thiên",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 1.963,
+            "confidence": 95.49,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              328,
+              1418,
+              974,
+              1462
+            ],
+            "generated_text": "cơ hoc dao tiêm cu.",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.913,
+            "confidence": 71.74,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              465,
+              1547,
+              2121,
+              1613
+            ],
+            "generated_text": "Tiên hiệu Thứ sử, thi viết Lê hầu, triết ngọc Bôi (4),",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 1.792,
+            "confidence": 92.28,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              331,
+              1643,
+              2121,
+              1708
+            ],
+            "generated_text": "Dung, nhân nãi mệnh Thi, Vĩnh Gia chi (mất 2 chủ).",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 1.843,
+            "confidence": 90.93,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              332,
+              1738,
+              2120,
+              1803
+            ],
+            "generated_text": "(Mất 12 chữ) xã cao vi tuyên tổng tướng soái Triệu",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.719,
+            "confidence": 89.19,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              333,
+              1830,
+              2120,
+              1897
+            ],
+            "generated_text": "Châu Thứ sử. Hũu Lương ngư (5) Lich, Đô đốc (6) Ai, Đức,",
+            "n_lines": 1,
+            "tokens": 32,
+            "seconds": 2.275,
+            "confidence": 93.67,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              331,
+              1926,
+              2123,
+              1993
+            ],
+            "generated_text": "Minh, Lơi, Hoan ngũ châu chủ quân sự, Ai Châu Thứ",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.724,
+            "confidence": 89.73,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              335,
+              2017,
+              2122,
+              2096
+            ],
+            "generated_text": "sử⁽⁷⁾ (mất 8 chủ) tướng quân, cải phong Mục Phong Hầu.",
+            "n_lines": 1,
+            "tokens": 35,
+            "seconds": 2.334,
+            "confidence": 89.5,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              334,
+              2115,
+              2122,
+              2179
+            ],
+            "generated_text": "Muc tri cổ (mất 1 chủ) tư vi Tam dai, hướng niên mi",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.79,
+            "confidence": 87.21,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              336,
+              2206,
+              2121,
+              2272
+            ],
+            "generated_text": "tho. Tình cứ sinh đia, tư toai phúc dân. (Mất 6 chủ), học",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 1.964,
+            "confidence": 87.4,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              337,
+              2299,
+              2121,
+              2366
+            ],
+            "generated_text": "thời hữu đức hữu pháp môn, gia hành viên măn. Môi",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.776,
+            "confidence": 95.97,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              338,
+              2395,
+              2123,
+              2467
+            ],
+            "generated_text": "thường sám lê, linh tượng phóng quang, vô môn tùy",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.613,
+            "confidence": 91.31,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              338,
+              2487,
+              2117,
+              2553
+            ],
+            "generated_text": "tâm, thi yên du xử. Nhi niên thế tâm thủy, (thiếu 2 chủ)",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 1.906,
+            "confidence": 88.52,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              340,
+              2580,
+              2114,
+              2653
+            ],
+            "generated_text": "thọ trường, bình (mất 2 chủ) đạo tướng quân, quân châu",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 1.731,
+            "confidence": 96.2,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              342,
+              2670,
+              2114,
+              2745
+            ],
+            "generated_text": "Thú sử, trần công thủy phát, tư thưởng thị uy vũ tương",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.548,
+            "confidence": 78.38,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              342,
+              2766,
+              2111,
+              2833
+            ],
+            "generated_text": "quân, Ai Châu Thứ sử. Lê Mục Phong hầu, tà vệ Sứ",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 1.904,
+            "confidence": 91.4,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              339,
+              2861,
+              2105,
+              2927
+            ],
+            "generated_text": "quân chi (mất 2 chủ) định sinh linh, (mất 3 chủ) vọng,",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 1.898,
+            "confidence": 95.32,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              336,
+              2950,
+              2475,
+              3029
+            ],
+            "generated_text": "tình dương truy mô, sùng lập động hồi. Nãi thu (mất 5",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 1.998,
+            "confidence": 91.7,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              332,
+              3041,
+              2432,
+              3111
+            ],
+            "generated_text": "chũ) từ tổng triết nhân, nghi ủy thi Lê xã dân. Trường",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.874,
+            "confidence": 85.25,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 32,
+            "box": [
+              333,
+              3132,
+              2425,
+              3203
+            ],
+            "generated_text": "từ ích từ tự (mất 2 chủ) sử (mất 5 chủ) chi đế bát hòa",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 2.176,
+            "confidence": 90.63,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              324,
+              523,
+              460,
+              532
+            ],
+            "ink": 441
+          },
+          {
+            "box": [
+              633,
+              733,
+              2109,
+              747
+            ],
+            "ink": 834
+          },
+          {
+            "box": [
+              465,
+              1007,
+              2010,
+              1019
+            ],
+            "ink": 726
+          },
+          {
+            "box": [
+              350,
+              1373,
+              1933,
+              1386
+            ],
+            "ink": 766
+          },
+          {
+            "box": [
+              530,
+              1993,
+              1815,
+              2002
+            ],
+            "ink": 471
+          },
+          {
+            "box": [
+              464,
+              3107,
+              2423,
+              3121
+            ],
+            "ink": 962
+          },
+          {
+            "box": [
+              718,
+              3202,
+              2271,
+              3211
+            ],
+            "ink": 541
+          },
+          {
+            "box": [
+              2019,
+              3308,
+              2190,
+              3325
+            ],
+            "ink": 1267
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

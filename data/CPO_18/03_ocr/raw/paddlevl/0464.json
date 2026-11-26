@@ -1,0 +1,973 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_18",
+  "engine": "paddlevl",
+  "page": 464,
+  "runs": [
+    {
+      "key": "daea93696e4421ceae6c01059813913e4f661f0fc4b602b80edb64dd6d7f9696",
+      "parameters": {
+        "image_sha256": "87892340c1b9b3fd64ef53e394c5c5c45ec45dcbe99018c70353a83bebe1dc5a",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T16:19:31+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_464.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        0,
+        2480,
+        3509
+      ],
+      "lines": [
+        {
+          "text": "Sụu tấm và khảo luận tác phẩm chủ Hán của người Việt Nam trước TK 10",
+          "bbox": [
+            233,
+            88,
+            2148,
+            152
+          ],
+          "confidence": 93.06
+        },
+        {
+          "text": "/",
+          "bbox": [
+            214,
+            179,
+            2254,
+            204
+          ],
+          "confidence": 33.41
+        },
+        {
+          "text": "năng thu nhân đạo, bất năng sử nhân lý nhi hành chi",
+          "bbox": [
+            228,
+            287,
+            2247,
+            356
+          ],
+          "confidence": 85.95
+        },
+        {
+          "text": "giã. Cao Dao nặng tôi đạo nhân, bất nặng sự tham phu",
+          "bbox": [
+            227,
+            383,
+            2244,
+            449
+          ],
+          "confidence": 87.59
+        },
+        {
+          "text": "vi Di. Tê. Ngũ hình năng tru vô trang, bất năng sử ác",
+          "bbox": [
+            221,
+            477,
+            2245,
+            542
+          ],
+          "confidence": 92.03
+        },
+        {
+          "text": "nhân vi Tăng, Măn. Nghiêu bất nặng hóa Dan Chu,",
+          "bbox": [
+            223,
+            568,
+            2241,
+            637
+          ],
+          "confidence": 91.3
+        },
+        {
+          "text": "Chu Công bất nặng huấn Quản, Thái, khỉ Đường giáo",
+          "bbox": [
+            224,
+            662,
+            2451,
+            740
+          ],
+          "confidence": 92.79
+        },
+        {
+          "text": "chi bất trú, Chu đạo chi bất bi tai ? Nhiên vô như ác",
+          "bbox": [
+            220,
+            757,
+            2242,
+            824
+          ],
+          "confidence": 86.2
+        },
+        {
+          "text": "nhân, hà giả ? Thí chi thế nhân hoc thông Thất kinh nhi",
+          "bbox": [
+            220,
+            853,
+            2241,
+            920
+          ],
+          "confidence": 92.88
+        },
+        {
+          "text": "mê ủ tài sắc, khả vi Luc nghê chi tà đâm hộ? Hà Bá tuy",
+          "bbox": [
+            221,
+            947,
+            2242,
+            1014
+          ],
+          "confidence": 81.14
+        },
+        {
+          "text": "thân, bất nặng nịch lục địa nhân ; phiêu phong tuy tất,",
+          "bbox": [
+            219,
+            1042,
+            2237,
+            1118
+          ],
+          "confidence": 92.79
+        },
+        {
+          "text": "bất nặng sự tram thụy dương trân.",
+          "bbox": [
+            221,
+            1142,
+            1454,
+            1197
+          ],
+          "confidence": 78.83
+        },
+        {
+          "text": "Đương hoan nhân bất nặng hành, khi khả vi Phát",
+          "bbox": [
+            353,
+            1246,
+            2240,
+            1314
+          ],
+          "confidence": 87.76
+        },
+        {
+          "text": "dao hữu ac ho?",
+          "bbox": [
+            220,
+            1359,
+            763,
+            1404
+          ],
+          "confidence": 80.66
+        },
+        {
+          "text": "DICH NGHIA :",
+          "bbox": [
+            351,
+            1613,
+            1926,
+            1669
+          ],
+          "confidence": 93.94
+        },
+        {
+          "text": "Hỏi rằng : Đạo Phật chuông vô vi, thích bổ thí và",
+          "bbox": [
+            353,
+            1732,
+            2237,
+            1801
+          ],
+          "confidence": 91.16
+        },
+        {
+          "text": "giữ điều kiêng cấm, nơm nóp như đúng bên vực thăm.",
+          "bbox": [
+            219,
+            1829,
+            2234,
+            1908
+          ],
+          "confidence": 81.62
+        },
+        {
+          "text": "Nay các nhà sự say sưa rượu chè, có người hư ( or (hư? ) ) cà vợ",
+          "bbox": [
+            220,
+            1923,
+            2238,
+            1988
+          ],
+          "confidence": 65.99
+        },
+        {
+          "text": "con, mua rẻ bán đất, chuyên làm việc đối trá, đấy toàn",
+          "bbox": [
+            219,
+            2013,
+            2233,
+            2080
+          ],
+          "confidence": 91.06
+        },
+        {
+          "text": "những chuyên giả đối ở đời, mà đạo Phật lại goi là vô vi",
+          "bbox": [
+            220,
+            2104,
+            2235,
+            2172
+          ],
+          "confidence": 87.92
+        },
+        {
+          "text": "Mâu Tử đáp : Công Du (106) có thể đưa búa, rìu, dây",
+          "bbox": [
+            355,
+            2308,
+            2235,
+            2376
+          ],
+          "confidence": 93.6
+        },
+        {
+          "text": "mục, nhưng không thể khiến người ta khéo. Thánh",
+          "bbox": [
+            224,
+            2398,
+            2236,
+            2468
+          ],
+          "confidence": 98.18
+        },
+        {
+          "text": "nhân có thể truyền đạo, nhưng không thể khiến người",
+          "bbox": [
+            223,
+            2494,
+            2236,
+            2559
+          ],
+          "confidence": 93.49
+        },
+        {
+          "text": "ta thực hiện. Cao Dao (107) có thể xử tối kế trôm, nhưng",
+          "bbox": [
+            224,
+            2583,
+            2238,
+            2650
+          ],
+          "confidence": 97.01
+        },
+        {
+          "text": "không thể khiến đứa tham trở nên Di, Tê. Ngũ hình (108)",
+          "bbox": [
+            223,
+            2673,
+            2236,
+            2742
+          ],
+          "confidence": 89.47
+        },
+        {
+          "text": "có thể trừng phat kế xấu, nhưng không thể khiến người",
+          "bbox": [
+            224,
+            2768,
+            2236,
+            2834
+          ],
+          "confidence": 87.64
+        },
+        {
+          "text": "ác trỏ thành Tăng, Măn (109). Vua Nghiêu (110) không thể",
+          "bbox": [
+            227,
+            2855,
+            2235,
+            2924
+          ],
+          "confidence": 93.1
+        },
+        {
+          "text": "cảm hóa Dan Chu, Chu Công không thể dạy bảo Quản,",
+          "bbox": [
+            224,
+            2948,
+            2475,
+            3025
+          ],
+          "confidence": 91.84
+        },
+        {
+          "text": "Thái, đâu phải do giáo hóa Đường Ngu không rạng tỏ,",
+          "bbox": [
+            224,
+            3038,
+            2435,
+            3115
+          ],
+          "confidence": 94.14
+        },
+        {
+          "text": "đạo lý nhà Chu không hoàn biể! Vậy mà không làm gì",
+          "bbox": [
+            227,
+            3129,
+            2334,
+            3205
+          ],
+          "confidence": 82.26
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          3509
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 49.037,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              233,
+              88,
+              2148,
+              152
+            ],
+            "generated_text": "Sụu tấm và khảo luận tác phẩm chủ Hán của người Việt Nam trước TK 10",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 1.988,
+            "confidence": 93.06,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              214,
+              179,
+              2254,
+              204
+            ],
+            "generated_text": "/",
+            "n_lines": 1,
+            "tokens": 2,
+            "seconds": 0.481,
+            "confidence": 33.41,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              228,
+              287,
+              2247,
+              356
+            ],
+            "generated_text": "năng thu nhân đạo, bất năng sử nhân lý nhi hành chi",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.391,
+            "confidence": 85.95,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              227,
+              383,
+              2244,
+              449
+            ],
+            "generated_text": "giã. Cao Dao nặng tôi đạo nhân, bất nặng sự tham phu",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.856,
+            "confidence": 87.59,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              221,
+              477,
+              2245,
+              542
+            ],
+            "generated_text": "vi Di. Tê. Ngũ hình năng tru vô trang, bất năng sử ác",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.754,
+            "confidence": 92.03,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              223,
+              568,
+              2241,
+              637
+            ],
+            "generated_text": "nhân vi Tăng, Măn. Nghiêu bất nặng hóa Dan Chu,",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.796,
+            "confidence": 91.3,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              224,
+              662,
+              2451,
+              740
+            ],
+            "generated_text": "Chu Công bất nặng huấn Quản, Thái, khỉ Đường giáo",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.939,
+            "confidence": 92.79,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              220,
+              757,
+              2242,
+              824
+            ],
+            "generated_text": "chi bất trú, Chu đạo chi bất bi tai ? Nhiên vô như ác",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.797,
+            "confidence": 86.2,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              220,
+              853,
+              2241,
+              920
+            ],
+            "generated_text": "nhân, hà giả ? Thí chi thế nhân hoc thông Thất kinh nhi",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.525,
+            "confidence": 92.88,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              221,
+              947,
+              2242,
+              1014
+            ],
+            "generated_text": "mê ủ tài sắc, khả vi Luc nghê chi tà đâm hộ? Hà Bá tuy",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 2.058,
+            "confidence": 81.14,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              219,
+              1042,
+              2237,
+              1118
+            ],
+            "generated_text": "thân, bất nặng nịch lục địa nhân ; phiêu phong tuy tất,",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 1.837,
+            "confidence": 92.79,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              221,
+              1142,
+              1454,
+              1197
+            ],
+            "generated_text": "bất nặng sự tram thụy dương trân.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.219,
+            "confidence": 78.83,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              353,
+              1246,
+              2240,
+              1314
+            ],
+            "generated_text": "Đương hoan nhân bất nặng hành, khi khả vi Phát",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.46,
+            "confidence": 87.76,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              220,
+              1359,
+              763,
+              1404
+            ],
+            "generated_text": "dao hữu ac ho?",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.804,
+            "confidence": 80.66,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              351,
+              1613,
+              1926,
+              1669
+            ],
+            "generated_text": "DICH NGHIA :",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.748,
+            "confidence": 93.94,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              353,
+              1732,
+              2237,
+              1801
+            ],
+            "generated_text": "Hỏi rằng : Đạo Phật chuông vô vi, thích bổ thí và",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.599,
+            "confidence": 91.16,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              219,
+              1829,
+              2234,
+              1908
+            ],
+            "generated_text": "giữ điều kiêng cấm, nơm nóp như đúng bên vực thăm.",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 1.841,
+            "confidence": 81.62,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              220,
+              1923,
+              2238,
+              1988
+            ],
+            "generated_text": "Nay các nhà sự say sưa rượu chè, có người hư ( or (hư? ) ) cà vợ",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 2.354,
+            "confidence": 65.99,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              219,
+              2013,
+              2233,
+              2080
+            ],
+            "generated_text": "con, mua rẻ bán đất, chuyên làm việc đối trá, đấy toàn",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.674,
+            "confidence": 91.06,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              220,
+              2104,
+              2235,
+              2172
+            ],
+            "generated_text": "những chuyên giả đối ở đời, mà đạo Phật lại goi là vô vi",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.705,
+            "confidence": 87.92,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              355,
+              2308,
+              2235,
+              2376
+            ],
+            "generated_text": "Mâu Tử đáp : Công Du (106) có thể đưa búa, rìu, dây",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 2.108,
+            "confidence": 93.6,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              224,
+              2398,
+              2236,
+              2468
+            ],
+            "generated_text": "mục, nhưng không thể khiến người ta khéo. Thánh",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.291,
+            "confidence": 98.18,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              223,
+              2494,
+              2236,
+              2559
+            ],
+            "generated_text": "nhân có thể truyền đạo, nhưng không thể khiến người",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.359,
+            "confidence": 93.49,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              224,
+              2583,
+              2238,
+              2650
+            ],
+            "generated_text": "ta thực hiện. Cao Dao (107) có thể xử tối kế trôm, nhưng",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 2.011,
+            "confidence": 97.01,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              223,
+              2673,
+              2236,
+              2742
+            ],
+            "generated_text": "không thể khiến đứa tham trở nên Di, Tê. Ngũ hình (108)",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 1.918,
+            "confidence": 89.47,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              224,
+              2768,
+              2236,
+              2834
+            ],
+            "generated_text": "có thể trừng phat kế xấu, nhưng không thể khiến người",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.542,
+            "confidence": 87.64,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              227,
+              2855,
+              2235,
+              2924
+            ],
+            "generated_text": "ác trỏ thành Tăng, Măn (109). Vua Nghiêu (110) không thể",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 1.989,
+            "confidence": 93.1,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              224,
+              2948,
+              2475,
+              3025
+            ],
+            "generated_text": "cảm hóa Dan Chu, Chu Công không thể dạy bảo Quản,",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.81,
+            "confidence": 91.84,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              224,
+              3038,
+              2435,
+              3115
+            ],
+            "generated_text": "Thái, đâu phải do giáo hóa Đường Ngu không rạng tỏ,",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.718,
+            "confidence": 94.14,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              227,
+              3129,
+              2334,
+              3205
+            ],
+            "generated_text": "đạo lý nhà Chu không hoàn biể! Vậy mà không làm gì",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.463,
+            "confidence": 82.26,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              225,
+              447,
+              2130,
+              457
+            ],
+            "ink": 663
+          },
+          {
+            "box": [
+              651,
+              540,
+              2014,
+              552
+            ],
+            "ink": 740
+          },
+          {
+            "box": [
+              685,
+              635,
+              2237,
+              644
+            ],
+            "ink": 511
+          },
+          {
+            "box": [
+              546,
+              1313,
+              2192,
+              1323
+            ],
+            "ink": 578
+          },
+          {
+            "box": [
+              238,
+              1344,
+              766,
+              1358
+            ],
+            "ink": 1075
+          },
+          {
+            "box": [
+              636,
+              1801,
+              1903,
+              1811
+            ],
+            "ink": 584
+          },
+          {
+            "box": [
+              408,
+              2169,
+              1897,
+              2183
+            ],
+            "ink": 1088
+          },
+          {
+            "box": [
+              308,
+              2467,
+              1464,
+              2477
+            ],
+            "ink": 592
+          },
+          {
+            "box": [
+              619,
+              2830,
+              2113,
+              2844
+            ],
+            "ink": 1136
+          },
+          {
+            "box": [
+              247,
+              3349,
+              2100,
+              3363
+            ],
+            "ink": 1047
+          },
+          {
+            "box": [
+              237,
+              3372,
+              2096,
+              3391
+            ],
+            "ink": 1582
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}
