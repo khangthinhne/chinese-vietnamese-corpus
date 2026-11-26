@@ -505,3 +505,137 @@ Sau `22a445f` và `40bf94a`: còn 0 tài liệu có lớp lặp; bead hợp lệ
 - `check_ocr_complete` khi đã đủ ảnh:
   - CPO_19: **ĐỦ, 0 lỗi**;
   - CPO_18: còn 3 lỗi `vie_degenerate` đã biết (208, 286, 523), hết `missing_image`.
+
+## 10. Vòng 3 (2026-11-27): duyệt đổi lớp, ghi đè CPO_18, quét ảo giác Qwen, file bị xoá
+
+### 10.1 Commit (nhánh `audit/segmentation`, không push)
+| Commit | Nội dung | Test |
+|---|---|---|
+| `272cd68` | Kiểm tra chéo Qwen (vie.xml) với dòng Latin paddlevl, cảnh báo trong `check_ocr_complete` | `tests/test_ocr_cross_check.py` (7) |
+| `0b027cd` | Bộ nhận diện âm/nghĩa chỉ chấm điểm và chuyển phần am MỞ NGẦM | 1 test mới |
+| `c7e249c` | Bước dòng Hán dùng trung vị dưới (sửa ranh giới CPO_18.054) | 1 test mới |
+| `f895c61` | Cơ chế `segmentation.document_overrides` | `tests/test_segmentation_overrides.py` (4) |
+| `3358fc0` | Config CPO_20: bật `am_detection`; docs | - |
+| `480960c` | Config CPO_18: 4 ghi đè có lý do | - |
+
+Toàn bộ test: 455 passed (nền 443). `git status --short data`: 216 dòng trước và sau, không commit gì trong `data/`.
+
+### 10.2 Xác nhận ảnh CPO_20 trước khi bật bộ nhận diện
+- **.155** (Hán tr.644–645, Việt tr.646–648): ảnh tr.646 có "Dịch nghĩa:" và tiêu đề "BÀI KÝ: NGƯỜI NÓI CHUYỆN VỚI
+  BÓNG" nhưng Qwen bỏ sót cả hai dòng, nên phần Việt bị mở ngầm thành am. Đây là văn xuôi chỉ có dịch nghĩa: **đúng**.
+- **.053** (tr.120–134) thực ra gồm 3 phần:
+  - tr.120–122: "TỰA TẬP NGÔ GIA VĂN PHÁI", văn xuôi dịch nghĩa, Hán ở tr.118–119;
+  - tr.123–125: THƠ NÔM PHAN HUY ÍCH (thơ Nôm, không in chữ Hán);
+  - tr.126–134: "Phiên âm:" bài DỤ NHỊ SÚY QUỐC ÂM CHIẾU VĂN (chiếu Nôm, không in chữ Nôm).
+
+  Bộ nhận diện cũ chuyển cả phần "Phiên âm:" tường minh sang nghia, nên đã sửa (`0b027cd`): giờ chỉ chuyển
+  tr.120–122. Phần tr.123–134 không có chữ Hán đối ứng, nên cặp dóng của .053 vẫn lẫn. **Cần quyết:** đưa tr.123–134
+  ra khỏi lớp dóng bằng `document_overrides`, hoặc tách thành bài riêng.
+- Danh sách 12 bài đổi am→nghia không đổi so với danh sách đã duyệt.
+
+| CPO_20 | nền 40bf94a | sau (bật) |
+|---|---|---|
+| câu am / câu nghia | 2843 / 1378 | 2525 / 1698 |
+| Hán–âm ±10% | 0,768 | 0,804 |
+| lệch số câu han/am | 28 | 22 |
+| chữ số chỉ mục trong am (05) | 40 | 30 |
+| bead han-am hợp lệ | 2031/2758 | 2031/2783 |
+
+### 10.3 CPO_18: ghi đè theo bài và sửa ranh giới
+| Bài | Thực tế (đã xem ảnh/văn bản) | Xử lý | Dòng gỡ ra |
+|---|---|---|---|
+| .012 tr.337–339 | Nửa đầu văn bia chuông Thanh Mai; am chỉ có 1 dòng `[UNCLEAR]` | `exclude` | 29 |
+| .013 tr.339–357 | Tiêu đề "KHAO DI" mất dấu ở tr.342, nên khảo dị (1)–(47) mở ngầm am trước "PHIÊN ÂM:" tr.344 | `notes`, chỉ phần am mở ngầm | 45 |
+| .015 tr.358–359 | Khảo dị Bản B/C; 2 dòng Hán là chữ trích trong khảo dị | `notes` cả bài | 12 |
+| .028 tr.413–415 | am là tiểu sử/chú thích, không phải phiên âm | `exclude` | 35 |
+| .054 tr.492 | Dòng rác "一" (conf 19) đầu trang làm bước dòng Hán = 2806 px, nên 2 dòng Hán cuối trang bị "dán" lên trên đuôi phiên âm .053 | Sửa chung `c7e249c`, không cần ghi đè | - |
+| .019 tr.368–369 | Qwen bịa dòng "Một ngày, một người đến gặp một thầy…" ở tr.369 (ảnh không có), cắt khối Hán | Đưa tr.369 vào danh sách OCR lại | - |
+
+Mọi dòng bị gỡ đều có review `override_excluded` (64) hoặc `override_note` (57), kèm 1 dòng `document_override`
+mang lý do.
+
+Ghi chú thêm:
+- **Nguyên nhân gốc của .013:** tiêu đề khảo dị chỉ kết thúc lớp nghia. Nếu nó cũng chặn việc mở ngầm am ngay sau
+  khối Hán, có thể bỏ ghi đè này. Đề xuất làm sau, có cờ.
+- **.012 có thể giữ lại thay vì loại:** phiên âm của .012 nằm trong .013, nên gộp .012 vào .013 thì giữ được 28 dòng
+  Hán văn bia. Cần bạn quyết.
+- **Tác dụng phụ của sửa ranh giới:** ở CPO_18 tr.524 có 3 dòng Hán là tên bài thơ trích trong văn xuôi. Trước khi
+  sửa, chúng mở bài giả ở dòng 1; sau khi sửa, mở bài giả ở dòng 2, còn dòng 1 dính vào .066 thành "lớp lặp". Cả
+  trước lẫn sau đều sai.
+
+| CPO_18 | nền 40bf94a | +bước dòng Hán | +ghi đè |
+|---|---|---|---|
+| tài liệu | 75 | 74 | 74 |
+| bead han-am hợp lệ | 1105/1413 | 1108/1411 | 1108/1350 |
+| Hán–âm ±10% | 0,676 | 0,699 | 0,714 |
+| lệch số câu | 16 | 15 | 13 |
+
+CPO_19 không đổi ở mọi chỉ số (bead 3507/3926).
+
+### 10.4 Quét ảo giác/lặp/bỏ sót của Qwen (CPU, `src/ocr/cross_check.py`)
+**Cách đo.** So vie.xml với các dòng Latin mà paddlevl đã OCR trên cùng trang (lấy từ JSON thô của luồng Hán). Dòng lẫn
+chữ Hán thì giữ phần Latin. Văn bản được đưa về chữ thường, bỏ dấu, bỏ khoảng trắng/dấu câu/số, rồi so tập 4-gram ký tự.
+- precision = phần chữ của Qwen mà paddlevl cũng thấy;
+- recall = phần chữ của paddlevl mà Qwen cũng có;
+- dòng Qwen ≥ 30 chữ cái có precision < 0,35 là "không xác nhận".
+
+**Phạm vi.** So được 284/311 trang (CPO_18), 718/820 (CPO_19), 463/501 (CPO_20); các trang còn lại có quá ít chữ
+Latin.
+
+**Phân vị.** precision p5: 0,93 / 0,96 / 0,94. recall p5: 0,90 / 0,91 / 0,77; CPO_20 hay bỏ sót chú thích chữ nhỏ.
+
+**Tích hợp.** Đã thêm vào `check_ocr_complete` dưới dạng **cảnh báo** (không chặn):
+- `vie_cross_low_precision` (< 0,75);
+- `vie_cross_low_recall` (< 0,6);
+- `vie_unconfirmed_line`.
+
+Trên dữ liệu thật:
+- CPO_18: 2 / 2 / 5 cảnh báo;
+- CPO_19: 2 / 0 / 1;
+- CPO_20: 1 / 6 / 1.
+
+Số lỗi không đổi: CPO_18 còn 3 `vie_degenerate`; CPO_19 và CPO_20 có 0 lỗi.
+
+**Đã mở ảnh 10 trang có min(precision, recall) thấp nhất,** cùng các trang có dòng không xác nhận:
+| Trang | Kết luận |
+|---|---|
+| CPO_18 343, 539 | Qwen đúng; chính **paddlevl bịa** ("The quick brown fox…", "(the original is…") |
+| CPO_18 402 | Qwen bịa "Bài giảng: Điều tra dân số…", "HỌC THỦY QUỐC" (trang chỉ có 2 chú thích, phần còn lại là mực thấm từ trang sau) |
+| CPO_18 369 | Qwen bịa 1 dòng truyện (bài .019) |
+| CPO_20 90, 76, 678, 622, 298, 685, 771 | Qwen **bỏ sót chú thích cuối trang**; tr.90 mất cả tiêu đề "NHÂM TUẤT NGUYÊN NHẬT…" |
+
+Kiểm tra theo văn bản:
+- CPO_18 tr.470: dòng tiếng Anh tự bịa.
+- CPO_18 tr.528: rác LaTeX.
+- CPO_20 tr.215: dòng "Trên đỉnh núi cao tuyết trắng như trời." không có trong ảnh, chen vào Dịch thơ.
+- CPO_20 tr.296: 25 dòng pinyin "-: zhuǎn" và lời tự nói "Phần âm của các từ trong hình là:".
+- CPO_19 tr.102: 4 dòng pinyin không dấu dưới "PHIÊN ÂM:".
+
+Ba trang cuối lọt qua `script_filter`/`chatter`. Đề xuất mở rộng luật lọc (pinyin 1 âm tiết, pinyin không dấu), có
+test.
+
+**Danh sách trang cần OCR lại Qwen (luồng vie)**
+- Ưu tiên 1, rác/bịa ảnh hưởng tách lớp hoặc cặp dóng:
+  - CPO_18: 208, 286, 523 (`vie_degenerate`), 369, 402, 470, 528; 353 nghi (1 dòng tên người bị đọc rối).
+  - CPO_19: 102.
+  - CPO_20: 215, 296.
+- Ưu tiên 2, bỏ sót chú thích/tiêu đề:
+  - CPO_20: 76, 90, 298, 622, 646 (mất "Dịch nghĩa:" và tiêu đề), 678, 685, 771.
+  - Chú thích không vào cặp dóng; chỉ tr.90 và tr.646 ảnh hưởng metadata/tách lớp.
+- Không cần OCR lại: CPO_18 343, 539 (paddlevl sai); CPO_19 599 (dòng bị che một nửa ở mép trên trang).
+
+### 10.5 69 file bị xoá trong `data/` (chỉ báo cáo, không khôi phục hay xoá gì)
+| Nhóm | File | Có trong commit | Xoá khi nào |
+|---|---|---|---|
+| CPO_18 `ocr_raw_text/han` | 29 trang: 261–281, 306–307, 327–329, 335, 361–362 | `8b001c3` (2026-11-26 17:09, "OCR CPO_18 raw from 205-544") | Lần `build_layers` sau khi các trang ảnh chụp thủ bản bị bỏ khỏi `ocr.streams.pages` (lần chạy cuối 2026-11-26 20:39) |
+| CPO_18 `ocr_raw_text/vie` | 28 trang như trên, trừ 272 (trang này chưa từng có vie) | `8b001c3` | như trên |
+| CPO_19 `ocr_raw_text/han` | 3 trang: 258, 259, 266 | `dfb8d22` (2026-11-26 17:11) | `build_layers` sau khi bỏ 258–266 (2026-11-26 20:22) |
+| CPO_19 `ocr_raw_text/vie` | 9 trang: 258–266 | 12 file theo `9e0b941` (19:36), còn lại theo `dfb8d22` | như trên |
+
+- **Cách bị xoá:** đây là hành vi có chủ đích của `build_layers.write_texts`, vốn xoá TXT của những trang không còn
+  được build (vòng `entry.unlink()`). Không có thao tác xoá bằng tay.
+- **Còn ở đâu:** cả 69 file vẫn có trong HEAD của `audit/segmentation`, `feat/merge-member-ocr` và
+  `origin/feat/merge-member-ocr`.
+- **JSON thô `03_ocr/raw/{paddlevl,qwen}/NNNN.json`** của các trang này còn nguyên.
+- **Nếu commit trạng thái `data/` hiện tại**, các TXT này sẽ bị xoá khỏi lịch sử tiếp theo. Điều này đúng với quyết
+  định bỏ trang, nhưng cần bạn xác nhận.
