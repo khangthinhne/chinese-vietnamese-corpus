@@ -25,6 +25,7 @@
       "enabled": true,
       "ocr_streams": "han_vie",
       "notes_after_attribution": ["am"],
+      "note_entry_ends": ["am", "nghia", "tho"],
       "document": {
         "start_patterns": [
           "^\\s*[\\u4e00-\\u9fff]{2,12}\\s*$"
@@ -90,6 +91,7 @@
         }
       }
     },
+    "sentence": {"am_follow_han_split": true},
     "clean": {
       "common": {
         "excluded_pages": "321-621",
