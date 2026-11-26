@@ -35,3 +35,12 @@ def test_merge_issues_one_line_per_page_and_code():
     assert [i.code for i in out if i.page == 700] == ["vie_run_no_lines"]
     assert [i.code for i in out if i.page == 679] == ["han_model_chatter"]
     assert len(out) == 4
+
+
+def test_han_line_keeps_title_number():
+    from src.ocr.script_filter import filter_han_line
+    assert filter_han_line("37. 題安貞巢") == "37. 題安貞巢"
+    assert filter_han_line("2.答李交州森難佛不見形") == "2. 答李交州森難佛不見形"
+    assert filter_han_line("1、諒山道中（二首）") == "1. 諒山道中（二首）"
+    assert filter_han_line("07 距 占 缁") == "距占缁"          # số không có dấu sau: vẫn bỏ như cũ
+    assert filter_han_line("行止由天 (1)") == "行止由天"       # số chú thích cuối dòng: vẫn bỏ

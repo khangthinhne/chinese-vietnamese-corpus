@@ -75,12 +75,20 @@ def has_latin(text: str) -> bool:
     return any(is_latin_letter(c) for c in text)
 
 
+# Số thứ tự đầu tiêu đề bài ("37. 題安貞巢", "2.答李交州…"): segmentation CPO_18/19 mở bài mới theo số này
+# (start_patterns/title_patterns "^\d{1,3}[.、…]\s*<chữ Hán>"), nên giữ lại dạng chuẩn "37. ".
+_HAN_NUMBER_PREFIX_RE = re.compile(r"^\s*(\d{1,3})\s*[.．、﹒·。)]\s*(?=[" + "".join(_CJK_IDEOGRAPH_RANGES) + "])")
+
+
 def filter_han_line(text: str) -> str | None:
-    """Trả về dòng chỉ còn chữ Hán + dấu câu CJK, hoặc None nếu dòng không có chữ Hán."""
+    """Trả về dòng chỉ còn chữ Hán + dấu câu CJK (giữ số thứ tự đầu tiêu đề), hoặc None nếu dòng không có chữ Hán."""
     text = unicodedata.normalize("NFC", text)
     if not has_cjk(text):
         return None
-    return _NOT_HAN_RE.sub("", text).replace("　", "") or None   # bỏ cả khoảng trắng ý văn
+    m = _HAN_NUMBER_PREFIX_RE.match(text)
+    prefix = f"{m[1]}. " if m else ""
+    body = _NOT_HAN_RE.sub("", text[m.end():] if m else text).replace("　", "")   # bỏ cả khoảng trắng ý văn
+    return prefix + body if body else None
 
 
 # Dòng Hán "giả": dòng tiếng Việt (khảo dị/chú thích) có trích vài chữ Hán, hoặc paddlevl đọc nhầm một dòng

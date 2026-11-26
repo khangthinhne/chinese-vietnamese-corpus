@@ -175,7 +175,7 @@ def test_build_layers_end_to_end(tmp_path, capsys):
     vie_txt = sorted(p.name for p in layout.ocr_layer_text_dir("vie").iterdir())
     assert han_txt == ["0001.txt", "0002.txt"]
     assert vie_txt == ["0001.txt", "0003.txt", "0004.txt"]
-    assert layout.ocr_layer_text_path("han", 1).read_text(encoding="utf-8") == "諒山道中（二首）\n二諒江山境界連\n"
+    assert layout.ocr_layer_text_path("han", 1).read_text(encoding="utf-8") == "1. 諒山道中（二首）\n二諒江山境界連\n"
     assert layout.ocr_layer_text_path("vie", 1).read_text(encoding="utf-8") == "PHIÊN ÂM:\nNhị Lạng giang\n"
 
     han = file_element(read_root(layout.ocr_layer_xml_path("han")))
