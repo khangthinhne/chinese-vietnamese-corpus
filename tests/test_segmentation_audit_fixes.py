@@ -127,3 +127,13 @@ def test_am_digit_markers_removed_only_in_am_layer():
     assert res.text == "Cao sơn lưu thủy hữu tri âm," and ("am_digit_marker", "2") in res.removed
     assert clean_ocr_artifacts("Ngày 12 tháng 12 năm ấy", cfg, layer="nghia").text == "Ngày 12 tháng 12 năm ấy"
     assert clean_ocr_artifacts("trạo sơ 1, năm 1790", cfg, layer="am").text == "trạo sơ 1, năm 1790"
+
+
+def test_short_translator_lines_go_to_metadata():
+    from src.cleaning.metadata import is_translator_line
+    for text, layer in (("Đỗ Ngọc Toại - Thạch Can dịch", "tho"), ("Dương Minh và Thạch Can dịch", "nghia"),
+                        ("Nguyen Van Bach dich", "tho"), ("Thạch Can dịch thơ", "tho"), ("Ngô Linh Ngọc dịch", "am")):
+        assert is_translator_line(text, layer), text
+    for text, layer in (("Hình bất vì tâm dịch.", "am"), ("Hình bất vì tâm dịch.", "tho"),
+                        ("Từng trải nắng mưa đường trạm dịch,", "nghia"), ("Lời này khó dịch", "nghia")):
+        assert not is_translator_line(text, layer), text

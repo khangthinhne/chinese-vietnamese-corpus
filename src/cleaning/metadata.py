@@ -362,6 +362,24 @@ def extract_metadata(lines: list[RawLine], cfg: MetadataConfig, layer: str
 # "Ngô Linh Ngọc dịch". Trước đây bị bỏ như chú thích/cuối trang; giờ ra khỏi chính văn nhưng VÀO metadata.
 COMPOSITION_RE = re.compile(r"^\s*[(（]\s*(?:Làm|Viết|Soạn|Sáng tác|Thơ làm|Bài này làm)\b[^()（）]{0,120}[)）]\s*\.?\s*$")
 TRANSLATOR_RE = re.compile(r"^\s*(?:[A-ZĐÀ-Ỹ][^\s,.;:!?()]*\s+){1,4}dịch(?:\s+thơ)?\s*\.?\s*$")
+# Lớp nghia/tho: dòng NGẮN kết thúc bằng "dịch" (kể cả OCR mất dấu "dich", viết thường "Ngô linh ngọc dịch", nhiều
+# người "Dương Minh và Thạch Can dịch", "Đỗ Ngọc Toại - Thạch Can dịch"). Không áp cho lớp am: câu phiên âm hay kết
+# thúc bằng chữ "dịch" ("Hình bất vì tâm dịch."). Dòng có dấu phẩy/chấm phẩy là câu thơ/văn, không phải tên.
+TRANSLATOR_SHORT_RE = re.compile(
+    r"^\s*[A-ZĐÀ-Ỹ][^\d,;:!?()]{0,60}?\s(?:dịch|dich)(?:\s+(?:thơ|tho))?\s*\.?\s*$")
+TRANSLATOR_MAX_WORDS = 8
+
+
+def is_translator_line(text: str, layer: str) -> bool:
+    """Dòng tên người dịch (đưa vào metadata, không phải chính văn)."""
+    text = text.strip()
+    if TRANSLATOR_RE.match(text):
+        return True
+    if layer not in ("nghia", "tho") or len(text.split()) > TRANSLATOR_MAX_WORDS or not TRANSLATOR_SHORT_RE.match(text):
+        return False
+    words = [w for w in re.sub(r"\s+(?:dịch|dich)(?:\s+(?:thơ|tho))?\s*\.?\s*$", "", text).split()
+             if w.lower() not in ("và", "va", "-", "–", "&")]
+    return bool(words) and sum(w[0].isupper() for w in words) * 2 >= len(words)      # phần tên: đa số viết hoa
 
 
 def _name_key(text: str) -> str:
@@ -389,7 +407,7 @@ def capture_note_lines(lines: list[RawLine], cfg: MetadataConfig, layer: str
         text = ln.text.strip()
         if COMPOSITION_RE.match(text):
             captured.append(("composition", ln))
-        elif TRANSLATOR_RE.match(text) or (names and _name_key(text) in names):
+        elif is_translator_line(text, layer) or (names and _name_key(text) in names):
             captured.append(("translator", ln))
         else:
             kept.append(ln)
