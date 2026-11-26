@@ -223,7 +223,9 @@ def allowed_document_starts(merged: list[OcrLine], headers: set[str] | None = No
     blocks: list[list[int]] = []
     previous = None                      # luồng của dòng nội dung gần nhất
     for i, ln in enumerate(merged):
-        if is_header(ln.text) or (ln.writing_system == "vie" and _is_noise_vie(ln.text)):
+        numbered = ln.writing_system == "han" and NUMBERED_HAN_TITLE_RE.match(ln.text)
+        # tiêu đề đánh số ("10. 又一道") lặp ở nhiều trang nhưng không phải tiêu đề chạy (_norm bỏ chữ số)
+        if not numbered and (is_header(ln.text) or (ln.writing_system == "vie" and _is_noise_vie(ln.text))):
             continue
         if ln.writing_system == "han":
             if previous != "han":

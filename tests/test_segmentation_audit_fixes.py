@@ -210,3 +210,14 @@ def test_single_numbered_han_title_line_opens_next_document():
     starts = streams.allowed_document_starts(merged)
     assert 4 in starts                                   # "10. 又一道" mở bài mới dù khối chỉ 1 dòng
     assert 6 not in starts and 8 not in starts           # chữ Hán lẻ trong phần Việt vẫn không mở bài
+
+
+def test_repeated_numbered_title_is_not_a_running_header():
+    merged = []
+    for k, page in enumerate((100, 200, 300, 435)):         # "又一道" là tên nhiều bài -> lặp >= 3 trang
+        merged += [line("vie", page, 1, ["Mùa xuân năm ấy", "Gió thu lồng lộng", "Trăng soi bến cũ",
+                                         "Nước chảy về đông"][k], 100),
+                   line("han", page, 1, f"{k + 7}. 又一道", 2900),
+                   line("han", page, 2, "（覆稽典禮。留守官稟）", 3000), line("han", page, 3, "前奉札飭本國查照册封典禮", 3100)]
+    starts = streams.allowed_document_starts(merged)
+    assert {i for i, ln in enumerate(merged) if ln.text.endswith("又一道")} <= starts
