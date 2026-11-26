@@ -76,6 +76,17 @@ def test_note_entry_ends_vietnamese_layer_only_when_enabled():
     assert sum(r["reason"] == "unassigned_line" for r in on.review) == 2
 
 
+def test_am_can_follow_han_split_mode():
+    am = [RawLine(f"W.001.P0001.L{k:03d}", 1, t) for k, t in enumerate(
+        ["Cao sơn lưu thủy hữu tri âm,", "Lương địa thần giao ký ý thâm.",
+         "Danh mạo khởi tu bằng vấn tấn,", "Phong tình quân dị ngụ ca ngâm."], 1)]
+    cfg = SentenceConfig(layer="am", split="auto")
+    auto, _ = make_sentences("W", "am", am, cfg)
+    assert len(auto) == 4                                         # văn vần -> theo dòng
+    forced, _ = make_sentences("W", "am", am, cfg, forced_modes={"W.001": "punct"})
+    assert len(forced) == 2                                       # theo lớp han (tách 。) -> theo dấu câu
+
+
 def test_note_entries_end_layer_only_until_page_break():
     rows = [("han", 1, "夢遊文灘次思堂"), ("vie", 1, "PHIÊN ÂM:"), ("vie", 1, "Nguyệt tiền ngô diệc tác tư du,"),
             ("vie", 1, "1. Nguyên chủ: Tư Đường là ông Hoàng giáp."), ("vie", 2, "Bồng trục thương doanh nhất diệp phù."),
