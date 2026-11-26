@@ -199,3 +199,14 @@ def test_reading_match_ignores_note_lines_before_phien_am():
     notes = ['1. Nguyên bản chép "trú nhật gian", không có nghĩa. Ngờ là chép nhầm chữ nhàn ' * 3,
              "2. Nguyên bản chép chữ ánh không hợp nghĩa."]
     assert reading_match(["扇值清秋盡日閒"], notes + ["ĐỀ THU PHIẾN", "Phiến trị thanh thu tận nhật nhàn,"], rd) == 1.0
+
+
+def test_single_numbered_han_title_line_opens_next_document():
+    merged = [line("han", 434, 1, "實由力不從心。", 100), line("han", 434, 2, "敬祈垂鑒。", 200),
+              line("vie", 434, 1, "PHIÊN ÂM:", 300), line("vie", 434, 2, "Thực do lực bất tòng tâm.", 400),
+              line("han", 435, 1, "10. 又一道", 2900), line("vie", 436, 1, "Lại một đạo thư nữa gửi đi.", 100),
+              line("han", 436, 1, "茲者恭奉", 300), line("vie", 436, 2, "Nay kính vâng mệnh.", 400),
+              line("han", 436, 2, "論旨", 500)]
+    starts = streams.allowed_document_starts(merged)
+    assert 4 in starts                                   # "10. 又一道" mở bài mới dù khối chỉ 1 dòng
+    assert 6 not in starts and 8 not in starts           # chữ Hán lẻ trong phần Việt vẫn không mở bài

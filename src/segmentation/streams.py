@@ -189,6 +189,9 @@ def running_headers(lines: list[OcrLine], min_pages: int = HEADER_MIN_PAGES) -> 
 
 
 MIN_HAN_BLOCK_LINES = 2                  # khối Hán 1 dòng (trích dẫn trong chú thích) không mở tài liệu
+# ... trừ khi dòng đó là tiêu đề đánh số của bài kế tiếp in ở cuối trang ("10. 又一道", "28.呈福大人", CPO_19: 12 bài
+# từng bị dính tiêu đề bài sau vào cuối lớp han, câu Hán cuối thừa chữ).
+NUMBERED_HAN_TITLE_RE = re.compile(r"^\s*\d{1,3}\s*[.．、]\s*[㐀-鿿豈-﫿]")
 # Dòng Việt nhiễu (rác OCR của Qwen trên trang chữ Hán, chữ viết tay bên lề): không phải "phần Việt" của bài.
 # Gặp ở audit 2026-11-26: "E", "**N**", "Điều" (CPO_18 tr.235: tách đôi bài, phiên âm gắn sang bài sau),
 # "of contradiction!", "Vandana =", "Stone", "Dome", "cuer".
@@ -227,7 +230,8 @@ def allowed_document_starts(merged: list[OcrLine], headers: set[str] | None = No
                 blocks.append([])
             blocks[-1].append(i)
         previous = ln.writing_system
-    return {b[0] for b in blocks if len(b) >= min_block_lines}
+    return {b[0] for b in blocks
+            if len(b) >= min_block_lines or NUMBERED_HAN_TITLE_RE.match(merged[b[0]].text)}
 
 
 def document_config(doc_cfg: dict) -> dict:
