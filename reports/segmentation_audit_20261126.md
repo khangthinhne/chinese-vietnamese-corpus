@@ -384,3 +384,124 @@ Thứ tự commit đề xuất:
    không?
 5. **Metadata tiêu đề Hán:** chỉ cho phép 1 dòng (≤ 12 chữ) để không nuốt dòng thân văn (CPO_20.124 tr.268, CPO_19
    59 tiêu đề nhiều dòng)?
+
+
+## 9. Đợt 2 (2026-11-27): sau khi người dùng duyệt
+
+Người dùng duyệt A, B, C; bật D cho CPO_20 và E cho cả ba work; yêu cầu thêm 6 sửa. Mỗi sửa một commit kèm test,
+số liệu đo trên bản sao bằng `scripts/audit_segmentation.py`. Không push. `data/`: `git status --short data` = 216 dòng
+trước và sau (132 M, 69 D, 15 ??), không commit file nào trong `data/`.
+
+### Commit (nhánh `audit/segmentation`)
+`git log --oneline 25b6362..HEAD`:
+- `a5ba17c` nền lượt trước · `8c4afea` A+B · `23e39fd` C · `c5125f1` D · `63c8b86` E · `a784380` audit script + báo cáo
+- `ef4777b` config: bật D (CPO_20) và E (CPO_18/19/20)
+- `011e855` tiêu đề mục so khớp mờ · `66d2c25` bỏ chữ số chỉ mục trong lớp am · `35f5f6f` dòng "X dịch" vào metadata
+- `429872e` tiêu đề Hán tối đa 1 dòng + phụ đề · `a058223`, `f265907` bộ nhận diện âm/nghĩa (mặc định tắt)
+- `22a445f`, `40bf94a` tiêu đề Hán đánh số 1 dòng mở bài mới (không coi là tiêu đề chạy)
+
+Test: mỗi commit đều qua (worktree riêng); cuối: 443 passed.
+
+### D trước khi bật (CPO_20)
+Bật `note_entry_ends` làm unassigned tăng 179 → 528 (+349): 300 dòng mục `số. thuật ngữ:` và 49 dòng là phần còn lại
+của chú thích. Rà 30 dòng mẫu (seed 20261127): cả 30 là chú thích, nên đã bật.
+
+### Diff config thật (`ef4777b`)
+```
+configs/CPO_18.json, CPO_19.json:  + "sentence": {"am_follow_han_split": true},
+configs/CPO_20.json:               + "note_entry_ends": ["am", "nghia", "tho"],   (trong segmentation)
+                                   + "sentence": {"am_follow_han_split": true},
+```
+
+### Số liệu từng sửa
+Bản sao dùng config thật. Cột "nền" là `ef4777b`. "(bật nhận diện âm/nghĩa)" là đo riêng, không có trong config thật.
+Cột "CUỐI" có align.
+
+### CPO_18
+
+| Chỉ số | nền (ef4777b) | + tiêu đề mờ | + bỏ số am | + người dịch | + tiêu đề Hán | + tiêu đề số 1 dòng | (bật nhận diện âm/nghĩa) | CUỐI 40bf94a |
+|---|---|---|---|---|---|---|---|---|
+| tài liệu | 75 | 75 | 75 | 75 | 75 | 75 | 75 | 75 |
+| lớp lặp | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| không tho | 73 | 73 | 73 | 73 | 73 | 73 | 73 | 73 |
+| tiêu đề mục trong thân (04) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| số chỉ mục am (05) | 32 | 32 | 5 | 5 | 5 | 5 | 5 | 5 |
+| tên dịch tho+nghia (05) | 5 | 5 | 5 | 5 | 5 | 5 | 5 | 5 |
+| metadata | 148 | 147 | 147 | 147 | 144 | 144 | 144 | 144 |
+| Hán–âm ±10% | 0.667 | 0.676 | 0.676 | 0.676 | 0.676 | 0.676 | 0.706 | 0.676 |
+| lệch số câu | 15 | 16 | 16 | 16 | 16 | 16 | 11 | 16 |
+| câu am | 1412 | 1410 | 1410 | 1410 | 1410 | 1410 | 1318 | 1410 |
+| câu nghia | 1133 | 1133 | 1133 | 1133 | 1133 | 1133 | 1224 | 1133 |
+| bead | 1107/1409 | - | - | - | - | - | - | 1105/1413 |
+
+### CPO_19
+
+| Chỉ số | nền (ef4777b) | + tiêu đề mờ | + bỏ số am | + người dịch | + tiêu đề Hán | + tiêu đề số 1 dòng | (bật nhận diện âm/nghĩa) | CUỐI 40bf94a |
+|---|---|---|---|---|---|---|---|---|
+| tài liệu | 270 | 270 | 270 | 270 | 270 | 270 | 270 | 270 |
+| lớp lặp | 12 | 12 | 12 | 12 | 12 | 12 | 12 | 0 |
+| không tho | 213 | 188 | 188 | 188 | 188 | 188 | 188 | 188 |
+| tiêu đề mục trong thân (04) | 11 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| số chỉ mục am (05) | 7 | 6 | 5 | 5 | 5 | 5 | 5 | 5 |
+| tên dịch tho+nghia (05) | 39 | 34 | 34 | 34 | 34 | 34 | 34 | 34 |
+| metadata | 1012 | 1009 | 1009 | 1009 | 953 | 953 | 953 | 963 |
+| Hán–âm ±10% | 0.896 | 0.9 | 0.9 | 0.9 | 0.893 | 0.893 | 0.893 | 0.893 |
+| lệch số câu | 23 | 21 | 21 | 21 | 21 | 21 | 21 | 21 |
+| câu am | 3895 | 3859 | 3859 | 3859 | 3861 | 3861 | 3861 | 3861 |
+| câu nghia | 3403 | 3387 | 3387 | 3387 | 3387 | 3387 | 3387 | 3387 |
+| bead | 3501/3924 | - | - | - | - | - | - | 3507/3926 |
+
+### CPO_20
+
+| Chỉ số | nền (ef4777b) | + tiêu đề mờ | + bỏ số am | + người dịch | + tiêu đề Hán | + tiêu đề số 1 dòng | (bật nhận diện âm/nghĩa) | CUỐI 40bf94a |
+|---|---|---|---|---|---|---|---|---|
+| tài liệu | 222 | 222 | 222 | 222 | 222 | 222 | 222 | 222 |
+| lớp lặp | 4 | 4 | 4 | 4 | 4 | 4 | 3 | 4 |
+| không tho | 112 | 111 | 111 | 111 | 111 | 111 | 111 | 111 |
+| tiêu đề mục trong thân (04) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| số chỉ mục am (05) | 144 | 144 | 40 | 40 | 40 | 40 | 28 | 40 |
+| tên dịch tho+nghia (05) | 8 | 8 | 8 | 7 | 7 | 7 | 11 | 7 |
+| metadata | 656 | 656 | 656 | 656 | 629 | 629 | 625 | 629 |
+| Hán–âm ±10% | 0.75 | 0.755 | 0.755 | 0.755 | 0.768 | 0.768 | 0.808 | 0.768 |
+| lệch số câu | 30 | 29 | 29 | 29 | 28 | 28 | 21 | 28 |
+| câu am | 2838 | 2843 | 2843 | 2843 | 2843 | 2843 | 2444 | 2843 |
+| câu nghia | 1446 | 1378 | 1378 | 1378 | 1378 | 1378 | 1777 | 1378 |
+| bead | 2022/2753 | - | - | - | - | - | - | 2031/2758 |
+
+### Bộ nhận diện âm/nghĩa: bài bị đổi lớp khi bật (ngưỡng 0,35), CHỜ DUYỆT
+Phân bố điểm: bài phiên âm thật ≥ 0,45; bài dịch nghĩa 0,00–0,27.
+- **CPO_20** (12 bài, đều là văn xuôi chỉ có dịch nghĩa):
+  - .047 tr.99 (0,20) · .048 tr.104–105 (0,11) · .049 tr.107–109 (0,17) · .050 tr.111–112 (0,14)
+  - .051 tr.113–114 (0,18) · .052 tr.116–118 (0,12) · .053 tr.120–134 (0,15) · .124 tr.268–269 (0,13)
+  - .125 tr.271 (0,27) · .126 tr.274–275 (0,21) · .133 tr.287 (0,00) · .155 tr.646–648 (0,16)
+- **CPO_18** (6 bài): lớp "âm" vốn đã sai, nhưng đổi sang nghĩa cũng chưa đúng hẳn:
+  - .012 tr.339: rác `[UNCLEAR]`;
+  - .013 tr.342–349 và .015 tr.358–359: mục khảo dị `(6) Bản B: …`;
+  - .019 tr.369: đoạn truyện do Qwen tự bịa;
+  - .028 tr.414–415: tiểu sử;
+  - .054 tr.492: bản dịch; dòng đầu "hĩ. Ngũ kinh…" là đuôi phiên âm của bài trước tràn sang.
+- **CPO_19:** 0 bài.
+- Đề xuất: bật `segmentation.am_detection: {"enabled": true}` cho CPO_20. Với CPO_18 thì chưa bật; nên sửa nguồn
+  (khảo dị, rác OCR) trước.
+
+### 12 tài liệu CPO_19 có khối Hán thứ hai ở cuối
+Cả 12 bài (.032, .144, .187, .191, .195, .205, .207, .209, .211, .215, .221, .231) cùng một kiểu: khối Hán thứ hai là
+**tiêu đề đánh số của bài kế tiếp** in ở cuối trang (`10. 又一道`, `52. 共一`, `28.呈福大人`).
+
+Hai nguyên nhân chồng nhau:
+1. Khối Hán 1 dòng không được mở bài.
+2. `_norm` bỏ chữ số, nên `又一道` lặp ở nhiều trang và bị coi là tiêu đề chạy.
+
+Ảnh hưởng tới cặp dóng:
+- 9 cặp han-nghia có câu Hán cuối bị nối thêm tiêu đề (`…者也。又一道`, `…之大願也。呈福大人`).
+- Bài sau mất tiêu đề.
+- CPO_19.207: tiêu đề âm "LẠI MỘT ĐẠO" của bài sau cũng dính vào bài trước.
+
+Sau `22a445f` và `40bf94a`: còn 0 tài liệu có lớp lặp; bead hợp lệ 3501 → 3507.
+
+### Ảnh đã trích để kiểm tra
+- CPO_18: 340 trang (205–544). CPO_19: 829 trang (5–833). Ảnh nằm trong `data/*/02_extraction/pages`, thư mục này đã
+  có trong gitignore.
+- `check_ocr_complete` khi đã đủ ảnh:
+  - CPO_19: **ĐỦ, 0 lỗi**;
+  - CPO_18: còn 3 lỗi `vie_degenerate` đã biết (208, 286, 523), hết `missing_image`.
