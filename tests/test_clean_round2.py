@@ -305,3 +305,30 @@ def test_audit_punct_issues():
            enumerate(["Trời đất ， mênh mông", "Ông nói : đi", "Câu (mở ngoặc", "Bình thường."])]
     pu = audit.punct_issues(els)
     assert (pu["fullwidth"], pu["space_before"], pu["unbalanced"]) == (1, 1, 1)   # "，" tính là full-width
+
+
+# --- CPO_20 tr.692 (Qwen coi trang thưa mực là trắng) và tr.631 (lát ảnh mỏng đọc ra dòng kẻ lặp) ---
+
+def test_qwen_sparse_page_is_not_blank():
+    import numpy as np
+    from src.ocr.engines import qwen
+    gray = np.full((400, 300), 255, dtype=np.uint8)
+    gray.reshape(-1)[: int(0.014 * gray.size)] = 10          # ~1.4% điểm mực như tr.692
+    assert abs(qwen.ink_mask(gray).mean() - 0.014) < 1e-3
+    assert not qwen.ink_mask(np.full((50, 50), 255, dtype=np.uint8)).any()
+    assert qwen.ADAPTER_VERSION >= 4
+
+
+def test_han_rule_junk_line_rejected():
+    from src.ocr.script_filter import han_reject_reason
+    assert han_reject_reason("口 + — — — — — — — — — — — — — — —") == "rule_junk"
+    assert han_reject_reason("真與殷興於毫，周興於岐，而同一其揆度。") is None
+    assert han_reject_reason("其一 ——") is None
+
+
+def test_bad_units_ignores_loop_without_han_text():
+    from src.ocr.run_quality import bad_units
+    junk = {"unit": 5, "flags": ["loop_stopped"], "generated_text": "口 + — — — — — — — —"}
+    real = {"unit": 6, "flags": ["loop_stopped"], "generated_text": "山水山水山水山水"}
+    run = {"raw": {"bands": [junk, real]}}
+    assert [u["unit"] for u in bad_units(run, "han")] == [6]

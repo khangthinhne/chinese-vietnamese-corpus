@@ -93,7 +93,14 @@ HAN_MIN_CJK_WITH_LATIN = 2       # dòng có chữ cái Latin phải có ít nh�
 # Lời tự nói của model bằng tiếng Trung hiện đại (giản thể) lọt vào luồng Hán, đã gặp ở CPO_20:
 # tr.450 "这里原文本可能存在识别偏差…", tr.679/703 "作为一个人工智能语言模型，我还没学习如何…".
 # Các cụm này không thể có trong văn bản Hán cổ của corpus.
-HAN_CHATTER_RE = re.compile(r"人工智能|语言模型|語言模型|原文本|识别|識別偏差|无法识别|很抱歉|作为一个|我还没|按要求")
+HAN_CHATTER_RE = re.compile(r"人工智能|语言模型|語言模型|原文本|识别|識別偏差|无法识别|抱歉|作为一个|我还没|按要求"
+                            r"|(?i:\bas\s+an?\s+ai\b|\blanguage\s+model\b)")
+
+# Dòng "kẻ" rác: paddlevl đọc một lát ảnh mỏng giữa hai dòng thành 1-2 chữ + chuỗi gạch lặp,
+# vd CPO_20 tr.631 "口 + — — — — …" (hai dòng thật trên/dưới vẫn được đọc đủ ở đơn vị riêng).
+RULE_JUNK_MAX_CJK = 2
+RULE_JUNK_MIN_DASHES = 6
+_DASH_CHARS = frozenset("—–-─━_＿－")
 
 
 def han_reject_reason(text: str, min_cjk_share: float = HAN_MIN_CJK_SHARE,
@@ -103,6 +110,8 @@ def han_reject_reason(text: str, min_cjk_share: float = HAN_MIN_CJK_SHARE,
     if HAN_CHATTER_RE.search(text):
         return "model_chatter"
     cjk = len(CJK_IDEOGRAPH_RE.findall(text))
+    if cjk <= RULE_JUNK_MAX_CJK and sum(c in _DASH_CHARS for c in text) >= RULE_JUNK_MIN_DASHES:
+        return "rule_junk"
     latin = sum(1 for c in text if is_latin_letter(c))
     if not cjk or not latin:
         return None
@@ -134,7 +143,8 @@ _VIE_SPECIFIC_RE = re.compile(r"[À-ỹĐđ]")
 _CHATTER_RE = re.compile(
     r"^\W*(?:the\s+(?:image|text|provided|transcription|following)\b|here(?:'s|\s+is|\s+are)\b"
     r"|i\s+(?:will|can|'ll|have)\b|sure\b|certainly\b|below\s+is\b|this\s+(?:image|text)\b)"
-    r"|\btranscri(?:be|bed|ption|bing)\b",
+    r"|\btranscri(?:be|bed|ption|bing)\b"
+    r"|\bas\s+an?\s+ai\b|\blanguage\s+model\b|\bi(?:'m|\s+am)\s+sorry\b",
     re.IGNORECASE)
 
 
@@ -144,6 +154,15 @@ def vie_reject_reason(text: str) -> str | None:
     if _VIE_SPECIFIC_RE.search(text):
         return None
     return "model_chatter" if _CHATTER_RE.search(text) else None
+
+
+def chatter_reason(text: str, layer: str) -> str | None:
+    """"model_chatter" nếu dòng là lời tự nói của mô hình theo luật build_layers của lớp đó, không thì None.
+
+    Dùng ở check_ocr_complete: dòng như vậy còn sót trong han.xml/vie.xml là LỖI (build_layers phải đã loại)."""
+    if layer == "han":
+        return "model_chatter" if HAN_CHATTER_RE.search(unicodedata.normalize("NFC", text)) else None
+    return vie_reject_reason(text)
 
 
 def filter_vie_line(text: str) -> tuple[str | None, int]:

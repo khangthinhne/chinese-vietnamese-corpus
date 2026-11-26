@@ -11,6 +11,8 @@ from src.ocr.script_filter import CJK_IDEOGRAPH_RE
 
 BAD_UNIT_FLAGS = frozenset({"truncated", "loop_stopped"})
 LATIN_LETTERS_BAD_UNIT = 20          # dải Qwen hỏng chỉ làm hại luồng vie khi có >= ngần này chữ Latin
+CJK_BAD_UNIT = 3                     # đơn vị paddlevl hỏng chỉ tính khi có >= ngần này chữ Hán: lát ảnh mỏng
+                                     # đọc ra "口 + — — —" (CPO_20 tr.631) không chứa chữ nào bị mất
 
 
 def latin_letters(text: str) -> int:
@@ -34,7 +36,7 @@ def bad_units(run: dict | None, layer: str) -> list[dict]:
         text = str(unit.get("generated_text") or "")
         if layer == "vie" and latin_letters(text) >= LATIN_LETTERS_BAD_UNIT:
             out.append(unit)
-        elif layer == "han" and CJK_IDEOGRAPH_RE.search(text):
+        elif layer == "han" and len(CJK_IDEOGRAPH_RE.findall(text)) >= CJK_BAD_UNIT:
             out.append(unit)
     return out
 

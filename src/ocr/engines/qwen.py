@@ -42,7 +42,7 @@ log = logging.getLogger("qwen")
 
 MODEL_ID = "Qwen/Qwen2.5-VL-3B-Instruct"
 MODEL_REVISION = "main"
-ADAPTER_VERSION = 3
+ADAPTER_VERSION = 4                 # 4: mặt nạ mực cho trang thưa mực (CPO_20 tr.692)
 PROMPT_VERSION = 3
 
 # Cấu hình cho RTX 3050 6GB + 32GB RAM.
@@ -136,10 +136,19 @@ def _sha(text: str) -> str:
     return hashlib.sha256(text.encode("utf-8")).hexdigest()
 
 
+INK_PERCENTILES = (2.0, 98.0)
+SPARSE_INK_PERCENTILE = 0.1             # trang thưa mực (< ~2% điểm mực): phân vị 2 vẫn là giấy trắng
+
+
 def ink_mask(gray):
-    """True ở điểm ảnh 'mực'. Ngưỡng thích nghi theo phân vị nên chịu được giấy ngả vàng."""
+    """True ở điểm ảnh 'mực'. Ngưỡng thích nghi theo phân vị nên chịu được giấy ngả vàng.
+
+    Trang thưa mực (vd 8 dòng thơ dịch, CPO_20 tr.692, ~1.4% điểm mực) có phân vị 2 = phân vị 98 = giấy;
+    trước adapter 4 trang đó bị coi là trắng và Qwen không đọc dòng nào. Cùng cách sửa với paddlevl adapter 5."""
     import numpy as np
-    lo, hi = np.percentile(gray, [2, 98])
+    lo, hi = np.percentile(gray, INK_PERCENTILES)
+    if hi - lo < 30:
+        lo = float(np.percentile(gray, SPARSE_INK_PERCENTILE))
     if hi - lo < 30:                      # ảnh trắng/không tương phản
         return np.zeros(gray.shape, dtype=bool)
     return gray < (lo + hi) / 2

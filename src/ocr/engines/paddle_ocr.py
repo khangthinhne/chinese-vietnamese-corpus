@@ -46,7 +46,9 @@ log = logging.getLogger("paddlevl")
 
 MODEL_ID = "PaddlePaddle/PaddleOCR-VL-1.6"
 MODEL_REVISION = "main"
-ADAPTER_VERSION = 5                     # 5: ink_mask không còn bỏ trắng trang thưa mực
+ADAPTER_VERSION = 7                     # 5: ink_mask không còn bỏ trắng trang thưa mực
+                                        # 6: chẻ dải nhiều hàng theo bước hàng (văn xuôi Hán lưới ngang)
+                                        # 7: nối dòng khi model xuống dòng sau từng chữ của một hàng
 PROMPT = "OCR:"
 MIN_PIXELS = 384 * 384                  # mặc định của image processor (transformers 5 không còn thuộc tính min_pixels)
 COL_REL_THRESHOLD = 0.05                # cột "trắng" nếu mực <= 5% mực cột chữ điển hình (bỏ qua hạt nhiễu của bản quét)
@@ -55,6 +57,15 @@ MAX_ASPECT = 100                        # smart_resize báo lỗi nếu tỉ l�
 
 MIN_BAND_SIDE = 56                      # đệm trắng cho crop quá nhỏ
 MIN_SPAN_PX = 14                        # cột hẹp hơn mức này coi là nhiễu/đường kẻ viền
+ROW_PITCH_LAGS = (24, 240)              # khoảng tìm bước hàng (px ở 300 dpi) bằng tự tương quan
+ROW_PITCH_MIN_AC = 0.15                 # đỉnh tự tương quan yếu hơn: không tin bước hàng, không chẻ
+ROW_PITCH_TALL = 1.6                    # dải cao hơn ngần này lần bước hàng là nhiều hàng dính nhau
+ROW_VALLEY_REL = 0.5                    # chỉ cắt ở khe có mực <= tỉ lệ này x trung vị mực của dải
+DESKEW_MAX_DEG = 2.5                    # chỉnh nghiêng (chỉ khi còn dải nhiều hàng): tìm góc trong +-mức này
+DESKEW_STEP_DEG = 0.1
+DESKEW_MIN_DEG = 0.2                    # nghiêng ít hơn: không xoay ảnh
+CHAR_LINES_MIN = 3                      # nối dòng khi model xuống dòng sau từng chữ trong một hàng ngang
+CHAR_LINES_MAX_CHARS = 2
 DEGENERATE_CONFIDENCE_CAP = 10.0
 TRUNCATED_CONFIDENCE_CAP = 30.0
 LOOP_CHECK_EVERY = 8                    # kiểm tra vòng lặp mỗi N token sinh
@@ -227,7 +238,143 @@ def split_rows(mask, *, min_gap: int = 4, ink_frac: float = 0.002, rel: float = 
             out.extend(zip(cuts[:-1], cuts[1:]))
         else:
             out.append((a, b))
+    return split_by_pitch(out, prof)
+
+
+def row_pitch(prof, lags: tuple[int, int] = ROW_PITCH_LAGS, min_ac: float = ROW_PITCH_MIN_AC) -> int | None:
+    """Bước hàng (px) của trang chữ ngang = độ trễ của đỉnh tự tương quan hình chiếu mực theo y.
+
+    Ưu tiên đỉnh nhỏ nhất đủ mạnh khi đỉnh lớn nhất là bội số của nó. None khi trang không có nhịp hàng rõ."""
+    import numpy as np
+    idx = np.flatnonzero(prof > 0)
+    lo, hi = lags
+    if idx.size == 0 or idx[-1] - idx[0] + 1 < 2 * lo:
+        return None
+    x = np.asarray(prof[idx[0]:idx[-1] + 1], dtype=float)
+    x -= x.mean()
+    hi = min(hi, x.size - 2)
+    n = 1 << (2 * x.size - 1).bit_length()
+    f = np.fft.rfft(x, n)
+    ac = np.fft.irfft(f * np.conj(f), n)[:hi + 2]
+    if ac[0] <= 0:
+        return None
+    ac = ac / ac[0]
+    peaks = [k for k in range(lo, hi + 1) if ac[k] > ac[k - 1] and ac[k] >= ac[k + 1] and ac[k] > min_ac]
+    if not peaks:
+        return None
+    best = max(peaks, key=lambda k: ac[k])
+    for k in peaks:
+        if k < best and ac[k] >= 0.7 * ac[best] and abs(best / k - round(best / k)) < 0.15:
+            return k
+    return best
+
+
+def split_by_pitch(spans: list[tuple[int, int]], prof, *, tall: float = ROW_PITCH_TALL,
+                   valley_rel: float = ROW_VALLEY_REL) -> list[tuple[int, int]]:
+    """Chẻ dải cao hơn `tall` x bước hàng tại khe ít mực nhất gần vị trí kỳ vọng.
+
+    Văn xuôi Hán in lưới dày (CPO_20 tr.663, 270) có dấu câu/hạt nhiễu nằm giữa hai hàng nên kẽ hàng không
+    "trắng"; dải nhiều hàng làm model đọc lưới theo cột. Khe chỉ được cắt khi đủ sâu (<= valley_rel x trung vị
+    mực của dải), nên chữ to (tiêu đề) không bị chém. Trang thơ đã tách đúng (mỗi dải một hàng) không đổi."""
+    import numpy as np
+    pitch = row_pitch(prof)
+    if not pitch:
+        return spans
+    out: list[tuple[int, int]] = []
+    for a, b in spans:
+        n = round((b - a) / pitch)
+        if (b - a) <= tall * pitch or n < 2:
+            out.append((a, b))
+            continue
+        floor = valley_rel * float(np.median(prof[a:b]))
+        cuts = [a]
+        for k in range(1, n):
+            exp = a + round((b - a) * k / n)
+            lo, hi = max(cuts[-1] + pitch // 2, exp - pitch // 3), min(b - pitch // 2, exp + pitch // 3)
+            if hi < lo:
+                continue
+            c = lo + int(np.argmin(prof[lo:hi + 1]))
+            if prof[c] <= floor:
+                cuts.append(c)
+        cuts.append(b)
+        out.extend(zip(cuts[:-1], cuts[1:]))
     return out
+
+
+def tall_spans(spans: list[tuple[int, int]], prof, tall: float = ROW_PITCH_TALL) -> list[tuple[int, int]]:
+    """Dải vẫn cao hơn `tall` x bước hàng (nhiều hàng dính nhau) sau khi đã chẻ."""
+    pitch = row_pitch(prof)
+    return [(a, b) for a, b in spans if pitch and (b - a) > tall * pitch]
+
+
+def estimate_skew(mask, max_deg: float = DESKEW_MAX_DEG, step: float = DESKEW_STEP_DEG) -> float:
+    """Góc (độ, ngược chiều kim đồng hồ như PIL.Image.rotate) làm hình chiếu mực theo y "sắc" nhất.
+
+    Chấm điểm bằng tổng bình phương hiệu hình chiếu giữa hai hàng liền nhau (kẽ hàng rõ thì điểm cao).
+    Tính trên ảnh thu nhỏ 1/4 cho nhanh."""
+    import numpy as np
+    small = Image.fromarray((mask * 255).astype("uint8")).reduce(4)
+    best, best_score = 0.0, -1.0
+    n = int(round(max_deg / step))
+    for k in range(-n, n + 1):
+        deg = k * step
+        prof = np.asarray(small.rotate(deg, resample=Image.BILINEAR), dtype=float).sum(axis=1)
+        score = float((np.diff(prof) ** 2).sum())
+        if score > best_score + 1e-9:
+            best, best_score = deg, score
+    return round(best, 2)
+
+
+def rotate_box_back(box: tuple[int, int, int, int], deg: float, size: tuple[int, int]) -> tuple[int, int, int, int]:
+    """Hộp trong ảnh đã xoay `deg` (quanh tâm, không mở rộng) -> hộp bao trong toạ độ trang gốc."""
+    import math
+    w, h = size
+    cx, cy = w / 2, h / 2
+    t = math.radians(deg)
+    c, s = math.cos(t), math.sin(t)
+    x0, y0, x1, y1 = box
+    xs, ys = [], []
+    for x, y in ((x0, y0), (x1, y0), (x0, y1), (x1, y1)):
+        dx, dy = x - cx, y - cy
+        # PIL xoay ngược chiều kim đồng hồ `deg` (trục y hướng xuống); ánh xạ ngược điểm về ảnh gốc
+        xs.append(cx + dx * c - dy * s)
+        ys.append(cy + dx * s + dy * c)
+    return (max(0, int(math.floor(min(xs)))), max(0, int(math.floor(min(ys)))),
+            min(w, int(math.ceil(max(xs)))), min(h, int(math.ceil(max(ys)))))
+
+
+def plan_units(image: Image.Image, orientation: str):
+    """Chọn các đơn vị (vùng crop) cần OCR cho một trang, KHÔNG gọi model (hàm thuần, test được).
+
+    Trả (ảnh dùng để crop, hướng, [hộp], [đơn vị bỏ vì ít mực], góc đã xoay). Chữ ngang: từng dòng một, vì
+    dải nhiều dòng làm model đọc lưới chữ theo cột. Còn dải nhiều hàng sau khi chẻ theo bước hàng thì trang
+    nghiêng làm kẽ hàng mờ đi (CPO_20 tr.663): xoay thẳng trang rồi tách lại."""
+    import numpy as np
+    width, height = image.size
+    mask = strip_rules(ink_mask(np.asarray(image.convert("L"))))
+    page_image, deskew_deg = image, 0.0
+    if orientation == "auto":
+        orientation = detect_orientation(mask)
+    if orientation == "vertical":
+        regions = [ink_box(mask, x0, 0, x1, height, pad=6) for x0, x1 in split_columns(mask)]
+    else:
+        rows = split_rows(mask)
+        if tall_spans(rows, mask.sum(axis=1)):
+            deg = estimate_skew(mask)
+            if abs(deg) >= DESKEW_MIN_DEG:
+                page_image = image.rotate(deg, resample=Image.BICUBIC, fillcolor=(255, 255, 255))
+                mask = strip_rules(ink_mask(np.asarray(page_image.convert("L"))))
+                rows = split_rows(mask)
+                deskew_deg = deg
+        regions = [ink_box(mask, 0, y0, width, y1) for y0, y1 in rows]
+    regions = [r for r in regions if r is not None]
+    skipped: list[dict] = []
+    if len(regions) > 1:
+        inks = [int(mask[b[1]:b[3], b[0]:b[2]].sum()) for b in regions]
+        floor = MIN_UNIT_INK_REL * float(np.percentile(inks, 75))
+        skipped = [{"box": list(b), "ink": k} for b, k in zip(regions, inks) if k < floor]
+        regions = [b for b, k in zip(regions, inks) if k >= floor]
+    return page_image, orientation, regions, skipped, deskew_deg
 
 
 def split_columns(mask, *, min_gap: int = 6, ink_frac: float = 0.002, rel: float = COL_REL_THRESHOLD,
@@ -331,6 +478,18 @@ def _collapse_loop(match: re.Match) -> str:
     """Thu gọn vòng lặp trong một dòng; giữ nguyên nếu đơn vị lặp toàn dấu (dấu chấm dẫn mục lục...)."""
     unit = match.group(1)
     return match.group(0) if not re.search(r"\w", unit) else unit
+
+
+def char_per_line(texts: list[str], min_lines: int = CHAR_LINES_MIN, max_chars: int = CHAR_LINES_MAX_CHARS) -> bool:
+    """Model xuống dòng sau từng chữ trong MỘT hàng ngang in thưa (CPO_20 tr.268: "熟\\n然\\n冬\\n夏…"):
+    >= min_lines dòng, mỗi dòng có 1..max_chars chữ Hán và không có chữ cái Latin."""
+    if len(texts) < min_lines:
+        return False
+    for t in texts:
+        n = len(re.findall(f"[{_CJK_RANGE}]", t))
+        if not 1 <= n <= max_chars or re.search(r"[A-Za-zÀ-ỹ]", t):
+            return False
+    return True
 
 
 def clean_generated_text(text: str) -> tuple[list[str], list[str]]:
@@ -522,6 +681,10 @@ class PaddleVLEngine(OcrEngine):
             "loop_pattern": _LOOP_RE.pattern, "max_identical_run": MAX_IDENTICAL_RUN,
             "confidence_caps": [DEGENERATE_CONFIDENCE_CAP, TRUNCATED_CONFIDENCE_CAP],
             "ink_percentiles": [*INK_PERCENTILES, SPARSE_INK_PERCENTILE],
+            "row_pitch_split": {"lags": list(ROW_PITCH_LAGS), "min_ac": ROW_PITCH_MIN_AC,
+                                "tall": ROW_PITCH_TALL, "valley_rel": ROW_VALLEY_REL},
+            "deskew": [DESKEW_MAX_DEG, DESKEW_STEP_DEG, DESKEW_MIN_DEG],
+            "char_lines_join": [CHAR_LINES_MIN, CHAR_LINES_MAX_CHARS],
             "adapter_version": ADAPTER_VERSION,
         }
 
@@ -541,27 +704,15 @@ class PaddleVLEngine(OcrEngine):
             log.info("Dùng lại kết quả đã chép cho ảnh này (%d dòng)", len(hit["lines"]))
             return self._result(hit, lang)
 
-        import numpy as np
-        mask = strip_rules(ink_mask(np.asarray(image.convert("L"))))
-        orientation = cfg["orientation"] if cfg["orientation"] != "auto" else detect_orientation(mask)
-        if orientation == "vertical":
-            regions = [ink_box(mask, x0, 0, x1, height, pad=6) for x0, x1 in split_columns(mask)]
-        else:
-            # từng dòng ngang một: dải nhiều dòng làm model đọc lưới chữ theo cột (nhầm hướng)
-            regions = [ink_box(mask, 0, y0, width, y1) for y0, y1 in split_rows(mask)]
-        regions = [r for r in regions if r is not None]
-        skipped: list[dict] = []
-        if len(regions) > 1:
-            inks = [int(mask[b[1]:b[3], b[0]:b[2]].sum()) for b in regions]
-            floor = MIN_UNIT_INK_REL * float(np.percentile(inks, 75))
-            skipped = [{"box": list(b), "ink": k} for b, k in zip(regions, inks) if k < floor]
-            regions = [b for b, k in zip(regions, inks) if k >= floor]
+        page_image, orientation, regions, skipped, deskew_deg = plan_units(image, cfg["orientation"])
 
         lines: list[OcrLine] = []
         units_raw: list[dict] = []
         started = time.perf_counter()
         for index, box in enumerate(regions, 1):
-            crop = pad_to_min_side(image.crop(box))
+            crop = pad_to_min_side(page_image.crop(box))
+            if deskew_deg:
+                box = rotate_box_back(box, deskew_deg, (width, height))
             t0 = time.perf_counter()
             text, tokens, logprobs, loop_hit, used_px = _generate_safe(
                 crop, max_new_tokens=cfg["max_new_tokens"], max_pixels=cfg["max_pixels"])
@@ -579,6 +730,9 @@ class PaddleVLEngine(OcrEngine):
                     lines.append(OcrLine("".join(texts), tuple(int(v) for v in box), conf))
                 n_lines = 1 if texts else 0
             else:
+                if char_per_line(texts):                 # một hàng in thưa bị model xuống dòng sau từng chữ
+                    texts = ["".join(texts)]
+                    flags.append("char_lines_joined")
                 for line_text, sub in zip(texts, split_line_boxes(len(texts), box)):
                     lines.append(OcrLine(line_text, tuple(int(v) for v in sub), conf))
                 n_lines = len(texts)
@@ -597,6 +751,7 @@ class PaddleVLEngine(OcrEngine):
                     "bbox_granularity": "unit_exact" if orientation == "vertical" else "row_exact",
                     "max_new_tokens": cfg["max_new_tokens"], "max_pixels": cfg["max_pixels"],
                     "inference_seconds": round(elapsed, 3), "bands": units_raw, "skipped_units": skipped,
+                    "deskew_deg": deskew_deg,
                     "any_degenerate": any({"repetition_collapsed", "loop_stopped"} & set(u["flags"])
                                           for u in units_raw),
                     "any_truncated": any("truncated" in u["flags"] for u in units_raw)},
