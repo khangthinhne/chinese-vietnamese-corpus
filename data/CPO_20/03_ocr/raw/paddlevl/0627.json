@@ -1,0 +1,868 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_20",
+  "engine": "paddlevl",
+  "page": 627,
+  "runs": [
+    {
+      "key": "c9940ad8ea35d594f046fb0dda529a5a71abba7395c59df32a34fa861d526967",
+      "parameters": {
+        "image_sha256": "f652175df06ccf4cb6904be6c8cc935478d504b49404e1ea555f7d9ca6e1f14b",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T13:48:52+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_627.png",
+      "image_size": [
+        1823,
+        2814
+      ],
+      "crop_box": [
+        0,
+        0,
+        1823,
+        2814
+      ],
+      "lines": [
+        {
+          "text": "Hoa quốc văn chương giai tải khoán¹,",
+          "bbox": [
+            357,
+            264,
+            1122,
+            310
+          ],
+          "confidence": 84.93
+        },
+        {
+          "text": "Giao lân quan cái tức am trình.",
+          "bbox": [
+            359,
+            328,
+            1002,
+            368
+          ],
+          "confidence": 90.58
+        },
+        {
+          "text": "Tinh sà tục trắng tiên du phá,",
+          "bbox": [
+            360,
+            386,
+            985,
+            427
+          ],
+          "confidence": 88.68
+        },
+        {
+          "text": "Giao lân quan cái tức am trình.",
+          "bbox": [
+            362,
+            444,
+            1005,
+            485
+          ],
+          "confidence": 90.61
+        },
+        {
+          "text": "Tinh sà tục trắng tiên du phá,",
+          "bbox": [
+            362,
+            504,
+            1177,
+            544
+          ],
+          "confidence": 85.78
+        },
+        {
+          "text": "Long Động ² tăng quang thủt thứ hành.",
+          "bbox": [
+            365,
+            555,
+            1153,
+            608
+          ],
+          "confidence": 74.76
+        },
+        {
+          "text": "Tào trữ công hoàn mông di ôc,",
+          "bbox": [
+            365,
+            622,
+            994,
+            664
+          ],
+          "confidence": 80.29
+        },
+        {
+          "text": "Lạc động bà trần thương ban đình °.",
+          "bbox": [
+            366,
+            675,
+            1116,
+            725
+          ],
+          "confidence": 81.11
+        },
+        {
+          "text": "Dich nghĩa:",
+          "bbox": [
+            148,
+            869,
+            382,
+            908
+          ],
+          "confidence": 98.2
+        },
+        {
+          "text": "THỐ MỤNG CHÁU GỘI BẰNG CẤU LA",
+          "bbox": [
+            306,
+            980,
+            1413,
+            1049
+          ],
+          "confidence": 89.27
+        },
+        {
+          "text": "* ___ ___",
+          "bbox": [
+            426,
+            1051,
+            1442,
+            1082
+          ],
+          "confidence": 10.0
+        },
+        {
+          "text": "KHÚE NHẠC HAU PHỤNG MỆNH ĐI SỐ",
+          "bbox": [
+            279,
+            1074,
+            1435,
+            1130
+          ],
+          "confidence": 75.49
+        },
+        {
+          "text": "Là con nhà họ Phan và cháu ngoại nhà họ Ngô,",
+          "bbox": [
+            377,
+            1206,
+            1357,
+            1258
+          ],
+          "confidence": 95.85
+        },
+        {
+          "text": "Tên tuổi ở Trung Quốc đã từng quen biết.",
+          "bbox": [
+            377,
+            1265,
+            1367,
+            1316
+          ],
+          "confidence": 99.24
+        },
+        {
+          "text": "Văn chương làm đẹp cho nước, nội tiếng xưa nay,",
+          "bbox": [
+            379,
+            1322,
+            1531,
+            1375
+          ],
+          "confidence": 91.3
+        },
+        {
+          "text": "Mũ lòng di bang giao, vốn đã quen đường.",
+          "bbox": [
+            381,
+            1384,
+            1547,
+            1441
+          ],
+          "confidence": 87.77
+        },
+        {
+          "text": "Chuyến đi sử lân này làm về vang thêm cho chuyên đi lân",
+          "bbox": [
+            382,
+            1433,
+            1578,
+            1492
+          ],
+          "confidence": 87.58
+        },
+        {
+          "text": "Ở Long Động được hàn hạnh đón chuyên đi này.",
+          "bbox": [
+            385,
+            1556,
+            1541,
+            1617
+          ],
+          "confidence": 87.05
+        },
+        {
+          "text": "Mong việc công chống thành, sẽ được ơn thương đặc biệt,",
+          "bbox": [
+            385,
+            1609,
+            1558,
+            1660
+          ],
+          "confidence": 87.13
+        },
+        {
+          "text": "móng viết công",
+          "bbox": [
+            387,
+            1652,
+            1491,
+            1675
+          ],
+          "confidence": 59.54
+        },
+        {
+          "text": "Khi ấy cùng nhau nâng chén rượu dâng trước ban đình.",
+          "bbox": [
+            387,
+            1667,
+            1516,
+            1728
+          ],
+          "confidence": 90.58
+        },
+        {
+          "text": "1. Tả khoán: Khoán là khế ước. Khế ước thường làm hai bán gọi là \"tả khoán\" và",
+          "bbox": [
+            252,
+            2166,
+            1600,
+            2220
+          ],
+          "confidence": 92.55
+        },
+        {
+          "text": "\"hũu khoán\", mỗi bên cầm một bản để làm tin. Ở đây có ý nói việc giới văn chương là",
+          "bbox": [
+            170,
+            2212,
+            1602,
+            2275
+          ],
+          "confidence": 90.31
+        },
+        {
+          "text": "diêu chắc chắn.",
+          "bbox": [
+            171,
+            2293,
+            426,
+            2321
+          ],
+          "confidence": 88.43
+        },
+        {
+          "text": "2. Long Động: Tên một động ở Lạng Sơn.",
+          "bbox": [
+            252,
+            2326,
+            1606,
+            2388
+          ],
+          "confidence": 93.21
+        },
+        {
+          "text": "3. Ran đinh: Sản của cha mẹ. Do tịch hầu Lại cho chị hạ",
+          "bbox": [
+            254,
+            2380,
+            1577,
+            2409
+          ],
+          "confidence": 55.47
+        },
+        {
+          "text": "bày mươi mà ông còn mặc áo sặc sở ra sân múa, rồi giả vờ ngã khóc như tre con cho",
+          "bbox": [
+            173,
+            2401,
+            1608,
+            2464
+          ],
+          "confidence": 86.74
+        },
+        {
+          "text": "cha me vui (Hiếu tử truyện).",
+          "bbox": [
+            173,
+            2477,
+            1742,
+            2510
+          ],
+          "confidence": 86.94
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          1823,
+          2814
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 18.262,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              357,
+              264,
+              1122,
+              310
+            ],
+            "generated_text": "Hoa quốc văn chương giai tải khoán¹,",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.71,
+            "confidence": 84.93,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              359,
+              328,
+              1002,
+              368
+            ],
+            "generated_text": "Giao lân quan cái tức am trình.",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.29,
+            "confidence": 90.58,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              360,
+              386,
+              985,
+              427
+            ],
+            "generated_text": "Tinh sà tục trắng tiên du phá,",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.972,
+            "confidence": 88.68,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              362,
+              444,
+              1005,
+              485
+            ],
+            "generated_text": "Giao lân quan cái tức am trình.",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.415,
+            "confidence": 90.61,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              362,
+              504,
+              1177,
+              544
+            ],
+            "generated_text": "Tinh sà tục trắng tiên du phá,",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.423,
+            "confidence": 85.78,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              365,
+              555,
+              1153,
+              608
+            ],
+            "generated_text": "Long Động ² tăng quang thủt thứ hành.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.406,
+            "confidence": 74.76,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              365,
+              622,
+              994,
+              664
+            ],
+            "generated_text": "Tào trữ công hoàn mông di ôc,",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.406,
+            "confidence": 80.29,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              366,
+              675,
+              1116,
+              725
+            ],
+            "generated_text": "Lạc động bà trần thương ban đình °.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.399,
+            "confidence": 81.11,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              148,
+              869,
+              382,
+              908
+            ],
+            "generated_text": "Dich nghĩa:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.232,
+            "confidence": 98.2,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              306,
+              980,
+              1413,
+              1049
+            ],
+            "generated_text": "THỐ MỤNG CHÁU GỘI BẰNG CẤU LA",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 0.717,
+            "confidence": 89.27,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              426,
+              1051,
+              1442,
+              1082
+            ],
+            "generated_text": "* ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.423,
+            "confidence": 10.0,
+            "flags": [
+              "repetition_collapsed"
+            ],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              279,
+              1074,
+              1435,
+              1130
+            ],
+            "generated_text": "KHÚE NHẠC HAU PHỤNG MỆNH ĐI SỐ",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.757,
+            "confidence": 75.49,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              377,
+              1206,
+              1357,
+              1258
+            ],
+            "generated_text": "Là con nhà họ Phan và cháu ngoại nhà họ Ngô,",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.51,
+            "confidence": 95.85,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              377,
+              1265,
+              1367,
+              1316
+            ],
+            "generated_text": "Tên tuổi ở Trung Quốc đã từng quen biết.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 0.398,
+            "confidence": 99.24,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              379,
+              1322,
+              1531,
+              1375
+            ],
+            "generated_text": "Văn chương làm đẹp cho nước, nội tiếng xưa nay,",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.519,
+            "confidence": 91.3,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              381,
+              1384,
+              1547,
+              1441
+            ],
+            "generated_text": "Mũ lòng di bang giao, vốn đã quen đường.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.515,
+            "confidence": 87.77,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              382,
+              1433,
+              1578,
+              1492
+            ],
+            "generated_text": "Chuyến đi sử lân này làm về vang thêm cho chuyên đi lân",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.63,
+            "confidence": 87.58,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              385,
+              1556,
+              1541,
+              1617
+            ],
+            "generated_text": "Ở Long Động được hàn hạnh đón chuyên đi này.",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.589,
+            "confidence": 87.05,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              385,
+              1609,
+              1558,
+              1660
+            ],
+            "generated_text": "Mong việc công chống thành, sẽ được ơn thương đặc biệt,",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.483,
+            "confidence": 87.13,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              387,
+              1652,
+              1491,
+              1675
+            ],
+            "generated_text": "móng viết công",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.277,
+            "confidence": 59.54,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              387,
+              1667,
+              1516,
+              1728
+            ],
+            "generated_text": "Khi ấy cùng nhau nâng chén rượu dâng trước ban đình.",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.608,
+            "confidence": 90.58,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              167,
+              2148,
+              1592,
+              2170
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.135,
+            "confidence": 35.02,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              252,
+              2166,
+              1600,
+              2220
+            ],
+            "generated_text": "1. Tả khoán: Khoán là khế ước. Khế ước thường làm hai bán gọi là \"tả khoán\" và",
+            "n_lines": 1,
+            "tokens": 35,
+            "seconds": 0.844,
+            "confidence": 92.55,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              170,
+              2212,
+              1602,
+              2275
+            ],
+            "generated_text": "\"hũu khoán\", mỗi bên cầm một bản để làm tin. Ở đây có ý nói việc giới văn chương là",
+            "n_lines": 1,
+            "tokens": 35,
+            "seconds": 0.826,
+            "confidence": 90.31,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              171,
+              2293,
+              426,
+              2321
+            ],
+            "generated_text": "diêu chắc chắn.",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.298,
+            "confidence": 88.43,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              252,
+              2326,
+              1606,
+              2388
+            ],
+            "generated_text": "2. Long Động: Tên một động ở Lạng Sơn.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.457,
+            "confidence": 93.21,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              254,
+              2380,
+              1577,
+              2409
+            ],
+            "generated_text": "3. Ran đinh: Sản của cha mẹ. Do tịch hầu Lại cho chị hạ",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.679,
+            "confidence": 55.47,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              173,
+              2401,
+              1608,
+              2464
+            ],
+            "generated_text": "bày mươi mà ông còn mặc áo sặc sở ra sân múa, rồi giả vờ ngã khóc như tre con cho",
+            "n_lines": 1,
+            "tokens": 37,
+            "seconds": 0.88,
+            "confidence": 86.74,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              173,
+              2477,
+              1742,
+              2510
+            ],
+            "generated_text": "cha me vui (Hiếu tử truyện).",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.46,
+            "confidence": 86.94,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              1039,
+              973,
+              1397,
+              984
+            ],
+            "ink": 363
+          },
+          {
+            "box": [
+              1466,
+              1495,
+              1575,
+              1508
+            ],
+            "ink": 507
+          },
+          {
+            "box": [
+              1469,
+              1509,
+              1586,
+              1522
+            ],
+            "ink": 474
+          },
+          {
+            "box": [
+              1536,
+              2521,
+              1608,
+              2531
+            ],
+            "ink": 214
+          }
+        ],
+        "any_degenerate": true,
+        "any_truncated": false,
+        "lang": "all"
+      }
+    }
+  ]
+}

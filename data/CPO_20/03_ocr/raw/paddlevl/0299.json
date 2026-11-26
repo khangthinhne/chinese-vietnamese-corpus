@@ -1,0 +1,796 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_20",
+  "engine": "paddlevl",
+  "page": 299,
+  "runs": [
+    {
+      "key": "a152d58cb566d7187a174ff5f90e6a8311fefdbc2e5f077fed875e1f8dca4107",
+      "parameters": {
+        "image_sha256": "ccd62575ca3eabc979715f5477acff4c788e3d1acd3ed82feb1512cc163851ff",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T06:45:23+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_299.png",
+      "image_size": [
+        1823,
+        2814
+      ],
+      "crop_box": [
+        0,
+        0,
+        1823,
+        2814
+      ],
+      "lines": [
+        {
+          "text": "温扶著晶靈祠朱記",
+          "bbox": [
+            604,
+            250,
+            1250,
+            303
+          ],
+          "confidence": 60.94
+        },
+        {
+          "text": "四八里取巫門水",
+          "bbox": [
+            601,
+            295,
+            1252,
+            329
+          ],
+          "confidence": 44.52
+        },
+        {
+          "text": "赫赫沖天祠",
+          "bbox": [
+            830,
+            419,
+            1225,
+            473
+          ],
+          "confidence": 95.46
+        },
+        {
+          "text": "巍巍建初寺",
+          "bbox": [
+            834,
+            493,
+            1224,
+            544
+          ],
+          "confidence": 99.78
+        },
+        {
+          "text": "劍馬歸太空",
+          "bbox": [
+            834,
+            561,
+            1227,
+            613
+          ],
+          "confidence": 94.91
+        },
+        {
+          "text": "警名在前史",
+          "bbox": [
+            812,
+            633,
+            1252,
+            683
+          ],
+          "confidence": 80.41
+        },
+        {
+          "text": "京北標最盡",
+          "bbox": [
+            834,
+            703,
+            1228,
+            757
+          ],
+          "confidence": 82.6
+        },
+        {
+          "text": "天南稱不死",
+          "bbox": [
+            837,
+            776,
+            1228,
+            830
+          ],
+          "confidence": 99.2
+        },
+        {
+          "text": "壯哉扶童祠",
+          "bbox": [
+            835,
+            847,
+            1230,
+            905
+          ],
+          "confidence": 99.17
+        },
+        {
+          "text": "萬年香火祀",
+          "bbox": [
+            838,
+            922,
+            1230,
+            977
+          ],
+          "confidence": 99.34
+        },
+        {
+          "text": "Phien âm:",
+          "bbox": [
+            198,
+            1181,
+            414,
+            1209
+          ],
+          "confidence": 84.11
+        },
+        {
+          "text": "VẾT PHỦ ĐỐNG TỐI LẦN THỪ 1 CỦNG KỶ",
+          "bbox": [
+            307,
+            1281,
+            1528,
+            1328
+          ],
+          "confidence": 74.86
+        },
+        {
+          "text": "IET PHO DONG TOI LINH TO CONG KI",
+          "bbox": [
+            317,
+            1320,
+            1517,
+            1345
+          ],
+          "confidence": 74.69
+        },
+        {
+          "text": "Hách hách Xung Thiên tử,",
+          "bbox": [
+            429,
+            1434,
+            1011,
+            1475
+          ],
+          "confidence": 89.76
+        },
+        {
+          "text": "Nguy nguy Kiến Sơ tụ.",
+          "bbox": [
+            429,
+            1492,
+            985,
+            1534
+          ],
+          "confidence": 86.03
+        },
+        {
+          "text": "Kiếm mã quy thái không,",
+          "bbox": [
+            427,
+            1551,
+            963,
+            1594
+          ],
+          "confidence": 92.34
+        },
+        {
+          "text": "Thanh danh tai tiến sử.",
+          "bbox": [
+            427,
+            1611,
+            925,
+            1652
+          ],
+          "confidence": 86.71
+        },
+        {
+          "text": "Kinh Bắc tiêu tôi linh,",
+          "bbox": [
+            427,
+            1670,
+            899,
+            1711
+          ],
+          "confidence": 94.64
+        },
+        {
+          "text": "Thiên Nam xưng bất tử.",
+          "bbox": [
+            427,
+            1728,
+            930,
+            1770
+          ],
+          "confidence": 90.33
+        },
+        {
+          "text": "Tráng tai Phú Đông tử.",
+          "bbox": [
+            427,
+            1787,
+            916,
+            1828
+          ],
+          "confidence": 72.96
+        },
+        {
+          "text": "Van niên hướng hóa tư.",
+          "bbox": [
+            426,
+            1847,
+            1289,
+            1888
+          ],
+          "confidence": 83.77
+        },
+        {
+          "text": "1. Phù Đồng tối linh tử: Đến Phù Đồng tức đến thờ Thánh Gióng, tại xã Phù",
+          "bbox": [
+            284,
+            2270,
+            1636,
+            2310
+          ],
+          "confidence": 87.83
+        },
+        {
+          "text": "Động ngoại thành Hà Nội.",
+          "bbox": [
+            198,
+            2323,
+            643,
+            2357
+          ],
+          "confidence": 92.31
+        },
+        {
+          "text": "2. Xung Thiên tử: Chỉ đến thờ Thánh Gióng.",
+          "bbox": [
+            281,
+            2368,
+            1025,
+            2406
+          ],
+          "confidence": 95.65
+        },
+        {
+          "text": "3. Kiến Sơ tư: Chùa Kiến Sơ, tên một ngôi chùa cạnh đến Phù Đống, tại chùa này",
+          "bbox": [
+            281,
+            2412,
+            1638,
+            2453
+          ],
+          "confidence": 90.25
+        },
+        {
+          "text": "có thỏ ba thân sinh ra Thánh Gióng.",
+          "bbox": [
+            198,
+            2465,
+            810,
+            2500
+          ],
+          "confidence": 83.38
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          1823,
+          2814
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 10.553,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              604,
+              250,
+              1250,
+              303
+            ],
+            "generated_text": "温扶著晶靈祠朱記",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.367,
+            "confidence": 60.94,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              601,
+              295,
+              1252,
+              329
+            ],
+            "generated_text": "四八里取巫門水",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.308,
+            "confidence": 44.52,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              830,
+              419,
+              1225,
+              473
+            ],
+            "generated_text": "赫赫沖天祠",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.306,
+            "confidence": 95.46,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              834,
+              493,
+              1224,
+              544
+            ],
+            "generated_text": "巍巍建初寺",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.258,
+            "confidence": 99.78,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              834,
+              561,
+              1227,
+              613
+            ],
+            "generated_text": "劍馬歸太空",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.326,
+            "confidence": 94.91,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              812,
+              633,
+              1252,
+              683
+            ],
+            "generated_text": "警名在前史",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.226,
+            "confidence": 80.41,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              834,
+              703,
+              1228,
+              757
+            ],
+            "generated_text": "京北標最盡",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.293,
+            "confidence": 82.6,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              837,
+              776,
+              1228,
+              830
+            ],
+            "generated_text": "天南稱不死",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.234,
+            "confidence": 99.2,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              835,
+              847,
+              1230,
+              905
+            ],
+            "generated_text": "壯哉扶童祠",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.298,
+            "confidence": 99.17,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              838,
+              922,
+              1230,
+              977
+            ],
+            "generated_text": "萬年香火祀",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.25,
+            "confidence": 99.34,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              198,
+              1181,
+              414,
+              1209
+            ],
+            "generated_text": "Phien âm:",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.215,
+            "confidence": 84.11,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              307,
+              1281,
+              1528,
+              1328
+            ],
+            "generated_text": "VẾT PHỦ ĐỐNG TỐI LẦN THỪ 1 CỦNG KỶ",
+            "n_lines": 1,
+            "tokens": 40,
+            "seconds": 0.986,
+            "confidence": 74.86,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              317,
+              1320,
+              1517,
+              1345
+            ],
+            "generated_text": "IET PHO DONG TOI LINH TO CONG KI",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.428,
+            "confidence": 74.69,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              429,
+              1434,
+              1011,
+              1475
+            ],
+            "generated_text": "Hách hách Xung Thiên tử,",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.378,
+            "confidence": 89.76,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              429,
+              1492,
+              985,
+              1534
+            ],
+            "generated_text": "Nguy nguy Kiến Sơ tụ.",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.381,
+            "confidence": 86.03,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              427,
+              1551,
+              963,
+              1594
+            ],
+            "generated_text": "Kiếm mã quy thái không,",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.33,
+            "confidence": 92.34,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              427,
+              1611,
+              925,
+              1652
+            ],
+            "generated_text": "Thanh danh tai tiến sử.",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.359,
+            "confidence": 86.71,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              427,
+              1670,
+              899,
+              1711
+            ],
+            "generated_text": "Kinh Bắc tiêu tôi linh,",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.339,
+            "confidence": 94.64,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              427,
+              1728,
+              930,
+              1770
+            ],
+            "generated_text": "Thiên Nam xưng bất tử.",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.362,
+            "confidence": 90.33,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              427,
+              1787,
+              916,
+              1828
+            ],
+            "generated_text": "Tráng tai Phú Đông tử.",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.344,
+            "confidence": 72.96,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              426,
+              1847,
+              1289,
+              1888
+            ],
+            "generated_text": "Van niên hướng hóa tư.",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.345,
+            "confidence": 83.77,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              224,
+              2235,
+              790,
+              2252
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.135,
+            "confidence": 67.42,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              284,
+              2270,
+              1636,
+              2310
+            ],
+            "generated_text": "1. Phù Đồng tối linh tử: Đến Phù Đồng tức đến thờ Thánh Gióng, tại xã Phù",
+            "n_lines": 1,
+            "tokens": 35,
+            "seconds": 0.873,
+            "confidence": 87.83,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              198,
+              2323,
+              643,
+              2357
+            ],
+            "generated_text": "Động ngoại thành Hà Nội.",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.326,
+            "confidence": 92.31,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              281,
+              2368,
+              1025,
+              2406
+            ],
+            "generated_text": "2. Xung Thiên tử: Chỉ đến thờ Thánh Gióng.",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.542,
+            "confidence": 95.65,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              281,
+              2412,
+              1638,
+              2453
+            ],
+            "generated_text": "3. Kiến Sơ tư: Chùa Kiến Sơ, tên một ngôi chùa cạnh đến Phù Đống, tại chùa này",
+            "n_lines": 1,
+            "tokens": 35,
+            "seconds": 0.869,
+            "confidence": 90.25,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              198,
+              2465,
+              810,
+              2500
+            ],
+            "generated_text": "có thỏ ba thân sinh ra Thánh Gióng.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.474,
+            "confidence": 83.38,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              465,
+              1530,
+              879,
+              1542
+            ],
+            "ink": 349
+          },
+          {
+            "box": [
+              648,
+              1590,
+              958,
+              1599
+            ],
+            "ink": 221
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      }
+    }
+  ]
+}

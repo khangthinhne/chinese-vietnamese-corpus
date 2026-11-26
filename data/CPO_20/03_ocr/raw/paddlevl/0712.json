@@ -1,0 +1,329 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_20",
+  "engine": "paddlevl",
+  "page": 712,
+  "runs": [
+    {
+      "key": "a6cfd38880fa7ad861098b5942b325132946cd97bd4fd3a785a8f6ee6e0887f0",
+      "parameters": {
+        "image_sha256": "946d1fbbf2eba226c7d7a45ede50bb2655a7bb873e3ec564fd5a17b97ccf9824",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T14:24:08+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_712.png",
+      "image_size": [
+        1839,
+        2803
+      ],
+      "crop_box": [
+        0,
+        0,
+        1839,
+        2803
+      ],
+      "lines": [
+        {
+          "text": "縱咬得茶根，奈吾人之窮何！",
+          "bbox": [
+            437,
+            835,
+            1263,
+            892
+          ],
+          "confidence": 95.99
+        },
+        {
+          "text": "農民勤苦，終歲不擬。",
+          "bbox": [
+            438,
+            903,
+            1063,
+            959
+          ],
+          "confidence": 87.53
+        },
+        {
+          "text": "歲旱則傷於螟螣，歲潦則委諸魚鱉。",
+          "bbox": [
+            437,
+            972,
+            1479,
+            1031
+          ],
+          "confidence": 93.31
+        },
+        {
+          "text": "生穀幾何，民食不竭。",
+          "bbox": [
+            438,
+            1039,
+            1038,
+            1095
+          ],
+          "confidence": 97.24
+        },
+        {
+          "text": "何莫非水，而此则盡農夫之膏血。",
+          "bbox": [
+            437,
+            1106,
+            1405,
+            1164
+          ],
+          "confidence": 92.6
+        },
+        {
+          "text": "人且嗷嗷然，予獨何心傲清風而賞明月。",
+          "bbox": [
+            437,
+            1173,
+            1619,
+            1233
+          ],
+          "confidence": 94.26
+        },
+        {
+          "text": "非時之遊，爾其勿說。",
+          "bbox": [
+            437,
+            1240,
+            1036,
+            1298
+          ],
+          "confidence": 95.35
+        },
+        {
+          "text": "農叟芳觀，意甚盤桓曰：",
+          "bbox": [
+            437,
+            1309,
+            1111,
+            1366
+          ],
+          "confidence": 95.14
+        },
+        {
+          "text": "吾子此言，誠知吾稼穡之艱難。",
+          "bbox": [
+            437,
+            1375,
+            1354,
+            1433
+          ],
+          "confidence": 97.29
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          1839,
+          2803
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 4.261,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              437,
+              835,
+              1263,
+              892
+            ],
+            "generated_text": "縱咬得茶根，奈吾人之窮何！",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.454,
+            "confidence": 95.99,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              438,
+              903,
+              1063,
+              959
+            ],
+            "generated_text": "農民勤苦，終歲不擬。",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 0.4,
+            "confidence": 87.53,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              437,
+              972,
+              1479,
+              1031
+            ],
+            "generated_text": "歲旱則傷於螟螣，歲潦則委諸魚鱉。",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.696,
+            "confidence": 93.31,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              438,
+              1039,
+              1038,
+              1095
+            ],
+            "generated_text": "生穀幾何，民食不竭。",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 0.39,
+            "confidence": 97.24,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              437,
+              1106,
+              1405,
+              1164
+            ],
+            "generated_text": "何莫非水，而此则盡農夫之膏血。",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.467,
+            "confidence": 92.6,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              437,
+              1173,
+              1619,
+              1233
+            ],
+            "generated_text": "人且嗷嗷然，予獨何心傲清風而賞明月。",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.532,
+            "confidence": 94.26,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              437,
+              1240,
+              1036,
+              1298
+            ],
+            "generated_text": "非時之遊，爾其勿說。",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.345,
+            "confidence": 95.35,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              437,
+              1309,
+              1111,
+              1366
+            ],
+            "generated_text": "農叟芳觀，意甚盤桓曰：",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.436,
+            "confidence": 95.14,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              437,
+              1375,
+              1354,
+              1433
+            ],
+            "generated_text": "吾子此言，誠知吾稼穡之艱難。",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.541,
+            "confidence": 97.29,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              279,
+              2507,
+              356,
+              2518
+            ],
+            "ink": 333
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      }
+    }
+  ]
+}

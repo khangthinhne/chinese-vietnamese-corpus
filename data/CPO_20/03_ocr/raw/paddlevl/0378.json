@@ -1,0 +1,997 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_20",
+  "engine": "paddlevl",
+  "page": 378,
+  "runs": [
+    {
+      "key": "9b6306be16db1d55f8a31f9872ad799d0735f4a980ee1c3b7553ea096f37ba60",
+      "parameters": {
+        "image_sha256": "cbf13bd7148135a5bf0e7a9fc03b5ea4d88df82a2b59286350c84294ee1ba44c",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T07:16:30+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_378.png",
+      "image_size": [
+        1839,
+        2803
+      ],
+      "crop_box": [
+        0,
+        0,
+        1839,
+        2803
+      ],
+      "lines": [
+        {
+          "text": "Quân sĩ tan rã. Hai công tử đều bị bắt sống, đóng cũi giải về kinh.",
+          "bbox": [
+            309,
+            219,
+            1688,
+            279
+          ],
+          "confidence": 89.07
+        },
+        {
+          "text": "Chính nghe xong, than rằng:",
+          "bbox": [
+            398,
+            297,
+            1001,
+            337
+          ],
+          "confidence": 98.51
+        },
+        {
+          "text": "- Tuổi trẻ bông bột, hèn nào không hỏng việc! Nhưng cũng là",
+          "bbox": [
+            396,
+            361,
+            1743,
+            422
+          ],
+          "confidence": 92.47
+        },
+        {
+          "text": "một việc làm vì nghĩa, dầu thất bại mà vẫn về vang...!",
+          "bbox": [
+            309,
+            414,
+            1744,
+            474
+          ],
+          "confidence": 91.06
+        },
+        {
+          "text": "Rôi Chính lai hỏi:",
+          "bbox": [
+            397,
+            489,
+            773,
+            533
+          ],
+          "confidence": 86.58
+        },
+        {
+          "text": "- Thế đưa về kinh rồi sau ra sao?",
+          "bbox": [
+            393,
+            561,
+            1565,
+            610
+          ],
+          "confidence": 97.52
+        },
+        {
+          "text": "Người ấy trả lời:",
+          "bbox": [
+            393,
+            636,
+            742,
+            677
+          ],
+          "confidence": 97.26
+        },
+        {
+          "text": "- Triệu đình bàn định hai công tử đều đáng tội chết. Chúa nghĩ",
+          "bbox": [
+            363,
+            707,
+            1740,
+            770
+          ],
+          "confidence": 83.63
+        },
+        {
+          "text": "tình anh em cô cậu, ra ơn cho được tha tội chết. Nhưng lại bị thái phì",
+          "bbox": [
+            304,
+            772,
+            1738,
+            830
+          ],
+          "confidence": 90.49
+        },
+        {
+          "text": "ngâm sai người đến bắt ương thước độc. Có kẻ báo với chúa. Chúa với",
+          "bbox": [
+            304,
+            826,
+            1736,
+            886
+          ],
+          "confidence": 89.86
+        },
+        {
+          "text": "sai viên trung sứ đến ngăn lại. Nhưng khi đến nơi thì câu cả đã bi",
+          "bbox": [
+            302,
+            890,
+            1736,
+            947
+          ],
+          "confidence": 89.57
+        },
+        {
+          "text": "trùng độc chết rồi. Chỉ còn cậu hai hiện đang bị giam ở ngục của Đại.",
+          "bbox": [
+            301,
+            945,
+            1735,
+            1006
+          ],
+          "confidence": 90.56
+        },
+        {
+          "text": "Chỉnh tỏ về ngậm ngùi mà răng:",
+          "bbox": [
+            388,
+            1014,
+            1647,
+            1066
+          ],
+          "confidence": 79.75
+        },
+        {
+          "text": "- Thương thay! Phá tổ đỗ trứng ¹! Người ta có tôi tình gì?",
+          "bbox": [
+            385,
+            1087,
+            1596,
+            1147
+          ],
+          "confidence": 83.6
+        },
+        {
+          "text": "Lại hỏi:",
+          "bbox": [
+            387,
+            1167,
+            553,
+            1197
+          ],
+          "confidence": 96.35
+        },
+        {
+          "text": "- Còn công chúa, từ khi bị giam vào hậu cung thì việc ăn ở ra sao?",
+          "bbox": [
+            384,
+            1234,
+            1719,
+            1291
+          ],
+          "confidence": 94.58
+        },
+        {
+          "text": "- Chúa cũng nghĩ tình cô ruột, không nỡ hành ha gì cả. Song vì",
+          "bbox": [
+            382,
+            1376,
+            1729,
+            1433
+          ],
+          "confidence": 93.61
+        },
+        {
+          "text": "thái phi vấn có hiểm cũ, nên đã làm cho khổ cực đủ đường. Công",
+          "bbox": [
+            295,
+            1425,
+            1730,
+            1491
+          ],
+          "confidence": 93.89
+        },
+        {
+          "text": "chúa vừa đau buồn uất hận, nên đã thành bệnh mà chết rồi!",
+          "bbox": [
+            295,
+            1487,
+            1726,
+            1548
+          ],
+          "confidence": 90.53
+        },
+        {
+          "text": "Chính thỏa đài hồi lâu, rồi nói:",
+          "bbox": [
+            381,
+            1559,
+            1011,
+            1609
+          ],
+          "confidence": 81.67
+        },
+        {
+          "text": "- Công chúa chết cũng là phải, sống mà làm gì nữa...!",
+          "bbox": [
+            377,
+            1634,
+            1636,
+            1691
+          ],
+          "confidence": 98.38
+        },
+        {
+          "text": "Lại hỏi:",
+          "bbox": [
+            379,
+            1711,
+            545,
+            1741
+          ],
+          "confidence": 90.9
+        },
+        {
+          "text": "- Thế còn Đặng Tuyên phi thì thế nào?",
+          "bbox": [
+            376,
+            1773,
+            1201,
+            1827
+          ],
+          "confidence": 95.96
+        },
+        {
+          "text": "- Khi chúa nhỏ bị bỏ, thái phi liền sai người bắt tuyên phi đến",
+          "bbox": [
+            374,
+            1920,
+            1721,
+            1977
+          ],
+          "confidence": 97.26
+        },
+        {
+          "text": "trước mặt mình, kế tội, rồi bước tuyên phi phải lay ta. Tuyên phi",
+          "bbox": [
+            284,
+            1975,
+            1719,
+            2044
+          ],
+          "confidence": 88.91
+        },
+        {
+          "text": "không chịu lấy, thái phi bèn sai hai thi nữ đúng kèm hai bên, nếu tóc",
+          "bbox": [
+            286,
+            2036,
+            1719,
+            2094
+          ],
+          "confidence": 85.12
+        },
+        {
+          "text": "tuyên phi rập đầu xương đất. Nhưng tuyên phi văn nhất định không",
+          "bbox": [
+            284,
+            2093,
+            1719,
+            2153
+          ],
+          "confidence": 89.98
+        },
+        {
+          "text": "chịu lấy, mà cũng không nói nữa nhời. Thái phi giận quá, đánh đập",
+          "bbox": [
+            282,
+            2156,
+            1718,
+            2218
+          ],
+          "confidence": 93.49
+        },
+        {
+          "text": "một hồi, nhớ nước bọt vào đầu vào mặt, rồi đem giam vào nhà Hộ",
+          "bbox": [
+            282,
+            2215,
+            1715,
+            2270
+          ],
+          "confidence": 89.47
+        },
+        {
+          "text": "1. Thời Tam Quốc, Không Dung bị Tào Tháo bất, lúc sắp bị giết chết, có kẻ đến",
+          "bbox": [
+            279,
+            2326,
+            1713,
+            2385
+          ],
+          "confidence": 92.86
+        },
+        {
+          "text": "bao hai con của Dung nên trốn đi; hai người đó trả lời: \"Tổ võ thì trúng còn toàn vẹn",
+          "bbox": [
+            279,
+            2377,
+            1713,
+            2429
+          ],
+          "confidence": 87.31
+        },
+        {
+          "text": "làm sao được\". Câu này dùng theo ý đó.",
+          "bbox": [
+            277,
+            2421,
+            1499,
+            2462
+          ],
+          "confidence": 97.85
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          1839,
+          2803
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 18.626,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              309,
+              219,
+              1688,
+              279
+            ],
+            "generated_text": "Quân sĩ tan rã. Hai công tử đều bị bắt sống, đóng cũi giải về kinh.",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.68,
+            "confidence": 89.07,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              398,
+              297,
+              1001,
+              337
+            ],
+            "generated_text": "Chính nghe xong, than rằng:",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.373,
+            "confidence": 98.51,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              396,
+              361,
+              1743,
+              422
+            ],
+            "generated_text": "- Tuổi trẻ bông bột, hèn nào không hỏng việc! Nhưng cũng là",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.611,
+            "confidence": 92.47,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              309,
+              414,
+              1744,
+              474
+            ],
+            "generated_text": "một việc làm vì nghĩa, dầu thất bại mà vẫn về vang...!",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.579,
+            "confidence": 91.06,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              397,
+              489,
+              773,
+              533
+            ],
+            "generated_text": "Rôi Chính lai hỏi:",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.322,
+            "confidence": 86.58,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              393,
+              561,
+              1565,
+              610
+            ],
+            "generated_text": "- Thế đưa về kinh rồi sau ra sao?",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.415,
+            "confidence": 97.52,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              393,
+              636,
+              742,
+              677
+            ],
+            "generated_text": "Người ấy trả lời:",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.332,
+            "confidence": 97.26,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              363,
+              707,
+              1740,
+              770
+            ],
+            "generated_text": "- Triệu đình bàn định hai công tử đều đáng tội chết. Chúa nghĩ",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.672,
+            "confidence": 83.63,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              304,
+              772,
+              1738,
+              830
+            ],
+            "generated_text": "tình anh em cô cậu, ra ơn cho được tha tội chết. Nhưng lại bị thái phì",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.722,
+            "confidence": 90.49,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              304,
+              826,
+              1736,
+              886
+            ],
+            "generated_text": "ngâm sai người đến bắt ương thước độc. Có kẻ báo với chúa. Chúa với",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.677,
+            "confidence": 89.86,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              302,
+              890,
+              1736,
+              947
+            ],
+            "generated_text": "sai viên trung sứ đến ngăn lại. Nhưng khi đến nơi thì câu cả đã bi",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.614,
+            "confidence": 89.57,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              301,
+              945,
+              1735,
+              1006
+            ],
+            "generated_text": "trùng độc chết rồi. Chỉ còn cậu hai hiện đang bị giam ở ngục của Đại.",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.751,
+            "confidence": 90.56,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              388,
+              1014,
+              1647,
+              1066
+            ],
+            "generated_text": "Chỉnh tỏ về ngậm ngùi mà răng:",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.437,
+            "confidence": 79.75,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              385,
+              1087,
+              1596,
+              1147
+            ],
+            "generated_text": "- Thương thay! Phá tổ đỗ trứng ¹! Người ta có tôi tình gì?",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.717,
+            "confidence": 83.6,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              387,
+              1167,
+              553,
+              1197
+            ],
+            "generated_text": "Lại hỏi:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.242,
+            "confidence": 96.35,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              384,
+              1234,
+              1719,
+              1291
+            ],
+            "generated_text": "- Còn công chúa, từ khi bị giam vào hậu cung thì việc ăn ở ra sao?",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.635,
+            "confidence": 94.58,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              382,
+              1376,
+              1729,
+              1433
+            ],
+            "generated_text": "- Chúa cũng nghĩ tình cô ruột, không nỡ hành ha gì cả. Song vì",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.619,
+            "confidence": 93.61,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              295,
+              1425,
+              1730,
+              1491
+            ],
+            "generated_text": "thái phi vấn có hiểm cũ, nên đã làm cho khổ cực đủ đường. Công",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.648,
+            "confidence": 93.89,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              295,
+              1487,
+              1726,
+              1548
+            ],
+            "generated_text": "chúa vừa đau buồn uất hận, nên đã thành bệnh mà chết rồi!",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.671,
+            "confidence": 90.53,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              381,
+              1559,
+              1011,
+              1609
+            ],
+            "generated_text": "Chính thỏa đài hồi lâu, rồi nói:",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.469,
+            "confidence": 81.67,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              377,
+              1634,
+              1636,
+              1691
+            ],
+            "generated_text": "- Công chúa chết cũng là phải, sống mà làm gì nữa...!",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.525,
+            "confidence": 98.38,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              379,
+              1711,
+              545,
+              1741
+            ],
+            "generated_text": "Lại hỏi:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.241,
+            "confidence": 90.9,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              376,
+              1773,
+              1201,
+              1827
+            ],
+            "generated_text": "- Thế còn Đặng Tuyên phi thì thế nào?",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.44,
+            "confidence": 95.96,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              374,
+              1920,
+              1721,
+              1977
+            ],
+            "generated_text": "- Khi chúa nhỏ bị bỏ, thái phi liền sai người bắt tuyên phi đến",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.623,
+            "confidence": 97.26,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              284,
+              1975,
+              1719,
+              2044
+            ],
+            "generated_text": "trước mặt mình, kế tội, rồi bước tuyên phi phải lay ta. Tuyên phi",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.76,
+            "confidence": 88.91,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              286,
+              2036,
+              1719,
+              2094
+            ],
+            "generated_text": "không chịu lấy, thái phi bèn sai hai thi nữ đúng kèm hai bên, nếu tóc",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 0.739,
+            "confidence": 85.12,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              284,
+              2093,
+              1719,
+              2153
+            ],
+            "generated_text": "tuyên phi rập đầu xương đất. Nhưng tuyên phi văn nhất định không",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.594,
+            "confidence": 89.98,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              282,
+              2156,
+              1718,
+              2218
+            ],
+            "generated_text": "chịu lấy, mà cũng không nói nữa nhời. Thái phi giận quá, đánh đập",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.656,
+            "confidence": 93.49,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              282,
+              2215,
+              1715,
+              2270
+            ],
+            "generated_text": "một hồi, nhớ nước bọt vào đầu vào mặt, rồi đem giam vào nhà Hộ",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.669,
+            "confidence": 89.47,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              279,
+              2288,
+              878,
+              2310
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.151,
+            "confidence": 26.54,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              279,
+              2326,
+              1713,
+              2385
+            ],
+            "generated_text": "1. Thời Tam Quốc, Không Dung bị Tào Tháo bất, lúc sắp bị giết chết, có kẻ đến",
+            "n_lines": 1,
+            "tokens": 35,
+            "seconds": 0.831,
+            "confidence": 92.86,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 32,
+            "box": [
+              279,
+              2377,
+              1713,
+              2429
+            ],
+            "generated_text": "bao hai con của Dung nên trốn đi; hai người đó trả lời: \"Tổ võ thì trúng còn toàn vẹn",
+            "n_lines": 1,
+            "tokens": 32,
+            "seconds": 0.792,
+            "confidence": 87.31,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 33,
+            "box": [
+              277,
+              2421,
+              1499,
+              2462
+            ],
+            "generated_text": "làm sao được\". Câu này dùng theo ý đó.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.414,
+            "confidence": 97.85,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              402,
+              288,
+              922,
+              299
+            ],
+            "ink": 369
+          },
+          {
+            "box": [
+              387,
+              1309,
+              487,
+              1323
+            ],
+            "ink": 642
+          },
+          {
+            "box": [
+              388,
+              1319,
+              475,
+              1328
+            ],
+            "ink": 417
+          },
+          {
+            "box": [
+              384,
+              1325,
+              487,
+              1338
+            ],
+            "ink": 641
+          },
+          {
+            "box": [
+              377,
+              1853,
+              478,
+              1866
+            ],
+            "ink": 537
+          },
+          {
+            "box": [
+              376,
+              1870,
+              478,
+              1881
+            ],
+            "ink": 412
+          },
+          {
+            "box": [
+              279,
+              2498,
+              354,
+              2507
+            ],
+            "ink": 266
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      }
+    }
+  ]
+}

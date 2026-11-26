@@ -1,0 +1,264 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_20",
+  "engine": "qwen",
+  "page": 712,
+  "runs": [
+    {
+      "key": "eb13f2225f33db49002b2e8b822e564bed93690cffc27d833ab2ca4207cf60bb",
+      "parameters": {
+        "image_sha256": "946d1fbbf2eba226c7d7a45ede50bb2655a7bb873e3ec564fd5a17b97ccf9824",
+        "engine": {
+          "name": "qwen",
+          "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "model_revision": "main",
+          "transformers_version": "4.57.6",
+          "torch_version": "2.5.1+cu121",
+          "cuda_version": "12.1",
+          "bitsandbytes_version": "0.50.2",
+          "quantization": {
+            "load_in_4bit": true,
+            "quant_type": "nf4",
+            "double_quant": true,
+            "compute_dtype": "float16"
+          },
+          "mode": "all",
+          "min_pixels": 50176,
+          "max_pixels": 802816,
+          "band_inches": 2.0,
+          "max_new_tokens": 768,
+          "repetition_penalty": 1.05,
+          "adapter_version": 3,
+          "prompt_version": 3,
+          "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74"
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T18:58:59+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_712.png",
+      "image_size": [
+        1839,
+        2803
+      ],
+      "crop_box": [
+        0,
+        0,
+        1839,
+        2803
+      ],
+      "lines": [
+        {
+          "text": "縱咬得茶根，奈吾人之窮何！",
+          "bbox": [
+            437,
+            832,
+            1762,
+            900
+          ],
+          "confidence": 90.27
+        },
+        {
+          "text": "農民勤苦，終歲不掇。",
+          "bbox": [
+            437,
+            900,
+            1762,
+            968
+          ],
+          "confidence": 90.27
+        },
+        {
+          "text": "歲旱則傷於蝦膩，歲潦則委諸魚鱉。",
+          "bbox": [
+            437,
+            968,
+            1762,
+            1035
+          ],
+          "confidence": 90.27
+        },
+        {
+          "text": "生穀幾何，民食不竭。",
+          "bbox": [
+            437,
+            1035,
+            1762,
+            1103
+          ],
+          "confidence": 90.27
+        },
+        {
+          "text": "何莫非水，而此則盡農夫之膏血。",
+          "bbox": [
+            437,
+            1103,
+            1762,
+            1171
+          ],
+          "confidence": 90.27
+        },
+        {
+          "text": "人且嗷嗷然，予獨何心傲清風而賞明月。",
+          "bbox": [
+            437,
+            1171,
+            1762,
+            1238
+          ],
+          "confidence": 90.27
+        },
+        {
+          "text": "非時之遊，爾其勿說。",
+          "bbox": [
+            437,
+            1238,
+            1762,
+            1306
+          ],
+          "confidence": 90.27
+        },
+        {
+          "text": "農叟旁觀，意甚盤桓曰：",
+          "bbox": [
+            437,
+            1306,
+            1762,
+            1374
+          ],
+          "confidence": 90.27
+        },
+        {
+          "text": "吾子此言，诚知吾稼穑之艰难。",
+          "bbox": [
+            437,
+            1366,
+            1762,
+            1606
+          ],
+          "confidence": 91.12
+        },
+        {
+          "text": ".",
+          "bbox": [
+            718,
+            1598,
+            1762,
+            2147
+          ],
+          "confidence": 75.25
+        },
+        {
+          "text": "716",
+          "bbox": [
+            279,
+            2139,
+            1762,
+            2545
+          ],
+          "confidence": 99.02
+        }
+      ],
+      "raw": {
+        "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+        "model_revision": "main",
+        "mode": "all",
+        "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74",
+        "dpi": 300,
+        "image_size": [
+          1839,
+          2803
+        ],
+        "band_target_height": 600,
+        "bbox_granularity": "band_even_split",
+        "max_new_tokens": 768,
+        "max_pixels": 802816,
+        "inference_seconds": 11.799,
+        "bands": [
+          {
+            "band": 1,
+            "y0": 836,
+            "y1": 1370,
+            "ink_box": [
+              437,
+              832,
+              1762,
+              1374
+            ],
+            "generated_text": "縱咬得茶根，奈吾人之窮何！\n農民勤苦，終歲不掇。\n歲旱則傷於蝦膩，歲潦則委諸魚鱉。\n生穀幾何，民食不竭。\n何莫非水，而此則盡農夫之膏血。\n人且嗷嗷然，予獨何心傲清風而賞明月。\n非時之遊，爾其勿說。\n農叟旁觀，意甚盤桓曰：",
+            "n_lines": 8,
+            "tokens": 109,
+            "seconds": 7.434,
+            "confidence": 90.27,
+            "flags": []
+          },
+          {
+            "band": 2,
+            "y0": 1370,
+            "y1": 1602,
+            "ink_box": [
+              437,
+              1366,
+              1762,
+              1606
+            ],
+            "generated_text": "吾子此言，诚知吾稼穑之艰难。",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.502,
+            "confidence": 91.12,
+            "flags": []
+          },
+          {
+            "band": 3,
+            "y0": 1602,
+            "y1": 2143,
+            "ink_box": [
+              718,
+              1598,
+              1762,
+              2147
+            ],
+            "generated_text": ".",
+            "n_lines": 1,
+            "tokens": 2,
+            "seconds": 1.356,
+            "confidence": 75.25,
+            "flags": []
+          },
+          {
+            "band": 4,
+            "y0": 2143,
+            "y1": 2541,
+            "ink_box": [
+              279,
+              2139,
+              1762,
+              2545
+            ],
+            "generated_text": "716",
+            "n_lines": 1,
+            "tokens": 4,
+            "seconds": 1.499,
+            "confidence": 99.02,
+            "flags": []
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "9f9251f525e6fb14a7842465d834ea0d351ab96e",
+        "git_describe": "9f9251f",
+        "git_dirty": true,
+        "gpu": "NVIDIA GeForce RTX 3050 6GB Laptop GPU",
+        "dtype": "float16",
+        "adapter_version": 3
+      }
+    }
+  ]
+}

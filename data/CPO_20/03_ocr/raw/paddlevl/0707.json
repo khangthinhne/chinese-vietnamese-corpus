@@ -1,0 +1,962 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_20",
+  "engine": "paddlevl",
+  "page": 707,
+  "runs": [
+    {
+      "key": "be95b0ec5ed14eddf7d8013ca73bd3543dbb08b77d9182504e8ceb1b4393a03d",
+      "parameters": {
+        "image_sha256": "a5b9f8977d084c5038b1001a0eae3730637d2eebdc6ee0214ed9fff8b20d27e1",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T14:22:48+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_707.png",
+      "image_size": [
+        1823,
+        2814
+      ],
+      "crop_box": [
+        0,
+        0,
+        1823,
+        2814
+      ],
+      "lines": [
+        {
+          "text": "Trải máy độ phong trần ly loạn.",
+          "bbox": [
+            384,
+            280,
+            1039,
+            330
+          ],
+          "confidence": 93.48
+        },
+        {
+          "text": "Cháu ở giang Nam, chủ ở giang Bắc,",
+          "bbox": [
+            192,
+            339,
+            1125,
+            388
+          ],
+          "confidence": 94.62
+        },
+        {
+          "text": "Nước máy cách trở lưỡng những nhớ nhau.",
+          "bbox": [
+            387,
+            398,
+            1247,
+            446
+          ],
+          "confidence": 82.68
+        },
+        {
+          "text": "Cháu còn có thú vui gỉa đình, quê quán,",
+          "bbox": [
+            388,
+            458,
+            1189,
+            505
+          ],
+          "confidence": 86.43
+        },
+        {
+          "text": "Chú ở nhà hay ở trọ chẳng có gì hơn.",
+          "bbox": [
+            390,
+            516,
+            1144,
+            565
+          ],
+          "confidence": 92.44
+        },
+        {
+          "text": "Thôi mặc cho cuộc sống cứ trôi đạt.",
+          "bbox": [
+            388,
+            575,
+            1105,
+            618
+          ],
+          "confidence": 89.04
+        },
+        {
+          "text": "Cảnh đã buồn, lại thêm nổi buồn góa vợ.",
+          "bbox": [
+            391,
+            632,
+            1216,
+            677
+          ],
+          "confidence": 90.82
+        },
+        {
+          "text": "Chiếc bóng quê người, cùng ai bầu bạn!",
+          "bbox": [
+            391,
+            691,
+            1183,
+            742
+          ],
+          "confidence": 98.93
+        },
+        {
+          "text": "Trong gian phòng cô quanh, đêm đêm nước mắt thấm áo...",
+          "bbox": [
+            391,
+            750,
+            1575,
+            803
+          ],
+          "confidence": 95.59
+        },
+        {
+          "text": "... Đời người như con và ở trong trời đất,",
+          "bbox": [
+            142,
+            811,
+            1214,
+            855
+          ],
+          "confidence": 91.6
+        },
+        {
+          "text": "Cùng thông, được mất, phó mặc cho tự nhiên.",
+          "bbox": [
+            395,
+            869,
+            1314,
+            919
+          ],
+          "confidence": 98.66
+        },
+        {
+          "text": "Cần gì phải tính quê người hay quê nhà,",
+          "bbox": [
+            395,
+            930,
+            1214,
+            978
+          ],
+          "confidence": 97.45
+        },
+        {
+          "text": "Trên cõi đời, sống ở đâu cũng là gửi cả.",
+          "bbox": [
+            395,
+            987,
+            1192,
+            1034
+          ],
+          "confidence": 94.23
+        },
+        {
+          "text": "Dich thơ:",
+          "bbox": [
+            170,
+            1200,
+            357,
+            1230
+          ],
+          "confidence": 87.67
+        },
+        {
+          "text": "Thủ đô còn để trái đào thơ đại,",
+          "bbox": [
+            459,
+            1308,
+            1053,
+            1352
+          ],
+          "confidence": 77.11
+        },
+        {
+          "text": "Cùng vui đùa, giận cãi mắng nhau.",
+          "bbox": [
+            459,
+            1365,
+            1169,
+            1413
+          ],
+          "confidence": 92.72
+        },
+        {
+          "text": "Tháng ngày thấp thoáng trôi mau,",
+          "bbox": [
+            518,
+            1425,
+            1210,
+            1474
+          ],
+          "confidence": 87.76
+        },
+        {
+          "text": "Chúng ta rày đà mày râu nên người.",
+          "bbox": [
+            402,
+            1484,
+            1141,
+            1530
+          ],
+          "confidence": 81.21
+        },
+        {
+          "text": "Mệnh chảng đạt, gặp thời vận xửi,",
+          "bbox": [
+            459,
+            1540,
+            1158,
+            1588
+          ],
+          "confidence": 84.78
+        },
+        {
+          "text": "Trải máy phen gió bụi loạn ly.",
+          "bbox": [
+            462,
+            1601,
+            1077,
+            1647
+          ],
+          "confidence": 90.83
+        },
+        {
+          "text": "Bác Nam hai ngả phân kỳ,",
+          "bbox": [
+            518,
+            1658,
+            1060,
+            1705
+          ],
+          "confidence": 88.7
+        },
+        {
+          "text": "Nước ngắn, máy cách tương tự đôi đường.",
+          "bbox": [
+            402,
+            1710,
+            1242,
+            1766
+          ],
+          "confidence": 86.86
+        },
+        {
+          "text": "Cháu còn có gia hương vui thú,",
+          "bbox": [
+            463,
+            1776,
+            1091,
+            1822
+          ],
+          "confidence": 92.34
+        },
+        {
+          "text": "Chú một thân vò vỡ đúng người.",
+          "bbox": [
+            465,
+            1833,
+            1094,
+            1880
+          ],
+          "confidence": 76.15
+        },
+        {
+          "text": "Phù sinh lặn lợi pha phôi,",
+          "bbox": [
+            523,
+            1890,
+            1052,
+            1938
+          ],
+          "confidence": 80.86
+        },
+        {
+          "text": "Cảm thương thân thế, ngậm ngùi khuê ly.",
+          "bbox": [
+            407,
+            1947,
+            1253,
+            2000
+          ],
+          "confidence": 93.36
+        },
+        {
+          "text": "Nơi đất khách đi về bóng lè,",
+          "bbox": [
+            466,
+            2009,
+            1041,
+            2056
+          ],
+          "confidence": 84.75
+        },
+        {
+          "text": "Mảnh áo đơn đảm lệ đêm thanh...",
+          "bbox": [
+            466,
+            2062,
+            1153,
+            2117
+          ],
+          "confidence": 94.39
+        },
+        {
+          "text": "... Quảng đời một kiếp phù sinh,",
+          "bbox": [
+            295,
+            2121,
+            1342,
+            2175
+          ],
+          "confidence": 90.59
+        },
+        {
+          "text": "Cùng thông đã mất, nhục vinh lẽ thương.",
+          "bbox": [
+            384,
+            2176,
+            1247,
+            2235
+          ],
+          "confidence": 94.29
+        },
+        {
+          "text": "Có hướng dù nữa tha hướng.",
+          "bbox": [
+            527,
+            2241,
+            1163,
+            2292
+          ],
+          "confidence": 85.83
+        },
+        {
+          "text": "Cũng là sổng gửi trong trường thê gian.",
+          "bbox": [
+            471,
+            2295,
+            1269,
+            2351
+          ],
+          "confidence": 83.75
+        },
+        {
+          "text": "Nguyễn Văn Bách dịch",
+          "bbox": [
+            1183,
+            2406,
+            1608,
+            2446
+          ],
+          "confidence": 97.02
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          1823,
+          2814
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 48.623,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              384,
+              280,
+              1039,
+              330
+            ],
+            "generated_text": "Trải máy độ phong trần ly loạn.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.142,
+            "confidence": 93.48,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              192,
+              339,
+              1125,
+              388
+            ],
+            "generated_text": "Cháu ở giang Nam, chủ ở giang Bắc,",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.192,
+            "confidence": 94.62,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              387,
+              398,
+              1247,
+              446
+            ],
+            "generated_text": "Nước máy cách trở lưỡng những nhớ nhau.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.266,
+            "confidence": 82.68,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              388,
+              458,
+              1189,
+              505
+            ],
+            "generated_text": "Cháu còn có thú vui gỉa đình, quê quán,",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.493,
+            "confidence": 86.43,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              390,
+              516,
+              1144,
+              565
+            ],
+            "generated_text": "Chú ở nhà hay ở trọ chẳng có gì hơn.",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.325,
+            "confidence": 92.44,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              388,
+              575,
+              1105,
+              618
+            ],
+            "generated_text": "Thôi mặc cho cuộc sống cứ trôi đạt.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.184,
+            "confidence": 89.04,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              391,
+              632,
+              1216,
+              677
+            ],
+            "generated_text": "Cảnh đã buồn, lại thêm nổi buồn góa vợ.",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.455,
+            "confidence": 90.82,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              391,
+              691,
+              1183,
+              742
+            ],
+            "generated_text": "Chiếc bóng quê người, cùng ai bầu bạn!",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.172,
+            "confidence": 98.93,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              391,
+              750,
+              1575,
+              803
+            ],
+            "generated_text": "Trong gian phòng cô quanh, đêm đêm nước mắt thấm áo...",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 2.016,
+            "confidence": 95.59,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              142,
+              811,
+              1214,
+              855
+            ],
+            "generated_text": "... Đời người như con và ở trong trời đất,",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.191,
+            "confidence": 91.6,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              395,
+              869,
+              1314,
+              919
+            ],
+            "generated_text": "Cùng thông, được mất, phó mặc cho tự nhiên.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.492,
+            "confidence": 98.66,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              395,
+              930,
+              1214,
+              978
+            ],
+            "generated_text": "Cần gì phải tính quê người hay quê nhà,",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.376,
+            "confidence": 97.45,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              395,
+              987,
+              1192,
+              1034
+            ],
+            "generated_text": "Trên cõi đời, sống ở đâu cũng là gửi cả.",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 2.049,
+            "confidence": 94.23,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              170,
+              1200,
+              357,
+              1230
+            ],
+            "generated_text": "Dich thơ:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.71,
+            "confidence": 87.67,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              459,
+              1308,
+              1053,
+              1352
+            ],
+            "generated_text": "Thủ đô còn để trái đào thơ đại,",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.676,
+            "confidence": 77.11,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              459,
+              1365,
+              1169,
+              1413
+            ],
+            "generated_text": "Cùng vui đùa, giận cãi mắng nhau.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.898,
+            "confidence": 92.72,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              518,
+              1425,
+              1210,
+              1474
+            ],
+            "generated_text": "Tháng ngày thấp thoáng trôi mau,",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.351,
+            "confidence": 87.76,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              402,
+              1484,
+              1141,
+              1530
+            ],
+            "generated_text": "Chúng ta rày đà mày râu nên người.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.677,
+            "confidence": 81.21,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              459,
+              1540,
+              1158,
+              1588
+            ],
+            "generated_text": "Mệnh chảng đạt, gặp thời vận xửi,",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.803,
+            "confidence": 84.78,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              462,
+              1601,
+              1077,
+              1647
+            ],
+            "generated_text": "Trải máy phen gió bụi loạn ly.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.245,
+            "confidence": 90.83,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              518,
+              1658,
+              1060,
+              1705
+            ],
+            "generated_text": "Bác Nam hai ngả phân kỳ,",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.104,
+            "confidence": 88.7,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              402,
+              1710,
+              1242,
+              1766
+            ],
+            "generated_text": "Nước ngắn, máy cách tương tự đôi đường.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.642,
+            "confidence": 86.86,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              463,
+              1776,
+              1091,
+              1822
+            ],
+            "generated_text": "Cháu còn có gia hương vui thú,",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.077,
+            "confidence": 92.34,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              465,
+              1833,
+              1094,
+              1880
+            ],
+            "generated_text": "Chú một thân vò vỡ đúng người.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.421,
+            "confidence": 76.15,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              523,
+              1890,
+              1052,
+              1938
+            ],
+            "generated_text": "Phù sinh lặn lợi pha phôi,",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.87,
+            "confidence": 80.86,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              407,
+              1947,
+              1253,
+              2000
+            ],
+            "generated_text": "Cảm thương thân thế, ngậm ngùi khuê ly.",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 2.035,
+            "confidence": 93.36,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              466,
+              2009,
+              1041,
+              2056
+            ],
+            "generated_text": "Nơi đất khách đi về bóng lè,",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.415,
+            "confidence": 84.75,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              466,
+              2062,
+              1153,
+              2117
+            ],
+            "generated_text": "Mảnh áo đơn đảm lệ đêm thanh...",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.881,
+            "confidence": 94.39,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              295,
+              2121,
+              1342,
+              2175
+            ],
+            "generated_text": "... Quảng đời một kiếp phù sinh,",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.526,
+            "confidence": 90.59,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              384,
+              2176,
+              1247,
+              2235
+            ],
+            "generated_text": "Cùng thông đã mất, nhục vinh lẽ thương.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.838,
+            "confidence": 94.29,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              527,
+              2241,
+              1163,
+              2292
+            ],
+            "generated_text": "Có hướng dù nữa tha hướng.",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 1.239,
+            "confidence": 85.83,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 32,
+            "box": [
+              471,
+              2295,
+              1269,
+              2351
+            ],
+            "generated_text": "Cũng là sổng gửi trong trường thê gian.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.656,
+            "confidence": 83.75,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 33,
+            "box": [
+              1183,
+              2406,
+              1608,
+              2446
+            ],
+            "generated_text": "Nguyễn Văn Bách dịch",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 1.198,
+            "confidence": 97.02,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              174,
+              1190,
+              310,
+              1200
+            ],
+            "ink": 229
+          },
+          {
+            "box": [
+              1534,
+              2507,
+              1603,
+              2518
+            ],
+            "ink": 263
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      }
+    }
+  ]
+}

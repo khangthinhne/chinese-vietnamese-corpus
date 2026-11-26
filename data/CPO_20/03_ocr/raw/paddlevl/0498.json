@@ -1,0 +1,996 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_20",
+  "engine": "paddlevl",
+  "page": 498,
+  "runs": [
+    {
+      "key": "1091a319ed428b5bf23e81af285cc31aaab86ecd9280bf9707b3a0e2f2908c0f",
+      "parameters": {
+        "image_sha256": "4a6e452e8f7023a903f39afd6b65fcf92c73d417fc2d8c554f2e6a6711c43b0b",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T08:20:27+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_498.png",
+      "image_size": [
+        1839,
+        2803
+      ],
+      "crop_box": [
+        0,
+        0,
+        1839,
+        2803
+      ],
+      "lines": [
+        {
+          "text": "thiện?¹ Chi bằng trước hãy làm bài cáo văn hiểu dự rõ đường hoa",
+          "bbox": [
+            221,
+            238,
+            1697,
+            290
+          ],
+          "confidence": 92.07
+        },
+        {
+          "text": "phúc cho y. Nếu y cứ u mê không tỉnh, sau đó ta hãy đem quân đánh.",
+          "bbox": [
+            221,
+            299,
+            1696,
+            351
+          ],
+          "confidence": 95.83
+        },
+        {
+          "text": "ta cứ giữ niềm trung hậu, để cho người ngoài không nói vào đầu được.",
+          "bbox": [
+            221,
+            360,
+            1696,
+            410
+          ],
+          "confidence": 91.51
+        },
+        {
+          "text": "há không hơn hay sao?",
+          "bbox": [
+            221,
+            425,
+            715,
+            458
+          ],
+          "confidence": 94.15
+        },
+        {
+          "text": "Chính không nghe, nói:",
+          "bbox": [
+            312,
+            500,
+            814,
+            532
+          ],
+          "confidence": 98.25
+        },
+        {
+          "text": "- Nếu tôi không đem quân ra, để cho việc Trọng Tế giúp chúa",
+          "bbox": [
+            310,
+            563,
+            1696,
+            616
+          ],
+          "confidence": 95.33
+        },
+        {
+          "text": "được thành, xem y có xử hậu với hoàng thượng không? Anh hùng làm",
+          "bbox": [
+            220,
+            625,
+            1694,
+            676
+          ],
+          "confidence": 94.06
+        },
+        {
+          "text": "việc, há lại theo lòng nhân đức của đàn bà?",
+          "bbox": [
+            218,
+            683,
+            1149,
+            728
+          ],
+          "confidence": 94.24
+        },
+        {
+          "text": "Rồi Chỉnh cổ xin ra quân, vua Lê bắt đặc dĩ phải cho Chỉnh đọc",
+          "bbox": [
+            310,
+            756,
+            1694,
+            808
+          ],
+          "confidence": 84.22
+        },
+        {
+          "text": "suất các quân qua sông, thuyền bè chất cả mặt nước, khí thế rất là",
+          "bbox": [
+            220,
+            820,
+            1693,
+            869
+          ],
+          "confidence": 95.9
+        },
+        {
+          "text": "lam lét dang sơ.",
+          "bbox": [
+            218,
+            887,
+            581,
+            917
+          ],
+          "confidence": 61.92
+        },
+        {
+          "text": "Chúa Trình nghe tin, với vàng sai Toại độc suất người trong ho đ",
+          "bbox": [
+            307,
+            950,
+            1691,
+            1003
+          ],
+          "confidence": 84.97
+        },
+        {
+          "text": "Quế O làm quân tiến phong, thổ hào Yên Dũng là Nguyễn Trọng",
+          "bbox": [
+            218,
+            1011,
+            1693,
+            1063
+          ],
+          "confidence": 95.77
+        },
+        {
+          "text": "Linh làm tướng chống bên tả, thổ bảo Gia Bình là Trần Quang Châu",
+          "bbox": [
+            217,
+            1072,
+            1691,
+            1122
+          ],
+          "confidence": 92.7
+        },
+        {
+          "text": "làm tương chống bên hữu, bày trận chờ sẵn.",
+          "bbox": [
+            217,
+            1133,
+            1158,
+            1178
+          ],
+          "confidence": 92.16
+        },
+        {
+          "text": "Quân Chính tối nơi, hai bên đánh nhau từ sáng đến trưa, chưa",
+          "bbox": [
+            304,
+            1205,
+            1690,
+            1255
+          ],
+          "confidence": 91.85
+        },
+        {
+          "text": "phân được thua; sau đều rút quân để nghỉ ngơi.",
+          "bbox": [
+            215,
+            1267,
+            1218,
+            1311
+          ],
+          "confidence": 96.62
+        },
+        {
+          "text": "Chính sai người đưa tờ chiếu của vua tới du chúa, khuyên nên",
+          "bbox": [
+            304,
+            1339,
+            1688,
+            1386
+          ],
+          "confidence": 91.66
+        },
+        {
+          "text": "quy thuận, không nên chống cự. Chúa cười mà nói:",
+          "bbox": [
+            213,
+            1400,
+            1294,
+            1445
+          ],
+          "confidence": 96.69
+        },
+        {
+          "text": "- Hũu Chỉnh đến đây lần này, ý muốn bắt sống ta, nuốt trôi, chắc",
+          "bbox": [
+            302,
+            1469,
+            1688,
+            1520
+          ],
+          "confidence": 91.86
+        },
+        {
+          "text": "không chịu nhà ra. Nay lại lấy lời ngon ngọt dỗ ta, thắng nghịch tắc",
+          "bbox": [
+            213,
+            1531,
+            1686,
+            1584
+          ],
+          "confidence": 91.18
+        },
+        {
+          "text": "này quý quyệt đáng ghét thật. Tuy vậy, hắn đã muộn mệnh lệnh hoàng",
+          "bbox": [
+            212,
+            1594,
+            1686,
+            1642
+          ],
+          "confidence": 93.09
+        },
+        {
+          "text": "thượng đưa lại, ta không thể im lặng không trả lời.",
+          "bbox": [
+            212,
+            1653,
+            1276,
+            1698
+          ],
+          "confidence": 93.74
+        },
+        {
+          "text": "Chúa bèn tự thảo một tờ biểu trần tình, kể tôi ác của Chính và",
+          "bbox": [
+            301,
+            1723,
+            1682,
+            1772
+          ],
+          "confidence": 92.37
+        },
+        {
+          "text": "nói nhân dân ai cũng nghiên răng tức giận, xin hãy giết Chỉnh đã,",
+          "bbox": [
+            210,
+            1787,
+            1683,
+            1838
+          ],
+          "confidence": 97.35
+        },
+        {
+          "text": "rối sẽ về triều, lời lẽ có nhiều câu gay gắt.",
+          "bbox": [
+            210,
+            1845,
+            1113,
+            1891
+          ],
+          "confidence": 96.71
+        },
+        {
+          "text": "Sống mái ngoài đồng còn chưa quyết.",
+          "bbox": [
+            446,
+            1995,
+            1246,
+            2039
+          ],
+          "confidence": 85.69
+        },
+        {
+          "text": "Trai có trong rương vân giãng co.",
+          "bbox": [
+            449,
+            2062,
+            1161,
+            2103
+          ],
+          "confidence": 73.85
+        },
+        {
+          "text": "Chưa biết thua được ra sao? Hãy xem hỏi sau phân giải.",
+          "bbox": [
+            298,
+            2113,
+            1485,
+            2160
+          ],
+          "confidence": 93.22
+        },
+        {
+          "text": "1. Từ Văn tên thật là Đấu Cốc Ô Đồ, người đời Xuân Thu, làm quan nước Sở, có",
+          "bbox": [
+            301,
+            2345,
+            1677,
+            2389
+          ],
+          "confidence": 94.23
+        },
+        {
+          "text": "công lớn trong việc trị nước. Sau người em họ là Đấu Việt Thuc làm loan, đáng lẽ phả",
+          "bbox": [
+            206,
+            2398,
+            1676,
+            2437
+          ],
+          "confidence": 88.19
+        },
+        {
+          "text": "tru di cá hộ; nhưng Sở Trang Vương tha tôi cho người cháu của Tử Văn, và nói: “Người",
+          "bbox": [
+            206,
+            2445,
+            1676,
+            2485
+          ],
+          "confidence": 90.88
+        },
+        {
+          "text": "như Từ Văn mà bị tuyệt tự thì lấy gì mà khuyến khích điều thiện\".",
+          "bbox": [
+            206,
+            2493,
+            1349,
+            2534
+          ],
+          "confidence": 93.6
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          1839,
+          2803
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 20.418,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              221,
+              238,
+              1697,
+              290
+            ],
+            "generated_text": "thiện?¹ Chi bằng trước hãy làm bài cáo văn hiểu dự rõ đường hoa",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.646,
+            "confidence": 92.07,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              221,
+              299,
+              1696,
+              351
+            ],
+            "generated_text": "phúc cho y. Nếu y cứ u mê không tỉnh, sau đó ta hãy đem quân đánh.",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 0.717,
+            "confidence": 95.83,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              221,
+              360,
+              1696,
+              410
+            ],
+            "generated_text": "ta cứ giữ niềm trung hậu, để cho người ngoài không nói vào đầu được.",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.623,
+            "confidence": 91.51,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              221,
+              425,
+              715,
+              458
+            ],
+            "generated_text": "há không hơn hay sao?",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.262,
+            "confidence": 94.15,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              312,
+              500,
+              814,
+              532
+            ],
+            "generated_text": "Chính không nghe, nói:",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.296,
+            "confidence": 98.25,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              310,
+              563,
+              1696,
+              616
+            ],
+            "generated_text": "- Nếu tôi không đem quân ra, để cho việc Trọng Tế giúp chúa",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.589,
+            "confidence": 95.33,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              220,
+              625,
+              1694,
+              676
+            ],
+            "generated_text": "được thành, xem y có xử hậu với hoàng thượng không? Anh hùng làm",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.62,
+            "confidence": 94.06,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              218,
+              683,
+              1149,
+              728
+            ],
+            "generated_text": "việc, há lại theo lòng nhân đức của đàn bà?",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.47,
+            "confidence": 94.24,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              310,
+              756,
+              1694,
+              808
+            ],
+            "generated_text": "Rồi Chỉnh cổ xin ra quân, vua Lê bắt đặc dĩ phải cho Chỉnh đọc",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.682,
+            "confidence": 84.22,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              220,
+              820,
+              1693,
+              869
+            ],
+            "generated_text": "suất các quân qua sông, thuyền bè chất cả mặt nước, khí thế rất là",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.635,
+            "confidence": 95.9,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              218,
+              887,
+              581,
+              917
+            ],
+            "generated_text": "lam lét dang sơ.",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.29,
+            "confidence": 61.92,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              307,
+              950,
+              1691,
+              1003
+            ],
+            "generated_text": "Chúa Trình nghe tin, với vàng sai Toại độc suất người trong ho đ",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.578,
+            "confidence": 84.97,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              218,
+              1011,
+              1693,
+              1063
+            ],
+            "generated_text": "Quế O làm quân tiến phong, thổ hào Yên Dũng là Nguyễn Trọng",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.669,
+            "confidence": 95.77,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              217,
+              1072,
+              1691,
+              1122
+            ],
+            "generated_text": "Linh làm tướng chống bên tả, thổ bảo Gia Bình là Trần Quang Châu",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.704,
+            "confidence": 92.7,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              217,
+              1133,
+              1158,
+              1178
+            ],
+            "generated_text": "làm tương chống bên hữu, bày trận chờ sẵn.",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.706,
+            "confidence": 92.16,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              304,
+              1205,
+              1690,
+              1255
+            ],
+            "generated_text": "Quân Chính tối nơi, hai bên đánh nhau từ sáng đến trưa, chưa",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.624,
+            "confidence": 91.85,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              215,
+              1267,
+              1218,
+              1311
+            ],
+            "generated_text": "phân được thua; sau đều rút quân để nghỉ ngơi.",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.578,
+            "confidence": 96.62,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              304,
+              1339,
+              1688,
+              1386
+            ],
+            "generated_text": "Chính sai người đưa tờ chiếu của vua tới du chúa, khuyên nên",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.587,
+            "confidence": 91.66,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              213,
+              1400,
+              1294,
+              1445
+            ],
+            "generated_text": "quy thuận, không nên chống cự. Chúa cười mà nói:",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.604,
+            "confidence": 96.69,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              302,
+              1469,
+              1688,
+              1520
+            ],
+            "generated_text": "- Hũu Chỉnh đến đây lần này, ý muốn bắt sống ta, nuốt trôi, chắc",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.62,
+            "confidence": 91.86,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              213,
+              1531,
+              1686,
+              1584
+            ],
+            "generated_text": "không chịu nhà ra. Nay lại lấy lời ngon ngọt dỗ ta, thắng nghịch tắc",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 0.754,
+            "confidence": 91.18,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              212,
+              1594,
+              1686,
+              1642
+            ],
+            "generated_text": "này quý quyệt đáng ghét thật. Tuy vậy, hắn đã muộn mệnh lệnh hoàng",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 0.872,
+            "confidence": 93.09,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              212,
+              1653,
+              1276,
+              1698
+            ],
+            "generated_text": "thượng đưa lại, ta không thể im lặng không trả lời.",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.599,
+            "confidence": 93.74,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              301,
+              1723,
+              1682,
+              1772
+            ],
+            "generated_text": "Chúa bèn tự thảo một tờ biểu trần tình, kể tôi ác của Chính và",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.71,
+            "confidence": 92.37,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              210,
+              1787,
+              1683,
+              1838
+            ],
+            "generated_text": "nói nhân dân ai cũng nghiên răng tức giận, xin hãy giết Chỉnh đã,",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.691,
+            "confidence": 97.35,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              210,
+              1845,
+              1113,
+              1891
+            ],
+            "generated_text": "rối sẽ về triều, lời lẽ có nhiều câu gay gắt.",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.63,
+            "confidence": 96.71,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              446,
+              1995,
+              1246,
+              2039
+            ],
+            "generated_text": "Sống mái ngoài đồng còn chưa quyết.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.396,
+            "confidence": 85.69,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              449,
+              2062,
+              1161,
+              2103
+            ],
+            "generated_text": "Trai có trong rương vân giãng co.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.448,
+            "confidence": 73.85,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              298,
+              2113,
+              1485,
+              2160
+            ],
+            "generated_text": "Chưa biết thua được ra sao? Hãy xem hỏi sau phân giải.",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.546,
+            "confidence": 93.22,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              206,
+              2306,
+              818,
+              2324
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.147,
+            "confidence": 43.87,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              301,
+              2345,
+              1677,
+              2389
+            ],
+            "generated_text": "1. Từ Văn tên thật là Đấu Cốc Ô Đồ, người đời Xuân Thu, làm quan nước Sở, có",
+            "n_lines": 1,
+            "tokens": 33,
+            "seconds": 0.837,
+            "confidence": 94.23,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 32,
+            "box": [
+              206,
+              2398,
+              1676,
+              2437
+            ],
+            "generated_text": "công lớn trong việc trị nước. Sau người em họ là Đấu Việt Thuc làm loan, đáng lẽ phả",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 0.739,
+            "confidence": 88.19,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 33,
+            "box": [
+              206,
+              2445,
+              1676,
+              2485
+            ],
+            "generated_text": "tru di cá hộ; nhưng Sở Trang Vương tha tôi cho người cháu của Tử Văn, và nói: “Người",
+            "n_lines": 1,
+            "tokens": 32,
+            "seconds": 0.792,
+            "confidence": 90.88,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 34,
+            "box": [
+              206,
+              2493,
+              1349,
+              2534
+            ],
+            "generated_text": "như Từ Văn mà bị tuyệt tự thì lấy gì mà khuyến khích điều thiện\".",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.754,
+            "confidence": 93.6,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              224,
+              419,
+              712,
+              429
+            ],
+            "ink": 462
+          },
+          {
+            "box": [
+              313,
+              489,
+              798,
+              504
+            ],
+            "ink": 700
+          },
+          {
+            "box": [
+              310,
+              1926,
+              475,
+              1947
+            ],
+            "ink": 1181
+          },
+          {
+            "box": [
+              306,
+              1943,
+              473,
+              1956
+            ],
+            "ink": 668
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      }
+    }
+  ]
+}

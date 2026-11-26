@@ -1,0 +1,224 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_20",
+  "engine": "qwen",
+  "page": 740,
+  "runs": [
+    {
+      "key": "a1e7909357bcf4483b5229ebf0aa64d981be07acc13b9ea23d5fbb4f8c8618af",
+      "parameters": {
+        "image_sha256": "3c61ad22ee29f576d5cefe5163d29876134d40ee9d3f5b36c4b0d02d39a548c5",
+        "engine": {
+          "name": "qwen",
+          "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "model_revision": "main",
+          "transformers_version": "4.57.6",
+          "torch_version": "2.5.1+cu121",
+          "cuda_version": "12.1",
+          "bitsandbytes_version": "0.50.2",
+          "quantization": {
+            "load_in_4bit": true,
+            "quant_type": "nf4",
+            "double_quant": true,
+            "compute_dtype": "float16"
+          },
+          "mode": "all",
+          "min_pixels": 50176,
+          "max_pixels": 802816,
+          "band_inches": 2.0,
+          "max_new_tokens": 768,
+          "repetition_penalty": 1.05,
+          "adapter_version": 3,
+          "prompt_version": 3,
+          "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74"
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T19:11:22+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_740.png",
+      "image_size": [
+        1839,
+        2804
+      ],
+      "crop_box": [
+        0,
+        0,
+        1839,
+        2804
+      ],
+      "lines": [
+        {
+          "text": "NGÔ THÌ ĐIỂN",
+          "bbox": [
+            181,
+            491,
+            1762,
+            677
+          ],
+          "confidence": 93.68
+        },
+        {
+          "text": "? - ?",
+          "bbox": [
+            181,
+            677,
+            1762,
+            864
+          ],
+          "confidence": 93.68
+        },
+        {
+          "text": "Tự là Kính Phủ, hiệu là Tịnh Trai, là con trưởng của Ngô Thì Nhậm.1 Chưa rõ năm sinh năm mất. Căn cứ vào tuổi của Ngô Thì Nhậm, và căn cứ trên sáng tác của Ngô Thì Điển, có thể biết dưới thời Tây Sơn, Ngô Thì Điển đã trưởng thành. Chưa biết vào thời gian nào, nhưng hình như ông có học ở trường Quốc Tử Giám, có đi dạy ở Bắc Giang, và có ở Phú Xuân nay là Huế",
+          "bbox": [
+            181,
+            864,
+            1762,
+            1050
+          ],
+          "confidence": 93.68
+        },
+        {
+          "text": "khoảng mười năm trời. Dưới thời nhà Nguyễn, không biết ông có làm gì cho triều đại này không. Về sáng tác, Ngô Thì Điển còn để lại tập Dương chuyển thi văn. Phần lớn sáng tác của Ngô Thì Điển được viết ra dưới thời nhà Nguyễn. Nhưng có vẻ ông không bằng lòng với thực tại lúc bấy giờ. Đối với ông, dường như những năm tháng chống giặc giữ nước dưới thời Tây Sơn mới là điều hấp dẫn lớn.",
+          "bbox": [
+            174,
+            1042,
+            1762,
+            1293
+          ],
+          "confidence": 95.42
+        },
+        {
+          "text": "Thơ Ngô Thì Điển trước nay chưa được giới thiệu. Trong tập này chúng tôi tuyển chọn một số bài lấy trong tác phẩm trên, dựa theo bản Ngô gia văn phái chép tay tương đối đầy đủ của Thư viện Viện Nghiên cứu Hán Nôm, ký",
+          "bbox": [
+            174,
+            1293,
+            1762,
+            1544
+          ],
+          "confidence": 95.42
+        },
+        {
+          "text": "hiệu A 1176/21.",
+          "bbox": [
+            179,
+            1536,
+            1762,
+            2014
+          ],
+          "confidence": 92.16
+        },
+        {
+          "text": "1. Xem phần Ngô Thì Nhậm.",
+          "bbox": [
+            179,
+            2006,
+            1762,
+            2561
+          ],
+          "confidence": 87.67
+        }
+      ],
+      "raw": {
+        "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+        "model_revision": "main",
+        "mode": "all",
+        "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74",
+        "dpi": 300,
+        "image_size": [
+          1839,
+          2804
+        ],
+        "band_target_height": 600,
+        "bbox_granularity": "band_even_split",
+        "max_new_tokens": 768,
+        "max_pixels": 802816,
+        "inference_seconds": 24.203,
+        "bands": [
+          {
+            "band": 1,
+            "y0": 495,
+            "y1": 1046,
+            "ink_box": [
+              181,
+              491,
+              1762,
+              1050
+            ],
+            "generated_text": "NGÔ THÌ ĐIỂN\n\n? - ?\n\nTự là Kính Phủ, hiệu là Tịnh Trai, là con trưởng của Ngô Thì Nhậm.1 Chưa rõ năm sinh năm mất. Căn cứ vào tuổi của Ngô Thì Nhậm, và căn cứ trên sáng tác của Ngô Thì Điển, có thể biết dưới thời Tây Sơn, Ngô Thì Điển đã trưởng thành. Chưa biết vào thời gian nào, nhưng hình như ông có học ở trường Quốc Tử Giám, có đi dạy ở Bắc Giang, và có ở Phú Xuân nay là Huế",
+            "n_lines": 3,
+            "tokens": 128,
+            "seconds": 8.711,
+            "confidence": 93.68,
+            "flags": []
+          },
+          {
+            "band": 2,
+            "y0": 1046,
+            "y1": 1540,
+            "ink_box": [
+              174,
+              1042,
+              1762,
+              1544
+            ],
+            "generated_text": "khoảng mười năm trời. Dưới thời nhà Nguyễn, không biết ông có làm gì cho triều đại này không. Về sáng tác, Ngô Thì Điển còn để lại tập Dương chuyển thi văn. Phần lớn sáng tác của Ngô Thì Điển được viết ra dưới thời nhà Nguyễn. Nhưng có vẻ ông không bằng lòng với thực tại lúc bấy giờ. Đối với ông, dường như những năm tháng chống giặc giữ nước dưới thời Tây Sơn mới là điều hấp dẫn lớn.\n\nThơ Ngô Thì Điển trước nay chưa được giới thiệu. Trong tập này chúng tôi tuyển chọn một số bài lấy trong tác phẩm trên, dựa theo bản Ngô gia văn phái chép tay tương đối đầy đủ của Thư viện Viện Nghiên cứu Hán Nôm, ký",
+            "n_lines": 2,
+            "tokens": 169,
+            "seconds": 10.725,
+            "confidence": 95.42,
+            "flags": []
+          },
+          {
+            "band": 3,
+            "y0": 1540,
+            "y1": 2010,
+            "ink_box": [
+              179,
+              1536,
+              1762,
+              2014
+            ],
+            "generated_text": "hiệu A 1176/21.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 2.398,
+            "confidence": 92.16,
+            "flags": []
+          },
+          {
+            "band": 4,
+            "y0": 2010,
+            "y1": 2557,
+            "ink_box": [
+              179,
+              2006,
+              1762,
+              2561
+            ],
+            "generated_text": "1. Xem phần Ngô Thì Nhậm.",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 2.357,
+            "confidence": 87.67,
+            "flags": []
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "9f9251f525e6fb14a7842465d834ea0d351ab96e",
+        "git_describe": "9f9251f",
+        "git_dirty": true,
+        "gpu": "NVIDIA GeForce RTX 3050 6GB Laptop GPU",
+        "dtype": "float16",
+        "adapter_version": 3
+      }
+    }
+  ]
+}

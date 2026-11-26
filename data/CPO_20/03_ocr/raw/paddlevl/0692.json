@@ -1,0 +1,381 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_20",
+  "engine": "paddlevl",
+  "page": 692,
+  "runs": [
+    {
+      "key": "3837eb211347dd30a92878624c7e00b548198daeff83eceb446673ffddcbb09f",
+      "parameters": {
+        "image_sha256": "427a76ca50115b60eab177afb8b32f4720e8da87f347139e202c1b0986b8c019",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T14:16:13+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_692.png",
+      "image_size": [
+        1839,
+        2803
+      ],
+      "crop_box": [
+        0,
+        0,
+        1839,
+        2803
+      ],
+      "lines": [
+        {
+          "text": "Dich tha:",
+          "bbox": [
+            285,
+            238,
+            1716,
+            268
+          ],
+          "confidence": 87.94
+        },
+        {
+          "text": "Kia xem biến cả rộng dường bao,",
+          "bbox": [
+            523,
+            357,
+            1544,
+            410
+          ],
+          "confidence": 87.43
+        },
+        {
+          "text": "Muốn suối ngàn sông trút cả vào.",
+          "bbox": [
+            523,
+            417,
+            1222,
+            466
+          ],
+          "confidence": 85.49
+        },
+        {
+          "text": "Vút thảm mù khơi không bãi bến.",
+          "bbox": [
+            524,
+            474,
+            1230,
+            522
+          ],
+          "confidence": 91.99
+        },
+        {
+          "text": "Sám vang giận dữ lúc ba đào.",
+          "bbox": [
+            521,
+            536,
+            1147,
+            583
+          ],
+          "confidence": 86.75
+        },
+        {
+          "text": "Sâu nóng \"đong biển\" lời bày đặt,",
+          "bbox": [
+            273,
+            594,
+            1227,
+            645
+          ],
+          "confidence": 87.71
+        },
+        {
+          "text": "Hư thực “bè trôi” truyện thuở nào.",
+          "bbox": [
+            297,
+            652,
+            1232,
+            701
+          ],
+          "confidence": 80.18
+        },
+        {
+          "text": "Xa ngăm ngày người, ngoài đảo lê,",
+          "bbox": [
+            515,
+            719,
+            1246,
+            766
+          ],
+          "confidence": 89.19
+        },
+        {
+          "text": "Ngő là cột đá giữa dòng sâu.",
+          "bbox": [
+            515,
+            773,
+            1121,
+            825
+          ],
+          "confidence": 85.97
+        },
+        {
+          "text": "Thach Can dich",
+          "bbox": [
+            1446,
+            914,
+            1724,
+            955
+          ],
+          "confidence": 98.49
+        },
+        {
+          "text": "696",
+          "bbox": [
+            265,
+            2487,
+            346,
+            2524
+          ],
+          "confidence": 99.95
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          1839,
+          2803
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 5.782,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              285,
+              238,
+              1716,
+              268
+            ],
+            "generated_text": "Dich tha:",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.24,
+            "confidence": 87.94,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              523,
+              357,
+              1544,
+              410
+            ],
+            "generated_text": "Kia xem biến cả rộng dường bao,",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 0.413,
+            "confidence": 87.43,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              523,
+              417,
+              1222,
+              466
+            ],
+            "generated_text": "Muốn suối ngàn sông trút cả vào.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.392,
+            "confidence": 85.49,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              524,
+              474,
+              1230,
+              522
+            ],
+            "generated_text": "Vút thảm mù khơi không bãi bến.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.494,
+            "confidence": 91.99,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              521,
+              536,
+              1147,
+              583
+            ],
+            "generated_text": "Sám vang giận dữ lúc ba đào.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.434,
+            "confidence": 86.75,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              273,
+              594,
+              1227,
+              645
+            ],
+            "generated_text": "Sâu nóng \"đong biển\" lời bày đặt,",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.493,
+            "confidence": 87.71,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              297,
+              652,
+              1232,
+              701
+            ],
+            "generated_text": "Hư thực “bè trôi” truyện thuở nào.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.446,
+            "confidence": 80.18,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              515,
+              719,
+              1246,
+              766
+            ],
+            "generated_text": "Xa ngăm ngày người, ngoài đảo lê,",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.591,
+            "confidence": 89.19,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              515,
+              773,
+              1121,
+              825
+            ],
+            "generated_text": "Ngő là cột đá giữa dòng sâu.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.658,
+            "confidence": 85.97,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              1446,
+              914,
+              1724,
+              955
+            ],
+            "generated_text": "Thach Can dich",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.418,
+            "confidence": 98.49,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              265,
+              2487,
+              346,
+              2524
+            ],
+            "generated_text": "696",
+            "n_lines": 1,
+            "tokens": 4,
+            "seconds": 0.202,
+            "confidence": 99.95,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              293,
+              227,
+              437,
+              238
+            ],
+            "ink": 298
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      }
+    }
+  ]
+}

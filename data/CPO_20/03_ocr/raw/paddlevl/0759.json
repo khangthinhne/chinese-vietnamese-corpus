@@ -1,0 +1,859 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_20",
+  "engine": "paddlevl",
+  "page": 759,
+  "runs": [
+    {
+      "key": "8513e89a7c1a41da78fb69383608745ea6709133751397754731ab8ec2448c12",
+      "parameters": {
+        "image_sha256": "22587349a86c25f1669c74b8c277b9e2cbf760e532a80ba9e98add9e533f2de4",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T14:34:35+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_759.png",
+      "image_size": [
+        1821,
+        2814
+      ],
+      "crop_box": [
+        0,
+        0,
+        1821,
+        2814
+      ],
+      "lines": [
+        {
+          "text": "Phiên âm:",
+          "bbox": [
+            149,
+            272,
+            370,
+            302
+          ],
+          "confidence": 81.08
+        },
+        {
+          "text": "NHUE KIEU DA PHU",
+          "bbox": [
+            501,
+            397,
+            1115,
+            448
+          ],
+          "confidence": 95.93
+        },
+        {
+          "text": "(Kỷ nhi)",
+          "bbox": [
+            688,
+            477,
+            934,
+            532
+          ],
+          "confidence": 86.97
+        },
+        {
+          "text": "Điểm bãi thiên chung da lâu trầm.",
+          "bbox": [
+            388,
+            618,
+            1112,
+            658
+          ],
+          "confidence": 93.11
+        },
+        {
+          "text": "Kiểu dầu độc lập tứ nan cấm.",
+          "bbox": [
+            388,
+            677,
+            998,
+            719
+          ],
+          "confidence": 79.89
+        },
+        {
+          "text": "Phong chàng động thụ thu thanh thiết,",
+          "bbox": [
+            390,
+            737,
+            1201,
+            780
+          ],
+          "confidence": 91.05
+        },
+        {
+          "text": "Nguyệt truy hàn ba thủy sắc cấm kim.",
+          "bbox": [
+            390,
+            798,
+            1187,
+            839
+          ],
+          "confidence": 88.11
+        },
+        {
+          "text": "Ngư đinh hành hành phú chữ tiểu,",
+          "bbox": [
+            390,
+            856,
+            1108,
+            900
+          ],
+          "confidence": 80.21
+        },
+        {
+          "text": "Thôn gia ăn ăn phú sương thâm.",
+          "bbox": [
+            390,
+            919,
+            1068,
+            959
+          ],
+          "confidence": 94.61
+        },
+        {
+          "text": "Ngâm hoàn có ảnh ngó thùy ngữ,",
+          "bbox": [
+            391,
+            978,
+            1085,
+            1024
+          ],
+          "confidence": 82.53
+        },
+        {
+          "text": "Duy hữu khanh khanh 'ngộ ngã tâm.",
+          "bbox": [
+            391,
+            1037,
+            1166,
+            1080
+          ],
+          "confidence": 90.0
+        },
+        {
+          "text": "Dich nghĩa:",
+          "bbox": [
+            154,
+            1300,
+            406,
+            1328
+          ],
+          "confidence": 78.31
+        },
+        {
+          "text": "TẢ CẢNH CẦU SÔNG NHỤ ĐẠN ĐỀM",
+          "bbox": [
+            245,
+            1406,
+            1563,
+            1474
+          ],
+          "confidence": 82.45
+        },
+        {
+          "text": "Tiếng chuông chuà vừa đút, đêm đã vào khuya,",
+          "bbox": [
+            396,
+            1636,
+            1369,
+            1684
+          ],
+          "confidence": 90.87
+        },
+        {
+          "text": "Một mình đứng trên câu suy nghĩ mông lung.",
+          "bbox": [
+            398,
+            1700,
+            1333,
+            1744
+          ],
+          "confidence": 93.04
+        },
+        {
+          "text": "Gió đập vào xác xơ, tiếng thu nghe như sắt,",
+          "bbox": [
+            398,
+            1756,
+            1304,
+            1803
+          ],
+          "confidence": 95.0
+        },
+        {
+          "text": "Trăng rơi xuống sóng lạnh, sắc nước tựa vàng.",
+          "bbox": [
+            398,
+            1815,
+            1358,
+            1864
+          ],
+          "confidence": 92.87
+        },
+        {
+          "text": "Thuyền đánh cá lênh đênh ngoài bãi nước tít mù,",
+          "bbox": [
+            398,
+            1872,
+            1427,
+            1924
+          ],
+          "confidence": 85.64
+        },
+        {
+          "text": "Nhà thôn dân thấp thoáng dưới màn sương dày.",
+          "bbox": [
+            399,
+            1933,
+            1397,
+            1983
+          ],
+          "confidence": 95.09
+        },
+        {
+          "text": "Ngâm xong nhìn bóng, không biết nói chuyện cùng ai?",
+          "bbox": [
+            399,
+            1989,
+            1530,
+            2044
+          ],
+          "confidence": 98.49
+        },
+        {
+          "text": "Chắc chỉ có mình mới hiểu được tấm lòng của ta.",
+          "bbox": [
+            401,
+            2051,
+            1413,
+            2102
+          ],
+          "confidence": 91.27
+        },
+        {
+          "text": ".",
+          "bbox": [
+            163,
+            2262,
+            766,
+            2282
+          ],
+          "confidence": 37.6
+        },
+        {
+          "text": "1. Khanh khanh: Hai tiếng này nguyên là hai tiếng vợ chồng gọi đùa nhau. Có",
+          "bbox": [
+            256,
+            2288,
+            1622,
+            2343
+          ],
+          "confidence": 97.7
+        },
+        {
+          "text": "diễn nói \"Liên khanh, ái khanh, cố hoán khanh khanh. Ngã bất khanh khanh, thùy vị",
+          "bbox": [
+            165,
+            2335,
+            1624,
+            2384
+          ],
+          "confidence": 88.92
+        },
+        {
+          "text": "dich novi liebunt, ad",
+          "bbox": [
+            167,
+            2376,
+            1579,
+            2397
+          ],
+          "confidence": 10.05
+        },
+        {
+          "text": "khan khanh\" nghĩa là \"Thương mình, yêu mình nên gọi mình bằng mình. Ta không",
+          "bbox": [
+            167,
+            2389,
+            1625,
+            2439
+          ],
+          "confidence": 93.0
+        },
+        {
+          "text": "goi mình bằng mình, thì ai gọi mình bằng mình\". Ở đây tác giả dùng chữ \"khanh",
+          "bbox": [
+            165,
+            2431,
+            1625,
+            2485
+          ],
+          "confidence": 91.7
+        },
+        {
+          "text": "khanh\" để gọi cái bóng của mình.",
+          "bbox": [
+            167,
+            2498,
+            1622,
+            2540
+          ],
+          "confidence": 88.9
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          1821,
+          2814
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 13.893,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              149,
+              272,
+              370,
+              302
+            ],
+            "generated_text": "Phiên âm:",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.221,
+            "confidence": 81.08,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              501,
+              397,
+              1115,
+              448
+            ],
+            "generated_text": "NHUE KIEU DA PHU",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.316,
+            "confidence": 95.93,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              688,
+              477,
+              934,
+              532
+            ],
+            "generated_text": "(Kỷ nhi)",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.26,
+            "confidence": 86.97,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              388,
+              618,
+              1112,
+              658
+            ],
+            "generated_text": "Điểm bãi thiên chung da lâu trầm.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.439,
+            "confidence": 93.11,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              388,
+              677,
+              998,
+              719
+            ],
+            "generated_text": "Kiểu dầu độc lập tứ nan cấm.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.478,
+            "confidence": 79.89,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              390,
+              737,
+              1201,
+              780
+            ],
+            "generated_text": "Phong chàng động thụ thu thanh thiết,",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.43,
+            "confidence": 91.05,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              390,
+              798,
+              1187,
+              839
+            ],
+            "generated_text": "Nguyệt truy hàn ba thủy sắc cấm kim.",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.492,
+            "confidence": 88.11,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              390,
+              856,
+              1108,
+              900
+            ],
+            "generated_text": "Ngư đinh hành hành phú chữ tiểu,",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.396,
+            "confidence": 80.21,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              390,
+              919,
+              1068,
+              959
+            ],
+            "generated_text": "Thôn gia ăn ăn phú sương thâm.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 0.388,
+            "confidence": 94.61,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              391,
+              978,
+              1085,
+              1024
+            ],
+            "generated_text": "Ngâm hoàn có ảnh ngó thùy ngữ,",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.424,
+            "confidence": 82.53,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              391,
+              1037,
+              1166,
+              1080
+            ],
+            "generated_text": "Duy hữu khanh khanh 'ngộ ngã tâm.",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.53,
+            "confidence": 90.0,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              154,
+              1300,
+              406,
+              1328
+            ],
+            "generated_text": "Dich nghĩa:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.242,
+            "confidence": 78.31,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              245,
+              1406,
+              1563,
+              1474
+            ],
+            "generated_text": "TẢ CẢNH CẦU SÔNG NHỤ ĐẠN ĐỀM",
+            "n_lines": 1,
+            "tokens": 32,
+            "seconds": 0.878,
+            "confidence": 82.45,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              396,
+              1636,
+              1369,
+              1684
+            ],
+            "generated_text": "Tiếng chuông chuà vừa đút, đêm đã vào khuya,",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.56,
+            "confidence": 90.87,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              398,
+              1700,
+              1333,
+              1744
+            ],
+            "generated_text": "Một mình đứng trên câu suy nghĩ mông lung.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.479,
+            "confidence": 93.04,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              398,
+              1756,
+              1304,
+              1803
+            ],
+            "generated_text": "Gió đập vào xác xơ, tiếng thu nghe như sắt,",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.515,
+            "confidence": 95.0,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              398,
+              1815,
+              1358,
+              1864
+            ],
+            "generated_text": "Trăng rơi xuống sóng lạnh, sắc nước tựa vàng.",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.55,
+            "confidence": 92.87,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              398,
+              1872,
+              1427,
+              1924
+            ],
+            "generated_text": "Thuyền đánh cá lênh đênh ngoài bãi nước tít mù,",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.6,
+            "confidence": 85.64,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              399,
+              1933,
+              1397,
+              1983
+            ],
+            "generated_text": "Nhà thôn dân thấp thoáng dưới màn sương dày.",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.563,
+            "confidence": 95.09,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              399,
+              1989,
+              1530,
+              2044
+            ],
+            "generated_text": "Ngâm xong nhìn bóng, không biết nói chuyện cùng ai?",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.529,
+            "confidence": 98.49,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              401,
+              2051,
+              1413,
+              2102
+            ],
+            "generated_text": "Chắc chỉ có mình mới hiểu được tấm lòng của ta.",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.553,
+            "confidence": 91.27,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              163,
+              2262,
+              766,
+              2282
+            ],
+            "generated_text": ".",
+            "n_lines": 1,
+            "tokens": 2,
+            "seconds": 0.167,
+            "confidence": 37.6,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              256,
+              2288,
+              1622,
+              2343
+            ],
+            "generated_text": "1. Khanh khanh: Hai tiếng này nguyên là hai tiếng vợ chồng gọi đùa nhau. Có",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.716,
+            "confidence": 97.7,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              165,
+              2335,
+              1624,
+              2384
+            ],
+            "generated_text": "diễn nói \"Liên khanh, ái khanh, cố hoán khanh khanh. Ngã bất khanh khanh, thùy vị",
+            "n_lines": 1,
+            "tokens": 43,
+            "seconds": 1.05,
+            "confidence": 88.92,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              167,
+              2376,
+              1579,
+              2397
+            ],
+            "generated_text": "dich novi liebunt, ad",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.323,
+            "confidence": 10.05,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              167,
+              2389,
+              1625,
+              2439
+            ],
+            "generated_text": "khan khanh\" nghĩa là \"Thương mình, yêu mình nên gọi mình bằng mình. Ta không",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.673,
+            "confidence": 93.0,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              165,
+              2431,
+              1625,
+              2485
+            ],
+            "generated_text": "goi mình bằng mình, thì ai gọi mình bằng mình\". Ở đây tác giả dùng chữ \"khanh",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 0.744,
+            "confidence": 91.7,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              167,
+              2498,
+              1622,
+              2540
+            ],
+            "generated_text": "khanh\" để gọi cái bóng của mình.",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.375,
+            "confidence": 88.9,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              152,
+              266,
+              312,
+              276
+            ],
+            "ink": 334
+          },
+          {
+            "box": [
+              644,
+              389,
+              1104,
+              401
+            ],
+            "ink": 396
+          },
+          {
+            "box": [
+              498,
+              776,
+              851,
+              786
+            ],
+            "ink": 344
+          },
+          {
+            "box": [
+              426,
+              836,
+              894,
+              847
+            ],
+            "ink": 344
+          },
+          {
+            "box": [
+              160,
+              1290,
+              363,
+              1299
+            ],
+            "ink": 295
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      }
+    }
+  ]
+}

@@ -891,6 +891,948 @@
         "any_truncated": false,
         "lang": "all"
       }
+    },
+    {
+      "key": "5bace435887062a4f2ad3f378beb03c405d345a3fc576fa032296b9eb4256439",
+      "parameters": {
+        "image_sha256": "daf8cf233eab240a4383042b5ce8fbce12ef74e55b96884dc18ac6c076a6e049",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "row_pitch_split": {
+            "lags": [
+              24,
+              240
+            ],
+            "min_ac": 0.15,
+            "tall": 1.6,
+            "valley_rel": 0.5
+          },
+          "deskew": [
+            2.5,
+            0.1,
+            0.2
+          ],
+          "adapter_version": 6
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-26T04:03:22+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_087.png",
+      "image_size": [
+        1865,
+        2851
+      ],
+      "crop_box": [
+        0,
+        0,
+        1865,
+        2851
+      ],
+      "lines": [
+        {
+          "text": "仲冬奉扈駕南",
+          "bbox": [
+            587,
+            293,
+            1194,
+            370
+          ],
+          "confidence": 97.38
+        },
+        {
+          "text": "征永宫軍次偶述",
+          "bbox": [
+            666,
+            387,
+            1249,
+            465
+          ],
+          "confidence": 92.31
+        },
+        {
+          "text": "昔年禾義扈戎輿",
+          "bbox": [
+            665,
+            550,
+            1245,
+            604
+          ],
+          "confidence": 91.95
+        },
+        {
+          "text": "唐突私憂且奏書",
+          "bbox": [
+            662,
+            618,
+            1244,
+            674
+          ],
+          "confidence": 92.08
+        },
+        {
+          "text": "今日乂安陪御蹕",
+          "bbox": [
+            550,
+            693,
+            1244,
+            747
+          ],
+          "confidence": 94.44
+        },
+        {
+          "text": "肅騷吹冷到官居",
+          "bbox": [
+            660,
+            761,
+            1511,
+            820
+          ],
+          "confidence": 90.23
+        },
+        {
+          "text": "前鋒甲馬方乘銳",
+          "bbox": [
+            659,
+            834,
+            1460,
+            891
+          ],
+          "confidence": 96.61
+        },
+        {
+          "text": "横岸城溝未抵虚",
+          "bbox": [
+            655,
+            906,
+            1350,
+            965
+          ],
+          "confidence": 95.64
+        },
+        {
+          "text": "羈思逡巡公事少",
+          "bbox": [
+            655,
+            978,
+            1236,
+            1036
+          ],
+          "confidence": 95.08
+        },
+        {
+          "text": "海南時盼故鄉閭",
+          "bbox": [
+            654,
+            1053,
+            1236,
+            1105
+          ],
+          "confidence": 93.96
+        },
+        {
+          "text": "Phien âm:",
+          "bbox": [
+            221,
+            1178,
+            440,
+            1206
+          ],
+          "confidence": 66.42
+        },
+        {
+          "text": "TRỊNG ĐÔNG PHỤNG HỒ GIÁ NAM CHÍNH.",
+          "bbox": [
+            293,
+            1298,
+            1731,
+            1367
+          ],
+          "confidence": 86.47
+        },
+        {
+          "text": "VỆNH DOANH 1 QUẬN THỨ, NGẦU THUẬT 2",
+          "bbox": [
+            78,
+            1373,
+            1575,
+            1445
+          ],
+          "confidence": 83.08
+        },
+        {
+          "text": "Tích niên Hòa Nghĩa hỗ nhưng dư.",
+          "bbox": [
+            448,
+            1518,
+            1189,
+            1567
+          ],
+          "confidence": 91.53
+        },
+        {
+          "text": "Đường đột tử ưu thả tấu thư.",
+          "bbox": [
+            446,
+            1579,
+            1066,
+            1623
+          ],
+          "confidence": 71.68
+        },
+        {
+          "text": "Kim nhất Nghệ An bồi ngự tất.",
+          "bbox": [
+            445,
+            1634,
+            1096,
+            1683
+          ],
+          "confidence": 80.74
+        },
+        {
+          "text": "Tiêu tao suy lãnh đáo quan cư.",
+          "bbox": [
+            443,
+            1695,
+            1103,
+            1739
+          ],
+          "confidence": 92.95
+        },
+        {
+          "text": "一",
+          "bbox": [
+            212,
+            1812,
+            802,
+            1831
+          ],
+          "confidence": 22.92
+        },
+        {
+          "text": "1. Vinh Doanh: Nay là Vinh, Nghệ An.",
+          "bbox": [
+            302,
+            1851,
+            941,
+            1893
+          ],
+          "confidence": 97.53
+        },
+        {
+          "text": "2. Nguyên đản: Giữa mùa thu, nhà vua sai Tiết Chế công độc thúc các đạo bình",
+          "bbox": [
+            246,
+            1901,
+            1648,
+            1953
+          ],
+          "confidence": 96.35
+        },
+        {
+          "text": "mà đi trước đến Nghệ An sắp đặt công việc. Bấy giờ chiếu chỉ mới báo dịch thân nhà",
+          "bbox": [
+            210,
+            1945,
+            1645,
+            2000
+          ],
+          "confidence": 92.31
+        },
+        {
+          "text": "vua sẽ đi Nam chính. Vào ngày 19 tháng 11 xa giá nhà vua khởi hành từ Bắc Thành,",
+          "bbox": [
+            209,
+            1992,
+            1647,
+            2047
+          ],
+          "confidence": 92.92
+        },
+        {
+          "text": "tôi phụng mệnh đi trước để làm lễ cáo yết thần núi sông. Ngày 29 xa giá đến Nghệ",
+          "bbox": [
+            209,
+            2039,
+            1645,
+            2097
+          ],
+          "confidence": 96.25
+        },
+        {
+          "text": "An, nhà vua sai quan quân tiến trước đến Linh Giang xem thế trân lập đơn ở ngoài",
+          "bbox": [
+            207,
+            2089,
+            1644,
+            2147
+          ],
+          "confidence": 92.22
+        },
+        {
+          "text": "Luy Thay, dễ thừa cơ vây đánh, đợi quân quay về báo xa giá sẽ tiến tiếp. Nhà vua lúc",
+          "bbox": [
+            207,
+            2139,
+            1644,
+            2195
+          ],
+          "confidence": 90.42
+        },
+        {
+          "text": "do van lưu lại ở hành đinh Vĩnh Doanh. Còn tôi máy tuần quanh quẩn ở đó, không dự",
+          "bbox": [
+            206,
+            2187,
+            1645,
+            2237
+          ],
+          "confidence": 89.54
+        },
+        {
+          "text": "bàn việc quân cơ, nhưng cũng không đảm xin phép về quê quán, chỉ ôm lồng áp suối",
+          "bbox": [
+            206,
+            2229,
+            1641,
+            2278
+          ],
+          "confidence": 89.83
+        },
+        {
+          "text": "lanh, buồn vấn vo mà ghi lại nổi lòng.",
+          "bbox": [
+            204,
+            2270,
+            1642,
+            2312
+          ],
+          "confidence": 89.99
+        },
+        {
+          "text": "3. Phan Huy ích muốn nhắc tới việc trước đây khi rút quân về Quảng Nam, ông",
+          "bbox": [
+            221,
+            2319,
+            1641,
+            2375
+          ],
+          "confidence": 95.04
+        },
+        {
+          "text": "cùng với một số quan văn đăng biểu xin vua Cảnh Thịnh lưu lại để tiện việc độc sức",
+          "bbox": [
+            95,
+            2367,
+            1639,
+            2421
+          ],
+          "confidence": 91.3
+        },
+        {
+          "text": "binh sĩ giữ vững kinh đô. Những lúc đó không được nhà vua chấp nhận.",
+          "bbox": [
+            202,
+            2413,
+            1484,
+            2463
+          ],
+          "confidence": 92.26
+        },
+        {
+          "text": "4. Quan cục Nơi tam trú của các quan thời phong kiến.",
+          "bbox": [
+            287,
+            2464,
+            1186,
+            2507
+          ],
+          "confidence": 89.89
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          1865,
+          2851
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 17.164,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              587,
+              293,
+              1194,
+              370
+            ],
+            "generated_text": "仲冬奉扈駕南",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.344,
+            "confidence": 97.38,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              666,
+              387,
+              1249,
+              465
+            ],
+            "generated_text": "征永宫軍次偶述",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.282,
+            "confidence": 92.31,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              665,
+              550,
+              1245,
+              604
+            ],
+            "generated_text": "昔年禾義扈戎輿",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.394,
+            "confidence": 91.95,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              662,
+              618,
+              1244,
+              674
+            ],
+            "generated_text": "唐突私憂且奏書",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.332,
+            "confidence": 92.08,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              550,
+              693,
+              1244,
+              747
+            ],
+            "generated_text": "今日乂安陪御蹕",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.344,
+            "confidence": 94.44,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              660,
+              761,
+              1511,
+              820
+            ],
+            "generated_text": "肅騷吹冷到官居",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.349,
+            "confidence": 90.23,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              659,
+              834,
+              1460,
+              891
+            ],
+            "generated_text": "前鋒甲馬方乘銳",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.348,
+            "confidence": 96.61,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              655,
+              906,
+              1350,
+              965
+            ],
+            "generated_text": "横岸城溝未抵虚",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.304,
+            "confidence": 95.64,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              655,
+              978,
+              1236,
+              1036
+            ],
+            "generated_text": "羈思逡巡公事少",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.367,
+            "confidence": 95.08,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              654,
+              1053,
+              1236,
+              1105
+            ],
+            "generated_text": "海南時盼故鄉閭",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.307,
+            "confidence": 93.96,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              221,
+              1178,
+              440,
+              1206
+            ],
+            "generated_text": "Phien âm:",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.217,
+            "confidence": 66.42,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              293,
+              1298,
+              1731,
+              1367
+            ],
+            "generated_text": "TRỊNG ĐÔNG PHỤNG HỒ GIÁ NAM CHÍNH.",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.733,
+            "confidence": 86.47,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              78,
+              1373,
+              1575,
+              1445
+            ],
+            "generated_text": "VỆNH DOANH 1 QUẬN THỨ, NGẦU THUẬT 2",
+            "n_lines": 1,
+            "tokens": 34,
+            "seconds": 0.923,
+            "confidence": 83.08,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              448,
+              1518,
+              1189,
+              1567
+            ],
+            "generated_text": "Tích niên Hòa Nghĩa hỗ nhưng dư.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.428,
+            "confidence": 91.53,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              446,
+              1579,
+              1066,
+              1623
+            ],
+            "generated_text": "Đường đột tử ưu thả tấu thư.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.471,
+            "confidence": 71.68,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              445,
+              1634,
+              1096,
+              1683
+            ],
+            "generated_text": "Kim nhất Nghệ An bồi ngự tất.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.423,
+            "confidence": 80.74,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              443,
+              1695,
+              1103,
+              1739
+            ],
+            "generated_text": "Tiêu tao suy lãnh đáo quan cư.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.379,
+            "confidence": 92.95,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              212,
+              1812,
+              802,
+              1831
+            ],
+            "generated_text": "一",
+            "n_lines": 1,
+            "tokens": 2,
+            "seconds": 0.167,
+            "confidence": 22.92,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              302,
+              1851,
+              941,
+              1893
+            ],
+            "generated_text": "1. Vinh Doanh: Nay là Vinh, Nghệ An.",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.516,
+            "confidence": 97.53,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              246,
+              1901,
+              1648,
+              1953
+            ],
+            "generated_text": "2. Nguyên đản: Giữa mùa thu, nhà vua sai Tiết Chế công độc thúc các đạo bình",
+            "n_lines": 1,
+            "tokens": 32,
+            "seconds": 0.767,
+            "confidence": 96.35,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              210,
+              1945,
+              1645,
+              2000
+            ],
+            "generated_text": "mà đi trước đến Nghệ An sắp đặt công việc. Bấy giờ chiếu chỉ mới báo dịch thân nhà",
+            "n_lines": 1,
+            "tokens": 32,
+            "seconds": 0.763,
+            "confidence": 92.31,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              209,
+              1992,
+              1647,
+              2047
+            ],
+            "generated_text": "vua sẽ đi Nam chính. Vào ngày 19 tháng 11 xa giá nhà vua khởi hành từ Bắc Thành,",
+            "n_lines": 1,
+            "tokens": 32,
+            "seconds": 0.767,
+            "confidence": 92.92,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              209,
+              2039,
+              1645,
+              2097
+            ],
+            "generated_text": "tôi phụng mệnh đi trước để làm lễ cáo yết thần núi sông. Ngày 29 xa giá đến Nghệ",
+            "n_lines": 1,
+            "tokens": 36,
+            "seconds": 0.883,
+            "confidence": 96.25,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              207,
+              2089,
+              1644,
+              2147
+            ],
+            "generated_text": "An, nhà vua sai quan quân tiến trước đến Linh Giang xem thế trân lập đơn ở ngoài",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 0.684,
+            "confidence": 92.22,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              207,
+              2139,
+              1644,
+              2195
+            ],
+            "generated_text": "Luy Thay, dễ thừa cơ vây đánh, đợi quân quay về báo xa giá sẽ tiến tiếp. Nhà vua lúc",
+            "n_lines": 1,
+            "tokens": 39,
+            "seconds": 0.909,
+            "confidence": 90.42,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              206,
+              2187,
+              1645,
+              2237
+            ],
+            "generated_text": "do van lưu lại ở hành đinh Vĩnh Doanh. Còn tôi máy tuần quanh quẩn ở đó, không dự",
+            "n_lines": 1,
+            "tokens": 32,
+            "seconds": 0.754,
+            "confidence": 89.54,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              206,
+              2229,
+              1641,
+              2278
+            ],
+            "generated_text": "bàn việc quân cơ, nhưng cũng không đảm xin phép về quê quán, chỉ ôm lồng áp suối",
+            "n_lines": 1,
+            "tokens": 33,
+            "seconds": 0.774,
+            "confidence": 89.83,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              204,
+              2270,
+              1642,
+              2312
+            ],
+            "generated_text": "lanh, buồn vấn vo mà ghi lại nổi lòng.",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.475,
+            "confidence": 89.99,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              221,
+              2319,
+              1641,
+              2375
+            ],
+            "generated_text": "3. Phan Huy ích muốn nhắc tới việc trước đây khi rút quân về Quảng Nam, ông",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.655,
+            "confidence": 95.04,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              95,
+              2367,
+              1639,
+              2421
+            ],
+            "generated_text": "cùng với một số quan văn đăng biểu xin vua Cảnh Thịnh lưu lại để tiện việc độc sức",
+            "n_lines": 1,
+            "tokens": 33,
+            "seconds": 0.881,
+            "confidence": 91.3,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              202,
+              2413,
+              1484,
+              2463
+            ],
+            "generated_text": "binh sĩ giữ vững kinh đô. Những lúc đó không được nhà vua chấp nhận.",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.68,
+            "confidence": 92.26,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 32,
+            "box": [
+              287,
+              2464,
+              1186,
+              2507
+            ],
+            "generated_text": "4. Quan cục Nơi tam trú của các quan thời phong kiến.",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.545,
+            "confidence": 89.89,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              78,
+              77,
+              1787,
+              90
+            ],
+            "ink": 905
+          }
+        ],
+        "deskew_deg": 0.0,
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "7a0a8d9befaa9c2afee66139d5b233593b81f86e",
+        "git_describe": "7a0a8d9",
+        "git_dirty": true,
+        "gpu": "NVIDIA GeForce RTX 3050 6GB Laptop GPU",
+        "dtype": "bfloat16",
+        "adapter_version": 6
+      }
     }
   ]
 }

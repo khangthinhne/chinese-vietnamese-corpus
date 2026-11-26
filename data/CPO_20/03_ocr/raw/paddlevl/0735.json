@@ -1,0 +1,953 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_20",
+  "engine": "paddlevl",
+  "page": 735,
+  "runs": [
+    {
+      "key": "a86ea2e493fbce44fc3d622c8930d885301064940079ab94521b4a7f2ae0989e",
+      "parameters": {
+        "image_sha256": "3d30ff826926ad3cb44900ec71e864b50a2a2c37e8c537a88c8bf6f2b1c4b53b",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T14:28:56+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_735.png",
+      "image_size": [
+        1821,
+        2814
+      ],
+      "crop_box": [
+        0,
+        0,
+        1821,
+        2814
+      ],
+      "lines": [
+        {
+          "text": "三橋月夜遊記",
+          "bbox": [
+            430,
+            266,
+            971,
+            346
+          ],
+          "confidence": 94.73
+        },
+        {
+          "text": "歲乙廿八月，望前二日，梧雨初晴，風涼日",
+          "bbox": [
+            238,
+            349,
+            1536,
+            408
+          ],
+          "confidence": 95.5
+        },
+        {
+          "text": "淡，余课徒于义柱溪板橋之上。弟希濂公，老",
+          "bbox": [
+            160,
+            411,
+            1544,
+            474
+          ],
+          "confidence": 90.92
+        },
+        {
+          "text": "友陳公，各以其徒，自講館來會，三村童冠，二",
+          "bbox": [
+            160,
+            477,
+            1544,
+            537
+          ],
+          "confidence": 98.48
+        },
+        {
+          "text": "三十人，列坐橋之左右，命題以巢父洗耳為",
+          "bbox": [
+            162,
+            543,
+            1546,
+            601
+          ],
+          "confidence": 91.27
+        },
+        {
+          "text": "詩，嚴陵瀨為賦，富春耕釣為文。課既罷，或臨",
+          "bbox": [
+            160,
+            607,
+            1547,
+            665
+          ],
+          "confidence": 92.95
+        },
+        {
+          "text": "流而濯缨，或倚树而迎凉，欣欣然，各適其性。",
+          "bbox": [
+            160,
+            669,
+            1571,
+            728
+          ],
+          "confidence": 93.29
+        },
+        {
+          "text": "憑欄望之，溪流曲折，水色清瑩，炎暑既退，清",
+          "bbox": [
+            159,
+            736,
+            1546,
+            794
+          ],
+          "confidence": 98.48
+        },
+        {
+          "text": "風徐來，乃命遍舟載茶酒，老友辭歸，獨與吾",
+          "bbox": [
+            159,
+            801,
+            1546,
+            858
+          ],
+          "confidence": 98.12
+        },
+        {
+          "text": "弟攜手登舟，童冠願從者不禁。對酌舟中，凝",
+          "bbox": [
+            160,
+            867,
+            1546,
+            922
+          ],
+          "confidence": 92.87
+        },
+        {
+          "text": "眸四顾远岫孤村，浮云落霞，飞鸥翔鹈，古树",
+          "bbox": [
+            159,
+            931,
+            1546,
+            984
+          ],
+          "confidence": 76.61
+        },
+        {
+          "text": "孤館，牧豎之往來，出翁之歸去。",
+          "bbox": [
+            159,
+            997,
+            1179,
+            1050
+          ],
+          "confidence": 90.77
+        },
+        {
+          "text": "一在目，應接不暇，即景聯吟，命冠者執",
+          "bbox": [
+            240,
+            1062,
+            1544,
+            1116
+          ],
+          "confidence": 95.02
+        },
+        {
+          "text": "筆於船頭書之，順流而汎，至華洞橋，維舟泊",
+          "bbox": [
+            159,
+            1126,
+            1541,
+            1180
+          ],
+          "confidence": 98.15
+        },
+        {
+          "text": "岸，登橋烹茗，或醉或叫，盤桓若有所待。茶煙",
+          "bbox": [
+            159,
+            1189,
+            1544,
+            1244
+          ],
+          "confidence": 91.52
+        },
+        {
+          "text": "歇暮鴛合，橋下晴紋蕩樣如萬隊金蛇，童子",
+          "bbox": [
+            159,
+            1253,
+            1541,
+            1309
+          ],
+          "confidence": 85.62
+        },
+        {
+          "text": "曰山東月出矣，收拾歸舟，滿眼煙光靈物，則",
+          "bbox": [
+            159,
+            1315,
+            1543,
+            1372
+          ],
+          "confidence": 88.79
+        },
+        {
+          "text": "有一番精神，兼葭两岸，迭相送迎，风拂稻香。",
+          "bbox": [
+            159,
+            1380,
+            1568,
+            1438
+          ],
+          "confidence": 93.77
+        },
+        {
+          "text": "時在酒卮茶碗中，請興來追，吟不成調，誦溪",
+          "bbox": [
+            159,
+            1445,
+            1543,
+            1505
+          ],
+          "confidence": 88.57
+        },
+        {
+          "text": "橋之賦，與風聲樹聲溪聲間響，靜而聽之，亦",
+          "bbox": [
+            157,
+            1509,
+            1544,
+            1567
+          ],
+          "confidence": 97.03
+        },
+        {
+          "text": "忘溪之東西，橋之上下，月送歸舟，瞬息又在",
+          "bbox": [
+            157,
+            1573,
+            1543,
+            1633
+          ],
+          "confidence": 94.0
+        },
+        {
+          "text": "課徒之所，諸村叟預設酒馥相待。金鏡懸欄，",
+          "bbox": [
+            157,
+            1637,
+            1569,
+            1699
+          ],
+          "confidence": 84.37
+        },
+        {
+          "text": "橋光如畫，開懷敘飲，月色盈杯。酒到半醉，遊",
+          "bbox": [
+            156,
+            1701,
+            1543,
+            1763
+          ],
+          "confidence": 97.03
+        },
+        {
+          "text": "興未閑，將溯龍頷之淵，登三觸之山，又命舟",
+          "bbox": [
+            156,
+            1765,
+            1544,
+            1827
+          ],
+          "confidence": 89.4
+        },
+        {
+          "text": "子沿流而上，至于石橋，夜淅將半，寒霜滿溪。",
+          "bbox": [
+            156,
+            1828,
+            1569,
+            1891
+          ],
+          "confidence": 91.49
+        },
+        {
+          "text": "於是遣掉，再回板橋。靜舟登岸。仰祝長空明",
+          "bbox": [
+            156,
+            1892,
+            1543,
+            1958
+          ],
+          "confidence": 89.19
+        },
+        {
+          "text": "月，徘徊不能相捨，乘月而歸。步步沉吟，四時",
+          "bbox": [
+            159,
+            1959,
+            1543,
+            2020
+          ],
+          "confidence": 95.75
+        },
+        {
+          "text": "之景秋最清中秋之候月最清明.清明意象，造",
+          "bbox": [
+            154,
+            2022,
+            1543,
+            2084
+          ],
+          "confidence": 91.9
+        },
+        {
+          "text": "化無盡藏，人與之契會，非豪曠不能得其妙。",
+          "bbox": [
+            157,
+            2084,
+            1569,
+            2151
+          ],
+          "confidence": 96.17
+        },
+        {
+          "text": "地皆可赏玩，非清寂不能得其神，我與吾弟",
+          "bbox": [
+            156,
+            2149,
+            1544,
+            2215
+          ],
+          "confidence": 90.27
+        },
+        {
+          "text": "托跡人鄉，生涯局于餐裾，末技束于繩黑，誠",
+          "bbox": [
+            152,
+            2213,
+            1546,
+            2278
+          ],
+          "confidence": 93.35
+        },
+        {
+          "text": "非豪曠者流，但即所居，因以為樂，寂寥野色。",
+          "bbox": [
+            156,
+            2277,
+            1569,
+            2343
+          ],
+          "confidence": 89.98
+        },
+        {
+          "text": "夜深人定，月在天，橋在溪，客在船，都自一壶",
+          "bbox": [
+            156,
+            2341,
+            1544,
+            2406
+          ],
+          "confidence": 90.32
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          1821,
+          2814
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 20.198,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              430,
+              266,
+              971,
+              346
+            ],
+            "generated_text": "三橋月夜遊記",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.259,
+            "confidence": 94.73,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              238,
+              349,
+              1536,
+              408
+            ],
+            "generated_text": "歲乙廿八月，望前二日，梧雨初晴，風涼日",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.578,
+            "confidence": 95.5,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              160,
+              411,
+              1544,
+              474
+            ],
+            "generated_text": "淡，余课徒于义柱溪板橋之上。弟希濂公，老",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.57,
+            "confidence": 90.92,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              160,
+              477,
+              1544,
+              537
+            ],
+            "generated_text": "友陳公，各以其徒，自講館來會，三村童冠，二",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.57,
+            "confidence": 98.48,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              162,
+              543,
+              1546,
+              601
+            ],
+            "generated_text": "三十人，列坐橋之左右，命題以巢父洗耳為",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.516,
+            "confidence": 91.27,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              160,
+              607,
+              1547,
+              665
+            ],
+            "generated_text": "詩，嚴陵瀨為賦，富春耕釣為文。課既罷，或臨",
+            "n_lines": 1,
+            "tokens": 35,
+            "seconds": 0.847,
+            "confidence": 92.95,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              160,
+              669,
+              1571,
+              728
+            ],
+            "generated_text": "流而濯缨，或倚树而迎凉，欣欣然，各適其性。",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.651,
+            "confidence": 93.29,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              159,
+              736,
+              1546,
+              794
+            ],
+            "generated_text": "憑欄望之，溪流曲折，水色清瑩，炎暑既退，清",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.68,
+            "confidence": 98.48,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              159,
+              801,
+              1546,
+              858
+            ],
+            "generated_text": "風徐來，乃命遍舟載茶酒，老友辭歸，獨與吾",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.641,
+            "confidence": 98.12,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              160,
+              867,
+              1546,
+              922
+            ],
+            "generated_text": "弟攜手登舟，童冠願從者不禁。對酌舟中，凝",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.601,
+            "confidence": 92.87,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              159,
+              931,
+              1546,
+              984
+            ],
+            "generated_text": "眸四顾远岫孤村，浮云落霞，飞鸥翔鹈，古树",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.634,
+            "confidence": 76.61,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              159,
+              997,
+              1179,
+              1050
+            ],
+            "generated_text": "孤館，牧豎之往來，出翁之歸去。",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.573,
+            "confidence": 90.77,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              240,
+              1062,
+              1544,
+              1116
+            ],
+            "generated_text": "一在目，應接不暇，即景聯吟，命冠者執",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.527,
+            "confidence": 95.02,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              159,
+              1126,
+              1541,
+              1180
+            ],
+            "generated_text": "筆於船頭書之，順流而汎，至華洞橋，維舟泊",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.66,
+            "confidence": 98.15,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              159,
+              1189,
+              1544,
+              1244
+            ],
+            "generated_text": "岸，登橋烹茗，或醉或叫，盤桓若有所待。茶煙",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.639,
+            "confidence": 91.52,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              159,
+              1253,
+              1541,
+              1309
+            ],
+            "generated_text": "歇暮鴛合，橋下晴紋蕩樣如萬隊金蛇，童子",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.656,
+            "confidence": 85.62,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              159,
+              1315,
+              1543,
+              1372
+            ],
+            "generated_text": "曰山東月出矣，收拾歸舟，滿眼煙光靈物，則",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.634,
+            "confidence": 88.79,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              159,
+              1380,
+              1568,
+              1438
+            ],
+            "generated_text": "有一番精神，兼葭两岸，迭相送迎，风拂稻香。",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.564,
+            "confidence": 93.77,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              159,
+              1445,
+              1543,
+              1505
+            ],
+            "generated_text": "時在酒卮茶碗中，請興來追，吟不成調，誦溪",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.615,
+            "confidence": 88.57,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              157,
+              1509,
+              1544,
+              1567
+            ],
+            "generated_text": "橋之賦，與風聲樹聲溪聲間響，靜而聽之，亦",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.749,
+            "confidence": 97.03,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              157,
+              1573,
+              1543,
+              1633
+            ],
+            "generated_text": "忘溪之東西，橋之上下，月送歸舟，瞬息又在",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.598,
+            "confidence": 94.0,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              157,
+              1637,
+              1569,
+              1699
+            ],
+            "generated_text": "課徒之所，諸村叟預設酒馥相待。金鏡懸欄，",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 0.74,
+            "confidence": 84.37,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              156,
+              1701,
+              1543,
+              1763
+            ],
+            "generated_text": "橋光如畫，開懷敘飲，月色盈杯。酒到半醉，遊",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.703,
+            "confidence": 97.03,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              156,
+              1765,
+              1544,
+              1827
+            ],
+            "generated_text": "興未閑，將溯龍頷之淵，登三觸之山，又命舟",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 0.734,
+            "confidence": 89.4,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              156,
+              1828,
+              1569,
+              1891
+            ],
+            "generated_text": "子沿流而上，至于石橋，夜淅將半，寒霜滿溪。",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.563,
+            "confidence": 91.49,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              156,
+              1892,
+              1543,
+              1958
+            ],
+            "generated_text": "於是遣掉，再回板橋。靜舟登岸。仰祝長空明",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.594,
+            "confidence": 89.19,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              159,
+              1959,
+              1543,
+              2020
+            ],
+            "generated_text": "月，徘徊不能相捨，乘月而歸。步步沉吟，四時",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.595,
+            "confidence": 95.75,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              154,
+              2022,
+              1543,
+              2084
+            ],
+            "generated_text": "之景秋最清中秋之候月最清明.清明意象，造",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.478,
+            "confidence": 91.9,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              157,
+              2084,
+              1569,
+              2151
+            ],
+            "generated_text": "化無盡藏，人與之契會，非豪曠不能得其妙。",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.651,
+            "confidence": 96.17,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              156,
+              2149,
+              1544,
+              2215
+            ],
+            "generated_text": "地皆可赏玩，非清寂不能得其神，我與吾弟",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.503,
+            "confidence": 90.27,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              152,
+              2213,
+              1546,
+              2278
+            ],
+            "generated_text": "托跡人鄉，生涯局于餐裾，末技束于繩黑，誠",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.691,
+            "confidence": 93.35,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 32,
+            "box": [
+              156,
+              2277,
+              1569,
+              2343
+            ],
+            "generated_text": "非豪曠者流，但即所居，因以為樂，寂寥野色。",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.589,
+            "confidence": 89.98,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 33,
+            "box": [
+              156,
+              2341,
+              1544,
+              2406
+            ],
+            "generated_text": "夜深人定，月在天，橋在溪，客在船，都自一壶",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.591,
+            "confidence": 90.32,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              1500,
+              2507,
+              1574,
+              2518
+            ],
+            "ink": 287
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      }
+    }
+  ]
+}

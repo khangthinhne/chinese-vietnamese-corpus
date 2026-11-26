@@ -10,7 +10,7 @@
   },
   "ocr": {
     "streams": {
-      "pages": "205-544",
+      "pages": "205-260,282-305,308-326,330-334,336-360,363-544",
       "paddlevl_orientation": "horizontal",
       "engines": {"han": "paddlevl", "vie": "qwen"},
       "check": {"qwen_low_conf": 60},
@@ -111,6 +111,9 @@
     }
   },
   "clean": {
+    "common": {
+      "excluded_pages": "261-281,306-307,327-329,335,361-362"
+    },
     "am": {
       "drop_pattern": [
         "^Phần II",

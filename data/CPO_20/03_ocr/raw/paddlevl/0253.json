@@ -1,0 +1,782 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_20",
+  "engine": "paddlevl",
+  "page": 253,
+  "runs": [
+    {
+      "key": "d252238f8c2f79d36a1a7d8fce8db711bd5e24d4f71ee86cdfb1526c39b035ef",
+      "parameters": {
+        "image_sha256": "80b1b34ccd4f57e016c195275baa1013c392dcc6777e4089d0b8e29bba26e83f",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T06:28:57+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_253.png",
+      "image_size": [
+        1823,
+        2814
+      ],
+      "crop_box": [
+        0,
+        0,
+        1823,
+        2814
+      ],
+      "lines": [
+        {
+          "text": "Dich thơ:",
+          "bbox": [
+            179,
+            277,
+            362,
+            315
+          ],
+          "confidence": 92.92
+        },
+        {
+          "text": "Lần đầu vượt bến Sông Gianh đò.",
+          "bbox": [
+            398,
+            389,
+            1102,
+            441
+          ],
+          "confidence": 84.09
+        },
+        {
+          "text": "Cát đá mệnh mông, biển thét gào;",
+          "bbox": [
+            399,
+            449,
+            1110,
+            501
+          ],
+          "confidence": 96.97
+        },
+        {
+          "text": "Nam, Bắc, văn chung trời đất ấy,",
+          "bbox": [
+            396,
+            507,
+            1086,
+            557
+          ],
+          "confidence": 90.65
+        },
+        {
+          "text": "Núi sông nọ rạch nước non nào!",
+          "bbox": [
+            396,
+            569,
+            1066,
+            615
+          ],
+          "confidence": 87.52
+        },
+        {
+          "text": "Trăm năm rào lũy, mưu cùn hết.",
+          "bbox": [
+            398,
+            630,
+            1077,
+            674
+          ],
+          "confidence": 94.66
+        },
+        {
+          "text": "Hai cõi xiêm y, tục giống nhau.",
+          "bbox": [
+            395,
+            685,
+            1041,
+            734
+          ],
+          "confidence": 97.53
+        },
+        {
+          "text": "Chia, gộp, biết cùng ai tính chuyện,",
+          "bbox": [
+            396,
+            744,
+            1741,
+            798
+          ],
+          "confidence": 97.06
+        },
+        {
+          "text": "Bên sông lò lừng mái thuyền câu!...",
+          "bbox": [
+            394,
+            805,
+            1127,
+            853
+          ],
+          "confidence": 87.45
+        },
+        {
+          "text": "Ngô Linh Ngọc dịch",
+          "bbox": [
+            1233,
+            887,
+            1603,
+            927
+          ],
+          "confidence": 96.77
+        },
+        {
+          "text": "十 1 坊江打",
+          "bbox": [
+            684,
+            1162,
+            1088,
+            1196
+          ],
+          "confidence": 57.41
+        },
+        {
+          "text": "村人祖江村",
+          "bbox": [
+            684,
+            1188,
+            1089,
+            1241
+          ],
+          "confidence": 68.99
+        },
+        {
+          "text": "纍彼江頭喜氣盈",
+          "bbox": [
+            591,
+            1323,
+            1174,
+            1380
+          ],
+          "confidence": 88.22
+        },
+        {
+          "text": "数行江杆一朝成",
+          "bbox": [
+            591,
+            1395,
+            1171,
+            1450
+          ],
+          "confidence": 99.26
+        },
+        {
+          "text": "輔栽自是因天篤",
+          "bbox": [
+            591,
+            1467,
+            1171,
+            1524
+          ],
+          "confidence": 98.72
+        },
+        {
+          "text": "壅注原非與水爭",
+          "bbox": [
+            590,
+            1539,
+            1169,
+            1595
+          ],
+          "confidence": 98.29
+        },
+        {
+          "text": "幹定海潮隨月長",
+          "bbox": [
+            590,
+            1611,
+            1168,
+            1667
+          ],
+          "confidence": 96.16
+        },
+        {
+          "text": "根深山潦向秋生",
+          "bbox": [
+            587,
+            1684,
+            1166,
+            1741
+          ],
+          "confidence": 98.37
+        },
+        {
+          "text": "從今滋息年年厚",
+          "bbox": [
+            588,
+            1757,
+            1166,
+            1814
+          ],
+          "confidence": 97.35
+        },
+        {
+          "text": "玉墨银堆地運亨",
+          "bbox": [
+            585,
+            1830,
+            1165,
+            1884
+          ],
+          "confidence": 77.12
+        },
+        {
+          "text": "Thiên âm:",
+          "bbox": [
+            154,
+            2013,
+            365,
+            2046
+          ],
+          "confidence": 95.11
+        },
+        {
+          "text": "THÔN NHÂN THỰC GIANG CÁN",
+          "bbox": [
+            262,
+            2129,
+            1197,
+            2190
+          ],
+          "confidence": 89.91
+        },
+        {
+          "text": "Thác bỉ giang đấu hỷ khí doanh,",
+          "bbox": [
+            376,
+            2273,
+            1046,
+            2325
+          ],
+          "confidence": 82.64
+        },
+        {
+          "text": "Số hàng giang cán nhất triệu thành.",
+          "bbox": [
+            374,
+            2332,
+            1128,
+            2382
+          ],
+          "confidence": 91.18
+        },
+        {
+          "text": "Phụ tài tự thi nhân thiên đốc,",
+          "bbox": [
+            374,
+            2390,
+            999,
+            2434
+          ],
+          "confidence": 90.58
+        },
+        {
+          "text": "Ung chủ nguyên phi dữ thủy tranh.",
+          "bbox": [
+            376,
+            2449,
+            1097,
+            2500
+          ],
+          "confidence": 87.21
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          1823,
+          2814
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 30.65,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              179,
+              277,
+              362,
+              315
+            ],
+            "generated_text": "Dich thơ:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.933,
+            "confidence": 92.92,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              398,
+              389,
+              1102,
+              441
+            ],
+            "generated_text": "Lần đầu vượt bến Sông Gianh đò.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.744,
+            "confidence": 84.09,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              399,
+              449,
+              1110,
+              501
+            ],
+            "generated_text": "Cát đá mệnh mông, biển thét gào;",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.515,
+            "confidence": 96.97,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              396,
+              507,
+              1086,
+              557
+            ],
+            "generated_text": "Nam, Bắc, văn chung trời đất ấy,",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.64,
+            "confidence": 90.65,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              396,
+              569,
+              1066,
+              615
+            ],
+            "generated_text": "Núi sông nọ rạch nước non nào!",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.365,
+            "confidence": 87.52,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              398,
+              630,
+              1077,
+              674
+            ],
+            "generated_text": "Trăm năm rào lũy, mưu cùn hết.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.468,
+            "confidence": 94.66,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              395,
+              685,
+              1041,
+              734
+            ],
+            "generated_text": "Hai cõi xiêm y, tục giống nhau.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.523,
+            "confidence": 97.53,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              396,
+              744,
+              1741,
+              798
+            ],
+            "generated_text": "Chia, gộp, biết cùng ai tính chuyện,",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.527,
+            "confidence": 97.06,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              394,
+              805,
+              1127,
+              853
+            ],
+            "generated_text": "Bên sông lò lừng mái thuyền câu!...",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.48,
+            "confidence": 87.45,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              1233,
+              887,
+              1603,
+              927
+            ],
+            "generated_text": "Ngô Linh Ngọc dịch",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.828,
+            "confidence": 96.77,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              684,
+              1162,
+              1088,
+              1196
+            ],
+            "generated_text": "十 1 坊 江 打",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 1.076,
+            "confidence": 57.41,
+            "flags": [
+              "han_gap_removed"
+            ],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              684,
+              1188,
+              1089,
+              1241
+            ],
+            "generated_text": "村人祖江村",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.62,
+            "confidence": 68.99,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              591,
+              1323,
+              1174,
+              1380
+            ],
+            "generated_text": "纍彼江頭喜氣盈",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.939,
+            "confidence": 88.22,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              591,
+              1395,
+              1171,
+              1450
+            ],
+            "generated_text": "数行江杆一朝成",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.732,
+            "confidence": 99.26,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              591,
+              1467,
+              1171,
+              1524
+            ],
+            "generated_text": "輔栽自是因天篤",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.292,
+            "confidence": 98.72,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              590,
+              1539,
+              1169,
+              1595
+            ],
+            "generated_text": "壅注原非與水爭",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.979,
+            "confidence": 98.29,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              590,
+              1611,
+              1168,
+              1667
+            ],
+            "generated_text": "幹定海潮隨月長",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.826,
+            "confidence": 96.16,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              587,
+              1684,
+              1166,
+              1741
+            ],
+            "generated_text": "根深山潦向秋生",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 1.013,
+            "confidence": 98.37,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              588,
+              1757,
+              1166,
+              1814
+            ],
+            "generated_text": "從今滋息年年厚",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.72,
+            "confidence": 97.35,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              585,
+              1830,
+              1165,
+              1884
+            ],
+            "generated_text": "玉墨银堆地運亨",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.936,
+            "confidence": 77.12,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              154,
+              2013,
+              365,
+              2046
+            ],
+            "generated_text": "Thiên âm:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.631,
+            "confidence": 95.11,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              262,
+              2129,
+              1197,
+              2190
+            ],
+            "generated_text": "THÔN NHÂN THỰC GIANG CÁN",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.51,
+            "confidence": 89.91,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              376,
+              2273,
+              1046,
+              2325
+            ],
+            "generated_text": "Thác bỉ giang đấu hỷ khí doanh,",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.565,
+            "confidence": 82.64,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              374,
+              2332,
+              1128,
+              2382
+            ],
+            "generated_text": "Số hàng giang cán nhất triệu thành.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.368,
+            "confidence": 91.18,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              374,
+              2390,
+              999,
+              2434
+            ],
+            "generated_text": "Phụ tài tự thi nhân thiên đốc,",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.247,
+            "confidence": 90.58,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              376,
+              2449,
+              1097,
+              2500
+            ],
+            "generated_text": "Ung chủ nguyên phi dữ thủy tranh.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.169,
+            "confidence": 87.21,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              1503,
+              2532,
+              1580,
+              2545
+            ],
+            "ink": 303
+          },
+          {
+            "box": [
+              1503,
+              2557,
+              1572,
+              2570
+            ],
+            "ink": 286
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      }
+    }
+  ]
+}

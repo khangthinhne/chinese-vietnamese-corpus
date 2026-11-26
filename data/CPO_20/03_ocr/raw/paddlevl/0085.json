@@ -830,6 +830,887 @@
         "any_truncated": false,
         "lang": "all"
       }
+    },
+    {
+      "key": "fad8d2f3ef0f005aad4298e3207b1eb324c5019f69ded246b8e934b1b06bcc67",
+      "parameters": {
+        "image_sha256": "71d3acbc5f35d045df23e7105ff4022ed59ce7a9e285a40e045b7a2acc7a1fce",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "row_pitch_split": {
+            "lags": [
+              24,
+              240
+            ],
+            "min_ac": 0.15,
+            "tall": 1.6,
+            "valley_rel": 0.5
+          },
+          "deskew": [
+            2.5,
+            0.1,
+            0.2
+          ],
+          "adapter_version": 6
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-26T04:03:05+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_085.png",
+      "image_size": [
+        1865,
+        2851
+      ],
+      "crop_box": [
+        0,
+        0,
+        1865,
+        2851
+      ],
+      "lines": [
+        {
+          "text": "环口分",
+          "bbox": [
+            866,
+            296,
+            1097,
+            331
+          ],
+          "confidence": 88.53
+        },
+        {
+          "text": "扶顛排難愧非才",
+          "bbox": [
+            685,
+            528,
+            1264,
+            585
+          ],
+          "confidence": 93.82
+        },
+        {
+          "text": "潘邸驚逢御輦來",
+          "bbox": [
+            684,
+            597,
+            1263,
+            655
+          ],
+          "confidence": 94.73
+        },
+        {
+          "text": "戎政何能分贊畫",
+          "bbox": [
+            680,
+            672,
+            1261,
+            731
+          ],
+          "confidence": 90.29
+        },
+        {
+          "text": "文詞安用趁趨陪",
+          "bbox": [
+            680,
+            745,
+            1258,
+            803
+          ],
+          "confidence": 96.41
+        },
+        {
+          "text": "兩朝渥眷難圓報",
+          "bbox": [
+            680,
+            818,
+            1397,
+            878
+          ],
+          "confidence": 92.09
+        },
+        {
+          "text": "二部繫樞玷總裁",
+          "bbox": [
+            679,
+            892,
+            1256,
+            950
+          ],
+          "confidence": 93.81
+        },
+        {
+          "text": "前席更多酬奉夜",
+          "bbox": [
+            678,
+            961,
+            1253,
+            1016
+          ],
+          "confidence": 99.87
+        },
+        {
+          "text": "金蓮幾度燭光回",
+          "bbox": [
+            674,
+            1029,
+            1250,
+            1091
+          ],
+          "confidence": 91.83
+        },
+        {
+          "text": "Thiên âm:",
+          "bbox": [
+            237,
+            1272,
+            456,
+            1301
+          ],
+          "confidence": 83.45
+        },
+        {
+          "text": "THUẬT THẦN PHẦN 1",
+          "bbox": [
+            78,
+            1397,
+            1114,
+            1456
+          ],
+          "confidence": 89.57
+        },
+        {
+          "text": "Phù điện bài nạn quý phi tài,",
+          "bbox": [
+            463,
+            1534,
+            1077,
+            1584
+          ],
+          "confidence": 94.86
+        },
+        {
+          "text": "Phiên dễ kinh phùng ngư liền lai.",
+          "bbox": [
+            462,
+            1590,
+            1161,
+            1645
+          ],
+          "confidence": 73.15
+        },
+        {
+          "text": "Nhung chính hà năng phân tán hoạch.",
+          "bbox": [
+            460,
+            1653,
+            1263,
+            1704
+          ],
+          "confidence": 87.63
+        },
+        {
+          "text": "Văn từ an dụng sẵn xu bồi.",
+          "bbox": [
+            463,
+            1712,
+            1021,
+            1758
+          ],
+          "confidence": 82.35
+        },
+        {
+          "text": "1. Nguyên dẫn: Ngày 4 tháng 5, kinh thành Phú Xuân thất thủ, xe vua chay ra",
+          "bbox": [
+            227,
+            1889,
+            1666,
+            1946
+          ],
+          "confidence": 96.01
+        },
+        {
+          "text": "Bác, qua đôn Đông Hội, quân giặc dưới theo gấp. Nhà vua cùng hoàng đế là Thái Tế",
+          "bbox": [
+            226,
+            1938,
+            1666,
+            1992
+          ],
+          "confidence": 86.12
+        },
+        {
+          "text": "công, Nguyên Suy công, Độc Trần công mang khinh kỷ vượt qua sông Linh Giang. Lúc",
+          "bbox": [
+            224,
+            1984,
+            1664,
+            2040
+          ],
+          "confidence": 86.97
+        },
+        {
+          "text": "đó chỉ có quan tư đồ Tư Quận công cùng Độc Trần công đi theo hộ giá, vượt gấp sang",
+          "bbox": [
+            223,
+            2032,
+            1664,
+            2088
+          ],
+          "confidence": 85.25
+        },
+        {
+          "text": "bộ Bác, đến tram Xuân Kiều, rồi sai phu tram luân chuyển đưa đi, đến trán Thanh",
+          "bbox": [
+            223,
+            2080,
+            1663,
+            2134
+          ],
+          "confidence": 84.87
+        },
+        {
+          "text": "Hoa lúc đó mới thông báo rõ tình trạng đi đường cho mọi người được biết.",
+          "bbox": [
+            223,
+            2126,
+            1440,
+            2181
+          ],
+          "confidence": 94.2
+        },
+        {
+          "text": "Ngày 9 tín đến Bắc Thành, Tiết Chế công lập tức độc quan quân vào Thanh Hoa",
+          "bbox": [
+            78,
+            2173,
+            1659,
+            2230
+          ],
+          "confidence": 92.22
+        },
+        {
+          "text": "nghệnh tiếp xa giá. Ngày 18 xa giá đến Bắc Thành, nhà vua dùng công phủ làm hành",
+          "bbox": [
+            218,
+            2222,
+            1658,
+            2280
+          ],
+          "confidence": 91.0
+        },
+        {
+          "text": "wẹn, som hôm sau, khi thiết triệu, ngay giữa sân rồng nhà vua sai tôi cùng Hộ Bộ",
+          "bbox": [
+            217,
+            2272,
+            1730,
+            2321
+          ],
+          "confidence": 85.91
+        },
+        {
+          "text": "Thương thư Xuyên Thanh hầu coi việc Bộ Hình. Sau đó tôi được nhà vua goi hỏi. Sớm",
+          "bbox": [
+            221,
+            2313,
+            1655,
+            2361
+          ],
+          "confidence": 91.55
+        },
+        {
+          "text": "tôi phụng hầu tạ hữu, nên việc giấy tờ tờ án xét không xử. Trên còn sai tôi kiểm coi",
+          "bbox": [
+            134,
+            2353,
+            1656,
+            2411
+          ],
+          "confidence": 86.26
+        },
+        {
+          "text": "việc Bộ Lê, thất là dùng trước việc nghĩa khó thể từ nan, tôi có gắng hoàn thành.",
+          "bbox": [
+            174,
+            2403,
+            1655,
+            2460
+          ],
+          "confidence": 92.12
+        },
+        {
+          "text": "Trong khi đó làm được hai bài thơ để tổ cảm hoài.",
+          "bbox": [
+            218,
+            2452,
+            1650,
+            2495
+          ],
+          "confidence": 92.02
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          1865,
+          2851
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 34.528,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              866,
+              296,
+              1097,
+              331
+            ],
+            "generated_text": "环口分",
+            "n_lines": 1,
+            "tokens": 4,
+            "seconds": 19.213,
+            "confidence": 88.53,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              685,
+              528,
+              1264,
+              585
+            ],
+            "generated_text": "扶顛排難愧非才",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.328,
+            "confidence": 93.82,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              684,
+              597,
+              1263,
+              655
+            ],
+            "generated_text": "潘邸驚逢御輦來",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.367,
+            "confidence": 94.73,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              680,
+              672,
+              1261,
+              731
+            ],
+            "generated_text": "戎政何能分贊畫",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.352,
+            "confidence": 90.29,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              680,
+              745,
+              1258,
+              803
+            ],
+            "generated_text": "文詞安用趁趨陪",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.339,
+            "confidence": 96.41,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              680,
+              818,
+              1397,
+              878
+            ],
+            "generated_text": "兩朝渥眷難圓報",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.37,
+            "confidence": 92.09,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              679,
+              892,
+              1256,
+              950
+            ],
+            "generated_text": "二部繫樞玷總裁",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.408,
+            "confidence": 93.81,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              678,
+              961,
+              1253,
+              1016
+            ],
+            "generated_text": "前席更多酬奉夜",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.262,
+            "confidence": 99.87,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              674,
+              1029,
+              1250,
+              1091
+            ],
+            "generated_text": "金蓮幾度燭光回",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.42,
+            "confidence": 91.83,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              237,
+              1272,
+              456,
+              1301
+            ],
+            "generated_text": "Thiên âm:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.243,
+            "confidence": 83.45,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              78,
+              1397,
+              1114,
+              1456
+            ],
+            "generated_text": "THUẬT THẦN PHẦN 1",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.538,
+            "confidence": 89.57,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              463,
+              1534,
+              1077,
+              1584
+            ],
+            "generated_text": "Phù điện bài nạn quý phi tài,",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.413,
+            "confidence": 94.86,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              462,
+              1590,
+              1161,
+              1645
+            ],
+            "generated_text": "Phiên dễ kinh phùng ngư liền lai.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.404,
+            "confidence": 73.15,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              460,
+              1653,
+              1263,
+              1704
+            ],
+            "generated_text": "Nhung chính hà năng phân tán hoạch.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.403,
+            "confidence": 87.63,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              463,
+              1712,
+              1021,
+              1758
+            ],
+            "generated_text": "Văn từ an dụng sẵn xu bồi.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.428,
+            "confidence": 82.35,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              226,
+              1848,
+              820,
+              1870
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.153,
+            "confidence": 15.64,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              227,
+              1889,
+              1666,
+              1946
+            ],
+            "generated_text": "1. Nguyên dẫn: Ngày 4 tháng 5, kinh thành Phú Xuân thất thủ, xe vua chay ra",
+            "n_lines": 1,
+            "tokens": 32,
+            "seconds": 0.79,
+            "confidence": 96.01,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              226,
+              1938,
+              1666,
+              1992
+            ],
+            "generated_text": "Bác, qua đôn Đông Hội, quân giặc dưới theo gấp. Nhà vua cùng hoàng đế là Thái Tế",
+            "n_lines": 1,
+            "tokens": 37,
+            "seconds": 0.891,
+            "confidence": 86.12,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              224,
+              1984,
+              1664,
+              2040
+            ],
+            "generated_text": "công, Nguyên Suy công, Độc Trần công mang khinh kỷ vượt qua sông Linh Giang. Lúc",
+            "n_lines": 1,
+            "tokens": 33,
+            "seconds": 0.797,
+            "confidence": 86.97,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              223,
+              2032,
+              1664,
+              2088
+            ],
+            "generated_text": "đó chỉ có quan tư đồ Tư Quận công cùng Độc Trần công đi theo hộ giá, vượt gấp sang",
+            "n_lines": 1,
+            "tokens": 33,
+            "seconds": 0.773,
+            "confidence": 85.25,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              223,
+              2080,
+              1663,
+              2134
+            ],
+            "generated_text": "bộ Bác, đến tram Xuân Kiều, rồi sai phu tram luân chuyển đưa đi, đến trán Thanh",
+            "n_lines": 1,
+            "tokens": 32,
+            "seconds": 0.788,
+            "confidence": 84.87,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              223,
+              2126,
+              1440,
+              2181
+            ],
+            "generated_text": "Hoa lúc đó mới thông báo rõ tình trạng đi đường cho mọi người được biết.",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.577,
+            "confidence": 94.2,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              78,
+              2173,
+              1659,
+              2230
+            ],
+            "generated_text": "Ngày 9 tín đến Bắc Thành, Tiết Chế công lập tức độc quan quân vào Thanh Hoa",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 0.776,
+            "confidence": 92.22,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              218,
+              2222,
+              1658,
+              2280
+            ],
+            "generated_text": "nghệnh tiếp xa giá. Ngày 18 xa giá đến Bắc Thành, nhà vua dùng công phủ làm hành",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 0.723,
+            "confidence": 91.0,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              217,
+              2272,
+              1730,
+              2321
+            ],
+            "generated_text": "wẹn, som hôm sau, khi thiết triệu, ngay giữa sân rồng nhà vua sai tôi cùng Hộ Bộ",
+            "n_lines": 1,
+            "tokens": 34,
+            "seconds": 0.832,
+            "confidence": 85.91,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              221,
+              2313,
+              1655,
+              2361
+            ],
+            "generated_text": "Thương thư Xuyên Thanh hầu coi việc Bộ Hình. Sau đó tôi được nhà vua goi hỏi. Sớm",
+            "n_lines": 1,
+            "tokens": 34,
+            "seconds": 0.791,
+            "confidence": 91.55,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              134,
+              2353,
+              1656,
+              2411
+            ],
+            "generated_text": "tôi phụng hầu tạ hữu, nên việc giấy tờ tờ án xét không xử. Trên còn sai tôi kiểm coi",
+            "n_lines": 1,
+            "tokens": 38,
+            "seconds": 0.896,
+            "confidence": 86.26,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              174,
+              2403,
+              1655,
+              2460
+            ],
+            "generated_text": "việc Bộ Lê, thất là dùng trước việc nghĩa khó thể từ nan, tôi có gắng hoàn thành.",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 0.794,
+            "confidence": 92.12,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              218,
+              2452,
+              1650,
+              2495
+            ],
+            "generated_text": "Trong khi đó làm được hai bài thơ để tổ cảm hoài.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.461,
+            "confidence": 92.02,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              78,
+              77,
+              1787,
+              90
+            ],
+            "ink": 733
+          },
+          {
+            "box": [
+              871,
+              279,
+              1083,
+              291
+            ],
+            "ink": 465
+          },
+          {
+            "box": [
+              885,
+              290,
+              1085,
+              299
+            ],
+            "ink": 314
+          },
+          {
+            "box": [
+              866,
+              327,
+              1088,
+              351
+            ],
+            "ink": 1173
+          }
+        ],
+        "deskew_deg": 0.0,
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "7a0a8d9befaa9c2afee66139d5b233593b81f86e",
+        "git_describe": "7a0a8d9",
+        "git_dirty": true,
+        "gpu": "NVIDIA GeForce RTX 3050 6GB Laptop GPU",
+        "dtype": "bfloat16",
+        "adapter_version": 6
+      }
     }
   ]
 }

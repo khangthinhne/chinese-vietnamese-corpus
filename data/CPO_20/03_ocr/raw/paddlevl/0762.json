@@ -1,0 +1,822 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_20",
+  "engine": "paddlevl",
+  "page": 762,
+  "runs": [
+    {
+      "key": "18dd38295d8c0924ddaa731781176ad4f5ae3e00492df210150be07c037d262e",
+      "parameters": {
+        "image_sha256": "e59bb0a2e5cbebee314cc7f0f3a13dd0897392e3d2b44a46eb605ee0de21b509",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T14:35:07+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_762.png",
+      "image_size": [
+        1839,
+        2804
+      ],
+      "crop_box": [
+        0,
+        0,
+        1839,
+        2804
+      ],
+      "lines": [
+        {
+          "text": "Dich tho:",
+          "bbox": [
+            163,
+            275,
+            365,
+            307
+          ],
+          "confidence": 86.54
+        },
+        {
+          "text": "Anh hùng tư cổ đâu rồi,",
+          "bbox": [
+            526,
+            383,
+            1040,
+            427
+          ],
+          "confidence": 86.97
+        },
+        {
+          "text": "Được thua một trận xót, cười thoảng không.",
+          "bbox": [
+            410,
+            437,
+            1330,
+            490
+          ],
+          "confidence": 94.75
+        },
+        {
+          "text": "Bạc đời, chẳng bạc rượu hồng,",
+          "bbox": [
+            531,
+            503,
+            1174,
+            547
+          ],
+          "confidence": 89.45
+        },
+        {
+          "text": "Thời cùng, đâu có khốn cùng khách say.",
+          "bbox": [
+            415,
+            560,
+            1360,
+            608
+          ],
+          "confidence": 95.0
+        },
+        {
+          "text": "Non kia lạnh, hạc còn đấy,",
+          "bbox": [
+            533,
+            619,
+            1105,
+            666
+          ],
+          "confidence": 90.18
+        },
+        {
+          "text": "Nước dù bằng giá, chẳng gây bạch lòng.",
+          "bbox": [
+            415,
+            680,
+            1572,
+            731
+          ],
+          "confidence": 89.02
+        },
+        {
+          "text": "Những e khi thuận cánh hỏng,",
+          "bbox": [
+            536,
+            740,
+            1186,
+            787
+          ],
+          "confidence": 92.66
+        },
+        {
+          "text": "Vô danh dấu muốn cũng không được nào.",
+          "bbox": [
+            421,
+            798,
+            1299,
+            848
+          ],
+          "confidence": 88.33
+        },
+        {
+          "text": "Nguyên Văn Bách dịch",
+          "bbox": [
+            1228,
+            870,
+            1660,
+            912
+          ],
+          "confidence": 94.47
+        },
+        {
+          "text": "秋夜不寐",
+          "bbox": [
+            799,
+            1079,
+            1093,
+            1156
+          ],
+          "confidence": 99.97
+        },
+        {
+          "text": "金風入耳正淒淒",
+          "bbox": [
+            677,
+            1248,
+            1201,
+            1306
+          ],
+          "confidence": 96.82
+        },
+        {
+          "text": "啓戶重聞鶡旦啼",
+          "bbox": [
+            674,
+            1320,
+            1202,
+            1379
+          ],
+          "confidence": 95.08
+        },
+        {
+          "text": "漠漠长空星欲曙",
+          "bbox": [
+            676,
+            1393,
+            1358,
+            1453
+          ],
+          "confidence": 96.3
+        },
+        {
+          "text": "默默寒夜月将西",
+          "bbox": [
+            676,
+            1467,
+            1205,
+            1525
+          ],
+          "confidence": 90.78
+        },
+        {
+          "text": "孤村萬里煙霞閉",
+          "bbox": [
+            677,
+            1535,
+            1207,
+            1597
+          ],
+          "confidence": 99.18
+        },
+        {
+          "text": "遠樹三更雪靄迷",
+          "bbox": [
+            679,
+            1609,
+            1207,
+            1670
+          ],
+          "confidence": 92.67
+        },
+        {
+          "text": "定宴擬將圖蝶夢",
+          "bbox": [
+            679,
+            1684,
+            1208,
+            1747
+          ],
+          "confidence": 85.4
+        },
+        {
+          "text": "祝朱又報數聲難",
+          "bbox": [
+            681,
+            1756,
+            1210,
+            1818
+          ],
+          "confidence": 95.0
+        },
+        {
+          "text": "Phiên âm:",
+          "bbox": [
+            202,
+            1906,
+            429,
+            1946
+          ],
+          "confidence": 96.85
+        },
+        {
+          "text": "THU DA BÀT MỘ",
+          "bbox": [
+            446,
+            2029,
+            949,
+            2087
+          ],
+          "confidence": 87.16
+        },
+        {
+          "text": "Kim phong nhập nhĩ chính thế thế,",
+          "bbox": [
+            451,
+            2168,
+            1665,
+            2222
+          ],
+          "confidence": 84.9
+        },
+        {
+          "text": "Khái học trùng văn hát đán¹ để.",
+          "bbox": [
+            452,
+            2228,
+            1132,
+            2280
+          ],
+          "confidence": 74.21
+        },
+        {
+          "text": "1. Hạt đán: Tên một loại chim thương kêu vào lúc gần sáng. Có người cho nó là",
+          "bbox": [
+            307,
+            2385,
+            1693,
+            2444
+          ],
+          "confidence": 93.37
+        },
+        {
+          "text": "một loại đơi to. Có sách nói hạt đán là con \"hàn hào trùng\" (con trùng gào khí troi",
+          "bbox": [
+            215,
+            2436,
+            1694,
+            2494
+          ],
+          "confidence": 84.26
+        },
+        {
+          "text": "rét), khi gió lanh về nó kêu \"Phương hoàng chẳng bằng ta\".",
+          "bbox": [
+            192,
+            2486,
+            1235,
+            2543
+          ],
+          "confidence": 89.58
+        },
+        {
+          "text": "766",
+          "bbox": [
+            224,
+            2572,
+            298,
+            2599
+          ],
+          "confidence": 88.52
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          1839,
+          2804
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 11.131,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              163,
+              275,
+              365,
+              307
+            ],
+            "generated_text": "Dich tho:",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.237,
+            "confidence": 86.54,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              526,
+              383,
+              1040,
+              427
+            ],
+            "generated_text": "Anh hùng tư cổ đâu rồi,",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.408,
+            "confidence": 86.97,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              410,
+              437,
+              1330,
+              490
+            ],
+            "generated_text": "Được thua một trận xót, cười thoảng không.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.48,
+            "confidence": 94.75,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              531,
+              503,
+              1174,
+              547
+            ],
+            "generated_text": "Bạc đời, chẳng bạc rượu hồng,",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.566,
+            "confidence": 89.45,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              415,
+              560,
+              1360,
+              608
+            ],
+            "generated_text": "Thời cùng, đâu có khốn cùng khách say.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.452,
+            "confidence": 95.0,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              533,
+              619,
+              1105,
+              666
+            ],
+            "generated_text": "Non kia lạnh, hạc còn đấy,",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.393,
+            "confidence": 90.18,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              415,
+              680,
+              1572,
+              731
+            ],
+            "generated_text": "Nước dù bằng giá, chẳng gây bạch lòng.",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.573,
+            "confidence": 89.02,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              536,
+              740,
+              1186,
+              787
+            ],
+            "generated_text": "Những e khi thuận cánh hỏng,",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 0.408,
+            "confidence": 92.66,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              421,
+              798,
+              1299,
+              848
+            ],
+            "generated_text": "Vô danh dấu muốn cũng không được nào.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 0.43,
+            "confidence": 88.33,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              1228,
+              870,
+              1660,
+              912
+            ],
+            "generated_text": "Nguyên Văn Bách dịch",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.322,
+            "confidence": 94.47,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              799,
+              1079,
+              1093,
+              1156
+            ],
+            "generated_text": "秋夜不寐",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.252,
+            "confidence": 99.97,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              677,
+              1248,
+              1201,
+              1306
+            ],
+            "generated_text": "金風入耳正淒淒",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.367,
+            "confidence": 96.82,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              674,
+              1320,
+              1202,
+              1379
+            ],
+            "generated_text": "啓戶重聞鶡旦啼",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.38,
+            "confidence": 95.08,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              676,
+              1393,
+              1358,
+              1453
+            ],
+            "generated_text": "漠漠长空星欲曙",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.297,
+            "confidence": 96.3,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              676,
+              1467,
+              1205,
+              1525
+            ],
+            "generated_text": "默默寒夜月将西",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.274,
+            "confidence": 90.78,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              677,
+              1535,
+              1207,
+              1597
+            ],
+            "generated_text": "孤村萬里煙霞閉",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.358,
+            "confidence": 99.18,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              679,
+              1609,
+              1207,
+              1670
+            ],
+            "generated_text": "遠樹三更雪靄迷",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.322,
+            "confidence": 92.67,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              679,
+              1684,
+              1208,
+              1747
+            ],
+            "generated_text": "定宴擬將圖蝶夢",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.366,
+            "confidence": 85.4,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              681,
+              1756,
+              1210,
+              1818
+            ],
+            "generated_text": "祝朱又報數聲難",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.285,
+            "confidence": 95.0,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              202,
+              1906,
+              429,
+              1946
+            ],
+            "generated_text": "Phiên âm:",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.216,
+            "confidence": 96.85,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              446,
+              2029,
+              949,
+              2087
+            ],
+            "generated_text": "THU DA BÀT MỘ",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.341,
+            "confidence": 87.16,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              451,
+              2168,
+              1665,
+              2222
+            ],
+            "generated_text": "Kim phong nhập nhĩ chính thế thế,",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.361,
+            "confidence": 84.9,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              452,
+              2228,
+              1132,
+              2280
+            ],
+            "generated_text": "Khái học trùng văn hát đán¹ để.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.416,
+            "confidence": 74.21,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              212,
+              2363,
+              1685,
+              2386
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.137,
+            "confidence": 5.07,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              307,
+              2385,
+              1693,
+              2444
+            ],
+            "generated_text": "1. Hạt đán: Tên một loại chim thương kêu vào lúc gần sáng. Có người cho nó là",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 0.7,
+            "confidence": 93.37,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              215,
+              2436,
+              1694,
+              2494
+            ],
+            "generated_text": "một loại đơi to. Có sách nói hạt đán là con \"hàn hào trùng\" (con trùng gào khí troi",
+            "n_lines": 1,
+            "tokens": 36,
+            "seconds": 0.871,
+            "confidence": 84.26,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              192,
+              2486,
+              1235,
+              2543
+            ],
+            "generated_text": "rét), khi gió lanh về nó kêu \"Phương hoàng chẳng bằng ta\".",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.715,
+            "confidence": 89.58,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              224,
+              2572,
+              298,
+              2599
+            ],
+            "generated_text": "766",
+            "n_lines": 1,
+            "tokens": 4,
+            "seconds": 0.201,
+            "confidence": 88.52,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              170,
+              268,
+              317,
+              279
+            ],
+            "ink": 311
+          },
+          {
+            "box": [
+              218,
+              2561,
+              298,
+              2575
+            ],
+            "ink": 442
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      }
+    }
+  ]
+}

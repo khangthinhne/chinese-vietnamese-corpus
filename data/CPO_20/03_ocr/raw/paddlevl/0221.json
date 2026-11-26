@@ -1,0 +1,711 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_20",
+  "engine": "paddlevl",
+  "page": 221,
+  "runs": [
+    {
+      "key": "3f45b2574f45c9b3024b9813a34dac92c070e116b420d7a447f0ea8dc547e953",
+      "parameters": {
+        "image_sha256": "764549a613b65a5d1f5a7e7c88e4ba67e0c98d720b978bd9d85f9ea5e603298d",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T06:16:44+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_221.png",
+      "image_size": [
+        1823,
+        2815
+      ],
+      "crop_box": [
+        0,
+        0,
+        1823,
+        2815
+      ],
+      "lines": [
+        {
+          "text": "Trân mưa đất làm tan hứng thú đi trên sông.",
+          "bbox": [
+            391,
+            260,
+            1327,
+            319
+          ],
+          "confidence": 88.67
+        },
+        {
+          "text": "Ngọn gió thổi lượt qua khua động tấm lòng nhớ quê nhà.",
+          "bbox": [
+            391,
+            318,
+            1564,
+            388
+          ],
+          "confidence": 91.4
+        },
+        {
+          "text": "Muốn mua rượu giải sấu nhưng thương chú nhỏ mét.",
+          "bbox": [
+            390,
+            380,
+            1464,
+            438
+          ],
+          "confidence": 85.0
+        },
+        {
+          "text": "Năm-nghe bài ca của dân chài mà không hiểu tiếng.",
+          "bbox": [
+            390,
+            436,
+            1467,
+            497
+          ],
+          "confidence": 95.23
+        },
+        {
+          "text": "Dich thơ:",
+          "bbox": [
+            161,
+            622,
+            348,
+            652
+          ],
+          "confidence": 91.15
+        },
+        {
+          "text": "Ngàn trùng tứ khách ngập Sông Than,",
+          "bbox": [
+            383,
+            736,
+            1186,
+            790
+          ],
+          "confidence": 89.82
+        },
+        {
+          "text": "Song lạnh chăn đơn toát khí hàn.",
+          "bbox": [
+            384,
+            793,
+            1077,
+            843
+          ],
+          "confidence": 89.97
+        },
+        {
+          "text": "Gấm đệt về mây sao lắp lấy.",
+          "bbox": [
+            384,
+            851,
+            972,
+            900
+          ],
+          "confidence": 77.48
+        },
+        {
+          "text": "Vàng gieo mặt sóng nguyệt lăn tăn.",
+          "bbox": [
+            388,
+            919,
+            1113,
+            966
+          ],
+          "confidence": 94.44
+        },
+        {
+          "text": "Khua tan cảnh hùng con mưa đôi,",
+          "bbox": [
+            381,
+            968,
+            1078,
+            1020
+          ],
+          "confidence": 79.82
+        },
+        {
+          "text": "Khơi dấy niềm quê đợt gió tràn.",
+          "bbox": [
+            379,
+            1028,
+            1041,
+            1080
+          ],
+          "confidence": 88.98
+        },
+        {
+          "text": "Toan chuộc chén buồn thương nhỏ mét,",
+          "bbox": [
+            381,
+            1089,
+            1266,
+            1140
+          ],
+          "confidence": 90.24
+        },
+        {
+          "text": "Năm nghe xa vắng điều hò khoan.",
+          "bbox": [
+            376,
+            1148,
+            1082,
+            1197
+          ],
+          "confidence": 93.33
+        },
+        {
+          "text": "Nguyễn Văn Bách dịch",
+          "bbox": [
+            1161,
+            1228,
+            1585,
+            1272
+          ],
+          "confidence": 97.1
+        },
+        {
+          "text": "再泊昭平月夜寫興",
+          "bbox": [
+            540,
+            1511,
+            1200,
+            1595
+          ],
+          "confidence": 98.98
+        },
+        {
+          "text": "鴿返昭平泊水湄",
+          "bbox": [
+            534,
+            1679,
+            1113,
+            1742
+          ],
+          "confidence": 78.44
+        },
+        {
+          "text": "天晴夜靜思淋漓",
+          "bbox": [
+            535,
+            1748,
+            1110,
+            1808
+          ],
+          "confidence": 96.0
+        },
+        {
+          "text": "光茫片月高悬镜",
+          "bbox": [
+            534,
+            1821,
+            1312,
+            1879
+          ],
+          "confidence": 84.93
+        },
+        {
+          "text": "燦爛群星密布",
+          "bbox": [
+            531,
+            1892,
+            1107,
+            1951
+          ],
+          "confidence": 86.72
+        },
+        {
+          "text": "雲漫寒江清混沌",
+          "bbox": [
+            532,
+            1964,
+            1105,
+            2025
+          ],
+          "confidence": 83.36
+        },
+        {
+          "text": "霜含遠蟜絲蔘差",
+          "bbox": [
+            531,
+            2037,
+            1103,
+            2097
+          ],
+          "confidence": 70.8
+        },
+        {
+          "text": "乾坤幽寂須珍賞",
+          "bbox": [
+            529,
+            2113,
+            1340,
+            2169
+          ],
+          "confidence": 95.16
+        },
+        {
+          "text": "旅客無嫌玉漏遲",
+          "bbox": [
+            527,
+            2185,
+            1102,
+            2241
+          ],
+          "confidence": 92.26
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          1823,
+          2815
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 9.087,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              391,
+              260,
+              1327,
+              319
+            ],
+            "generated_text": "Trân mưa đất làm tan hứng thú đi trên sông.",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.486,
+            "confidence": 88.67,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              391,
+              318,
+              1564,
+              388
+            ],
+            "generated_text": "Ngọn gió thổi lượt qua khua động tấm lòng nhớ quê nhà.",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.673,
+            "confidence": 91.4,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              390,
+              380,
+              1464,
+              438
+            ],
+            "generated_text": "Muốn mua rượu giải sấu nhưng thương chú nhỏ mét.",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.584,
+            "confidence": 85.0,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              390,
+              436,
+              1467,
+              497
+            ],
+            "generated_text": "Năm-nghe bài ca của dân chài mà không hiểu tiếng.",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.514,
+            "confidence": 95.23,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              161,
+              622,
+              348,
+              652
+            ],
+            "generated_text": "Dich thơ:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.231,
+            "confidence": 91.15,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              383,
+              736,
+              1186,
+              790
+            ],
+            "generated_text": "Ngàn trùng tứ khách ngập Sông Than,",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.401,
+            "confidence": 89.82,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              384,
+              793,
+              1077,
+              843
+            ],
+            "generated_text": "Song lạnh chăn đơn toát khí hàn.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.417,
+            "confidence": 89.97,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              384,
+              851,
+              972,
+              900
+            ],
+            "generated_text": "Gấm đệt về mây sao lắp lấy.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.453,
+            "confidence": 77.48,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              388,
+              919,
+              1113,
+              966
+            ],
+            "generated_text": "Vàng gieo mặt sóng nguyệt lăn tăn.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.459,
+            "confidence": 94.44,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              381,
+              968,
+              1078,
+              1020
+            ],
+            "generated_text": "Khua tan cảnh hùng con mưa đôi,",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.39,
+            "confidence": 79.82,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              379,
+              1028,
+              1041,
+              1080
+            ],
+            "generated_text": "Khơi dấy niềm quê đợt gió tràn.",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.475,
+            "confidence": 88.98,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              381,
+              1089,
+              1266,
+              1140
+            ],
+            "generated_text": "Toan chuộc chén buồn thương nhỏ mét,",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.425,
+            "confidence": 90.24,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              376,
+              1148,
+              1082,
+              1197
+            ],
+            "generated_text": "Năm nghe xa vắng điều hò khoan.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.409,
+            "confidence": 93.33,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              1161,
+              1228,
+              1585,
+              1272
+            ],
+            "generated_text": "Nguyễn Văn Bách dịch",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.315,
+            "confidence": 97.1,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              540,
+              1511,
+              1200,
+              1595
+            ],
+            "generated_text": "再泊昭平月夜寫興",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.296,
+            "confidence": 98.98,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              534,
+              1679,
+              1113,
+              1742
+            ],
+            "generated_text": "鴿返昭平泊水湄",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.363,
+            "confidence": 78.44,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              535,
+              1748,
+              1110,
+              1808
+            ],
+            "generated_text": "天晴夜靜思淋漓",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.297,
+            "confidence": 96.0,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              534,
+              1821,
+              1312,
+              1879
+            ],
+            "generated_text": "光茫片月高悬镜",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.278,
+            "confidence": 84.93,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              531,
+              1892,
+              1107,
+              1951
+            ],
+            "generated_text": "燦爛群星密布",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.344,
+            "confidence": 86.72,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              532,
+              1964,
+              1105,
+              2025
+            ],
+            "generated_text": "雲漫寒江清混沌",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.26,
+            "confidence": 83.36,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              531,
+              2037,
+              1103,
+              2097
+            ],
+            "generated_text": "霜含遠蟜絲蔘差",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.399,
+            "confidence": 70.8,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              529,
+              2113,
+              1340,
+              2169
+            ],
+            "generated_text": "乾坤幽寂須珍賞",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.309,
+            "confidence": 95.16,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              527,
+              2185,
+              1102,
+              2241
+            ],
+            "generated_text": "旅客無嫌玉漏遲",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.307,
+            "confidence": 92.26,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              167,
+              613,
+              303,
+              624
+            ],
+            "ink": 255
+          },
+          {
+            "box": [
+              1483,
+              2527,
+              1558,
+              2549
+            ],
+            "ink": 654
+          },
+          {
+            "box": [
+              1483,
+              2550,
+              1560,
+              2565
+            ],
+            "ink": 484
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      }
+    }
+  ]
+}

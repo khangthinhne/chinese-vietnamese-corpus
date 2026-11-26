@@ -1,0 +1,980 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_20",
+  "engine": "paddlevl",
+  "page": 263,
+  "runs": [
+    {
+      "key": "bf0755bd403de9ba6b33f535eed2508ee0db6649ada305e12c7e667e76130b12",
+      "parameters": {
+        "image_sha256": "3b51e63951fedf69fd6bd0d0b9d86c56632bf565e50c8fd2ab28f06d415afeb4",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T06:35:57+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_263.png",
+      "image_size": [
+        1821,
+        2814
+      ],
+      "crop_box": [
+        0,
+        0,
+        1821,
+        2814
+      ],
+      "lines": [
+        {
+          "text": "Nhược Công tử Kiều.",
+          "bbox": [
+            409,
+            247,
+            869,
+            290
+          ],
+          "confidence": 83.57
+        },
+        {
+          "text": "Thừa dư khả tế.",
+          "bbox": [
+            409,
+            307,
+            746,
+            348
+          ],
+          "confidence": 71.57
+        },
+        {
+          "text": "Dân lực đường nhiều.",
+          "bbox": [
+            409,
+            366,
+            852,
+            408
+          ],
+          "confidence": 84.4
+        },
+        {
+          "text": "Tín năng hành thụ.",
+          "bbox": [
+            409,
+            425,
+            823,
+            466
+          ],
+          "confidence": 83.08
+        },
+        {
+          "text": "Hạp giới chi kiêu.",
+          "bbox": [
+            409,
+            494,
+            784,
+            526
+          ],
+          "confidence": 82.22
+        },
+        {
+          "text": "Phú tư dân như xích tử",
+          "bbox": [
+            409,
+            543,
+            894,
+            585
+          ],
+          "confidence": 86.48
+        },
+        {
+          "text": "Tê tư thế ư Hoàng Nghiêu.",
+          "bbox": [
+            409,
+            602,
+            965,
+            644
+          ],
+          "confidence": 88.5
+        },
+        {
+          "text": "Sĩ kỳ: thiên tâm duyệt, thời vũ điều.",
+          "bbox": [
+            409,
+            661,
+            1162,
+            708
+          ],
+          "confidence": 97.63
+        },
+        {
+          "text": "Tú đã đi tích,",
+          "bbox": [
+            409,
+            722,
+            695,
+            763
+          ],
+          "confidence": 85.9
+        },
+        {
+          "text": "Thi cồn thi biểu.",
+          "bbox": [
+            409,
+            781,
+            790,
+            822
+          ],
+          "confidence": 85.68
+        },
+        {
+          "text": "Sơn xuyên di ninh.",
+          "bbox": [
+            409,
+            851,
+            805,
+            881
+          ],
+          "confidence": 85.15
+        },
+        {
+          "text": "Duy yêu duy kiểu.",
+          "bbox": [
+            409,
+            911,
+            780,
+            941
+          ],
+          "confidence": 85.14
+        },
+        {
+          "text": "Nhiên hậu: Cao nhĩ biểu tru.",
+          "bbox": [
+            407,
+            959,
+            1005,
+            1002
+          ],
+          "confidence": 86.56
+        },
+        {
+          "text": "Knh thiên lãng tế.",
+          "bbox": [
+            407,
+            1019,
+            813,
+            1059
+          ],
+          "confidence": 77.82
+        },
+        {
+          "text": "Tráng nhĩ giai thê.",
+          "bbox": [
+            407,
+            1078,
+            809,
+            1119
+          ],
+          "confidence": 93.09
+        },
+        {
+          "text": "Ly văn lân điêu, khởi bất mĩ tại!",
+          "bbox": [
+            407,
+            1137,
+            1085,
+            1178
+          ],
+          "confidence": 83.58
+        },
+        {
+          "text": "Nhi hà khổ tru sài biên trúc,",
+          "bbox": [
+            407,
+            1195,
+            1007,
+            1238
+          ],
+          "confidence": 91.87
+        },
+        {
+          "text": "Dĩ sinh tư dân chi kiêu kiêu.",
+          "bbox": [
+            407,
+            1255,
+            999,
+            1297
+          ],
+          "confidence": 91.97
+        },
+        {
+          "text": "Kiểu văn ngô ngôn, viết: thiện tai ngôn hồ!",
+          "bbox": [
+            405,
+            1314,
+            1299,
+            1363
+          ],
+          "confidence": 89.15
+        },
+        {
+          "text": "Thủ đương đổ ngao tử chi Kỳ Chiêu.",
+          "bbox": [
+            405,
+            1372,
+            1182,
+            1414
+          ],
+          "confidence": 85.55
+        },
+        {
+          "text": "Ký trầm tư hề phú thủ,",
+          "bbox": [
+            405,
+            1431,
+            894,
+            1474
+          ],
+          "confidence": 76.18
+        },
+        {
+          "text": "Nãi thi kính hề triết yêu.",
+          "bbox": [
+            405,
+            1490,
+            937,
+            1531
+          ],
+          "confidence": 87.02
+        },
+        {
+          "text": "Tái đăng đồ hề tiêu dao,",
+          "bbox": [
+            404,
+            1548,
+            915,
+            1591
+          ],
+          "confidence": 85.2
+        },
+        {
+          "text": "Thiên nhất thương hệ phù dao.",
+          "bbox": [
+            404,
+            1608,
+            1049,
+            1649
+          ],
+          "confidence": 94.52
+        },
+        {
+          "text": ".",
+          "bbox": [
+            190,
+            2078,
+            766,
+            2097
+          ],
+          "confidence": 27.82
+        },
+        {
+          "text": "1. Công tử Kiểu: Tức Từ Sản là quan đại phu nước Trịnh thời Xuân Thu Chiến",
+          "bbox": [
+            260,
+            2120,
+            1613,
+            2156
+          ],
+          "confidence": 92.01
+        },
+        {
+          "text": "Quốc. Sách Luân Ngữ: “Từ Sản di kỳ thắng du, tế nhân vợ Trân Vị” (Từ Sản lấy xe của",
+          "bbox": [
+            174,
+            2166,
+            1611,
+            2204
+          ],
+          "confidence": 85.5
+        },
+        {
+          "text": "minh chở người qua sông Trân Vị.",
+          "bbox": [
+            174,
+            2216,
+            752,
+            2251
+          ],
+          "confidence": 92.04
+        },
+        {
+          "text": "2. Thị cổn thị biểu: Cày sâu cuộc bắm; Chữ sách Tá Truyện có nghĩa là làm có",
+          "bbox": [
+            256,
+            2260,
+            1610,
+            2300
+          ],
+          "confidence": 90.15
+        },
+        {
+          "text": "von lúa",
+          "bbox": [
+            174,
+            2313,
+            295,
+            2335
+          ],
+          "confidence": 87.32
+        },
+        {
+          "text": "3. Ký Chiêu: Tên một bài thơ \"Dát thi\". Theo sách Tả Truyện: Xưa vua Mục",
+          "bbox": [
+            256,
+            2354,
+            1610,
+            2392
+          ],
+          "confidence": 84.51
+        },
+        {
+          "text": "Vương muốn đi khắp thiên hạ để chở nào cũng có vết xe ngựa của vua, Kỳ Phú làm bài",
+          "bbox": [
+            176,
+            2401,
+            1608,
+            2439
+          ],
+          "confidence": 92.85
+        },
+        {
+          "text": "thơ Kỳ Chiêu dễ ngăn vua.",
+          "bbox": [
+            171,
+            2448,
+            616,
+            2485
+          ],
+          "confidence": 83.54
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          1821,
+          2814
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 57.665,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              409,
+              247,
+              869,
+              290
+            ],
+            "generated_text": "Nhược Công tử Kiều.",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 1.448,
+            "confidence": 83.57,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              409,
+              307,
+              746,
+              348
+            ],
+            "generated_text": "Thừa dư khả tế.",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 1.609,
+            "confidence": 71.57,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              409,
+              366,
+              852,
+              408
+            ],
+            "generated_text": "Dân lực đường nhiều.",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 1.138,
+            "confidence": 84.4,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              409,
+              425,
+              823,
+              466
+            ],
+            "generated_text": "Tín năng hành thụ.",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.839,
+            "confidence": 83.08,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              409,
+              494,
+              784,
+              526
+            ],
+            "generated_text": "Hạp giới chi kiêu.",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 1.195,
+            "confidence": 82.22,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              409,
+              543,
+              894,
+              585
+            ],
+            "generated_text": "Phú tư dân như xích tử",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 1.326,
+            "confidence": 86.48,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              409,
+              602,
+              965,
+              644
+            ],
+            "generated_text": "Tê tư thế ư Hoàng Nghiêu.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.763,
+            "confidence": 88.5,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              409,
+              661,
+              1162,
+              708
+            ],
+            "generated_text": "Sĩ kỳ: thiên tâm duyệt, thời vũ điều.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.84,
+            "confidence": 97.63,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              409,
+              722,
+              695,
+              763
+            ],
+            "generated_text": "Tú đã đi tích,",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.821,
+            "confidence": 85.9,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              409,
+              781,
+              790,
+              822
+            ],
+            "generated_text": "Thi cồn thi biểu.",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 1.071,
+            "confidence": 85.68,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              409,
+              851,
+              805,
+              881
+            ],
+            "generated_text": "Sơn xuyên di ninh.",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 1.093,
+            "confidence": 85.15,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              409,
+              911,
+              780,
+              941
+            ],
+            "generated_text": "Duy yêu duy kiểu.",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.896,
+            "confidence": 85.14,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              407,
+              959,
+              1005,
+              1002
+            ],
+            "generated_text": "Nhiên hậu: Cao nhĩ biểu tru.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.707,
+            "confidence": 86.56,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              407,
+              1019,
+              813,
+              1059
+            ],
+            "generated_text": "Knh thiên lãng tế.",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 1.344,
+            "confidence": 77.82,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              407,
+              1078,
+              809,
+              1119
+            ],
+            "generated_text": "Tráng nhĩ giai thê.",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 1.467,
+            "confidence": 93.09,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              407,
+              1137,
+              1085,
+              1178
+            ],
+            "generated_text": "Ly văn lân điêu, khởi bất mĩ tại!",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 2.044,
+            "confidence": 83.58,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              407,
+              1195,
+              1007,
+              1238
+            ],
+            "generated_text": "Nhi hà khổ tru sài biên trúc,",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.816,
+            "confidence": 91.87,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              407,
+              1255,
+              999,
+              1297
+            ],
+            "generated_text": "Dĩ sinh tư dân chi kiêu kiêu.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.594,
+            "confidence": 91.97,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              405,
+              1314,
+              1299,
+              1363
+            ],
+            "generated_text": "Kiểu văn ngô ngôn, viết: thiện tai ngôn hồ!",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.857,
+            "confidence": 89.15,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              405,
+              1372,
+              1182,
+              1414
+            ],
+            "generated_text": "Thủ đương đổ ngao tử chi Kỳ Chiêu.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 2.01,
+            "confidence": 85.55,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              405,
+              1431,
+              894,
+              1474
+            ],
+            "generated_text": "Ký trầm tư hề phú thủ,",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.565,
+            "confidence": 76.18,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              405,
+              1490,
+              937,
+              1531
+            ],
+            "generated_text": "Nãi thi kính hề triết yêu.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.41,
+            "confidence": 87.02,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              404,
+              1548,
+              915,
+              1591
+            ],
+            "generated_text": "Tái đăng đồ hề tiêu dao,",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.662,
+            "confidence": 85.2,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              404,
+              1608,
+              1049,
+              1649
+            ],
+            "generated_text": "Thiên nhất thương hệ phù dao.",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.425,
+            "confidence": 94.52,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              190,
+              2078,
+              766,
+              2097
+            ],
+            "generated_text": ".",
+            "n_lines": 1,
+            "tokens": 2,
+            "seconds": 0.449,
+            "confidence": 27.82,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              260,
+              2120,
+              1613,
+              2156
+            ],
+            "generated_text": "1. Công tử Kiểu: Tức Từ Sản là quan đại phu nước Trịnh thời Xuân Thu Chiến",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 3.574,
+            "confidence": 92.01,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              174,
+              2166,
+              1611,
+              2204
+            ],
+            "generated_text": "Quốc. Sách Luân Ngữ: “Từ Sản di kỳ thắng du, tế nhân vợ Trân Vị” (Từ Sản lấy xe của",
+            "n_lines": 1,
+            "tokens": 41,
+            "seconds": 4.101,
+            "confidence": 85.5,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              174,
+              2216,
+              752,
+              2251
+            ],
+            "generated_text": "minh chở người qua sông Trân Vị.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.614,
+            "confidence": 92.04,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              256,
+              2260,
+              1610,
+              2300
+            ],
+            "generated_text": "2. Thị cổn thị biểu: Cày sâu cuộc bắm; Chữ sách Tá Truyện có nghĩa là làm có",
+            "n_lines": 1,
+            "tokens": 34,
+            "seconds": 3.896,
+            "confidence": 90.15,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              174,
+              2313,
+              295,
+              2335
+            ],
+            "generated_text": "von lúa",
+            "n_lines": 1,
+            "tokens": 4,
+            "seconds": 0.534,
+            "confidence": 87.32,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              256,
+              2354,
+              1610,
+              2392
+            ],
+            "generated_text": "3. Ký Chiêu: Tên một bài thơ \"Dát thi\". Theo sách Tả Truyện: Xưa vua Mục",
+            "n_lines": 1,
+            "tokens": 33,
+            "seconds": 3.506,
+            "confidence": 84.51,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 32,
+            "box": [
+              176,
+              2401,
+              1608,
+              2439
+            ],
+            "generated_text": "Vương muốn đi khắp thiên hạ để chở nào cũng có vết xe ngựa của vua, Kỳ Phú làm bài",
+            "n_lines": 1,
+            "tokens": 34,
+            "seconds": 3.702,
+            "confidence": 92.85,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 33,
+            "box": [
+              171,
+              2448,
+              616,
+              2485
+            ],
+            "generated_text": "thơ Kỳ Chiêu dễ ngăn vua.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.342,
+            "confidence": 83.54,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              409,
+              483,
+              1404,
+              498
+            ],
+            "ink": 466
+          },
+          {
+            "box": [
+              410,
+              901,
+              743,
+              914
+            ],
+            "ink": 402
+          },
+          {
+            "box": [
+              604,
+              1411,
+              994,
+              1420
+            ],
+            "ink": 254
+          },
+          {
+            "box": [
+              1530,
+              2502,
+              1607,
+              2514
+            ],
+            "ink": 354
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      }
+    }
+  ]
+}

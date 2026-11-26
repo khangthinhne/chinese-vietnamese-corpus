@@ -1,0 +1,761 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_20",
+  "engine": "paddlevl",
+  "page": 641,
+  "runs": [
+    {
+      "key": "4e769edf446c71f9d7bbb01833eacf8f2c3979eeca1f6efe7bc7f7f285361ebe",
+      "parameters": {
+        "image_sha256": "0c41862d45b33592ab28f7d749bebbc6426f0e690b3b2b2683e6e7af0c65a486",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T13:53:47+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_641.png",
+      "image_size": [
+        1823,
+        2814
+      ],
+      "crop_box": [
+        0,
+        0,
+        1823,
+        2814
+      ],
+      "lines": [
+        {
+          "text": "Kia xem núi, bế của ta:",
+          "bbox": [
+            356,
+            288,
+            835,
+            329
+          ],
+          "confidence": 88.34
+        },
+        {
+          "text": "Không chim xuống vực,",
+          "bbox": [
+            356,
+            347,
+            838,
+            388
+          ],
+          "confidence": 94.95
+        },
+        {
+          "text": "Không nổi nương dâu.",
+          "bbox": [
+            357,
+            405,
+            1183,
+            448
+          ],
+          "confidence": 93.87
+        },
+        {
+          "text": "Không tiêu phu hái củi,",
+          "bbox": [
+            357,
+            463,
+            849,
+            507
+          ],
+          "confidence": 85.85
+        },
+        {
+          "text": "Không ngư phủ bướng câu.",
+          "bbox": [
+            359,
+            524,
+            912,
+            571
+          ],
+          "confidence": 76.26
+        },
+        {
+          "text": "Không thú dữ mà có rau để hái,",
+          "bbox": [
+            360,
+            580,
+            1024,
+            624
+          ],
+          "confidence": 84.88
+        },
+        {
+          "text": "Nước thường ngọt chẳng có sóng tuôn trào.",
+          "bbox": [
+            360,
+            639,
+            1239,
+            687
+          ],
+          "confidence": 90.96
+        },
+        {
+          "text": "Chỉ mới ngầm có cái tứ suối khe cây cỏ,",
+          "bbox": [
+            363,
+            695,
+            1178,
+            743
+          ],
+          "confidence": 83.45
+        },
+        {
+          "text": "Còn như đem đời về đây non Bống nước Nhược mà xa lánh",
+          "bbox": [
+            365,
+            751,
+            1546,
+            803
+          ],
+          "confidence": 90.8
+        },
+        {
+          "text": "bui trần, để vui cái vui của ta thì chưa phải đã đủ.",
+          "bbox": [
+            529,
+            808,
+            1567,
+            859
+          ],
+          "confidence": 92.32
+        },
+        {
+          "text": "Bèn rót rượu mài khách mà ca rằng:",
+          "bbox": [
+            271,
+            876,
+            1116,
+            920
+          ],
+          "confidence": 87.99
+        },
+        {
+          "text": "Cao cao muôn nhận chữ,",
+          "bbox": [
+            368,
+            939,
+            874,
+            981
+          ],
+          "confidence": 77.73
+        },
+        {
+          "text": "Đá nào chẳng phải là non?",
+          "bbox": [
+            201,
+            994,
+            927,
+            1041
+          ],
+          "confidence": 97.3
+        },
+        {
+          "text": "Chỉ cần lòng kiên trình chú,",
+          "bbox": [
+            368,
+            1055,
+            952,
+            1099
+          ],
+          "confidence": 79.6
+        },
+        {
+          "text": "Sống nào chẳng phải là nước.",
+          "bbox": [
+            370,
+            1112,
+            1310,
+            1163
+          ],
+          "confidence": 90.03
+        },
+        {
+          "text": "Lại còn có cái lượng mệnh mông chữ,",
+          "bbox": [
+            368,
+            1172,
+            1396,
+            1219
+          ],
+          "confidence": 84.67
+        },
+        {
+          "text": "Đâu thế đục trong pha trộn được.",
+          "bbox": [
+            370,
+            1231,
+            1457,
+            1278
+          ],
+          "confidence": 91.96
+        },
+        {
+          "text": "Cho nên: Cái đạo \"hình nhi thương\" thì nên suy câu,",
+          "bbox": [
+            373,
+            1283,
+            1446,
+            1336
+          ],
+          "confidence": 89.22
+        },
+        {
+          "text": "Cái khi “hình nhi hạ” thì đùng vướng mắc",
+          "bbox": [
+            373,
+            1345,
+            1472,
+            1394
+          ],
+          "confidence": 83.95
+        },
+        {
+          "text": "Còn như: Cao như non Thái, rộng như biển khơi,",
+          "bbox": [
+            374,
+            1397,
+            1521,
+            1452
+          ],
+          "confidence": 97.8
+        },
+        {
+          "text": "Đều chỉ là một vật trong đó mà thôi.",
+          "bbox": [
+            373,
+            1462,
+            1127,
+            1513
+          ],
+          "confidence": 97.79
+        },
+        {
+          "text": "Dương Minh và Thạch Can dịch",
+          "bbox": [
+            723,
+            1522,
+            1578,
+            1566
+          ],
+          "confidence": 94.1
+        },
+        {
+          "text": "___",
+          "bbox": [
+            160,
+            2401,
+            746,
+            2421
+          ],
+          "confidence": 26.13
+        },
+        {
+          "text": "1. \"Hình nhi thương\" là cái siêu vật chất, khái niệm xưa để chỉ cái dao. \"Hình nhi",
+          "bbox": [
+            245,
+            2420,
+            1596,
+            2481
+          ],
+          "confidence": 92.56
+        },
+        {
+          "text": "hạ\", khái niệm xưa là khí, tức là cái vật chất.",
+          "bbox": [
+            162,
+            2483,
+            1594,
+            2529
+          ],
+          "confidence": 97.15
+        },
+        {
+          "text": "645",
+          "bbox": [
+            1519,
+            2527,
+            1597,
+            2553
+          ],
+          "confidence": 99.91
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          1823,
+          2814
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 11.375,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              356,
+              288,
+              835,
+              329
+            ],
+            "generated_text": "Kia xem núi, bế của ta:",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.354,
+            "confidence": 88.34,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              356,
+              347,
+              838,
+              388
+            ],
+            "generated_text": "Không chim xuống vực,",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.29,
+            "confidence": 94.95,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              357,
+              405,
+              1183,
+              448
+            ],
+            "generated_text": "Không nổi nương dâu.",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.359,
+            "confidence": 93.87,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              357,
+              463,
+              849,
+              507
+            ],
+            "generated_text": "Không tiêu phu hái củi,",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 0.379,
+            "confidence": 85.85,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              359,
+              524,
+              912,
+              571
+            ],
+            "generated_text": "Không ngư phủ bướng câu.",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.372,
+            "confidence": 76.26,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              360,
+              580,
+              1024,
+              624
+            ],
+            "generated_text": "Không thú dữ mà có rau để hái,",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.387,
+            "confidence": 84.88,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              360,
+              639,
+              1239,
+              687
+            ],
+            "generated_text": "Nước thường ngọt chẳng có sóng tuôn trào.",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.556,
+            "confidence": 90.96,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              363,
+              695,
+              1178,
+              743
+            ],
+            "generated_text": "Chỉ mới ngầm có cái tứ suối khe cây cỏ,",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.499,
+            "confidence": 83.45,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              365,
+              751,
+              1546,
+              803
+            ],
+            "generated_text": "Còn như đem đời về đây non Bống nước Nhược mà xa lánh",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.505,
+            "confidence": 90.8,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              529,
+              808,
+              1567,
+              859
+            ],
+            "generated_text": "bui trần, để vui cái vui của ta thì chưa phải đã đủ.",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.64,
+            "confidence": 92.32,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              271,
+              876,
+              1116,
+              920
+            ],
+            "generated_text": "Bèn rót rượu mài khách mà ca rằng:",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.42,
+            "confidence": 87.99,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              368,
+              939,
+              874,
+              981
+            ],
+            "generated_text": "Cao cao muôn nhận chữ,",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.368,
+            "confidence": 77.73,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              201,
+              994,
+              927,
+              1041
+            ],
+            "generated_text": "Đá nào chẳng phải là non?",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 0.37,
+            "confidence": 97.3,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              368,
+              1055,
+              952,
+              1099
+            ],
+            "generated_text": "Chỉ cần lòng kiên trình chú,",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.382,
+            "confidence": 79.6,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              370,
+              1112,
+              1310,
+              1163
+            ],
+            "generated_text": "Sống nào chẳng phải là nước.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 0.392,
+            "confidence": 90.03,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              368,
+              1172,
+              1396,
+              1219
+            ],
+            "generated_text": "Lại còn có cái lượng mệnh mông chữ,",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.442,
+            "confidence": 84.67,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              370,
+              1231,
+              1457,
+              1278
+            ],
+            "generated_text": "Đâu thế đục trong pha trộn được.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.484,
+            "confidence": 91.96,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              373,
+              1283,
+              1446,
+              1336
+            ],
+            "generated_text": "Cho nên: Cái đạo \"hình nhi thương\" thì nên suy câu,",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.619,
+            "confidence": 89.22,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              373,
+              1345,
+              1472,
+              1394
+            ],
+            "generated_text": "Cái khi “hình nhi hạ” thì đùng vướng mắc",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.547,
+            "confidence": 83.95,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              374,
+              1397,
+              1521,
+              1452
+            ],
+            "generated_text": "Còn như: Cao như non Thái, rộng như biển khơi,",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.572,
+            "confidence": 97.8,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              373,
+              1462,
+              1127,
+              1513
+            ],
+            "generated_text": "Đều chỉ là một vật trong đó mà thôi.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 0.378,
+            "confidence": 97.79,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              723,
+              1522,
+              1578,
+              1566
+            ],
+            "generated_text": "Dương Minh và Thạch Can dịch",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.323,
+            "confidence": 94.1,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              160,
+              2401,
+              746,
+              2421
+            ],
+            "generated_text": "___",
+            "n_lines": 1,
+            "tokens": 2,
+            "seconds": 0.166,
+            "confidence": 26.13,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              245,
+              2420,
+              1596,
+              2481
+            ],
+            "generated_text": "1. \"Hình nhi thương\" là cái siêu vật chất, khái niệm xưa để chỉ cái dao. \"Hình nhi",
+            "n_lines": 1,
+            "tokens": 33,
+            "seconds": 0.815,
+            "confidence": 92.56,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              162,
+              2483,
+              1594,
+              2529
+            ],
+            "generated_text": "hạ\", khái niệm xưa là khí, tức là cái vật chất.",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.557,
+            "confidence": 97.15,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              1519,
+              2527,
+              1597,
+              2553
+            ],
+            "generated_text": "645",
+            "n_lines": 1,
+            "tokens": 4,
+            "seconds": 0.196,
+            "confidence": 99.91,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      }
+    }
+  ]
+}

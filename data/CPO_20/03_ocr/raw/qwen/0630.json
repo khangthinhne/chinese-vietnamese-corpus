@@ -1,0 +1,294 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_20",
+  "engine": "qwen",
+  "page": 630,
+  "runs": [
+    {
+      "key": "e013c88bb95acb22918fda7397abafe230a25e39de50ecd03f41138463991e19",
+      "parameters": {
+        "image_sha256": "f2d238608e71ce2c4893856695de74c0853b4a775fffe6596ef8eec2572ae94d",
+        "engine": {
+          "name": "qwen",
+          "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "model_revision": "main",
+          "transformers_version": "4.57.6",
+          "torch_version": "2.5.1+cu121",
+          "cuda_version": "12.1",
+          "bitsandbytes_version": "0.50.2",
+          "quantization": {
+            "load_in_4bit": true,
+            "quant_type": "nf4",
+            "double_quant": true,
+            "compute_dtype": "float16"
+          },
+          "mode": "all",
+          "min_pixels": 50176,
+          "max_pixels": 802816,
+          "band_inches": 2.0,
+          "max_new_tokens": 768,
+          "repetition_penalty": 1.05,
+          "adapter_version": 3,
+          "prompt_version": 3,
+          "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74"
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T17:17:17+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_630.png",
+      "image_size": [
+        1840,
+        2803
+      ],
+      "crop_box": [
+        0,
+        0,
+        1840,
+        2803
+      ],
+      "lines": [
+        {
+          "text": "既舍舟而登陆，",
+          "bbox": [
+            363,
+            412,
+            1763,
+            523
+          ],
+          "confidence": 78.33
+        },
+        {
+          "text": "及披衣而上山。",
+          "bbox": [
+            363,
+            523,
+            1763,
+            634
+          ],
+          "confidence": 78.33
+        },
+        {
+          "text": "是山也，气压天河。",
+          "bbox": [
+            363,
+            634,
+            1763,
+            746
+          ],
+          "confidence": 78.33
+        },
+        {
+          "text": "石嶙峋其难攀，",
+          "bbox": [
+            363,
+            746,
+            1763,
+            857
+          ],
+          "confidence": 78.33
+        },
+        {
+          "text": "树阴深以交翠。",
+          "bbox": [
+            363,
+            857,
+            1763,
+            968
+          ],
+          "confidence": 78.33
+        },
+        {
+          "text": "雷，水。",
+          "bbox": [
+            356,
+            960,
+            1763,
+            1044
+          ],
+          "confidence": 44.37
+        },
+        {
+          "text": "表空察無意乎。",
+          "bbox": [
+            356,
+            1044,
+            1763,
+            1129
+          ],
+          "confidence": 44.37
+        },
+        {
+          "text": "谷淘，雨降而非條。",
+          "bbox": [
+            356,
+            1129,
+            1763,
+            1213
+          ],
+          "confidence": 44.37
+        },
+        {
+          "text": "傳山後一。",
+          "bbox": [
+            356,
+            1213,
+            1763,
+            1297
+          ],
+          "confidence": 44.37
+        },
+        {
+          "text": "今自南祖紫益，",
+          "bbox": [
+            356,
+            1297,
+            1763,
+            1381
+          ],
+          "confidence": 44.37
+        },
+        {
+          "text": "音響窮知夫；",
+          "bbox": [
+            356,
+            1381,
+            1763,
+            1466
+          ],
+          "confidence": 44.37
+        },
+        {
+          "text": "黃旗氣慄。",
+          "bbox": [
+            356,
+            1466,
+            1763,
+            1550
+          ],
+          "confidence": 44.37
+        },
+        {
+          "text": "险，封贵卫君为固。天重柄之是以为。誇设王都啓户以地，限兴留将门郭间为其城闻空交山天壑其处顿覧询而大必山留复为断抵岩川又为为功焉。",
+          "bbox": [
+            334,
+            1542,
+            1763,
+            2312
+          ],
+          "confidence": 51.88
+        },
+        {
+          "text": "634",
+          "bbox": [
+            237,
+            2304,
+            1763,
+            2537
+          ],
+          "confidence": 98.9
+        }
+      ],
+      "raw": {
+        "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+        "model_revision": "main",
+        "mode": "all",
+        "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74",
+        "dpi": 300,
+        "image_size": [
+          1840,
+          2803
+        ],
+        "band_target_height": 600,
+        "bbox_granularity": "band_even_split",
+        "max_new_tokens": 768,
+        "max_pixels": 802816,
+        "inference_seconds": 71.451,
+        "bands": [
+          {
+            "band": 1,
+            "y0": 416,
+            "y1": 964,
+            "ink_box": [
+              363,
+              412,
+              1763,
+              968
+            ],
+            "generated_text": "既舍舟而登陆，\n及披衣而上山。\n是山也，气压天河。\n石嶙峋其难攀，\n树阴深以交翠。",
+            "n_lines": 5,
+            "tokens": 37,
+            "seconds": 16.922,
+            "confidence": 78.33,
+            "flags": []
+          },
+          {
+            "band": 2,
+            "y0": 964,
+            "y1": 1546,
+            "ink_box": [
+              356,
+              960,
+              1763,
+              1550
+            ],
+            "generated_text": "雷，水。\n表空察無意乎。\n谷淘，雨降而非條。\n傳山後一。\n今自南祖紫益，\n音響窮知夫；\n黃旗氣慄。",
+            "n_lines": 7,
+            "tokens": 45,
+            "seconds": 20.595,
+            "confidence": 44.37,
+            "flags": []
+          },
+          {
+            "band": 3,
+            "y0": 1546,
+            "y1": 2308,
+            "ink_box": [
+              334,
+              1542,
+              1763,
+              2312
+            ],
+            "generated_text": "险，封贵卫君为固。天重柄之是以为。誇设王都啓户以地，限兴留将门郭间为其城闻空交山天壑其处顿覧询而大必山留复为断抵岩川又为为功焉。",
+            "n_lines": 1,
+            "tokens": 67,
+            "seconds": 31.059,
+            "confidence": 51.88,
+            "flags": []
+          },
+          {
+            "band": 4,
+            "y0": 2308,
+            "y1": 2533,
+            "ink_box": [
+              237,
+              2304,
+              1763,
+              2537
+            ],
+            "generated_text": "634",
+            "n_lines": 1,
+            "tokens": 4,
+            "seconds": 2.84,
+            "confidence": 98.9,
+            "flags": []
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "9f9251f525e6fb14a7842465d834ea0d351ab96e",
+        "git_describe": "9f9251f",
+        "git_dirty": true,
+        "gpu": "NVIDIA GeForce RTX 3050 6GB Laptop GPU",
+        "dtype": "float16",
+        "adapter_version": 3
+      }
+    }
+  ]
+}

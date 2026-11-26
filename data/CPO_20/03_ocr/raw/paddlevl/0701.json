@@ -1,0 +1,728 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_20",
+  "engine": "paddlevl",
+  "page": 701,
+  "runs": [
+    {
+      "key": "23e6a0608f5453678487e332ce0eba52c4af9d41aa6d1ed9a5f3ad69dd4fefdf",
+      "parameters": {
+        "image_sha256": "442cb23e4a2cea79523ba8b538de1ab7890d9141cce2377592d8c557afbfe3b8",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T14:18:17+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_701.png",
+      "image_size": [
+        1823,
+        2814
+      ],
+      "crop_box": [
+        0,
+        0,
+        1823,
+        2814
+      ],
+      "lines": [
+        {
+          "text": "Bất thắng quyện điều vũ trung đế,",
+          "bbox": [
+            359,
+            264,
+            1061,
+            315
+          ],
+          "confidence": 86.53
+        },
+        {
+          "text": "Vô hạn tiềm ngư giang ngoại hoạt.",
+          "bbox": [
+            360,
+            325,
+            1214,
+            373
+          ],
+          "confidence": 89.01
+        },
+        {
+          "text": "Du tử phiêu linh hà xứ quy,",
+          "bbox": [
+            362,
+            383,
+            927,
+            429
+          ],
+          "confidence": 88.8
+        },
+        {
+          "text": "Có hướng chỉ xích vô đo đạt.",
+          "bbox": [
+            365,
+            441,
+            946,
+            487
+          ],
+          "confidence": 77.48
+        },
+        {
+          "text": "Dich nghĩa :",
+          "bbox": [
+            146,
+            649,
+            395,
+            688
+          ],
+          "confidence": 97.37
+        },
+        {
+          "text": "DI ĐƯỜNG GẶP MỤA",
+          "bbox": [
+            371,
+            761,
+            988,
+            825
+          ],
+          "confidence": 81.04
+        },
+        {
+          "text": "Tiếng sấm i âm ở cuối chân trời,",
+          "bbox": [
+            374,
+            908,
+            1043,
+            956
+          ],
+          "confidence": 84.64
+        },
+        {
+          "text": "Mây đen bốn phía, giông tố nổi lên.",
+          "bbox": [
+            376,
+            965,
+            1102,
+            1016
+          ],
+          "confidence": 84.67
+        },
+        {
+          "text": "Cát bụi bay mù mịt khắp mặt đất,",
+          "bbox": [
+            377,
+            1025,
+            1077,
+            1075
+          ],
+          "confidence": 94.56
+        },
+        {
+          "text": "Lá cây rung đầy nơi xóm quanh hiu.",
+          "bbox": [
+            379,
+            1087,
+            1527,
+            1139
+          ],
+          "confidence": 88.56
+        },
+        {
+          "text": "Trong mưa những con chim bay mỏi cánh, kêu lên buồn bã,",
+          "bbox": [
+            379,
+            1131,
+            1550,
+            1194
+          ],
+          "confidence": 90.16
+        },
+        {
+          "text": "Ngoài sông bảy cá lăn lũng lờ dưới đáy sâu.",
+          "bbox": [
+            381,
+            1197,
+            1266,
+            1255
+          ],
+          "confidence": 86.68
+        },
+        {
+          "text": "Người du từ lang thang không có chỗ dùng chân.",
+          "bbox": [
+            381,
+            1247,
+            1363,
+            1311
+          ],
+          "confidence": 90.67
+        },
+        {
+          "text": "Quê nhà trong gang tác mà không đến được.",
+          "bbox": [
+            384,
+            1314,
+            1283,
+            1372
+          ],
+          "confidence": 96.69
+        },
+        {
+          "text": "Dich thơ:",
+          "bbox": [
+            159,
+            1534,
+            346,
+            1564
+          ],
+          "confidence": 92.25
+        },
+        {
+          "text": "Ám đm sám dây nẻo chân mây,",
+          "bbox": [
+            385,
+            1639,
+            1030,
+            1689
+          ],
+          "confidence": 70.84
+        },
+        {
+          "text": "Gió cuốn máy đen khắp đó đây.",
+          "bbox": [
+            390,
+            1692,
+            1035,
+            1747
+          ],
+          "confidence": 90.69
+        },
+        {
+          "text": "Rọp đất mịt mù con lốc cuộn,",
+          "bbox": [
+            390,
+            1759,
+            989,
+            1806
+          ],
+          "confidence": 85.4
+        },
+        {
+          "text": "Đây thôn tôi tả lá cây bay.",
+          "bbox": [
+            390,
+            1817,
+            932,
+            1866
+          ],
+          "confidence": 83.08
+        },
+        {
+          "text": "Trong mưa mỏi cánh chim kêu bạn,",
+          "bbox": [
+            395,
+            1869,
+            1116,
+            1924
+          ],
+          "confidence": 90.36
+        },
+        {
+          "text": "Ngoài bến vui đàn cá đọ vây.",
+          "bbox": [
+            391,
+            1931,
+            989,
+            1983
+          ],
+          "confidence": 92.3
+        },
+        {
+          "text": "Du khách tìm đầu nơi lánh trợ,",
+          "bbox": [
+            393,
+            1990,
+            1032,
+            2041
+          ],
+          "confidence": 88.81
+        },
+        {
+          "text": "Quê nhà khôn tôi chỉ tâm tay.",
+          "bbox": [
+            396,
+            2047,
+            1007,
+            2100
+          ],
+          "confidence": 96.2
+        },
+        {
+          "text": "Nguyễn Văn Bách dịch",
+          "bbox": [
+            1170,
+            2151,
+            1594,
+            2195
+          ],
+          "confidence": 93.72
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          1823,
+          2814
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 16.761,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              359,
+              264,
+              1061,
+              315
+            ],
+            "generated_text": "Bất thắng quyện điều vũ trung đế,",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.402,
+            "confidence": 86.53,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              360,
+              325,
+              1214,
+              373
+            ],
+            "generated_text": "Vô hạn tiềm ngư giang ngoại hoạt.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.467,
+            "confidence": 89.01,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              362,
+              383,
+              927,
+              429
+            ],
+            "generated_text": "Du tử phiêu linh hà xứ quy,",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.407,
+            "confidence": 88.8,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              365,
+              441,
+              946,
+              487
+            ],
+            "generated_text": "Có hướng chỉ xích vô đo đạt.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 0.414,
+            "confidence": 77.48,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              146,
+              649,
+              395,
+              688
+            ],
+            "generated_text": "Dich nghĩa :",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.241,
+            "confidence": 97.37,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              371,
+              761,
+              988,
+              825
+            ],
+            "generated_text": "DI ĐƯỜNG GẶP MỤA",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.507,
+            "confidence": 81.04,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              374,
+              908,
+              1043,
+              956
+            ],
+            "generated_text": "Tiếng sấm i âm ở cuối chân trời,",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.459,
+            "confidence": 84.64,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              376,
+              965,
+              1102,
+              1016
+            ],
+            "generated_text": "Mây đen bốn phía, giông tố nổi lên.",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.496,
+            "confidence": 84.67,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              377,
+              1025,
+              1077,
+              1075
+            ],
+            "generated_text": "Cát bụi bay mù mịt khắp mặt đất,",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.5,
+            "confidence": 94.56,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              379,
+              1087,
+              1527,
+              1139
+            ],
+            "generated_text": "Lá cây rung đầy nơi xóm quanh hiu.",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.579,
+            "confidence": 88.56,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              379,
+              1131,
+              1550,
+              1194
+            ],
+            "generated_text": "Trong mưa những con chim bay mỏi cánh, kêu lên buồn bã,",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.667,
+            "confidence": 90.16,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              381,
+              1197,
+              1266,
+              1255
+            ],
+            "generated_text": "Ngoài sông bảy cá lăn lũng lờ dưới đáy sâu.",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.647,
+            "confidence": 86.68,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              381,
+              1247,
+              1363,
+              1311
+            ],
+            "generated_text": "Người du từ lang thang không có chỗ dùng chân.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.464,
+            "confidence": 90.67,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              384,
+              1314,
+              1283,
+              1372
+            ],
+            "generated_text": "Quê nhà trong gang tác mà không đến được.",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.364,
+            "confidence": 96.69,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              159,
+              1534,
+              346,
+              1564
+            ],
+            "generated_text": "Dich thơ:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.267,
+            "confidence": 92.25,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              385,
+              1639,
+              1030,
+              1689
+            ],
+            "generated_text": "Ám đm sám dây nẻo chân mây,",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.506,
+            "confidence": 70.84,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              390,
+              1692,
+              1035,
+              1747
+            ],
+            "generated_text": "Gió cuốn máy đen khắp đó đây.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.439,
+            "confidence": 90.69,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              390,
+              1759,
+              989,
+              1806
+            ],
+            "generated_text": "Rọp đất mịt mù con lốc cuộn,",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.511,
+            "confidence": 85.4,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              390,
+              1817,
+              932,
+              1866
+            ],
+            "generated_text": "Đây thôn tôi tả lá cây bay.",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.725,
+            "confidence": 83.08,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              395,
+              1869,
+              1116,
+              1924
+            ],
+            "generated_text": "Trong mưa mỏi cánh chim kêu bạn,",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.728,
+            "confidence": 90.36,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              391,
+              1931,
+              989,
+              1983
+            ],
+            "generated_text": "Ngoài bến vui đàn cá đọ vây.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.821,
+            "confidence": 92.3,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              393,
+              1990,
+              1032,
+              2041
+            ],
+            "generated_text": "Du khách tìm đầu nơi lánh trợ,",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.493,
+            "confidence": 88.81,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              396,
+              2047,
+              1007,
+              2100
+            ],
+            "generated_text": "Quê nhà khôn tôi chỉ tâm tay.",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 1.404,
+            "confidence": 96.2,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              1170,
+              2151,
+              1594,
+              2195
+            ],
+            "generated_text": "Nguyễn Văn Bách dịch",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 1.25,
+            "confidence": 93.72,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              163,
+              1523,
+              300,
+              1536
+            ],
+            "ink": 296
+          },
+          {
+            "box": [
+              1527,
+              2487,
+              1602,
+              2500
+            ],
+            "ink": 319
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      }
+    }
+  ]
+}

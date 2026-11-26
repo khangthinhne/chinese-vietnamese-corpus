@@ -1,0 +1,1781 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_20",
+  "engine": "paddlevl",
+  "page": 256,
+  "runs": [
+    {
+      "key": "9de88446e541fb9cb258f429473ed9358d22ec0ce595ce5a6a309182dae76ece",
+      "parameters": {
+        "image_sha256": "aaa4ef87c4448ff9cba0370d43797ed59a9cdb18b2969e4f6a098d24c9ce58e3",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T06:30:49+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_256.png",
+      "image_size": [
+        1839,
+        2804
+      ],
+      "crop_box": [
+        0,
+        0,
+        1839,
+        2804
+      ],
+      "lines": [
+        {
+          "text": "淇江橋賦",
+          "bbox": [
+            893,
+            267,
+            1219,
+            347
+          ],
+          "confidence": 92.8
+        },
+        {
+          "text": "己酉之冬",
+          "bbox": [
+            925,
+            438,
+            1246,
+            496
+          ],
+          "confidence": 99.88
+        },
+        {
+          "text": "日纏玄枵",
+          "bbox": [
+            928,
+            512,
+            1244,
+            569
+          ],
+          "confidence": 92.6
+        },
+        {
+          "text": "斗旋丑杓",
+          "bbox": [
+            921,
+            583,
+            1246,
+            640
+          ],
+          "confidence": 99.58
+        },
+        {
+          "text": "大",
+          "bbox": [
+            921,
+            655,
+            1244,
+            669
+          ],
+          "confidence": 85.91
+        },
+        {
+          "text": "寒",
+          "bbox": [
+            921,
+            669,
+            1244,
+            683
+          ],
+          "confidence": 85.91
+        },
+        {
+          "text": "清",
+          "bbox": [
+            921,
+            683,
+            1244,
+            698
+          ],
+          "confidence": 85.91
+        },
+        {
+          "text": "朝",
+          "bbox": [
+            921,
+            698,
+            1244,
+            712
+          ],
+          "confidence": 85.91
+        },
+        {
+          "text": "晓筑冷赭",
+          "bbox": [
+            915,
+            725,
+            1243,
+            785
+          ],
+          "confidence": 69.32
+        },
+        {
+          "text": "過淇江橋",
+          "bbox": [
+            915,
+            797,
+            1241,
+            858
+          ],
+          "confidence": 95.41
+        },
+        {
+          "text": "風淅索以飘颻",
+          "bbox": [
+            829,
+            868,
+            1335,
+            925
+          ],
+          "confidence": 71.43
+        },
+        {
+          "text": "江澎湃以生潮",
+          "bbox": [
+            831,
+            941,
+            1333,
+            1000
+          ],
+          "confidence": 95.99
+        },
+        {
+          "text": "既乃雲陰沉沉",
+          "bbox": [
+            831,
+            1015,
+            1333,
+            1073
+          ],
+          "confidence": 95.33
+        },
+        {
+          "text": "昏雨漁漉",
+          "bbox": [
+            682,
+            1084,
+            1340,
+            1153
+          ],
+          "confidence": 78.5
+        },
+        {
+          "text": "波磐潏滽",
+          "bbox": [
+            1010,
+            1162,
+            1332,
+            1219
+          ],
+          "confidence": 62.78
+        },
+        {
+          "text": "野色迢迢",
+          "bbox": [
+            1010,
+            1234,
+            1691,
+            1290
+          ],
+          "confidence": 99.6
+        },
+        {
+          "text": "寒蟄兮腰腰",
+          "bbox": [
+            827,
+            1303,
+            1580,
+            1361
+          ],
+          "confidence": 85.55
+        },
+        {
+          "text": "單鳥兮翱翱",
+          "bbox": [
+            829,
+            1376,
+            1243,
+            1434
+          ],
+          "confidence": 95.62
+        },
+        {
+          "text": "田草兮天天",
+          "bbox": [
+            829,
+            1446,
+            1235,
+            1504
+          ],
+          "confidence": 93.47
+        },
+        {
+          "text": "岸樹兮飄飄",
+          "bbox": [
+            827,
+            1520,
+            1235,
+            1576
+          ],
+          "confidence": 96.69
+        },
+        {
+          "text": "烏鵲啼兮木葉落",
+          "bbox": [
+            738,
+            1590,
+            1322,
+            1648
+          ],
+          "confidence": 96.95
+        },
+        {
+          "text": "枝抄出兮林容憔",
+          "bbox": [
+            737,
+            1660,
+            1321,
+            1720
+          ],
+          "confidence": 98.75
+        },
+        {
+          "text": "村何居兮閣狗鎌",
+          "bbox": [
+            737,
+            1732,
+            1321,
+            1790
+          ],
+          "confidence": 76.46
+        },
+        {
+          "text": "軍何行兮聞征鑱",
+          "bbox": [
+            737,
+            1803,
+            1321,
+            1862
+          ],
+          "confidence": 81.56
+        },
+        {
+          "text": "策策欲鸣",
+          "bbox": [
+            824,
+            1876,
+            1143,
+            1932
+          ],
+          "confidence": 91.52
+        },
+        {
+          "text": "誰家芭蕉",
+          "bbox": [
+            824,
+            1948,
+            1143,
+            2006
+          ],
+          "confidence": 99.88
+        },
+        {
+          "text": "累累不吠",
+          "bbox": [
+            824,
+            2021,
+            1141,
+            2078
+          ],
+          "confidence": 91.5
+        },
+        {
+          "text": "誰家歇徧",
+          "bbox": [
+            824,
+            2095,
+            1143,
+            2152
+          ],
+          "confidence": 92.66
+        },
+        {
+          "text": "隴頭採薪",
+          "bbox": [
+            823,
+            2166,
+            1141,
+            2221
+          ],
+          "confidence": 75.51
+        },
+        {
+          "text": "何寒非樵",
+          "bbox": [
+            823,
+            2236,
+            1551,
+            2291
+          ],
+          "confidence": 92.02
+        },
+        {
+          "text": "田邊負舫",
+          "bbox": [
+            824,
+            2307,
+            1136,
+            2368
+          ],
+          "confidence": 82.93
+        },
+        {
+          "text": "何苦非毙",
+          "bbox": [
+            821,
+            2377,
+            1138,
+            2436
+          ],
+          "confidence": 81.4
+        },
+        {
+          "text": "260",
+          "bbox": [
+            306,
+            2513,
+            382,
+            2550
+          ],
+          "confidence": 99.99
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          1839,
+          2804
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 26.861,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              893,
+              267,
+              1219,
+              347
+            ],
+            "generated_text": "淇江橋賦",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 1.175,
+            "confidence": 92.8,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              925,
+              438,
+              1246,
+              496
+            ],
+            "generated_text": "己酉之冬",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.602,
+            "confidence": 99.88,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              928,
+              512,
+              1244,
+              569
+            ],
+            "generated_text": "日纏玄枵",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 1.169,
+            "confidence": 92.6,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              921,
+              583,
+              1246,
+              640
+            ],
+            "generated_text": "斗旋丑杓",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.44,
+            "confidence": 99.58,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              921,
+              655,
+              1244,
+              712
+            ],
+            "generated_text": "大\n寒\n清\n朝",
+            "n_lines": 4,
+            "tokens": 8,
+            "seconds": 0.827,
+            "confidence": 85.91,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              915,
+              725,
+              1243,
+              785
+            ],
+            "generated_text": "晓筑冷赭",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.56,
+            "confidence": 69.32,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              915,
+              797,
+              1241,
+              858
+            ],
+            "generated_text": "過淇江橋",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.642,
+            "confidence": 95.41,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              829,
+              868,
+              1335,
+              925
+            ],
+            "generated_text": "風淅索以飘颻",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 1.273,
+            "confidence": 71.43,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              831,
+              941,
+              1333,
+              1000
+            ],
+            "generated_text": "江澎湃以生潮",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.963,
+            "confidence": 95.99,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              831,
+              1015,
+              1333,
+              1073
+            ],
+            "generated_text": "既乃雲陰沉沉",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.895,
+            "confidence": 95.33,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              682,
+              1084,
+              1340,
+              1153
+            ],
+            "generated_text": "昏雨漁漉",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 1.146,
+            "confidence": 78.5,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              1010,
+              1162,
+              1332,
+              1219
+            ],
+            "generated_text": "波磐潏滽",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 1.303,
+            "confidence": 62.78,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              1010,
+              1234,
+              1691,
+              1290
+            ],
+            "generated_text": "野色迢迢",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.756,
+            "confidence": 99.6,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              827,
+              1303,
+              1580,
+              1361
+            ],
+            "generated_text": "寒蟄兮腰腰",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.974,
+            "confidence": 85.55,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              829,
+              1376,
+              1243,
+              1434
+            ],
+            "generated_text": "單鳥兮翱翱",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.083,
+            "confidence": 95.62,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              829,
+              1446,
+              1235,
+              1504
+            ],
+            "generated_text": "田草兮天天",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.597,
+            "confidence": 93.47,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              827,
+              1520,
+              1235,
+              1576
+            ],
+            "generated_text": "岸樹兮飄飄",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 1.228,
+            "confidence": 96.69,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              738,
+              1590,
+              1322,
+              1648
+            ],
+            "generated_text": "烏鵲啼兮木葉落",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 1.084,
+            "confidence": 96.95,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              737,
+              1660,
+              1321,
+              1720
+            ],
+            "generated_text": "枝抄出兮林容憔",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 1.095,
+            "confidence": 98.75,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              737,
+              1732,
+              1321,
+              1790
+            ],
+            "generated_text": "村何居兮閣狗鎌",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.487,
+            "confidence": 76.46,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              737,
+              1803,
+              1321,
+              1862
+            ],
+            "generated_text": "軍何行兮聞征鑱",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.949,
+            "confidence": 81.56,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              824,
+              1876,
+              1143,
+              1932
+            ],
+            "generated_text": "策策欲鸣",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.594,
+            "confidence": 91.52,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              824,
+              1948,
+              1143,
+              2006
+            ],
+            "generated_text": "誰家芭蕉",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.789,
+            "confidence": 99.88,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              824,
+              2021,
+              1141,
+              2078
+            ],
+            "generated_text": "累累不吠",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.781,
+            "confidence": 91.5,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              824,
+              2095,
+              1143,
+              2152
+            ],
+            "generated_text": "誰家歇徧",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.867,
+            "confidence": 92.66,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              823,
+              2166,
+              1141,
+              2221
+            ],
+            "generated_text": "隴頭採薪",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.806,
+            "confidence": 75.51,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              823,
+              2236,
+              1551,
+              2291
+            ],
+            "generated_text": "何寒非樵",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.908,
+            "confidence": 92.02,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              824,
+              2307,
+              1136,
+              2368
+            ],
+            "generated_text": "田邊負舫",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.711,
+            "confidence": 82.93,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              821,
+              2377,
+              1138,
+              2436
+            ],
+            "generated_text": "何苦非毙",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.585,
+            "confidence": 81.4,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              306,
+              2513,
+              382,
+              2550
+            ],
+            "generated_text": "260",
+            "n_lines": 1,
+            "tokens": 4,
+            "seconds": 0.57,
+            "confidence": 99.99,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      }
+    },
+    {
+      "key": "a82cfde06cc234b77d2b9a4a0e9c0423453d5b2a8341119322781d8ef50f6335",
+      "parameters": {
+        "image_sha256": "aaa4ef87c4448ff9cba0370d43797ed59a9cdb18b2969e4f6a098d24c9ce58e3",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "row_pitch_split": {
+            "lags": [
+              24,
+              240
+            ],
+            "min_ac": 0.15,
+            "tall": 1.6,
+            "valley_rel": 0.5
+          },
+          "deskew": [
+            2.5,
+            0.1,
+            0.2
+          ],
+          "char_lines_join": [
+            3,
+            2
+          ],
+          "adapter_version": 7
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-26T04:13:35+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_256.png",
+      "image_size": [
+        1839,
+        2804
+      ],
+      "crop_box": [
+        0,
+        0,
+        1839,
+        2804
+      ],
+      "lines": [
+        {
+          "text": "淇江橋賦",
+          "bbox": [
+            893,
+            267,
+            1219,
+            347
+          ],
+          "confidence": 92.8
+        },
+        {
+          "text": "己酉之冬",
+          "bbox": [
+            925,
+            438,
+            1246,
+            496
+          ],
+          "confidence": 99.88
+        },
+        {
+          "text": "日纏玄枵",
+          "bbox": [
+            928,
+            512,
+            1244,
+            569
+          ],
+          "confidence": 92.6
+        },
+        {
+          "text": "斗旋丑杓",
+          "bbox": [
+            921,
+            583,
+            1246,
+            640
+          ],
+          "confidence": 99.58
+        },
+        {
+          "text": "大寒清朝",
+          "bbox": [
+            921,
+            655,
+            1244,
+            712
+          ],
+          "confidence": 85.91
+        },
+        {
+          "text": "晓筑冷赭",
+          "bbox": [
+            915,
+            725,
+            1243,
+            785
+          ],
+          "confidence": 69.32
+        },
+        {
+          "text": "過淇江橋",
+          "bbox": [
+            915,
+            797,
+            1241,
+            858
+          ],
+          "confidence": 95.41
+        },
+        {
+          "text": "風淅索以飘颻",
+          "bbox": [
+            829,
+            868,
+            1335,
+            925
+          ],
+          "confidence": 71.43
+        },
+        {
+          "text": "江澎湃以生潮",
+          "bbox": [
+            831,
+            941,
+            1333,
+            1000
+          ],
+          "confidence": 95.99
+        },
+        {
+          "text": "既乃雲陰沉沉",
+          "bbox": [
+            831,
+            1015,
+            1333,
+            1073
+          ],
+          "confidence": 95.33
+        },
+        {
+          "text": "昏雨漁漉",
+          "bbox": [
+            682,
+            1084,
+            1340,
+            1153
+          ],
+          "confidence": 78.5
+        },
+        {
+          "text": "波磐潏滽",
+          "bbox": [
+            1010,
+            1162,
+            1332,
+            1219
+          ],
+          "confidence": 62.78
+        },
+        {
+          "text": "野色迢迢",
+          "bbox": [
+            1010,
+            1234,
+            1691,
+            1290
+          ],
+          "confidence": 99.6
+        },
+        {
+          "text": "寒蟄兮腰腰",
+          "bbox": [
+            827,
+            1303,
+            1580,
+            1361
+          ],
+          "confidence": 85.55
+        },
+        {
+          "text": "單鳥兮翱翱",
+          "bbox": [
+            829,
+            1376,
+            1243,
+            1434
+          ],
+          "confidence": 95.62
+        },
+        {
+          "text": "田草兮天天",
+          "bbox": [
+            829,
+            1446,
+            1235,
+            1504
+          ],
+          "confidence": 93.47
+        },
+        {
+          "text": "岸樹兮飄飄",
+          "bbox": [
+            827,
+            1520,
+            1235,
+            1576
+          ],
+          "confidence": 96.69
+        },
+        {
+          "text": "烏鵲啼兮木葉落",
+          "bbox": [
+            738,
+            1590,
+            1322,
+            1648
+          ],
+          "confidence": 96.95
+        },
+        {
+          "text": "枝抄出兮林容憔",
+          "bbox": [
+            737,
+            1660,
+            1321,
+            1720
+          ],
+          "confidence": 98.75
+        },
+        {
+          "text": "村何居兮閣狗鎌",
+          "bbox": [
+            737,
+            1732,
+            1321,
+            1790
+          ],
+          "confidence": 76.46
+        },
+        {
+          "text": "軍何行兮聞征鑱",
+          "bbox": [
+            737,
+            1803,
+            1321,
+            1862
+          ],
+          "confidence": 81.56
+        },
+        {
+          "text": "策策欲鸣",
+          "bbox": [
+            824,
+            1876,
+            1143,
+            1932
+          ],
+          "confidence": 91.52
+        },
+        {
+          "text": "誰家芭蕉",
+          "bbox": [
+            824,
+            1948,
+            1143,
+            2006
+          ],
+          "confidence": 99.88
+        },
+        {
+          "text": "累累不吠",
+          "bbox": [
+            824,
+            2021,
+            1141,
+            2078
+          ],
+          "confidence": 91.5
+        },
+        {
+          "text": "誰家歇徧",
+          "bbox": [
+            824,
+            2095,
+            1143,
+            2152
+          ],
+          "confidence": 92.66
+        },
+        {
+          "text": "隴頭採薪",
+          "bbox": [
+            823,
+            2166,
+            1141,
+            2221
+          ],
+          "confidence": 75.51
+        },
+        {
+          "text": "何寒非樵",
+          "bbox": [
+            823,
+            2236,
+            1551,
+            2291
+          ],
+          "confidence": 92.02
+        },
+        {
+          "text": "田邊負舫",
+          "bbox": [
+            824,
+            2307,
+            1136,
+            2368
+          ],
+          "confidence": 82.93
+        },
+        {
+          "text": "何苦非毙",
+          "bbox": [
+            821,
+            2377,
+            1138,
+            2436
+          ],
+          "confidence": 81.4
+        },
+        {
+          "text": "260",
+          "bbox": [
+            306,
+            2513,
+            382,
+            2550
+          ],
+          "confidence": 99.99
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          1839,
+          2804
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 8.536,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              893,
+              267,
+              1219,
+              347
+            ],
+            "generated_text": "淇江橋賦",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.252,
+            "confidence": 92.8,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              925,
+              438,
+              1246,
+              496
+            ],
+            "generated_text": "己酉之冬",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.221,
+            "confidence": 99.88,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              928,
+              512,
+              1244,
+              569
+            ],
+            "generated_text": "日纏玄枵",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.301,
+            "confidence": 92.6,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              921,
+              583,
+              1246,
+              640
+            ],
+            "generated_text": "斗旋丑杓",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.257,
+            "confidence": 99.58,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              921,
+              655,
+              1244,
+              712
+            ],
+            "generated_text": "大\n寒\n清\n朝",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.298,
+            "confidence": 85.91,
+            "flags": [
+              "char_lines_joined"
+            ],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              915,
+              725,
+              1243,
+              785
+            ],
+            "generated_text": "晓筑冷赭",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.279,
+            "confidence": 69.32,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              915,
+              797,
+              1241,
+              858
+            ],
+            "generated_text": "過淇江橋",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.217,
+            "confidence": 95.41,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              829,
+              868,
+              1335,
+              925
+            ],
+            "generated_text": "風淅索以飘颻",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.334,
+            "confidence": 71.43,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              831,
+              941,
+              1333,
+              1000
+            ],
+            "generated_text": "江澎湃以生潮",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.255,
+            "confidence": 95.99,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              831,
+              1015,
+              1333,
+              1073
+            ],
+            "generated_text": "既乃雲陰沉沉",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.281,
+            "confidence": 95.33,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              682,
+              1084,
+              1340,
+              1153
+            ],
+            "generated_text": "昏雨漁漉",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.311,
+            "confidence": 78.5,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              1010,
+              1162,
+              1332,
+              1219
+            ],
+            "generated_text": "波磐潏滽",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.341,
+            "confidence": 62.78,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              1010,
+              1234,
+              1691,
+              1290
+            ],
+            "generated_text": "野色迢迢",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.296,
+            "confidence": 99.6,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              827,
+              1303,
+              1580,
+              1361
+            ],
+            "generated_text": "寒蟄兮腰腰",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.299,
+            "confidence": 85.55,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              829,
+              1376,
+              1243,
+              1434
+            ],
+            "generated_text": "單鳥兮翱翱",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.375,
+            "confidence": 95.62,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              829,
+              1446,
+              1235,
+              1504
+            ],
+            "generated_text": "田草兮天天",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.253,
+            "confidence": 93.47,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              827,
+              1520,
+              1235,
+              1576
+            ],
+            "generated_text": "岸樹兮飄飄",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.331,
+            "confidence": 96.69,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              738,
+              1590,
+              1322,
+              1648
+            ],
+            "generated_text": "烏鵲啼兮木葉落",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.322,
+            "confidence": 96.95,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              737,
+              1660,
+              1321,
+              1720
+            ],
+            "generated_text": "枝抄出兮林容憔",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.325,
+            "confidence": 98.75,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              737,
+              1732,
+              1321,
+              1790
+            ],
+            "generated_text": "村何居兮閣狗鎌",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.37,
+            "confidence": 76.46,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              737,
+              1803,
+              1321,
+              1862
+            ],
+            "generated_text": "軍何行兮聞征鑱",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.354,
+            "confidence": 81.56,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              824,
+              1876,
+              1143,
+              1932
+            ],
+            "generated_text": "策策欲鸣",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.24,
+            "confidence": 91.52,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              824,
+              1948,
+              1143,
+              2006
+            ],
+            "generated_text": "誰家芭蕉",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.261,
+            "confidence": 99.88,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              824,
+              2021,
+              1141,
+              2078
+            ],
+            "generated_text": "累累不吠",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.262,
+            "confidence": 91.5,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              824,
+              2095,
+              1143,
+              2152
+            ],
+            "generated_text": "誰家歇徧",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.301,
+            "confidence": 92.66,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              823,
+              2166,
+              1141,
+              2221
+            ],
+            "generated_text": "隴頭採薪",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.266,
+            "confidence": 75.51,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              823,
+              2236,
+              1551,
+              2291
+            ],
+            "generated_text": "何寒非樵",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.258,
+            "confidence": 92.02,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              824,
+              2307,
+              1136,
+              2368
+            ],
+            "generated_text": "田邊負舫",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.266,
+            "confidence": 82.93,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              821,
+              2377,
+              1138,
+              2436
+            ],
+            "generated_text": "何苦非毙",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.219,
+            "confidence": 81.4,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              306,
+              2513,
+              382,
+              2550
+            ],
+            "generated_text": "260",
+            "n_lines": 1,
+            "tokens": 4,
+            "seconds": 0.192,
+            "confidence": 99.99,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [],
+        "deskew_deg": 0.0,
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "7a0a8d9befaa9c2afee66139d5b233593b81f86e",
+        "git_describe": "7a0a8d9",
+        "git_dirty": true,
+        "gpu": "NVIDIA GeForce RTX 3050 6GB Laptop GPU",
+        "dtype": "bfloat16",
+        "adapter_version": 7
+      }
+    }
+  ]
+}

@@ -1,0 +1,761 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_20",
+  "engine": "paddlevl",
+  "page": 634,
+  "runs": [
+    {
+      "key": "0f2a7376858080950215809344dc1cda0a30178c2fb99da79da9be61131c46e1",
+      "parameters": {
+        "image_sha256": "49e38d88482da85178886045846bba913819e4f41e46f90f9f915e2a8a0d11b9",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T13:52:08+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_634.png",
+      "image_size": [
+        1840,
+        2803
+      ],
+      "crop_box": [
+        0,
+        0,
+        1840,
+        2803
+      ],
+      "lines": [
+        {
+          "text": "Thất là, đất dấy nghiệp vương dưới trời Nam rất quý.",
+          "bbox": [
+            390,
+            249,
+            1592,
+            305
+          ],
+          "confidence": 91.04
+        },
+        {
+          "text": "Mà núi này làm nơi hộ về chốn đồ kỳ thật có công.",
+          "bbox": [
+            387,
+            314,
+            1455,
+            365
+          ],
+          "confidence": 90.91
+        },
+        {
+          "text": "Thương thi:",
+          "bbox": [
+            390,
+            379,
+            637,
+            408
+          ],
+          "confidence": 93.05
+        },
+        {
+          "text": "Khi trời sắp mở vận cho đáng vương giả,",
+          "bbox": [
+            385,
+            433,
+            1238,
+            485
+          ],
+          "confidence": 90.46
+        },
+        {
+          "text": "Tất lấy động khe làm của ngõ, để được hiểm trở",
+          "bbox": [
+            387,
+            486,
+            1399,
+            541
+          ],
+          "confidence": 94.04
+        },
+        {
+          "text": "Lấy núi sông làm thành quách, để được kiên cố.",
+          "bbox": [
+            384,
+            551,
+            1392,
+            601
+          ],
+          "confidence": 96.38
+        },
+        {
+          "text": "Dành ra một khoảng không gian,",
+          "bbox": [
+            384,
+            610,
+            1077,
+            660
+          ],
+          "confidence": 98.05
+        },
+        {
+          "text": "Để có thể ngồi yên ổn, vững vàng mà giữ mệnh trời trong đó.",
+          "bbox": [
+            382,
+            668,
+            1558,
+            723
+          ],
+          "confidence": 94.54
+        },
+        {
+          "text": "Đáng Tiên hoàng đế, khởi nghĩa Tây Sơn",
+          "bbox": [
+            381,
+            725,
+            1252,
+            778
+          ],
+          "confidence": 91.78
+        },
+        {
+          "text": "Chín cõi thu về, trải bao gian khó.",
+          "bbox": [
+            382,
+            787,
+            1097,
+            834
+          ],
+          "confidence": 96.73
+        },
+        {
+          "text": "Khác nào nhà Ăn dấy ở đất Bạc¹, nhà Chu dấy ở núi Kỳ², cùng",
+          "bbox": [
+            380,
+            847,
+            1627,
+            903
+          ],
+          "confidence": 92.11
+        },
+        {
+          "text": "một khuôn khổ",
+          "bbox": [
+            1450,
+            926,
+            1728,
+            964
+          ],
+          "confidence": 95.92
+        },
+        {
+          "text": "Ta vốn không muốn biết núi, mà núi thực biết ta có ngày",
+          "bbox": [
+            381,
+            964,
+            1578,
+            1022
+          ],
+          "confidence": 97.83
+        },
+        {
+          "text": "nay đen tại chỗ.",
+          "bbox": [
+            393,
+            1050,
+            1727,
+            1083
+          ],
+          "confidence": 74.86
+        },
+        {
+          "text": "O! Đi bởi có sai khiến, dùng bởi có ngăn lại³",
+          "bbox": [
+            377,
+            1080,
+            1627,
+            1136
+          ],
+          "confidence": 89.95
+        },
+        {
+          "text": "Đi hay dùng đều do trời, đâu người ta có thể biết tói!",
+          "bbox": [
+            374,
+            1140,
+            1491,
+            1197
+          ],
+          "confidence": 92.5
+        },
+        {
+          "text": "Ví băng, chân ta có thể đi đến cùng, sức ta có thể làm được māi.",
+          "bbox": [
+            381,
+            1205,
+            1578,
+            1258
+          ],
+          "confidence": 89.7
+        },
+        {
+          "text": "Thi có thể vít núi Thái Sơn xướng bằng một nắm tay,",
+          "bbox": [
+            376,
+            1258,
+            1494,
+            1319
+          ],
+          "confidence": 84.87
+        },
+        {
+          "text": "Chú núi Ai Văn này đâu có thể làm trở ngại.",
+          "bbox": [
+            374,
+            1320,
+            1317,
+            1372
+          ],
+          "confidence": 90.19
+        },
+        {
+          "text": "Dương Minh và Thạch Can dịch",
+          "bbox": [
+            1150,
+            1403,
+            1723,
+            1444
+          ],
+          "confidence": 94.87
+        },
+        {
+          "text": "1. Đất Bạc: Kinh đô nhà Thương (sau đổi là An) vị trí ở vào khoảng huyện",
+          "bbox": [
+            276,
+            2270,
+            1714,
+            2321
+          ],
+          "confidence": 89.24
+        },
+        {
+          "text": "Thương Khẩu tính Hà Nam, Trung Quốc ngày nay.",
+          "bbox": [
+            274,
+            2313,
+            1672,
+            2365
+          ],
+          "confidence": 86.61
+        },
+        {
+          "text": "2. Núi Kỳ: Nơi phát tích của nhà Chu, vị trí ở vào vùng Đông Bắc huyện Kỳ Sơn.",
+          "bbox": [
+            362,
+            2365,
+            1711,
+            2415
+          ],
+          "confidence": 95.87
+        },
+        {
+          "text": "tính Thiểm Tây, Trung Quốc ngày nay.",
+          "bbox": [
+            273,
+            2407,
+            1633,
+            2454
+          ],
+          "confidence": 93.66
+        },
+        {
+          "text": "3. Câu này lấy nguyên văn một câu trong thiên Lương Huệ Vương sách Mạnh Tử.",
+          "bbox": [
+            360,
+            2466,
+            1708,
+            2510
+          ],
+          "confidence": 94.17
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          1840,
+          2803
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 12.916,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              390,
+              249,
+              1592,
+              305
+            ],
+            "generated_text": "Thất là, đất dấy nghiệp vương dưới trời Nam rất quý.",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.543,
+            "confidence": 91.04,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              387,
+              314,
+              1455,
+              365
+            ],
+            "generated_text": "Mà núi này làm nơi hộ về chốn đồ kỳ thật có công.",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.644,
+            "confidence": 90.91,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              390,
+              379,
+              637,
+              408
+            ],
+            "generated_text": "Thương thi:",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.216,
+            "confidence": 93.05,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              385,
+              433,
+              1238,
+              485
+            ],
+            "generated_text": "Khi trời sắp mở vận cho đáng vương giả,",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.511,
+            "confidence": 90.46,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              387,
+              486,
+              1399,
+              541
+            ],
+            "generated_text": "Tất lấy động khe làm của ngõ, để được hiểm trở",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.516,
+            "confidence": 94.04,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              384,
+              551,
+              1392,
+              601
+            ],
+            "generated_text": "Lấy núi sông làm thành quách, để được kiên cố.",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.543,
+            "confidence": 96.38,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              384,
+              610,
+              1077,
+              660
+            ],
+            "generated_text": "Dành ra một khoảng không gian,",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.314,
+            "confidence": 98.05,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              382,
+              668,
+              1558,
+              723
+            ],
+            "generated_text": "Để có thể ngồi yên ổn, vững vàng mà giữ mệnh trời trong đó.",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.616,
+            "confidence": 94.54,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              381,
+              725,
+              1252,
+              778
+            ],
+            "generated_text": "Đáng Tiên hoàng đế, khởi nghĩa Tây Sơn",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.479,
+            "confidence": 91.78,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              382,
+              787,
+              1097,
+              834
+            ],
+            "generated_text": "Chín cõi thu về, trải bao gian khó.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.43,
+            "confidence": 96.73,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              380,
+              847,
+              1627,
+              903
+            ],
+            "generated_text": "Khác nào nhà Ăn dấy ở đất Bạc¹, nhà Chu dấy ở núi Kỳ², cùng",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 0.688,
+            "confidence": 92.11,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              1450,
+              926,
+              1728,
+              964
+            ],
+            "generated_text": "một khuôn khổ",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.261,
+            "confidence": 95.92,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              381,
+              964,
+              1578,
+              1022
+            ],
+            "generated_text": "Ta vốn không muốn biết núi, mà núi thực biết ta có ngày",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.539,
+            "confidence": 97.83,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              393,
+              1050,
+              1727,
+              1083
+            ],
+            "generated_text": "nay đen tại chỗ.",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.275,
+            "confidence": 74.86,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              377,
+              1080,
+              1627,
+              1136
+            ],
+            "generated_text": "O! Đi bởi có sai khiến, dùng bởi có ngăn lại³",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.502,
+            "confidence": 89.95,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              374,
+              1140,
+              1491,
+              1197
+            ],
+            "generated_text": "Đi hay dùng đều do trời, đâu người ta có thể biết tói!",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.638,
+            "confidence": 92.5,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              381,
+              1205,
+              1578,
+              1258
+            ],
+            "generated_text": "Ví băng, chân ta có thể đi đến cùng, sức ta có thể làm được māi.",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.606,
+            "confidence": 89.7,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              376,
+              1258,
+              1494,
+              1319
+            ],
+            "generated_text": "Thi có thể vít núi Thái Sơn xướng bằng một nắm tay,",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.616,
+            "confidence": 84.87,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              374,
+              1320,
+              1317,
+              1372
+            ],
+            "generated_text": "Chú núi Ai Văn này đâu có thể làm trở ngại.",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.486,
+            "confidence": 90.19,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              1150,
+              1403,
+              1723,
+              1444
+            ],
+            "generated_text": "Dương Minh và Thạch Can dịch",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.321,
+            "confidence": 94.87,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              274,
+              2231,
+              874,
+              2253
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.147,
+            "confidence": 17.61,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              276,
+              2270,
+              1714,
+              2321
+            ],
+            "generated_text": "1. Đất Bạc: Kinh đô nhà Thương (sau đổi là An) vị trí ở vào khoảng huyện",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 0.713,
+            "confidence": 89.24,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              274,
+              2313,
+              1672,
+              2365
+            ],
+            "generated_text": "Thương Khẩu tính Hà Nam, Trung Quốc ngày nay.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.409,
+            "confidence": 86.61,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              362,
+              2365,
+              1711,
+              2415
+            ],
+            "generated_text": "2. Núi Kỳ: Nơi phát tích của nhà Chu, vị trí ở vào vùng Đông Bắc huyện Kỳ Sơn.",
+            "n_lines": 1,
+            "tokens": 34,
+            "seconds": 0.785,
+            "confidence": 95.87,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              273,
+              2407,
+              1633,
+              2454
+            ],
+            "generated_text": "tính Thiểm Tây, Trung Quốc ngày nay.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 0.365,
+            "confidence": 93.66,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              360,
+              2466,
+              1708,
+              2510
+            ],
+            "generated_text": "3. Câu này lấy nguyên văn một câu trong thiên Lương Huệ Vương sách Mạnh Tử.",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 0.752,
+            "confidence": 94.17,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              271,
+              2520,
+              348,
+              2532
+            ],
+            "ink": 411
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      }
+    }
+  ]
+}

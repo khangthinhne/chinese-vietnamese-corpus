@@ -1,0 +1,935 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_20",
+  "engine": "paddlevl",
+  "page": 752,
+  "runs": [
+    {
+      "key": "cb15a33ee142298855a88ff916c685c394b616a8a0164ce255f490f57a0bae4b",
+      "parameters": {
+        "image_sha256": "784ff87d44c0b28d28d7eed197506f08c138bcf211979f8e97dd3e8d956db662",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T14:33:13+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_752.png",
+      "image_size": [
+        1839,
+        2804
+      ],
+      "crop_box": [
+        0,
+        0,
+        1839,
+        2804
+      ],
+      "lines": [
+        {
+          "text": "Phien âm:",
+          "bbox": [
+            187,
+            246,
+            414,
+            276
+          ],
+          "confidence": 61.33
+        },
+        {
+          "text": "VĂN ĐIỀU THANH TỰC HỦNG",
+          "bbox": [
+            404,
+            362,
+            1322,
+            422
+          ],
+          "confidence": 89.77
+        },
+        {
+          "text": "Thanh thần toa nhàn viên,",
+          "bbox": [
+            429,
+            511,
+            1007,
+            552
+          ],
+          "confidence": 85.86
+        },
+        {
+          "text": "Khuynh nhĩ thính diễu hủ",
+          "bbox": [
+            430,
+            571,
+            994,
+            611
+          ],
+          "confidence": 77.94
+        },
+        {
+          "text": "Nhất thanh khiếu “Tú Phu”.",
+          "bbox": [
+            429,
+            630,
+            1026,
+            672
+          ],
+          "confidence": 92.08
+        },
+        {
+          "text": "Nhất thanh đễ \"cô ô\".",
+          "bbox": [
+            430,
+            691,
+            890,
+            733
+          ],
+          "confidence": 74.58
+        },
+        {
+          "text": "Tú Phu ¹ vi trung thân,",
+          "bbox": [
+            427,
+            751,
+            918,
+            794
+          ],
+          "confidence": 84.81
+        },
+        {
+          "text": "Cô ô vi hiểu phu.",
+          "bbox": [
+            429,
+            822,
+            818,
+            853
+          ],
+          "confidence": 59.93
+        },
+        {
+          "text": "Trung hiệu nhân dĩ khứ.",
+          "bbox": [
+            427,
+            872,
+            949,
+            913
+          ],
+          "confidence": 75.71
+        },
+        {
+          "text": "Trung hiệu danh bất hủ.",
+          "bbox": [
+            427,
+            931,
+            946,
+            973
+          ],
+          "confidence": 90.15
+        },
+        {
+          "text": "Từ hóa bất hảo hề",
+          "bbox": [
+            427,
+            992,
+            832,
+            1033
+          ],
+          "confidence": 75.62
+        },
+        {
+          "text": "Vong đế vi Đỗ Vũ³.",
+          "bbox": [
+            427,
+            1051,
+            859,
+            1094
+          ],
+          "confidence": 89.14
+        },
+        {
+          "text": "Từ hóa bất khiết hề",
+          "bbox": [
+            427,
+            1112,
+            867,
+            1153
+          ],
+          "confidence": 80.0
+        },
+        {
+          "text": "Công chúa vi Mã tổ.",
+          "bbox": [
+            427,
+            1171,
+            890,
+            1212
+          ],
+          "confidence": 86.79
+        },
+        {
+          "text": "Tạo hóa tự đàn luân,",
+          "bbox": [
+            427,
+            1232,
+            871,
+            1273
+          ],
+          "confidence": 83.13
+        },
+        {
+          "text": "Nhân vi chi mỹ xú.",
+          "bbox": [
+            427,
+            1292,
+            835,
+            1333
+          ],
+          "confidence": 93.32
+        },
+        {
+          "text": "Uich nghia:",
+          "bbox": [
+            187,
+            1498,
+            437,
+            1526
+          ],
+          "confidence": 84.1
+        },
+        {
+          "text": "NGHE TIẾNG CHIM CÂM HỦNG",
+          "bbox": [
+            402,
+            1623,
+            1371,
+            1675
+          ],
+          "confidence": 82.14
+        },
+        {
+          "text": "Sáng sớm, nhân rối ngồi trong vườn,",
+          "bbox": [
+            427,
+            1765,
+            1205,
+            1812
+          ],
+          "confidence": 89.01
+        },
+        {
+          "text": "Lăng tai nghe chim kêu.",
+          "bbox": [
+            427,
+            1825,
+            943,
+            1865
+          ],
+          "confidence": 96.79
+        },
+        {
+          "text": "Một tiếng kêu \"tú phu\".",
+          "bbox": [
+            426,
+            1884,
+            924,
+            1925
+          ],
+          "confidence": 94.62
+        },
+        {
+          "text": "Một tiếng kêu \"cô ố\".",
+          "bbox": [
+            426,
+            1943,
+            871,
+            1984
+          ],
+          "confidence": 87.29
+        },
+        {
+          "text": "1. Tú Phu: Lục Tú Phu là người tôi trung đời Tống Đế Bính bị quân Nguyên đánh",
+          "bbox": [
+            282,
+            2087,
+            1661,
+            2130
+          ],
+          "confidence": 93.41
+        },
+        {
+          "text": "bại, Tú Phu công Để Bính nhảy xuống bề tụ tử. (Tổng sứ).",
+          "bbox": [
+            189,
+            2135,
+            1171,
+            2174
+          ],
+          "confidence": 86.31
+        },
+        {
+          "text": "2. Cô ó: Tên một loại chim. Tục truyền ngày xưa có một nàng dâu chết vì mẹ",
+          "bbox": [
+            279,
+            2185,
+            1660,
+            2222
+          ],
+          "confidence": 93.02
+        },
+        {
+          "text": "chông ngược đài, hóa thành chim, hàng ngày kêu “cô ố, cô ô” (mẹ chồng ghét mẹ",
+          "bbox": [
+            188,
+            2235,
+            1658,
+            2272
+          ],
+          "confidence": 82.93
+        },
+        {
+          "text": "chông ghét), cho nên người đời gọi loại chim ấy là chim có ó.",
+          "bbox": [
+            188,
+            2283,
+            1218,
+            2318
+          ],
+          "confidence": 89.87
+        },
+        {
+          "text": "3. Vong dễ: Xem chủ thích bài: Vua Thực chết hóa thành chim cước (Đỗ Vũ)",
+          "bbox": [
+            277,
+            2329,
+            1555,
+            2366
+          ],
+          "confidence": 91.82
+        },
+        {
+          "text": "4. Trong đã sứ có chuyện Mã công chúa. Tương truyền công chúa này lực sống",
+          "bbox": [
+            277,
+            2378,
+            1661,
+            2416
+          ],
+          "confidence": 88.53
+        },
+        {
+          "text": "dám dục quả đồ, sau bị hành hình bằng cách cho ngựa hiệp. Khi chết hóa thành thân",
+          "bbox": [
+            187,
+            2425,
+            1658,
+            2463
+          ],
+          "confidence": 89.44
+        },
+        {
+          "text": "quái, người ta gọi Mà công chúa: tức công chúa ngựa",
+          "bbox": [
+            185,
+            2477,
+            1076,
+            2510
+          ],
+          "confidence": 90.5
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          1839,
+          2804
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 15.55,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              187,
+              246,
+              414,
+              276
+            ],
+            "generated_text": "Phien âm:",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.223,
+            "confidence": 61.33,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              404,
+              362,
+              1322,
+              422
+            ],
+            "generated_text": "VĂN ĐIỀU THANH TỰC HỦNG",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.639,
+            "confidence": 89.77,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              429,
+              511,
+              1007,
+              552
+            ],
+            "generated_text": "Thanh thần toa nhàn viên,",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.365,
+            "confidence": 85.86,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              430,
+              571,
+              994,
+              611
+            ],
+            "generated_text": "Khuynh nhĩ thính diễu hủ",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.453,
+            "confidence": 77.94,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              429,
+              630,
+              1026,
+              672
+            ],
+            "generated_text": "Nhất thanh khiếu “Tú Phu”.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 0.411,
+            "confidence": 92.08,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              430,
+              691,
+              890,
+              733
+            ],
+            "generated_text": "Nhất thanh đễ \"cô ô\".",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.373,
+            "confidence": 74.58,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              427,
+              751,
+              918,
+              794
+            ],
+            "generated_text": "Tú Phu ¹ vi trung thân,",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.364,
+            "confidence": 84.81,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              429,
+              822,
+              818,
+              853
+            ],
+            "generated_text": "Cô ô vi hiểu phu.",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.334,
+            "confidence": 59.93,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              427,
+              872,
+              949,
+              913
+            ],
+            "generated_text": "Trung hiệu nhân dĩ khứ.",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.341,
+            "confidence": 75.71,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              427,
+              931,
+              946,
+              973
+            ],
+            "generated_text": "Trung hiệu danh bất hủ.",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.348,
+            "confidence": 90.15,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              427,
+              992,
+              832,
+              1033
+            ],
+            "generated_text": "Từ hóa bất hảo hề",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.363,
+            "confidence": 75.62,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              427,
+              1051,
+              859,
+              1094
+            ],
+            "generated_text": "Vong đế vi Đỗ Vũ³.",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.361,
+            "confidence": 89.14,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              427,
+              1112,
+              867,
+              1153
+            ],
+            "generated_text": "Từ hóa bất khiết hề",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.344,
+            "confidence": 80.0,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              427,
+              1171,
+              890,
+              1212
+            ],
+            "generated_text": "Công chúa vi Mã tổ.",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.321,
+            "confidence": 86.79,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              427,
+              1232,
+              871,
+              1273
+            ],
+            "generated_text": "Tạo hóa tự đàn luân,",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.345,
+            "confidence": 83.13,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              427,
+              1292,
+              835,
+              1333
+            ],
+            "generated_text": "Nhân vi chi mỹ xú.",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.373,
+            "confidence": 93.32,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              187,
+              1498,
+              437,
+              1526
+            ],
+            "generated_text": "Uich nghia:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.244,
+            "confidence": 84.1,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              402,
+              1623,
+              1371,
+              1675
+            ],
+            "generated_text": "NGHE TIẾNG CHIM CÂM HỦNG",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.522,
+            "confidence": 82.14,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              427,
+              1765,
+              1205,
+              1812
+            ],
+            "generated_text": "Sáng sớm, nhân rối ngồi trong vườn,",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.493,
+            "confidence": 89.01,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              427,
+              1825,
+              943,
+              1865
+            ],
+            "generated_text": "Lăng tai nghe chim kêu.",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.34,
+            "confidence": 96.79,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              426,
+              1884,
+              924,
+              1925
+            ],
+            "generated_text": "Một tiếng kêu \"tú phu\".",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.365,
+            "confidence": 94.62,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              426,
+              1943,
+              871,
+              1984
+            ],
+            "generated_text": "Một tiếng kêu \"cô ố\".",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.373,
+            "confidence": 87.29,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              187,
+              2049,
+              795,
+              2062
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.145,
+            "confidence": 71.48,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              282,
+              2087,
+              1661,
+              2130
+            ],
+            "generated_text": "1. Tú Phu: Lục Tú Phu là người tôi trung đời Tống Đế Bính bị quân Nguyên đánh",
+            "n_lines": 1,
+            "tokens": 33,
+            "seconds": 0.816,
+            "confidence": 93.41,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              189,
+              2135,
+              1171,
+              2174
+            ],
+            "generated_text": "bại, Tú Phu công Để Bính nhảy xuống bề tụ tử. (Tổng sứ).",
+            "n_lines": 1,
+            "tokens": 32,
+            "seconds": 0.86,
+            "confidence": 86.31,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              279,
+              2185,
+              1660,
+              2222
+            ],
+            "generated_text": "2. Cô ó: Tên một loại chim. Tục truyền ngày xưa có một nàng dâu chết vì mẹ",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 0.749,
+            "confidence": 93.02,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              188,
+              2235,
+              1658,
+              2272
+            ],
+            "generated_text": "chông ngược đài, hóa thành chim, hàng ngày kêu “cô ố, cô ô” (mẹ chồng ghét mẹ",
+            "n_lines": 1,
+            "tokens": 35,
+            "seconds": 0.961,
+            "confidence": 82.93,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              188,
+              2283,
+              1218,
+              2318
+            ],
+            "generated_text": "chông ghét), cho nên người đời gọi loại chim ấy là chim có ó.",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.64,
+            "confidence": 89.87,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              277,
+              2329,
+              1555,
+              2366
+            ],
+            "generated_text": "3. Vong dễ: Xem chủ thích bài: Vua Thực chết hóa thành chim cước (Đỗ Vũ)",
+            "n_lines": 1,
+            "tokens": 33,
+            "seconds": 0.859,
+            "confidence": 91.82,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              277,
+              2378,
+              1661,
+              2416
+            ],
+            "generated_text": "4. Trong đã sứ có chuyện Mã công chúa. Tương truyền công chúa này lực sống",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.733,
+            "confidence": 88.53,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              187,
+              2425,
+              1658,
+              2463
+            ],
+            "generated_text": "dám dục quả đồ, sau bị hành hình bằng cách cho ngựa hiệp. Khi chết hóa thành thân",
+            "n_lines": 1,
+            "tokens": 32,
+            "seconds": 0.875,
+            "confidence": 89.44,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 32,
+            "box": [
+              185,
+              2477,
+              1076,
+              2510
+            ],
+            "generated_text": "quái, người ta gọi Mà công chúa: tức công chúa ngựa",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.613,
+            "confidence": 90.5,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              432,
+              812,
+              765,
+              826
+            ],
+            "ink": 523
+          },
+          {
+            "box": [
+              193,
+              1487,
+              373,
+              1497
+            ],
+            "ink": 244
+          },
+          {
+            "box": [
+              188,
+              2525,
+              264,
+              2536
+            ],
+            "ink": 247
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      }
+    }
+  ]
+}

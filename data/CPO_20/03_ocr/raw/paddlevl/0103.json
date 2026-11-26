@@ -634,6 +634,697 @@
         "any_truncated": false,
         "lang": "all"
       }
+    },
+    {
+      "key": "a00262ea9b18ce54a03eeb7714d07e83317e8931233f3fd33e99f0378606bcae",
+      "parameters": {
+        "image_sha256": "118430c72902ec2bada0ca9649cb4ff0475b6cde955c161c3c6e86b635221fd1",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "row_pitch_split": {
+            "lags": [
+              24,
+              240
+            ],
+            "min_ac": 0.15,
+            "tall": 1.6,
+            "valley_rel": 0.5
+          },
+          "deskew": [
+            2.5,
+            0.1,
+            0.2
+          ],
+          "adapter_version": 6
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-26T04:03:49+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_103.png",
+      "image_size": [
+        1865,
+        2851
+      ],
+      "crop_box": [
+        0,
+        0,
+        1865,
+        2851
+      ],
+      "lines": [
+        {
+          "text": "壬子中冬皇考武皇帝喪禮",
+          "bbox": [
+            402,
+            542,
+            1288,
+            621
+          ],
+          "confidence": 94.37
+        },
+        {
+          "text": "御率諸皇弟公主列位",
+          "bbox": [
+            485,
+            625,
+            1202,
+            701
+          ],
+          "confidence": 98.89
+        },
+        {
+          "text": "莫祭文",
+          "bbox": [
+            568,
+            775,
+            1381,
+            823
+          ],
+          "confidence": 98.84
+        },
+        {
+          "text": "嗚呼，煙迷蓬島，仙御難攀，露落楓庭，寂遊",
+          "bbox": [
+            271,
+            833,
+            1641,
+            903
+          ],
+          "confidence": 85.4
+        },
+        {
+          "text": "永悶懋慕深而彷彿羹墻悲感重而悱徊黼",
+          "bbox": [
+            254,
+            895,
+            1639,
+            987
+          ],
+          "confidence": 73.93
+        },
+        {
+          "text": "聖武誕膺景命。馬上功成創造。宇宙開午",
+          "bbox": [
+            337,
+            1022,
+            1633,
+            1091
+          ],
+          "confidence": 91.47
+        },
+        {
+          "text": "日之昌期。仰昊穹邁賜純床。螽斯慶裕蕃昌。",
+          "bbox": [
+            254,
+            1083,
+            1656,
+            1151
+          ],
+          "confidence": 82.79
+        },
+        {
+          "text": "宮庭衍天溝之秀氣，屬雖仰奉眷憐，儀則僅",
+          "bbox": [
+            249,
+            1143,
+            1631,
+            1215
+          ],
+          "confidence": 87.71
+        },
+        {
+          "text": "加訓示。齊治時隣愁範。啓迪而完養績功。繼",
+          "bbox": [
+            249,
+            1207,
+            1630,
+            1278
+          ],
+          "confidence": 78.42
+        },
+        {
+          "text": "承仰賴淵謨，封殖厚而蛋腐震器，价藩分建",
+          "bbox": [
+            248,
+            1270,
+            1628,
+            1330
+          ],
+          "confidence": 88.19
+        },
+        {
+          "text": "於虎幃，仁胫流光于麟趾，哀陛怡愉有慶，方",
+          "bbox": [
+            245,
+            1322,
+            1627,
+            1397
+          ],
+          "confidence": 83.42
+        },
+        {
+          "text": "期寶月照瓊觴。化機伎倆難諶。忽悵金風寒",
+          "bbox": [
+            245,
+            1389,
+            1625,
+            1462
+          ],
+          "confidence": 90.37
+        },
+        {
+          "text": "玉几，骑龙莫挽於鼎湖，诒燕永懷於豐水。",
+          "bbox": [
+            243,
+            1454,
+            1623,
+            1526
+          ],
+          "confidence": 82.76
+        },
+        {
+          "text": "奉宛舊時弓劍，淒涼展夕，慨非腹膽之承歡。",
+          "bbox": [
+            243,
+            1518,
+            1648,
+            1590
+          ],
+          "confidence": 85.48
+        },
+        {
+          "text": "持守遣一统山河，慄惕渊冰，恐乏構堂之紹",
+          "bbox": [
+            240,
+            1582,
+            1623,
+            1653
+          ],
+          "confidence": 89.7
+        },
+        {
+          "text": "聖天子陛下，洞照微衷，弘恢睿咱，澷德顺",
+          "bbox": [
+            259,
+            1661,
+            1619,
+            1727
+          ],
+          "confidence": 79.46
+        },
+        {
+          "text": "帝命，即北城為宅中圖大之基，作邦克對天",
+          "bbox": [
+            238,
+            1719,
+            1619,
+            1793
+          ],
+          "confidence": 92.24
+        },
+        {
+          "text": "心，以南京奠固本深源之址，统绪通光古始",
+          "bbox": [
+            237,
+            1785,
+            1641,
+            1868
+          ],
+          "confidence": 82.77
+        },
+        {
+          "text": "疑优式慰今兹傘潼宏闊高深天府壯虎據",
+          "bbox": [
+            234,
+            1860,
+            1616,
+            1933
+          ],
+          "confidence": 78.8
+        },
+        {
+          "text": "能踴之勝，翌軫昭回燦爛，皇圖綿龜扶鰲莫",
+          "bbox": [
+            234,
+            1925,
+            1613,
+            1992
+          ],
+          "confidence": 86.14
+        },
+        {
+          "text": "之昌，臣等無任瞻天仰望，不勝激切題朝",
+          "bbox": [
+            231,
+            1984,
+            1613,
+            2038
+          ],
+          "confidence": 84.72
+        },
+        {
+          "text": "至，謹奉表奏以聞。",
+          "bbox": [
+            231,
+            2030,
+            1613,
+            2095
+          ],
+          "confidence": 88.19
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          1865,
+          2851
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 14.211,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              402,
+              542,
+              1288,
+              621
+            ],
+            "generated_text": "壬子中冬皇考武皇帝喪禮",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 0.393,
+            "confidence": 94.37,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              485,
+              625,
+              1202,
+              701
+            ],
+            "generated_text": "御率諸皇弟公主列位",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.306,
+            "confidence": 98.89,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              568,
+              775,
+              1381,
+              823
+            ],
+            "generated_text": "莫祭文",
+            "n_lines": 1,
+            "tokens": 4,
+            "seconds": 0.196,
+            "confidence": 98.84,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              271,
+              833,
+              1641,
+              903
+            ],
+            "generated_text": "嗚呼，煙迷蓬島，仙御難攀，露落楓庭，寂遊",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.754,
+            "confidence": 85.4,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              254,
+              895,
+              1639,
+              987
+            ],
+            "generated_text": "永悶懋慕深而彷彿羹墻悲感重而悱徊黼",
+            "n_lines": 1,
+            "tokens": 32,
+            "seconds": 0.773,
+            "confidence": 73.93,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              337,
+              1022,
+              1633,
+              1091
+            ],
+            "generated_text": "聖武誕膺景命。馬上功成創造。宇宙開午",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.635,
+            "confidence": 91.47,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              254,
+              1083,
+              1656,
+              1151
+            ],
+            "generated_text": "日之昌期。仰昊穹邁賜純床。螽斯慶裕蕃昌。",
+            "n_lines": 1,
+            "tokens": 33,
+            "seconds": 0.903,
+            "confidence": 82.79,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              249,
+              1143,
+              1631,
+              1215
+            ],
+            "generated_text": "宮庭衍天溝之秀氣，屬雖仰奉眷憐，儀則僅",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.77,
+            "confidence": 87.71,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              249,
+              1207,
+              1630,
+              1278
+            ],
+            "generated_text": "加訓示。齊治時隣愁範。啓迪而完養績功。繼",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 0.811,
+            "confidence": 78.42,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              248,
+              1270,
+              1628,
+              1330
+            ],
+            "generated_text": "承仰賴淵謨，封殖厚而蛋腐震器，价藩分建",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.623,
+            "confidence": 88.19,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              245,
+              1322,
+              1627,
+              1397
+            ],
+            "generated_text": "於虎幃，仁胫流光于麟趾，哀陛怡愉有慶，方",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.802,
+            "confidence": 83.42,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              245,
+              1389,
+              1625,
+              1462
+            ],
+            "generated_text": "期寶月照瓊觴。化機伎倆難諶。忽悵金風寒",
+            "n_lines": 1,
+            "tokens": 32,
+            "seconds": 0.864,
+            "confidence": 90.37,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              243,
+              1454,
+              1623,
+              1526
+            ],
+            "generated_text": "玉几，骑龙莫挽於鼎湖，诒燕永懷於豐水。",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.726,
+            "confidence": 82.76,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              243,
+              1518,
+              1648,
+              1590
+            ],
+            "generated_text": "奉宛舊時弓劍，淒涼展夕，慨非腹膽之承歡。",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 0.79,
+            "confidence": 85.48,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              240,
+              1582,
+              1623,
+              1653
+            ],
+            "generated_text": "持守遣一统山河，慄惕渊冰，恐乏構堂之紹",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.657,
+            "confidence": 89.7,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              259,
+              1661,
+              1619,
+              1727
+            ],
+            "generated_text": "聖天子陛下，洞照微衷，弘恢睿咱，澷德顺",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.591,
+            "confidence": 79.46,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              238,
+              1719,
+              1619,
+              1793
+            ],
+            "generated_text": "帝命，即北城為宅中圖大之基，作邦克對天",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.577,
+            "confidence": 92.24,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              237,
+              1785,
+              1641,
+              1868
+            ],
+            "generated_text": "心，以南京奠固本深源之址，统绪通光古始",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.56,
+            "confidence": 82.77,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              234,
+              1860,
+              1616,
+              1933
+            ],
+            "generated_text": "疑优式慰今兹傘潼宏闊高深天府壯虎據",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.712,
+            "confidence": 78.8,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              234,
+              1925,
+              1613,
+              1992
+            ],
+            "generated_text": "能踴之勝，翌軫昭回燦爛，皇圖綿龜扶鰲莫",
+            "n_lines": 1,
+            "tokens": 34,
+            "seconds": 0.92,
+            "confidence": 86.14,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              231,
+              1984,
+              1613,
+              2038
+            ],
+            "generated_text": "之昌，臣等無任瞻天仰望，不勝激切題朝",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.473,
+            "confidence": 84.72,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              231,
+              2030,
+              1613,
+              2095
+            ],
+            "generated_text": "至，謹奉表奏以聞。",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.373,
+            "confidence": 88.19,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              254,
+              983,
+              392,
+              1005
+            ],
+            "ink": 1117
+          },
+          {
+            "box": [
+              78,
+              2760,
+              282,
+              2774
+            ],
+            "ink": 890
+          }
+        ],
+        "deskew_deg": 0.0,
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "7a0a8d9befaa9c2afee66139d5b233593b81f86e",
+        "git_describe": "7a0a8d9",
+        "git_dirty": true,
+        "gpu": "NVIDIA GeForce RTX 3050 6GB Laptop GPU",
+        "dtype": "bfloat16",
+        "adapter_version": 6
+      }
     }
   ]
 }

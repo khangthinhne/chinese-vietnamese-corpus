@@ -1,0 +1,964 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_20",
+  "engine": "paddlevl",
+  "page": 791,
+  "runs": [
+    {
+      "key": "b8724a4c46af845b2668912304d88d3fed11fc01e22b67f85a5551434968498a",
+      "parameters": {
+        "image_sha256": "98f5b0263a41e9d822b80e40d85a541083f1ae6ccab0426aa39b923407fc44a0",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T14:40:48+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_791.png",
+      "image_size": [
+        1821,
+        2814
+      ],
+      "crop_box": [
+        0,
+        0,
+        1821,
+        2814
+      ],
+      "lines": [
+        {
+          "text": "Vọng Đế thù phương Bắc.",
+          "bbox": [
+            380,
+            252,
+            909,
+            301
+          ],
+          "confidence": 92.27
+        },
+        {
+          "text": "Di thần cổ quốc Nam.",
+          "bbox": [
+            380,
+            311,
+            829,
+            358
+          ],
+          "confidence": 90.06
+        },
+        {
+          "text": "Tráng tâm tiêu bạc tần.",
+          "bbox": [
+            380,
+            375,
+            876,
+            419
+          ],
+          "confidence": 87.22
+        },
+        {
+          "text": "Ung thi lão yên lam.",
+          "bbox": [
+            380,
+            430,
+            809,
+            477
+          ],
+          "confidence": 84.33
+        },
+        {
+          "text": "(Kỷ nhi)",
+          "bbox": [
+            507,
+            560,
+            752,
+            619
+          ],
+          "confidence": 90.27
+        },
+        {
+          "text": "Thế sự tùy thu biến,",
+          "bbox": [
+            380,
+            630,
+            846,
+            677
+          ],
+          "confidence": 96.02
+        },
+        {
+          "text": "Hương tình trực thủy lưu.",
+          "bbox": [
+            380,
+            691,
+            902,
+            739
+          ],
+          "confidence": 84.71
+        },
+        {
+          "text": "Doanh hư kim cổ nguyệt,",
+          "bbox": [
+            380,
+            751,
+            894,
+            803
+          ],
+          "confidence": 94.0
+        },
+        {
+          "text": "Lai văng Bắc Nam chu.",
+          "bbox": [
+            380,
+            812,
+            869,
+            858
+          ],
+          "confidence": 86.91
+        },
+        {
+          "text": "Khách cứu ứng vô lệ.",
+          "bbox": [
+            380,
+            872,
+            813,
+            916
+          ],
+          "confidence": 88.83
+        },
+        {
+          "text": "Thân cùng chỉ tự tu.",
+          "bbox": [
+            380,
+            933,
+            798,
+            977
+          ],
+          "confidence": 94.23
+        },
+        {
+          "text": "Thủ sinh thành thâm sư.",
+          "bbox": [
+            380,
+            992,
+            898,
+            1036
+          ],
+          "confidence": 82.49
+        },
+        {
+          "text": "Lược đặc tảo phong hầu.",
+          "bbox": [
+            380,
+            1053,
+            880,
+            1095
+          ],
+          "confidence": 89.39
+        },
+        {
+          "text": "Uich nghĩa:",
+          "bbox": [
+            140,
+            1184,
+            392,
+            1214
+          ],
+          "confidence": 82.84
+        },
+        {
+          "text": "VÊ BẮC ĐI QUẠ SÔNG NHỮ HÀ",
+          "bbox": [
+            377,
+            1273,
+            1288,
+            1334
+          ],
+          "confidence": 80.62
+        },
+        {
+          "text": "Mây trên Núi Tần đen thấm,",
+          "bbox": [
+            380,
+            1505,
+            1293,
+            1547
+          ],
+          "confidence": 89.62
+        },
+        {
+          "text": "Nước dưới Sông Lô trong xanh.",
+          "bbox": [
+            379,
+            1564,
+            1015,
+            1606
+          ],
+          "confidence": 98.24
+        },
+        {
+          "text": "Người khách hai lần đi qua sông núi này.",
+          "bbox": [
+            379,
+            1623,
+            1226,
+            1670
+          ],
+          "confidence": 98.56
+        },
+        {
+          "text": "Như cánh buồm cô độc giữa cánh trời đất.",
+          "bbox": [
+            379,
+            1681,
+            1236,
+            1727
+          ],
+          "confidence": 95.07
+        },
+        {
+          "text": "Vua Vọng Để nơi phương Bắc xa xôi,",
+          "bbox": [
+            379,
+            1740,
+            1127,
+            1791
+          ],
+          "confidence": 95.83
+        },
+        {
+          "text": "Kế di thần về phương Nam nước cũ.",
+          "bbox": [
+            379,
+            1801,
+            1113,
+            1845
+          ],
+          "confidence": 88.25
+        },
+        {
+          "text": "Lòng hãng hái tiêu tan hết cả,",
+          "bbox": [
+            379,
+            1862,
+            1007,
+            1906
+          ],
+          "confidence": 88.44
+        },
+        {
+          "text": "Thôi chiu giả cùng với khói mây.",
+          "bbox": [
+            379,
+            1920,
+            1115,
+            1966
+          ],
+          "confidence": 77.22
+        },
+        {
+          "text": "Sự thể cùng thay đổi với mùa thu,",
+          "bbox": [
+            379,
+            2061,
+            1074,
+            2108
+          ],
+          "confidence": 86.2
+        },
+        {
+          "text": "Lòng nhớ quê trôi theo dòng nước chảy.",
+          "bbox": [
+            379,
+            2120,
+            1191,
+            2168
+          ],
+          "confidence": 97.74
+        },
+        {
+          "text": "Mảnh trắng xưa nay tròn rối khuyết,",
+          "bbox": [
+            377,
+            2177,
+            1135,
+            2229
+          ],
+          "confidence": 90.7
+        },
+        {
+          "text": "Chiếc thuyền Nam Bắc lại rồi qua.",
+          "bbox": [
+            377,
+            2237,
+            1119,
+            2289
+          ],
+          "confidence": 98.0
+        },
+        {
+          "text": "Ở đất khách lâu không còn giọt nước mắt,",
+          "bbox": [
+            377,
+            2296,
+            1243,
+            2346
+          ],
+          "confidence": 97.93
+        },
+        {
+          "text": "Thân cùng chỉ biết tự xấu hổ với mình.",
+          "bbox": [
+            376,
+            2354,
+            1177,
+            2407
+          ],
+          "confidence": 99.01
+        },
+        {
+          "text": "Suốt một đời chặng làm nên việc gì,",
+          "bbox": [
+            377,
+            2415,
+            1118,
+            2467
+          ],
+          "confidence": 90.59
+        },
+        {
+          "text": "Chỉ được cái phong hầu rất sớm.",
+          "bbox": [
+            377,
+            2477,
+            1040,
+            2526
+          ],
+          "confidence": 94.74
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          1821,
+          2814
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 12.28,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              380,
+              252,
+              909,
+              301
+            ],
+            "generated_text": "Vọng Đế thù phương Bắc.",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.368,
+            "confidence": 92.27,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              380,
+              311,
+              829,
+              358
+            ],
+            "generated_text": "Di thần cổ quốc Nam.",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.317,
+            "confidence": 90.06,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              380,
+              375,
+              876,
+              419
+            ],
+            "generated_text": "Tráng tâm tiêu bạc tần.",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.356,
+            "confidence": 87.22,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              380,
+              430,
+              809,
+              477
+            ],
+            "generated_text": "Ung thi lão yên lam.",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.297,
+            "confidence": 84.33,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              507,
+              560,
+              752,
+              619
+            ],
+            "generated_text": "(Kỷ nhi)",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.254,
+            "confidence": 90.27,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              380,
+              630,
+              846,
+              677
+            ],
+            "generated_text": "Thế sự tùy thu biến,",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.359,
+            "confidence": 96.02,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              380,
+              691,
+              902,
+              739
+            ],
+            "generated_text": "Hương tình trực thủy lưu.",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.392,
+            "confidence": 84.71,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              380,
+              751,
+              894,
+              803
+            ],
+            "generated_text": "Doanh hư kim cổ nguyệt,",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.37,
+            "confidence": 94.0,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              380,
+              812,
+              869,
+              858
+            ],
+            "generated_text": "Lai văng Bắc Nam chu.",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.326,
+            "confidence": 86.91,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              380,
+              872,
+              813,
+              916
+            ],
+            "generated_text": "Khách cứu ứng vô lệ.",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.408,
+            "confidence": 88.83,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              380,
+              933,
+              798,
+              977
+            ],
+            "generated_text": "Thân cùng chỉ tự tu.",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.295,
+            "confidence": 94.23,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              380,
+              992,
+              898,
+              1036
+            ],
+            "generated_text": "Thủ sinh thành thâm sư.",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.347,
+            "confidence": 82.49,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              380,
+              1053,
+              880,
+              1095
+            ],
+            "generated_text": "Lược đặc tảo phong hầu.",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.37,
+            "confidence": 89.39,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              140,
+              1184,
+              392,
+              1214
+            ],
+            "generated_text": "Uich nghĩa:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.252,
+            "confidence": 82.84,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              377,
+              1273,
+              1288,
+              1334
+            ],
+            "generated_text": "VÊ BẮC ĐI QUẠ SÔNG NHỮ HÀ",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.583,
+            "confidence": 80.62,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              380,
+              1505,
+              1293,
+              1547
+            ],
+            "generated_text": "Mây trên Núi Tần đen thấm,",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.435,
+            "confidence": 89.62,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              379,
+              1564,
+              1015,
+              1606
+            ],
+            "generated_text": "Nước dưới Sông Lô trong xanh.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.462,
+            "confidence": 98.24,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              379,
+              1623,
+              1226,
+              1670
+            ],
+            "generated_text": "Người khách hai lần đi qua sông núi này.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.414,
+            "confidence": 98.56,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              379,
+              1681,
+              1236,
+              1727
+            ],
+            "generated_text": "Như cánh buồm cô độc giữa cánh trời đất.",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.546,
+            "confidence": 95.07,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              379,
+              1740,
+              1127,
+              1791
+            ],
+            "generated_text": "Vua Vọng Để nơi phương Bắc xa xôi,",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.458,
+            "confidence": 95.83,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              379,
+              1801,
+              1113,
+              1845
+            ],
+            "generated_text": "Kế di thần về phương Nam nước cũ.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.423,
+            "confidence": 88.25,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              379,
+              1862,
+              1007,
+              1906
+            ],
+            "generated_text": "Lòng hãng hái tiêu tan hết cả,",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.441,
+            "confidence": 88.44,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              379,
+              1920,
+              1115,
+              1966
+            ],
+            "generated_text": "Thôi chiu giả cùng với khói mây.",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.365,
+            "confidence": 77.22,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              379,
+              2061,
+              1074,
+              2108
+            ],
+            "generated_text": "Sự thể cùng thay đổi với mùa thu,",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.412,
+            "confidence": 86.2,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              379,
+              2120,
+              1191,
+              2168
+            ],
+            "generated_text": "Lòng nhớ quê trôi theo dòng nước chảy.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.463,
+            "confidence": 97.74,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              377,
+              2177,
+              1135,
+              2229
+            ],
+            "generated_text": "Mảnh trắng xưa nay tròn rối khuyết,",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.442,
+            "confidence": 90.7,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              377,
+              2237,
+              1119,
+              2289
+            ],
+            "generated_text": "Chiếc thuyền Nam Bắc lại rồi qua.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.422,
+            "confidence": 98.0,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              377,
+              2296,
+              1243,
+              2346
+            ],
+            "generated_text": "Ở đất khách lâu không còn giọt nước mắt,",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.474,
+            "confidence": 97.93,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              376,
+              2354,
+              1177,
+              2407
+            ],
+            "generated_text": "Thân cùng chỉ biết tự xấu hổ với mình.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.416,
+            "confidence": 99.01,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              377,
+              2415,
+              1118,
+              2467
+            ],
+            "generated_text": "Suốt một đời chặng làm nên việc gì,",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.405,
+            "confidence": 90.59,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              377,
+              2477,
+              1040,
+              2526
+            ],
+            "generated_text": "Chỉ được cái phong hầu rất sớm.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.404,
+            "confidence": 94.74,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              441,
+              1092,
+              782,
+              1102
+            ],
+            "ink": 195
+          },
+          {
+            "box": [
+              146,
+              1172,
+              357,
+              1188
+            ],
+            "ink": 419
+          },
+          {
+            "box": [
+              727,
+              1331,
+              773,
+              1342
+            ],
+            "ink": 302
+          },
+          {
+            "box": [
+              791,
+              1987,
+              845,
+              2003
+            ],
+            "ink": 442
+          },
+          {
+            "box": [
+              777,
+              2022,
+              1118,
+              2038
+            ],
+            "ink": 445
+          },
+          {
+            "box": [
+              1506,
+              2531,
+              1582,
+              2542
+            ],
+            "ink": 295
+          },
+          {
+            "box": [
+              1516,
+              2541,
+              1583,
+              2554
+            ],
+            "ink": 390
+          },
+          {
+            "box": [
+              1513,
+              2554,
+              1583,
+              2567
+            ],
+            "ink": 325
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      }
+    }
+  ]
+}

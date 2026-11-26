@@ -1,0 +1,771 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_20",
+  "engine": "paddlevl",
+  "page": 277,
+  "runs": [
+    {
+      "key": "f9550c0c6e934a6b7a584f27d35424e46361a744aa5c9472905e3b8efb44b478",
+      "parameters": {
+        "image_sha256": "8429d54d2be91f02e46d9ed6485dc424b9f8ebfa9c5244c6cb19289afb33919f",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T06:41:13+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_277.png",
+      "image_size": [
+        1823,
+        2814
+      ],
+      "crop_box": [
+        0,
+        0,
+        1823,
+        2814
+      ],
+      "lines": [
+        {
+          "text": "CAO HIV DIÊT",
+          "bbox": [
+            529,
+            571,
+            1238,
+            621
+          ],
+          "confidence": 70.66
+        },
+        {
+          "text": "cáo hoá Dieu",
+          "bbox": [
+            531,
+            613,
+            1230,
+            648
+          ],
+          "confidence": 51.48
+        },
+        {
+          "text": "10 01",
+          "bbox": [
+            802,
+            685,
+            968,
+            709
+          ],
+          "confidence": 51.8
+        },
+        {
+          "text": "Tụ là Cứu Chiếu, hiệu là Hồng Quế Hiên, người làng Phú Thị, huyện Gia",
+          "bbox": [
+            240,
+            820,
+            1603,
+            864
+          ],
+          "confidence": 92.93
+        },
+        {
+          "text": "Làm, ngoại thành Hà Nội. Ông là người cùng họ với nhà thơ Cao Bá Quát.",
+          "bbox": [
+            159,
+            873,
+            1602,
+            919
+          ],
+          "confidence": 93.25
+        },
+        {
+          "text": "Chưa rõ năm sinh và năm mất. Đươi thời Tây Sơn, ông vào Phú Xuân, nhưng",
+          "bbox": [
+            159,
+            928,
+            1603,
+            969
+          ],
+          "confidence": 90.14
+        },
+        {
+          "text": "không biết ông có nhận chức gì với nhà Tây Sơn không Đầu thời Nguyễn,",
+          "bbox": [
+            159,
+            981,
+            1602,
+            1025
+          ],
+          "confidence": 92.2
+        },
+        {
+          "text": "năm 1806, ông đi thi Hương, đậu thủ khoa ở trường Kinh Bắc, sau đó làm Tư",
+          "bbox": [
+            157,
+            1033,
+            1605,
+            1075
+          ],
+          "confidence": 97.84
+        },
+        {
+          "text": "nghiệp trưởng Quốc Tử giảm. Hình như ông mất vào khoảng cuối đời Gia",
+          "bbox": [
+            157,
+            1086,
+            1600,
+            1130
+          ],
+          "confidence": 91.49
+        },
+        {
+          "text": "Long. Về sáng tác, Cao Huy Diệu có tập thể chữ Hán Hồng Quế Hiên thi tập.",
+          "bbox": [
+            159,
+            1139,
+            1577,
+            1183
+          ],
+          "confidence": 94.83
+        },
+        {
+          "text": "Thơ Cao Huy Diệu phần nhiều viết về thiên nhiên và một vài cánh",
+          "bbox": [
+            238,
+            1203,
+            1599,
+            1244
+          ],
+          "confidence": 95.5
+        },
+        {
+          "text": "sinh hoạt ở nông thôn. Cảnh của ông giản dị, mộc mạc. Lời thơ trong sáng,",
+          "bbox": [
+            156,
+            1256,
+            1597,
+            1302
+          ],
+          "confidence": 97.57
+        },
+        {
+          "text": "có nhiều hình ảnh. Đọc Cao Huy Diệu thấy ông là một người nhân hậu,",
+          "bbox": [
+            156,
+            1309,
+            1597,
+            1353
+          ],
+          "confidence": 98.17
+        },
+        {
+          "text": "không sôi nổi những lạc quan, yêu đời. Những bài thơ trích tuyển ở đây lấy",
+          "bbox": [
+            156,
+            1362,
+            1597,
+            1406
+          ],
+          "confidence": 95.19
+        },
+        {
+          "text": "trong tập Hồng Quế Hiên thi tập ký hiệu A2836 Thư viên Viện Nghiên cứu",
+          "bbox": [
+            156,
+            1414,
+            1597,
+            1458
+          ],
+          "confidence": 95.14
+        },
+        {
+          "text": "Hàn Nôm.",
+          "bbox": [
+            156,
+            1475,
+            350,
+            1502
+          ],
+          "confidence": 89.72
+        },
+        {
+          "text": "前咨莘山李",
+          "bbox": [
+            674,
+            1642,
+            1078,
+            1691
+          ],
+          "confidence": 62.44
+        },
+        {
+          "text": "的豆乐山守",
+          "bbox": [
+            676,
+            1683,
+            1071,
+            1714
+          ],
+          "confidence": 60.65
+        },
+        {
+          "text": "攝衣直跨瓊宮頂",
+          "bbox": [
+            585,
+            1855,
+            1168,
+            1909
+          ],
+          "confidence": 93.04
+        },
+        {
+          "text": "遠遠斜陽影欲西",
+          "bbox": [
+            585,
+            1926,
+            1166,
+            1983
+          ],
+          "confidence": 90.83
+        },
+        {
+          "text": "坦步頓忘危石險",
+          "bbox": [
+            584,
+            1999,
+            1166,
+            2053
+          ],
+          "confidence": 98.63
+        },
+        {
+          "text": "回頭暗笑老松低",
+          "bbox": [
+            585,
+            2072,
+            1166,
+            2128
+          ],
+          "confidence": 93.63
+        },
+        {
+          "text": "千花勝景供評閱",
+          "bbox": [
+            581,
+            2140,
+            1161,
+            2193
+          ],
+          "confidence": 95.91
+        },
+        {
+          "text": "八葉前因總品題",
+          "bbox": [
+            582,
+            2210,
+            1160,
+            2262
+          ],
+          "confidence": 98.99
+        },
+        {
+          "text": "腳下江山募半局",
+          "bbox": [
+            577,
+            2279,
+            1158,
+            2331
+          ],
+          "confidence": 88.3
+        },
+        {
+          "text": "滔滔冷笑濁途迷",
+          "bbox": [
+            577,
+            2349,
+            1168,
+            2403
+          ],
+          "confidence": 98.48
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          1823,
+          2814
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 12.583,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              529,
+              571,
+              1238,
+              621
+            ],
+            "generated_text": "CAO HIV DIÊT",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.292,
+            "confidence": 70.66,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              531,
+              613,
+              1230,
+              648
+            ],
+            "generated_text": "cáo hoá Dieu",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.273,
+            "confidence": 51.48,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              802,
+              685,
+              968,
+              709
+            ],
+            "generated_text": "10 01",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.236,
+            "confidence": 51.8,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              240,
+              820,
+              1603,
+              864
+            ],
+            "generated_text": "Tụ là Cứu Chiếu, hiệu là Hồng Quế Hiên, người làng Phú Thị, huyện Gia",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 0.745,
+            "confidence": 92.93,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              159,
+              873,
+              1602,
+              919
+            ],
+            "generated_text": "Làm, ngoại thành Hà Nội. Ông là người cùng họ với nhà thơ Cao Bá Quát.",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.665,
+            "confidence": 93.25,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              159,
+              928,
+              1603,
+              969
+            ],
+            "generated_text": "Chưa rõ năm sinh và năm mất. Đươi thời Tây Sơn, ông vào Phú Xuân, nhưng",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 0.731,
+            "confidence": 90.14,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              159,
+              981,
+              1602,
+              1025
+            ],
+            "generated_text": "không biết ông có nhận chức gì với nhà Tây Sơn không Đầu thời Nguyễn,",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.568,
+            "confidence": 92.2,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              157,
+              1033,
+              1605,
+              1075
+            ],
+            "generated_text": "năm 1806, ông đi thi Hương, đậu thủ khoa ở trường Kinh Bắc, sau đó làm Tư",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 0.753,
+            "confidence": 97.84,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              157,
+              1086,
+              1600,
+              1130
+            ],
+            "generated_text": "nghiệp trưởng Quốc Tử giảm. Hình như ông mất vào khoảng cuối đời Gia",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.684,
+            "confidence": 91.49,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              159,
+              1139,
+              1577,
+              1183
+            ],
+            "generated_text": "Long. Về sáng tác, Cao Huy Diệu có tập thể chữ Hán Hồng Quế Hiên thi tập.",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 0.724,
+            "confidence": 94.83,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              238,
+              1203,
+              1599,
+              1244
+            ],
+            "generated_text": "Thơ Cao Huy Diệu phần nhiều viết về thiên nhiên và một vài cánh",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.587,
+            "confidence": 95.5,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              156,
+              1256,
+              1597,
+              1302
+            ],
+            "generated_text": "sinh hoạt ở nông thôn. Cảnh của ông giản dị, mộc mạc. Lời thơ trong sáng,",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 0.763,
+            "confidence": 97.57,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              156,
+              1309,
+              1597,
+              1353
+            ],
+            "generated_text": "có nhiều hình ảnh. Đọc Cao Huy Diệu thấy ông là một người nhân hậu,",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.599,
+            "confidence": 98.17,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              156,
+              1362,
+              1597,
+              1406
+            ],
+            "generated_text": "không sôi nổi những lạc quan, yêu đời. Những bài thơ trích tuyển ở đây lấy",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 0.723,
+            "confidence": 95.19,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              156,
+              1414,
+              1597,
+              1458
+            ],
+            "generated_text": "trong tập Hồng Quế Hiên thi tập ký hiệu A2836 Thư viên Viện Nghiên cứu",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 0.769,
+            "confidence": 95.14,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              156,
+              1475,
+              350,
+              1502
+            ],
+            "generated_text": "Hàn Nôm.",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.266,
+            "confidence": 89.72,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              674,
+              1642,
+              1078,
+              1691
+            ],
+            "generated_text": "前咨莘山李",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.294,
+            "confidence": 62.44,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              676,
+              1683,
+              1071,
+              1714
+            ],
+            "generated_text": "的豆乐山守",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.255,
+            "confidence": 60.65,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              585,
+              1855,
+              1168,
+              1909
+            ],
+            "generated_text": "攝衣直跨瓊宮頂",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.387,
+            "confidence": 93.04,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              585,
+              1926,
+              1166,
+              1983
+            ],
+            "generated_text": "遠遠斜陽影欲西",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.294,
+            "confidence": 90.83,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              584,
+              1999,
+              1166,
+              2053
+            ],
+            "generated_text": "坦步頓忘危石險",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.405,
+            "confidence": 98.63,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              585,
+              2072,
+              1166,
+              2128
+            ],
+            "generated_text": "回頭暗笑老松低",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.297,
+            "confidence": 93.63,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              581,
+              2140,
+              1161,
+              2193
+            ],
+            "generated_text": "千花勝景供評閱",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.339,
+            "confidence": 95.91,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              582,
+              2210,
+              1160,
+              2262
+            ],
+            "generated_text": "八葉前因總品題",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.305,
+            "confidence": 98.99,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              577,
+              2279,
+              1158,
+              2331
+            ],
+            "generated_text": "腳下江山募半局",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.312,
+            "confidence": 88.3,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              577,
+              2349,
+              1168,
+              2403
+            ],
+            "generated_text": "滔滔冷笑濁途迷",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.315,
+            "confidence": 98.48,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              802,
+              706,
+              966,
+              720
+            ],
+            "ink": 670
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      }
+    }
+  ]
+}

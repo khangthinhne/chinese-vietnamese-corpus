@@ -1,0 +1,641 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_20",
+  "engine": "paddlevl",
+  "page": 173,
+  "runs": [
+    {
+      "key": "302527c17c571d2ac86c1c8c7bc5d4e63ea02176ffbff8bc5ca80c9f492bc701",
+      "parameters": {
+        "image_sha256": "0d1fcfca9a64d2927168554038b8ed74485dbb0ec1e09c791f58331b6775dbb9",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T06:06:49+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_173.png",
+      "image_size": [
+        1823,
+        2814
+      ],
+      "crop_box": [
+        0,
+        0,
+        1823,
+        2814
+      ],
+      "lines": [
+        {
+          "text": "Dich nghĩ.",
+          "bbox": [
+            156,
+            296,
+            393,
+            326
+          ],
+          "confidence": 73.03
+        },
+        {
+          "text": "GIỆ NGO VÊ ĐỀN NAM QUAN",
+          "bbox": [
+            409,
+            400,
+            1317,
+            460
+          ],
+          "confidence": 81.19
+        },
+        {
+          "text": "THUẬT LẠI CẢM HỘNG",
+          "bbox": [
+            527,
+            486,
+            1294,
+            539
+          ],
+          "confidence": 80.8
+        },
+        {
+          "text": "Xe về đi bước một, bỗng đã tới thành Nam Quan,",
+          "bbox": [
+            387,
+            624,
+            1403,
+            668
+          ],
+          "confidence": 94.33
+        },
+        {
+          "text": "Hết như giác mộng đi chơi cõi tiến vừa chợ tỉnh.",
+          "bbox": [
+            388,
+            683,
+            1403,
+            727
+          ],
+          "confidence": 82.44
+        },
+        {
+          "text": "Chín tháng đi về, nhanh như qua ba tram.",
+          "bbox": [
+            388,
+            744,
+            1263,
+            784
+          ],
+          "confidence": 93.45
+        },
+        {
+          "text": "Hai mươi ngày mù tôi, một sớm trời hững.",
+          "bbox": [
+            388,
+            803,
+            1261,
+            844
+          ],
+          "confidence": 93.38
+        },
+        {
+          "text": "Mái tóc thân yêu của gia đình hắn đã bạc thêm,",
+          "bbox": [
+            388,
+            861,
+            1413,
+            903
+          ],
+          "confidence": 79.13
+        },
+        {
+          "text": "Trên khắp núi non làng nước màu xanh vần không đổi.",
+          "bbox": [
+            388,
+            920,
+            1560,
+            961
+          ],
+          "confidence": 89.76
+        },
+        {
+          "text": "Ban cũ nếu hỏi cuộc hành trình thu được cái gì,",
+          "bbox": [
+            388,
+            978,
+            1366,
+            1020
+          ],
+          "confidence": 95.6
+        },
+        {
+          "text": "Rằng: phong vật Trung Châu ở cả trong hai ống tay áo.",
+          "bbox": [
+            388,
+            1037,
+            1527,
+            1086
+          ],
+          "confidence": 95.72
+        },
+        {
+          "text": "奉和司馬少保兵部",
+          "bbox": [
+            556,
+            1265,
+            1217,
+            1339
+          ],
+          "confidence": 99.74
+        },
+        {
+          "text": "諸公寵贈詩韻",
+          "bbox": [
+            290,
+            1361,
+            1132,
+            1438
+          ],
+          "confidence": 99.94
+        },
+        {
+          "text": "欽奉皇華進玉開",
+          "bbox": [
+            551,
+            1530,
+            1130,
+            1584
+          ],
+          "confidence": 90.72
+        },
+        {
+          "text": "馳驅那管水和山",
+          "bbox": [
+            554,
+            1601,
+            1127,
+            1653
+          ],
+          "confidence": 97.85
+        },
+        {
+          "text": "宸居回望雲重嶂",
+          "bbox": [
+            554,
+            1670,
+            1128,
+            1724
+          ],
+          "confidence": 97.11
+        },
+        {
+          "text": "鄉國時懷月一",
+          "bbox": [
+            554,
+            1741,
+            1128,
+            1794
+          ],
+          "confidence": 87.72
+        },
+        {
+          "text": "幹運悉歸成畫上",
+          "bbox": [
+            552,
+            1811,
+            1125,
+            1867
+          ],
+          "confidence": 98.65
+        },
+        {
+          "text": "縱橫事費屈毫端",
+          "bbox": [
+            551,
+            1883,
+            1127,
+            1939
+          ],
+          "confidence": 97.57
+        },
+        {
+          "text": "太和今喜完佳局",
+          "bbox": [
+            553,
+            1956,
+            1127,
+            2012
+          ],
+          "confidence": 99.7
+        },
+        {
+          "text": "慶席叨陪簇錦團",
+          "bbox": [
+            551,
+            2028,
+            1125,
+            2086
+          ],
+          "confidence": 99.47
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          1823,
+          2814
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 18.527,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              156,
+              296,
+              393,
+              326
+            ],
+            "generated_text": "Dich nghĩ.",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.346,
+            "confidence": 73.03,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              409,
+              400,
+              1317,
+              460
+            ],
+            "generated_text": "GIỆ NGO VÊ ĐỀN NAM QUAN",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.995,
+            "confidence": 81.19,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              527,
+              486,
+              1294,
+              539
+            ],
+            "generated_text": "THUẬT LẠI CẢM HỘNG",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.167,
+            "confidence": 80.8,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              387,
+              624,
+              1403,
+              668
+            ],
+            "generated_text": "Xe về đi bước một, bỗng đã tới thành Nam Quan,",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.129,
+            "confidence": 94.33,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              388,
+              683,
+              1403,
+              727
+            ],
+            "generated_text": "Hết như giác mộng đi chơi cõi tiến vừa chợ tỉnh.",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.33,
+            "confidence": 82.44,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              388,
+              744,
+              1263,
+              784
+            ],
+            "generated_text": "Chín tháng đi về, nhanh như qua ba tram.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.88,
+            "confidence": 93.45,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              388,
+              803,
+              1261,
+              844
+            ],
+            "generated_text": "Hai mươi ngày mù tôi, một sớm trời hững.",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.095,
+            "confidence": 93.38,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              388,
+              861,
+              1413,
+              903
+            ],
+            "generated_text": "Mái tóc thân yêu của gia đình hắn đã bạc thêm,",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.187,
+            "confidence": 79.13,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              388,
+              920,
+              1560,
+              961
+            ],
+            "generated_text": "Trên khắp núi non làng nước màu xanh vần không đổi.",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.179,
+            "confidence": 89.76,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              388,
+              978,
+              1366,
+              1020
+            ],
+            "generated_text": "Ban cũ nếu hỏi cuộc hành trình thu được cái gì,",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.006,
+            "confidence": 95.6,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              388,
+              1037,
+              1527,
+              1086
+            ],
+            "generated_text": "Rằng: phong vật Trung Châu ở cả trong hai ống tay áo.",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.257,
+            "confidence": 95.72,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              556,
+              1265,
+              1217,
+              1339
+            ],
+            "generated_text": "奉和司馬少保兵部",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.605,
+            "confidence": 99.74,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              290,
+              1361,
+              1132,
+              1438
+            ],
+            "generated_text": "諸公寵贈詩韻",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.898,
+            "confidence": 99.94,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              551,
+              1530,
+              1130,
+              1584
+            ],
+            "generated_text": "欽奉皇華進玉開",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.63,
+            "confidence": 90.72,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              554,
+              1601,
+              1127,
+              1653
+            ],
+            "generated_text": "馳驅那管水和山",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.742,
+            "confidence": 97.85,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              554,
+              1670,
+              1128,
+              1724
+            ],
+            "generated_text": "宸居回望雲重嶂",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.657,
+            "confidence": 97.11,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              554,
+              1741,
+              1128,
+              1794
+            ],
+            "generated_text": "鄉國時懷月一",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.601,
+            "confidence": 87.72,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              552,
+              1811,
+              1125,
+              1867
+            ],
+            "generated_text": "幹運悉歸成畫上",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.741,
+            "confidence": 98.65,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              551,
+              1883,
+              1127,
+              1939
+            ],
+            "generated_text": "縱橫事費屈毫端",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.76,
+            "confidence": 97.57,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              553,
+              1956,
+              1127,
+              2012
+            ],
+            "generated_text": "太和今喜完佳局",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.585,
+            "confidence": 99.7,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              551,
+              2028,
+              1125,
+              2086
+            ],
+            "generated_text": "慶席叨陪簇錦團",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.735,
+            "confidence": 99.47,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              619,
+              840,
+              1250,
+              849
+            ],
+            "ink": 276
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      }
+    }
+  ]
+}

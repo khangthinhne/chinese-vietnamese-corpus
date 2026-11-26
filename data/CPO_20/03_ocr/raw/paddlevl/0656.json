@@ -1,0 +1,751 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_20",
+  "engine": "paddlevl",
+  "page": 656,
+  "runs": [
+    {
+      "key": "8492d3ac534f604cdda2e51df0158222c143f810f2393ad55f468ca04d07440a",
+      "parameters": {
+        "image_sha256": "cd07a3e60bfda218bb8dcc5feb048b35519e3aafa1aaefeab9ae41dc55f220be",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T13:57:43+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_656.png",
+      "image_size": [
+        1840,
+        2803
+      ],
+      "crop_box": [
+        0,
+        0,
+        1840,
+        2803
+      ],
+      "lines": [
+        {
+          "text": "Phiên âm:",
+          "bbox": [
+            274,
+            285,
+            498,
+            313
+          ],
+          "confidence": 78.87
+        },
+        {
+          "text": "LỮ TRIỆN TỪ CỨU",
+          "bbox": [
+            598,
+            410,
+            1372,
+            462
+          ],
+          "confidence": 88.04
+        },
+        {
+          "text": "Nam Bắc thiên nhai cứu tác du.",
+          "bbox": [
+            512,
+            547,
+            1173,
+            591
+          ],
+          "confidence": 91.27
+        },
+        {
+          "text": "Bình tụng tụy xứ các trầm phù.",
+          "bbox": [
+            512,
+            610,
+            1164,
+            651
+          ],
+          "confidence": 80.58
+        },
+        {
+          "text": "Biệt lai quát mục 'đa tam nhất.",
+          "bbox": [
+            510,
+            668,
+            1537,
+            711
+          ],
+          "confidence": 84.52
+        },
+        {
+          "text": "Tọa hữu luân tâm sả lương thu.",
+          "bbox": [
+            510,
+            730,
+            1166,
+            770
+          ],
+          "confidence": 78.52
+        },
+        {
+          "text": "Lập loát thủ hành quân khách địa.",
+          "bbox": [
+            510,
+            787,
+            1638,
+            830
+          ],
+          "confidence": 82.35
+        },
+        {
+          "text": "Y quan cô thổ thi trung châu.",
+          "bbox": [
+            513,
+            849,
+            1121,
+            889
+          ],
+          "confidence": 89.2
+        },
+        {
+          "text": "Binh hoang mac thuyết lưu di sư.",
+          "bbox": [
+            509,
+            905,
+            1631,
+            948
+          ],
+          "confidence": 86.5
+        },
+        {
+          "text": "Thiên địa nguyên lại nhất dai chu.",
+          "bbox": [
+            507,
+            964,
+            1727,
+            1008
+          ],
+          "confidence": 91.88
+        },
+        {
+          "text": "Vich nghĩa:",
+          "bbox": [
+            273,
+            1167,
+            520,
+            1197
+          ],
+          "confidence": 83.0
+        },
+        {
+          "text": "NOI QUẬN TRỊ GIẢI BÀY NIỆM CỐ CỬU",
+          "bbox": [
+            396,
+            1284,
+            1608,
+            1348
+          ],
+          "confidence": 88.4
+        },
+        {
+          "text": "Đã lâu rồi đi khắp hết cuối trời Nam Bắc.",
+          "bbox": [
+            507,
+            1431,
+            1381,
+            1475
+          ],
+          "confidence": 98.17
+        },
+        {
+          "text": "Dấu bèo đến đâu cũng đều chìm nổi.",
+          "bbox": [
+            505,
+            1489,
+            1263,
+            1534
+          ],
+          "confidence": 92.2
+        },
+        {
+          "text": "Xa nhau chỉ hơn ba ngày phải banh mất mà nhìn lại nhau,",
+          "bbox": [
+            505,
+            1548,
+            1692,
+            1594
+          ],
+          "confidence": 92.99
+        },
+        {
+          "text": "Kế bên tâm sự chốc đã hai năm.",
+          "bbox": [
+            490,
+            1608,
+            1185,
+            1650
+          ],
+          "confidence": 93.66
+        },
+        {
+          "text": "Mũ nón ra đi đâu cũng là đất khách.",
+          "bbox": [
+            505,
+            1667,
+            1270,
+            1709
+          ],
+          "confidence": 97.81
+        },
+        {
+          "text": "Ao mão đất cũ vốn là miền trung châu.",
+          "bbox": [
+            504,
+            1727,
+            1319,
+            1769
+          ],
+          "confidence": 96.47
+        },
+        {
+          "text": "Lúc chính chiến xin đùng nói đến việc đổi đổi nữa,",
+          "bbox": [
+            505,
+            1783,
+            1563,
+            1828
+          ],
+          "confidence": 88.6
+        },
+        {
+          "text": "Trời đất vốn chỉ là con thuyền lớn.",
+          "bbox": [
+            505,
+            1841,
+            1233,
+            1886
+          ],
+          "confidence": 98.59
+        },
+        {
+          "text": "1. Quát mục: Có nghĩa là banh mất, ý nói banh mất để nhìn nhau cho rõ. Tam",
+          "bbox": [
+            362,
+            2290,
+            1709,
+            2329
+          ],
+          "confidence": 95.7
+        },
+        {
+          "text": "Quốc chí: Lã Mông nói với Lỗ Túc: \"Sĩ biết tam nhất, tức cánh quát mục tương đổi\"",
+          "bbox": [
+            271,
+            2335,
+            1711,
+            2378
+          ],
+          "confidence": 87.23
+        },
+        {
+          "text": "(Kế sĩ biệt nhau ba ngày thì cần phải banh mất ra mà nhìn nhau lại). Ý nói cách nhau",
+          "bbox": [
+            271,
+            2382,
+            1709,
+            2423
+          ],
+          "confidence": 93.92
+        },
+        {
+          "text": "chỉ ba ngày thôi, trình độ hiểu biết cũng đã khác trước rồi, không thể nhìn nhau bằng",
+          "bbox": [
+            271,
+            2431,
+            1709,
+            2470
+          ],
+          "confidence": 98.28
+        },
+        {
+          "text": "con mất như cũ được.",
+          "bbox": [
+            271,
+            2484,
+            624,
+            2510
+          ],
+          "confidence": 86.94
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          1840,
+          2803
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 12.579,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              274,
+              285,
+              498,
+              313
+            ],
+            "generated_text": "Phiên âm:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.238,
+            "confidence": 78.87,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              598,
+              410,
+              1372,
+              462
+            ],
+            "generated_text": "LỮ TRIỆN TỪ CỨU",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.512,
+            "confidence": 88.04,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              512,
+              547,
+              1173,
+              591
+            ],
+            "generated_text": "Nam Bắc thiên nhai cứu tác du.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.404,
+            "confidence": 91.27,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              512,
+              610,
+              1164,
+              651
+            ],
+            "generated_text": "Bình tụng tụy xứ các trầm phù.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.504,
+            "confidence": 80.58,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              510,
+              668,
+              1537,
+              711
+            ],
+            "generated_text": "Biệt lai quát mục 'đa tam nhất.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.444,
+            "confidence": 84.52,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              510,
+              730,
+              1166,
+              770
+            ],
+            "generated_text": "Tọa hữu luân tâm sả lương thu.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.491,
+            "confidence": 78.52,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              510,
+              787,
+              1638,
+              830
+            ],
+            "generated_text": "Lập loát thủ hành quân khách địa.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 0.43,
+            "confidence": 82.35,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              513,
+              849,
+              1121,
+              889
+            ],
+            "generated_text": "Y quan cô thổ thi trung châu.",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.358,
+            "confidence": 89.2,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              509,
+              905,
+              1631,
+              948
+            ],
+            "generated_text": "Binh hoang mac thuyết lưu di sư.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.48,
+            "confidence": 86.5,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              507,
+              964,
+              1727,
+              1008
+            ],
+            "generated_text": "Thiên địa nguyên lại nhất dai chu.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 0.388,
+            "confidence": 91.88,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              273,
+              1167,
+              520,
+              1197
+            ],
+            "generated_text": "Vich nghĩa:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.238,
+            "confidence": 83.0,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              396,
+              1284,
+              1608,
+              1348
+            ],
+            "generated_text": "NOI QUẬN TRỊ GIẢI BÀY NIỆM CỐ CỬU",
+            "n_lines": 1,
+            "tokens": 34,
+            "seconds": 0.906,
+            "confidence": 88.4,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              507,
+              1431,
+              1381,
+              1475
+            ],
+            "generated_text": "Đã lâu rồi đi khắp hết cuối trời Nam Bắc.",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.524,
+            "confidence": 98.17,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              505,
+              1489,
+              1263,
+              1534
+            ],
+            "generated_text": "Dấu bèo đến đâu cũng đều chìm nổi.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.453,
+            "confidence": 92.2,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              505,
+              1548,
+              1692,
+              1594
+            ],
+            "generated_text": "Xa nhau chỉ hơn ba ngày phải banh mất mà nhìn lại nhau,",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.486,
+            "confidence": 92.99,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              490,
+              1608,
+              1185,
+              1650
+            ],
+            "generated_text": "Kế bên tâm sự chốc đã hai năm.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 0.387,
+            "confidence": 93.66,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              505,
+              1667,
+              1270,
+              1709
+            ],
+            "generated_text": "Mũ nón ra đi đâu cũng là đất khách.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.422,
+            "confidence": 97.81,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              504,
+              1727,
+              1319,
+              1769
+            ],
+            "generated_text": "Ao mão đất cũ vốn là miền trung châu.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.461,
+            "confidence": 96.47,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              505,
+              1783,
+              1563,
+              1828
+            ],
+            "generated_text": "Lúc chính chiến xin đùng nói đến việc đổi đổi nữa,",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.587,
+            "confidence": 88.6,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              505,
+              1841,
+              1233,
+              1886
+            ],
+            "generated_text": "Trời đất vốn chỉ là con thuyền lớn.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.394,
+            "confidence": 98.59,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              270,
+              2251,
+              870,
+              2268
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.145,
+            "confidence": 24.71,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              362,
+              2290,
+              1709,
+              2329
+            ],
+            "generated_text": "1. Quát mục: Có nghĩa là banh mất, ý nói banh mất để nhìn nhau cho rõ. Tam",
+            "n_lines": 1,
+            "tokens": 32,
+            "seconds": 0.765,
+            "confidence": 95.7,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              271,
+              2335,
+              1711,
+              2378
+            ],
+            "generated_text": "Quốc chí: Lã Mông nói với Lỗ Túc: \"Sĩ biết tam nhất, tức cánh quát mục tương đổi\"",
+            "n_lines": 1,
+            "tokens": 37,
+            "seconds": 0.871,
+            "confidence": 87.23,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              271,
+              2382,
+              1709,
+              2423
+            ],
+            "generated_text": "(Kế sĩ biệt nhau ba ngày thì cần phải banh mất ra mà nhìn nhau lại). Ý nói cách nhau",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.721,
+            "confidence": 93.92,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              271,
+              2431,
+              1709,
+              2470
+            ],
+            "generated_text": "chỉ ba ngày thôi, trình độ hiểu biết cũng đã khác trước rồi, không thể nhìn nhau bằng",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.654,
+            "confidence": 98.28,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              271,
+              2484,
+              624,
+              2510
+            ],
+            "generated_text": "con mất như cũ được.",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.316,
+            "confidence": 86.94,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      }
+    }
+  ]
+}

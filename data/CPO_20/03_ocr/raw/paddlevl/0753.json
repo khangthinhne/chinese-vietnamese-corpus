@@ -1,0 +1,799 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_20",
+  "engine": "paddlevl",
+  "page": 753,
+  "runs": [
+    {
+      "key": "1b9e5add28cf8fc7325ee5a053b8da7dbfaeeccb88cf8da46dc60e5dba897e3f",
+      "parameters": {
+        "image_sha256": "19582c29c3d9e15756ecf27d5cc885b0fb733ea616ee27400275af7b7b005ea9",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T14:33:22+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_753.png",
+      "image_size": [
+        1821,
+        2814
+      ],
+      "crop_box": [
+        0,
+        0,
+        1821,
+        2814
+      ],
+      "lines": [
+        {
+          "text": "“Tú phu” là người tôi trung,",
+          "bbox": [
+            373,
+            261,
+            943,
+            312
+          ],
+          "confidence": 95.69
+        },
+        {
+          "text": "“Cô ô” là người dâu hiêu.",
+          "bbox": [
+            373,
+            322,
+            888,
+            365
+          ],
+          "confidence": 84.25
+        },
+        {
+          "text": "Người trung hiếu mất rồi.",
+          "bbox": [
+            374,
+            382,
+            907,
+            430
+          ],
+          "confidence": 86.48
+        },
+        {
+          "text": "Tiếng trung hiểu còn mãi.",
+          "bbox": [
+            374,
+            441,
+            912,
+            483
+          ],
+          "confidence": 87.92
+        },
+        {
+          "text": "Người chết hóa vật chẳng tốt,",
+          "bbox": [
+            376,
+            500,
+            993,
+            549
+          ],
+          "confidence": 91.47
+        },
+        {
+          "text": "Như Vong đế hóa chim Đỗ Vũ.",
+          "bbox": [
+            376,
+            560,
+            1005,
+            602
+          ],
+          "confidence": 91.94
+        },
+        {
+          "text": "Người chết hóa vật chẳng sạch,",
+          "bbox": [
+            376,
+            619,
+            1029,
+            669
+          ],
+          "confidence": 94.37
+        },
+        {
+          "text": "Như công chúa hóa thành Mã tố.",
+          "bbox": [
+            376,
+            680,
+            1057,
+            724
+          ],
+          "confidence": 87.35
+        },
+        {
+          "text": "Tạo hóa cho tự biến thành cái cung hay cái bánh xe,",
+          "bbox": [
+            376,
+            740,
+            1463,
+            789
+          ],
+          "confidence": 97.08
+        },
+        {
+          "text": "Con người làm ra cả cái tốt và cái xấu.",
+          "bbox": [
+            377,
+            800,
+            1179,
+            842
+          ],
+          "confidence": 99.07
+        },
+        {
+          "text": "Dich tho:",
+          "bbox": [
+            138,
+            940,
+            337,
+            972
+          ],
+          "confidence": 81.86
+        },
+        {
+          "text": "Nhà vắng bưởi sớm mai.",
+          "bbox": [
+            376,
+            1058,
+            884,
+            1099
+          ],
+          "confidence": 76.95
+        },
+        {
+          "text": "Lăng tai nghe chim gu.",
+          "bbox": [
+            377,
+            1117,
+            857,
+            1159
+          ],
+          "confidence": 87.81
+        },
+        {
+          "text": "Một tiếng kêu \"Cô ó\".",
+          "bbox": [
+            377,
+            1176,
+            820,
+            1217
+          ],
+          "confidence": 84.02
+        },
+        {
+          "text": "Tú phu: người trung thần,",
+          "bbox": [
+            118,
+            1237,
+            918,
+            1284
+          ],
+          "confidence": 91.81
+        },
+        {
+          "text": "Cô ó: nàng hiểu phụ.",
+          "bbox": [
+            379,
+            1295,
+            813,
+            1338
+          ],
+          "confidence": 89.37
+        },
+        {
+          "text": "Người trung hiểu xa rồi.",
+          "bbox": [
+            377,
+            1356,
+            877,
+            1397
+          ],
+          "confidence": 79.38
+        },
+        {
+          "text": "Tiếng hiểu trung còn tỏ.",
+          "bbox": [
+            380,
+            1415,
+            880,
+            1456
+          ],
+          "confidence": 87.54
+        },
+        {
+          "text": "Chết hóa kiếp chăng hay,",
+          "bbox": [
+            380,
+            1475,
+            904,
+            1520
+          ],
+          "confidence": 92.53
+        },
+        {
+          "text": "Vua Thuc thành Đỗ Vũ,",
+          "bbox": [
+            380,
+            1531,
+            874,
+            1575
+          ],
+          "confidence": 85.26
+        },
+        {
+          "text": "Chết hóa thân không sạch,",
+          "bbox": [
+            380,
+            1592,
+            935,
+            1636
+          ],
+          "confidence": 96.69
+        },
+        {
+          "text": "Bà chúa thành bà Ngựa.",
+          "bbox": [
+            379,
+            1651,
+            887,
+            1695
+          ],
+          "confidence": 86.17
+        },
+        {
+          "text": "Xấu tốt do người gây,",
+          "bbox": [
+            379,
+            1712,
+            824,
+            1759
+          ],
+          "confidence": 87.99
+        },
+        {
+          "text": "Văn xoay trời bấm phú.",
+          "bbox": [
+            382,
+            1772,
+            866,
+            1814
+          ],
+          "confidence": 89.88
+        },
+        {
+          "text": "Nguyễn Văn Bách dịch",
+          "bbox": [
+            718,
+            1833,
+            1597,
+            1870
+          ],
+          "confidence": 95.98
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          1821,
+          2814
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 9.553,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              373,
+              261,
+              943,
+              312
+            ],
+            "generated_text": "“Tú phu” là người tôi trung,",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.38,
+            "confidence": 95.69,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              373,
+              322,
+              888,
+              365
+            ],
+            "generated_text": "“Cô ô” là người dâu hiêu.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 0.416,
+            "confidence": 84.25,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              374,
+              382,
+              907,
+              430
+            ],
+            "generated_text": "Người trung hiếu mất rồi.",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.361,
+            "confidence": 86.48,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              374,
+              441,
+              912,
+              483
+            ],
+            "generated_text": "Tiếng trung hiểu còn mãi.",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.373,
+            "confidence": 87.92,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              376,
+              500,
+              993,
+              549
+            ],
+            "generated_text": "Người chết hóa vật chẳng tốt,",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.489,
+            "confidence": 91.47,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              376,
+              560,
+              1005,
+              602
+            ],
+            "generated_text": "Như Vong đế hóa chim Đỗ Vũ.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.457,
+            "confidence": 91.94,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              376,
+              619,
+              1029,
+              669
+            ],
+            "generated_text": "Người chết hóa vật chẳng sạch,",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.486,
+            "confidence": 94.37,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              376,
+              680,
+              1057,
+              724
+            ],
+            "generated_text": "Như công chúa hóa thành Mã tố.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.4,
+            "confidence": 87.35,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              376,
+              740,
+              1463,
+              789
+            ],
+            "generated_text": "Tạo hóa cho tự biến thành cái cung hay cái bánh xe,",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.574,
+            "confidence": 97.08,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              377,
+              800,
+              1179,
+              842
+            ],
+            "generated_text": "Con người làm ra cả cái tốt và cái xấu.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.415,
+            "confidence": 99.07,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              138,
+              940,
+              337,
+              972
+            ],
+            "generated_text": "Dich tho:",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.224,
+            "confidence": 81.86,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              376,
+              1058,
+              884,
+              1099
+            ],
+            "generated_text": "Nhà vắng bưởi sớm mai.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 0.381,
+            "confidence": 76.95,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              377,
+              1117,
+              857,
+              1159
+            ],
+            "generated_text": "Lăng tai nghe chim gu.",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.298,
+            "confidence": 87.81,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              377,
+              1176,
+              820,
+              1217
+            ],
+            "generated_text": "Một tiếng kêu \"Cô ó\".",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.352,
+            "confidence": 84.02,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              118,
+              1237,
+              918,
+              1284
+            ],
+            "generated_text": "Tú phu: người trung thần,",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.343,
+            "confidence": 91.81,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              379,
+              1295,
+              813,
+              1338
+            ],
+            "generated_text": "Cô ó: nàng hiểu phụ.",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.368,
+            "confidence": 89.37,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              377,
+              1356,
+              877,
+              1397
+            ],
+            "generated_text": "Người trung hiểu xa rồi.",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.33,
+            "confidence": 79.38,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              380,
+              1415,
+              880,
+              1456
+            ],
+            "generated_text": "Tiếng hiểu trung còn tỏ.",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.349,
+            "confidence": 87.54,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              380,
+              1475,
+              904,
+              1520
+            ],
+            "generated_text": "Chết hóa kiếp chăng hay,",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.378,
+            "confidence": 92.53,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              380,
+              1531,
+              874,
+              1575
+            ],
+            "generated_text": "Vua Thuc thành Đỗ Vũ,",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.379,
+            "confidence": 85.26,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              380,
+              1592,
+              935,
+              1636
+            ],
+            "generated_text": "Chết hóa thân không sạch,",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.385,
+            "confidence": 96.69,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              379,
+              1651,
+              887,
+              1695
+            ],
+            "generated_text": "Bà chúa thành bà Ngựa.",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.365,
+            "confidence": 86.17,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              379,
+              1712,
+              824,
+              1759
+            ],
+            "generated_text": "Xấu tốt do người gây,",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.337,
+            "confidence": 87.99,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              382,
+              1772,
+              866,
+              1814
+            ],
+            "generated_text": "Văn xoay trời bấm phú.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 0.387,
+            "confidence": 89.88,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              718,
+              1833,
+              1597,
+              1870
+            ],
+            "generated_text": "Nguyễn Văn Bách dịch",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.326,
+            "confidence": 95.98,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              473,
+              480,
+              621,
+              490
+            ],
+            "ink": 130
+          },
+          {
+            "box": [
+              145,
+              931,
+              289,
+              944
+            ],
+            "ink": 270
+          },
+          {
+            "box": [
+              457,
+              1155,
+              837,
+              1166
+            ],
+            "ink": 226
+          },
+          {
+            "box": [
+              577,
+              1334,
+              735,
+              1344
+            ],
+            "ink": 120
+          },
+          {
+            "box": [
+              412,
+              1395,
+              623,
+              1405
+            ],
+            "ink": 133
+          },
+          {
+            "box": [
+              471,
+              1453,
+              726,
+              1463
+            ],
+            "ink": 158
+          },
+          {
+            "box": [
+              1525,
+              2535,
+              1602,
+              2548
+            ],
+            "ink": 340
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      }
+    }
+  ]
+}

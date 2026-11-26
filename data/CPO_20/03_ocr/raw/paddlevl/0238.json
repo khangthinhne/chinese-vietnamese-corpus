@@ -1,0 +1,685 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_20",
+  "engine": "paddlevl",
+  "page": 238,
+  "runs": [
+    {
+      "key": "311586f7512e0596348b42cc324d54a5662d2527ce93a90c65df2cef8ab7c76d",
+      "parameters": {
+        "image_sha256": "2a7282d79072e441ff364597e3a62b96bc0feffb8476b8a90f90ee12e9136629",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T06:20:34+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_238.png",
+      "image_size": [
+        1839,
+        2804
+      ],
+      "crop_box": [
+        0,
+        0,
+        1839,
+        2804
+      ],
+      "lines": [
+        {
+          "text": "Dich nghĩa:",
+          "bbox": [
+            293,
+            289,
+            542,
+            326
+          ],
+          "confidence": 94.91
+        },
+        {
+          "text": "CÁM NGÂM",
+          "bbox": [
+            645,
+            414,
+            1276,
+            468
+          ],
+          "confidence": 87.45
+        },
+        {
+          "text": "Trời đất sinh ta có ý hay không?",
+          "bbox": [
+            523,
+            712,
+            1211,
+            767
+          ],
+          "confidence": 99.46
+        },
+        {
+          "text": "Sao không sinh ta vào đời Đường Ngu?",
+          "bbox": [
+            521,
+            772,
+            1333,
+            833
+          ],
+          "confidence": 96.14
+        },
+        {
+          "text": "Bình đạo khắp chốn, vũng tài xoay xở,",
+          "bbox": [
+            520,
+            831,
+            1324,
+            888
+          ],
+          "confidence": 81.24
+        },
+        {
+          "text": "Nơi thảo đã, ôm chí lo trời một mình,",
+          "bbox": [
+            518,
+            890,
+            1307,
+            947
+          ],
+          "confidence": 90.15
+        },
+        {
+          "text": "Lúa thủ lúa tắc mọc nơi cung xưa tuyệt không người nào",
+          "bbox": [
+            518,
+            950,
+            1688,
+            1014
+          ],
+          "confidence": 96.06
+        },
+        {
+          "text": "dua xót.",
+          "bbox": [
+            523,
+            1043,
+            1732,
+            1075
+          ],
+          "confidence": 68.33
+        },
+        {
+          "text": "Sâm rên trong mây, ai biết rong rưỡi việc nước?",
+          "bbox": [
+            515,
+            1076,
+            1515,
+            1128
+          ],
+          "confidence": 90.55
+        },
+        {
+          "text": "Loạn lac thế này, biết bao giờ mới hết?",
+          "bbox": [
+            515,
+            1132,
+            1338,
+            1183
+          ],
+          "confidence": 93.82
+        },
+        {
+          "text": "Kia đó hoa vàng dưới bờ giậu và cây ngô đồng bên giếng",
+          "bbox": [
+            513,
+            1186,
+            1694,
+            1254
+          ],
+          "confidence": 92.19
+        },
+        {
+          "text": "nước.",
+          "bbox": [
+            1624,
+            1279,
+            1727,
+            1309
+          ],
+          "confidence": 95.07
+        },
+        {
+          "text": "Uich thơ:",
+          "bbox": [
+            276,
+            1425,
+            470,
+            1456
+          ],
+          "confidence": 88.03
+        },
+        {
+          "text": "Trời sinh ta có ý gì?",
+          "bbox": [
+            621,
+            1643,
+            1046,
+            1689
+          ],
+          "confidence": 99.36
+        },
+        {
+          "text": "Sinh ta sao chăng gặp thì Đường Ngu?",
+          "bbox": [
+            502,
+            1705,
+            1308,
+            1761
+          ],
+          "confidence": 87.42
+        },
+        {
+          "text": "Lửa binh xoay xỏa vung trò,",
+          "bbox": [
+            615,
+            1761,
+            1201,
+            1812
+          ],
+          "confidence": 83.67
+        },
+        {
+          "text": "Quê mùa ôm māi chỉ có lo trời!",
+          "bbox": [
+            502,
+            1821,
+            1157,
+            1867
+          ],
+          "confidence": 80.93
+        },
+        {
+          "text": "Lúa khoai vun xói không người,",
+          "bbox": [
+            613,
+            1884,
+            1274,
+            1936
+          ],
+          "confidence": 94.39
+        },
+        {
+          "text": "Nước non bão tố nào ai khuông phò,",
+          "bbox": [
+            498,
+            1938,
+            1251,
+            1989
+          ],
+          "confidence": 89.5
+        },
+        {
+          "text": "Loạn ly biết đến bao giờ.",
+          "bbox": [
+            612,
+            1996,
+            1130,
+            2043
+          ],
+          "confidence": 96.61
+        },
+        {
+          "text": "Giêng ngô kia, lại giậu thu hoa vàng!...",
+          "bbox": [
+            498,
+            2054,
+            1307,
+            2107
+          ],
+          "confidence": 87.81
+        },
+        {
+          "text": "Nguyễn Văn Bách dịch",
+          "bbox": [
+            248,
+            2139,
+            1710,
+            2180
+          ],
+          "confidence": 96.64
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          1839,
+          2804
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 27.965,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              293,
+              289,
+              542,
+              326
+            ],
+            "generated_text": "Dich nghĩa:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.652,
+            "confidence": 94.91,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              645,
+              414,
+              1276,
+              468
+            ],
+            "generated_text": "CÁM NGÂM",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 1.173,
+            "confidence": 87.45,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              523,
+              712,
+              1211,
+              767
+            ],
+            "generated_text": "Trời đất sinh ta có ý hay không?",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.896,
+            "confidence": 99.46,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              521,
+              772,
+              1333,
+              833
+            ],
+            "generated_text": "Sao không sinh ta vào đời Đường Ngu?",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.342,
+            "confidence": 96.14,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              520,
+              831,
+              1324,
+              888
+            ],
+            "generated_text": "Bình đạo khắp chốn, vũng tài xoay xở,",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.709,
+            "confidence": 81.24,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              518,
+              890,
+              1307,
+              947
+            ],
+            "generated_text": "Nơi thảo đã, ôm chí lo trời một mình,",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.595,
+            "confidence": 90.15,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              518,
+              950,
+              1688,
+              1014
+            ],
+            "generated_text": "Lúa thủ lúa tắc mọc nơi cung xưa tuyệt không người nào",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.978,
+            "confidence": 96.06,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              523,
+              1043,
+              1732,
+              1075
+            ],
+            "generated_text": "dua xót.",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.665,
+            "confidence": 68.33,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              515,
+              1076,
+              1515,
+              1128
+            ],
+            "generated_text": "Sâm rên trong mây, ai biết rong rưỡi việc nước?",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.917,
+            "confidence": 90.55,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              515,
+              1132,
+              1338,
+              1183
+            ],
+            "generated_text": "Loạn lac thế này, biết bao giờ mới hết?",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.276,
+            "confidence": 93.82,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              513,
+              1186,
+              1694,
+              1254
+            ],
+            "generated_text": "Kia đó hoa vàng dưới bờ giậu và cây ngô đồng bên giếng",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 2.24,
+            "confidence": 92.19,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              1624,
+              1279,
+              1727,
+              1309
+            ],
+            "generated_text": "nước.",
+            "n_lines": 1,
+            "tokens": 4,
+            "seconds": 0.634,
+            "confidence": 95.07,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              276,
+              1425,
+              470,
+              1456
+            ],
+            "generated_text": "Uich thơ:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.744,
+            "confidence": 88.03,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              621,
+              1643,
+              1046,
+              1689
+            ],
+            "generated_text": "Trời sinh ta có ý gì?",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 1.042,
+            "confidence": 99.36,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              502,
+              1705,
+              1308,
+              1761
+            ],
+            "generated_text": "Sinh ta sao chăng gặp thì Đường Ngu?",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.37,
+            "confidence": 87.42,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              615,
+              1761,
+              1201,
+              1812
+            ],
+            "generated_text": "Lửa binh xoay xỏa vung trò,",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.416,
+            "confidence": 83.67,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              502,
+              1821,
+              1157,
+              1867
+            ],
+            "generated_text": "Quê mùa ôm māi chỉ có lo trời!",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.632,
+            "confidence": 80.93,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              613,
+              1884,
+              1274,
+              1936
+            ],
+            "generated_text": "Lúa khoai vun xói không người,",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.907,
+            "confidence": 94.39,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              498,
+              1938,
+              1251,
+              1989
+            ],
+            "generated_text": "Nước non bão tố nào ai khuông phò,",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.326,
+            "confidence": 89.5,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              612,
+              1996,
+              1130,
+              2043
+            ],
+            "generated_text": "Loạn ly biết đến bao giờ.",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.944,
+            "confidence": 96.61,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              498,
+              2054,
+              1307,
+              2107
+            ],
+            "generated_text": "Giêng ngô kia, lại giậu thu hoa vàng!...",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.523,
+            "confidence": 87.81,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              248,
+              2139,
+              1710,
+              2180
+            ],
+            "generated_text": "Nguyễn Văn Bách dịch",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.978,
+            "confidence": 96.64,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              282,
+              1414,
+              423,
+              1425
+            ],
+            "ink": 251
+          },
+          {
+            "box": [
+              260,
+              2491,
+              334,
+              2500
+            ],
+            "ink": 261
+          },
+          {
+            "box": [
+              256,
+              2496,
+              334,
+              2508
+            ],
+            "ink": 352
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      }
+    }
+  ]
+}

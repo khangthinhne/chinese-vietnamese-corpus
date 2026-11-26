@@ -1,0 +1,969 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_20",
+  "engine": "paddlevl",
+  "page": 488,
+  "runs": [
+    {
+      "key": "e56ae091cd923ab99603379922575003505e0ce2dfab0c8f8abdbf6d4e5ab2ce",
+      "parameters": {
+        "image_sha256": "afa586d04f7dae034bd9cfcab3840857dc59602ded24403d047c5e1a787e94cf",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T08:16:56+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_488.png",
+      "image_size": [
+        1839,
+        2803
+      ],
+      "crop_box": [
+        0,
+        0,
+        1839,
+        2803
+      ],
+      "lines": [
+        {
+          "text": "tri kỷ, đều là nghĩa phải như thế, ngoài ra không biết đến việc gì khác.",
+          "bbox": [
+            238,
+            241,
+            1705,
+            294
+          ],
+          "confidence": 97.73
+        },
+        {
+          "text": "Xan mừng mà răng:",
+          "bbox": [
+            327,
+            322,
+            759,
+            354
+          ],
+          "confidence": 76.37
+        },
+        {
+          "text": "- Mạnh mẽ thay! Kế sĩ như thế đáng goi là \"đat\" vây.",
+          "bbox": [
+            327,
+            385,
+            1476,
+            432
+          ],
+          "confidence": 89.23
+        },
+        {
+          "text": "Rồi đem Nho vào yết kiến vua. Vua cho Nho lay ở nội điện và hỏi:",
+          "bbox": [
+            329,
+            457,
+            1690,
+            507
+          ],
+          "confidence": 94.71
+        },
+        {
+          "text": "- Nhà người đã ôm áp kinh luân, từng trải việc đời, thử liệu xem",
+          "bbox": [
+            327,
+            532,
+            1708,
+            583
+          ],
+          "confidence": 94.72
+        },
+        {
+          "text": "chuyên di này ra sao?",
+          "bbox": [
+            238,
+            599,
+            703,
+            630
+          ],
+          "confidence": 81.81
+        },
+        {
+          "text": "Nho tâu:",
+          "bbox": [
+            327,
+            672,
+            512,
+            701
+          ],
+          "confidence": 91.25
+        },
+        {
+          "text": "- Ngừa trông phúc lớn của nhà nước và mưu sâu của miếu đường.",
+          "bbox": [
+            327,
+            739,
+            1705,
+            788
+          ],
+          "confidence": 88.19
+        },
+        {
+          "text": "công việc xong xuôi tưởng cũng không khó. Và lại lúc ấy đã có vi",
+          "bbox": [
+            237,
+            800,
+            1705,
+            848
+          ],
+          "confidence": 97.68
+        },
+        {
+          "text": "lượng thân chuyên việc ứng đối, chắc sẽ không để nhục đến mệnh",
+          "bbox": [
+            237,
+            859,
+            1704,
+            908
+          ],
+          "confidence": 94.15
+        },
+        {
+          "text": "vua. Thân làm người giúp việc chỉ biết làm hết chức phận mà thôi.",
+          "bbox": [
+            234,
+            918,
+            1651,
+            967
+          ],
+          "confidence": 97.91
+        },
+        {
+          "text": "Nhà vua gật đầu, rồi sai quan Bình chương Phan Lê Phiên cùng",
+          "bbox": [
+            324,
+            992,
+            1705,
+            1042
+          ],
+          "confidence": 97.3
+        },
+        {
+          "text": "với Bằng công Nguyên Hữu Chỉnh hợp nhau bán việc thảo quốc thư.",
+          "bbox": [
+            232,
+            1050,
+            1702,
+            1102
+          ],
+          "confidence": 88.15
+        },
+        {
+          "text": "Trong thư đại lược nói rằng:",
+          "bbox": [
+            232,
+            1109,
+            835,
+            1153
+          ],
+          "confidence": 96.34
+        },
+        {
+          "text": "“Nghệ An là đất nền móng trong cuộc trung hưng của bản triều,",
+          "bbox": [
+            321,
+            1183,
+            1702,
+            1234
+          ],
+          "confidence": 92.56
+        },
+        {
+          "text": "cùng với Thanh Hoa, đều là quận chân tay của nhà nước, quan văn",
+          "bbox": [
+            232,
+            1242,
+            1702,
+            1294
+          ],
+          "confidence": 96.76
+        },
+        {
+          "text": "tương võ phần nhiều ở đó mà ra. Quân lính tức về cũng đều kén chọn",
+          "bbox": [
+            231,
+            1303,
+            1702,
+            1353
+          ],
+          "confidence": 90.9
+        },
+        {
+          "text": "định tráng ở xứ ấy mà sung vào. Nếu như dùng người mà bỏ đất, để",
+          "bbox": [
+            232,
+            1365,
+            1701,
+            1413
+          ],
+          "confidence": 92.88
+        },
+        {
+          "text": "họ cách trở quê hương, xa lìa thân thích, xét về nhân tình, rất là trái",
+          "bbox": [
+            232,
+            1426,
+            1701,
+            1472
+          ],
+          "confidence": 96.06
+        },
+        {
+          "text": "hướng. Đức vua quý quốc trọng điều tín nghĩa, hòa với láng giềng,",
+          "bbox": [
+            231,
+            1487,
+            1699,
+            1538
+          ],
+          "confidence": 87.05
+        },
+        {
+          "text": "\"suy bụng ta ra bụng người\", chắc rằng không việc nhỏ mon nào mà",
+          "bbox": [
+            231,
+            1547,
+            1697,
+            1592
+          ],
+          "confidence": 97.52
+        },
+        {
+          "text": "không soi thấu, hướng chi là việc rõ ràng như thế. Nghĩ lại đức vua",
+          "bbox": [
+            231,
+            1603,
+            1699,
+            1652
+          ],
+          "confidence": 94.62
+        },
+        {
+          "text": "quý quốc lúc mới ra Bắc, vốn lấy việc tôn phờ làm nghĩa thứ nhất.",
+          "bbox": [
+            229,
+            1664,
+            1696,
+            1713
+          ],
+          "confidence": 95.96
+        },
+        {
+          "text": "Tiên dễ lúc sinh thơi, từng mọi ngồi trên giường, cầm tay cùng trò",
+          "bbox": [
+            229,
+            1722,
+            1696,
+            1778
+          ],
+          "confidence": 85.47
+        },
+        {
+          "text": "chuyện. Tiếng ngọc còn văng vẳng bên tai, với quên sao được? Kịp",
+          "bbox": [
+            229,
+            1787,
+            1696,
+            1834
+          ],
+          "confidence": 93.98
+        },
+        {
+          "text": "đến khi tiên đế tựa gói trối trăng mọi việc, ăn cản lo cho kế tiểu tử",
+          "bbox": [
+            229,
+            1842,
+            1697,
+            1892
+          ],
+          "confidence": 82.43
+        },
+        {
+          "text": "này tuổi còn trẻ nhỏ, muốn nhờ vào phúc ấm của quý quốc, để làm",
+          "bbox": [
+            227,
+            1905,
+            1694,
+            1952
+          ],
+          "confidence": 95.91
+        },
+        {
+          "text": "nơi nương tựa. Gân đây nghe tin quý quốc sai tướng ra động ở Nghệ",
+          "bbox": [
+            227,
+            1966,
+            1693,
+            2017
+          ],
+          "confidence": 91.72
+        },
+        {
+          "text": "An, lòng người ngờ vực, có kẻ cho rằng đó là do bọn bề tôi ở biên giới",
+          "bbox": [
+            226,
+            2025,
+            1693,
+            2072
+          ],
+          "confidence": 93.65
+        },
+        {
+          "text": "gây việc, không phải bản ý của quý quốc vương. Đến lúc tiếp được bức",
+          "bbox": [
+            226,
+            2084,
+            1693,
+            2134
+          ],
+          "confidence": 95.12
+        },
+        {
+          "text": "thư tư ra, mới biết thật là vâng mệnh lệnh của quý quốc vương. Trong",
+          "bbox": [
+            226,
+            2146,
+            1694,
+            2194
+          ],
+          "confidence": 91.68
+        },
+        {
+          "text": "thư vin vào cơ mùa thu năm ngoái bắn quốc đã húa cắt đất khao",
+          "bbox": [
+            226,
+            2207,
+            1691,
+            2253
+          ],
+          "confidence": 84.02
+        },
+        {
+          "text": "quân. Kế tiểu tử này mới lên ngôi, chưa được rõ nguyên nhân việc",
+          "bbox": [
+            224,
+            2265,
+            1691,
+            2312
+          ],
+          "confidence": 94.63
+        },
+        {
+          "text": "trước, đã sai định thần tra cứu lại cái ước cắt đất, thì là hai châu Bộ",
+          "bbox": [
+            224,
+            2323,
+            1690,
+            2371
+          ],
+          "confidence": 90.29
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          1839,
+          2803
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 20.638,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              238,
+              241,
+              1705,
+              294
+            ],
+            "generated_text": "tri kỷ, đều là nghĩa phải như thế, ngoài ra không biết đến việc gì khác.",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.6,
+            "confidence": 97.73,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              327,
+              322,
+              759,
+              354
+            ],
+            "generated_text": "Xan mừng mà răng:",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.303,
+            "confidence": 76.37,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              327,
+              385,
+              1476,
+              432
+            ],
+            "generated_text": "- Mạnh mẽ thay! Kế sĩ như thế đáng goi là \"đat\" vây.",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.74,
+            "confidence": 89.23,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              329,
+              457,
+              1690,
+              507
+            ],
+            "generated_text": "Rồi đem Nho vào yết kiến vua. Vua cho Nho lay ở nội điện và hỏi:",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 0.696,
+            "confidence": 94.71,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              327,
+              532,
+              1708,
+              583
+            ],
+            "generated_text": "- Nhà người đã ôm áp kinh luân, từng trải việc đời, thử liệu xem",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.652,
+            "confidence": 94.72,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              238,
+              599,
+              703,
+              630
+            ],
+            "generated_text": "chuyên di này ra sao?",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.288,
+            "confidence": 81.81,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              327,
+              672,
+              512,
+              701
+            ],
+            "generated_text": "Nho tâu:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.235,
+            "confidence": 91.25,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              327,
+              739,
+              1705,
+              788
+            ],
+            "generated_text": "- Ngừa trông phúc lớn của nhà nước và mưu sâu của miếu đường.",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.568,
+            "confidence": 88.19,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              237,
+              800,
+              1705,
+              848
+            ],
+            "generated_text": "công việc xong xuôi tưởng cũng không khó. Và lại lúc ấy đã có vi",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.631,
+            "confidence": 97.68,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              237,
+              859,
+              1704,
+              908
+            ],
+            "generated_text": "lượng thân chuyên việc ứng đối, chắc sẽ không để nhục đến mệnh",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.602,
+            "confidence": 94.15,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              234,
+              918,
+              1651,
+              967
+            ],
+            "generated_text": "vua. Thân làm người giúp việc chỉ biết làm hết chức phận mà thôi.",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.579,
+            "confidence": 97.91,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              324,
+              992,
+              1705,
+              1042
+            ],
+            "generated_text": "Nhà vua gật đầu, rồi sai quan Bình chương Phan Lê Phiên cùng",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.605,
+            "confidence": 97.3,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              232,
+              1050,
+              1702,
+              1102
+            ],
+            "generated_text": "với Bằng công Nguyên Hữu Chỉnh hợp nhau bán việc thảo quốc thư.",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.589,
+            "confidence": 88.15,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              232,
+              1109,
+              835,
+              1153
+            ],
+            "generated_text": "Trong thư đại lược nói rằng:",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.359,
+            "confidence": 96.34,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              321,
+              1183,
+              1702,
+              1234
+            ],
+            "generated_text": "“Nghệ An là đất nền móng trong cuộc trung hưng của bản triều,",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.581,
+            "confidence": 92.56,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              232,
+              1242,
+              1702,
+              1294
+            ],
+            "generated_text": "cùng với Thanh Hoa, đều là quận chân tay của nhà nước, quan văn",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.582,
+            "confidence": 96.76,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              231,
+              1303,
+              1702,
+              1353
+            ],
+            "generated_text": "tương võ phần nhiều ở đó mà ra. Quân lính tức về cũng đều kén chọn",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.627,
+            "confidence": 90.9,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              232,
+              1365,
+              1701,
+              1413
+            ],
+            "generated_text": "định tráng ở xứ ấy mà sung vào. Nếu như dùng người mà bỏ đất, để",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.69,
+            "confidence": 92.88,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              232,
+              1426,
+              1701,
+              1472
+            ],
+            "generated_text": "họ cách trở quê hương, xa lìa thân thích, xét về nhân tình, rất là trái",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.694,
+            "confidence": 96.06,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              231,
+              1487,
+              1699,
+              1538
+            ],
+            "generated_text": "hướng. Đức vua quý quốc trọng điều tín nghĩa, hòa với láng giềng,",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.69,
+            "confidence": 87.05,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              231,
+              1547,
+              1697,
+              1592
+            ],
+            "generated_text": "\"suy bụng ta ra bụng người\", chắc rằng không việc nhỏ mon nào mà",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.578,
+            "confidence": 97.52,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              231,
+              1603,
+              1699,
+              1652
+            ],
+            "generated_text": "không soi thấu, hướng chi là việc rõ ràng như thế. Nghĩ lại đức vua",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.718,
+            "confidence": 94.62,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              229,
+              1664,
+              1696,
+              1713
+            ],
+            "generated_text": "quý quốc lúc mới ra Bắc, vốn lấy việc tôn phờ làm nghĩa thứ nhất.",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.664,
+            "confidence": 95.96,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              229,
+              1722,
+              1696,
+              1778
+            ],
+            "generated_text": "Tiên dễ lúc sinh thơi, từng mọi ngồi trên giường, cầm tay cùng trò",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.664,
+            "confidence": 85.47,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              229,
+              1787,
+              1696,
+              1834
+            ],
+            "generated_text": "chuyện. Tiếng ngọc còn văng vẳng bên tai, với quên sao được? Kịp",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 0.735,
+            "confidence": 93.98,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              229,
+              1842,
+              1697,
+              1892
+            ],
+            "generated_text": "đến khi tiên đế tựa gói trối trăng mọi việc, ăn cản lo cho kế tiểu tử",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 0.732,
+            "confidence": 82.43,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              227,
+              1905,
+              1694,
+              1952
+            ],
+            "generated_text": "này tuổi còn trẻ nhỏ, muốn nhờ vào phúc ấm của quý quốc, để làm",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.645,
+            "confidence": 95.91,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              227,
+              1966,
+              1693,
+              2017
+            ],
+            "generated_text": "nơi nương tựa. Gân đây nghe tin quý quốc sai tướng ra động ở Nghệ",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.65,
+            "confidence": 91.72,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              226,
+              2025,
+              1693,
+              2072
+            ],
+            "generated_text": "An, lòng người ngờ vực, có kẻ cho rằng đó là do bọn bề tôi ở biên giới",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.687,
+            "confidence": 93.65,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              226,
+              2084,
+              1693,
+              2134
+            ],
+            "generated_text": "gây việc, không phải bản ý của quý quốc vương. Đến lúc tiếp được bức",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.604,
+            "confidence": 95.12,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              226,
+              2146,
+              1694,
+              2194
+            ],
+            "generated_text": "thư tư ra, mới biết thật là vâng mệnh lệnh của quý quốc vương. Trong",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.673,
+            "confidence": 91.68,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 32,
+            "box": [
+              226,
+              2207,
+              1691,
+              2253
+            ],
+            "generated_text": "thư vin vào cơ mùa thu năm ngoái bắn quốc đã húa cắt đất khao",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.605,
+            "confidence": 84.02,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 33,
+            "box": [
+              224,
+              2265,
+              1691,
+              2312
+            ],
+            "generated_text": "quân. Kế tiểu tử này mới lên ngôi, chưa được rõ nguyên nhân việc",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.658,
+            "confidence": 94.63,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 34,
+            "box": [
+              224,
+              2323,
+              1690,
+              2371
+            ],
+            "generated_text": "trước, đã sai định thần tra cứu lại cái ước cắt đất, thì là hai châu Bộ",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 0.712,
+            "confidence": 90.29,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      }
+    }
+  ]
+}

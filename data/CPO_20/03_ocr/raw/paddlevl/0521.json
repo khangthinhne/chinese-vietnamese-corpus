@@ -1,0 +1,969 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_20",
+  "engine": "paddlevl",
+  "page": 521,
+  "runs": [
+    {
+      "key": "1f4b13d482e237b1e1385941d9f57309c2a57b37c348b1d1ab068c70caba5181",
+      "parameters": {
+        "image_sha256": "a359325ed76e7756e7a8ba138dbd0cb0eb930d5d101805cfc4f79faa5504d82d",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T08:28:52+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_521.png",
+      "image_size": [
+        1821,
+        2814
+      ],
+      "crop_box": [
+        0,
+        0,
+        1821,
+        2814
+      ],
+      "lines": [
+        {
+          "text": "Châu bèn đem quân đến đón vua Lê, vua tôi gặp nhau rất là vui",
+          "bbox": [
+            245,
+            263,
+            1611,
+            313
+          ],
+          "confidence": 99.08
+        },
+        {
+          "text": "mùng.",
+          "bbox": [
+            168,
+            347,
+            359,
+            376
+          ],
+          "confidence": 88.24
+        },
+        {
+          "text": "Vua nói:",
+          "bbox": [
+            251,
+            411,
+            421,
+            441
+          ],
+          "confidence": 97.7
+        },
+        {
+          "text": "- Nghe đồn nhà người dùng bình rất hùng dũng, nay quân giặc",
+          "bbox": [
+            246,
+            468,
+            1614,
+            516
+          ],
+          "confidence": 95.27
+        },
+        {
+          "text": "tu tập ở vùng Bảo Khảm chừng hai trăm tên, nếu người có thể đánh",
+          "bbox": [
+            170,
+            527,
+            1614,
+            579
+          ],
+          "confidence": 93.38
+        },
+        {
+          "text": "phá được chúng, ta sẽ cho người làm trấn thủ xứ Kinh Bắc.",
+          "bbox": [
+            171,
+            585,
+            1385,
+            638
+          ],
+          "confidence": 96.9
+        },
+        {
+          "text": "Châu nơi:",
+          "bbox": [
+            251,
+            675,
+            456,
+            706
+          ],
+          "confidence": 87.59
+        },
+        {
+          "text": "- Việc đó rất dễ, song chỉ e khi chúng kéo hết quân đến, thân ít",
+          "bbox": [
+            249,
+            731,
+            1618,
+            780
+          ],
+          "confidence": 95.69
+        },
+        {
+          "text": "quân, lại không có quân cứu viên, thì không đủ sức đánh nhau với",
+          "bbox": [
+            173,
+            790,
+            1616,
+            844
+          ],
+          "confidence": 95.9
+        },
+        {
+          "text": "chúng, mà rồi lại không thể tránh đi nơi khác để giấu kín tung tích.",
+          "bbox": [
+            173,
+            850,
+            1616,
+            903
+          ],
+          "confidence": 99.3
+        },
+        {
+          "text": "Lâu nay, những việc thần đã làm, chỉ có thể hả bót tức giận mà chưa",
+          "bbox": [
+            174,
+            911,
+            1619,
+            963
+          ],
+          "confidence": 91.15
+        },
+        {
+          "text": "thể tự lập được cũng là vì có ấy. May nhờ oai linh của bệ hạ, lại được",
+          "bbox": [
+            174,
+            970,
+            1619,
+            1022
+          ],
+          "confidence": 95.93
+        },
+        {
+          "text": "các tương góp sức, thần xin tự mình chống đỡ một mặt, gặp giặc là",
+          "bbox": [
+            176,
+            1031,
+            1619,
+            1081
+          ],
+          "confidence": 95.52
+        },
+        {
+          "text": "đánh, có chết thì thôi chứ không chạy.",
+          "bbox": [
+            176,
+            1097,
+            976,
+            1141
+          ],
+          "confidence": 89.9
+        },
+        {
+          "text": "Vua nói:",
+          "bbox": [
+            262,
+            1183,
+            432,
+            1213
+          ],
+          "confidence": 77.56
+        },
+        {
+          "text": "- Manh mê thay! Thật đáng là bạc đại tương.",
+          "bbox": [
+            256,
+            1239,
+            1210,
+            1284
+          ],
+          "confidence": 85.36
+        },
+        {
+          "text": "Rồi đó vua bèn phong cho Châu làm quyền trân thụ, tước Đạo",
+          "bbox": [
+            259,
+            1308,
+            1624,
+            1356
+          ],
+          "confidence": 85.69
+        },
+        {
+          "text": "quân công. Châu liền mở cuộc diễu vỡ núi Van Kiếp,¹ dùng cơ và",
+          "bbox": [
+            179,
+            1362,
+            1624,
+            1416
+          ],
+          "confidence": 74.67
+        },
+        {
+          "text": "trống đại tướng ở trên núi, rồi sai người tầu với vua tới xem.",
+          "bbox": [
+            179,
+            1430,
+            1429,
+            1477
+          ],
+          "confidence": 88.29
+        },
+        {
+          "text": "Thất la:",
+          "bbox": [
+            260,
+            1517,
+            431,
+            1549
+          ],
+          "confidence": 68.37
+        },
+        {
+          "text": "Thành lữ long đong lo việc nước,",
+          "bbox": [
+            407,
+            1578,
+            1090,
+            1620
+          ],
+          "confidence": 79.67
+        },
+        {
+          "text": "Trach bảo hãng hái giết quân thù.",
+          "bbox": [
+            409,
+            1634,
+            1158,
+            1680
+          ],
+          "confidence": 88.17
+        },
+        {
+          "text": "Chưa biết việc này sẽ ra sao? Hãy xem hỏi sau phần giai.",
+          "bbox": [
+            262,
+            1705,
+            1452,
+            1753
+          ],
+          "confidence": 89.49
+        },
+        {
+          "text": "1. Thuộc huyện Chí Linh, Hải Dương.",
+          "bbox": [
+            270,
+            2118,
+            1630,
+            2157
+          ],
+          "confidence": 95.94
+        },
+        {
+          "text": "2. Thành lữ: Muơn ở câu \"Hữu diễn nhất thành, hữu chúng nhất lữ\" (đất dai có",
+          "bbox": [
+            266,
+            2149,
+            1633,
+            2206
+          ],
+          "confidence": 89.19
+        },
+        {
+          "text": "mười dặm, quân lính có năm trăm người) trong Bắc sử, trở vào việc vua Thiếu Khang",
+          "bbox": [
+            188,
+            2198,
+            1636,
+            2254
+          ],
+          "confidence": 93.19
+        },
+        {
+          "text": "nhà Ha bị mất nước chỉ còn có một thành một lũ mà lại khôi phục được cơ nghiệp.",
+          "bbox": [
+            190,
+            2246,
+            1635,
+            2301
+          ],
+          "confidence": 93.52
+        },
+        {
+          "text": "Trách bào mươn chủ ở bài “Vô y” trong Kinh Thi, bài thơ nói về tinh thần hữu ái và",
+          "bbox": [
+            188,
+            2293,
+            1635,
+            2343
+          ],
+          "confidence": 89.59
+        },
+        {
+          "text": "Để đào mượn chỗ ở bất vọng",
+          "bbox": [
+            231,
+            2335,
+            1635,
+            2358
+          ],
+          "confidence": 40.49
+        },
+        {
+          "text": "kháng khái của quân lính. “Trách” là áo lót, “bào” là áo khoác, nguyên văn là kho1",
+          "bbox": [
+            190,
+            2350,
+            1638,
+            2400
+          ],
+          "confidence": 88.75
+        },
+        {
+          "text": "viết vô y. Dũ tứ đồng bào... Khởi viết vô y. Dũ tứ đồng trách\" (Há răng không có áo?",
+          "bbox": [
+            190,
+            2392,
+            1638,
+            2446
+          ],
+          "confidence": 87.51
+        },
+        {
+          "text": "Ta sẽ chung áo khoác cùng anh...). Cả hai câu thơ trên đều nói về việc Chiêu Thông",
+          "bbox": [
+            190,
+            2438,
+            1639,
+            2493
+          ],
+          "confidence": 97.36
+        },
+        {
+          "text": "cùng đám quân cần vương đang hàng hái mưu khôi phục được cơ nghiệp.",
+          "bbox": [
+            192,
+            2490,
+            1636,
+            2545
+          ],
+          "confidence": 89.7
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          1821,
+          2814
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 19.061,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              245,
+              263,
+              1611,
+              313
+            ],
+            "generated_text": "Châu bèn đem quân đến đón vua Lê, vua tôi gặp nhau rất là vui",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.696,
+            "confidence": 99.08,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              168,
+              347,
+              359,
+              376
+            ],
+            "generated_text": "mùng.",
+            "n_lines": 1,
+            "tokens": 4,
+            "seconds": 0.194,
+            "confidence": 88.24,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              251,
+              411,
+              421,
+              441
+            ],
+            "generated_text": "Vua nói:",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.215,
+            "confidence": 97.7,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              246,
+              468,
+              1614,
+              516
+            ],
+            "generated_text": "- Nghe đồn nhà người dùng bình rất hùng dũng, nay quân giặc",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.593,
+            "confidence": 95.27,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              170,
+              527,
+              1614,
+              579
+            ],
+            "generated_text": "tu tập ở vùng Bảo Khảm chừng hai trăm tên, nếu người có thể đánh",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.648,
+            "confidence": 93.38,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              171,
+              585,
+              1385,
+              638
+            ],
+            "generated_text": "phá được chúng, ta sẽ cho người làm trấn thủ xứ Kinh Bắc.",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.539,
+            "confidence": 96.9,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              251,
+              675,
+              456,
+              706
+            ],
+            "generated_text": "Châu nơi:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.247,
+            "confidence": 87.59,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              249,
+              731,
+              1618,
+              780
+            ],
+            "generated_text": "- Việc đó rất dễ, song chỉ e khi chúng kéo hết quân đến, thân ít",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.638,
+            "confidence": 95.69,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              173,
+              790,
+              1616,
+              844
+            ],
+            "generated_text": "quân, lại không có quân cứu viên, thì không đủ sức đánh nhau với",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.597,
+            "confidence": 95.9,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              173,
+              850,
+              1616,
+              903
+            ],
+            "generated_text": "chúng, mà rồi lại không thể tránh đi nơi khác để giấu kín tung tích.",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.609,
+            "confidence": 99.3,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              174,
+              911,
+              1619,
+              963
+            ],
+            "generated_text": "Lâu nay, những việc thần đã làm, chỉ có thể hả bót tức giận mà chưa",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.675,
+            "confidence": 91.15,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              174,
+              970,
+              1619,
+              1022
+            ],
+            "generated_text": "thể tự lập được cũng là vì có ấy. May nhờ oai linh của bệ hạ, lại được",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 0.711,
+            "confidence": 95.93,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              176,
+              1031,
+              1619,
+              1081
+            ],
+            "generated_text": "các tương góp sức, thần xin tự mình chống đỡ một mặt, gặp giặc là",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 0.711,
+            "confidence": 95.52,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              176,
+              1097,
+              976,
+              1141
+            ],
+            "generated_text": "đánh, có chết thì thôi chứ không chạy.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.455,
+            "confidence": 89.9,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              262,
+              1183,
+              432,
+              1213
+            ],
+            "generated_text": "Vua nói:",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.213,
+            "confidence": 77.56,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              256,
+              1239,
+              1210,
+              1284
+            ],
+            "generated_text": "- Manh mê thay! Thật đáng là bạc đại tương.",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.558,
+            "confidence": 85.36,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              259,
+              1308,
+              1624,
+              1356
+            ],
+            "generated_text": "Rồi đó vua bèn phong cho Châu làm quyền trân thụ, tước Đạo",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.621,
+            "confidence": 85.69,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              179,
+              1362,
+              1624,
+              1416
+            ],
+            "generated_text": "quân công. Châu liền mở cuộc diễu vỡ núi Van Kiếp,¹ dùng cơ và",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 0.724,
+            "confidence": 74.67,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              179,
+              1430,
+              1429,
+              1477
+            ],
+            "generated_text": "trống đại tướng ở trên núi, rồi sai người tầu với vua tới xem.",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.571,
+            "confidence": 88.29,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              260,
+              1517,
+              431,
+              1549
+            ],
+            "generated_text": "Thất la:",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.208,
+            "confidence": 68.37,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              407,
+              1578,
+              1090,
+              1620
+            ],
+            "generated_text": "Thành lữ long đong lo việc nước,",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.354,
+            "confidence": 79.67,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              409,
+              1634,
+              1158,
+              1680
+            ],
+            "generated_text": "Trach bảo hãng hái giết quân thù.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.483,
+            "confidence": 88.17,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              262,
+              1705,
+              1452,
+              1753
+            ],
+            "generated_text": "Chưa biết việc này sẽ ra sao? Hãy xem hỏi sau phần giai.",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.521,
+            "confidence": 89.49,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              198,
+              2080,
+              782,
+              2097
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.146,
+            "confidence": 14.63,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              270,
+              2118,
+              1630,
+              2157
+            ],
+            "generated_text": "1. Thuộc huyện Chí Linh, Hải Dương.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.476,
+            "confidence": 95.94,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              266,
+              2149,
+              1633,
+              2206
+            ],
+            "generated_text": "2. Thành lữ: Muơn ở câu \"Hữu diễn nhất thành, hữu chúng nhất lữ\" (đất dai có",
+            "n_lines": 1,
+            "tokens": 34,
+            "seconds": 0.794,
+            "confidence": 89.19,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              188,
+              2198,
+              1636,
+              2254
+            ],
+            "generated_text": "mười dặm, quân lính có năm trăm người) trong Bắc sử, trở vào việc vua Thiếu Khang",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 0.747,
+            "confidence": 93.19,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              190,
+              2246,
+              1635,
+              2301
+            ],
+            "generated_text": "nhà Ha bị mất nước chỉ còn có một thành một lũ mà lại khôi phục được cơ nghiệp.",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.648,
+            "confidence": 93.52,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              188,
+              2293,
+              1635,
+              2343
+            ],
+            "generated_text": "Trách bào mươn chủ ở bài “Vô y” trong Kinh Thi, bài thơ nói về tinh thần hữu ái và",
+            "n_lines": 1,
+            "tokens": 36,
+            "seconds": 0.86,
+            "confidence": 89.59,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              231,
+              2335,
+              1635,
+              2358
+            ],
+            "generated_text": "Để đào mượn chỗ ở bất vọng",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.416,
+            "confidence": 40.49,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              190,
+              2350,
+              1638,
+              2400
+            ],
+            "generated_text": "kháng khái của quân lính. “Trách” là áo lót, “bào” là áo khoác, nguyên văn là kho1",
+            "n_lines": 1,
+            "tokens": 38,
+            "seconds": 0.909,
+            "confidence": 88.75,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 32,
+            "box": [
+              190,
+              2392,
+              1638,
+              2446
+            ],
+            "generated_text": "viết vô y. Dũ tứ đồng bào... Khởi viết vô y. Dũ tứ đồng trách\" (Há răng không có áo?",
+            "n_lines": 1,
+            "tokens": 39,
+            "seconds": 0.951,
+            "confidence": 87.51,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 33,
+            "box": [
+              190,
+              2438,
+              1639,
+              2493
+            ],
+            "generated_text": "Ta sẽ chung áo khoác cùng anh...). Cả hai câu thơ trên đều nói về việc Chiêu Thông",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 0.728,
+            "confidence": 97.36,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 34,
+            "box": [
+              192,
+              2490,
+              1636,
+              2545
+            ],
+            "generated_text": "cùng đám quân cần vương đang hàng hái mưu khôi phục được cơ nghiệp.",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.601,
+            "confidence": 89.7,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              260,
+              1509,
+              406,
+              1519
+            ],
+            "ink": 416
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      }
+    }
+  ]
+}

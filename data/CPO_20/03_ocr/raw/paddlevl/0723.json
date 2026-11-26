@@ -1,0 +1,735 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_20",
+  "engine": "paddlevl",
+  "page": 723,
+  "runs": [
+    {
+      "key": "971e9d8b4321a1962cfda501d309eefa79227efff5509830d218bf4886063980",
+      "parameters": {
+        "image_sha256": "050c6f8fd15afd1410499a228c2d0a3c75d4d76b4364b31dcb27596047faf4ee",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T14:26:11+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_723.png",
+      "image_size": [
+        1823,
+        2814
+      ],
+      "crop_box": [
+        0,
+        0,
+        1823,
+        2814
+      ],
+      "lines": [
+        {
+          "text": "翻虹影於波心。",
+          "bbox": [
+            641,
+            508,
+            1153,
+            565
+          ],
+          "confidence": 93.28
+        },
+        {
+          "text": "織龍鱗於水面。",
+          "bbox": [
+            637,
+            580,
+            1185,
+            641
+          ],
+          "confidence": 94.57
+        },
+        {
+          "text": "陰古樹之扶疏，",
+          "bbox": [
+            640,
+            657,
+            1147,
+            720
+          ],
+          "confidence": 93.28
+        },
+        {
+          "text": "錯沙汀之潛現。",
+          "bbox": [
+            641,
+            733,
+            1507,
+            793
+          ],
+          "confidence": 93.01
+        },
+        {
+          "text": "誰牽牛之上飲，",
+          "bbox": [
+            643,
+            804,
+            1147,
+            861
+          ],
+          "confidence": 98.28
+        },
+        {
+          "text": "孰織女之下浣。",
+          "bbox": [
+            641,
+            876,
+            1175,
+            933
+          ],
+          "confidence": 85.51
+        },
+        {
+          "text": "維釣艇於中流，",
+          "bbox": [
+            645,
+            950,
+            1153,
+            1011
+          ],
+          "confidence": 99.08
+        },
+        {
+          "text": "岸東西其莫辨",
+          "bbox": [
+            646,
+            1014,
+            1122,
+            1076
+          ],
+          "confidence": 96.86
+        },
+        {
+          "text": "溥浩浩其滿盈，",
+          "bbox": [
+            641,
+            1084,
+            1152,
+            1149
+          ],
+          "confidence": 92.89
+        },
+        {
+          "text": "掬涓涓其澄清。",
+          "bbox": [
+            646,
+            1161,
+            1152,
+            1220
+          ],
+          "confidence": 79.91
+        },
+        {
+          "text": "乃澡身而浴德，",
+          "bbox": [
+            651,
+            1233,
+            1157,
+            1291
+          ],
+          "confidence": 99.72
+        },
+        {
+          "text": "亦澣衣而濯缨。",
+          "bbox": [
+            78,
+            1305,
+            1153,
+            1364
+          ],
+          "confidence": 90.85
+        },
+        {
+          "text": "魚縱壑其活潑，",
+          "bbox": [
+            78,
+            1380,
+            1155,
+            1436
+          ],
+          "confidence": 95.47
+        },
+        {
+          "text": "龍躍浪以縱橫：",
+          "bbox": [
+            78,
+            1448,
+            1155,
+            1511
+          ],
+          "confidence": 96.65
+        },
+        {
+          "text": "淘泥沙以就潔，",
+          "bbox": [
+            78,
+            1520,
+            1161,
+            1578
+          ],
+          "confidence": 97.35
+        },
+        {
+          "text": "若羽化而输生，",
+          "bbox": [
+            78,
+            1586,
+            1191,
+            1649
+          ],
+          "confidence": 91.41
+        },
+        {
+          "text": "爱捨舟而登岸，",
+          "bbox": [
+            78,
+            1656,
+            1161,
+            1714
+          ],
+          "confidence": 96.6
+        },
+        {
+          "text": "一憑欄其舒眺。",
+          "bbox": [
+            78,
+            1726,
+            1153,
+            1788
+          ],
+          "confidence": 76.66
+        },
+        {
+          "text": "披清风其满襟，",
+          "bbox": [
+            78,
+            1794,
+            1166,
+            1863
+          ],
+          "confidence": 91.74
+        },
+        {
+          "text": "回日光以相照。",
+          "bbox": [
+            78,
+            1869,
+            1161,
+            1934
+          ],
+          "confidence": 86.6
+        },
+        {
+          "text": "寫幽愛而放懷，",
+          "bbox": [
+            78,
+            1945,
+            1153,
+            2008
+          ],
+          "confidence": 95.99
+        },
+        {
+          "text": "劉一磐之長叫",
+          "bbox": [
+            78,
+            2012,
+            1133,
+            2084
+          ],
+          "confidence": 80.38
+        },
+        {
+          "text": "I 727",
+          "bbox": [
+            78,
+            2510,
+            1619,
+            2550
+          ],
+          "confidence": 71.34
+        },
+        {
+          "text": "I",
+          "bbox": [
+            78,
+            2602,
+            1745,
+            2637
+          ],
+          "confidence": 72.07
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          1823,
+          2814
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 8.229,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              641,
+              508,
+              1153,
+              565
+            ],
+            "generated_text": "翻虹影於波心。",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.3,
+            "confidence": 93.28,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              637,
+              580,
+              1185,
+              641
+            ],
+            "generated_text": "織龍鱗於水面。",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.305,
+            "confidence": 94.57,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              640,
+              657,
+              1147,
+              720
+            ],
+            "generated_text": "陰古樹之扶疏，",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.344,
+            "confidence": 93.28,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              641,
+              733,
+              1507,
+              793
+            ],
+            "generated_text": "錯沙汀之潛現。",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.409,
+            "confidence": 93.01,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              643,
+              804,
+              1147,
+              861
+            ],
+            "generated_text": "誰牽牛之上飲，",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 0.391,
+            "confidence": 98.28,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              641,
+              876,
+              1175,
+              933
+            ],
+            "generated_text": "孰織女之下浣。",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.304,
+            "confidence": 85.51,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              645,
+              950,
+              1153,
+              1011
+            ],
+            "generated_text": "維釣艇於中流，",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.332,
+            "confidence": 99.08,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              646,
+              1014,
+              1122,
+              1076
+            ],
+            "generated_text": "岸東西其莫辨",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.256,
+            "confidence": 96.86,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              641,
+              1084,
+              1152,
+              1149
+            ],
+            "generated_text": "溥浩浩其滿盈，",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.361,
+            "confidence": 92.89,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              646,
+              1161,
+              1152,
+              1220
+            ],
+            "generated_text": "掬涓涓其澄清。",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.325,
+            "confidence": 79.91,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              651,
+              1233,
+              1157,
+              1291
+            ],
+            "generated_text": "乃澡身而浴德，",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.308,
+            "confidence": 99.72,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              78,
+              1305,
+              1153,
+              1364
+            ],
+            "generated_text": "亦澣衣而濯缨。",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.452,
+            "confidence": 90.85,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              78,
+              1380,
+              1155,
+              1436
+            ],
+            "generated_text": "魚縱壑其活潑，",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.48,
+            "confidence": 95.47,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              78,
+              1448,
+              1155,
+              1511
+            ],
+            "generated_text": "龍躍浪以縱橫：",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.421,
+            "confidence": 96.65,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              78,
+              1520,
+              1161,
+              1578
+            ],
+            "generated_text": "淘泥沙以就潔，",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.365,
+            "confidence": 97.35,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              78,
+              1586,
+              1191,
+              1649
+            ],
+            "generated_text": "若羽化而输生，",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.304,
+            "confidence": 91.41,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              78,
+              1656,
+              1161,
+              1714
+            ],
+            "generated_text": "爱捨舟而登岸，",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.358,
+            "confidence": 96.6,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              78,
+              1726,
+              1153,
+              1788
+            ],
+            "generated_text": "一憑欄其舒眺。",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.373,
+            "confidence": 76.66,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              78,
+              1794,
+              1166,
+              1863
+            ],
+            "generated_text": "披清风其满襟，",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.284,
+            "confidence": 91.74,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              78,
+              1869,
+              1161,
+              1934
+            ],
+            "generated_text": "回日光以相照。",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.284,
+            "confidence": 86.6,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              78,
+              1945,
+              1153,
+              2008
+            ],
+            "generated_text": "寫幽愛而放懷，",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.353,
+            "confidence": 95.99,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              78,
+              2012,
+              1133,
+              2084
+            ],
+            "generated_text": "劉一磐之長叫",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.31,
+            "confidence": 80.38,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              78,
+              2510,
+              1619,
+              2550
+            ],
+            "generated_text": "I 727",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.275,
+            "confidence": 71.34,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              78,
+              2602,
+              1745,
+              2637
+            ],
+            "generated_text": "I",
+            "n_lines": 1,
+            "tokens": 2,
+            "seconds": 0.174,
+            "confidence": 72.07,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              78,
+              2635,
+              1745,
+              2696
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.158,
+            "confidence": 14.62,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              78,
+              2723,
+              1745,
+              2737
+            ],
+            "ink": 196
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      }
+    }
+  ]
+}

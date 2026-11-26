@@ -1,0 +1,805 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_20",
+  "engine": "paddlevl",
+  "page": 704,
+  "runs": [
+    {
+      "key": "ff44a958417d57702feb0ee275dcb79343c7281ec804d42ae33c09635f91be01",
+      "parameters": {
+        "image_sha256": "355d958ebd8a7365e4a664911d5189b69701187fb5849db9582d551580b09ee6",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T14:20:37+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_704.png",
+      "image_size": [
+        1839,
+        2803
+      ],
+      "crop_box": [
+        0,
+        0,
+        1839,
+        2803
+      ],
+      "lines": [
+        {
+          "text": "和韵苗秋怀八首",
+          "bbox": [
+            688,
+            246,
+            1276,
+            300
+          ],
+          "confidence": 79.2
+        },
+        {
+          "text": "THU JULY AUGUST",
+          "bbox": [
+            692,
+            292,
+            1666,
+            323
+          ],
+          "confidence": 29.23
+        },
+        {
+          "text": "遥的村醒對落唖",
+          "bbox": [
+            716,
+            411,
+            1305,
+            468
+          ],
+          "confidence": 51.31
+        },
+        {
+          "text": "客懷隠几入希微",
+          "bbox": [
+            718,
+            483,
+            1307,
+            540
+          ],
+          "confidence": 89.29
+        },
+        {
+          "text": "青洲海外寒鸥泛",
+          "bbox": [
+            717,
+            558,
+            1304,
+            613
+          ],
+          "confidence": 87.74
+        },
+        {
+          "text": "紫塞天邊晚鴈飛",
+          "bbox": [
+            717,
+            630,
+            1305,
+            687
+          ],
+          "confidence": 91.11
+        },
+        {
+          "text": "聞聞兼忘佳節過",
+          "bbox": [
+            715,
+            701,
+            1668,
+            759
+          ],
+          "confidence": 83.93
+        },
+        {
+          "text": "高懷每與壯年逢",
+          "bbox": [
+            717,
+            776,
+            1304,
+            833
+          ],
+          "confidence": 98.63
+        },
+        {
+          "text": "鹑枝薈拙衡門下",
+          "bbox": [
+            713,
+            850,
+            1302,
+            906
+          ],
+          "confidence": 62.46
+        },
+        {
+          "text": "不管人心不溶肥",
+          "bbox": [
+            715,
+            923,
+            1305,
+            979
+          ],
+          "confidence": 88.75
+        },
+        {
+          "text": "Phిన âm:",
+          "bbox": [
+            259,
+            1140,
+            481,
+            1170
+          ],
+          "confidence": 60.53
+        },
+        {
+          "text": "HQA KINH PHÚ THU HOÀI BÁT THỦ",
+          "bbox": [
+            376,
+            1261,
+            1485,
+            1322
+          ],
+          "confidence": 86.77
+        },
+        {
+          "text": "(ky tam)",
+          "bbox": [
+            820,
+            1358,
+            1044,
+            1392
+          ],
+          "confidence": 98.98
+        },
+        {
+          "text": "Cuồng chuộc thôn giao đổi lac huy,",
+          "bbox": [
+            493,
+            1476,
+            1226,
+            1520
+          ],
+          "confidence": 78.7
+        },
+        {
+          "text": "Khách hoài ăn kỳ nhập hy vi.",
+          "bbox": [
+            495,
+            1533,
+            1122,
+            1577
+          ],
+          "confidence": 93.09
+        },
+        {
+          "text": "Thanh châu hải ngoại hàn âu phiếm.",
+          "bbox": [
+            495,
+            1592,
+            1272,
+            1638
+          ],
+          "confidence": 85.07
+        },
+        {
+          "text": "Từ tái thiên biên văn nhan phi.",
+          "bbox": [
+            495,
+            1651,
+            1163,
+            1695
+          ],
+          "confidence": 92.46
+        },
+        {
+          "text": "Nhàn muộn kiêm vong giai tiết quá.",
+          "bbox": [
+            495,
+            1711,
+            1255,
+            1756
+          ],
+          "confidence": 82.85
+        },
+        {
+          "text": "Cao hoài mỗi dữ trắng niên vi.",
+          "bbox": [
+            495,
+            1771,
+            1140,
+            1813
+          ],
+          "confidence": 89.92
+        },
+        {
+          "text": "Liêu chi dưỡng chuyết hoành môn ha.",
+          "bbox": [
+            495,
+            1828,
+            1319,
+            1873
+          ],
+          "confidence": 89.99
+        },
+        {
+          "text": "Bất quản nhân tâm các tích phì.",
+          "bbox": [
+            495,
+            1887,
+            1208,
+            1931
+          ],
+          "confidence": 90.33
+        },
+        {
+          "text": "1. Liêu chi: Chim tiêu liêu làm tổ trong rừng sâu, chỉ cần một cành cây nhỏ (Theo",
+          "bbox": [
+            349,
+            2266,
+            1713,
+            2309
+          ],
+          "confidence": 94.51
+        },
+        {
+          "text": "Trang Từ, thiên Tiêu dao du). Ở đây có ý nói cuộc sống giản dị. Dương chuyết: Bởi",
+          "bbox": [
+            259,
+            2312,
+            1711,
+            2360
+          ],
+          "confidence": 93.03
+        },
+        {
+          "text": "dương tính vùng về ngay thẳng, khinh ghét sự xảo trá. Hoành môn: Nhà của người ăn",
+          "bbox": [
+            257,
+            2363,
+            1711,
+            2404
+          ],
+          "confidence": 87.7
+        },
+        {
+          "text": "đặt, dùng cây gỗ bắc ngang qua để làm cửa.",
+          "bbox": [
+            257,
+            2410,
+            994,
+            2448
+          ],
+          "confidence": 86.67
+        },
+        {
+          "text": "2. Các tích phi: Cái này gấy cái kia béo. Ở đây nói lòng người xấu hay tốt.",
+          "bbox": [
+            345,
+            2456,
+            1593,
+            2499
+          ],
+          "confidence": 96.32
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          1839,
+          2803
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 41.141,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              688,
+              246,
+              1276,
+              300
+            ],
+            "generated_text": "和韵苗秋怀八首",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.882,
+            "confidence": 79.2,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              692,
+              292,
+              1666,
+              323
+            ],
+            "generated_text": "THU JULY AUGUST",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.98,
+            "confidence": 29.23,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              716,
+              411,
+              1305,
+              468
+            ],
+            "generated_text": "遥的村醒對落唖",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.925,
+            "confidence": 51.31,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              718,
+              483,
+              1307,
+              540
+            ],
+            "generated_text": "客懷隠几入希微",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.151,
+            "confidence": 89.29,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              717,
+              558,
+              1304,
+              613
+            ],
+            "generated_text": "青洲海外寒鸥泛",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.933,
+            "confidence": 87.74,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              717,
+              630,
+              1305,
+              687
+            ],
+            "generated_text": "紫塞天邊晚鴈飛",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.943,
+            "confidence": 91.11,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              715,
+              701,
+              1668,
+              759
+            ],
+            "generated_text": "聞聞兼忘佳節過",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 1.017,
+            "confidence": 83.93,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              717,
+              776,
+              1304,
+              833
+            ],
+            "generated_text": "高懷每與壯年逢",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.306,
+            "confidence": 98.63,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              713,
+              850,
+              1302,
+              906
+            ],
+            "generated_text": "鹑枝薈拙衡門下",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.325,
+            "confidence": 62.46,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              715,
+              923,
+              1305,
+              979
+            ],
+            "generated_text": "不管人心不溶肥",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.653,
+            "confidence": 88.75,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              259,
+              1140,
+              481,
+              1170
+            ],
+            "generated_text": "Phిన âm:",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.621,
+            "confidence": 60.53,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              376,
+              1261,
+              1485,
+              1322
+            ],
+            "generated_text": "HQA KINH PHÚ THU HOÀI BÁT THỦ",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.648,
+            "confidence": 86.77,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              820,
+              1358,
+              1044,
+              1392
+            ],
+            "generated_text": "(ky tam)",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.513,
+            "confidence": 98.98,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              493,
+              1476,
+              1226,
+              1520
+            ],
+            "generated_text": "Cuồng chuộc thôn giao đổi lac huy,",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.445,
+            "confidence": 78.7,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              495,
+              1533,
+              1122,
+              1577
+            ],
+            "generated_text": "Khách hoài ăn kỳ nhập hy vi.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.146,
+            "confidence": 93.09,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              495,
+              1592,
+              1272,
+              1638
+            ],
+            "generated_text": "Thanh châu hải ngoại hàn âu phiếm.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.613,
+            "confidence": 85.07,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              495,
+              1651,
+              1163,
+              1695
+            ],
+            "generated_text": "Từ tái thiên biên văn nhan phi.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.533,
+            "confidence": 92.46,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              495,
+              1711,
+              1255,
+              1756
+            ],
+            "generated_text": "Nhàn muộn kiêm vong giai tiết quá.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.807,
+            "confidence": 82.85,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              495,
+              1771,
+              1140,
+              1813
+            ],
+            "generated_text": "Cao hoài mỗi dữ trắng niên vi.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.606,
+            "confidence": 89.92,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              495,
+              1828,
+              1319,
+              1873
+            ],
+            "generated_text": "Liêu chi dưỡng chuyết hoành môn ha.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.584,
+            "confidence": 89.99,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              495,
+              1887,
+              1208,
+              1931
+            ],
+            "generated_text": "Bất quản nhân tâm các tích phì.",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.206,
+            "confidence": 90.33,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              257,
+              2229,
+              859,
+              2245
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.265,
+            "confidence": 26.25,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              349,
+              2266,
+              1713,
+              2309
+            ],
+            "generated_text": "1. Liêu chi: Chim tiêu liêu làm tổ trong rừng sâu, chỉ cần một cành cây nhỏ (Theo",
+            "n_lines": 1,
+            "tokens": 33,
+            "seconds": 3.541,
+            "confidence": 94.51,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              259,
+              2312,
+              1711,
+              2360
+            ],
+            "generated_text": "Trang Từ, thiên Tiêu dao du). Ở đây có ý nói cuộc sống giản dị. Dương chuyết: Bởi",
+            "n_lines": 1,
+            "tokens": 34,
+            "seconds": 3.418,
+            "confidence": 93.03,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              257,
+              2363,
+              1711,
+              2404
+            ],
+            "generated_text": "dương tính vùng về ngay thẳng, khinh ghét sự xảo trá. Hoành môn: Nhà của người ăn",
+            "n_lines": 1,
+            "tokens": 35,
+            "seconds": 3.403,
+            "confidence": 87.7,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              257,
+              2410,
+              994,
+              2448
+            ],
+            "generated_text": "đặt, dùng cây gỗ bắc ngang qua để làm cửa.",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 2.21,
+            "confidence": 86.67,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              345,
+              2456,
+              1593,
+              2499
+            ],
+            "generated_text": "2. Các tích phi: Cái này gấy cái kia béo. Ở đây nói lòng người xấu hay tốt.",
+            "n_lines": 1,
+            "tokens": 33,
+            "seconds": 3.463,
+            "confidence": 96.32,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              898,
+              346,
+              1032,
+              358
+            ],
+            "ink": 487
+          },
+          {
+            "box": [
+              901,
+              362,
+              1029,
+              372
+            ],
+            "ink": 433
+          },
+          {
+            "box": [
+              898,
+              379,
+              1036,
+              390
+            ],
+            "ink": 390
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      }
+    }
+  ]
+}

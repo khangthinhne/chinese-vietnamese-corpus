@@ -1,0 +1,1021 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_20",
+  "engine": "paddlevl",
+  "page": 414,
+  "runs": [
+    {
+      "key": "0ed36e329f84d18805b2e6aebe9b6cefe272dbf1567310cb5093d66306aaa799",
+      "parameters": {
+        "image_sha256": "c3c14a373cd6ea848670515c5e64c31a317fb0e7f5ec4d48e0c2836660e1afd1",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T07:45:51+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_414.png",
+      "image_size": [
+        1839,
+        2804
+      ],
+      "crop_box": [
+        0,
+        0,
+        1839,
+        2804
+      ],
+      "lines": [
+        {
+          "text": "Vua Tây Sơn hồi:",
+          "bbox": [
+            377,
+            252,
+            743,
+            294
+          ],
+          "confidence": 89.81
+        },
+        {
+          "text": "- No dâu?",
+          "bbox": [
+            376,
+            335,
+            593,
+            363
+          ],
+          "confidence": 83.86
+        },
+        {
+          "text": "Bọn này đáp:",
+          "bbox": [
+            377,
+            405,
+            660,
+            435
+          ],
+          "confidence": 92.19
+        },
+        {
+          "text": "- Nó lấy được của xong, với chạy vào trong đấy núi kia!",
+          "bbox": [
+            376,
+            471,
+            1536,
+            519
+          ],
+          "confidence": 94.73
+        },
+        {
+          "text": "Vua Tây Sơn liên sai một tốp lính đổi bất. Vừa đến một chỗ núi",
+          "bbox": [
+            374,
+            536,
+            1722,
+            594
+          ],
+          "confidence": 90.83
+        },
+        {
+          "text": "hiểm, mấy chức ngươi đều rút dao kiểm trong đòn ống ra và reo lên:",
+          "bbox": [
+            288,
+            600,
+            1699,
+            655
+          ],
+          "confidence": 87.49
+        },
+        {
+          "text": "- Chúng bay đã biết bọn tao hay chưa; bọn tao đều là các bác",
+          "bbox": [
+            373,
+            670,
+            1724,
+            725
+          ],
+          "confidence": 93.34
+        },
+        {
+          "text": "đàn anh trong đám thụ hạ của Chương Tiến. Hôm nay đến để chất",
+          "bbox": [
+            287,
+            731,
+            1724,
+            786
+          ],
+          "confidence": 91.22
+        },
+        {
+          "text": "cái đầu của lũ \"lông đỏ\"¹ chúng bay đấy.",
+          "bbox": [
+            285,
+            789,
+            1130,
+            836
+          ],
+          "confidence": 88.81
+        },
+        {
+          "text": "Vừa reo họ vừa xông vào đảm chém, dao kiếm vung lên tua tủa.",
+          "bbox": [
+            376,
+            865,
+            1721,
+            915
+          ],
+          "confidence": 88.94
+        },
+        {
+          "text": "quân Nam bị đánh bắt ngờ, thua chạy liềng xiếng.",
+          "bbox": [
+            284,
+            918,
+            1336,
+            970
+          ],
+          "confidence": 89.61
+        },
+        {
+          "text": "Vua Tây Sơn cả sợ, từ đó, trên đường hành quân không dám vào",
+          "bbox": [
+            370,
+            989,
+            1721,
+            1047
+          ],
+          "confidence": 95.67
+        },
+        {
+          "text": "ngũ trong nhà dân nữa; tôi đâu giăng màn ra giữa đồng ruộng ở đó",
+          "bbox": [
+            282,
+            1056,
+            1719,
+            1108
+          ],
+          "confidence": 89.23
+        },
+        {
+          "text": "mà ngủ, còn các quân sĩ thì đều ngủ ngoài trời.",
+          "bbox": [
+            282,
+            1115,
+            1268,
+            1159
+          ],
+          "confidence": 94.42
+        },
+        {
+          "text": "Bởi lẽ đó, khi tới kinh sư, cả đoàn quân chỉ còn là một lũ nửa",
+          "bbox": [
+            367,
+            1181,
+            1721,
+            1236
+          ],
+          "confidence": 96.5
+        },
+        {
+          "text": "người nữa ngợm, mặt mũi hốc hác, coi không ra bộ quân của vua",
+          "bbox": [
+            279,
+            1245,
+            1719,
+            1294
+          ],
+          "confidence": 95.11
+        },
+        {
+          "text": "chúa nữa.",
+          "bbox": [
+            279,
+            1306,
+            487,
+            1336
+          ],
+          "confidence": 85.01
+        },
+        {
+          "text": "Thấy vậy, thiên hạ đều đồn đại lung tung. Kế thì bảo thành Tây",
+          "bbox": [
+            367,
+            1371,
+            1719,
+            1425
+          ],
+          "confidence": 91.81
+        },
+        {
+          "text": "Sơn đá bị nhà Nguyễn phá vỡ, vua Tây Sơn vì không giữ được nữa",
+          "bbox": [
+            279,
+            1428,
+            1719,
+            1483
+          ],
+          "confidence": 93.3
+        },
+        {
+          "text": "nên phải chuôn ra đấy. Người thì nói Bình dùng mưu chước gian đối,",
+          "bbox": [
+            277,
+            1490,
+            1718,
+            1542
+          ],
+          "confidence": 86.22
+        },
+        {
+          "text": "muợn một kẻ khác giả làm vua anh để thêm thanh thế cho mình.",
+          "bbox": [
+            277,
+            1550,
+            1716,
+            1600
+          ],
+          "confidence": 90.07
+        },
+        {
+          "text": "Hào kiệt thiên hạ và những kế coi giữ châu quân ngầm nuôi bình mã,",
+          "bbox": [
+            277,
+            1606,
+            1716,
+            1659
+          ],
+          "confidence": 91.01
+        },
+        {
+          "text": "đều muôn đò xem thực hư thế nào, để tìm cách bắt lấy; nhưng rốt cuộc",
+          "bbox": [
+            277,
+            1666,
+            1716,
+            1717
+          ],
+          "confidence": 84.68
+        },
+        {
+          "text": "cũng không ai biết rõ tình hình.",
+          "bbox": [
+            276,
+            1724,
+            949,
+            1767
+          ],
+          "confidence": 99.77
+        },
+        {
+          "text": "Lúc vua Tây Sơn mới đến kinh. Bình ra tận ngoài ô đón tiếp và",
+          "bbox": [
+            363,
+            1795,
+            1715,
+            1847
+          ],
+          "confidence": 96.38
+        },
+        {
+          "text": "tạ cải tội tự chuyên của mình. Vua Tây Sơn nói:",
+          "bbox": [
+            274,
+            1857,
+            1272,
+            1901
+          ],
+          "confidence": 86.14
+        },
+        {
+          "text": "- Tương ổ bên ngoài, nếu gặp việc có ích lợi cho nước nhà thì cứ tự",
+          "bbox": [
+            360,
+            1926,
+            1716,
+            1976
+          ],
+          "confidence": 92.03
+        },
+        {
+          "text": "ý mà làm cũng được. Bắc Hà có thể lấy, mà em lấy ngay được, đó là",
+          "bbox": [
+            273,
+            1984,
+            1713,
+            2036
+          ],
+          "confidence": 98.15
+        },
+        {
+          "text": "chó thân diệu trong phép dùng bình. Và lại, em trèo đèo lội suối đi",
+          "bbox": [
+            273,
+            2045,
+            1713,
+            2093
+          ],
+          "confidence": 85.85
+        },
+        {
+          "text": "hàng muôn đảm đế mở mang bờ cõi cho đất nước rộng thêm; thủ đoạn",
+          "bbox": [
+            273,
+            2104,
+            1712,
+            2154
+          ],
+          "confidence": 88.82
+        },
+        {
+          "text": "anh hùng như vậy, anh thực không thể nào sánh kịp. Nhưng mà, mình",
+          "bbox": [
+            272,
+            2161,
+            1711,
+            2211
+          ],
+          "confidence": 97.68
+        },
+        {
+          "text": "1. Không hiểu sao lại gọi Tây Sơn \"lông đỏ\" (hồng mao), chưa tra cứu ra. Trong",
+          "bbox": [
+            362,
+            2319,
+            1711,
+            2361
+          ],
+          "confidence": 93.21
+        },
+        {
+          "text": "Đại Nam quốc sự diễn ca thấy có câu tả cách ăn mặc của quân Tây Sơn như sau:",
+          "bbox": [
+            268,
+            2364,
+            1708,
+            2408
+          ],
+          "confidence": 91.46
+        },
+        {
+          "text": "Quân dung đâu mới lạ những; Mao mao áo đò chất dường kéo ra\". Có lẽ tác giả đã",
+          "bbox": [
+            270,
+            2410,
+            1708,
+            2455
+          ],
+          "confidence": 78.15
+        },
+        {
+          "text": "căn cứ vào cách ăn mặc đó (mũ lông áo đỏ) mà gọi Tây Sơn là \"hồng mao\" chẳng?",
+          "bbox": [
+            268,
+            2460,
+            1629,
+            2502
+          ],
+          "confidence": 89.45
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          1839,
+          2804
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 24.914,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              377,
+              252,
+              743,
+              294
+            ],
+            "generated_text": "Vua Tây Sơn hồi:",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.366,
+            "confidence": 89.81,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              376,
+              335,
+              593,
+              363
+            ],
+            "generated_text": "- No dâu?",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.265,
+            "confidence": 83.86,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              377,
+              405,
+              660,
+              435
+            ],
+            "generated_text": "Bọn này đáp:",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.319,
+            "confidence": 92.19,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              376,
+              471,
+              1536,
+              519
+            ],
+            "generated_text": "- Nó lấy được của xong, với chạy vào trong đấy núi kia!",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.677,
+            "confidence": 94.73,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              374,
+              536,
+              1722,
+              594
+            ],
+            "generated_text": "Vua Tây Sơn liên sai một tốp lính đổi bất. Vừa đến một chỗ núi",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 0.736,
+            "confidence": 90.83,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              288,
+              600,
+              1699,
+              655
+            ],
+            "generated_text": "hiểm, mấy chức ngươi đều rút dao kiểm trong đòn ống ra và reo lên:",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.688,
+            "confidence": 87.49,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              373,
+              670,
+              1724,
+              725
+            ],
+            "generated_text": "- Chúng bay đã biết bọn tao hay chưa; bọn tao đều là các bác",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.609,
+            "confidence": 93.34,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              287,
+              731,
+              1724,
+              786
+            ],
+            "generated_text": "đàn anh trong đám thụ hạ của Chương Tiến. Hôm nay đến để chất",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.646,
+            "confidence": 91.22,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              285,
+              789,
+              1130,
+              836
+            ],
+            "generated_text": "cái đầu của lũ \"lông đỏ\"¹ chúng bay đấy.",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.506,
+            "confidence": 88.81,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              376,
+              865,
+              1721,
+              915
+            ],
+            "generated_text": "Vừa reo họ vừa xông vào đảm chém, dao kiếm vung lên tua tủa.",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.693,
+            "confidence": 88.94,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              284,
+              918,
+              1336,
+              970
+            ],
+            "generated_text": "quân Nam bị đánh bắt ngờ, thua chạy liềng xiếng.",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.672,
+            "confidence": 89.61,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              370,
+              989,
+              1721,
+              1047
+            ],
+            "generated_text": "Vua Tây Sơn cả sợ, từ đó, trên đường hành quân không dám vào",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.639,
+            "confidence": 95.67,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              282,
+              1056,
+              1719,
+              1108
+            ],
+            "generated_text": "ngũ trong nhà dân nữa; tôi đâu giăng màn ra giữa đồng ruộng ở đó",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.696,
+            "confidence": 89.23,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              282,
+              1115,
+              1268,
+              1159
+            ],
+            "generated_text": "mà ngủ, còn các quân sĩ thì đều ngủ ngoài trời.",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.644,
+            "confidence": 94.42,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              367,
+              1181,
+              1721,
+              1236
+            ],
+            "generated_text": "Bởi lẽ đó, khi tới kinh sư, cả đoàn quân chỉ còn là một lũ nửa",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.647,
+            "confidence": 96.5,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              279,
+              1245,
+              1719,
+              1294
+            ],
+            "generated_text": "người nữa ngợm, mặt mũi hốc hác, coi không ra bộ quân của vua",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.69,
+            "confidence": 95.11,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              279,
+              1306,
+              487,
+              1336
+            ],
+            "generated_text": "chúa nữa.",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.242,
+            "confidence": 85.01,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              367,
+              1371,
+              1719,
+              1425
+            ],
+            "generated_text": "Thấy vậy, thiên hạ đều đồn đại lung tung. Kế thì bảo thành Tây",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.618,
+            "confidence": 91.81,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              279,
+              1428,
+              1719,
+              1483
+            ],
+            "generated_text": "Sơn đá bị nhà Nguyễn phá vỡ, vua Tây Sơn vì không giữ được nữa",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.687,
+            "confidence": 93.3,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              277,
+              1490,
+              1718,
+              1542
+            ],
+            "generated_text": "nên phải chuôn ra đấy. Người thì nói Bình dùng mưu chước gian đối,",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.699,
+            "confidence": 86.22,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              277,
+              1550,
+              1716,
+              1600
+            ],
+            "generated_text": "muợn một kẻ khác giả làm vua anh để thêm thanh thế cho mình.",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.575,
+            "confidence": 90.07,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              277,
+              1606,
+              1716,
+              1659
+            ],
+            "generated_text": "Hào kiệt thiên hạ và những kế coi giữ châu quân ngầm nuôi bình mã,",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 0.716,
+            "confidence": 91.01,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              277,
+              1666,
+              1716,
+              1717
+            ],
+            "generated_text": "đều muôn đò xem thực hư thế nào, để tìm cách bắt lấy; nhưng rốt cuộc",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.654,
+            "confidence": 84.68,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              276,
+              1724,
+              949,
+              1767
+            ],
+            "generated_text": "cũng không ai biết rõ tình hình.",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.337,
+            "confidence": 99.77,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              363,
+              1795,
+              1715,
+              1847
+            ],
+            "generated_text": "Lúc vua Tây Sơn mới đến kinh. Bình ra tận ngoài ô đón tiếp và",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.649,
+            "confidence": 96.38,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              274,
+              1857,
+              1272,
+              1901
+            ],
+            "generated_text": "tạ cải tội tự chuyên của mình. Vua Tây Sơn nói:",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.617,
+            "confidence": 86.14,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              360,
+              1926,
+              1716,
+              1976
+            ],
+            "generated_text": "- Tương ổ bên ngoài, nếu gặp việc có ích lợi cho nước nhà thì cứ tự",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 0.751,
+            "confidence": 92.03,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              273,
+              1984,
+              1713,
+              2036
+            ],
+            "generated_text": "ý mà làm cũng được. Bắc Hà có thể lấy, mà em lấy ngay được, đó là",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.649,
+            "confidence": 98.15,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              273,
+              2045,
+              1713,
+              2093
+            ],
+            "generated_text": "chó thân diệu trong phép dùng bình. Và lại, em trèo đèo lội suối đi",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 0.76,
+            "confidence": 85.85,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              273,
+              2104,
+              1712,
+              2154
+            ],
+            "generated_text": "hàng muôn đảm đế mở mang bờ cõi cho đất nước rộng thêm; thủ đoạn",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 0.758,
+            "confidence": 88.82,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              272,
+              2161,
+              1711,
+              2211
+            ],
+            "generated_text": "anh hùng như vậy, anh thực không thể nào sánh kịp. Nhưng mà, mình",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.615,
+            "confidence": 97.68,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 32,
+            "box": [
+              270,
+              2274,
+              868,
+              2294
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.146,
+            "confidence": 35.48,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 33,
+            "box": [
+              362,
+              2319,
+              1711,
+              2361
+            ],
+            "generated_text": "1. Không hiểu sao lại gọi Tây Sơn \"lông đỏ\" (hồng mao), chưa tra cứu ra. Trong",
+            "n_lines": 1,
+            "tokens": 36,
+            "seconds": 0.834,
+            "confidence": 93.21,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 34,
+            "box": [
+              268,
+              2364,
+              1708,
+              2408
+            ],
+            "generated_text": "Đại Nam quốc sự diễn ca thấy có câu tả cách ăn mặc của quân Tây Sơn như sau:",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.671,
+            "confidence": 91.46,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 35,
+            "box": [
+              270,
+              2410,
+              1708,
+              2455
+            ],
+            "generated_text": "Quân dung đâu mới lạ những; Mao mao áo đò chất dường kéo ra\". Có lẽ tác giả đã",
+            "n_lines": 1,
+            "tokens": 34,
+            "seconds": 3.269,
+            "confidence": 78.15,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 36,
+            "box": [
+              268,
+              2460,
+              1629,
+              2502
+            ],
+            "generated_text": "căn cứ vào cách ăn mặc đó (mũ lông áo đỏ) mà gọi Tây Sơn là \"hồng mao\" chẳng?",
+            "n_lines": 1,
+            "tokens": 40,
+            "seconds": 1.171,
+            "confidence": 89.45,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              323,
+              2032,
+              1599,
+              2042
+            ],
+            "ink": 397
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      }
+    }
+  ]
+}

@@ -1,0 +1,771 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_20",
+  "engine": "paddlevl",
+  "page": 227,
+  "runs": [
+    {
+      "key": "70d56958fe5d1247cf09010a4e52ed770ef213b05f02a57371786981c23401cf",
+      "parameters": {
+        "image_sha256": "db99962d09e6704a5ff0e7b4c680045dd03281bd9f92eac789781a0dd131d190",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T06:17:50+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_227.png",
+      "image_size": [
+        1823,
+        2815
+      ],
+      "crop_box": [
+        0,
+        0,
+        1823,
+        2815
+      ],
+      "lines": [
+        {
+          "text": "Phiên âm:",
+          "bbox": [
+            181,
+            271,
+            392,
+            301
+          ],
+          "confidence": 84.78
+        },
+        {
+          "text": "TAM GIANG KHẨU CHU TRUNG TỰC CẢNH",
+          "bbox": [
+            251,
+            383,
+            1538,
+            446
+          ],
+          "confidence": 92.52
+        },
+        {
+          "text": "Tam giang giang khấu thuận lưu hành.",
+          "bbox": [
+            406,
+            530,
+            1203,
+            572
+          ],
+          "confidence": 92.51
+        },
+        {
+          "text": "Đăng dạng yên hà phiếm trao khinh.",
+          "bbox": [
+            406,
+            585,
+            1171,
+            630
+          ],
+          "confidence": 93.73
+        },
+        {
+          "text": "Ap lãng sơn dung nghi đảo thủy,",
+          "bbox": [
+            404,
+            644,
+            1077,
+            689
+          ],
+          "confidence": 88.08
+        },
+        {
+          "text": "Hàm nhai thủ ảnh dục phù thanh.",
+          "bbox": [
+            404,
+            699,
+            1108,
+            747
+          ],
+          "confidence": 94.14
+        },
+        {
+          "text": "Tân kỳ đại khối vô cùng ý.",
+          "bbox": [
+            404,
+            759,
+            963,
+            803
+          ],
+          "confidence": 90.5
+        },
+        {
+          "text": "Tiêu sái chính phu bất tận tình.",
+          "bbox": [
+            404,
+            818,
+            1063,
+            864
+          ],
+          "confidence": 91.57
+        },
+        {
+          "text": "Đài vọng hốt liêu hương quốc tứ.",
+          "bbox": [
+            404,
+            878,
+            1074,
+            923
+          ],
+          "confidence": 85.74
+        },
+        {
+          "text": "Nam hoàn cô nhạn nhiều không thanh.",
+          "bbox": [
+            402,
+            937,
+            1209,
+            983
+          ],
+          "confidence": 88.15
+        },
+        {
+          "text": "Uich nghia:",
+          "bbox": [
+            171,
+            1122,
+            414,
+            1151
+          ],
+          "confidence": 81.07
+        },
+        {
+          "text": "TỰC CẢNH ĐI THUYÊN TRÊN CỦA",
+          "bbox": [
+            373,
+            1231,
+            1405,
+            1294
+          ],
+          "confidence": 88.51
+        },
+        {
+          "text": "TAM GIANG",
+          "bbox": [
+            713,
+            1321,
+            1069,
+            1372
+          ],
+          "confidence": 99.49
+        },
+        {
+          "text": "Của sông Tam Giang, thả thuyền xuôi dòng,",
+          "bbox": [
+            399,
+            1457,
+            1300,
+            1506
+          ],
+          "confidence": 96.44
+        },
+        {
+          "text": "Mây khói bông bệnh, mái chèo nhe lưới.",
+          "bbox": [
+            398,
+            1515,
+            1227,
+            1559
+          ],
+          "confidence": 83.51
+        },
+        {
+          "text": "Dáng ngon núi đè xuống sông ngọ màu biếc đổ xuống,",
+          "bbox": [
+            396,
+            1576,
+            1503,
+            1625
+          ],
+          "confidence": 79.75
+        },
+        {
+          "text": "Bóng mặt nước ngậm lấy bờ tương vẻ trong nổi lên.",
+          "bbox": [
+            396,
+            1632,
+            1455,
+            1682
+          ],
+          "confidence": 86.22
+        },
+        {
+          "text": "Cảnh đất trời tân kỳ thật vô cùng lý thú,",
+          "bbox": [
+            395,
+            1692,
+            1246,
+            1734
+          ],
+          "confidence": 89.41
+        },
+        {
+          "text": "Người lũ khách thanh cao không nói hết được tâm tình.",
+          "bbox": [
+            395,
+            1750,
+            1535,
+            1793
+          ],
+          "confidence": 94.87
+        },
+        {
+          "text": "Ngăng trọng cánh vật, chọt gợi niềm nhớ quê nhớ nước,",
+          "bbox": [
+            395,
+            1809,
+            1546,
+            1857
+          ],
+          "confidence": 78.49
+        },
+        {
+          "text": "Chiếc nhan lẻ về Nam, tiếng còn văng lại trên không.",
+          "bbox": [
+            395,
+            1865,
+            1503,
+            1914
+          ],
+          "confidence": 90.48
+        },
+        {
+          "text": "Uich thơ:",
+          "bbox": [
+            160,
+            2105,
+            351,
+            2132
+          ],
+          "confidence": 78.77
+        },
+        {
+          "text": "Tam Gian, vén nước thả xuôi mành,",
+          "bbox": [
+            390,
+            2218,
+            1139,
+            2259
+          ],
+          "confidence": 80.9
+        },
+        {
+          "text": "Mây khói bồng bệnh mái nhẹ tênh.",
+          "bbox": [
+            387,
+            2275,
+            1107,
+            2317
+          ],
+          "confidence": 83.48
+        },
+        {
+          "text": "Đè sông về non những lôn biếc,",
+          "bbox": [
+            385,
+            2335,
+            1055,
+            2376
+          ],
+          "confidence": 74.81
+        },
+        {
+          "text": "In hỗ sẵn nước tưa pha xanh.",
+          "bbox": [
+            385,
+            2399,
+            980,
+            2433
+          ],
+          "confidence": 79.29
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          1823,
+          2815
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 11.87,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              181,
+              271,
+              392,
+              301
+            ],
+            "generated_text": "Phiên âm:",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.22,
+            "confidence": 84.78,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              251,
+              383,
+              1538,
+              446
+            ],
+            "generated_text": "TAM GIANG KHẨU CHU TRUNG TỰC CẢNH",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.712,
+            "confidence": 92.52,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              406,
+              530,
+              1203,
+              572
+            ],
+            "generated_text": "Tam giang giang khấu thuận lưu hành.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.415,
+            "confidence": 92.51,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              406,
+              585,
+              1171,
+              630
+            ],
+            "generated_text": "Đăng dạng yên hà phiếm trao khinh.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.451,
+            "confidence": 93.73,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              404,
+              644,
+              1077,
+              689
+            ],
+            "generated_text": "Ap lãng sơn dung nghi đảo thủy,",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.413,
+            "confidence": 88.08,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              404,
+              699,
+              1108,
+              747
+            ],
+            "generated_text": "Hàm nhai thủ ảnh dục phù thanh.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.4,
+            "confidence": 94.14,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              404,
+              759,
+              963,
+              803
+            ],
+            "generated_text": "Tân kỳ đại khối vô cùng ý.",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.367,
+            "confidence": 90.5,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              404,
+              818,
+              1063,
+              864
+            ],
+            "generated_text": "Tiêu sái chính phu bất tận tình.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.392,
+            "confidence": 91.57,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              404,
+              878,
+              1074,
+              923
+            ],
+            "generated_text": "Đài vọng hốt liêu hương quốc tứ.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.406,
+            "confidence": 85.74,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              402,
+              937,
+              1209,
+              983
+            ],
+            "generated_text": "Nam hoàn cô nhạn nhiều không thanh.",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.366,
+            "confidence": 88.15,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              171,
+              1122,
+              414,
+              1151
+            ],
+            "generated_text": "Uich nghia:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.235,
+            "confidence": 81.07,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              373,
+              1231,
+              1405,
+              1294
+            ],
+            "generated_text": "TỰC CẢNH ĐI THUYÊN TRÊN CỦA",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.667,
+            "confidence": 88.51,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              713,
+              1321,
+              1069,
+              1372
+            ],
+            "generated_text": "TAM GIANG",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.225,
+            "confidence": 99.49,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              399,
+              1457,
+              1300,
+              1506
+            ],
+            "generated_text": "Của sông Tam Giang, thả thuyền xuôi dòng,",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.514,
+            "confidence": 96.44,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              398,
+              1515,
+              1227,
+              1559
+            ],
+            "generated_text": "Mây khói bông bệnh, mái chèo nhe lưới.",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.541,
+            "confidence": 83.51,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              396,
+              1576,
+              1503,
+              1625
+            ],
+            "generated_text": "Dáng ngon núi đè xuống sông ngọ màu biếc đổ xuống,",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.701,
+            "confidence": 79.75,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              396,
+              1632,
+              1455,
+              1682
+            ],
+            "generated_text": "Bóng mặt nước ngậm lấy bờ tương vẻ trong nổi lên.",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.597,
+            "confidence": 86.22,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              395,
+              1692,
+              1246,
+              1734
+            ],
+            "generated_text": "Cảnh đất trời tân kỳ thật vô cùng lý thú,",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.507,
+            "confidence": 89.41,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              395,
+              1750,
+              1535,
+              1793
+            ],
+            "generated_text": "Người lũ khách thanh cao không nói hết được tâm tình.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.518,
+            "confidence": 94.87,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              395,
+              1809,
+              1546,
+              1857
+            ],
+            "generated_text": "Ngăng trọng cánh vật, chọt gợi niềm nhớ quê nhớ nước,",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.737,
+            "confidence": 78.49,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              395,
+              1865,
+              1503,
+              1914
+            ],
+            "generated_text": "Chiếc nhan lẻ về Nam, tiếng còn văng lại trên không.",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.569,
+            "confidence": 90.48,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              160,
+              2105,
+              351,
+              2132
+            ],
+            "generated_text": "Uich thơ:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.237,
+            "confidence": 78.77,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              390,
+              2218,
+              1139,
+              2259
+            ],
+            "generated_text": "Tam Gian, vén nước thả xuôi mành,",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.389,
+            "confidence": 80.9,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              387,
+              2275,
+              1107,
+              2317
+            ],
+            "generated_text": "Mây khói bồng bệnh mái nhẹ tênh.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.43,
+            "confidence": 83.48,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              385,
+              2335,
+              1055,
+              2376
+            ],
+            "generated_text": "Đè sông về non những lôn biếc,",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.389,
+            "confidence": 74.81,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              385,
+              2399,
+              980,
+              2433
+            ],
+            "generated_text": "In hỗ sẵn nước tưa pha xanh.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.47,
+            "confidence": 79.29,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              406,
+              524,
+              848,
+              533
+            ],
+            "ink": 371
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      }
+    }
+  ]
+}

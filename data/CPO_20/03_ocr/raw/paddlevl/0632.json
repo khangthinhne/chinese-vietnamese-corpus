@@ -1,0 +1,928 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_20",
+  "engine": "paddlevl",
+  "page": 632,
+  "runs": [
+    {
+      "key": "c7dd53c4ee94e1d41b6a34d7d126d6cdcb03b8cfc41e307d29c3f9c700a8b78b",
+      "parameters": {
+        "image_sha256": "7dcda1bb24fc37550d76ba863b4958f8b366140f63dc6a263a2a2d0eca64705c",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T13:51:38+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_632.png",
+      "image_size": [
+        1840,
+        2803
+      ],
+      "crop_box": [
+        0,
+        0,
+        1840,
+        2803
+      ],
+      "lines": [
+        {
+          "text": "Thạch lân tuân kỳ nan phan.",
+          "bbox": [
+            526,
+            249,
+            1141,
+            300
+          ],
+          "confidence": 92.59
+        },
+        {
+          "text": "Thụ âm thầm kỳ giao thủy.",
+          "bbox": [
+            526,
+            312,
+            1100,
+            358
+          ],
+          "confidence": 92.96
+        },
+        {
+          "text": "Đào thanh hướng lượng, cốc truyền khung biểu chi lôi:",
+          "bbox": [
+            377,
+            368,
+            1514,
+            427
+          ],
+          "confidence": 89.69
+        },
+        {
+          "text": "Toàn hướng khanh oanh, vũ lạc bán không chi thủy.",
+          "bbox": [
+            376,
+            424,
+            1513,
+            485
+          ],
+          "confidence": 94.53
+        },
+        {
+          "text": "Dư cùng sơn chi điện, giáng nhi sát hồ địa dự chi hình:",
+          "bbox": [
+            374,
+            488,
+            1528,
+            546
+          ],
+          "confidence": 81.96
+        },
+        {
+          "text": "Nãi tri tạo hóa chi thiết, phi vô ý đã.",
+          "bbox": [
+            374,
+            546,
+            1156,
+            596
+          ],
+          "confidence": 85.73
+        },
+        {
+          "text": "Kim phù: Sơn hậu nhất điều.",
+          "bbox": [
+            521,
+            607,
+            1127,
+            655
+          ],
+          "confidence": 92.9
+        },
+        {
+          "text": "Tụ nam tô đông.",
+          "bbox": [
+            518,
+            669,
+            866,
+            709
+          ],
+          "confidence": 83.82
+        },
+        {
+          "text": "Hoàng kỳ tử cái,",
+          "bbox": [
+            518,
+            726,
+            870,
+            771
+          ],
+          "confidence": 89.75
+        },
+        {
+          "text": "Vương khí uất thông.",
+          "bbox": [
+            520,
+            787,
+            963,
+            831
+          ],
+          "confidence": 89.67
+        },
+        {
+          "text": "Đón phục khởi hề, hình khoan thiên hiểm;",
+          "bbox": [
+            368,
+            842,
+            1266,
+            897
+          ],
+          "confidence": 88.25
+        },
+        {
+          "text": "Khoan hụu chích hề, hạn thiết trùng phong.",
+          "bbox": [
+            366,
+            898,
+            1288,
+            959
+          ],
+          "confidence": 95.13
+        },
+        {
+          "text": "Tuân vi Giao Nam hưng vương cực quý chi địa;",
+          "bbox": [
+            365,
+            961,
+            1339,
+            1020
+          ],
+          "confidence": 92.53
+        },
+        {
+          "text": "Nhi tư sơn vi lưu đô chi về đực, cái bất vi vô công yên.",
+          "bbox": [
+            363,
+            1023,
+            1502,
+            1081
+          ],
+          "confidence": 83.88
+        },
+        {
+          "text": "Đại để Thiên chi tương khái thi quân dã.",
+          "bbox": [
+            363,
+            1073,
+            1500,
+            1134
+          ],
+          "confidence": 80.15
+        },
+        {
+          "text": "Tất nham hác kỳ môn hộ dĩ vi hiểm.",
+          "bbox": [
+            362,
+            1137,
+            1138,
+            1191
+          ],
+          "confidence": 86.68
+        },
+        {
+          "text": "Sơn xuyên kỳ thành quách dĩ vi cố.",
+          "bbox": [
+            362,
+            1201,
+            1102,
+            1248
+          ],
+          "confidence": 86.36
+        },
+        {
+          "text": "Lưu nhất xứ không gian chi địa,",
+          "bbox": [
+            360,
+            1259,
+            1033,
+            1309
+          ],
+          "confidence": 86.91
+        },
+        {
+          "text": "Sứ đặc đoan cư cao cũng hồ kỳ gian, đi vi đại kỳ sở thu.",
+          "bbox": [
+            359,
+            1319,
+            1524,
+            1377
+          ],
+          "confidence": 83.55
+        },
+        {
+          "text": "Ngã Tiên hoàng đế, phần tích Tây Sơn.",
+          "bbox": [
+            359,
+            1373,
+            1503,
+            1430
+          ],
+          "confidence": 91.15
+        },
+        {
+          "text": "Khái tất lam lũ, dì hũu cụ hũu.",
+          "bbox": [
+            357,
+            1430,
+            1028,
+            1484
+          ],
+          "confidence": 81.07
+        },
+        {
+          "text": "Chân dữ An hưng ư Bạc, Chu hưng ư Kỳ, nhi đồng nhất kỳ quỹ độ.",
+          "bbox": [
+            357,
+            1492,
+            1673,
+            1564
+          ],
+          "confidence": 83.67
+        },
+        {
+          "text": "Dư cỡ bất nguyên tri sơn, nhi sơn thực tri dư hữu kim nhất",
+          "bbox": [
+            356,
+            1556,
+            1586,
+            1614
+          ],
+          "confidence": 84.83
+        },
+        {
+          "text": "chi lai giả cổ hỹ.",
+          "bbox": [
+            356,
+            1636,
+            1711,
+            1673
+          ],
+          "confidence": 69.65
+        },
+        {
+          "text": "E! Hành hoặc sử chi, chỉ hoặc nat chi.",
+          "bbox": [
+            354,
+            1665,
+            1695,
+            1722
+          ],
+          "confidence": 92.27
+        },
+        {
+          "text": "Hành chỉ do thiên, nhi phi ngô nhân chỉ sở năng dữ tri.",
+          "bbox": [
+            354,
+            1726,
+            1522,
+            1789
+          ],
+          "confidence": 88.01
+        },
+        {
+          "text": "Cấu khả năng ngô túc chỉ số để.",
+          "bbox": [
+            352,
+            1781,
+            1520,
+            1838
+          ],
+          "confidence": 74.76
+        },
+        {
+          "text": "Tân ngô lực chi sở dương vi.",
+          "bbox": [
+            351,
+            1845,
+            941,
+            1894
+          ],
+          "confidence": 91.4
+        },
+        {
+          "text": "Cái tăng đê Thái Sơn ư quyền thạch.",
+          "bbox": [
+            351,
+            1906,
+            1122,
+            1958
+          ],
+          "confidence": 75.53
+        },
+        {
+          "text": "Phù hà hữu hỗ Vân Sơn chỉ hiểm di.",
+          "bbox": [
+            350,
+            1961,
+            1111,
+            2016
+          ],
+          "confidence": 93.16
+        },
+        {
+          "text": "636",
+          "bbox": [
+            251,
+            2516,
+            332,
+            2542
+          ],
+          "confidence": 99.97
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          1840,
+          2803
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 15.015,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              526,
+              249,
+              1141,
+              300
+            ],
+            "generated_text": "Thạch lân tuân kỳ nan phan.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 0.387,
+            "confidence": 92.59,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              526,
+              312,
+              1100,
+              358
+            ],
+            "generated_text": "Thụ âm thầm kỳ giao thủy.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 0.385,
+            "confidence": 92.96,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              377,
+              368,
+              1514,
+              427
+            ],
+            "generated_text": "Đào thanh hướng lượng, cốc truyền khung biểu chi lôi:",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.631,
+            "confidence": 89.69,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              376,
+              424,
+              1513,
+              485
+            ],
+            "generated_text": "Toàn hướng khanh oanh, vũ lạc bán không chi thủy.",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.602,
+            "confidence": 94.53,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              374,
+              488,
+              1528,
+              546
+            ],
+            "generated_text": "Dư cùng sơn chi điện, giáng nhi sát hồ địa dự chi hình:",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.67,
+            "confidence": 81.96,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              374,
+              546,
+              1156,
+              596
+            ],
+            "generated_text": "Nãi tri tạo hóa chi thiết, phi vô ý đã.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.458,
+            "confidence": 85.73,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              521,
+              607,
+              1127,
+              655
+            ],
+            "generated_text": "Kim phù: Sơn hậu nhất điều.",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.392,
+            "confidence": 92.9,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              518,
+              669,
+              866,
+              709
+            ],
+            "generated_text": "Tụ nam tô đông.",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.334,
+            "confidence": 83.82,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              518,
+              726,
+              870,
+              771
+            ],
+            "generated_text": "Hoàng kỳ tử cái,",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.318,
+            "confidence": 89.75,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              520,
+              787,
+              963,
+              831
+            ],
+            "generated_text": "Vương khí uất thông.",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.301,
+            "confidence": 89.67,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              368,
+              842,
+              1266,
+              897
+            ],
+            "generated_text": "Đón phục khởi hề, hình khoan thiên hiểm;",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.48,
+            "confidence": 88.25,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              366,
+              898,
+              1288,
+              959
+            ],
+            "generated_text": "Khoan hụu chích hề, hạn thiết trùng phong.",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.537,
+            "confidence": 95.13,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              365,
+              961,
+              1339,
+              1020
+            ],
+            "generated_text": "Tuân vi Giao Nam hưng vương cực quý chi địa;",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.544,
+            "confidence": 92.53,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              363,
+              1023,
+              1502,
+              1081
+            ],
+            "generated_text": "Nhi tư sơn vi lưu đô chi về đực, cái bất vi vô công yên.",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.701,
+            "confidence": 83.88,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              363,
+              1073,
+              1500,
+              1134
+            ],
+            "generated_text": "Đại để Thiên chi tương khái thi quân dã.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.505,
+            "confidence": 80.15,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              362,
+              1137,
+              1138,
+              1191
+            ],
+            "generated_text": "Tất nham hác kỳ môn hộ dĩ vi hiểm.",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.487,
+            "confidence": 86.68,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              362,
+              1201,
+              1102,
+              1248
+            ],
+            "generated_text": "Sơn xuyên kỳ thành quách dĩ vi cố.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.429,
+            "confidence": 86.36,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              360,
+              1259,
+              1033,
+              1309
+            ],
+            "generated_text": "Lưu nhất xứ không gian chi địa,",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.344,
+            "confidence": 86.91,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              359,
+              1319,
+              1524,
+              1377
+            ],
+            "generated_text": "Sứ đặc đoan cư cao cũng hồ kỳ gian, đi vi đại kỳ sở thu.",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.736,
+            "confidence": 83.55,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              359,
+              1373,
+              1503,
+              1430
+            ],
+            "generated_text": "Ngã Tiên hoàng đế, phần tích Tây Sơn.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.545,
+            "confidence": 91.15,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              357,
+              1430,
+              1028,
+              1484
+            ],
+            "generated_text": "Khái tất lam lũ, dì hũu cụ hũu.",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.514,
+            "confidence": 81.07,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              357,
+              1492,
+              1673,
+              1564
+            ],
+            "generated_text": "Chân dữ An hưng ư Bạc, Chu hưng ư Kỳ, nhi đồng nhất kỳ quỹ độ.",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 0.796,
+            "confidence": 83.67,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              356,
+              1556,
+              1586,
+              1614
+            ],
+            "generated_text": "Dư cỡ bất nguyên tri sơn, nhi sơn thực tri dư hữu kim nhất",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.6,
+            "confidence": 84.83,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              356,
+              1636,
+              1711,
+              1673
+            ],
+            "generated_text": "chi lai giả cổ hỹ.",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.295,
+            "confidence": 69.65,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              354,
+              1665,
+              1695,
+              1722
+            ],
+            "generated_text": "E! Hành hoặc sử chi, chỉ hoặc nat chi.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.383,
+            "confidence": 92.27,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              354,
+              1726,
+              1522,
+              1789
+            ],
+            "generated_text": "Hành chỉ do thiên, nhi phi ngô nhân chỉ sở năng dữ tri.",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.595,
+            "confidence": 88.01,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              352,
+              1781,
+              1520,
+              1838
+            ],
+            "generated_text": "Cấu khả năng ngô túc chỉ số để.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.454,
+            "confidence": 74.76,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              351,
+              1845,
+              941,
+              1894
+            ],
+            "generated_text": "Tân ngô lực chi sở dương vi.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.409,
+            "confidence": 91.4,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              351,
+              1906,
+              1122,
+              1958
+            ],
+            "generated_text": "Cái tăng đê Thái Sơn ư quyền thạch.",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.47,
+            "confidence": 75.53,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              350,
+              1961,
+              1111,
+              2016
+            ],
+            "generated_text": "Phù hà hữu hỗ Vân Sơn chỉ hiểm di.",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.502,
+            "confidence": 93.16,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              251,
+              2516,
+              332,
+              2542
+            ],
+            "generated_text": "636",
+            "n_lines": 1,
+            "tokens": 4,
+            "seconds": 0.209,
+            "confidence": 99.97,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              374,
+              482,
+              1450,
+              491
+            ],
+            "ink": 265
+          },
+          {
+            "box": [
+              365,
+              1017,
+              1336,
+              1027
+            ],
+            "ink": 295
+          },
+          {
+            "box": [
+              362,
+              1314,
+              478,
+              1323
+            ],
+            "ink": 238
+          },
+          {
+            "box": [
+              254,
+              2506,
+              331,
+              2520
+            ],
+            "ink": 398
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      }
+    }
+  ]
+}

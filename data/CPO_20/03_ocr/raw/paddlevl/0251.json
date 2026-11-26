@@ -1,0 +1,772 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_20",
+  "engine": "paddlevl",
+  "page": 251,
+  "runs": [
+    {
+      "key": "3dad29f41e652a04acaba37b199dfd9b445b6a629b7f06c18ac0bc8118e32695",
+      "parameters": {
+        "image_sha256": "7c122c6a2fee83ebf909e2a02adc9177a13c7bf666f4370f35cf63645f05b14d",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T06:27:30+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_251.png",
+      "image_size": [
+        1823,
+        2814
+      ],
+      "crop_box": [
+        0,
+        0,
+        1823,
+        2814
+      ],
+      "lines": [
+        {
+          "text": "Dich nghĩa:",
+          "bbox": [
+            188,
+            258,
+            428,
+            301
+          ],
+          "confidence": 93.61
+        },
+        {
+          "text": "VỊNH NÚI ĐẠI HÀM",
+          "bbox": [
+            412,
+            380,
+            1007,
+            440
+          ],
+          "confidence": 85.59
+        },
+        {
+          "text": "Mạch đất từ phía trong nổi lên.",
+          "bbox": [
+            413,
+            519,
+            1068,
+            569
+          ],
+          "confidence": 95.28
+        },
+        {
+          "text": "Thế núi đứng riêng trồng hùng đũng.",
+          "bbox": [
+            412,
+            577,
+            1180,
+            635
+          ],
+          "confidence": 78.93
+        },
+        {
+          "text": "Vóc đáng vươn cao như tiến vào quân dịch.",
+          "bbox": [
+            410,
+            636,
+            1292,
+            691
+          ],
+          "confidence": 80.93
+        },
+        {
+          "text": "Khí tụ tích lại như xông đến tận trời.",
+          "bbox": [
+            410,
+            696,
+            1185,
+            749
+          ],
+          "confidence": 91.98
+        },
+        {
+          "text": "Sông La, Sông Phố hợp đồng ở Tam Soa,",
+          "bbox": [
+            410,
+            756,
+            1253,
+            809
+          ],
+          "confidence": 87.37
+        },
+        {
+          "text": "Hương Sơn, Thanh Chương kế nhau như đôi cánh.",
+          "bbox": [
+            409,
+            815,
+            1433,
+            870
+          ],
+          "confidence": 89.6
+        },
+        {
+          "text": "Đức Cao hoàng bình giác Bắc.",
+          "bbox": [
+            409,
+            875,
+            1030,
+            927
+          ],
+          "confidence": 90.29
+        },
+        {
+          "text": "Từ núi này quất roi ngựa tiến quân.",
+          "bbox": [
+            407,
+            934,
+            1146,
+            986
+          ],
+          "confidence": 94.54
+        },
+        {
+          "text": "Dich thơ:",
+          "bbox": [
+            177,
+            1120,
+            365,
+            1150
+          ],
+          "confidence": 73.9
+        },
+        {
+          "text": "Mạch đất từ trong nổi,",
+          "bbox": [
+            401,
+            1230,
+            876,
+            1275
+          ],
+          "confidence": 88.68
+        },
+        {
+          "text": "Thế núi kiều hùng thay.",
+          "bbox": [
+            402,
+            1287,
+            906,
+            1334
+          ],
+          "confidence": 97.19
+        },
+        {
+          "text": "Dáng vươn, chừng đuổi giặc.",
+          "bbox": [
+            399,
+            1348,
+            989,
+            1400
+          ],
+          "confidence": 79.15
+        },
+        {
+          "text": "Khi tụ, muốn tung máy.",
+          "bbox": [
+            398,
+            1405,
+            896,
+            1452
+          ],
+          "confidence": 88.28
+        },
+        {
+          "text": "La, Phố, Tam Soa hop,",
+          "bbox": [
+            396,
+            1465,
+            1622,
+            1509
+          ],
+          "confidence": 89.57
+        },
+        {
+          "text": "Hương, Chương, hai cánh bảy.",
+          "bbox": [
+            396,
+            1525,
+            1019,
+            1574
+          ],
+          "confidence": 93.04
+        },
+        {
+          "text": "Cao Hoàng bình giặc Bắc,",
+          "bbox": [
+            398,
+            1583,
+            936,
+            1633
+          ],
+          "confidence": 91.89
+        },
+        {
+          "text": "Roi ngựa vút từ đấy...",
+          "bbox": [
+            395,
+            1645,
+            849,
+            1691
+          ],
+          "confidence": 86.43
+        },
+        {
+          "text": "Ngô Linh Ngọc dịch",
+          "bbox": [
+            1231,
+            1719,
+            1602,
+            1763
+          ],
+          "confidence": 97.07
+        },
+        {
+          "text": "大盛江",
+          "bbox": [
+            743,
+            1876,
+            969,
+            1952
+          ],
+          "confidence": 82.88
+        },
+        {
+          "text": "浮生初渡大靈江",
+          "bbox": [
+            593,
+            2037,
+            1166,
+            2095
+          ],
+          "confidence": 89.67
+        },
+        {
+          "text": "沙礦茫涼海浪撞",
+          "bbox": [
+            591,
+            2110,
+            1166,
+            2168
+          ],
+          "confidence": 83.71
+        },
+        {
+          "text": "南北總皆吾宇宙",
+          "bbox": [
+            591,
+            2182,
+            1164,
+            2239
+          ],
+          "confidence": 94.51
+        },
+        {
+          "text": "山川奚畫此家邦",
+          "bbox": [
+            591,
+            2254,
+            1164,
+            2310
+          ],
+          "confidence": 96.03
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          1823,
+          2814
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 33.127,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              188,
+              258,
+              428,
+              301
+            ],
+            "generated_text": "Dich nghĩa:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.926,
+            "confidence": 93.61,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              412,
+              380,
+              1007,
+              440
+            ],
+            "generated_text": "VỊNH NÚI ĐẠI HÀM",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 2.12,
+            "confidence": 85.59,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              413,
+              519,
+              1068,
+              569
+            ],
+            "generated_text": "Mạch đất từ phía trong nổi lên.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.42,
+            "confidence": 95.28,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              412,
+              577,
+              1180,
+              635
+            ],
+            "generated_text": "Thế núi đứng riêng trồng hùng đũng.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.698,
+            "confidence": 78.93,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              410,
+              636,
+              1292,
+              691
+            ],
+            "generated_text": "Vóc đáng vươn cao như tiến vào quân dịch.",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.898,
+            "confidence": 80.93,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              410,
+              696,
+              1185,
+              749
+            ],
+            "generated_text": "Khí tụ tích lại như xông đến tận trời.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.647,
+            "confidence": 91.98,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              410,
+              756,
+              1253,
+              809
+            ],
+            "generated_text": "Sông La, Sông Phố hợp đồng ở Tam Soa,",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.555,
+            "confidence": 87.37,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              409,
+              815,
+              1433,
+              870
+            ],
+            "generated_text": "Hương Sơn, Thanh Chương kế nhau như đôi cánh.",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.864,
+            "confidence": 89.6,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              409,
+              875,
+              1030,
+              927
+            ],
+            "generated_text": "Đức Cao hoàng bình giác Bắc.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.107,
+            "confidence": 90.29,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              407,
+              934,
+              1146,
+              986
+            ],
+            "generated_text": "Từ núi này quất roi ngựa tiến quân.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.784,
+            "confidence": 94.54,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              177,
+              1120,
+              365,
+              1150
+            ],
+            "generated_text": "Dich thơ:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.818,
+            "confidence": 73.9,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              401,
+              1230,
+              876,
+              1275
+            ],
+            "generated_text": "Mạch đất từ trong nổi,",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 1.135,
+            "confidence": 88.68,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              402,
+              1287,
+              906,
+              1334
+            ],
+            "generated_text": "Thế núi kiều hùng thay.",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.284,
+            "confidence": 97.19,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              399,
+              1348,
+              989,
+              1400
+            ],
+            "generated_text": "Dáng vươn, chừng đuổi giặc.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.656,
+            "confidence": 79.15,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              398,
+              1405,
+              896,
+              1452
+            ],
+            "generated_text": "Khi tụ, muốn tung máy.",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.885,
+            "confidence": 88.28,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              396,
+              1465,
+              1622,
+              1509
+            ],
+            "generated_text": "La, Phố, Tam Soa hop,",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 1.342,
+            "confidence": 89.57,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              396,
+              1525,
+              1019,
+              1574
+            ],
+            "generated_text": "Hương, Chương, hai cánh bảy.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.758,
+            "confidence": 93.04,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              398,
+              1583,
+              936,
+              1633
+            ],
+            "generated_text": "Cao Hoàng bình giặc Bắc,",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.357,
+            "confidence": 91.89,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              395,
+              1645,
+              849,
+              1691
+            ],
+            "generated_text": "Roi ngựa vút từ đấy...",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.262,
+            "confidence": 86.43,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              1231,
+              1719,
+              1602,
+              1763
+            ],
+            "generated_text": "Ngô Linh Ngọc dịch",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.922,
+            "confidence": 97.07,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              743,
+              1876,
+              969,
+              1952
+            ],
+            "generated_text": "大盛江",
+            "n_lines": 1,
+            "tokens": 4,
+            "seconds": 0.522,
+            "confidence": 82.88,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              593,
+              2037,
+              1166,
+              2095
+            ],
+            "generated_text": "浮生初渡大靈江",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 1.006,
+            "confidence": 89.67,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              591,
+              2110,
+              1166,
+              2168
+            ],
+            "generated_text": "沙礦茫涼海浪撞",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.318,
+            "confidence": 83.71,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              591,
+              2182,
+              1164,
+              2239
+            ],
+            "generated_text": "南北總皆吾宇宙",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.786,
+            "confidence": 94.51,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              591,
+              2254,
+              1164,
+              2310
+            ],
+            "generated_text": "山川奚畫此家邦",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 1.054,
+            "confidence": 96.03,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              184,
+              1109,
+              320,
+              1120
+            ],
+            "ink": 244
+          },
+          {
+            "box": [
+              765,
+              1330,
+              887,
+              1339
+            ],
+            "ink": 180
+          },
+          {
+            "box": [
+              1513,
+              2516,
+              1588,
+              2540
+            ],
+            "ink": 677
+          },
+          {
+            "box": [
+              1513,
+              2537,
+              1589,
+              2554
+            ],
+            "ink": 513
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      }
+    }
+  ]
+}

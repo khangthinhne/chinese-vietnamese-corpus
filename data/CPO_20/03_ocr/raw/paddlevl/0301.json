@@ -1,0 +1,816 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_20",
+  "engine": "paddlevl",
+  "page": 301,
+  "runs": [
+    {
+      "key": "7f7ac8428c2467d06dca03d5258e1b306c0cefd116cd8c7f6253118e105f6cb0",
+      "parameters": {
+        "image_sha256": "f8a250c397c0cdfa1a241c33c0430c0319543a9670d15298bf628c3a7ec7fece",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T06:45:42+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_301.png",
+      "image_size": [
+        1823,
+        2814
+      ],
+      "crop_box": [
+        0,
+        0,
+        1823,
+        2814
+      ],
+      "lines": [
+        {
+          "text": "去山阳吧",
+          "bbox": [
+            78,
+            314,
+            963,
+            351
+          ],
+          "confidence": 42.37
+        },
+        {
+          "text": "香山明",
+          "bbox": [
+            78,
+            343,
+            964,
+            391
+          ],
+          "confidence": 35.08
+        },
+        {
+          "text": "群山迤逦绕羅城",
+          "bbox": [
+            616,
+            483,
+            1192,
+            541
+          ],
+          "confidence": 91.3
+        },
+        {
+          "text": "莊點春天百媚生",
+          "bbox": [
+            615,
+            552,
+            1191,
+            613
+          ],
+          "confidence": 94.21
+        },
+        {
+          "text": "乱石嶙峋天位置",
+          "bbox": [
+            613,
+            627,
+            1191,
+            690
+          ],
+          "confidence": 90.73
+        },
+        {
+          "text": "嬌花菩蕾地晴明",
+          "bbox": [
+            612,
+            700,
+            1189,
+            763
+          ],
+          "confidence": 86.33
+        },
+        {
+          "text": "新枝鬢髮雲梳線",
+          "bbox": [
+            616,
+            775,
+            1189,
+            833
+          ],
+          "confidence": 85.96
+        },
+        {
+          "text": "細草横眉雨黛青",
+          "bbox": [
+            612,
+            845,
+            1188,
+            903
+          ],
+          "confidence": 89.62
+        },
+        {
+          "text": "高揭詩簾舒望眼",
+          "bbox": [
+            612,
+            917,
+            1188,
+            975
+          ],
+          "confidence": 99.33
+        },
+        {
+          "text": "化工编出四周屏",
+          "bbox": [
+            613,
+            991,
+            1186,
+            1047
+          ],
+          "confidence": 79.27
+        },
+        {
+          "text": "Phien âm:",
+          "bbox": [
+            176,
+            1142,
+            389,
+            1170
+          ],
+          "confidence": 74.25
+        },
+        {
+          "text": "XUAN SON MINH MY",
+          "bbox": [
+            401,
+            1267,
+            1030,
+            1319
+          ],
+          "confidence": 90.44
+        },
+        {
+          "text": "Quân sơn dĩ lý nhịêu La Thành,",
+          "bbox": [
+            401,
+            1405,
+            1066,
+            1449
+          ],
+          "confidence": 63.93
+        },
+        {
+          "text": "Trang điểm xuân thiên bách my sinh.",
+          "bbox": [
+            401,
+            1464,
+            1178,
+            1506
+          ],
+          "confidence": 96.79
+        },
+        {
+          "text": "Loan thach lân tuần thiên vi trí,",
+          "bbox": [
+            401,
+            1523,
+            1078,
+            1566
+          ],
+          "confidence": 90.48
+        },
+        {
+          "text": "Kiểu hoa bồi lỗi địa tình minh.",
+          "bbox": [
+            399,
+            1581,
+            1038,
+            1625
+          ],
+          "confidence": 80.69
+        },
+        {
+          "text": "Tân chi mấn phát vân sơ lục,",
+          "bbox": [
+            398,
+            1640,
+            1010,
+            1683
+          ],
+          "confidence": 82.71
+        },
+        {
+          "text": "Tế thảo hoành my vũ đại thanh.",
+          "bbox": [
+            398,
+            1698,
+            1069,
+            1742
+          ],
+          "confidence": 90.58
+        },
+        {
+          "text": "Cao yết thi liêm thư vọng nhăn,",
+          "bbox": [
+            398,
+            1759,
+            1061,
+            1802
+          ],
+          "confidence": 89.86
+        },
+        {
+          "text": "Hóa công tú xuất tứ chu bình.",
+          "bbox": [
+            396,
+            1817,
+            1352,
+            1859
+          ],
+          "confidence": 91.47
+        },
+        {
+          "text": "Dịch nghĩa:",
+          "bbox": [
+            168,
+            1995,
+            1206,
+            2033
+          ],
+          "confidence": 82.7
+        },
+        {
+          "text": "NÚI XUÂN TƯỚI ĐỘP",
+          "bbox": [
+            393,
+            2123,
+            1021,
+            2180
+          ],
+          "confidence": 82.34
+        },
+        {
+          "text": "Núi non dàng đặc bao quanh La Thành,",
+          "bbox": [
+            392,
+            2265,
+            1210,
+            2309
+          ],
+          "confidence": 89.95
+        },
+        {
+          "text": "Tô điện trời xuân này trăm vẻ đẹp.",
+          "bbox": [
+            390,
+            2324,
+            1132,
+            2367
+          ],
+          "confidence": 87.11
+        },
+        {
+          "text": "Đá mọc chấp chùng do trời sắp đặt,",
+          "bbox": [
+            390,
+            2382,
+            1126,
+            2425
+          ],
+          "confidence": 91.64
+        },
+        {
+          "text": "Hca dep chúm chím khiến đất sáng tươi.",
+          "bbox": [
+            390,
+            2440,
+            1225,
+            2482
+          ],
+          "confidence": 90.17
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          1823,
+          2814
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 9.78,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              78,
+              314,
+              963,
+              351
+            ],
+            "generated_text": "去山阳吧",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.227,
+            "confidence": 42.37,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              78,
+              343,
+              964,
+              391
+            ],
+            "generated_text": "香山明",
+            "n_lines": 1,
+            "tokens": 4,
+            "seconds": 0.217,
+            "confidence": 35.08,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              616,
+              483,
+              1192,
+              541
+            ],
+            "generated_text": "群山迤逦绕羅城",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.372,
+            "confidence": 91.3,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              615,
+              552,
+              1191,
+              613
+            ],
+            "generated_text": "莊點春天百媚生",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.309,
+            "confidence": 94.21,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              613,
+              627,
+              1191,
+              690
+            ],
+            "generated_text": "乱石嶙峋天位置",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.354,
+            "confidence": 90.73,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              612,
+              700,
+              1189,
+              763
+            ],
+            "generated_text": "嬌花菩蕾地晴明",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.363,
+            "confidence": 86.33,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              616,
+              775,
+              1189,
+              833
+            ],
+            "generated_text": "新枝鬢髮雲梳線",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.372,
+            "confidence": 85.96,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              612,
+              845,
+              1188,
+              903
+            ],
+            "generated_text": "細草横眉雨黛青",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.284,
+            "confidence": 89.62,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              612,
+              917,
+              1188,
+              975
+            ],
+            "generated_text": "高揭詩簾舒望眼",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.382,
+            "confidence": 99.33,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              613,
+              991,
+              1186,
+              1047
+            ],
+            "generated_text": "化工编出四周屏",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.25,
+            "confidence": 79.27,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              176,
+              1142,
+              389,
+              1170
+            ],
+            "generated_text": "Phien âm:",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.227,
+            "confidence": 74.25,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              401,
+              1267,
+              1030,
+              1319
+            ],
+            "generated_text": "XUAN SON MINH MY",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.319,
+            "confidence": 90.44,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              401,
+              1405,
+              1066,
+              1449
+            ],
+            "generated_text": "Quân sơn dĩ lý nhịêu La Thành,",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.427,
+            "confidence": 63.93,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              401,
+              1464,
+              1178,
+              1506
+            ],
+            "generated_text": "Trang điểm xuân thiên bách my sinh.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 0.39,
+            "confidence": 96.79,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              401,
+              1523,
+              1078,
+              1566
+            ],
+            "generated_text": "Loan thach lân tuần thiên vi trí,",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.417,
+            "confidence": 90.48,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              399,
+              1581,
+              1038,
+              1625
+            ],
+            "generated_text": "Kiểu hoa bồi lỗi địa tình minh.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.462,
+            "confidence": 80.69,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              398,
+              1640,
+              1010,
+              1683
+            ],
+            "generated_text": "Tân chi mấn phát vân sơ lục,",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.439,
+            "confidence": 82.71,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              398,
+              1698,
+              1069,
+              1742
+            ],
+            "generated_text": "Tế thảo hoành my vũ đại thanh.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.41,
+            "confidence": 90.58,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              398,
+              1759,
+              1061,
+              1802
+            ],
+            "generated_text": "Cao yết thi liêm thư vọng nhăn,",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.464,
+            "confidence": 89.86,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              396,
+              1817,
+              1352,
+              1859
+            ],
+            "generated_text": "Hóa công tú xuất tứ chu bình.",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.403,
+            "confidence": 91.47,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              168,
+              1995,
+              1206,
+              2033
+            ],
+            "generated_text": "Dịch nghĩa:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.268,
+            "confidence": 82.7,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              393,
+              2123,
+              1021,
+              2180
+            ],
+            "generated_text": "NÚI XUÂN TƯỚI ĐỘP",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.554,
+            "confidence": 82.34,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              392,
+              2265,
+              1210,
+              2309
+            ],
+            "generated_text": "Núi non dàng đặc bao quanh La Thành,",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.455,
+            "confidence": 89.95,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              390,
+              2324,
+              1132,
+              2367
+            ],
+            "generated_text": "Tô điện trời xuân này trăm vẻ đẹp.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.43,
+            "confidence": 87.11,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              390,
+              2382,
+              1126,
+              2425
+            ],
+            "generated_text": "Đá mọc chấp chùng do trời sắp đặt,",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.494,
+            "confidence": 91.64,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              390,
+              2440,
+              1225,
+              2482
+            ],
+            "generated_text": "Hca dep chúm chím khiến đất sáng tươi.",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.49,
+            "confidence": 90.17,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              184,
+              1136,
+              332,
+              1145
+            ],
+            "ink": 255
+          },
+          {
+            "box": [
+              512,
+              2421,
+              1022,
+              2431
+            ],
+            "ink": 208
+          },
+          {
+            "box": [
+              1523,
+              2516,
+              1599,
+              2529
+            ],
+            "ink": 293
+          },
+          {
+            "box": [
+              1528,
+              2527,
+              1596,
+              2537
+            ],
+            "ink": 262
+          },
+          {
+            "box": [
+              1522,
+              2541,
+              1599,
+              2553
+            ],
+            "ink": 302
+          },
+          {
+            "box": [
+              78,
+              2727,
+              121,
+              2737
+            ],
+            "ink": 148
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      }
+    }
+  ]
+}

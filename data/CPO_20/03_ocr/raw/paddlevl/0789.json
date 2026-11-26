@@ -1,0 +1,641 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_20",
+  "engine": "paddlevl",
+  "page": 789,
+  "runs": [
+    {
+      "key": "5672c2d0b535720485a3b8b128978956ae0bec88e509dace92887961a29f6119",
+      "parameters": {
+        "image_sha256": "e86ba042ed2adff621a760700751d2823e1124c969314b65f40fe029c462e8ee",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T14:40:28+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_789.png",
+      "image_size": [
+        1821,
+        2814
+      ],
+      "crop_box": [
+        0,
+        0,
+        1821,
+        2814
+      ],
+      "lines": [
+        {
+          "text": "Phiên âm:",
+          "bbox": [
+            165,
+            272,
+            968,
+            301
+          ],
+          "confidence": 90.4
+        },
+        {
+          "text": "PHÚ NGUYỄT QUỐ HỒNG HOA NGỪ TRÀO",
+          "bbox": [
+            263,
+            380,
+            1516,
+            449
+          ],
+          "confidence": 79.7
+        },
+        {
+          "text": "Tích xuân hoa thảo vị thùy dung.",
+          "bbox": [
+            402,
+            529,
+            1082,
+            573
+          ],
+          "confidence": 91.27
+        },
+        {
+          "text": "Ninh nai lân quân thổ văn hồng.",
+          "bbox": [
+            404,
+            588,
+            1080,
+            632
+          ],
+          "confidence": 90.4
+        },
+        {
+          "text": "Diêm sắc bất điều tam nguyệt vũ.",
+          "bbox": [
+            404,
+            647,
+            1096,
+            691
+          ],
+          "confidence": 92.63
+        },
+        {
+          "text": "Phương tâm đi giá nhất niên phong.",
+          "bbox": [
+            404,
+            709,
+            1149,
+            759
+          ],
+          "confidence": 89.39
+        },
+        {
+          "text": "Luc hà ảnh lý lưu oanh lão,",
+          "bbox": [
+            405,
+            769,
+            969,
+            811
+          ],
+          "confidence": 84.06
+        },
+        {
+          "text": "Minh nguyệt chi đấu vũ điệp dung.",
+          "bbox": [
+            405,
+            830,
+            1116,
+            878
+          ],
+          "confidence": 90.0
+        },
+        {
+          "text": "Khước tiểu ngo quỳ hoa thái thiểu,",
+          "bbox": [
+            405,
+            889,
+            1118,
+            931
+          ],
+          "confidence": 83.97
+        },
+        {
+          "text": "Ký phiên tiểu tụy nhất phiên nùng.",
+          "bbox": [
+            405,
+            950,
+            1137,
+            999
+          ],
+          "confidence": 92.83
+        },
+        {
+          "text": "Uich nghĩa:",
+          "bbox": [
+            168,
+            1142,
+            420,
+            1172
+          ],
+          "confidence": 79.67
+        },
+        {
+          "text": "CUÔI THĂNG BA CỖN HOA ĐỖ,",
+          "bbox": [
+            437,
+            1251,
+            1355,
+            1308
+          ],
+          "confidence": 81.09
+        },
+        {
+          "text": "NGU Y TRÃO PHUNG",
+          "bbox": [
+            588,
+            1333,
+            1210,
+            1389
+          ],
+          "confidence": 74.88
+        },
+        {
+          "text": "Tiếc mùa xuân qua hoa cổ còn làm đáng với ai.",
+          "bbox": [
+            409,
+            1475,
+            1371,
+            1522
+          ],
+          "confidence": 91.41
+        },
+        {
+          "text": "Thương cho hoa chịu khó phun ra màu đỏ muộn măn,",
+          "bbox": [
+            410,
+            1534,
+            1502,
+            1583
+          ],
+          "confidence": 96.08
+        },
+        {
+          "text": "Mưa tháng ba sắc màu không suy suyên.",
+          "bbox": [
+            410,
+            1600,
+            1240,
+            1641
+          ],
+          "confidence": 93.12
+        },
+        {
+          "text": "Gió quanh năm, hương thơm vân vện nguyên.",
+          "bbox": [
+            410,
+            1658,
+            1346,
+            1702
+          ],
+          "confidence": 85.19
+        },
+        {
+          "text": "Trong bóng ráng chiều, chim oanh già bay lăng lē.",
+          "bbox": [
+            298,
+            1709,
+            1446,
+            1763
+          ],
+          "confidence": 83.41
+        },
+        {
+          "text": "Trên cành cây dưới trăng, con bướm múa nhọn nhác.",
+          "bbox": [
+            412,
+            1773,
+            1499,
+            1820
+          ],
+          "confidence": 89.55
+        },
+        {
+          "text": "Buồn cười cho hoa quỳ giờ Ngọ sắc màu nhọt nhạt,",
+          "bbox": [
+            412,
+            1830,
+            1457,
+            1881
+          ],
+          "confidence": 83.39
+        },
+        {
+          "text": "Mấy lần tiêu tụy mới được một phen nông thăm.",
+          "bbox": [
+            412,
+            1890,
+            1410,
+            1941
+          ],
+          "confidence": 90.5
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          1821,
+          2814
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 10.102,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              165,
+              272,
+              968,
+              301
+            ],
+            "generated_text": "Phiên âm:",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.222,
+            "confidence": 90.4,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              263,
+              380,
+              1516,
+              449
+            ],
+            "generated_text": "PHÚ NGUYỄT QUỐ HỒNG HOA NGỪ TRÀO",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.766,
+            "confidence": 79.7,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              402,
+              529,
+              1082,
+              573
+            ],
+            "generated_text": "Tích xuân hoa thảo vị thùy dung.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.437,
+            "confidence": 91.27,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              404,
+              588,
+              1080,
+              632
+            ],
+            "generated_text": "Ninh nai lân quân thổ văn hồng.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.436,
+            "confidence": 90.4,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              404,
+              647,
+              1096,
+              691
+            ],
+            "generated_text": "Diêm sắc bất điều tam nguyệt vũ.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.437,
+            "confidence": 92.63,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              404,
+              709,
+              1149,
+              759
+            ],
+            "generated_text": "Phương tâm đi giá nhất niên phong.",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.363,
+            "confidence": 89.39,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              405,
+              769,
+              969,
+              811
+            ],
+            "generated_text": "Luc hà ảnh lý lưu oanh lão,",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 0.385,
+            "confidence": 84.06,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              405,
+              830,
+              1116,
+              878
+            ],
+            "generated_text": "Minh nguyệt chi đấu vũ điệp dung.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.438,
+            "confidence": 90.0,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              405,
+              889,
+              1118,
+              931
+            ],
+            "generated_text": "Khước tiểu ngo quỳ hoa thái thiểu,",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.397,
+            "confidence": 83.97,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              405,
+              950,
+              1137,
+              999
+            ],
+            "generated_text": "Ký phiên tiểu tụy nhất phiên nùng.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.467,
+            "confidence": 92.83,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              168,
+              1142,
+              420,
+              1172
+            ],
+            "generated_text": "Uich nghĩa:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.256,
+            "confidence": 79.67,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              437,
+              1251,
+              1355,
+              1308
+            ],
+            "generated_text": "CUÔI THĂNG BA CỖN HOA ĐỖ,",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.559,
+            "confidence": 81.09,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              588,
+              1333,
+              1210,
+              1389
+            ],
+            "generated_text": "NGU Y TRÃO PHUNG",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.317,
+            "confidence": 74.88,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              409,
+              1475,
+              1371,
+              1522
+            ],
+            "generated_text": "Tiếc mùa xuân qua hoa cổ còn làm đáng với ai.",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.532,
+            "confidence": 91.41,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              410,
+              1534,
+              1502,
+              1583
+            ],
+            "generated_text": "Thương cho hoa chịu khó phun ra màu đỏ muộn măn,",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.666,
+            "confidence": 96.08,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              410,
+              1600,
+              1240,
+              1641
+            ],
+            "generated_text": "Mưa tháng ba sắc màu không suy suyên.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.414,
+            "confidence": 93.12,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              410,
+              1658,
+              1346,
+              1702
+            ],
+            "generated_text": "Gió quanh năm, hương thơm vân vện nguyên.",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.537,
+            "confidence": 85.19,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              298,
+              1709,
+              1446,
+              1763
+            ],
+            "generated_text": "Trong bóng ráng chiều, chim oanh già bay lăng lē.",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.585,
+            "confidence": 83.41,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              412,
+              1773,
+              1499,
+              1820
+            ],
+            "generated_text": "Trên cành cây dưới trăng, con bướm múa nhọn nhác.",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.698,
+            "confidence": 89.55,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              412,
+              1830,
+              1457,
+              1881
+            ],
+            "generated_text": "Buồn cười cho hoa quỳ giờ Ngọ sắc màu nhọt nhạt,",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.651,
+            "confidence": 83.39,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              412,
+              1890,
+              1410,
+              1941
+            ],
+            "generated_text": "Mấy lần tiêu tụy mới được một phen nông thăm.",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.537,
+            "confidence": 90.5,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              1549,
+              2531,
+              1624,
+              2540
+            ],
+            "ink": 320
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      }
+    }
+  ]
+}

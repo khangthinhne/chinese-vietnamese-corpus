@@ -1,0 +1,952 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_20",
+  "engine": "paddlevl",
+  "page": 800,
+  "runs": [
+    {
+      "key": "7d8896bbc613bbda2ee2e16473ea64510bf7e5c6193c87f304ccb178607fb24a",
+      "parameters": {
+        "image_sha256": "b59fc40e5600df53cd582122d95ace693e8112356d50f02df20583fb548504e2",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T14:42:27+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_800.png",
+      "image_size": [
+        1839,
+        2804
+      ],
+      "crop_box": [
+        0,
+        0,
+        1839,
+        2804
+      ],
+      "lines": [
+        {
+          "text": "HOA NAP NGON NHỮ NGHĨA TRACH",
+          "bbox": [
+            437,
+            383,
+            1558,
+            438
+          ],
+          "confidence": 84.18
+        },
+        {
+          "text": "KIẾN TẶNG",
+          "bbox": [
+            817,
+            466,
+            1231,
+            516
+          ],
+          "confidence": 84.42
+        },
+        {
+          "text": "Thu phong diễu định tích dương kiểu.",
+          "bbox": [
+            490,
+            566,
+            1285,
+            610
+          ],
+          "confidence": 81.47
+        },
+        {
+          "text": "Hồng tư minh minh yên tư phiêu.",
+          "bbox": [
+            492,
+            636,
+            1208,
+            669
+          ],
+          "confidence": 88.31
+        },
+        {
+          "text": "Tiệm kiến du dân ¹ nhàn di tuc.",
+          "bbox": [
+            467,
+            686,
+            1168,
+            730
+          ],
+          "confidence": 77.61
+        },
+        {
+          "text": "Kỷ văn di lão thuyết tân triều",
+          "bbox": [
+            490,
+            747,
+            1168,
+            791
+          ],
+          "confidence": 92.08
+        },
+        {
+          "text": "Nguyệt minh Ba Giáp ³ nhân hà tại.",
+          "bbox": [
+            490,
+            809,
+            1261,
+            851
+          ],
+          "confidence": 87.03
+        },
+        {
+          "text": "Vân mật Kỳ Dương 4 thiên diệc dao.",
+          "bbox": [
+            490,
+            868,
+            1255,
+            912
+          ],
+          "confidence": 84.25
+        },
+        {
+          "text": "Hỗ thỉ sơ tâm tiêu tỏa tân,",
+          "bbox": [
+            490,
+            932,
+            1555,
+            972
+          ],
+          "confidence": 78.05
+        },
+        {
+          "text": "Nhất thanh sương chủ mấn hoa điều.",
+          "bbox": [
+            488,
+            989,
+            1277,
+            1033
+          ],
+          "confidence": 83.31
+        },
+        {
+          "text": "Dich nghĩa:",
+          "bbox": [
+            248,
+            1156,
+            595,
+            1186
+          ],
+          "confidence": 95.11
+        },
+        {
+          "text": "HQA BÀI THỐ TẶNG CỦA ÔNG NẠP",
+          "bbox": [
+            451,
+            1273,
+            1538,
+            1329
+          ],
+          "confidence": 78.11
+        },
+        {
+          "text": "NGON NHỮ NGHĨA TRACH",
+          "bbox": [
+            540,
+            1356,
+            1402,
+            1409
+          ],
+          "confidence": 88.58
+        },
+        {
+          "text": "Gió thụ thổi, thuyền câu đấu dưới câu lúc chiều hôm.",
+          "bbox": [
+            465,
+            1475,
+            1604,
+            1520
+          ],
+          "confidence": 87.37
+        },
+        {
+          "text": "Chim hồng tự bay xa, chim én tự liệng gần.",
+          "bbox": [
+            465,
+            1535,
+            1413,
+            1584
+          ],
+          "confidence": 90.85
+        },
+        {
+          "text": "Đã thấy người dân triều cũ quen dân với phong tục mới,",
+          "bbox": [
+            485,
+            1596,
+            1674,
+            1640
+          ],
+          "confidence": 95.61
+        },
+        {
+          "text": "Đã nghe các di lão nói chuyện tân triều.",
+          "bbox": [
+            485,
+            1656,
+            1341,
+            1698
+          ],
+          "confidence": 91.82
+        },
+        {
+          "text": "Trăng sáng trên núi Ba Giáp, người ở đâu rồi?",
+          "bbox": [
+            485,
+            1715,
+            1476,
+            1759
+          ],
+          "confidence": 95.52
+        },
+        {
+          "text": "Mây dày trên đất Kỳ Dương, trời còn xa lắc.",
+          "bbox": [
+            485,
+            1774,
+            1430,
+            1820
+          ],
+          "confidence": 96.65
+        },
+        {
+          "text": "Tấm lòng hộ thỉ bưói đấu tiêu tan hết cả.",
+          "bbox": [
+            484,
+            1833,
+            1363,
+            1879
+          ],
+          "confidence": 83.58
+        },
+        {
+          "text": "Nghe một tiếng chày sương, thương cho mái tóc phôi pha.",
+          "bbox": [
+            381,
+            1896,
+            1699,
+            1945
+          ],
+          "confidence": 94.4
+        },
+        {
+          "text": "1. Du dân: Ông Tạ Diệp Sơn người Tống, không chịu hàng nhà Nguyên, trong bức",
+          "bbox": [
+            338,
+            2016,
+            1721,
+            2059
+          ],
+          "confidence": 89.11
+        },
+        {
+          "text": "thư ông gửi cho bon quan lại đã hàng Nguyên có câu: \"Vị Tổng bô bá thần khá, vi Nguyên",
+          "bbox": [
+            246,
+            2065,
+            1721,
+            2108
+          ],
+          "confidence": 85.7
+        },
+        {
+          "text": "du nọa dân khả\", (nghĩa là: Làm bảy tôi bố bá thời Tổng cũng được, làm người dân lưỡi",
+          "bbox": [
+            246,
+            2113,
+            1719,
+            2155
+          ],
+          "confidence": 88.24
+        },
+        {
+          "text": "nhác thòi Nguyên cũng được*. Ở đây chỉ những người không hợp tác với triều đại mới.",
+          "bbox": [
+            246,
+            2161,
+            1663,
+            2205
+          ],
+          "confidence": 88.48
+        },
+        {
+          "text": "2. Tân triều: Chỉ triều đại Tây Sơn. Hai câu này chứng tỏ triều đại Tây Sơn dân",
+          "bbox": [
+            335,
+            2210,
+            1719,
+            2249
+          ],
+          "confidence": 88.99
+        },
+        {
+          "text": "dẫn chính phục được những người văn tự coi là trung thành với nhà Lê.",
+          "bbox": [
+            246,
+            2258,
+            1694,
+            2298
+          ],
+          "confidence": 91.86
+        },
+        {
+          "text": "3. Ba giáp: Núi Vu Giáp đ đông Ba Đông.",
+          "bbox": [
+            335,
+            2307,
+            1410,
+            2346
+          ],
+          "confidence": 79.85
+        },
+        {
+          "text": "4. Văn một Kỳ Dương: Mày đày đờ đất Kỳ Dương. Kinh Dịch có cấu: “Mặt văn bất",
+          "bbox": [
+            335,
+            2355,
+            1718,
+            2397
+          ],
+          "confidence": 77.02
+        },
+        {
+          "text": "vũ\", nghĩa là máy đã dày mà chuẩn thấy mưa. Ý nói dân nhà Thương trọng vua Văn",
+          "bbox": [
+            245,
+            2403,
+            1718,
+            2443
+          ],
+          "confidence": 85.38
+        },
+        {
+          "text": "Vương ở Kỳ Dương kéo quân đến diệt Trụ, nhưng Văn Vương chưa thấy đến. Ở đây",
+          "bbox": [
+            245,
+            2450,
+            1718,
+            2493
+          ],
+          "confidence": 86.82
+        },
+        {
+          "text": "Trần Danh An văn tổ ý mong có người giúp nhà Lê khôi phục lại nghiệp cũ.",
+          "bbox": [
+            243,
+            2500,
+            1730,
+            2543
+          ],
+          "confidence": 91.33
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          1839,
+          2804
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 19.004,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              437,
+              383,
+              1558,
+              438
+            ],
+            "generated_text": "HOA NAP NGON NHỮ NGHĨA TRACH",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.548,
+            "confidence": 84.18,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              817,
+              466,
+              1231,
+              516
+            ],
+            "generated_text": "KIẾN TẶNG",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.358,
+            "confidence": 84.42,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              490,
+              566,
+              1285,
+              610
+            ],
+            "generated_text": "Thu phong diễu định tích dương kiểu.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.407,
+            "confidence": 81.47,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              492,
+              636,
+              1208,
+              669
+            ],
+            "generated_text": "Hồng tư minh minh yên tư phiêu.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.428,
+            "confidence": 88.31,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              467,
+              686,
+              1168,
+              730
+            ],
+            "generated_text": "Tiệm kiến du dân ¹ nhàn di tuc.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.437,
+            "confidence": 77.61,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              490,
+              747,
+              1168,
+              791
+            ],
+            "generated_text": "Kỷ văn di lão thuyết tân triều",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.421,
+            "confidence": 92.08,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              490,
+              809,
+              1261,
+              851
+            ],
+            "generated_text": "Nguyệt minh Ba Giáp ³ nhân hà tại.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.46,
+            "confidence": 87.03,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              490,
+              868,
+              1255,
+              912
+            ],
+            "generated_text": "Vân mật Kỳ Dương 4 thiên diệc dao.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.455,
+            "confidence": 84.25,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              490,
+              932,
+              1555,
+              972
+            ],
+            "generated_text": "Hỗ thỉ sơ tâm tiêu tỏa tân,",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.525,
+            "confidence": 78.05,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              488,
+              989,
+              1277,
+              1033
+            ],
+            "generated_text": "Nhất thanh sương chủ mấn hoa điều.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 0.381,
+            "confidence": 83.31,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              248,
+              1156,
+              595,
+              1186
+            ],
+            "generated_text": "Dich nghĩa:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.248,
+            "confidence": 95.11,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              451,
+              1273,
+              1538,
+              1329
+            ],
+            "generated_text": "HQA BÀI THỐ TẶNG CỦA ÔNG NẠP",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.753,
+            "confidence": 78.11,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              540,
+              1356,
+              1402,
+              1409
+            ],
+            "generated_text": "NGON NHỮ NGHĨA TRACH",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.415,
+            "confidence": 88.58,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              465,
+              1475,
+              1604,
+              1520
+            ],
+            "generated_text": "Gió thụ thổi, thuyền câu đấu dưới câu lúc chiều hôm.",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.781,
+            "confidence": 87.37,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              465,
+              1535,
+              1413,
+              1584
+            ],
+            "generated_text": "Chim hồng tự bay xa, chim én tự liệng gần.",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.563,
+            "confidence": 90.85,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              485,
+              1596,
+              1674,
+              1640
+            ],
+            "generated_text": "Đã thấy người dân triều cũ quen dân với phong tục mới,",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.505,
+            "confidence": 95.61,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              485,
+              1656,
+              1341,
+              1698
+            ],
+            "generated_text": "Đã nghe các di lão nói chuyện tân triều.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.488,
+            "confidence": 91.82,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              485,
+              1715,
+              1476,
+              1759
+            ],
+            "generated_text": "Trăng sáng trên núi Ba Giáp, người ở đâu rồi?",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.532,
+            "confidence": 95.52,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              485,
+              1774,
+              1430,
+              1820
+            ],
+            "generated_text": "Mây dày trên đất Kỳ Dương, trời còn xa lắc.",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.557,
+            "confidence": 96.65,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              484,
+              1833,
+              1363,
+              1879
+            ],
+            "generated_text": "Tấm lòng hộ thỉ bưói đấu tiêu tan hết cả.",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.578,
+            "confidence": 83.58,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              381,
+              1896,
+              1699,
+              1945
+            ],
+            "generated_text": "Nghe một tiếng chày sương, thương cho mái tóc phôi pha.",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.57,
+            "confidence": 94.4,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              245,
+              1978,
+              857,
+              1992
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.147,
+            "confidence": 48.75,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              338,
+              2016,
+              1721,
+              2059
+            ],
+            "generated_text": "1. Du dân: Ông Tạ Diệp Sơn người Tống, không chịu hàng nhà Nguyên, trong bức",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 0.725,
+            "confidence": 89.11,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              246,
+              2065,
+              1721,
+              2108
+            ],
+            "generated_text": "thư ông gửi cho bon quan lại đã hàng Nguyên có câu: \"Vị Tổng bô bá thần khá, vi Nguyên",
+            "n_lines": 1,
+            "tokens": 36,
+            "seconds": 0.886,
+            "confidence": 85.7,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              246,
+              2113,
+              1719,
+              2155
+            ],
+            "generated_text": "du nọa dân khả\", (nghĩa là: Làm bảy tôi bố bá thời Tổng cũng được, làm người dân lưỡi",
+            "n_lines": 1,
+            "tokens": 38,
+            "seconds": 0.953,
+            "confidence": 88.24,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              246,
+              2161,
+              1663,
+              2205
+            ],
+            "generated_text": "nhác thòi Nguyên cũng được*. Ở đây chỉ những người không hợp tác với triều đại mới.",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.676,
+            "confidence": 88.48,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              335,
+              2210,
+              1719,
+              2249
+            ],
+            "generated_text": "2. Tân triều: Chỉ triều đại Tây Sơn. Hai câu này chứng tỏ triều đại Tây Sơn dân",
+            "n_lines": 1,
+            "tokens": 34,
+            "seconds": 0.819,
+            "confidence": 88.99,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              246,
+              2258,
+              1694,
+              2298
+            ],
+            "generated_text": "dẫn chính phục được những người văn tự coi là trung thành với nhà Lê.",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.569,
+            "confidence": 91.86,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              335,
+              2307,
+              1410,
+              2346
+            ],
+            "generated_text": "3. Ba giáp: Núi Vu Giáp đ đông Ba Đông.",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.589,
+            "confidence": 79.85,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              335,
+              2355,
+              1718,
+              2397
+            ],
+            "generated_text": "4. Văn một Kỳ Dương: Mày đày đờ đất Kỳ Dương. Kinh Dịch có cấu: “Mặt văn bất",
+            "n_lines": 1,
+            "tokens": 39,
+            "seconds": 0.933,
+            "confidence": 77.02,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              245,
+              2403,
+              1718,
+              2443
+            ],
+            "generated_text": "vũ\", nghĩa là máy đã dày mà chuẩn thấy mưa. Ý nói dân nhà Thương trọng vua Văn",
+            "n_lines": 1,
+            "tokens": 32,
+            "seconds": 0.795,
+            "confidence": 85.38,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 32,
+            "box": [
+              245,
+              2450,
+              1718,
+              2493
+            ],
+            "generated_text": "Vương ở Kỳ Dương kéo quân đến diệt Trụ, nhưng Văn Vương chưa thấy đến. Ở đây",
+            "n_lines": 1,
+            "tokens": 33,
+            "seconds": 0.797,
+            "confidence": 86.82,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 33,
+            "box": [
+              243,
+              2500,
+              1730,
+              2543
+            ],
+            "generated_text": "Trần Danh An văn tổ ý mong có người giúp nhà Lê khôi phục lại nghiệp cũ.",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.702,
+            "confidence": 91.33,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              259,
+              266,
+              478,
+              280
+            ],
+            "ink": 1089
+          },
+          {
+            "box": [
+              252,
+              280,
+              1204,
+              294
+            ],
+            "ink": 874
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      }
+    }
+  ]
+}

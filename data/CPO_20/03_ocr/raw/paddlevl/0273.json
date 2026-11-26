@@ -1,0 +1,979 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_20",
+  "engine": "paddlevl",
+  "page": 273,
+  "runs": [
+    {
+      "key": "e1d2b2316ce041c24dc2c577495c1e6756c89cfa394273e5600a132dfb9be68e",
+      "parameters": {
+        "image_sha256": "50cbea90762e0fe217cc2124433f899492eb8f79e1e3d7e35603f5bf1072c9dc",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T06:40:01+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_273.png",
+      "image_size": [
+        1821,
+        2814
+      ],
+      "crop_box": [
+        0,
+        0,
+        1821,
+        2814
+      ],
+      "lines": [
+        {
+          "text": "笠石河瓜牙之木盤石河扶越，真福梧場之竹筐。",
+          "bbox": [
+            215,
+            269,
+            1577,
+            332
+          ],
+          "confidence": 78.69
+        },
+        {
+          "text": "真福勇决，石河泰河瓜牙東城祭舍之管席羅山",
+          "bbox": [
+            213,
+            336,
+            1560,
+            401
+          ],
+          "confidence": 90.11
+        },
+        {
+          "text": "安全，石河大節之逢笠宜春三制之帆天禄美禄",
+          "bbox": [
+            209,
+            404,
+            1561,
+            468
+          ],
+          "confidence": 81.51
+        },
+        {
+          "text": "之麻制亦简民简利用而作者只足自翕而已。惟",
+          "bbox": [
+            207,
+            469,
+            1561,
+            533
+          ],
+          "confidence": 71.18
+        },
+        {
+          "text": "是上之人深知其情，而有以安養之，黎朝獄法。租",
+          "bbox": [
+            209,
+            536,
+            1560,
+            599
+          ],
+          "confidence": 85.52
+        },
+        {
+          "text": "粟只取公田。不及私田。至裕尊和皇帝。保泰三年。",
+          "bbox": [
+            207,
+            602,
+            1574,
+            663
+          ],
+          "confidence": 92.47
+        },
+        {
+          "text": "徵公田畝八陌二熟出粟三分之二一熟出粟三",
+          "bbox": [
+            207,
+            669,
+            1557,
+            731
+          ],
+          "confidence": 88.89
+        },
+        {
+          "text": "分之一。私印二熟歆三陌。一熟歆二陌。五年復减",
+          "bbox": [
+            207,
+            739,
+            1557,
+            800
+          ],
+          "confidence": 84.83
+        },
+        {
+          "text": "半.廢帝永慶二年.私田租減半.公田全免.又減私",
+          "bbox": [
+            206,
+            806,
+            1557,
+            867
+          ],
+          "confidence": 91.67
+        },
+        {
+          "text": "日租三等收畝一陌，深浚高燥豁免，身腊每丁一",
+          "bbox": [
+            206,
+            873,
+            1555,
+            933
+          ],
+          "confidence": 78.65
+        },
+        {
+          "text": "貫二陌五年亦免之戶調每丁六陌凡牌表祭券",
+          "bbox": [
+            204,
+            940,
+            1554,
+            1003
+          ],
+          "confidence": 84.75
+        },
+        {
+          "text": "殿廟行疋道路橋梁諸務官罹人為之九年亦教",
+          "bbox": [
+            201,
+            1006,
+            1554,
+            1067
+          ],
+          "confidence": 76.06
+        },
+        {
+          "text": "免，民惟出力受兵兵，有官虞，不困给養，征商之法，",
+          "bbox": [
+            206,
+            1073,
+            1568,
+            1133
+          ],
+          "confidence": 81.17
+        },
+        {
+          "text": "則裴舍良塲有征，惟守八十分之一，河黄驪赜。武",
+          "bbox": [
+            202,
+            1139,
+            1550,
+            1199
+          ],
+          "confidence": 68.9
+        },
+        {
+          "text": "烈可留，特以譏察往來，只有呈錢雖辰有朴貴，而",
+          "bbox": [
+            201,
+            1205,
+            1549,
+            1266
+          ],
+          "confidence": 83.8
+        },
+        {
+          "text": "官税較輕朴致者亦不得濫素貧官猶吏之弊唯",
+          "bbox": [
+            199,
+            1273,
+            1547,
+            1333
+          ],
+          "confidence": 78.1
+        },
+        {
+          "text": "其詞訟曲直之間縱有詩虐貨賄其害只及爭訟",
+          "bbox": [
+            201,
+            1340,
+            1549,
+            1399
+          ],
+          "confidence": 92.23
+        },
+        {
+          "text": "一二人，未有害及一處者，況民情疾苦，鎮承得以",
+          "bbox": [
+            199,
+            1411,
+            1546,
+            1466
+          ],
+          "confidence": 88.99
+        },
+        {
+          "text": "條上權改抑舒恚祭得以調提官吏能否辰有差",
+          "bbox": [
+            198,
+            1473,
+            1546,
+            1533
+          ],
+          "confidence": 79.16
+        },
+        {
+          "text": "使清訪之，民事微隱，辰召貢士博詢之，年歲因歉。",
+          "bbox": [
+            198,
+            1540,
+            1561,
+            1599
+          ],
+          "confidence": 79.23
+        },
+        {
+          "text": "官發錢粟眼給之朝廷日夜議論無一念不在乎",
+          "bbox": [
+            195,
+            1606,
+            1543,
+            1664
+          ],
+          "confidence": 93.62
+        },
+        {
+          "text": "民在官者亦惟以名節為重，苟有資貴買賤，與民",
+          "bbox": [
+            199,
+            1675,
+            1544,
+            1730
+          ],
+          "confidence": 91.34
+        },
+        {
+          "text": "爭利，便為時論所鄙終身不能自拔。士之未達者。",
+          "bbox": [
+            198,
+            1739,
+            1558,
+            1797
+          ],
+          "confidence": 89.71
+        },
+        {
+          "text": "亦皆以伺候催門，聚歛貨食為恥，風化之流，自上",
+          "bbox": [
+            196,
+            1806,
+            1541,
+            1863
+          ],
+          "confidence": 81.79
+        },
+        {
+          "text": "及下四民之民各業其業故雖地務民貧而樂事",
+          "bbox": [
+            196,
+            1872,
+            1541,
+            1930
+          ],
+          "confidence": 83.76
+        },
+        {
+          "text": "赴功。尊君親上，禮義廉恥。純厚之俗，未嘗有問也。",
+          "bbox": [
+            192,
+            1939,
+            1557,
+            1997
+          ],
+          "confidence": 90.02
+        },
+        {
+          "text": "乂安地將民貧，不遠四鎮遠甚。然風俗所以純",
+          "bbox": [
+            196,
+            2012,
+            1533,
+            2083
+          ],
+          "confidence": 89.55
+        },
+        {
+          "text": "厚所以得正在於是惟其贫瘠，故堅苦忍耐勤儉",
+          "bbox": [
+            192,
+            2075,
+            1533,
+            2146
+          ],
+          "confidence": 87.22
+        },
+        {
+          "text": "節約習以成性，為士者不務華飭安於苴寒諸鎮",
+          "bbox": [
+            190,
+            2138,
+            1532,
+            2201
+          ],
+          "confidence": 83.35
+        },
+        {
+          "text": "1",
+          "bbox": [
+            204,
+            2193,
+            1532,
+            2223
+          ],
+          "confidence": 37.29
+        },
+        {
+          "text": "人常笑其陋，為民者不忽微細，安於節儉，諸鎮人",
+          "bbox": [
+            187,
+            2215,
+            1530,
+            2282
+          ],
+          "confidence": 89.83
+        },
+        {
+          "text": "第鄙其隰嘉林陳尚書公駐州風土話云上類多",
+          "bbox": [
+            185,
+            2274,
+            1529,
+            2348
+          ],
+          "confidence": 76.85
+        },
+        {
+          "text": "激濁揚清之勁氣小民深驕人益己之誦謀謚諸",
+          "bbox": [
+            185,
+            2340,
+            1529,
+            2410
+          ],
+          "confidence": 79.89
+        },
+        {
+          "text": "之嘲謔乂安殆如此。",
+          "bbox": [
+            184,
+            2402,
+            1524,
+            2459
+          ],
+          "confidence": 79.51
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          1821,
+          2814
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 21.069,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              215,
+              269,
+              1577,
+              332
+            ],
+            "generated_text": "笠石河瓜牙之木盤石河扶越，真福梧場之竹筐。",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.656,
+            "confidence": 78.69,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              213,
+              336,
+              1560,
+              401
+            ],
+            "generated_text": "真福勇决，石河泰河瓜牙東城祭舍之管席羅山",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.645,
+            "confidence": 90.11,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              209,
+              404,
+              1561,
+              468
+            ],
+            "generated_text": "安全，石河大節之逢笠宜春三制之帆天禄美禄",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.613,
+            "confidence": 81.51,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              207,
+              469,
+              1561,
+              533
+            ],
+            "generated_text": "之麻制亦简民简利用而作者只足自翕而已。惟",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.525,
+            "confidence": 71.18,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              209,
+              536,
+              1560,
+              599
+            ],
+            "generated_text": "是上之人深知其情，而有以安養之，黎朝獄法。租",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.587,
+            "confidence": 85.52,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              207,
+              602,
+              1574,
+              663
+            ],
+            "generated_text": "粟只取公田。不及私田。至裕尊和皇帝。保泰三年。",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.547,
+            "confidence": 92.47,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              207,
+              669,
+              1557,
+              731
+            ],
+            "generated_text": "徵公田畝八陌二熟出粟三分之二一熟出粟三",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.542,
+            "confidence": 88.89,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              207,
+              739,
+              1557,
+              800
+            ],
+            "generated_text": "分之一。私印二熟歆三陌。一熟歆二陌。五年復减",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.627,
+            "confidence": 84.83,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              206,
+              806,
+              1557,
+              867
+            ],
+            "generated_text": "半.廢帝永慶二年.私田租減半.公田全免.又減私",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 0.76,
+            "confidence": 91.67,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              206,
+              873,
+              1555,
+              933
+            ],
+            "generated_text": "日租三等收畝一陌，深浚高燥豁免，身腊每丁一",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.63,
+            "confidence": 78.65,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              204,
+              940,
+              1554,
+              1003
+            ],
+            "generated_text": "貫二陌五年亦免之戶調每丁六陌凡牌表祭券",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.524,
+            "confidence": 84.75,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              201,
+              1006,
+              1554,
+              1067
+            ],
+            "generated_text": "殿廟行疋道路橋梁諸務官罹人為之九年亦教",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.594,
+            "confidence": 76.06,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              206,
+              1073,
+              1568,
+              1133
+            ],
+            "generated_text": "免，民惟出力受兵兵，有官虞，不困给養，征商之法，",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.607,
+            "confidence": 81.17,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              202,
+              1139,
+              1550,
+              1199
+            ],
+            "generated_text": "則裴舍良塲有征，惟守八十分之一，河黄驪赜。武",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.683,
+            "confidence": 68.9,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              201,
+              1205,
+              1549,
+              1266
+            ],
+            "generated_text": "烈可留，特以譏察往來，只有呈錢雖辰有朴貴，而",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.628,
+            "confidence": 83.8,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              199,
+              1273,
+              1547,
+              1333
+            ],
+            "generated_text": "官税較輕朴致者亦不得濫素貧官猶吏之弊唯",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.667,
+            "confidence": 78.1,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              201,
+              1340,
+              1549,
+              1399
+            ],
+            "generated_text": "其詞訟曲直之間縱有詩虐貨賄其害只及爭訟",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 0.721,
+            "confidence": 92.23,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              199,
+              1411,
+              1546,
+              1466
+            ],
+            "generated_text": "一二人，未有害及一處者，況民情疾苦，鎮承得以",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.521,
+            "confidence": 88.99,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              198,
+              1473,
+              1546,
+              1533
+            ],
+            "generated_text": "條上權改抑舒恚祭得以調提官吏能否辰有差",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.527,
+            "confidence": 79.16,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              198,
+              1540,
+              1561,
+              1599
+            ],
+            "generated_text": "使清訪之，民事微隱，辰召貢士博詢之，年歲因歉。",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 0.747,
+            "confidence": 79.23,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              195,
+              1606,
+              1543,
+              1664
+            ],
+            "generated_text": "官發錢粟眼給之朝廷日夜議論無一念不在乎",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.459,
+            "confidence": 93.62,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              199,
+              1675,
+              1544,
+              1730
+            ],
+            "generated_text": "民在官者亦惟以名節為重，苟有資貴買賤，與民",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.646,
+            "confidence": 91.34,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              198,
+              1739,
+              1558,
+              1797
+            ],
+            "generated_text": "爭利，便為時論所鄙終身不能自拔。士之未達者。",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.575,
+            "confidence": 89.71,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              196,
+              1806,
+              1541,
+              1863
+            ],
+            "generated_text": "亦皆以伺候催門，聚歛貨食為恥，風化之流，自上",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.69,
+            "confidence": 81.79,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              196,
+              1872,
+              1541,
+              1930
+            ],
+            "generated_text": "及下四民之民各業其業故雖地務民貧而樂事",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.571,
+            "confidence": 83.76,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              192,
+              1939,
+              1557,
+              1997
+            ],
+            "generated_text": "赴功。尊君親上，禮義廉恥。純厚之俗，未嘗有問也。",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 0.76,
+            "confidence": 90.02,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              196,
+              2012,
+              1533,
+              2083
+            ],
+            "generated_text": "乂安地將民貧，不遠四鎮遠甚。然風俗所以純",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.761,
+            "confidence": 89.55,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              192,
+              2075,
+              1533,
+              2146
+            ],
+            "generated_text": "厚所以得正在於是惟其贫瘠，故堅苦忍耐勤儉",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.704,
+            "confidence": 87.22,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              190,
+              2138,
+              1532,
+              2201
+            ],
+            "generated_text": "節約習以成性，為士者不務華飭安於苴寒諸鎮",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.635,
+            "confidence": 83.35,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              204,
+              2193,
+              1532,
+              2223
+            ],
+            "generated_text": "1",
+            "n_lines": 1,
+            "tokens": 2,
+            "seconds": 0.151,
+            "confidence": 37.29,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              187,
+              2215,
+              1530,
+              2282
+            ],
+            "generated_text": "人常笑其陋，為民者不忽微細，安於節儉，諸鎮人",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.706,
+            "confidence": 89.83,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 32,
+            "box": [
+              185,
+              2274,
+              1529,
+              2348
+            ],
+            "generated_text": "第鄙其隰嘉林陳尚書公駐州風土話云上類多",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.7,
+            "confidence": 76.85,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 33,
+            "box": [
+              185,
+              2340,
+              1529,
+              2410
+            ],
+            "generated_text": "激濁揚清之勁氣小民深驕人益己之誦謀謚諸",
+            "n_lines": 1,
+            "tokens": 34,
+            "seconds": 0.925,
+            "confidence": 79.89,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 34,
+            "box": [
+              184,
+              2402,
+              1524,
+              2459
+            ],
+            "generated_text": "之嘲謔乂安殆如此。",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.431,
+            "confidence": 79.51,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              1506,
+              2504,
+              1580,
+              2514
+            ],
+            "ink": 360
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      }
+    }
+  ]
+}

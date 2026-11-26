@@ -1,0 +1,969 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_20",
+  "engine": "paddlevl",
+  "page": 680,
+  "runs": [
+    {
+      "key": "fdcf0f2f672765809875668ebb1cadcb6d17b1f840c2046c2679a9dc14398611",
+      "parameters": {
+        "image_sha256": "73571d810f4ca75a52b9a584ecee791efd44ee692374457bd1bd5bc498f966e2",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T14:12:10+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_680.png",
+      "image_size": [
+        1839,
+        2803
+      ],
+      "crop_box": [
+        0,
+        0,
+        1839,
+        2803
+      ],
+      "lines": [
+        {
+          "text": "簷程吟",
+          "bbox": [
+            860,
+            239,
+            1090,
+            300
+          ],
+          "confidence": 52.31
+        },
+        {
+          "text": "（癸丑年二月初九日）",
+          "bbox": [
+            649,
+            339,
+            1371,
+            395
+          ],
+          "confidence": 97.09
+        },
+        {
+          "text": "蹉跎幾載穢而耕，",
+          "bbox": [
+            709,
+            408,
+            1574,
+            462
+          ],
+          "confidence": 78.92
+        },
+        {
+          "text": "無意今朝萬里行。",
+          "bbox": [
+            709,
+            479,
+            1319,
+            533
+          ],
+          "confidence": 95.04
+        },
+        {
+          "text": "有社稷壇無定主，",
+          "bbox": [
+            710,
+            550,
+            1319,
+            608
+          ],
+          "confidence": 97.63
+        },
+        {
+          "text": "可南北路是何情。",
+          "bbox": [
+            709,
+            623,
+            1318,
+            680
+          ],
+          "confidence": 88.05
+        },
+        {
+          "text": "淚河陸上長纓濯，",
+          "bbox": [
+            706,
+            696,
+            1318,
+            756
+          ],
+          "confidence": 95.85
+        },
+        {
+          "text": "身葉途間寸草輕。",
+          "bbox": [
+            706,
+            771,
+            1315,
+            827
+          ],
+          "confidence": 84.58
+        },
+        {
+          "text": "敘節不知忘節士，",
+          "bbox": [
+            704,
+            845,
+            1315,
+            903
+          ],
+          "confidence": 97.26
+        },
+        {
+          "text": "虚提天子一招旌。",
+          "bbox": [
+            702,
+            918,
+            1313,
+            976
+          ],
+          "confidence": 93.2
+        },
+        {
+          "text": "Phiên âm:",
+          "bbox": [
+            267,
+            1112,
+            487,
+            1141
+          ],
+          "confidence": 74.22
+        },
+        {
+          "text": "PHÁT TRÌNH NGÂM 1",
+          "bbox": [
+            499,
+            1227,
+            1480,
+            1288
+          ],
+          "confidence": 85.53
+        },
+        {
+          "text": "Quý sứu niên nhị nguyệt sơ cứu nhất",
+          "bbox": [
+            382,
+            1306,
+            1366,
+            1363
+          ],
+          "confidence": 86.95
+        },
+        {
+          "text": "Sa đà ký tái ngẫu nhi canh².",
+          "bbox": [
+            499,
+            1437,
+            1113,
+            1484
+          ],
+          "confidence": 87.88
+        },
+        {
+          "text": "Vô ý kim triệu vạn lý hành.",
+          "bbox": [
+            501,
+            1498,
+            1085,
+            1542
+          ],
+          "confidence": 87.44
+        },
+        {
+          "text": "Hữu xã tắc đàn³ vô định chủ.",
+          "bbox": [
+            498,
+            1558,
+            1118,
+            1602
+          ],
+          "confidence": 80.13
+        },
+        {
+          "text": "Khả nam bác lộ thi hà tình 4",
+          "bbox": [
+            496,
+            1612,
+            1114,
+            1661
+          ],
+          "confidence": 80.22
+        },
+        {
+          "text": "Lệ hà lục thương trương anh trac.",
+          "bbox": [
+            496,
+            1681,
+            1207,
+            1722
+          ],
+          "confidence": 85.79
+        },
+        {
+          "text": "Thân diện độ gian thốn thảo khinh ⁵.",
+          "bbox": [
+            495,
+            1731,
+            1276,
+            1781
+          ],
+          "confidence": 76.17
+        },
+        {
+          "text": "Tụ tiết bất tri vong tiết sĩ.",
+          "bbox": [
+            495,
+            1793,
+            1052,
+            1836
+          ],
+          "confidence": 87.52
+        },
+        {
+          "text": "Hư đế thiên tử nhất chiêu tinh.",
+          "bbox": [
+            495,
+            1848,
+            1151,
+            1897
+          ],
+          "confidence": 81.88
+        },
+        {
+          "text": "1. Nguyên chủ: “Tập thơ lúc vào Kinh đô Phú Xuân”. (Những bài thơ dưới đây",
+          "bbox": [
+            351,
+            1976,
+            1704,
+            2025
+          ],
+          "confidence": 92.72
+        },
+        {
+          "text": "cũng thế).",
+          "bbox": [
+            257,
+            2026,
+            429,
+            2053
+          ],
+          "confidence": 90.92
+        },
+        {
+          "text": "2. Sau khi nhà Lê mất, Hoàng Nguyễn Thự về ở quê vợ là làng Đông Ngạc (thuộc",
+          "bbox": [
+            257,
+            2070,
+            1702,
+            2122
+          ],
+          "confidence": 93.96
+        },
+        {
+          "text": "huyện Từ Liêm).",
+          "bbox": [
+            257,
+            2114,
+            1579,
+            2151
+          ],
+          "confidence": 91.3
+        },
+        {
+          "text": "3. Thời phong kiến: “đàn xă”, “đàn tắc” là nơi để vua tế trời đất. Trong văn học",
+          "bbox": [
+            282,
+            2163,
+            1702,
+            2215
+          ],
+          "confidence": 92.44
+        },
+        {
+          "text": "cô, thường dùng làm biểu tượng của quốc gia.",
+          "bbox": [
+            256,
+            2212,
+            1557,
+            2254
+          ],
+          "confidence": 95.82
+        },
+        {
+          "text": "4. Ý thơ tác giả vẫn nhớ nhà Lê. Nam là chí Tây Sơn, Bắc là chí Chiêu Thống",
+          "bbox": [
+            343,
+            2260,
+            1701,
+            2309
+          ],
+          "confidence": 90.56
+        },
+        {
+          "text": "đương lưu vong ở phương Bắc.",
+          "bbox": [
+            254,
+            2309,
+            756,
+            2343
+          ],
+          "confidence": 89.02
+        },
+        {
+          "text": "5. Thốn thảo: Tắc cỏ: Thơ Manh Giao: “Thùy ngôn thốn thảo tâm, báo đặc tam",
+          "bbox": [
+            343,
+            2351,
+            1697,
+            2403
+          ],
+          "confidence": 87.82
+        },
+        {
+          "text": "xuân huy (Ai nói lòng tác có, báo đáp được ảnh nặng ba xuân) ý nói tấm lòng bé nhỏ",
+          "bbox": [
+            252,
+            2401,
+            1697,
+            2449
+          ],
+          "confidence": 89.04
+        },
+        {
+          "text": "khó có thể báo đáp on cha mẹ. Ở đây tác giả dùng ý ấy.",
+          "bbox": [
+            252,
+            2445,
+            1580,
+            2492
+          ],
+          "confidence": 94.09
+        },
+        {
+          "text": "684",
+          "bbox": [
+            251,
+            2507,
+            332,
+            2528
+          ],
+          "confidence": 99.91
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          1839,
+          2803
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 61.669,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              860,
+              239,
+              1090,
+              300
+            ],
+            "generated_text": "簷程吟",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.841,
+            "confidence": 52.31,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              649,
+              339,
+              1371,
+              395
+            ],
+            "generated_text": "（癸丑年二月初九日）",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 1.21,
+            "confidence": 97.09,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              709,
+              408,
+              1574,
+              462
+            ],
+            "generated_text": "蹉跎幾載穢而耕，",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.746,
+            "confidence": 78.92,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              709,
+              479,
+              1319,
+              533
+            ],
+            "generated_text": "無意今朝萬里行。",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 1.045,
+            "confidence": 95.04,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              710,
+              550,
+              1319,
+              608
+            ],
+            "generated_text": "有社稷壇無定主，",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.575,
+            "confidence": 97.63,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              709,
+              623,
+              1318,
+              680
+            ],
+            "generated_text": "可南北路是何情。",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 1.036,
+            "confidence": 88.05,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              706,
+              696,
+              1318,
+              756
+            ],
+            "generated_text": "淚河陸上長纓濯，",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.598,
+            "confidence": 95.85,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              706,
+              771,
+              1315,
+              827
+            ],
+            "generated_text": "身葉途間寸草輕。",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 1.188,
+            "confidence": 84.58,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              704,
+              845,
+              1315,
+              903
+            ],
+            "generated_text": "敘節不知忘節士，",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 1.265,
+            "confidence": 97.26,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              702,
+              918,
+              1313,
+              976
+            ],
+            "generated_text": "虚提天子一招旌。",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 1.234,
+            "confidence": 93.2,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              267,
+              1112,
+              487,
+              1141
+            ],
+            "generated_text": "Phiên âm:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.697,
+            "confidence": 74.22,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              499,
+              1227,
+              1480,
+              1288
+            ],
+            "generated_text": "PHÁT TRÌNH NGÂM 1",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.355,
+            "confidence": 85.53,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              382,
+              1306,
+              1366,
+              1363
+            ],
+            "generated_text": "Quý sứu niên nhị nguyệt sơ cứu nhất",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.948,
+            "confidence": 86.95,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              499,
+              1437,
+              1113,
+              1484
+            ],
+            "generated_text": "Sa đà ký tái ngẫu nhi canh².",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.625,
+            "confidence": 87.88,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              501,
+              1498,
+              1085,
+              1542
+            ],
+            "generated_text": "Vô ý kim triệu vạn lý hành.",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.329,
+            "confidence": 87.44,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              498,
+              1558,
+              1118,
+              1602
+            ],
+            "generated_text": "Hữu xã tắc đàn³ vô định chủ.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.695,
+            "confidence": 80.13,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              496,
+              1612,
+              1114,
+              1661
+            ],
+            "generated_text": "Khả nam bác lộ thi hà tình 4",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.662,
+            "confidence": 80.22,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              496,
+              1681,
+              1207,
+              1722
+            ],
+            "generated_text": "Lệ hà lục thương trương anh trac.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.743,
+            "confidence": 85.79,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              495,
+              1731,
+              1276,
+              1781
+            ],
+            "generated_text": "Thân diện độ gian thốn thảo khinh ⁵.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.949,
+            "confidence": 76.17,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              495,
+              1793,
+              1052,
+              1836
+            ],
+            "generated_text": "Tụ tiết bất tri vong tiết sĩ.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.682,
+            "confidence": 87.52,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              495,
+              1848,
+              1151,
+              1897
+            ],
+            "generated_text": "Hư đế thiên tử nhất chiêu tinh.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.787,
+            "confidence": 81.88,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              259,
+              1934,
+              859,
+              1955
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.318,
+            "confidence": 56.4,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              351,
+              1976,
+              1704,
+              2025
+            ],
+            "generated_text": "1. Nguyên chủ: “Tập thơ lúc vào Kinh đô Phú Xuân”. (Những bài thơ dưới đây",
+            "n_lines": 1,
+            "tokens": 34,
+            "seconds": 3.715,
+            "confidence": 92.72,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              257,
+              2026,
+              429,
+              2053
+            ],
+            "generated_text": "cũng thế).",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.698,
+            "confidence": 90.92,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              257,
+              2070,
+              1702,
+              2122
+            ],
+            "generated_text": "2. Sau khi nhà Lê mất, Hoàng Nguyễn Thự về ở quê vợ là làng Đông Ngạc (thuộc",
+            "n_lines": 1,
+            "tokens": 33,
+            "seconds": 3.636,
+            "confidence": 93.96,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              257,
+              2114,
+              1579,
+              2151
+            ],
+            "generated_text": "huyện Từ Liêm).",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 1.145,
+            "confidence": 91.3,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              282,
+              2163,
+              1702,
+              2215
+            ],
+            "generated_text": "3. Thời phong kiến: “đàn xă”, “đàn tắc” là nơi để vua tế trời đất. Trong văn học",
+            "n_lines": 1,
+            "tokens": 39,
+            "seconds": 4.05,
+            "confidence": 92.44,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              256,
+              2212,
+              1557,
+              2254
+            ],
+            "generated_text": "cô, thường dùng làm biểu tượng của quốc gia.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.884,
+            "confidence": 95.82,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              343,
+              2260,
+              1701,
+              2309
+            ],
+            "generated_text": "4. Ý thơ tác giả vẫn nhớ nhà Lê. Nam là chí Tây Sơn, Bắc là chí Chiêu Thống",
+            "n_lines": 1,
+            "tokens": 34,
+            "seconds": 3.664,
+            "confidence": 90.56,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              254,
+              2309,
+              756,
+              2343
+            ],
+            "generated_text": "đương lưu vong ở phương Bắc.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.612,
+            "confidence": 89.02,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              343,
+              2351,
+              1697,
+              2403
+            ],
+            "generated_text": "5. Thốn thảo: Tắc cỏ: Thơ Manh Giao: “Thùy ngôn thốn thảo tâm, báo đặc tam",
+            "n_lines": 1,
+            "tokens": 37,
+            "seconds": 3.81,
+            "confidence": 87.82,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 32,
+            "box": [
+              252,
+              2401,
+              1697,
+              2449
+            ],
+            "generated_text": "xuân huy (Ai nói lòng tác có, báo đáp được ảnh nặng ba xuân) ý nói tấm lòng bé nhỏ",
+            "n_lines": 1,
+            "tokens": 36,
+            "seconds": 3.601,
+            "confidence": 89.04,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 33,
+            "box": [
+              252,
+              2445,
+              1580,
+              2492
+            ],
+            "generated_text": "khó có thể báo đáp on cha mẹ. Ở đây tác giả dùng ý ấy.",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 2.82,
+            "confidence": 94.09,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 34,
+            "box": [
+              251,
+              2507,
+              332,
+              2528
+            ],
+            "generated_text": "684",
+            "n_lines": 1,
+            "tokens": 4,
+            "seconds": 0.5,
+            "confidence": 99.91,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              864,
+              304,
+              1080,
+              316
+            ],
+            "ink": 408
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      }
+    }
+  ]
+}

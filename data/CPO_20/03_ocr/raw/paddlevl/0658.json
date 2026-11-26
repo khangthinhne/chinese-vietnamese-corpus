@@ -1,0 +1,651 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_20",
+  "engine": "paddlevl",
+  "page": 658,
+  "runs": [
+    {
+      "key": "a581184a2dd830a1109809a149473ca5bc6c078706b2787bdace5711ad0629e3",
+      "parameters": {
+        "image_sha256": "8288b43f15c312e9d3a5f5f1d837cddfc24289375eb8f33685f28074af7b6fba",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T13:58:05+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_658.png",
+      "image_size": [
+        1840,
+        2803
+      ],
+      "crop_box": [
+        0,
+        0,
+        1840,
+        2803
+      ],
+      "lines": [
+        {
+          "text": "Dich nghĩa:",
+          "bbox": [
+            284,
+            407,
+            531,
+            437
+          ],
+          "confidence": 86.31
+        },
+        {
+          "text": "CHỐI CHỦA PHÚC LỘC",
+          "bbox": [
+            520,
+            514,
+            1219,
+            575
+          ],
+          "confidence": 85.96
+        },
+        {
+          "text": "Ở đất khách lúc thành thời tìm chơi chùa cổ.",
+          "bbox": [
+            518,
+            658,
+            1458,
+            708
+          ],
+          "confidence": 88.78
+        },
+        {
+          "text": "Nào hay đâu thân thế ở cõi Diêm Phù.",
+          "bbox": [
+            516,
+            720,
+            1327,
+            766
+          ],
+          "confidence": 91.16
+        },
+        {
+          "text": "Đàm đạo chuyện văn chương, người không phải là tục,",
+          "bbox": [
+            516,
+            783,
+            1647,
+            834
+          ],
+          "confidence": 93.4
+        },
+        {
+          "text": "Thường thức cánh yên hà, ta gợi hứng thú.",
+          "bbox": [
+            515,
+            837,
+            1411,
+            891
+          ],
+          "confidence": 88.61
+        },
+        {
+          "text": "Có hứng thú, tự nhiên thấy cảnh vui vẻ.",
+          "bbox": [
+            515,
+            898,
+            1355,
+            945
+          ],
+          "confidence": 90.79
+        },
+        {
+          "text": "Ở làng nhân há phải chọn chỗ cùng quê.",
+          "bbox": [
+            513,
+            958,
+            1366,
+            1005
+          ],
+          "confidence": 89.95
+        },
+        {
+          "text": "Gần đây nghe nói ở Thanh Cảo phong cảnh đẹp,",
+          "bbox": [
+            513,
+            1019,
+            1530,
+            1066
+          ],
+          "confidence": 94.45
+        },
+        {
+          "text": "Định thả một con thuyền vượt bên dòng Văn Than.",
+          "bbox": [
+            513,
+            1075,
+            1583,
+            1125
+          ],
+          "confidence": 95.08
+        },
+        {
+          "text": "Uich thơ:",
+          "bbox": [
+            276,
+            1344,
+            471,
+            1372
+          ],
+          "confidence": 85.58
+        },
+        {
+          "text": "Đất khách tìm vào chùa cổ chơi,",
+          "bbox": [
+            509,
+            1444,
+            1181,
+            1491
+          ],
+          "confidence": 88.73
+        },
+        {
+          "text": "Hay đâu thân thế cõi trần ai.",
+          "bbox": [
+            509,
+            1503,
+            1121,
+            1548
+          ],
+          "confidence": 94.69
+        },
+        {
+          "text": "Trao lời văn học tan niềm tục,",
+          "bbox": [
+            512,
+            1562,
+            1146,
+            1608
+          ],
+          "confidence": 89.25
+        },
+        {
+          "text": "Ghé mất yên hà này từ hay.",
+          "bbox": [
+            510,
+            1623,
+            1093,
+            1666
+          ],
+          "confidence": 93.04
+        },
+        {
+          "text": "Mến cảnh tự nhiên nên hứng thú.",
+          "bbox": [
+            509,
+            1680,
+            1219,
+            1727
+          ],
+          "confidence": 86.52
+        },
+        {
+          "text": "Hợp tính chi phải vốn xưa nay.",
+          "bbox": [
+            507,
+            1739,
+            1155,
+            1784
+          ],
+          "confidence": 88.91
+        },
+        {
+          "text": "Mảng nghe cảnh đẹp miền Thanh Cảo.",
+          "bbox": [
+            507,
+            1798,
+            1322,
+            1845
+          ],
+          "confidence": 86.6
+        },
+        {
+          "text": "Thuyền thả Văn Than rắp tôi nơi.",
+          "bbox": [
+            509,
+            1855,
+            1219,
+            1902
+          ],
+          "confidence": 83.0
+        },
+        {
+          "text": "Thach Can dich",
+          "bbox": [
+            1433,
+            1992,
+            1714,
+            2028
+          ],
+          "confidence": 94.75
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          1840,
+          2803
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 8.943,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              284,
+              407,
+              531,
+              437
+            ],
+            "generated_text": "Dich nghĩa:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.231,
+            "confidence": 86.31,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              520,
+              514,
+              1219,
+              575
+            ],
+            "generated_text": "CHỐI CHỦA PHÚC LỘC",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.568,
+            "confidence": 85.96,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              518,
+              658,
+              1458,
+              708
+            ],
+            "generated_text": "Ở đất khách lúc thành thời tìm chơi chùa cổ.",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.553,
+            "confidence": 88.78,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              516,
+              720,
+              1327,
+              766
+            ],
+            "generated_text": "Nào hay đâu thân thế ở cõi Diêm Phù.",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.495,
+            "confidence": 91.16,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              516,
+              783,
+              1647,
+              834
+            ],
+            "generated_text": "Đàm đạo chuyện văn chương, người không phải là tục,",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.601,
+            "confidence": 93.4,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              515,
+              837,
+              1411,
+              891
+            ],
+            "generated_text": "Thường thức cánh yên hà, ta gợi hứng thú.",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.541,
+            "confidence": 88.61,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              515,
+              898,
+              1355,
+              945
+            ],
+            "generated_text": "Có hứng thú, tự nhiên thấy cảnh vui vẻ.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.498,
+            "confidence": 90.79,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              513,
+              958,
+              1366,
+              1005
+            ],
+            "generated_text": "Ở làng nhân há phải chọn chỗ cùng quê.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.495,
+            "confidence": 89.95,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              513,
+              1019,
+              1530,
+              1066
+            ],
+            "generated_text": "Gần đây nghe nói ở Thanh Cảo phong cảnh đẹp,",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.53,
+            "confidence": 94.45,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              513,
+              1075,
+              1583,
+              1125
+            ],
+            "generated_text": "Định thả một con thuyền vượt bên dòng Văn Than.",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.645,
+            "confidence": 95.08,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              276,
+              1344,
+              471,
+              1372
+            ],
+            "generated_text": "Uich thơ:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.258,
+            "confidence": 85.58,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              509,
+              1444,
+              1181,
+              1491
+            ],
+            "generated_text": "Đất khách tìm vào chùa cổ chơi,",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.404,
+            "confidence": 88.73,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              509,
+              1503,
+              1121,
+              1548
+            ],
+            "generated_text": "Hay đâu thân thế cõi trần ai.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.418,
+            "confidence": 94.69,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              512,
+              1562,
+              1146,
+              1608
+            ],
+            "generated_text": "Trao lời văn học tan niềm tục,",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.452,
+            "confidence": 89.25,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              510,
+              1623,
+              1093,
+              1666
+            ],
+            "generated_text": "Ghé mất yên hà này từ hay.",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.371,
+            "confidence": 93.04,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              509,
+              1680,
+              1219,
+              1727
+            ],
+            "generated_text": "Mến cảnh tự nhiên nên hứng thú.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 0.41,
+            "confidence": 86.52,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              507,
+              1739,
+              1155,
+              1784
+            ],
+            "generated_text": "Hợp tính chi phải vốn xưa nay.",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.386,
+            "confidence": 88.91,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              507,
+              1798,
+              1322,
+              1845
+            ],
+            "generated_text": "Mảng nghe cảnh đẹp miền Thanh Cảo.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.426,
+            "confidence": 86.6,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              509,
+              1855,
+              1219,
+              1902
+            ],
+            "generated_text": "Thuyền thả Văn Than rắp tôi nơi.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.422,
+            "confidence": 83.0,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              1433,
+              1992,
+              1714,
+              2028
+            ],
+            "generated_text": "Thach Can dich",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.237,
+            "confidence": 94.75,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              290,
+              396,
+              467,
+              405
+            ],
+            "ink": 194
+          },
+          {
+            "box": [
+              284,
+              1333,
+              1417,
+              1344
+            ],
+            "ink": 257
+          },
+          {
+            "box": [
+              277,
+              2531,
+              346,
+              2540
+            ],
+            "ink": 219
+          },
+          {
+            "box": [
+              271,
+              2541,
+              349,
+              2553
+            ],
+            "ink": 381
+          },
+          {
+            "box": [
+              274,
+              2556,
+              349,
+              2568
+            ],
+            "ink": 278
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      }
+    }
+  ]
+}

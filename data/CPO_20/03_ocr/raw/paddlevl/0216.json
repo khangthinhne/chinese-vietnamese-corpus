@@ -1,0 +1,920 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_20",
+  "engine": "paddlevl",
+  "page": 216,
+  "runs": [
+    {
+      "key": "b6ed237e97ccfb6e06c0b8f6de2326941ded7948686316479c2119fa5c86bb24",
+      "parameters": {
+        "image_sha256": "a968827ad6452e4316a0c6e3f46004d663c94fff0655f1168321733bf9e9c87c",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T06:15:51+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_216.png",
+      "image_size": [
+        1839,
+        2803
+      ],
+      "crop_box": [
+        0,
+        0,
+        1839,
+        2803
+      ],
+      "lines": [
+        {
+          "text": "Phiên âm:",
+          "bbox": [
+            282,
+            252,
+            504,
+            287
+          ],
+          "confidence": 96.56
+        },
+        {
+          "text": "HOÀNG HAC LÂU",
+          "bbox": [
+            643,
+            375,
+            1171,
+            430
+          ],
+          "confidence": 85.48
+        },
+        {
+          "text": "Ky hạc tiên ông khú bất hoàn,",
+          "bbox": [
+            517,
+            513,
+            1157,
+            562
+          ],
+          "confidence": 88.09
+        },
+        {
+          "text": "Nguy lâu chung cổ bạch vân nhàn.",
+          "bbox": [
+            517,
+            572,
+            1233,
+            621
+          ],
+          "confidence": 92.96
+        },
+        {
+          "text": "Liên tiêu hoa đồng lăng thanh đảo.",
+          "bbox": [
+            516,
+            632,
+            1252,
+            680
+          ],
+          "confidence": 94.02
+        },
+        {
+          "text": "Lệ nhất điều manh hám bích loan.",
+          "bbox": [
+            515,
+            692,
+            1235,
+            741
+          ],
+          "confidence": 90.83
+        },
+        {
+          "text": "Giang lăng mất hàm Anh Vũ phổ.",
+          "bbox": [
+            513,
+            755,
+            1224,
+            800
+          ],
+          "confidence": 82.36
+        },
+        {
+          "text": "Thôn yên sơ tráo Phượng Hoàng san.",
+          "bbox": [
+            512,
+            812,
+            1288,
+            861
+          ],
+          "confidence": 91.64
+        },
+        {
+          "text": "Hướng quan sâu tứ kim nhưng tại.",
+          "bbox": [
+            510,
+            875,
+            1224,
+            919
+          ],
+          "confidence": 75.56
+        },
+        {
+          "text": "Măn nhăn yêm đào nhất vọng gian.",
+          "bbox": [
+            510,
+            931,
+            1258,
+            984
+          ],
+          "confidence": 91.71
+        },
+        {
+          "text": "Dich nghĩa:",
+          "bbox": [
+            273,
+            1055,
+            518,
+            1084
+          ],
+          "confidence": 80.33
+        },
+        {
+          "text": "LẦU HOÀNG HAC",
+          "bbox": [
+            631,
+            1175,
+            1160,
+            1231
+          ],
+          "confidence": 87.75
+        },
+        {
+          "text": "Tiên ông cưỡi hạc bay đi không trở lại,",
+          "bbox": [
+            504,
+            1315,
+            1319,
+            1366
+          ],
+          "confidence": 91.29
+        },
+        {
+          "text": "Từ ngàn xưa trên lâu cao, mấy trắng vẫn bay nhớn nhơ.",
+          "bbox": [
+            502,
+            1375,
+            1669,
+            1430
+          ],
+          "confidence": 87.97
+        },
+        {
+          "text": "Cột hoa liền với trời cao vượt lên đảo xanh.",
+          "bbox": [
+            502,
+            1431,
+            1410,
+            1484
+          ],
+          "confidence": 97.43
+        },
+        {
+          "text": "Mái gỡ vẽ sát mặt trời chiếu xổng vực nước biếc.",
+          "bbox": [
+            502,
+            1494,
+            1538,
+            1545
+          ],
+          "confidence": 85.65
+        },
+        {
+          "text": "Sóng trên sông đồn đập như ngậm lấy bến Anh Vũ,",
+          "bbox": [
+            502,
+            1551,
+            1576,
+            1605
+          ],
+          "confidence": 85.58
+        },
+        {
+          "text": "Khói trong thôn phơ phát như trùm lấy núi Phương Hoàng.",
+          "bbox": [
+            501,
+            1606,
+            1643,
+            1666
+          ],
+          "confidence": 95.51
+        },
+        {
+          "text": "Lòng sâu nhớ quê hương ngày nay vẫn vậy,",
+          "bbox": [
+            295,
+            1671,
+            1405,
+            1723
+          ],
+          "confidence": 95.32
+        },
+        {
+          "text": "Nhìn hết tầm mất chỉ thấy một màu khói sóng.",
+          "bbox": [
+            499,
+            1722,
+            1491,
+            1780
+          ],
+          "confidence": 90.15
+        },
+        {
+          "text": "Uich tho:",
+          "bbox": [
+            263,
+            1847,
+            459,
+            1877
+          ],
+          "confidence": 91.27
+        },
+        {
+          "text": "Tiên ông cười hạc đi đâu!",
+          "bbox": [
+            615,
+            1965,
+            1154,
+            2009
+          ],
+          "confidence": 87.41
+        },
+        {
+          "text": "Ngàn năm máy trắng trên lầu lượn quanh.",
+          "bbox": [
+            493,
+            2026,
+            1382,
+            2073
+          ],
+          "confidence": 81.06
+        },
+        {
+          "text": "Gác máy một sắc đảo xanh.",
+          "bbox": [
+            613,
+            2086,
+            1182,
+            2129
+          ],
+          "confidence": 90.49
+        },
+        {
+          "text": "Mái cong nghiêng bóng bên doành rơi gương.",
+          "bbox": [
+            493,
+            2141,
+            1429,
+            2193
+          ],
+          "confidence": 91.06
+        },
+        {
+          "text": "Bên Anh sóng dậy mơ màng,",
+          "bbox": [
+            609,
+            2201,
+            1207,
+            2249
+          ],
+          "confidence": 86.81
+        },
+        {
+          "text": "Khói thôn trùm núi Phượng Hoàng lơ mơ.",
+          "bbox": [
+            492,
+            2257,
+            1358,
+            2307
+          ],
+          "confidence": 92.61
+        },
+        {
+          "text": "Tình quê sầu nặng ngắn ngo,",
+          "bbox": [
+            610,
+            2312,
+            1218,
+            2368
+          ],
+          "confidence": 85.76
+        },
+        {
+          "text": "Với trọng khói sóng xa xa một màu.",
+          "bbox": [
+            498,
+            2373,
+            1230,
+            2421
+          ],
+          "confidence": 91.12
+        },
+        {
+          "text": "Nguyên Văn Bách dịch",
+          "bbox": [
+            1280,
+            2456,
+            1705,
+            2493
+          ],
+          "confidence": 95.07
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          1839,
+          2803
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 13.049,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              282,
+              252,
+              504,
+              287
+            ],
+            "generated_text": "Phiên âm:",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.244,
+            "confidence": 96.56,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              643,
+              375,
+              1171,
+              430
+            ],
+            "generated_text": "HOÀNG HAC LÂU",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.308,
+            "confidence": 85.48,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              517,
+              513,
+              1157,
+              562
+            ],
+            "generated_text": "Ky hạc tiên ông khú bất hoàn,",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 0.406,
+            "confidence": 88.09,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              517,
+              572,
+              1233,
+              621
+            ],
+            "generated_text": "Nguy lâu chung cổ bạch vân nhàn.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.439,
+            "confidence": 92.96,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              516,
+              632,
+              1252,
+              680
+            ],
+            "generated_text": "Liên tiêu hoa đồng lăng thanh đảo.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.405,
+            "confidence": 94.02,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              515,
+              692,
+              1235,
+              741
+            ],
+            "generated_text": "Lệ nhất điều manh hám bích loan.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 0.391,
+            "confidence": 90.83,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              513,
+              755,
+              1224,
+              800
+            ],
+            "generated_text": "Giang lăng mất hàm Anh Vũ phổ.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.44,
+            "confidence": 82.36,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              512,
+              812,
+              1288,
+              861
+            ],
+            "generated_text": "Thôn yên sơ tráo Phượng Hoàng san.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.401,
+            "confidence": 91.64,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              510,
+              875,
+              1224,
+              919
+            ],
+            "generated_text": "Hướng quan sâu tứ kim nhưng tại.",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.38,
+            "confidence": 75.56,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              510,
+              931,
+              1258,
+              984
+            ],
+            "generated_text": "Măn nhăn yêm đào nhất vọng gian.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.401,
+            "confidence": 91.71,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              273,
+              1055,
+              518,
+              1084
+            ],
+            "generated_text": "Dich nghĩa:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.245,
+            "confidence": 80.33,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              631,
+              1175,
+              1160,
+              1231
+            ],
+            "generated_text": "LẦU HOÀNG HAC",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.344,
+            "confidence": 87.75,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              504,
+              1315,
+              1319,
+              1366
+            ],
+            "generated_text": "Tiên ông cưỡi hạc bay đi không trở lại,",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.447,
+            "confidence": 91.29,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              502,
+              1375,
+              1669,
+              1430
+            ],
+            "generated_text": "Từ ngàn xưa trên lâu cao, mấy trắng vẫn bay nhớn nhơ.",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.686,
+            "confidence": 87.97,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              502,
+              1431,
+              1410,
+              1484
+            ],
+            "generated_text": "Cột hoa liền với trời cao vượt lên đảo xanh.",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.509,
+            "confidence": 97.43,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              502,
+              1494,
+              1538,
+              1545
+            ],
+            "generated_text": "Mái gỡ vẽ sát mặt trời chiếu xổng vực nước biếc.",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.664,
+            "confidence": 85.65,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              502,
+              1551,
+              1576,
+              1605
+            ],
+            "generated_text": "Sóng trên sông đồn đập như ngậm lấy bến Anh Vũ,",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.631,
+            "confidence": 85.58,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              501,
+              1606,
+              1643,
+              1666
+            ],
+            "generated_text": "Khói trong thôn phơ phát như trùm lấy núi Phương Hoàng.",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.624,
+            "confidence": 95.51,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              295,
+              1671,
+              1405,
+              1723
+            ],
+            "generated_text": "Lòng sâu nhớ quê hương ngày nay vẫn vậy,",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.499,
+            "confidence": 95.32,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              499,
+              1722,
+              1491,
+              1780
+            ],
+            "generated_text": "Nhìn hết tầm mất chỉ thấy một màu khói sóng.",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.529,
+            "confidence": 90.15,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              263,
+              1847,
+              459,
+              1877
+            ],
+            "generated_text": "Uich tho:",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.221,
+            "confidence": 91.27,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              615,
+              1965,
+              1154,
+              2009
+            ],
+            "generated_text": "Tiên ông cười hạc đi đâu!",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.358,
+            "confidence": 87.41,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              493,
+              2026,
+              1382,
+              2073
+            ],
+            "generated_text": "Ngàn năm máy trắng trên lầu lượn quanh.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.449,
+            "confidence": 81.06,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              613,
+              2086,
+              1182,
+              2129
+            ],
+            "generated_text": "Gác máy một sắc đảo xanh.",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.374,
+            "confidence": 90.49,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              493,
+              2141,
+              1429,
+              2193
+            ],
+            "generated_text": "Mái cong nghiêng bóng bên doành rơi gương.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.535,
+            "confidence": 91.06,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              609,
+              2201,
+              1207,
+              2249
+            ],
+            "generated_text": "Bên Anh sóng dậy mơ màng,",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 0.407,
+            "confidence": 86.81,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              492,
+              2257,
+              1358,
+              2307
+            ],
+            "generated_text": "Khói thôn trùm núi Phượng Hoàng lơ mơ.",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.524,
+            "confidence": 92.61,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              610,
+              2312,
+              1218,
+              2368
+            ],
+            "generated_text": "Tình quê sầu nặng ngắn ngo,",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.421,
+            "confidence": 85.76,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              498,
+              2373,
+              1230,
+              2421
+            ],
+            "generated_text": "Với trọng khói sóng xa xa một màu.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.429,
+            "confidence": 91.12,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              1280,
+              2456,
+              1705,
+              2493
+            ],
+            "generated_text": "Nguyên Văn Bách dịch",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.338,
+            "confidence": 95.07,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              282,
+              1044,
+              456,
+              1053
+            ],
+            "ink": 236
+          },
+          {
+            "box": [
+              502,
+              1662,
+              1632,
+              1672
+            ],
+            "ink": 309
+          },
+          {
+            "box": [
+              271,
+              1836,
+              412,
+              1845
+            ],
+            "ink": 228
+          },
+          {
+            "box": [
+              500,
+              2251,
+              645,
+              2261
+            ],
+            "ink": 280
+          },
+          {
+            "box": [
+              259,
+              2499,
+              329,
+              2509
+            ],
+            "ink": 243
+          },
+          {
+            "box": [
+              256,
+              2524,
+              331,
+              2537
+            ],
+            "ink": 367
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      }
+    }
+  ]
+}

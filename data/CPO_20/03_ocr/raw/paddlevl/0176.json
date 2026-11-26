@@ -1,0 +1,719 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_20",
+  "engine": "paddlevl",
+  "page": 176,
+  "runs": [
+    {
+      "key": "67b26c7cdab21ef169cc51e58c30e8dd320ac532f6a89d0a597d97380642ce48",
+      "parameters": {
+        "image_sha256": "a70d37e17cd0996f6278b12730ce9ebedfe9bc217feed082e94d4e1feec52b9d",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T06:07:58+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_176.png",
+      "image_size": [
+        1840,
+        2803
+      ],
+      "crop_box": [
+        0,
+        0,
+        1840,
+        2803
+      ],
+      "lines": [
+        {
+          "text": "Dich nghĩa:",
+          "bbox": [
+            248,
+            297,
+            493,
+            326
+          ],
+          "confidence": 82.93
+        },
+        {
+          "text": "NGÀY 17 THÁNG CHAP VÊ ĐỀN",
+          "bbox": [
+            495,
+            404,
+            1467,
+            462
+          ],
+          "confidence": 88.66
+        },
+        {
+          "text": "THÀNH PHƯƠNG, NGÀY 20 LAI ĐI VÀO",
+          "bbox": [
+            387,
+            485,
+            1574,
+            541
+          ],
+          "confidence": 93.6
+        },
+        {
+          "text": "THÀNH PHÚ XUẠN TRONG NAM.",
+          "bbox": [
+            484,
+            572,
+            1474,
+            622
+          ],
+          "confidence": 85.38
+        },
+        {
+          "text": "LỤC LÊN ĐƯỜNG CẢM HỨNG",
+          "bbox": [
+            538,
+            644,
+            1424,
+            703
+          ],
+          "confidence": 87.68
+        },
+        {
+          "text": "Tháng chạp từ thành Phương giục vô ngựa ra đi,",
+          "bbox": [
+            482,
+            792,
+            1499,
+            842
+          ],
+          "confidence": 87.77
+        },
+        {
+          "text": "Đi hết đất Bắc vừa mới về, lại đi cùng đất Nam.",
+          "bbox": [
+            482,
+            851,
+            1489,
+            895
+          ],
+          "confidence": 98.28
+        },
+        {
+          "text": "Mất trắng đã từng xem hết ảnh trắng khi tỏ khi mờ",
+          "bbox": [
+            482,
+            912,
+            1589,
+            955
+          ],
+          "confidence": 86.08
+        },
+        {
+          "text": "Lòng son đã từng ngạo nghễ với hết thảy chương lam nơi",
+          "bbox": [
+            482,
+            972,
+            1675,
+            1020
+          ],
+          "confidence": 86.64
+        },
+        {
+          "text": "biên cả non ngăn.",
+          "bbox": [
+            1333,
+            1044,
+            1698,
+            1073
+          ],
+          "confidence": 83.92
+        },
+        {
+          "text": "Đê an ủi người thân, đã sớm gửi hai phong thiếp.",
+          "bbox": [
+            480,
+            1090,
+            1514,
+            1133
+          ],
+          "confidence": 93.31
+        },
+        {
+          "text": "Gặp em trai, chỉ mới dành ra được nửa bưói trò chuyện.",
+          "bbox": [
+            480,
+            1150,
+            1639,
+            1192
+          ],
+          "confidence": 87.53
+        },
+        {
+          "text": "Những người đi theo chó có than thở răng đi đường khổ,",
+          "bbox": [
+            423,
+            1209,
+            1656,
+            1255
+          ],
+          "confidence": 85.12
+        },
+        {
+          "text": "Chí tang bông tử nay mới đáng gọi là kế nam nhi.",
+          "bbox": [
+            480,
+            1269,
+            1530,
+            1316
+          ],
+          "confidence": 82.16
+        },
+        {
+          "text": "Unet tho:",
+          "bbox": [
+            246,
+            1455,
+            442,
+            1483
+          ],
+          "confidence": 44.71
+        },
+        {
+          "text": "Phương thành, tháng chap, lên yên.",
+          "bbox": [
+            479,
+            1562,
+            1227,
+            1605
+          ],
+          "confidence": 92.38
+        },
+        {
+          "text": "Vừa xong Cục Bắc đã miền Cục Nam.",
+          "bbox": [
+            484,
+            1622,
+            1263,
+            1664
+          ],
+          "confidence": 91.37
+        },
+        {
+          "text": "Nguyệt đầy voi, mất đã nhắm.",
+          "bbox": [
+            479,
+            1681,
+            1116,
+            1721
+          ],
+          "confidence": 79.29
+        },
+        {
+          "text": "Lòng son từng thách chương làm biến hổ.",
+          "bbox": [
+            480,
+            1740,
+            1342,
+            1782
+          ],
+          "confidence": 87.44
+        },
+        {
+          "text": "Thăm nhà, thu vói, vài tờ,",
+          "bbox": [
+            484,
+            1797,
+            1033,
+            1839
+          ],
+          "confidence": 88.4
+        },
+        {
+          "text": "Gặp em, gặp rút chuyên trò nữa đêm!",
+          "bbox": [
+            480,
+            1860,
+            1269,
+            1900
+          ],
+          "confidence": 91.78
+        },
+        {
+          "text": "Ban đường gian khổ chó hiểm.",
+          "bbox": [
+            480,
+            1915,
+            1121,
+            1958
+          ],
+          "confidence": 82.63
+        },
+        {
+          "text": "Làm trai, hộ thỉ, thỏa niềm khát khao!",
+          "bbox": [
+            479,
+            1975,
+            1291,
+            2017
+          ],
+          "confidence": 86.06
+        },
+        {
+          "text": "Ngô Linh Ngọc dịch",
+          "bbox": [
+            1327,
+            2048,
+            1694,
+            2086
+          ],
+          "confidence": 90.96
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          1840,
+          2803
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 24.128,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              248,
+              297,
+              493,
+              326
+            ],
+            "generated_text": "Dich nghĩa:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.48,
+            "confidence": 82.93,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              495,
+              404,
+              1467,
+              462
+            ],
+            "generated_text": "NGÀY 17 THÁNG CHAP VÊ ĐỀN",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.102,
+            "confidence": 88.66,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              387,
+              485,
+              1574,
+              541
+            ],
+            "generated_text": "THÀNH PHƯƠNG, NGÀY 20 LAI ĐI VÀO",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.231,
+            "confidence": 93.6,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              484,
+              572,
+              1474,
+              622
+            ],
+            "generated_text": "THÀNH PHÚ XUẠN TRONG NAM.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.0,
+            "confidence": 85.38,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              538,
+              644,
+              1424,
+              703
+            ],
+            "generated_text": "LỤC LÊN ĐƯỜNG CẢM HỨNG",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 1.368,
+            "confidence": 87.68,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              482,
+              792,
+              1499,
+              842
+            ],
+            "generated_text": "Tháng chạp từ thành Phương giục vô ngựa ra đi,",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.138,
+            "confidence": 87.77,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              482,
+              851,
+              1489,
+              895
+            ],
+            "generated_text": "Đi hết đất Bắc vừa mới về, lại đi cùng đất Nam.",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.216,
+            "confidence": 98.28,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              482,
+              912,
+              1589,
+              955
+            ],
+            "generated_text": "Mất trắng đã từng xem hết ảnh trắng khi tỏ khi mờ",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.255,
+            "confidence": 86.08,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              482,
+              972,
+              1675,
+              1020
+            ],
+            "generated_text": "Lòng son đã từng ngạo nghễ với hết thảy chương lam nơi",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.158,
+            "confidence": 86.64,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              1333,
+              1044,
+              1698,
+              1073
+            ],
+            "generated_text": "biên cả non ngăn.",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.579,
+            "confidence": 83.92,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              480,
+              1090,
+              1514,
+              1133
+            ],
+            "generated_text": "Đê an ủi người thân, đã sớm gửi hai phong thiếp.",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 1.428,
+            "confidence": 93.31,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              480,
+              1150,
+              1639,
+              1192
+            ],
+            "generated_text": "Gặp em trai, chỉ mới dành ra được nửa bưói trò chuyện.",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.336,
+            "confidence": 87.53,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              423,
+              1209,
+              1656,
+              1255
+            ],
+            "generated_text": "Những người đi theo chó có than thở răng đi đường khổ,",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.042,
+            "confidence": 85.12,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              480,
+              1269,
+              1530,
+              1316
+            ],
+            "generated_text": "Chí tang bông tử nay mới đáng gọi là kế nam nhi.",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.204,
+            "confidence": 82.16,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              246,
+              1455,
+              442,
+              1483
+            ],
+            "generated_text": "Unet tho:",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.456,
+            "confidence": 44.71,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              479,
+              1562,
+              1227,
+              1605
+            ],
+            "generated_text": "Phương thành, tháng chap, lên yên.",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.69,
+            "confidence": 92.38,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              484,
+              1622,
+              1263,
+              1664
+            ],
+            "generated_text": "Vừa xong Cục Bắc đã miền Cục Nam.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.949,
+            "confidence": 91.37,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              479,
+              1681,
+              1116,
+              1721
+            ],
+            "generated_text": "Nguyệt đầy voi, mất đã nhắm.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.041,
+            "confidence": 79.29,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              480,
+              1740,
+              1342,
+              1782
+            ],
+            "generated_text": "Lòng son từng thách chương làm biến hổ.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.912,
+            "confidence": 87.44,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              484,
+              1797,
+              1033,
+              1839
+            ],
+            "generated_text": "Thăm nhà, thu vói, vài tờ,",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.864,
+            "confidence": 88.4,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              480,
+              1860,
+              1269,
+              1900
+            ],
+            "generated_text": "Gặp em, gặp rút chuyên trò nữa đêm!",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.087,
+            "confidence": 91.78,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              480,
+              1915,
+              1121,
+              1958
+            ],
+            "generated_text": "Ban đường gian khổ chó hiểm.",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.736,
+            "confidence": 82.63,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              479,
+              1975,
+              1291,
+              2017
+            ],
+            "generated_text": "Làm trai, hộ thỉ, thỏa niềm khát khao!",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.215,
+            "confidence": 86.06,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              1327,
+              2048,
+              1694,
+              2086
+            ],
+            "generated_text": "Ngô Linh Ngọc dịch",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.64,
+            "confidence": 90.96,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              705,
+              1130,
+              1511,
+              1139
+            ],
+            "ink": 359
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      }
+    }
+  ]
+}
