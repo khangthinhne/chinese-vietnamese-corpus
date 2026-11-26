@@ -63,3 +63,26 @@ def test_dropped_cross_stream_lines_are_reviewed():
     res = assign(texts)
     dropped = [r for r in res.review if r["reason"] == "dropped_cross_stream"]
     assert [(r["layer"], r["text"]) for r in dropped] == [("am", "旁")]
+
+
+def test_note_entry_ends_vietnamese_layer_only_when_enabled():
+    texts = [("han", "夢遊文灘次思堂"), ("vie", "PHIÊN ÂM:"), ("vie", "Nguyệt tiền ngô diệc tác tư du,"),
+             ("vie", "1. Nguyên chủ: Tư Đường là ông Hoàng giáp ở Bảo Triện."),
+             ("vie", "2. Cửu châu: Chín châu.")]
+    off = assign(texts)
+    assert len(off.lines["am"]) == 3
+    on = assign(texts, note_entry_ends={"am", "nghia", "tho"})
+    assert [r.text for r in on.lines["am"]] == ["Nguyệt tiền ngô diệc tác tư du,"]
+    assert sum(r["reason"] == "unassigned_line" for r in on.review) == 2
+
+
+def test_note_entries_end_layer_only_until_page_break():
+    rows = [("han", 1, "夢遊文灘次思堂"), ("vie", 1, "PHIÊN ÂM:"), ("vie", 1, "Nguyệt tiền ngô diệc tác tư du,"),
+            ("vie", 1, "1. Nguyên chủ: Tư Đường là ông Hoàng giáp."), ("vie", 2, "Bồng trục thương doanh nhất diệp phù."),
+            ("vie", 2, "DỊCH NGHĨA:"), ("vie", 2, "Trước trăng ta cũng làm cuộc chơi ấy,")]
+    doc = Document(id="W.001", pages=[1, 2], lines=[line(s, p, i, t, 100 * i) for i, (s, p, t) in enumerate(rows, 1)])
+    res = assign_document_unified("W", doc, CFG, {}, keep_line=streams.keep_line, dropped={},
+                                  implicit_next={"han": "am"}, title_next={"am": "nghia"},
+                                  is_header=streams.header_predicate(doc.lines), note_entry_ends={"am", "nghia"})
+    assert [r.text for r in res.lines["am"]] == ["Nguyệt tiền ngô diệc tác tư du,", "Bồng trục thương doanh nhất diệp phù."]
+    assert [r.text for r in res.lines["nghia"]] == ["Trước trăng ta cũng làm cuộc chơi ấy,"]

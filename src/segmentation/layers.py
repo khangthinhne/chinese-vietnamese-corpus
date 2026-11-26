@@ -30,6 +30,9 @@ from src.segmentation.patterns import (
 
 DEFAULT_SOURCE = {"han": "chi_tra", "am": "vie", "nghia": "vie", "tho": "vie"}
 
+# Mục chú thích đầu dòng: "1. Nguyên dẫn: ...", "2) Y đài: ..." (số, dấu chấm/ngoặc, thuật ngữ ngắn, dấu hai chấm).
+NOTE_ENTRY_RE = re.compile(r"^\s*\d{1,2}\s*[.)]\s*[^\d\s][^:：]{0,40}[:：]\s*\S")
+
 
 # Tiêu đề khối ghi chú kết thúc lớp nghia, so khớp mờ theo lỗi OCR thường gặp: KHẢO DỊ / KHÁO DỊ / KHAO DI /
 # KHẢO DỊC (CPO_19), NGUYÊN CHÚ, CHÚ THÍCH; phải theo sau là ':' hoặc hết dòng, được phép có nội dung cùng dòng
@@ -241,7 +244,8 @@ def assign_document_unified(work_id: str, doc: Document, layer_cfg: dict, meta_c
                             keep_line=None, dropped: dict[str, int] | None = None,
                             implicit_next: dict[str, str] | None = None,
                             is_header=None, title_next: dict[str, str] | None = None,
-                            notes_after_attribution: set[str] | frozenset[str] = frozenset()) -> DocumentLayers:
+                            notes_after_attribution: set[str] | frozenset[str] = frozenset(),
+                            note_entry_ends: set[str] | frozenset[str] = frozenset()) -> DocumentLayers:
     """Gán dòng của MỘT tài liệu vào các lớp (han/am/nghia/tho) từ stream OCR duy nhất.
 
     - Không phụ thuộc vào 'source' (chi_tra/vie).
@@ -258,6 +262,10 @@ def assign_document_unified(work_id: str, doc: Document, layer_cfg: dict, meta_c
       "LÊN NÚI MẪU TỬ" mà OCR làm mất chữ "DỊCH NGHĨA"). Review `implicit_layer_start`.
     - `notes_after_attribution` (tuỳ chọn), vd {"am"}: trong lớp đó, sau dòng khớp `attribution_patterns` (dòng
       nguồn "Trích ..."), các dòng tiếp theo là chú thích: không gán lớp cho tới tiêu đề/tiêu đề viết hoa kế tiếp.
+    - `note_entry_ends` (tuỳ chọn), vd {"am", "nghia", "tho"}: trong các lớp đó, dòng mục chú thích "1. Thuật ngữ: ..."
+      (`NOTE_ENTRY_RE`) mở vùng chú thích cuối trang: nó và các dòng sau trên CÙNG TRANG không gán lớp; sang trang
+      mới mà chưa gặp tiêu đề thì lớp cũ chạy tiếp (CPO_20 in chú thích cuối trang không có tiêu đề CHÚ THÍCH,
+      audit 2026-11-26).
     - Tiêu đề mục tường minh đặt lại số dòng nội dung của lớp đó; dòng `is_header` (tiêu đề chạy, dòng Việt nhiễu)
       không tính là dòng nội dung (CPO_18.005: rác + tiêu đề chạy làm "PHIÊN ÂM:" rồi tiêu đề bài mở nhầm nghia).
     - Dòng bị `keep_line` loại được ghi review `dropped_cross_stream` (từng dòng), không mất dấu.
@@ -294,6 +302,7 @@ def assign_document_unified(work_id: str, doc: Document, layer_cfg: dict, meta_c
     current: str | None = default_start
     started: set[str] = {default_start} if default_start else set()
     body_lines: dict[str, int] = {}              # số dòng nội dung không viết hoa đã gán cho mỗi lớp
+    notes_page: int | None = None                # trang đang có chú thích cuối trang (note_entry_ends)
     last_layer: str | None = current             # lớp nội dung gần nhất (để thoát khỏi đoạn chú thích)
     attribution = {n: compile_patterns(layer_cfg[n].get("attribution_patterns"),
                                        f"segmentation.layers.{n}.attribution_patterns", False)
@@ -363,6 +372,15 @@ def assign_document_unified(work_id: str, doc: Document, layer_cfg: dict, meta_c
                 current = nxt
                 started.add(nxt)
 
+        if notes_page is not None and ln.page != notes_page:
+            if current is None and last_layer:   # chú thích cuối trang đã hết: nội dung lớp chạy tiếp sang trang mới
+                current = last_layer
+            notes_page = None
+        if (current in note_entry_ends and NOTE_ENTRY_RE.match(ln.text)
+                and (keep_line is None or keep_line(current, ln))):
+            last_layer = current
+            current = None                       # mục chú thích "1. Thuật ngữ: ...": hết lớp tới cuối trang
+            notes_page = ln.page
         target = current
         if target is None:
             review.append(review_row(work_id, doc.id, "", "unassigned_line",

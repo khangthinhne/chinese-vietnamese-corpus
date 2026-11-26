@@ -200,7 +200,9 @@ def run(args) -> None:
                                                                       ocr_streams.IMPLICIT_TITLE_NEXT),
                                                    notes_after_attribution=set(seg.get(
                                                        "notes_after_attribution",
-                                                       ocr_streams.NOTES_AFTER_ATTRIBUTION)))
+                                                       ocr_streams.NOTES_AFTER_ATTRIBUTION)),
+                                                   # mục chú thích "1. Thuật ngữ: ..." kết thúc lớp Việt (mặc định tắt)
+                                                   note_entry_ends=set(seg.get("note_entry_ends", [])))
             elif is_unified:
                 assigned = assign_document_unified(args.work_id, doc, layer_cfg, meta_cfg)
             else:
