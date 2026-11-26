@@ -165,3 +165,28 @@ def test_han_title_suspect_by_length():
     assert han_title_suspect(rows)["pages"] == [515]
     rows[0]["fields"][0]["text"] = "呈天朝敕使二位大人"
     assert han_title_suspect(rows) is None
+
+
+def test_reading_match_separates_phien_am_from_translation():
+    from src.segmentation.am_detect import fold, reading_match
+    readings = {"夕": "tịch", "照": "chiếu", "流": "lưu", "霞": "hà", "萬": "vạn", "頃": "khoảnh", "丹": "đan",
+                "漁": "ngư", "舟": "chu", "次": "thứ", "第": "đệ", "望": "vọng", "回": "hồi", "灘": "than"}
+    rd = {k: frozenset({fold(v)}) for k, v in readings.items()}
+    han = ["夕照流霞萬頃丹", "漁舟次第望回灘"]
+    assert reading_match(han, ["Tịch chiếu lưu hà vạn khoảnh đan,", "Ngư chu thứ đệ vọng hồi than."], rd) == 1.0
+    assert reading_match(han, ["Mặt trời chiều chiếu trên đám mây bay", "Thuyền đánh cá lần lượt trở về bến,"], rd) < 0.35
+    assert reading_match(["夕照"], ["Tịch chiếu"], rd) is None
+
+
+def test_am_detector_moves_implicit_translation_to_nghia_and_honors_overrides():
+    from src.segmentation.am_detect import AmDetector
+    det = AmDetector({"enabled": True, "min_match": 0.35, "nghia_only_pages": [5], "am_pages": [7]})
+    assert det.decide(5, [], [])[0] is True and det.decide(7, ["一"] * 10, ["xyz"] * 10)[0] is False
+    texts = [("han", "天氣和暢雖六陰節候盛陽常自如稼穡"), ("vie", "Xứ ấy trời đất ấm áp, mùa đông không lạnh lắm,"),
+             ("vie", "mùa hè cũng dễ chịu, quanh năm cây cối tốt tươi.")]
+    det.path = "resources/han_viet.tsv"
+    res = assign(texts, am_detector=det)
+    assert "am" not in res.lines and len(res.lines["nghia"]) == 2
+    assert any(r["reason"] == "am_reassigned_to_nghia" for r in res.review)
+    off = assign(texts, am_detector=AmDetector({}))
+    assert len(off.lines["am"]) == 2

@@ -142,6 +142,8 @@ def run(args) -> None:
             merged, min_block_lines=int(seg.get("document", {}).get("min_han_block_lines",
                                                                    ocr_streams.MIN_HAN_BLOCK_LINES)))
         is_header = ocr_streams.header_predicate(merged)
+        from src.segmentation.am_detect import AmDetector
+        am_detector = AmDetector(seg.get("am_detection"), Path(__file__).resolve().parents[2])
         docs, review = segment_documents_unified(args.work_id, merged,
                                                  ocr_streams.document_config(seg.get("document", {})),
                                                  pages, allowed_starts=allowed)
@@ -202,7 +204,8 @@ def run(args) -> None:
                                                        "notes_after_attribution",
                                                        ocr_streams.NOTES_AFTER_ATTRIBUTION)),
                                                    # mục chú thích "1. Thuật ngữ: ..." kết thúc lớp Việt (mặc định tắt)
-                                                   note_entry_ends=set(seg.get("note_entry_ends", [])))
+                                                   note_entry_ends=set(seg.get("note_entry_ends", [])),
+                                                   am_detector=am_detector)
             elif is_unified:
                 assigned = assign_document_unified(args.work_id, doc, layer_cfg, meta_cfg)
             else:

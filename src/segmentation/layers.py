@@ -298,7 +298,8 @@ def assign_document_unified(work_id: str, doc: Document, layer_cfg: dict, meta_c
                             implicit_next: dict[str, str] | None = None,
                             is_header=None, title_next: dict[str, str] | None = None,
                             notes_after_attribution: set[str] | frozenset[str] = frozenset(),
-                            note_entry_ends: set[str] | frozenset[str] = frozenset()) -> DocumentLayers:
+                            note_entry_ends: set[str] | frozenset[str] = frozenset(),
+                            am_detector=None) -> DocumentLayers:
     """Gán dòng của MỘT tài liệu vào các lớp (han/am/nghia/tho) từ stream OCR duy nhất.
 
     - Không phụ thuộc vào 'source' (chi_tra/vie).
@@ -322,6 +323,8 @@ def assign_document_unified(work_id: str, doc: Document, layer_cfg: dict, meta_c
     - Tiêu đề mục tường minh đặt lại số dòng nội dung của lớp đó; dòng `is_header` (tiêu đề chạy, dòng Việt nhiễu)
       không tính là dòng nội dung (CPO_18.005: rác + tiêu đề chạy làm "PHIÊN ÂM:" rồi tiêu đề bài mở nhầm nghia).
     - Dòng bị `keep_line` loại được ghi review `dropped_cross_stream` (từng dòng), không mất dấu.
+    - `am_detector` (tuỳ chọn, `src.segmentation.am_detect.AmDetector`): lớp am được MỞ NGẦM (không có tiêu đề
+      PHIÊN ÂM) mà không khớp cách đọc Hán–Việt của chữ Hán -> chuyển sang nghia, review `am_reassigned_to_nghia`.
     """
     review: list[dict] = []
     headings: list[dict] = []
@@ -356,6 +359,7 @@ def assign_document_unified(work_id: str, doc: Document, layer_cfg: dict, meta_c
     started: set[str] = {default_start} if default_start else set()
     body_lines: dict[str, int] = {}              # số dòng nội dung không viết hoa đã gán cho mỗi lớp
     notes_page: int | None = None                # trang đang có chú thích cuối trang (note_entry_ends)
+    implicit_started: set[str] = set()           # lớp được mở ngầm sau khối Hán (không có tiêu đề mục)
     last_layer: str | None = current             # lớp nội dung gần nhất (để thoát khỏi đoạn chú thích)
     attribution = {n: compile_patterns(layer_cfg[n].get("attribution_patterns"),
                                        f"segmentation.layers.{n}.attribution_patterns", False)
@@ -421,6 +425,7 @@ def assign_document_unified(work_id: str, doc: Document, layer_cfg: dict, meta_c
                                          [ln.page], ln.text, [ln.source_id]))
                 current = nxt
                 started.add(nxt)
+                implicit_started.add(nxt)
 
         if title_next and is_upper_title(ln.text) and not (is_header and is_header(ln)):
             prev = current or last_layer
@@ -469,6 +474,16 @@ def assign_document_unified(work_id: str, doc: Document, layer_cfg: dict, meta_c
                 grouped[layer] = kept
             else:
                 del grouped[layer]
+
+    if (am_detector is not None and "am" in implicit_started and grouped.get("am") and grouped.get("han")):
+        move, why = am_detector.decide(min(doc.pages) if doc.pages else 0,
+                                       [x.text for x in grouped["han"]], [x.text for x in grouped["am"]])
+        if move:
+            am_lines = grouped.pop("am")
+            grouped["nghia"] = am_lines + grouped.get("nghia", [])
+            started.add("nghia")
+            review.append(review_row(work_id, doc.id, "nghia", "am_reassigned_to_nghia",
+                                     sorted({x.page for x in am_lines}), why, [am_lines[0].source_id]))
 
     for n in names:
         optional = bool(layer_cfg[n].get("optional"))
