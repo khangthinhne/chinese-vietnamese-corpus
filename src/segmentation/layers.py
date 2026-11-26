@@ -54,7 +54,60 @@ class _NoteHeadingMatcher(Matcher):
         return len(self.base)
 
     def matches_probe(self, probe: str) -> bool:
-        return self.base.matches_probe(probe) or bool(NOTE_HEADING_RE.match(probe))
+        return (self.base.matches_probe(probe) or bool(NOTE_HEADING_RE.match(probe))
+                or fuzzy_note_heading(probe))
+
+
+# So khớp mờ tiêu đề mục (OCR hay sai: "DỊCH THOẠI:", "DỊCH NHĨA:", "Phần âm:", "CHÚ TÍCH:"): sau khi bỏ dấu, khoảng
+# cách sửa tới tiêu đề chuẩn <= 2 (tiêu đề >= 8 chữ cái) hoặc <= 1. Chỉ xét dòng <= 3 từ và kết thúc bằng ":" hoặc viết
+# hoa toàn bộ, để câu thân văn ngắn ("Đích thị") không bị coi là tiêu đề. "Dịch phú" là tiêu đề hợp lệ của lớp tho.
+SECTION_HEADINGS = {"am": ("phien am",), "nghia": ("dich nghia",), "tho": ("dich tho", "dich phu")}
+NOTE_HEADINGS = ("chu thich", "khao di", "nguyen chu")
+FUZZY_HEADING_MAX_WORDS = 3
+
+
+def _fold_heading(text: str) -> str | None:
+    t = unicodedata.normalize("NFC", text).strip()
+    colon = t.endswith((":", "："))
+    t = t.rstrip(":： .")
+    letters = [c for c in t if c.isalpha()]
+    if not letters or len(t.split()) > FUZZY_HEADING_MAX_WORDS or not (colon or all(c.isupper() for c in letters)):
+        return None
+    t = unicodedata.normalize("NFD", t.lower().replace("đ", "d"))
+    t = "".join(c for c in t if not unicodedata.combining(c))
+    return re.sub(r"\s+", " ", re.sub(r"[^a-z ]", " ", t)).strip() or None
+
+
+def _edit_distance(a: str, b: str) -> int:
+    prev = list(range(len(b) + 1))
+    for i, ca in enumerate(a, 1):
+        cur = [i]
+        for j, cb in enumerate(b, 1):
+            cur.append(min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + (ca != cb)))
+        prev = cur
+    return prev[-1]
+
+
+def _fuzzy_match(text: str, canon: dict[str, tuple[str, ...]]) -> str | None:
+    folded = _fold_heading(text)
+    if not folded:
+        return None
+    scored = sorted((_edit_distance(folded, c), key) for key, cs in canon.items() for c in cs
+                    if _edit_distance(folded, c) <= (2 if len(c.replace(" ", "")) >= 7 else 1))
+    if not scored or (len(scored) > 1 and scored[0][0] == scored[1][0] and scored[0][1] != scored[1][1]):
+        return None
+    return scored[0][1]
+
+
+def fuzzy_section_layer(text: str, layers) -> str | None:
+    """Lớp (am/nghia/tho) mà dòng là tiêu đề mục mở lớp, theo so khớp mờ; None nếu không phải."""
+    canon = {k: v for k, v in SECTION_HEADINGS.items() if k in layers}
+    return _fuzzy_match(text, canon) if canon else None
+
+
+def fuzzy_note_heading(text: str) -> bool:
+    """Dòng là tiêu đề khối ghi chú (CHÚ THÍCH/KHẢO DỊ/NGUYÊN CHÚ) theo so khớp mờ."""
+    return _fuzzy_match(text, {"note": NOTE_HEADINGS}) is not None
 
 
 def _compile_layer_matcher(layer_cfg: dict, kind: str, name: str):
@@ -308,9 +361,16 @@ def assign_document_unified(work_id: str, doc: Document, layer_cfg: dict, meta_c
                                        f"segmentation.layers.{n}.attribution_patterns", False)
                    for n in notes_after_attribution if n in layer_cfg}
 
+    heading_layers = [n for n in names if layer_cfg.get(n, {}).get("heading_mode")]
     for ln in all_lines:
         starts_hit = matched_labels(starts, ln.text)
         ends_hit = matched_labels(ends, ln.text)
+        if not starts_hit and heading_layers:
+            fuzzy = fuzzy_section_layer(ln.text, heading_layers)
+            if fuzzy:
+                starts_hit = [fuzzy]
+                review.append(review_row(work_id, doc.id, fuzzy, "fuzzy_section_heading",
+                                         [ln.page], ln.text, [ln.source_id]))
 
         if len(starts_hit) > 1:
             review.append(review_row(work_id, doc.id, "", "layer_overlap",

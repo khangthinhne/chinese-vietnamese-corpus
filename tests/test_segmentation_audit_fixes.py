@@ -97,3 +97,23 @@ def test_note_entries_end_layer_only_until_page_break():
                                   is_header=streams.header_predicate(doc.lines), note_entry_ends={"am", "nghia"})
     assert [r.text for r in res.lines["am"]] == ["Nguyệt tiền ngô diệc tác tư du,", "Bồng trục thương doanh nhất diệp phù."]
     assert [r.text for r in res.lines["nghia"]] == ["Trước trăng ta cũng làm cuộc chơi ấy,"]
+
+
+def test_fuzzy_section_headings():
+    from src.segmentation.layers import fuzzy_note_heading, fuzzy_section_layer
+    layers = ["am", "nghia", "tho"]
+    for text, layer in (("DỊCH THOẠI:", "tho"), ("DỊCH NHĨA:", "nghia"), ("Phần âm:", "am"), ("Dịch phú:", "tho"),
+                        ("PHIÊN ÂM", "am")):
+        assert fuzzy_section_layer(text, layers) == layer, text
+    for text in ("Đích thị", "Dịch thơ hay quá:", "DỊCH :", "LÀO"):
+        assert fuzzy_section_layer(text, layers) is None, text
+    assert fuzzy_note_heading("CHÚ TÍCH:") and not fuzzy_note_heading("Chú ý:")
+
+
+def test_fuzzy_heading_opens_tho_layer():
+    texts = [("han", "諒山道中"), ("vie", "PHIÊN ÂM:"), ("vie", "Nhị Lạng giang sơn cảnh giới liên,"),
+             ("vie", "DỊCH NGHĨA:"), ("vie", "Núi sông xứ Lạng liền nhau,"), ("vie", "DỊCH THOẠI:"),
+             ("vie", "Núi sông xứ Lạng kế liền nhau,")]
+    res = assign(texts)
+    assert [r.text for r in res.lines["tho"]] == ["Núi sông xứ Lạng kế liền nhau,"]
+    assert any(r["reason"] == "fuzzy_section_heading" for r in res.review)
