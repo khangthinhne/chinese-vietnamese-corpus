@@ -153,6 +153,13 @@ Bật trong config (hoặc `--ocr-streams han_vie`); mặc định tắt, chế 
      chữ thường) mở nghĩa, khi OCR làm mất chữ "DỊCH NGHĨA";
    - `notes_after_attribution` (mặc định []; CPO_20 dùng ["am"]): sau dòng nguồn "Trích ..." là chú thích.
    Mọi chuyển lớp ngầm ghi review `implicit_layer_start`.
+   - `am_detection` (mặc định tắt; CPO_20 bật): phần am MỞ NGẦM mà không khớp cách đọc Hán–Việt của chữ Hán
+     (`src/segmentation/am_detect.py`, `min_match` 0,35) chuyển sang nghia; phần sau tiêu đề PHIÊN ÂM tường minh
+     giữ nguyên. Review `am_reassigned_to_nghia`.
+   - `document_overrides`: ghi đè theo TRANG BẮT ĐẦU của tài liệu, bắt buộc có `reason`
+     (`src/segmentation/overrides.py`): `exclude` (ra khỏi lớp dóng) / `notes` (vùng chú thích), tuỳ chọn
+     `layers`, `implicit_am_only`, `han_prefix`. Mỗi dòng bị gỡ có review `override_excluded`/`override_note`;
+     ghi đè không khớp tài liệu nào thì log cảnh báo.
 5. Cảnh báo: hai luồng khác phạm vi trang, tài liệu có Hán mà không có âm (và ngược lại), dòng han nằm ngoài
    khoảng trang của tài liệu (`metadata.json` -> `segmentation.ocr_streams`).
 
