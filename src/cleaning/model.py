@@ -37,6 +37,12 @@ LETTER_MARKER_RE = re.compile(r"(?<=\S)[ \t]*(?:\\\(\s*)?\^?\{?\(\^?[a-zđ]\)\}?
 # Chỉ mục chú thích bằng chữ số thường đứng GIỮA hai âm tiết trong lớp phiên âm (Qwen chép chỉ số trên "²" thành "2":
 # "Cao sơn lưu thủy 2 hữu tri âm"). Phiên âm Hán Việt không dùng chữ số Ả Rập, nên chỉ áp cho lớp am.
 AM_DIGIT_MARKER_RE = re.compile(r"(?<=[^\W\d_])[ 	]+\d{1,2}(?=[ 	]+[^\W\d_])")
+# Sửa C (cờ am_markers_extended): chỉ mục sau dấu câu ("đại thần, 2 quốc gia") và ở cuối dòng ("Tỳ bà đình 1")
+AM_DIGIT_AFTER_PUNCT_RE = re.compile(r"(?<=[^\W\d_][,.;:!?”\"')])[ \t]+\d{1,2}(?=[ \t]+[^\W\d_])")
+AM_DIGIT_LINE_END_RE = re.compile(r"(?<=[^\W\d_])[ \t]+\d{1,2}(?=[ \t]*[,.;:!?]?[ \t]*$)")
+# chỉ mục 1-2 chữ số giữa hai chữ / trước dấu câu (nhóm 1 = số), dùng với page_note_numbers (sửa E)
+PAGE_NOTE_MARKER_RE = re.compile(r"(?<=[^\W\d_])[ \t]+(\d{1,2})(?=[ \t]+[^\W\d_]|[ \t]*[,.;:!?)])")
+NUMBERING_WORD_RE = re.compile(r"(?i)\b(?:bài|kỳ|kì|số|phần|quyển|chương|tập|thủ|khúc|đoạn|mục)[ \t]+\d{1,2}[ \t]*$")
 LEADING_NUM_RE = re.compile(r"^\s*\d{1,3}\s*[·.．、﹒)]\s*")
 
 # ký tự nhiễu OCR biết chắc: XOÁ khi làm sạch (rule noise_char:<ch>)
@@ -94,6 +100,10 @@ class OCRCleaningConfig:
     suspect_chars: str = SUSPECT_CHARS
     strip_markers: bool = True             # xoá chỉ mục chú thích [1], (1), ① trong dòng
     strip_letter_markers: bool = True      # lớp am/nghia/tho: xoá chỉ mục khảo dị (a), (b) sau chữ (LETTER_MARKER_RE)
+    am_markers_extended: bool = False      # lớp am: thêm chỉ mục sau dấu câu / cuối dòng (trừ số bài "BÀI 2", "Kỳ 3")
+    # sửa E (cờ stream_note_markers): số mục chú thích "N. ..." theo trang, lấy từ cả luồng vie.xml. Lớp nghia/tho:
+    # chữ số giữa chữ trùng một số như vậy trên cùng trang là chỉ mục ("Đảo Bồng 3 khói tỏa") -> xoá. Rỗng = tắt.
+    page_note_numbers: dict = field(default_factory=dict)
     noise_chars: str = NOISE_CHARS
 
 
@@ -109,6 +119,10 @@ class FootnoteConfig:
     # Mục chú thích/khảo dị dạng "1. Côn Lôn: Tức dãy...", "1. 2. Bản A.603 chép là..." lọt vào lớp am/nghia/tho
     # khi OCR thiếu tiêu đề "CHÚ THÍCH". TUỲ CHỌN (mặc định tắt): bản dịch có thể có danh sách đánh số thật.
     note_entries: bool = False
+    # Mục "4. Vâng theo lời dặn ..." (không có "Thuật ngữ:"), nhận khi số 4 trùng một chữ số chỉ mục trong thân lớp
+    # trên CÙNG trang ("... thủy 4 hữu ..."). TUỲ CHỌN (mặc định tắt), CPO_20 lớp am.
+    note_entry_markers: bool = False
+    stream_page_markers: dict = field(default_factory=dict)    # sửa E: chỉ mục theo trang từ cả luồng vie.xml
     bib_patterns: list[str] = field(default_factory=lambda: [
         r"Q\.\s*\d", r"Quyển\s+\S", r"Quyên\s+\S", r"[集卷]", r"\btập\b",
         r"(三国|三國|六朝|全宋|全唐|弘明|高僧|文苑).*?[集卷文]",
@@ -132,6 +146,7 @@ class MetadataConfig:
     attribution_patterns: list[str] = field(default_factory=list)  # vd r"^\*" dòng quy trách
     capture_notes: bool = True                  # niên đại sáng tác / "X dịch" -> metadata (thay vì bị bỏ)
     translator_names: list[str] = field(default_factory=list)      # tên người dịch đứng một mình, vd "Lâm Giang"
+    capture_source_lines: bool = False          # sửa D: dòng nguồn "Trích Dật thi lược toản" -> metadata "source"
     author_max_tokens: int = 4                  # "dạng tên người": tối đa bao nhiêu token
     author_max_len: int = 24                    # và độ dài ký tự tối đa (lớp Hán nên đặt nhỏ hơn)
 
@@ -162,6 +177,8 @@ class CleanConfig:
     remove_headers: bool = True          # dòng đầu trang lặp lại >= header_footer_min_pages trang
     remove_footers: bool = True
     header_footer_min_pages: int = 3
+    # source_id các dòng tiêu đề chạy tính trên hai luồng của cả work (streams.edge_running_header_ids); rỗng = tắt
+    stream_header_ids: frozenset = frozenset()
     drop_recurring_single_lines: bool = True   # trang chỉ có 1 dòng, dòng đó lặp y hệt trên >= min_pages trang
     remove_duplicates: bool = True       # dòng OCR trùng/near-dup
     duplicate_threshold: float = 0.9     # tỉ lệ giống tối thiểu (difflib) tính là near-dup

@@ -174,6 +174,40 @@ def header_matcher(headers: set[str]):
     return match
 
 
+EDGE_LINES = 2          # số dòng đầu/cuối trang (sau khi trộn hai luồng) coi là mép trang
+
+
+def edge_running_header_ids(merged: list[OcrLine], edge: int = EDGE_LINES,
+                            min_pages: int = HEADER_MIN_PAGES) -> set[str]:
+    """source_id của các dòng TIÊU ĐỀ CHẠY: khớp (kể cả mờ) một dòng lặp trên >= min_pages trang của cả work, đa số
+    lần xuất hiện của nó nằm trong `edge` dòng đầu/cuối trang, và chính dòng này cũng ở mép trang.
+
+    Dùng ở bước clean (cờ `clean.common.stream_running_headers`): bước lọc header/footer cũ chỉ so CHÍNH XÁC và đếm
+    trong TỪNG lớp, nên bỏ sót "Cẩm Dưỡng Nhân Thọ" (OCR sai của "Cẩm Đường Nhàn Thoại") hay tiêu đề rải qua nhiều
+    lớp. Dòng lặp ở giữa trang ("Bài 2", điệp khúc "Ngươi chẳng thấy:") là nội dung: không bị chọn."""
+    match = header_matcher(running_headers(merged, min_pages))
+    by_page: dict[int, list[OcrLine]] = defaultdict(list)
+    for ln in merged:
+        by_page[ln.page].append(ln)
+    at_edge: dict[str, list[bool]] = defaultdict(list)
+    candidates: list[tuple[OcrLine, str, bool]] = []
+    for lines in by_page.values():
+        n = len(lines)
+        for i, ln in enumerate(lines):
+            if not ln.text.strip() or not match(ln.text):
+                continue
+            key = _fold(_norm(ln.text))
+            on_edge = i < edge or i >= n - edge
+            at_edge[key].append(on_edge)
+            candidates.append((ln, key, on_edge))
+    ok = {k for k, v in at_edge.items() if sum(v) * 2 > len(v)}
+    # khoá OCR sai (ít lần) theo cùng tiêu đề gốc: dòng ở mép trang mà khoá của nó chưa đủ đa số vẫn nhận khi khớp mờ
+    # một tiêu đề đã được nhận
+    ok_match = header_matcher(ok) if ok else (lambda _t: False)
+    return {ln.source_id for ln, key, on_edge in candidates
+            if on_edge and (key in ok or ok_match(ln.text))}
+
+
 def header_predicate(lines: list[OcrLine]):
     """Hàm ln -> bool: dòng KHÔNG mang cấu trúc: tiêu đề chạy (lặp trên nhiều trang, kể cả bản OCR sai dấu) hoặc
     dòng Việt nhiễu (`is_noise_vie`). Máy trạng thái không dùng các dòng này để ngầm mở lớp, mở lớp kế tiếp, hay

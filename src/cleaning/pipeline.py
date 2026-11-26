@@ -275,6 +275,7 @@ def build_config(args, layer: str) -> CleanConfig:
             remove_patterns=list(args.ocr_remove or []),
             replace_patterns=[_parse_replace(r) for r in (args.ocr_replace or [])],
             strip_letter_markers=not getattr(args, "keep_letter_markers", False),
+            am_markers_extended=getattr(args, "am_markers_extended", False),
         ),
         footnotes=FootnoteConfig(note_entries=getattr(args, "note_entries", False)),
         metadata=MetadataConfig(
@@ -287,6 +288,7 @@ def build_config(args, layer: str) -> CleanConfig:
             attribution_patterns=list(args.meta_attribution_pattern or []),
             capture_notes=not getattr(args, "no_capture_notes", False),
             translator_names=list(getattr(args, "translator_name", None) or []),
+            capture_source_lines=getattr(args, "capture_source_lines", False),
             author_max_tokens=args.meta_author_max_tokens,
             author_max_len=args.meta_author_max_len,
         ),
@@ -299,6 +301,37 @@ SHARED_CLEANING_OUTPUTS = ("review_required.xml", "cleaning_audit.xml")
 def layer_outputs(outputs: list[Path]) -> list[Path]:
     """Bỏ các file kiểm toán dùng chung giữa các lớp khỏi danh sách dùng để chặn chạy lại."""
     return [p for p in outputs if Path(p).name not in SHARED_CLEANING_OUTPUTS]
+
+
+def stream_running_header_ids(layout: DataLayout) -> set[str]:
+    """Tiêu đề chạy tính trên han.xml + vie.xml của cả work (chế độ hai luồng); rỗng nếu chưa có hai luồng."""
+    from src.segmentation import streams
+    try:
+        merged = streams.merge_streams(streams.load_stream(layout, "han"), streams.load_stream(layout, "vie"))
+    except FileNotFoundError:
+        log.warning("--stream-running-headers: chưa có han.xml/vie.xml, bỏ qua")
+        return set()
+    return streams.edge_running_header_ids(merged)
+
+
+def stream_page_notes(layout: DataLayout) -> tuple[dict[int, set[str]], dict[int, set[str]]]:
+    """Theo trang, từ cả luồng vie.xml: (số của các mục chú thích "N. ...", chữ số chỉ mục trong thân)."""
+    from src.cleaning.footnotes import INLINE_MARKER_RE, MARKER_ENTRY_RE
+    from src.segmentation import streams
+    try:
+        vie = streams.load_stream(layout, "vie")
+    except FileNotFoundError:
+        log.warning("--stream-note-markers: chưa có vie.xml, bỏ qua")
+        return {}, {}
+    notes: dict[int, set[str]] = {}
+    markers: dict[int, set[str]] = {}
+    for ln in vie:
+        m = MARKER_ENTRY_RE.match(ln.text.strip())
+        if m:
+            notes.setdefault(ln.page, set()).add(m.group(1))
+        else:
+            markers.setdefault(ln.page, set()).update(x.group(1) for x in INLINE_MARKER_RE.finditer(ln.text))
+    return notes, markers
 
 
 def run(args) -> Path:
@@ -318,6 +351,13 @@ def run(args) -> Path:
         inputs.append(Path(args.config))
 
     cfg = build_config(args, layer)
+    if getattr(args, "stream_running_headers", False):
+        cfg.stream_header_ids = frozenset(stream_running_header_ids(layout))
+    if getattr(args, "stream_note_markers", False):
+        notes, markers = stream_page_notes(layout)
+        cfg.ocr.page_note_numbers = notes
+        cfg.footnotes.stream_page_markers = markers
+    cfg.footnotes.note_entry_markers = getattr(args, "note_entry_markers", False)
     cfg.footnotes.enabled = not args.no_footnotes
     cfg.footnotes.policy = args.footnote_policy
     cfg.footnotes.detect_parentheses = not args.no_paren_notes
@@ -433,6 +473,16 @@ def create_parser():
     # trang / trùng / nối
     p.add_argument("--exclude-pages", help="Trang loại thủ công, vd '205,210-212'")
     p.add_argument("--no-headers", action="store_true", help="Tắt nhận diện header đầu trang lặp lại")
+    p.add_argument("--stream-running-headers", action="store_true",
+                   help="Chế độ hai luồng: bỏ tiêu đề chạy tính trên han.xml+vie.xml của cả work (khớp mờ, mép trang)")
+    p.add_argument("--am-markers-extended", action="store_true",
+                   help="Lớp am: xoá thêm chỉ mục sau dấu câu và ở cuối dòng (không áp dòng viết hoa toàn bộ)")
+    p.add_argument("--capture-source-lines", action="store_true",
+                   help="Lớp Việt: dòng nguồn 'Trích <Tên sách>' (không dấu kết câu) -> metadata source")
+    p.add_argument("--stream-note-markers", action="store_true",
+                   help="Chế độ hai luồng: số mục chú thích/chỉ mục theo trang từ cả vie.xml (nghia/tho: xoá chỉ mục)")
+    p.add_argument("--note-entry-markers", action="store_true",
+                   help="Lớp Việt: dòng 'N. ...' là mục chú thích khi N trùng chữ số chỉ mục trên cùng trang")
     p.add_argument("--no-footers", action="store_true", help="Tắt nhận diện footer cuối trang lặp lại")
     p.add_argument("--header-footer-min-pages", type=int, default=3)
     p.add_argument("--no-duplicates", action="store_true", help="Tắt phát hiện dòng OCR trùng")

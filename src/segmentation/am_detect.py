@@ -74,6 +74,70 @@ def reading_match(han_texts: list[str], am_texts: list[str], readings: dict[str,
     return prev[-1] / min(len(han), len(am))
 
 
+SPLIT_LINE_MAX = 0.55       # dòng có < 55% âm tiết là cách đọc của chữ Hán trong bài = dòng dịch (câu dịch nhiều
+                            # tên riêng "Hỏi rằng: Khổng Tử nói ... Di Địch" khớp 0,50; dòng phiên âm thấp nhất 0,44
+                            # nhưng không bao giờ hai dòng liền nhau)
+SPLIT_PREFIX_MIN = 0.6      # phần am trước điểm tách phải khớp trung bình >= 60% (chữ Hán OCR rác thì không tách)
+SPLIT_CONSUMED = 0.8        # số âm tiết trước điểm tách >= 80% số chữ Hán
+SPLIT_MIN_SYLLABLES = 6     # dòng ngắn hơn không dùng để quyết định (văn tán 4 chữ khớp dao động, CPO_19.265)
+
+
+def line_coverage(text: str, han_readings: set[str]) -> float | None:
+    sy = [fold(s) for s in SYLLABLE_RE.findall(text)]
+    if len(sy) < SPLIT_MIN_SYLLABLES:
+        return None
+    return sum(1 for s in sy if s in han_readings) / len(sy)
+
+
+def split_point(han_texts: list[str], am_texts: list[str], readings: dict[str, frozenset[str]],
+                skip: list[bool] | None = None) -> int | None:
+    """Chỉ số dòng am đầu tiên thuộc phần DỊCH (dính vào sau phiên âm vì OCR mất nhãn "Dịch nghĩa:", CPO_20 tr.137),
+    hoặc None. Điều kiện: hai dòng liền nhau (đủ dài) khớp < SPLIT_LINE_MAX, số âm tiết trước đó >= SPLIT_CONSUMED x số
+    chữ Hán, và phần trước khớp trung bình >= SPLIT_PREFIX_MIN."""
+    han = [c for t in han_texts for c in CJK_IDEOGRAPH_RE.findall(t)]
+    if len(han) < MIN_UNITS:
+        return None
+    pool: set[str] = set()
+    for c in han:
+        pool |= _readings_of(readings, c)
+    # tiêu đề chạy (skip), mục chú thích/khảo dị "(2) Bản B: ...", tiêu đề viết hoa: không dùng để quyết định
+    cov = [None if ((skip and skip[i]) or NOTE_LINE_RE.match(t) or _is_upper_title(t)) else line_coverage(t, pool)
+           for i, t in enumerate(am_texts)]
+    consumed = 0
+    for i, t in enumerate(am_texts):
+        if consumed >= SPLIT_CONSUMED * len(han):
+            nxt = [c for c in cov[i:] if c is not None][:2]
+            prev = [c for c in cov[:i] if c is not None]
+            if (len(nxt) == 2 and all(c < SPLIT_LINE_MAX for c in nxt) and cov[i] is not None
+                    and prev and sum(prev) / len(prev) >= SPLIT_PREFIX_MIN):
+                return i
+        if not NOTE_LINE_RE.match(t) and not _is_upper_title(t):
+            consumed += len(SYLLABLE_RE.findall(t))
+    return None
+
+
+VERSE_THO_RATIO = 1.6       # nghia >= 1,6 x số dòng thân am (bài thơ, không có lớp tho) -> phần đuôi là dịch thơ
+VERSE_MAX_SYLLABLES = 12    # dòng dịch thơ: <= 12 âm tiết (lục bát, thất ngôn, ngũ ngôn)
+
+
+def verse_tho_split(am_texts: list[str], nghia_texts: list[str]) -> int | None:
+    """Chỉ số dòng nghia đầu tiên thuộc DỊCH THƠ (OCR mất nhãn "Dịch thơ:", CPO_20.039/.145), hoặc None. Bài thơ dịch
+    nghĩa từng câu: n dòng thân am <-> n dòng thân nghia; phần còn lại (>= 4 dòng, đều <= VERSE_MAX_SYLLABLES âm tiết)
+    là dịch thơ."""
+    body = [t for t in am_texts if not NOTE_LINE_RE.match(t) and not _is_upper_title(t)]
+    n = len(body)
+    if n < 4 or len(am_texts) and any(len(SYLLABLE_RE.findall(t)) > VERSE_MAX_SYLLABLES + 4 for t in body):
+        return None
+    nb = [i for i, t in enumerate(nghia_texts) if not _is_upper_title(t)]
+    if len(nb) < VERSE_THO_RATIO * n or len(nb) <= n:
+        return None
+    k = nb[n]
+    tail = [t for t in nghia_texts[k:] if not _is_upper_title(t)]
+    if len(tail) < 4 or any(len(SYLLABLE_RE.findall(t)) > VERSE_MAX_SYLLABLES for t in tail):
+        return None
+    return k
+
+
 class AmDetector:
     """Gọi từ segmentation: quyết định có chuyển lớp am (mở ngầm) của một tài liệu sang nghia không."""
 
@@ -87,6 +151,12 @@ class AmDetector:
         self.path = str(path)
         self.nghia_only = {int(p) for p in cfg.get("nghia_only_pages", [])}
         self.keep_am = {int(p) for p in cfg.get("am_pages", [])}
+        self.split_lines = bool(cfg.get("split_lines"))    # sửa F, mặc định tắt
+
+    def split(self, han_texts: list[str], am_texts: list[str], skip: list[bool] | None = None) -> int | None:
+        if not self.split_lines:
+            return None
+        return split_point(han_texts, am_texts, load_folded_readings(self.path), skip)
 
     def decide(self, start_page: int, han_texts: list[str], am_texts: list[str]) -> tuple[bool, str]:
         """(chuyển am -> nghia?, lý do để ghi review)."""

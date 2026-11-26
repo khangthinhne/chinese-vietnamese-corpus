@@ -59,6 +59,19 @@ def filter_pages(lines: list[RawLine], cfg: CleanConfig, audit: Audit
         return {k for k, n in counts.items()
                 if n >= cfg.header_footer_min_pages and len(k) <= 120}
 
+    stream_ids = getattr(cfg, "stream_header_ids", frozenset())
+    if stream_ids:
+        kept = []
+        for ln in [x for pls in pages.values() for x in pls if x.page in content]:
+            if set(ln.source_ids) & stream_ids:
+                page_records.append({"page": ln.page, "reason": PAGE_HEADER, "lines": 1, "text": ln.text})
+                audit.add("remove_line", PAGE_HEADER, rule="stream_running_header", line=ln)
+                continue
+            kept.append(ln)
+        content = {p: [x for x in pls if not set(x.source_ids) & stream_ids] for p, pls in content.items()}
+        content = {p: pls for p, pls in content.items() if pls}
+        pages = OrderedDict((p, [x for x in pls if not set(x.source_ids) & stream_ids]) for p, pls in pages.items())
+
     headers = recurring(0, cfg.remove_headers, PAGE_HEADER)
     footers = recurring(-1, cfg.remove_footers, PAGE_FOOTER)
     # Trang mà lớp này chỉ có ĐÚNG MỘT dòng, và dòng đó giống hệt dòng duy nhất của >= N trang khác: tiêu đề chạy

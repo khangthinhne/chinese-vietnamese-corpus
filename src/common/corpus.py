@@ -173,6 +173,10 @@ class DataLayout:
     def cleaning_root(self) -> Path: return self.work_dir / "05_cleaning"
     @property
     def cleaning_structural_dir(self) -> Path: return self.cleaning_root / "structural"
+    @property
+    def cleaning_text_dir(self) -> Path:
+        """Text sạch mỗi câu một dòng (han.txt, viet_<lớp>.txt, mapping.tsv); gói nộp bài chép sang 03_text_sach/."""
+        return self.cleaning_root / "text"
 
     def cleaning_structural(self, layer: str) -> Path:
         return self.cleaning_structural_dir / f"{layer}.xml"

@@ -299,7 +299,7 @@ def assign_document_unified(work_id: str, doc: Document, layer_cfg: dict, meta_c
                             is_header=None, title_next: dict[str, str] | None = None,
                             notes_after_attribution: set[str] | frozenset[str] = frozenset(),
                             note_entry_ends: set[str] | frozenset[str] = frozenset(),
-                            am_detector=None, overrides=()) -> DocumentLayers:
+                            am_detector=None, overrides=(), verse_tho: bool = False) -> DocumentLayers:
     """Gán dòng của MỘT tài liệu vào các lớp (han/am/nghia/tho) từ stream OCR duy nhất.
 
     - Không phụ thuộc vào 'source' (chi_tra/vie).
@@ -500,6 +500,30 @@ def assign_document_unified(work_id: str, doc: Document, layer_cfg: dict, meta_c
             started.add("nghia")
             review.append(review_row(work_id, doc.id, "nghia", "am_reassigned_to_nghia",
                                      sorted({x.page for x in am_lines}), why, [am_lines[0].source_id]))
+
+    if am_detector is not None and getattr(am_detector, "split_lines", False) and grouped.get("am") \
+            and grouped.get("han"):
+        am_sorted = sorted(grouped["am"], key=lambda x: (x.page, x.index))
+        k = am_detector.split([x.text for x in grouped["han"]], [x.text for x in am_sorted],
+                              [bool(is_header and is_header(x)) for x in am_sorted])
+        if k:
+            tail = am_sorted[k:]
+            grouped["am"] = am_sorted[:k]
+            grouped["nghia"] = tail + grouped.get("nghia", [])
+            started.add("nghia")
+            review.append(review_row(work_id, doc.id, "nghia", "am_tail_split_to_nghia",
+                                     sorted({x.page for x in tail}), tail[0].text, [tail[0].source_id]))
+
+    if verse_tho and "tho" not in grouped and grouped.get("am") and grouped.get("nghia"):
+        from src.segmentation.am_detect import verse_tho_split
+        ng = sorted(grouped["nghia"], key=lambda x: (x.page, x.index))
+        k = verse_tho_split([x.text for x in sorted(grouped["am"], key=lambda x: (x.page, x.index))],
+                            [x.text for x in ng])
+        if k:
+            grouped["nghia"], grouped["tho"] = ng[:k], ng[k:]
+            started.add("tho")
+            review.append(review_row(work_id, doc.id, "tho", "nghia_tail_split_to_tho",
+                                     sorted({x.page for x in ng[k:]}), ng[k].text, [ng[k].source_id]))
 
     whole_excluded = False
     if overrides:

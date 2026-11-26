@@ -392,6 +392,10 @@ TRANSLATOR_RE = re.compile(r"^\s*(?:[A-ZĐÀ-Ỹ][^\s,.;:!?()]*\s+){1,4}dịch(?
 TRANSLATOR_SHORT_RE = re.compile(
     r"^\s*[A-ZĐÀ-Ỹ][^\d,;:!?()]{0,60}?\s(?:dịch|dich)(?:\s+(?:thơ|tho))?\s*\.?\s*$")
 TRANSLATOR_MAX_WORDS = 8
+# Sửa D: dòng nguồn "Trích Dật thi lược toản", "Theo Tang thương ngẫu lục": tên sách viết hoa chữ đầu, <= 10 từ, KHÔNG
+# có dấu kết câu (dòng phiên âm "Trích thủy xao thiềm sổ cử bôi." có chữ thường sau "Trích" và dấu chấm -> giữ).
+SOURCE_LINE_RE = re.compile(r"^\s*\(?(?:Trích|Theo)\s+[A-ZĐÀ-Ỹ][^.!?;:]*?[)\s]*$")
+SOURCE_MAX_WORDS = 10
 
 
 def is_translator_line(text: str, layer: str) -> bool:
@@ -431,6 +435,9 @@ def capture_note_lines(lines: list[RawLine], cfg: MetadataConfig, layer: str
         text = ln.text.strip()
         if COMPOSITION_RE.match(text):
             captured.append(("composition", ln))
+        elif (getattr(cfg, "capture_source_lines", False) and SOURCE_LINE_RE.match(text)
+              and len(text.split()) <= SOURCE_MAX_WORDS):
+            captured.append(("source", ln))
         elif is_translator_line(text, layer) or (names and _name_key(text) in names):
             captured.append(("translator", ln))
         else:

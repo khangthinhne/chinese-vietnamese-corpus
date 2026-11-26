@@ -55,6 +55,16 @@ DOC_LONG_FACTOR = 5
 DOC_SHORT_LINES = 2
 MISMATCH = 0.30
 BEAD_MIN_SCORE = 0.5
+# Dòng rác OCR: token mô hình, LaTeX, pinyin "-: zhuǎn", câu tiếng Anh (>= 3 từ thông dụng, không có chữ Việt có dấu)
+OCR_JUNK_RE = re.compile(r"\[UNCLEAR\]|\\[a-zA-Z]+\{|\$\\|^\s*-:\s*\S+\s*$")
+ENGLISH_WORD_RE = re.compile(r"\b(?:the|and|of|is|are|this|that|with|from|which|text|image|poem|verse)\b", re.I)
+VIE_MARK_RE = re.compile(r"[À-ỹĐđ]")
+# Dòng nguồn ngắn ("Trích ...", "Theo ...")
+from src.cleaning.metadata import SOURCE_LINE_RE, SOURCE_MAX_WORDS  # noqa: E402  (cùng luật với bước clean)
+# Cổng "đủ tốt" (đề xuất của người dùng, task clean đầy đủ 2026-11-27)
+GATE_MAX_LEAK_SHARE = 0.01
+NOTE_NUMBER_RE = re.compile(r"^\s*(\d{1,2})\s*[.)]\s*\S")
+GATE_MIN_HAN_AM_10PCT = 0.85
 
 
 # ----------------------------------------------------------------------------- văn bản
@@ -142,11 +152,13 @@ def load_work(layout: DataLayout, pages: list[int] | None) -> dict:
 
 
 # ----------------------------------------------------------------------------- 3. kế toán dòng
-def metadata_source_ids(metadata: list[dict], lines: dict[str, dict]) -> dict[str, str]:
+def metadata_source_ids(metadata: list[dict], lines: dict[str, dict], taken: set[str] | None = None) -> dict[str, str]:
     """Metadata ghi ID dòng NỘI BỘ của tài liệu, không phải ID luồng: ánh xạ bằng (trang, văn bản)."""
     by_page: dict[int, dict[str, list[str]]] = defaultdict(lambda: defaultdict(list))
+    by_page_sids: dict[int, list[str]] = defaultdict(list)
     for sid, ln in lines.items():
         by_page[ln["page"]][match_key(ln["text"])].append(sid)
+        by_page_sids[ln["page"]].append(sid)
     out: dict[str, str] = {}
     for doc in metadata:
         groups = list(doc["metadata"].items()) + [("uncertain", doc["uncertain"])]
@@ -154,10 +166,23 @@ def metadata_source_ids(metadata: list[dict], lines: dict[str, dict]) -> dict[st
             for occs in per_layer.values():
                 for occ in occs:
                     key = match_key(occ["text"])
+                    exact = norm_line(occ["text"])
+                    tokens = {match_key(w) for w in occ["text"].split()}
                     for page in occ.get("pages") or []:
-                        # một trường metadata có thể ghép nhiều dòng liên tiếp ("TIÊU ĐỀ DÒNG 1 DÒNG 2")
+                        # dòng có chữ y hệt (phân biệt hoa/thường) thắng: "LÝ HOẠC LUẬN" (tiêu đề nghia) không được
+                        # ghép nhầm vào dòng am "Lý hoạc luận." cùng trang
+                        same = [sid for sid in by_page_sids.get(page, []) if norm_line(lines[sid]["text"]) == exact]
+                        # hai dòng cùng chữ ("I" của tiêu đề và "I" số bài thơ): ưu tiên dòng chưa nằm trong lớp nào
+                        free = [sid for sid in same if not taken or sid not in taken]
+                        same = free or same
+                        if same:
+                            for sid in same:
+                                out.setdefault(sid, f"metadata:{name}")
+                            continue
+                        # một trường metadata có thể ghép nhiều dòng liên tiếp ("TIÊU ĐỀ DÒNG 1 DÒNG 2", cả dòng "I")
                         for line_key, sids in by_page.get(page, {}).items():
-                            if line_key == key or (len(line_key) >= 2 and line_key in key):
+                            if (line_key == key or (len(line_key) >= 2 and line_key in key)
+                                    or (line_key and line_key in tokens)):
                                 for sid in sids:
                                     out.setdefault(sid, f"metadata:{name}")
     return out
@@ -190,31 +215,94 @@ def build_destinations(data: dict) -> dict[str, list[str]]:
         for sid in h["source_ids"]:
             if h["kind"] != "document_start":          # mốc mở tài liệu trỏ vào dòng Hán đã nằm trong lớp han
                 dest[sid].append("heading")
-    for sid, what in metadata_source_ids(data["metadata"], data["lines"]).items():
+    in_layers = set(dest)
+    for sid, what in metadata_source_ids(data["metadata"], data["lines"], in_layers).items():
         dest[sid].append(what)
     for r in data["review"]:
-        if r["reason"] in ("unassigned_line", "dropped_cross_stream"):
+        if r["reason"] in ("unassigned_line", "dropped_cross_stream", "override_excluded", "override_note"):
             for sid in r["source_ids"]:
-                dest[sid].append("unassigned" if r["reason"] == "unassigned_line" else "dropped_cross_stream")
+                # ghi đè config (src/segmentation/overrides.py) cũng là một nơi đến có dấu vết
+                dest[sid].append({"unassigned_line": "unassigned"}.get(r["reason"], r["reason"]))
     return dest
 
 
 # ----------------------------------------------------------------------------- 3. rò rỉ
-def leakage(layer_rows: dict[str, list[dict]], *, headers=None, translator_names=()) -> dict:
-    """Đếm dòng rò rỉ trong thân lớp (04_segmentation/layers)."""
+def ocr_junk(text: str) -> bool:
+    return bool(OCR_JUNK_RE.search(text)) or (not VIE_MARK_RE.search(text)
+                                               and len(ENGLISH_WORD_RE.findall(text)) >= 3)
+
+
+EDGE_LINES = 2          # số dòng đầu/cuối trang coi là "mép trang" (vị trí của tiêu đề chạy, số trang)
+
+
+def edge_running_headers(lines: dict[str, dict], order: dict[str, int], headers) -> set[str]:
+    """Khoá `norm_line` của các dòng lặp (`headers`) mà đa số lần xuất hiện nằm trong EDGE_LINES dòng đầu/cuối của
+    trang. Dòng lặp ở giữa trang ("Bài 2", điệp khúc "Ngươi chẳng thấy:", "Than ôi!") là nội dung, không phải rò rỉ."""
+    by_page: dict[int, list[str]] = defaultdict(list)
+    for sid in sorted(lines, key=lambda x: order.get(x, 0)):
+        by_page[lines[sid]["page"]].append(sid)
+    edge, total = Counter(), Counter()
+    for sids in by_page.values():
+        for i, sid in enumerate(sids):
+            text = lines[sid]["text"]
+            if not headers(text):
+                continue
+            key = norm_line(text)
+            total[key] += 1
+            if i < EDGE_LINES or i >= len(sids) - EDGE_LINES:
+                edge[key] += 1
+    return {k for k in total if edge[k] * 2 > total[k]}
+
+
+def page_note_numbers(lines: dict[str, dict]) -> dict[int, set[str]]:
+    """Số của các mục chú thích "7. Xương Lê: ..." theo trang (mọi dòng luồng Việt của trang)."""
+    out: dict[int, set[str]] = defaultdict(set)
+    for ln in lines.values():
+        m = NOTE_NUMBER_RE.match(ln["text"]) if ln["stream"] == "vie" else None
+        if m:
+            out[ln["page"]].add(m.group(1))
+    return out
+
+
+def inline_note_digit(layer: str, text: str, page: int, note_numbers: dict[int, set[str]] | None) -> bool:
+    """am: mọi chữ số 1-2 chữ số giữa chữ (phiên âm không có số thật). nghia/tho (có số thật: "Ngày 20 tháng 2",
+    "Bài 2"): khi có `note_numbers`, chỉ tính số trùng số một mục chú thích trên cùng trang."""
+    found = [m.group(0).strip() for m in INLINE_NOTE_DIGIT_RE.finditer(text)]
+    if not found:
+        return False
+    if layer == "am" or note_numbers is None:
+        return True
+    return any(d in note_numbers.get(page, ()) for d in found)
+
+
+def leakage(layer_rows: dict[str, list[dict]], *, headers=None, translator_names=(),
+            skip_pages: set[int] | frozenset[int] = frozenset(),
+            note_numbers: dict[int, set[str]] | None = None, edge_keys: set[str] | None = None) -> dict:
+    """Đếm dòng rò rỉ trong thân lớp theo loại. `rows` / `leak_rows`: số dòng của lớp / số dòng có ít nhất một loại
+    (một dòng nhiều loại tính 1 lần) -> `leak_share` cho cổng. Dòng trên `skip_pages` (chờ OCR lại) không tính."""
     out: dict[str, Counter] = {layer: Counter() for layer in layer_rows}
     examples: dict[str, list] = defaultdict(list)
     names = {fold(n) for n in translator_names}
+    totals: dict[str, int] = {layer: 0 for layer in layer_rows}
+    leaking: dict[str, set] = {layer: set() for layer in layer_rows}
 
     def hit(layer, kind, row):
         out[layer][kind] += 1
+        leaking[layer].add(row["id"])
         if len(examples[f"{layer}:{kind}"]) < 5:
             examples[f"{layer}:{kind}"].append((row["id"], row["page"], row["text"][:70]))
 
     for layer, rows in layer_rows.items():
         for row in rows:
+            if int(row["page"]) in skip_pages:
+                continue
+            totals[layer] += 1
             text = row["text"]
             f = fold(text)
+            if ocr_junk(text):
+                hit(layer, "ocr_junk", row)
+            if layer != "han" and SOURCE_LINE_RE.match(text) and len(text.split()) <= SOURCE_MAX_WORDS:
+                hit(layer, "source_line", row)
             if layer == "han":
                 if has_latin_outside_mask(text):
                     hit(layer, "latin", row)
@@ -223,17 +311,20 @@ def leakage(layer_rows: dict[str, list[dict]], *, headers=None, translator_names
                     hit(layer, "cjk", row)
                 if NOTE_ENTRY_RE.match(text) and not is_upper_title(text):
                     hit(layer, "note_entry", row)
-                if INLINE_NOTE_DIGIT_RE.search(text):
+                if inline_note_digit(layer, text, int(row["page"]), note_numbers):
                     hit(layer, "inline_note_digit", row)
             if any(f.startswith(w) for w in SECTION_WORDS) and len(f.split()) <= 4:
                 hit(layer, "section_heading", row)
             if PAGE_NUMBER_RE.match(text):
                 hit(layer, "page_number", row)
-            if headers is not None and headers(text):
-                hit(layer, "repeated_line", row)       # lặp >= 3 trang: tiêu đề chạy, "X dịch", "Trích ..."
+            if headers is not None and headers(text) and (edge_keys is None or norm_line(text) in edge_keys):
+                # lặp >= 3 trang (và, khi có edge_keys, nằm ở mép trang): tiêu đề chạy, số trang, watermark
+                hit(layer, "repeated_line", row)
             if f in names:
                 hit(layer, "translator_name", row)
-    return {"counts": {k: dict(v) for k, v in out.items()}, "examples": dict(examples)}
+    return {"counts": {k: dict(v) for k, v in out.items()}, "examples": dict(examples),
+            "rows": totals, "leak_rows": {k: len(v) for k, v in leaking.items()},
+            "leak_share": {k: round(len(leaking[k]) / totals[k], 4) if totals[k] else 0.0 for k in totals}}
 
 
 # ----------------------------------------------------------------------------- 3. Hán <-> âm, thơ, nghĩa
@@ -244,13 +335,14 @@ def by_doc(rows: list[dict]) -> dict[str, list[dict]]:
     return out
 
 
-def han_am_consistency(han_rows: list[dict], am_rows: list[dict], headers=None) -> dict:
+def han_am_consistency(han_rows: list[dict], am_rows: list[dict], headers=None,
+                       skip_docs: set[str] | frozenset[str] = frozenset()) -> dict:
     """Theo tài liệu: chữ Hán vs âm tiết (bỏ dòng tiêu đề có số ở lớp han, tiêu đề VIẾT HOA ở lớp am vì tiêu đề
     thường đi vào metadata ở một lớp mà không ở lớp kia). Thơ (dòng Hán trung bình <= 8 chữ, số dòng bằng nhau):
     so từng dòng."""
     han_d, am_d = by_doc(han_rows), by_doc(am_rows)
     docs = []
-    for doc in sorted(set(han_d) & set(am_d)):
+    for doc in sorted((set(han_d) & set(am_d)) - set(skip_docs)):
         h = [r for r in han_d[doc] if not numbered_title(r["text"])]
         a = [r for r in am_d[doc] if is_body_line(r["text"], headers)]
         hc = sum(han_units(r["text"]) for r in h)
@@ -277,7 +369,13 @@ def han_am_consistency(han_rows: list[dict], am_rows: list[dict], headers=None) 
     near = sum(0 < d["diff"] <= 0.10 for d in docs)
     far = [d for d in docs if d["diff"] > 0.10]
     verse = [d for d in docs if d["verse_line_match"] is not None]
-    return {"docs": len(docs), "exact": exact, "within_10pct": near, "off": len(far),
+    split = {}
+    for kind, sel in (("verse", [d for d in docs if d["verse_line_match"] is not None]),
+                      ("prose", [d for d in docs if d["verse_line_match"] is None])):
+        m = len(sel) or 1
+        split[kind] = {"docs": len(sel), "exact_share": round(sum(d["diff"] == 0 for d in sel) / m, 3),
+                       "within_10pct_share": round(sum(d["diff"] <= 0.10 for d in sel) / m, 3)}
+    return {"docs": len(docs), "exact": exact, "within_10pct": near, "off": len(far), "by_kind": split,
             "exact_share": round(exact / n, 3), "within_10pct_share": round((exact + near) / n, 3),
             "verse_docs": len(verse),
             "verse_all_lines_match": sum(d["verse_line_match"] == 1 for d in verse),
@@ -606,7 +704,28 @@ def stratified_sample(docs: list[dict], suspects: list[dict], n: int, seed: int)
 
 
 # ----------------------------------------------------------------------------- main
-def audit(layout: DataLayout, cfg: dict | None, top: int = 20, sample: int = 5, seed: int = 20261126) -> dict:
+def gate(acc: dict, leak_struct: dict, ha_struct: dict) -> dict:
+    """Cổng "đủ tốt" của một work, điều kiện 1-3 (điều kiện 4, rà bằng mắt, ghi tay trong báo cáo)."""
+    cjk = sum(leak_struct["counts"].get(x, {}).get("cjk", 0) for x in VIE_LAYERS)
+    latin = leak_struct["counts"].get("han", {}).get("latin", 0)
+    checks = {
+        "1_script_and_accounting": {"cjk_in_vie": cjk, "latin_in_han": latin, "lost": acc["lost"],
+                                    "double": acc["double"],
+                                    "pass": cjk == 0 and latin == 0 and acc["lost"] == 0 and acc["double"] == 0},
+        "2_leak_share": {"share": leak_struct["leak_share"], "max": GATE_MAX_LEAK_SHARE,
+                         "pass": all(v < GATE_MAX_LEAK_SHARE for k, v in leak_struct["leak_share"].items()
+                                     if leak_struct["rows"].get(k))},
+        "3_han_am_10pct": {"share": ha_struct["within_10pct_share"], "min": GATE_MIN_HAN_AM_10PCT,
+                           "by_kind": ha_struct.get("by_kind"),
+                           "pass": ha_struct["within_10pct_share"] >= GATE_MIN_HAN_AM_10PCT},
+    }
+    return {"checks": checks, "pass_1_3": all(c["pass"] for c in checks.values())}
+
+
+def audit(layout: DataLayout, cfg: dict | None, top: int = 20, sample: int = 5, seed: int = 20261126,
+          pending_pages: set[int] | frozenset[int] = frozenset()) -> dict:
+    """`pending_pages`: trang "chờ OCR lại", tách khỏi số liệu cổng (dòng trên các trang này và tài liệu chạm vào
+    chúng không tính trong rò rỉ/Hán-âm của cổng; dòng mất/hai nơi trên các trang đó không tính)."""
     cfg = cfg or {}
     pages = parse_pages(cfg.get("common", {}).get("pages")) if cfg.get("common", {}).get("pages") else None
     data = load_work(layout, pages)
@@ -632,6 +751,23 @@ def audit(layout: DataLayout, cfg: dict | None, top: int = 20, sample: int = 5, 
     ng = nghia_check(data["layers"]["han"], data["layers"]["nghia"], data["headings"])
     sents = sentence_stats(data["sentences"], data["structural"])
     beads = bead_rates(data["beads"])
+    pending = set(pending_pages)
+    pending_docs = {d["document_id"] for d in data["documents"] if pending & set(d["pages"])}
+    struct_rows = {k: [{"id": r["id"], "page": int(r["page"]), "text": r.get("text", ""),
+                        "document_id": r.get("document_id", "")} for r in v] for k, v in data["structural"].items()}
+    gate_leak = leakage(struct_rows, headers=headers, translator_names=translators, skip_pages=pending,
+                        note_numbers=page_note_numbers(data["lines"]),
+                        edge_keys=edge_running_headers(data["lines"], data["order"], headers))
+    gate_ha = han_am_consistency(data["structural"]["han"], data["structural"]["am"], headers, skip_docs=pending_docs)
+    lost_gate = [sid for sid in acc["lost_ids"] if data["lines"][sid]["page"] not in pending]
+    double_gate = [sid for sid in dest if sid in data["lines"] and len(set(dest[sid])) > 1
+                   and data["lines"][sid]["page"] not in pending]
+    gate_res = gate({"lost": len(lost_gate), "double": len(double_gate)}, gate_leak, gate_ha)
+    gate_res.update({"pending_pages": sorted(pending), "pending_docs": sorted(pending_docs),
+                     "leak_counts": gate_leak["counts"], "leak_rows": gate_leak["leak_rows"],
+                     "rows": gate_leak["rows"], "leak_examples": gate_leak["examples"],
+                     "lost_examples": [(sid, data["lines"][sid]["text"][:60]) for sid in lost_gate[:10]],
+                     "double_examples": [(sid, sorted(set(dest[sid]))) for sid in double_gate[:10]]})
     suspects = rank_suspects(data["documents"], docs_chk, ha, sents, beads,
                              leak_per_doc(data["layers"], headers), top)
     valid_rates = [b["rate"] for b in beads.values()]
@@ -651,8 +787,18 @@ def audit(layout: DataLayout, cfg: dict | None, top: int = 20, sample: int = 5, 
                   "total_beads": sum(b["beads"] for b in beads.values()),
                   "doc_rate_median": statistics.median(valid_rates) if valid_rates else None},
         "suspects": suspects, "sample": stratified_sample(data["documents"], suspects, sample, seed),
+        "gate": gate_res, "beads_per_doc": beads,
     }
     return report
+
+
+def gate_line(g: dict) -> str:
+    parts = []
+    for name, c in g["checks"].items():
+        shown = {k: v for k, v in c.items() if k not in ("pass", "by_kind", "max", "min")}
+        parts.append(f"{name}={'ok' if c['pass'] else 'X'} {shown}")
+    verdict = "ĐẠT" if g["pass_1_3"] else "KHÔNG ĐẠT"
+    return f"   CỔNG 1-3 {verdict} (trừ {len(g['pending_pages'])} trang chờ OCR lại): " + "; ".join(parts)
 
 
 def summary(r: dict) -> str:
@@ -677,6 +823,7 @@ def summary(r: dict) -> str:
         f"{s['han_am_count_mismatch']['causes']} vượt tài liệu {s['cross_document']['count']}",
         f"   bead han-am hợp lệ {r['beads']['valid_beads']}/{r['beads']['total_beads']} "
         f"(trung vị theo tài liệu {r['beads']['doc_rate_median']})",
+        gate_line(r["gate"]),
     ]
     return "\n".join(lines)
 
@@ -690,11 +837,13 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--top", type=int, default=20)
     p.add_argument("--sample", type=int, default=5)
     p.add_argument("--seed", type=int, default=20261126)
+    p.add_argument("--pending-pages", default="", help="Trang chờ OCR lại, tách khỏi số liệu cổng, vd 208,286")
     args = p.parse_args(argv)
     cfg_path = Path(args.config) if args.config else Path("configs") / f"{args.work_id}.json"
     cfg = json.loads(cfg_path.read_text(encoding="utf-8")) if cfg_path.exists() else {}
     layout = DataLayout(Path(args.data_root), args.work_id)
-    report = audit(layout, cfg, args.top, args.sample, args.seed)
+    pending = set(parse_pages(args.pending_pages)) if args.pending_pages else set()
+    report = audit(layout, cfg, args.top, args.sample, args.seed, pending)
     print(summary(report))
     if args.json:
         Path(args.json).write_text(json.dumps(report, ensure_ascii=False, indent=1, default=list), encoding="utf-8")

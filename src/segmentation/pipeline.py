@@ -212,7 +212,9 @@ def run(args) -> None:
                                                    # mục chú thích "1. Thuật ngữ: ..." kết thúc lớp Việt (mặc định tắt)
                                                    note_entry_ends=set(seg.get("note_entry_ends", [])),
                                                    am_detector=am_detector,
-                                                   overrides=matched)
+                                                   overrides=matched,
+                                                   # sửa G (mặc định tắt): dịch thơ dính vào nghia khi mất "Dịch thơ:"
+                                                   verse_tho=bool(seg.get("verse_tho_split", False)))
             elif is_unified:
                 assigned = assign_document_unified(args.work_id, doc, layer_cfg, meta_cfg)
             else:

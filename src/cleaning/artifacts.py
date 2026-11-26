@@ -16,7 +16,9 @@ import re
 from dataclasses import dataclass, field
 
 from src.cleaning.audit import Audit
-from src.cleaning.model import AM_DIGIT_MARKER_RE, LETTER_MARKER_RE, MARKER_RE, OCRCleaningConfig, OCR_ARTIFACT, RawLine, UNCERTAIN
+from src.cleaning.model import (AM_DIGIT_AFTER_PUNCT_RE, AM_DIGIT_LINE_END_RE, AM_DIGIT_MARKER_RE, NUMBERING_WORD_RE,
+                                PAGE_NOTE_MARKER_RE)
+from src.cleaning.model import LETTER_MARKER_RE, MARKER_RE, OCRCleaningConfig, OCR_ARTIFACT, RawLine, UNCERTAIN
 
 # chữ Latin đơn lẻ / chữ+cục số không thuộc từ: "lợi N cho", "nước ta. M4"
 _ISOLATED_LATIN = re.compile(r"(?<![A-Za-zÀ-ỹđĐ])([A-Za-z]|[A-Za-z]\d)(?![A-Za-zÀ-ỹđĐ])")
@@ -61,6 +63,28 @@ def clean_ocr_artifacts(text: str, config: OCRCleaningConfig,
         if found and audit is not None and line is not None:
             audit.add("remove_marker", "in_text_marker", rule="AM_DIGIT_MARKER_RE", line=line,
                       original=before, processed=out)
+        if getattr(config, "am_markers_extended", False) and not NUMBERING_WORD_RE.search(out):
+            for rx, rule in ((AM_DIGIT_AFTER_PUNCT_RE, "AM_DIGIT_AFTER_PUNCT_RE"),
+                             (AM_DIGIT_LINE_END_RE, "AM_DIGIT_LINE_END_RE")):
+                before = out
+                found = [m.group(0).strip() for m in rx.finditer(out)]
+                out = rx.sub("", out)
+                res.removed.extend(("am_digit_marker", m) for m in found)
+                if found and audit is not None and line is not None:
+                    audit.add("remove_marker", "in_text_marker", rule=rule, line=line, original=before, processed=out)
+
+    notes = getattr(config, "page_note_numbers", None) or {}
+    if (config.strip_markers and layer in ("nghia", "tho") and line is not None and notes.get(line.page)
+            and not re.match(r"^\s*\d{1,2}\s*[.)]", out)):
+        nums = notes[line.page]
+        before = out
+        found = [m.group(1) for m in PAGE_NOTE_MARKER_RE.finditer(out) if m.group(1) in nums]
+        if found:
+            out = PAGE_NOTE_MARKER_RE.sub(lambda m: "" if m.group(1) in nums else m.group(0), out)
+            res.removed.extend(("page_note_marker", d) for d in found)
+            if audit is not None:
+                audit.add("remove_marker", "in_text_marker", rule="PAGE_NOTE_MARKER_RE", line=line,
+                          original=before, processed=out)
 
     for pat in config.remove_patterns:
         rx = re.compile(pat)

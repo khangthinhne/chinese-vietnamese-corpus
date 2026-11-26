@@ -33,6 +33,9 @@ NOTE_ENTRY_PATTERNS = [
     r"^\d{1,3}\s*\.\s*(?:\d{1,3}\s*\.\s*)*[A-ZĐÀ-Ỹ][^:：.?!]{0,60}[:：]\s",
     r"^\d{1,3}\s*\.\s*(?:\d{1,3}\s*\.\s*)*(?:Bản|Trong|Câu|Chữ|Nguyên|Tức|Xem)\s",
 ]
+# Chữ số chỉ mục chú thích trong thân lớp Việt ("thủy 4 hữu", "Chiêu Lăng 6 năm") và mục chú thích mang số đó.
+INLINE_MARKER_RE = re.compile(r"[^\W\d_][,.;:!?”\"')]?[ \t]+(\d{1,2})(?=[ \t]+[^\W\d_]|[ \t]*[,.;:!?)]|[ \t]*$)")
+MARKER_ENTRY_RE = re.compile(r"^(\d{1,2})\s*[.)]\s*[\"“'(]?[A-ZĐÀ-Ỹ]")
 VI_COMPLETE = re.compile(r"[.?!…;:\"”’')﹚\]]$")   # dòng đã trọn câu (gồm ':')
 HAN_COMPLETE_CH = "。！？；﹖﹕﹒」』”’）﹚"
 
@@ -89,6 +92,32 @@ def detect_footnotes(lines: list[RawLine], cfg: FootnoteConfig, layer: str,
     if getattr(cfg, "note_entries", False) and layer != "han":
         item_res += [re.compile(p) for p in NOTE_ENTRY_PATTERNS]
     counter = 0
+    # sửa B: số chỉ mục xuất hiện trong thân của TỪNG trang (dòng không tự là mục chú thích)
+    page_markers: dict[int, set[str]] = {}
+    if getattr(cfg, "note_entry_markers", False) and layer != "han":
+        for ln in lines:
+            src = ln.raw_text or ln.text
+            if not MARKER_ENTRY_RE.match(src.strip()):
+                page_markers.setdefault(ln.page, set()).update(m.group(1) for m in INLINE_MARKER_RE.finditer(src))
+
+    extra = getattr(cfg, "stream_page_markers", None) or {}
+
+    last_entry: dict[str, int] = {}          # số + trang của mục chú thích (theo chỉ mục) gần nhất
+
+    def marker_entry(line: RawLine) -> bool:
+        m = MARKER_ENTRY_RE.match(line.text.strip())
+        if not m or not (page_markers or extra):
+            return False
+        num = m.group(1)
+        if num in page_markers.get(line.page, ()) or num in extra.get(line.page, ()):
+            return True
+        # mục N ngay sau mục N-1 đã nhận (cùng trang hoặc trang kế): OCR làm mất chỉ mục N trong thân
+        return (last_entry.get("num") == int(num) - 1 and 0 <= line.page - last_entry.get("page", -99) <= 1)
+
+    def remember(line: RawLine) -> None:
+        m = MARKER_ENTRY_RE.match(line.text.strip())
+        if m:
+            last_entry.update(num=int(m.group(1)), page=line.page)
 
     def is_bib(text: str) -> bool:
         return any(r.search(text) for r in bib_res)
@@ -197,10 +226,15 @@ def detect_footnotes(lines: list[RawLine], cfg: FootnoteConfig, layer: str,
             consumed.add(i)
             make(FOOTNOTE, [i])
             continue
-        if _prev_complete(last_kept, layer) and any(r.search(probe) for r in item_res):
+        by_marker = marker_entry(ln)
+        if ((_prev_complete(last_kept, layer) and any(r.search(probe) for r in item_res))
+                or by_marker):
+            if by_marker:
+                remember(ln)
             idxs, j = [i], i
             while (j + 1 < len(lines) and (j + 1) not in consumed
                    and not _complete(lines[j].text, layer)
+                   and not marker_entry(lines[j + 1])
                    and not any(r.search(lines[j + 1].text.strip()) for r in item_res)):
                 j += 1
                 idxs.append(j)

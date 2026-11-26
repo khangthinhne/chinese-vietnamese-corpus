@@ -177,6 +177,16 @@ def _clean_argv(cfg: dict, layer: str, base: list[str], force: bool, extra: list
     _opt(argv, "--dup-min-len", cc.get("duplicate_min_len"))
     if cc.get("footnotes", {}).get("note_entries") is True:
         argv.append("--note-entries")
+    if cc.get("footnotes", {}).get("note_entry_markers") is True:
+        argv.append("--note-entry-markers")
+    if cc.get("stream_running_headers") is True:
+        argv.append("--stream-running-headers")
+    if cc.get("stream_note_markers") is True:
+        argv.append("--stream-note-markers")
+    if cc.get("am_markers_extended") is True:
+        argv.append("--am-markers-extended")
+    if cc.get("capture_source_lines") is True:
+        argv.append("--capture-source-lines")
     for flag, key in (("--no-paren-notes", "detect_parentheses"),
                       ("--no-bib-notes", "detect_bibliographic_notes")):
         if cc.get("footnotes", {}).get(key) is False:
