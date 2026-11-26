@@ -509,6 +509,40 @@ def assign_document_unified(work_id: str, doc: Document, layer_cfg: dict, meta_c
             review.append(review_row(work_id, doc.id, layer,
                                      "metadata_uncertain", u.get("pages", []),
                                      u.get("text", ""), u.get("source_ids", [])))
+        by_id = {x.id: x for x in rows}
+        for ln, _ in md.restored:
+            src = by_id.get(ln.id)
+            review.append(review_row(work_id, doc.id, layer, "han_title_line_restored", [ln.page], ln.text,
+                                     list(src.source_ids) if src else []))
+    suspect = han_title_suspect(metadata_rows)
+    if suspect:
+        review.append(review_row(work_id, doc.id, "han", "han_title_suspect", suspect["pages"], suspect["text"]))
 
     return DocumentLayers(lines=lines_by_layer, headings=headings,
                           metadata_rows=metadata_rows, uncertain=uncertain, review=review)
+
+
+HAN_TITLE_SUSPECT_RATIO = 0.5
+
+
+def han_title_suspect(metadata_rows: list[dict]) -> dict | None:
+    """Tiêu đề Hán nghi là rác OCR (tiêu đề chữ to): số chữ Hán lệch số âm tiết của tiêu đề âm > 50% (và > 2).
+    Chỉ cảnh báo review, không sửa dữ liệu."""
+    def first_title(layer):
+        for row in metadata_rows:
+            if row.get("layer") == layer:
+                for f in row.get("fields", []):
+                    if f.get("field") == "title":
+                        return f
+        return None
+    han, am = first_title("han"), first_title("am")
+    if not han or not am:
+        return None
+    n_han = sum(1 for c in han["text"] if "㐀" <= c <= "鿿" or "豈" <= c <= "﫿")
+    n_am = len(re.findall(r"[^\W\d_]+", am["text"]))
+    if not n_han or not n_am:
+        return None
+    gap = abs(n_han - n_am)
+    if gap > 2 and gap > HAN_TITLE_SUSPECT_RATIO * max(n_han, n_am):
+        return {"text": f"{han['text']} ({n_han} chữ) / {am['text']} ({n_am} âm tiết)", "pages": han.get("pages", [])}
+    return None

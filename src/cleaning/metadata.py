@@ -77,6 +77,8 @@ class DocumentMetadata:
     uncertain: list[MetadataUncertain] = field(default_factory=list)
     excluded: list[tuple[RawLine, str]] = field(default_factory=list, repr=False)  # (dòng, lý do)
     status: str = "ok"                           # ok | no_metadata (không tìm thấy khối nào)
+    # dòng từng bị gom vào tiêu đề Hán nhưng trả về chính văn (tiêu đề Hán tối đa 1 dòng + 1 phụ đề trong ngoặc)
+    restored: list[tuple[RawLine, str]] = field(default_factory=list, repr=False)
 
     def to_row(self, work_id: str, layer: str) -> dict:
         return {"work_id": work_id, "layer": layer, "document_id": self.document_id,
@@ -172,9 +174,23 @@ def document_id_of(line: RawLine) -> str:
 # --------------------------------------------------------------------------- #
 # Trích xuất theo từng tài liệu
 # --------------------------------------------------------------------------- #
+HAN_TITLE_MAX_LINES = 1                          # tiêu đề Hán: 1 dòng (+ 1 dòng phụ đề trong ngoặc)
+_HAN_SUBTITLE_RE = re.compile(r"^\s*[(（]")
+
+
+def _limit_han_title(title_lines: list[RawLine]) -> tuple[list[RawLine], list[RawLine]]:
+    """(dòng giữ làm tiêu đề, dòng trả về chính văn). Tiêu đề chữ to hay bị OCR thành rác, khi đó mẫu tiêu đề
+    ^[Hán]{2,12}$ gom luôn vài dòng thân văn đầu (CPO_20 tr.268 "又安天氣和暢…") vào "tiêu đề"."""
+    keep = title_lines[:HAN_TITLE_MAX_LINES]
+    rest = title_lines[HAN_TITLE_MAX_LINES:]
+    if rest and _HAN_SUBTITLE_RE.match(rest[0].raw_text or rest[0].text):
+        keep, rest = keep + rest[:1], rest[1:]
+    return keep, rest
+
+
 def _flush_block(doc: DocumentMetadata, block: list[tuple[RawLine, bool]],
                  explicit_author: list[RawLine], attr_lines: list[RawLine],
-                 cfg: MetadataConfig, han: bool) -> None:
+                 cfg: MetadataConfig, han: bool) -> list[RawLine]:
     """Chốt khối dòng metadata thu được trước khi thân bài bắt đầu.
 
     block = [(dòng, là_tiêu_đề_tường minh)]. Quy tắc tách tiêu đề / tác giả: dòng CUỐI
@@ -190,6 +206,10 @@ def _flush_block(doc: DocumentMetadata, block: list[tuple[RawLine, bool]],
         author_lines = [pool[-1]]
     author_ids = {id(ln) for ln in author_lines}
     title_lines = [ln for ln, _ in block if id(ln) not in author_ids]
+    restored: list[RawLine] = []
+    if han and len(title_lines) > HAN_TITLE_MAX_LINES:
+        title_lines, restored = _limit_han_title(title_lines)
+        doc.restored.extend((ln, "han_title_extra_line") for ln in restored)
     has_explicit_title = any(explicit for _, explicit in block)
     title_conf = "high" if (has_explicit_title or len(pool) >= 2) else "ambiguous"
     joiner = "" if han else " "
@@ -206,6 +226,7 @@ def _flush_block(doc: DocumentMetadata, block: list[tuple[RawLine, bool]],
     _emit("attribution", attr_lines, METADATA_ATTRIBUTION, "high")
     _emit("author", author_lines, METADATA_AUTHOR, "high")
     _emit("title", title_lines, METADATA_TITLE, title_conf)
+    return restored
 
 
 VERSE_LENGTHS = range(4, 8)                      # câu thơ Hán 4/5/6/7 chữ
@@ -242,7 +263,10 @@ def _classify_document(doc_id: str, lines: list[RawLine], cfg: MetadataConfig, h
     attr_lines: list[RawLine] = []
 
     def flush() -> None:
-        _flush_block(doc, block, explicit_author, attr_lines, cfg, han)
+        restored = _flush_block(doc, block, explicit_author, attr_lines, cfg, han)
+        if restored:                             # dòng thân văn bị gom nhầm vào tiêu đề: trả về chính văn
+            restored_ids = {id(x) for x in restored}
+            kept.extend(ln for ln, _ in block if id(ln) in restored_ids)
         block.clear()
         explicit_author.clear()
         attr_lines.clear()

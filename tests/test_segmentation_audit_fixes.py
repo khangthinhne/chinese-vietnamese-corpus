@@ -137,3 +137,31 @@ def test_short_translator_lines_go_to_metadata():
     for text, layer in (("Hình bất vì tâm dịch.", "am"), ("Hình bất vì tâm dịch.", "tho"),
                         ("Từng trải nắng mưa đường trạm dịch,", "nghia"), ("Lời này khó dịch", "nghia")):
         assert not is_translator_line(text, layer), text
+
+
+def test_han_title_keeps_one_line_plus_parenthesized_subtitle():
+    from src.cleaning.metadata import classify_leading_block
+    from src.cleaning.model import MetadataConfig
+    cfg = MetadataConfig(enabled=True, title_patterns=[r"^\s*[一-鿿]{2,12}\s*$"])
+    lines = [RawLine(f"W.001.P0268.L{k:03d}", 268, t, raw_text=t) for k, t in enumerate(
+        ["又安天氣和暢", "有二熟十一月立", "熟然冬夏之間", "八九月間天陰雨。東北風"], 1)]
+    kept, md = classify_leading_block(lines, cfg, "han", "W.001")
+    titles = [f for f in md.fields if f.field == "title"]
+    assert [f.text for f in titles] == ["又安天氣和暢"]
+    assert [ln.text for ln in kept] == ["有二熟十一月立", "熟然冬夏之間", "八九月間天陰雨。東北風"]
+    assert [ln.text for ln, _ in md.restored] == ["有二熟十一月立", "熟然冬夏之間"]
+    sub = [RawLine("W.002.P0001.L001", 1, "呈福大人", raw_text="呈福大人"),
+           RawLine("W.002.P0001.L002", 1, "（國王書呈告）", raw_text="（國王書呈告）"),
+           RawLine("W.002.P0001.L003", 1, "茲欽奉御頒金印誥敕。", raw_text="茲欽奉御頒金印誥敕。")]
+    cfg2 = MetadataConfig(enabled=True, title_patterns=[r"^\s*[一-鿿（）]{2,12}\s*$"])
+    kept2, md2 = classify_leading_block(sub, cfg2, "han", "W.002")
+    assert [f.text for f in md2.fields if f.field == "title"] == ["呈福大人（國王書呈告）"]
+
+
+def test_han_title_suspect_by_length():
+    from src.segmentation.layers import han_title_suspect
+    rows = [{"layer": "han", "fields": [{"field": "title", "text": "广一伯", "pages": [515]}]},
+            {"layer": "am", "fields": [{"field": "title", "text": "TRÌNH THIÊN TRIỀU SẮC SỨ NHỊ VỊ ĐẠI NHÂN"}]}]
+    assert han_title_suspect(rows)["pages"] == [515]
+    rows[0]["fields"][0]["text"] = "呈天朝敕使二位大人"
+    assert han_title_suspect(rows) is None
