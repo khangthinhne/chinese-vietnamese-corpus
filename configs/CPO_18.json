@@ -45,6 +45,12 @@
   "segmentation": {
     "enabled": true,
     "ocr_streams": "han_vie",
+    "document_overrides": [
+      {"start_page": 337, "action": "exclude", "reason": "CPO_18.012 (tr.337-339): lớp am chỉ là 1 dòng rác [UNCLEAR] của Qwen; nửa đầu văn bia chuông Thanh Mai, phiên âm của nó nằm trong bài kế (duyệt 2026-11-27)"},
+      {"start_page": 339, "action": "notes", "layers": ["am"], "implicit_am_only": true, "reason": "CPO_18.013: khảo dị (1)-(47) tr.342-344 (tiêu đề KHAO DI mất dấu) mở ngầm lớp am trước PHIÊN ÂM: (duyệt 2026-11-27)"},
+      {"start_page": 358, "action": "notes", "reason": "CPO_18.015 (tr.358-359): khảo dị Bản B/C của Đề lữ sấn; 2 dòng Hán là chữ trích trong khảo dị (duyệt 2026-11-27)"},
+      {"start_page": 413, "action": "exclude", "reason": "CPO_18.028 (tr.413-415): lớp am là tiểu sử/chú thích, không phải phiên âm của chữ Hán tr.413 (duyệt 2026-11-27)"}
+    ],
     "document": {
       "numbered_heading": true,
       "start_patterns": [],
