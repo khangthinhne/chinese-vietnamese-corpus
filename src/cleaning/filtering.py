@@ -28,7 +28,7 @@ def drop_reason(raw: str, cleaned: str, line: RawLine, cfg: CleanConfig,
         if re.search(pat, raw) or re.search(pat, cleaned):
             return f"pattern:{pat}"
     if cfg.layer == "han":
-        if cjk_ratio(cleaned) < cfg.min_cjk:
+        if cjk_ratio(cleaned.replace("[MASK]", "口")) < cfg.min_cjk:      # [MASK] = 1 chữ khuyết
             return "not_han"
         if is_parenthesized(raw.strip()):
             return "footnote"

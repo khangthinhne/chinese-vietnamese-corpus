@@ -233,7 +233,7 @@ def make_sentences(work_id: str, layer: str, lines: list[RawLine],
         if not text:
             return
         if layer == "han":
-            ok = sum(1 for c in text if cjk_ratio(c) > 0) >= 2
+            ok = sum(1 for c in text.replace("[MASK]", "口") if cjk_ratio(c) > 0) >= 2   # [MASK] = 1 chữ
         else:
             ok = any(ch.isalnum() for ch in text)
         owning_lines = [lines[k] for k in idxs]

@@ -46,6 +46,13 @@ IMPLICIT_TITLE_NEXT = {"am": "nghia"}
 NOTES_AFTER_ATTRIBUTION: tuple[str, ...] = ()
 MODE = "han_vie"
 HEADER_MIN_PAGES = 3                     # dòng lặp lại trên >= 3 trang = tiêu đề chạy (đầu/chân trang)
+# Tiêu đề chạy bị OCR sai dấu/1 chữ ("HOÀNG HOA ĐÔ PHẢ" ~ "ĐỒ", "NGÔ THÌ NHÂN" ~ "NHẬM", CPO_19 tr.190/284/457)
+# vẫn là tiêu đề chạy: so sau khi bỏ dấu, độ giống >= HEADER_FUZZY_RATIO, chỉ với khoá dài >= HEADER_FUZZY_MIN_LEN.
+HEADER_FUZZY_RATIO = 0.88
+HEADER_FUZZY_MIN_LEN = 8
+# Dòng Hán kế tiếp cách dòng trước <= HAN_BLOCK_GAP x bước dòng Hán (trung vị) của trang thì dòng Việt có mép trên
+# lọt vào giữa (bbox Qwen lệch, dòng rác 1 chữ) được đặt SAU dòng Hán đó, không cắt đôi khối Hán.
+HAN_BLOCK_GAP = 1.5
 
 
 def stream_of_layer(layer: str) -> str | None:
@@ -98,10 +105,14 @@ def merge_streams(han: list[OcrLine], vie: list[OcrLine]) -> list[OcrLine]:
     for page in sorted(by_page):
         a, b = by_page[page]
         ka, kb = _keys(a), _keys(b)
+        pitch = _han_pitch(ka)
         i = j = 0
         page_out = []
         while i < len(a) or j < len(b):
-            if j >= len(b) or (i < len(a) and ka[i] <= kb[j]):
+            # dòng Việt lọt vào kẽ giữa hai dòng Hán liền nhau -> để sau dòng Hán kế tiếp (khối Hán không bị cắt)
+            glued = (pitch is not None and 0 < i < len(a) and page_out and page_out[-1] is a[i - 1]
+                     and ka[i] - ka[i - 1] <= HAN_BLOCK_GAP * pitch)
+            if j >= len(b) or (i < len(a) and (ka[i] <= kb[j] or glued)):
                 page_out.append(a[i]); i += 1
             else:
                 page_out.append(b[j]); j += 1
@@ -121,15 +132,48 @@ def _keys(lines: list[OcrLine]) -> list[float]:
     return keys
 
 
+def _han_pitch(keys: list[float]) -> float | None:
+    """Bước dòng Hán của trang: trung vị khoảng cách dương giữa hai mép trên liên tiếp (cần >= 2 khoảng)."""
+    gaps = sorted(b - a for a, b in zip(keys, keys[1:]) if b > a)
+    return gaps[len(gaps) // 2] if len(gaps) >= 2 else None
+
+
 def _norm(text: str) -> str:
     text = unicodedata.normalize("NFC", text).lower()
     return re.sub(r"[\d\W_]+", "", text)
 
 
+def _fold(key: str) -> str:
+    """Khoá _norm bỏ dấu tiếng Việt (đ -> d) để so tiêu đề chạy bị OCR sai dấu."""
+    key = key.replace("đ", "d")
+    return "".join(c for c in unicodedata.normalize("NFD", key) if not unicodedata.combining(c))
+
+
+def header_matcher(headers: set[str]):
+    """Hàm text -> bool: khớp đúng một tiêu đề chạy, hoặc gần đúng (bỏ dấu, độ giống cao) với tiêu đề dài."""
+    from difflib import SequenceMatcher
+    folded = {_fold(h) for h in headers}
+    long_ones = [h for h in folded if len(h) >= HEADER_FUZZY_MIN_LEN]
+
+    def match(text: str) -> bool:
+        key = _norm(text)
+        if not key:
+            return False
+        if key in headers:
+            return True
+        f = _fold(key)
+        if f in folded:
+            return True
+        return len(f) >= HEADER_FUZZY_MIN_LEN and any(
+            abs(len(f) - len(h)) <= 3 and SequenceMatcher(None, f, h).ratio() >= HEADER_FUZZY_RATIO
+            for h in long_ones)
+    return match
+
+
 def header_predicate(lines: list[OcrLine]):
-    """Hàm ln -> bool: dòng là tiêu đề chạy (lặp trên nhiều trang)."""
-    headers = running_headers(lines)
-    return lambda ln: _norm(ln.text) in headers
+    """Hàm ln -> bool: dòng là tiêu đề chạy (lặp trên nhiều trang, kể cả bản OCR sai dấu)."""
+    match = header_matcher(running_headers(lines))
+    return lambda ln: match(ln.text)
 
 
 def running_headers(lines: list[OcrLine], min_pages: int = HEADER_MIN_PAGES) -> set[str]:
@@ -143,6 +187,12 @@ def running_headers(lines: list[OcrLine], min_pages: int = HEADER_MIN_PAGES) -> 
 
 
 MIN_HAN_BLOCK_LINES = 2                  # khối Hán 1 dòng (trích dẫn trong chú thích) không mở tài liệu
+VIE_NOISE_MAX_LETTERS = 1                # dòng Việt chỉ 0-1 chữ cái (rác OCR "E", "I") không phải phần Việt
+
+
+def _is_noise_vie(text: str) -> bool:
+    """Dòng Việt rác (vd "E" giữa bài thơ Hán CPO_19 tr.217): không làm đứt khối Hán."""
+    return sum(c.isalpha() for c in text) <= VIE_NOISE_MAX_LETTERS
 
 
 def allowed_document_starts(merged: list[OcrLine], headers: set[str] | None = None,
@@ -150,11 +200,11 @@ def allowed_document_starts(merged: list[OcrLine], headers: set[str] | None = No
     """Chỉ số dòng được phép mở tài liệu: dòng Hán đầu tiên của một khối Hán liên tiếp có >= min_block_lines
     dòng. Dòng tiêu đề chạy (lặp trên nhiều trang) không làm đứt khối Hán, để bài thơ sang trang không bị tách
     đôi. Khối Hán 1 dòng giữa phần Việt thường là chữ Hán trích trong chú thích/khảo dị: không mở tài liệu."""
-    headers = headers if headers is not None else running_headers(merged)
+    is_header = header_matcher(headers if headers is not None else running_headers(merged))
     blocks: list[list[int]] = []
     previous = None                      # luồng của dòng nội dung gần nhất
     for i, ln in enumerate(merged):
-        if _norm(ln.text) in headers:
+        if is_header(ln.text) or (ln.writing_system == "vie" and _is_noise_vie(ln.text)):
             continue
         if ln.writing_system == "han":
             if previous != "han":

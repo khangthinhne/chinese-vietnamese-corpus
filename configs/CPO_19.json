@@ -4,13 +4,13 @@
     "data_root": "data",
     "title": "Ngô Thì Nhậm Toàn Tập - Tập III",
     "source": "data/CPO_19/01_sources/NgoThiNhamToanTap3_LamGiang.pdf",
-    "pages": "15-16",
+    "pages": "5-257,267-833",
     "dpi": 300,
     "workers": 4
   },
   "ocr": {
     "streams": {
-      "pages": "5-833",
+      "pages": "5-257,267-833",
       "paddlevl_orientation": "horizontal",
       "engines": {"han": "paddlevl", "vie": "qwen"},
       "check": {"qwen_low_conf": 60},
@@ -23,6 +23,7 @@
   },
   "segmentation": {
     "enabled": true,
+    "ocr_streams": "han_vie",
     "document": {
       "start_patterns": [
         "^\\s*\\d{1,3}\\s*[.．、﹒·。)]\\s*[\u4e00-\u9fff]",
@@ -95,7 +96,7 @@
   },
   "clean": {
     "common": {
-      "excluded_pages": "5-13",
+      "excluded_pages": "5-13,258-266",
       "translator_names": ["Lâm Giang"]
     },
     "am": {

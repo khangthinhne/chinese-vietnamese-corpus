@@ -80,15 +80,22 @@ def has_latin(text: str) -> bool:
 _HAN_NUMBER_PREFIX_RE = re.compile(r"^\s*(\d{1,3})\s*[.．、﹒·。)]\s*(?=[" + "".join(_CJK_IDEOGRAPH_RANGES) + "])")
 
 
+# Chữ khuyết in thành ô vuông "□" ("講室之□", "□□□□，" CPO_18 tr.286): giữ nguyên trong lớp han (bước làm sạch
+# đổi thành [MASK] cho tool dóng Hán-Âm), kể cả dòng chỉ toàn chữ khuyết.
+HAN_MISSING_CHAR = "□"
+
+
 def filter_han_line(text: str) -> str | None:
-    """Trả về dòng chỉ còn chữ Hán + dấu câu CJK (giữ số thứ tự đầu tiêu đề), hoặc None nếu dòng không có chữ Hán."""
+    """Trả về dòng chỉ còn chữ Hán + dấu câu CJK + chữ khuyết □ (giữ số thứ tự đầu tiêu đề), hoặc None nếu dòng
+    không có chữ Hán lẫn chữ khuyết."""
     text = unicodedata.normalize("NFC", text)
-    if not has_cjk(text):
+    if not has_cjk(text) and HAN_MISSING_CHAR not in text:
         return None
     m = _HAN_NUMBER_PREFIX_RE.match(text)
     prefix = f"{m[1]}. " if m else ""
-    body = _NOT_HAN_RE.sub("", text[m.end():] if m else text).replace("　", "")   # bỏ cả khoảng trắng ý văn
-    return prefix + body if body else None
+    parts = (text[m.end():] if m else text).split(HAN_MISSING_CHAR)
+    body = HAN_MISSING_CHAR.join(_NOT_HAN_RE.sub("", p).replace("　", "") for p in parts)   # bỏ cả khoảng trắng ý văn
+    return prefix + body if body.strip("，、。；：") else None
 
 
 # Dòng Hán "giả": dòng tiếng Việt (khảo dị/chú thích) có trích vài chữ Hán, hoặc paddlevl đọc nhầm một dòng
@@ -156,9 +163,33 @@ _CHATTER_RE = re.compile(
     re.IGNORECASE)
 
 
+# Qwen đôi khi chép dòng chữ Hán thành pinyin ("Yān cí zhì zhù jīng", CPO_19 tr.218). Nguyên âm có dấu ngang
+# (macron) hay dấu móc ngược (caron) không bao giờ có trong tiếng Việt (tiếng Việt dùng ă = breve).
+_PINYIN_TONE_CHARS = frozenset("āēīōūǖǎěǐǒǔǚǘǜĀĒĪŌŪǍĚǏǑǓ")
+PINYIN_MIN_MARKS = 2
+# Chữ chỉ tiếng Việt mới có (pinyin không có): đ, ă, â, ê, ô, ơ, ư và mọi nguyên âm mang dấu hỏi/ngã/nặng.
+_VIE_ONLY_CHARS = frozenset("đăâêôơư"
+                            "ảạẳẵặằắẩẫậầấẻẽẹểễệềếỉĩịỏõọổỗộồốởỡợờớủũụửữựừứỷỹỵỳý")
+
+
+# Lời tự nói của Qwen bằng tiếng Việt (CPO_20 tr.25/47, CPO_18 tr.341): mô tả ảnh thay vì chép chữ. Chỉ các cụm
+# không thể có trong sách ("của ảnh", "thông tin được cung cấp"...), vì "chúng tôi", "dưới đây là trích từ..."
+# là văn bản thật của người biên soạn.
+_VIE_CHATTER_RE = re.compile(
+    r"(?i)\b(?:phía\s+(?:trên|dưới)\s+(?:của\s+)?(?:hình\s+)?ảnh|(?:của|trong)\s+(?:bức\s+|hình\s+)?ảnh\s+(?:có|này|là)"
+    r"|dựa\s+(?:trên|vào)\s+thông\s+tin\s+được\s+cung\s+cấp|có\s+thể\s+được\s+dịch\s+(?:như\s+sau|sang)"
+    r"|dưới\s+đây\s+là\s+(?:bản\s+)?(?:phiên\s+âm|bản\s+dịch|nội\s+dung)\s+của\s+(?:đoạn|văn\s+bản|hình|ảnh|dòng)"
+    r"|dòng\s+chữ\s+này\s+có\s+thể)")
+
+
 def vie_reject_reason(text: str) -> str | None:
-    """Lý do loại một dòng khỏi lớp vie (None = giữ): hiện chỉ có lời dẫn tiếng Anh của mô hình."""
+    """Lý do loại một dòng khỏi lớp vie (None = giữ): lời dẫn tiếng Anh/tiếng Việt của mô hình, dòng pinyin."""
     text = unicodedata.normalize("NFC", text)
+    if _VIE_CHATTER_RE.search(text):
+        return "model_chatter"
+    if (sum(c in _PINYIN_TONE_CHARS for c in text) >= PINYIN_MIN_MARKS
+            and not any(c in _VIE_ONLY_CHARS for c in text.lower())):   # "Lộc Viên (Mrgadāva)" là tiếng Việt
+        return "pinyin"
     if _VIE_SPECIFIC_RE.search(text):
         return None
     return "model_chatter" if _CHATTER_RE.search(text) else None

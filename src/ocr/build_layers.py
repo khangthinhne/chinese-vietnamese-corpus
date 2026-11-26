@@ -31,7 +31,8 @@ from src.common.xmlstore import add, bbox_attr, file_element, read_root, write_f
 from src.ocr import raw_store
 from src.ocr.raw_xml import _add_engine, _add_parameters
 from src.ocr.run_quality import run_is_valid
-from src.ocr.script_filter import (HAN_MIN_CJK_SHARE, HAN_MIN_CJK_WITH_LATIN, LAYERS, LONE_HAN_MIN_VIE_LINES,
+from src.ocr.script_filter import (HAN_MIN_CJK_SHARE, HAN_MIN_CJK_WITH_LATIN, HAN_MISSING_CHAR, LAYERS,
+                                   LONE_HAN_MIN_VIE_LINES,
                                    PageFilterResult, count_cjk, filter_page, has_cjk, lone_han_reason)
 
 log = logging.getLogger(__name__)
@@ -418,7 +419,7 @@ def verify_layer(layout: DataLayout, layer: str) -> tuple[list[str], dict]:
             ids.add(line_id)
             if not line.get("SRC_LINE", "").isdigit():
                 errors.append(f"{line_id}: thiếu SRC_LINE")
-            if layer == "han" and not has_cjk(text):
+            if layer == "han" and not has_cjk(text) and HAN_MISSING_CHAR not in text:
                 errors.append(f"{line_id}: dòng han không có chữ Hán")
         xml_pages[number] = [line.text or "" for line in lines]
     text_dir = layout.ocr_layer_text_dir(layer)

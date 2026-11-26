@@ -119,6 +119,18 @@ def validate_corpus(layout: DataLayout, layers: list[str] | None = None,
             except Exception:
                 pass
 
+    # Hai luồng (segmentation.ocr_streams = "han_vie"): source_id = "<luồng>.<ID dòng>" của 03_ocr/ocr_raw/{han,vie}.xml
+    for stream in ("han", "vie"):
+        stream_path = layout.ocr_layer_xml_path(stream)
+        if stream_path.exists():
+            try:
+                for page_el in segxml.file_element(segxml.read_root(stream_path)).findall("PAGE"):
+                    for line_el in page_el.findall("LINE"):
+                        if line_el.get("ID"):
+                            raw_ocr_line_ids.add(f"{stream}.{line_el.get('ID')}")
+            except Exception:
+                log.warning("Không đọc được %s để kiểm tra source_id", stream_path)
+
     # 2. Kiểm tra phân đoạn đoạn / lớp (04_segmentation/layers/<layer>.xml)
     target_layers = layers or ["han", "am", "nghia"]
     known_segment_ids: dict[str, set[str]] = {}
@@ -268,6 +280,7 @@ def validation_inputs(layout: DataLayout, config: str | None) -> list[Path]:
     """Mọi file validate đọc: 04_segmentation/, 05_cleaning/ (trừ chính báo cáo), config. Kiểm tra cặp chỉ đọc câu
     đã làm sạch, không đọc 06_alignment/ (bước align chạy SAU validate)."""
     files: list[Path] = [layout.segmentation_dir]
+    files += [p for p in (layout.ocr_layer_xml_path("han"), layout.ocr_layer_xml_path("vie")) if p.exists()]
     if layout.cleaning_root.is_dir():
         files += [p for p in layout.cleaning_root.rglob("*")
                   if p.is_file() and p.name != "validation_report.json"]
