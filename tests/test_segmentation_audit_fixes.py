@@ -221,3 +221,17 @@ def test_repeated_numbered_title_is_not_a_running_header():
                    line("han", page, 2, "（覆稽典禮。留守官稟）", 3000), line("han", page, 3, "前奉札飭本國查照册封典禮", 3100)]
     starts = streams.allowed_document_starts(merged)
     assert {i for i, ln in enumerate(merged) if ln.text.endswith("又一道")} <= starts
+
+
+def test_am_detector_moves_only_implicit_am_not_explicit_phien_am():
+    """CPO_20.053: tựa dịch nghĩa mở ngầm am, sau đó 'PHIÊN ÂM:' tường minh (chiếu Nôm) phải ở lại am."""
+    from src.segmentation.am_detect import AmDetector
+    det = AmDetector({"enabled": True, "min_match": 0.35})
+    det.path = "resources/han_viet.tsv"
+    texts = [("han", "天氣和暢雖六陰節候盛陽常自如稼穡"), ("vie", "Xứ ấy trời đất ấm áp, mùa đông không lạnh lắm,"),
+             ("vie", "mùa hè cũng dễ chịu, quanh năm cây cối tốt tươi."), ("vie", "PHIÊN ÂM:"),
+             ("vie", "Chiếu Thiếu phó Diệu quận công khâm tri."), ("vie", "Nhị khanh là huân cựu đại thần.")]
+    res = assign(texts, am_detector=det)
+    assert [x.text for x in res.lines["am"]] == ["Chiếu Thiếu phó Diệu quận công khâm tri.",
+                                                 "Nhị khanh là huân cựu đại thần."]
+    assert len(res.lines["nghia"]) == 2

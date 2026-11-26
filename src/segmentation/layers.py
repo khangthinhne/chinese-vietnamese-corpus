@@ -360,6 +360,8 @@ def assign_document_unified(work_id: str, doc: Document, layer_cfg: dict, meta_c
     body_lines: dict[str, int] = {}              # số dòng nội dung không viết hoa đã gán cho mỗi lớp
     notes_page: int | None = None                # trang đang có chú thích cuối trang (note_entry_ends)
     implicit_started: set[str] = set()           # lớp được mở ngầm sau khối Hán (không có tiêu đề mục)
+    am_implicit_run = False                      # lớp am hiện đang chạy từ lần mở ngầm (chưa gặp tiêu đề PHIÊN ÂM)
+    implicit_am: list[OcrLine] = []              # dòng am gán trong lúc đó (bộ nhận diện chỉ xét/chuyển các dòng này)
     last_layer: str | None = current             # lớp nội dung gần nhất (để thoát khỏi đoạn chú thích)
     attribution = {n: compile_patterns(layer_cfg[n].get("attribution_patterns"),
                                        f"segmentation.layers.{n}.attribution_patterns", False)
@@ -393,6 +395,8 @@ def assign_document_unified(work_id: str, doc: Document, layer_cfg: dict, meta_c
                 current = target
                 started.add(target)
                 body_lines[target] = 0           # tiêu đề tường minh: nội dung của lớp tính lại từ đây
+                if target == "am":
+                    am_implicit_run = False
                 h_info = _heading(work_id, doc, target, "start", ln)
                 h_info["heading_id"] = f"{doc.id}.P{ln.page:04d}.H{len(headings) + 1:03d}"
                 headings.append(h_info)
@@ -426,6 +430,7 @@ def assign_document_unified(work_id: str, doc: Document, layer_cfg: dict, meta_c
                 current = nxt
                 started.add(nxt)
                 implicit_started.add(nxt)
+                am_implicit_run = am_implicit_run or nxt == "am"
 
         if title_next and is_upper_title(ln.text) and not (is_header and is_header(ln)):
             prev = current or last_layer
@@ -452,6 +457,8 @@ def assign_document_unified(work_id: str, doc: Document, layer_cfg: dict, meta_c
                                      [ln.page], ln.text, [ln.source_id]))
             continue
         grouped.setdefault(target, []).append(ln)
+        if target == "am" and am_implicit_run:
+            implicit_am.append(ln)
         last_layer = target
         # dòng nội dung = có chữ thường (tiêu đề viết hoa nhiều dòng, kể cả dòng kết thúc bằng dấu phẩy, không tính)
         if (any(c.islower() for c in ln.text) and (keep_line is None or keep_line(target, ln))
@@ -475,11 +482,19 @@ def assign_document_unified(work_id: str, doc: Document, layer_cfg: dict, meta_c
             else:
                 del grouped[layer]
 
-    if (am_detector is not None and "am" in implicit_started and grouped.get("am") and grouped.get("han")):
+    kept_ids = {id(x) for x in grouped.get("am", [])}
+    implicit_am = [x for x in implicit_am if id(x) in kept_ids]       # bỏ dòng đã bị loại khác luồng
+    if am_detector is not None and implicit_am and grouped.get("han"):
+        # Chỉ phần am MỞ NGẦM; phần sau tiêu đề PHIÊN ÂM tường minh giữ nguyên (CPO_20.053: tựa dịch nghĩa mở
+        # ngầm, rồi "Phiên âm:" một bài chiếu Nôm ở tr.126-134).
         move, why = am_detector.decide(min(doc.pages) if doc.pages else 0,
-                                       [x.text for x in grouped["han"]], [x.text for x in grouped["am"]])
+                                       [x.text for x in grouped["han"]], [x.text for x in implicit_am])
         if move:
-            am_lines = grouped.pop("am")
+            moved = {id(x) for x in implicit_am}
+            am_lines = implicit_am
+            rest = [x for x in grouped.pop("am") if id(x) not in moved]
+            if rest:
+                grouped["am"] = rest
             grouped["nghia"] = am_lines + grouped.get("nghia", [])
             started.add("nghia")
             review.append(review_row(work_id, doc.id, "nghia", "am_reassigned_to_nghia",
