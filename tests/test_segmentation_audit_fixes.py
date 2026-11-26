@@ -117,3 +117,13 @@ def test_fuzzy_heading_opens_tho_layer():
     res = assign(texts)
     assert [r.text for r in res.lines["tho"]] == ["Núi sông xứ Lạng kế liền nhau,"]
     assert any(r["reason"] == "fuzzy_section_heading" for r in res.review)
+
+
+def test_am_digit_markers_removed_only_in_am_layer():
+    from src.cleaning.artifacts import clean_ocr_artifacts
+    from src.cleaning.model import OCRCleaningConfig
+    cfg = OCRCleaningConfig()
+    res = clean_ocr_artifacts("Cao sơn lưu thủy 2 hữu tri âm,", cfg, layer="am")
+    assert res.text == "Cao sơn lưu thủy hữu tri âm," and ("am_digit_marker", "2") in res.removed
+    assert clean_ocr_artifacts("Ngày 12 tháng 12 năm ấy", cfg, layer="nghia").text == "Ngày 12 tháng 12 năm ấy"
+    assert clean_ocr_artifacts("trạo sơ 1, năm 1790", cfg, layer="am").text == "trạo sơ 1, năm 1790"

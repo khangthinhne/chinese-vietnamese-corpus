@@ -34,6 +34,9 @@ MARKER_RE = re.compile(r"\[\d{1,3}\]|［\d{1,3}］|\(\d{1,3}\)|（\d{1,3}）|[�
 # "triện^{(b)} ấn" (Qwen viết chỉ số trên kiểu LaTeX). Chỉ xoá khi đứng SAU một chữ (không ở đầu dòng: "(a) ..." đầu
 # dòng là mục liệt kê) và trước khoảng trắng/dấu câu/cuối dòng. Đo trên CPO_18/19/20: 44/44 lần là chỉ mục thật.
 LETTER_MARKER_RE = re.compile(r"(?<=\S)[ \t]*(?:\\\(\s*)?\^?\{?\(\^?[a-zđ]\)\}?(?:\s*\\\))?(?=[\s,.;:!?)\]]|$)")
+# Chỉ mục chú thích bằng chữ số thường đứng GIỮA hai âm tiết trong lớp phiên âm (Qwen chép chỉ số trên "²" thành "2":
+# "Cao sơn lưu thủy 2 hữu tri âm"). Phiên âm Hán Việt không dùng chữ số Ả Rập, nên chỉ áp cho lớp am.
+AM_DIGIT_MARKER_RE = re.compile(r"(?<=[^\W\d_])[ 	]+\d{1,2}(?=[ 	]+[^\W\d_])")
 LEADING_NUM_RE = re.compile(r"^\s*\d{1,3}\s*[·.．、﹒)]\s*")
 
 # ký tự nhiễu OCR biết chắc: XOÁ khi làm sạch (rule noise_char:<ch>)
