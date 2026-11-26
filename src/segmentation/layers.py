@@ -260,6 +260,7 @@ def assign_document_unified(work_id: str, doc: Document, layer_cfg: dict, meta_c
       nguồn "Trích ..."), các dòng tiếp theo là chú thích: không gán lớp cho tới tiêu đề/tiêu đề viết hoa kế tiếp.
     - Tiêu đề mục tường minh đặt lại số dòng nội dung của lớp đó; dòng `is_header` (tiêu đề chạy, dòng Việt nhiễu)
       không tính là dòng nội dung (CPO_18.005: rác + tiêu đề chạy làm "PHIÊN ÂM:" rồi tiêu đề bài mở nhầm nghia).
+    - Dòng bị `keep_line` loại được ghi review `dropped_cross_stream` (từng dòng), không mất dấu.
     """
     review: list[dict] = []
     headings: list[dict] = []
@@ -382,6 +383,10 @@ def assign_document_unified(work_id: str, doc: Document, layer_cfg: dict, meta_c
             kept = [ln for ln in grouped[layer] if keep_line(layer, ln)]
             if dropped is not None and len(kept) != len(grouped[layer]):
                 dropped[layer] = dropped.get(layer, 0) + len(grouped[layer]) - len(kept)
+            for ln in grouped[layer]:
+                if not keep_line(layer, ln):
+                    review.append(review_row(work_id, doc.id, layer, "dropped_cross_stream",
+                                             [ln.page], ln.text, [ln.source_id]))
             if kept:
                 grouped[layer] = kept
             else:

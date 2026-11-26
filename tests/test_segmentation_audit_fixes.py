@@ -55,3 +55,11 @@ def test_noise_vie_does_not_implicitly_start_am_and_han_lines_survive():
     texts = [("han", "石繙此芳猷義之重宣"), ("vie", "**N**"), ("han", "黎皇靈鬱"), ("han", "四海攸同")]
     res = assign(texts)
     assert [r.text for r in res.lines["han"]] == ["石繙此芳猷義之重宣", "黎皇靈鬱", "四海攸同"]
+
+
+def test_dropped_cross_stream_lines_are_reviewed():
+    texts = [("han", "諒山道中"), ("vie", "PHIÊN ÂM:"), ("vie", "Nhị Lạng giang sơn cảnh giới liên,"),
+             ("han", "旁")]
+    res = assign(texts)
+    dropped = [r for r in res.review if r["reason"] == "dropped_cross_stream"]
+    assert [(r["layer"], r["text"]) for r in dropped] == [("am", "旁")]
