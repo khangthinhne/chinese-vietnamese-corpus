@@ -1,0 +1,919 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 812,
+  "runs": [
+    {
+      "key": "163acbb31d6e6a5655addd9279ffbe7528e82812c3da7d00f324ee13971e12ff",
+      "parameters": {
+        "image_sha256": "6cf2c98035dd91d8ea6f46dca622496800a73faf4c2065feb718666cb9bc21db",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.9.1+cu128",
+          "cuda_version": "12.8",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-26T09:13:33+00:00",
+      "image": "/marimo/.cpo19_ocr/repo/data/CPO_19/02_extraction/pages/page_812.png",
+      "image_size": [
+        2032,
+        2938
+      ],
+      "crop_box": [
+        0,
+        0,
+        2032,
+        2938
+      ],
+      "lines": [
+        {
+          "text": "BANG GIAO HAO THOAI",
+          "bbox": [
+            1293,
+            64,
+            1813,
+            103
+          ],
+          "confidence": 99.65
+        },
+        {
+          "text": "Muôn đòi bao dung.",
+          "bbox": [
+            459,
+            175,
+            1125,
+            220
+          ],
+          "confidence": 91.54
+        },
+        {
+          "text": "Nơi thanh giáo đến,",
+          "bbox": [
+            667,
+            267,
+            1124,
+            310
+          ],
+          "confidence": 94.43
+        },
+        {
+          "text": "Ai cha lại đăng.",
+          "bbox": [
+            665,
+            369,
+            1029,
+            401
+          ],
+          "confidence": 67.15
+        },
+        {
+          "text": "-Giói thân đập đầu,",
+          "bbox": [
+            668,
+            448,
+            1119,
+            492
+          ],
+          "confidence": 79.26
+        },
+        {
+          "text": "Kính phung Thánh nhân.",
+          "bbox": [
+            669,
+            539,
+            1261,
+            583
+          ],
+          "confidence": 99.43
+        },
+        {
+          "text": "Phàm có khí huyết,",
+          "bbox": [
+            669,
+            627,
+            1117,
+            672
+          ],
+          "confidence": 97.63
+        },
+        {
+          "text": "Ai cha tôn thân.",
+          "bbox": [
+            668,
+            727,
+            1681,
+            759
+          ],
+          "confidence": 89.11
+        },
+        {
+          "text": "CHU THICH:",
+          "bbox": [
+            111,
+            827,
+            400,
+            866
+          ],
+          "confidence": 98.0
+        },
+        {
+          "text": "1.Ba không riêng: Trời không che riêng, đất không chỏ riêng, mặt trời",
+          "bbox": [
+            263,
+            924,
+            1818,
+            974
+          ],
+          "confidence": 95.9
+        },
+        {
+          "text": "mặt trắng không chiếu riêng.",
+          "bbox": [
+            112,
+            1005,
+            731,
+            1046
+          ],
+          "confidence": 90.59
+        },
+        {
+          "text": "2.Tram lô: Ôn mưa móc.",
+          "bbox": [
+            196,
+            1086,
+            772,
+            1127
+          ],
+          "confidence": 86.95
+        },
+        {
+          "text": "3. Thần thông: Trí thông minh của nhà vua.",
+          "bbox": [
+            261,
+            1166,
+            1536,
+            1209
+          ],
+          "confidence": 92.21
+        },
+        {
+          "text": "4.Áp Bạc: Áp của Thương Thang.",
+          "bbox": [
+            261,
+            1248,
+            1773,
+            1292
+          ],
+          "confidence": 83.56
+        },
+        {
+          "text": "5.Đại Cáp Đat: Pho tượng Phát.",
+          "bbox": [
+            262,
+            1331,
+            935,
+            1373
+          ],
+          "confidence": 83.09
+        },
+        {
+          "text": "6. Cửu tuyên: Chỉ cõi âm dưới mặt đất, tức là chết. Theo Thế thuyết, sau",
+          "bbox": [
+            263,
+            1412,
+            1818,
+            1456
+          ],
+          "confidence": 91.51
+        },
+        {
+          "text": "khi Ân Trọng Kham chết, Hoàn Huyền hỏi Trọng Văn: \"Cha người là Trọng",
+          "bbox": [
+            112,
+            1494,
+            1818,
+            1546
+          ],
+          "confidence": 91.85
+        },
+        {
+          "text": "Kham, là người thế nào?\" Trọng Văn trả lời: \"Tuy không làm sáng tỏ được một",
+          "bbox": [
+            113,
+            1577,
+            1818,
+            1628
+          ],
+          "confidence": 94.0
+        },
+        {
+          "text": "đòi, cũng đủ để soi rơi khắp cứu tuyên.\"",
+          "bbox": [
+            113,
+            1660,
+            1414,
+            1703
+          ],
+          "confidence": 86.76
+        },
+        {
+          "text": "7. Cửu thiên: Tức 9 phương trời: Trung ương, tứ phương, tứ ngang.",
+          "bbox": [
+            263,
+            1742,
+            1657,
+            1792
+          ],
+          "confidence": 88.1
+        },
+        {
+          "text": "8. Thiều hô: “Thiều” là nhạc của Ngu Thuấn, “hô” là nhạc của Ha Vũ. Sau",
+          "bbox": [
+            262,
+            1823,
+            1819,
+            1867
+          ],
+          "confidence": 91.45
+        },
+        {
+          "text": "dùng để chỉ nhac của nhà vua nói chung.",
+          "bbox": [
+            114,
+            1908,
+            975,
+            1950
+          ],
+          "confidence": 93.57
+        },
+        {
+          "text": "9. Hoà long: Hoà có lẽ là chỉ phương nam.",
+          "bbox": [
+            263,
+            1989,
+            1125,
+            2031
+          ],
+          "confidence": 92.28
+        },
+        {
+          "text": "10. Thuý vi: Nơi sườn núi.",
+          "bbox": [
+            266,
+            2072,
+            1535,
+            2112
+          ],
+          "confidence": 95.78
+        },
+        {
+          "text": "88修音表",
+          "bbox": [
+            772,
+            2243,
+            1147,
+            2293
+          ],
+          "confidence": 77.88
+        },
+        {
+          "text": "00. 修只衣",
+          "bbox": [
+            772,
+            2285,
+            1158,
+            2314
+          ],
+          "confidence": 82.06
+        },
+        {
+          "text": "去台边做球去，你游因水，以叨相曲，土世击击",
+          "bbox": [
+            281,
+            2435,
+            1750,
+            2461
+          ],
+          "confidence": 44.49
+        },
+        {
+          "text": "奏為恪修職貢，仰邀恩光，以昭規典，表恭度事。",
+          "bbox": [
+            266,
+            2453,
+            1798,
+            2501
+          ],
+          "confidence": 95.98
+        },
+        {
+          "text": "臣：世守交南，恪遵候度。",
+          "bbox": [
+            124,
+            2565,
+            885,
+            2627
+          ],
+          "confidence": 98.35
+        },
+        {
+          "text": "久荷太上皇帝扶植之恩，仰大皇帝清明之治。",
+          "bbox": [
+            242,
+            2690,
+            1665,
+            2754
+          ],
+          "confidence": 99.82
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2032,
+          2938
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 4.408,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              1293,
+              64,
+              1813,
+              103
+            ],
+            "generated_text": "BANG GIAO HAO THOAI",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.096,
+            "confidence": 99.65,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              109,
+              108,
+              1821,
+              124
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.027,
+            "confidence": 68.37,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              459,
+              175,
+              1125,
+              220
+            ],
+            "generated_text": "Muôn đòi bao dung.",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.086,
+            "confidence": 91.54,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              667,
+              267,
+              1124,
+              310
+            ],
+            "generated_text": "Nơi thanh giáo đến,",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.087,
+            "confidence": 94.43,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              665,
+              369,
+              1029,
+              401
+            ],
+            "generated_text": "Ai cha lại đăng.",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.072,
+            "confidence": 67.15,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              668,
+              448,
+              1119,
+              492
+            ],
+            "generated_text": "-Giói thân đập đầu,",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.103,
+            "confidence": 79.26,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              669,
+              539,
+              1261,
+              583
+            ],
+            "generated_text": "Kính phung Thánh nhân.",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.088,
+            "confidence": 99.43,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              669,
+              627,
+              1117,
+              672
+            ],
+            "generated_text": "Phàm có khí huyết,",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.09,
+            "confidence": 97.63,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              668,
+              727,
+              1681,
+              759
+            ],
+            "generated_text": "Ai cha tôn thân.",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.082,
+            "confidence": 89.11,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              111,
+              827,
+              400,
+              866
+            ],
+            "generated_text": "CHU THICH:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.065,
+            "confidence": 98.0,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              263,
+              924,
+              1818,
+              974
+            ],
+            "generated_text": "1.Ba không riêng: Trời không che riêng, đất không chỏ riêng, mặt trời",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.219,
+            "confidence": 95.9,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              112,
+              1005,
+              731,
+              1046
+            ],
+            "generated_text": "mặt trắng không chiếu riêng.",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.103,
+            "confidence": 90.59,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              196,
+              1086,
+              772,
+              1127
+            ],
+            "generated_text": "2.Tram lô: Ôn mưa móc.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.135,
+            "confidence": 86.95,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              261,
+              1166,
+              1536,
+              1209
+            ],
+            "generated_text": "3. Thần thông: Trí thông minh của nhà vua.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.148,
+            "confidence": 92.21,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              261,
+              1248,
+              1773,
+              1292
+            ],
+            "generated_text": "4.Áp Bạc: Áp của Thương Thang.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.141,
+            "confidence": 83.56,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              262,
+              1331,
+              935,
+              1373
+            ],
+            "generated_text": "5.Đại Cáp Đat: Pho tượng Phát.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.142,
+            "confidence": 83.09,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              263,
+              1412,
+              1818,
+              1456
+            ],
+            "generated_text": "6. Cửu tuyên: Chỉ cõi âm dưới mặt đất, tức là chết. Theo Thế thuyết, sau",
+            "n_lines": 1,
+            "tokens": 36,
+            "seconds": 0.273,
+            "confidence": 91.51,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              112,
+              1494,
+              1818,
+              1546
+            ],
+            "generated_text": "khi Ân Trọng Kham chết, Hoàn Huyền hỏi Trọng Văn: \"Cha người là Trọng",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.236,
+            "confidence": 91.85,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              113,
+              1577,
+              1818,
+              1628
+            ],
+            "generated_text": "Kham, là người thế nào?\" Trọng Văn trả lời: \"Tuy không làm sáng tỏ được một",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.225,
+            "confidence": 94.0,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              113,
+              1660,
+              1414,
+              1703
+            ],
+            "generated_text": "đòi, cũng đủ để soi rơi khắp cứu tuyên.\"",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.179,
+            "confidence": 86.76,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              263,
+              1742,
+              1657,
+              1792
+            ],
+            "generated_text": "7. Cửu thiên: Tức 9 phương trời: Trung ương, tứ phương, tứ ngang.",
+            "n_lines": 1,
+            "tokens": 32,
+            "seconds": 0.263,
+            "confidence": 88.1,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              262,
+              1823,
+              1819,
+              1867
+            ],
+            "generated_text": "8. Thiều hô: “Thiều” là nhạc của Ngu Thuấn, “hô” là nhạc của Ha Vũ. Sau",
+            "n_lines": 1,
+            "tokens": 32,
+            "seconds": 0.265,
+            "confidence": 91.45,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              114,
+              1908,
+              975,
+              1950
+            ],
+            "generated_text": "dùng để chỉ nhac của nhà vua nói chung.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.134,
+            "confidence": 93.57,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              263,
+              1989,
+              1125,
+              2031
+            ],
+            "generated_text": "9. Hoà long: Hoà có lẽ là chỉ phương nam.",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.157,
+            "confidence": 92.28,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              266,
+              2072,
+              1535,
+              2112
+            ],
+            "generated_text": "10. Thuý vi: Nơi sườn núi.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.14,
+            "confidence": 95.78,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              772,
+              2243,
+              1147,
+              2293
+            ],
+            "generated_text": "88修音表",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.065,
+            "confidence": 77.88,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              772,
+              2285,
+              1158,
+              2314
+            ],
+            "generated_text": "00. 修 只 衣",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.088,
+            "confidence": 82.06,
+            "flags": [
+              "han_gap_removed"
+            ],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              281,
+              2435,
+              1750,
+              2461
+            ],
+            "generated_text": "去台边做球去，你游因水，以叨相曲，土世击击",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.187,
+            "confidence": 44.49,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              266,
+              2453,
+              1798,
+              2501
+            ],
+            "generated_text": "奏為恪修職貢，仰邀恩光，以昭規典，表恭度事。",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.22,
+            "confidence": 95.98,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              124,
+              2565,
+              885,
+              2627
+            ],
+            "generated_text": "臣：世守交南，恪遵候度。",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.133,
+            "confidence": 98.35,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              242,
+              2690,
+              1665,
+              2754
+            ],
+            "generated_text": "久荷太上皇帝扶植之恩，仰大皇帝清明之治。",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.157,
+            "confidence": 99.82,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              642,
+              358,
+              950,
+              368
+            ],
+            "ink": 341
+          },
+          {
+            "box": [
+              684,
+              719,
+              991,
+              729
+            ],
+            "ink": 390
+          },
+          {
+            "box": [
+              159,
+              1043,
+              714,
+              1052
+            ],
+            "ink": 219
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": null,
+        "git_describe": null,
+        "git_dirty": null,
+        "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+        "dtype": "bfloat16",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

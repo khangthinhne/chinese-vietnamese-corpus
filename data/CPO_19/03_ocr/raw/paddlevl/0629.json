@@ -1,0 +1,883 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 629,
+  "runs": [
+    {
+      "key": "c479ea0f0c6b4f027ea8755ca1a82e84872d97b2194ca5553f778cab228ce774",
+      "parameters": {
+        "image_sha256": "c490c7c7908e688b17dbf2806ef60c5d3a12ef362d344eaa4e630c17564bb33e",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.9.1+cu128",
+          "cuda_version": "12.8",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-26T08:27:21+00:00",
+      "image": "/marimo/.cpo19_ocr/repo/data/CPO_19/02_extraction/pages/page_629.png",
+      "image_size": [
+        2187,
+        3115
+      ],
+      "crop_box": [
+        0,
+        0,
+        2187,
+        3115
+      ],
+      "lines": [
+        {
+          "text": "NGÔ THI NHAM TOAN TẠP - TẠP III",
+          "bbox": [
+            251,
+            65,
+            1026,
+            106
+          ],
+          "confidence": 83.03
+        },
+        {
+          "text": "緬懷雲樹之相違，深愧瓊琚之莫報。",
+          "bbox": [
+            404,
+            160,
+            1912,
+            225
+          ],
+          "confidence": 99.96
+        },
+        {
+          "text": "頃以萬象國構起兵端，小番：",
+          "bbox": [
+            407,
+            303,
+            1253,
+            366
+          ],
+          "confidence": 99.51
+        },
+        {
+          "text": "憑仗聲靈，迄消邊患。",
+          "bbox": [
+            406,
+            445,
+            1077,
+            508
+          ],
+          "confidence": 99.58
+        },
+        {
+          "text": "今因獻捷，藉便將忱。",
+          "bbox": [
+            402,
+            587,
+            1077,
+            647
+          ],
+          "confidence": 99.6
+        },
+        {
+          "text": "恭祝：大皇帝與天齊壽，長如日月之升恒；尊大人",
+          "bbox": [
+            404,
+            727,
+            1959,
+            793
+          ],
+          "confidence": 98.17
+        },
+        {
+          "text": "與國同休，會見旂常之炳耀。",
+          "bbox": [
+            259,
+            848,
+            1135,
+            913
+          ],
+          "confidence": 99.4
+        },
+        {
+          "text": "聖節屆九旬之盛，山聲同萬歲之歡。",
+          "bbox": [
+            407,
+            967,
+            1505,
+            1032
+          ],
+          "confidence": 99.04
+        },
+        {
+          "text": "復得:邇挹芝眉，少抒葵瓣。是小番之大願也。",
+          "bbox": [
+            405,
+            1088,
+            1807,
+            1152
+          ],
+          "confidence": 97.02
+        },
+        {
+          "text": "PHIEN AM:",
+          "bbox": [
+            258,
+            1226,
+            511,
+            1265
+          ],
+          "confidence": 89.85
+        },
+        {
+          "text": "TRINH THIÊN TRIỀU NÓI CÁC ĐẠI HỌC SỐ",
+          "bbox": [
+            545,
+            1323,
+            1678,
+            1369
+          ],
+          "confidence": 86.99
+        },
+        {
+          "text": "HOA DAI NHAN GIẢN",
+          "bbox": [
+            816,
+            1406,
+            1394,
+            1451
+          ],
+          "confidence": 91.46
+        },
+        {
+          "text": "Đai nhân: Quyên tinh dục tú, trung nhạc tiêu anh.",
+          "bbox": [
+            400,
+            1533,
+            1562,
+            1578
+          ],
+          "confidence": 90.78
+        },
+        {
+          "text": "Thao bính chính vu nham lang, nhi nghi ta nhiếp điều chi lực; đat",
+          "bbox": [
+            405,
+            1607,
+            1959,
+            1653
+          ],
+          "confidence": 91.47
+        },
+        {
+          "text": "hoàng phong vu hải vũ, vạn phương tư trấn phủ chi du.",
+          "bbox": [
+            255,
+            1682,
+            1530,
+            1736
+          ],
+          "confidence": 90.91
+        },
+        {
+          "text": "Tac nhân triển cận thiên đình, hoạch thân ngô tư; nhĩ bôi thanh",
+          "bbox": [
+            405,
+            1761,
+            1956,
+            1807
+          ],
+          "confidence": 89.0
+        },
+        {
+          "text": "phạm, kỳ ngương dục dung.",
+          "bbox": [
+            253,
+            1852,
+            895,
+            1895
+          ],
+          "confidence": 81.03
+        },
+        {
+          "text": "Đại phù: Hải tế ngôn tuyên, tâm duy luyện luyện.",
+          "bbox": [
+            415,
+            1920,
+            1545,
+            1972
+          ],
+          "confidence": 89.74
+        },
+        {
+          "text": "Để quốc hậu: Kinh ủy bôi giới, nghệ khuyết tạ ân; phụ thư thỉnh",
+          "bbox": [
+            401,
+            2000,
+            1957,
+            2053
+          ],
+          "confidence": 86.42
+        },
+        {
+          "text": "háo, trùng ha ăn can thỉnh y.",
+          "bbox": [
+            257,
+            2096,
+            930,
+            2128
+          ],
+          "confidence": 80.59
+        },
+        {
+          "text": "Khuất tổng tư hàm, thực thâm hàn úy.",
+          "bbox": [
+            401,
+            2165,
+            1288,
+            2210
+          ],
+          "confidence": 90.9
+        },
+        {
+          "text": "Tình ngưỡng kiến: Thánh chủ quang ứng thọ chỉ, tinh thần",
+          "bbox": [
+            406,
+            2243,
+            1955,
+            2297
+          ],
+          "confidence": 94.73
+        },
+        {
+          "text": "bội thắng ư tích niên; thiên tâm hậu quyến hoàng gia, phù thuy",
+          "bbox": [
+            257,
+            2322,
+            1958,
+            2375
+          ],
+          "confidence": 89.26
+        },
+        {
+          "text": "điệp trưởng u lao tụe.",
+          "bbox": [
+            256,
+            2408,
+            761,
+            2446
+          ],
+          "confidence": 62.13
+        },
+        {
+          "text": "Dao thừa phương tấn, bôi thiết hạ tông.",
+          "bbox": [
+            402,
+            2478,
+            1308,
+            2525
+          ],
+          "confidence": 87.9
+        },
+        {
+          "text": "Miến hoài vân thủ chi tương vi, thâm quý quỳnh cư chi mạc báo.",
+          "bbox": [
+            402,
+            2556,
+            1881,
+            2609
+          ],
+          "confidence": 87.42
+        },
+        {
+          "text": "Khoảnh dĩ Van Tương quốc cấu khối binh đoan, tiểu phiên:",
+          "bbox": [
+            402,
+            2634,
+            1768,
+            2681
+          ],
+          "confidence": 88.49
+        },
+        {
+          "text": "Băng trưởng thanh linh, hất tiêu biên hoan.",
+          "bbox": [
+            402,
+            2713,
+            1336,
+            2760
+          ],
+          "confidence": 89.72
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2187,
+          3115
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 4.848,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              251,
+              65,
+              1026,
+              106
+            ],
+            "generated_text": "NGÔ THI NHAM TOAN TẠP - TẠP III",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.167,
+            "confidence": 83.03,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              254,
+              109,
+              1967,
+              125
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.028,
+            "confidence": 29.65,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              404,
+              160,
+              1912,
+              225
+            ],
+            "generated_text": "緬懷雲樹之相違，深愧瓊琚之莫報。",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.225,
+            "confidence": 99.96,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              407,
+              303,
+              1253,
+              366
+            ],
+            "generated_text": "頃以萬象國構起兵端，小番：",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.131,
+            "confidence": 99.51,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              406,
+              445,
+              1077,
+              508
+            ],
+            "generated_text": "憑仗聲靈，迄消邊患。",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.134,
+            "confidence": 99.58,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              402,
+              587,
+              1077,
+              647
+            ],
+            "generated_text": "今因獻捷，藉便將忱。",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.135,
+            "confidence": 99.6,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              404,
+              727,
+              1959,
+              793
+            ],
+            "generated_text": "恭祝：大皇帝與天齊壽，長如日月之升恒；尊大人",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.172,
+            "confidence": 98.17,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              259,
+              848,
+              1135,
+              913
+            ],
+            "generated_text": "與國同休，會見旂常之炳耀。",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.142,
+            "confidence": 99.4,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              407,
+              967,
+              1505,
+              1032
+            ],
+            "generated_text": "聖節屆九旬之盛，山聲同萬歲之歡。",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.151,
+            "confidence": 99.04,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              405,
+              1088,
+              1807,
+              1152
+            ],
+            "generated_text": "復得:邇挹芝眉，少抒葵瓣。是小番之大願也。",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.217,
+            "confidence": 97.02,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              258,
+              1226,
+              511,
+              1265
+            ],
+            "generated_text": "PHIEN AM:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.064,
+            "confidence": 89.85,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              545,
+              1323,
+              1678,
+              1369
+            ],
+            "generated_text": "TRINH THIÊN TRIỀU NÓI CÁC ĐẠI HỌC SỐ",
+            "n_lines": 1,
+            "tokens": 32,
+            "seconds": 0.266,
+            "confidence": 86.99,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              816,
+              1406,
+              1394,
+              1451
+            ],
+            "generated_text": "HOA DAI NHAN GIẢN",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.111,
+            "confidence": 91.46,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              400,
+              1533,
+              1562,
+              1578
+            ],
+            "generated_text": "Đai nhân: Quyên tinh dục tú, trung nhạc tiêu anh.",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.181,
+            "confidence": 90.78,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              405,
+              1607,
+              1959,
+              1653
+            ],
+            "generated_text": "Thao bính chính vu nham lang, nhi nghi ta nhiếp điều chi lực; đat",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.203,
+            "confidence": 91.47,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              255,
+              1682,
+              1530,
+              1736
+            ],
+            "generated_text": "hoàng phong vu hải vũ, vạn phương tư trấn phủ chi du.",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.201,
+            "confidence": 90.91,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              405,
+              1761,
+              1956,
+              1807
+            ],
+            "generated_text": "Tac nhân triển cận thiên đình, hoạch thân ngô tư; nhĩ bôi thanh",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.216,
+            "confidence": 89.0,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              253,
+              1852,
+              895,
+              1895
+            ],
+            "generated_text": "phạm, kỳ ngương dục dung.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 0.11,
+            "confidence": 81.03,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              415,
+              1920,
+              1545,
+              1972
+            ],
+            "generated_text": "Đại phù: Hải tế ngôn tuyên, tâm duy luyện luyện.",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.165,
+            "confidence": 89.74,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              401,
+              2000,
+              1957,
+              2053
+            ],
+            "generated_text": "Để quốc hậu: Kinh ủy bôi giới, nghệ khuyết tạ ân; phụ thư thỉnh",
+            "n_lines": 1,
+            "tokens": 32,
+            "seconds": 0.265,
+            "confidence": 86.42,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              257,
+              2096,
+              930,
+              2128
+            ],
+            "generated_text": "háo, trùng ha ăn can thỉnh y.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 0.108,
+            "confidence": 80.59,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              401,
+              2165,
+              1288,
+              2210
+            ],
+            "generated_text": "Khuất tổng tư hàm, thực thâm hàn úy.",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.165,
+            "confidence": 90.9,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              406,
+              2243,
+              1955,
+              2297
+            ],
+            "generated_text": "Tình ngưỡng kiến: Thánh chủ quang ứng thọ chỉ, tinh thần",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.195,
+            "confidence": 94.73,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              257,
+              2322,
+              1958,
+              2375
+            ],
+            "generated_text": "bội thắng ư tích niên; thiên tâm hậu quyến hoàng gia, phù thuy",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.219,
+            "confidence": 89.26,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              256,
+              2408,
+              761,
+              2446
+            ],
+            "generated_text": "điệp trưởng u lao tụe.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 0.118,
+            "confidence": 62.13,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              402,
+              2478,
+              1308,
+              2525
+            ],
+            "generated_text": "Dao thừa phương tấn, bôi thiết hạ tông.",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.156,
+            "confidence": 87.9,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              402,
+              2556,
+              1881,
+              2609
+            ],
+            "generated_text": "Miến hoài vân thủ chi tương vi, thâm quý quỳnh cư chi mạc báo.",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.234,
+            "confidence": 87.42,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              402,
+              2634,
+              1768,
+              2681
+            ],
+            "generated_text": "Khoảnh dĩ Van Tương quốc cấu khối binh đoan, tiểu phiên:",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.201,
+            "confidence": 88.49,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              402,
+              2713,
+              1336,
+              2760
+            ],
+            "generated_text": "Băng trưởng thanh linh, hất tiêu biên hoan.",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.164,
+            "confidence": 89.72,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              627,
+              1316,
+              1678,
+              1327
+            ],
+            "ink": 366
+          },
+          {
+            "box": [
+              447,
+              1574,
+              1310,
+              1584
+            ],
+            "ink": 271
+          },
+          {
+            "box": [
+              1092,
+              1650,
+              1923,
+              1660
+            ],
+            "ink": 332
+          },
+          {
+            "box": [
+              291,
+              1843,
+              799,
+              1853
+            ],
+            "ink": 323
+          },
+          {
+            "box": [
+              264,
+              2086,
+              921,
+              2099
+            ],
+            "ink": 514
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": null,
+        "git_describe": null,
+        "git_dirty": null,
+        "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+        "dtype": "bfloat16",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

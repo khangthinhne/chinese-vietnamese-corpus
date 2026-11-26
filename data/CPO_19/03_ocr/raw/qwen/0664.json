@@ -1,0 +1,251 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "qwen",
+  "page": 664,
+  "runs": [
+    {
+      "key": "529e77cda4fd70ea40c26183ed1716487a2344f58cca8c8566881d1579c33838",
+      "parameters": {
+        "image_sha256": "8aa3f6f68b0b4f932266309bad1773d99e3d0388d2ecc2860648a2cad66b9579",
+        "engine": {
+          "name": "qwen",
+          "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "model_revision": "main",
+          "transformers_version": "4.57.6",
+          "torch_version": "2.9.1+cu128",
+          "cuda_version": "12.8",
+          "bitsandbytes_version": "0.50.2",
+          "quantization": {
+            "load_in_4bit": true,
+            "quant_type": "nf4",
+            "double_quant": true,
+            "compute_dtype": "float16"
+          },
+          "mode": "all",
+          "min_pixels": 50176,
+          "max_pixels": 802816,
+          "band_inches": 2.0,
+          "max_new_tokens": 768,
+          "repetition_penalty": 1.05,
+          "adapter_version": 3,
+          "prompt_version": 3,
+          "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74"
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-26T08:39:37+00:00",
+      "image": "/marimo/.cpo19_ocr/repo/data/CPO_19/02_extraction/pages/page_664.png",
+      "image_size": [
+        2082,
+        2973
+      ],
+      "crop_box": [
+        0,
+        0,
+        2082,
+        2973
+      ],
+      "lines": [
+        {
+          "text": "BANG GIAO HAO THOAI",
+          "bbox": [
+            176,
+            75,
+            1887,
+            319
+          ],
+          "confidence": 86.57
+        },
+        {
+          "text": "此次往還，計程有九千餘里之遙，而縮地行走，不至一百八十餘日。急公之敏，不至歧誤。所謂：“愛人以德”非君子之造歟？至於辛苦之喚咻，疾疾之調劑，一",
+          "bbox": [
+            176,
+            319,
+            1887,
+            562
+          ],
+          "confidence": 86.57
+        },
+        {
+          "text": "部並臻康吉，則又仁人之賜也。卑迂疏曠闕，尊台每爲之就周旋。時雨所及，居然滋長。蓋事有可以意會，不可以言傳。卑不敘其從遊之久，而感悅之深。古人",
+          "bbox": [
+            148,
+            650,
+            1879,
+            1040
+          ],
+          "confidence": 89.87
+        },
+        {
+          "text": "有言：“居而相离则思”，言居之思，而不及行之思。",
+          "bbox": [
+            180,
+            1129,
+            1881,
+            1357
+          ],
+          "confidence": 88.93
+        },
+        {
+          "text": "夫！以关津万里，寒暑二时，陟翠岭而浮溟溟，度清晨而侵长夜，步亦趋，无行不与，乃一朝天各容易分攘，其",
+          "bbox": [
+            180,
+            1357,
+            1881,
+            1586
+          ],
+          "confidence": 88.93
+        },
+        {
+          "text": "行之思，更有甚于居者。此卑所以长拒春风，尤梦寐夫侧玉也。",
+          "bbox": [
+            148,
+            1596,
+            1877,
+            1873
+          ],
+          "confidence": 77.74
+        },
+        {
+          "text": "尊台表列郡，树召伯之风声，由此而蹲部院，登巖廓为栋羽仪，无待于颂。惟豈弟之真福，蕃庶之康",
+          "bbox": [
+            148,
+            1873,
+            1877,
+            2150
+          ],
+          "confidence": 77.74
+        },
+        {
+          "text": "候，天相吉人，自無不利。夫！亦左券底道理，卑拜别無以奉芹，願上數言，以誌尊台衰繡之歸，今則一路福星，乃他日天下之福星也。秋暉薦爽，恭禱台祺，不一。",
+          "bbox": [
+            87,
+            2236,
+            1878,
+            2900
+          ],
+          "confidence": 86.7
+        }
+      ],
+      "raw": {
+        "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+        "model_revision": "main",
+        "mode": "all",
+        "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74",
+        "dpi": 300,
+        "image_size": [
+          2082,
+          2973
+        ],
+        "band_target_height": 600,
+        "bbox_granularity": "band_even_split",
+        "max_new_tokens": 768,
+        "max_pixels": 802816,
+        "inference_seconds": 8.543,
+        "bands": [
+          {
+            "band": 1,
+            "y0": 79,
+            "y1": 606,
+            "ink_box": [
+              176,
+              75,
+              1887,
+              562
+            ],
+            "generated_text": "BANG GIAO HAO THOAI\n\n此次往還，計程有九千餘里之遙，而縮地行走，不至一百八十餘日。急公之敏，不至歧誤。所謂：“愛人以德”非君子之造歟？至於辛苦之喚咻，疾疾之調劑，一",
+            "n_lines": 2,
+            "tokens": 77,
+            "seconds": 1.836,
+            "confidence": 86.57,
+            "flags": []
+          },
+          {
+            "band": 2,
+            "y0": 606,
+            "y1": 1084,
+            "ink_box": [
+              148,
+              650,
+              1879,
+              1040
+            ],
+            "generated_text": "部並臻康吉，則又仁人之賜也。卑迂疏曠闕，尊台每爲之就周旋。時雨所及，居然滋長。蓋事有可以意會，不可以言傳。卑不敘其從遊之久，而感悅之深。古人",
+            "n_lines": 1,
+            "tokens": 70,
+            "seconds": 1.653,
+            "confidence": 89.87,
+            "flags": []
+          },
+          {
+            "band": 3,
+            "y0": 1084,
+            "y1": 1593,
+            "ink_box": [
+              180,
+              1129,
+              1881,
+              1586
+            ],
+            "generated_text": "有言：“居而相离则思”，言居之思，而不及行之思。\n夫！以关津万里，寒暑二时，陟翠岭而浮溟溟，度清晨而侵长夜，步亦趋，无行不与，乃一朝天各容易分攘，其",
+            "n_lines": 2,
+            "tokens": 68,
+            "seconds": 1.606,
+            "confidence": 88.93,
+            "flags": []
+          },
+          {
+            "band": 4,
+            "y0": 1593,
+            "y1": 2193,
+            "ink_box": [
+              148,
+              1596,
+              1877,
+              2150
+            ],
+            "generated_text": "行之思，更有甚于居者。此卑所以长拒春风，尤梦寐夫侧玉也。\n尊台表列郡，树召伯之风声，由此而蹲部院，登巖廓为栋羽仪，无待于颂。惟豈弟之真福，蕃庶之康",
+            "n_lines": 2,
+            "tokens": 71,
+            "seconds": 1.677,
+            "confidence": 77.74,
+            "flags": []
+          },
+          {
+            "band": 5,
+            "y0": 2193,
+            "y1": 2896,
+            "ink_box": [
+              87,
+              2236,
+              1878,
+              2900
+            ],
+            "generated_text": "候，天相吉人，自無不利。夫！亦左券底道理，卑拜别無以奉芹，願上數言，以誌尊台衰繡之歸，今則一路福星，乃他日天下之福星也。秋暉薦爽，恭禱台祺，不一。",
+            "n_lines": 1,
+            "tokens": 75,
+            "seconds": 1.758,
+            "confidence": 86.7,
+            "flags": []
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": null,
+        "git_describe": null,
+        "git_dirty": null,
+        "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+        "dtype": "float16",
+        "adapter_version": 3
+      }
+    }
+  ]
+}

@@ -1,0 +1,241 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "qwen",
+  "page": 637,
+  "runs": [
+    {
+      "key": "4903b6249c41d0849403c55b2c05a21d84dea3782d92cbeff0850ee2cecbaf95",
+      "parameters": {
+        "image_sha256": "4a0f9ccbcdb011a530b7c416be64654548150ce7a065b0f4d4e5baceb132669f",
+        "engine": {
+          "name": "qwen",
+          "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "model_revision": "main",
+          "transformers_version": "4.57.6",
+          "torch_version": "2.9.1+cu128",
+          "cuda_version": "12.8",
+          "bitsandbytes_version": "0.50.2",
+          "quantization": {
+            "load_in_4bit": true,
+            "quant_type": "nf4",
+            "double_quant": true,
+            "compute_dtype": "float16"
+          },
+          "mode": "all",
+          "min_pixels": 50176,
+          "max_pixels": 802816,
+          "band_inches": 2.0,
+          "max_new_tokens": 768,
+          "repetition_penalty": 1.05,
+          "adapter_version": 3,
+          "prompt_version": 3,
+          "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74"
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-26T08:34:03+00:00",
+      "image": "/marimo/.cpo19_ocr/repo/data/CPO_19/02_extraction/pages/page_637.png",
+      "image_size": [
+        2299,
+        3214
+      ],
+      "crop_box": [
+        0,
+        0,
+        2299,
+        3214
+      ],
+      "lines": [
+        {
+          "text": "NGÔ THÌ NHẬM TOÀN TẬP - TẬP III",
+          "bbox": [
+            147,
+            101,
+            1986,
+            340
+          ],
+          "confidence": 90.47
+        },
+        {
+          "text": "效。痛於九月日斃逝，搶地呼天，罔知所措，國內臣民，推卑權理國事。仰仗天朝威德，人心豫附，四郊無事。緣卑沖稚寡昧不知應行典禮，告請稽遲。",
+          "bbox": [
+            147,
+            340,
+            1986,
+            579
+          ],
+          "confidence": 90.47
+        },
+        {
+          "text": "再者先親在日，接奉詔命發交硃批表文，並廷寄諭旨，及玉如意朝珠，端陽節賞各項恩賜。因疾既彌留囑卑代為陳謝。",
+          "bbox": [
+            277,
+            571,
+            1981,
+            824
+          ],
+          "confidence": 94.97
+        },
+        {
+          "text": "嗣於十月日，恭奉諭旨，幷恩賞詩扇。",
+          "bbox": [
+            277,
+            824,
+            1981,
+            1077
+          ],
+          "confidence": 94.97
+        },
+        {
+          "text": "十一月日，又奉廷寄谕旨二道，并拉持纳巴都尔禀帖一件，再奉欲赏御用仍饼果乾各一匣，先亲已不及见。卑于数月间，节旨次庄诵纶音，祗领御赐昭告于灵几，想九原之下，犹知卿结天恩。",
+          "bbox": [
+            283,
+            1106,
+            2038,
+            1647
+          ],
+          "confidence": 89.07
+        },
+        {
+          "text": "至于郭尔喀，因威生慕，纳钦请命，大皇帝文德敷，不遗遐阻，寔中外臣民之同庆。卑尝尝在疚，亦获凭灵，以镇抚其国家。",
+          "bbox": [
+            283,
+            1716,
+            1998,
+            2260
+          ],
+          "confidence": 73.83
+        },
+        {
+          "text": "請，遞前各件表文。伏念稚年弱質，涉履未周，一切國情，願以列憲大人爲準，耑望據情代奏，洞達宸聰，庶幾明燭煌煌，照及下國。不惟卑獲受大人之賜，即先親餘靈不泯，亦銘感於泉下矣。",
+          "bbox": [
+            286,
+            2283,
+            1992,
+            2929
+          ],
+          "confidence": 94.81
+        }
+      ],
+      "raw": {
+        "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+        "model_revision": "main",
+        "mode": "all",
+        "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74",
+        "dpi": 300,
+        "image_size": [
+          2299,
+          3214
+        ],
+        "band_target_height": 600,
+        "bbox_granularity": "band_even_split",
+        "max_new_tokens": 768,
+        "max_pixels": 802816,
+        "inference_seconds": 9.059,
+        "bands": [
+          {
+            "band": 1,
+            "y0": 105,
+            "y1": 575,
+            "ink_box": [
+              147,
+              101,
+              1986,
+              579
+            ],
+            "generated_text": "NGÔ THÌ NHẬM TOÀN TẬP - TẬP III\n\n效。痛於九月日斃逝，搶地呼天，罔知所措，國內臣民，推卑權理國事。仰仗天朝威德，人心豫附，四郊無事。緣卑沖稚寡昧不知應行典禮，告請稽遲。",
+            "n_lines": 2,
+            "tokens": 85,
+            "seconds": 1.937,
+            "confidence": 90.47,
+            "flags": []
+          },
+          {
+            "band": 2,
+            "y0": 575,
+            "y1": 1108,
+            "ink_box": [
+              277,
+              571,
+              1981,
+              1077
+            ],
+            "generated_text": "再者先親在日，接奉詔命發交硃批表文，並廷寄諭旨，及玉如意朝珠，端陽節賞各項恩賜。因疾既彌留囑卑代為陳謝。\n\n嗣於十月日，恭奉諭旨，幷恩賞詩扇。",
+            "n_lines": 2,
+            "tokens": 76,
+            "seconds": 1.867,
+            "confidence": 94.97,
+            "flags": []
+          },
+          {
+            "band": 3,
+            "y0": 1108,
+            "y1": 1680,
+            "ink_box": [
+              283,
+              1106,
+              2038,
+              1647
+            ],
+            "generated_text": "十一月日，又奉廷寄谕旨二道，并拉持纳巴都尔禀帖一件，再奉欲赏御用仍饼果乾各一匣，先亲已不及见。卑于数月间，节旨次庄诵纶音，祗领御赐昭告于灵几，想九原之下，犹知卿结天恩。",
+            "n_lines": 1,
+            "tokens": 80,
+            "seconds": 1.877,
+            "confidence": 89.07,
+            "flags": []
+          },
+          {
+            "band": 4,
+            "y0": 1680,
+            "y1": 2257,
+            "ink_box": [
+              283,
+              1716,
+              1998,
+              2260
+            ],
+            "generated_text": "至于郭尔喀，因威生慕，纳钦请命，大皇帝文德敷，不遗遐阻，寔中外臣民之同庆。卑尝尝在疚，亦获凭灵，以镇抚其国家。",
+            "n_lines": 1,
+            "tokens": 53,
+            "seconds": 1.312,
+            "confidence": 73.83,
+            "flags": []
+          },
+          {
+            "band": 5,
+            "y0": 2257,
+            "y1": 2925,
+            "ink_box": [
+              286,
+              2283,
+              1992,
+              2929
+            ],
+            "generated_text": "請，遞前各件表文。伏念稚年弱質，涉履未周，一切國情，願以列憲大人爲準，耑望據情代奏，洞達宸聰，庶幾明燭煌煌，照及下國。不惟卑獲受大人之賜，即先親餘靈不泯，亦銘感於泉下矣。",
+            "n_lines": 1,
+            "tokens": 88,
+            "seconds": 2.051,
+            "confidence": 94.81,
+            "flags": []
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": null,
+        "git_describe": null,
+        "git_dirty": null,
+        "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+        "dtype": "float16",
+        "adapter_version": 3
+      }
+    }
+  ]
+}

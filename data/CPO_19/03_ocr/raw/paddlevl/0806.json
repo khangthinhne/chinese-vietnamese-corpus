@@ -1,0 +1,962 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 806,
+  "runs": [
+    {
+      "key": "fcb1400421ef64764da9e5e312b40df152779b74c8b763da831c0314ebc031f0",
+      "parameters": {
+        "image_sha256": "e32a0c8ddbc003229b6d934e27508330372a9fc0c082fdb2e86f76b22b3e09b9",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.9.1+cu128",
+          "cuda_version": "12.8",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-26T09:13:12+00:00",
+      "image": "/marimo/.cpo19_ocr/repo/data/CPO_19/02_extraction/pages/page_806.png",
+      "image_size": [
+        2069,
+        2970
+      ],
+      "crop_box": [
+        0,
+        0,
+        2069,
+        2970
+      ],
+      "lines": [
+        {
+          "text": "BANG GIAO HAO THOAI",
+          "bbox": [
+            1313,
+            79,
+            1834,
+            119
+          ],
+          "confidence": 93.39
+        },
+        {
+          "text": "Thi chúng tế bác.",
+          "bbox": [
+            688,
+            193,
+            1274,
+            238
+          ],
+          "confidence": 90.11
+        },
+        {
+          "text": "Thánh tâm điệu văng,",
+          "bbox": [
+            687,
+            288,
+            1198,
+            339
+          ],
+          "confidence": 82.71
+        },
+        {
+          "text": "Vô thế thủy chung.",
+          "bbox": [
+            79,
+            382,
+            1116,
+            434
+          ],
+          "confidence": 94.42
+        },
+        {
+          "text": "Tây hồ di chức,",
+          "bbox": [
+            687,
+            477,
+            1038,
+            522
+          ],
+          "confidence": 82.18
+        },
+        {
+          "text": "Cứu bê bi động.",
+          "bbox": [
+            688,
+            569,
+            1046,
+            613
+          ],
+          "confidence": 71.23
+        },
+        {
+          "text": "Doãn văn ý thước,",
+          "bbox": [
+            684,
+            659,
+            1101,
+            705
+          ],
+          "confidence": 86.92
+        },
+        {
+          "text": "Chiêu hôi phủ táo.",
+          "bbox": [
+            688,
+            750,
+            1112,
+            796
+          ],
+          "confidence": 89.94
+        },
+        {
+          "text": "Tú thân Tiên Vương.",
+          "bbox": [
+            688,
+            840,
+            1164,
+            885
+          ],
+          "confidence": 86.38
+        },
+        {
+          "text": "Long danh hiện hiệu.",
+          "bbox": [
+            684,
+            933,
+            1178,
+            978
+          ],
+          "confidence": 97.09
+        },
+        {
+          "text": "Thiên chương xán xán,",
+          "bbox": [
+            689,
+            1023,
+            1256,
+            1068
+          ],
+          "confidence": 92.86
+        },
+        {
+          "text": "Tuyên hoại quang thi.",
+          "bbox": [
+            688,
+            1114,
+            1194,
+            1168
+          ],
+          "confidence": 97.63
+        },
+        {
+          "text": "Đặc tuyên thân giới,",
+          "bbox": [
+            685,
+            1205,
+            1151,
+            1258
+          ],
+          "confidence": 97.75
+        },
+        {
+          "text": "Hôi thuyên phong bi.",
+          "bbox": [
+            684,
+            1296,
+            1168,
+            1350
+          ],
+          "confidence": 89.99
+        },
+        {
+          "text": "Thánh lượng tuất cô,",
+          "bbox": [
+            689,
+            1388,
+            1169,
+            1440
+          ],
+          "confidence": 91.55
+        },
+        {
+          "text": "Bất di hà viên.",
+          "bbox": [
+            399,
+            1479,
+            1027,
+            1524
+          ],
+          "confidence": 88.53
+        },
+        {
+          "text": "Van lý án tình,",
+          "bbox": [
+            688,
+            1573,
+            1035,
+            1618
+          ],
+          "confidence": 81.49
+        },
+        {
+          "text": "Cữu trùng minh kiến.",
+          "bbox": [
+            689,
+            1667,
+            1185,
+            1713
+          ],
+          "confidence": 84.64
+        },
+        {
+          "text": "Tân định quốc bang,",
+          "bbox": [
+            689,
+            1763,
+            1164,
+            1818
+          ],
+          "confidence": 92.34
+        },
+        {
+          "text": "Trắc động thân lưu.",
+          "bbox": [
+            458,
+            1859,
+            1147,
+            1904
+          ],
+          "confidence": 97.06
+        },
+        {
+          "text": "Tú thân Tụ Vương,",
+          "bbox": [
+            688,
+            1954,
+            1127,
+            2008
+          ],
+          "confidence": 85.97
+        },
+        {
+          "text": "Băng ta thiên hưu.",
+          "bbox": [
+            684,
+            2050,
+            1120,
+            2095
+          ],
+          "confidence": 86.67
+        },
+        {
+          "text": "Sắc thư hoàng hoàng,",
+          "bbox": [
+            685,
+            2144,
+            1188,
+            2199
+          ],
+          "confidence": 94.1
+        },
+        {
+          "text": "Tập phong nam vũ.",
+          "bbox": [
+            688,
+            2238,
+            1578,
+            2293
+          ],
+          "confidence": 98.85
+        },
+        {
+          "text": "Đặc mệnh thân giới,",
+          "bbox": [
+            684,
+            2333,
+            1152,
+            2388
+          ],
+          "confidence": 97.36
+        },
+        {
+          "text": "Cung lai dao thu.",
+          "bbox": [
+            688,
+            2428,
+            1092,
+            2474
+          ],
+          "confidence": 97.44
+        },
+        {
+          "text": "Chế tri thủ quốc,",
+          "bbox": [
+            687,
+            2524,
+            1072,
+            2569
+          ],
+          "confidence": 93.52
+        },
+        {
+          "text": "Bảo huấn tuyên chiêu.",
+          "bbox": [
+            683,
+            2619,
+            1199,
+            2665
+          ],
+          "confidence": 95.05
+        },
+        {
+          "text": "Khâm văn quang bị,",
+          "bbox": [
+            214,
+            2715,
+            1156,
+            2769
+          ],
+          "confidence": 92.26
+        },
+        {
+          "text": "811",
+          "bbox": [
+            342,
+            2842,
+            1830,
+            2887
+          ],
+          "confidence": 99.28
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2069,
+          2970
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 2.534,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              1313,
+              79,
+              1834,
+              119
+            ],
+            "generated_text": "BANG GIAO HAO THOAI",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.09,
+            "confidence": 93.39,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              132,
+              123,
+              1841,
+              137
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.026,
+            "confidence": 71.42,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              688,
+              193,
+              1274,
+              238
+            ],
+            "generated_text": "Thi chúng tế bác.",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.082,
+            "confidence": 90.11,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              687,
+              288,
+              1198,
+              339
+            ],
+            "generated_text": "Thánh tâm điệu văng,",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.087,
+            "confidence": 82.71,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              79,
+              382,
+              1116,
+              434
+            ],
+            "generated_text": "Vô thế thủy chung.",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.083,
+            "confidence": 94.42,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              687,
+              477,
+              1038,
+              522
+            ],
+            "generated_text": "Tây hồ di chức,",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.08,
+            "confidence": 82.18,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              688,
+              569,
+              1046,
+              613
+            ],
+            "generated_text": "Cứu bê bi động.",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.083,
+            "confidence": 71.23,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              684,
+              659,
+              1101,
+              705
+            ],
+            "generated_text": "Doãn văn ý thước,",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.089,
+            "confidence": 86.92,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              688,
+              750,
+              1112,
+              796
+            ],
+            "generated_text": "Chiêu hôi phủ táo.",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.094,
+            "confidence": 89.94,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              688,
+              840,
+              1164,
+              885
+            ],
+            "generated_text": "Tú thân Tiên Vương.",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.089,
+            "confidence": 86.38,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              684,
+              933,
+              1178,
+              978
+            ],
+            "generated_text": "Long danh hiện hiệu.",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.072,
+            "confidence": 97.09,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              689,
+              1023,
+              1256,
+              1068
+            ],
+            "generated_text": "Thiên chương xán xán,",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.117,
+            "confidence": 92.86,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              688,
+              1114,
+              1194,
+              1168
+            ],
+            "generated_text": "Tuyên hoại quang thi.",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.087,
+            "confidence": 97.63,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              685,
+              1205,
+              1151,
+              1258
+            ],
+            "generated_text": "Đặc tuyên thân giới,",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.087,
+            "confidence": 97.75,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              684,
+              1296,
+              1168,
+              1350
+            ],
+            "generated_text": "Hôi thuyên phong bi.",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.087,
+            "confidence": 89.99,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              689,
+              1388,
+              1169,
+              1440
+            ],
+            "generated_text": "Thánh lượng tuất cô,",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.075,
+            "confidence": 91.55,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              399,
+              1479,
+              1027,
+              1524
+            ],
+            "generated_text": "Bất di hà viên.",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.083,
+            "confidence": 88.53,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              688,
+              1573,
+              1035,
+              1618
+            ],
+            "generated_text": "Van lý án tình,",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.064,
+            "confidence": 81.49,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              689,
+              1667,
+              1185,
+              1713
+            ],
+            "generated_text": "Cữu trùng minh kiến.",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.096,
+            "confidence": 84.64,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              689,
+              1763,
+              1164,
+              1818
+            ],
+            "generated_text": "Tân định quốc bang,",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.067,
+            "confidence": 92.34,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              458,
+              1859,
+              1147,
+              1904
+            ],
+            "generated_text": "Trắc động thân lưu.",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.081,
+            "confidence": 97.06,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              688,
+              1954,
+              1127,
+              2008
+            ],
+            "generated_text": "Tú thân Tụ Vương,",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.088,
+            "confidence": 85.97,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              684,
+              2050,
+              1120,
+              2095
+            ],
+            "generated_text": "Băng ta thiên hưu.",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.088,
+            "confidence": 86.67,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              685,
+              2144,
+              1188,
+              2199
+            ],
+            "generated_text": "Sắc thư hoàng hoàng,",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.093,
+            "confidence": 94.1,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              688,
+              2238,
+              1578,
+              2293
+            ],
+            "generated_text": "Tập phong nam vũ.",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.088,
+            "confidence": 98.85,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              684,
+              2333,
+              1152,
+              2388
+            ],
+            "generated_text": "Đặc mệnh thân giới,",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.086,
+            "confidence": 97.36,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              688,
+              2428,
+              1092,
+              2474
+            ],
+            "generated_text": "Cung lai dao thu.",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.072,
+            "confidence": 97.44,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              687,
+              2524,
+              1072,
+              2569
+            ],
+            "generated_text": "Chế tri thủ quốc,",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.072,
+            "confidence": 93.52,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              683,
+              2619,
+              1199,
+              2665
+            ],
+            "generated_text": "Bảo huấn tuyên chiêu.",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.095,
+            "confidence": 95.05,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              214,
+              2715,
+              1156,
+              2769
+            ],
+            "generated_text": "Khâm văn quang bị,",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.083,
+            "confidence": 92.26,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              342,
+              2842,
+              1830,
+              2887
+            ],
+            "generated_text": "811",
+            "n_lines": 1,
+            "tokens": 4,
+            "seconds": 0.046,
+            "confidence": 99.28,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              828,
+              611,
+              1029,
+              621
+            ],
+            "ink": 126
+          },
+          {
+            "box": [
+              1119,
+              882,
+              1148,
+              891
+            ],
+            "ink": 132
+          },
+          {
+            "box": [
+              771,
+              975,
+              1129,
+              986
+            ],
+            "ink": 133
+          },
+          {
+            "box": [
+              969,
+              1065,
+              1204,
+              1074
+            ],
+            "ink": 133
+          },
+          {
+            "box": [
+              841,
+              1902,
+              917,
+              1912
+            ],
+            "ink": 124
+          },
+          {
+            "box": [
+              776,
+              2092,
+              857,
+              2103
+            ],
+            "ink": 138
+          },
+          {
+            "box": [
+              779,
+              2470,
+              1067,
+              2483
+            ],
+            "ink": 199
+          },
+          {
+            "box": [
+              827,
+              2567,
+              1067,
+              2577
+            ],
+            "ink": 127
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": null,
+        "git_describe": null,
+        "git_dirty": null,
+        "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+        "dtype": "bfloat16",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

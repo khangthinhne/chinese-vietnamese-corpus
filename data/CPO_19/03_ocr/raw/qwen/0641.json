@@ -1,0 +1,268 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "qwen",
+  "page": 641,
+  "runs": [
+    {
+      "key": "ee037c5cc84098a81e8a9a738256d1013a3c460893e96eec3bf4da1542df7775",
+      "parameters": {
+        "image_sha256": "0171e6cd16ef25a05d147bfd50baeb4985e19e9fb2c3a0f5dd8c8fefe89afc34",
+        "engine": {
+          "name": "qwen",
+          "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "model_revision": "main",
+          "transformers_version": "4.57.6",
+          "torch_version": "2.9.1+cu128",
+          "cuda_version": "12.8",
+          "bitsandbytes_version": "0.50.2",
+          "quantization": {
+            "load_in_4bit": true,
+            "quant_type": "nf4",
+            "double_quant": true,
+            "compute_dtype": "float16"
+          },
+          "mode": "all",
+          "min_pixels": 50176,
+          "max_pixels": 802816,
+          "band_inches": 2.0,
+          "max_new_tokens": 768,
+          "repetition_penalty": 1.05,
+          "adapter_version": 3,
+          "prompt_version": 3,
+          "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74"
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-26T08:34:55+00:00",
+      "image": "/marimo/.cpo19_ocr/repo/data/CPO_19/02_extraction/pages/page_641.png",
+      "image_size": [
+        2138,
+        3074
+      ],
+      "crop_box": [
+        0,
+        0,
+        2138,
+        3074
+      ],
+      "lines": [
+        {
+          "text": "NGÔ THỊ NHẬM TOÀN TẬP - TẬP III",
+          "bbox": [
+            217,
+            43,
+            1997,
+            290
+          ],
+          "confidence": 90.62
+        },
+        {
+          "text": "奏，承送廷寄，奉上諭，本國小心敬事，特加優獎，並奉賞如意玉，山蟒綿紗疋，玻璃磁器等件，耑派大員資捧賞件親赴沖藩面爲傳旨，以獎其恪恭向化之",
+          "bbox": [
+            217,
+            290,
+            1997,
+            537
+          ],
+          "confidence": 90.62
+        },
+        {
+          "text": "制憲大人接奉敕旨，耑派高廉道熊同廉府，資送出關頒命，驚喜。",
+          "bbox": [
+            248,
+            615,
+            1988,
+            1033
+          ],
+          "confidence": 78.14
+        },
+        {
+          "text": "自惟輯盗寧邦，乃藩候職守常事，奉此恩施優渥，曷以稱酬，寔由大人勤宣封令。本國率履不越，深惟疏曠是懼。幸賴聲靈遠暢，犯夥散落，遂使風浪遊",
+          "bbox": [
+            290,
+            1090,
+            1991,
+            1526
+          ],
+          "confidence": 87.79
+        },
+        {
+          "text": "魂，难逃宪纲。",
+          "bbox": [
+            286,
+            1570,
+            1994,
+            1763
+          ],
+          "confidence": 87.82
+        },
+        {
+          "text": "再蒙波照盛情，成就其美，并将铢寸计录，上达承明，仰承宸旒洞烛，嘉其善而安劝之。下邦获免纵",
+          "bbox": [
+            286,
+            1763,
+            1994,
+            1956
+          ],
+          "confidence": 87.82
+        },
+        {
+          "text": "惡長奸之誚，重荷天旨優褒。皇恩寵潤，揣分捫衷，無涯感激，合即星夜急趨瞻臺下，親迎使節，拜受天恩，庶表恭虔素悃。",
+          "bbox": [
+            296,
+            2028,
+            1996,
+            2473
+          ],
+          "confidence": 91.79
+        },
+        {
+          "text": "惟本國見在疆事艱轄，見有暹邇落鳩集惡蠻，不時抄掠邊氓，爲沿海以南之梗，齊桅惡夥，又爲其羽",
+          "bbox": [
+            37,
+            2481,
+            1997,
+            3013
+          ],
+          "confidence": 84.2
+        }
+      ],
+      "raw": {
+        "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+        "model_revision": "main",
+        "mode": "all",
+        "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74",
+        "dpi": 300,
+        "image_size": [
+          2138,
+          3074
+        ],
+        "band_target_height": 600,
+        "bbox_granularity": "band_even_split",
+        "max_new_tokens": 768,
+        "max_pixels": 802816,
+        "inference_seconds": 8.677,
+        "bands": [
+          {
+            "band": 1,
+            "y0": 47,
+            "y1": 572,
+            "ink_box": [
+              217,
+              43,
+              1997,
+              537
+            ],
+            "generated_text": "NGÔ THỊ NHẬM TOÀN TẬP - TẬP III\n\n奏，承送廷寄，奉上諭，本國小心敬事，特加優獎，並奉賞如意玉，山蟒綿紗疋，玻璃磁器等件，耑派大員資捧賞件親赴沖藩面爲傳旨，以獎其恪恭向化之",
+            "n_lines": 2,
+            "tokens": 89,
+            "seconds": 2.011,
+            "confidence": 90.62,
+            "flags": []
+          },
+          {
+            "band": 2,
+            "y0": 572,
+            "y1": 1047,
+            "ink_box": [
+              248,
+              615,
+              1988,
+              1033
+            ],
+            "generated_text": "制憲大人接奉敕旨，耑派高廉道熊同廉府，資送出關頒命，驚喜。",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 0.868,
+            "confidence": 78.14,
+            "flags": []
+          },
+          {
+            "band": 3,
+            "y0": 1047,
+            "y1": 1524,
+            "ink_box": [
+              290,
+              1090,
+              1991,
+              1526
+            ],
+            "generated_text": "自惟輯盗寧邦，乃藩候職守常事，奉此恩施優渥，曷以稱酬，寔由大人勤宣封令。本國率履不越，深惟疏曠是懼。幸賴聲靈遠暢，犯夥散落，遂使風浪遊",
+            "n_lines": 1,
+            "tokens": 69,
+            "seconds": 1.629,
+            "confidence": 87.79,
+            "flags": []
+          },
+          {
+            "band": 4,
+            "y0": 1524,
+            "y1": 1998,
+            "ink_box": [
+              286,
+              1570,
+              1994,
+              1956
+            ],
+            "generated_text": "魂，难逃宪纲。\n再蒙波照盛情，成就其美，并将铢寸计录，上达承明，仰承宸旒洞烛，嘉其善而安劝之。下邦获免纵",
+            "n_lines": 2,
+            "tokens": 50,
+            "seconds": 1.326,
+            "confidence": 87.82,
+            "flags": []
+          },
+          {
+            "band": 5,
+            "y0": 1998,
+            "y1": 2474,
+            "ink_box": [
+              296,
+              2028,
+              1996,
+              2473
+            ],
+            "generated_text": "惡長奸之誚，重荷天旨優褒。皇恩寵潤，揣分捫衷，無涯感激，合即星夜急趨瞻臺下，親迎使節，拜受天恩，庶表恭虔素悃。",
+            "n_lines": 1,
+            "tokens": 58,
+            "seconds": 1.469,
+            "confidence": 91.79,
+            "flags": []
+          },
+          {
+            "band": 6,
+            "y0": 2474,
+            "y1": 3009,
+            "ink_box": [
+              37,
+              2481,
+              1997,
+              3013
+            ],
+            "generated_text": "惟本國見在疆事艱轄，見有暹邇落鳩集惡蠻，不時抄掠邊氓，爲沿海以南之梗，齊桅惡夥，又爲其羽",
+            "n_lines": 1,
+            "tokens": 49,
+            "seconds": 1.358,
+            "confidence": 84.2,
+            "flags": []
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": null,
+        "git_describe": null,
+        "git_dirty": null,
+        "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+        "dtype": "float16",
+        "adapter_version": 3
+      }
+    }
+  ]
+}

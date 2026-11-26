@@ -1,0 +1,271 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "qwen",
+  "page": 708,
+  "runs": [
+    {
+      "key": "e5d3aab62452c852f8e1c31d05833f03fc2b376c5f0683cfb5539c08b5b616a3",
+      "parameters": {
+        "image_sha256": "2155d0c73f1a8c8c61397828d3ee026e7dcb9a9f8dde20a42c6c895c8e420e58",
+        "engine": {
+          "name": "qwen",
+          "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "model_revision": "main",
+          "transformers_version": "4.57.6",
+          "torch_version": "2.9.1+cu128",
+          "cuda_version": "12.8",
+          "bitsandbytes_version": "0.50.2",
+          "quantization": {
+            "load_in_4bit": true,
+            "quant_type": "nf4",
+            "double_quant": true,
+            "compute_dtype": "float16"
+          },
+          "mode": "all",
+          "min_pixels": 50176,
+          "max_pixels": 802816,
+          "band_inches": 2.0,
+          "max_new_tokens": 768,
+          "repetition_penalty": 1.05,
+          "adapter_version": 3,
+          "prompt_version": 3,
+          "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74"
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-26T08:53:56+00:00",
+      "image": "/marimo/.cpo19_ocr/repo/data/CPO_19/02_extraction/pages/page_708.png",
+      "image_size": [
+        2099,
+        2993
+      ],
+      "crop_box": [
+        0,
+        0,
+        2099,
+        2993
+      ],
+      "lines": [
+        {
+          "text": "BANG GIAO HẢO THOẠI",
+          "bbox": [
+            242,
+            78,
+            1950,
+            257
+          ],
+          "confidence": 81.79
+        },
+        {
+          "text": "71.乞馬表",
+          "bbox": [
+            242,
+            257,
+            1950,
+            435
+          ],
+          "confidence": 81.79
+        },
+        {
+          "text": "臣於庚戌秋進京展覲，欽奉御賜天廐良馬。臣祗領回國，馬行踴捷，性又和柔，真在道",
+          "bbox": [
+            242,
+            435,
+            1950,
+            614
+          ],
+          "confidence": 81.79
+        },
+        {
+          "text": "不習水草，此馬顛躪，臣深用懊昔。雖欲捐金尋買，而臣馬非所產。況此追風逐電，自非從恒北，還是伏櫪駕駃。",
+          "bbox": [
+            239,
+            709,
+            1942,
+            1110
+          ],
+          "confidence": 80.21
+        },
+        {
+          "text": "臣仰荷皇恩，賜履南服。馳驅邊塞，敢瞻守土之常，趨赴闕庭，尚多朝天之日，幸得憑藉聲靈，境内綏帖。",
+          "bbox": [
+            161,
+            1181,
+            1961,
+            1398
+          ],
+          "confidence": 92.89
+        },
+        {
+          "text": "瞻佛日於無量，壽佛在極樂國，以龍象法力提撕，一切",
+          "bbox": [
+            161,
+            1398,
+            1961,
+            1615
+          ],
+          "confidence": 92.89
+        },
+        {
+          "text": "歸投，聖天子壽考萬年，莫不來享，莫不來王。晉康錫蕃，",
+          "bbox": [
+            237,
+            1709,
+            1921,
+            1843
+          ],
+          "confidence": 92.94
+        },
+        {
+          "text": "所以需澤宮之恩膏，縮朝宗之地分。",
+          "bbox": [
+            237,
+            1843,
+            1921,
+            1977
+          ],
+          "confidence": 92.94
+        },
+        {
+          "text": "臣北拱宸極，馳神覲光，自惟扶南海際，山川阻深，",
+          "bbox": [
+            237,
+            1977,
+            1921,
+            2111
+          ],
+          "confidence": 92.94
+        },
+        {
+          "text": "幸得踨蹐之錫南土，彭彭之命東方，時叩天閻，日陪曦馭，臣誠不勝大願。輒敢不揣塵漬，叩請洪私，伏望聖慈覃恩渥水，恕其冒妄干求之罪，錫以權寄馳蹤之良。臣永矢坤貞，長資乾健，無任瞻仰願望之至。",
+          "bbox": [
+            168,
+            2206,
+            1940,
+            2898
+          ],
+          "confidence": 87.79
+        }
+      ],
+      "raw": {
+        "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+        "model_revision": "main",
+        "mode": "all",
+        "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74",
+        "dpi": 300,
+        "image_size": [
+          2099,
+          2993
+        ],
+        "band_target_height": 600,
+        "bbox_granularity": "band_even_split",
+        "max_new_tokens": 768,
+        "max_pixels": 802816,
+        "inference_seconds": 8.776,
+        "bands": [
+          {
+            "band": 1,
+            "y0": 82,
+            "y1": 662,
+            "ink_box": [
+              242,
+              78,
+              1950,
+              614
+            ],
+            "generated_text": "BANG GIAO HẢO THOẠI\n71.乞馬表\n臣於庚戌秋進京展覲，欽奉御賜天廐良馬。臣祗領回國，馬行踴捷，性又和柔，真在道",
+            "n_lines": 3,
+            "tokens": 63,
+            "seconds": 1.534,
+            "confidence": 81.79,
+            "flags": []
+          },
+          {
+            "band": 2,
+            "y0": 662,
+            "y1": 1160,
+            "ink_box": [
+              239,
+              709,
+              1942,
+              1110
+            ],
+            "generated_text": "不習水草，此馬顛躪，臣深用懊昔。雖欲捐金尋買，而臣馬非所產。況此追風逐電，自非從恒北，還是伏櫪駕駃。",
+            "n_lines": 1,
+            "tokens": 55,
+            "seconds": 1.314,
+            "confidence": 80.21,
+            "flags": []
+          },
+          {
+            "band": 3,
+            "y0": 1160,
+            "y1": 1662,
+            "ink_box": [
+              161,
+              1181,
+              1961,
+              1615
+            ],
+            "generated_text": "臣仰荷皇恩，賜履南服。馳驅邊塞，敢瞻守土之常，趨赴闕庭，尚多朝天之日，幸得憑藉聲靈，境内綏帖。\n瞻佛日於無量，壽佛在極樂國，以龍象法力提撕，一切",
+            "n_lines": 2,
+            "tokens": 76,
+            "seconds": 1.766,
+            "confidence": 92.89,
+            "flags": []
+          },
+          {
+            "band": 4,
+            "y0": 1662,
+            "y1": 2159,
+            "ink_box": [
+              237,
+              1709,
+              1921,
+              2111
+            ],
+            "generated_text": "歸投，聖天子壽考萬年，莫不來享，莫不來王。晉康錫蕃，\n所以需澤宮之恩膏，縮朝宗之地分。\n臣北拱宸極，馳神覲光，自惟扶南海際，山川阻深，",
+            "n_lines": 3,
+            "tokens": 67,
+            "seconds": 1.696,
+            "confidence": 92.94,
+            "flags": []
+          },
+          {
+            "band": 5,
+            "y0": 2159,
+            "y1": 2894,
+            "ink_box": [
+              168,
+              2206,
+              1940,
+              2898
+            ],
+            "generated_text": "幸得踨蹐之錫南土，彭彭之命東方，時叩天閻，日陪曦馭，臣誠不勝大願。輒敢不揣塵漬，叩請洪私，伏望聖慈覃恩渥水，恕其冒妄干求之罪，錫以權寄馳蹤之良。臣永矢坤貞，長資乾健，無任瞻仰願望之至。",
+            "n_lines": 1,
+            "tokens": 103,
+            "seconds": 2.451,
+            "confidence": 87.79,
+            "flags": []
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": null,
+        "git_describe": null,
+        "git_dirty": null,
+        "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+        "dtype": "float16",
+        "adapter_version": 3
+      }
+    }
+  ]
+}

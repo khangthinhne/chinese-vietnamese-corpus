@@ -1,0 +1,873 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 737,
+  "runs": [
+    {
+      "key": "60f867c550065fb2cd161a71ce2b7272ab0e464a91531690361d60dd3a056056",
+      "parameters": {
+        "image_sha256": "89c61e3568ebdeeab78909df3df9291bc32097f704603be4662da6544c45e48d",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.9.1+cu128",
+          "cuda_version": "12.8",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-26T08:58:23+00:00",
+      "image": "/marimo/.cpo19_ocr/repo/data/CPO_19/02_extraction/pages/page_737.png",
+      "image_size": [
+        2206,
+        3133
+      ],
+      "crop_box": [
+        0,
+        0,
+        2206,
+        3133
+      ],
+      "lines": [
+        {
+          "text": "NGÔ THI NHAM TOẠN TẬP - TẬP III",
+          "bbox": [
+            165,
+            69,
+            937,
+            110
+          ],
+          "confidence": 80.66
+        },
+        {
+          "text": "DICH NGHIA:",
+          "bbox": [
+            166,
+            192,
+            476,
+            231
+          ],
+          "confidence": 99.15
+        },
+        {
+          "text": "BIÊU TA ÔN ĐƯỢC BAN SÁC THỦ VA CHUÔI NGOC TRAI",
+          "bbox": [
+            261,
+            278,
+            1773,
+            325
+          ],
+          "confidence": 83.87
+        },
+        {
+          "text": "Nay kính được Ngư ban sắc thư và chuỗi ngọc trai đeo tay, thánh",
+          "bbox": [
+            314,
+            412,
+            1869,
+            457
+          ],
+          "confidence": 89.36
+        },
+        {
+          "text": "ân long trọng, cảm khích không cùng. Thân hướng về phương Bắc trông",
+          "bbox": [
+            168,
+            488,
+            1871,
+            541
+          ],
+          "confidence": 92.37
+        },
+        {
+          "text": "lên của trời, đốt chín lân hương khấu đâu. Từ khi nước thân mở phong",
+          "bbox": [
+            168,
+            565,
+            1871,
+            612
+          ],
+          "confidence": 91.9
+        },
+        {
+          "text": "cương đến nay, chưa từng được ơn hậu như thế. Đức như trời che đất trở,",
+          "bbox": [
+            168,
+            641,
+            1869,
+            689
+          ],
+          "confidence": 88.25
+        },
+        {
+          "text": "không thể tà được, xin đâng tờ biểu tạ.",
+          "bbox": [
+            167,
+            721,
+            1531,
+            766
+          ],
+          "confidence": 77.61
+        },
+        {
+          "text": "Cúi nghĩ: Sắc thư rực rỡ, để thể nắng xuân xoi về; mưa móc đuơm",
+          "bbox": [
+            319,
+            801,
+            1870,
+            847
+          ],
+          "confidence": 84.14
+        },
+        {
+          "text": "tràn, ngửa đôi thành nhân ăn trách.",
+          "bbox": [
+            168,
+            885,
+            1004,
+            931
+          ],
+          "confidence": 87.17
+        },
+        {
+          "text": "Ban ra đức lón, ghi tác lòng son.",
+          "bbox": [
+            316,
+            968,
+            1056,
+            1013
+          ],
+          "confidence": 82.49
+        },
+        {
+          "text": "Kính nghĩ Hoàng đế bệ ha:",
+          "bbox": [
+            319,
+            1049,
+            938,
+            1095
+          ],
+          "confidence": 88.4
+        },
+        {
+          "text": "Lón lao thay: Sùng sũng giữa trời, uy nghi khuôn phép.",
+          "bbox": [
+            317,
+            1131,
+            1590,
+            1183
+          ],
+          "confidence": 91.54
+        },
+        {
+          "text": "Thể thức đủ cả bốn mùa bốn đức, công bằng hoàng cực nêu cao; hợp",
+          "bbox": [
+            317,
+            1212,
+            1870,
+            1263
+          ],
+          "confidence": 91.65
+        },
+        {
+          "text": "đại đồng làm một nhà một người, bưói thái hoà mở ra hội chân nguyên.",
+          "bbox": [
+            172,
+            1292,
+            1802,
+            1345
+          ],
+          "confidence": 92.75
+        },
+        {
+          "text": "Thân: Ô nơi xa lánh, ơn được chờ che.",
+          "bbox": [
+            320,
+            1376,
+            1180,
+            1422
+          ],
+          "confidence": 90.22
+        },
+        {
+          "text": "Doc sắc thư mà biết lòng nhân nhu hoà an ủi khuyên răn, thuận",
+          "bbox": [
+            318,
+            1456,
+            1869,
+            1503
+          ],
+          "confidence": 92.31
+        },
+        {
+          "text": "mệnh không sai gang tắc; đeo chuỗi ngọc mà thấy tình thân, sánh ngang",
+          "bbox": [
+            172,
+            1539,
+            1872,
+            1594
+          ],
+          "confidence": 96.23
+        },
+        {
+          "text": "nghĩa tiếp nối, nêu công lao thuộc cõi năm nghìn.",
+          "bbox": [
+            172,
+            1623,
+            1336,
+            1672
+          ],
+          "confidence": 94.43
+        },
+        {
+          "text": "Đâu đám không: Đức hoá kính noi, không lơi vàng mệnh.",
+          "bbox": [
+            319,
+            1704,
+            1631,
+            1751
+          ],
+          "confidence": 92.34
+        },
+        {
+          "text": "Sơ trời thờ nước lón, kính ruồi lòng nơi van đăm xa; giũ đất làm",
+          "bbox": [
+            320,
+            1786,
+            1872,
+            1833
+          ],
+          "confidence": 86.56
+        },
+        {
+          "text": "dâu phên, ngửa đội ơn ở chín tăng thăm.",
+          "bbox": [
+            174,
+            1872,
+            1103,
+            1917
+          ],
+          "confidence": 82.13
+        },
+        {
+          "text": "CHU THICH:",
+          "bbox": [
+            175,
+            1984,
+            461,
+            2023
+          ],
+          "confidence": 92.99
+        },
+        {
+          "text": "1.Năm nghìn: Tức 5 phục, mỗi phục 500 đặm, phục nọ cách phục kia đều",
+          "bbox": [
+            324,
+            2060,
+            1872,
+            2110
+          ],
+          "confidence": 95.89
+        },
+        {
+          "text": "5000 đảm (động, tây, nam, bắc).",
+          "bbox": [
+            175,
+            2147,
+            850,
+            2187
+          ],
+          "confidence": 93.47
+        },
+        {
+          "text": "76表粱林人阮淸祕笺八夕回國謝表",
+          "bbox": [
+            304,
+            2320,
+            1726,
+            2367
+          ],
+          "confidence": 70.95
+        },
+        {
+          "text": "10.牟祥示八阮逐臥守八石曰國謝衣",
+          "bbox": [
+            315,
+            2359,
+            1737,
+            2398
+          ],
+          "confidence": 75.26
+        },
+        {
+          "text": "茲欽奉恩旨，放釋羈禁人，乃臣國人牧馬鎮目之",
+          "bbox": [
+            327,
+            2533,
+            1968,
+            2597
+          ],
+          "confidence": 98.68
+        },
+        {
+          "text": "阮遠猷等八名，遠猷業已病故，見存朱廷俚等七",
+          "bbox": [
+            177,
+            2684,
+            1870,
+            2749
+          ],
+          "confidence": 99.89
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2206,
+          3133
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 5.546,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              165,
+              69,
+              937,
+              110
+            ],
+            "generated_text": "NGÔ THI NHAM TOẠN TẬP - TẬP III",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.19,
+            "confidence": 80.66,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              169,
+              115,
+              1878,
+              129
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.028,
+            "confidence": 56.57,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              166,
+              192,
+              476,
+              231
+            ],
+            "generated_text": "DICH NGHIA:",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.067,
+            "confidence": 99.15,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              261,
+              278,
+              1773,
+              325
+            ],
+            "generated_text": "BIÊU TA ÔN ĐƯỢC BAN SÁC THỦ VA CHUÔI NGOC TRAI",
+            "n_lines": 1,
+            "tokens": 33,
+            "seconds": 0.275,
+            "confidence": 83.87,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              314,
+              412,
+              1869,
+              457
+            ],
+            "generated_text": "Nay kính được Ngư ban sắc thư và chuỗi ngọc trai đeo tay, thánh",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.22,
+            "confidence": 89.36,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              168,
+              488,
+              1871,
+              541
+            ],
+            "generated_text": "ân long trọng, cảm khích không cùng. Thân hướng về phương Bắc trông",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.183,
+            "confidence": 92.37,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              168,
+              565,
+              1871,
+              612
+            ],
+            "generated_text": "lên của trời, đốt chín lân hương khấu đâu. Từ khi nước thân mở phong",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 0.233,
+            "confidence": 91.9,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              168,
+              641,
+              1869,
+              689
+            ],
+            "generated_text": "cương đến nay, chưa từng được ơn hậu như thế. Đức như trời che đất trở,",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.238,
+            "confidence": 88.25,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              167,
+              721,
+              1531,
+              766
+            ],
+            "generated_text": "không thể tà được, xin đâng tờ biểu tạ.",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.166,
+            "confidence": 77.61,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              319,
+              801,
+              1870,
+              847
+            ],
+            "generated_text": "Cúi nghĩ: Sắc thư rực rỡ, để thể nắng xuân xoi về; mưa móc đuơm",
+            "n_lines": 1,
+            "tokens": 34,
+            "seconds": 0.261,
+            "confidence": 84.14,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              168,
+              885,
+              1004,
+              931
+            ],
+            "generated_text": "tràn, ngửa đôi thành nhân ăn trách.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.119,
+            "confidence": 87.17,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              316,
+              968,
+              1056,
+              1013
+            ],
+            "generated_text": "Ban ra đức lón, ghi tác lòng son.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.125,
+            "confidence": 82.49,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              319,
+              1049,
+              938,
+              1095
+            ],
+            "generated_text": "Kính nghĩ Hoàng đế bệ ha:",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 0.111,
+            "confidence": 88.4,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              317,
+              1131,
+              1590,
+              1183
+            ],
+            "generated_text": "Lón lao thay: Sùng sũng giữa trời, uy nghi khuôn phép.",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.189,
+            "confidence": 91.54,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              317,
+              1212,
+              1870,
+              1263
+            ],
+            "generated_text": "Thể thức đủ cả bốn mùa bốn đức, công bằng hoàng cực nêu cao; hợp",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.228,
+            "confidence": 91.65,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              172,
+              1292,
+              1802,
+              1345
+            ],
+            "generated_text": "đại đồng làm một nhà một người, bưói thái hoà mở ra hội chân nguyên.",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.22,
+            "confidence": 92.75,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              320,
+              1376,
+              1180,
+              1422
+            ],
+            "generated_text": "Thân: Ô nơi xa lánh, ơn được chờ che.",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.146,
+            "confidence": 90.22,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              318,
+              1456,
+              1869,
+              1503
+            ],
+            "generated_text": "Doc sắc thư mà biết lòng nhân nhu hoà an ủi khuyên răn, thuận",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.21,
+            "confidence": 92.31,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              172,
+              1539,
+              1872,
+              1594
+            ],
+            "generated_text": "mệnh không sai gang tắc; đeo chuỗi ngọc mà thấy tình thân, sánh ngang",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.196,
+            "confidence": 96.23,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              172,
+              1623,
+              1336,
+              1672
+            ],
+            "generated_text": "nghĩa tiếp nối, nêu công lao thuộc cõi năm nghìn.",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.182,
+            "confidence": 94.43,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              319,
+              1704,
+              1631,
+              1751
+            ],
+            "generated_text": "Đâu đám không: Đức hoá kính noi, không lơi vàng mệnh.",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.181,
+            "confidence": 92.34,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              320,
+              1786,
+              1872,
+              1833
+            ],
+            "generated_text": "Sơ trời thờ nước lón, kính ruồi lòng nơi van đăm xa; giũ đất làm",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 0.223,
+            "confidence": 86.56,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              174,
+              1872,
+              1103,
+              1917
+            ],
+            "generated_text": "dâu phên, ngửa đội ơn ở chín tăng thăm.",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.173,
+            "confidence": 82.13,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              175,
+              1984,
+              461,
+              2023
+            ],
+            "generated_text": "CHU THICH:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.068,
+            "confidence": 92.99,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              324,
+              2060,
+              1872,
+              2110
+            ],
+            "generated_text": "1.Năm nghìn: Tức 5 phục, mỗi phục 500 đặm, phục nọ cách phục kia đều",
+            "n_lines": 1,
+            "tokens": 37,
+            "seconds": 0.306,
+            "confidence": 95.89,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              175,
+              2147,
+              850,
+              2187
+            ],
+            "generated_text": "5000 đảm (động, tây, nam, bắc).",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.16,
+            "confidence": 93.47,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              304,
+              2320,
+              1726,
+              2367
+            ],
+            "generated_text": "76表粱林人阮淸祕笺八夕回國謝表",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.196,
+            "confidence": 70.95,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              315,
+              2359,
+              1737,
+              2398
+            ],
+            "generated_text": "10.牟祥示八阮逐臥守八石曰國謝衣",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.16,
+            "confidence": 75.26,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              327,
+              2533,
+              1968,
+              2597
+            ],
+            "generated_text": "茲欽奉恩旨，放釋羈禁人，乃臣國人牧馬鎮目之",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 0.253,
+            "confidence": 98.68,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              177,
+              2684,
+              1870,
+              2749
+            ],
+            "generated_text": "阮遠猷等八名，遠猷業已病故，見存朱廷俚等七",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.236,
+            "confidence": 99.89,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              380,
+              453,
+              1707,
+              464
+            ],
+            "ink": 435
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": null,
+        "git_describe": null,
+        "git_dirty": null,
+        "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+        "dtype": "bfloat16",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

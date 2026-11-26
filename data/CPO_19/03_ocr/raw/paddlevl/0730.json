@@ -1,0 +1,856 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 730,
+  "runs": [
+    {
+      "key": "bb3c675508b57f2b746819444b2c50c5771747dbd00bd794eb2991e9caf50d46",
+      "parameters": {
+        "image_sha256": "e06e52885d01c02b9e7700157fac6b7cf9695de3251f28e5c0c0dbfe19770bbc",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.9.1+cu128",
+          "cuda_version": "12.8",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-26T08:57:47+00:00",
+      "image": "/marimo/.cpo19_ocr/repo/data/CPO_19/02_extraction/pages/page_730.png",
+      "image_size": [
+        2069,
+        2965
+      ],
+      "crop_box": [
+        0,
+        0,
+        2069,
+        2965
+      ],
+      "lines": [
+        {
+          "text": "BANG GIAO HAO THOAI",
+          "bbox": [
+            1346,
+            74,
+            1865,
+            114
+          ],
+          "confidence": 99.58
+        },
+        {
+          "text": "Đạo thấu cổ kim, sáng như nhất nguyệt.",
+          "bbox": [
+            309,
+            177,
+            1565,
+            226
+          ],
+          "confidence": 88.02
+        },
+        {
+          "text": "Đường chính cực kỳ bằng phẳng, khí huyết tạo nên một dòng; xót",
+          "bbox": [
+            309,
+            265,
+            1867,
+            318
+          ],
+          "confidence": 94.66
+        },
+        {
+          "text": "thương nghiêm túc ban ra, cho kẻ mất tai không sáng.",
+          "bbox": [
+            160,
+            342,
+            1409,
+            395
+          ],
+          "confidence": 93.37
+        },
+        {
+          "text": "Năm quyền hành bằng ân nghĩa, dụng biểu trưng ở lời ban.",
+          "bbox": [
+            310,
+            432,
+            1681,
+            485
+          ],
+          "confidence": 88.59
+        },
+        {
+          "text": "Thân: Vâng nhân Thiên ngôn, kính theo phép tắc.",
+          "bbox": [
+            309,
+            524,
+            1462,
+            569
+          ],
+          "confidence": 95.03
+        },
+        {
+          "text": "Kính chức: Thánh thọ van ức năm, làm vua làm thày mãi; Hoàng",
+          "bbox": [
+            310,
+            616,
+            1866,
+            661
+          ],
+          "confidence": 92.79
+        },
+        {
+          "text": "gia nghìn trăm thuở, nội dài đòi cháu con.",
+          "bbox": [
+            163,
+            694,
+            1130,
+            741
+          ],
+          "confidence": 90.25
+        },
+        {
+          "text": "Thân ha tình khôn xiết cảm kích.",
+          "bbox": [
+            310,
+            786,
+            1081,
+            832
+          ],
+          "confidence": 95.57
+        },
+        {
+          "text": "CHU THICH:",
+          "bbox": [
+            164,
+            892,
+            452,
+            930
+          ],
+          "confidence": 99.03
+        },
+        {
+          "text": "1.Nghieu: Sách Luận ngữ nói: Biết được người thông sáng chỉ có vua",
+          "bbox": [
+            315,
+            967,
+            1866,
+            1016
+          ],
+          "confidence": 90.29
+        },
+        {
+          "text": "Nghiêu là thế được, lồng lộng lòng trời là lớn, vua Nghiêu cũng lớn bằng trời.",
+          "bbox": [
+            162,
+            1036,
+            1776,
+            1086
+          ],
+          "confidence": 95.04
+        },
+        {
+          "text": "2. Ngậm cát: Nơi bãi biến có con giải hộ ngân, thường ngậm cát, người đi",
+          "bbox": [
+            313,
+            1116,
+            1868,
+            1166
+          ],
+          "confidence": 90.69
+        },
+        {
+          "text": "qua thi nổ phun cát bán ra.",
+          "bbox": [
+            164,
+            1202,
+            1254,
+            1232
+          ],
+          "confidence": 75.52
+        },
+        {
+          "text": "3.Ba điều không riêng: Trời không che riêng, đất không chỏ riêng, mặt",
+          "bbox": [
+            315,
+            1271,
+            1867,
+            1321
+          ],
+          "confidence": 95.15
+        },
+        {
+          "text": "trời mất trắng không chiếu riêng.",
+          "bbox": [
+            161,
+            1347,
+            868,
+            1388
+          ],
+          "confidence": 89.27
+        },
+        {
+          "text": "4. Mò tôi chưa tin: Trong Kinh Dịch chữ \"phỉ phụ\" ở hào Cửu Ngũ quẻ",
+          "bbox": [
+            313,
+            1424,
+            1867,
+            1475
+          ],
+          "confidence": 84.6
+        },
+        {
+          "text": "Tung, nghĩa là kế nào mò tối mà không tin sẽ có hai.",
+          "bbox": [
+            160,
+            1500,
+            1268,
+            1542
+          ],
+          "confidence": 91.18
+        },
+        {
+          "text": "74走吐卧曲行淮沅立二亡泊七",
+          "bbox": [
+            321,
+            1669,
+            1678,
+            1699
+          ],
+          "confidence": 44.53
+        },
+        {
+          "text": "/4.奉放時獻書拜準通尚立巾謝表",
+          "bbox": [
+            333,
+            1691,
+            1700,
+            1748
+          ],
+          "confidence": 80.58
+        },
+        {
+          "text": "兹欽奉御攽，乾隆五十五年時獻書，著禮部嗣",
+          "bbox": [
+            317,
+            1863,
+            1863,
+            1928
+          ],
+          "confidence": 95.86
+        },
+        {
+          "text": "後屆期頒給，發交臣國之諒山鎮目祇領，不拘朝鮮國",
+          "bbox": [
+            164,
+            1981,
+            1858,
+            2044
+          ],
+          "confidence": 99.43
+        },
+        {
+          "text": "遣使進京候領之例，並奉御旨。",
+          "bbox": [
+            163,
+            2099,
+            1137,
+            2161
+          ],
+          "confidence": 99.26
+        },
+        {
+          "text": "俯念臣國：連歲被兵，物力衰耗；特賜開商，俾通市易。",
+          "bbox": [
+            311,
+            2217,
+            1827,
+            2281
+          ],
+          "confidence": 98.63
+        },
+        {
+          "text": "仰惟：聖德如天，無遠不燭。",
+          "bbox": [
+            311,
+            2338,
+            1150,
+            2400
+          ],
+          "confidence": 97.25
+        },
+        {
+          "text": "放正授時，而歲功不忒，蠻荒昧於銖黍，晷刻之度，",
+          "bbox": [
+            312,
+            2456,
+            1845,
+            2521
+          ],
+          "confidence": 98.59
+        },
+        {
+          "text": "自此而氣候不至於差訛；開關通市，而貨泉可通，下民病",
+          "bbox": [
+            174,
+            2575,
+            1866,
+            2638
+          ],
+          "confidence": 99.93
+        },
+        {
+          "text": "於貿遷，有無之間，繼此而物力不至於短絀。",
+          "bbox": [
+            161,
+            2692,
+            1726,
+            2754
+          ],
+          "confidence": 99.95
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2069,
+          2965
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 5.052,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              1346,
+              74,
+              1865,
+              114
+            ],
+            "generated_text": "BANG GIAO HAO THOAI",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.097,
+            "confidence": 99.58,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              165,
+              117,
+              1872,
+              132
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.032,
+            "confidence": 44.06,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              309,
+              177,
+              1565,
+              226
+            ],
+            "generated_text": "Đạo thấu cổ kim, sáng như nhất nguyệt.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.13,
+            "confidence": 88.02,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              309,
+              265,
+              1867,
+              318
+            ],
+            "generated_text": "Đường chính cực kỳ bằng phẳng, khí huyết tạo nên một dòng; xót",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.218,
+            "confidence": 94.66,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              160,
+              342,
+              1409,
+              395
+            ],
+            "generated_text": "thương nghiêm túc ban ra, cho kẻ mất tai không sáng.",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.166,
+            "confidence": 93.37,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              310,
+              432,
+              1681,
+              485
+            ],
+            "generated_text": "Năm quyền hành bằng ân nghĩa, dụng biểu trưng ở lời ban.",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.189,
+            "confidence": 88.59,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              309,
+              524,
+              1462,
+              569
+            ],
+            "generated_text": "Thân: Vâng nhân Thiên ngôn, kính theo phép tắc.",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.162,
+            "confidence": 95.03,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              310,
+              616,
+              1866,
+              661
+            ],
+            "generated_text": "Kính chức: Thánh thọ van ức năm, làm vua làm thày mãi; Hoàng",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.213,
+            "confidence": 92.79,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              163,
+              694,
+              1130,
+              741
+            ],
+            "generated_text": "gia nghìn trăm thuở, nội dài đòi cháu con.",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.154,
+            "confidence": 90.25,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              310,
+              786,
+              1081,
+              832
+            ],
+            "generated_text": "Thân ha tình khôn xiết cảm kích.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 0.119,
+            "confidence": 95.57,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              164,
+              892,
+              452,
+              930
+            ],
+            "generated_text": "CHU THICH:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.066,
+            "confidence": 99.03,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              315,
+              967,
+              1866,
+              1016
+            ],
+            "generated_text": "1.Nghieu: Sách Luận ngữ nói: Biết được người thông sáng chỉ có vua",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.195,
+            "confidence": 90.29,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              162,
+              1036,
+              1776,
+              1086
+            ],
+            "generated_text": "Nghiêu là thế được, lồng lộng lòng trời là lớn, vua Nghiêu cũng lớn bằng trời.",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 0.23,
+            "confidence": 95.04,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              313,
+              1116,
+              1868,
+              1166
+            ],
+            "generated_text": "2. Ngậm cát: Nơi bãi biến có con giải hộ ngân, thường ngậm cát, người đi",
+            "n_lines": 1,
+            "tokens": 33,
+            "seconds": 0.274,
+            "confidence": 90.69,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              164,
+              1202,
+              1254,
+              1232
+            ],
+            "generated_text": "qua thi nổ phun cát bán ra.",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.105,
+            "confidence": 75.52,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              315,
+              1271,
+              1867,
+              1321
+            ],
+            "generated_text": "3.Ba điều không riêng: Trời không che riêng, đất không chỏ riêng, mặt",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.194,
+            "confidence": 95.15,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              161,
+              1347,
+              868,
+              1388
+            ],
+            "generated_text": "trời mất trắng không chiếu riêng.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 0.109,
+            "confidence": 89.27,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              313,
+              1424,
+              1867,
+              1475
+            ],
+            "generated_text": "4. Mò tôi chưa tin: Trong Kinh Dịch chữ \"phỉ phụ\" ở hào Cửu Ngũ quẻ",
+            "n_lines": 1,
+            "tokens": 34,
+            "seconds": 0.257,
+            "confidence": 84.6,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              160,
+              1500,
+              1268,
+              1542
+            ],
+            "generated_text": "Tung, nghĩa là kế nào mò tối mà không tin sẽ có hai.",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.16,
+            "confidence": 91.18,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              321,
+              1669,
+              1678,
+              1699
+            ],
+            "generated_text": "74走吐卧曲行淮沅立二亡泊七",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.138,
+            "confidence": 44.53,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              333,
+              1691,
+              1700,
+              1748
+            ],
+            "generated_text": "/4.奉放時獻書拜準通尚立巾謝表",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.166,
+            "confidence": 80.58,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              317,
+              1863,
+              1863,
+              1928
+            ],
+            "generated_text": "兹欽奉御攽，乾隆五十五年時獻書，著禮部嗣",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.195,
+            "confidence": 95.86,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              164,
+              1981,
+              1858,
+              2044
+            ],
+            "generated_text": "後屆期頒給，發交臣國之諒山鎮目祇領，不拘朝鮮國",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 0.23,
+            "confidence": 99.43,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              163,
+              2099,
+              1137,
+              2161
+            ],
+            "generated_text": "遣使進京候領之例，並奉御旨。",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.137,
+            "confidence": 99.26,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              311,
+              2217,
+              1827,
+              2281
+            ],
+            "generated_text": "俯念臣國：連歲被兵，物力衰耗；特賜開商，俾通市易。",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 0.249,
+            "confidence": 98.63,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              311,
+              2338,
+              1150,
+              2400
+            ],
+            "generated_text": "仰惟：聖德如天，無遠不燭。",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.141,
+            "confidence": 97.25,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              312,
+              2456,
+              1845,
+              2521
+            ],
+            "generated_text": "放正授時，而歲功不忒，蠻荒昧於銖黍，晷刻之度，",
+            "n_lines": 1,
+            "tokens": 34,
+            "seconds": 0.279,
+            "confidence": 98.59,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              174,
+              2575,
+              1866,
+              2638
+            ],
+            "generated_text": "自此而氣候不至於差訛；開關通市，而貨泉可通，下民病",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 0.225,
+            "confidence": 99.93,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              161,
+              2692,
+              1726,
+              2754
+            ],
+            "generated_text": "於貿遷，有無之間，繼此而物力不至於短絀。",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.221,
+            "confidence": 99.95,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              556,
+              566,
+              1354,
+              576
+            ],
+            "ink": 329
+          },
+          {
+            "box": [
+              202,
+              1538,
+              1234,
+              1548
+            ],
+            "ink": 318
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": null,
+        "git_describe": null,
+        "git_dirty": null,
+        "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+        "dtype": "bfloat16",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

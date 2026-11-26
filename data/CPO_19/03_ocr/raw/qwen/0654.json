@@ -1,0 +1,251 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "qwen",
+  "page": 654,
+  "runs": [
+    {
+      "key": "1b6690f2d65f5d5f86528cc1a148bf0fe3ba7d384324ac4c6bf5a7a6248a6696",
+      "parameters": {
+        "image_sha256": "bd9af0058839a00b4a267f4e915910e623c0856a0c9174018fc44e994c84e1cc",
+        "engine": {
+          "name": "qwen",
+          "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "model_revision": "main",
+          "transformers_version": "4.57.6",
+          "torch_version": "2.9.1+cu128",
+          "cuda_version": "12.8",
+          "bitsandbytes_version": "0.50.2",
+          "quantization": {
+            "load_in_4bit": true,
+            "quant_type": "nf4",
+            "double_quant": true,
+            "compute_dtype": "float16"
+          },
+          "mode": "all",
+          "min_pixels": 50176,
+          "max_pixels": 802816,
+          "band_inches": 2.0,
+          "max_new_tokens": 768,
+          "repetition_penalty": 1.05,
+          "adapter_version": 3,
+          "prompt_version": 3,
+          "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74"
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-26T08:37:37+00:00",
+      "image": "/marimo/.cpo19_ocr/repo/data/CPO_19/02_extraction/pages/page_654.png",
+      "image_size": [
+        2026,
+        2928
+      ],
+      "crop_box": [
+        0,
+        0,
+        2026,
+        2928
+      ],
+      "lines": [
+        {
+          "text": "BANG GIAO HAO THOAI",
+          "bbox": [
+            9,
+            39,
+            1880,
+            215
+          ],
+          "confidence": 91.43
+        },
+        {
+          "text": "60. 呈天朝总督吉大人提督台大人",
+          "bbox": [
+            9,
+            215,
+            1880,
+            391
+          ],
+          "confidence": 91.43
+        },
+        {
+          "text": "嘉庆四年七月日，接奉院宪照会公文，内开，于六月日钦奉谕旨，小番自袭爵后，叠荷施恩，今接奉遗诏，",
+          "bbox": [
+            9,
+            391,
+            1880,
+            567
+          ],
+          "confidence": 91.43
+        },
+        {
+          "text": "遣使臣詣京進香。自屬出於感激憐憫。但思高宗純皇帝梓官，於九月內，奉移山陵。若本國遣使進香，計程已在永遠奉安之後，徒勞跋涉，令其不必遣使至。",
+          "bbox": [
+            170,
+            609,
+            1870,
+            847
+          ],
+          "confidence": 93.08
+        },
+        {
+          "text": "此次預進庚申例貢，若今本國即行資送到京，現",
+          "bbox": [
+            170,
+            847,
+            1870,
+            1084
+          ],
+          "confidence": 93.08
+        },
+        {
+          "text": "係二十七月之内，不受朝贺，并停止宴賚，自未便令其来京。所有此次预进庚申例贡，著同上次应行，併进例贡，俱于壬戌贡期一併呈进，以示体悉远藩之意，钦此！",
+          "bbox": [
+            0,
+            1132,
+            1869,
+            1584
+          ],
+          "confidence": 89.63
+        },
+        {
+          "text": "奉见大皇帝孝德郅隆，仁心溥洽，因山陵日近，不忍远国，陪臣跋涉奔赴，停止进香。又于三年，谅阴未受朝贺，停止宴资，著贡留底下次。仰惟天地父母之为量，小番益感激。",
+          "bbox": [
+            166,
+            1649,
+            1870,
+            2101
+          ],
+          "confidence": 85.56
+        },
+        {
+          "text": "竊念小番世荷高宗純皇帝封殖隆恩，景仰大皇帝柔懷至德，無階報稱，惟有焚香拜表，馳神楓陛，庶幾恭虔一念，暴白于高厚間。見在所遣進香與年例二貢陪價，並已等候，切願瞻天仰聖，少抒敬慕戀主之誠。今奉上諭並行停止，體恤之厚，倍切飲冰。",
+          "bbox": [
+            166,
+            2173,
+            1869,
+            2863
+          ],
+          "confidence": 95.43
+        }
+      ],
+      "raw": {
+        "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+        "model_revision": "main",
+        "mode": "all",
+        "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74",
+        "dpi": 300,
+        "image_size": [
+          2026,
+          2928
+        ],
+        "band_target_height": 600,
+        "bbox_granularity": "band_even_split",
+        "max_new_tokens": 768,
+        "max_pixels": 802816,
+        "inference_seconds": 9.563,
+        "bands": [
+          {
+            "band": 1,
+            "y0": 43,
+            "y1": 577,
+            "ink_box": [
+              9,
+              39,
+              1880,
+              567
+            ],
+            "generated_text": "BANG GIAO HAO THOAI\n\n60. 呈天朝总督吉大人提督台大人\n\n嘉庆四年七月日，接奉院宪照会公文，内开，于六月日钦奉谕旨，小番自袭爵后，叠荷施恩，今接奉遗诏，",
+            "n_lines": 3,
+            "tokens": 74,
+            "seconds": 1.743,
+            "confidence": 91.43,
+            "flags": []
+          },
+          {
+            "band": 2,
+            "y0": 577,
+            "y1": 1111,
+            "ink_box": [
+              170,
+              609,
+              1870,
+              1084
+            ],
+            "generated_text": "遣使臣詣京進香。自屬出於感激憐憫。但思高宗純皇帝梓官，於九月內，奉移山陵。若本國遣使進香，計程已在永遠奉安之後，徒勞跋涉，令其不必遣使至。\n\n此次預進庚申例貢，若今本國即行資送到京，現",
+            "n_lines": 2,
+            "tokens": 87,
+            "seconds": 2.004,
+            "confidence": 93.08,
+            "flags": []
+          },
+          {
+            "band": 3,
+            "y0": 1111,
+            "y1": 1617,
+            "ink_box": [
+              0,
+              1132,
+              1869,
+              1584
+            ],
+            "generated_text": "係二十七月之内，不受朝贺，并停止宴賚，自未便令其来京。所有此次预进庚申例贡，著同上次应行，併进例贡，俱于壬戌贡期一併呈进，以示体悉远藩之意，钦此！",
+            "n_lines": 1,
+            "tokens": 68,
+            "seconds": 1.636,
+            "confidence": 89.63,
+            "flags": []
+          },
+          {
+            "band": 4,
+            "y0": 1617,
+            "y1": 2137,
+            "ink_box": [
+              166,
+              1649,
+              1870,
+              2101
+            ],
+            "generated_text": "奉见大皇帝孝德郅隆，仁心溥洽，因山陵日近，不忍远国，陪臣跋涉奔赴，停止进香。又于三年，谅阴未受朝贺，停止宴资，著贡留底下次。仰惟天地父母之为量，小番益感激。",
+            "n_lines": 1,
+            "tokens": 69,
+            "seconds": 1.634,
+            "confidence": 85.56,
+            "flags": []
+          },
+          {
+            "band": 5,
+            "y0": 2137,
+            "y1": 2859,
+            "ink_box": [
+              166,
+              2173,
+              1869,
+              2863
+            ],
+            "generated_text": "竊念小番世荷高宗純皇帝封殖隆恩，景仰大皇帝柔懷至德，無階報稱，惟有焚香拜表，馳神楓陛，庶幾恭虔一念，暴白于高厚間。見在所遣進香與年例二貢陪價，並已等候，切願瞻天仰聖，少抒敬慕戀主之誠。今奉上諭並行停止，體恤之厚，倍切飲冰。",
+            "n_lines": 1,
+            "tokens": 113,
+            "seconds": 2.53,
+            "confidence": 95.43,
+            "flags": []
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": null,
+        "git_describe": null,
+        "git_dirty": null,
+        "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+        "dtype": "float16",
+        "adapter_version": 3
+      }
+    }
+  ]
+}

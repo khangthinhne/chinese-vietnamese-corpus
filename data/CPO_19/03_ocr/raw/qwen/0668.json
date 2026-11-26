@@ -1,0 +1,231 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "qwen",
+  "page": 668,
+  "runs": [
+    {
+      "key": "28dd3f3004a2ef1930a974cc425cf9bbef9ed932f1d327320b658b3f2ec6ad1c",
+      "parameters": {
+        "image_sha256": "eaaa77c46bbb124b260d5aabfa534bcdfa57cba8d21237b80d455e580f79e3ba",
+        "engine": {
+          "name": "qwen",
+          "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "model_revision": "main",
+          "transformers_version": "4.57.6",
+          "torch_version": "2.9.1+cu128",
+          "cuda_version": "12.8",
+          "bitsandbytes_version": "0.50.2",
+          "quantization": {
+            "load_in_4bit": true,
+            "quant_type": "nf4",
+            "double_quant": true,
+            "compute_dtype": "float16"
+          },
+          "mode": "all",
+          "min_pixels": 50176,
+          "max_pixels": 802816,
+          "band_inches": 2.0,
+          "max_new_tokens": 768,
+          "repetition_penalty": 1.05,
+          "adapter_version": 3,
+          "prompt_version": 3,
+          "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74"
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-26T08:40:24+00:00",
+      "image": "/marimo/.cpo19_ocr/repo/data/CPO_19/02_extraction/pages/page_668.png",
+      "image_size": [
+        2057,
+        2954
+      ],
+      "crop_box": [
+        0,
+        0,
+        2057,
+        2954
+      ],
+      "lines": [
+        {
+          "text": "BANG GIAO HAO THOAI",
+          "bbox": [
+            89,
+            28,
+            1860,
+            260
+          ],
+          "confidence": 82.96
+        },
+        {
+          "text": "禮監，經遣行詣關，備以國情題奏。而黎之逋臣，挾故主國母，先投丐援，督部堂士毅，以封疆大臣，不能審究遠情，彼所以亡國之由，此所以入國之",
+          "bbox": [
+            89,
+            260,
+            1860,
+            492
+          ],
+          "confidence": 82.96
+        },
+        {
+          "text": "故，明奏大皇帝，伏候處分，以安邊境，止亂階。卻惟先入之言是聽，將臣表裂擲於地，傳檄境內，以復黎爲名，歸罪於臣，調兵出關，期以剪草去根，大肆屠戮，以快貪殘。",
+          "bbox": [
+            151,
+            557,
+            1855,
+            1034
+          ],
+          "confidence": 95.26
+        },
+        {
+          "text": "臣僻处天末，道路悠远，不知事果出大皇帝差遣否，抑自疆场之臣矫制以邀功也？臣闻有出关兵马，自念，从来一片，畏天事大真衷，既为阉臣所阻，壅于上闻，将来端一开，为祸不浅。乃集合黎之旧臣，与国之耆",
+          "bbox": [
+            154,
+            1097,
+            1858,
+            1599
+          ],
+          "confidence": 90.51
+        },
+        {
+          "text": "老，問所以輸稅請成之策，萬口同辭，以臣爲歸。臣本非貪其土地，利其人民，寔有辭之而不能已者。因委家相陳名炳，以黎王之子維權，及臣民稟文三道，偕陪价八人，叩詣轅門，懇請孫士毅按兵闢上，查明前",
+          "bbox": [
+            144,
+            1669,
+            1854,
+            2170
+          ],
+          "confidence": 90.18
+        },
+        {
+          "text": "又臣家將吳拱振，挈獲巡洋兵，郝紹等十人，一同發遣使之道達，恭順之意。而士毅一不之省，殺陳名炳，併誅巡洋兵丁，羈執來使，驅兵直抵黎城。臣之將校，歛眾而南，士毅乘勢追殺甚眾。其有駐寓村庄，盡",
+          "bbox": [
+            152,
+            2243,
+            1854,
+            2877
+          ],
+          "confidence": 93.06
+        }
+      ],
+      "raw": {
+        "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+        "model_revision": "main",
+        "mode": "all",
+        "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74",
+        "dpi": 300,
+        "image_size": [
+          2057,
+          2954
+        ],
+        "band_target_height": 600,
+        "bbox_granularity": "band_even_split",
+        "max_new_tokens": 768,
+        "max_pixels": 802816,
+        "inference_seconds": 10.399,
+        "bands": [
+          {
+            "band": 1,
+            "y0": 32,
+            "y1": 524,
+            "ink_box": [
+              89,
+              28,
+              1860,
+              492
+            ],
+            "generated_text": "BANG GIAO HAO THOAI\n禮監，經遣行詣關，備以國情題奏。而黎之逋臣，挾故主國母，先投丐援，督部堂士毅，以封疆大臣，不能審究遠情，彼所以亡國之由，此所以入國之",
+            "n_lines": 2,
+            "tokens": 76,
+            "seconds": 1.841,
+            "confidence": 82.96,
+            "flags": []
+          },
+          {
+            "band": 2,
+            "y0": 524,
+            "y1": 1065,
+            "ink_box": [
+              151,
+              557,
+              1855,
+              1034
+            ],
+            "generated_text": "故，明奏大皇帝，伏候處分，以安邊境，止亂階。卻惟先入之言是聽，將臣表裂擲於地，傳檄境內，以復黎爲名，歸罪於臣，調兵出關，期以剪草去根，大肆屠戮，以快貪殘。",
+            "n_lines": 1,
+            "tokens": 79,
+            "seconds": 1.918,
+            "confidence": 95.26,
+            "flags": []
+          },
+          {
+            "band": 3,
+            "y0": 1065,
+            "y1": 1634,
+            "ink_box": [
+              154,
+              1097,
+              1858,
+              1599
+            ],
+            "generated_text": "臣僻处天末，道路悠远，不知事果出大皇帝差遣否，抑自疆场之臣矫制以邀功也？臣闻有出关兵马，自念，从来一片，畏天事大真衷，既为阉臣所阻，壅于上闻，将来端一开，为祸不浅。乃集合黎之旧臣，与国之耆",
+            "n_lines": 1,
+            "tokens": 87,
+            "seconds": 2.077,
+            "confidence": 90.51,
+            "flags": []
+          },
+          {
+            "band": 4,
+            "y0": 1634,
+            "y1": 2206,
+            "ink_box": [
+              144,
+              1669,
+              1854,
+              2170
+            ],
+            "generated_text": "老，問所以輸稅請成之策，萬口同辭，以臣爲歸。臣本非貪其土地，利其人民，寔有辭之而不能已者。因委家相陳名炳，以黎王之子維權，及臣民稟文三道，偕陪价八人，叩詣轅門，懇請孫士毅按兵闢上，查明前",
+            "n_lines": 1,
+            "tokens": 96,
+            "seconds": 2.285,
+            "confidence": 90.18,
+            "flags": []
+          },
+          {
+            "band": 5,
+            "y0": 2206,
+            "y1": 2873,
+            "ink_box": [
+              152,
+              2243,
+              1854,
+              2877
+            ],
+            "generated_text": "又臣家將吳拱振，挈獲巡洋兵，郝紹等十人，一同發遣使之道達，恭順之意。而士毅一不之省，殺陳名炳，併誅巡洋兵丁，羈執來使，驅兵直抵黎城。臣之將校，歛眾而南，士毅乘勢追殺甚眾。其有駐寓村庄，盡",
+            "n_lines": 1,
+            "tokens": 96,
+            "seconds": 2.263,
+            "confidence": 93.06,
+            "flags": []
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": null,
+        "git_describe": null,
+        "git_dirty": null,
+        "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+        "dtype": "float16",
+        "adapter_version": 3
+      }
+    }
+  ]
+}
