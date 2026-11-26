@@ -1,0 +1,311 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 258,
+  "runs": [
+    {
+      "key": "0ce74ac79d49ed5708b4892931aa967ee8de57ccd48a1237ed2e529664a9abbc",
+      "parameters": {
+        "image_sha256": "af79af16fb17039de24e70d410df0217953a2dda64124139a6427c8ed1c98ec6",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T14:06:08+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_258.png",
+      "image_size": [
+        2578,
+        2960
+      ],
+      "crop_box": [
+        0,
+        0,
+        2578,
+        2960
+      ],
+      "lines": [
+        {
+          "text": "ngothinhamle1.pdf",
+          "bbox": [
+            7,
+            19,
+            286,
+            45
+          ],
+          "confidence": 96.3
+        },
+        {
+          "text": "伯光明",
+          "bbox": [
+            1079,
+            628,
+            1418,
+            660
+          ],
+          "confidence": 62.31
+        },
+        {
+          "text": "錦室間話",
+          "bbox": [
+            1071,
+            652,
+            1429,
+            704
+          ],
+          "confidence": 77.98
+        },
+        {
+          "text": "CAM DƯỜNG NHAN THOAI",
+          "bbox": [
+            780,
+            803,
+            1736,
+            859
+          ],
+          "confidence": 86.02
+        },
+        {
+          "text": "Sưu tầm, dịch thuật",
+          "bbox": [
+            998,
+            1181,
+            1511,
+            1223
+          ],
+          "confidence": 91.65
+        },
+        {
+          "text": "DO THI HAO",
+          "bbox": [
+            1087,
+            1258,
+            1423,
+            1302
+          ],
+          "confidence": 99.09
+        },
+        {
+          "text": "Giới thiệu, hiểu định",
+          "bbox": [
+            991,
+            1344,
+            1522,
+            1387
+          ],
+          "confidence": 90.49
+        },
+        {
+          "text": "LAM GIANG",
+          "bbox": [
+            1095,
+            1423,
+            1413,
+            1466
+          ],
+          "confidence": 99.42
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2578,
+          2960
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 6.734,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              7,
+              19,
+              286,
+              45
+            ],
+            "generated_text": "ngothinhamle1.pdf",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.899,
+            "confidence": 96.3,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              1079,
+              628,
+              1418,
+              660
+            ],
+            "generated_text": "伯光明",
+            "n_lines": 1,
+            "tokens": 4,
+            "seconds": 0.581,
+            "confidence": 62.31,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              1071,
+              652,
+              1429,
+              704
+            ],
+            "generated_text": "錦室間話",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.791,
+            "confidence": 77.98,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              780,
+              803,
+              1736,
+              859
+            ],
+            "generated_text": "CAM DƯỜNG NHAN THOAI",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.233,
+            "confidence": 86.02,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              998,
+              1181,
+              1511,
+              1223
+            ],
+            "generated_text": "Sưu tầm, dịch thuật",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.97,
+            "confidence": 91.65,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              1087,
+              1258,
+              1423,
+              1302
+            ],
+            "generated_text": "DO THI HAO",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.701,
+            "confidence": 99.09,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              991,
+              1344,
+              1522,
+              1387
+            ],
+            "generated_text": "Giới thiệu, hiểu định",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.925,
+            "confidence": 90.49,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              1095,
+              1423,
+              1413,
+              1466
+            ],
+            "generated_text": "LAM GIANG",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.632,
+            "confidence": 99.42,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              72,
+              13,
+              1114,
+              22
+            ],
+            "ink": 102
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

@@ -1,0 +1,962 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 78,
+  "runs": [
+    {
+      "key": "bbff04d2931519f9e2901136f84863fb9de6a41a5f36baaee7099ae47774876a",
+      "parameters": {
+        "image_sha256": "8bb6983cd66b69e43d1459af317c7a67875ffa5b7250e81ab4dd1e3d68149b97",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T11:58:52+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_078.png",
+      "image_size": [
+        2607,
+        3231
+      ],
+      "crop_box": [
+        0,
+        0,
+        2607,
+        3231
+      ],
+      "lines": [
+        {
+          "text": "ngothinhamle1.pdf",
+          "bbox": [
+            7,
+            19,
+            1566,
+            45
+          ],
+          "confidence": 95.01
+        },
+        {
+          "text": "HOANG HOA DO PHA",
+          "bbox": [
+            1446,
+            231,
+            2123,
+            270
+          ],
+          "confidence": 81.61
+        },
+        {
+          "text": "Liệt thành toàn nhiều thiên phàm tu;",
+          "bbox": [
+            859,
+            337,
+            1723,
+            380
+          ],
+          "confidence": 85.95
+        },
+        {
+          "text": "Ngũ lĩnh oanh hôi nhất lô thông.",
+          "bbox": [
+            858,
+            418,
+            1619,
+            462
+          ],
+          "confidence": 86.84
+        },
+        {
+          "text": "Đặc ý tôn phong tương tông hảo,",
+          "bbox": [
+            859,
+            500,
+            1604,
+            552
+          ],
+          "confidence": 87.12
+        },
+        {
+          "text": "Hướng quan chỉ xích mông vân trung.",
+          "bbox": [
+            859,
+            581,
+            1733,
+            627
+          ],
+          "confidence": 87.81
+        },
+        {
+          "text": "DICH NGHIA:",
+          "bbox": [
+            414,
+            699,
+            2066,
+            738
+          ],
+          "confidence": 98.45
+        },
+        {
+          "text": "GHI LAI NHỮNG ĐIỀU TRÔNG THẤY Ở TÂM GIANG\\(^{1}\\) (HAI BÀI)",
+          "bbox": [
+            496,
+            776,
+            2037,
+            833
+          ],
+          "confidence": 90.38
+        },
+        {
+          "text": "Chảy gấp về động, nước sông Tâm Giang,",
+          "bbox": [
+            715,
+            1036,
+            1664,
+            1088
+          ],
+          "confidence": 87.22
+        },
+        {
+          "text": "Đá tăng lò mò dưới lòng con sóng.",
+          "bbox": [
+            714,
+            1118,
+            1486,
+            1162
+          ],
+          "confidence": 82.74
+        },
+        {
+          "text": "Qua nhiều thác hiểm, động đổ ra phía tây;",
+          "bbox": [
+            712,
+            1200,
+            1689,
+            1245
+          ],
+          "confidence": 90.01
+        },
+        {
+          "text": "Những định núi nhọn, từ phương bắc chay tới.",
+          "bbox": [
+            712,
+            1283,
+            1780,
+            1336
+          ],
+          "confidence": 85.24
+        },
+        {
+          "text": "Ngàn cánh buồm tụ lại, vậy lấy toà thành;",
+          "bbox": [
+            713,
+            1364,
+            1689,
+            1417
+          ],
+          "confidence": 90.97
+        },
+        {
+          "text": "Một con đường chạy thông, vòng quanh Ngũ Lĩnh.",
+          "bbox": [
+            712,
+            1447,
+            1906,
+            1500
+          ],
+          "confidence": 89.35
+        },
+        {
+          "text": "Gió động nam đặc ý đưa tiên nhau,",
+          "bbox": [
+            713,
+            1528,
+            1521,
+            1573
+          ],
+          "confidence": 89.05
+        },
+        {
+          "text": "Trong mơ thầy quê hương trong gang tắc.",
+          "bbox": [
+            712,
+            1609,
+            1665,
+            1662
+          ],
+          "confidence": 86.25
+        },
+        {
+          "text": "CHU THICH:",
+          "bbox": [
+            413,
+            1721,
+            702,
+            1760
+          ],
+          "confidence": 98.04
+        },
+        {
+          "text": "1.Tầm Giang (sông Tầm): Thuộc tỉnh Quảng Tây, do sông Kiểm và sông",
+          "bbox": [
+            565,
+            1799,
+            2119,
+            1851
+          ],
+          "confidence": 95.29
+        },
+        {
+          "text": "Uất hợp lưu tại Quế Bình thuộc phủ Tâm Châu, nên gọi là sông Tầm.",
+          "bbox": [
+            411,
+            1882,
+            1876,
+            1935
+          ],
+          "confidence": 95.01
+        },
+        {
+          "text": "2.Ngũ lĩnh: Tức 5 ngọn núi ở giữa Giang Tây với Quảng Đông.",
+          "bbox": [
+            563,
+            1967,
+            1871,
+            2017
+          ],
+          "confidence": 96.66
+        },
+        {
+          "text": "DICH THO:",
+          "bbox": [
+            412,
+            2080,
+            666,
+            2119
+          ],
+          "confidence": 88.28
+        },
+        {
+          "text": "Sông Tâm nước chảy gấp về động,",
+          "bbox": [
+            850,
+            2162,
+            1870,
+            2216
+          ],
+          "confidence": 92.99
+        },
+        {
+          "text": "Con sóng lô nhô ăn dưới dòng.",
+          "bbox": [
+            851,
+            2250,
+            1545,
+            2294
+          ],
+          "confidence": 88.65
+        },
+        {
+          "text": "Từ hướng tây về, sông lăm thác;",
+          "bbox": [
+            852,
+            2337,
+            1585,
+            2382
+          ],
+          "confidence": 94.86
+        },
+        {
+          "text": "Theo phương bắc tới, núi trừng trùng.",
+          "bbox": [
+            851,
+            2423,
+            1714,
+            2469
+          ],
+          "confidence": 87.12
+        },
+        {
+          "text": "Các thành vây lại, ngàn buôm tu;",
+          "bbox": [
+            850,
+            2510,
+            2239,
+            2555
+          ],
+          "confidence": 88.7
+        },
+        {
+          "text": "Ngũ Lĩnh quanh co, đường chạy thông.",
+          "bbox": [
+            845,
+            2597,
+            1743,
+            2650
+          ],
+          "confidence": 95.98
+        },
+        {
+          "text": "Bởi gió động nam nhiều đặc ý,",
+          "bbox": [
+            845,
+            2683,
+            1542,
+            2728
+          ],
+          "confidence": 86.69
+        },
+        {
+          "text": "Quê hương gang tắc giác mơ sông.",
+          "bbox": [
+            848,
+            2773,
+            1655,
+            2825
+          ],
+          "confidence": 86.22
+        },
+        {
+          "text": "Làm Giang",
+          "bbox": [
+            1357,
+            2882,
+            2110,
+            2914
+          ],
+          "confidence": 97.75
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2607,
+          3231
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 41.996,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              7,
+              19,
+              1566,
+              45
+            ],
+            "generated_text": "ngothinhamle1.pdf",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.898,
+            "confidence": 95.01,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              1446,
+              231,
+              2123,
+              270
+            ],
+            "generated_text": "HOANG HOA DO PHA",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.795,
+            "confidence": 81.61,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              416,
+              274,
+              2127,
+              288
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.453,
+            "confidence": 90.99,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              859,
+              337,
+              1723,
+              380
+            ],
+            "generated_text": "Liệt thành toàn nhiều thiên phàm tu;",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.11,
+            "confidence": 85.95,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              858,
+              418,
+              1619,
+              462
+            ],
+            "generated_text": "Ngũ lĩnh oanh hôi nhất lô thông.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.256,
+            "confidence": 86.84,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              859,
+              500,
+              1604,
+              552
+            ],
+            "generated_text": "Đặc ý tôn phong tương tông hảo,",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.254,
+            "confidence": 87.12,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              859,
+              581,
+              1733,
+              627
+            ],
+            "generated_text": "Hướng quan chỉ xích mông vân trung.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.175,
+            "confidence": 87.81,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              414,
+              699,
+              2066,
+              738
+            ],
+            "generated_text": "DICH NGHIA:",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.837,
+            "confidence": 98.45,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              496,
+              776,
+              2037,
+              833
+            ],
+            "generated_text": "GHI LAI NHỮNG ĐIỀU TRÔNG THẤY Ở TÂM GIANG\\(^{1}\\) (HAI BÀI)",
+            "n_lines": 1,
+            "tokens": 45,
+            "seconds": 3.344,
+            "confidence": 90.38,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              715,
+              1036,
+              1664,
+              1088
+            ],
+            "generated_text": "Chảy gấp về động, nước sông Tâm Giang,",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.503,
+            "confidence": 87.22,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              714,
+              1118,
+              1486,
+              1162
+            ],
+            "generated_text": "Đá tăng lò mò dưới lòng con sóng.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.388,
+            "confidence": 82.74,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              712,
+              1200,
+              1689,
+              1245
+            ],
+            "generated_text": "Qua nhiều thác hiểm, động đổ ra phía tây;",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.598,
+            "confidence": 90.01,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              712,
+              1283,
+              1780,
+              1336
+            ],
+            "generated_text": "Những định núi nhọn, từ phương bắc chay tới.",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.642,
+            "confidence": 85.24,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              713,
+              1364,
+              1689,
+              1417
+            ],
+            "generated_text": "Ngàn cánh buồm tụ lại, vậy lấy toà thành;",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.674,
+            "confidence": 90.97,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              712,
+              1447,
+              1906,
+              1500
+            ],
+            "generated_text": "Một con đường chạy thông, vòng quanh Ngũ Lĩnh.",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.53,
+            "confidence": 89.35,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              713,
+              1528,
+              1521,
+              1573
+            ],
+            "generated_text": "Gió động nam đặc ý đưa tiên nhau,",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.166,
+            "confidence": 89.05,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              712,
+              1609,
+              1665,
+              1662
+            ],
+            "generated_text": "Trong mơ thầy quê hương trong gang tắc.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.512,
+            "confidence": 86.25,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              413,
+              1721,
+              702,
+              1760
+            ],
+            "generated_text": "CHU THICH:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.736,
+            "confidence": 98.04,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              565,
+              1799,
+              2119,
+              1851
+            ],
+            "generated_text": "1.Tầm Giang (sông Tầm): Thuộc tỉnh Quảng Tây, do sông Kiểm và sông",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 2.237,
+            "confidence": 95.29,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              411,
+              1882,
+              1876,
+              1935
+            ],
+            "generated_text": "Uất hợp lưu tại Quế Bình thuộc phủ Tâm Châu, nên gọi là sông Tầm.",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.123,
+            "confidence": 95.01,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              563,
+              1967,
+              1871,
+              2017
+            ],
+            "generated_text": "2.Ngũ lĩnh: Tức 5 ngọn núi ở giữa Giang Tây với Quảng Đông.",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 2.199,
+            "confidence": 96.66,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              412,
+              2080,
+              666,
+              2119
+            ],
+            "generated_text": "DICH THO:",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.655,
+            "confidence": 88.28,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              850,
+              2162,
+              1870,
+              2216
+            ],
+            "generated_text": "Sông Tâm nước chảy gấp về động,",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.334,
+            "confidence": 92.99,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              851,
+              2250,
+              1545,
+              2294
+            ],
+            "generated_text": "Con sóng lô nhô ăn dưới dòng.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.253,
+            "confidence": 88.65,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              852,
+              2337,
+              1585,
+              2382
+            ],
+            "generated_text": "Từ hướng tây về, sông lăm thác;",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.318,
+            "confidence": 94.86,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              851,
+              2423,
+              1714,
+              2469
+            ],
+            "generated_text": "Theo phương bắc tới, núi trừng trùng.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.358,
+            "confidence": 87.12,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              850,
+              2510,
+              2239,
+              2555
+            ],
+            "generated_text": "Các thành vây lại, ngàn buôm tu;",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.262,
+            "confidence": 88.7,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              845,
+              2597,
+              1743,
+              2650
+            ],
+            "generated_text": "Ngũ Lĩnh quanh co, đường chạy thông.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.368,
+            "confidence": 95.98,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              845,
+              2683,
+              1542,
+              2728
+            ],
+            "generated_text": "Bởi gió động nam nhiều đặc ý,",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.065,
+            "confidence": 86.69,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              848,
+              2773,
+              1655,
+              2825
+            ],
+            "generated_text": "Quê hương gang tắc giác mơ sông.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.303,
+            "confidence": 86.22,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              1357,
+              2882,
+              2110,
+              2914
+            ],
+            "generated_text": "Làm Giang",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.646,
+            "confidence": 97.75,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              985,
+              623,
+              1719,
+              634
+            ],
+            "ink": 355
+          },
+          {
+            "box": [
+              1198,
+              903,
+              1293,
+              912
+            ],
+            "ink": 179
+          },
+          {
+            "box": [
+              1204,
+              924,
+              1327,
+              934
+            ],
+            "ink": 374
+          },
+          {
+            "box": [
+              1199,
+              935,
+              1333,
+              946
+            ],
+            "ink": 372
+          },
+          {
+            "box": [
+              872,
+              1159,
+              1471,
+              1169
+            ],
+            "ink": 252
+          },
+          {
+            "box": [
+              738,
+              1242,
+              1687,
+              1251
+            ],
+            "ink": 271
+          },
+          {
+            "box": [
+              1042,
+              2379,
+              1577,
+              2388
+            ],
+            "ink": 252
+          },
+          {
+            "box": [
+              969,
+              2466,
+              1699,
+              2476
+            ],
+            "ink": 299
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

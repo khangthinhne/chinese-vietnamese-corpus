@@ -1,0 +1,952 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 121,
+  "runs": [
+    {
+      "key": "700f3d31c4d70a0257f68891decfdbf450fbfe95a5d4cc8afb5466c57ba93998",
+      "parameters": {
+        "image_sha256": "bd058de4a370fdd32b799a849d1c2fea0a221d428db79165c70c327efdebae74",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T12:27:27+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_121.png",
+      "image_size": [
+        2563,
+        3194
+      ],
+      "crop_box": [
+        0,
+        0,
+        2563,
+        3194
+      ],
+      "lines": [
+        {
+          "text": "ngothinhamch1.pdf",
+          "bbox": [
+            7,
+            19,
+            2049,
+            45
+          ],
+          "confidence": 99.26
+        },
+        {
+          "text": "NGŮ THI NHAM TOAN TAP - TAP III",
+          "bbox": [
+            426,
+            186,
+            1484,
+            225
+          ],
+          "confidence": 84.05
+        },
+        {
+          "text": "PHIEN AM:",
+          "bbox": [
+            427,
+            299,
+            681,
+            340
+          ],
+          "confidence": 99.57
+        },
+        {
+          "text": "VINH CHÂU DA PHAT",
+          "bbox": [
+            1001,
+            382,
+            1556,
+            427
+          ],
+          "confidence": 91.15
+        },
+        {
+          "text": "Thâm sơn thâm da tái tinh qua,",
+          "bbox": [
+            874,
+            518,
+            1611,
+            561
+          ],
+          "confidence": 88.42
+        },
+        {
+          "text": "Nhiều tu tưởng vân hộ sứ xa.",
+          "bbox": [
+            868,
+            606,
+            1534,
+            648
+          ],
+          "confidence": 88.77
+        },
+        {
+          "text": "Thach đăng chỉ kim kham sách mã;",
+          "bbox": [
+            874,
+            692,
+            1701,
+            734
+          ],
+          "confidence": 93.73
+        },
+        {
+          "text": "Làm loan tư cổ thuyết bô xà.",
+          "bbox": [
+            869,
+            778,
+            1519,
+            824
+          ],
+          "confidence": 89.97
+        },
+        {
+          "text": "Thôi ngôi chu đáo làm thanh thu;",
+          "bbox": [
+            874,
+            866,
+            1654,
+            911
+          ],
+          "confidence": 92.0
+        },
+        {
+          "text": "An ánh thương đăng trao giáng sa.",
+          "bbox": [
+            869,
+            957,
+            1676,
+            997
+          ],
+          "confidence": 93.01
+        },
+        {
+          "text": "Thiên Hán phần minh tần thức vong,",
+          "bbox": [
+            875,
+            1040,
+            1732,
+            1085
+          ],
+          "confidence": 89.22
+        },
+        {
+          "text": "Chính hàn Dục Chắn huyện (a) quang hoa.",
+          "bbox": [
+            874,
+            1126,
+            1825,
+            1172
+          ],
+          "confidence": 85.41
+        },
+        {
+          "text": "DICH NGHIA:",
+          "bbox": [
+            427,
+            1223,
+            736,
+            1261
+          ],
+          "confidence": 99.34
+        },
+        {
+          "text": "KHỐI HÀNH TRONG Đêm TỪ VĨNH CHÂU\\(^{(1)}\\)",
+          "bbox": [
+            733,
+            1301,
+            1826,
+            1348
+          ],
+          "confidence": 85.52
+        },
+        {
+          "text": "Núi thăm đêm khuya, tinh kỳ ruồi,",
+          "bbox": [
+            839,
+            1438,
+            1649,
+            1483
+          ],
+          "confidence": 91.75
+        },
+        {
+          "text": "Hô về bè sứ, mây lành vây quanh.",
+          "bbox": [
+            840,
+            1526,
+            1623,
+            1571
+          ],
+          "confidence": 82.73
+        },
+        {
+          "text": "Tói nay bệ đá, ngụa phóng qua được;",
+          "bbox": [
+            839,
+            1613,
+            1684,
+            1665
+          ],
+          "confidence": 91.98
+        },
+        {
+          "text": "Từ cổ rừng này, có truyền bất xà.",
+          "bbox": [
+            840,
+            1701,
+            1643,
+            1745
+          ],
+          "confidence": 82.23
+        },
+        {
+          "text": "Sát hàng cây xanh, gỗ ghê đương lón;",
+          "bbox": [
+            841,
+            1786,
+            1700,
+            1839
+          ],
+          "confidence": 86.92
+        },
+        {
+          "text": "Chup bằng the đỏ, đèn hiệu buôn long lanh.",
+          "bbox": [
+            843,
+            1874,
+            1853,
+            1920
+          ],
+          "confidence": 91.08
+        },
+        {
+          "text": "Sông Ngân văng vắc, dụi mất ngăm,",
+          "bbox": [
+            842,
+            1964,
+            1990,
+            2014
+          ],
+          "confidence": 81.81
+        },
+        {
+          "text": "Rất mừng sao Dục, sao Chắn chói ngòi.",
+          "bbox": [
+            842,
+            2049,
+            2048,
+            2096
+          ],
+          "confidence": 85.22
+        },
+        {
+          "text": "KHAO DI:",
+          "bbox": [
+            431,
+            2140,
+            651,
+            2179
+          ],
+          "confidence": 95.78
+        },
+        {
+          "text": "a. Bản A.1579: Xán 燦.",
+          "bbox": [
+            579,
+            2214,
+            1055,
+            2256
+          ],
+          "confidence": 95.8
+        },
+        {
+          "text": "NGUYÊN CHU:",
+          "bbox": [
+            431,
+            2320,
+            766,
+            2360
+          ],
+          "confidence": 91.64
+        },
+        {
+          "text": "A.Đời Đường, Liễu Tông Nguyên bị biếm làm Thứ sử Vĩnh Châu, có làm",
+          "bbox": [
+            581,
+            2393,
+            2138,
+            2443
+          ],
+          "confidence": 95.0
+        },
+        {
+          "text": "bài Lời người bắt răn, tức là chốn này. Sau khi kiệu sứ thân lên đường núi,",
+          "bbox": [
+            431,
+            2475,
+            2136,
+            2523
+          ],
+          "confidence": 92.85
+        },
+        {
+          "text": "người tùy từng bắt được con xuyên sơn giáp (tê tê), người ta bảo ở đây nhiều răn",
+          "bbox": [
+            433,
+            2557,
+            2140,
+            2608
+          ],
+          "confidence": 93.62
+        },
+        {
+          "text": "độc và loại xuyên sơn nay.",
+          "bbox": [
+            435,
+            2654,
+            987,
+            2685
+          ],
+          "confidence": 86.87
+        },
+        {
+          "text": "CHU THICH:",
+          "bbox": [
+            436,
+            2751,
+            723,
+            2790
+          ],
+          "confidence": 98.71
+        },
+        {
+          "text": "1.Vĩnh Châu: Tên phủ thuộc Hồ Nam, phủ lị là Linh Lăng, quản các",
+          "bbox": [
+            588,
+            2826,
+            2139,
+            2876
+          ],
+          "confidence": 95.0
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2563,
+          3194
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 44.338,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              7,
+              19,
+              2049,
+              45
+            ],
+            "generated_text": "ngothinhamch1.pdf",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.988,
+            "confidence": 99.26,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              426,
+              186,
+              1484,
+              225
+            ],
+            "generated_text": "NGŮ THI NHAM TOAN TAP - TAP III",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.488,
+            "confidence": 84.05,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              429,
+              230,
+              2138,
+              244
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.453,
+            "confidence": 96.05,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              427,
+              299,
+              681,
+              340
+            ],
+            "generated_text": "PHIEN AM:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.711,
+            "confidence": 99.57,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              1001,
+              382,
+              1556,
+              427
+            ],
+            "generated_text": "VINH CHÂU DA PHAT",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.961,
+            "confidence": 91.15,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              874,
+              518,
+              1611,
+              561
+            ],
+            "generated_text": "Thâm sơn thâm da tái tinh qua,",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.185,
+            "confidence": 88.42,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              868,
+              606,
+              1534,
+              648
+            ],
+            "generated_text": "Nhiều tu tưởng vân hộ sứ xa.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.209,
+            "confidence": 88.77,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              874,
+              692,
+              1701,
+              734
+            ],
+            "generated_text": "Thach đăng chỉ kim kham sách mã;",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.149,
+            "confidence": 93.73,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              869,
+              778,
+              1519,
+              824
+            ],
+            "generated_text": "Làm loan tư cổ thuyết bô xà.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.455,
+            "confidence": 89.97,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              874,
+              866,
+              1654,
+              911
+            ],
+            "generated_text": "Thôi ngôi chu đáo làm thanh thu;",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.131,
+            "confidence": 92.0,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              869,
+              957,
+              1676,
+              997
+            ],
+            "generated_text": "An ánh thương đăng trao giáng sa.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.217,
+            "confidence": 93.01,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              875,
+              1040,
+              1732,
+              1085
+            ],
+            "generated_text": "Thiên Hán phần minh tần thức vong,",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.295,
+            "confidence": 89.22,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              874,
+              1126,
+              1825,
+              1172
+            ],
+            "generated_text": "Chính hàn Dục Chắn huyện (a) quang hoa.",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.561,
+            "confidence": 85.41,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              427,
+              1223,
+              736,
+              1261
+            ],
+            "generated_text": "DICH NGHIA:",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.754,
+            "confidence": 99.34,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              733,
+              1301,
+              1826,
+              1348
+            ],
+            "generated_text": "KHỐI HÀNH TRONG Đêm TỪ VĨNH CHÂU\\(^{(1)}\\)",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 2.41,
+            "confidence": 85.52,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              839,
+              1438,
+              1649,
+              1483
+            ],
+            "generated_text": "Núi thăm đêm khuya, tinh kỳ ruồi,",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.462,
+            "confidence": 91.75,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              840,
+              1526,
+              1623,
+              1571
+            ],
+            "generated_text": "Hô về bè sứ, mây lành vây quanh.",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.452,
+            "confidence": 82.73,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              839,
+              1613,
+              1684,
+              1665
+            ],
+            "generated_text": "Tói nay bệ đá, ngụa phóng qua được;",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.425,
+            "confidence": 91.98,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              840,
+              1701,
+              1643,
+              1745
+            ],
+            "generated_text": "Từ cổ rừng này, có truyền bất xà.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.403,
+            "confidence": 82.23,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              841,
+              1786,
+              1700,
+              1839
+            ],
+            "generated_text": "Sát hàng cây xanh, gỗ ghê đương lón;",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.495,
+            "confidence": 86.92,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              843,
+              1874,
+              1853,
+              1920
+            ],
+            "generated_text": "Chup bằng the đỏ, đèn hiệu buôn long lanh.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.545,
+            "confidence": 91.08,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              842,
+              1964,
+              1990,
+              2014
+            ],
+            "generated_text": "Sông Ngân văng vắc, dụi mất ngăm,",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.653,
+            "confidence": 81.81,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              842,
+              2049,
+              2048,
+              2096
+            ],
+            "generated_text": "Rất mừng sao Dục, sao Chắn chói ngòi.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.354,
+            "confidence": 85.22,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              431,
+              2140,
+              651,
+              2179
+            ],
+            "generated_text": "KHAO DI:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.697,
+            "confidence": 95.78,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              579,
+              2214,
+              1055,
+              2256
+            ],
+            "generated_text": "a. Bản A.1579: Xán 燦.",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.509,
+            "confidence": 95.8,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              431,
+              2320,
+              766,
+              2360
+            ],
+            "generated_text": "NGUYÊN CHU:",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.883,
+            "confidence": 91.64,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              581,
+              2393,
+              2138,
+              2443
+            ],
+            "generated_text": "A.Đời Đường, Liễu Tông Nguyên bị biếm làm Thứ sử Vĩnh Châu, có làm",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 2.384,
+            "confidence": 95.0,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              431,
+              2475,
+              2136,
+              2523
+            ],
+            "generated_text": "bài Lời người bắt răn, tức là chốn này. Sau khi kiệu sứ thân lên đường núi,",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 2.428,
+            "confidence": 92.85,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              433,
+              2557,
+              2140,
+              2608
+            ],
+            "generated_text": "người tùy từng bắt được con xuyên sơn giáp (tê tê), người ta bảo ở đây nhiều răn",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 2.494,
+            "confidence": 93.62,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              435,
+              2654,
+              987,
+              2685
+            ],
+            "generated_text": "độc và loại xuyên sơn nay.",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 1.046,
+            "confidence": 86.87,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              436,
+              2751,
+              723,
+              2790
+            ],
+            "generated_text": "CHU THICH:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.742,
+            "confidence": 98.71,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 32,
+            "box": [
+              588,
+              2826,
+              2139,
+              2876
+            ],
+            "generated_text": "1.Vĩnh Châu: Tên phủ thuộc Hồ Nam, phủ lị là Linh Lăng, quản các",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 2.394,
+            "confidence": 95.0,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              1185,
+              993,
+              1596,
+              1005
+            ],
+            "ink": 402
+          },
+          {
+            "box": [
+              825,
+              1294,
+              1739,
+              1305
+            ],
+            "ink": 360
+          },
+          {
+            "box": [
+              919,
+              1916,
+              1717,
+              1927
+            ],
+            "ink": 319
+          },
+          {
+            "box": [
+              446,
+              2647,
+              942,
+              2656
+            ],
+            "ink": 305
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

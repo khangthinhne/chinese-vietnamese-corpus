@@ -1,0 +1,779 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 445,
+  "runs": [
+    {
+      "key": "af8e08c8e5e3df4fd78e975ca464e6249d59c17c19e5fa4444591dfa75ba2a98",
+      "parameters": {
+        "image_sha256": "7f191879824b8421fd86295e911966aba76e9c5a4ebdf10122f05c940a287d2b",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T16:31:11+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_445.png",
+      "image_size": [
+        2638,
+        3257
+      ],
+      "crop_box": [
+        0,
+        0,
+        2638,
+        3257
+      ],
+      "lines": [
+        {
+          "text": "ngothinhamch1.pdf",
+          "bbox": [
+            7,
+            19,
+            296,
+            45
+          ],
+          "confidence": 98.71
+        },
+        {
+          "text": "NGŮ THI NHẨM TOẠN TẬP - TẬP III",
+          "bbox": [
+            410,
+            205,
+            1184,
+            244
+          ],
+          "confidence": 79.13
+        },
+        {
+          "text": "CHU THICH:",
+          "bbox": [
+            412,
+            306,
+            1704,
+            345
+          ],
+          "confidence": 99.58
+        },
+        {
+          "text": "1.Lại một đạo: Chưa rõ bấm ai.",
+          "bbox": [
+            387,
+            374,
+            1217,
+            415
+          ],
+          "confidence": 88.78
+        },
+        {
+          "text": "2. Chính đường ho Vương: Chưa rõ là Vương gì.",
+          "bbox": [
+            558,
+            441,
+            1544,
+            484
+          ],
+          "confidence": 90.18
+        },
+        {
+          "text": "3. Tướng sự đại viên: Là viên mang sắc phong và bài thơ Ngụ chế sang",
+          "bbox": [
+            559,
+            510,
+            2119,
+            560
+          ],
+          "confidence": 95.34
+        },
+        {
+          "text": "ban cho Quang Trung, đã nói ở trên.",
+          "bbox": [
+            410,
+            582,
+            1202,
+            623
+          ],
+          "confidence": 99.62
+        },
+        {
+          "text": "4.Gần bộc: Có người có thú rau cản ăn ngon đem biếu người làng, vì",
+          "bbox": [
+            559,
+            651,
+            2119,
+            693
+          ],
+          "confidence": 89.43
+        },
+        {
+          "text": "tấm lòng tốt, nhưng người làng ăn vào thấy đau bụng, nên người sau có tặng",
+          "bbox": [
+            411,
+            721,
+            2119,
+            772
+          ],
+          "confidence": 98.28
+        },
+        {
+          "text": "gì cho ai, mà nhận là lẽ mọn thì gọi là hiến cân. Còn bộc là hơi nóng mặt trời",
+          "bbox": [
+            412,
+            793,
+            2204,
+            842
+          ],
+          "confidence": 91.49
+        },
+        {
+          "text": "ấm, có người đi cày ruộng phơi lưng ra mặt trời thấy ấm, nghĩ đến muốn đem",
+          "bbox": [
+            412,
+            862,
+            2118,
+            912
+          ],
+          "confidence": 93.21
+        },
+        {
+          "text": "cái ấm ấy đàng vua (Liệt Tử).",
+          "bbox": [
+            411,
+            932,
+            1060,
+            974
+          ],
+          "confidence": 89.5
+        },
+        {
+          "text": "（覆呈里數館舍各摺。昇龍留守官稟）",
+          "bbox": [
+            594,
+            1192,
+            1931,
+            1265
+          ],
+          "confidence": 97.76
+        },
+        {
+          "text": "兹接奉劄子示：乾隆五十四年八月初四日，奉大人",
+          "bbox": [
+            565,
+            1392,
+            2118,
+            1456
+          ],
+          "confidence": 99.35
+        },
+        {
+          "text": "飛札，飭令遵事計期，仍未奉到，是以卑等前稟與前",
+          "bbox": [
+            417,
+            1534,
+            2118,
+            1602
+          ],
+          "confidence": 98.0
+        },
+        {
+          "text": "札未符，大人未便轉達，爵各部堂公見將卑等前稟暫",
+          "bbox": [
+            417,
+            1676,
+            2115,
+            1743
+          ],
+          "confidence": 99.21
+        },
+        {
+          "text": "存奉此。再奉查照前劄，於本月初九日未刻，自諒山城",
+          "bbox": [
+            417,
+            1819,
+            2120,
+            1886
+          ],
+          "confidence": 99.89
+        },
+        {
+          "text": "驛到昇龍，卑等謹已立即修稟飛遞呈，覆計呈約於月",
+          "bbox": [
+            414,
+            1962,
+            2107,
+            2027
+          ],
+          "confidence": 99.94
+        },
+        {
+          "text": "望當達，尊臺鈞照。惟本國國長未及回到都城，今奉",
+          "bbox": [
+            420,
+            2104,
+            2117,
+            2171
+          ],
+          "confidence": 99.93
+        },
+        {
+          "text": "將事大員進關日期在邇，一切伺候迎接事宜，卑等不",
+          "bbox": [
+            415,
+            2246,
+            2113,
+            2311
+          ],
+          "confidence": 98.73
+        },
+        {
+          "text": "敢抌擱，已奉飭諒山京北鎮目，照舊公館處，所及",
+          "bbox": [
+            416,
+            2389,
+            2119,
+            2454
+          ],
+          "confidence": 94.27
+        },
+        {
+          "text": "需用品物，遞驛夫馬，賴先整辨。但茲秋雨連旬，其",
+          "bbox": [
+            366,
+            2532,
+            2097,
+            2597
+          ],
+          "confidence": 98.18
+        },
+        {
+          "text": "所作館舍堂宇，猶有滲濕，未整齊之處。至如挑換疲",
+          "bbox": [
+            418,
+            2674,
+            2099,
+            2740
+          ],
+          "confidence": 99.93
+        },
+        {
+          "text": "倦夫馬，及頓處需購物件，謹依前札賜教，不敢違越。",
+          "bbox": [
+            417,
+            2816,
+            2083,
+            2883
+          ],
+          "confidence": 99.38
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2638,
+          3257
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 46.071,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              7,
+              19,
+              296,
+              45
+            ],
+            "generated_text": "ngothinhamch1.pdf",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.907,
+            "confidence": 98.71,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              410,
+              205,
+              1184,
+              244
+            ],
+            "generated_text": "NGŮ THI NHẨM TOẠN TẬP - TẬP III",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.047,
+            "confidence": 79.13,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              414,
+              249,
+              2125,
+              262
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.448,
+            "confidence": 28.3,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              412,
+              306,
+              1704,
+              345
+            ],
+            "generated_text": "CHU THICH:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.695,
+            "confidence": 99.58,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              387,
+              374,
+              1217,
+              415
+            ],
+            "generated_text": "1.Lại một đạo: Chưa rõ bấm ai.",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.458,
+            "confidence": 88.78,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              558,
+              441,
+              1544,
+              484
+            ],
+            "generated_text": "2. Chính đường ho Vương: Chưa rõ là Vương gì.",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.645,
+            "confidence": 90.18,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              559,
+              510,
+              2119,
+              560
+            ],
+            "generated_text": "3. Tướng sự đại viên: Là viên mang sắc phong và bài thơ Ngụ chế sang",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 2.002,
+            "confidence": 95.34,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              410,
+              582,
+              1202,
+              623
+            ],
+            "generated_text": "ban cho Quang Trung, đã nói ở trên.",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.08,
+            "confidence": 99.62,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              559,
+              651,
+              2119,
+              693
+            ],
+            "generated_text": "4.Gần bộc: Có người có thú rau cản ăn ngon đem biếu người làng, vì",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.126,
+            "confidence": 89.43,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              411,
+              721,
+              2119,
+              772
+            ],
+            "generated_text": "tấm lòng tốt, nhưng người làng ăn vào thấy đau bụng, nên người sau có tặng",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.248,
+            "confidence": 98.28,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              412,
+              793,
+              2204,
+              842
+            ],
+            "generated_text": "gì cho ai, mà nhận là lẽ mọn thì gọi là hiến cân. Còn bộc là hơi nóng mặt trời",
+            "n_lines": 1,
+            "tokens": 34,
+            "seconds": 2.706,
+            "confidence": 91.49,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              412,
+              862,
+              2118,
+              912
+            ],
+            "generated_text": "ấm, có người đi cày ruộng phơi lưng ra mặt trời thấy ấm, nghĩ đến muốn đem",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 2.392,
+            "confidence": 93.21,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              411,
+              932,
+              1060,
+              974
+            ],
+            "generated_text": "cái ấm ấy đàng vua (Liệt Tử).",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.592,
+            "confidence": 89.5,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              594,
+              1192,
+              1931,
+              1265
+            ],
+            "generated_text": "（覆呈里數館舍各摺。昇龍留守官稟）",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.95,
+            "confidence": 97.76,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              565,
+              1392,
+              2118,
+              1456
+            ],
+            "generated_text": "兹接奉劄子示：乾隆五十四年八月初四日，奉大人",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.614,
+            "confidence": 99.35,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              417,
+              1534,
+              2118,
+              1602
+            ],
+            "generated_text": "飛札，飭令遵事計期，仍未奉到，是以卑等前稟與前",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 1.95,
+            "confidence": 98.0,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              417,
+              1676,
+              2115,
+              1743
+            ],
+            "generated_text": "札未符，大人未便轉達，爵各部堂公見將卑等前稟暫",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 2.021,
+            "confidence": 99.21,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              417,
+              1819,
+              2120,
+              1886
+            ],
+            "generated_text": "存奉此。再奉查照前劄，於本月初九日未刻，自諒山城",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.089,
+            "confidence": 99.89,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              414,
+              1962,
+              2107,
+              2027
+            ],
+            "generated_text": "驛到昇龍，卑等謹已立即修稟飛遞呈，覆計呈約於月",
+            "n_lines": 1,
+            "tokens": 33,
+            "seconds": 2.423,
+            "confidence": 99.94,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              420,
+              2104,
+              2117,
+              2171
+            ],
+            "generated_text": "望當達，尊臺鈞照。惟本國國長未及回到都城，今奉",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 1.921,
+            "confidence": 99.93,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              415,
+              2246,
+              2113,
+              2311
+            ],
+            "generated_text": "將事大員進關日期在邇，一切伺候迎接事宜，卑等不",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.671,
+            "confidence": 98.73,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              416,
+              2389,
+              2119,
+              2454
+            ],
+            "generated_text": "敢抌擱，已奉飭諒山京北鎮目，照舊公館處，所及",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 2.309,
+            "confidence": 94.27,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              366,
+              2532,
+              2097,
+              2597
+            ],
+            "generated_text": "需用品物，遞驛夫馬，賴先整辨。但茲秋雨連旬，其",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 2.315,
+            "confidence": 98.18,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              418,
+              2674,
+              2099,
+              2740
+            ],
+            "generated_text": "所作館舍堂宇，猶有滲濕，未整齊之處。至如挑換疲",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 2.181,
+            "confidence": 99.93,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              417,
+              2816,
+              2083,
+              2883
+            ],
+            "generated_text": "倦夫馬，及頓處需購物件，謹依前札賜教，不敢違越。",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 2.278,
+            "confidence": 99.38,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              846,
+              480,
+              1514,
+              490
+            ],
+            "ink": 309
+          },
+          {
+            "box": [
+              742,
+              689,
+              2052,
+              699
+            ],
+            "ink": 313
+          },
+          {
+            "box": [
+              1071,
+              1105,
+              1443,
+              1123
+            ],
+            "ink": 988
+          },
+          {
+            "box": [
+              1078,
+              1121,
+              1436,
+              1145
+            ],
+            "ink": 1422
+          },
+          {
+            "box": [
+              1073,
+              1144,
+              1435,
+              1165
+            ],
+            "ink": 1248
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

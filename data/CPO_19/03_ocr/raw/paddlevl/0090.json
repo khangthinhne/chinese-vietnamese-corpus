@@ -1,0 +1,900 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 90,
+  "runs": [
+    {
+      "key": "5d6002075b829708815347c0bc337ce6755853365c0602297a7c623b904d16b7",
+      "parameters": {
+        "image_sha256": "cde96a54dc1530d2e068d54839159a012b3d57dcb4cde602c6ac91f11ede239b",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T12:06:51+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_090.png",
+      "image_size": [
+        2594,
+        3225
+      ],
+      "crop_box": [
+        0,
+        0,
+        2594,
+        3225
+      ],
+      "lines": [
+        {
+          "text": "ngothinhamle1.pdf",
+          "bbox": [
+            7,
+            15,
+            1475,
+            45
+          ],
+          "confidence": 93.93
+        },
+        {
+          "text": "HOÀNG HOA ĐÔ PHA",
+          "bbox": [
+            1631,
+            209,
+            2096,
+            248
+          ],
+          "confidence": 83.86
+        },
+        {
+          "text": "Câu gỗ xa xa được mờ tỏ,",
+          "bbox": [
+            798,
+            319,
+            1369,
+            363
+          ],
+          "confidence": 78.38
+        },
+        {
+          "text": "Lính thú goi nhau đón sử giả.",
+          "bbox": [
+            795,
+            405,
+            1486,
+            450
+          ],
+          "confidence": 88.32
+        },
+        {
+          "text": "Khói sương mù mịt chăng rõ người,",
+          "bbox": [
+            795,
+            493,
+            1609,
+            547
+          ],
+          "confidence": 94.42
+        },
+        {
+          "text": "Phút chốc phương động trời ứng đổ.",
+          "bbox": [
+            796,
+            580,
+            1618,
+            634
+          ],
+          "confidence": 80.96
+        },
+        {
+          "text": "Núi sông trong vật vẽ nên tranh.",
+          "bbox": [
+            795,
+            668,
+            1546,
+            713
+          ],
+          "confidence": 97.97
+        },
+        {
+          "text": "Như thế ban ngày đèn lưng linh.",
+          "bbox": [
+            795,
+            753,
+            1552,
+            806
+          ],
+          "confidence": 94.62
+        },
+        {
+          "text": "Nhân vật phôn hoa thành Vĩnh Phúc.",
+          "bbox": [
+            795,
+            835,
+            1669,
+            879
+          ],
+          "confidence": 96.85
+        },
+        {
+          "text": "Lâu đài san sát kế bên ghềnh.",
+          "bbox": [
+            797,
+            916,
+            1974,
+            962
+          ],
+          "confidence": 91.64
+        },
+        {
+          "text": "Nhà khách kết hoa đêm rực rỡ,",
+          "bbox": [
+            795,
+            997,
+            1507,
+            1041
+          ],
+          "confidence": 95.37
+        },
+        {
+          "text": "Không dự cuộc vui, sử có tang.",
+          "bbox": [
+            797,
+            1080,
+            1498,
+            1133
+          ],
+          "confidence": 95.81
+        },
+        {
+          "text": "Quan chức trong triệu đều ôm trán,",
+          "bbox": [
+            802,
+            1163,
+            1614,
+            1208
+          ],
+          "confidence": 94.45
+        },
+        {
+          "text": "Ai nấy không quên Tiên vương ta.",
+          "bbox": [
+            795,
+            1245,
+            1573,
+            1300
+          ],
+          "confidence": 91.64
+        },
+        {
+          "text": "Nghe nói Tỉnh Hình dường hiểm trở,",
+          "bbox": [
+            796,
+            1328,
+            1644,
+            1375
+          ],
+          "confidence": 82.18
+        },
+        {
+          "text": "Dấu cho hiểm trở vấn vượt qua.",
+          "bbox": [
+            798,
+            1406,
+            1522,
+            1457
+          ],
+          "confidence": 85.73
+        },
+        {
+          "text": "Đi xa trẻo cao nên cân thân,",
+          "bbox": [
+            799,
+            1495,
+            1442,
+            1540
+          ],
+          "confidence": 85.13
+        },
+        {
+          "text": "Thiên vương đã hứa, sớm về nhà.",
+          "bbox": [
+            803,
+            1577,
+            1562,
+            1622
+          ],
+          "confidence": 94.69
+        },
+        {
+          "text": "Làm Giang",
+          "bbox": [
+            1825,
+            1667,
+            2135,
+            1699
+          ],
+          "confidence": 99.31
+        },
+        {
+          "text": "へへー",
+          "bbox": [
+            1065,
+            1765,
+            1389,
+            1784
+          ],
+          "confidence": 45.85
+        },
+        {
+          "text": "31. 山行",
+          "bbox": [
+            1063,
+            1783,
+            1484,
+            1830
+          ],
+          "confidence": 87.01
+        },
+        {
+          "text": "徹夜山行不少留",
+          "bbox": [
+            928,
+            1964,
+            1814,
+            2026
+          ],
+          "confidence": 99.83
+        },
+        {
+          "text": "轎夫報道駐前頭",
+          "bbox": [
+            769,
+            2089,
+            1527,
+            2154
+          ],
+          "confidence": 99.91
+        },
+        {
+          "text": "倦看林月乍潛見",
+          "bbox": [
+            938,
+            2217,
+            1526,
+            2280
+          ],
+          "confidence": 96.01
+        },
+        {
+          "text": "愁聽泉風時瑟颼",
+          "bbox": [
+            942,
+            2343,
+            1531,
+            2407
+          ],
+          "confidence": 99.45
+        },
+        {
+          "text": "行有扶持危更穩",
+          "bbox": [
+            937,
+            2467,
+            1529,
+            2533
+          ],
+          "confidence": 94.22
+        },
+        {
+          "text": "分當趨赴樂忘憂",
+          "bbox": [
+            939,
+            2592,
+            1698,
+            2657
+          ],
+          "confidence": 99.93
+        },
+        {
+          "text": "林梢忽见東方白",
+          "bbox": [
+            936,
+            2718,
+            1521,
+            2782
+          ],
+          "confidence": 92.78
+        },
+        {
+          "text": "卻是青雲程尚修",
+          "bbox": [
+            937,
+            2843,
+            1527,
+            2907
+          ],
+          "confidence": 99.72
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2594,
+          3225
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 31.653,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              7,
+              15,
+              1475,
+              45
+            ],
+            "generated_text": "ngothinhamle1.pdf",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.892,
+            "confidence": 93.93,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              1631,
+              209,
+              2096,
+              248
+            ],
+            "generated_text": "HOÀNG HOA ĐÔ PHA",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.941,
+            "confidence": 83.86,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              387,
+              253,
+              2099,
+              268
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.456,
+            "confidence": 81.48,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              798,
+              319,
+              1369,
+              363
+            ],
+            "generated_text": "Câu gỗ xa xa được mờ tỏ,",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.165,
+            "confidence": 78.38,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              795,
+              405,
+              1486,
+              450
+            ],
+            "generated_text": "Lính thú goi nhau đón sử giả.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.115,
+            "confidence": 88.32,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              795,
+              493,
+              1609,
+              547
+            ],
+            "generated_text": "Khói sương mù mịt chăng rõ người,",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.34,
+            "confidence": 94.42,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              796,
+              580,
+              1618,
+              634
+            ],
+            "generated_text": "Phút chốc phương động trời ứng đổ.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.289,
+            "confidence": 80.96,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              795,
+              668,
+              1546,
+              713
+            ],
+            "generated_text": "Núi sông trong vật vẽ nên tranh.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.196,
+            "confidence": 97.97,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              795,
+              753,
+              1552,
+              806
+            ],
+            "generated_text": "Như thế ban ngày đèn lưng linh.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.131,
+            "confidence": 94.62,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              795,
+              835,
+              1669,
+              879
+            ],
+            "generated_text": "Nhân vật phôn hoa thành Vĩnh Phúc.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.226,
+            "confidence": 96.85,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              797,
+              916,
+              1974,
+              962
+            ],
+            "generated_text": "Lâu đài san sát kế bên ghềnh.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.278,
+            "confidence": 91.64,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              795,
+              997,
+              1507,
+              1041
+            ],
+            "generated_text": "Nhà khách kết hoa đêm rực rỡ,",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.12,
+            "confidence": 95.37,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              797,
+              1080,
+              1498,
+              1133
+            ],
+            "generated_text": "Không dự cuộc vui, sử có tang.",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.053,
+            "confidence": 95.81,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              802,
+              1163,
+              1614,
+              1208
+            ],
+            "generated_text": "Quan chức trong triệu đều ôm trán,",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.202,
+            "confidence": 94.45,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              795,
+              1245,
+              1573,
+              1300
+            ],
+            "generated_text": "Ai nấy không quên Tiên vương ta.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.134,
+            "confidence": 91.64,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              796,
+              1328,
+              1644,
+              1375
+            ],
+            "generated_text": "Nghe nói Tỉnh Hình dường hiểm trở,",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.227,
+            "confidence": 82.18,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              798,
+              1406,
+              1522,
+              1457
+            ],
+            "generated_text": "Dấu cho hiểm trở vấn vượt qua.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.193,
+            "confidence": 85.73,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              799,
+              1495,
+              1442,
+              1540
+            ],
+            "generated_text": "Đi xa trẻo cao nên cân thân,",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.319,
+            "confidence": 85.13,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              803,
+              1577,
+              1562,
+              1622
+            ],
+            "generated_text": "Thiên vương đã hứa, sớm về nhà.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.38,
+            "confidence": 94.69,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              1825,
+              1667,
+              2135,
+              1699
+            ],
+            "generated_text": "Làm Giang",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.635,
+            "confidence": 99.31,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              1065,
+              1765,
+              1389,
+              1784
+            ],
+            "generated_text": "へへー",
+            "n_lines": 1,
+            "tokens": 4,
+            "seconds": 0.573,
+            "confidence": 45.85,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              1063,
+              1783,
+              1484,
+              1830
+            ],
+            "generated_text": "31. 山行",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.78,
+            "confidence": 87.01,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              928,
+              1964,
+              1814,
+              2026
+            ],
+            "generated_text": "徹夜山行不少留",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.901,
+            "confidence": 99.83,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              769,
+              2089,
+              1527,
+              2154
+            ],
+            "generated_text": "轎夫報道駐前頭",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.174,
+            "confidence": 99.91,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              938,
+              2217,
+              1526,
+              2280
+            ],
+            "generated_text": "倦看林月乍潛見",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.958,
+            "confidence": 96.01,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              942,
+              2343,
+              1531,
+              2407
+            ],
+            "generated_text": "愁聽泉風時瑟颼",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.095,
+            "confidence": 99.45,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              937,
+              2467,
+              1529,
+              2533
+            ],
+            "generated_text": "行有扶持危更穩",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.904,
+            "confidence": 94.22,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              939,
+              2592,
+              1698,
+              2657
+            ],
+            "generated_text": "分當趨赴樂忘憂",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.163,
+            "confidence": 99.93,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              936,
+              2718,
+              1521,
+              2782
+            ],
+            "generated_text": "林梢忽见東方白",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.838,
+            "confidence": 92.78,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              937,
+              2843,
+              1527,
+              2907
+            ],
+            "generated_text": "卻是青雲程尚修",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.972,
+            "confidence": 99.72,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              1013,
+              448,
+              1423,
+              458
+            ],
+            "ink": 218
+          },
+          {
+            "box": [
+              975,
+              711,
+              1541,
+              721
+            ],
+            "ink": 254
+          },
+          {
+            "box": [
+              836,
+              1371,
+              1640,
+              1382
+            ],
+            "ink": 266
+          },
+          {
+            "box": [
+              1833,
+              1656,
+              2009,
+              1668
+            ],
+            "ink": 352
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

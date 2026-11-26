@@ -1,0 +1,876 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 376,
+  "runs": [
+    {
+      "key": "5355036abbc4f4579e01529e6a788e617351ce95c4b47cac071e5a67f51cdbc5",
+      "parameters": {
+        "image_sha256": "f75d5e58d5a661db5713e5a68b5e9b31f05355cde3c54cd48b80933eb1a0c99a",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T15:25:20+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_376.png",
+      "image_size": [
+        2712,
+        3325
+      ],
+      "crop_box": [
+        0,
+        0,
+        2712,
+        3325
+      ],
+      "lines": [
+        {
+          "text": "ngothinhamch1.pdf",
+          "bbox": [
+            7,
+            19,
+            296,
+            45
+          ],
+          "confidence": 98.71
+        },
+        {
+          "text": "NGŮ THI NHAM TOẠN TẬP - TẬP III",
+          "bbox": [
+            484,
+            247,
+            1258,
+            287
+          ],
+          "confidence": 78.87
+        },
+        {
+          "text": ".",
+          "bbox": [
+            467,
+            287,
+            2211,
+            301
+          ],
+          "confidence": 50.56
+        },
+        {
+          "text": "Tuổi tho xuân ngu, cốt sao người thân khỏi lo.",
+          "bbox": [
+            421,
+            345,
+            1839,
+            391
+          ],
+          "confidence": 90.46
+        },
+        {
+          "text": "Đoi lấy đại vàng phô nơi vườn cực;",
+          "bbox": [
+            779,
+            420,
+            1572,
+            465
+          ],
+          "confidence": 83.21
+        },
+        {
+          "text": "Dám đem trâm ngọc, sánh với mai tươi.",
+          "bbox": [
+            780,
+            495,
+            1690,
+            539
+          ],
+          "confidence": 94.92
+        },
+        {
+          "text": "Nhớ khi quán khách tam bày tiệc rượu,",
+          "bbox": [
+            759,
+            568,
+            1688,
+            613
+          ],
+          "confidence": 89.09
+        },
+        {
+          "text": "Hoà vui ngõ nâng chén ở nhà Cẩm đường.",
+          "bbox": [
+            746,
+            641,
+            1783,
+            686
+          ],
+          "confidence": 91.59
+        },
+        {
+          "text": "CHU THICH:",
+          "bbox": [
+            487,
+            718,
+            775,
+            757
+          ],
+          "confidence": 98.64
+        },
+        {
+          "text": "1. Treo cung: Xưa, đẻ con trai người ta treo cung tên ở trước của",
+          "bbox": [
+            637,
+            785,
+            2193,
+            827
+          ],
+          "confidence": 93.91
+        },
+        {
+          "text": "nhà, ý là sau khi con khôn lớn, sẽ có chí vẫy vùng bốn phương. Ở đây",
+          "bbox": [
+            484,
+            854,
+            2195,
+            904
+          ],
+          "confidence": 93.21
+        },
+        {
+          "text": "dùng để chỉ ngày sinh nhất.",
+          "bbox": [
+            486,
+            927,
+            1127,
+            969
+          ],
+          "confidence": 95.41
+        },
+        {
+          "text": "2.Cảm đương: Xem chủ thích 2, bài 56.",
+          "bbox": [
+            633,
+            996,
+            1453,
+            1038
+          ],
+          "confidence": 92.87
+        },
+        {
+          "text": "58.次孫時素晬盤日誌慶（並引）",
+          "bbox": [
+            752,
+            1154,
+            2104,
+            1232
+          ],
+          "confidence": 95.83
+        },
+        {
+          "text": "余以乙卯冬至日子半誕次孫。其日殷薦禮成，祖考",
+          "bbox": [
+            636,
+            1336,
+            2186,
+            1403
+          ],
+          "confidence": 99.89
+        },
+        {
+          "text": "積慶，螽斯之瑞，夫豈偶然。既及晬盤，適表眷倬嶺",
+          "bbox": [
+            487,
+            1455,
+            2220,
+            1521
+          ],
+          "confidence": 99.62
+        },
+        {
+          "text": "侯獻石象二座，奉安于追遠壇。久大之徵於焉可卜。謹",
+          "bbox": [
+            489,
+            1572,
+            2184,
+            1637
+          ],
+          "confidence": 99.85
+        },
+        {
+          "text": "按金蘭弘墳，乙卯來龍，地鉗之世出巨儒，名聯金榜，",
+          "bbox": [
+            487,
+            1689,
+            2165,
+            1755
+          ],
+          "confidence": 99.97
+        },
+        {
+          "text": "邀天之幸，果符徵應，余敢不勤修陰隙，以裕燕貽。",
+          "bbox": [
+            488,
+            1806,
+            2166,
+            1871
+          ],
+          "confidence": 99.9
+        },
+        {
+          "text": "因賦一章，用表嘉兆。",
+          "bbox": [
+            495,
+            1928,
+            1161,
+            1988
+          ],
+          "confidence": 99.72
+        },
+        {
+          "text": "碩果原從福地裁",
+          "bbox": [
+            1106,
+            2045,
+            1646,
+            2105
+          ],
+          "confidence": 93.68
+        },
+        {
+          "text": "生機長至一聲雷",
+          "bbox": [
+            1109,
+            2162,
+            1646,
+            2224
+          ],
+          "confidence": 99.82
+        },
+        {
+          "text": "卯龍可卜金龍發",
+          "bbox": [
+            1111,
+            2281,
+            1650,
+            2343
+          ],
+          "confidence": 99.94
+        },
+        {
+          "text": "復象還徵石象來",
+          "bbox": [
+            1107,
+            2398,
+            1647,
+            2461
+          ],
+          "confidence": 99.45
+        },
+        {
+          "text": "祖德懋留家慶澤",
+          "bbox": [
+            1105,
+            2515,
+            1647,
+            2580
+          ],
+          "confidence": 99.83
+        },
+        {
+          "text": "孫謀切望世科魁",
+          "bbox": [
+            1107,
+            2634,
+            1650,
+            2695
+          ],
+          "confidence": 99.75
+        },
+        {
+          "text": "成人正爾提金印",
+          "bbox": [
+            1107,
+            2751,
+            1770,
+            2811
+          ],
+          "confidence": 95.78
+        },
+        {
+          "text": "奕葉王侯炫上台",
+          "bbox": [
+            1104,
+            2870,
+            2162,
+            2930
+          ],
+          "confidence": 98.02
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2712,
+          3325
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 41.105,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              7,
+              19,
+              296,
+              45
+            ],
+            "generated_text": "ngothinhamch1.pdf",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.918,
+            "confidence": 98.71,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              484,
+              247,
+              1258,
+              287
+            ],
+            "generated_text": "NGŮ THI NHAM TOẠN TẬP - TẬP III",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 1.885,
+            "confidence": 78.87,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              467,
+              287,
+              2211,
+              301
+            ],
+            "generated_text": ".",
+            "n_lines": 1,
+            "tokens": 2,
+            "seconds": 0.526,
+            "confidence": 50.56,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              421,
+              345,
+              1839,
+              391
+            ],
+            "generated_text": "Tuổi tho xuân ngu, cốt sao người thân khỏi lo.",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.476,
+            "confidence": 90.46,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              779,
+              420,
+              1572,
+              465
+            ],
+            "generated_text": "Đoi lấy đại vàng phô nơi vườn cực;",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.458,
+            "confidence": 83.21,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              780,
+              495,
+              1690,
+              539
+            ],
+            "generated_text": "Dám đem trâm ngọc, sánh với mai tươi.",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.493,
+            "confidence": 94.92,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              759,
+              568,
+              1688,
+              613
+            ],
+            "generated_text": "Nhớ khi quán khách tam bày tiệc rượu,",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.373,
+            "confidence": 89.09,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              746,
+              641,
+              1783,
+              686
+            ],
+            "generated_text": "Hoà vui ngõ nâng chén ở nhà Cẩm đường.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.562,
+            "confidence": 91.59,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              487,
+              718,
+              775,
+              757
+            ],
+            "generated_text": "CHU THICH:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.732,
+            "confidence": 98.64,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              637,
+              785,
+              2193,
+              827
+            ],
+            "generated_text": "1. Treo cung: Xưa, đẻ con trai người ta treo cung tên ở trước của",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 2.032,
+            "confidence": 93.91,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              484,
+              854,
+              2195,
+              904
+            ],
+            "generated_text": "nhà, ý là sau khi con khôn lớn, sẽ có chí vẫy vùng bốn phương. Ở đây",
+            "n_lines": 1,
+            "tokens": 32,
+            "seconds": 2.561,
+            "confidence": 93.21,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              486,
+              927,
+              1127,
+              969
+            ],
+            "generated_text": "dùng để chỉ ngày sinh nhất.",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.971,
+            "confidence": 95.41,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              633,
+              996,
+              1453,
+              1038
+            ],
+            "generated_text": "2.Cảm đương: Xem chủ thích 2, bài 56.",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.749,
+            "confidence": 92.87,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              752,
+              1154,
+              2104,
+              1232
+            ],
+            "generated_text": "58.次孫時素晬盤日誌慶（並引）",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 2.241,
+            "confidence": 95.83,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              636,
+              1336,
+              2186,
+              1403
+            ],
+            "generated_text": "余以乙卯冬至日子半誕次孫。其日殷薦禮成，祖考",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 2.004,
+            "confidence": 99.89,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              487,
+              1455,
+              2220,
+              1521
+            ],
+            "generated_text": "積慶，螽斯之瑞，夫豈偶然。既及晬盤，適表眷倬嶺",
+            "n_lines": 1,
+            "tokens": 37,
+            "seconds": 2.768,
+            "confidence": 99.62,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              489,
+              1572,
+              2184,
+              1637
+            ],
+            "generated_text": "侯獻石象二座，奉安于追遠壇。久大之徵於焉可卜。謹",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 2.348,
+            "confidence": 99.85,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              487,
+              1689,
+              2165,
+              1755
+            ],
+            "generated_text": "按金蘭弘墳，乙卯來龍，地鉗之世出巨儒，名聯金榜，",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 2.185,
+            "confidence": 99.97,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              488,
+              1806,
+              2166,
+              1871
+            ],
+            "generated_text": "邀天之幸，果符徵應，余敢不勤修陰隙，以裕燕貽。",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.12,
+            "confidence": 99.9,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              495,
+              1928,
+              1161,
+              1988
+            ],
+            "generated_text": "因賦一章，用表嘉兆。",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.247,
+            "confidence": 99.72,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              1106,
+              2045,
+              1646,
+              2105
+            ],
+            "generated_text": "碩果原從福地裁",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.976,
+            "confidence": 93.68,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              1109,
+              2162,
+              1646,
+              2224
+            ],
+            "generated_text": "生機長至一聲雷",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.83,
+            "confidence": 99.82,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              1111,
+              2281,
+              1650,
+              2343
+            ],
+            "generated_text": "卯龍可卜金龍發",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.829,
+            "confidence": 99.94,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              1107,
+              2398,
+              1647,
+              2461
+            ],
+            "generated_text": "復象還徵石象來",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.83,
+            "confidence": 99.45,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              1105,
+              2515,
+              1647,
+              2580
+            ],
+            "generated_text": "祖德懋留家慶澤",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.195,
+            "confidence": 99.83,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              1107,
+              2634,
+              1650,
+              2695
+            ],
+            "generated_text": "孫謀切望世科魁",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.079,
+            "confidence": 99.75,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              1107,
+              2751,
+              1770,
+              2811
+            ],
+            "generated_text": "成人正爾提金印",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.86,
+            "confidence": 95.78,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              1104,
+              2870,
+              2162,
+              2930
+            ],
+            "generated_text": "奕葉王侯炫上台",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.854,
+            "confidence": 98.02,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              561,
+              242,
+              1160,
+              251
+            ],
+            "ink": 256
+          },
+          {
+            "box": [
+              748,
+              387,
+              1460,
+              397
+            ],
+            "ink": 274
+          },
+          {
+            "box": [
+              827,
+              462,
+              1569,
+              472
+            ],
+            "ink": 264
+          },
+          {
+            "box": [
+              1007,
+              682,
+              1730,
+              692
+            ],
+            "ink": 281
+          },
+          {
+            "box": [
+              884,
+              823,
+              1799,
+              833
+            ],
+            "ink": 296
+          },
+          {
+            "box": [
+              574,
+              966,
+              1086,
+              975
+            ],
+            "ink": 214
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

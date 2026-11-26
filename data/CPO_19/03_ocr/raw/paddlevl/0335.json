@@ -1,0 +1,878 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 335,
+  "runs": [
+    {
+      "key": "dd7fc9534b41e2de0ba4a00c581af453ea2c4b4cc63babd60e51ff0ae81edf86",
+      "parameters": {
+        "image_sha256": "7efb3bed103c6f683b32c0bd9dabd2fde3f94d292aa537049e171de22b641727",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T14:57:14+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_335.png",
+      "image_size": [
+        2567,
+        3006
+      ],
+      "crop_box": [
+        0,
+        0,
+        2567,
+        3006
+      ],
+      "lines": [
+        {
+          "text": "ngothinhamle1.pdf",
+          "bbox": [
+            7,
+            19,
+            287,
+            45
+          ],
+          "confidence": 96.92
+        },
+        {
+          "text": "CÂM ĐƯỜNG NHẬN THOAI",
+          "bbox": [
+            1179,
+            203,
+            2066,
+            242
+          ],
+          "confidence": 80.5
+        },
+        {
+          "text": "DICH NGHIA:",
+          "bbox": [
+            359,
+            335,
+            669,
+            374
+          ],
+          "confidence": 97.13
+        },
+        {
+          "text": "NHỐ QUÊ VIỆT GÚI NGƯỜI BAN CỦNG KHOA",
+          "bbox": [
+            677,
+            409,
+            1841,
+            460
+          ],
+          "confidence": 88.16
+        },
+        {
+          "text": "LA NGUYÊN TA KHE\\(^{1}\\)",
+          "bbox": [
+            974,
+            497,
+            1540,
+            543
+          ],
+          "confidence": 90.78
+        },
+        {
+          "text": "372, 3733 9000 3330 3330 3330 3330 3330",
+          "bbox": [
+            801,
+            627,
+            1718,
+            647
+          ],
+          "confidence": 10.0
+        },
+        {
+          "text": "Bác, day hoc tựa hac kêu bên chăm. (2)",
+          "bbox": [
+            800,
+            684,
+            1661,
+            729
+          ],
+          "confidence": 81.83
+        },
+        {
+          "text": "Khi bận, hay ghen với thú điện viên;",
+          "bbox": [
+            799,
+            766,
+            1644,
+            812
+          ],
+          "confidence": 83.65
+        },
+        {
+          "text": "Lúc nhàn, nào hay nổi vất vả chốn quan trưởng.",
+          "bbox": [
+            800,
+            849,
+            1909,
+            895
+          ],
+          "confidence": 85.05
+        },
+        {
+          "text": "Gặp thời được từ quan, nếu có phúc phân,",
+          "bbox": [
+            800,
+            932,
+            1763,
+            977
+          ],
+          "confidence": 94.19
+        },
+        {
+          "text": "Trở về sớm tối say với chén rượu ngon.",
+          "bbox": [
+            798,
+            1014,
+            1683,
+            1059
+          ],
+          "confidence": 94.84
+        },
+        {
+          "text": "CHU THICH:",
+          "bbox": [
+            358,
+            1095,
+            646,
+            1133
+          ],
+          "confidence": 98.65
+        },
+        {
+          "text": "1.Nguyên Tả Khê: Tức Nguyên Nha, cùng làng Tả Thanh Oai, đỗ Tiến sĩ",
+          "bbox": [
+            509,
+            1166,
+            2066,
+            1216
+          ],
+          "confidence": 95.49
+        },
+        {
+          "text": "cùng khoa với Ngô Thì Nhâm. Lúc này Tả Khê ở nhà day hoc.",
+          "bbox": [
+            355,
+            1240,
+            1657,
+            1283
+          ],
+          "confidence": 93.89
+        },
+        {
+          "text": "2.Hac kêu bên chăm: Theo Hac minh, Tiểu nhã, Kinh Thi: “Hac minh vu",
+          "bbox": [
+            505,
+            1315,
+            2065,
+            1361
+          ],
+          "confidence": 93.06
+        },
+        {
+          "text": "cứu cao, thanh động vu thiên\" (Chim hạc kêu ở chăm, tiếng động đến trời).",
+          "bbox": [
+            355,
+            1391,
+            1926,
+            1441
+          ],
+          "confidence": 94.14
+        },
+        {
+          "text": "07 距占缁",
+          "bbox": [
+            1004,
+            1553,
+            1476,
+            1585
+          ],
+          "confidence": 49.48
+        },
+        {
+          "text": "31. 題安貝果",
+          "bbox": [
+            1002,
+            1577,
+            1490,
+            1628
+          ],
+          "confidence": 80.54
+        },
+        {
+          "text": "結葉爲扉傍小岡",
+          "bbox": [
+            979,
+            1719,
+            1513,
+            1778
+          ],
+          "confidence": 99.55
+        },
+        {
+          "text": "閒來誦讀兩三行",
+          "bbox": [
+            981,
+            1844,
+            1520,
+            1902
+          ],
+          "confidence": 99.71
+        },
+        {
+          "text": "靜修自信安貞吉",
+          "bbox": [
+            283,
+            1968,
+            1514,
+            2031
+          ],
+          "confidence": 97.72
+        },
+        {
+          "text": "貞到安時字字康",
+          "bbox": [
+            422,
+            2095,
+            1516,
+            2158
+          ],
+          "confidence": 97.83
+        },
+        {
+          "text": "PHIEN AM:",
+          "bbox": [
+            357,
+            2240,
+            611,
+            2278
+          ],
+          "confidence": 99.61
+        },
+        {
+          "text": "DE AN TRINH SAO",
+          "bbox": [
+            967,
+            2313,
+            1443,
+            2358
+          ],
+          "confidence": 98.34
+        },
+        {
+          "text": "Kết diệp vi phi bang tiểu cương,",
+          "bbox": [
+            822,
+            2415,
+            1551,
+            2469
+          ],
+          "confidence": 85.28
+        },
+        {
+          "text": "Nhàn lai tung độc lưỡng tam hàng.",
+          "bbox": [
+            821,
+            2493,
+            2069,
+            2539
+          ],
+          "confidence": 84.55
+        },
+        {
+          "text": "Tình tu tu tính an trình cát,",
+          "bbox": [
+            826,
+            2572,
+            1441,
+            2616
+          ],
+          "confidence": 78.57
+        },
+        {
+          "text": "Trình đáo An thời tư tư khang.",
+          "bbox": [
+            825,
+            2653,
+            1533,
+            2698
+          ],
+          "confidence": 93.95
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2567,
+          3006
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 40.434,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              7,
+              19,
+              287,
+              45
+            ],
+            "generated_text": "ngothinhamle1.pdf",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.906,
+            "confidence": 96.92,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              1179,
+              203,
+              2066,
+              242
+            ],
+            "generated_text": "CÂM ĐƯỜNG NHẬN THOAI",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.491,
+            "confidence": 80.5,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              342,
+              242,
+              2083,
+              256
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.459,
+            "confidence": 61.23,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              359,
+              335,
+              669,
+              374
+            ],
+            "generated_text": "DICH NGHIA:",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.76,
+            "confidence": 97.13,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              677,
+              409,
+              1841,
+              460
+            ],
+            "generated_text": "NHỐ QUÊ VIỆT GÚI NGƯỜI BAN CỦNG KHOA",
+            "n_lines": 1,
+            "tokens": 32,
+            "seconds": 2.667,
+            "confidence": 88.16,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              974,
+              497,
+              1540,
+              543
+            ],
+            "generated_text": "LA NGUYÊN TA KHE\\(^{1}\\)",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.302,
+            "confidence": 90.78,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              801,
+              627,
+              1718,
+              647
+            ],
+            "generated_text": "372, 3733 9000 3330 3330 3330 3330 3330",
+            "n_lines": 1,
+            "tokens": 40,
+            "seconds": 3.055,
+            "confidence": 10.0,
+            "flags": [
+              "loop_stopped"
+            ],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              800,
+              684,
+              1661,
+              729
+            ],
+            "generated_text": "Bác, day hoc tựa hac kêu bên chăm. (2)",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.548,
+            "confidence": 81.83,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              799,
+              766,
+              1644,
+              812
+            ],
+            "generated_text": "Khi bận, hay ghen với thú điện viên;",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.303,
+            "confidence": 83.65,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              800,
+              849,
+              1909,
+              895
+            ],
+            "generated_text": "Lúc nhàn, nào hay nổi vất vả chốn quan trưởng.",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.786,
+            "confidence": 85.05,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              800,
+              932,
+              1763,
+              977
+            ],
+            "generated_text": "Gặp thời được từ quan, nếu có phúc phân,",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.506,
+            "confidence": 94.19,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              798,
+              1014,
+              1683,
+              1059
+            ],
+            "generated_text": "Trở về sớm tối say với chén rượu ngon.",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.557,
+            "confidence": 94.84,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              358,
+              1095,
+              646,
+              1133
+            ],
+            "generated_text": "CHU THICH:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.729,
+            "confidence": 98.65,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              509,
+              1166,
+              2066,
+              1216
+            ],
+            "generated_text": "1.Nguyên Tả Khê: Tức Nguyên Nha, cùng làng Tả Thanh Oai, đỗ Tiến sĩ",
+            "n_lines": 1,
+            "tokens": 33,
+            "seconds": 2.508,
+            "confidence": 95.49,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              355,
+              1240,
+              1657,
+              1283
+            ],
+            "generated_text": "cùng khoa với Ngô Thì Nhâm. Lúc này Tả Khê ở nhà day hoc.",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.811,
+            "confidence": 93.89,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              505,
+              1315,
+              2065,
+              1361
+            ],
+            "generated_text": "2.Hac kêu bên chăm: Theo Hac minh, Tiểu nhã, Kinh Thi: “Hac minh vu",
+            "n_lines": 1,
+            "tokens": 33,
+            "seconds": 2.516,
+            "confidence": 93.06,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              355,
+              1391,
+              1926,
+              1441
+            ],
+            "generated_text": "cứu cao, thanh động vu thiên\" (Chim hạc kêu ở chăm, tiếng động đến trời).",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 2.278,
+            "confidence": 94.14,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              1004,
+              1553,
+              1476,
+              1585
+            ],
+            "generated_text": "07 距 占 缁",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 1.005,
+            "confidence": 49.48,
+            "flags": [
+              "han_gap_removed"
+            ],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              1002,
+              1577,
+              1490,
+              1628
+            ],
+            "generated_text": "31. 題安貝果",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 1.01,
+            "confidence": 80.54,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              979,
+              1719,
+              1513,
+              1778
+            ],
+            "generated_text": "結葉爲扉傍小岡",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.836,
+            "confidence": 99.55,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              981,
+              1844,
+              1520,
+              1902
+            ],
+            "generated_text": "閒來誦讀兩三行",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.097,
+            "confidence": 99.71,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              283,
+              1968,
+              1514,
+              2031
+            ],
+            "generated_text": "靜修自信安貞吉",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 1.133,
+            "confidence": 97.72,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              422,
+              2095,
+              1516,
+              2158
+            ],
+            "generated_text": "貞到安時字字康",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 1.046,
+            "confidence": 97.83,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              357,
+              2240,
+              611,
+              2278
+            ],
+            "generated_text": "PHIEN AM:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.723,
+            "confidence": 99.61,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              967,
+              2313,
+              1443,
+              2358
+            ],
+            "generated_text": "DE AN TRINH SAO",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.824,
+            "confidence": 98.34,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              822,
+              2415,
+              1551,
+              2469
+            ],
+            "generated_text": "Kết diệp vi phi bang tiểu cương,",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.116,
+            "confidence": 85.28,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              821,
+              2493,
+              2069,
+              2539
+            ],
+            "generated_text": "Nhàn lai tung độc lưỡng tam hàng.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.169,
+            "confidence": 84.55,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              826,
+              2572,
+              1441,
+              2616
+            ],
+            "generated_text": "Tình tu tu tính an trình cát,",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 1.109,
+            "confidence": 78.57,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              825,
+              2653,
+              1533,
+              2698
+            ],
+            "generated_text": "Trình đáo An thời tư tư khang.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.179,
+            "confidence": 93.95,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              845,
+              973,
+              1762,
+              985
+            ],
+            "ink": 403
+          },
+          {
+            "box": [
+              433,
+              1279,
+              1620,
+              1290
+            ],
+            "ink": 338
+          },
+          {
+            "box": [
+              1068,
+              2537,
+              1618,
+              2547
+            ],
+            "ink": 319
+          },
+          {
+            "box": [
+              1280,
+              2918,
+              1542,
+              2928
+            ],
+            "ink": 218
+          }
+        ],
+        "any_degenerate": true,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

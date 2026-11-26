@@ -1,0 +1,943 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 103,
+  "runs": [
+    {
+      "key": "a7c717735e027ab1ebf59c0654fb269f4bc79351e4a421020c7d24a599c640f6",
+      "parameters": {
+        "image_sha256": "4bd8d566a386dc3712d5730cf7acd097abab3ea979838ee24d1bf18b185ae739",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T12:15:55+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_103.png",
+      "image_size": [
+        2594,
+        3201
+      ],
+      "crop_box": [
+        0,
+        0,
+        2594,
+        3201
+      ],
+      "lines": [
+        {
+          "text": "ngothinhamch1.pdf",
+          "bbox": [
+            7,
+            19,
+            1157,
+            45
+          ],
+          "confidence": 97.97
+        },
+        {
+          "text": "NGO THI NHAM TOAN TAP - TAP III",
+          "bbox": [
+            377,
+            160,
+            2106,
+            199
+          ],
+          "confidence": 96.06
+        },
+        {
+          "text": "Vô cánh lươn bay chẳng cần bãi đô.",
+          "bbox": [
+            208,
+            265,
+            1484,
+            309
+          ],
+          "confidence": 87.24
+        },
+        {
+          "text": "“Nước trị” (1) đảm đìa, nhiều điều vui vẻ;",
+          "bbox": [
+            683,
+            347,
+            1591,
+            392
+          ],
+          "confidence": 83.72
+        },
+        {
+          "text": "\"Bến mê\" (2) phải lôi, cũng chẳng buồn phiền.",
+          "bbox": [
+            683,
+            427,
+            1693,
+            473
+          ],
+          "confidence": 87.65
+        },
+        {
+          "text": "Lòng hanh thông như quê Khảm, (3) lợi xem phong cảnh;",
+          "bbox": [
+            671,
+            510,
+            1948,
+            562
+          ],
+          "confidence": 94.09
+        },
+        {
+          "text": "Được bạn tựa quê Khôn, (4) cần gì phải dùng mưu.",
+          "bbox": [
+            671,
+            591,
+            1800,
+            644
+          ],
+          "confidence": 92.77
+        },
+        {
+          "text": "Những may gặp gỡ, là nhờ phúc của Thiên tử,",
+          "bbox": [
+            672,
+            672,
+            1727,
+            726
+          ],
+          "confidence": 96.82
+        },
+        {
+          "text": "Thủy thần nên phù hộ cho thuyền sú giả qua sông.",
+          "bbox": [
+            671,
+            756,
+            2310,
+            808
+          ],
+          "confidence": 91.58
+        },
+        {
+          "text": "CHU THICH:",
+          "bbox": [
+            378,
+            843,
+            2310,
+            882
+          ],
+          "confidence": 99.09
+        },
+        {
+          "text": "1.Nước trí: Chũ Luận ngữ: “Trí giả nhạo thủy, nhân giả nhạo sơn” (Kẻ trí",
+          "bbox": [
+            530,
+            916,
+            2311,
+            969
+          ],
+          "confidence": 92.47
+        },
+        {
+          "text": "thì vui với nước, kế nhân vui với núi).",
+          "bbox": [
+            377,
+            999,
+            2313,
+            1041
+          ],
+          "confidence": 88.28
+        },
+        {
+          "text": "2.Bến mê: Chũ nhà Phật, ở đây mượn để chỉ bến sông.",
+          "bbox": [
+            528,
+            1074,
+            2314,
+            1118
+          ],
+          "confidence": 88.52
+        },
+        {
+          "text": "3.Quẻ Khảm: Quái tử nói: “Tập khảm, hũu phu, duy tâm hanh” (Hai lần",
+          "bbox": [
+            529,
+            1153,
+            2315,
+            1202
+          ],
+          "confidence": 91.77
+        },
+        {
+          "text": "“Khảm,” có lòng tin, thì trong lòng hanh thống). Đây dùng để chỉ sự hanh thống.",
+          "bbox": [
+            378,
+            1230,
+            2316,
+            1280
+          ],
+          "confidence": 93.33
+        },
+        {
+          "text": "4.Quẻ Khôn: Quái tử: “Tây nam đặc bảng” (Đi ra hướng tây được bạn).",
+          "bbox": [
+            529,
+            1308,
+            2318,
+            1358
+          ],
+          "confidence": 91.39
+        },
+        {
+          "text": "DICH THO:",
+          "bbox": [
+            379,
+            1406,
+            2319,
+            1446
+          ],
+          "confidence": 86.98
+        },
+        {
+          "text": "Trời mưa đặc ý nhất đàn âu,",
+          "bbox": [
+            793,
+            1489,
+            2320,
+            1532
+          ],
+          "confidence": 90.84
+        },
+        {
+          "text": "Vô cánh lượn bay chăng đô đâu.",
+          "bbox": [
+            793,
+            1575,
+            2322,
+            1621
+          ],
+          "confidence": 87.89
+        },
+        {
+          "text": "“Nước trĩ” đảm đìa, nhưng thoả chí;",
+          "bbox": [
+            791,
+            1662,
+            2323,
+            1708
+          ],
+          "confidence": 79.67
+        },
+        {
+          "text": "\"Bến mề\" phải lội, cũng không sâu.",
+          "bbox": [
+            793,
+            1750,
+            2324,
+            1801
+          ],
+          "confidence": 91.39
+        },
+        {
+          "text": "Hanh thông quê Khảm, xem phong cảnh;",
+          "bbox": [
+            791,
+            1835,
+            2326,
+            1889
+          ],
+          "confidence": 90.66
+        },
+        {
+          "text": "Bói được quê Khôn, chẳng phải mưu.",
+          "bbox": [
+            792,
+            1923,
+            2327,
+            1971
+          ],
+          "confidence": 91.85
+        },
+        {
+          "text": "“Gặp gỡ” là nhỏ “Thiên tử” “phúc!”",
+          "bbox": [
+            794,
+            2011,
+            2328,
+            2059
+          ],
+          "confidence": 91.35
+        },
+        {
+          "text": "Thuỷ thân hô vệ vượt sông sâu.",
+          "bbox": [
+            797,
+            2101,
+            2330,
+            2145
+          ],
+          "confidence": 86.27
+        },
+        {
+          "text": "Làm Giang",
+          "bbox": [
+            1821,
+            2192,
+            2331,
+            2223
+          ],
+          "confidence": 98.56
+        },
+        {
+          "text": "７く 廿一",
+          "bbox": [
+            1066,
+            2326,
+            1379,
+            2351
+          ],
+          "confidence": 51.14
+        },
+        {
+          "text": "45. 共一",
+          "bbox": [
+            1056,
+            2355,
+            1397,
+            2383
+          ],
+          "confidence": 85.1
+        },
+        {
+          "text": "長江泛泛水中鷗",
+          "bbox": [
+            936,
+            2512,
+            1523,
+            2571
+          ],
+          "confidence": 99.23
+        },
+        {
+          "text": "頃刻飛奔不記洲",
+          "bbox": [
+            939,
+            2652,
+            1521,
+            2711
+          ],
+          "confidence": 99.86
+        },
+        {
+          "text": "門岸滾前端勢急",
+          "bbox": [
+            941,
+            2790,
+            1807,
+            2851
+          ],
+          "confidence": 87.55
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2594,
+          3201
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 48.59,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              7,
+              19,
+              1157,
+              45
+            ],
+            "generated_text": "ngothinhamch1.pdf",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.999,
+            "confidence": 97.97,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              377,
+              160,
+              2106,
+              199
+            ],
+            "generated_text": "NGO THI NHAM TOAN TAP - TAP III",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.372,
+            "confidence": 96.06,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              380,
+              204,
+              2092,
+              217
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.456,
+            "confidence": 49.03,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              208,
+              265,
+              1484,
+              309
+            ],
+            "generated_text": "Vô cánh lươn bay chẳng cần bãi đô.",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.604,
+            "confidence": 87.24,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              683,
+              347,
+              1591,
+              392
+            ],
+            "generated_text": "“Nước trị” (1) đảm đìa, nhiều điều vui vẻ;",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.828,
+            "confidence": 83.72,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              683,
+              427,
+              1693,
+              473
+            ],
+            "generated_text": "\"Bến mê\" (2) phải lôi, cũng chẳng buồn phiền.",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 2.019,
+            "confidence": 87.65,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              671,
+              510,
+              1948,
+              562
+            ],
+            "generated_text": "Lòng hanh thông như quê Khảm, (3) lợi xem phong cảnh;",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 1.855,
+            "confidence": 94.09,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              671,
+              591,
+              1800,
+              644
+            ],
+            "generated_text": "Được bạn tựa quê Khôn, (4) cần gì phải dùng mưu.",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.922,
+            "confidence": 92.77,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              672,
+              672,
+              1727,
+              726
+            ],
+            "generated_text": "Những may gặp gỡ, là nhờ phúc của Thiên tử,",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.842,
+            "confidence": 96.82,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              671,
+              756,
+              2310,
+              808
+            ],
+            "generated_text": "Thủy thần nên phù hộ cho thuyền sú giả qua sông.",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.685,
+            "confidence": 91.58,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              378,
+              843,
+              2310,
+              882
+            ],
+            "generated_text": "CHU THICH:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.801,
+            "confidence": 99.09,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              530,
+              916,
+              2311,
+              969
+            ],
+            "generated_text": "1.Nước trí: Chũ Luận ngữ: “Trí giả nhạo thủy, nhân giả nhạo sơn” (Kẻ trí",
+            "n_lines": 1,
+            "tokens": 34,
+            "seconds": 2.748,
+            "confidence": 92.47,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              377,
+              999,
+              2313,
+              1041
+            ],
+            "generated_text": "thì vui với nước, kế nhân vui với núi).",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.583,
+            "confidence": 88.28,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              528,
+              1074,
+              2314,
+              1118
+            ],
+            "generated_text": "2.Bến mê: Chũ nhà Phật, ở đây mượn để chỉ bến sông.",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 2.116,
+            "confidence": 88.52,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              529,
+              1153,
+              2315,
+              1202
+            ],
+            "generated_text": "3.Quẻ Khảm: Quái tử nói: “Tập khảm, hũu phu, duy tâm hanh” (Hai lần",
+            "n_lines": 1,
+            "tokens": 37,
+            "seconds": 2.986,
+            "confidence": 91.77,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              378,
+              1230,
+              2316,
+              1280
+            ],
+            "generated_text": "“Khảm,” có lòng tin, thì trong lòng hanh thống). Đây dùng để chỉ sự hanh thống.",
+            "n_lines": 1,
+            "tokens": 32,
+            "seconds": 2.667,
+            "confidence": 93.33,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              529,
+              1308,
+              2318,
+              1358
+            ],
+            "generated_text": "4.Quẻ Khôn: Quái tử: “Tây nam đặc bảng” (Đi ra hướng tây được bạn).",
+            "n_lines": 1,
+            "tokens": 33,
+            "seconds": 2.697,
+            "confidence": 91.39,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              379,
+              1406,
+              2319,
+              1446
+            ],
+            "generated_text": "DICH THO:",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.738,
+            "confidence": 86.98,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              793,
+              1489,
+              2320,
+              1532
+            ],
+            "generated_text": "Trời mưa đặc ý nhất đàn âu,",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.236,
+            "confidence": 90.84,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              793,
+              1575,
+              2322,
+              1621
+            ],
+            "generated_text": "Vô cánh lượn bay chăng đô đâu.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.377,
+            "confidence": 87.89,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              791,
+              1662,
+              2323,
+              1708
+            ],
+            "generated_text": "“Nước trĩ” đảm đìa, nhưng thoả chí;",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.557,
+            "confidence": 79.67,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              793,
+              1750,
+              2324,
+              1801
+            ],
+            "generated_text": "\"Bến mề\" phải lội, cũng không sâu.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.376,
+            "confidence": 91.39,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              791,
+              1835,
+              2326,
+              1889
+            ],
+            "generated_text": "Hanh thông quê Khảm, xem phong cảnh;",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.379,
+            "confidence": 90.66,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              792,
+              1923,
+              2327,
+              1971
+            ],
+            "generated_text": "Bói được quê Khôn, chẳng phải mưu.",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.511,
+            "confidence": 91.85,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              794,
+              2011,
+              2328,
+              2059
+            ],
+            "generated_text": "“Gặp gỡ” là nhỏ “Thiên tử” “phúc!”",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.778,
+            "confidence": 91.35,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              797,
+              2101,
+              2330,
+              2145
+            ],
+            "generated_text": "Thuỷ thân hô vệ vượt sông sâu.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.373,
+            "confidence": 86.27,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              1821,
+              2192,
+              2331,
+              2223
+            ],
+            "generated_text": "Làm Giang",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.668,
+            "confidence": 98.56,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              1066,
+              2326,
+              1379,
+              2351
+            ],
+            "generated_text": "７く 廿一",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.826,
+            "confidence": 51.14,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              1056,
+              2355,
+              1397,
+              2383
+            ],
+            "generated_text": "45. 共一",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.771,
+            "confidence": 85.1,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              936,
+              2512,
+              1523,
+              2571
+            ],
+            "generated_text": "長江泛泛水中鷗",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.929,
+            "confidence": 99.23,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              939,
+              2652,
+              1521,
+              2711
+            ],
+            "generated_text": "頃刻飛奔不記洲",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.985,
+            "confidence": 99.86,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 32,
+            "box": [
+              941,
+              2790,
+              1807,
+              2851
+            ],
+            "generated_text": "門岸滾前端勢急",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.9,
+            "confidence": 87.55,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              453,
+              153,
+              1052,
+              163
+            ],
+            "ink": 254
+          },
+          {
+            "box": [
+              944,
+              470,
+              1563,
+              481
+            ],
+            "ink": 355
+          },
+          {
+            "box": [
+              886,
+              2141,
+              2330,
+              2150
+            ],
+            "ink": 247
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

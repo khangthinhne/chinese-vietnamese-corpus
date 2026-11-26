@@ -1,0 +1,231 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "qwen",
+  "page": 609,
+  "runs": [
+    {
+      "key": "59d1341ad5d2ef10481126682a1a2c60c613094cbefb77b0cb658788d38d2c2a",
+      "parameters": {
+        "image_sha256": "44566ad0d196c18153f5228a839c919222db7c13c8c99fefd350e636e4652e5e",
+        "engine": {
+          "name": "qwen",
+          "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "model_revision": "main",
+          "transformers_version": "4.57.6",
+          "torch_version": "2.5.1+cu121",
+          "cuda_version": "12.1",
+          "bitsandbytes_version": "0.50.2",
+          "quantization": {
+            "load_in_4bit": true,
+            "quant_type": "nf4",
+            "double_quant": true,
+            "compute_dtype": "float16"
+          },
+          "mode": "all",
+          "min_pixels": 50176,
+          "max_pixels": 802816,
+          "band_inches": 2.0,
+          "max_new_tokens": 768,
+          "repetition_penalty": 1.05,
+          "adapter_version": 3,
+          "prompt_version": 3,
+          "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74"
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T23:08:29+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_609.png",
+      "image_size": [
+        2550,
+        3186
+      ],
+      "crop_box": [
+        0,
+        0,
+        2550,
+        3186
+      ],
+      "lines": [
+        {
+          "text": "NGÔ THÌ NHẬM TOÀN TẬP - TẬP III",
+          "bbox": [
+            7,
+            0,
+            2128,
+            232
+          ],
+          "confidence": 95.12
+        },
+        {
+          "text": "程，再奉公中堂光顧賜勞優厚。至於水陸行次，又蒙左江湯大人為之照料，事事周妥，爾等想宜知悉。此番",
+          "bbox": [
+            7,
+            232,
+            2128,
+            463
+          ],
+          "confidence": 95.12
+        },
+        {
+          "text": "行色當與前番無異，我亦無用遠掛。惟國事一條關緊，我亦意想不到，故於爾等辭行，不曾曉示顛末。今奉聖旨，許爾等及年底，或開春燈前節到京，早路兼程，想於進覲時，必與暹使相會。暹者，我之南界",
+          "bbox": [
+            417,
+            519,
+            2155,
+            1038
+          ],
+          "confidence": 96.63
+        },
+        {
+          "text": "也。我以布衣舉事，與彼初無雋隙。彼近數攻掠我同犯屬邑，是用構釁，遂及於兵。彼爲我所敗者三次矣，計彼之人馬物故，不知其幾。彼欲得當於我國，而力不能敵，欲嫁謗於上國，而機無所投。今聞彼使來京，必",
+          "bbox": [
+            416,
+            1070,
+            2118,
+            1609
+          ],
+          "confidence": 90.7
+        },
+        {
+          "text": "将有所媒孽。大皇帝明见万里，何畏乎巧言？尔等噬仕于我，此一条前事，不得详知，因此驰书明示。倘奉天旨垂询，直当据情陈奏，勿有所隐。四聪之下，无远不烛，或因彼之弄舌，见我之真情，是亦一大幸也。",
+          "bbox": [
+            416,
+            1678,
+            2116,
+            2179
+          ],
+          "confidence": 92.97
+        },
+        {
+          "text": "再者，國母年邁八衰，氣體衰弱，晨昏之奉，惟願得上項人復。爾等到京時，多方採買，得若干雨，先我入覲，隨便寄回。我萬里遠行，留爲奉親之寶。至囑至囑？抑我聞之使也：「恭敬則無誤，勤慎則無失」。爾等幸得觀光，勉之可也。",
+          "bbox": [
+            416,
+            2212,
+            2169,
+            2973
+          ],
+          "confidence": 94.54
+        }
+      ],
+      "raw": {
+        "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+        "model_revision": "main",
+        "mode": "all",
+        "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74",
+        "dpi": 300,
+        "image_size": [
+          2550,
+          3186
+        ],
+        "band_target_height": 600,
+        "bbox_granularity": "band_even_split",
+        "max_new_tokens": 768,
+        "max_pixels": 802816,
+        "inference_seconds": 29.951,
+        "bands": [
+          {
+            "band": 1,
+            "y0": 0,
+            "y1": 496,
+            "ink_box": [
+              7,
+              0,
+              2128,
+              463
+            ],
+            "generated_text": "NGÔ THÌ NHẬM TOÀN TẬP - TẬP III\n\n程，再奉公中堂光顧賜勞優厚。至於水陸行次，又蒙左江湯大人為之照料，事事周妥，爾等想宜知悉。此番",
+            "n_lines": 2,
+            "tokens": 65,
+            "seconds": 4.543,
+            "confidence": 95.12,
+            "flags": []
+          },
+          {
+            "band": 2,
+            "y0": 496,
+            "y1": 1070,
+            "ink_box": [
+              417,
+              519,
+              2155,
+              1038
+            ],
+            "generated_text": "行色當與前番無異，我亦無用遠掛。惟國事一條關緊，我亦意想不到，故於爾等辭行，不曾曉示顛末。今奉聖旨，許爾等及年底，或開春燈前節到京，早路兼程，想於進覲時，必與暹使相會。暹者，我之南界",
+            "n_lines": 1,
+            "tokens": 88,
+            "seconds": 5.988,
+            "confidence": 96.63,
+            "flags": []
+          },
+          {
+            "band": 3,
+            "y0": 1070,
+            "y1": 1643,
+            "ink_box": [
+              416,
+              1070,
+              2118,
+              1609
+            ],
+            "generated_text": "也。我以布衣舉事，與彼初無雋隙。彼近數攻掠我同犯屬邑，是用構釁，遂及於兵。彼爲我所敗者三次矣，計彼之人馬物故，不知其幾。彼欲得當於我國，而力不能敵，欲嫁謗於上國，而機無所投。今聞彼使來京，必",
+            "n_lines": 1,
+            "tokens": 95,
+            "seconds": 6.458,
+            "confidence": 90.7,
+            "flags": []
+          },
+          {
+            "band": 4,
+            "y0": 1643,
+            "y1": 2213,
+            "ink_box": [
+              416,
+              1678,
+              2116,
+              2179
+            ],
+            "generated_text": "将有所媒孽。大皇帝明见万里，何畏乎巧言？尔等噬仕于我，此一条前事，不得详知，因此驰书明示。倘奉天旨垂询，直当据情陈奏，勿有所隐。四聪之下，无远不烛，或因彼之弄舌，见我之真情，是亦一大幸也。",
+            "n_lines": 1,
+            "tokens": 85,
+            "seconds": 5.785,
+            "confidence": 92.97,
+            "flags": []
+          },
+          {
+            "band": 5,
+            "y0": 2213,
+            "y1": 2969,
+            "ink_box": [
+              416,
+              2212,
+              2169,
+              2973
+            ],
+            "generated_text": "再者，國母年邁八衰，氣體衰弱，晨昏之奉，惟願得上項人復。爾等到京時，多方採買，得若干雨，先我入覲，隨便寄回。我萬里遠行，留爲奉親之寶。至囑至囑？抑我聞之使也：「恭敬則無誤，勤慎則無失」。爾等幸得觀光，勉之可也。",
+            "n_lines": 1,
+            "tokens": 106,
+            "seconds": 7.147,
+            "confidence": 94.54,
+            "flags": []
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "61cbea5c0055c260ccfc12f884e0febca7b2783b",
+        "git_describe": "61cbea5",
+        "git_dirty": true,
+        "gpu": "NVIDIA L4",
+        "dtype": "float16",
+        "adapter_version": 3
+      }
+    }
+  ]
+}

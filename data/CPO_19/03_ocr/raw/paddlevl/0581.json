@@ -1,0 +1,953 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 581,
+  "runs": [
+    {
+      "key": "1d867a9a8cfe2499609e1fad90a29433d0cf3d426ab46b924d3564e0f9c88053",
+      "parameters": {
+        "image_sha256": "858c383fddaaa83d0f7004907876d110031765174ffa1db39070580ea5783752",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T18:32:12+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_581.png",
+      "image_size": [
+        2724,
+        3339
+      ],
+      "crop_box": [
+        0,
+        0,
+        2724,
+        3339
+      ],
+      "lines": [
+        {
+          "text": "ngothinhamch1.pdf",
+          "bbox": [
+            7,
+            19,
+            296,
+            45
+          ],
+          "confidence": 98.43
+        },
+        {
+          "text": "NGŮ THI NHAM TOAN TAP - TAP III",
+          "bbox": [
+            459,
+            266,
+            1232,
+            304
+          ],
+          "confidence": 75.45
+        },
+        {
+          "text": "Năm ngoái, kính sai bồi thần đâng biểu vào châu, vâng được",
+          "bbox": [
+            609,
+            367,
+            2169,
+            414
+          ],
+          "confidence": 86.79
+        },
+        {
+          "text": "Thánh du: Trước tiết khai xuân phải đến [Yên] Kinh, để cùng lĩnh vấn với",
+          "bbox": [
+            457,
+            445,
+            2168,
+            491
+          ],
+          "confidence": 92.64
+        },
+        {
+          "text": "sú nước Tiêm La. Ngày đó bôi giói đã qua của ải, tiểu phiên tôi chưa kịp",
+          "bbox": [
+            459,
+            523,
+            2167,
+            569
+          ],
+          "confidence": 86.32
+        },
+        {
+          "text": "dăn dò tình hình ngoài biên cương, vì vậy mới có thu ( or: thư) nói rõ về việc nước",
+          "bbox": [
+            460,
+            602,
+            2168,
+            646
+          ],
+          "confidence": 77.8
+        },
+        {
+          "text": "Tiêm La gây hấn với nước tôi, để cho bồi thần biết rõ, đủ để tâu thưa,",
+          "bbox": [
+            458,
+            679,
+            2167,
+            724
+          ],
+          "confidence": 85.27
+        },
+        {
+          "text": "nhân lai dăn mua nhân sâm gửi về, lưu làm vật báu để phung dưỡng bề",
+          "bbox": [
+            458,
+            757,
+            2171,
+            802
+          ],
+          "confidence": 91.1
+        },
+        {
+          "text": "thân. Đó là tình cảm riêng tư của gia đình, không dám chép rõ. Ngờ đầu",
+          "bbox": [
+            459,
+            834,
+            2168,
+            880
+          ],
+          "confidence": 92.59
+        },
+        {
+          "text": "quan Tả giang đạo mở duyệt phong thư ấy, chuyên trình quan trên xét,",
+          "bbox": [
+            461,
+            913,
+            2169,
+            965
+          ],
+          "confidence": 94.01
+        },
+        {
+          "text": "túc cứ thực tình dễ đạt, và đem nguyên trát ấy kính trình vua xem. Kính",
+          "bbox": [
+            459,
+            990,
+            2170,
+            1036
+          ],
+          "confidence": 89.3
+        },
+        {
+          "text": "được Thánh ngơi khen, ban sắc thư xuống yên ủi, đặc biệt ban cho 1 cân",
+          "bbox": [
+            461,
+            1068,
+            2169,
+            1113
+          ],
+          "confidence": 89.55
+        },
+        {
+          "text": "nhân sâm lấy trong kho, đúng là từ khi được ăn sùng đến nay, nhờ ở lòng",
+          "bbox": [
+            459,
+            1146,
+            2171,
+            1197
+          ],
+          "confidence": 91.92
+        },
+        {
+          "text": "nhân đức của quan trên mà được như vậy.",
+          "bbox": [
+            460,
+            1230,
+            1437,
+            1269
+          ],
+          "confidence": 97.53
+        },
+        {
+          "text": "Kịp khi được ăn ban vật quý giữ mình, lúc bái nhận, trong lòng",
+          "bbox": [
+            610,
+            1309,
+            2171,
+            1360
+          ],
+          "confidence": 94.37
+        },
+        {
+          "text": "thất vô cùng cảm kích. Kính cẩn đăng biểu văn ta ơn, xin cho con tôi là",
+          "bbox": [
+            461,
+            1386,
+            2170,
+            1432
+          ],
+          "confidence": 88.97
+        },
+        {
+          "text": "Quang Thuỷ vào châu thay. Tất cả sự tình, đã bấm trình Công các độc bộ",
+          "bbox": [
+            461,
+            1462,
+            2171,
+            1510
+          ],
+          "confidence": 93.57
+        },
+        {
+          "text": "đường tâu xin giúp. Tiểu phiên tôi lần này chưa thể tự mình vào châu,",
+          "bbox": [
+            463,
+            1540,
+            2169,
+            1588
+          ],
+          "confidence": 92.48
+        },
+        {
+          "text": "như vậy là, trên không lấy gì đáp được ơn Thánh rủ lòng thương, sau",
+          "bbox": [
+            462,
+            1618,
+            2170,
+            1673
+          ],
+          "confidence": 94.37
+        },
+        {
+          "text": "không khỏi phụ tâm lòng yêu thương của Liệt hiến Đại nhân, vì vậy mà",
+          "bbox": [
+            461,
+            1698,
+            2170,
+            1751
+          ],
+          "confidence": 94.11
+        },
+        {
+          "text": "trong lòng cảm thấy bức bội ăn năn khôn xiết. Kính xin Ngài thế tất mờ",
+          "bbox": [
+            463,
+            1777,
+            2173,
+            1826
+          ],
+          "confidence": 91.33
+        },
+        {
+          "text": "rộng lòng trung, để đạt thay cho, may nhỏ Thánh thương cho phép, ngõ",
+          "bbox": [
+            464,
+            1855,
+            2172,
+            1909
+          ],
+          "confidence": 89.0
+        },
+        {
+          "text": "hầu được thoả nối lòng, tiểu phiên tôi xiết bao mong mỏi.",
+          "bbox": [
+            462,
+            1933,
+            1774,
+            1982
+          ],
+          "confidence": 88.43
+        },
+        {
+          "text": "41口T切伽兴L正山明日L鍵1",
+          "bbox": [
+            711,
+            2104,
+            1902,
+            2132
+          ],
+          "confidence": 58.56
+        },
+        {
+          "text": "41.呈大朝御前大臣内阁大学士",
+          "bbox": [
+            695,
+            2124,
+            1931,
+            2178
+          ],
+          "confidence": 99.45
+        },
+        {
+          "text": "和大人问大人",
+          "bbox": [
+            1028,
+            2224,
+            1605,
+            2272
+          ],
+          "confidence": 83.41
+        },
+        {
+          "text": "（歷陳寵遇望節天恩。國王書呈）",
+          "bbox": [
+            703,
+            2368,
+            1946,
+            2440
+          ],
+          "confidence": 98.67
+        },
+        {
+          "text": "小番以一介布衣，邀天之寵，幸有國邑。竊記自己",
+          "bbox": [
+            621,
+            2572,
+            2167,
+            2636
+          ],
+          "confidence": 99.87
+        },
+        {
+          "text": "酉之宣封也，懇恩之表，纔及天閽，而寵綸賜履，即下",
+          "bbox": [
+            475,
+            2721,
+            2170,
+            2787
+          ],
+          "confidence": 98.9
+        },
+        {
+          "text": "諫於小國。",
+          "bbox": [
+            474,
+            2890,
+            805,
+            2924
+          ],
+          "confidence": 86.3
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2724,
+          3339
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 16.211,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              7,
+              19,
+              296,
+              45
+            ],
+            "generated_text": "ngothinhamch1.pdf",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.232,
+            "confidence": 98.43,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              459,
+              266,
+              1232,
+              304
+            ],
+            "generated_text": "NGŮ THI NHAM TOAN TAP - TAP III",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.373,
+            "confidence": 75.45,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              461,
+              309,
+              2175,
+              325
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.068,
+            "confidence": 76.02,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              609,
+              367,
+              2169,
+              414
+            ],
+            "generated_text": "Năm ngoái, kính sai bồi thần đâng biểu vào châu, vâng được",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.539,
+            "confidence": 86.79,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              457,
+              445,
+              2168,
+              491
+            ],
+            "generated_text": "Thánh du: Trước tiết khai xuân phải đến [Yên] Kinh, để cùng lĩnh vấn với",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 0.654,
+            "confidence": 92.64,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              459,
+              523,
+              2167,
+              569
+            ],
+            "generated_text": "sú nước Tiêm La. Ngày đó bôi giói đã qua của ải, tiểu phiên tôi chưa kịp",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 0.679,
+            "confidence": 86.32,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              460,
+              602,
+              2168,
+              646
+            ],
+            "generated_text": "dăn dò tình hình ngoài biên cương, vì vậy mới có thu ( or: thư) nói rõ về việc nước",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 0.68,
+            "confidence": 77.8,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              458,
+              679,
+              2167,
+              724
+            ],
+            "generated_text": "Tiêm La gây hấn với nước tôi, để cho bồi thần biết rõ, đủ để tâu thưa,",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 0.657,
+            "confidence": 85.27,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              458,
+              757,
+              2171,
+              802
+            ],
+            "generated_text": "nhân lai dăn mua nhân sâm gửi về, lưu làm vật báu để phung dưỡng bề",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 0.659,
+            "confidence": 91.1,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              459,
+              834,
+              2168,
+              880
+            ],
+            "generated_text": "thân. Đó là tình cảm riêng tư của gia đình, không dám chép rõ. Ngờ đầu",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 0.64,
+            "confidence": 92.59,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              461,
+              913,
+              2169,
+              965
+            ],
+            "generated_text": "quan Tả giang đạo mở duyệt phong thư ấy, chuyên trình quan trên xét,",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.617,
+            "confidence": 94.01,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              459,
+              990,
+              2170,
+              1036
+            ],
+            "generated_text": "túc cứ thực tình dễ đạt, và đem nguyên trát ấy kính trình vua xem. Kính",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 0.657,
+            "confidence": 89.3,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              461,
+              1068,
+              2169,
+              1113
+            ],
+            "generated_text": "được Thánh ngơi khen, ban sắc thư xuống yên ủi, đặc biệt ban cho 1 cân",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 0.68,
+            "confidence": 89.55,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              459,
+              1146,
+              2171,
+              1197
+            ],
+            "generated_text": "nhân sâm lấy trong kho, đúng là từ khi được ăn sùng đến nay, nhờ ở lòng",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.594,
+            "confidence": 91.92,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              460,
+              1230,
+              1437,
+              1269
+            ],
+            "generated_text": "nhân đức của quan trên mà được như vậy.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 0.312,
+            "confidence": 97.53,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              610,
+              1309,
+              2171,
+              1360
+            ],
+            "generated_text": "Kịp khi được ăn ban vật quý giữ mình, lúc bái nhận, trong lòng",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.538,
+            "confidence": 94.37,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              461,
+              1386,
+              2170,
+              1432
+            ],
+            "generated_text": "thất vô cùng cảm kích. Kính cẩn đăng biểu văn ta ơn, xin cho con tôi là",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 0.657,
+            "confidence": 88.97,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              461,
+              1462,
+              2171,
+              1510
+            ],
+            "generated_text": "Quang Thuỷ vào châu thay. Tất cả sự tình, đã bấm trình Công các độc bộ",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.615,
+            "confidence": 93.57,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              463,
+              1540,
+              2169,
+              1588
+            ],
+            "generated_text": "đường tâu xin giúp. Tiểu phiên tôi lần này chưa thể tự mình vào châu,",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.577,
+            "confidence": 92.48,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              462,
+              1618,
+              2170,
+              1673
+            ],
+            "generated_text": "như vậy là, trên không lấy gì đáp được ơn Thánh rủ lòng thương, sau",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.574,
+            "confidence": 94.37,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              461,
+              1698,
+              2170,
+              1751
+            ],
+            "generated_text": "không khỏi phụ tâm lòng yêu thương của Liệt hiến Đại nhân, vì vậy mà",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.564,
+            "confidence": 94.11,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              463,
+              1777,
+              2173,
+              1826
+            ],
+            "generated_text": "trong lòng cảm thấy bức bội ăn năn khôn xiết. Kính xin Ngài thế tất mờ",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 0.659,
+            "confidence": 91.33,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              464,
+              1855,
+              2172,
+              1909
+            ],
+            "generated_text": "rộng lòng trung, để đạt thay cho, may nhỏ Thánh thương cho phép, ngõ",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.6,
+            "confidence": 89.0,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              462,
+              1933,
+              1774,
+              1982
+            ],
+            "generated_text": "hầu được thoả nối lòng, tiểu phiên tôi xiết bao mong mỏi.",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.515,
+            "confidence": 88.43,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              711,
+              2104,
+              1902,
+              2132
+            ],
+            "generated_text": "41口T切伽兴L正山明日L鍵1",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.393,
+            "confidence": 58.56,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              695,
+              2124,
+              1931,
+              2178
+            ],
+            "generated_text": "41.呈大朝御前大臣内阁大学士",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.327,
+            "confidence": 99.45,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              1028,
+              2224,
+              1605,
+              2272
+            ],
+            "generated_text": "和大人问大人",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.148,
+            "confidence": 83.41,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              703,
+              2368,
+              1946,
+              2440
+            ],
+            "generated_text": "（歷陳寵遇望節天恩。國王書呈）",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.413,
+            "confidence": 98.67,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              621,
+              2572,
+              2167,
+              2636
+            ],
+            "generated_text": "小番以一介布衣，邀天之寵，幸有國邑。竊記自己",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.574,
+            "confidence": 99.87,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              475,
+              2721,
+              2170,
+              2787
+            ],
+            "generated_text": "酉之宣封也，懇恩之表，纔及天閽，而寵綸賜履，即下",
+            "n_lines": 1,
+            "tokens": 37,
+            "seconds": 0.803,
+            "confidence": 98.9,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              474,
+              2890,
+              805,
+              2924
+            ],
+            "generated_text": "諫於小國。",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.207,
+            "confidence": 86.3,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              923,
+              565,
+              2153,
+              575
+            ],
+            "ink": 442
+          },
+          {
+            "box": [
+              621,
+              798,
+              2093,
+              809
+            ],
+            "ink": 442
+          },
+          {
+            "box": [
+              1056,
+              876,
+              2035,
+              886
+            ],
+            "ink": 419
+          },
+          {
+            "box": [
+              528,
+              1109,
+              1800,
+              1120
+            ],
+            "ink": 448
+          },
+          {
+            "box": [
+              1039,
+              2209,
+              1565,
+              2225
+            ],
+            "ink": 1109
+          },
+          {
+            "box": [
+              477,
+              2885,
+              752,
+              2894
+            ],
+            "ink": 553
+          },
+          {
+            "box": [
+              472,
+              2921,
+              752,
+              2933
+            ],
+            "ink": 782
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "61cbea5c0055c260ccfc12f884e0febca7b2783b",
+        "git_describe": "61cbea5",
+        "git_dirty": true,
+        "gpu": "NVIDIA L4",
+        "dtype": "bfloat16",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

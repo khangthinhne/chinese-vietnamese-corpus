@@ -1,0 +1,969 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 410,
+  "runs": [
+    {
+      "key": "155991fe32af033f12a66316527eb85817dff00638907dadd486b7b49ac9a890",
+      "parameters": {
+        "image_sha256": "b943b3c52a62b3b5f1aa13b838516b92f4d933ceb2bd9162ed9497be0138c730",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T15:56:45+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_410.png",
+      "image_size": [
+        2619,
+        3242
+      ],
+      "crop_box": [
+        0,
+        0,
+        2619,
+        3242
+      ],
+      "lines": [
+        {
+          "text": "ngothinhamle1.pdf ___",
+          "bbox": [
+            7,
+            19,
+            1588,
+            45
+          ],
+          "confidence": 88.08
+        },
+        {
+          "text": "BANG GIAO HAO THOAI",
+          "bbox": [
+            1625,
+            190,
+            2142,
+            228
+          ],
+          "confidence": 99.57
+        },
+        {
+          "text": "điệt Quang Hiến phó quan, đại cung hành lễ, tinh phụng bám hàm,",
+          "bbox": [
+            439,
+            295,
+            2138,
+            349
+          ],
+          "confidence": 87.53
+        },
+        {
+          "text": "minh tự tình sự, nhưng dĩ thỉnh phong thuộc án, chuyên vọng thương",
+          "bbox": [
+            440,
+            378,
+            2144,
+            431
+          ],
+          "confidence": 86.7
+        },
+        {
+          "text": "hiến, khúc lễ trung thành, đại vi đế bấm. Ngưỡng duy Đại hoàng đế,",
+          "bbox": [
+            440,
+            460,
+            2140,
+            512
+          ],
+          "confidence": 90.1
+        },
+        {
+          "text": "phú mao van quốc, nhất thi động nhân sá kỳ sư, bất do chủ chi quá,",
+          "bbox": [
+            441,
+            540,
+            2140,
+            587
+          ],
+          "confidence": 88.7
+        },
+        {
+          "text": "phố thí hồng án, hạnh đặc hạ liệt phiên phong, các tu chức công, tức",
+          "bbox": [
+            437,
+            624,
+            2144,
+            676
+          ],
+          "confidence": 88.54
+        },
+        {
+          "text": "Thương hiến thành tấu chi đức, định đối vô ký hỹ.",
+          "bbox": [
+            442,
+            706,
+            1643,
+            750
+          ],
+          "confidence": 88.07
+        },
+        {
+          "text": "DICH NGHIA:",
+          "bbox": [
+            442,
+            804,
+            751,
+            843
+          ],
+          "confidence": 99.34
+        },
+        {
+          "text": "BAM GIA DUNG CÔNG PHUC ĐẠI NHẬN\\(^{(1)}\\)",
+          "bbox": [
+            742,
+            874,
+            1907,
+            920
+          ],
+          "confidence": 84.91
+        },
+        {
+          "text": "TONG DOC LƯỢNG QUANG, THIÊN TRIỆU",
+          "bbox": [
+            367,
+            951,
+            1861,
+            996
+          ],
+          "confidence": 86.83
+        },
+        {
+          "text": "(BIỆN VỀ VIỆC XAY RA BINH DAO VÀ XIN PHONG. QUỐC VƯƠNG BÂM)",
+          "bbox": [
+            498,
+            1033,
+            2092,
+            1076
+          ],
+          "confidence": 89.13
+        },
+        {
+          "text": "Nước tôi từ khi vua Lê mất quyên bính, chính sự về tay ho",
+          "bbox": [
+            479,
+            1166,
+            2145,
+            1210
+          ],
+          "confidence": 96.12
+        },
+        {
+          "text": "Trình, quân kiêu dân oán, tích thành thêm loan. Tôi sinh trưởng nơi",
+          "bbox": [
+            441,
+            1252,
+            2145,
+            1299
+          ],
+          "confidence": 93.55
+        },
+        {
+          "text": "bãi bế, có cái thói của giống trâu ngựa không hợp nhau, lại vì kẻ bế tôi",
+          "bbox": [
+            440,
+            1340,
+            2145,
+            1392
+          ],
+          "confidence": 92.0
+        },
+        {
+          "text": "bỏ nước Nguyên Chỉnh chay đến kêu xin quân, nên mùa ha năm Bính",
+          "bbox": [
+            440,
+            1427,
+            2145,
+            1475
+          ],
+          "confidence": 93.96
+        },
+        {
+          "text": "Ngọ (1786), mới có việc ở thành nhà Lê, thực không phải là chuyện",
+          "bbox": [
+            441,
+            1515,
+            2143,
+            1567
+          ],
+          "confidence": 98.87
+        },
+        {
+          "text": "tham chiếm đất dai. Gặp khi vua Lê qua đời, tôi phò tụ tôn lên nối",
+          "bbox": [
+            441,
+            1601,
+            2144,
+            1649
+          ],
+          "confidence": 89.47
+        },
+        {
+          "text": "ngôi, xong việc lại quay cỏ về nam. Khốn nổi, Lê tự tôn không đảm",
+          "bbox": [
+            442,
+            1688,
+            2147,
+            1740
+          ],
+          "confidence": 91.46
+        },
+        {
+          "text": "đường nổi việc nước, lòng dân không phục, việc trong nước trái lìa, lại",
+          "bbox": [
+            442,
+            1774,
+            2145,
+            1826
+          ],
+          "confidence": 93.27
+        },
+        {
+          "text": "chỉ nghe lời Nguyên Chỉnh, coi người có ân là thù địch, gây sự ngoài",
+          "bbox": [
+            441,
+            1860,
+            2145,
+            1913
+          ],
+          "confidence": 92.1
+        },
+        {
+          "text": "biên. Mùa động năm Đinh Vị (1787), tôi phải sai gia tướng đến hỏi tôi",
+          "bbox": [
+            439,
+            1947,
+            2145,
+            1995
+          ],
+          "confidence": 93.58
+        },
+        {
+          "text": "Nguyên Chỉnh, Lê tự vương bỏ nước chạy đi, thân dân trong nước đều",
+          "bbox": [
+            441,
+            2034,
+            2143,
+            2087
+          ],
+          "confidence": 94.76
+        },
+        {
+          "text": "muốn tôi ở lại cai trị. Mùa hạ năm Mậu Thân (1788), tôi đã sai sử đến",
+          "bbox": [
+            441,
+            2122,
+            2142,
+            2171
+          ],
+          "confidence": 94.79
+        },
+        {
+          "text": "gõ của ài, tâu rõ tình hình trong nước, đợi ý chỉ của Đại Hoàng đế. Thế",
+          "bbox": [
+            441,
+            2209,
+            2148,
+            2261
+          ],
+          "confidence": 93.46
+        },
+        {
+          "text": "nhưng viên tiến nhiệm Tổng độc họ Tôn không xem xét kỹ, đã trả lại",
+          "bbox": [
+            440,
+            2296,
+            2143,
+            2345
+          ],
+          "confidence": 92.84
+        },
+        {
+          "text": "thu, không tiếp súa, gây nên mối binh đạo, tôi bất đắc dĩ phải đôi",
+          "bbox": [
+            440,
+            2383,
+            2142,
+            2434
+          ],
+          "confidence": 81.78
+        },
+        {
+          "text": "phó. Sự thể chuyển biến, thành ra một phen nhiều nhương náo động,",
+          "bbox": [
+            441,
+            2469,
+            2140,
+            2517
+          ],
+          "confidence": 84.89
+        },
+        {
+          "text": "cách thức thì giống như chống lại, thực ra là rất sợ hãi, liên dâng biểu",
+          "bbox": [
+            440,
+            2555,
+            2140,
+            2606
+          ],
+          "confidence": 94.2
+        },
+        {
+          "text": "chương trình bây, nhờ Tả giang binh bị đạo hợp Thang chuyển đệ lên,",
+          "bbox": [
+            439,
+            2641,
+            2138,
+            2693
+          ],
+          "confidence": 84.2
+        },
+        {
+          "text": "rồi sai viên chuyên trách đến của ai đợi mệnh, và đem những quan",
+          "bbox": [
+            439,
+            2728,
+            2138,
+            2777
+          ],
+          "confidence": 91.35
+        },
+        {
+          "text": "quản hiện con lai, nóp theo.",
+          "bbox": [
+            441,
+            2827,
+            1104,
+            2860
+          ],
+          "confidence": 84.35
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2619,
+          3242
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 66.09,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              7,
+              19,
+              1588,
+              45
+            ],
+            "generated_text": "ngothinhamle1.pdf ___",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.964,
+            "confidence": 88.08,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              1625,
+              190,
+              2142,
+              228
+            ],
+            "generated_text": "BANG GIAO HAO THOAI",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.963,
+            "confidence": 99.57,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              444,
+              233,
+              2150,
+              247
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.455,
+            "confidence": 93.48,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              439,
+              295,
+              2138,
+              349
+            ],
+            "generated_text": "điệt Quang Hiến phó quan, đại cung hành lễ, tinh phụng bám hàm,",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.273,
+            "confidence": 87.53,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              440,
+              378,
+              2144,
+              431
+            ],
+            "generated_text": "minh tự tình sự, nhưng dĩ thỉnh phong thuộc án, chuyên vọng thương",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.917,
+            "confidence": 86.7,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              440,
+              460,
+              2140,
+              512
+            ],
+            "generated_text": "hiến, khúc lễ trung thành, đại vi đế bấm. Ngưỡng duy Đại hoàng đế,",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 2.48,
+            "confidence": 90.1,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              441,
+              540,
+              2140,
+              587
+            ],
+            "generated_text": "phú mao van quốc, nhất thi động nhân sá kỳ sư, bất do chủ chi quá,",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.98,
+            "confidence": 88.7,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              437,
+              624,
+              2144,
+              676
+            ],
+            "generated_text": "phố thí hồng án, hạnh đặc hạ liệt phiên phong, các tu chức công, tức",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 2.34,
+            "confidence": 88.54,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              442,
+              706,
+              1643,
+              750
+            ],
+            "generated_text": "Thương hiến thành tấu chi đức, định đối vô ký hỹ.",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.534,
+            "confidence": 88.07,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              442,
+              804,
+              751,
+              843
+            ],
+            "generated_text": "DICH NGHIA:",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.762,
+            "confidence": 99.34,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              742,
+              874,
+              1907,
+              920
+            ],
+            "generated_text": "BAM GIA DUNG CÔNG PHUC ĐẠI NHẬN\\(^{(1)}\\)",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 2.297,
+            "confidence": 84.91,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              367,
+              951,
+              1861,
+              996
+            ],
+            "generated_text": "TONG DOC LƯỢNG QUANG, THIÊN TRIỆU",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 1.932,
+            "confidence": 86.83,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              498,
+              1033,
+              2092,
+              1076
+            ],
+            "generated_text": "(BIỆN VỀ VIỆC XAY RA BINH DAO VÀ XIN PHONG. QUỐC VƯƠNG BÂM)",
+            "n_lines": 1,
+            "tokens": 46,
+            "seconds": 3.467,
+            "confidence": 89.13,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              479,
+              1166,
+              2145,
+              1210
+            ],
+            "generated_text": "Nước tôi từ khi vua Lê mất quyên bính, chính sự về tay ho",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.823,
+            "confidence": 96.12,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              441,
+              1252,
+              2145,
+              1299
+            ],
+            "generated_text": "Trình, quân kiêu dân oán, tích thành thêm loan. Tôi sinh trưởng nơi",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 2.06,
+            "confidence": 93.55,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              440,
+              1340,
+              2145,
+              1392
+            ],
+            "generated_text": "bãi bế, có cái thói của giống trâu ngựa không hợp nhau, lại vì kẻ bế tôi",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 2.406,
+            "confidence": 92.0,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              440,
+              1427,
+              2145,
+              1475
+            ],
+            "generated_text": "bỏ nước Nguyên Chỉnh chay đến kêu xin quân, nên mùa ha năm Bính",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 2.062,
+            "confidence": 93.96,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              441,
+              1515,
+              2143,
+              1567
+            ],
+            "generated_text": "Ngọ (1786), mới có việc ở thành nhà Lê, thực không phải là chuyện",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.982,
+            "confidence": 98.87,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              441,
+              1601,
+              2144,
+              1649
+            ],
+            "generated_text": "tham chiếm đất dai. Gặp khi vua Lê qua đời, tôi phò tụ tôn lên nối",
+            "n_lines": 1,
+            "tokens": 32,
+            "seconds": 2.554,
+            "confidence": 89.47,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              442,
+              1688,
+              2147,
+              1740
+            ],
+            "generated_text": "ngôi, xong việc lại quay cỏ về nam. Khốn nổi, Lê tự tôn không đảm",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 2.34,
+            "confidence": 91.46,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              442,
+              1774,
+              2145,
+              1826
+            ],
+            "generated_text": "đường nổi việc nước, lòng dân không phục, việc trong nước trái lìa, lại",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.975,
+            "confidence": 93.27,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              441,
+              1860,
+              2145,
+              1913
+            ],
+            "generated_text": "chỉ nghe lời Nguyên Chỉnh, coi người có ân là thù địch, gây sự ngoài",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 2.351,
+            "confidence": 92.1,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              439,
+              1947,
+              2145,
+              1995
+            ],
+            "generated_text": "biên. Mùa động năm Đinh Vị (1787), tôi phải sai gia tướng đến hỏi tôi",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.255,
+            "confidence": 93.58,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              441,
+              2034,
+              2143,
+              2087
+            ],
+            "generated_text": "Nguyên Chỉnh, Lê tự vương bỏ nước chạy đi, thân dân trong nước đều",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 2.2,
+            "confidence": 94.76,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              441,
+              2122,
+              2142,
+              2171
+            ],
+            "generated_text": "muốn tôi ở lại cai trị. Mùa hạ năm Mậu Thân (1788), tôi đã sai sử đến",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 2.476,
+            "confidence": 94.79,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              441,
+              2209,
+              2148,
+              2261
+            ],
+            "generated_text": "gõ của ài, tâu rõ tình hình trong nước, đợi ý chỉ của Đại Hoàng đế. Thế",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 2.483,
+            "confidence": 93.46,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              440,
+              2296,
+              2143,
+              2345
+            ],
+            "generated_text": "nhưng viên tiến nhiệm Tổng độc họ Tôn không xem xét kỹ, đã trả lại",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 2.195,
+            "confidence": 92.84,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              440,
+              2383,
+              2142,
+              2434
+            ],
+            "generated_text": "thu, không tiếp súa, gây nên mối binh đạo, tôi bất đắc dĩ phải đôi",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.273,
+            "confidence": 81.78,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              441,
+              2469,
+              2140,
+              2517
+            ],
+            "generated_text": "phó. Sự thể chuyển biến, thành ra một phen nhiều nhương náo động,",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.915,
+            "confidence": 84.89,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              440,
+              2555,
+              2140,
+              2606
+            ],
+            "generated_text": "cách thức thì giống như chống lại, thực ra là rất sợ hãi, liên dâng biểu",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.272,
+            "confidence": 94.2,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              439,
+              2641,
+              2138,
+              2693
+            ],
+            "generated_text": "chương trình bây, nhờ Tả giang binh bị đạo hợp Thang chuyển đệ lên,",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 2.196,
+            "confidence": 84.2,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 32,
+            "box": [
+              439,
+              2728,
+              2138,
+              2777
+            ],
+            "generated_text": "rồi sai viên chuyên trách đến của ai đợi mệnh, và đem những quan",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.918,
+            "confidence": 91.35,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 33,
+            "box": [
+              441,
+              2827,
+              1104,
+              2860
+            ],
+            "generated_text": "quản hiện con lai, nóp theo.",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.983,
+            "confidence": 84.35,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              435,
+              583,
+              2138,
+              595
+            ],
+            "ink": 514
+          },
+          {
+            "box": [
+              775,
+              943,
+              1806,
+              952
+            ],
+            "ink": 410
+          },
+          {
+            "box": [
+              508,
+              2819,
+              1022,
+              2828
+            ],
+            "ink": 447
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

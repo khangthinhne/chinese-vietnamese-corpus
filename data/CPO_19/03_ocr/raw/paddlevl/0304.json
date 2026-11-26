@@ -1,0 +1,952 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 304,
+  "runs": [
+    {
+      "key": "465bdc07b216f99b28e7813d7eec7c915d41459fb6b9da90f566e4e77069afb4",
+      "parameters": {
+        "image_sha256": "52718d19ff3473138c6c1c844fb56ed13b6e81829a4501697be1ed898f9a983c",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T14:38:06+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_304.png",
+      "image_size": [
+        2569,
+        3199
+      ],
+      "crop_box": [
+        0,
+        0,
+        2569,
+        3199
+      ],
+      "lines": [
+        {
+          "text": "ngothinhamch1.pdf",
+          "bbox": [
+            7,
+            19,
+            296,
+            45
+          ],
+          "confidence": 98.71
+        },
+        {
+          "text": "NGŨ THI NHAM TOAN TAP - TAP III",
+          "bbox": [
+            535,
+            219,
+            1309,
+            258
+          ],
+          "confidence": 82.94
+        },
+        {
+          "text": "Bắc chủ nghi hồng thi lý tuyên.",
+          "bbox": [
+            1003,
+            324,
+            1723,
+            368
+          ],
+          "confidence": 75.14
+        },
+        {
+          "text": "Thánh đại bí thành kim nhất sư,",
+          "bbox": [
+            1006,
+            406,
+            1766,
+            451
+          ],
+          "confidence": 83.91
+        },
+        {
+          "text": "Hó vi súc ý thuốc kỳ niên.",
+          "bbox": [
+            906,
+            490,
+            1588,
+            534
+          ],
+          "confidence": 85.71
+        },
+        {
+          "text": "DICH NGHIA:",
+          "bbox": [
+            536,
+            618,
+            845,
+            658
+          ],
+          "confidence": 99.1
+        },
+        {
+          "text": "BOI BUT (HAI BAI)",
+          "bbox": [
+            1154,
+            715,
+            1621,
+            760
+          ],
+          "confidence": 79.95
+        },
+        {
+          "text": "Được quê Khôn\\(^{(2)}\\) đã và đường bước vào mảnh đất không,",
+          "bbox": [
+            830,
+            958,
+            2136,
+            1003
+          ],
+          "confidence": 90.8
+        },
+        {
+          "text": "Nên thăm dò đảm Tây, (3) dưới bầu trời không mét mỏi.",
+          "bbox": [
+            720,
+            1045,
+            2076,
+            1091
+          ],
+          "confidence": 92.86
+        },
+        {
+          "text": "Xem xét gia cánh, đã máy phen rộng không;",
+          "bbox": [
+            828,
+            1134,
+            1880,
+            1187
+          ],
+          "confidence": 82.66
+        },
+        {
+          "text": "Vượt vực sâu, há cân răn điều can đảm?",
+          "bbox": [
+            829,
+            1221,
+            1786,
+            1266
+          ],
+          "confidence": 82.77
+        },
+        {
+          "text": "Ban ngụa ở cung tây, hỏi ra trái⁽⁶⁾ với sự gặp gỡ.",
+          "bbox": [
+            830,
+            1308,
+            1928,
+            1361
+          ],
+          "confidence": 94.84
+        },
+        {
+          "text": "Chim hồng nơi bến bắc, thấy đã quay lại gót hài.",
+          "bbox": [
+            831,
+            1396,
+            1986,
+            1448
+          ],
+          "confidence": 93.61
+        },
+        {
+          "text": "Công việc hôm nay do đời vua thánh tao dùng,",
+          "bbox": [
+            832,
+            1483,
+            1899,
+            1529
+          ],
+          "confidence": 85.25
+        },
+        {
+          "text": "Nhốt hổ để nuôi, cần sự mềm mỏng ở ông già.",
+          "bbox": [
+            831,
+            1571,
+            1874,
+            1618
+          ],
+          "confidence": 84.51
+        },
+        {
+          "text": "CHU THICH:",
+          "bbox": [
+            538,
+            1686,
+            825,
+            1725
+          ],
+          "confidence": 99.03
+        },
+        {
+          "text": "1.Bói bút: Có lẽ đây là hình thức bói chữ viết. Người cần bói viết một chữ",
+          "bbox": [
+            688,
+            1759,
+            2243,
+            1802
+          ],
+          "confidence": 93.13
+        },
+        {
+          "text": "bất kỳ, người xem bói dựa vào nét bút, vận dụng vào Kinh Dịch mà bói. Chính vì",
+          "bbox": [
+            536,
+            1838,
+            2243,
+            1886
+          ],
+          "confidence": 98.27
+        },
+        {
+          "text": "vậy, ở mỗi câu thơ đều có tên một quẻ bói, như câu 1 có quẻ Khôn, câu 2 có quẻ",
+          "bbox": [
+            536,
+            1915,
+            2243,
+            1964
+          ],
+          "confidence": 98.22
+        },
+        {
+          "text": "Đoài, câu 3 có quẻ Khảm v.v... Trong từng câu thơ đều có nghĩa bóng và nghĩa",
+          "bbox": [
+            538,
+            1993,
+            2243,
+            2043
+          ],
+          "confidence": 97.26
+        },
+        {
+          "text": "thực, rất khó hiểu, nên ở đây chỉ xin dịch nghĩa thực.",
+          "bbox": [
+            538,
+            2071,
+            1652,
+            2117
+          ],
+          "confidence": 97.36
+        },
+        {
+          "text": "2.Được quê Khôn: Tức bói được quê Khôn, tương trưng cho đất, hoặc",
+          "bbox": [
+            686,
+            2150,
+            2243,
+            2198
+          ],
+          "confidence": 93.44
+        },
+        {
+          "text": "người phụ nữ...",
+          "bbox": [
+            538,
+            2244,
+            860,
+            2274
+          ],
+          "confidence": 96.43
+        },
+        {
+          "text": "3. Đảm tây (Đoài trách): “Tây” cũng chính là tên của quê Đoài, chỉ",
+          "bbox": [
+            686,
+            2308,
+            2241,
+            2353
+          ],
+          "confidence": 93.03
+        },
+        {
+          "text": "hướng tay...",
+          "bbox": [
+            539,
+            2403,
+            815,
+            2433
+          ],
+          "confidence": 91.28
+        },
+        {
+          "text": "4.Rỗng không (Khảm khảm): Khảm tên quê, đúng ở vị trí số 2",
+          "bbox": [
+            687,
+            2465,
+            2240,
+            2511
+          ],
+          "confidence": 93.57
+        },
+        {
+          "text": "trong bat quai.",
+          "bbox": [
+            539,
+            2561,
+            875,
+            2591
+          ],
+          "confidence": 87.69
+        },
+        {
+          "text": "5.Can đảm (Kiên kiên): Kiên tên quê, đúng ở vị trí thú nhất trong",
+          "bbox": [
+            689,
+            2624,
+            2243,
+            2668
+          ],
+          "confidence": 92.9
+        },
+        {
+          "text": "bát quai.",
+          "bbox": [
+            542,
+            2717,
+            737,
+            2746
+          ],
+          "confidence": 67.12
+        },
+        {
+          "text": "6. Trái (Quỳ): Quỳ tên quẹ, cũng có nghĩa là trái lìa.",
+          "bbox": [
+            689,
+            2784,
+            1769,
+            2833
+          ],
+          "confidence": 88.84
+        },
+        {
+          "text": "7.Gót hài (Lý): Lý tên quế, cũng có nghĩa là đảm đap.",
+          "bbox": [
+            689,
+            2866,
+            1809,
+            2914
+          ],
+          "confidence": 90.54
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2569,
+          3199
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 53.069,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              7,
+              19,
+              296,
+              45
+            ],
+            "generated_text": "ngothinhamch1.pdf",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.914,
+            "confidence": 98.71,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              535,
+              219,
+              1309,
+              258
+            ],
+            "generated_text": "NGŨ THI NHAM TOAN TAP - TAP III",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.32,
+            "confidence": 82.94,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              517,
+              259,
+              2259,
+              272
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.46,
+            "confidence": 86.03,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              1003,
+              324,
+              1723,
+              368
+            ],
+            "generated_text": "Bắc chủ nghi hồng thi lý tuyên.",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.071,
+            "confidence": 75.14,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              1006,
+              406,
+              1766,
+              451
+            ],
+            "generated_text": "Thánh đại bí thành kim nhất sư,",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 1.017,
+            "confidence": 83.91,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              906,
+              490,
+              1588,
+              534
+            ],
+            "generated_text": "Hó vi súc ý thuốc kỳ niên.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.165,
+            "confidence": 85.71,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              536,
+              618,
+              845,
+              658
+            ],
+            "generated_text": "DICH NGHIA:",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.755,
+            "confidence": 99.1,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              1154,
+              715,
+              1621,
+              760
+            ],
+            "generated_text": "BOI BUT (HAI BAI)",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 1.013,
+            "confidence": 79.95,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              830,
+              958,
+              2136,
+              1003
+            ],
+            "generated_text": "Được quê Khôn\\(^{(2)}\\) đã và đường bước vào mảnh đất không,",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.822,
+            "confidence": 90.8,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              720,
+              1045,
+              2076,
+              1091
+            ],
+            "generated_text": "Nên thăm dò đảm Tây, (3) dưới bầu trời không mét mỏi.",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.083,
+            "confidence": 92.86,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              828,
+              1134,
+              1880,
+              1187
+            ],
+            "generated_text": "Xem xét gia cánh, đã máy phen rộng không;",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.509,
+            "confidence": 82.66,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              829,
+              1221,
+              1786,
+              1266
+            ],
+            "generated_text": "Vượt vực sâu, há cân răn điều can đảm?",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.706,
+            "confidence": 82.77,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              830,
+              1308,
+              1928,
+              1361
+            ],
+            "generated_text": "Ban ngụa ở cung tây, hỏi ra trái⁽⁶⁾ với sự gặp gỡ.",
+            "n_lines": 1,
+            "tokens": 33,
+            "seconds": 2.71,
+            "confidence": 94.84,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              831,
+              1396,
+              1986,
+              1448
+            ],
+            "generated_text": "Chim hồng nơi bến bắc, thấy đã quay lại gót hài.",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.944,
+            "confidence": 93.61,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              832,
+              1483,
+              1899,
+              1529
+            ],
+            "generated_text": "Công việc hôm nay do đời vua thánh tao dùng,",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.635,
+            "confidence": 85.25,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              831,
+              1571,
+              1874,
+              1618
+            ],
+            "generated_text": "Nhốt hổ để nuôi, cần sự mềm mỏng ở ông già.",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.85,
+            "confidence": 84.51,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              538,
+              1686,
+              825,
+              1725
+            ],
+            "generated_text": "CHU THICH:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.733,
+            "confidence": 99.03,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              688,
+              1759,
+              2243,
+              1802
+            ],
+            "generated_text": "1.Bói bút: Có lẽ đây là hình thức bói chữ viết. Người cần bói viết một chữ",
+            "n_lines": 1,
+            "tokens": 32,
+            "seconds": 2.445,
+            "confidence": 93.13,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              536,
+              1838,
+              2243,
+              1886
+            ],
+            "generated_text": "bất kỳ, người xem bói dựa vào nét bút, vận dụng vào Kinh Dịch mà bói. Chính vì",
+            "n_lines": 1,
+            "tokens": 33,
+            "seconds": 2.609,
+            "confidence": 98.27,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              536,
+              1915,
+              2243,
+              1964
+            ],
+            "generated_text": "vậy, ở mỗi câu thơ đều có tên một quẻ bói, như câu 1 có quẻ Khôn, câu 2 có quẻ",
+            "n_lines": 1,
+            "tokens": 39,
+            "seconds": 3.055,
+            "confidence": 98.22,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              538,
+              1993,
+              2243,
+              2043
+            ],
+            "generated_text": "Đoài, câu 3 có quẻ Khảm v.v... Trong từng câu thơ đều có nghĩa bóng và nghĩa",
+            "n_lines": 1,
+            "tokens": 36,
+            "seconds": 2.84,
+            "confidence": 97.26,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              538,
+              2071,
+              1652,
+              2117
+            ],
+            "generated_text": "thực, rất khó hiểu, nên ở đây chỉ xin dịch nghĩa thực.",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.93,
+            "confidence": 97.36,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              686,
+              2150,
+              2243,
+              2198
+            ],
+            "generated_text": "2.Được quê Khôn: Tức bói được quê Khôn, tương trưng cho đất, hoặc",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 2.237,
+            "confidence": 93.44,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              538,
+              2244,
+              860,
+              2274
+            ],
+            "generated_text": "người phụ nữ...",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.757,
+            "confidence": 96.43,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              686,
+              2308,
+              2241,
+              2353
+            ],
+            "generated_text": "3. Đảm tây (Đoài trách): “Tây” cũng chính là tên của quê Đoài, chỉ",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 2.368,
+            "confidence": 93.03,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              539,
+              2403,
+              815,
+              2433
+            ],
+            "generated_text": "hướng tay...",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.666,
+            "confidence": 91.28,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              687,
+              2465,
+              2240,
+              2511
+            ],
+            "generated_text": "4.Rỗng không (Khảm khảm): Khảm tên quê, đúng ở vị trí số 2",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 2.301,
+            "confidence": 93.57,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              539,
+              2561,
+              875,
+              2591
+            ],
+            "generated_text": "trong bat quai.",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.765,
+            "confidence": 87.69,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              689,
+              2624,
+              2243,
+              2668
+            ],
+            "generated_text": "5.Can đảm (Kiên kiên): Kiên tên quê, đúng ở vị trí thú nhất trong",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.173,
+            "confidence": 92.9,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              542,
+              2717,
+              737,
+              2746
+            ],
+            "generated_text": "bát quai.",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.716,
+            "confidence": 67.12,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              689,
+              2784,
+              1769,
+              2833
+            ],
+            "generated_text": "6. Trái (Quỳ): Quỳ tên quẹ, cũng có nghĩa là trái lìa.",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 2.13,
+            "confidence": 88.84,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 32,
+            "box": [
+              689,
+              2866,
+              1809,
+              2914
+            ],
+            "generated_text": "7.Gót hài (Lý): Lý tên quế, cũng có nghĩa là đảm đap.",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.366,
+            "confidence": 90.54,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              1230,
+              367,
+              1645,
+              376
+            ],
+            "ink": 293
+          },
+          {
+            "box": [
+              1320,
+              851,
+              1454,
+              862
+            ],
+            "ink": 391
+          },
+          {
+            "box": [
+              923,
+              1525,
+              1895,
+              1534
+            ],
+            "ink": 329
+          },
+          {
+            "box": [
+              1198,
+              1614,
+              1814,
+              1624
+            ],
+            "ink": 319
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

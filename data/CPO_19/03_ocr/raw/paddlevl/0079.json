@@ -1,0 +1,840 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 79,
+  "runs": [
+    {
+      "key": "dc182e008e994f25d9ae856601f956329877618230c287a7685f9026c887188b",
+      "parameters": {
+        "image_sha256": "554db4edc678eac725d3679f5cc1946b4c7824a2f2e4a7a2884234b01e310d25",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T11:59:21+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_079.png",
+      "image_size": [
+        2619,
+        3241
+      ],
+      "crop_box": [
+        0,
+        0,
+        2619,
+        3241
+      ],
+      "lines": [
+        {
+          "text": "ngothinhamch1.pdf",
+          "bbox": [
+            6,
+            19,
+            1506,
+            45
+          ],
+          "confidence": 98.17
+        },
+        {
+          "text": "NGÔ THI NHÂM TOÀN TẬP - TẬP III",
+          "bbox": [
+            409,
+            229,
+            1181,
+            276
+          ],
+          "confidence": 93.82
+        },
+        {
+          "text": "つつ せー",
+          "bbox": [
+            1063,
+            325,
+            1401,
+            352
+          ],
+          "confidence": 62.43
+        },
+        {
+          "text": "52. 共一",
+          "bbox": [
+            1061,
+            363,
+            1486,
+            388
+          ],
+          "confidence": 74.94
+        },
+        {
+          "text": "潯州西上指西偏",
+          "bbox": [
+            912,
+            515,
+            1499,
+            575
+          ],
+          "confidence": 99.54
+        },
+        {
+          "text": "風景依稀似越天",
+          "bbox": [
+            912,
+            646,
+            1499,
+            708
+          ],
+          "confidence": 99.28
+        },
+        {
+          "text": "土俗民夫頭束辮",
+          "bbox": [
+            915,
+            777,
+            1490,
+            840
+          ],
+          "confidence": 98.14
+        },
+        {
+          "text": "村妝孺婦腳無纏",
+          "bbox": [
+            912,
+            908,
+            1500,
+            971
+          ],
+          "confidence": 99.81
+        },
+        {
+          "text": "人家斷岸依箖竹",
+          "bbox": [
+            911,
+            1041,
+            1500,
+            1102
+          ],
+          "confidence": 95.61
+        },
+        {
+          "text": "牧豎平沙放紙鳶",
+          "bbox": [
+            911,
+            1170,
+            1498,
+            1236
+          ],
+          "confidence": 99.6
+        },
+        {
+          "text": "欲視尉陀雄據府",
+          "bbox": [
+            911,
+            1303,
+            1501,
+            1367
+          ],
+          "confidence": 99.41
+        },
+        {
+          "text": "遠山落漠罩濃煙",
+          "bbox": [
+            913,
+            1434,
+            1501,
+            1500
+          ],
+          "confidence": 99.82
+        },
+        {
+          "text": "PHIEN AM:",
+          "bbox": [
+            413,
+            1630,
+            1658,
+            1670
+          ],
+          "confidence": 96.01
+        },
+        {
+          "text": "KYNHI",
+          "bbox": [
+            1165,
+            1716,
+            1361,
+            1762
+          ],
+          "confidence": 89.62
+        },
+        {
+          "text": "Tâm Châu (a) tây thương chỉ tây thiên,",
+          "bbox": [
+            894,
+            1856,
+            1750,
+            1910
+          ],
+          "confidence": 86.72
+        },
+        {
+          "text": "Phong cảnh y hy tự Việt thiên.",
+          "bbox": [
+            877,
+            1944,
+            1570,
+            1999
+          ],
+          "confidence": 96.63
+        },
+        {
+          "text": "Thổ tục (b) dân phu đầu thúc biên;",
+          "bbox": [
+            881,
+            2031,
+            1645,
+            2077
+          ],
+          "confidence": 85.44
+        },
+        {
+          "text": "Thôn trang nhu phu cước vô triển.",
+          "bbox": [
+            881,
+            2120,
+            1663,
+            2165
+          ],
+          "confidence": 89.15
+        },
+        {
+          "text": "Nhân gia đoạn ngạn y lâm trúc;",
+          "bbox": [
+            876,
+            2207,
+            1655,
+            2261
+          ],
+          "confidence": 89.28
+        },
+        {
+          "text": "Mục thu bình sả phóng chỉ diễn.",
+          "bbox": [
+            879,
+            2294,
+            1623,
+            2339
+          ],
+          "confidence": 80.18
+        },
+        {
+          "text": "Dục thi Uý Đà hùng cứ phủ,",
+          "bbox": [
+            879,
+            2381,
+            1530,
+            2435
+          ],
+          "confidence": 95.6
+        },
+        {
+          "text": "Viên sơn lac mac trao nông yên.",
+          "bbox": [
+            882,
+            2469,
+            1604,
+            2513
+          ],
+          "confidence": 87.05
+        },
+        {
+          "text": "DICH NGHIA:",
+          "bbox": [
+            416,
+            2562,
+            726,
+            2602
+          ],
+          "confidence": 95.59
+        },
+        {
+          "text": "BÀI 2",
+          "bbox": [
+            1199,
+            2649,
+            1336,
+            2694
+          ],
+          "confidence": 90.93
+        },
+        {
+          "text": "Phía tây Tâm Châu chếch hướng tây,",
+          "bbox": [
+            828,
+            2790,
+            1683,
+            2835
+          ],
+          "confidence": 97.46
+        },
+        {
+          "text": "Phong cảnh phảng phát tụa như trời Việt.",
+          "bbox": [
+            828,
+            2878,
+            1794,
+            2932
+          ],
+          "confidence": 92.09
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2619,
+          3241
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 28.431,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              6,
+              19,
+              1506,
+              45
+            ],
+            "generated_text": "ngothinhamch1.pdf",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.902,
+            "confidence": 98.17,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              409,
+              229,
+              1181,
+              276
+            ],
+            "generated_text": "NGÔ THI NHÂM TOÀN TẬP - TẬP III",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.752,
+            "confidence": 93.82,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              412,
+              281,
+              2122,
+              294
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.454,
+            "confidence": 60.81,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              1063,
+              325,
+              1401,
+              352
+            ],
+            "generated_text": "つつ せー",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.702,
+            "confidence": 62.43,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              1061,
+              363,
+              1486,
+              388
+            ],
+            "generated_text": "52. 共一",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.725,
+            "confidence": 74.94,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              912,
+              515,
+              1499,
+              575
+            ],
+            "generated_text": "潯州西上指西偏",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.977,
+            "confidence": 99.54,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              912,
+              646,
+              1499,
+              708
+            ],
+            "generated_text": "風景依稀似越天",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.849,
+            "confidence": 99.28,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              915,
+              777,
+              1490,
+              840
+            ],
+            "generated_text": "土俗民夫頭束辮",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.969,
+            "confidence": 98.14,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              912,
+              908,
+              1500,
+              971
+            ],
+            "generated_text": "村妝孺婦腳無纏",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.465,
+            "confidence": 99.81,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              911,
+              1041,
+              1500,
+              1102
+            ],
+            "generated_text": "人家斷岸依箖竹",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 1.045,
+            "confidence": 95.61,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              911,
+              1170,
+              1498,
+              1236
+            ],
+            "generated_text": "牧豎平沙放紙鳶",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.194,
+            "confidence": 99.6,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              911,
+              1303,
+              1501,
+              1367
+            ],
+            "generated_text": "欲視尉陀雄據府",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.845,
+            "confidence": 99.41,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              913,
+              1434,
+              1501,
+              1500
+            ],
+            "generated_text": "遠山落漠罩濃煙",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.074,
+            "confidence": 99.82,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              413,
+              1630,
+              1658,
+              1670
+            ],
+            "generated_text": "PHIEN AM:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.682,
+            "confidence": 96.01,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              1165,
+              1716,
+              1361,
+              1762
+            ],
+            "generated_text": "KYNHI",
+            "n_lines": 1,
+            "tokens": 4,
+            "seconds": 0.583,
+            "confidence": 89.62,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              894,
+              1856,
+              1750,
+              1910
+            ],
+            "generated_text": "Tâm Châu (a) tây thương chỉ tây thiên,",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.467,
+            "confidence": 86.72,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              877,
+              1944,
+              1570,
+              1999
+            ],
+            "generated_text": "Phong cảnh y hy tự Việt thiên.",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.059,
+            "confidence": 96.63,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              881,
+              2031,
+              1645,
+              2077
+            ],
+            "generated_text": "Thổ tục (b) dân phu đầu thúc biên;",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.384,
+            "confidence": 85.44,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              881,
+              2120,
+              1663,
+              2165
+            ],
+            "generated_text": "Thôn trang nhu phu cước vô triển.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.193,
+            "confidence": 89.15,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              876,
+              2207,
+              1655,
+              2261
+            ],
+            "generated_text": "Nhân gia đoạn ngạn y lâm trúc;",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.195,
+            "confidence": 89.28,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              879,
+              2294,
+              1623,
+              2339
+            ],
+            "generated_text": "Mục thu bình sả phóng chỉ diễn.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.124,
+            "confidence": 80.18,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              879,
+              2381,
+              1530,
+              2435
+            ],
+            "generated_text": "Dục thi Uý Đà hùng cứ phủ,",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.386,
+            "confidence": 95.6,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              882,
+              2469,
+              1604,
+              2513
+            ],
+            "generated_text": "Viên sơn lac mac trao nông yên.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.121,
+            "confidence": 87.05,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              416,
+              2562,
+              726,
+              2602
+            ],
+            "generated_text": "DICH NGHIA:",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.76,
+            "confidence": 95.59,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              1199,
+              2649,
+              1336,
+              2694
+            ],
+            "generated_text": "BÀI 2",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.692,
+            "confidence": 90.93,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              828,
+              2790,
+              1683,
+              2835
+            ],
+            "generated_text": "Phía tây Tâm Châu chếch hướng tây,",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.418,
+            "confidence": 97.46,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              828,
+              2878,
+              1794,
+              2932
+            ],
+            "generated_text": "Phong cảnh phảng phát tụa như trời Việt.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.412,
+            "confidence": 92.09,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              1071,
+              350,
+              1274,
+              364
+            ],
+            "ink": 441
+          },
+          {
+            "box": [
+              1108,
+              2162,
+              1338,
+              2173
+            ],
+            "ink": 249
+          },
+          {
+            "box": [
+              933,
+              2337,
+              1409,
+              2348
+            ],
+            "ink": 222
+          },
+          {
+            "box": [
+              1110,
+              2509,
+              1529,
+              2521
+            ],
+            "ink": 265
+          },
+          {
+            "box": [
+              994,
+              2832,
+              1680,
+              2842
+            ],
+            "ink": 207
+          },
+          {
+            "box": [
+              427,
+              3038,
+              485,
+              3049
+            ],
+            "ink": 217
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

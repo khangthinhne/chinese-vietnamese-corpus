@@ -1,0 +1,1093 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 13,
+  "runs": [
+    {
+      "key": "2959b010f751fa56cce1ec76192730ef853d5157a15c6f3b56fbd2fdf9eb3fb0",
+      "parameters": {
+        "image_sha256": "f2d8f4e4de9024f50033f73db37a910eb942151a4e0e556ab11ac5f0e205f130",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T11:17:46+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_013.png",
+      "image_size": [
+        2619,
+        3239
+      ],
+      "crop_box": [
+        0,
+        0,
+        2619,
+        3239
+      ],
+      "lines": [
+        {
+          "text": "ngothinhamch1.pdf",
+          "bbox": [
+            7,
+            19,
+            1041,
+            45
+          ],
+          "confidence": 98.44
+        },
+        {
+          "text": "NGŮ THI NHAM TOAN TAP - TẬP III",
+          "bbox": [
+            351,
+            220,
+            1126,
+            259
+          ],
+          "confidence": 73.56
+        },
+        {
+          "text": "A.117c/ VHv. VHv. A.404 A.1697 A. A.2871",
+          "bbox": [
+            332,
+            334,
+            2042,
+            380
+          ],
+          "confidence": 94.95
+        },
+        {
+          "text": "[1",
+          "bbox": [
+            332,
+            422,
+            2042,
+            433
+          ],
+          "confidence": 80.33
+        },
+        {
+          "text": "1743/23",
+          "bbox": [
+            332,
+            433,
+            2042,
+            444
+          ],
+          "confidence": 80.33
+        },
+        {
+          "text": "16/12",
+          "bbox": [
+            332,
+            444,
+            2042,
+            455
+          ],
+          "confidence": 80.33
+        },
+        {
+          "text": "[1579",
+          "bbox": [
+            332,
+            455,
+            2042,
+            466
+          ],
+          "confidence": 80.33
+        },
+        {
+          "text": "|",
+          "bbox": [
+            328,
+            474,
+            2042,
+            488
+          ],
+          "confidence": 84.84
+        },
+        {
+          "text": "1 | 2 | 3 | 4 | 5 | 6 | 7",
+          "bbox": [
+            331,
+            512,
+            2042,
+            554
+          ],
+          "confidence": 94.54
+        },
+        {
+          "text": "|",
+          "bbox": [
+            326,
+            563,
+            2042,
+            577
+          ],
+          "confidence": 69.84
+        },
+        {
+          "text": "|110|109|109|78 bài|110|110|114|",
+          "bbox": [
+            329,
+            598,
+            2042,
+            642
+          ],
+          "confidence": 95.34
+        },
+        {
+          "text": "bài | bài | bài | | bài | | bài",
+          "bbox": [
+            331,
+            671,
+            2043,
+            716
+          ],
+          "confidence": 82.64
+        },
+        {
+          "text": ".",
+          "bbox": [
+            330,
+            721,
+            2042,
+            734
+          ],
+          "confidence": 79.84
+        },
+        {
+          "text": "Trong đó: Bản A.2871 chép 114 bài.",
+          "bbox": [
+            504,
+            802,
+            1322,
+            846
+          ],
+          "confidence": 99.67
+        },
+        {
+          "text": "Bản A.117c/1 chép 110 bài, nhưng có 1 bài mà bản A.2871 không",
+          "bbox": [
+            503,
+            893,
+            2059,
+            938
+          ],
+          "confidence": 98.63
+        },
+        {
+          "text": "có: Vô đế. Trong khi biên dịch xin dùng bản có ký hiệu A.117c/1 làm bản",
+          "bbox": [
+            353,
+            971,
+            2057,
+            1016
+          ],
+          "confidence": 97.28
+        },
+        {
+          "text": "nền, tiến hành so sánh khảo di.",
+          "bbox": [
+            353,
+            1049,
+            1461,
+            1094
+          ],
+          "confidence": 91.02
+        },
+        {
+          "text": "Vây: Hoàng hoa đô phả 114 bài (A.2871), thêm 1 bài ở bản A.117c/1,",
+          "bbox": [
+            470,
+            1140,
+            2056,
+            1184
+          ],
+          "confidence": 95.38
+        },
+        {
+          "text": "tổng cộng 115 bài thơ và hai bài phú. Hai bài phú này cũng được chép",
+          "bbox": [
+            253,
+            1217,
+            2057,
+            1270
+          ],
+          "confidence": 98.43
+        },
+        {
+          "text": "trong tập Kim mã hành dư, theo sự sắp xếp của soạn giả từng thư Ngô",
+          "bbox": [
+            354,
+            1295,
+            2057,
+            1348
+          ],
+          "confidence": 90.64
+        },
+        {
+          "text": "gia văn phái. Hai bài phú đã in trong Ngô Thi Nhậm Toàn tập - Tập I,",
+          "bbox": [
+            348,
+            1373,
+            2056,
+            1427
+          ],
+          "confidence": 92.1
+        },
+        {
+          "text": "nên ở đây lược đi.",
+          "bbox": [
+            354,
+            1461,
+            760,
+            1497
+          ],
+          "confidence": 95.41
+        },
+        {
+          "text": "CHU THICH:",
+          "bbox": [
+            356,
+            1562,
+            2117,
+            1600
+          ],
+          "confidence": 99.36
+        },
+        {
+          "text": "1. Ngô gia văn phái VHv.1743/1.",
+          "bbox": [
+            509,
+            1651,
+            1874,
+            1692
+          ],
+          "confidence": 95.98
+        },
+        {
+          "text": "2.Đoàn Nguyên Tuấn hiệu Hải Ông, quê làng Hải An, huyện Quỳnh Côi",
+          "bbox": [
+            505,
+            1740,
+            2059,
+            1789
+          ],
+          "confidence": 95.85
+        },
+        {
+          "text": "(nay là Quỳnh Phụ) tỉnh Thái Bình, là con trai Thám hoa Đoàn Nguyên Thục",
+          "bbox": [
+            357,
+            1817,
+            2058,
+            1866
+          ],
+          "confidence": 97.0
+        },
+        {
+          "text": "(1718-1775), con rể Quốc lão Nhữ Đình Toản (1703-1774), và là anh vợ Nguyên",
+          "bbox": [
+            357,
+            1895,
+            2058,
+            1938
+          ],
+          "confidence": 97.13
+        },
+        {
+          "text": "Du (1765-1820). Không rõ năm sinh, năm mất. Đô Hương cống đòi Cảnh Hưng,",
+          "bbox": [
+            355,
+            1972,
+            2056,
+            2016
+          ],
+          "confidence": 95.0
+        },
+        {
+          "text": "những không ra làm quan cho nhà Lê, sau ra với nhà Tây Sơn, giữ chức Trực",
+          "bbox": [
+            355,
+            2051,
+            2059,
+            2094
+          ],
+          "confidence": 95.4
+        },
+        {
+          "text": "học sĩ Viên Hàn lâm, năm 1790 được cử đi sử trong phái bộ giả vương. Tập thơ đi",
+          "bbox": [
+            354,
+            2129,
+            2060,
+            2179
+          ],
+          "confidence": 93.3
+        },
+        {
+          "text": "sú của ông được người đòi sau tập hợp thành Hải Ông thi tập.",
+          "bbox": [
+            356,
+            2208,
+            1647,
+            2251
+          ],
+          "confidence": 90.65
+        },
+        {
+          "text": "3.Xem: Hải Ông thi tập A.2603, hiện chỉ chép 29 bài, thiếu 1 bài.",
+          "bbox": [
+            506,
+            2300,
+            1866,
+            2342
+          ],
+          "confidence": 98.82
+        },
+        {
+          "text": "4. Sau khi hoàn thành nhiệm vụ bạn tổng, Đoàn Nguyên Tuấn có bài thơ:",
+          "bbox": [
+            505,
+            2391,
+            2056,
+            2434
+          ],
+          "confidence": 94.37
+        },
+        {
+          "text": "Tăng biệt Cát Thủy Bùi Ứng Thắng (Tăng biệt ông Bùi Ứng Thắng ở Cát Thủy),",
+          "bbox": [
+            355,
+            2468,
+            2056,
+            2518
+          ],
+          "confidence": 93.7
+        },
+        {
+          "text": "kèm lời đăn như sau: Doc đường, lúc đi cũng như lúc nghỉ, ông đối với tôi rất",
+          "bbox": [
+            355,
+            2546,
+            2058,
+            2589
+          ],
+          "confidence": 93.01
+        },
+        {
+          "text": "hâu. Thơ ông tăng tôi có câu: “Tài tình duy ngã độc tri quân” (Tài tình chỉ có tôi",
+          "bbox": [
+            355,
+            2624,
+            2059,
+            2667
+          ],
+          "confidence": 94.67
+        },
+        {
+          "text": "biết ông). Khi ấy, tôi trở dậy trước, từ biết ông ở bên đường (Xem: Hải Ông thi",
+          "bbox": [
+            355,
+            2702,
+            2057,
+            2750
+          ],
+          "confidence": 96.29
+        },
+        {
+          "text": "tap A.2603).",
+          "bbox": [
+            355,
+            2793,
+            1801,
+            2822
+          ],
+          "confidence": 99.53
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2619,
+          3239
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 70.318,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              7,
+              19,
+              1041,
+              45
+            ],
+            "generated_text": "ngothinhamch1.pdf",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.98,
+            "confidence": 98.44,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              351,
+              220,
+              1126,
+              259
+            ],
+            "generated_text": "NGŮ THI NHAM TOAN TAP - TẬP III",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.53,
+            "confidence": 73.56,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              356,
+              264,
+              2066,
+              279
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.458,
+            "confidence": 66.86,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              328,
+              294,
+              2042,
+              308
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.459,
+            "confidence": 21.48,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              332,
+              334,
+              2042,
+              380
+            ],
+            "generated_text": "A.117c/ VHv. VHv. A.404 A.1697 A. A.2871",
+            "n_lines": 1,
+            "tokens": 35,
+            "seconds": 2.787,
+            "confidence": 94.95,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              332,
+              422,
+              2042,
+              466
+            ],
+            "generated_text": "[1\n1743/23\n16/12\n[1579",
+            "n_lines": 4,
+            "tokens": 23,
+            "seconds": 1.939,
+            "confidence": 80.33,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              328,
+              474,
+              2042,
+              488
+            ],
+            "generated_text": "|",
+            "n_lines": 1,
+            "tokens": 2,
+            "seconds": 0.523,
+            "confidence": 84.84,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              331,
+              512,
+              2042,
+              554
+            ],
+            "generated_text": "1 | 2 | 3 | 4 | 5 | 6 | 7",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.712,
+            "confidence": 94.54,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              326,
+              563,
+              2042,
+              577
+            ],
+            "generated_text": "|",
+            "n_lines": 1,
+            "tokens": 2,
+            "seconds": 0.524,
+            "confidence": 69.84,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              329,
+              598,
+              2042,
+              642
+            ],
+            "generated_text": "|110|109|109|78 bài|110|110|114|",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 2.428,
+            "confidence": 95.34,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              331,
+              671,
+              2043,
+              716
+            ],
+            "generated_text": "bài | bài | bài | | bài | | bài",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.241,
+            "confidence": 82.64,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              330,
+              721,
+              2042,
+              734
+            ],
+            "generated_text": ".",
+            "n_lines": 1,
+            "tokens": 2,
+            "seconds": 0.525,
+            "confidence": 79.84,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              504,
+              802,
+              1322,
+              846
+            ],
+            "generated_text": "Trong đó: Bản A.2871 chép 114 bài.",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.687,
+            "confidence": 99.67,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              503,
+              893,
+              2059,
+              938
+            ],
+            "generated_text": "Bản A.117c/1 chép 110 bài, nhưng có 1 bài mà bản A.2871 không",
+            "n_lines": 1,
+            "tokens": 33,
+            "seconds": 2.527,
+            "confidence": 98.63,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              353,
+              971,
+              2057,
+              1016
+            ],
+            "generated_text": "có: Vô đế. Trong khi biên dịch xin dùng bản có ký hiệu A.117c/1 làm bản",
+            "n_lines": 1,
+            "tokens": 35,
+            "seconds": 2.781,
+            "confidence": 97.28,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              353,
+              1049,
+              1461,
+              1094
+            ],
+            "generated_text": "nền, tiến hành so sánh khảo di.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.363,
+            "confidence": 91.02,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              470,
+              1140,
+              2056,
+              1184
+            ],
+            "generated_text": "Vây: Hoàng hoa đô phả 114 bài (A.2871), thêm 1 bài ở bản A.117c/1,",
+            "n_lines": 1,
+            "tokens": 40,
+            "seconds": 3.015,
+            "confidence": 95.38,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              253,
+              1217,
+              2057,
+              1270
+            ],
+            "generated_text": "tổng cộng 115 bài thơ và hai bài phú. Hai bài phú này cũng được chép",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.329,
+            "confidence": 98.43,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              354,
+              1295,
+              2057,
+              1348
+            ],
+            "generated_text": "trong tập Kim mã hành dư, theo sự sắp xếp của soạn giả từng thư Ngô",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.285,
+            "confidence": 90.64,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              348,
+              1373,
+              2056,
+              1427
+            ],
+            "generated_text": "gia văn phái. Hai bài phú đã in trong Ngô Thi Nhậm Toàn tập - Tập I,",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.285,
+            "confidence": 92.1,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              354,
+              1461,
+              760,
+              1497
+            ],
+            "generated_text": "nên ở đây lược đi.",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.931,
+            "confidence": 95.41,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              356,
+              1562,
+              2117,
+              1600
+            ],
+            "generated_text": "CHU THICH:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.788,
+            "confidence": 99.36,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              509,
+              1651,
+              1874,
+              1692
+            ],
+            "generated_text": "1. Ngô gia văn phái VHv.1743/1.",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.634,
+            "confidence": 95.98,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              505,
+              1740,
+              2059,
+              1789
+            ],
+            "generated_text": "2.Đoàn Nguyên Tuấn hiệu Hải Ông, quê làng Hải An, huyện Quỳnh Côi",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 2.383,
+            "confidence": 95.85,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              357,
+              1817,
+              2058,
+              1866
+            ],
+            "generated_text": "(nay là Quỳnh Phụ) tỉnh Thái Bình, là con trai Thám hoa Đoàn Nguyên Thục",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 2.427,
+            "confidence": 97.0,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              357,
+              1895,
+              2058,
+              1938
+            ],
+            "generated_text": "(1718-1775), con rể Quốc lão Nhữ Đình Toản (1703-1774), và là anh vợ Nguyên",
+            "n_lines": 1,
+            "tokens": 42,
+            "seconds": 3.29,
+            "confidence": 97.13,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              355,
+              1972,
+              2056,
+              2016
+            ],
+            "generated_text": "Du (1765-1820). Không rõ năm sinh, năm mất. Đô Hương cống đòi Cảnh Hưng,",
+            "n_lines": 1,
+            "tokens": 37,
+            "seconds": 2.929,
+            "confidence": 95.0,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              355,
+              2051,
+              2059,
+              2094
+            ],
+            "generated_text": "những không ra làm quan cho nhà Lê, sau ra với nhà Tây Sơn, giữ chức Trực",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 2.139,
+            "confidence": 95.4,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              354,
+              2129,
+              2060,
+              2179
+            ],
+            "generated_text": "học sĩ Viên Hàn lâm, năm 1790 được cử đi sử trong phái bộ giả vương. Tập thơ đi",
+            "n_lines": 1,
+            "tokens": 35,
+            "seconds": 2.781,
+            "confidence": 93.3,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              356,
+              2208,
+              1647,
+              2251
+            ],
+            "generated_text": "sú của ông được người đòi sau tập hợp thành Hải Ông thi tập.",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.551,
+            "confidence": 90.65,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              506,
+              2300,
+              1866,
+              2342
+            ],
+            "generated_text": "3.Xem: Hải Ông thi tập A.2603, hiện chỉ chép 29 bài, thiếu 1 bài.",
+            "n_lines": 1,
+            "tokens": 34,
+            "seconds": 2.468,
+            "confidence": 98.82,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 32,
+            "box": [
+              505,
+              2391,
+              2056,
+              2434
+            ],
+            "generated_text": "4. Sau khi hoàn thành nhiệm vụ bạn tổng, Đoàn Nguyên Tuấn có bài thơ:",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 2.095,
+            "confidence": 94.37,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 33,
+            "box": [
+              355,
+              2468,
+              2056,
+              2518
+            ],
+            "generated_text": "Tăng biệt Cát Thủy Bùi Ứng Thắng (Tăng biệt ông Bùi Ứng Thắng ở Cát Thủy),",
+            "n_lines": 1,
+            "tokens": 39,
+            "seconds": 3.066,
+            "confidence": 93.7,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 34,
+            "box": [
+              355,
+              2546,
+              2058,
+              2589
+            ],
+            "generated_text": "kèm lời đăn như sau: Doc đường, lúc đi cũng như lúc nghỉ, ông đối với tôi rất",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.275,
+            "confidence": 93.01,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 35,
+            "box": [
+              355,
+              2624,
+              2059,
+              2667
+            ],
+            "generated_text": "hâu. Thơ ông tăng tôi có câu: “Tài tình duy ngã độc tri quân” (Tài tình chỉ có tôi",
+            "n_lines": 1,
+            "tokens": 34,
+            "seconds": 2.703,
+            "confidence": 94.67,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 36,
+            "box": [
+              355,
+              2702,
+              2057,
+              2750
+            ],
+            "generated_text": "biết ông). Khi ấy, tôi trở dậy trước, từ biết ông ở bên đường (Xem: Hải Ông thi",
+            "n_lines": 1,
+            "tokens": 32,
+            "seconds": 2.568,
+            "confidence": 96.29,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 37,
+            "box": [
+              355,
+              2793,
+              1801,
+              2822
+            ],
+            "generated_text": "tap A.2603).",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.907,
+            "confidence": 99.53,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              332,
+              412,
+              2042,
+              426
+            ],
+            "ink": 854
+          },
+          {
+            "box": [
+              554,
+              2247,
+              1617,
+              2258
+            ],
+            "ink": 458
+          },
+          {
+            "box": [
+              382,
+              2784,
+              598,
+              2793
+            ],
+            "ink": 385
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

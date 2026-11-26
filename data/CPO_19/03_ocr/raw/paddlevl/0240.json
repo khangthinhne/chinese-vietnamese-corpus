@@ -1,0 +1,954 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 240,
+  "runs": [
+    {
+      "key": "e43d4db1dbfaf01e11f17fd2608c3f5f145bdd9117471fb1f8bd663c9c84dafd",
+      "parameters": {
+        "image_sha256": "80b1034df0d7e9e903f398b86cc77201014a88074222fc5280a7d272047b070a",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T13:53:50+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_240.png",
+      "image_size": [
+        2631,
+        3247
+      ],
+      "crop_box": [
+        0,
+        0,
+        2631,
+        3247
+      ],
+      "lines": [
+        {
+          "text": "ngothinhamle1.pdf",
+          "bbox": [
+            7,
+            19,
+            1785,
+            45
+          ],
+          "confidence": 96.53
+        },
+        {
+          "text": "HOANG HOA DO PHA",
+          "bbox": [
+            330,
+            185,
+            2084,
+            224
+          ],
+          "confidence": 92.19
+        },
+        {
+          "text": "KHAO DI:",
+          "bbox": [
+            371,
+            287,
+            593,
+            326
+          ],
+          "confidence": 97.33
+        },
+        {
+          "text": "a. Bản A.1697, A.117c/1: Tổng trị 肇峙.",
+          "bbox": [
+            517,
+            355,
+            1340,
+            397
+          ],
+          "confidence": 90.94
+        },
+        {
+          "text": "b. Bản A.1697: Trước 著.",
+          "bbox": [
+            520,
+            425,
+            1028,
+            468
+          ],
+          "confidence": 97.27
+        },
+        {
+          "text": "Bản A.117c/1: Nhược若.",
+          "bbox": [
+            521,
+            497,
+            1043,
+            538
+          ],
+          "confidence": 90.78
+        },
+        {
+          "text": "CHU THICH;",
+          "bbox": [
+            372,
+            590,
+            701,
+            629
+          ],
+          "confidence": 96.55
+        },
+        {
+          "text": "1.Châu Ký: Xưa là một trong chín châu, nay thuộc tỉnh Hà Bắc, còn",
+          "bbox": [
+            525,
+            653,
+            2082,
+            696
+          ],
+          "confidence": 96.39
+        },
+        {
+          "text": "go1 là Ký Bác.",
+          "bbox": [
+            372,
+            731,
+            681,
+            760
+          ],
+          "confidence": 74.59
+        },
+        {
+          "text": "2.Hy, Nghiêu: Tức Phục Hy và Đế Nghiêu.",
+          "bbox": [
+            521,
+            788,
+            1420,
+            831
+          ],
+          "confidence": 93.87
+        },
+        {
+          "text": "3.Sông Hà: Tức sông Hoàng Hà, một con sông lớn ở Trung Quốc.",
+          "bbox": [
+            520,
+            858,
+            1877,
+            909
+          ],
+          "confidence": 96.12
+        },
+        {
+          "text": "4. Châu Kế: Thuộc tỉnh Hà Bắc, phía động huyện Tam Hà.",
+          "bbox": [
+            521,
+            929,
+            1750,
+            973
+          ],
+          "confidence": 89.12
+        },
+        {
+          "text": "5.Vạch quẻ (hoạch quái): Phục Hy vạch ra tám quẻ để chỉ định ranh giới",
+          "bbox": [
+            521,
+            1000,
+            2083,
+            1052
+          ],
+          "confidence": 94.17
+        },
+        {
+          "text": "tâm phương.",
+          "bbox": [
+            371,
+            1083,
+            643,
+            1113
+          ],
+          "confidence": 77.62
+        },
+        {
+          "text": "6.Rủ áo (thùy y): Hệ tủ Kinh Dịch nói: Hoàng đế Nghiêu Thuấn thùy y",
+          "bbox": [
+            280,
+            1142,
+            2081,
+            1192
+          ],
+          "confidence": 90.11
+        },
+        {
+          "text": "thường, nhi thiên hạ trị (Vua Nghiêu, vua Thuấn, chỉ ngồi rũ áo xiêm, mà",
+          "bbox": [
+            371,
+            1212,
+            2080,
+            1262
+          ],
+          "confidence": 95.34
+        },
+        {
+          "text": "thiên ha tri bình).",
+          "bbox": [
+            371,
+            1284,
+            772,
+            1324
+          ],
+          "confidence": 96.99
+        },
+        {
+          "text": "107 店店",
+          "bbox": [
+            976,
+            1415,
+            1458,
+            1453
+          ],
+          "confidence": 47.71
+        },
+        {
+          "text": "107. 币先朝",
+          "bbox": [
+            977,
+            1445,
+            1966,
+            1490
+          ],
+          "confidence": 76.42
+        },
+        {
+          "text": "堯華徂落四千年",
+          "bbox": [
+            935,
+            1581,
+            1524,
+            1642
+          ],
+          "confidence": 99.2
+        },
+        {
+          "text": "衰冕雍容尚宛然",
+          "bbox": [
+            487,
+            1696,
+            1521,
+            1760
+          ],
+          "confidence": 93.03
+        },
+        {
+          "text": "業業宸宮空易地",
+          "bbox": [
+            934,
+            1815,
+            1525,
+            1878
+          ],
+          "confidence": 99.84
+        },
+        {
+          "text": "巍巍帝德自光天",
+          "bbox": [
+            931,
+            1935,
+            1521,
+            2000
+          ],
+          "confidence": 99.78
+        },
+        {
+          "text": "望都秀氣觀川岳",
+          "bbox": [
+            937,
+            2055,
+            1524,
+            2117
+          ],
+          "confidence": 99.59
+        },
+        {
+          "text": "唐國遺風驗市廛",
+          "bbox": [
+            932,
+            2175,
+            2014,
+            2237
+          ],
+          "confidence": 99.84
+        },
+        {
+          "text": "大道顯行存聖典",
+          "bbox": [
+            502,
+            2292,
+            1520,
+            2354
+          ],
+          "confidence": 99.54
+        },
+        {
+          "text": "都俞想像土階前",
+          "bbox": [
+            463,
+            2410,
+            1521,
+            2472
+          ],
+          "confidence": 99.61
+        },
+        {
+          "text": "PHIEN AM:",
+          "bbox": [
+            369,
+            2552,
+            762,
+            2592
+          ],
+          "confidence": 99.49
+        },
+        {
+          "text": "DE NGHIEU MIEU",
+          "bbox": [
+            984,
+            2619,
+            2069,
+            2665
+          ],
+          "confidence": 97.17
+        },
+        {
+          "text": "Nghiêu hoa tô lac tứ thiên niên.",
+          "bbox": [
+            811,
+            2750,
+            1541,
+            2796
+          ],
+          "confidence": 83.55
+        },
+        {
+          "text": "Côn miện ung dung thương uyên nhiên.",
+          "bbox": [
+            816,
+            2835,
+            1722,
+            2889
+          ],
+          "confidence": 89.72
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2631,
+          3247
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 39.907,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              7,
+              19,
+              1785,
+              45
+            ],
+            "generated_text": "ngothinhamle1.pdf",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.978,
+            "confidence": 96.53,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              330,
+              185,
+              2084,
+              224
+            ],
+            "generated_text": "HOANG HOA DO PHA",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.912,
+            "confidence": 92.19,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              374,
+              229,
+              2087,
+              242
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.459,
+            "confidence": 50.7,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              371,
+              287,
+              593,
+              326
+            ],
+            "generated_text": "KHAO DI:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.687,
+            "confidence": 97.33,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              517,
+              355,
+              1340,
+              397
+            ],
+            "generated_text": "a. Bản A.1697, A.117c/1: Tổng trị 肇峙.",
+            "n_lines": 1,
+            "tokens": 32,
+            "seconds": 2.397,
+            "confidence": 90.94,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              520,
+              425,
+              1028,
+              468
+            ],
+            "generated_text": "b. Bản A.1697: Trước 著.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.427,
+            "confidence": 97.27,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              521,
+              497,
+              1043,
+              538
+            ],
+            "generated_text": "Bản A.117c/1: Nhược若.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.367,
+            "confidence": 90.78,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              372,
+              590,
+              701,
+              629
+            ],
+            "generated_text": "CHU THICH;",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.705,
+            "confidence": 96.55,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              525,
+              653,
+              2082,
+              696
+            ],
+            "generated_text": "1.Châu Ký: Xưa là một trong chín châu, nay thuộc tỉnh Hà Bắc, còn",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 2.032,
+            "confidence": 96.39,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              372,
+              731,
+              681,
+              760
+            ],
+            "generated_text": "go1 là Ký Bác.",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.879,
+            "confidence": 74.59,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              521,
+              788,
+              1420,
+              831
+            ],
+            "generated_text": "2.Hy, Nghiêu: Tức Phục Hy và Đế Nghiêu.",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.704,
+            "confidence": 93.87,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              520,
+              858,
+              1877,
+              909
+            ],
+            "generated_text": "3.Sông Hà: Tức sông Hoàng Hà, một con sông lớn ở Trung Quốc.",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.819,
+            "confidence": 96.12,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              521,
+              929,
+              1750,
+              973
+            ],
+            "generated_text": "4. Châu Kế: Thuộc tỉnh Hà Bắc, phía động huyện Tam Hà.",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.747,
+            "confidence": 89.12,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              521,
+              1000,
+              2083,
+              1052
+            ],
+            "generated_text": "5.Vạch quẻ (hoạch quái): Phục Hy vạch ra tám quẻ để chỉ định ranh giới",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.177,
+            "confidence": 94.17,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              371,
+              1083,
+              643,
+              1113
+            ],
+            "generated_text": "tâm phương.",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.731,
+            "confidence": 77.62,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              280,
+              1142,
+              2081,
+              1192
+            ],
+            "generated_text": "6.Rủ áo (thùy y): Hệ tủ Kinh Dịch nói: Hoàng đế Nghiêu Thuấn thùy y",
+            "n_lines": 1,
+            "tokens": 36,
+            "seconds": 2.898,
+            "confidence": 90.11,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              371,
+              1212,
+              2080,
+              1262
+            ],
+            "generated_text": "thường, nhi thiên hạ trị (Vua Nghiêu, vua Thuấn, chỉ ngồi rũ áo xiêm, mà",
+            "n_lines": 1,
+            "tokens": 34,
+            "seconds": 2.723,
+            "confidence": 95.34,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              371,
+              1284,
+              772,
+              1324
+            ],
+            "generated_text": "thiên ha tri bình).",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.864,
+            "confidence": 96.99,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              976,
+              1415,
+              1458,
+              1453
+            ],
+            "generated_text": "107 店 店",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.833,
+            "confidence": 47.71,
+            "flags": [
+              "han_gap_removed"
+            ],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              977,
+              1445,
+              1966,
+              1490
+            ],
+            "generated_text": "107. 币先朝",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.975,
+            "confidence": 76.42,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              935,
+              1581,
+              1524,
+              1642
+            ],
+            "generated_text": "堯華徂落四千年",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 1.06,
+            "confidence": 99.2,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              487,
+              1696,
+              1521,
+              1760
+            ],
+            "generated_text": "衰冕雍容尚宛然",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.873,
+            "confidence": 93.03,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              934,
+              1815,
+              1525,
+              1878
+            ],
+            "generated_text": "業業宸宮空易地",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.856,
+            "confidence": 99.84,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              931,
+              1935,
+              1521,
+              2000
+            ],
+            "generated_text": "巍巍帝德自光天",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.848,
+            "confidence": 99.78,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              937,
+              2055,
+              1524,
+              2117
+            ],
+            "generated_text": "望都秀氣觀川岳",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.87,
+            "confidence": 99.59,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              932,
+              2175,
+              2014,
+              2237
+            ],
+            "generated_text": "唐國遺風驗市廛",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.184,
+            "confidence": 99.84,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              502,
+              2292,
+              1520,
+              2354
+            ],
+            "generated_text": "大道顯行存聖典",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.796,
+            "confidence": 99.54,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              463,
+              2410,
+              1521,
+              2472
+            ],
+            "generated_text": "都俞想像土階前",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.855,
+            "confidence": 99.61,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              369,
+              2552,
+              762,
+              2592
+            ],
+            "generated_text": "PHIEN AM:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.737,
+            "confidence": 99.49,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              984,
+              2619,
+              2069,
+              2665
+            ],
+            "generated_text": "DE NGHIEU MIEU",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 1.008,
+            "confidence": 97.17,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              811,
+              2750,
+              1541,
+              2796
+            ],
+            "generated_text": "Nghiêu hoa tô lac tứ thiên niên.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.252,
+            "confidence": 83.55,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 32,
+            "box": [
+              816,
+              2835,
+              1722,
+              2889
+            ],
+            "generated_text": "Côn miện ung dung thương uyên nhiên.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.25,
+            "confidence": 89.72,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              733,
+              692,
+              1983,
+              701
+            ],
+            "ink": 266
+          },
+          {
+            "box": [
+              425,
+              720,
+              1808,
+              733
+            ],
+            "ink": 531
+          },
+          {
+            "box": [
+              597,
+              828,
+              1313,
+              838
+            ],
+            "ink": 284
+          },
+          {
+            "box": [
+              867,
+              969,
+              1518,
+              979
+            ],
+            "ink": 263
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

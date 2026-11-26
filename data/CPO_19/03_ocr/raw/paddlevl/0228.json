@@ -1,0 +1,996 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 228,
+  "runs": [
+    {
+      "key": "c2482a2869b5e83043b7bec27ac1ec954971f54d620b772bced40377a087295a",
+      "parameters": {
+        "image_sha256": "4faabb0331c26f073891224a2e6bf3cf3b20b0d2056c85353f604639ae2e2e9c",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T13:45:48+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_228.png",
+      "image_size": [
+        2619,
+        3226
+      ],
+      "crop_box": [
+        0,
+        0,
+        2619,
+        3226
+      ],
+      "lines": [
+        {
+          "text": "ngothinhamle1.pdf",
+          "bbox": [
+            7,
+            19,
+            1526,
+            45
+          ],
+          "confidence": 94.91
+        },
+        {
+          "text": "HOÀNG HOA ĐỔ PHA",
+          "bbox": [
+            1636,
+            208,
+            2099,
+            248
+          ],
+          "confidence": 80.41
+        },
+        {
+          "text": "PHIEN AM:",
+          "bbox": [
+            390,
+            322,
+            1887,
+            360
+          ],
+          "confidence": 99.63
+        },
+        {
+          "text": "HO HA DA",
+          "bbox": [
+            1107,
+            395,
+            1374,
+            439
+          ],
+          "confidence": 88.75
+        },
+        {
+          "text": "Bị thương (a) vi yếm Xích tinh Lưu,",
+          "bbox": [
+            835,
+            527,
+            1613,
+            573
+          ],
+          "confidence": 81.48
+        },
+        {
+          "text": "Lạc thủy linh nguyên xuất ki ngưu.",
+          "bbox": [
+            835,
+            612,
+            1647,
+            656
+          ],
+          "confidence": 86.92
+        },
+        {
+          "text": "Chính phải dĩ phu hoàn hải vọng;",
+          "bbox": [
+            839,
+            694,
+            1628,
+            738
+          ],
+          "confidence": 86.1
+        },
+        {
+          "text": "Kiên băng hề giả thiện hà lưu?",
+          "bbox": [
+            836,
+            774,
+            1550,
+            820
+          ],
+          "confidence": 82.56
+        },
+        {
+          "text": "Để vương (b) chân mệnh đô thân thu;",
+          "bbox": [
+            836,
+            857,
+            1658,
+            901
+          ],
+          "confidence": 89.34
+        },
+        {
+          "text": "Hầu bá dung phu xướng quý mưu.",
+          "bbox": [
+            836,
+            938,
+            1629,
+            982
+          ],
+          "confidence": 84.13
+        },
+        {
+          "text": "Hiểu sớm anh quân chuyên giảng sổ,",
+          "bbox": [
+            836,
+            1021,
+            1687,
+            1065
+          ],
+          "confidence": 82.04
+        },
+        {
+          "text": "Truyền nghi truyền tín khán sa châu.",
+          "bbox": [
+            841,
+            1102,
+            1698,
+            1146
+          ],
+          "confidence": 93.34
+        },
+        {
+          "text": "DICH NGHIA:",
+          "bbox": [
+            391,
+            1216,
+            702,
+            1255
+          ],
+          "confidence": 98.81
+        },
+        {
+          "text": "SÔNG HỒ ĐẠ (A)(1)",
+          "bbox": [
+            1041,
+            1290,
+            1451,
+            1335
+          ],
+          "confidence": 86.18
+        },
+        {
+          "text": "Trời kia chưa chán ghét ho Lưu vốn giòng Xích Đế, (2)",
+          "bbox": [
+            745,
+            1422,
+            1953,
+            1468
+          ],
+          "confidence": 92.44
+        },
+        {
+          "text": "Nguồn thiêng sông Lạc, (3) sinh ra người cưỡi trâu. (4)",
+          "bbox": [
+            746,
+            1505,
+            1906,
+            1557
+          ],
+          "confidence": 92.41
+        },
+        {
+          "text": "Là giòng chính thống, (5) thỏa lòng thiên hạ trông ngóng;",
+          "bbox": [
+            378,
+            1587,
+            2027,
+            1641
+          ],
+          "confidence": 93.24
+        },
+        {
+          "text": "Băng đã đóng cứng, (6) cân chi nhỏ đến động sông nông?",
+          "bbox": [
+            747,
+            1670,
+            2008,
+            1723
+          ],
+          "confidence": 86.84
+        },
+        {
+          "text": "Mệnh chân chính đáng để vương, đều do thân trao cho;",
+          "bbox": [
+            747,
+            1751,
+            2014,
+            1797
+          ],
+          "confidence": 91.86
+        },
+        {
+          "text": "Kế tâm thường làm hầu bá, (7) mối đế xướng quỷ kế.",
+          "bbox": [
+            747,
+            1831,
+            1904,
+            1879
+          ],
+          "confidence": 80.31
+        },
+        {
+          "text": "Vua anh minh thích sấm ký, chuyên bàn vân số,",
+          "bbox": [
+            745,
+            1915,
+            1896,
+            1961
+          ],
+          "confidence": 88.37
+        },
+        {
+          "text": "Răng tin rằng ngờ, hãy xem bãi sông này!",
+          "bbox": [
+            747,
+            1999,
+            1705,
+            2050
+          ],
+          "confidence": 92.26
+        },
+        {
+          "text": "KHAO DI:",
+          "bbox": [
+            395,
+            2108,
+            615,
+            2147
+          ],
+          "confidence": 92.94
+        },
+        {
+          "text": "a. Bản A.117c/1, A.1579: Thiên 夭.",
+          "bbox": [
+            543,
+            2183,
+            1257,
+            2225
+          ],
+          "confidence": 93.64
+        },
+        {
+          "text": "b. Bản A.1579: Sinh 生.",
+          "bbox": [
+            541,
+            2263,
+            1350,
+            2304
+          ],
+          "confidence": 91.82
+        },
+        {
+          "text": "NGUYEN CHU:",
+          "bbox": [
+            395,
+            2343,
+            731,
+            2382
+          ],
+          "confidence": 87.27
+        },
+        {
+          "text": "A.Nước sông đục ngâu, bãi sông bùn nhão, lòng sông hẹp và rất cạn,",
+          "bbox": [
+            545,
+            2421,
+            2098,
+            2470
+          ],
+          "confidence": 94.61
+        },
+        {
+          "text": "người đi qua chỉ lối đến đầu gối mà thôi.",
+          "bbox": [
+            395,
+            2502,
+            1241,
+            2544
+          ],
+          "confidence": 88.61
+        },
+        {
+          "text": "CHU THICH:",
+          "bbox": [
+            397,
+            2609,
+            684,
+            2648
+          ],
+          "confidence": 96.83
+        },
+        {
+          "text": "1.Sông Hồ Đà: Một dòng sông lớn bắt nguồn từ phía động núi Đại Hỉ",
+          "bbox": [
+            548,
+            2683,
+            2100,
+            2734
+          ],
+          "confidence": 89.66
+        },
+        {
+          "text": "huyện Phồn Trĩ tỉnh Sơn Tây. Hán Quang Vũ đã từng bị quân Vương Lang đuổi",
+          "bbox": [
+            394,
+            2761,
+            2100,
+            2812
+          ],
+          "confidence": 94.42
+        },
+        {
+          "text": "danh phai vượt qua sông này.",
+          "bbox": [
+            398,
+            2852,
+            1450,
+            2882
+          ],
+          "confidence": 89.33
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2619,
+          3226
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 47.662,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              7,
+              19,
+              1526,
+              45
+            ],
+            "generated_text": "ngothinhamle1.pdf",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.902,
+            "confidence": 94.91,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              1636,
+              208,
+              2099,
+              248
+            ],
+            "generated_text": "HOÀNG HOA ĐỔ PHA",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.065,
+            "confidence": 80.41,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              393,
+              253,
+              2103,
+              267
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.459,
+            "confidence": 12.33,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              390,
+              322,
+              1887,
+              360
+            ],
+            "generated_text": "PHIEN AM:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.727,
+            "confidence": 99.63,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              1107,
+              395,
+              1374,
+              439
+            ],
+            "generated_text": "HO HA DA",
+            "n_lines": 1,
+            "tokens": 4,
+            "seconds": 0.592,
+            "confidence": 88.75,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              835,
+              527,
+              1613,
+              573
+            ],
+            "generated_text": "Bị thương (a) vi yếm Xích tinh Lưu,",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.509,
+            "confidence": 81.48,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              835,
+              612,
+              1647,
+              656
+            ],
+            "generated_text": "Lạc thủy linh nguyên xuất ki ngưu.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.22,
+            "confidence": 86.92,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              839,
+              694,
+              1628,
+              738
+            ],
+            "generated_text": "Chính phải dĩ phu hoàn hải vọng;",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.271,
+            "confidence": 86.1,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              836,
+              774,
+              1550,
+              820
+            ],
+            "generated_text": "Kiên băng hề giả thiện hà lưu?",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.253,
+            "confidence": 82.56,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              836,
+              857,
+              1658,
+              901
+            ],
+            "generated_text": "Để vương (b) chân mệnh đô thân thu;",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.485,
+            "confidence": 89.34,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              836,
+              938,
+              1629,
+              982
+            ],
+            "generated_text": "Hầu bá dung phu xướng quý mưu.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.286,
+            "confidence": 84.13,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              836,
+              1021,
+              1687,
+              1065
+            ],
+            "generated_text": "Hiểu sớm anh quân chuyên giảng sổ,",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.37,
+            "confidence": 82.04,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              841,
+              1102,
+              1698,
+              1146
+            ],
+            "generated_text": "Truyền nghi truyền tín khán sa châu.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.244,
+            "confidence": 93.34,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              391,
+              1216,
+              702,
+              1255
+            ],
+            "generated_text": "DICH NGHIA:",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.76,
+            "confidence": 98.81,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              1041,
+              1290,
+              1451,
+              1335
+            ],
+            "generated_text": "SÔNG HỒ ĐẠ (A)(1)",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.513,
+            "confidence": 86.18,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              745,
+              1422,
+              1953,
+              1468
+            ],
+            "generated_text": "Trời kia chưa chán ghét ho Lưu vốn giòng Xích Đế, (2)",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 1.852,
+            "confidence": 92.44,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              746,
+              1505,
+              1906,
+              1557
+            ],
+            "generated_text": "Nguồn thiêng sông Lạc, (3) sinh ra người cưỡi trâu. (4)",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 2.311,
+            "confidence": 92.41,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              378,
+              1587,
+              2027,
+              1641
+            ],
+            "generated_text": "Là giòng chính thống, (5) thỏa lòng thiên hạ trông ngóng;",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 2.119,
+            "confidence": 93.24,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              747,
+              1670,
+              2008,
+              1723
+            ],
+            "generated_text": "Băng đã đóng cứng, (6) cân chi nhỏ đến động sông nông?",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.805,
+            "confidence": 86.84,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              747,
+              1751,
+              2014,
+              1797
+            ],
+            "generated_text": "Mệnh chân chính đáng để vương, đều do thân trao cho;",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.618,
+            "confidence": 91.86,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              747,
+              1831,
+              1904,
+              1879
+            ],
+            "generated_text": "Kế tâm thường làm hầu bá, (7) mối đế xướng quỷ kế.",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 2.102,
+            "confidence": 80.31,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              745,
+              1915,
+              1896,
+              1961
+            ],
+            "generated_text": "Vua anh minh thích sấm ký, chuyên bàn vân số,",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.949,
+            "confidence": 88.37,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              747,
+              1999,
+              1705,
+              2050
+            ],
+            "generated_text": "Răng tin rằng ngờ, hãy xem bãi sông này!",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.643,
+            "confidence": 92.26,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              395,
+              2108,
+              615,
+              2147
+            ],
+            "generated_text": "KHAO DI:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.694,
+            "confidence": 92.94,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              543,
+              2183,
+              1257,
+              2225
+            ],
+            "generated_text": "a. Bản A.117c/1, A.1579: Thiên 夭.",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 1.925,
+            "confidence": 93.64,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              541,
+              2263,
+              1350,
+              2304
+            ],
+            "generated_text": "b. Bản A.1579: Sinh 生.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.359,
+            "confidence": 91.82,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              395,
+              2343,
+              731,
+              2382
+            ],
+            "generated_text": "NGUYEN CHU:",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.827,
+            "confidence": 87.27,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              545,
+              2421,
+              2098,
+              2470
+            ],
+            "generated_text": "A.Nước sông đục ngâu, bãi sông bùn nhão, lòng sông hẹp và rất cạn,",
+            "n_lines": 1,
+            "tokens": 33,
+            "seconds": 2.508,
+            "confidence": 94.61,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              395,
+              2502,
+              1241,
+              2544
+            ],
+            "generated_text": "người đi qua chỉ lối đến đầu gối mà thôi.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.376,
+            "confidence": 88.61,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              397,
+              2609,
+              684,
+              2648
+            ],
+            "generated_text": "CHU THICH:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.731,
+            "confidence": 96.83,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              548,
+              2683,
+              2100,
+              2734
+            ],
+            "generated_text": "1.Sông Hồ Đà: Một dòng sông lớn bắt nguồn từ phía động núi Đại Hỉ",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 2.328,
+            "confidence": 89.66,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 32,
+            "box": [
+              394,
+              2761,
+              2100,
+              2812
+            ],
+            "generated_text": "huyện Phồn Trĩ tỉnh Sơn Tây. Hán Quang Vũ đã từng bị quân Vương Lang đuổi",
+            "n_lines": 1,
+            "tokens": 32,
+            "seconds": 2.561,
+            "confidence": 94.42,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 33,
+            "box": [
+              398,
+              2852,
+              1450,
+              2882
+            ],
+            "generated_text": "danh phai vượt qua sông này.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.292,
+            "confidence": 89.33,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              875,
+              652,
+              1570,
+              663
+            ],
+            "ink": 371
+          },
+          {
+            "box": [
+              1110,
+              978,
+              1487,
+              991
+            ],
+            "ink": 467
+          },
+          {
+            "box": [
+              1182,
+              1062,
+              1682,
+              1073
+            ],
+            "ink": 393
+          },
+          {
+            "box": [
+              555,
+              1144,
+              1222,
+              1153
+            ],
+            "ink": 236
+          },
+          {
+            "box": [
+              1191,
+              1464,
+              1914,
+              1475
+            ],
+            "ink": 365
+          },
+          {
+            "box": [
+              1065,
+              1875,
+              1809,
+              1886
+            ],
+            "ink": 341
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

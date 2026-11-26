@@ -1,0 +1,771 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 618,
+  "runs": [
+    {
+      "key": "bb07e2d239f55f5a4dd11b18d70d0759f3ad8eff33f82caf012c8a224ceeb184",
+      "parameters": {
+        "image_sha256": "84dc10b977c13ac9ca9a7a0afa82cb2cd85dd8fbf6ff0667079ca67ceb88293d",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T18:41:48+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_618.png",
+      "image_size": [
+        2613,
+        3241
+      ],
+      "crop_box": [
+        0,
+        0,
+        2613,
+        3241
+      ],
+      "lines": [
+        {
+          "text": "ngothinhamle1.pdf",
+          "bbox": [
+            7,
+            19,
+            286,
+            45
+          ],
+          "confidence": 95.75
+        },
+        {
+          "text": "BANG GIAO HAO THOAI",
+          "bbox": [
+            1589,
+            196,
+            2108,
+            236
+          ],
+          "confidence": 99.65
+        },
+        {
+          "text": ".",
+          "bbox": [
+            394,
+            238,
+            2116,
+            253
+          ],
+          "confidence": 67.91
+        },
+        {
+          "text": "CHU THICH:",
+          "bbox": [
+            403,
+            305,
+            1769,
+            344
+          ],
+          "confidence": 99.65
+        },
+        {
+          "text": "1.Kim Ngưu: Tên một cái hồ ở phía tây tỉnh Triết Giang, Trung Quốc. Ở",
+          "bbox": [
+            555,
+            379,
+            2109,
+            430
+          ],
+          "confidence": 91.77
+        },
+        {
+          "text": "đây chỉ lòng nhân ái của vua Kiên Long.",
+          "bbox": [
+            403,
+            458,
+            1255,
+            501
+          ],
+          "confidence": 97.86
+        },
+        {
+          "text": "2.Hoà Tước: Chưa rõ diễn cổ. Không thấy có chủ hoà tước, chỉ có chủ",
+          "bbox": [
+            553,
+            535,
+            2109,
+            579
+          ],
+          "confidence": 91.27
+        },
+        {
+          "text": "khuốc hoá tước, là một vật công của vua Thuận Tông đời Đường. Thú chim ấy để",
+          "bbox": [
+            400,
+            614,
+            2108,
+            663
+          ],
+          "confidence": 88.34
+        },
+        {
+          "text": "vào lửa thì lửa phải tư tan.",
+          "bbox": [
+            400,
+            701,
+            974,
+            733
+          ],
+          "confidence": 84.32
+        },
+        {
+          "text": "3.Biên xa (xe Biên): Loại xe vua Nghiêu ban cho sú giả nước Việt để đi về,",
+          "bbox": [
+            553,
+            767,
+            2106,
+            813
+          ],
+          "confidence": 88.31
+        },
+        {
+          "text": "sau được dùng để chỉ xe sứ giả.",
+          "bbox": [
+            403,
+            848,
+            1027,
+            890
+          ],
+          "confidence": 93.44
+        },
+        {
+          "text": "4. Ho Trân: Chỉ Trân Bình đời Hán làm Hũu thừa tướng.",
+          "bbox": [
+            552,
+            925,
+            1740,
+            968
+          ],
+          "confidence": 90.64
+        },
+        {
+          "text": "49. 呈天朝經筵大臣董大人柬",
+          "bbox": [
+            433,
+            1097,
+            1872,
+            1174
+          ],
+          "confidence": 95.76
+        },
+        {
+          "text": "竊自：楓庭展覲，瞻晤德容；桂海言旋，久違清範。",
+          "bbox": [
+            559,
+            1309,
+            2045,
+            1376
+          ],
+          "confidence": 98.51
+        },
+        {
+          "text": "星凰在仰，懷想依依。",
+          "bbox": [
+            559,
+            1432,
+            1224,
+            1493
+          ],
+          "confidence": 99.8
+        },
+        {
+          "text": "昨委：陪价詣闕謝恩，附遞寸箋參候。",
+          "bbox": [
+            559,
+            1548,
+            1695,
+            1613
+          ],
+          "confidence": 98.07
+        },
+        {
+          "text": "辱荷台臺，不以傖荒賜隔；覆布好音，焜煌華藻",
+          "bbox": [
+            558,
+            1667,
+            2099,
+            1733
+          ],
+          "confidence": 99.61
+        },
+        {
+          "text": "諄勤備至，鄭重桃瓜之贈，酬答無階，展誦瑤函倍",
+          "bbox": [
+            554,
+            1921,
+            2105,
+            1986
+          ],
+          "confidence": 99.76
+        },
+        {
+          "text": "深忻感。",
+          "bbox": [
+            406,
+            2052,
+            649,
+            2104
+          ],
+          "confidence": 99.17
+        },
+        {
+          "text": "迺者，鄰國萬象國，構起兵端，小番：",
+          "bbox": [
+            292,
+            2178,
+            1669,
+            2241
+          ],
+          "confidence": 99.59
+        },
+        {
+          "text": "遙仗皇威，迄消邊患。",
+          "bbox": [
+            554,
+            2305,
+            1218,
+            2368
+          ],
+          "confidence": 96.34
+        },
+        {
+          "text": "今因獻捷，虔將尺素，候問起居。",
+          "bbox": [
+            553,
+            2430,
+            1578,
+            2494
+          ],
+          "confidence": 99.83
+        },
+        {
+          "text": "少抒延跋之忱，庶表往來之誼。",
+          "bbox": [
+            561,
+            2558,
+            1637,
+            2618
+          ],
+          "confidence": 98.82
+        },
+        {
+          "text": "廑祝：聖天子如山川日月，壽考萬年；尊大人爲耳",
+          "bbox": [
+            556,
+            2691,
+            2103,
+            2755
+          ],
+          "confidence": 97.05
+        },
+        {
+          "text": "目股肱，交孚一德。",
+          "bbox": [
+            417,
+            2828,
+            1002,
+            2887
+          ],
+          "confidence": 99.56
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2613,
+          3241
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 11.173,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              7,
+              19,
+              286,
+              45
+            ],
+            "generated_text": "ngothinhamle1.pdf",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.233,
+            "confidence": 95.75,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              1589,
+              196,
+              2108,
+              236
+            ],
+            "generated_text": "BANG GIAO HAO THOAI",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.249,
+            "confidence": 99.65,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              394,
+              238,
+              2116,
+              253
+            ],
+            "generated_text": ".",
+            "n_lines": 1,
+            "tokens": 2,
+            "seconds": 0.093,
+            "confidence": 67.91,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              403,
+              305,
+              1769,
+              344
+            ],
+            "generated_text": "CHU THICH:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.172,
+            "confidence": 99.65,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              555,
+              379,
+              2109,
+              430
+            ],
+            "generated_text": "1.Kim Ngưu: Tên một cái hồ ở phía tây tỉnh Triết Giang, Trung Quốc. Ở",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 0.69,
+            "confidence": 91.77,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              403,
+              458,
+              1255,
+              501
+            ],
+            "generated_text": "đây chỉ lòng nhân ái của vua Kiên Long.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.379,
+            "confidence": 97.86,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              553,
+              535,
+              2109,
+              579
+            ],
+            "generated_text": "2.Hoà Tước: Chưa rõ diễn cổ. Không thấy có chủ hoà tước, chỉ có chủ",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 0.659,
+            "confidence": 91.27,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              400,
+              614,
+              2108,
+              663
+            ],
+            "generated_text": "khuốc hoá tước, là một vật công của vua Thuận Tông đời Đường. Thú chim ấy để",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 0.674,
+            "confidence": 88.34,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              400,
+              701,
+              974,
+              733
+            ],
+            "generated_text": "vào lửa thì lửa phải tư tan.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 0.315,
+            "confidence": 84.32,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              553,
+              767,
+              2106,
+              813
+            ],
+            "generated_text": "3.Biên xa (xe Biên): Loại xe vua Nghiêu ban cho sú giả nước Việt để đi về,",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 0.649,
+            "confidence": 88.31,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              403,
+              848,
+              1027,
+              890
+            ],
+            "generated_text": "sau được dùng để chỉ xe sứ giả.",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.297,
+            "confidence": 93.44,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              552,
+              925,
+              1740,
+              968
+            ],
+            "generated_text": "4. Ho Trân: Chỉ Trân Bình đời Hán làm Hũu thừa tướng.",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.584,
+            "confidence": 90.64,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              433,
+              1097,
+              1872,
+              1174
+            ],
+            "generated_text": "49. 呈天朝經筵大臣董大人柬",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.422,
+            "confidence": 95.76,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              559,
+              1309,
+              2045,
+              1376
+            ],
+            "generated_text": "竊自：楓庭展覲，瞻晤德容；桂海言旋，久違清範。",
+            "n_lines": 1,
+            "tokens": 34,
+            "seconds": 0.752,
+            "confidence": 98.51,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              559,
+              1432,
+              1224,
+              1493
+            ],
+            "generated_text": "星凰在仰，懷想依依。",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.297,
+            "confidence": 99.8,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              559,
+              1548,
+              1695,
+              1613
+            ],
+            "generated_text": "昨委：陪价詣闕謝恩，附遞寸箋參候。",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.586,
+            "confidence": 98.07,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              558,
+              1667,
+              2099,
+              1733
+            ],
+            "generated_text": "辱荷台臺，不以傖荒賜隔；覆布好音，焜煌華藻",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.607,
+            "confidence": 99.61,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              554,
+              1921,
+              2105,
+              1986
+            ],
+            "generated_text": "諄勤備至，鄭重桃瓜之贈，酬答無階，展誦瑤函倍",
+            "n_lines": 1,
+            "tokens": 33,
+            "seconds": 0.743,
+            "confidence": 99.76,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              406,
+              2052,
+              649,
+              2104
+            ],
+            "generated_text": "深忻感。",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.19,
+            "confidence": 99.17,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              292,
+              2178,
+              1669,
+              2241
+            ],
+            "generated_text": "迺者，鄰國萬象國，構起兵端，小番：",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.505,
+            "confidence": 99.59,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              554,
+              2305,
+              1218,
+              2368
+            ],
+            "generated_text": "遙仗皇威，迄消邊患。",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 0.319,
+            "confidence": 96.34,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              553,
+              2430,
+              1578,
+              2494
+            ],
+            "generated_text": "今因獻捷，虔將尺素，候問起居。",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.463,
+            "confidence": 99.83,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              561,
+              2558,
+              1637,
+              2618
+            ],
+            "generated_text": "少抒延跋之忱，庶表往來之誼。",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.442,
+            "confidence": 98.82,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              556,
+              2691,
+              2103,
+              2755
+            ],
+            "generated_text": "廑祝：聖天子如山川日月，壽考萬年；尊大人爲耳",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.547,
+            "confidence": 97.05,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              417,
+              2828,
+              1002,
+              2887
+            ],
+            "generated_text": "目股肱，交孚一德。",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.301,
+            "confidence": 99.56,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              431,
+              693,
+              903,
+              704
+            ],
+            "ink": 378
+          },
+          {
+            "box": [
+              413,
+              1810,
+              588,
+              1825
+            ],
+            "ink": 595
+          },
+          {
+            "box": [
+              404,
+              1834,
+              1156,
+              1845
+            ],
+            "ink": 413
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "61cbea5c0055c260ccfc12f884e0febca7b2783b",
+        "git_describe": "61cbea5",
+        "git_dirty": true,
+        "gpu": "NVIDIA L4",
+        "dtype": "bfloat16",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

@@ -1,0 +1,1056 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 12,
+  "runs": [
+    {
+      "key": "1d066f84470e05b7d3a5d737be188a32987137b2e62be71315e71ce304f5cf1c",
+      "parameters": {
+        "image_sha256": "c21846f19220780e24fb84d2e97f1097f11130928636d20764a1ef022bcda2fc",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T11:16:36+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_012.png",
+      "image_size": [
+        2575,
+        3210
+      ],
+      "crop_box": [
+        0,
+        0,
+        2575,
+        3210
+      ],
+      "lines": [
+        {
+          "text": "ngothinhamle1.pdf",
+          "bbox": [
+            7,
+            19,
+            286,
+            45
+          ],
+          "confidence": 96.3
+        },
+        {
+          "text": "HOANG HOA ĐỔ PHA",
+          "bbox": [
+            1626,
+            219,
+            2086,
+            260
+          ],
+          "confidence": 84.2
+        },
+        {
+          "text": "1790, năm đầu tiên nhà Tây Sơn chính thức cử một phải bộ do Pham",
+          "bbox": [
+            395,
+            322,
+            2086,
+            368
+          ],
+          "confidence": 91.3
+        },
+        {
+          "text": "Công Trị đóng giả vua Quang Trung, Phan Huy Ich, trọng thân hàng",
+          "bbox": [
+            391,
+            399,
+            2085,
+            453
+          ],
+          "confidence": 95.8
+        },
+        {
+          "text": "văn, Ngô Văn Sở trọng thân hàng võ, sang nhà Thanh chức thọ vua Càn",
+          "bbox": [
+            371,
+            478,
+            2085,
+            530
+          ],
+          "confidence": 95.14
+        },
+        {
+          "text": "Long tròn 80 tuổi. Trong sự bộ còn có Nguyễn Đế, Vũ Huy Tấn, Đoàn",
+          "bbox": [
+            391,
+            555,
+            2085,
+            608
+          ],
+          "confidence": 87.1
+        },
+        {
+          "text": "Nguyễn Tuấn... gồm 150 người. Lần đi sử này thì thật “ung dung,” được",
+          "bbox": [
+            391,
+            634,
+            2086,
+            688
+          ],
+          "confidence": 89.31
+        },
+        {
+          "text": "nhà Thanh đón tiếp hết sức long trong. Sứ bộ đến Yên Kinh vào đầu",
+          "bbox": [
+            390,
+            713,
+            2086,
+            760
+          ],
+          "confidence": 97.07
+        },
+        {
+          "text": "tháng 7, đến cuối tháng 8 mới bắt đầu ra về. Như vậy, mới có cảnh thu ở",
+          "bbox": [
+            392,
+            792,
+            2088,
+            837
+          ],
+          "confidence": 95.15
+        },
+        {
+          "text": "Yên Đài để các nhà thơ của chúng ta, tức cảnh thành thọ, trổ tài xướng",
+          "bbox": [
+            390,
+            870,
+            2088,
+            916
+          ],
+          "confidence": 91.09
+        },
+        {
+          "text": "hoa! Nếu nói người thứ ba này là Ngô Thì Nhâm thì không có lý. Theo",
+          "bbox": [
+            390,
+            949,
+            2086,
+            995
+          ],
+          "confidence": 95.58
+        },
+        {
+          "text": "Hoàng Lê nhất thống chí, chính Ngô Thì Nhâm đề xuất và chủ trì việc",
+          "bbox": [
+            389,
+            1028,
+            2086,
+            1074
+          ],
+          "confidence": 93.44
+        },
+        {
+          "text": "cũ phái bộ giả Vương này, nhưng ông không sang Yên Kinh. Mãi đến",
+          "bbox": [
+            392,
+            1106,
+            2086,
+            1160
+          ],
+          "confidence": 93.24
+        },
+        {
+          "text": "năm 1793, Ngô Thì Nhâm mới lãnh chức Chánh sử sang nhà Thanh",
+          "bbox": [
+            393,
+            1186,
+            2087,
+            1231
+          ],
+          "confidence": 96.55
+        },
+        {
+          "text": "báo tang Quang Trung và câu phong cho Quang Toản. Vậy thì ai là tác",
+          "bbox": [
+            392,
+            1263,
+            2087,
+            1315
+          ],
+          "confidence": 96.24
+        },
+        {
+          "text": "giả của 30 bài thơ còn lại trong Yên Đài thu vinh đã trình bày ở trên?",
+          "bbox": [
+            395,
+            1340,
+            2087,
+            1385
+          ],
+          "confidence": 98.1
+        },
+        {
+          "text": "Chúng tôi đã tìm độc và so sánh với một số tác phẩm trong từng thư",
+          "bbox": [
+            395,
+            1418,
+            2088,
+            1462
+          ],
+          "confidence": 90.48
+        },
+        {
+          "text": "Ngô gia văn phái, Tinh sà kỷ hành (bản khác in) của Phan Huy Ích,",
+          "bbox": [
+            391,
+            1494,
+            2087,
+            1540
+          ],
+          "confidence": 94.59
+        },
+        {
+          "text": "Hoa nguyên tùy bộ cá Vô Huy Tân, Hoa trình tiêu khiến tấp của",
+          "bbox": [
+            391,
+            1571,
+            2087,
+            1618
+          ],
+          "confidence": 70.89
+        },
+        {
+          "text": "Nguyên Để... là những tập thể đi sứ sáng tác năm 1790 đều không",
+          "bbox": [
+            395,
+            1651,
+            2088,
+            1702
+          ],
+          "confidence": 86.87
+        },
+        {
+          "text": "thấy có điểm nào liên quan đến vấn đề nêu trên. Vây chỉ có thể nhân",
+          "bbox": [
+            395,
+            1728,
+            2087,
+            1774
+          ],
+          "confidence": 96.22
+        },
+        {
+          "text": "định rằng, Ngô Thì Nhâm không có tập Yên Đài thu vinh.",
+          "bbox": [
+            397,
+            1807,
+            1769,
+            1852
+          ],
+          "confidence": 95.36
+        },
+        {
+          "text": "Hai bản Tinh sà ký hành (A.404) và Yên Đài thu vinh (A.1597) chỉ",
+          "bbox": [
+            545,
+            1898,
+            2088,
+            1944
+          ],
+          "confidence": 95.39
+        },
+        {
+          "text": "được coi là hai dị bản của Hoa trình gia án (túc Hoàng hoa đô phả) và",
+          "bbox": [
+            397,
+            1976,
+            2088,
+            2023
+          ],
+          "confidence": 92.11
+        },
+        {
+          "text": "Tinh sà ký hành, vì nó có chép thơ của hai tập này.",
+          "bbox": [
+            396,
+            2055,
+            1562,
+            2099
+          ],
+          "confidence": 91.75
+        },
+        {
+          "text": "Lại xét trong những dị bản vừa nêu trên, dị bản nào có vẽ bản",
+          "bbox": [
+            546,
+            2146,
+            2087,
+            2192
+          ],
+          "confidence": 89.72
+        },
+        {
+          "text": "đô, kèm với thơ vinh, có tên Hoàng hoa đô phả, tên tập thơ phù hợp với",
+          "bbox": [
+            399,
+            2222,
+            2090,
+            2269
+          ],
+          "confidence": 92.04
+        },
+        {
+          "text": "nội dung, thì đây mới chính là tên tập thơ do tác giả đặt. Khi tập thơ",
+          "bbox": [
+            396,
+            2300,
+            2090,
+            2351
+          ],
+          "confidence": 96.35
+        },
+        {
+          "text": "được người khác sao chép đã tuy tiện và cũng đưa vào nội dung mà đặt",
+          "bbox": [
+            398,
+            2379,
+            2089,
+            2428
+          ],
+          "confidence": 92.73
+        },
+        {
+          "text": "cho cái tên khác như: Hoa trình thi phú sao (vì trong tập có cả thơ và",
+          "bbox": [
+            397,
+            2454,
+            2088,
+            2502
+          ],
+          "confidence": 97.15
+        },
+        {
+          "text": "phú), hay Hoa trình thi họa (vì tập thơ có cả thơ và về cảnh đường đi",
+          "bbox": [
+            396,
+            2531,
+            2089,
+            2581
+          ],
+          "confidence": 91.76
+        },
+        {
+          "text": "sứ). Còn khi tập thơ được tập hợp trong từng thư Ngô gia văn phải thì",
+          "bbox": [
+            398,
+            2610,
+            2087,
+            2662
+          ],
+          "confidence": 87.96
+        },
+        {
+          "text": "có tên Hoa trình gia ấn nhụ đã nêu trên.",
+          "bbox": [
+            397,
+            2688,
+            1368,
+            2732
+          ],
+          "confidence": 90.62
+        },
+        {
+          "text": "Số thọ chép trong 7 dị bản (trừ 1 dị bản hiện chỉ còn Micopilm) của",
+          "bbox": [
+            546,
+            2775,
+            2087,
+            2824
+          ],
+          "confidence": 95.03
+        },
+        {
+          "text": "tạp Hoàng hoa do pha như sau:",
+          "bbox": [
+            400,
+            2862,
+            1121,
+            2893
+          ],
+          "confidence": 89.71
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2575,
+          3210
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 71.352,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              7,
+              19,
+              286,
+              45
+            ],
+            "generated_text": "ngothinhamle1.pdf",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.904,
+            "confidence": 96.3,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              1626,
+              219,
+              2086,
+              260
+            ],
+            "generated_text": "HOANG HOA ĐỔ PHA",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.998,
+            "confidence": 84.2,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              393,
+              264,
+              2091,
+              279
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.458,
+            "confidence": 65.38,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              395,
+              322,
+              2086,
+              368
+            ],
+            "generated_text": "1790, năm đầu tiên nhà Tây Sơn chính thức cử một phải bộ do Pham",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.995,
+            "confidence": 91.3,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              391,
+              399,
+              2085,
+              453
+            ],
+            "generated_text": "Công Trị đóng giả vua Quang Trung, Phan Huy Ich, trọng thân hàng",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 2.063,
+            "confidence": 95.8,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              371,
+              478,
+              2085,
+              530
+            ],
+            "generated_text": "văn, Ngô Văn Sở trọng thân hàng võ, sang nhà Thanh chức thọ vua Càn",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.276,
+            "confidence": 95.14,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              391,
+              555,
+              2085,
+              608
+            ],
+            "generated_text": "Long tròn 80 tuổi. Trong sự bộ còn có Nguyễn Đế, Vũ Huy Tấn, Đoàn",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 2.424,
+            "confidence": 87.1,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              391,
+              634,
+              2086,
+              688
+            ],
+            "generated_text": "Nguyễn Tuấn... gồm 150 người. Lần đi sử này thì thật “ung dung,” được",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 2.426,
+            "confidence": 89.31,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              390,
+              713,
+              2086,
+              760
+            ],
+            "generated_text": "nhà Thanh đón tiếp hết sức long trong. Sứ bộ đến Yên Kinh vào đầu",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 2.068,
+            "confidence": 97.07,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              392,
+              792,
+              2088,
+              837
+            ],
+            "generated_text": "tháng 7, đến cuối tháng 8 mới bắt đầu ra về. Như vậy, mới có cảnh thu ở",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.294,
+            "confidence": 95.15,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              390,
+              870,
+              2088,
+              916
+            ],
+            "generated_text": "Yên Đài để các nhà thơ của chúng ta, tức cảnh thành thọ, trổ tài xướng",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 2.21,
+            "confidence": 91.09,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              390,
+              949,
+              2086,
+              995
+            ],
+            "generated_text": "hoa! Nếu nói người thứ ba này là Ngô Thì Nhâm thì không có lý. Theo",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 2.009,
+            "confidence": 95.58,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              389,
+              1028,
+              2086,
+              1074
+            ],
+            "generated_text": "Hoàng Lê nhất thống chí, chính Ngô Thì Nhâm đề xuất và chủ trì việc",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 2.064,
+            "confidence": 93.44,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              392,
+              1106,
+              2086,
+              1160
+            ],
+            "generated_text": "cũ phái bộ giả Vương này, nhưng ông không sang Yên Kinh. Mãi đến",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.997,
+            "confidence": 93.24,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              393,
+              1186,
+              2087,
+              1231
+            ],
+            "generated_text": "năm 1793, Ngô Thì Nhâm mới lãnh chức Chánh sử sang nhà Thanh",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 2.219,
+            "confidence": 96.55,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              392,
+              1263,
+              2087,
+              1315
+            ],
+            "generated_text": "báo tang Quang Trung và câu phong cho Quang Toản. Vậy thì ai là tác",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.996,
+            "confidence": 96.24,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              395,
+              1340,
+              2087,
+              1385
+            ],
+            "generated_text": "giả của 30 bài thơ còn lại trong Yên Đài thu vinh đã trình bày ở trên?",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 2.206,
+            "confidence": 98.1,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              395,
+              1418,
+              2088,
+              1462
+            ],
+            "generated_text": "Chúng tôi đã tìm độc và so sánh với một số tác phẩm trong từng thư",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.932,
+            "confidence": 90.48,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              391,
+              1494,
+              2087,
+              1540
+            ],
+            "generated_text": "Ngô gia văn phái, Tinh sà kỷ hành (bản khác in) của Phan Huy Ích,",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 2.422,
+            "confidence": 94.59,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              391,
+              1571,
+              2087,
+              1618
+            ],
+            "generated_text": "Hoa nguyên tùy bộ cá Vô Huy Tân, Hoa trình tiêu khiến tấp của",
+            "n_lines": 1,
+            "tokens": 35,
+            "seconds": 2.781,
+            "confidence": 70.89,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              395,
+              1651,
+              2088,
+              1702
+            ],
+            "generated_text": "Nguyên Để... là những tập thể đi sứ sáng tác năm 1790 đều không",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 2.074,
+            "confidence": 86.87,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              395,
+              1728,
+              2087,
+              1774
+            ],
+            "generated_text": "thấy có điểm nào liên quan đến vấn đề nêu trên. Vây chỉ có thể nhân",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.927,
+            "confidence": 96.22,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              397,
+              1807,
+              1769,
+              1852
+            ],
+            "generated_text": "định rằng, Ngô Thì Nhâm không có tập Yên Đài thu vinh.",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.772,
+            "confidence": 95.36,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              545,
+              1898,
+              2088,
+              1944
+            ],
+            "generated_text": "Hai bản Tinh sà ký hành (A.404) và Yên Đài thu vinh (A.1597) chỉ",
+            "n_lines": 1,
+            "tokens": 35,
+            "seconds": 2.652,
+            "confidence": 95.39,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              397,
+              1976,
+              2088,
+              2023
+            ],
+            "generated_text": "được coi là hai dị bản của Hoa trình gia án (túc Hoàng hoa đô phả) và",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 2.134,
+            "confidence": 92.11,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              396,
+              2055,
+              1562,
+              2099
+            ],
+            "generated_text": "Tinh sà ký hành, vì nó có chép thơ của hai tập này.",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.881,
+            "confidence": 91.75,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              546,
+              2146,
+              2087,
+              2192
+            ],
+            "generated_text": "Lại xét trong những dị bản vừa nêu trên, dị bản nào có vẽ bản",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.768,
+            "confidence": 89.72,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              399,
+              2222,
+              2090,
+              2269
+            ],
+            "generated_text": "đô, kèm với thơ vinh, có tên Hoàng hoa đô phả, tên tập thơ phù hợp với",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 2.433,
+            "confidence": 92.04,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              396,
+              2300,
+              2090,
+              2351
+            ],
+            "generated_text": "nội dung, thì đây mới chính là tên tập thơ do tác giả đặt. Khi tập thơ",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 2.139,
+            "confidence": 96.35,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              398,
+              2379,
+              2089,
+              2428
+            ],
+            "generated_text": "được người khác sao chép đã tuy tiện và cũng đưa vào nội dung mà đặt",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 2.0,
+            "confidence": 92.73,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              397,
+              2454,
+              2088,
+              2502
+            ],
+            "generated_text": "cho cái tên khác như: Hoa trình thi phú sao (vì trong tập có cả thơ và",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.93,
+            "confidence": 97.15,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 32,
+            "box": [
+              396,
+              2531,
+              2089,
+              2581
+            ],
+            "generated_text": "phú), hay Hoa trình thi họa (vì tập thơ có cả thơ và về cảnh đường đi",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 2.139,
+            "confidence": 91.76,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 33,
+            "box": [
+              398,
+              2610,
+              2087,
+              2662
+            ],
+            "generated_text": "sứ). Còn khi tập thơ được tập hợp trong từng thư Ngô gia văn phải thì",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 2.071,
+            "confidence": 87.96,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 34,
+            "box": [
+              397,
+              2688,
+              1368,
+              2732
+            ],
+            "generated_text": "có tên Hoa trình gia ấn nhụ đã nêu trên.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.464,
+            "confidence": 90.62,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 35,
+            "box": [
+              546,
+              2775,
+              2087,
+              2824
+            ],
+            "generated_text": "Số thọ chép trong 7 dị bản (trừ 1 dị bản hiện chỉ còn Micopilm) của",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 2.085,
+            "confidence": 95.03,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 36,
+            "box": [
+              400,
+              2862,
+              1121,
+              2893
+            ],
+            "generated_text": "tạp Hoàng hoa do pha như sau:",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.13,
+            "confidence": 89.71,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              431,
+              991,
+              1923,
+              1002
+            ],
+            "ink": 372
+          },
+          {
+            "box": [
+              528,
+              1460,
+              1982,
+              1470
+            ],
+            "ink": 314
+          },
+          {
+            "box": [
+              432,
+              1538,
+              2082,
+              1547
+            ],
+            "ink": 330
+          },
+          {
+            "box": [
+              427,
+              1848,
+              1684,
+              1859
+            ],
+            "ink": 415
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

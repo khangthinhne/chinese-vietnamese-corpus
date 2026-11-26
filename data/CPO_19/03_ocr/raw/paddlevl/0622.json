@@ -1,0 +1,969 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 622,
+  "runs": [
+    {
+      "key": "623025e53f18d2cd41696304f8de7e35eb3bd8a777d43e70e9bbe37d98c36bc2",
+      "parameters": {
+        "image_sha256": "8b6062627ced383f453dc29ce39b3b548949f2396570f1fd18a122a2c4a6f05b",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T18:42:43+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_622.png",
+      "image_size": [
+        2594,
+        3226
+      ],
+      "crop_box": [
+        0,
+        0,
+        2594,
+        3226
+      ],
+      "lines": [
+        {
+          "text": "ngothinhamle1.pdf",
+          "bbox": [
+            7,
+            19,
+            286,
+            45
+          ],
+          "confidence": 95.75
+        },
+        {
+          "text": "BANG GIAO HAO THOAI",
+          "bbox": [
+            1601,
+            190,
+            2122,
+            229
+          ],
+          "confidence": 99.55
+        },
+        {
+          "text": "Xuân phong hoà khí, viên bị hải ngung.",
+          "bbox": [
+            559,
+            298,
+            1959,
+            351
+          ],
+          "confidence": 95.82
+        },
+        {
+          "text": "Phàm quyết thân dân, tư động hoan khánh.",
+          "bbox": [
+            435,
+            384,
+            1570,
+            431
+          ],
+          "confidence": 94.95
+        },
+        {
+          "text": "Tạc giả, lân ấp Vạn Tượng cấu khởi binh đoan, tiểu phiên:",
+          "bbox": [
+            580,
+            470,
+            1928,
+            526
+          ],
+          "confidence": 88.91
+        },
+        {
+          "text": "Dao trương hoàng linh, hất tiêu biên hoan.",
+          "bbox": [
+            561,
+            560,
+            1546,
+            606
+          ],
+          "confidence": 94.19
+        },
+        {
+          "text": "Kim nhân hiện tiếp, kiến tương xích tố, hầu vấn khởi cư.",
+          "bbox": [
+            562,
+            647,
+            1835,
+            693
+          ],
+          "confidence": 84.22
+        },
+        {
+          "text": "Liêu thân lan chỉ chi hoài, quý pháp quỳnh dao chi báo.",
+          "bbox": [
+            562,
+            731,
+            1800,
+            786
+          ],
+          "confidence": 97.34
+        },
+        {
+          "text": "Cung tụng: Thân viên vĩnh huyền, cảnh diệu trường huy.",
+          "bbox": [
+            566,
+            816,
+            2108,
+            870
+          ],
+          "confidence": 91.2
+        },
+        {
+          "text": "Trùng thông tượng dịch ư đan trì, cấn hiệu Nam Sơn chi chức; tái",
+          "bbox": [
+            566,
+            903,
+            2121,
+            956
+          ],
+          "confidence": 88.49
+        },
+        {
+          "text": "áp hồng nghi ư tử các, nhĩ chiêm Bắc đấu chi quang.",
+          "bbox": [
+            416,
+            984,
+            1626,
+            1033
+          ],
+          "confidence": 86.56
+        },
+        {
+          "text": "DICH NGHIA:",
+          "bbox": [
+            416,
+            1101,
+            726,
+            1140
+          ],
+          "confidence": 98.59
+        },
+        {
+          "text": "THỦ TRÌNH GIA DUNG CONG PHÚC ĐẠI NHÂN",
+          "bbox": [
+            637,
+            1175,
+            1899,
+            1222
+          ],
+          "confidence": 88.21
+        },
+        {
+          "text": "TONG DOC LƯỢNG QUANG",
+          "bbox": [
+            902,
+            1265,
+            1842,
+            1310
+          ],
+          "confidence": 86.48
+        },
+        {
+          "text": "Tiếu phiên tử: Lần trước triều cận, ngửa đón ơn trời; bóng sáng nương",
+          "bbox": [
+            564,
+            1398,
+            2122,
+            1450
+          ],
+          "confidence": 90.13
+        },
+        {
+          "text": "nhọ, coi Nam vô trị.",
+          "bbox": [
+            414,
+            1493,
+            853,
+            1524
+          ],
+          "confidence": 76.32
+        },
+        {
+          "text": "Được Thánh thiên tử kiên khôn che chở; ban cho ăn hàu, không thể",
+          "bbox": [
+            564,
+            1562,
+            2120,
+            1610
+          ],
+          "confidence": 91.33
+        },
+        {
+          "text": "hình dung.",
+          "bbox": [
+            413,
+            1660,
+            1240,
+            1691
+          ],
+          "confidence": 93.06
+        },
+        {
+          "text": "Lại được Tôn đại nhân mọi lẽ chu toàn, nông hậu ăn tình, thực nên",
+          "bbox": [
+            562,
+            1729,
+            2116,
+            1780
+          ],
+          "confidence": 90.49
+        },
+        {
+          "text": "ghi nhớ.",
+          "bbox": [
+            413,
+            1824,
+            605,
+            1856
+          ],
+          "confidence": 88.29
+        },
+        {
+          "text": "Ngày trở về đến nước nhà, đã sai bối giới đến của ta ơn, kiêm đê",
+          "bbox": [
+            562,
+            1893,
+            2117,
+            1940
+          ],
+          "confidence": 88.18
+        },
+        {
+          "text": "phong thư thăm hoi.",
+          "bbox": [
+            409,
+            1989,
+            886,
+            2021
+          ],
+          "confidence": 78.85
+        },
+        {
+          "text": "Cúi vàng Đài ý, thỏa sức ân cân.",
+          "bbox": [
+            561,
+            2059,
+            1307,
+            2103
+          ],
+          "confidence": 84.4
+        },
+        {
+          "text": "Thơ gấm một hôm, phúc thêm đầy đặn.",
+          "bbox": [
+            559,
+            2141,
+            1460,
+            2186
+          ],
+          "confidence": 92.24
+        },
+        {
+          "text": "Xa vâng tin tốt, cảm đôi càng sâu.",
+          "bbox": [
+            557,
+            2228,
+            2147,
+            2272
+          ],
+          "confidence": 93.32
+        },
+        {
+          "text": "Và ngửa thấy: Kính cẩn càng cao, đạo Kiên nọ xoay vân thêm khoẻ;",
+          "bbox": [
+            557,
+            2314,
+            2113,
+            2366
+          ],
+          "confidence": 86.92
+        },
+        {
+          "text": "mọi điểm hoà thuận, lòng trời kia yêu mến không riêng.",
+          "bbox": [
+            408,
+            2401,
+            1694,
+            2446
+          ],
+          "confidence": 92.78
+        },
+        {
+          "text": "Gió xuân ấm áp, thôi khắp chân trời.",
+          "bbox": [
+            557,
+            2483,
+            1407,
+            2527
+          ],
+          "confidence": 87.62
+        },
+        {
+          "text": "Trong nước thân dân, thấy đều hoan hỉ.",
+          "bbox": [
+            555,
+            2569,
+            1473,
+            2614
+          ],
+          "confidence": 94.68
+        },
+        {
+          "text": "Mói đấy, nước láng giềng Vạn Tượng, reo hoạ binh đạo, tiểu phiên tôi:",
+          "bbox": [
+            554,
+            2657,
+            2204,
+            2710
+          ],
+          "confidence": 85.26
+        },
+        {
+          "text": "Xa cây Hoàng đế uy linh, đẹp trù ngoài biên hoạ nạn.",
+          "bbox": [
+            552,
+            2745,
+            2146,
+            2797
+          ],
+          "confidence": 91.78
+        },
+        {
+          "text": "Nay nhân dâng tin thắng trận, kính gửi bức thư, tỏ lời thăm hỏi.",
+          "bbox": [
+            417,
+            2833,
+            2043,
+            2885
+          ],
+          "confidence": 93.55
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2594,
+          3226
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 15.004,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              7,
+              19,
+              286,
+              45
+            ],
+            "generated_text": "ngothinhamle1.pdf",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.244,
+            "confidence": 95.75,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              1601,
+              190,
+              2122,
+              229
+            ],
+            "generated_text": "BANG GIAO HAO THOAI",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.263,
+            "confidence": 99.55,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              419,
+              232,
+              2129,
+              248
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.07,
+            "confidence": 56.47,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              559,
+              298,
+              1959,
+              351
+            ],
+            "generated_text": "Xuân phong hoà khí, viên bị hải ngung.",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.429,
+            "confidence": 95.82,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              435,
+              384,
+              1570,
+              431
+            ],
+            "generated_text": "Phàm quyết thân dân, tư động hoan khánh.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.406,
+            "confidence": 94.95,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              580,
+              470,
+              1928,
+              526
+            ],
+            "generated_text": "Tạc giả, lân ấp Vạn Tượng cấu khởi binh đoan, tiểu phiên:",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.62,
+            "confidence": 88.91,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              561,
+              560,
+              1546,
+              606
+            ],
+            "generated_text": "Dao trương hoàng linh, hất tiêu biên hoan.",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.432,
+            "confidence": 94.19,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              562,
+              647,
+              1835,
+              693
+            ],
+            "generated_text": "Kim nhân hiện tiếp, kiến tương xích tố, hầu vấn khởi cư.",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.551,
+            "confidence": 84.22,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              562,
+              731,
+              1800,
+              786
+            ],
+            "generated_text": "Liêu thân lan chỉ chi hoài, quý pháp quỳnh dao chi báo.",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.535,
+            "confidence": 97.34,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              566,
+              816,
+              2108,
+              870
+            ],
+            "generated_text": "Cung tụng: Thân viên vĩnh huyền, cảnh diệu trường huy.",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.556,
+            "confidence": 91.2,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              566,
+              903,
+              2121,
+              956
+            ],
+            "generated_text": "Trùng thông tượng dịch ư đan trì, cấn hiệu Nam Sơn chi chức; tái",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.596,
+            "confidence": 88.49,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              416,
+              984,
+              1626,
+              1033
+            ],
+            "generated_text": "áp hồng nghi ư tử các, nhĩ chiêm Bắc đấu chi quang.",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.526,
+            "confidence": 86.56,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              416,
+              1101,
+              726,
+              1140
+            ],
+            "generated_text": "DICH NGHIA:",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.19,
+            "confidence": 98.59,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              637,
+              1175,
+              1899,
+              1222
+            ],
+            "generated_text": "THỦ TRÌNH GIA DUNG CONG PHÚC ĐẠI NHÂN",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.572,
+            "confidence": 88.21,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              902,
+              1265,
+              1842,
+              1310
+            ],
+            "generated_text": "TONG DOC LƯỢNG QUANG",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.342,
+            "confidence": 86.48,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              564,
+              1398,
+              2122,
+              1450
+            ],
+            "generated_text": "Tiếu phiên tử: Lần trước triều cận, ngửa đón ơn trời; bóng sáng nương",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 0.654,
+            "confidence": 90.13,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              414,
+              1493,
+              853,
+              1524
+            ],
+            "generated_text": "nhọ, coi Nam vô trị.",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.274,
+            "confidence": 76.32,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              564,
+              1562,
+              2120,
+              1610
+            ],
+            "generated_text": "Được Thánh thiên tử kiên khôn che chở; ban cho ăn hàu, không thể",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.565,
+            "confidence": 91.33,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              413,
+              1660,
+              1240,
+              1691
+            ],
+            "generated_text": "hình dung.",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.169,
+            "confidence": 93.06,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              562,
+              1729,
+              2116,
+              1780
+            ],
+            "generated_text": "Lại được Tôn đại nhân mọi lẽ chu toàn, nông hậu ăn tình, thực nên",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.543,
+            "confidence": 90.49,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              413,
+              1824,
+              605,
+              1856
+            ],
+            "generated_text": "ghi nhớ.",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.168,
+            "confidence": 88.29,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              562,
+              1893,
+              2117,
+              1940
+            ],
+            "generated_text": "Ngày trở về đến nước nhà, đã sai bối giới đến của ta ơn, kiêm đê",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.553,
+            "confidence": 88.18,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              409,
+              1989,
+              886,
+              2021
+            ],
+            "generated_text": "phong thư thăm hoi.",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.258,
+            "confidence": 78.85,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              561,
+              2059,
+              1307,
+              2103
+            ],
+            "generated_text": "Cúi vàng Đài ý, thỏa sức ân cân.",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.468,
+            "confidence": 84.4,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              559,
+              2141,
+              1460,
+              2186
+            ],
+            "generated_text": "Thơ gấm một hôm, phúc thêm đầy đặn.",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.493,
+            "confidence": 92.24,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              557,
+              2228,
+              2147,
+              2272
+            ],
+            "generated_text": "Xa vâng tin tốt, cảm đôi càng sâu.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.406,
+            "confidence": 93.32,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              557,
+              2314,
+              2113,
+              2366
+            ],
+            "generated_text": "Và ngửa thấy: Kính cẩn càng cao, đạo Kiên nọ xoay vân thêm khoẻ;",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 0.696,
+            "confidence": 86.92,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              408,
+              2401,
+              1694,
+              2446
+            ],
+            "generated_text": "mọi điểm hoà thuận, lòng trời kia yêu mến không riêng.",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.489,
+            "confidence": 92.78,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              557,
+              2483,
+              1407,
+              2527
+            ],
+            "generated_text": "Gió xuân ấm áp, thôi khắp chân trời.",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.51,
+            "confidence": 87.62,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              555,
+              2569,
+              1473,
+              2614
+            ],
+            "generated_text": "Trong nước thân dân, thấy đều hoan hỉ.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.392,
+            "confidence": 94.68,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              554,
+              2657,
+              2204,
+              2710
+            ],
+            "generated_text": "Mói đấy, nước láng giềng Vạn Tượng, reo hoạ binh đạo, tiểu phiên tôi:",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 0.723,
+            "confidence": 85.26,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 32,
+            "box": [
+              552,
+              2745,
+              2146,
+              2797
+            ],
+            "generated_text": "Xa cây Hoàng đế uy linh, đẹp trù ngoài biên hoạ nạn.",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.578,
+            "confidence": 91.78,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 33,
+            "box": [
+              417,
+              2833,
+              2043,
+              2885
+            ],
+            "generated_text": "Nay nhân dâng tin thắng trận, kính gửi bức thư, tỏ lời thăm hỏi.",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 0.728,
+            "confidence": 93.55,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              440,
+              1031,
+              1608,
+              1041
+            ],
+            "ink": 374
+          },
+          {
+            "box": [
+              443,
+              1482,
+              838,
+              1494
+            ],
+            "ink": 504
+          },
+          {
+            "box": [
+              459,
+              2442,
+              1679,
+              2453
+            ],
+            "ink": 403
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "61cbea5c0055c260ccfc12f884e0febca7b2783b",
+        "git_describe": "61cbea5",
+        "git_dirty": true,
+        "gpu": "NVIDIA L4",
+        "dtype": "bfloat16",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

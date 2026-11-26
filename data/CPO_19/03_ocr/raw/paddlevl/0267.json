@@ -1,0 +1,971 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 267,
+  "runs": [
+    {
+      "key": "33a682edc54b8c13339a41d706a3ab3a75c6a8909594aed7dbe6e45ed10d3939",
+      "parameters": {
+        "image_sha256": "9d41137f43b023d1e677c49ca80b92666f7fcbb65ea9f8e76a365acce90608ca",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T14:13:54+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_267.png",
+      "image_size": [
+        2606,
+        3217
+      ],
+      "crop_box": [
+        0,
+        0,
+        2606,
+        3217
+      ],
+      "lines": [
+        {
+          "text": "ngothinhamle1.pdf",
+          "bbox": [
+            7,
+            19,
+            286,
+            45
+          ],
+          "confidence": 96.3
+        },
+        {
+          "text": "CAM DƯỜNG NHẦN THOAI",
+          "bbox": [
+            1591,
+            194,
+            2170,
+            234
+          ],
+          "confidence": 78.03
+        },
+        {
+          "text": "明時得路快鴻毛",
+          "bbox": [
+            1004,
+            292,
+            1994,
+            352
+          ],
+          "confidence": 98.28
+        },
+        {
+          "text": "柳閫分符屬譽髦",
+          "bbox": [
+            999,
+            402,
+            2138,
+            465
+          ],
+          "confidence": 97.5
+        },
+        {
+          "text": "聖德包涵嬴海闊",
+          "bbox": [
+            1002,
+            530,
+            1583,
+            591
+          ],
+          "confidence": 99.78
+        },
+        {
+          "text": "神州控制隘雲高",
+          "bbox": [
+            949,
+            653,
+            1583,
+            712
+          ],
+          "confidence": 98.84
+        },
+        {
+          "text": "承恩獲佐良翰召",
+          "bbox": [
+            878,
+            769,
+            1581,
+            832
+          ],
+          "confidence": 99.97
+        },
+        {
+          "text": "報效宜師淑問臬",
+          "bbox": [
+            999,
+            881,
+            1587,
+            940
+          ],
+          "confidence": 92.73
+        },
+        {
+          "text": "咫尺威顏恒畏謹",
+          "bbox": [
+            571,
+            992,
+            1588,
+            1052
+          ],
+          "confidence": 96.19
+        },
+        {
+          "text": "清華拾价紫金袍",
+          "bbox": [
+            1001,
+            1110,
+            1590,
+            1169
+          ],
+          "confidence": 99.23
+        },
+        {
+          "text": "PHIEN AM:",
+          "bbox": [
+            468,
+            1280,
+            724,
+            1318
+          ],
+          "confidence": 96.95
+        },
+        {
+          "text": "TONG HINH BO HUU THI LANG CU CHÂU HÀU THU QUANG",
+          "bbox": [
+            626,
+            1362,
+            2163,
+            1408
+          ],
+          "confidence": 80.6
+        },
+        {
+          "text": "NAM HIỆP TRẦN CHI MÊNH (TIỆN NGỮ)",
+          "bbox": [
+            823,
+            1444,
+            1812,
+            1489
+          ],
+          "confidence": 81.93
+        },
+        {
+          "text": "Quảng Nam Trần triệu Thắng Hoa lộ đã, dĩ An phủ lĩnh chi. Hồng",
+          "bbox": [
+            615,
+            1572,
+            2173,
+            1620
+          ],
+          "confidence": 91.56
+        },
+        {
+          "text": "Đức gian thắng tuyên, vi Quảng Nam thừa tuyên. Sơ dĩ Hiến sát đại An",
+          "bbox": [
+            465,
+            1651,
+            2169,
+            1704
+          ],
+          "confidence": 96.3
+        },
+        {
+          "text": "phủ sự chi nhâm. Tiên bối danh công hoan tích kỳ đia giả bất thiếu, mâu",
+          "bbox": [
+            467,
+            1728,
+            2170,
+            1774
+          ],
+          "confidence": 87.54
+        },
+        {
+          "text": "thanh mâu thực, trước tại sử biên. Phung kim thánh triều long hưng, đặc",
+          "bbox": [
+            467,
+            1806,
+            2172,
+            1853
+          ],
+          "confidence": 92.09
+        },
+        {
+          "text": "trọng bảo chương chi tuyến, Cử Châu quân Hà Bắc sĩ dã, phệ sĩ tức mông",
+          "bbox": [
+            467,
+            1885,
+            2172,
+            1939
+          ],
+          "confidence": 90.41
+        },
+        {
+          "text": "đặc giản. Do tiến cung liêu trac á khanh, xí chấp khuê chi liệt. Tuyên dĩ",
+          "bbox": [
+            467,
+            1964,
+            2186,
+            2009
+          ],
+          "confidence": 88.51
+        },
+        {
+          "text": "pháp tạo xuất Tham trấn vu, phi thường chi ngộ, hệ tích hãn văn.",
+          "bbox": [
+            467,
+            2042,
+            2211,
+            2088
+          ],
+          "confidence": 93.19
+        },
+        {
+          "text": "Dụ dữ Cụ Châu quân túc tích chi giao dã, tăng tri kỳ vi nhân hào",
+          "bbox": [
+            613,
+            2134,
+            2169,
+            2181
+          ],
+          "confidence": 90.18
+        },
+        {
+          "text": "mại, hữu kỳ khí. Trung gian khốn tâm hành lụt, đãi thương thương giả",
+          "bbox": [
+            468,
+            2211,
+            2169,
+            2265
+          ],
+          "confidence": 90.47
+        },
+        {
+          "text": "tương dì ngọc vu thành, cố hữu thủ kỳ cọ duyên kỳ tao ngộ. Phù! Sĩ khuất",
+          "bbox": [
+            466,
+            2290,
+            2170,
+            2344
+          ],
+          "confidence": 86.48
+        },
+        {
+          "text": "u bất tri kỷ nhi thân ư tri kỷ. Ký đặc kỳ sở thân chi lộ, đương tư sở dĩ đồ",
+          "bbox": [
+            468,
+            2368,
+            2173,
+            2420
+          ],
+          "confidence": 89.17
+        },
+        {
+          "text": "báo chi lộ chi như hà? Thanh cân thân tam châm, tưởng Cử Châu quân",
+          "bbox": [
+            466,
+            2446,
+            2167,
+            2492
+          ],
+          "confidence": 91.16
+        },
+        {
+          "text": "gia pháp giang quan trung lại, kha vô đại ử miên.",
+          "bbox": [
+            465,
+            2535,
+            1616,
+            2568
+          ],
+          "confidence": 81.81
+        },
+        {
+          "text": "Dich viết: Bất hạng kỳ đức hoặc thừa chi tu. Hàng chi vi ngôn",
+          "bbox": [
+            625,
+            2601,
+            2194,
+            2648
+          ],
+          "confidence": 90.13
+        },
+        {
+          "text": "thường dã. Có quân tử dĩ hàng vi quý. Cấu năng thủ hữu hàng chi hành,",
+          "bbox": [
+            466,
+            2678,
+            2194,
+            2731
+          ],
+          "confidence": 87.93
+        },
+        {
+          "text": "dĩ báo phi thường chi ân, tắc dư ư Cừ Châu quân dư hữu phân vinh đa",
+          "bbox": [
+            464,
+            2755,
+            2166,
+            2803
+          ],
+          "confidence": 82.09
+        },
+        {
+          "text": "hỹ. Nhi Cứ Châu quân ư tiên bối danh công, kỳ vi kế phương hoàng hỹ.",
+          "bbox": [
+            465,
+            2834,
+            2094,
+            2890
+          ],
+          "confidence": 83.41
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2606,
+          3217
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 56.39,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              7,
+              19,
+              286,
+              45
+            ],
+            "generated_text": "ngothinhamle1.pdf",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.892,
+            "confidence": 96.3,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              1591,
+              194,
+              2170,
+              234
+            ],
+            "generated_text": "CAM DƯỜNG NHẦN THOAI",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.407,
+            "confidence": 78.03,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              451,
+              235,
+              2189,
+              249
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.456,
+            "confidence": 45.61,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              1004,
+              292,
+              1994,
+              352
+            ],
+            "generated_text": "明時得路快鴻毛",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.969,
+            "confidence": 98.28,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              999,
+              402,
+              2138,
+              465
+            ],
+            "generated_text": "柳閫分符屬譽髦",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.321,
+            "confidence": 97.5,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              1002,
+              530,
+              1583,
+              591
+            ],
+            "generated_text": "聖德包涵嬴海闊",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.088,
+            "confidence": 99.78,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              949,
+              653,
+              1583,
+              712
+            ],
+            "generated_text": "神州控制隘雲高",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.889,
+            "confidence": 98.84,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              878,
+              769,
+              1581,
+              832
+            ],
+            "generated_text": "承恩獲佐良翰召",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.911,
+            "confidence": 99.97,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              999,
+              881,
+              1587,
+              940
+            ],
+            "generated_text": "報效宜師淑問臬",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.987,
+            "confidence": 92.73,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              571,
+              992,
+              1588,
+              1052
+            ],
+            "generated_text": "咫尺威顏恒畏謹",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.283,
+            "confidence": 96.19,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              1001,
+              1110,
+              1590,
+              1169
+            ],
+            "generated_text": "清華拾价紫金袍",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.85,
+            "confidence": 99.23,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              468,
+              1280,
+              724,
+              1318
+            ],
+            "generated_text": "PHIEN AM:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.714,
+            "confidence": 96.95,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              626,
+              1362,
+              2163,
+              1408
+            ],
+            "generated_text": "TONG HINH BO HUU THI LANG CU CHÂU HÀU THU QUANG",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.81,
+            "confidence": 80.6,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              823,
+              1444,
+              1812,
+              1489
+            ],
+            "generated_text": "NAM HIỆP TRẦN CHI MÊNH (TIỆN NGỮ)",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 2.376,
+            "confidence": 81.93,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              615,
+              1572,
+              2173,
+              1620
+            ],
+            "generated_text": "Quảng Nam Trần triệu Thắng Hoa lộ đã, dĩ An phủ lĩnh chi. Hồng",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 2.089,
+            "confidence": 91.56,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              465,
+              1651,
+              2169,
+              1704
+            ],
+            "generated_text": "Đức gian thắng tuyên, vi Quảng Nam thừa tuyên. Sơ dĩ Hiến sát đại An",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.286,
+            "confidence": 96.3,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              467,
+              1728,
+              2170,
+              1774
+            ],
+            "generated_text": "phủ sự chi nhâm. Tiên bối danh công hoan tích kỳ đia giả bất thiếu, mâu",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 2.437,
+            "confidence": 87.54,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              467,
+              1806,
+              2172,
+              1853
+            ],
+            "generated_text": "thanh mâu thực, trước tại sử biên. Phung kim thánh triều long hưng, đặc",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 2.14,
+            "confidence": 92.09,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              467,
+              1885,
+              2172,
+              1939
+            ],
+            "generated_text": "trọng bảo chương chi tuyến, Cử Châu quân Hà Bắc sĩ dã, phệ sĩ tức mông",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 2.509,
+            "confidence": 90.41,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              467,
+              1964,
+              2186,
+              2009
+            ],
+            "generated_text": "đặc giản. Do tiến cung liêu trac á khanh, xí chấp khuê chi liệt. Tuyên dĩ",
+            "n_lines": 1,
+            "tokens": 34,
+            "seconds": 2.711,
+            "confidence": 88.51,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              467,
+              2042,
+              2211,
+              2088
+            ],
+            "generated_text": "pháp tạo xuất Tham trấn vu, phi thường chi ngộ, hệ tích hãn văn.",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 2.111,
+            "confidence": 93.19,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              613,
+              2134,
+              2169,
+              2181
+            ],
+            "generated_text": "Dụ dữ Cụ Châu quân túc tích chi giao dã, tăng tri kỳ vi nhân hào",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 2.265,
+            "confidence": 90.18,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              468,
+              2211,
+              2169,
+              2265
+            ],
+            "generated_text": "mại, hữu kỳ khí. Trung gian khốn tâm hành lụt, đãi thương thương giả",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.28,
+            "confidence": 90.47,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              466,
+              2290,
+              2170,
+              2344
+            ],
+            "generated_text": "tương dì ngọc vu thành, cố hữu thủ kỳ cọ duyên kỳ tao ngộ. Phù! Sĩ khuất",
+            "n_lines": 1,
+            "tokens": 34,
+            "seconds": 2.714,
+            "confidence": 86.48,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              468,
+              2368,
+              2173,
+              2420
+            ],
+            "generated_text": "u bất tri kỷ nhi thân ư tri kỷ. Ký đặc kỳ sở thân chi lộ, đương tư sở dĩ đồ",
+            "n_lines": 1,
+            "tokens": 40,
+            "seconds": 3.14,
+            "confidence": 89.17,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              466,
+              2446,
+              2167,
+              2492
+            ],
+            "generated_text": "báo chi lộ chi như hà? Thanh cân thân tam châm, tưởng Cử Châu quân",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 2.349,
+            "confidence": 91.16,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              465,
+              2535,
+              1616,
+              2568
+            ],
+            "generated_text": "gia pháp giang quan trung lại, kha vô đại ử miên.",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.729,
+            "confidence": 81.81,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              625,
+              2601,
+              2194,
+              2648
+            ],
+            "generated_text": "Dich viết: Bất hạng kỳ đức hoặc thừa chi tu. Hàng chi vi ngôn",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 2.05,
+            "confidence": 90.13,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              466,
+              2678,
+              2194,
+              2731
+            ],
+            "generated_text": "thường dã. Có quân tử dĩ hàng vi quý. Cấu năng thủ hữu hàng chi hành,",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 2.368,
+            "confidence": 87.93,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              464,
+              2755,
+              2166,
+              2803
+            ],
+            "generated_text": "dĩ báo phi thường chi ân, tắc dư ư Cừ Châu quân dư hữu phân vinh đa",
+            "n_lines": 1,
+            "tokens": 34,
+            "seconds": 2.706,
+            "confidence": 82.09,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              465,
+              2834,
+              2094,
+              2890
+            ],
+            "generated_text": "hỹ. Nhi Cứ Châu quân ư tiên bối danh công, kỳ vi kế phương hoàng hỹ.",
+            "n_lines": 1,
+            "tokens": 33,
+            "seconds": 2.547,
+            "confidence": 83.41,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              678,
+              1354,
+              2079,
+              1364
+            ],
+            "ink": 484
+          },
+          {
+            "box": [
+              635,
+              1616,
+              2166,
+              1625
+            ],
+            "ink": 403
+          },
+          {
+            "box": [
+              462,
+              1771,
+              2125,
+              1782
+            ],
+            "ink": 397
+          },
+          {
+            "box": [
+              671,
+              1850,
+              2132,
+              1859
+            ],
+            "ink": 395
+          },
+          {
+            "box": [
+              502,
+              2007,
+              2037,
+              2017
+            ],
+            "ink": 349
+          },
+          {
+            "box": [
+              464,
+              2085,
+              1653,
+              2095
+            ],
+            "ink": 405
+          },
+          {
+            "box": [
+              500,
+              2523,
+              1577,
+              2539
+            ],
+            "ink": 940
+          },
+          {
+            "box": [
+              462,
+              2565,
+              2406,
+              2576
+            ],
+            "ink": 534
+          },
+          {
+            "box": [
+              1080,
+              3120,
+              1526,
+              3130
+            ],
+            "ink": 210
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

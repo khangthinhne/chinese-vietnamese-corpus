@@ -1,0 +1,979 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 25,
+  "runs": [
+    {
+      "key": "7a85f12d9c4bfa4d2b4b87d5e30e7bfb9e6c095d80fd6d20f4391cea6b8f8834",
+      "parameters": {
+        "image_sha256": "046e7e0ef4e06b11d3f01d8e9e753def610dfdd47f5a793b676ab4a7a6c118fa",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T11:24:25+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_025.png",
+      "image_size": [
+        2582,
+        3208
+      ],
+      "crop_box": [
+        0,
+        0,
+        2582,
+        3208
+      ],
+      "lines": [
+        {
+          "text": "ngothinhamch1.pdf",
+          "bbox": [
+            7,
+            19,
+            296,
+            45
+          ],
+          "confidence": 98.71
+        },
+        {
+          "text": "NGŨ THI NHAM TOAN TAP - TAP III",
+          "bbox": [
+            384,
+            191,
+            1156,
+            230
+          ],
+          "confidence": 74.37
+        },
+        {
+          "text": "Thủy xa chuyên trực lôi huyện ngạn;",
+          "bbox": [
+            832,
+            300,
+            1673,
+            345
+          ],
+          "confidence": 86.41
+        },
+        {
+          "text": "Hoà hiệu tiêu đài tuyệt măn đường.",
+          "bbox": [
+            829,
+            389,
+            1646,
+            434
+          ],
+          "confidence": 82.55
+        },
+        {
+          "text": "Khuốc thuyết(a) hàng thành thành thâm su,",
+          "bbox": [
+            829,
+            477,
+            1822,
+            522
+          ],
+          "confidence": 87.59
+        },
+        {
+          "text": "Linh nhân thiên tại ma Nghi Dương.",
+          "bbox": [
+            829,
+            563,
+            1680,
+            609
+          ],
+          "confidence": 89.86
+        },
+        {
+          "text": "DICH NGHIA:",
+          "bbox": [
+            384,
+            694,
+            693,
+            732
+          ],
+          "confidence": 99.08
+        },
+        {
+          "text": "THÀNH THU HÀNG\\(^{(1)}\\)",
+          "bbox": [
+            580,
+            790,
+            1550,
+            835
+          ],
+          "confidence": 92.23
+        },
+        {
+          "text": "Đường vào Bằng Tường đi qua mac phủ, (2)",
+          "bbox": [
+            361,
+            929,
+            1729,
+            975
+          ],
+          "confidence": 88.05
+        },
+        {
+          "text": "Thành Thu Hàng xưa thuộc cương giới cũ.",
+          "bbox": [
+            766,
+            1018,
+            1736,
+            1062
+          ],
+          "confidence": 94.77
+        },
+        {
+          "text": "Núi hết núi Lang Sơn, sưới khe hơi ít;",
+          "bbox": [
+            767,
+            1104,
+            1636,
+            1149
+          ],
+          "confidence": 87.77
+        },
+        {
+          "text": "Đá giống đá Ha Thach, đăm đường dài hơn. (A)",
+          "bbox": [
+            766,
+            1190,
+            1812,
+            1236
+          ],
+          "confidence": 89.69
+        },
+        {
+          "text": "Sám đôi bên bỏ, guồng nước xoay trực; (B)",
+          "bbox": [
+            768,
+            1279,
+            1691,
+            1323
+          ],
+          "confidence": 86.93
+        },
+        {
+          "text": "Tuyết rơi đầy lối, lửa hiệu nêu trên đài.",
+          "bbox": [
+            767,
+            1365,
+            1718,
+            1411
+          ],
+          "confidence": 87.47
+        },
+        {
+          "text": "Nói tôi “hàng thành,” thành ra chuyên,",
+          "bbox": [
+            768,
+            1454,
+            1668,
+            1499
+          ],
+          "confidence": 88.9
+        },
+        {
+          "text": "Khiến người ngàn thuở rủa Nghi Dương. (D) (3)",
+          "bbox": [
+            769,
+            1539,
+            1800,
+            1587
+          ],
+          "confidence": 90.94
+        },
+        {
+          "text": "KHAO DI:",
+          "bbox": [
+            386,
+            1661,
+            607,
+            1700
+          ],
+          "confidence": 94.39
+        },
+        {
+          "text": "a. Bản A.117c/1: Đô thuyết 都說.",
+          "bbox": [
+            534,
+            1729,
+            1428,
+            1775
+          ],
+          "confidence": 94.45
+        },
+        {
+          "text": "Bản A.404: Đô thống 都統",
+          "bbox": [
+            534,
+            1799,
+            1145,
+            1845
+          ],
+          "confidence": 91.84
+        },
+        {
+          "text": "NGUYÊN CHU:",
+          "bbox": [
+            387,
+            1912,
+            722,
+            1951
+          ],
+          "confidence": 85.86
+        },
+        {
+          "text": "A.Phía nam châu Ha Thach đến trấn Nam Quan là ranh giới nước Nam",
+          "bbox": [
+            536,
+            1998,
+            2093,
+            2042
+          ],
+          "confidence": 94.92
+        },
+        {
+          "text": "cũ, nay còn cốt đả làm mốc.",
+          "bbox": [
+            388,
+            2087,
+            966,
+            2125
+          ],
+          "confidence": 87.55
+        },
+        {
+          "text": "B. Bên đường có những chiếc guồng kéo nước, trên đường xe ngựa",
+          "bbox": [
+            538,
+            2172,
+            2092,
+            2222
+          ],
+          "confidence": 93.91
+        },
+        {
+          "text": "không ngót.",
+          "bbox": [
+            388,
+            2269,
+            1943,
+            2299
+          ],
+          "confidence": 91.25
+        },
+        {
+          "text": "C. Mỗi đường có ba ngọn lửa hiệu, trên nhọn dưới vương, trong rỗng, xây",
+          "bbox": [
+            540,
+            2337,
+            2094,
+            2387
+          ],
+          "confidence": 93.45
+        },
+        {
+          "text": "bằng gạch. Khi có báo động thì nhà khói làm hiệu, tro nguội trông như tuyết, gọi",
+          "bbox": [
+            387,
+            2419,
+            2096,
+            2469
+          ],
+          "confidence": 95.68
+        },
+        {
+          "text": "la hoa dài.",
+          "bbox": [
+            390,
+            2516,
+            613,
+            2544
+          ],
+          "confidence": 81.6
+        },
+        {
+          "text": "D.Tướng nhà Minh là Cữu Loan và Mao Bá Ôn đóng quân ở đây nói là",
+          "bbox": [
+            540,
+            2581,
+            2094,
+            2626
+          ],
+          "confidence": 90.43
+        },
+        {
+          "text": "đánh nhà Mạc. Mạc Đăng Dung ngậm ngọc bích đến hàng. Người Minh phong",
+          "bbox": [
+            392,
+            2664,
+            2095,
+            2713
+          ],
+          "confidence": 97.44
+        },
+        {
+          "text": "cho làm Đô thống sú ty Đô thống, Đăng Dung bèn hiến ba châu: Niêm Nhai,",
+          "bbox": [
+            390,
+            2745,
+            2092,
+            2794
+          ],
+          "confidence": 92.31
+        },
+        {
+          "text": "Thương Thach, Ha Thach.",
+          "bbox": [
+            390,
+            2829,
+            948,
+            2872
+          ],
+          "confidence": 97.24
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2582,
+          3208
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 46.465,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              7,
+              19,
+              296,
+              45
+            ],
+            "generated_text": "ngothinhamch1.pdf",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.928,
+            "confidence": 98.71,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              384,
+              191,
+              1156,
+              230
+            ],
+            "generated_text": "NGŨ THI NHAM TOAN TAP - TAP III",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.319,
+            "confidence": 74.37,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              387,
+              235,
+              2097,
+              250
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.458,
+            "confidence": 66.3,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              832,
+              300,
+              1673,
+              345
+            ],
+            "generated_text": "Thủy xa chuyên trực lôi huyện ngạn;",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.371,
+            "confidence": 86.41,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              829,
+              389,
+              1646,
+              434
+            ],
+            "generated_text": "Hoà hiệu tiêu đài tuyệt măn đường.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.226,
+            "confidence": 82.55,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              829,
+              477,
+              1822,
+              522
+            ],
+            "generated_text": "Khuốc thuyết(a) hàng thành thành thâm su,",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.533,
+            "confidence": 87.59,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              829,
+              563,
+              1680,
+              609
+            ],
+            "generated_text": "Linh nhân thiên tại ma Nghi Dương.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.172,
+            "confidence": 89.86,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              384,
+              694,
+              693,
+              732
+            ],
+            "generated_text": "DICH NGHIA:",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.76,
+            "confidence": 99.08,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              580,
+              790,
+              1550,
+              835
+            ],
+            "generated_text": "THÀNH THU HÀNG\\(^{(1)}\\)",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.323,
+            "confidence": 92.23,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              361,
+              929,
+              1729,
+              975
+            ],
+            "generated_text": "Đường vào Bằng Tường đi qua mac phủ, (2)",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.378,
+            "confidence": 88.05,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              766,
+              1018,
+              1736,
+              1062
+            ],
+            "generated_text": "Thành Thu Hàng xưa thuộc cương giới cũ.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.393,
+            "confidence": 94.77,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              767,
+              1104,
+              1636,
+              1149
+            ],
+            "generated_text": "Núi hết núi Lang Sơn, sưới khe hơi ít;",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.769,
+            "confidence": 87.77,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              766,
+              1190,
+              1812,
+              1236
+            ],
+            "generated_text": "Đá giống đá Ha Thach, đăm đường dài hơn. (A)",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.854,
+            "confidence": 89.69,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              768,
+              1279,
+              1691,
+              1323
+            ],
+            "generated_text": "Sám đôi bên bỏ, guồng nước xoay trực; (B)",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.705,
+            "confidence": 86.93,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              767,
+              1365,
+              1718,
+              1411
+            ],
+            "generated_text": "Tuyết rơi đầy lối, lửa hiệu nêu trên đài.",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.762,
+            "confidence": 87.47,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              768,
+              1454,
+              1668,
+              1499
+            ],
+            "generated_text": "Nói tôi “hàng thành,” thành ra chuyên,",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.229,
+            "confidence": 88.9,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              769,
+              1539,
+              1800,
+              1587
+            ],
+            "generated_text": "Khiến người ngàn thuở rủa Nghi Dương. (D) (3)",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.886,
+            "confidence": 90.94,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              386,
+              1661,
+              607,
+              1700
+            ],
+            "generated_text": "KHAO DI:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.698,
+            "confidence": 94.39,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              534,
+              1729,
+              1428,
+              1775
+            ],
+            "generated_text": "a. Bản A.117c/1: Đô thuyết 都說.",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.742,
+            "confidence": 94.45,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              534,
+              1799,
+              1145,
+              1845
+            ],
+            "generated_text": "Bản A.404: Đô thống 都統",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.369,
+            "confidence": 91.84,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              387,
+              1912,
+              722,
+              1951
+            ],
+            "generated_text": "NGUYÊN CHU:",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.879,
+            "confidence": 85.86,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              536,
+              1998,
+              2093,
+              2042
+            ],
+            "generated_text": "A.Phía nam châu Ha Thach đến trấn Nam Quan là ranh giới nước Nam",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.809,
+            "confidence": 94.92,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              388,
+              2087,
+              966,
+              2125
+            ],
+            "generated_text": "cũ, nay còn cốt đả làm mốc.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.262,
+            "confidence": 87.55,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              538,
+              2172,
+              2092,
+              2222
+            ],
+            "generated_text": "B. Bên đường có những chiếc guồng kéo nước, trên đường xe ngựa",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.796,
+            "confidence": 93.91,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              388,
+              2269,
+              1943,
+              2299
+            ],
+            "generated_text": "không ngót.",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.715,
+            "confidence": 91.25,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              540,
+              2337,
+              2094,
+              2387
+            ],
+            "generated_text": "C. Mỗi đường có ba ngọn lửa hiệu, trên nhọn dưới vương, trong rỗng, xây",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 2.286,
+            "confidence": 93.45,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              387,
+              2419,
+              2096,
+              2469
+            ],
+            "generated_text": "bằng gạch. Khi có báo động thì nhà khói làm hiệu, tro nguội trông như tuyết, gọi",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 2.401,
+            "confidence": 95.68,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              390,
+              2516,
+              613,
+              2544
+            ],
+            "generated_text": "la hoa dài.",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.685,
+            "confidence": 81.6,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              540,
+              2581,
+              2094,
+              2626
+            ],
+            "generated_text": "D.Tướng nhà Minh là Cữu Loan và Mao Bá Ôn đóng quân ở đây nói là",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 2.084,
+            "confidence": 90.43,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              392,
+              2664,
+              2095,
+              2713
+            ],
+            "generated_text": "đánh nhà Mạc. Mạc Đăng Dung ngậm ngọc bích đến hàng. Người Minh phong",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.253,
+            "confidence": 97.44,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              390,
+              2745,
+              2092,
+              2794
+            ],
+            "generated_text": "cho làm Đô thống sú ty Đô thống, Đăng Dung bèn hiến ba châu: Niêm Nhai,",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 2.452,
+            "confidence": 92.31,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 32,
+            "box": [
+              390,
+              2829,
+              948,
+              2872
+            ],
+            "generated_text": "Thương Thach, Ha Thach.",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.964,
+            "confidence": 97.24,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              1191,
+              9,
+              1275,
+              18
+            ],
+            "ink": 55
+          },
+          {
+            "box": [
+              856,
+              343,
+              1666,
+              354
+            ],
+            "ink": 354
+          },
+          {
+            "box": [
+              892,
+              971,
+              1690,
+              983
+            ],
+            "ink": 460
+          },
+          {
+            "box": [
+              1007,
+              1060,
+              1597,
+              1070
+            ],
+            "ink": 286
+          },
+          {
+            "box": [
+              848,
+              1233,
+              1566,
+              1244
+            ],
+            "ink": 391
+          },
+          {
+            "box": [
+              919,
+              1320,
+              1646,
+              1330
+            ],
+            "ink": 342
+          },
+          {
+            "box": [
+              954,
+              1583,
+              1688,
+              1594
+            ],
+            "ink": 387
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

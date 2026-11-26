@@ -1,0 +1,231 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "qwen",
+  "page": 457,
+  "runs": [
+    {
+      "key": "679685f70106d6f8a3c411cab8aa06f357c3efe3f29db602894b0d2db5379de3",
+      "parameters": {
+        "image_sha256": "06002cc5d9a373e68b8e3f49240cc4369487afce0728d0ac7b51bec3c1958c86",
+        "engine": {
+          "name": "qwen",
+          "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "model_revision": "main",
+          "transformers_version": "4.57.6",
+          "torch_version": "2.5.1+cu121",
+          "cuda_version": "12.1",
+          "bitsandbytes_version": "0.50.2",
+          "quantization": {
+            "load_in_4bit": true,
+            "quant_type": "nf4",
+            "double_quant": true,
+            "compute_dtype": "float16"
+          },
+          "mode": "all",
+          "min_pixels": 50176,
+          "max_pixels": 802816,
+          "band_inches": 2.0,
+          "max_new_tokens": 768,
+          "repetition_penalty": 1.05,
+          "adapter_version": 3,
+          "prompt_version": 3,
+          "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74"
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T21:32:26+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_457.png",
+      "image_size": [
+        2774,
+        3388
+      ],
+      "crop_box": [
+        0,
+        0,
+        2774,
+        3388
+      ],
+      "lines": [
+        {
+          "text": "NGÔ THÌ NHÂN TOÀN TẬP - TẬP III",
+          "bbox": [
+            7,
+            13,
+            2375,
+            287
+          ],
+          "confidence": 93.58
+        },
+        {
+          "text": "容，即以八月二十八日，自乂安前往昇龍，恭迎敕書，並參謁大人，親陪雅範。不意病體新痊，不耐將息，勉",
+          "bbox": [
+            7,
+            287,
+            2375,
+            562
+          ],
+          "confidence": 93.58
+        },
+        {
+          "text": "僵運用，及行次又加感染比。至東城地頭，體甚委頓，不任與疾進道，無奈暫留，趁緊醫治。惟是恩封大禮，大人旌旌且至，小番抱恙未能如期受封。焦思呻吟，寔增惶恐，謹先遣親子光垂，帶領文武親臣，前",
+          "bbox": [
+            445,
+            610,
+            2276,
+            1093
+          ],
+          "confidence": 95.02
+        },
+        {
+          "text": "赴昇龍，同與該城弁兵，整飭儀仗旗幟，護衛龍亭，並候迎大人進就富良江公館亭驛。小番加意設法調理，速寥迅速，赶赴昇龍，兼程不出七八日，約於十月上弦左右且到。",
+          "bbox": [
+            446,
+            1154,
+            2239,
+            1627
+          ],
+          "confidence": 94.31
+        },
+        {
+          "text": "竊想，二十四日，宣封之期，諒蒙爵閣督部堂公奏明，大人遵照奉行，小番豈敢妄私更改。但微躯抱病，偶與行期相值，敢不據寔叩謁于台鑒之前，耑祈玉節暫停，香軒少住，容小番疾愈，即於參謁",
+          "bbox": [
+            452,
+            1713,
+            2158,
+            2169
+          ],
+          "confidence": 85.69
+        },
+        {
+          "text": "之后，另请蠲吉受封，告襄典礼，统祈台裁。至如稽延日期，有干慢命，小番兢懼良切，然而非意所及，事不由主。小番畏天事大，对越照临，惟大人鉴亮而周旋之，转禀爵阁督部堂公声明，小番中途敢病之由，与所请改日宣封之事，幸免于戾遁，观厥成寔，小番主臣之大愿也。斗奎在望，延跂为劳肃呈。",
+          "bbox": [
+            350,
+            2203,
+            2165,
+            3066
+          ],
+          "confidence": 86.69
+        }
+      ],
+      "raw": {
+        "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+        "model_revision": "main",
+        "mode": "all",
+        "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74",
+        "dpi": 300,
+        "image_size": [
+          2774,
+          3388
+        ],
+        "band_target_height": 600,
+        "bbox_granularity": "band_even_split",
+        "max_new_tokens": 768,
+        "max_pixels": 802816,
+        "inference_seconds": 30.712,
+        "bands": [
+          {
+            "band": 1,
+            "y0": 17,
+            "y1": 591,
+            "ink_box": [
+              7,
+              13,
+              2375,
+              562
+            ],
+            "generated_text": "NGÔ THÌ NHÂN TOÀN TẬP - TẬP III\n\n容，即以八月二十八日，自乂安前往昇龍，恭迎敕書，並參謁大人，親陪雅範。不意病體新痊，不耐將息，勉",
+            "n_lines": 2,
+            "tokens": 65,
+            "seconds": 4.571,
+            "confidence": 93.58,
+            "flags": []
+          },
+          {
+            "band": 2,
+            "y0": 591,
+            "y1": 1124,
+            "ink_box": [
+              445,
+              610,
+              2276,
+              1093
+            ],
+            "generated_text": "僵運用，及行次又加感染比。至東城地頭，體甚委頓，不任與疾進道，無奈暫留，趁緊醫治。惟是恩封大禮，大人旌旌且至，小番抱恙未能如期受封。焦思呻吟，寔增惶恐，謹先遣親子光垂，帶領文武親臣，前",
+            "n_lines": 1,
+            "tokens": 91,
+            "seconds": 6.192,
+            "confidence": 95.02,
+            "flags": []
+          },
+          {
+            "band": 3,
+            "y0": 1124,
+            "y1": 1670,
+            "ink_box": [
+              446,
+              1154,
+              2239,
+              1627
+            ],
+            "generated_text": "赴昇龍，同與該城弁兵，整飭儀仗旗幟，護衛龍亭，並候迎大人進就富良江公館亭驛。小番加意設法調理，速寥迅速，赶赴昇龍，兼程不出七八日，約於十月上弦左右且到。",
+            "n_lines": 1,
+            "tokens": 73,
+            "seconds": 5.029,
+            "confidence": 94.31,
+            "flags": []
+          },
+          {
+            "band": 4,
+            "y0": 1670,
+            "y1": 2193,
+            "ink_box": [
+              452,
+              1713,
+              2158,
+              2169
+            ],
+            "generated_text": "竊想，二十四日，宣封之期，諒蒙爵閣督部堂公奏明，大人遵照奉行，小番豈敢妄私更改。但微躯抱病，偶與行期相值，敢不據寔叩謁于台鑒之前，耑祈玉節暫停，香軒少住，容小番疾愈，即於參謁",
+            "n_lines": 1,
+            "tokens": 91,
+            "seconds": 6.233,
+            "confidence": 85.69,
+            "flags": []
+          },
+          {
+            "band": 5,
+            "y0": 2193,
+            "y1": 3062,
+            "ink_box": [
+              350,
+              2203,
+              2165,
+              3066
+            ],
+            "generated_text": "之后，另请蠲吉受封，告襄典礼，统祈台裁。至如稽延日期，有干慢命，小番兢懼良切，然而非意所及，事不由主。小番畏天事大，对越照临，惟大人鉴亮而周旋之，转禀爵阁督部堂公声明，小番中途敢病之由，与所请改日宣封之事，幸免于戾遁，观厥成寔，小番主臣之大愿也。斗奎在望，延跂为劳肃呈。",
+            "n_lines": 1,
+            "tokens": 129,
+            "seconds": 8.655,
+            "confidence": 86.69,
+            "flags": []
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "61cbea5c0055c260ccfc12f884e0febca7b2783b",
+        "git_describe": "61cbea5",
+        "git_dirty": true,
+        "gpu": "NVIDIA L4",
+        "dtype": "float16",
+        "adapter_version": 3
+      }
+    }
+  ]
+}

@@ -1,0 +1,1083 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 264,
+  "runs": [
+    {
+      "key": "9b325a776cc7100eb7f03b8b2bec40596ff0dacf47fd62bd65eb1ce2d90ebb1f",
+      "parameters": {
+        "image_sha256": "fd98598487d2d9f24af182a072fcdb9bcfa979633d6bba7ab0b26835d9f6e7be",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T14:11:49+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_264.png",
+      "image_size": [
+        2607,
+        3232
+      ],
+      "crop_box": [
+        0,
+        0,
+        2607,
+        3232
+      ],
+      "lines": [
+        {
+          "text": "ngothinhamch1.pdf",
+          "bbox": [
+            7,
+            19,
+            1166,
+            45
+          ],
+          "confidence": 97.74
+        },
+        {
+          "text": "NGŨ THI NHAM TOAN TAP - TAP III",
+          "bbox": [
+            457,
+            208,
+            1227,
+            246
+          ],
+          "confidence": 79.67
+        },
+        {
+          "text": "Nêu ra một vài nhân định trên đây, để thấy rõ nội dung cơ bản của",
+          "bbox": [
+            605,
+            309,
+            2161,
+            354
+          ],
+          "confidence": 93.09
+        },
+        {
+          "text": "tập Cấm đường nhàn thoai này.",
+          "bbox": [
+            458,
+            388,
+            1901,
+            432
+          ],
+          "confidence": 83.63
+        },
+        {
+          "text": "Cấm đường nhân thoại hiện còn 4 dị bản chép trong Tùng thư Ngô",
+          "bbox": [
+            605,
+            465,
+            2160,
+            519
+          ],
+          "confidence": 91.17
+        },
+        {
+          "text": "gia văn phái, lưu trữ tại Thư viện Viện Nghiên cứu Hán Nôm:",
+          "bbox": [
+            453,
+            543,
+            1888,
+            588
+          ],
+          "confidence": 94.84
+        },
+        {
+          "text": "1. Bản có ký hiệu VHv.16/3, khổ 27x15 cm, 82 tờ, tờ 16 dòng,",
+          "bbox": [
+            608,
+            622,
+            2158,
+            667
+          ],
+          "confidence": 96.67
+        },
+        {
+          "text": "dòng 23 chũ. Toàn văn chữ Hán chép chân phương trên giấy bản loại",
+          "bbox": [
+            459,
+            700,
+            2160,
+            746
+          ],
+          "confidence": 96.57
+        },
+        {
+          "text": "tốt. Sách có thể chép vào thời Tư Đức, vì những chủ \"Anh,\" \"Thì,\"",
+          "bbox": [
+            456,
+            778,
+            2159,
+            823
+          ],
+          "confidence": 92.31
+        },
+        {
+          "text": "“Hoa” đều được viết kiêng húy bớt nét. Toàn bộ tập sách chép 4 tập thơ",
+          "bbox": [
+            456,
+            856,
+            2162,
+            902
+          ],
+          "confidence": 95.81
+        },
+        {
+          "text": "của Ngô Thì Nhâm:",
+          "bbox": [
+            456,
+            935,
+            926,
+            979
+          ],
+          "confidence": 93.33
+        },
+        {
+          "text": "Tờ 1a: Bút hải từng đảm.",
+          "bbox": [
+            604,
+            1014,
+            1186,
+            1058
+          ],
+          "confidence": 91.89
+        },
+        {
+          "text": "Tờ 22a: Thuỷ vân nhân vinh.",
+          "bbox": [
+            603,
+            1093,
+            1274,
+            1137
+          ],
+          "confidence": 93.91
+        },
+        {
+          "text": "Tờ 39a: Ngọc đường xuân khiếu.",
+          "bbox": [
+            603,
+            1171,
+            1345,
+            1214
+          ],
+          "confidence": 96.22
+        },
+        {
+          "text": "Tờ 62a: Cám đường nhàn thoại.",
+          "bbox": [
+            604,
+            1248,
+            1332,
+            1292
+          ],
+          "confidence": 85.51
+        },
+        {
+          "text": "Tập Cấm đường nhân thoại chép 62 bài thơ. Bản này sao chép có",
+          "bbox": [
+            603,
+            1325,
+            2161,
+            1369
+          ],
+          "confidence": 92.68
+        },
+        {
+          "text": "hệ thống, đầy đủ rõ ràng, ít sai sót hơn so với những bản khác, nên dùng",
+          "bbox": [
+            456,
+            1401,
+            2161,
+            1453
+          ],
+          "confidence": 97.66
+        },
+        {
+          "text": "làm bản nền để đối chiếu, so sánh bổ sung cho những bản kia.",
+          "bbox": [
+            457,
+            1478,
+            1884,
+            1525
+          ],
+          "confidence": 94.82
+        },
+        {
+          "text": "2.Bản có ký hiệu VHv.1743/22, khổ 27x16 cm, gôm 84 tờ, tờ 16",
+          "bbox": [
+            605,
+            1556,
+            2159,
+            1602
+          ],
+          "confidence": 96.69
+        },
+        {
+          "text": "dòng, dòng 23 chũ, viết bằng bút lông, chữ viết chân phương, có đôi",
+          "bbox": [
+            459,
+            1635,
+            2160,
+            1688
+          ],
+          "confidence": 93.46
+        },
+        {
+          "text": "chỗ viết theo lối đá thảo, có chấm câu và khuyên bằng son đỏ, viết trên",
+          "bbox": [
+            457,
+            1713,
+            2158,
+            1761
+          ],
+          "confidence": 97.63
+        },
+        {
+          "text": "giấy bản loại tốt, đã úa vàng. Toàn bộ tập sách chép 4 tập thơ của Ngô",
+          "bbox": [
+            458,
+            1792,
+            2161,
+            1846
+          ],
+          "confidence": 99.28
+        },
+        {
+          "text": "Thi Nham:",
+          "bbox": [
+            459,
+            1887,
+            719,
+            1917
+          ],
+          "confidence": 92.69
+        },
+        {
+          "text": "Tờ 1a tập Bút hải từng đảm.",
+          "bbox": [
+            605,
+            1951,
+            1258,
+            1995
+          ],
+          "confidence": 90.92
+        },
+        {
+          "text": "Tờ 22a tập Thuỷ vân nhân vinh.",
+          "bbox": [
+            606,
+            2028,
+            1351,
+            2073
+          ],
+          "confidence": 90.43
+        },
+        {
+          "text": "Tờ 39b tập Ngọc đường xuân khiếu.",
+          "bbox": [
+            605,
+            2105,
+            1418,
+            2150
+          ],
+          "confidence": 95.37
+        },
+        {
+          "text": "Tờ 63a tập Cấm đường nhân thoại.",
+          "bbox": [
+            606,
+            2184,
+            1409,
+            2228
+          ],
+          "confidence": 91.01
+        },
+        {
+          "text": "Trước mỗi tập thơ đều ghi: Ngô gia văn phái. Tiến sỹ Thượng thư",
+          "bbox": [
+            606,
+            2262,
+            2163,
+            2316
+          ],
+          "confidence": 93.3
+        },
+        {
+          "text": "Hy Doan công di thao.",
+          "bbox": [
+            460,
+            2359,
+            973,
+            2392
+          ],
+          "confidence": 91.68
+        },
+        {
+          "text": "Tập Cấm đường nhân thoại này chép 62 bài thơ, số bài và thú tụ",
+          "bbox": [
+            607,
+            2426,
+            2163,
+            2472
+          ],
+          "confidence": 86.49
+        },
+        {
+          "text": "giữa các bài giống như bản nên VHv.16/3.",
+          "bbox": [
+            461,
+            2507,
+            1422,
+            2555
+          ],
+          "confidence": 95.88
+        },
+        {
+          "text": "3.Bản có ký hiệu VHv.1743/24, khổ 29.5x17cm, gôm 55 tờ, tờ 16",
+          "bbox": [
+            609,
+            2590,
+            2162,
+            2635
+          ],
+          "confidence": 97.11
+        },
+        {
+          "text": "dòng, dòng 24 chữ, viết theo lối đá thảo, có chấm câu và khuyên đỏ. Tờ",
+          "bbox": [
+            462,
+            2671,
+            2164,
+            2720
+          ],
+          "confidence": 96.74
+        },
+        {
+          "text": "đầu tập sách ghi: Tiến sỹ Thượng thư Hy Doãn công di thảo. Tập sách",
+          "bbox": [
+            463,
+            2754,
+            2163,
+            2807
+          ],
+          "confidence": 92.24
+        },
+        {
+          "text": "chép 3 tập thơ của Ngô Thì Nhâm:",
+          "bbox": [
+            462,
+            2838,
+            1252,
+            2885
+          ],
+          "confidence": 95.81
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2607,
+          3232
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 66.775,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              7,
+              19,
+              1166,
+              45
+            ],
+            "generated_text": "ngothinhamch1.pdf",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 1.011,
+            "confidence": 97.74,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              457,
+              208,
+              1227,
+              246
+            ],
+            "generated_text": "NGŨ THI NHAM TOAN TAP - TAP III",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.323,
+            "confidence": 79.67,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              440,
+              248,
+              2176,
+              261
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.464,
+            "confidence": 15.36,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              605,
+              309,
+              2161,
+              354
+            ],
+            "generated_text": "Nêu ra một vài nhân định trên đây, để thấy rõ nội dung cơ bản của",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.815,
+            "confidence": 93.09,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              458,
+              388,
+              1901,
+              432
+            ],
+            "generated_text": "tập Cấm đường nhàn thoai này.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.165,
+            "confidence": 83.63,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              605,
+              465,
+              2160,
+              519
+            ],
+            "generated_text": "Cấm đường nhân thoại hiện còn 4 dị bản chép trong Tùng thư Ngô",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.832,
+            "confidence": 91.17,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              453,
+              543,
+              1888,
+              588
+            ],
+            "generated_text": "gia văn phái, lưu trữ tại Thư viện Viện Nghiên cứu Hán Nôm:",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 2.244,
+            "confidence": 94.84,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              608,
+              622,
+              2158,
+              667
+            ],
+            "generated_text": "1. Bản có ký hiệu VHv.16/3, khổ 27x15 cm, 82 tờ, tờ 16 dòng,",
+            "n_lines": 1,
+            "tokens": 42,
+            "seconds": 3.15,
+            "confidence": 96.67,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              459,
+              700,
+              2160,
+              746
+            ],
+            "generated_text": "dòng 23 chũ. Toàn văn chữ Hán chép chân phương trên giấy bản loại",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.277,
+            "confidence": 96.57,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              456,
+              778,
+              2159,
+              823
+            ],
+            "generated_text": "tốt. Sách có thể chép vào thời Tư Đức, vì những chủ \"Anh,\" \"Thì,\"",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.268,
+            "confidence": 92.31,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              456,
+              856,
+              2162,
+              902
+            ],
+            "generated_text": "“Hoa” đều được viết kiêng húy bớt nét. Toàn bộ tập sách chép 4 tập thơ",
+            "n_lines": 1,
+            "tokens": 34,
+            "seconds": 2.687,
+            "confidence": 95.81,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              456,
+              935,
+              926,
+              979
+            ],
+            "generated_text": "của Ngô Thì Nhâm:",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.955,
+            "confidence": 93.33,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              604,
+              1014,
+              1186,
+              1058
+            ],
+            "generated_text": "Tờ 1a: Bút hải từng đảm.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.486,
+            "confidence": 91.89,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              603,
+              1093,
+              1274,
+              1137
+            ],
+            "generated_text": "Tờ 22a: Thuỷ vân nhân vinh.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.286,
+            "confidence": 93.91,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              603,
+              1171,
+              1345,
+              1214
+            ],
+            "generated_text": "Tờ 39a: Ngọc đường xuân khiếu.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.316,
+            "confidence": 96.22,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              604,
+              1248,
+              1332,
+              1292
+            ],
+            "generated_text": "Tờ 62a: Cám đường nhàn thoại.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.314,
+            "confidence": 85.51,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              603,
+              1325,
+              2161,
+              1369
+            ],
+            "generated_text": "Tập Cấm đường nhân thoại chép 62 bài thơ. Bản này sao chép có",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 2.016,
+            "confidence": 92.68,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              456,
+              1401,
+              2161,
+              1453
+            ],
+            "generated_text": "hệ thống, đầy đủ rõ ràng, ít sai sót hơn so với những bản khác, nên dùng",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 2.475,
+            "confidence": 97.66,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              457,
+              1478,
+              1884,
+              1525
+            ],
+            "generated_text": "làm bản nền để đối chiếu, so sánh bổ sung cho những bản kia.",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.725,
+            "confidence": 94.82,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              605,
+              1556,
+              2159,
+              1602
+            ],
+            "generated_text": "2.Bản có ký hiệu VHv.1743/22, khổ 27x16 cm, gôm 84 tờ, tờ 16",
+            "n_lines": 1,
+            "tokens": 45,
+            "seconds": 3.345,
+            "confidence": 96.69,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              459,
+              1635,
+              2160,
+              1688
+            ],
+            "generated_text": "dòng, dòng 23 chũ, viết bằng bút lông, chữ viết chân phương, có đôi",
+            "n_lines": 1,
+            "tokens": 32,
+            "seconds": 2.549,
+            "confidence": 93.46,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              457,
+              1713,
+              2158,
+              1761
+            ],
+            "generated_text": "chỗ viết theo lối đá thảo, có chấm câu và khuyên bằng son đỏ, viết trên",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 2.468,
+            "confidence": 97.63,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              458,
+              1792,
+              2161,
+              1846
+            ],
+            "generated_text": "giấy bản loại tốt, đã úa vàng. Toàn bộ tập sách chép 4 tập thơ của Ngô",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 2.389,
+            "confidence": 99.28,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              459,
+              1887,
+              719,
+              1917
+            ],
+            "generated_text": "Thi Nham:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.72,
+            "confidence": 92.69,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              605,
+              1951,
+              1258,
+              1995
+            ],
+            "generated_text": "Tờ 1a tập Bút hải từng đảm.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.527,
+            "confidence": 90.92,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              606,
+              2028,
+              1351,
+              2073
+            ],
+            "generated_text": "Tờ 22a tập Thuỷ vân nhân vinh.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.31,
+            "confidence": 90.43,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              605,
+              2105,
+              1418,
+              2150
+            ],
+            "generated_text": "Tờ 39b tập Ngọc đường xuân khiếu.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.339,
+            "confidence": 95.37,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              606,
+              2184,
+              1409,
+              2228
+            ],
+            "generated_text": "Tờ 63a tập Cấm đường nhân thoại.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.35,
+            "confidence": 91.01,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              606,
+              2262,
+              2163,
+              2316
+            ],
+            "generated_text": "Trước mỗi tập thơ đều ghi: Ngô gia văn phái. Tiến sỹ Thượng thư",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 2.227,
+            "confidence": 93.3,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              460,
+              2359,
+              973,
+              2392
+            ],
+            "generated_text": "Hy Doan công di thao.",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.906,
+            "confidence": 91.68,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              607,
+              2426,
+              2163,
+              2472
+            ],
+            "generated_text": "Tập Cấm đường nhân thoại này chép 62 bài thơ, số bài và thú tụ",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 2.079,
+            "confidence": 86.49,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 32,
+            "box": [
+              461,
+              2507,
+              1422,
+              2555
+            ],
+            "generated_text": "giữa các bài giống như bản nên VHv.16/3.",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.633,
+            "confidence": 95.88,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 33,
+            "box": [
+              609,
+              2590,
+              2162,
+              2635
+            ],
+            "generated_text": "3.Bản có ký hiệu VHv.1743/24, khổ 29.5x17cm, gôm 55 tờ, tờ 16",
+            "n_lines": 1,
+            "tokens": 47,
+            "seconds": 3.487,
+            "confidence": 97.11,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 34,
+            "box": [
+              462,
+              2671,
+              2164,
+              2720
+            ],
+            "generated_text": "dòng, dòng 24 chữ, viết theo lối đá thảo, có chấm câu và khuyên đỏ. Tờ",
+            "n_lines": 1,
+            "tokens": 37,
+            "seconds": 2.889,
+            "confidence": 96.74,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 35,
+            "box": [
+              463,
+              2754,
+              2163,
+              2807
+            ],
+            "generated_text": "đầu tập sách ghi: Tiến sỹ Thượng thư Hy Doãn công di thảo. Tập sách",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 2.402,
+            "confidence": 92.24,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 36,
+            "box": [
+              462,
+              2838,
+              1252,
+              2885
+            ],
+            "generated_text": "chép 3 tập thơ của Ngô Thì Nhâm:",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.338,
+            "confidence": 95.81,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              832,
+              351,
+              1898,
+              360
+            ],
+            "ink": 300
+          },
+          {
+            "box": [
+              453,
+              586,
+              1435,
+              596
+            ],
+            "ink": 348
+          },
+          {
+            "box": [
+              545,
+              742,
+              2132,
+              753
+            ],
+            "ink": 449
+          },
+          {
+            "box": [
+              781,
+              898,
+              2053,
+              909
+            ],
+            "ink": 390
+          },
+          {
+            "box": [
+              647,
+              1367,
+              2081,
+              1377
+            ],
+            "ink": 302
+          },
+          {
+            "box": [
+              459,
+              1874,
+              650,
+              1885
+            ],
+            "ink": 403
+          },
+          {
+            "box": [
+              460,
+              2348,
+              929,
+              2362
+            ],
+            "ink": 691
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

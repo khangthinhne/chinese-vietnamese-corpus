@@ -1,0 +1,944 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 189,
+  "runs": [
+    {
+      "key": "1c0b94eae337682c64475ed6e9037a8f7502a30f71e9ed43183d402561bf54e1",
+      "parameters": {
+        "image_sha256": "d3cfbb34da0256e60a4e8966b24caecb1055788565d2ecf9cd1b66329e9d5796",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T13:17:27+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_189.png",
+      "image_size": [
+        2663,
+        3281
+      ],
+      "crop_box": [
+        0,
+        0,
+        2663,
+        3281
+      ],
+      "lines": [
+        {
+          "text": "ngothinhamch1.pdf",
+          "bbox": [
+            7,
+            19,
+            1839,
+            45
+          ],
+          "confidence": 98.21
+        },
+        {
+          "text": "NGŮ THI NHAM TOAN TAP - TAP III",
+          "bbox": [
+            424,
+            233,
+            1198,
+            272
+          ],
+          "confidence": 74.18
+        },
+        {
+          "text": "Từng bước dây gấm vào dải “đê vàng;”",
+          "bbox": [
+            777,
+            338,
+            1656,
+            384
+          ],
+          "confidence": 81.63
+        },
+        {
+          "text": "Lai leo lên Chương Đài theo ngọc nũ. (3)",
+          "bbox": [
+            778,
+            420,
+            2363,
+            465
+          ],
+          "confidence": 89.69
+        },
+        {
+          "text": "Cuội ta chẳng phải là khách trộm lúc thư nhàn,",
+          "bbox": [
+            778,
+            502,
+            1879,
+            547
+          ],
+          "confidence": 84.1
+        },
+        {
+          "text": "Những đón được làn gió nhe, hứng thú lăm thay!",
+          "bbox": [
+            778,
+            584,
+            1906,
+            629
+          ],
+          "confidence": 83.65
+        },
+        {
+          "text": "CHU THICH:",
+          "bbox": [
+            426,
+            697,
+            714,
+            736
+          ],
+          "confidence": 97.61
+        },
+        {
+          "text": "1.Uyên Minh: Túc Đào Tiềm nhà thơ điện viên đời Tấn. Ông từ quan về ở",
+          "bbox": [
+            443,
+            771,
+            2136,
+            815
+          ],
+          "confidence": 89.38
+        },
+        {
+          "text": "Ần tại quê nhà, có trồng năm cây liễu và viết bài Ngũ Liễu tiên sinh truyền để",
+          "bbox": [
+            425,
+            849,
+            2135,
+            892
+          ],
+          "confidence": 90.83
+        },
+        {
+          "text": "nói chỉ hướng của mình.",
+          "bbox": [
+            423,
+            939,
+            934,
+            969
+          ],
+          "confidence": 92.7
+        },
+        {
+          "text": "2. Lục Châu: Tên người con gái đẹp, thiếp yêu của Thạch Sùng đời Tấn.",
+          "bbox": [
+            574,
+            1004,
+            2072,
+            1054
+          ],
+          "confidence": 95.37
+        },
+        {
+          "text": "3.Chương Đài: Tên một con đường ở kinh đô Trường An xưa. Đường Hàn",
+          "bbox": [
+            575,
+            1081,
+            2136,
+            1125
+          ],
+          "confidence": 95.86
+        },
+        {
+          "text": "Hoành lấy một người kĩ nữ ho Liễu ở con đường này. Hàn Hoành đi làm quan",
+          "bbox": [
+            424,
+            1159,
+            2136,
+            1204
+          ],
+          "confidence": 95.08
+        },
+        {
+          "text": "nơi xa, Liễu thị ở nhà bị tướng Phiên cướp mất, ba năm sau mới được tái hợp. Ô",
+          "bbox": [
+            424,
+            1238,
+            2134,
+            1287
+          ],
+          "confidence": 92.71
+        },
+        {
+          "text": "đây vì tà răng liễu, nên tác giả nhắc đến diễn cổ này.",
+          "bbox": [
+            426,
+            1316,
+            1540,
+            1360
+          ],
+          "confidence": 88.92
+        },
+        {
+          "text": "DICH THO:",
+          "bbox": [
+            427,
+            1431,
+            680,
+            1469
+          ],
+          "confidence": 97.34
+        },
+        {
+          "text": "Nghe nói Uyên Minh trông rằng liêu,",
+          "bbox": [
+            834,
+            1510,
+            1940,
+            1554
+          ],
+          "confidence": 87.24
+        },
+        {
+          "text": "Hàng hàng kết tóc Luc Châu xanh.",
+          "bbox": [
+            836,
+            1596,
+            1638,
+            1641
+          ],
+          "confidence": 99.44
+        },
+        {
+          "text": "Tưa trời rủ xuống, máy trùm đất;",
+          "bbox": [
+            840,
+            1684,
+            1608,
+            1728
+          ],
+          "confidence": 92.42
+        },
+        {
+          "text": "Như thế bên đường, lòng che quanh.",
+          "bbox": [
+            835,
+            1771,
+            1668,
+            1815
+          ],
+          "confidence": 94.95
+        },
+        {
+          "text": "Dây gấm đê vàng, từng bước chặt;",
+          "bbox": [
+            836,
+            1858,
+            1622,
+            1909
+          ],
+          "confidence": 90.01
+        },
+        {
+          "text": "Chương Đài ngọc nữ, bước theo nhanh.",
+          "bbox": [
+            840,
+            1943,
+            1731,
+            1987
+          ],
+          "confidence": 97.9
+        },
+        {
+          "text": "Cuội mình chăng phải thử nhân khách,",
+          "bbox": [
+            840,
+            2028,
+            2331,
+            2073
+          ],
+          "confidence": 67.25
+        },
+        {
+          "text": "Hùng thú xiết bao, chiếm gió thanh.",
+          "bbox": [
+            836,
+            2115,
+            1663,
+            2160
+          ],
+          "confidence": 93.15
+        },
+        {
+          "text": "Làm Giang",
+          "bbox": [
+            1864,
+            2219,
+            2135,
+            2250
+          ],
+          "confidence": 99.59
+        },
+        {
+          "text": "85 渦郾城愷兵武穆",
+          "bbox": [
+            826,
+            2347,
+            1710,
+            2401
+          ],
+          "confidence": 81.15
+        },
+        {
+          "text": "65.迎邮城您出武修",
+          "bbox": [
+            826,
+            2393,
+            1702,
+            2422
+          ],
+          "confidence": 51.72
+        },
+        {
+          "text": "将军此地奉金牌",
+          "bbox": [
+            959,
+            2565,
+            1585,
+            2626
+          ],
+          "confidence": 88.69
+        },
+        {
+          "text": "和局成時戰局灰",
+          "bbox": [
+            899,
+            2704,
+            1718,
+            2764
+          ],
+          "confidence": 99.09
+        },
+        {
+          "text": "奸賊自從讎國到",
+          "bbox": [
+            824,
+            2842,
+            1583,
+            2900
+          ],
+          "confidence": 99.8
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2663,
+          3281
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 44.326,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              7,
+              19,
+              1839,
+              45
+            ],
+            "generated_text": "ngothinhamch1.pdf",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.982,
+            "confidence": 98.21,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              424,
+              233,
+              1198,
+              272
+            ],
+            "generated_text": "NGŮ THI NHAM TOAN TAP - TAP III",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.32,
+            "confidence": 74.18,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              427,
+              277,
+              2141,
+              291
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.458,
+            "confidence": 25.8,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              777,
+              338,
+              1656,
+              384
+            ],
+            "generated_text": "Từng bước dây gấm vào dải “đê vàng;”",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.624,
+            "confidence": 81.63,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              778,
+              420,
+              2363,
+              465
+            ],
+            "generated_text": "Lai leo lên Chương Đài theo ngọc nũ. (3)",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.486,
+            "confidence": 89.69,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              778,
+              502,
+              1879,
+              547
+            ],
+            "generated_text": "Cuội ta chẳng phải là khách trộm lúc thư nhàn,",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.914,
+            "confidence": 84.1,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              778,
+              584,
+              1906,
+              629
+            ],
+            "generated_text": "Những đón được làn gió nhe, hứng thú lăm thay!",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.937,
+            "confidence": 83.65,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              426,
+              697,
+              714,
+              736
+            ],
+            "generated_text": "CHU THICH:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.727,
+            "confidence": 97.61,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              443,
+              771,
+              2136,
+              815
+            ],
+            "generated_text": "1.Uyên Minh: Túc Đào Tiềm nhà thơ điện viên đời Tấn. Ông từ quan về ở",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 2.481,
+            "confidence": 89.38,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              425,
+              849,
+              2135,
+              892
+            ],
+            "generated_text": "Ần tại quê nhà, có trồng năm cây liễu và viết bài Ngũ Liễu tiên sinh truyền để",
+            "n_lines": 1,
+            "tokens": 33,
+            "seconds": 2.63,
+            "confidence": 90.83,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              423,
+              939,
+              934,
+              969
+            ],
+            "generated_text": "nói chỉ hướng của mình.",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.911,
+            "confidence": 92.7,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              574,
+              1004,
+              2072,
+              1054
+            ],
+            "generated_text": "2. Lục Châu: Tên người con gái đẹp, thiếp yêu của Thạch Sùng đời Tấn.",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 2.272,
+            "confidence": 95.37,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              575,
+              1081,
+              2136,
+              1125
+            ],
+            "generated_text": "3.Chương Đài: Tên một con đường ở kinh đô Trường An xưa. Đường Hàn",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 2.09,
+            "confidence": 95.86,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              424,
+              1159,
+              2136,
+              1204
+            ],
+            "generated_text": "Hoành lấy một người kĩ nữ ho Liễu ở con đường này. Hàn Hoành đi làm quan",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 2.123,
+            "confidence": 95.08,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              424,
+              1238,
+              2134,
+              1287
+            ],
+            "generated_text": "nơi xa, Liễu thị ở nhà bị tướng Phiên cướp mất, ba năm sau mới được tái hợp. Ô",
+            "n_lines": 1,
+            "tokens": 32,
+            "seconds": 2.554,
+            "confidence": 92.71,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              426,
+              1316,
+              1540,
+              1360
+            ],
+            "generated_text": "đây vì tà răng liễu, nên tác giả nhắc đến diễn cổ này.",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.998,
+            "confidence": 88.92,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              427,
+              1431,
+              680,
+              1469
+            ],
+            "generated_text": "DICH THO:",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.662,
+            "confidence": 97.34,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              834,
+              1510,
+              1940,
+              1554
+            ],
+            "generated_text": "Nghe nói Uyên Minh trông rằng liêu,",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.357,
+            "confidence": 87.24,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              836,
+              1596,
+              1638,
+              1641
+            ],
+            "generated_text": "Hàng hàng kết tóc Luc Châu xanh.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.134,
+            "confidence": 99.44,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              840,
+              1684,
+              1608,
+              1728
+            ],
+            "generated_text": "Tưa trời rủ xuống, máy trùm đất;",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.38,
+            "confidence": 92.42,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              835,
+              1771,
+              1668,
+              1815
+            ],
+            "generated_text": "Như thế bên đường, lòng che quanh.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.219,
+            "confidence": 94.95,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              836,
+              1858,
+              1622,
+              1909
+            ],
+            "generated_text": "Dây gấm đê vàng, từng bước chặt;",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.472,
+            "confidence": 90.01,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              840,
+              1943,
+              1731,
+              1987
+            ],
+            "generated_text": "Chương Đài ngọc nữ, bước theo nhanh.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.366,
+            "confidence": 97.9,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              840,
+              2028,
+              2331,
+              2073
+            ],
+            "generated_text": "Cuội mình chăng phải thử nhân khách,",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.087,
+            "confidence": 67.25,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              836,
+              2115,
+              1663,
+              2160
+            ],
+            "generated_text": "Hùng thú xiết bao, chiếm gió thanh.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.421,
+            "confidence": 93.15,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              1864,
+              2219,
+              2135,
+              2250
+            ],
+            "generated_text": "Làm Giang",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.657,
+            "confidence": 99.59,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              826,
+              2347,
+              1710,
+              2401
+            ],
+            "generated_text": "85 渦郾城愷兵武穆",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.438,
+            "confidence": 81.15,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              826,
+              2393,
+              1702,
+              2422
+            ],
+            "generated_text": "65.迎邮城您出武修",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 1.05,
+            "confidence": 51.72,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              959,
+              2565,
+              1585,
+              2626
+            ],
+            "generated_text": "将军此地奉金牌",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.672,
+            "confidence": 88.69,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              899,
+              2704,
+              1718,
+              2764
+            ],
+            "generated_text": "和局成時戰局灰",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.826,
+            "confidence": 99.09,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              824,
+              2842,
+              1583,
+              2900
+            ],
+            "generated_text": "奸賊自從讎國到",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.074,
+            "confidence": 99.8,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              872,
+              380,
+              1633,
+              391
+            ],
+            "ink": 355
+          },
+          {
+            "box": [
+              911,
+              625,
+              1878,
+              636
+            ],
+            "ink": 391
+          },
+          {
+            "box": [
+              522,
+              888,
+              2032,
+              898
+            ],
+            "ink": 339
+          },
+          {
+            "box": [
+              754,
+              1121,
+              2023,
+              1131
+            ],
+            "ink": 333
+          },
+          {
+            "box": [
+              623,
+              1200,
+              2053,
+              1210
+            ],
+            "ink": 341
+          },
+          {
+            "box": [
+              874,
+              1551,
+              1568,
+              1561
+            ],
+            "ink": 339
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

@@ -1,0 +1,691 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 456,
+  "runs": [
+    {
+      "key": "1a6f30d704a7e33a9f2cddcc6d8f23d32cedb2fa6b69f396835167622aaebb91",
+      "parameters": {
+        "image_sha256": "d4d45f4cef2cdbf0753a04ce20f319bd8b51ac63c1c4a2a445dc714d782e2a41",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T16:42:13+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_456.png",
+      "image_size": [
+        2819,
+        3433
+      ],
+      "crop_box": [
+        0,
+        0,
+        2819,
+        3433
+      ],
+      "lines": [
+        {
+          "text": "ngothinhamle1.pdf",
+          "bbox": [
+            7,
+            19,
+            286,
+            45
+          ],
+          "confidence": 96.3
+        },
+        {
+          "text": "BANG GIAO HAO THOAI",
+          "bbox": [
+            1586,
+            286,
+            2106,
+            326
+          ],
+          "confidence": 99.41
+        },
+        {
+          "text": "15. 呈天朝敕使二位大人",
+          "bbox": [
+            771,
+            386,
+            1782,
+            458
+          ],
+          "confidence": 96.6
+        },
+        {
+          "text": "（具陳病由請緩宣封。國王書呈）",
+          "bbox": [
+            673,
+            489,
+            1841,
+            559
+          ],
+          "confidence": 96.64
+        },
+        {
+          "text": "小番越南一布衣也，家世寒賤，托跡山庄，遭時多",
+          "bbox": [
+            550,
+            692,
+            2100,
+            758
+          ],
+          "confidence": 97.08
+        },
+        {
+          "text": "故，乃自深山崛起。雖南海諸部推以爲長，然而明堂",
+          "bbox": [
+            398,
+            818,
+            2104,
+            881
+          ],
+          "confidence": 99.38
+        },
+        {
+          "text": "玉書猥賤，姓名蓋未預朝會同之列。一旦叩關投順，蒙",
+          "bbox": [
+            399,
+            943,
+            2103,
+            1008
+          ],
+          "confidence": 99.9
+        },
+        {
+          "text": "爵閣督部堂公奏明。仰大皇帝海涵春育，準予投誠資",
+          "bbox": [
+            402,
+            1067,
+            2107,
+            1132
+          ],
+          "confidence": 98.95
+        },
+        {
+          "text": "給敕書，恩賜珍珠手串，天恩高厚，啣感難名。重蒙聖",
+          "bbox": [
+            398,
+            1192,
+            2107,
+            1258
+          ],
+          "confidence": 99.89
+        },
+        {
+          "text": "德如天，俯念小番造邦伊始，必得仰仗天朝封號，方能",
+          "bbox": [
+            398,
+            1319,
+            2103,
+            1383
+          ],
+          "confidence": 99.76
+        },
+        {
+          "text": "鎮撫有民。不俟小番親自進京謝恩，即荷大皇帝榮賜",
+          "bbox": [
+            396,
+            1444,
+            2110,
+            1509
+          ],
+          "confidence": 99.81
+        },
+        {
+          "text": "封爵，並特放御製詩章，宸翰親書，聖文敷貴，用爲世世",
+          "bbox": [
+            398,
+            1569,
+            2105,
+            1635
+          ],
+          "confidence": 95.75
+        },
+        {
+          "text": "傳國之寶，誠交南上下三千年來未有之殊榮。",
+          "bbox": [
+            399,
+            1696,
+            1850,
+            1762
+          ],
+          "confidence": 99.46
+        },
+        {
+          "text": "小番才德涼薄，自揣何足以當此？聖世柔懷小邦，德",
+          "bbox": [
+            550,
+            1824,
+            2109,
+            1889
+          ],
+          "confidence": 99.62
+        },
+        {
+          "text": "同堯舜，光天至于海隅。爵閣督部堂公，道侔周召，澤被",
+          "bbox": [
+            404,
+            1957,
+            2108,
+            2022
+          ],
+          "confidence": 99.85
+        },
+        {
+          "text": "於南，故小番得遭逢至此。奉大人啣命進來，宣播皇",
+          "bbox": [
+            395,
+            2089,
+            2112,
+            2158
+          ],
+          "confidence": 99.72
+        },
+        {
+          "text": "仁，扇春風於南服，小番何階之報答？惟知踴躍歡喜，候",
+          "bbox": [
+            396,
+            2225,
+            2118,
+            2290
+          ],
+          "confidence": 99.0
+        },
+        {
+          "text": "明年祝釐展覲，叩首帝庭，鞠躬幕帥，庶少寫至誠于昭",
+          "bbox": [
+            401,
+            2357,
+            2101,
+            2422
+          ],
+          "confidence": 99.83
+        },
+        {
+          "text": "昭焉者，天鑒由衷，身其康彊。觀光之日，非遠而感",
+          "bbox": [
+            398,
+            2491,
+            2096,
+            2558
+          ],
+          "confidence": 96.82
+        },
+        {
+          "text": "恩之心可自。",
+          "bbox": [
+            397,
+            2641,
+            1934,
+            2686
+          ],
+          "confidence": 88.05
+        },
+        {
+          "text": "見今小番緣治邑于乂安地方，偶爲風霜所妒，傷寒",
+          "bbox": [
+            425,
+            2759,
+            2099,
+            2823
+          ],
+          "confidence": 99.5
+        },
+        {
+          "text": "似虐，醫理漸可。及聞有恩封之命，歡喜雀躍，莫可形",
+          "bbox": [
+            394,
+            2891,
+            2093,
+            2958
+          ],
+          "confidence": 99.94
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2819,
+          3433
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 41.813,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              7,
+              19,
+              286,
+              45
+            ],
+            "generated_text": "ngothinhamle1.pdf",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.897,
+            "confidence": 96.3,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              1586,
+              286,
+              2106,
+              326
+            ],
+            "generated_text": "BANG GIAO HAO THOAI",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.962,
+            "confidence": 99.41,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              399,
+              329,
+              2114,
+              343
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.455,
+            "confidence": 69.35,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              771,
+              386,
+              1782,
+              458
+            ],
+            "generated_text": "15. 呈天朝敕使二位大人",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.204,
+            "confidence": 96.6,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              673,
+              489,
+              1841,
+              559
+            ],
+            "generated_text": "（具陳病由請緩宣封。國王書呈）",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.571,
+            "confidence": 96.64,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              550,
+              692,
+              2100,
+              758
+            ],
+            "generated_text": "小番越南一布衣也，家世寒賤，托跡山庄，遭時多",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 1.883,
+            "confidence": 97.08,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              398,
+              818,
+              2104,
+              881
+            ],
+            "generated_text": "故，乃自深山崛起。雖南海諸部推以爲長，然而明堂",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.692,
+            "confidence": 99.38,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              399,
+              943,
+              2103,
+              1008
+            ],
+            "generated_text": "玉書猥賤，姓名蓋未預朝會同之列。一旦叩關投順，蒙",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 2.329,
+            "confidence": 99.9,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              402,
+              1067,
+              2107,
+              1132
+            ],
+            "generated_text": "爵閣督部堂公奏明。仰大皇帝海涵春育，準予投誠資",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 2.067,
+            "confidence": 98.95,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              398,
+              1192,
+              2107,
+              1258
+            ],
+            "generated_text": "給敕書，恩賜珍珠手串，天恩高厚，啣感難名。重蒙聖",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 2.247,
+            "confidence": 99.89,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              398,
+              1319,
+              2103,
+              1383
+            ],
+            "generated_text": "德如天，俯念小番造邦伊始，必得仰仗天朝封號，方能",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 1.936,
+            "confidence": 99.76,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              396,
+              1444,
+              2110,
+              1509
+            ],
+            "generated_text": "鎮撫有民。不俟小番親自進京謝恩，即荷大皇帝榮賜",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 2.33,
+            "confidence": 99.81,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              398,
+              1569,
+              2105,
+              1635
+            ],
+            "generated_text": "封爵，並特放御製詩章，宸翰親書，聖文敷貴，用爲世世",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 2.254,
+            "confidence": 95.75,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              399,
+              1696,
+              1850,
+              1762
+            ],
+            "generated_text": "傳國之寶，誠交南上下三千年來未有之殊榮。",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.73,
+            "confidence": 99.46,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              550,
+              1824,
+              2109,
+              1889
+            ],
+            "generated_text": "小番才德涼薄，自揣何足以當此？聖世柔懷小邦，德",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 2.023,
+            "confidence": 99.62,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              404,
+              1957,
+              2108,
+              2022
+            ],
+            "generated_text": "同堯舜，光天至于海隅。爵閣督部堂公，道侔周召，澤被",
+            "n_lines": 1,
+            "tokens": 35,
+            "seconds": 2.606,
+            "confidence": 99.85,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              395,
+              2089,
+              2112,
+              2158
+            ],
+            "generated_text": "於南，故小番得遭逢至此。奉大人啣命進來，宣播皇",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.827,
+            "confidence": 99.72,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              396,
+              2225,
+              2118,
+              2290
+            ],
+            "generated_text": "仁，扇春風於南服，小番何階之報答？惟知踴躍歡喜，候",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 2.274,
+            "confidence": 99.0,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              401,
+              2357,
+              2101,
+              2422
+            ],
+            "generated_text": "明年祝釐展覲，叩首帝庭，鞠躬幕帥，庶少寫至誠于昭",
+            "n_lines": 1,
+            "tokens": 34,
+            "seconds": 2.549,
+            "confidence": 99.83,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              398,
+              2491,
+              2096,
+              2558
+            ],
+            "generated_text": "昭焉者，天鑒由衷，身其康彊。觀光之日，非遠而感",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 2.058,
+            "confidence": 96.82,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              397,
+              2641,
+              1934,
+              2686
+            ],
+            "generated_text": "恩之心可自。",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.732,
+            "confidence": 88.05,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              425,
+              2759,
+              2099,
+              2823
+            ],
+            "generated_text": "見今小番緣治邑于乂安地方，偶爲風霜所妒，傷寒",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 1.999,
+            "confidence": 99.5,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              394,
+              2891,
+              2093,
+              2958
+            ],
+            "generated_text": "似虐，醫理漸可。及聞有恩封之命，歡喜雀躍，莫可形",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 2.184,
+            "confidence": 99.94,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              407,
+              2630,
+              758,
+              2645
+            ],
+            "ink": 678
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

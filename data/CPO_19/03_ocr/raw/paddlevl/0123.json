@@ -1,0 +1,979 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 123,
+  "runs": [
+    {
+      "key": "d4de71d86571fca00fa4acd78c4809d4fcb9d3c71f19fe0aa965425711654a24",
+      "parameters": {
+        "image_sha256": "208c51c4898ddbc13e4780db1f5d6c3a3c78069fc4abfe15f577cc945ed10605",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T12:28:39+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_123.png",
+      "image_size": [
+        2575,
+        3209
+      ],
+      "crop_box": [
+        0,
+        0,
+        2575,
+        3209
+      ],
+      "lines": [
+        {
+          "text": "ngothinhamch1.pdf",
+          "bbox": [
+            7,
+            19,
+            296,
+            45
+          ],
+          "confidence": 98.71
+        },
+        {
+          "text": "NGŮ THI NHAM TOAN TAP - TAP III",
+          "bbox": [
+            474,
+            205,
+            1245,
+            244
+          ],
+          "confidence": 69.72
+        },
+        {
+          "text": "PHIEN AM:",
+          "bbox": [
+            475,
+            326,
+            729,
+            365
+          ],
+          "confidence": 99.41
+        },
+        {
+          "text": "VAN TUNG SON",
+          "bbox": [
+            1120,
+            415,
+            1533,
+            460
+          ],
+          "confidence": 84.69
+        },
+        {
+          "text": "Sở, Việt cương loan thinh sản từng,",
+          "bbox": [
+            919,
+            549,
+            1731,
+            594
+          ],
+          "confidence": 86.85
+        },
+        {
+          "text": "Đinh đình giáp đạo lục âm nùng.",
+          "bbox": [
+            917,
+            632,
+            1688,
+            676
+          ],
+          "confidence": 81.37
+        },
+        {
+          "text": "Tham thiên lão cán phương điều đạt;",
+          "bbox": [
+            921,
+            713,
+            1778,
+            758
+          ],
+          "confidence": 86.96
+        },
+        {
+          "text": "Măn địa anh chi cánh uất thông.",
+          "bbox": [
+            919,
+            797,
+            1679,
+            840
+          ],
+          "confidence": 87.66
+        },
+        {
+          "text": "Tu bảo đoàn đoàn căn hữu hổ;",
+          "bbox": [
+            922,
+            879,
+            1992,
+            923
+          ],
+          "confidence": 92.28
+        },
+        {
+          "text": "Lăng sương cá cá giáp thành long.",
+          "bbox": [
+            918,
+            963,
+            1711,
+            1015
+          ],
+          "confidence": 96.03
+        },
+        {
+          "text": "Ai cứ đặc lập ngang nhiên cốt,",
+          "bbox": [
+            917,
+            1046,
+            1617,
+            1088
+          ],
+          "confidence": 87.92
+        },
+        {
+          "text": "Bất pha hàn uy tuê hữu động.",
+          "bbox": [
+            918,
+            1126,
+            1609,
+            1171
+          ],
+          "confidence": 84.6
+        },
+        {
+          "text": "DICH NGHIA:",
+          "bbox": [
+            474,
+            1232,
+            783,
+            1270
+          ],
+          "confidence": 99.06
+        },
+        {
+          "text": "NŨI VAN TỤNG (A)",
+          "bbox": [
+            1106,
+            1326,
+            1545,
+            1371
+          ],
+          "confidence": 80.41
+        },
+        {
+          "text": "Mọc nhiều thông, núi non vùng Sở, Việt,",
+          "bbox": [
+            773,
+            1463,
+            1702,
+            1515
+          ],
+          "confidence": 96.24
+        },
+        {
+          "text": "Toà bóng râm xanh mát, sừng sững bên đường.",
+          "bbox": [
+            773,
+            1545,
+            1857,
+            1598
+          ],
+          "confidence": 93.06
+        },
+        {
+          "text": "Ngất trời, cội gia còn đường vươn thắng;",
+          "bbox": [
+            775,
+            1628,
+            1696,
+            1681
+          ],
+          "confidence": 85.52
+        },
+        {
+          "text": "Róp đất, cành non đường độ sum suê.",
+          "bbox": [
+            456,
+            1710,
+            1634,
+            1756
+          ],
+          "confidence": 87.31
+        },
+        {
+          "text": "Vật vật cây quý hợp lại, gốc có hỗ phách;",
+          "bbox": [
+            775,
+            1791,
+            1706,
+            1846
+          ],
+          "confidence": 93.92
+        },
+        {
+          "text": "Cây cây trải tuyết sương, vỏ thành vẩy rộng.",
+          "bbox": [
+            777,
+            1875,
+            1798,
+            1928
+          ],
+          "confidence": 82.82
+        },
+        {
+          "text": "Yêu mến người bồi một mình hiện ngang đứng sừng,",
+          "bbox": [
+            775,
+            1958,
+            1986,
+            2010
+          ],
+          "confidence": 79.92
+        },
+        {
+          "text": "Chăng sợ gì rét dữ giữa mùa đông.",
+          "bbox": [
+            778,
+            2041,
+            1570,
+            2093
+          ],
+          "confidence": 87.74
+        },
+        {
+          "text": "NGUYÊN CHU:",
+          "bbox": [
+            478,
+            2137,
+            813,
+            2177
+          ],
+          "confidence": 92.95
+        },
+        {
+          "text": "A. Chỗ giáp giới Vĩnh Châu và Toàn Châu, ven rừng cây tùng cây bách mọc",
+          "bbox": [
+            464,
+            2214,
+            2184,
+            2266
+          ],
+          "confidence": 95.55
+        },
+        {
+          "text": "thành rừng, đường núi có biển đề “Vạn từng giáp đạo.”",
+          "bbox": [
+            478,
+            2297,
+            1588,
+            2349
+          ],
+          "confidence": 90.96
+        },
+        {
+          "text": "DICH THO:",
+          "bbox": [
+            480,
+            2418,
+            733,
+            2457
+          ],
+          "confidence": 96.67
+        },
+        {
+          "text": "Núi non Sở Việt mọc nhiều thông,",
+          "bbox": [
+            916,
+            2493,
+            1692,
+            2538
+          ],
+          "confidence": 95.69
+        },
+        {
+          "text": "Sùng sững bên đường bóng toả trong.",
+          "bbox": [
+            919,
+            2576,
+            1774,
+            2629
+          ],
+          "confidence": 83.73
+        },
+        {
+          "text": "Cây cối ngất trời vươn thắng vút;",
+          "bbox": [
+            921,
+            2659,
+            1681,
+            2703
+          ],
+          "confidence": 94.66
+        },
+        {
+          "text": "Cành non rợp đất, toả um tùm.",
+          "bbox": [
+            923,
+            2748,
+            1632,
+            2791
+          ],
+          "confidence": 94.6
+        },
+        {
+          "text": "Từng vùng từng vật, thân hổ phách;",
+          "bbox": [
+            923,
+            2837,
+            1755,
+            2891
+          ],
+          "confidence": 89.37
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2575,
+          3209
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 40.349,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              7,
+              19,
+              296,
+              45
+            ],
+            "generated_text": "ngothinhamch1.pdf",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.912,
+            "confidence": 98.71,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              474,
+              205,
+              1245,
+              244
+            ],
+            "generated_text": "NGŮ THI NHAM TOAN TAP - TAP III",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.313,
+            "confidence": 69.72,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              477,
+              250,
+              2187,
+              265
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.456,
+            "confidence": 72.25,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              475,
+              326,
+              729,
+              365
+            ],
+            "generated_text": "PHIEN AM:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.714,
+            "confidence": 99.41,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              1120,
+              415,
+              1533,
+              460
+            ],
+            "generated_text": "VAN TUNG SON",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.834,
+            "confidence": 84.69,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              919,
+              549,
+              1731,
+              594
+            ],
+            "generated_text": "Sở, Việt cương loan thinh sản từng,",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.215,
+            "confidence": 86.85,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              917,
+              632,
+              1688,
+              676
+            ],
+            "generated_text": "Đinh đình giáp đạo lục âm nùng.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.252,
+            "confidence": 81.37,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              921,
+              713,
+              1778,
+              758
+            ],
+            "generated_text": "Tham thiên lão cán phương điều đạt;",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.288,
+            "confidence": 86.96,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              919,
+              797,
+              1679,
+              840
+            ],
+            "generated_text": "Măn địa anh chi cánh uất thông.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.119,
+            "confidence": 87.66,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              922,
+              879,
+              1992,
+              923
+            ],
+            "generated_text": "Tu bảo đoàn đoàn căn hữu hổ;",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.484,
+            "confidence": 92.28,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              918,
+              963,
+              1711,
+              1015
+            ],
+            "generated_text": "Lăng sương cá cá giáp thành long.",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.084,
+            "confidence": 96.03,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              917,
+              1046,
+              1617,
+              1088
+            ],
+            "generated_text": "Ai cứ đặc lập ngang nhiên cốt,",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.187,
+            "confidence": 87.92,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              918,
+              1126,
+              1609,
+              1171
+            ],
+            "generated_text": "Bất pha hàn uy tuê hữu động.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.235,
+            "confidence": 84.6,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              474,
+              1232,
+              783,
+              1270
+            ],
+            "generated_text": "DICH NGHIA:",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.747,
+            "confidence": 99.06,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              1106,
+              1326,
+              1545,
+              1371
+            ],
+            "generated_text": "NŨI VAN TỤNG (A)",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.232,
+            "confidence": 80.41,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              773,
+              1463,
+              1702,
+              1515
+            ],
+            "generated_text": "Mọc nhiều thông, núi non vùng Sở, Việt,",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.361,
+            "confidence": 96.24,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              773,
+              1545,
+              1857,
+              1598
+            ],
+            "generated_text": "Toà bóng râm xanh mát, sừng sững bên đường.",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.691,
+            "confidence": 93.06,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              775,
+              1628,
+              1696,
+              1681
+            ],
+            "generated_text": "Ngất trời, cội gia còn đường vươn thắng;",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.43,
+            "confidence": 85.52,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              456,
+              1710,
+              1634,
+              1756
+            ],
+            "generated_text": "Róp đất, cành non đường độ sum suê.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.208,
+            "confidence": 87.31,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              775,
+              1791,
+              1706,
+              1846
+            ],
+            "generated_text": "Vật vật cây quý hợp lại, gốc có hỗ phách;",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.553,
+            "confidence": 93.92,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              777,
+              1875,
+              1798,
+              1928
+            ],
+            "generated_text": "Cây cây trải tuyết sương, vỏ thành vẩy rộng.",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.807,
+            "confidence": 82.82,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              775,
+              1958,
+              1986,
+              2010
+            ],
+            "generated_text": "Yêu mến người bồi một mình hiện ngang đứng sừng,",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.414,
+            "confidence": 79.92,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              778,
+              2041,
+              1570,
+              2093
+            ],
+            "generated_text": "Chăng sợ gì rét dữ giữa mùa đông.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.383,
+            "confidence": 87.74,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              478,
+              2137,
+              813,
+              2177
+            ],
+            "generated_text": "NGUYÊN CHU:",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.885,
+            "confidence": 92.95,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              464,
+              2214,
+              2184,
+              2266
+            ],
+            "generated_text": "A. Chỗ giáp giới Vĩnh Châu và Toàn Châu, ven rừng cây tùng cây bách mọc",
+            "n_lines": 1,
+            "tokens": 32,
+            "seconds": 2.563,
+            "confidence": 95.55,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              478,
+              2297,
+              1588,
+              2349
+            ],
+            "generated_text": "thành rừng, đường núi có biển đề “Vạn từng giáp đạo.”",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.987,
+            "confidence": 90.96,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              480,
+              2418,
+              733,
+              2457
+            ],
+            "generated_text": "DICH THO:",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.657,
+            "confidence": 96.67,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              916,
+              2493,
+              1692,
+              2538
+            ],
+            "generated_text": "Núi non Sở Việt mọc nhiều thông,",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.143,
+            "confidence": 95.69,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              919,
+              2576,
+              1774,
+              2629
+            ],
+            "generated_text": "Sùng sững bên đường bóng toả trong.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.166,
+            "confidence": 83.73,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              921,
+              2659,
+              1681,
+              2703
+            ],
+            "generated_text": "Cây cối ngất trời vươn thắng vút;",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.381,
+            "confidence": 94.66,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              923,
+              2748,
+              1632,
+              2791
+            ],
+            "generated_text": "Cành non rợp đất, toả um tùm.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.308,
+            "confidence": 94.6,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 32,
+            "box": [
+              923,
+              2837,
+              1755,
+              2891
+            ],
+            "generated_text": "Từng vùng từng vật, thân hổ phách;",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.336,
+            "confidence": 89.37,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              551,
+              199,
+              1148,
+              209
+            ],
+            "ink": 237
+          },
+          {
+            "box": [
+              975,
+              590,
+              1727,
+              602
+            ],
+            "ink": 342
+          },
+          {
+            "box": [
+              1170,
+              674,
+              1671,
+              684
+            ],
+            "ink": 235
+          },
+          {
+            "box": [
+              1087,
+              1085,
+              1610,
+              1097
+            ],
+            "ink": 325
+          },
+          {
+            "box": [
+              1015,
+              1169,
+              1591,
+              1178
+            ],
+            "ink": 209
+          },
+          {
+            "box": [
+              980,
+              2701,
+              1566,
+              2710
+            ],
+            "ink": 198
+          },
+          {
+            "box": [
+              470,
+              2987,
+              553,
+              2998
+            ],
+            "ink": 276
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

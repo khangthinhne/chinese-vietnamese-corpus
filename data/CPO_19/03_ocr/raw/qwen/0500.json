@@ -1,0 +1,251 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "qwen",
+  "page": 500,
+  "runs": [
+    {
+      "key": "5a03951afb07f51fb5b7add4bd18b73e52769aabb70435f15e06b0294366bf81",
+      "parameters": {
+        "image_sha256": "0c4198680247d2b6d309d7b768f4d0608a2c478c98364eb4a753ce179882f4d1",
+        "engine": {
+          "name": "qwen",
+          "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "model_revision": "main",
+          "transformers_version": "4.57.6",
+          "torch_version": "2.5.1+cu121",
+          "cuda_version": "12.1",
+          "bitsandbytes_version": "0.50.2",
+          "quantization": {
+            "load_in_4bit": true,
+            "quant_type": "nf4",
+            "double_quant": true,
+            "compute_dtype": "float16"
+          },
+          "mode": "all",
+          "min_pixels": 50176,
+          "max_pixels": 802816,
+          "band_inches": 2.0,
+          "max_new_tokens": 768,
+          "repetition_penalty": 1.05,
+          "adapter_version": 3,
+          "prompt_version": 3,
+          "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74"
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T21:59:47+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_500.png",
+      "image_size": [
+        2567,
+        3007
+      ],
+      "crop_box": [
+        0,
+        0,
+        2567,
+        3007
+      ],
+      "lines": [
+        {
+          "text": "BANG GIAO HẢO THOẠI",
+          "bbox": [
+            7,
+            13,
+            2109,
+            261
+          ],
+          "confidence": 91.23
+        },
+        {
+          "text": "段，劳攘感冒风霜，遂得寒疾比。到义安之东城地面，复值严秋，天气新冷，旧染转增，只得回舟义安城",
+          "bbox": [
+            7,
+            261,
+            2109,
+            508
+          ],
+          "confidence": 91.23
+        },
+        {
+          "text": "保所上敕使大員之書，蒙許金諾與否？",
+          "bbox": [
+            400,
+            579,
+            2153,
+            811
+          ],
+          "confidence": 88.35
+        },
+        {
+          "text": "見在義安臺殿未竣，僕權於城中理恙，謹委親子恭詣昇龍城迎候，並撥取城中兵馬旗物護衛龍",
+          "bbox": [
+            400,
+            811,
+            2153,
+            1042
+          ],
+          "confidence": 88.35
+        },
+        {
+          "text": "亭，取路义安进发。仆在此等候拜迎，前就富春城宣封。这条路乃仆素所经繇，康庄无阻，其止舍顿递准备齐足。再飭下各该镇目，重加整理，使朝一路遄征，自当十分稳善。且仆既以本国内属天朝，其自昇龙以",
+          "bbox": [
+            402,
+            1105,
+            2103,
+            1576
+          ],
+          "confidence": 84.06
+        },
+        {
+          "text": "南，州城鎮戍，山川風雨，一一情形，欲敕使大員一經親覽。倘蒙憲幕垂詢奏大皇帝，洞燭邊情尤見，僕恭順至誠，無敢回曲欺隱之意。",
+          "bbox": [
+            399,
+            1639,
+            2098,
+            1892
+          ],
+          "confidence": 93.94
+        },
+        {
+          "text": "夫！恩封大典也。昇龍旺氣銷歇，人煙亦少見留。僕",
+          "bbox": [
+            399,
+            1892,
+            2098,
+            2145
+          ],
+          "confidence": 93.94
+        },
+        {
+          "text": "家將鎮撫，非僕根基所在。今奉錫命啓邦，不獲展於其鳩集輻輳之都，而卻於荒殘蕭索之地，祇承恩命於心，寔有未定。大人德似玉溫明同犀照。近來費了許多，深心計凡皆僕幹旋幫助之謀，顧此一副衷",
+          "bbox": [
+            396,
+            2177,
+            2096,
+            2936
+          ],
+          "confidence": 94.12
+        }
+      ],
+      "raw": {
+        "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+        "model_revision": "main",
+        "mode": "all",
+        "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74",
+        "dpi": 300,
+        "image_size": [
+          2567,
+          3007
+        ],
+        "band_target_height": 600,
+        "bbox_granularity": "band_even_split",
+        "max_new_tokens": 768,
+        "max_pixels": 802816,
+        "inference_seconds": 26.378,
+        "bands": [
+          {
+            "band": 1,
+            "y0": 17,
+            "y1": 543,
+            "ink_box": [
+              7,
+              13,
+              2109,
+              508
+            ],
+            "generated_text": "BANG GIAO HẢO THOẠI\n\n段，劳攘感冒风霜，遂得寒疾比。到义安之东城地面，复值严秋，天气新冷，旧染转增，只得回舟义安城",
+            "n_lines": 2,
+            "tokens": 55,
+            "seconds": 3.93,
+            "confidence": 91.23,
+            "flags": []
+          },
+          {
+            "band": 2,
+            "y0": 543,
+            "y1": 1073,
+            "ink_box": [
+              400,
+              579,
+              2153,
+              1042
+            ],
+            "generated_text": "保所上敕使大員之書，蒙許金諾與否？\n見在義安臺殿未竣，僕權於城中理恙，謹委親子恭詣昇龍城迎候，並撥取城中兵馬旗物護衛龍",
+            "n_lines": 2,
+            "tokens": 62,
+            "seconds": 4.399,
+            "confidence": 88.35,
+            "flags": []
+          },
+          {
+            "band": 3,
+            "y0": 1073,
+            "y1": 1607,
+            "ink_box": [
+              402,
+              1105,
+              2103,
+              1576
+            ],
+            "generated_text": "亭，取路义安进发。仆在此等候拜迎，前就富春城宣封。这条路乃仆素所经繇，康庄无阻，其止舍顿递准备齐足。再飭下各该镇目，重加整理，使朝一路遄征，自当十分稳善。且仆既以本国内属天朝，其自昇龙以",
+            "n_lines": 1,
+            "tokens": 87,
+            "seconds": 5.951,
+            "confidence": 84.06,
+            "flags": []
+          },
+          {
+            "band": 4,
+            "y0": 1607,
+            "y1": 2175,
+            "ink_box": [
+              399,
+              1639,
+              2098,
+              2145
+            ],
+            "generated_text": "南，州城鎮戍，山川風雨，一一情形，欲敕使大員一經親覽。倘蒙憲幕垂詢奏大皇帝，洞燭邊情尤見，僕恭順至誠，無敢回曲欺隱之意。\n\n夫！恩封大典也。昇龍旺氣銷歇，人煙亦少見留。僕",
+            "n_lines": 2,
+            "tokens": 84,
+            "seconds": 5.774,
+            "confidence": 93.94,
+            "flags": []
+          },
+          {
+            "band": 5,
+            "y0": 2175,
+            "y1": 2932,
+            "ink_box": [
+              396,
+              2177,
+              2096,
+              2936
+            ],
+            "generated_text": "家將鎮撫，非僕根基所在。今奉錫命啓邦，不獲展於其鳩集輻輳之都，而卻於荒殘蕭索之地，祇承恩命於心，寔有未定。大人德似玉溫明同犀照。近來費了許多，深心計凡皆僕幹旋幫助之謀，顧此一副衷",
+            "n_lines": 1,
+            "tokens": 92,
+            "seconds": 6.295,
+            "confidence": 94.12,
+            "flags": []
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "61cbea5c0055c260ccfc12f884e0febca7b2783b",
+        "git_describe": "61cbea5",
+        "git_dirty": true,
+        "gpu": "NVIDIA L4",
+        "dtype": "float16",
+        "adapter_version": 3
+      }
+    }
+  ]
+}

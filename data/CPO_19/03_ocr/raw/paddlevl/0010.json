@@ -1,0 +1,1177 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 10,
+  "runs": [
+    {
+      "key": "7032bc7e47132a920c5bf8128b039ef666c4ee60f42ed473e2aead1cfb8c0feb",
+      "parameters": {
+        "image_sha256": "67e37f82cf36688c4c64a52dc80b2a798faf9ec00bd1fa6ab77abc07738434c4",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T11:14:13+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_010.png",
+      "image_size": [
+        2588,
+        3219
+      ],
+      "crop_box": [
+        0,
+        0,
+        2588,
+        3219
+      ],
+      "lines": [
+        {
+          "text": "ngothinhamle1.pdf",
+          "bbox": [
+            7,
+            19,
+            286,
+            45
+          ],
+          "confidence": 96.3
+        },
+        {
+          "text": "HOÀNG HOA ĐỔ PHA",
+          "bbox": [
+            1682,
+            215,
+            2145,
+            254
+          ],
+          "confidence": 80.69
+        },
+        {
+          "text": "1-Từ tờ 1a đến tờ 25a, chép 72 bài thơ trong Tình sà kỹ hành của",
+          "bbox": [
+            593,
+            318,
+            2142,
+            364
+          ],
+          "confidence": 92.81
+        },
+        {
+          "text": "Phan Huy Ich. Thú tư sắp xếp giữa các bài thơ giống như bản chính thức",
+          "bbox": [
+            440,
+            398,
+            2142,
+            443
+          ],
+          "confidence": 94.7
+        },
+        {
+          "text": "do Phan Huy Ich sắp xếp đưa khác in.",
+          "bbox": [
+            441,
+            477,
+            1317,
+            522
+          ],
+          "confidence": 97.0
+        },
+        {
+          "text": "2-Từ tờ 25b đến tờ 43a chép 73 bài thơ đi súc chưa rõ của ai. Những",
+          "bbox": [
+            588,
+            568,
+            2144,
+            612
+          ],
+          "confidence": 88.74
+        },
+        {
+          "text": "bài thơ chép ở đây hoàn toàn giống như những bài thơ chưa xác minh",
+          "bbox": [
+            439,
+            646,
+            2144,
+            692
+          ],
+          "confidence": 98.81
+        },
+        {
+          "text": "được tác giả đã chép ở Yên Đài thu vinh. Thú tử giữa các bài thơ vẫn được",
+          "bbox": [
+            442,
+            725,
+            2147,
+            769
+          ],
+          "confidence": 91.28
+        },
+        {
+          "text": "giũ nguyên, nhưng cách bố trí sắp xếp của hai sách có khác nhau và có sự",
+          "bbox": [
+            443,
+            804,
+            2144,
+            848
+          ],
+          "confidence": 94.01
+        },
+        {
+          "text": "chênh lệch về số bài thơ đã chép: Yên Đài thu vinh 63 bài; Tinh sà kỷ",
+          "bbox": [
+            441,
+            881,
+            2144,
+            928
+          ],
+          "confidence": 96.73
+        },
+        {
+          "text": "hành 73 bài:",
+          "bbox": [
+            439,
+            974,
+            1101,
+            1003
+          ],
+          "confidence": 94.69
+        },
+        {
+          "text": "Số | Tinh sà kỷ hành A.404 | Yên Đài thu vinh | Chênh",
+          "bbox": [
+            417,
+            1099,
+            2229,
+            1145
+          ],
+          "confidence": 91.76
+        },
+        {
+          "text": "T.T. | A.1597 lêch",
+          "bbox": [
+            417,
+            1175,
+            2303,
+            1218
+          ],
+          "confidence": 85.42
+        },
+        {
+          "text": "|",
+          "bbox": [
+            414,
+            1221,
+            2127,
+            1236
+          ],
+          "confidence": 81.03
+        },
+        {
+          "text": "1 | Từ tờ 25a-29a chép 12 bài | Từ tờ 9a-12b chép 12 | 0",
+          "bbox": [
+            418,
+            1260,
+            2150,
+            1305
+          ],
+          "confidence": 96.92
+        },
+        {
+          "text": "|",
+          "bbox": [
+            414,
+            1400,
+            2128,
+            1414
+          ],
+          "confidence": 74.17
+        },
+        {
+          "text": "2 | Từ tờ 29b-32b chép 13 bài | Từ tờ 65b-68b chép 13 | 0",
+          "bbox": [
+            418,
+            1421,
+            2128,
+            1465
+          ],
+          "confidence": 96.2
+        },
+        {
+          "text": "|",
+          "bbox": [
+            414,
+            1549,
+            2129,
+            1563
+          ],
+          "confidence": 71.93
+        },
+        {
+          "text": "3 | Từ tờ 33a- 35a chép 8 bài | Yên đài thu vinh",
+          "bbox": [
+            418,
+            1583,
+            2130,
+            1629
+          ],
+          "confidence": 93.62
+        },
+        {
+          "text": "| | khong co 8 bai nay | 8",
+          "bbox": [
+            418,
+            1672,
+            2128,
+            1703
+          ],
+          "confidence": 74.6
+        },
+        {
+          "text": "|",
+          "bbox": [
+            415,
+            1727,
+            2127,
+            1742
+          ],
+          "confidence": 71.83
+        },
+        {
+          "text": "4 | Từ tờ 35b-43a chép 40 bài | Từ tờ 1a-8b chép 38 bài |",
+          "bbox": [
+            418,
+            1759,
+            2129,
+            1804
+          ],
+          "confidence": 95.9
+        },
+        {
+          "text": "(trong đó có 30 bài vinh | (trong đó có 28 bài | 2",
+          "bbox": [
+            418,
+            1846,
+            2129,
+            1891
+          ],
+          "confidence": 91.52
+        },
+        {
+          "text": "cảnh thu ở Yên Kinh). vinh",
+          "bbox": [
+            418,
+            1919,
+            2150,
+            1963
+          ],
+          "confidence": 80.12
+        },
+        {
+          "text": "lắc cánh thu ở Yên Kinh)",
+          "bbox": [
+            419,
+            2005,
+            2128,
+            2050
+          ],
+          "confidence": 69.34
+        },
+        {
+          "text": "|",
+          "bbox": [
+            415,
+            2056,
+            2128,
+            2071
+          ],
+          "confidence": 76.22
+        },
+        {
+          "text": "Công | 73 bài | 63 bài | 10",
+          "bbox": [
+            418,
+            2093,
+            2128,
+            2137
+          ],
+          "confidence": 96.54
+        },
+        {
+          "text": "Trong 10 bài chênh lệch trên, rõ ràng ở Yên Đài thu vinh chép",
+          "bbox": [
+            591,
+            2218,
+            2142,
+            2263
+          ],
+          "confidence": 96.96
+        },
+        {
+          "text": "thiếu 2 bài vinh cảnh thu, còn 8 bài Đường luật, cũng là thơ đi sú,",
+          "bbox": [
+            442,
+            2293,
+            2141,
+            2338
+          ],
+          "confidence": 92.09
+        },
+        {
+          "text": "những chuẩn đám chắc có phải cùng một tác giả với những bài thơ trên",
+          "bbox": [
+            441,
+            2367,
+            2142,
+            2412
+          ],
+          "confidence": 84.82
+        },
+        {
+          "text": "hay không?",
+          "bbox": [
+            442,
+            2454,
+            1808,
+            2485
+          ],
+          "confidence": 99.63
+        },
+        {
+          "text": "3-Từ tờ 43b đến tờ 65b, chép 78 bài thơ trong Hoa trình gia án",
+          "bbox": [
+            593,
+            2532,
+            2141,
+            2577
+          ],
+          "confidence": 95.67
+        },
+        {
+          "text": "của Ngô Thì Nhâm. Sở dĩ nói như vậy vì thú tự giữa các bài thơ cũng",
+          "bbox": [
+            442,
+            2609,
+            2144,
+            2655
+          ],
+          "confidence": 94.48
+        },
+        {
+          "text": "được sắp xếp như trong Hoa trình gia ấn, nhưng số bài thơ ở đây chép",
+          "bbox": [
+            443,
+            2687,
+            2142,
+            2739
+          ],
+          "confidence": 94.96
+        },
+        {
+          "text": "thiêu tôi 32 bài.",
+          "bbox": [
+            441,
+            2777,
+            824,
+            2808
+          ],
+          "confidence": 89.36
+        },
+        {
+          "text": "4-Từ tờ 66a đến tờ 69a (hết) chép 15 bài thơ đi sú, chưa rõ của ai.",
+          "bbox": [
+            592,
+            2855,
+            2142,
+            2901
+          ],
+          "confidence": 93.7
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2588,
+          3219
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 65.699,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              7,
+              19,
+              286,
+              45
+            ],
+            "generated_text": "ngothinhamle1.pdf",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.895,
+            "confidence": 96.3,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              1682,
+              215,
+              2145,
+              254
+            ],
+            "generated_text": "HOÀNG HOA ĐỔ PHA",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.056,
+            "confidence": 80.69,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              443,
+              260,
+              2148,
+              273
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.453,
+            "confidence": 83.32,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              593,
+              318,
+              2142,
+              364
+            ],
+            "generated_text": "1-Từ tờ 1a đến tờ 25a, chép 72 bài thơ trong Tình sà kỹ hành của",
+            "n_lines": 1,
+            "tokens": 35,
+            "seconds": 2.648,
+            "confidence": 92.81,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              440,
+              398,
+              2142,
+              443
+            ],
+            "generated_text": "Phan Huy Ich. Thú tư sắp xếp giữa các bài thơ giống như bản chính thức",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 2.324,
+            "confidence": 94.7,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              441,
+              477,
+              1317,
+              522
+            ],
+            "generated_text": "do Phan Huy Ich sắp xếp đưa khác in.",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.486,
+            "confidence": 97.0,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              588,
+              568,
+              2144,
+              612
+            ],
+            "generated_text": "2-Từ tờ 25b đến tờ 43a chép 73 bài thơ đi súc chưa rõ của ai. Những",
+            "n_lines": 1,
+            "tokens": 38,
+            "seconds": 2.853,
+            "confidence": 88.74,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              439,
+              646,
+              2144,
+              692
+            ],
+            "generated_text": "bài thơ chép ở đây hoàn toàn giống như những bài thơ chưa xác minh",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 2.041,
+            "confidence": 98.81,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              442,
+              725,
+              2147,
+              769
+            ],
+            "generated_text": "được tác giả đã chép ở Yên Đài thu vinh. Thú tử giữa các bài thơ vẫn được",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 2.322,
+            "confidence": 91.28,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              443,
+              804,
+              2144,
+              848
+            ],
+            "generated_text": "giũ nguyên, nhưng cách bố trí sắp xếp của hai sách có khác nhau và có sự",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 2.187,
+            "confidence": 94.01,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              441,
+              881,
+              2144,
+              928
+            ],
+            "generated_text": "chênh lệch về số bài thơ đã chép: Yên Đài thu vinh 63 bài; Tinh sà kỷ",
+            "n_lines": 1,
+            "tokens": 34,
+            "seconds": 2.698,
+            "confidence": 96.73,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              439,
+              974,
+              1101,
+              1003
+            ],
+            "generated_text": "hành 73 bài:",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.791,
+            "confidence": 94.69,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              418,
+              1059,
+              2127,
+              1073
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.453,
+            "confidence": 83.84,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              417,
+              1099,
+              2229,
+              1145
+            ],
+            "generated_text": "Số | Tinh sà kỷ hành A.404 | Yên Đài thu vinh | Chênh",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.325,
+            "confidence": 91.76,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              417,
+              1175,
+              2303,
+              1218
+            ],
+            "generated_text": "T.T. | A.1597 lêch",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.421,
+            "confidence": 85.42,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              414,
+              1221,
+              2127,
+              1236
+            ],
+            "generated_text": "|",
+            "n_lines": 1,
+            "tokens": 2,
+            "seconds": 0.517,
+            "confidence": 81.03,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              418,
+              1260,
+              2150,
+              1305
+            ],
+            "generated_text": "1 | Từ tờ 25a-29a chép 12 bài | Từ tờ 9a-12b chép 12 | 0",
+            "n_lines": 1,
+            "tokens": 41,
+            "seconds": 3.209,
+            "confidence": 96.92,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              414,
+              1400,
+              2128,
+              1414
+            ],
+            "generated_text": "|",
+            "n_lines": 1,
+            "tokens": 2,
+            "seconds": 0.518,
+            "confidence": 74.17,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              418,
+              1421,
+              2128,
+              1465
+            ],
+            "generated_text": "2 | Từ tờ 29b-32b chép 13 bài | Từ tờ 65b-68b chép 13 | 0",
+            "n_lines": 1,
+            "tokens": 42,
+            "seconds": 3.262,
+            "confidence": 96.2,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              414,
+              1549,
+              2129,
+              1563
+            ],
+            "generated_text": "|",
+            "n_lines": 1,
+            "tokens": 2,
+            "seconds": 0.52,
+            "confidence": 71.93,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              418,
+              1583,
+              2130,
+              1629
+            ],
+            "generated_text": "3 | Từ tờ 33a- 35a chép 8 bài | Yên đài thu vinh",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 2.343,
+            "confidence": 93.62,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              418,
+              1672,
+              2128,
+              1703
+            ],
+            "generated_text": "| | khong co 8 bai nay | 8",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.221,
+            "confidence": 74.6,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              415,
+              1727,
+              2127,
+              1742
+            ],
+            "generated_text": "|",
+            "n_lines": 1,
+            "tokens": 2,
+            "seconds": 0.523,
+            "confidence": 71.83,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              418,
+              1759,
+              2129,
+              1804
+            ],
+            "generated_text": "4 | Từ tờ 35b-43a chép 40 bài | Từ tờ 1a-8b chép 38 bài |",
+            "n_lines": 1,
+            "tokens": 39,
+            "seconds": 3.057,
+            "confidence": 95.9,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              418,
+              1846,
+              2129,
+              1891
+            ],
+            "generated_text": "(trong đó có 30 bài vinh | (trong đó có 28 bài | 2",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 2.051,
+            "confidence": 91.52,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              418,
+              1919,
+              2150,
+              1963
+            ],
+            "generated_text": "cảnh thu ở Yên Kinh). vinh",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.175,
+            "confidence": 80.12,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              419,
+              2005,
+              2128,
+              2050
+            ],
+            "generated_text": "lắc cánh thu ở Yên Kinh)",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.163,
+            "confidence": 69.34,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              415,
+              2056,
+              2128,
+              2071
+            ],
+            "generated_text": "|",
+            "n_lines": 1,
+            "tokens": 2,
+            "seconds": 0.522,
+            "confidence": 76.22,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              418,
+              2093,
+              2128,
+              2137
+            ],
+            "generated_text": "Công | 73 bài | 63 bài | 10",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.492,
+            "confidence": 96.54,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              419,
+              2141,
+              2128,
+              2156
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.457,
+            "confidence": 30.25,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              591,
+              2218,
+              2142,
+              2263
+            ],
+            "generated_text": "Trong 10 bài chênh lệch trên, rõ ràng ở Yên Đài thu vinh chép",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 2.229,
+            "confidence": 96.96,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 32,
+            "box": [
+              442,
+              2293,
+              2141,
+              2338
+            ],
+            "generated_text": "thiếu 2 bài vinh cảnh thu, còn 8 bài Đường luật, cũng là thơ đi sú,",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.277,
+            "confidence": 92.09,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 33,
+            "box": [
+              441,
+              2367,
+              2142,
+              2412
+            ],
+            "generated_text": "những chuẩn đám chắc có phải cùng một tác giả với những bài thơ trên",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.857,
+            "confidence": 84.82,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 34,
+            "box": [
+              442,
+              2454,
+              1808,
+              2485
+            ],
+            "generated_text": "hay không?",
+            "n_lines": 1,
+            "tokens": 4,
+            "seconds": 0.582,
+            "confidence": 99.63,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 35,
+            "box": [
+              593,
+              2532,
+              2141,
+              2577
+            ],
+            "generated_text": "3-Từ tờ 43b đến tờ 65b, chép 78 bài thơ trong Hoa trình gia án",
+            "n_lines": 1,
+            "tokens": 32,
+            "seconds": 2.435,
+            "confidence": 95.67,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 36,
+            "box": [
+              442,
+              2609,
+              2144,
+              2655
+            ],
+            "generated_text": "của Ngô Thì Nhâm. Sở dĩ nói như vậy vì thú tự giữa các bài thơ cũng",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.258,
+            "confidence": 94.48,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 37,
+            "box": [
+              443,
+              2687,
+              2142,
+              2739
+            ],
+            "generated_text": "được sắp xếp như trong Hoa trình gia ấn, nhưng số bài thơ ở đây chép",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 2.129,
+            "confidence": 94.96,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 38,
+            "box": [
+              441,
+              2777,
+              824,
+              2808
+            ],
+            "generated_text": "thiêu tôi 32 bài.",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.925,
+            "confidence": 89.36,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 39,
+            "box": [
+              592,
+              2855,
+              2142,
+              2901
+            ],
+            "generated_text": "4-Từ tờ 66a đến tờ 69a (hết) chép 15 bài thơ đi sú, chưa rõ của ai.",
+            "n_lines": 1,
+            "tokens": 40,
+            "seconds": 3.017,
+            "confidence": 93.7,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              648,
+              440,
+              1663,
+              450
+            ],
+            "ink": 366
+          },
+          {
+            "box": [
+              708,
+              688,
+              1575,
+              698
+            ],
+            "ink": 306
+          },
+          {
+            "box": [
+              509,
+              767,
+              2114,
+              776
+            ],
+            "ink": 262
+          },
+          {
+            "box": [
+              442,
+              845,
+              2132,
+              856
+            ],
+            "ink": 412
+          },
+          {
+            "box": [
+              445,
+              962,
+              718,
+              975
+            ],
+            "ink": 503
+          },
+          {
+            "box": [
+              418,
+              1365,
+              2127,
+              1376
+            ],
+            "ink": 488
+          },
+          {
+            "box": [
+              418,
+              1527,
+              2128,
+              1538
+            ],
+            "ink": 459
+          },
+          {
+            "box": [
+              418,
+              1660,
+              2127,
+              1676
+            ],
+            "ink": 792
+          },
+          {
+            "box": [
+              419,
+              1887,
+              2128,
+              1896
+            ],
+            "ink": 349
+          },
+          {
+            "box": [
+              570,
+              2408,
+              1835,
+              2419
+            ],
+            "ink": 401
+          },
+          {
+            "box": [
+              448,
+              2766,
+              808,
+              2778
+            ],
+            "ink": 498
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

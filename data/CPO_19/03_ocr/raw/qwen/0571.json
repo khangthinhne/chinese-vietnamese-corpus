@@ -1,0 +1,241 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "qwen",
+  "page": 571,
+  "runs": [
+    {
+      "key": "e31db0152aaf1420f5be353be48f33ff24c9da0224c61a9ec1893f9e3b797ec4",
+      "parameters": {
+        "image_sha256": "69e8f85afb9d19d1fb059b03d0686d293aa1f9752501df630df6ba4ed4b68a41",
+        "engine": {
+          "name": "qwen",
+          "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "model_revision": "main",
+          "transformers_version": "4.57.6",
+          "torch_version": "2.5.1+cu121",
+          "cuda_version": "12.1",
+          "bitsandbytes_version": "0.50.2",
+          "quantization": {
+            "load_in_4bit": true,
+            "quant_type": "nf4",
+            "double_quant": true,
+            "compute_dtype": "float16"
+          },
+          "mode": "all",
+          "min_pixels": 50176,
+          "max_pixels": 802816,
+          "band_inches": 2.0,
+          "max_new_tokens": 768,
+          "repetition_penalty": 1.05,
+          "adapter_version": 3,
+          "prompt_version": 3,
+          "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74"
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T22:45:11+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_571.png",
+      "image_size": [
+        2557,
+        3192
+      ],
+      "crop_box": [
+        0,
+        0,
+        2557,
+        3192
+      ],
+      "lines": [
+        {
+          "text": "NGÔ THÌ NHẬM TOÀN TẬP - TẬP III",
+          "bbox": [
+            7,
+            13,
+            2189,
+            174
+          ],
+          "confidence": 92.25
+        },
+        {
+          "text": "38. 又一道",
+          "bbox": [
+            7,
+            174,
+            2189,
+            335
+          ],
+          "confidence": 92.25
+        },
+        {
+          "text": "(祈達奏表許還興化州之地。國王書呈)",
+          "bbox": [
+            7,
+            335,
+            2189,
+            496
+          ],
+          "confidence": 92.25
+        },
+        {
+          "text": "小番自受命啓封，欽奉聖訓，以鳩集封內，為固國保民張本，而於新邦疆域，其里數之延展，經界之抵止，有驅畫網織所未及者，非關封守未敢陳於簡牘。",
+          "bbox": [
+            475,
+            569,
+            2187,
+            986
+          ],
+          "confidence": 92.9
+        },
+        {
+          "text": "酒者，本國鎮目報稱：該鎮之嵩陵、醴泉、黃巖、綏阜、合肥、萊州、謙州等七州，緣內地縣官，勒令州民，改装插牌征稅。見在該鎮行移徵調，一切指勒阻當，隔截不通。小番究案根由，事在乾隆五年，本國逆",
+          "bbox": [
+            478,
+            1069,
+            2240,
+            1570
+          ],
+          "confidence": 93.5
+        },
+        {
+          "text": "民黄公瓒之父黄公舒，据守七州之地，垂三十年，前黎姑息不辨。七州之民，以地势辽远，本国不能控制，夤缘内附，内地官概行征繕，边民亦便其游移。事所从来，盖由前黎不能恪循封守，有所馴致。",
+          "bbox": [
+            459,
+            1639,
+            2185,
+            2143
+          ],
+          "confidence": 84.46
+        },
+        {
+          "text": "小番仰蒙大皇，帝莫大之恩，封植栽培，如天之覆冒莫可名状。窃念，一带边陬，蕞尔之地，天朝庭除六合何足收此蹄冷。意者，封疆之吏，不以事上闻，因循前黎所不辨之疆界，概施内地所必治之铃束，浸淫驱勒，有不知其然而然。",
+          "bbox": [
+            482,
+            2178,
+            2213,
+            3005
+          ],
+          "confidence": 92.28
+        }
+      ],
+      "raw": {
+        "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+        "model_revision": "main",
+        "mode": "all",
+        "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74",
+        "dpi": 300,
+        "image_size": [
+          2557,
+          3192
+        ],
+        "band_target_height": 600,
+        "bbox_granularity": "band_even_split",
+        "max_new_tokens": 768,
+        "max_pixels": 802816,
+        "inference_seconds": 27.271,
+        "bands": [
+          {
+            "band": 1,
+            "y0": 17,
+            "y1": 555,
+            "ink_box": [
+              7,
+              13,
+              2189,
+              496
+            ],
+            "generated_text": "NGÔ THÌ NHẬM TOÀN TẬP - TẬP III\n\n38. 又一道\n\n(祈達奏表許還興化州之地。國王書呈)",
+            "n_lines": 3,
+            "tokens": 44,
+            "seconds": 3.202,
+            "confidence": 92.25,
+            "flags": []
+          },
+          {
+            "band": 2,
+            "y0": 555,
+            "y1": 1028,
+            "ink_box": [
+              475,
+              569,
+              2187,
+              986
+            ],
+            "generated_text": "小番自受命啓封，欽奉聖訓，以鳩集封內，為固國保民張本，而於新邦疆域，其里數之延展，經界之抵止，有驅畫網織所未及者，非關封守未敢陳於簡牘。",
+            "n_lines": 1,
+            "tokens": 75,
+            "seconds": 5.223,
+            "confidence": 92.9,
+            "flags": []
+          },
+          {
+            "band": 3,
+            "y0": 1028,
+            "y1": 1605,
+            "ink_box": [
+              478,
+              1069,
+              2240,
+              1570
+            ],
+            "generated_text": "酒者，本國鎮目報稱：該鎮之嵩陵、醴泉、黃巖、綏阜、合肥、萊州、謙州等七州，緣內地縣官，勒令州民，改装插牌征稅。見在該鎮行移徵調，一切指勒阻當，隔截不通。小番究案根由，事在乾隆五年，本國逆",
+            "n_lines": 1,
+            "tokens": 91,
+            "seconds": 6.236,
+            "confidence": 93.5,
+            "flags": []
+          },
+          {
+            "band": 4,
+            "y0": 1605,
+            "y1": 2179,
+            "ink_box": [
+              459,
+              1639,
+              2185,
+              2143
+            ],
+            "generated_text": "民黄公瓒之父黄公舒，据守七州之地，垂三十年，前黎姑息不辨。七州之民，以地势辽远，本国不能控制，夤缘内附，内地官概行征繕，边民亦便其游移。事所从来，盖由前黎不能恪循封守，有所馴致。",
+            "n_lines": 1,
+            "tokens": 84,
+            "seconds": 5.872,
+            "confidence": 84.46,
+            "flags": []
+          },
+          {
+            "band": 5,
+            "y0": 2179,
+            "y1": 3001,
+            "ink_box": [
+              482,
+              2178,
+              2213,
+              3005
+            ],
+            "generated_text": "小番仰蒙大皇，帝莫大之恩，封植栽培，如天之覆冒莫可名状。窃念，一带边陬，蕞尔之地，天朝庭除六合何足收此蹄冷。意者，封疆之吏，不以事上闻，因循前黎所不辨之疆界，概施内地所必治之铃束，浸淫驱勒，有不知其然而然。",
+            "n_lines": 1,
+            "tokens": 98,
+            "seconds": 6.707,
+            "confidence": 92.28,
+            "flags": []
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "61cbea5c0055c260ccfc12f884e0febca7b2783b",
+        "git_describe": "61cbea5",
+        "git_dirty": true,
+        "gpu": "NVIDIA L4",
+        "dtype": "float16",
+        "adapter_version": 3
+      }
+    }
+  ]
+}

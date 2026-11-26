@@ -1,0 +1,961 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 166,
+  "runs": [
+    {
+      "key": "cd7feef09ed57e047c37a6e14e5ca0a761d17ffb703a347c5ad69b3262a52e68",
+      "parameters": {
+        "image_sha256": "cb18d58b1a5e21fdb0563769afe4221f06c006c4ee86af81ea3d98681b1df470",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T13:01:22+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_166.png",
+      "image_size": [
+        2594,
+        3220
+      ],
+      "crop_box": [
+        0,
+        0,
+        2594,
+        3220
+      ],
+      "lines": [
+        {
+          "text": "ngothinhamle1.pdf",
+          "bbox": [
+            7,
+            19,
+            286,
+            45
+          ],
+          "confidence": 96.3
+        },
+        {
+          "text": "HOANG HOA ĐỔ PHA",
+          "bbox": [
+            1559,
+            220,
+            2022,
+            259
+          ],
+          "confidence": 84.57
+        },
+        {
+          "text": "KHAO DI:",
+          "bbox": [
+            313,
+            330,
+            534,
+            369
+          ],
+          "confidence": 96.51
+        },
+        {
+          "text": "a. Bản A.117c/1: Vân động nhất tâm tài 運動一心栽.",
+          "bbox": [
+            462,
+            405,
+            1566,
+            447
+          ],
+          "confidence": 89.53
+        },
+        {
+          "text": "b. Bản A.117c/1: Cung 恭.",
+          "bbox": [
+            460,
+            485,
+            993,
+            525
+          ],
+          "confidence": 97.76
+        },
+        {
+          "text": "CHU THICH:",
+          "bbox": [
+            315,
+            591,
+            604,
+            629
+          ],
+          "confidence": 99.05
+        },
+        {
+          "text": "1. Cù Bá Ngọc: Tên là Viên, học trò Khổng Tử sau làm quan Đại phu nước",
+          "bbox": [
+            468,
+            664,
+            2022,
+            706
+          ],
+          "confidence": 92.25
+        },
+        {
+          "text": "Vê thời Xuân Thu. Ở đây dùng để chỉ quan Trường tổng nhà Thanh.",
+          "bbox": [
+            314,
+            741,
+            1753,
+            783
+          ],
+          "confidence": 93.39
+        },
+        {
+          "text": "2.Tất Điều Khai: Học trò Khổng Tử, Khổng Tử bảo ông ra làm quan;",
+          "bbox": [
+            465,
+            818,
+            2021,
+            861
+          ],
+          "confidence": 95.67
+        },
+        {
+          "text": "ông trả lời: “Tôi chưa tin mình đã làm được việc.” Ô đây tác giả có ý tự nhận",
+          "bbox": [
+            315,
+            897,
+            2023,
+            939
+          ],
+          "confidence": 93.18
+        },
+        {
+          "text": "mình là Tất Điều Khai nhưng vẫn làm được việc do nhà vua sai đi sứ, mang",
+          "bbox": [
+            317,
+            975,
+            2022,
+            1017
+          ],
+          "confidence": 93.59
+        },
+        {
+          "text": "gió mát từ phương nam tôi, và ngụ ý chỉ làn gió từ chiếc quạt do quan trưởng",
+          "bbox": [
+            315,
+            1052,
+            2022,
+            1102
+          ],
+          "confidence": 90.25
+        },
+        {
+          "text": "tổng Trương Trung tăng.",
+          "bbox": [
+            314,
+            1142,
+            867,
+            1173
+          ],
+          "confidence": 86.45
+        },
+        {
+          "text": "3.Dũu Lượng tự Nguyên Quy, người đời Tấn, trấn ở ngoài mà năm quyền",
+          "bbox": [
+            465,
+            1207,
+            2023,
+            1257
+          ],
+          "confidence": 90.03
+        },
+        {
+          "text": "trong triều, kế xu ninh rất nhiều. Vương Đạo bất bình, mỗi khi có gió tây thổi",
+          "bbox": [
+            314,
+            1285,
+            2023,
+            1329
+          ],
+          "confidence": 92.75
+        },
+        {
+          "text": "bụi, lấy quạt che lại, nói: \"Bụi của Nguyên Quy làm bẩn người.\"",
+          "bbox": [
+            314,
+            1364,
+            1658,
+            1413
+          ],
+          "confidence": 93.11
+        },
+        {
+          "text": "4.Gia Cát Lương thường cầm chiếc quạt lông trắng, giúp Chu Du ở Đông",
+          "bbox": [
+            465,
+            1442,
+            2023,
+            1491
+          ],
+          "confidence": 93.65
+        },
+        {
+          "text": "Ngô câu gió động để thuận đánh Tào Tháo ở Xích Bích. Đây dẫn ra để tả cái",
+          "bbox": [
+            315,
+            1519,
+            2024,
+            1563
+          ],
+          "confidence": 87.94
+        },
+        {
+          "text": "quat đưa giọ.",
+          "bbox": [
+            316,
+            1613,
+            654,
+            1642
+          ],
+          "confidence": 79.19
+        },
+        {
+          "text": "5. Giải nổi nóng nực (giải uấn): Vua Thuấn làm đàn nắm dây hát rằng:",
+          "bbox": [
+            466,
+            1672,
+            2020,
+            1716
+          ],
+          "confidence": 87.95
+        },
+        {
+          "text": "“Nam phong chi huân hề, khả dĩ giải ngô dân chi uấn hề” (Gió nam mát, có thể",
+          "bbox": [
+            314,
+            1746,
+            2022,
+            1790
+          ],
+          "confidence": 92.3
+        },
+        {
+          "text": "giải nổi bực bội oi nồng của dân ta). Y nói, ông sẽ nhận chiếc quạt được tặng này",
+          "bbox": [
+            315,
+            1820,
+            2022,
+            1871
+          ],
+          "confidence": 92.07
+        },
+        {
+          "text": "mà giải nổi buồn bực đi nông cho dân, cũng như tiếng đàn vua Thuấn xưa.",
+          "bbox": [
+            317,
+            1895,
+            1881,
+            1937
+          ],
+          "confidence": 86.93
+        },
+        {
+          "text": "74 咸盛待驛晚",
+          "bbox": [
+            838,
+            2027,
+            1515,
+            2076
+          ],
+          "confidence": 87.57
+        },
+        {
+          "text": "丁。咸于符呼吭",
+          "bbox": [
+            848,
+            2068,
+            1476,
+            2099
+          ],
+          "confidence": 44.93
+        },
+        {
+          "text": "朝使急馳驅",
+          "bbox": [
+            952,
+            2213,
+            1365,
+            2270
+          ],
+          "confidence": 99.84
+        },
+        {
+          "text": "農夫忙稼穡",
+          "bbox": [
+            951,
+            2337,
+            1365,
+            2395
+          ],
+          "confidence": 99.59
+        },
+        {
+          "text": "待夫如待潮",
+          "bbox": [
+            948,
+            2466,
+            1363,
+            2517
+          ],
+          "confidence": 99.96
+        },
+        {
+          "text": "飽睡又飽食",
+          "bbox": [
+            947,
+            2588,
+            1365,
+            2643
+          ],
+          "confidence": 97.81
+        },
+        {
+          "text": "金鳳棲碧梧",
+          "bbox": [
+            948,
+            2708,
+            1365,
+            2768
+          ],
+          "confidence": 99.49
+        },
+        {
+          "text": "景鐘催漏刻",
+          "bbox": [
+            949,
+            2831,
+            1360,
+            2890
+          ],
+          "confidence": 99.97
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2594,
+          3220
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 52.28,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              7,
+              19,
+              286,
+              45
+            ],
+            "generated_text": "ngothinhamle1.pdf",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.903,
+            "confidence": 96.3,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              1559,
+              220,
+              2022,
+              259
+            ],
+            "generated_text": "HOANG HOA ĐỔ PHA",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 1.004,
+            "confidence": 84.57,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              315,
+              265,
+              2027,
+              280
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.458,
+            "confidence": 27.6,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              313,
+              330,
+              534,
+              369
+            ],
+            "generated_text": "KHAO DI:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.693,
+            "confidence": 96.51,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              462,
+              405,
+              1566,
+              447
+            ],
+            "generated_text": "a. Bản A.117c/1: Vân động nhất tâm tài 運動一心栽.",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 2.124,
+            "confidence": 89.53,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              460,
+              485,
+              993,
+              525
+            ],
+            "generated_text": "b. Bản A.117c/1: Cung 恭.",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.538,
+            "confidence": 97.76,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              315,
+              591,
+              604,
+              629
+            ],
+            "generated_text": "CHU THICH:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.724,
+            "confidence": 99.05,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              468,
+              664,
+              2022,
+              706
+            ],
+            "generated_text": "1. Cù Bá Ngọc: Tên là Viên, học trò Khổng Tử sau làm quan Đại phu nước",
+            "n_lines": 1,
+            "tokens": 32,
+            "seconds": 2.424,
+            "confidence": 92.25,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              314,
+              741,
+              1753,
+              783
+            ],
+            "generated_text": "Vê thời Xuân Thu. Ở đây dùng để chỉ quan Trường tổng nhà Thanh.",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 1.986,
+            "confidence": 93.39,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              465,
+              818,
+              2021,
+              861
+            ],
+            "generated_text": "2.Tất Điều Khai: Học trò Khổng Tử, Khổng Tử bảo ông ra làm quan;",
+            "n_lines": 1,
+            "tokens": 33,
+            "seconds": 2.509,
+            "confidence": 95.67,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              315,
+              897,
+              2023,
+              939
+            ],
+            "generated_text": "ông trả lời: “Tôi chưa tin mình đã làm được việc.” Ô đây tác giả có ý tự nhận",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 2.188,
+            "confidence": 93.18,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              317,
+              975,
+              2022,
+              1017
+            ],
+            "generated_text": "mình là Tất Điều Khai nhưng vẫn làm được việc do nhà vua sai đi sứ, mang",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 2.139,
+            "confidence": 93.59,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              315,
+              1052,
+              2022,
+              1102
+            ],
+            "generated_text": "gió mát từ phương nam tôi, và ngụ ý chỉ làn gió từ chiếc quạt do quan trưởng",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 2.407,
+            "confidence": 90.25,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              314,
+              1142,
+              867,
+              1173
+            ],
+            "generated_text": "tổng Trương Trung tăng.",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.981,
+            "confidence": 86.45,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              465,
+              1207,
+              2023,
+              1257
+            ],
+            "generated_text": "3.Dũu Lượng tự Nguyên Quy, người đời Tấn, trấn ở ngoài mà năm quyền",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 2.231,
+            "confidence": 90.03,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              314,
+              1285,
+              2023,
+              1329
+            ],
+            "generated_text": "trong triều, kế xu ninh rất nhiều. Vương Đạo bất bình, mỗi khi có gió tây thổi",
+            "n_lines": 1,
+            "tokens": 33,
+            "seconds": 2.639,
+            "confidence": 92.75,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              314,
+              1364,
+              1658,
+              1413
+            ],
+            "generated_text": "bụi, lấy quạt che lại, nói: \"Bụi của Nguyên Quy làm bẩn người.\"",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 2.141,
+            "confidence": 93.11,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              465,
+              1442,
+              2023,
+              1491
+            ],
+            "generated_text": "4.Gia Cát Lương thường cầm chiếc quạt lông trắng, giúp Chu Du ở Đông",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 2.224,
+            "confidence": 93.65,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              315,
+              1519,
+              2024,
+              1563
+            ],
+            "generated_text": "Ngô câu gió động để thuận đánh Tào Tháo ở Xích Bích. Đây dẫn ra để tả cái",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 2.496,
+            "confidence": 87.94,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              316,
+              1613,
+              654,
+              1642
+            ],
+            "generated_text": "quat đưa giọ.",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.837,
+            "confidence": 79.19,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              466,
+              1672,
+              2020,
+              1716
+            ],
+            "generated_text": "5. Giải nổi nóng nực (giải uấn): Vua Thuấn làm đàn nắm dây hát rằng:",
+            "n_lines": 1,
+            "tokens": 33,
+            "seconds": 2.526,
+            "confidence": 87.95,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              314,
+              1746,
+              2022,
+              1790
+            ],
+            "generated_text": "“Nam phong chi huân hề, khả dĩ giải ngô dân chi uấn hề” (Gió nam mát, có thể",
+            "n_lines": 1,
+            "tokens": 34,
+            "seconds": 2.709,
+            "confidence": 92.3,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              315,
+              1820,
+              2022,
+              1871
+            ],
+            "generated_text": "giải nổi bực bội oi nồng của dân ta). Y nói, ông sẽ nhận chiếc quạt được tặng này",
+            "n_lines": 1,
+            "tokens": 33,
+            "seconds": 2.638,
+            "confidence": 92.07,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              317,
+              1895,
+              1881,
+              1937
+            ],
+            "generated_text": "mà giải nổi buồn bực đi nông cho dân, cũng như tiếng đàn vua Thuấn xưa.",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.16,
+            "confidence": 86.93,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              838,
+              2027,
+              1515,
+              2076
+            ],
+            "generated_text": "74 咸盛待驛晚",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.994,
+            "confidence": 87.57,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              848,
+              2068,
+              1476,
+              2099
+            ],
+            "generated_text": "丁。咸于符呼吭",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 1.046,
+            "confidence": 44.93,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              952,
+              2213,
+              1365,
+              2270
+            ],
+            "generated_text": "朝使急馳驅",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.999,
+            "confidence": 99.84,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              951,
+              2337,
+              1365,
+              2395
+            ],
+            "generated_text": "農夫忙稼穡",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.862,
+            "confidence": 99.59,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              948,
+              2466,
+              1363,
+              2517
+            ],
+            "generated_text": "待夫如待潮",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.786,
+            "confidence": 99.96,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              947,
+              2588,
+              1365,
+              2643
+            ],
+            "generated_text": "飽睡又飽食",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 1.05,
+            "confidence": 97.81,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              948,
+              2708,
+              1365,
+              2768
+            ],
+            "generated_text": "金鳳棲碧梧",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.998,
+            "confidence": 99.49,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 32,
+            "box": [
+              949,
+              2831,
+              1360,
+              2890
+            ],
+            "generated_text": "景鐘催漏刻",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.863,
+            "confidence": 99.97,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              687,
+              704,
+              1842,
+              713
+            ],
+            "ink": 296
+          },
+          {
+            "box": [
+              355,
+              780,
+              1491,
+              790
+            ],
+            "ink": 325
+          },
+          {
+            "box": [
+              368,
+              935,
+              1984,
+              944
+            ],
+            "ink": 345
+          },
+          {
+            "box": [
+              320,
+              1133,
+              795,
+              1143
+            ],
+            "ink": 475
+          },
+          {
+            "box": [
+              387,
+              1169,
+              852,
+              1179
+            ],
+            "ink": 324
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

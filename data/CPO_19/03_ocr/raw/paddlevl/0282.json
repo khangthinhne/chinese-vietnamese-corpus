@@ -1,0 +1,831 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 282,
+  "runs": [
+    {
+      "key": "754fbe9d1d9b54cf45e67349b6ba60622ce5b4ab3bd8e84a29b64f7c76e65ff7",
+      "parameters": {
+        "image_sha256": "c526bcab2114664c7704c46ce745b04992be555102a9f135cd42f69660f77a2a",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T14:23:22+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_282.png",
+      "image_size": [
+        2557,
+        3191
+      ],
+      "crop_box": [
+        0,
+        0,
+        2557,
+        3191
+      ],
+      "lines": [
+        {
+          "text": "ngothinhamch1.pdf",
+          "bbox": [
+            6,
+            19,
+            296,
+            45
+          ],
+          "confidence": 98.77
+        },
+        {
+          "text": "NGŮ THI NHAM TOAN TAP - TAP III",
+          "bbox": [
+            488,
+            181,
+            1572,
+            220
+          ],
+          "confidence": 76.98
+        },
+        {
+          "text": "6. 浪吟",
+          "bbox": [
+            584,
+            286,
+            1975,
+            346
+          ],
+          "confidence": 92.82
+        },
+        {
+          "text": "待漏金熬不夜天",
+          "bbox": [
+            1047,
+            456,
+            1636,
+            517
+          ],
+          "confidence": 99.82
+        },
+        {
+          "text": "光明堂上燭高懸",
+          "bbox": [
+            1049,
+            585,
+            1636,
+            651
+          ],
+          "confidence": 99.74
+        },
+        {
+          "text": "棲巢樹鳥睡方穩",
+          "bbox": [
+            1048,
+            717,
+            1638,
+            780
+          ],
+          "confidence": 99.86
+        },
+        {
+          "text": "警析時雞聲正喧",
+          "bbox": [
+            1051,
+            848,
+            1637,
+            910
+          ],
+          "confidence": 99.62
+        },
+        {
+          "text": "筆陣花飛難御甲",
+          "bbox": [
+            1049,
+            978,
+            1630,
+            1043
+          ],
+          "confidence": 99.9
+        },
+        {
+          "text": "硯池柳動易生煙",
+          "bbox": [
+            1045,
+            1112,
+            2014,
+            1175
+          ],
+          "confidence": 99.58
+        },
+        {
+          "text": "委蛇欲學周卿士",
+          "bbox": [
+            1047,
+            1244,
+            1916,
+            1307
+          ],
+          "confidence": 99.28
+        },
+        {
+          "text": "卻慕姬公重仔肩",
+          "bbox": [
+            1047,
+            1376,
+            1632,
+            1440
+          ],
+          "confidence": 99.55
+        },
+        {
+          "text": "PHIEN AM:",
+          "bbox": [
+            490,
+            1550,
+            744,
+            1590
+          ],
+          "confidence": 98.71
+        },
+        {
+          "text": "LANG NGAM",
+          "bbox": [
+            1174,
+            1624,
+            1506,
+            1669
+          ],
+          "confidence": 95.5
+        },
+        {
+          "text": "Đại lâu kim ngao bất da thiên,",
+          "bbox": [
+            954,
+            1757,
+            1666,
+            1803
+          ],
+          "confidence": 75.18
+        },
+        {
+          "text": "Quang Minh đường thương chức cao huyện.",
+          "bbox": [
+            959,
+            1839,
+            1959,
+            1893
+          ],
+          "confidence": 89.49
+        },
+        {
+          "text": "Thê sào thụ điều thụy phương ổn;",
+          "bbox": [
+            959,
+            1921,
+            1732,
+            1975
+          ],
+          "confidence": 86.7
+        },
+        {
+          "text": "Cảnh tích thời kê thanh chính huyện.",
+          "bbox": [
+            958,
+            2003,
+            1814,
+            2050
+          ],
+          "confidence": 90.36
+        },
+        {
+          "text": "Bút trận hoa phi nan ngư giáp;",
+          "bbox": [
+            955,
+            2088,
+            1682,
+            2141
+          ],
+          "confidence": 94.02
+        },
+        {
+          "text": "Nghiên trì liệu động dị sinh yên.",
+          "bbox": [
+            954,
+            2169,
+            1701,
+            2224
+          ],
+          "confidence": 84.27
+        },
+        {
+          "text": "Uỷ sà dục hoc Chu khanh sĩ,",
+          "bbox": [
+            690,
+            2253,
+            1615,
+            2298
+          ],
+          "confidence": 82.72
+        },
+        {
+          "text": "Khuốc mộ Cơ công trọng tử kiên.",
+          "bbox": [
+            956,
+            2337,
+            1699,
+            2387
+          ],
+          "confidence": 87.06
+        },
+        {
+          "text": "DICH NGHIA:",
+          "bbox": [
+            490,
+            2450,
+            799,
+            2488
+          ],
+          "confidence": 99.03
+        },
+        {
+          "text": "NGÂM VANG",
+          "bbox": [
+            1175,
+            2522,
+            1506,
+            2568
+          ],
+          "confidence": 91.75
+        },
+        {
+          "text": "Trong nhà “đãi lậu” đèn được tựa ban ngày,",
+          "bbox": [
+            900,
+            2656,
+            1941,
+            2708
+          ],
+          "confidence": 84.28
+        },
+        {
+          "text": "Trên diện Quang Minh treo cao ngọn nền.",
+          "bbox": [
+            900,
+            2739,
+            1897,
+            2791
+          ],
+          "confidence": 94.75
+        },
+        {
+          "text": "Trên cây, chim trong tổ đường yên giấc ngủ;",
+          "bbox": [
+            901,
+            2822,
+            2073,
+            2874
+          ],
+          "confidence": 94.01
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2557,
+          3191
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 28.705,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              6,
+              19,
+              296,
+              45
+            ],
+            "generated_text": "ngothinhamch1.pdf",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.919,
+            "confidence": 98.77,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              488,
+              181,
+              1572,
+              220
+            ],
+            "generated_text": "NGŮ THI NHAM TOAN TAP - TAP III",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.51,
+            "confidence": 76.98,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              470,
+              221,
+              2209,
+              236
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.462,
+            "confidence": 87.49,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              584,
+              286,
+              1975,
+              346
+            ],
+            "generated_text": "6. 浪吟",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.706,
+            "confidence": 92.82,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              1047,
+              456,
+              1636,
+              517
+            ],
+            "generated_text": "待漏金熬不夜天",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.855,
+            "confidence": 99.82,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              1049,
+              585,
+              1636,
+              651
+            ],
+            "generated_text": "光明堂上燭高懸",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 1.01,
+            "confidence": 99.74,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              1048,
+              717,
+              1638,
+              780
+            ],
+            "generated_text": "棲巢樹鳥睡方穩",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.23,
+            "confidence": 99.86,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              1051,
+              848,
+              1637,
+              910
+            ],
+            "generated_text": "警析時雞聲正喧",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.991,
+            "confidence": 99.62,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              1049,
+              978,
+              1630,
+              1043
+            ],
+            "generated_text": "筆陣花飛難御甲",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.105,
+            "confidence": 99.9,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              1045,
+              1112,
+              2014,
+              1175
+            ],
+            "generated_text": "硯池柳動易生煙",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.12,
+            "confidence": 99.58,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              1047,
+              1244,
+              1916,
+              1307
+            ],
+            "generated_text": "委蛇欲學周卿士",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.827,
+            "confidence": 99.28,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              1047,
+              1376,
+              1632,
+              1440
+            ],
+            "generated_text": "卻慕姬公重仔肩",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.974,
+            "confidence": 99.55,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              490,
+              1550,
+              744,
+              1590
+            ],
+            "generated_text": "PHIEN AM:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.727,
+            "confidence": 98.71,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              1174,
+              1624,
+              1506,
+              1669
+            ],
+            "generated_text": "LANG NGAM",
+            "n_lines": 1,
+            "tokens": 4,
+            "seconds": 0.583,
+            "confidence": 95.5,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              954,
+              1757,
+              1666,
+              1803
+            ],
+            "generated_text": "Đại lâu kim ngao bất da thiên,",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.189,
+            "confidence": 75.18,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              959,
+              1839,
+              1959,
+              1893
+            ],
+            "generated_text": "Quang Minh đường thương chức cao huyện.",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.18,
+            "confidence": 89.49,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              959,
+              1921,
+              1732,
+              1975
+            ],
+            "generated_text": "Thê sào thụ điều thụy phương ổn;",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.395,
+            "confidence": 86.7,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              958,
+              2003,
+              1814,
+              2050
+            ],
+            "generated_text": "Cảnh tích thời kê thanh chính huyện.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.172,
+            "confidence": 90.36,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              955,
+              2088,
+              1682,
+              2141
+            ],
+            "generated_text": "Bút trận hoa phi nan ngư giáp;",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.128,
+            "confidence": 94.02,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              954,
+              2169,
+              1701,
+              2224
+            ],
+            "generated_text": "Nghiên trì liệu động dị sinh yên.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.136,
+            "confidence": 84.27,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              690,
+              2253,
+              1615,
+              2298
+            ],
+            "generated_text": "Uỷ sà dục hoc Chu khanh sĩ,",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.255,
+            "confidence": 82.72,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              956,
+              2337,
+              1699,
+              2387
+            ],
+            "generated_text": "Khuốc mộ Cơ công trọng tử kiên.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.31,
+            "confidence": 87.06,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              490,
+              2450,
+              799,
+              2488
+            ],
+            "generated_text": "DICH NGHIA:",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.766,
+            "confidence": 99.03,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              1175,
+              2522,
+              1506,
+              2568
+            ],
+            "generated_text": "NGÂM VANG",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.709,
+            "confidence": 91.75,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              900,
+              2656,
+              1941,
+              2708
+            ],
+            "generated_text": "Trong nhà “đãi lậu” đèn được tựa ban ngày,",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.718,
+            "confidence": 84.28,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              900,
+              2739,
+              1897,
+              2791
+            ],
+            "generated_text": "Trên diện Quang Minh treo cao ngọn nền.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.383,
+            "confidence": 94.75,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              901,
+              2822,
+              2073,
+              2874
+            ],
+            "generated_text": "Trên cây, chim trong tổ đường yên giấc ngủ;",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.342,
+            "confidence": 94.01,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              1070,
+              0,
+              1534,
+              10
+            ],
+            "ink": 151
+          },
+          {
+            "box": [
+              564,
+              173,
+              1164,
+              185
+            ],
+            "ink": 304
+          },
+          {
+            "box": [
+              501,
+              2952,
+              585,
+              2961
+            ],
+            "ink": 201
+          },
+          {
+            "box": [
+              512,
+              2966,
+              583,
+              2976
+            ],
+            "ink": 295
+          },
+          {
+            "box": [
+              496,
+              2985,
+              585,
+              2998
+            ],
+            "ink": 323
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

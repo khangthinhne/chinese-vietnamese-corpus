@@ -1,0 +1,963 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 85,
+  "runs": [
+    {
+      "key": "4ef2ed56f7c9901eb0a470ee9e565953d96ecc2dc2b705db75cb6f0e735f59dc",
+      "parameters": {
+        "image_sha256": "9bc6a5fe0542616e905b9af3862783be7d1fb2973fe59488248a5bd4645d204e",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T12:03:48+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_085.png",
+      "image_size": [
+        2544,
+        3178
+      ],
+      "crop_box": [
+        0,
+        0,
+        2544,
+        3178
+      ],
+      "lines": [
+        {
+          "text": "ngothinhamch1.pdf",
+          "bbox": [
+            7,
+            19,
+            296,
+            45
+          ],
+          "confidence": 98.71
+        },
+        {
+          "text": "NGÔ THI NHÂM TOẠN TẬP - TẬP III",
+          "bbox": [
+            557,
+            214,
+            1331,
+            252
+          ],
+          "confidence": 81.48
+        },
+        {
+          "text": "Mã đường lao lạc đại ngân thấp;",
+          "bbox": [
+            1004,
+            317,
+            1804,
+            362
+          ],
+          "confidence": 81.08
+        },
+        {
+          "text": "Nguu kính hoành tà thảo tích mê.",
+          "bbox": [
+            1001,
+            401,
+            1784,
+            446
+          ],
+          "confidence": 86.44
+        },
+        {
+          "text": "Vũ Hậu huyện lưu bôn giản cấp;",
+          "bbox": [
+            534,
+            482,
+            1758,
+            527
+          ],
+          "confidence": 86.86
+        },
+        {
+          "text": "Tiêu lai ngừng ái quái(d) phong đê.",
+          "bbox": [
+            1007,
+            566,
+            1795,
+            620
+          ],
+          "confidence": 83.74
+        },
+        {
+          "text": "Nhân công (đ (这里原文本可能存在识别错误，推测正确为“Nhân công”等，但按要求照识别处理) ) xế cấp hà niên đại,",
+          "bbox": [
+            1001,
+            648,
+            2125,
+            692
+          ],
+          "confidence": 61.85
+        },
+        {
+          "text": "Ký thủ hành nhân thương thach thê.",
+          "bbox": [
+            1003,
+            729,
+            1847,
+            774
+          ],
+          "confidence": 89.9
+        },
+        {
+          "text": "DICH NGHIA:",
+          "bbox": [
+            559,
+            819,
+            868,
+            856
+          ],
+          "confidence": 99.2
+        },
+        {
+          "text": "DOC ĐƯỜNG LẠC DUNG\\(^{(1)}\\)",
+          "bbox": [
+            1084,
+            891,
+            1738,
+            937
+          ],
+          "confidence": 91.66
+        },
+        {
+          "text": "Hết trẻo đèo lại xuống suối khe,",
+          "bbox": [
+            1007,
+            1024,
+            1739,
+            1068
+          ],
+          "confidence": 81.88
+        },
+        {
+          "text": "Địa thế Lạc Dung giống Lạng Sơn ghê.",
+          "bbox": [
+            1006,
+            1105,
+            1898,
+            1158
+          ],
+          "confidence": 92.89
+        },
+        {
+          "text": "Đường ngựa quanh hữu, ngắn rêu ấm ướt;",
+          "bbox": [
+            1006,
+            1187,
+            1982,
+            1240
+          ],
+          "confidence": 85.75
+        },
+        {
+          "text": "Lối trâu ngang doc, dấu cơ xum xuê.",
+          "bbox": [
+            1007,
+            1267,
+            1842,
+            1313
+          ],
+          "confidence": 88.12
+        },
+        {
+          "text": "Sau mưa, suối độc bằng xuống khe gấp;",
+          "bbox": [
+            1007,
+            1349,
+            2281,
+            1403
+          ],
+          "confidence": 90.11
+        },
+        {
+          "text": "Lúc tanh, mây dừng đầu núi phủ che.",
+          "bbox": [
+            1007,
+            1432,
+            2309,
+            1478
+          ],
+          "confidence": 87.51
+        },
+        {
+          "text": "Từ những năm nao, người xây bậc đá?",
+          "bbox": [
+            1006,
+            1515,
+            1886,
+            1568
+          ],
+          "confidence": 91.55
+        },
+        {
+          "text": "Trên thang đá, ghi dấu chân người đi.",
+          "bbox": [
+            1006,
+            1598,
+            1881,
+            1651
+          ],
+          "confidence": 97.01
+        },
+        {
+          "text": "KHAO DI:",
+          "bbox": [
+            560,
+            1683,
+            779,
+            1722
+          ],
+          "confidence": 91.62
+        },
+        {
+          "text": "a. Bản A.404, Bản A.117c/1: Lịch tần nham yêu phục độ khê 歷盡岩",
+          "bbox": [
+            708,
+            1752,
+            2222,
+            1801
+          ],
+          "confidence": 93.25
+        },
+        {
+          "text": "腰復渡溪。",
+          "bbox": [
+            575,
+            1833,
+            800,
+            1875
+          ],
+          "confidence": 95.89
+        },
+        {
+          "text": "b. Bản A.404: Khán sơn tê ống 青山齊.",
+          "bbox": [
+            706,
+            1901,
+            1425,
+            1944
+          ],
+          "confidence": 78.48
+        },
+        {
+          "text": "c. Bản A.404: Cân thấp 跟濕.",
+          "bbox": [
+            707,
+            1975,
+            1302,
+            2017
+          ],
+          "confidence": 95.81
+        },
+        {
+          "text": "d.Bản A.117c/1: Thu 樹.",
+          "bbox": [
+            709,
+            2049,
+            1212,
+            2091
+          ],
+          "confidence": 96.26
+        },
+        {
+          "text": "CHU THICH:",
+          "bbox": [
+            562,
+            2152,
+            849,
+            2191
+          ],
+          "confidence": 98.27
+        },
+        {
+          "text": "1.Lạc Dung: Tên huyện, thuộc tỉnh Quảng Tây, đặt từ đời Đường.",
+          "bbox": [
+            713,
+            2220,
+            2092,
+            2271
+          ],
+          "confidence": 93.72
+        },
+        {
+          "text": "～～～～～～～～～",
+          "bbox": [
+            1234,
+            2358,
+            1557,
+            2375
+          ],
+          "confidence": 73.32
+        },
+        {
+          "text": "36. 雨行",
+          "bbox": [
+            1233,
+            2373,
+            1571,
+            2421
+          ],
+          "confidence": 95.42
+        },
+        {
+          "text": "日夜兼程五百里",
+          "bbox": [
+            1163,
+            2567,
+            1738,
+            2624
+          ],
+          "confidence": 99.91
+        },
+        {
+          "text": "人馬馳驅不敢睡",
+          "bbox": [
+            1150,
+            2698,
+            1739,
+            2755
+          ],
+          "confidence": 99.96
+        },
+        {
+          "text": "閫臣火速騰詔書",
+          "bbox": [
+            1157,
+            2829,
+            1737,
+            2892
+          ],
+          "confidence": 99.7
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2544,
+          3178
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 44.412,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              7,
+              19,
+              296,
+              45
+            ],
+            "generated_text": "ngothinhamch1.pdf",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.914,
+            "confidence": 98.71,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              557,
+              214,
+              1331,
+              252
+            ],
+            "generated_text": "NGÔ THI NHÂM TOẠN TẬP - TẬP III",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 1.884,
+            "confidence": 81.48,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              560,
+              258,
+              2272,
+              271
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.458,
+            "confidence": 96.14,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              1004,
+              317,
+              1804,
+              362
+            ],
+            "generated_text": "Mã đường lao lạc đại ngân thấp;",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.213,
+            "confidence": 81.08,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              1001,
+              401,
+              1784,
+              446
+            ],
+            "generated_text": "Nguu kính hoành tà thảo tích mê.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.279,
+            "confidence": 86.44,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              534,
+              482,
+              1758,
+              527
+            ],
+            "generated_text": "Vũ Hậu huyện lưu bôn giản cấp;",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.253,
+            "confidence": 86.86,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              1007,
+              566,
+              1795,
+              620
+            ],
+            "generated_text": "Tiêu lai ngừng ái quái(d) phong đê.",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.457,
+            "confidence": 83.74,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              1001,
+              648,
+              2125,
+              692
+            ],
+            "generated_text": "Nhân công (đ (这里原文本可能存在识别错误，推测正确为“Nhân công”等，但按要求照识别处理) ) xế cấp hà niên đại,",
+            "n_lines": 1,
+            "tokens": 42,
+            "seconds": 3.406,
+            "confidence": 61.85,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              1003,
+              729,
+              1847,
+              774
+            ],
+            "generated_text": "Ký thủ hành nhân thương thach thê.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.17,
+            "confidence": 89.9,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              559,
+              819,
+              868,
+              856
+            ],
+            "generated_text": "DICH NGHIA:",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.767,
+            "confidence": 99.2,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              1084,
+              891,
+              1738,
+              937
+            ],
+            "generated_text": "DOC ĐƯỜNG LẠC DUNG\\(^{(1)}\\)",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.834,
+            "confidence": 91.66,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              1007,
+              1024,
+              1739,
+              1068
+            ],
+            "generated_text": "Hết trẻo đèo lại xuống suối khe,",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.387,
+            "confidence": 81.88,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              1006,
+              1105,
+              1898,
+              1158
+            ],
+            "generated_text": "Địa thế Lạc Dung giống Lạng Sơn ghê.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.435,
+            "confidence": 92.89,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              1006,
+              1187,
+              1982,
+              1240
+            ],
+            "generated_text": "Đường ngựa quanh hữu, ngắn rêu ấm ướt;",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.954,
+            "confidence": 85.75,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              1007,
+              1267,
+              1842,
+              1313
+            ],
+            "generated_text": "Lối trâu ngang doc, dấu cơ xum xuê.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.417,
+            "confidence": 88.12,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              1007,
+              1349,
+              2281,
+              1403
+            ],
+            "generated_text": "Sau mưa, suối độc bằng xuống khe gấp;",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.425,
+            "confidence": 90.11,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              1007,
+              1432,
+              2309,
+              1478
+            ],
+            "generated_text": "Lúc tanh, mây dừng đầu núi phủ che.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.375,
+            "confidence": 87.51,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              1006,
+              1515,
+              1886,
+              1568
+            ],
+            "generated_text": "Từ những năm nao, người xây bậc đá?",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.351,
+            "confidence": 91.55,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              1006,
+              1598,
+              1881,
+              1651
+            ],
+            "generated_text": "Trên thang đá, ghi dấu chân người đi.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.43,
+            "confidence": 97.01,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              560,
+              1683,
+              779,
+              1722
+            ],
+            "generated_text": "KHAO DI:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.686,
+            "confidence": 91.62,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              708,
+              1752,
+              2222,
+              1801
+            ],
+            "generated_text": "a. Bản A.404, Bản A.117c/1: Lịch tần nham yêu phục độ khê 歷 盡 岩",
+            "n_lines": 1,
+            "tokens": 42,
+            "seconds": 3.107,
+            "confidence": 93.25,
+            "flags": [
+              "han_gap_removed"
+            ],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              575,
+              1833,
+              800,
+              1875
+            ],
+            "generated_text": "腰復渡溪。",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.693,
+            "confidence": 95.89,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              706,
+              1901,
+              1425,
+              1944
+            ],
+            "generated_text": "b. Bản A.404: Khán sơn tê ống 青山齊.",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.686,
+            "confidence": 78.48,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              707,
+              1975,
+              1302,
+              2017
+            ],
+            "generated_text": "c. Bản A.404: Cân thấp 跟濕.",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.754,
+            "confidence": 95.81,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              709,
+              2049,
+              1212,
+              2091
+            ],
+            "generated_text": "d.Bản A.117c/1: Thu 樹.",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.488,
+            "confidence": 96.26,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              562,
+              2152,
+              849,
+              2191
+            ],
+            "generated_text": "CHU THICH:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.736,
+            "confidence": 98.27,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              713,
+              2220,
+              2092,
+              2271
+            ],
+            "generated_text": "1.Lạc Dung: Tên huyện, thuộc tỉnh Quảng Tây, đặt từ đời Đường.",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.083,
+            "confidence": 93.72,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              1234,
+              2358,
+              1557,
+              2375
+            ],
+            "generated_text": "～～～～～～～～～",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.942,
+            "confidence": 73.32,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              1233,
+              2373,
+              1571,
+              2421
+            ],
+            "generated_text": "36. 雨行",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.769,
+            "confidence": 95.42,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              1163,
+              2567,
+              1738,
+              2624
+            ],
+            "generated_text": "日夜兼程五百里",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.733,
+            "confidence": 99.91,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              1150,
+              2698,
+              1739,
+              2755
+            ],
+            "generated_text": "人馬馳驅不敢睡",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 1.096,
+            "confidence": 99.96,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 32,
+            "box": [
+              1157,
+              2829,
+              1737,
+              2892
+            ],
+            "generated_text": "閫臣火速騰詔書",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.223,
+            "confidence": 99.7,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              634,
+              207,
+              1234,
+              218
+            ],
+            "ink": 272
+          },
+          {
+            "box": [
+              1207,
+              359,
+              1755,
+              371
+            ],
+            "ink": 358
+          },
+          {
+            "box": [
+              1130,
+              524,
+              1750,
+              535
+            ],
+            "ink": 260
+          },
+          {
+            "box": [
+              1238,
+              1310,
+              1451,
+              1320
+            ],
+            "ink": 239
+          },
+          {
+            "box": [
+              1132,
+              1474,
+              1696,
+              1485
+            ],
+            "ink": 259
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

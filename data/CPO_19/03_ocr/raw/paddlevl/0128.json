@@ -1,0 +1,978 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 128,
+  "runs": [
+    {
+      "key": "96306bf9e140dc008731072decc20340a1f6e4d8875b87ddb53336d3b62d8b41",
+      "parameters": {
+        "image_sha256": "1d9975ad40e9990ce45dc199fe96530cd66027a5ebde5714ab8d1fccdc7791d7",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T12:32:28+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_128.png",
+      "image_size": [
+        2681,
+        3297
+      ],
+      "crop_box": [
+        0,
+        0,
+        2681,
+        3297
+      ],
+      "lines": [
+        {
+          "text": "ngothinhamle1.pdf",
+          "bbox": [
+            7,
+            19,
+            286,
+            45
+          ],
+          "confidence": 96.3
+        },
+        {
+          "text": "HOÀNG HOA ĐỔ PHA",
+          "bbox": [
+            1591,
+            248,
+            2127,
+            287
+          ],
+          "confidence": 79.07
+        },
+        {
+          "text": "hàng hiệt vân đoan.⁽⁴⁾ Nhai đáo thủ thời, khởi bất thường tâm ngư",
+          "bbox": [
+            343,
+            352,
+            2051,
+            398
+          ],
+          "confidence": 84.32
+        },
+        {
+          "text": "muc!(k) Túng sử Bông Lai tiên cảnh, xuất sắc trân hoàn, tiêu dao dữ",
+          "bbox": [
+            344,
+            435,
+            2056,
+            480
+          ],
+          "confidence": 88.47
+        },
+        {
+          "text": "du, diệc bất đắc dĩ Hành Dương tranh hĩ. Có thi nhân dĩ xuân nhất",
+          "bbox": [
+            344,
+            516,
+            2053,
+            561
+          ],
+          "confidence": 86.33
+        },
+        {
+          "text": "khởi hướng nhi quy ư thu, trọng ư thu. Kiến thu vi Hành Dương chủ",
+          "bbox": [
+            343,
+            597,
+            2052,
+            651
+          ],
+          "confidence": 85.78
+        },
+        {
+          "text": "nhân đà. Chân kiến đặc cổ (l (l (这里（可能原图存在识别错误，但按规则，按识别结果推测应为“chỉ” ）) tác thú vi nhi vân.",
+          "bbox": [
+            345,
+            682,
+            1476,
+            726
+          ],
+          "confidence": 51.43
+        },
+        {
+          "text": "Hành Dương tư cố thuyết thu giai,",
+          "bbox": [
+            792,
+            765,
+            1938,
+            808
+          ],
+          "confidence": 89.12
+        },
+        {
+          "text": "Nga dao lai thơ xuân vu lai.",
+          "bbox": [
+            355,
+            859,
+            1459,
+            891
+          ],
+          "confidence": 87.09
+        },
+        {
+          "text": "Tuấn sàng đăn tu khan cảnh vật;",
+          "bbox": [
+            796,
+            929,
+            1570,
+            973
+          ],
+          "confidence": 81.92
+        },
+        {
+          "text": "Phôn hoa bất tất luân lâu đài.",
+          "bbox": [
+            793,
+            1012,
+            1493,
+            1054
+          ],
+          "confidence": 85.28
+        },
+        {
+          "text": "Tiêu, Tương thủy hợp liên thanh chướng:",
+          "bbox": [
+            796,
+            1092,
+            1981,
+            1136
+          ],
+          "confidence": 96.71
+        },
+        {
+          "text": "Số, Việt sơn hoàn chấm bích ơi.",
+          "bbox": [
+            794,
+            1174,
+            1510,
+            1217
+          ],
+          "confidence": 84.13
+        },
+        {
+          "text": "Tương đặc kim phong quy nhan hâu.",
+          "bbox": [
+            797,
+            1255,
+            1659,
+            1299
+          ],
+          "confidence": 84.39
+        },
+        {
+          "text": "Vi ung tiên cảnh độc Bông Lai!",
+          "bbox": [
+            797,
+            1336,
+            1514,
+            1380
+          ],
+          "confidence": 75.17
+        },
+        {
+          "text": "DICH NGHIA:",
+          "bbox": [
+            346,
+            1450,
+            657,
+            1488
+          ],
+          "confidence": 99.14
+        },
+        {
+          "text": "NHAN THUẬT CANH HÀNH DƯỜNG\\(^{(1)}\\)",
+          "bbox": [
+            727,
+            1525,
+            1675,
+            1570
+          ],
+          "confidence": 85.23
+        },
+        {
+          "text": "Bài tụa Gác Đăng Vương của Vương Bột có câu: “Thuyền câu hát",
+          "bbox": [
+            493,
+            1661,
+            2055,
+            1714
+          ],
+          "confidence": 95.85
+        },
+        {
+          "text": "dưới ảnh tà dương, tiếng vọng khắp bờ Bành Lãi; đàn nhan sợ rét, tiếng",
+          "bbox": [
+            347,
+            1749,
+            2055,
+            1802
+          ],
+          "confidence": 95.28
+        },
+        {
+          "text": "thàng thốt bên Hành Dương.” Vương Kham Nhược có câu thơ:",
+          "bbox": [
+            347,
+            1837,
+            1770,
+            1883
+          ],
+          "confidence": 84.75
+        },
+        {
+          "text": "\"Rông dem máy chiều rơi động phủ,",
+          "bbox": [
+            509,
+            1924,
+            1475,
+            1968
+          ],
+          "confidence": 75.33
+        },
+        {
+          "text": "Nhan kéo sắc thu tói Hành Dương.\"",
+          "bbox": [
+            511,
+            2010,
+            1825,
+            2054
+          ],
+          "confidence": 86.12
+        },
+        {
+          "text": "Sông Tiêu, Tương hợp lại đổ về hộ [Động Đình]. Hành Dương ở",
+          "bbox": [
+            484,
+            2096,
+            2054,
+            2149
+          ],
+          "confidence": 87.19
+        },
+        {
+          "text": "phía nam hộ. Núi Sở, Việt vòng quanh; dòng Tiêu, Tương vây lấy. Đúng",
+          "bbox": [
+            346,
+            2183,
+            2054,
+            2235
+          ],
+          "confidence": 95.61
+        },
+        {
+          "text": "lúc ấy, ông chài hát dưới tà dương, tiếng véo von bến nước; rồng về hang",
+          "bbox": [
+            345,
+            2269,
+            2053,
+            2321
+          ],
+          "confidence": 89.19
+        },
+        {
+          "text": "thăm, cảnh máy khói mịt mùng, sắc thu Động Đình, Tiêu Tương trong",
+          "bbox": [
+            344,
+            2356,
+            2053,
+            2408
+          ],
+          "confidence": 92.21
+        },
+        {
+          "text": "suốt, cùng định Hồi Nhan ở Hành Dương, xa xa phản chiếu. Một bầu",
+          "bbox": [
+            345,
+            2442,
+            2050,
+            2490
+          ],
+          "confidence": 91.89
+        },
+        {
+          "text": "cảnh vật: Cá, rồng, nhan đều có thể xứng với ba cảnh tuyệt vời. Nhưng",
+          "bbox": [
+            344,
+            2530,
+            2050,
+            2582
+          ],
+          "confidence": 89.6
+        },
+        {
+          "text": "nay thuyên sử đi đến, lại gặp bưói mưa rào cuối xuân, nước lũ tràn lan,",
+          "bbox": [
+            344,
+            2618,
+            2048,
+            2669
+          ],
+          "confidence": 91.8
+        },
+        {
+          "text": "nhận sang phương bắc chứa về, rộng cũng lượt theo mây, thuyền câu ăn",
+          "bbox": [
+            344,
+            2706,
+            2047,
+            2757
+          ],
+          "confidence": 84.22
+        },
+        {
+          "text": "lên đá, chăng nghe tiếng sáo thuở nào, chỉ thấy lâu đài nơi bến xa, cái nọ",
+          "bbox": [
+            344,
+            2791,
+            2049,
+            2842
+          ],
+          "confidence": 90.94
+        },
+        {
+          "text": "cái kia xếp liền tựa cánh ve. Thường ngoạn cánh phôn hoa, bông muốn ra",
+          "bbox": [
+            344,
+            2877,
+            2048,
+            2929
+          ],
+          "confidence": 87.63
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2681,
+          3297
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 61.592,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              7,
+              19,
+              286,
+              45
+            ],
+            "generated_text": "ngothinhamle1.pdf",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.9,
+            "confidence": 96.3,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              1591,
+              248,
+              2127,
+              287
+            ],
+            "generated_text": "HOÀNG HOA ĐỔ PHA",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.094,
+            "confidence": 79.07,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              347,
+              292,
+              2059,
+              306
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.454,
+            "confidence": 37.72,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              343,
+              352,
+              2051,
+              398
+            ],
+            "generated_text": "hàng hiệt vân đoan.⁽⁴⁾ Nhai đáo thủ thời, khởi bất thường tâm ngư",
+            "n_lines": 1,
+            "tokens": 34,
+            "seconds": 2.686,
+            "confidence": 84.32,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              344,
+              435,
+              2056,
+              480
+            ],
+            "generated_text": "muc!(k) Túng sử Bông Lai tiên cảnh, xuất sắc trân hoàn, tiêu dao dữ",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 2.333,
+            "confidence": 88.47,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              344,
+              516,
+              2053,
+              561
+            ],
+            "generated_text": "du, diệc bất đắc dĩ Hành Dương tranh hĩ. Có thi nhân dĩ xuân nhất",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.256,
+            "confidence": 86.33,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              343,
+              597,
+              2052,
+              651
+            ],
+            "generated_text": "khởi hướng nhi quy ư thu, trọng ư thu. Kiến thu vi Hành Dương chủ",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 2.103,
+            "confidence": 85.78,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              345,
+              682,
+              1476,
+              726
+            ],
+            "generated_text": "nhân đà. Chân kiến đặc cổ (l (l (这里（可能原图存在识别错误，但按规则，按识别结果推测应为“chỉ” ）) tác thú vi nhi vân.",
+            "n_lines": 1,
+            "tokens": 51,
+            "seconds": 4.044,
+            "confidence": 51.43,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              792,
+              765,
+              1938,
+              808
+            ],
+            "generated_text": "Hành Dương tư cố thuyết thu giai,",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.507,
+            "confidence": 89.12,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              355,
+              859,
+              1459,
+              891
+            ],
+            "generated_text": "Nga dao lai thơ xuân vu lai.",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.197,
+            "confidence": 87.09,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              796,
+              929,
+              1570,
+              973
+            ],
+            "generated_text": "Tuấn sàng đăn tu khan cảnh vật;",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.187,
+            "confidence": 81.92,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              793,
+              1012,
+              1493,
+              1054
+            ],
+            "generated_text": "Phôn hoa bất tất luân lâu đài.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.245,
+            "confidence": 85.28,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              796,
+              1092,
+              1981,
+              1136
+            ],
+            "generated_text": "Tiêu, Tương thủy hợp liên thanh chướng:",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.273,
+            "confidence": 96.71,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              794,
+              1174,
+              1510,
+              1217
+            ],
+            "generated_text": "Số, Việt sơn hoàn chấm bích ơi.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.36,
+            "confidence": 84.13,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              797,
+              1255,
+              1659,
+              1299
+            ],
+            "generated_text": "Tương đặc kim phong quy nhan hâu.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.238,
+            "confidence": 84.39,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              797,
+              1336,
+              1514,
+              1380
+            ],
+            "generated_text": "Vi ung tiên cảnh độc Bông Lai!",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.127,
+            "confidence": 75.17,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              346,
+              1450,
+              657,
+              1488
+            ],
+            "generated_text": "DICH NGHIA:",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.762,
+            "confidence": 99.14,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              727,
+              1525,
+              1675,
+              1570
+            ],
+            "generated_text": "NHAN THUẬT CANH HÀNH DƯỜNG\\(^{(1)}\\)",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 2.127,
+            "confidence": 85.23,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              493,
+              1661,
+              2055,
+              1714
+            ],
+            "generated_text": "Bài tụa Gác Đăng Vương của Vương Bột có câu: “Thuyền câu hát",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.158,
+            "confidence": 95.85,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              347,
+              1749,
+              2055,
+              1802
+            ],
+            "generated_text": "dưới ảnh tà dương, tiếng vọng khắp bờ Bành Lãi; đàn nhan sợ rét, tiếng",
+            "n_lines": 1,
+            "tokens": 34,
+            "seconds": 2.685,
+            "confidence": 95.28,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              347,
+              1837,
+              1770,
+              1883
+            ],
+            "generated_text": "thàng thốt bên Hành Dương.” Vương Kham Nhược có câu thơ:",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.836,
+            "confidence": 84.75,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              509,
+              1924,
+              1475,
+              1968
+            ],
+            "generated_text": "\"Rông dem máy chiều rơi động phủ,",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.282,
+            "confidence": 75.33,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              511,
+              2010,
+              1825,
+              2054
+            ],
+            "generated_text": "Nhan kéo sắc thu tói Hành Dương.\"",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.239,
+            "confidence": 86.12,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              484,
+              2096,
+              2054,
+              2149
+            ],
+            "generated_text": "Sông Tiêu, Tương hợp lại đổ về hộ [Động Đình]. Hành Dương ở",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 2.005,
+            "confidence": 87.19,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              346,
+              2183,
+              2054,
+              2235
+            ],
+            "generated_text": "phía nam hộ. Núi Sở, Việt vòng quanh; dòng Tiêu, Tương vây lấy. Đúng",
+            "n_lines": 1,
+            "tokens": 33,
+            "seconds": 2.61,
+            "confidence": 95.61,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              345,
+              2269,
+              2053,
+              2321
+            ],
+            "generated_text": "lúc ấy, ông chài hát dưới tà dương, tiếng véo von bến nước; rồng về hang",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 2.466,
+            "confidence": 89.19,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              344,
+              2356,
+              2053,
+              2408
+            ],
+            "generated_text": "thăm, cảnh máy khói mịt mùng, sắc thu Động Đình, Tiêu Tương trong",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.273,
+            "confidence": 92.21,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              345,
+              2442,
+              2050,
+              2490
+            ],
+            "generated_text": "suốt, cùng định Hồi Nhan ở Hành Dương, xa xa phản chiếu. Một bầu",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 2.186,
+            "confidence": 91.89,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              344,
+              2530,
+              2050,
+              2582
+            ],
+            "generated_text": "cảnh vật: Cá, rồng, nhan đều có thể xứng với ba cảnh tuyệt vời. Nhưng",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 2.414,
+            "confidence": 89.6,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              344,
+              2618,
+              2048,
+              2669
+            ],
+            "generated_text": "nay thuyên sử đi đến, lại gặp bưói mưa rào cuối xuân, nước lũ tràn lan,",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 2.463,
+            "confidence": 91.8,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              344,
+              2706,
+              2047,
+              2757
+            ],
+            "generated_text": "nhận sang phương bắc chứa về, rộng cũng lượt theo mây, thuyền câu ăn",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.265,
+            "confidence": 84.22,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 32,
+            "box": [
+              344,
+              2791,
+              2049,
+              2842
+            ],
+            "generated_text": "lên đá, chăng nghe tiếng sáo thuở nào, chỉ thấy lâu đài nơi bến xa, cái nọ",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 2.48,
+            "confidence": 90.94,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 33,
+            "box": [
+              344,
+              2877,
+              2048,
+              2929
+            ],
+            "generated_text": "cái kia xếp liền tựa cánh ve. Thường ngoạn cánh phôn hoa, bông muốn ra",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 2.33,
+            "confidence": 87.63,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              799,
+              847,
+              1449,
+              862
+            ],
+            "ink": 841
+          },
+          {
+            "box": [
+              895,
+              1134,
+              1731,
+              1144
+            ],
+            "ink": 341
+          },
+          {
+            "box": [
+              910,
+              1297,
+              1655,
+              1307
+            ],
+            "ink": 379
+          },
+          {
+            "box": [
+              623,
+              1965,
+              1354,
+              1975
+            ],
+            "ink": 278
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

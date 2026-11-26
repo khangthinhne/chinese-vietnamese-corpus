@@ -1,0 +1,972 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 148,
+  "runs": [
+    {
+      "key": "bd61a1e02a7771b6b530f2a6ac305330c5d248ecd5a7b0fd851bea6ede4f15a9",
+      "parameters": {
+        "image_sha256": "d243180c69245bc50959f2c27c19f842b7561a8900948ebeab53be711557f4bb",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T12:47:01+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_148.png",
+      "image_size": [
+        2687,
+        3302
+      ],
+      "crop_box": [
+        0,
+        0,
+        2687,
+        3302
+      ],
+      "lines": [
+        {
+          "text": "ngothinhamle1.pdf",
+          "bbox": [
+            7,
+            19,
+            287,
+            45
+          ],
+          "confidence": 96.92
+        },
+        {
+          "text": "HOANG HOA DO PHA",
+          "bbox": [
+            1583,
+            244,
+            2047,
+            282
+          ],
+          "confidence": 88.27
+        },
+        {
+          "text": "晉",
+          "bbox": [
+            339,
+            288,
+            2051,
+            300
+          ],
+          "confidence": 15.27
+        },
+        {
+          "text": "DICH NGHIA:",
+          "bbox": [
+            338,
+            370,
+            1469,
+            407
+          ],
+          "confidence": 98.75
+        },
+        {
+          "text": "TREN DƯỜNG BA LÀNG\\(^{(1)}\\)",
+          "bbox": [
+            869,
+            472,
+            1513,
+            518
+          ],
+          "confidence": 79.42
+        },
+        {
+          "text": "Tương Âm (2) qua rồi, lại đến Ba Lăng,",
+          "bbox": [
+            632,
+            608,
+            1490,
+            653
+          ],
+          "confidence": 89.36
+        },
+        {
+          "text": "Đường bộ tầng tầng ngày thêm cao māi.",
+          "bbox": [
+            634,
+            697,
+            1552,
+            748
+          ],
+          "confidence": 87.05
+        },
+        {
+          "text": "Núi non khuất khúc, tưa rắn chay trên mâm vàng;",
+          "bbox": [
+            635,
+            783,
+            1803,
+            827
+          ],
+          "confidence": 89.46
+        },
+        {
+          "text": "Sông tưa đấy treo, như tăm bò thước ngọc.",
+          "bbox": [
+            634,
+            870,
+            1606,
+            915
+          ],
+          "confidence": 83.31
+        },
+        {
+          "text": "Bóng mát khóm thông, đưa lại vài tiếng sáo;",
+          "bbox": [
+            636,
+            957,
+            1655,
+            1001
+          ],
+          "confidence": 94.64
+        },
+        {
+          "text": "Răng tre lúc hoàng hôn, sáng mấy ngọn đèn.",
+          "bbox": [
+            634,
+            1043,
+            1662,
+            1094
+          ],
+          "confidence": 97.99
+        },
+        {
+          "text": "Thi thành náo nhiệt, trêu người mất khách,",
+          "bbox": [
+            633,
+            1129,
+            1642,
+            1174
+          ],
+          "confidence": 96.04
+        },
+        {
+          "text": "Những lòng vấn như băng trong bầu ngọc, mừng thay!(3)",
+          "bbox": [
+            635,
+            1215,
+            1928,
+            1267
+          ],
+          "confidence": 90.52
+        },
+        {
+          "text": "KHAO DI:",
+          "bbox": [
+            339,
+            1335,
+            570,
+            1375
+          ],
+          "confidence": 90.69
+        },
+        {
+          "text": "a. Bản A.117c/1, A.404: Am 陰.",
+          "bbox": [
+            488,
+            1421,
+            1131,
+            1463
+          ],
+          "confidence": 97.69
+        },
+        {
+          "text": "CHU THICH:",
+          "bbox": [
+            341,
+            1540,
+            630,
+            1579
+          ],
+          "confidence": 99.34
+        },
+        {
+          "text": "1.Ba Lăng: Tên huyện cũ, đặt tủ đòi Tấn.",
+          "bbox": [
+            494,
+            1623,
+            1409,
+            1666
+          ],
+          "confidence": 91.32
+        },
+        {
+          "text": "2. Tương Âm: Tên huyện, ở phía bắc huyện Trường Sa, tỉnh Hồ Nam.",
+          "bbox": [
+            491,
+            1705,
+            1937,
+            1755
+          ],
+          "confidence": 93.8
+        },
+        {
+          "text": "3.Bầu ngọc (ngọc hồ): Đòi Đường, Vương Xương Linh khi tiễn bạn có câu:",
+          "bbox": [
+            492,
+            1787,
+            2045,
+            1837
+          ],
+          "confidence": 90.94
+        },
+        {
+          "text": "“Nhất phiến bằng tâm tại ngọc hồ” (Một tấm lòng trong trắng như băng chúa",
+          "bbox": [
+            340,
+            1868,
+            2046,
+            1919
+          ],
+          "confidence": 91.81
+        },
+        {
+          "text": "trong bầu ngọc). Ý nói, lòng trong trắng như băng.",
+          "bbox": [
+            342,
+            1951,
+            1404,
+            2000
+          ],
+          "confidence": 97.02
+        },
+        {
+          "text": "DICH THO:",
+          "bbox": [
+            342,
+            2067,
+            596,
+            2106
+          ],
+          "confidence": 96.62
+        },
+        {
+          "text": "Tương Am qua rồi, đến Ba Lăng,",
+          "bbox": [
+            756,
+            2147,
+            1507,
+            2191
+          ],
+          "confidence": 94.56
+        },
+        {
+          "text": "Đường bộ một tầng, cao một tầng.",
+          "bbox": [
+            752,
+            2235,
+            1523,
+            2278
+          ],
+          "confidence": 94.05
+        },
+        {
+          "text": "Sông tưa tăm bò, liên thuộc ngọc;",
+          "bbox": [
+            752,
+            2321,
+            1683,
+            2364
+          ],
+          "confidence": 87.08
+        },
+        {
+          "text": "Núi như răn chay, khắp mâm vàng.",
+          "bbox": [
+            749,
+            2407,
+            1574,
+            2451
+          ],
+          "confidence": 96.72
+        },
+        {
+          "text": "Rùng thông toả mát vang tiếng sáo;",
+          "bbox": [
+            750,
+            2495,
+            1573,
+            2539
+          ],
+          "confidence": 86.85
+        },
+        {
+          "text": "Khóm trúc hoàng hôn mấy ngon đèn.",
+          "bbox": [
+            750,
+            2581,
+            1911,
+            2625
+          ],
+          "confidence": 93.82
+        },
+        {
+          "text": "Náo nhiệt thi thành trêu mắt khách,",
+          "bbox": [
+            748,
+            2672,
+            1586,
+            2716
+          ],
+          "confidence": 87.33
+        },
+        {
+          "text": "Long như báu ngọc van vui quen.",
+          "bbox": [
+            749,
+            2775,
+            1515,
+            2807
+          ],
+          "confidence": 89.01
+        },
+        {
+          "text": "Làm Giang",
+          "bbox": [
+            1774,
+            2877,
+            2045,
+            2907
+          ],
+          "confidence": 97.32
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2687,
+          3302
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 43.795,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              7,
+              19,
+              287,
+              45
+            ],
+            "generated_text": "ngothinhamle1.pdf",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.901,
+            "confidence": 96.92,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              1583,
+              244,
+              2047,
+              282
+            ],
+            "generated_text": "HOANG HOA DO PHA",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.813,
+            "confidence": 88.27,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              339,
+              288,
+              2051,
+              300
+            ],
+            "generated_text": "晉",
+            "n_lines": 1,
+            "tokens": 4,
+            "seconds": 0.649,
+            "confidence": 15.27,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              338,
+              370,
+              1469,
+              407
+            ],
+            "generated_text": "DICH NGHIA:",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.861,
+            "confidence": 98.75,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              869,
+              472,
+              1513,
+              518
+            ],
+            "generated_text": "TREN DƯỜNG BA LÀNG\\(^{(1)}\\)",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.675,
+            "confidence": 79.42,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              632,
+              608,
+              1490,
+              653
+            ],
+            "generated_text": "Tương Âm (2) qua rồi, lại đến Ba Lăng,",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.489,
+            "confidence": 89.36,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              634,
+              697,
+              1552,
+              748
+            ],
+            "generated_text": "Đường bộ tầng tầng ngày thêm cao māi.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.434,
+            "confidence": 87.05,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              635,
+              783,
+              1803,
+              827
+            ],
+            "generated_text": "Núi non khuất khúc, tưa rắn chay trên mâm vàng;",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.931,
+            "confidence": 89.46,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              634,
+              870,
+              1606,
+              915
+            ],
+            "generated_text": "Sông tưa đấy treo, như tăm bò thước ngọc.",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.731,
+            "confidence": 83.31,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              636,
+              957,
+              1655,
+              1001
+            ],
+            "generated_text": "Bóng mát khóm thông, đưa lại vài tiếng sáo;",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.611,
+            "confidence": 94.64,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              634,
+              1043,
+              1662,
+              1094
+            ],
+            "generated_text": "Răng tre lúc hoàng hôn, sáng mấy ngọn đèn.",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.677,
+            "confidence": 97.99,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              633,
+              1129,
+              1642,
+              1174
+            ],
+            "generated_text": "Thi thành náo nhiệt, trêu người mất khách,",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.473,
+            "confidence": 96.04,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              635,
+              1215,
+              1928,
+              1267
+            ],
+            "generated_text": "Những lòng vấn như băng trong bầu ngọc, mừng thay!(3)",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.74,
+            "confidence": 90.52,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              339,
+              1335,
+              570,
+              1375
+            ],
+            "generated_text": "KHAO DI:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.695,
+            "confidence": 90.69,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              488,
+              1421,
+              1131,
+              1463
+            ],
+            "generated_text": "a. Bản A.117c/1, A.404: Am 陰.",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 2.174,
+            "confidence": 97.69,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              341,
+              1540,
+              630,
+              1579
+            ],
+            "generated_text": "CHU THICH:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.732,
+            "confidence": 99.34,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              494,
+              1623,
+              1409,
+              1666
+            ],
+            "generated_text": "1.Ba Lăng: Tên huyện cũ, đặt tủ đòi Tấn.",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.843,
+            "confidence": 91.32,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              491,
+              1705,
+              1937,
+              1755
+            ],
+            "generated_text": "2. Tương Âm: Tên huyện, ở phía bắc huyện Trường Sa, tỉnh Hồ Nam.",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 2.17,
+            "confidence": 93.8,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              492,
+              1787,
+              2045,
+              1837
+            ],
+            "generated_text": "3.Bầu ngọc (ngọc hồ): Đòi Đường, Vương Xương Linh khi tiễn bạn có câu:",
+            "n_lines": 1,
+            "tokens": 32,
+            "seconds": 2.435,
+            "confidence": 90.94,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              340,
+              1868,
+              2046,
+              1919
+            ],
+            "generated_text": "“Nhất phiến bằng tâm tại ngọc hồ” (Một tấm lòng trong trắng như băng chúa",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 2.407,
+            "confidence": 91.81,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              342,
+              1951,
+              1404,
+              2000
+            ],
+            "generated_text": "trong bầu ngọc). Ý nói, lòng trong trắng như băng.",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.851,
+            "confidence": 97.02,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              342,
+              2067,
+              596,
+              2106
+            ],
+            "generated_text": "DICH THO:",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.662,
+            "confidence": 96.62,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              756,
+              2147,
+              1507,
+              2191
+            ],
+            "generated_text": "Tương Am qua rồi, đến Ba Lăng,",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.118,
+            "confidence": 94.56,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              752,
+              2235,
+              1523,
+              2278
+            ],
+            "generated_text": "Đường bộ một tầng, cao một tầng.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.256,
+            "confidence": 94.05,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              752,
+              2321,
+              1683,
+              2364
+            ],
+            "generated_text": "Sông tưa tăm bò, liên thuộc ngọc;",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.372,
+            "confidence": 87.08,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              749,
+              2407,
+              1574,
+              2451
+            ],
+            "generated_text": "Núi như răn chay, khắp mâm vàng.",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.48,
+            "confidence": 96.72,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              750,
+              2495,
+              1573,
+              2539
+            ],
+            "generated_text": "Rùng thông toả mát vang tiếng sáo;",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.224,
+            "confidence": 86.85,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              750,
+              2581,
+              1911,
+              2625
+            ],
+            "generated_text": "Khóm trúc hoàng hôn mấy ngon đèn.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.515,
+            "confidence": 93.82,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              748,
+              2672,
+              1586,
+              2716
+            ],
+            "generated_text": "Náo nhiệt thi thành trêu mắt khách,",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.161,
+            "confidence": 87.33,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              749,
+              2775,
+              1515,
+              2807
+            ],
+            "generated_text": "Long như báu ngọc van vui quen.",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.059,
+            "confidence": 89.01,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              1774,
+              2877,
+              2045,
+              2907
+            ],
+            "generated_text": "Làm Giang",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.651,
+            "confidence": 97.32,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              753,
+              649,
+              1486,
+              659
+            ],
+            "ink": 303
+          },
+          {
+            "box": [
+              723,
+              912,
+              1564,
+              922
+            ],
+            "ink": 262
+          },
+          {
+            "box": [
+              727,
+              997,
+              1652,
+              1008
+            ],
+            "ink": 344
+          },
+          {
+            "box": [
+              870,
+              2190,
+              1490,
+              2199
+            ],
+            "ink": 239
+          },
+          {
+            "box": [
+              874,
+              2274,
+              1509,
+              2286
+            ],
+            "ink": 384
+          },
+          {
+            "box": [
+              847,
+              2536,
+              1562,
+              2547
+            ],
+            "ink": 359
+          },
+          {
+            "box": [
+              757,
+              2764,
+              1380,
+              2773
+            ],
+            "ink": 248
+          },
+          {
+            "box": [
+              837,
+              2806,
+              1416,
+              2815
+            ],
+            "ink": 189
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

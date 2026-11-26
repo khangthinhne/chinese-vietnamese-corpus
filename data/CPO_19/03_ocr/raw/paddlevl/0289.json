@@ -1,0 +1,992 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 289,
+  "runs": [
+    {
+      "key": "9cd6b6076dd27ddc7797dcc08445a68cb4cfd259e948ca2ec195e4e6680abe12",
+      "parameters": {
+        "image_sha256": "d42e803cbef519dd612839e02544d858fd20d6cf651217c1baa0a350daeea272",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T14:28:16+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_289.png",
+      "image_size": [
+        2588,
+        3213
+      ],
+      "crop_box": [
+        0,
+        0,
+        2588,
+        3213
+      ],
+      "lines": [
+        {
+          "text": "ngothinhamle1.pdf",
+          "bbox": [
+            7,
+            13,
+            1325,
+            45
+          ],
+          "confidence": 93.97
+        },
+        {
+          "text": "CÁM ĐƯỜNG NHẬN THOAI",
+          "bbox": [
+            1554,
+            216,
+            2133,
+            257
+          ],
+          "confidence": 81.44
+        },
+        {
+          "text": ".",
+          "bbox": [
+            413,
+            257,
+            2151,
+            271
+          ],
+          "confidence": 87.97
+        },
+        {
+          "text": "Tưa Tiên trên máy nhòm của sổ, ném áo vũ nghệ.",
+          "bbox": [
+            782,
+            335,
+            1958,
+            383
+          ],
+          "confidence": 88.47
+        },
+        {
+          "text": "Tiết sánh từng xanh, vượt lên núi tuyệt;",
+          "bbox": [
+            768,
+            418,
+            1706,
+            464
+          ],
+          "confidence": 93.93
+        },
+        {
+          "text": "Đao ngang cổ biếc, in dấu khe sâu.",
+          "bbox": [
+            781,
+            503,
+            1580,
+            547
+          ],
+          "confidence": 89.05
+        },
+        {
+          "text": "Hoá công có ý xới vun bôi đắp,",
+          "bbox": [
+            783,
+            583,
+            1477,
+            629
+          ],
+          "confidence": 83.36
+        },
+        {
+          "text": "Trên bờ ao toả ánh sáng trong một màu.",
+          "bbox": [
+            783,
+            667,
+            1705,
+            710
+          ],
+          "confidence": 88.81
+        },
+        {
+          "text": "CHU THICH:",
+          "bbox": [
+            431,
+            775,
+            754,
+            813
+          ],
+          "confidence": 98.57
+        },
+        {
+          "text": "1.Tết Đoan Dương: Tết mồng 5 tháng 5 âm lịch.",
+          "bbox": [
+            580,
+            851,
+            1585,
+            893
+          ],
+          "confidence": 94.27
+        },
+        {
+          "text": "2.Phát cung trăng, ý nói bông sen là tượng trưng cho nhà Phật, nó biến",
+          "bbox": [
+            577,
+            929,
+            2136,
+            977
+          ],
+          "confidence": 94.86
+        },
+        {
+          "text": "hoá vô thường, sắc mà không, không mà sắc.",
+          "bbox": [
+            426,
+            1006,
+            1373,
+            1049
+          ],
+          "confidence": 96.31
+        },
+        {
+          "text": "3.Ao vũ nghê: Ao các vũ nũ mặc đế múa điệu “nghê thường” do Đường",
+          "bbox": [
+            577,
+            1085,
+            2135,
+            1134
+          ],
+          "confidence": 85.0
+        },
+        {
+          "text": "Minh Hoàng làm ra, xuất xứ từ chữ \"vũ y nghê thường.\"",
+          "bbox": [
+            427,
+            1163,
+            1611,
+            1205
+          ],
+          "confidence": 93.22
+        },
+        {
+          "text": "DICH THO:",
+          "bbox": [
+            428,
+            1273,
+            2179,
+            1312
+          ],
+          "confidence": 95.98
+        },
+        {
+          "text": "Vốn chất sinh ra bùn chăng nhuộm,",
+          "bbox": [
+            870,
+            1348,
+            1693,
+            1394
+          ],
+          "confidence": 81.04
+        },
+        {
+          "text": "Rành rành trên can tưa pha lê.",
+          "bbox": [
+            866,
+            1432,
+            1580,
+            1476
+          ],
+          "confidence": 89.71
+        },
+        {
+          "text": "Phát bà của nguyên khai lăng kính;",
+          "bbox": [
+            866,
+            1514,
+            1683,
+            1560
+          ],
+          "confidence": 90.3
+        },
+        {
+          "text": "Tiên nữ tàng máy ném vũ nghệ.",
+          "bbox": [
+            869,
+            1596,
+            1592,
+            1641
+          ],
+          "confidence": 93.62
+        },
+        {
+          "text": "Sánh với từng xanh trên đỉnh núi;",
+          "bbox": [
+            866,
+            1679,
+            1660,
+            1723
+          ],
+          "confidence": 94.03
+        },
+        {
+          "text": "Ban cùng có biếc dưới sườn khe.",
+          "bbox": [
+            865,
+            1760,
+            2009,
+            1805
+          ],
+          "confidence": 89.99
+        },
+        {
+          "text": "Hoa công sao kheo lo vun đáp,",
+          "bbox": [
+            864,
+            1855,
+            1560,
+            1887
+          ],
+          "confidence": 87.48
+        },
+        {
+          "text": "Toá sáng trên bờ lông lánh ghê!",
+          "bbox": [
+            869,
+            1929,
+            1596,
+            1976
+          ],
+          "confidence": 84.6
+        },
+        {
+          "text": "Đô Thi Hảo",
+          "bbox": [
+            1025,
+            2022,
+            2128,
+            2067
+          ],
+          "confidence": 96.7
+        },
+        {
+          "text": "10 并砧茝 ， 21、",
+          "bbox": [
+            938,
+            2173,
+            1604,
+            2203
+          ],
+          "confidence": 53.67
+        },
+        {
+          "text": "10. 亚顕連（並引）",
+          "bbox": [
+            623,
+            2195,
+            1615,
+            2246
+          ],
+          "confidence": 87.32
+        },
+        {
+          "text": "其月望前一日，沼中蓮生並頭花一本，在綠葉叢",
+          "bbox": [
+            577,
+            2372,
+            2121,
+            2438
+          ],
+          "confidence": 97.82
+        },
+        {
+          "text": "中。茶童採蓮見而異之，採來以獻。予恨惜久之，既",
+          "bbox": [
+            435,
+            2489,
+            2119,
+            2555
+          ],
+          "confidence": 99.74
+        },
+        {
+          "text": "而猛省，此花若不經攀折，自開自落，誰知之者！意",
+          "bbox": [
+            431,
+            2608,
+            2116,
+            2674
+          ],
+          "confidence": 99.55
+        },
+        {
+          "text": "花神亦有意於呈光乎？續賦一章：",
+          "bbox": [
+            428,
+            2725,
+            1545,
+            2791
+          ],
+          "confidence": 99.85
+        },
+        {
+          "text": "團團翠蓋出丁洲",
+          "bbox": [
+            961,
+            2843,
+            1539,
+            2908
+          ],
+          "confidence": 99.89
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2588,
+          3213
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 43.301,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              7,
+              13,
+              1325,
+              45
+            ],
+            "generated_text": "ngothinhamle1.pdf",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.866,
+            "confidence": 93.97,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              1554,
+              216,
+              2133,
+              257
+            ],
+            "generated_text": "CÁM ĐƯỜNG NHẬN THOAI",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.54,
+            "confidence": 81.44,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              413,
+              257,
+              2151,
+              271
+            ],
+            "generated_text": ".",
+            "n_lines": 1,
+            "tokens": 2,
+            "seconds": 0.523,
+            "confidence": 87.97,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              782,
+              335,
+              1958,
+              383
+            ],
+            "generated_text": "Tưa Tiên trên máy nhòm của sổ, ném áo vũ nghệ.",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.651,
+            "confidence": 88.47,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              768,
+              418,
+              1706,
+              464
+            ],
+            "generated_text": "Tiết sánh từng xanh, vượt lên núi tuyệt;",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.629,
+            "confidence": 93.93,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              781,
+              503,
+              1580,
+              547
+            ],
+            "generated_text": "Đao ngang cổ biếc, in dấu khe sâu.",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.515,
+            "confidence": 89.05,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              783,
+              583,
+              1477,
+              629
+            ],
+            "generated_text": "Hoá công có ý xới vun bôi đắp,",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.246,
+            "confidence": 83.36,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              783,
+              667,
+              1705,
+              710
+            ],
+            "generated_text": "Trên bờ ao toả ánh sáng trong một màu.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.382,
+            "confidence": 88.81,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              431,
+              775,
+              754,
+              813
+            ],
+            "generated_text": "CHU THICH:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.697,
+            "confidence": 98.57,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              580,
+              851,
+              1585,
+              893
+            ],
+            "generated_text": "1.Tết Đoan Dương: Tết mồng 5 tháng 5 âm lịch.",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.965,
+            "confidence": 94.27,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              577,
+              929,
+              2136,
+              977
+            ],
+            "generated_text": "2.Phát cung trăng, ý nói bông sen là tượng trưng cho nhà Phật, nó biến",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.162,
+            "confidence": 94.86,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              426,
+              1006,
+              1373,
+              1049
+            ],
+            "generated_text": "hoá vô thường, sắc mà không, không mà sắc.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.413,
+            "confidence": 96.31,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              577,
+              1085,
+              2135,
+              1134
+            ],
+            "generated_text": "3.Ao vũ nghê: Ao các vũ nũ mặc đế múa điệu “nghê thường” do Đường",
+            "n_lines": 1,
+            "tokens": 33,
+            "seconds": 2.489,
+            "confidence": 85.0,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              427,
+              1163,
+              1611,
+              1205
+            ],
+            "generated_text": "Minh Hoàng làm ra, xuất xứ từ chữ \"vũ y nghê thường.\"",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.658,
+            "confidence": 93.22,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              428,
+              1273,
+              2179,
+              1312
+            ],
+            "generated_text": "DICH THO:",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.71,
+            "confidence": 95.98,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              870,
+              1348,
+              1693,
+              1394
+            ],
+            "generated_text": "Vốn chất sinh ra bùn chăng nhuộm,",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.352,
+            "confidence": 81.04,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              866,
+              1432,
+              1580,
+              1476
+            ],
+            "generated_text": "Rành rành trên can tưa pha lê.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.127,
+            "confidence": 89.71,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              866,
+              1514,
+              1683,
+              1560
+            ],
+            "generated_text": "Phát bà của nguyên khai lăng kính;",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.236,
+            "confidence": 90.3,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              869,
+              1596,
+              1592,
+              1641
+            ],
+            "generated_text": "Tiên nữ tàng máy ném vũ nghệ.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.193,
+            "confidence": 93.62,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              866,
+              1679,
+              1660,
+              1723
+            ],
+            "generated_text": "Sánh với từng xanh trên đỉnh núi;",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.202,
+            "confidence": 94.03,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              865,
+              1760,
+              2009,
+              1805
+            ],
+            "generated_text": "Ban cùng có biếc dưới sườn khe.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.5,
+            "confidence": 89.99,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              864,
+              1855,
+              1560,
+              1887
+            ],
+            "generated_text": "Hoa công sao kheo lo vun đáp,",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.179,
+            "confidence": 87.48,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              869,
+              1929,
+              1596,
+              1976
+            ],
+            "generated_text": "Toá sáng trên bờ lông lánh ghê!",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.197,
+            "confidence": 84.6,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              1025,
+              2022,
+              2128,
+              2067
+            ],
+            "generated_text": "Đô Thi Hảo",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.784,
+            "confidence": 96.7,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              938,
+              2173,
+              1604,
+              2203
+            ],
+            "generated_text": "10 并 砧 茝 ， 21、",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.341,
+            "confidence": 53.67,
+            "flags": [
+              "han_gap_removed"
+            ],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              623,
+              2195,
+              1615,
+              2246
+            ],
+            "generated_text": "10. 亚顕連（並引）",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.319,
+            "confidence": 87.32,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              577,
+              2372,
+              2121,
+              2438
+            ],
+            "generated_text": "其月望前一日，沼中蓮生並頭花一本，在綠葉叢",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 1.942,
+            "confidence": 97.82,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              435,
+              2489,
+              2119,
+              2555
+            ],
+            "generated_text": "中。茶童採蓮見而異之，採來以獻。予恨惜久之，既",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 2.049,
+            "confidence": 99.74,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              431,
+              2608,
+              2116,
+              2674
+            ],
+            "generated_text": "而猛省，此花若不經攀折，自開自落，誰知之者！意",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 1.979,
+            "confidence": 99.55,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              428,
+              2725,
+              1545,
+              2791
+            ],
+            "generated_text": "花神亦有意於呈光乎？續賦一章：",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.496,
+            "confidence": 99.85,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              961,
+              2843,
+              1539,
+              2908
+            ],
+            "generated_text": "團團翠蓋出丁洲",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.952,
+            "confidence": 99.89,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              829,
+              544,
+              1207,
+              553
+            ],
+            "ink": 208
+          },
+          {
+            "box": [
+              1310,
+              707,
+              1550,
+              716
+            ],
+            "ink": 194
+          },
+          {
+            "box": [
+              941,
+              889,
+              1525,
+              899
+            ],
+            "ink": 217
+          },
+          {
+            "box": [
+              704,
+              1045,
+              1198,
+              1054
+            ],
+            "ink": 229
+          },
+          {
+            "box": [
+              669,
+              1201,
+              1578,
+              1211
+            ],
+            "ink": 265
+          },
+          {
+            "box": [
+              936,
+              1556,
+              1677,
+              1567
+            ],
+            "ink": 335
+          },
+          {
+            "box": [
+              873,
+              1842,
+              1520,
+              1859
+            ],
+            "ink": 679
+          },
+          {
+            "box": [
+              1046,
+              1974,
+              1518,
+              1984
+            ],
+            "ink": 246
+          },
+          {
+            "box": [
+              2033,
+              3029,
+              2114,
+              3038
+            ],
+            "ink": 186
+          },
+          {
+            "box": [
+              965,
+              3114,
+              1723,
+              3123
+            ],
+            "ink": 164
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

@@ -1,0 +1,943 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 27,
+  "runs": [
+    {
+      "key": "f39d53031f8a69e2a5508da004b1b04c3ccfe5385cbb6281c92b431290bc360e",
+      "parameters": {
+        "image_sha256": "dde9d204c5c8af7c3e6255286c7b7a91c6bc65ebebfd74df055ad45bd8b4e258",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T11:25:41+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_027.png",
+      "image_size": [
+        2599,
+        3224
+      ],
+      "crop_box": [
+        0,
+        0,
+        2599,
+        3224
+      ],
+      "lines": [
+        {
+          "text": "ngothinhamch1.pdf",
+          "bbox": [
+            7,
+            19,
+            296,
+            45
+          ],
+          "confidence": 98.71
+        },
+        {
+          "text": "NGO THI NHAM TOAN TAP - TAP III",
+          "bbox": [
+            397,
+            214,
+            2068,
+            253
+          ],
+          "confidence": 89.86
+        },
+        {
+          "text": "PHIEN AM:",
+          "bbox": [
+            398,
+            326,
+            2044,
+            364
+          ],
+          "confidence": 99.24
+        },
+        {
+          "text": "NINH MINH GIANG KY KIEN",
+          "bbox": [
+            882,
+            428,
+            1615,
+            472
+          ],
+          "confidence": 99.48
+        },
+        {
+          "text": "Bất đái Phân Mao nhân Lĩnh mai,",
+          "bbox": [
+            546,
+            558,
+            1642,
+            601
+          ],
+          "confidence": 82.93
+        },
+        {
+          "text": "Sóc nam giới han tự an bài.",
+          "bbox": [
+            842,
+            642,
+            1478,
+            684
+          ],
+          "confidence": 89.31
+        },
+        {
+          "text": "Thiên sơn Bình cung Vân Kiểm giáng;",
+          "bbox": [
+            806,
+            724,
+            1723,
+            770
+          ],
+          "confidence": 80.98
+        },
+        {
+          "text": "Nhất thủy Càn lưu Bác Lãng lai.",
+          "bbox": [
+            422,
+            811,
+            1602,
+            857
+          ],
+          "confidence": 92.16
+        },
+        {
+          "text": "Đia dao ăn cơ phi ngấu nhi;",
+          "bbox": [
+            841,
+            912,
+            1990,
+            943
+          ],
+          "confidence": 77.68
+        },
+        {
+          "text": "Thiên công (a) thâm ý khái đồ tại.",
+          "bbox": [
+            845,
+            987,
+            1582,
+            1031
+          ],
+          "confidence": 84.34
+        },
+        {
+          "text": "Bảo thư phân định nhân khan thuc,",
+          "bbox": [
+            841,
+            1075,
+            1676,
+            1120
+          ],
+          "confidence": 74.82
+        },
+        {
+          "text": "Hưu bà đô kinh nhất triển khai.",
+          "bbox": [
+            841,
+            1161,
+            1581,
+            1206
+          ],
+          "confidence": 90.32
+        },
+        {
+          "text": "DICH NGHIA:",
+          "bbox": [
+            398,
+            1277,
+            707,
+            1316
+          ],
+          "confidence": 98.82
+        },
+        {
+          "text": "GHI LAI NHỮNG ĐIỀU TRÔNG THẤY",
+          "bbox": [
+            786,
+            1369,
+            1714,
+            1422
+          ],
+          "confidence": 92.23
+        },
+        {
+          "text": "Ô SÔNG NINH MINH\\(^{(1)}\\)",
+          "bbox": [
+            970,
+            1458,
+            1529,
+            1504
+          ],
+          "confidence": 88.63
+        },
+        {
+          "text": "Không phải đợi có cổ rẽ mới nhận ra mai Dũu Lĩnh,",
+          "bbox": [
+            693,
+            1590,
+            1914,
+            1637
+          ],
+          "confidence": 87.94
+        },
+        {
+          "text": "Ranh giới giữa Bắc với Nam đã tự sắp đặt rồi. (A)",
+          "bbox": [
+            692,
+            1671,
+            1785,
+            1725
+          ],
+          "confidence": 93.05
+        },
+        {
+          "text": "Nghìn non từ Vân, Kiểm độ xuống, châu về phương Bính;",
+          "bbox": [
+            693,
+            1753,
+            2053,
+            1806
+          ],
+          "confidence": 88.93
+        },
+        {
+          "text": "Dòng nước từ Bác, Lãng chảy tối, xuôi theo hướng Càn. (B)",
+          "bbox": [
+            693,
+            1835,
+            2002,
+            1888
+          ],
+          "confidence": 91.69
+        },
+        {
+          "text": "Lẽ của phong thủy kín đáo, không phải ngẫu nhiên mà có;",
+          "bbox": [
+            694,
+            1918,
+            2034,
+            1972
+          ],
+          "confidence": 97.97
+        },
+        {
+          "text": "Ý của tạo hóa diệu huyện, đâu phải là chuyện vấn vơ.",
+          "bbox": [
+            690,
+            2002,
+            1926,
+            2054
+          ],
+          "confidence": 88.13
+        },
+        {
+          "text": "Trong sách báu đã ghi, hãy xem cho rõ,",
+          "bbox": [
+            693,
+            2085,
+            1594,
+            2132
+          ],
+          "confidence": 98.58
+        },
+        {
+          "text": "Và lại đem bản đồ trái ra [mà coi]!",
+          "bbox": [
+            692,
+            2168,
+            1482,
+            2215
+          ],
+          "confidence": 93.39
+        },
+        {
+          "text": "KHAO DI:",
+          "bbox": [
+            400,
+            2282,
+            620,
+            2320
+          ],
+          "confidence": 93.39
+        },
+        {
+          "text": "a. Bản A.404: Thiên công 天公.",
+          "bbox": [
+            551,
+            2355,
+            1192,
+            2396
+          ],
+          "confidence": 90.46
+        },
+        {
+          "text": "NGUYEN CHU:",
+          "bbox": [
+            401,
+            2460,
+            735,
+            2498
+          ],
+          "confidence": 90.95
+        },
+        {
+          "text": "A. Sử thi nước ta chép:",
+          "bbox": [
+            550,
+            2535,
+            1018,
+            2575
+          ],
+          "confidence": 93.68
+        },
+        {
+          "text": "Nam quốc sơn hà Nam đế cư,",
+          "bbox": [
+            550,
+            2611,
+            1164,
+            2652
+          ],
+          "confidence": 88.09
+        },
+        {
+          "text": "Tiết nhiên đinh phân tại thiên thư.",
+          "bbox": [
+            552,
+            2689,
+            1281,
+            2731
+          ],
+          "confidence": 87.1
+        },
+        {
+          "text": "(Sống núi nước Nam vua nước Nam ở,",
+          "bbox": [
+            567,
+            2770,
+            2169,
+            2812
+          ],
+          "confidence": 92.57
+        },
+        {
+          "text": "Rõ ràng đã định tại sách trời).",
+          "bbox": [
+            551,
+            2853,
+            1348,
+            2896
+          ],
+          "confidence": 95.41
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2599,
+          3224
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 41.55,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              7,
+              19,
+              296,
+              45
+            ],
+            "generated_text": "ngothinhamch1.pdf",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.908,
+            "confidence": 98.71,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              397,
+              214,
+              2068,
+              253
+            ],
+            "generated_text": "NGO THI NHAM TOAN TAP - TAP III",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.345,
+            "confidence": 89.86,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              400,
+              258,
+              2108,
+              272
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.453,
+            "confidence": 98.66,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              398,
+              326,
+              2044,
+              364
+            ],
+            "generated_text": "PHIEN AM:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.767,
+            "confidence": 99.24,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              882,
+              428,
+              1615,
+              472
+            ],
+            "generated_text": "NINH MINH GIANG KY KIEN",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.129,
+            "confidence": 99.48,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              546,
+              558,
+              1642,
+              601
+            ],
+            "generated_text": "Bất đái Phân Mao nhân Lĩnh mai,",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.416,
+            "confidence": 82.93,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              842,
+              642,
+              1478,
+              684
+            ],
+            "generated_text": "Sóc nam giới han tự an bài.",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 1.115,
+            "confidence": 89.31,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              806,
+              724,
+              1723,
+              770
+            ],
+            "generated_text": "Thiên sơn Bình cung Vân Kiểm giáng;",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.441,
+            "confidence": 80.98,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              422,
+              811,
+              1602,
+              857
+            ],
+            "generated_text": "Nhất thủy Càn lưu Bác Lãng lai.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.285,
+            "confidence": 92.16,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              841,
+              912,
+              1990,
+              943
+            ],
+            "generated_text": "Đia dao ăn cơ phi ngấu nhi;",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 1.15,
+            "confidence": 77.68,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              845,
+              987,
+              1582,
+              1031
+            ],
+            "generated_text": "Thiên công (a) thâm ý khái đồ tại.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.368,
+            "confidence": 84.34,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              841,
+              1075,
+              1676,
+              1120
+            ],
+            "generated_text": "Bảo thư phân định nhân khan thuc,",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.217,
+            "confidence": 74.82,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              841,
+              1161,
+              1581,
+              1206
+            ],
+            "generated_text": "Hưu bà đô kinh nhất triển khai.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.127,
+            "confidence": 90.32,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              398,
+              1277,
+              707,
+              1316
+            ],
+            "generated_text": "DICH NGHIA:",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.762,
+            "confidence": 98.82,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              786,
+              1369,
+              1714,
+              1422
+            ],
+            "generated_text": "GHI LAI NHỮNG ĐIỀU TRÔNG THẤY",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.908,
+            "confidence": 92.23,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              970,
+              1458,
+              1529,
+              1504
+            ],
+            "generated_text": "Ô SÔNG NINH MINH\\(^{(1)}\\)",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.301,
+            "confidence": 88.63,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              693,
+              1590,
+              1914,
+              1637
+            ],
+            "generated_text": "Không phải đợi có cổ rẽ mới nhận ra mai Dũu Lĩnh,",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.729,
+            "confidence": 87.94,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              692,
+              1671,
+              1785,
+              1725
+            ],
+            "generated_text": "Ranh giới giữa Bắc với Nam đã tự sắp đặt rồi. (A)",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.99,
+            "confidence": 93.05,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              693,
+              1753,
+              2053,
+              1806
+            ],
+            "generated_text": "Nghìn non từ Vân, Kiểm độ xuống, châu về phương Bính;",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.77,
+            "confidence": 88.93,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              693,
+              1835,
+              2002,
+              1888
+            ],
+            "generated_text": "Dòng nước từ Bác, Lãng chảy tối, xuôi theo hướng Càn. (B)",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.06,
+            "confidence": 91.69,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              694,
+              1918,
+              2034,
+              1972
+            ],
+            "generated_text": "Lẽ của phong thủy kín đáo, không phải ngẫu nhiên mà có;",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.688,
+            "confidence": 97.97,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              690,
+              2002,
+              1926,
+              2054
+            ],
+            "generated_text": "Ý của tạo hóa diệu huyện, đâu phải là chuyện vấn vơ.",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.667,
+            "confidence": 88.13,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              693,
+              2085,
+              1594,
+              2132
+            ],
+            "generated_text": "Trong sách báu đã ghi, hãy xem cho rõ,",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.573,
+            "confidence": 98.58,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              692,
+              2168,
+              1482,
+              2215
+            ],
+            "generated_text": "Và lại đem bản đồ trái ra [mà coi]!",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.511,
+            "confidence": 93.39,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              400,
+              2282,
+              620,
+              2320
+            ],
+            "generated_text": "KHAO DI:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.688,
+            "confidence": 93.39,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              551,
+              2355,
+              1192,
+              2396
+            ],
+            "generated_text": "a. Bản A.404: Thiên công 天公.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.538,
+            "confidence": 90.46,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              401,
+              2460,
+              735,
+              2498
+            ],
+            "generated_text": "NGUYEN CHU:",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.828,
+            "confidence": 90.95,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              550,
+              2535,
+              1018,
+              2575
+            ],
+            "generated_text": "A. Sử thi nước ta chép:",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.992,
+            "confidence": 93.68,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              550,
+              2611,
+              1164,
+              2652
+            ],
+            "generated_text": "Nam quốc sơn hà Nam đế cư,",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.231,
+            "confidence": 88.09,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              552,
+              2689,
+              1281,
+              2731
+            ],
+            "generated_text": "Tiết nhiên đinh phân tại thiên thư.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.194,
+            "confidence": 87.1,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              567,
+              2770,
+              2169,
+              2812
+            ],
+            "generated_text": "(Sống núi nước Nam vua nước Nam ở,",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.244,
+            "confidence": 92.57,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 32,
+            "box": [
+              551,
+              2853,
+              1348,
+              2896
+            ],
+            "generated_text": "Rõ ràng đã định tại sách trời).",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.149,
+            "confidence": 95.41,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              474,
+              208,
+              1070,
+              217
+            ],
+            "ink": 233
+          },
+          {
+            "box": [
+              923,
+              767,
+              1715,
+              777
+            ],
+            "ink": 279
+          },
+          {
+            "box": [
+              848,
+              900,
+              1477,
+              916
+            ],
+            "ink": 662
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

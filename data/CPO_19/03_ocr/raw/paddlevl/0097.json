@@ -1,0 +1,934 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 97,
+  "runs": [
+    {
+      "key": "b0b24bdb6d1f86a41f71c031f095ec6c9c30eb5498ac06a9fe257ad2528d148d",
+      "parameters": {
+        "image_sha256": "fbf19b6cf6aca6ba7d73073f4ccbe967fdb7c06aaf27c954464d0c59c60d58cd",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T12:12:08+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_097.png",
+      "image_size": [
+        2624,
+        3246
+      ],
+      "crop_box": [
+        0,
+        0,
+        2624,
+        3246
+      ],
+      "lines": [
+        {
+          "text": "ngothinhamch1.pdf",
+          "bbox": [
+            7,
+            19,
+            1653,
+            45
+          ],
+          "confidence": 98.32
+        },
+        {
+          "text": "NGO THI NHAM TOAN TAP - TAP III",
+          "bbox": [
+            619,
+            217,
+            1391,
+            256
+          ],
+          "confidence": 93.61
+        },
+        {
+          "text": "Tôi hiện kinh luân, đức âm ngòi sáng.",
+          "bbox": [
+            1000,
+            319,
+            1875,
+            363
+          ],
+          "confidence": 92.26
+        },
+        {
+          "text": "Lêu cổ Thiệu Nam hợp với Cơ Thích;(1)",
+          "bbox": [
+            1000,
+            396,
+            1877,
+            441
+          ],
+          "confidence": 84.43
+        },
+        {
+          "text": "Cô xe Vĩ Bắc chê bai Trinh Kiều.",
+          "bbox": [
+            1002,
+            474,
+            1791,
+            519
+          ],
+          "confidence": 86.32
+        },
+        {
+          "text": "Đến thiêng bến cũ, khó ở lại thăm viếng,",
+          "bbox": [
+            1002,
+            553,
+            1936,
+            597
+          ],
+          "confidence": 92.52
+        },
+        {
+          "text": "Đành ghi lại tính danh, đợi khi xe sứ trỏ về.",
+          "bbox": [
+            1002,
+            632,
+            2014,
+            676
+          ],
+          "confidence": 90.16
+        },
+        {
+          "text": "NGUYÊN CHU:",
+          "bbox": [
+            620,
+            730,
+            954,
+            768
+          ],
+          "confidence": 86.92
+        },
+        {
+          "text": "A.Ở Quế Lâm có 2 chiếc câu liên hoàn: Một ở trên sông Quế phía bắc tỉnh",
+          "bbox": [
+            768,
+            801,
+            2328,
+            845
+          ],
+          "confidence": 93.68
+        },
+        {
+          "text": "thành, cái thú hai ở Lĩnh Xuyên thuộc sông Ly, tức chảy qua cầu này. (Bản",
+          "bbox": [
+            620,
+            876,
+            2329,
+            918
+          ],
+          "confidence": 95.1
+        },
+        {
+          "text": "A.2871: Ô Quế Lâm có 2 chiếc câu liên hoàn: Một ở trên sông Quế phía bắc tỉnh",
+          "bbox": [
+            620,
+            950,
+            2328,
+            993
+          ],
+          "confidence": 96.94
+        },
+        {
+          "text": "thành, cái thú hai ở sông Ly thuộc Linh Châu, tức câu này).",
+          "bbox": [
+            620,
+            1024,
+            1881,
+            1067
+          ],
+          "confidence": 92.77
+        },
+        {
+          "text": "CHU THICH:",
+          "bbox": [
+            623,
+            1128,
+            909,
+            1165
+          ],
+          "confidence": 94.7
+        },
+        {
+          "text": "1. Bài Cam đường trong thơ Thiệu Nam, Kinh Thi ca ngợi Thiệu Công",
+          "bbox": [
+            774,
+            1198,
+            2329,
+            1242
+          ],
+          "confidence": 92.35
+        },
+        {
+          "text": "Thích nhà Chu, ông đi kinh lý phía nam thường nghỉ trong nhà cổ dưới bóng cây",
+          "bbox": [
+            621,
+            1273,
+            2328,
+            1322
+          ],
+          "confidence": 95.71
+        },
+        {
+          "text": "cam dương.",
+          "bbox": [
+            621,
+            1360,
+            866,
+            1389
+          ],
+          "confidence": 85.72
+        },
+        {
+          "text": "2.Vĩ Bắc: Tức sông Trăn Vĩ. Trình Kiều, tức Công Tôn Kiều nước Trình:",
+          "bbox": [
+            772,
+            1419,
+            2326,
+            1463
+          ],
+          "confidence": 92.43
+        },
+        {
+          "text": "Thiên Vi chính sách Luận ngữ: Từ Sản tức Công Tôn Kiều lấy xe thừa dư của",
+          "bbox": [
+            621,
+            1494,
+            2328,
+            1539
+          ],
+          "confidence": 89.76
+        },
+        {
+          "text": "mình chở người qua sông Trăn Vĩ, Khổng Tử nói: Ra ơn mà không biết làm",
+          "bbox": [
+            623,
+            1569,
+            2327,
+            1619
+          ],
+          "confidence": 93.03
+        },
+        {
+          "text": "chính tri (Không Từ chê việc làm của Từ Sản).",
+          "bbox": [
+            622,
+            1644,
+            1596,
+            1689
+          ],
+          "confidence": 95.64
+        },
+        {
+          "text": "A1 二懐",
+          "bbox": [
+            1288,
+            1781,
+            1631,
+            1815
+          ],
+          "confidence": 53.97
+        },
+        {
+          "text": "++1--个",
+          "bbox": [
+            1283,
+            1812,
+            1626,
+            1828
+          ],
+          "confidence": 35.47
+        },
+        {
+          "text": "11. 口",
+          "bbox": [
+            1307,
+            1824,
+            1641,
+            1843
+          ],
+          "confidence": 71.46
+        },
+        {
+          "text": "津送員弁畏簡書",
+          "bbox": [
+            1157,
+            1969,
+            1741,
+            2033
+          ],
+          "confidence": 99.81
+        },
+        {
+          "text": "天綸催召敢遑居",
+          "bbox": [
+            1158,
+            2097,
+            1743,
+            2156
+          ],
+          "confidence": 99.76
+        },
+        {
+          "text": "正愁飛驛雨無止",
+          "bbox": [
+            1156,
+            2220,
+            1747,
+            2281
+          ],
+          "confidence": 99.95
+        },
+        {
+          "text": "卻笑奔泉駒不如",
+          "bbox": [
+            1157,
+            2344,
+            1746,
+            2403
+          ],
+          "confidence": 99.75
+        },
+        {
+          "text": "摧彼顺流情所以",
+          "bbox": [
+            1158,
+            2468,
+            1744,
+            2528
+          ],
+          "confidence": 99.24
+        },
+        {
+          "text": "見余趨事義之於",
+          "bbox": [
+            1160,
+            2594,
+            1749,
+            2656
+          ],
+          "confidence": 99.88
+        },
+        {
+          "text": "勤勞自古長生劑",
+          "bbox": [
+            1162,
+            2718,
+            1747,
+            2781
+          ],
+          "confidence": 99.73
+        },
+        {
+          "text": "何必高堂坐擁爐",
+          "bbox": [
+            1158,
+            2846,
+            1750,
+            2906
+          ],
+          "confidence": 99.77
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2624,
+          3246
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 45.558,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              7,
+              19,
+              1653,
+              45
+            ],
+            "generated_text": "ngothinhamch1.pdf",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.957,
+            "confidence": 98.32,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              619,
+              217,
+              1391,
+              256
+            ],
+            "generated_text": "NGO THI NHAM TOAN TAP - TAP III",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.246,
+            "confidence": 93.61,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              622,
+              260,
+              2332,
+              274
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.459,
+            "confidence": 37.57,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              1000,
+              319,
+              1875,
+              363
+            ],
+            "generated_text": "Tôi hiện kinh luân, đức âm ngòi sáng.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.31,
+            "confidence": 92.26,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              1000,
+              396,
+              1877,
+              441
+            ],
+            "generated_text": "Lêu cổ Thiệu Nam hợp với Cơ Thích;(1)",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.429,
+            "confidence": 84.43,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              1002,
+              474,
+              1791,
+              519
+            ],
+            "generated_text": "Cô xe Vĩ Bắc chê bai Trinh Kiều.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.331,
+            "confidence": 86.32,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              1002,
+              553,
+              1936,
+              597
+            ],
+            "generated_text": "Đến thiêng bến cũ, khó ở lại thăm viếng,",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.694,
+            "confidence": 92.52,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              1002,
+              632,
+              2014,
+              676
+            ],
+            "generated_text": "Đành ghi lại tính danh, đợi khi xe sứ trỏ về.",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.824,
+            "confidence": 90.16,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              620,
+              730,
+              954,
+              768
+            ],
+            "generated_text": "NGUYÊN CHU:",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.881,
+            "confidence": 86.92,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              768,
+              801,
+              2328,
+              845
+            ],
+            "generated_text": "A.Ở Quế Lâm có 2 chiếc câu liên hoàn: Một ở trên sông Quế phía bắc tỉnh",
+            "n_lines": 1,
+            "tokens": 36,
+            "seconds": 2.711,
+            "confidence": 93.68,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              620,
+              876,
+              2329,
+              918
+            ],
+            "generated_text": "thành, cái thú hai ở Lĩnh Xuyên thuộc sông Ly, tức chảy qua cầu này. (Bản",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 2.462,
+            "confidence": 95.1,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              620,
+              950,
+              2328,
+              993
+            ],
+            "generated_text": "A.2871: Ô Quế Lâm có 2 chiếc câu liên hoàn: Một ở trên sông Quế phía bắc tỉnh",
+            "n_lines": 1,
+            "tokens": 39,
+            "seconds": 3.032,
+            "confidence": 96.94,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              620,
+              1024,
+              1881,
+              1067
+            ],
+            "generated_text": "thành, cái thú hai ở sông Ly thuộc Linh Châu, tức câu này).",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.804,
+            "confidence": 92.77,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              623,
+              1128,
+              909,
+              1165
+            ],
+            "generated_text": "CHU THICH:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.723,
+            "confidence": 94.7,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              774,
+              1198,
+              2329,
+              1242
+            ],
+            "generated_text": "1. Bài Cam đường trong thơ Thiệu Nam, Kinh Thi ca ngợi Thiệu Công",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 1.929,
+            "confidence": 92.35,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              621,
+              1273,
+              2328,
+              1322
+            ],
+            "generated_text": "Thích nhà Chu, ông đi kinh lý phía nam thường nghỉ trong nhà cổ dưới bóng cây",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 2.105,
+            "confidence": 95.71,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              621,
+              1360,
+              866,
+              1389
+            ],
+            "generated_text": "cam dương.",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.634,
+            "confidence": 85.72,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              772,
+              1419,
+              2326,
+              1463
+            ],
+            "generated_text": "2.Vĩ Bắc: Tức sông Trăn Vĩ. Trình Kiều, tức Công Tôn Kiều nước Trình:",
+            "n_lines": 1,
+            "tokens": 34,
+            "seconds": 2.562,
+            "confidence": 92.43,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              621,
+              1494,
+              2328,
+              1539
+            ],
+            "generated_text": "Thiên Vi chính sách Luận ngữ: Từ Sản tức Công Tôn Kiều lấy xe thừa dư của",
+            "n_lines": 1,
+            "tokens": 33,
+            "seconds": 2.61,
+            "confidence": 89.76,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              623,
+              1569,
+              2327,
+              1619
+            ],
+            "generated_text": "mình chở người qua sông Trăn Vĩ, Khổng Tử nói: Ra ơn mà không biết làm",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.243,
+            "confidence": 93.03,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              622,
+              1644,
+              1596,
+              1689
+            ],
+            "generated_text": "chính tri (Không Từ chê việc làm của Từ Sản).",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.64,
+            "confidence": 95.64,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              1288,
+              1781,
+              1631,
+              1815
+            ],
+            "generated_text": "A1 二懐",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.763,
+            "confidence": 53.97,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              1283,
+              1812,
+              1626,
+              1828
+            ],
+            "generated_text": "++1--个",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.627,
+            "confidence": 35.47,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              1307,
+              1824,
+              1641,
+              1843
+            ],
+            "generated_text": "11. 口",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.705,
+            "confidence": 71.46,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              1157,
+              1969,
+              1741,
+              2033
+            ],
+            "generated_text": "津送員弁畏簡書",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.958,
+            "confidence": 99.81,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              1158,
+              2097,
+              1743,
+              2156
+            ],
+            "generated_text": "天綸催召敢遑居",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.094,
+            "confidence": 99.76,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              1156,
+              2220,
+              1747,
+              2281
+            ],
+            "generated_text": "正愁飛驛雨無止",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.97,
+            "confidence": 99.95,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              1157,
+              2344,
+              1746,
+              2403
+            ],
+            "generated_text": "卻笑奔泉駒不如",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 1.033,
+            "confidence": 99.75,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              1158,
+              2468,
+              1744,
+              2528
+            ],
+            "generated_text": "摧彼顺流情所以",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.786,
+            "confidence": 99.24,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              1160,
+              2594,
+              1749,
+              2656
+            ],
+            "generated_text": "見余趨事義之於",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.975,
+            "confidence": 99.88,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              1162,
+              2718,
+              1747,
+              2781
+            ],
+            "generated_text": "勤勞自古長生劑",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 1.03,
+            "confidence": 99.73,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 32,
+            "box": [
+              1158,
+              2846,
+              1750,
+              2906
+            ],
+            "generated_text": "何必高堂坐擁爐",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 1.025,
+            "confidence": 99.77,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              750,
+              914,
+              2242,
+              925
+            ],
+            "ink": 363
+          },
+          {
+            "box": [
+              1124,
+              1238,
+              2325,
+              1248
+            ],
+            "ink": 303
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

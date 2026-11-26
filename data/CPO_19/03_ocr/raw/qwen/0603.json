@@ -1,0 +1,241 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "qwen",
+  "page": 603,
+  "runs": [
+    {
+      "key": "61ebb45e0734f78ec9baaad77567b40ac08a71b0688cb81112c4aed4988773e3",
+      "parameters": {
+        "image_sha256": "a89ad78fcd85fc543a4448012837ffbcc550404ef4140dc49f3c47d5a4dac720",
+        "engine": {
+          "name": "qwen",
+          "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "model_revision": "main",
+          "transformers_version": "4.57.6",
+          "torch_version": "2.5.1+cu121",
+          "cuda_version": "12.1",
+          "bitsandbytes_version": "0.50.2",
+          "quantization": {
+            "load_in_4bit": true,
+            "quant_type": "nf4",
+            "double_quant": true,
+            "compute_dtype": "float16"
+          },
+          "mode": "all",
+          "min_pixels": 50176,
+          "max_pixels": 802816,
+          "band_inches": 2.0,
+          "max_new_tokens": 768,
+          "repetition_penalty": 1.05,
+          "adapter_version": 3,
+          "prompt_version": 3,
+          "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74"
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T23:04:44+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_603.png",
+      "image_size": [
+        2563,
+        3196
+      ],
+      "crop_box": [
+        0,
+        0,
+        2563,
+        3196
+      ],
+      "lines": [
+        {
+          "text": "NGÔ THÌ NHẬM TOÀN TẬP - TẬP III",
+          "bbox": [
+            7,
+            13,
+            2225,
+            263
+          ],
+          "confidence": 93.41
+        },
+        {
+          "text": "前禀以天潢金玉為請，此卑學春秋而欲其求義，非本國王所授之意也。竊思，三代之王，聖賢世出，三",
+          "bbox": [
+            7,
+            263,
+            2225,
+            512
+          ],
+          "confidence": 93.41
+        },
+        {
+          "text": "代之候，智慧亦不少。一时卿佐，居是国事是君，使其联亲王姬，果为不合于道？则唐棣之章，不载于诗，而冕迎之礼，孔子不以答鲁君矣。此事寔卑本意，未曾启知国",
+          "bbox": [
+            449,
+            527,
+            2150,
+            969
+          ],
+          "confidence": 86.05
+        },
+        {
+          "text": "王。使果出國王之意，自卑淺學起見，亦以爲恰當底道理，決不敢有違異也。",
+          "bbox": [
+            441,
+            1022,
+            2149,
+            1276
+          ],
+          "confidence": 90.53
+        },
+        {
+          "text": "國王起自吠畝，拓土而南，以有人民社稷，既蒙大皇帝樹爲外屏，僅得復聯肺腑，即滿州蒙古諸王，能以",
+          "bbox": [
+            441,
+            1276,
+            2149,
+            1529
+          ],
+          "confidence": 90.53
+        },
+        {
+          "text": "子婿效勞於東北，國王豈不能以朱陳宣力於西南？大皇帝統御寰宇，如天地之無私覆載，其於諸國，莫不以子視之。但其顧復之情，先自滿州蒙古之近者始耳。自卑管蠡之見，未必以遠近分彼此也？古者王朝公卿大夫與",
+          "bbox": [
+            453,
+            1592,
+            2152,
+            2104
+          ],
+          "confidence": 97.63
+        },
+        {
+          "text": "諸侯五等之君，其待遇事體有翼，蓋諸侯有爲君之分，故以王姬歸之。又以同姓之公主謂之公主，而王朝之公卿，不得與焉。淺意天朝法度，漢大人不得尚天潢，又不得與滿為婚，其義亦猶是也。但自天朝發祥滿州以來，西南夷藩無有以尚天潢請者。故其事出於創見，而初聞者以疑難。",
+          "bbox": [
+            455,
+            2096,
+            2303,
+            2990
+          ],
+          "confidence": 96.53
+        }
+      ],
+      "raw": {
+        "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+        "model_revision": "main",
+        "mode": "all",
+        "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74",
+        "dpi": 300,
+        "image_size": [
+          2563,
+          3196
+        ],
+        "band_target_height": 600,
+        "bbox_granularity": "band_even_split",
+        "max_new_tokens": 768,
+        "max_pixels": 802816,
+        "inference_seconds": 28.08,
+        "bands": [
+          {
+            "band": 1,
+            "y0": 17,
+            "y1": 529,
+            "ink_box": [
+              7,
+              13,
+              2225,
+              512
+            ],
+            "generated_text": "NGÔ THÌ NHẬM TOÀN TẬP - TẬP III\n\n前禀以天潢金玉為請，此卑學春秋而欲其求義，非本國王所授之意也。竊思，三代之王，聖賢世出，三",
+            "n_lines": 2,
+            "tokens": 63,
+            "seconds": 4.402,
+            "confidence": 93.41,
+            "flags": []
+          },
+          {
+            "band": 2,
+            "y0": 529,
+            "y1": 981,
+            "ink_box": [
+              449,
+              527,
+              2150,
+              969
+            ],
+            "generated_text": "代之候，智慧亦不少。一时卿佐，居是国事是君，使其联亲王姬，果为不合于道？则唐棣之章，不载于诗，而冕迎之礼，孔子不以答鲁君矣。此事寔卑本意，未曾启知国",
+            "n_lines": 1,
+            "tokens": 68,
+            "seconds": 4.708,
+            "confidence": 86.05,
+            "flags": []
+          },
+          {
+            "band": 3,
+            "y0": 981,
+            "y1": 1560,
+            "ink_box": [
+              441,
+              1022,
+              2149,
+              1529
+            ],
+            "generated_text": "王。使果出國王之意，自卑淺學起見，亦以爲恰當底道理，決不敢有違異也。\n國王起自吠畝，拓土而南，以有人民社稷，既蒙大皇帝樹爲外屏，僅得復聯肺腑，即滿州蒙古諸王，能以",
+            "n_lines": 2,
+            "tokens": 75,
+            "seconds": 5.184,
+            "confidence": 90.53,
+            "flags": []
+          },
+          {
+            "band": 4,
+            "y0": 1560,
+            "y1": 2100,
+            "ink_box": [
+              453,
+              1592,
+              2152,
+              2104
+            ],
+            "generated_text": "子婿效勞於東北，國王豈不能以朱陳宣力於西南？大皇帝統御寰宇，如天地之無私覆載，其於諸國，莫不以子視之。但其顧復之情，先自滿州蒙古之近者始耳。自卑管蠡之見，未必以遠近分彼此也？古者王朝公卿大夫與",
+            "n_lines": 1,
+            "tokens": 87,
+            "seconds": 5.903,
+            "confidence": 97.63,
+            "flags": []
+          },
+          {
+            "band": 5,
+            "y0": 2100,
+            "y1": 2986,
+            "ink_box": [
+              455,
+              2096,
+              2303,
+              2990
+            ],
+            "generated_text": "諸侯五等之君，其待遇事體有翼，蓋諸侯有爲君之分，故以王姬歸之。又以同姓之公主謂之公主，而王朝之公卿，不得與焉。淺意天朝法度，漢大人不得尚天潢，又不得與滿為婚，其義亦猶是也。但自天朝發祥滿州以來，西南夷藩無有以尚天潢請者。故其事出於創見，而初聞者以疑難。",
+            "n_lines": 1,
+            "tokens": 117,
+            "seconds": 7.853,
+            "confidence": 96.53,
+            "flags": []
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "61cbea5c0055c260ccfc12f884e0febca7b2783b",
+        "git_describe": "61cbea5",
+        "git_dirty": true,
+        "gpu": "NVIDIA L4",
+        "dtype": "float16",
+        "adapter_version": 3
+      }
+    }
+  ]
+}

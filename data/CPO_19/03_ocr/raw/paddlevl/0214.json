@@ -1,0 +1,987 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 214,
+  "runs": [
+    {
+      "key": "df72e2bfaf1d26fae888b564186918d31be25220264ed9b78e8ba48c4a427b6c",
+      "parameters": {
+        "image_sha256": "e5d00b39ce50e320e26eafd93749e113070135a7ce242ae214952456ef501bb9",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T13:35:52+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_214.png",
+      "image_size": [
+        2544,
+        3182
+      ],
+      "crop_box": [
+        0,
+        0,
+        2544,
+        3182
+      ],
+      "lines": [
+        {
+          "text": "ngothinhamle1.pdf",
+          "bbox": [
+            7,
+            19,
+            286,
+            45
+          ],
+          "confidence": 96.3
+        },
+        {
+          "text": "HOANG HOA DO PHA",
+          "bbox": [
+            595,
+            197,
+            2007,
+            235
+          ],
+          "confidence": 98.75
+        },
+        {
+          "text": "PHIEN AM:",
+          "bbox": [
+            207,
+            308,
+            558,
+            347
+          ],
+          "confidence": 99.45
+        },
+        {
+          "text": "KHẾ CHƯƠNG ĐỨC",
+          "bbox": [
+            898,
+            387,
+            1913,
+            433
+          ],
+          "confidence": 80.99
+        },
+        {
+          "text": "Thủy dương âm ha đáo An Dương.",
+          "bbox": [
+            750,
+            522,
+            1541,
+            567
+          ],
+          "confidence": 89.12
+        },
+        {
+          "text": "Đô ổn Chương hà vi yêm trường.",
+          "bbox": [
+            746,
+            604,
+            1487,
+            649
+          ],
+          "confidence": 75.59
+        },
+        {
+          "text": "Nghiệp quân để cứ đài điện tần;",
+          "bbox": [
+            745,
+            686,
+            1492,
+            732
+          ],
+          "confidence": 80.37
+        },
+        {
+          "text": "Nguy Công tướng nghiệp tính danh hướng.",
+          "bbox": [
+            213,
+            770,
+            1846,
+            823
+          ],
+          "confidence": 92.68
+        },
+        {
+          "text": "Thủy vận vi vấn Chương Đài quán;",
+          "bbox": [
+            751,
+            852,
+            1565,
+            898
+          ],
+          "confidence": 88.79
+        },
+        {
+          "text": "Từ khí nhưng y trú cẩm đường.",
+          "bbox": [
+            751,
+            934,
+            1467,
+            980
+          ],
+          "confidence": 87.2
+        },
+        {
+          "text": "Quý ngã hậu hiện cần ngưỡng chỉ,",
+          "bbox": [
+            266,
+            1016,
+            1537,
+            1069
+          ],
+          "confidence": 84.71
+        },
+        {
+          "text": "Thanh phong huê mãn nhập giang hương.",
+          "bbox": [
+            750,
+            1096,
+            1721,
+            1151
+          ],
+          "confidence": 92.04
+        },
+        {
+          "text": "DICH NGHIA:",
+          "bbox": [
+            302,
+            1214,
+            611,
+            1252
+          ],
+          "confidence": 99.23
+        },
+        {
+          "text": "NGHI Ô CHƯƠNG ĐỨC\\(^{(1)}\\)",
+          "bbox": [
+            849,
+            1300,
+            1460,
+            1345
+          ],
+          "confidence": 84.48
+        },
+        {
+          "text": "Đi đến An Dương dưới bóng liễu rũ. (2)",
+          "bbox": [
+            601,
+            1433,
+            1458,
+            1479
+          ],
+          "confidence": 85.81
+        },
+        {
+          "text": "Chăng ngán đường dài, vượt sông Chương Đức bình yên.",
+          "bbox": [
+            602,
+            1516,
+            1904,
+            1569
+          ],
+          "confidence": 95.95
+        },
+        {
+          "text": "Nơi vua ở Quận Nghiệp, (3) cung điện đã mất;",
+          "bbox": [
+            602,
+            1598,
+            1622,
+            1651
+          ],
+          "confidence": 93.9
+        },
+        {
+          "text": "Tướng nghiệp của Nguy Công, (4) tên tuổi còn thơm.",
+          "bbox": [
+            599,
+            1680,
+            1751,
+            1734
+          ],
+          "confidence": 90.61
+        },
+        {
+          "text": "Ở quán Chương Đài, chưa hỏi tới đám mây xanh; (5)",
+          "bbox": [
+            314,
+            1763,
+            1767,
+            1811
+          ],
+          "confidence": 88.38
+        },
+        {
+          "text": "Nơi nhà Trú Cẩm, mây tía văn tu. (6)",
+          "bbox": [
+            602,
+            1845,
+            1513,
+            1891
+          ],
+          "confidence": 83.95
+        },
+        {
+          "text": "Ta thện là kế hậu hiện, tính hay chiêm ngưỡng,",
+          "bbox": [
+            601,
+            1927,
+            1700,
+            1975
+          ],
+          "confidence": 82.3
+        },
+        {
+          "text": "Mang đầy gió mát vào làng ven sông.",
+          "bbox": [
+            601,
+            2010,
+            1455,
+            2062
+          ],
+          "confidence": 95.61
+        },
+        {
+          "text": "CHU THICH:",
+          "bbox": [
+            302,
+            2117,
+            590,
+            2156
+          ],
+          "confidence": 99.02
+        },
+        {
+          "text": "1.Chương Đức: Tên phủ, thuộc tỉnh Hà Nam.",
+          "bbox": [
+            454,
+            2192,
+            1400,
+            2235
+          ],
+          "confidence": 94.95
+        },
+        {
+          "text": "2.An Dương: Tên huyện, nơi phủ trị của phủ Chương Đức đóng.",
+          "bbox": [
+            450,
+            2270,
+            1784,
+            2320
+          ],
+          "confidence": 96.73
+        },
+        {
+          "text": "3. Quận Nghiệp: Tên gọi cũ của Chương Đức đời Đường.",
+          "bbox": [
+            451,
+            2349,
+            1613,
+            2399
+          ],
+          "confidence": 92.82
+        },
+        {
+          "text": "4.Nguy Công: Tức Triệu Phổ làm quan đến chức Thái sự cho nhà Tống,",
+          "bbox": [
+            290,
+            2427,
+            2004,
+            2477
+          ],
+          "confidence": 93.66
+        },
+        {
+          "text": "người vùng đất Kế.",
+          "bbox": [
+            299,
+            2507,
+            1992,
+            2548
+          ],
+          "confidence": 98.5
+        },
+        {
+          "text": "5.Chương Đài: Xem chủ thích 3 bài 85.",
+          "bbox": [
+            450,
+            2585,
+            2079,
+            2627
+          ],
+          "confidence": 95.82
+        },
+        {
+          "text": "6. Nhà Trú Cẩm: Trú Cẩm là mặc áo gấm đi ban ngày, nghĩa bóng là giấu",
+          "bbox": [
+            449,
+            2666,
+            2005,
+            2719
+          ],
+          "confidence": 94.47
+        },
+        {
+          "text": "sang về làng cũ. Đời Tống, Hàn Kỳ làm Tễ tướng trở về cố hướng làm nhà ở gọi",
+          "bbox": [
+            299,
+            2747,
+            2006,
+            2797
+          ],
+          "confidence": 88.83
+        },
+        {
+          "text": "là Trú Cẩm đường. Nhà đó ở huyện An Dương tỉnh Hà Nam gần Chương Đức.",
+          "bbox": [
+            297,
+            2828,
+            1939,
+            2879
+          ],
+          "confidence": 96.68
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2544,
+          3182
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 49.531,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              7,
+              19,
+              286,
+              45
+            ],
+            "generated_text": "ngothinhamle1.pdf",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.91,
+            "confidence": 96.3,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              595,
+              197,
+              2007,
+              235
+            ],
+            "generated_text": "HOANG HOA DO PHA",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.837,
+            "confidence": 98.75,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              304,
+              240,
+              2011,
+              253
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.457,
+            "confidence": 92.11,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              207,
+              308,
+              558,
+              347
+            ],
+            "generated_text": "PHIEN AM:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.715,
+            "confidence": 99.45,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              898,
+              387,
+              1913,
+              433
+            ],
+            "generated_text": "KHẾ CHƯƠNG ĐỨC",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.48,
+            "confidence": 80.99,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              750,
+              522,
+              1541,
+              567
+            ],
+            "generated_text": "Thủy dương âm ha đáo An Dương.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.21,
+            "confidence": 89.12,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              746,
+              604,
+              1487,
+              649
+            ],
+            "generated_text": "Đô ổn Chương hà vi yêm trường.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.255,
+            "confidence": 75.59,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              745,
+              686,
+              1492,
+              732
+            ],
+            "generated_text": "Nghiệp quân để cứ đài điện tần;",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.254,
+            "confidence": 80.37,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              213,
+              770,
+              1846,
+              823
+            ],
+            "generated_text": "Nguy Công tướng nghiệp tính danh hướng.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.288,
+            "confidence": 92.68,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              751,
+              852,
+              1565,
+              898
+            ],
+            "generated_text": "Thủy vận vi vấn Chương Đài quán;",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.357,
+            "confidence": 88.79,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              751,
+              934,
+              1467,
+              980
+            ],
+            "generated_text": "Từ khí nhưng y trú cẩm đường.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.134,
+            "confidence": 87.2,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              266,
+              1016,
+              1537,
+              1069
+            ],
+            "generated_text": "Quý ngã hậu hiện cần ngưỡng chỉ,",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.253,
+            "confidence": 84.71,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              750,
+              1096,
+              1721,
+              1151
+            ],
+            "generated_text": "Thanh phong huê mãn nhập giang hương.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.456,
+            "confidence": 92.04,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              302,
+              1214,
+              611,
+              1252
+            ],
+            "generated_text": "DICH NGHIA:",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.749,
+            "confidence": 99.23,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              849,
+              1300,
+              1460,
+              1345
+            ],
+            "generated_text": "NGHI Ô CHƯƠNG ĐỨC\\(^{(1)}\\)",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.731,
+            "confidence": 84.48,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              601,
+              1433,
+              1458,
+              1479
+            ],
+            "generated_text": "Đi đến An Dương dưới bóng liễu rũ. (2)",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.616,
+            "confidence": 85.81,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              602,
+              1516,
+              1904,
+              1569
+            ],
+            "generated_text": "Chăng ngán đường dài, vượt sông Chương Đức bình yên.",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.688,
+            "confidence": 95.95,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              602,
+              1598,
+              1622,
+              1651
+            ],
+            "generated_text": "Nơi vua ở Quận Nghiệp, (3) cung điện đã mất;",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.9,
+            "confidence": 93.9,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              599,
+              1680,
+              1751,
+              1734
+            ],
+            "generated_text": "Tướng nghiệp của Nguy Công, (4) tên tuổi còn thơm.",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.736,
+            "confidence": 90.61,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              314,
+              1763,
+              1767,
+              1811
+            ],
+            "generated_text": "Ở quán Chương Đài, chưa hỏi tới đám mây xanh; (5)",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 1.985,
+            "confidence": 88.38,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              602,
+              1845,
+              1513,
+              1891
+            ],
+            "generated_text": "Nơi nhà Trú Cẩm, mây tía văn tu. (6)",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.649,
+            "confidence": 83.95,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              601,
+              1927,
+              1700,
+              1975
+            ],
+            "generated_text": "Ta thện là kế hậu hiện, tính hay chiêm ngưỡng,",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.781,
+            "confidence": 82.3,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              601,
+              2010,
+              1455,
+              2062
+            ],
+            "generated_text": "Mang đầy gió mát vào làng ven sông.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.375,
+            "confidence": 95.61,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              302,
+              2117,
+              590,
+              2156
+            ],
+            "generated_text": "CHU THICH:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.731,
+            "confidence": 99.02,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              454,
+              2192,
+              1400,
+              2235
+            ],
+            "generated_text": "1.Chương Đức: Tên phủ, thuộc tỉnh Hà Nam.",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.583,
+            "confidence": 94.95,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              450,
+              2270,
+              1784,
+              2320
+            ],
+            "generated_text": "2.An Dương: Tên huyện, nơi phủ trị của phủ Chương Đức đóng.",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.072,
+            "confidence": 96.73,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              451,
+              2349,
+              1613,
+              2399
+            ],
+            "generated_text": "3. Quận Nghiệp: Tên gọi cũ của Chương Đức đời Đường.",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 2.167,
+            "confidence": 92.82,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              290,
+              2427,
+              2004,
+              2477
+            ],
+            "generated_text": "4.Nguy Công: Tức Triệu Phổ làm quan đến chức Thái sự cho nhà Tống,",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 2.137,
+            "confidence": 93.66,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              299,
+              2507,
+              1992,
+              2548
+            ],
+            "generated_text": "người vùng đất Kế.",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 1.041,
+            "confidence": 98.5,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              450,
+              2585,
+              2079,
+              2627
+            ],
+            "generated_text": "5.Chương Đài: Xem chủ thích 3 bài 85.",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.631,
+            "confidence": 95.82,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              449,
+              2666,
+              2005,
+              2719
+            ],
+            "generated_text": "6. Nhà Trú Cẩm: Trú Cẩm là mặc áo gấm đi ban ngày, nghĩa bóng là giấu",
+            "n_lines": 1,
+            "tokens": 32,
+            "seconds": 2.448,
+            "confidence": 94.47,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 32,
+            "box": [
+              299,
+              2747,
+              2006,
+              2797
+            ],
+            "generated_text": "sang về làng cũ. Đời Tống, Hàn Kỳ làm Tễ tướng trở về cố hướng làm nhà ở gọi",
+            "n_lines": 1,
+            "tokens": 34,
+            "seconds": 2.709,
+            "confidence": 88.83,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 33,
+            "box": [
+              297,
+              2828,
+              1939,
+              2879
+            ],
+            "generated_text": "là Trú Cẩm đường. Nhà đó ở huyện An Dương tỉnh Hà Nam gần Chương Đức.",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 2.191,
+            "confidence": 96.68,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              763,
+              0,
+              1527,
+              5
+            ],
+            "ink": 51
+          },
+          {
+            "box": [
+              839,
+              565,
+              1536,
+              575
+            ],
+            "ink": 306
+          },
+          {
+            "box": [
+              792,
+              647,
+              1472,
+              657
+            ],
+            "ink": 326
+          },
+          {
+            "box": [
+              787,
+              729,
+              1484,
+              739
+            ],
+            "ink": 344
+          },
+          {
+            "box": [
+              1931,
+              2971,
+              2020,
+              2980
+            ],
+            "ink": 301
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

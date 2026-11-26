@@ -1,0 +1,998 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 22,
+  "runs": [
+    {
+      "key": "834b7777699e53c38cf5f4f262967ba56c6e989d0405884185c7001170864803",
+      "parameters": {
+        "image_sha256": "089cbaa09ca52968674c883fe2e765b570c8681266c773f58f38a95f0b885ecd",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T11:22:33+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_022.png",
+      "image_size": [
+        2550,
+        3190
+      ],
+      "crop_box": [
+        0,
+        0,
+        2550,
+        3190
+      ],
+      "lines": [
+        {
+          "text": "ngothinhamle1.pdf",
+          "bbox": [
+            7,
+            19,
+            286,
+            45
+          ],
+          "confidence": 96.3
+        },
+        {
+          "text": "HOÀNG HOA ĐỔ PHA",
+          "bbox": [
+            1451,
+            201,
+            2005,
+            241
+          ],
+          "confidence": 83.77
+        },
+        {
+          "text": "Bê tôi bền bỉ, lợi vượt khó khăn.",
+          "bbox": [
+            650,
+            308,
+            1386,
+            354
+          ],
+          "confidence": 90.23
+        },
+        {
+          "text": "Chia tay, chẳng phải chuốc rượu ly biết,",
+          "bbox": [
+            652,
+            391,
+            1570,
+            435
+          ],
+          "confidence": 89.61
+        },
+        {
+          "text": "Nơi đây, các bác từng cưỡi xe sứ trỏ về.",
+          "bbox": [
+            650,
+            474,
+            1541,
+            518
+          ],
+          "confidence": 91.35
+        },
+        {
+          "text": "KHAO DI:",
+          "bbox": [
+            297,
+            586,
+            1415,
+            623
+          ],
+          "confidence": 98.33
+        },
+        {
+          "text": "a. Bản A.117c/1: Tinh mao 旌旄.",
+          "bbox": [
+            238,
+            659,
+            1118,
+            704
+          ],
+          "confidence": 94.67
+        },
+        {
+          "text": "b. Bản A.404: Phong cương 封疆.",
+          "bbox": [
+            444,
+            738,
+            1120,
+            782
+          ],
+          "confidence": 96.15
+        },
+        {
+          "text": "c. Bản A.404: Bản triệu 本朝.",
+          "bbox": [
+            420,
+            817,
+            1058,
+            858
+          ],
+          "confidence": 96.2
+        },
+        {
+          "text": "d. Bản A.117c/1: Thân trung 臣忠.",
+          "bbox": [
+            448,
+            895,
+            1159,
+            938
+          ],
+          "confidence": 94.36
+        },
+        {
+          "text": "CHU THICH:",
+          "bbox": [
+            299,
+            975,
+            587,
+            1014
+          ],
+          "confidence": 93.84
+        },
+        {
+          "text": "1. Ngũ sứ ho Phan: Túc Phan Huy Ich; Bộ công ho Vũ: Túc Vũ Huy",
+          "bbox": [
+            451,
+            1049,
+            2004,
+            1093
+          ],
+          "confidence": 86.15
+        },
+        {
+          "text": "Tấn; Hiệp trấn hợp Ngô: Tức Ngô Vi Quý, ba ông đều đi sử trong phải bộ giả",
+          "bbox": [
+            295,
+            1128,
+            2003,
+            1179
+          ],
+          "confidence": 88.13
+        },
+        {
+          "text": "vương năm 1790.",
+          "bbox": [
+            296,
+            1219,
+            681,
+            1248
+          ],
+          "confidence": 89.98
+        },
+        {
+          "text": "2. Dương Quan: Tên của ải phía tây, thuộc Tây An, Trung Quốc. Vương",
+          "bbox": [
+            448,
+            1284,
+            2006,
+            1334
+          ],
+          "confidence": 93.63
+        },
+        {
+          "text": "Duy đòi Đường, tiến bạn là Nguyên Nhị sang sử An Tây có câu: “Tây xuất",
+          "bbox": [
+            299,
+            1362,
+            2006,
+            1412
+          ],
+          "confidence": 90.14
+        },
+        {
+          "text": "Dương Quan vô cố nhân\" (Ra khỏi của Dương Quan đi về phía tây, sẽ không còn",
+          "bbox": [
+            298,
+            1440,
+            2007,
+            1491
+          ],
+          "confidence": 96.03
+        },
+        {
+          "text": "ban cũ nữa). Sau thương dùng từ Dương Quan để chỉ của ai nói chung.",
+          "bbox": [
+            296,
+            1519,
+            1786,
+            1569
+          ],
+          "confidence": 87.71
+        },
+        {
+          "text": "3.Tiên hoàng: Chỉ vua Quang Trung.",
+          "bbox": [
+            448,
+            1598,
+            1229,
+            1641
+          ],
+          "confidence": 96.19
+        },
+        {
+          "text": "DICH THO:",
+          "bbox": [
+            297,
+            1708,
+            552,
+            1747
+          ],
+          "confidence": 96.12
+        },
+        {
+          "text": "Quạt cơ pháp phối của Dương Quan,",
+          "bbox": [
+            740,
+            1783,
+            1578,
+            1836
+          ],
+          "confidence": 90.3
+        },
+        {
+          "text": "Nghén thây đường máy van núi non.",
+          "bbox": [
+            735,
+            1861,
+            1579,
+            1906
+          ],
+          "confidence": 83.54
+        },
+        {
+          "text": "Ranh giới Trung Nguyên theo dây núi;",
+          "bbox": [
+            736,
+            1939,
+            1630,
+            1992
+          ],
+          "confidence": 92.79
+        },
+        {
+          "text": "Uy tràn khắp cõi đáng Tiên hoàng.",
+          "bbox": [
+            742,
+            2017,
+            1539,
+            2061
+          ],
+          "confidence": 97.29
+        },
+        {
+          "text": "Thênh thang vương đạo, không ngăn trở;",
+          "bbox": [
+            263,
+            2095,
+            1681,
+            2149
+          ],
+          "confidence": 98.31
+        },
+        {
+          "text": "Bên bỉ kiên trình vượt khó khăn.",
+          "bbox": [
+            734,
+            2173,
+            1481,
+            2217
+          ],
+          "confidence": 90.01
+        },
+        {
+          "text": "Chén rượu biết ly không phải rót,",
+          "bbox": [
+            738,
+            2255,
+            1497,
+            2299
+          ],
+          "confidence": 89.06
+        },
+        {
+          "text": "Nơi này trở lại, được toàn thân.",
+          "bbox": [
+            733,
+            2338,
+            1618,
+            2382
+          ],
+          "confidence": 96.03
+        },
+        {
+          "text": "Làm Giang",
+          "bbox": [
+            1731,
+            2438,
+            2002,
+            2468
+          ],
+          "confidence": 98.5
+        },
+        {
+          "text": "J. 一",
+          "bbox": [
+            1000,
+            2599,
+            1277,
+            2615
+          ],
+          "confidence": 48.2
+        },
+        {
+          "text": "四方弧矢是爲男",
+          "bbox": [
+            636,
+            2708,
+            1486,
+            2769
+          ],
+          "confidence": 97.05
+        },
+        {
+          "text": "矯步天梯豈不堪",
+          "bbox": [
+            853,
+            2835,
+            1649,
+            2896
+          ],
+          "confidence": 99.57
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2550,
+          3190
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 45.33,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              7,
+              19,
+              286,
+              45
+            ],
+            "generated_text": "ngothinhamle1.pdf",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.905,
+            "confidence": 96.3,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              1451,
+              201,
+              2005,
+              241
+            ],
+            "generated_text": "HOÀNG HOA ĐỔ PHA",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.114,
+            "confidence": 83.77,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              299,
+              248,
+              2009,
+              262
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.458,
+            "confidence": 85.55,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              650,
+              308,
+              1386,
+              354
+            ],
+            "generated_text": "Bê tôi bền bỉ, lợi vượt khó khăn.",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.565,
+            "confidence": 90.23,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              652,
+              391,
+              1570,
+              435
+            ],
+            "generated_text": "Chia tay, chẳng phải chuốc rượu ly biết,",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.585,
+            "confidence": 89.61,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              650,
+              474,
+              1541,
+              518
+            ],
+            "generated_text": "Nơi đây, các bác từng cưỡi xe sứ trỏ về.",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.703,
+            "confidence": 91.35,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              297,
+              586,
+              1415,
+              623
+            ],
+            "generated_text": "KHAO DI:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.799,
+            "confidence": 98.33,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              238,
+              659,
+              1118,
+              704
+            ],
+            "generated_text": "a. Bản A.117c/1: Tinh mao 旌旄.",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 1.974,
+            "confidence": 94.67,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              444,
+              738,
+              1120,
+              782
+            ],
+            "generated_text": "b. Bản A.404: Phong cương 封疆.",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.476,
+            "confidence": 96.15,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              420,
+              817,
+              1058,
+              858
+            ],
+            "generated_text": "c. Bản A.404: Bản triệu 本朝.",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.628,
+            "confidence": 96.2,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              448,
+              895,
+              1159,
+              938
+            ],
+            "generated_text": "d. Bản A.117c/1: Thân trung 臣 忠.",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.701,
+            "confidence": 94.36,
+            "flags": [
+              "han_gap_removed"
+            ],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              299,
+              975,
+              587,
+              1014
+            ],
+            "generated_text": "CHU THICH:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.745,
+            "confidence": 93.84,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              451,
+              1049,
+              2004,
+              1093
+            ],
+            "generated_text": "1. Ngũ sứ ho Phan: Túc Phan Huy Ich; Bộ công ho Vũ: Túc Vũ Huy",
+            "n_lines": 1,
+            "tokens": 32,
+            "seconds": 2.483,
+            "confidence": 86.15,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              295,
+              1128,
+              2003,
+              1179
+            ],
+            "generated_text": "Tấn; Hiệp trấn hợp Ngô: Tức Ngô Vi Quý, ba ông đều đi sử trong phải bộ giả",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 2.449,
+            "confidence": 88.13,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              296,
+              1219,
+              681,
+              1248
+            ],
+            "generated_text": "vương năm 1790.",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.992,
+            "confidence": 89.98,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              448,
+              1284,
+              2006,
+              1334
+            ],
+            "generated_text": "2. Dương Quan: Tên của ải phía tây, thuộc Tây An, Trung Quốc. Vương",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.19,
+            "confidence": 93.63,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              299,
+              1362,
+              2006,
+              1412
+            ],
+            "generated_text": "Duy đòi Đường, tiến bạn là Nguyên Nhị sang sử An Tây có câu: “Tây xuất",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 2.352,
+            "confidence": 90.14,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              298,
+              1440,
+              2007,
+              1491
+            ],
+            "generated_text": "Dương Quan vô cố nhân\" (Ra khỏi của Dương Quan đi về phía tây, sẽ không còn",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 2.364,
+            "confidence": 96.03,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              296,
+              1519,
+              1786,
+              1569
+            ],
+            "generated_text": "ban cũ nữa). Sau thương dùng từ Dương Quan để chỉ của ai nói chung.",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 1.937,
+            "confidence": 87.71,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              448,
+              1598,
+              1229,
+              1641
+            ],
+            "generated_text": "3.Tiên hoàng: Chỉ vua Quang Trung.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.341,
+            "confidence": 96.19,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              297,
+              1708,
+              552,
+              1747
+            ],
+            "generated_text": "DICH THO:",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.652,
+            "confidence": 96.12,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              740,
+              1783,
+              1578,
+              1836
+            ],
+            "generated_text": "Quạt cơ pháp phối của Dương Quan,",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.236,
+            "confidence": 90.3,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              735,
+              1861,
+              1579,
+              1906
+            ],
+            "generated_text": "Nghén thây đường máy van núi non.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.168,
+            "confidence": 83.54,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              736,
+              1939,
+              1630,
+              1992
+            ],
+            "generated_text": "Ranh giới Trung Nguyên theo dây núi;",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.173,
+            "confidence": 92.79,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              742,
+              2017,
+              1539,
+              2061
+            ],
+            "generated_text": "Uy tràn khắp cõi đáng Tiên hoàng.",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.442,
+            "confidence": 97.29,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              263,
+              2095,
+              1681,
+              2149
+            ],
+            "generated_text": "Thênh thang vương đạo, không ngăn trở;",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.332,
+            "confidence": 98.31,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              734,
+              2173,
+              1481,
+              2217
+            ],
+            "generated_text": "Bên bỉ kiên trình vượt khó khăn.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.312,
+            "confidence": 90.01,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              738,
+              2255,
+              1497,
+              2299
+            ],
+            "generated_text": "Chén rượu biết ly không phải rót,",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.13,
+            "confidence": 89.06,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              733,
+              2338,
+              1618,
+              2382
+            ],
+            "generated_text": "Nơi này trở lại, được toàn thân.",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.101,
+            "confidence": 96.03,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              1731,
+              2438,
+              2002,
+              2468
+            ],
+            "generated_text": "Làm Giang",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.658,
+            "confidence": 98.5,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              1000,
+              2599,
+              1277,
+              2615
+            ],
+            "generated_text": "J. 一",
+            "n_lines": 1,
+            "tokens": 4,
+            "seconds": 0.597,
+            "confidence": 48.2,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 32,
+            "box": [
+              636,
+              2708,
+              1486,
+              2769
+            ],
+            "generated_text": "四方弧矢是爲男",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.771,
+            "confidence": 97.05,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 33,
+            "box": [
+              853,
+              2835,
+              1649,
+              2896
+            ],
+            "generated_text": "矯步天梯豈不堪",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.991,
+            "confidence": 99.57,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              820,
+              431,
+              1568,
+              442
+            ],
+            "ink": 348
+          },
+          {
+            "box": [
+              528,
+              1089,
+              1992,
+              1099
+            ],
+            "ink": 332
+          },
+          {
+            "box": [
+              346,
+              1211,
+              667,
+              1222
+            ],
+            "ink": 419
+          },
+          {
+            "box": [
+              702,
+              1638,
+              1215,
+              1648
+            ],
+            "ink": 284
+          },
+          {
+            "box": [
+              776,
+              1903,
+              1331,
+              1914
+            ],
+            "ink": 310
+          },
+          {
+            "box": [
+              1003,
+              2570,
+              1259,
+              2584
+            ],
+            "ink": 633
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

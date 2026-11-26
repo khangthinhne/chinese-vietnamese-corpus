@@ -1,0 +1,268 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "qwen",
+  "page": 494,
+  "runs": [
+    {
+      "key": "bcecb0299ae81baca5545aaa8abdc979b2f4db7411d774b6477ae49f6b5611bc",
+      "parameters": {
+        "image_sha256": "30959ebfd97eb9b04fbd7d842393aa4ba11049896ec4eaaed2f81e9b034ead25",
+        "engine": {
+          "name": "qwen",
+          "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "model_revision": "main",
+          "transformers_version": "4.57.6",
+          "torch_version": "2.5.1+cu121",
+          "cuda_version": "12.1",
+          "bitsandbytes_version": "0.50.2",
+          "quantization": {
+            "load_in_4bit": true,
+            "quant_type": "nf4",
+            "double_quant": true,
+            "compute_dtype": "float16"
+          },
+          "mode": "all",
+          "min_pixels": 50176,
+          "max_pixels": 802816,
+          "band_inches": 2.0,
+          "max_new_tokens": 768,
+          "repetition_penalty": 1.05,
+          "adapter_version": 3,
+          "prompt_version": 3,
+          "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74"
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T21:56:01+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_494.png",
+      "image_size": [
+        2557,
+        3191
+      ],
+      "crop_box": [
+        0,
+        0,
+        2557,
+        3191
+      ],
+      "lines": [
+        {
+          "text": "BANG GIAO HẢO THOẠI",
+          "bbox": [
+            7,
+            13,
+            2090,
+            244
+          ],
+          "confidence": 96.12
+        },
+        {
+          "text": "安前往昇龍拜迎敕書，並參謁將事大員，敦請富春城宣封，冀得蓬艾胥榮，大酬素願。惟近來泛應勞",
+          "bbox": [
+            7,
+            244,
+            2090,
+            475
+          ],
+          "confidence": 96.12
+        },
+        {
+          "text": "攘，冒犯风暑，偶为伤寒所感。至日飭整部下将士，力疾进发，方至该镇之东城地面，离义安一日，恰值深秋，冷侵肌体，旧恙转增，不能勉强前进，只得回舟义安城调治。",
+          "bbox": [
+            368,
+            510,
+            2081,
+            1009
+          ],
+          "confidence": 90.05
+        },
+        {
+          "text": "望鶴車之將至未能親往迎拜，誠有踐踏而不自已，謹委親子代往候迎。仍奉派守城將士，護衛龍亭，取路從乂安進發。小番謹於城中等候，旬日有寥，奉接迎將事大員，偕來富春城，宣封告襄典禮。第念去",
+          "bbox": [
+            380,
+            1072,
+            2082,
+            1575
+          ],
+          "confidence": 88.8
+        },
+        {
+          "text": "回，必有定日，此次已奉憲札指授，小番所委親子奉迎，未保金諾與否？",
+          "bbox": [
+            305,
+            1637,
+            2080,
+            1893
+          ],
+          "confidence": 90.22
+        },
+        {
+          "text": "見在本山南清華义安顺化等地方，小番素所經繇，見在館舍灶器皿什物留用無缺，奉已飭下",
+          "bbox": [
+            305,
+            1893,
+            2080,
+            2148
+          ],
+          "confidence": 90.22
+        },
+        {
+          "text": "该镇目，更加缮理，恭候敕使遄往，窃计往返程途，不上一月。本国既内属，即自昇龙达富春，山川之险易，城戍之疏，关律之扼塞，邑里之稠凋，一一委曲情形，窃欲将事大员历览周知，将来帅幕垂询，庶写小番",
+          "bbox": [
+            381,
+            2215,
+            2143,
+            2720
+          ],
+          "confidence": 92.24
+        },
+        {
+          "text": "投款，至城无敢杆格之意。",
+          "bbox": [
+            379,
+            2771,
+            2333,
+            3121
+          ],
+          "confidence": 80.54
+        }
+      ],
+      "raw": {
+        "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+        "model_revision": "main",
+        "mode": "all",
+        "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74",
+        "dpi": 300,
+        "image_size": [
+          2557,
+          3191
+        ],
+        "band_target_height": 600,
+        "bbox_granularity": "band_even_split",
+        "max_new_tokens": 768,
+        "max_pixels": 802816,
+        "inference_seconds": 27.514,
+        "bands": [
+          {
+            "band": 1,
+            "y0": 17,
+            "y1": 507,
+            "ink_box": [
+              7,
+              13,
+              2090,
+              475
+            ],
+            "generated_text": "BANG GIAO HẢO THOẠI\n\n安前往昇龍拜迎敕書，並參謁將事大員，敦請富春城宣封，冀得蓬艾胥榮，大酬素願。惟近來泛應勞",
+            "n_lines": 2,
+            "tokens": 57,
+            "seconds": 3.988,
+            "confidence": 96.12,
+            "flags": []
+          },
+          {
+            "band": 2,
+            "y0": 507,
+            "y1": 1053,
+            "ink_box": [
+              368,
+              510,
+              2081,
+              1009
+            ],
+            "generated_text": "攘，冒犯风暑，偶为伤寒所感。至日飭整部下将士，力疾进发，方至该镇之东城地面，离义安一日，恰值深秋，冷侵肌体，旧恙转增，不能勉强前进，只得回舟义安城调治。",
+            "n_lines": 1,
+            "tokens": 72,
+            "seconds": 4.968,
+            "confidence": 90.05,
+            "flags": []
+          },
+          {
+            "band": 3,
+            "y0": 1053,
+            "y1": 1606,
+            "ink_box": [
+              380,
+              1072,
+              2082,
+              1575
+            ],
+            "generated_text": "望鶴車之將至未能親往迎拜，誠有踐踏而不自已，謹委親子代往候迎。仍奉派守城將士，護衛龍亭，取路從乂安進發。小番謹於城中等候，旬日有寥，奉接迎將事大員，偕來富春城，宣封告襄典禮。第念去",
+            "n_lines": 1,
+            "tokens": 93,
+            "seconds": 6.297,
+            "confidence": 88.8,
+            "flags": []
+          },
+          {
+            "band": 4,
+            "y0": 1606,
+            "y1": 2181,
+            "ink_box": [
+              305,
+              1637,
+              2080,
+              2148
+            ],
+            "generated_text": "回，必有定日，此次已奉憲札指授，小番所委親子奉迎，未保金諾與否？\n見在本山南清華义安顺化等地方，小番素所經繇，見在館舍灶器皿什物留用無缺，奉已飭下",
+            "n_lines": 2,
+            "tokens": 73,
+            "seconds": 5.058,
+            "confidence": 90.22,
+            "flags": []
+          },
+          {
+            "band": 5,
+            "y0": 2181,
+            "y1": 2751,
+            "ink_box": [
+              381,
+              2215,
+              2143,
+              2720
+            ],
+            "generated_text": "该镇目，更加缮理，恭候敕使遄往，窃计往返程途，不上一月。本国既内属，即自昇龙达富春，山川之险易，城戍之疏，关律之扼塞，邑里之稠凋，一一委曲情形，窃欲将事大员历览周知，将来帅幕垂询，庶写小番",
+            "n_lines": 1,
+            "tokens": 89,
+            "seconds": 6.054,
+            "confidence": 92.24,
+            "flags": []
+          },
+          {
+            "band": 6,
+            "y0": 2751,
+            "y1": 3117,
+            "ink_box": [
+              379,
+              2771,
+              2333,
+              3121
+            ],
+            "generated_text": "投款，至城无敢杆格之意。",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.119,
+            "confidence": 80.54,
+            "flags": []
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "61cbea5c0055c260ccfc12f884e0febca7b2783b",
+        "git_describe": "61cbea5",
+        "git_dirty": true,
+        "gpu": "NVIDIA L4",
+        "dtype": "float16",
+        "adapter_version": 3
+      }
+    }
+  ]
+}

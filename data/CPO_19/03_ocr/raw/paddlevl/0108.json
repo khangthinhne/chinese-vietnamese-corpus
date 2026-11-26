@@ -1,0 +1,1091 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 108,
+  "runs": [
+    {
+      "key": "f0567b0a583e8d98cd8bbd89219e91eef9327c181934c18c5add6a857a1f87d7",
+      "parameters": {
+        "image_sha256": "336b49fac8319a1a5b7bb1986178a49e3d8ca747c6b29bc3afa2ee98ee3ff3f6",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T12:19:31+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_108.png",
+      "image_size": [
+        2624,
+        3249
+      ],
+      "crop_box": [
+        0,
+        0,
+        2624,
+        3249
+      ],
+      "lines": [
+        {
+          "text": "ngothinhamle1.pdf",
+          "bbox": [
+            7,
+            19,
+            1394,
+            45
+          ],
+          "confidence": 92.79
+        },
+        {
+          "text": "HOÀNG HOA ĐỔ PHA",
+          "bbox": [
+            1590,
+            204,
+            2054,
+            242
+          ],
+          "confidence": 82.2
+        },
+        {
+          "text": "KHAO DI:",
+          "bbox": [
+            343,
+            305,
+            563,
+            343
+          ],
+          "confidence": 97.77
+        },
+        {
+          "text": "a. Bản A.404: Ky bình 磯平.",
+          "bbox": [
+            491,
+            378,
+            1071,
+            418
+          ],
+          "confidence": 92.95
+        },
+        {
+          "text": "NGUYEN CHU:",
+          "bbox": [
+            342,
+            455,
+            680,
+            494
+          ],
+          "confidence": 91.06
+        },
+        {
+          "text": "A. Hai châu Toàn và Vĩnh là nơi giáp giới hai đất Sở, Việt. Thuyền",
+          "bbox": [
+            491,
+            525,
+            2051,
+            568
+          ],
+          "confidence": 93.76
+        },
+        {
+          "text": "xuất phát từ Tô Gia Kiều huyện Hưng An đi tới ghênh Hoàng Thạch có 53",
+          "bbox": [
+            342,
+            598,
+            2049,
+            646
+          ],
+          "confidence": 92.0
+        },
+        {
+          "text": "thác hiểm. Đến huyện Linh Lăng thuộc Vĩnh Châu, hai sông Tiêu và",
+          "bbox": [
+            343,
+            674,
+            2050,
+            717
+          ],
+          "confidence": 98.8
+        },
+        {
+          "text": "Tương hợp lại, lòng sông rộng dần ra, hai bên bỏ, không có núi đá, chỉ có",
+          "bbox": [
+            343,
+            748,
+            2050,
+            798
+          ],
+          "confidence": 93.7
+        },
+        {
+          "text": "núi đất như nội úp, không có chỗ nào cao lăm. Ghênh không có hẻm, nước",
+          "bbox": [
+            344,
+            822,
+            2051,
+            866
+          ],
+          "confidence": 91.82
+        },
+        {
+          "text": "chảy bình thường không có xoáy độc.",
+          "bbox": [
+            344,
+            898,
+            1188,
+            941
+          ],
+          "confidence": 91.86
+        },
+        {
+          "text": "Nơi đây chơi lính thú thừa thốt, đi cả ngày chỉ thấy một hai cái đã đổ",
+          "bbox": [
+            495,
+            972,
+            2054,
+            1015
+          ],
+          "confidence": 90.14
+        },
+        {
+          "text": "nát không tu sửa, lại ở khuất trong lối mòn, chẳng có ai canh gác, khác hẳn",
+          "bbox": [
+            345,
+            1046,
+            2053,
+            1090
+          ],
+          "confidence": 97.75
+        },
+        {
+          "text": "với những đồn canh ở Việt Tây. Chắc là đất Việt nhiều trôm cướp, không",
+          "bbox": [
+            345,
+            1120,
+            2053,
+            1164
+          ],
+          "confidence": 93.1
+        },
+        {
+          "text": "được bình yên như ở đất Sở.",
+          "bbox": [
+            347,
+            1196,
+            961,
+            1237
+          ],
+          "confidence": 96.87
+        },
+        {
+          "text": "Những nơi có bến đò ngang, thường thấy một vài nóc nhà tranh xiêu",
+          "bbox": [
+            496,
+            1269,
+            2052,
+            1318
+          ],
+          "confidence": 96.2
+        },
+        {
+          "text": "veo kề bên sông. Từ trên đường cái xuống bến có thôn trang, duyên dáng",
+          "bbox": [
+            345,
+            1344,
+            2053,
+            1392
+          ],
+          "confidence": 91.98
+        },
+        {
+          "text": "thanh nhã đáng yêu. Từ đây xuôi xuống Trường Sa, xa dần đất Việt Tây, núi",
+          "bbox": [
+            346,
+            1418,
+            2054,
+            1467
+          ],
+          "confidence": 94.09
+        },
+        {
+          "text": "xa sông rộng, không có rừng, xóm làng trù mật, sạch khói mù, nhiều ánh",
+          "bbox": [
+            346,
+            1493,
+            2053,
+            1542
+          ],
+          "confidence": 95.3
+        },
+        {
+          "text": "sáng. Thế mới biết, sách Vũ Cống có nói: “Đất Sở tuy là hoang phục, đất Việt",
+          "bbox": [
+            348,
+            1566,
+            2054,
+            1610
+          ],
+          "confidence": 96.02
+        },
+        {
+          "text": "lại còn ở ngoài cõi hoang phục.” Ngày nay từ Việt Tây đến nước ta đều là đô",
+          "bbox": [
+            347,
+            1642,
+            2053,
+            1690
+          ],
+          "confidence": 96.58
+        },
+        {
+          "text": "hội, đó là dân dân mở mang ra vậy.",
+          "bbox": [
+            347,
+            1718,
+            1128,
+            1759
+          ],
+          "confidence": 92.29
+        },
+        {
+          "text": "CHU THICH:",
+          "bbox": [
+            350,
+            1823,
+            637,
+            1861
+          ],
+          "confidence": 99.18
+        },
+        {
+          "text": "1.Sông Tiêu bắt nguồn từ huyện Đạo, đổ xuống huyện Linh Lăng, hợp",
+          "bbox": [
+            502,
+            1894,
+            2053,
+            1944
+          ],
+          "confidence": 93.56
+        },
+        {
+          "text": "lưu với sông Tương, chảy ra Toàn Châu (Quảng Tây), rồi chảy xuống Hành",
+          "bbox": [
+            349,
+            1970,
+            2054,
+            2020
+          ],
+          "confidence": 96.15
+        },
+        {
+          "text": "Dương (Họ Nam).",
+          "bbox": [
+            349,
+            2057,
+            724,
+            2087
+          ],
+          "confidence": 88.28
+        },
+        {
+          "text": "DICH THO:",
+          "bbox": [
+            348,
+            2152,
+            603,
+            2190
+          ],
+          "confidence": 93.7
+        },
+        {
+          "text": "Tiêu Tương động hợp đố Hồ Nam,",
+          "bbox": [
+            789,
+            2223,
+            1567,
+            2268
+          ],
+          "confidence": 77.82
+        },
+        {
+          "text": "Qua những hiểm nghèo, thác thập tam.",
+          "bbox": [
+            790,
+            2301,
+            1689,
+            2345
+          ],
+          "confidence": 93.56
+        },
+        {
+          "text": "Đá hết chon von, thông rộng trải;",
+          "bbox": [
+            785,
+            2379,
+            1552,
+            2422
+          ],
+          "confidence": 93.33
+        },
+        {
+          "text": "Ghệnh phơi nước lăng, liêu lan tràn.",
+          "bbox": [
+            789,
+            2457,
+            1625,
+            2501
+          ],
+          "confidence": 87.38
+        },
+        {
+          "text": "Đơn canh vang ve bên dương núi;",
+          "bbox": [
+            785,
+            2547,
+            1559,
+            2579
+          ],
+          "confidence": 87.83
+        },
+        {
+          "text": "Ben cu tiêu sở dưới co am.",
+          "bbox": [
+            786,
+            2627,
+            1381,
+            2658
+          ],
+          "confidence": 78.77
+        },
+        {
+          "text": "Đia thế Việt Tây qua đất Sở",
+          "bbox": [
+            785,
+            2694,
+            1440,
+            2738
+          ],
+          "confidence": 91.37
+        },
+        {
+          "text": "Bên do của ai khoi lam tan.",
+          "bbox": [
+            785,
+            2785,
+            1421,
+            2816
+          ],
+          "confidence": 84.7
+        },
+        {
+          "text": "Làm Giang",
+          "bbox": [
+            1782,
+            2866,
+            2053,
+            2897
+          ],
+          "confidence": 99.24
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2624,
+          3249
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 59.858,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              7,
+              19,
+              1394,
+              45
+            ],
+            "generated_text": "ngothinhamle1.pdf",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.89,
+            "confidence": 92.79,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              1590,
+              204,
+              2054,
+              242
+            ],
+            "generated_text": "HOÀNG HOA ĐỔ PHA",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.067,
+            "confidence": 82.2,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              345,
+              246,
+              2059,
+              260
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.456,
+            "confidence": 77.2,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              343,
+              305,
+              563,
+              343
+            ],
+            "generated_text": "KHAO DI:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.695,
+            "confidence": 97.77,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              491,
+              378,
+              1071,
+              418
+            ],
+            "generated_text": "a. Bản A.404: Ky bình 磯平.",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.681,
+            "confidence": 92.95,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              342,
+              455,
+              680,
+              494
+            ],
+            "generated_text": "NGUYEN CHU:",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.83,
+            "confidence": 91.06,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              491,
+              525,
+              2051,
+              568
+            ],
+            "generated_text": "A. Hai châu Toàn và Vĩnh là nơi giáp giới hai đất Sở, Việt. Thuyền",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.155,
+            "confidence": 93.76,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              342,
+              598,
+              2049,
+              646
+            ],
+            "generated_text": "xuất phát từ Tô Gia Kiều huyện Hưng An đi tới ghênh Hoàng Thạch có 53",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 2.341,
+            "confidence": 92.0,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              343,
+              674,
+              2050,
+              717
+            ],
+            "generated_text": "thác hiểm. Đến huyện Linh Lăng thuộc Vĩnh Châu, hai sông Tiêu và",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 2.194,
+            "confidence": 98.8,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              343,
+              748,
+              2050,
+              798
+            ],
+            "generated_text": "Tương hợp lại, lòng sông rộng dần ra, hai bên bỏ, không có núi đá, chỉ có",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 2.494,
+            "confidence": 93.7,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              344,
+              822,
+              2051,
+              866
+            ],
+            "generated_text": "núi đất như nội úp, không có chỗ nào cao lăm. Ghênh không có hẻm, nước",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 2.406,
+            "confidence": 91.82,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              344,
+              898,
+              1188,
+              941
+            ],
+            "generated_text": "chảy bình thường không có xoáy độc.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.29,
+            "confidence": 91.86,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              495,
+              972,
+              2054,
+              1015
+            ],
+            "generated_text": "Nơi đây chơi lính thú thừa thốt, đi cả ngày chỉ thấy một hai cái đã đổ",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 2.02,
+            "confidence": 90.14,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              345,
+              1046,
+              2053,
+              1090
+            ],
+            "generated_text": "nát không tu sửa, lại ở khuất trong lối mòn, chẳng có ai canh gác, khác hẳn",
+            "n_lines": 1,
+            "tokens": 36,
+            "seconds": 2.83,
+            "confidence": 97.75,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              345,
+              1120,
+              2053,
+              1164
+            ],
+            "generated_text": "với những đồn canh ở Việt Tây. Chắc là đất Việt nhiều trôm cướp, không",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.273,
+            "confidence": 93.1,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              347,
+              1196,
+              961,
+              1237
+            ],
+            "generated_text": "được bình yên như ở đất Sở.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.244,
+            "confidence": 96.87,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              496,
+              1269,
+              2052,
+              1318
+            ],
+            "generated_text": "Những nơi có bến đò ngang, thường thấy một vài nóc nhà tranh xiêu",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 1.949,
+            "confidence": 96.2,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              345,
+              1344,
+              2053,
+              1392
+            ],
+            "generated_text": "veo kề bên sông. Từ trên đường cái xuống bến có thôn trang, duyên dáng",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.29,
+            "confidence": 91.98,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              346,
+              1418,
+              2054,
+              1467
+            ],
+            "generated_text": "thanh nhã đáng yêu. Từ đây xuôi xuống Trường Sa, xa dần đất Việt Tây, núi",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 2.498,
+            "confidence": 94.09,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              346,
+              1493,
+              2053,
+              1542
+            ],
+            "generated_text": "xa sông rộng, không có rừng, xóm làng trù mật, sạch khói mù, nhiều ánh",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 2.479,
+            "confidence": 95.3,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              348,
+              1566,
+              2054,
+              1610
+            ],
+            "generated_text": "sáng. Thế mới biết, sách Vũ Cống có nói: “Đất Sở tuy là hoang phục, đất Việt",
+            "n_lines": 1,
+            "tokens": 33,
+            "seconds": 2.635,
+            "confidence": 96.02,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              347,
+              1642,
+              2053,
+              1690
+            ],
+            "generated_text": "lại còn ở ngoài cõi hoang phục.” Ngày nay từ Việt Tây đến nước ta đều là đô",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 2.408,
+            "confidence": 96.58,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              347,
+              1718,
+              1128,
+              1759
+            ],
+            "generated_text": "hội, đó là dân dân mở mang ra vậy.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.216,
+            "confidence": 92.29,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              350,
+              1823,
+              637,
+              1861
+            ],
+            "generated_text": "CHU THICH:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.746,
+            "confidence": 99.18,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              502,
+              1894,
+              2053,
+              1944
+            ],
+            "generated_text": "1.Sông Tiêu bắt nguồn từ huyện Đạo, đổ xuống huyện Linh Lăng, hợp",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.16,
+            "confidence": 93.56,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              349,
+              1970,
+              2054,
+              2020
+            ],
+            "generated_text": "lưu với sông Tương, chảy ra Toàn Châu (Quảng Tây), rồi chảy xuống Hành",
+            "n_lines": 1,
+            "tokens": 32,
+            "seconds": 2.557,
+            "confidence": 96.15,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              349,
+              2057,
+              724,
+              2087
+            ],
+            "generated_text": "Dương (Họ Nam).",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.856,
+            "confidence": 88.28,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              348,
+              2152,
+              603,
+              2190
+            ],
+            "generated_text": "DICH THO:",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.663,
+            "confidence": 93.7,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              789,
+              2223,
+              1567,
+              2268
+            ],
+            "generated_text": "Tiêu Tương động hợp đố Hồ Nam,",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.135,
+            "confidence": 77.82,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              790,
+              2301,
+              1689,
+              2345
+            ],
+            "generated_text": "Qua những hiểm nghèo, thác thập tam.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.373,
+            "confidence": 93.56,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              785,
+              2379,
+              1552,
+              2422
+            ],
+            "generated_text": "Đá hết chon von, thông rộng trải;",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.271,
+            "confidence": 93.33,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 32,
+            "box": [
+              789,
+              2457,
+              1625,
+              2501
+            ],
+            "generated_text": "Ghệnh phơi nước lăng, liêu lan tràn.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.292,
+            "confidence": 87.38,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 33,
+            "box": [
+              785,
+              2547,
+              1559,
+              2579
+            ],
+            "generated_text": "Đơn canh vang ve bên dương núi;",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.254,
+            "confidence": 87.83,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 34,
+            "box": [
+              786,
+              2627,
+              1381,
+              2658
+            ],
+            "generated_text": "Ben cu tiêu sở dưới co am.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.234,
+            "confidence": 78.77,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 35,
+            "box": [
+              785,
+              2694,
+              1440,
+              2738
+            ],
+            "generated_text": "Đia thế Việt Tây qua đất Sở",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.196,
+            "confidence": 91.37,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 36,
+            "box": [
+              785,
+              2785,
+              1421,
+              2816
+            ],
+            "generated_text": "Bên do của ai khoi lam tan.",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 1.115,
+            "confidence": 84.7,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 37,
+            "box": [
+              1782,
+              2866,
+              2053,
+              2897
+            ],
+            "generated_text": "Làm Giang",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.659,
+            "confidence": 99.24,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              426,
+              1606,
+              2027,
+              1616
+            ],
+            "ink": 375
+          },
+          {
+            "box": [
+              350,
+              2046,
+              706,
+              2057
+            ],
+            "ink": 476
+          },
+          {
+            "box": [
+              794,
+              2535,
+              1542,
+              2551
+            ],
+            "ink": 818
+          },
+          {
+            "box": [
+              797,
+              2617,
+              1283,
+              2628
+            ],
+            "ink": 542
+          },
+          {
+            "box": [
+              793,
+              2772,
+              1351,
+              2788
+            ],
+            "ink": 813
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

@@ -1,0 +1,1005 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 285,
+  "runs": [
+    {
+      "key": "e253b14b5f4ccc86b16b62874ea518ffe45bb173f7154295f75f778b2520fe11",
+      "parameters": {
+        "image_sha256": "594a1f091afa09a4d3a9acdafa0063a6d13338395e623ae8fb26a67d4964a96d",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T14:25:29+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_285.png",
+      "image_size": [
+        2563,
+        3195
+      ],
+      "crop_box": [
+        0,
+        0,
+        2563,
+        3195
+      ],
+      "lines": [
+        {
+          "text": "ngothinhamle1.pdf",
+          "bbox": [
+            7,
+            19,
+            286,
+            45
+          ],
+          "confidence": 96.3
+        },
+        {
+          "text": "CAM ĐƯỜNG NHAN THOAI",
+          "bbox": [
+            1440,
+            205,
+            2124,
+            244
+          ],
+          "confidence": 92.7
+        },
+        {
+          "text": "Tài phi thường, sự nghiệp cũng phi thường,",
+          "bbox": [
+            860,
+            323,
+            1862,
+            377
+          ],
+          "confidence": 97.25
+        },
+        {
+          "text": "Hai lần đi sứ, vượt cả người hiện khi trước.",
+          "bbox": [
+            861,
+            406,
+            1850,
+            451
+          ],
+          "confidence": 91.48
+        },
+        {
+          "text": "Gần gũi Phú Xuân, sớm được vua yêu; (1)",
+          "bbox": [
+            860,
+            489,
+            1778,
+            533
+          ],
+          "confidence": 93.33
+        },
+        {
+          "text": "Danh lửng Trung Ha, thom lâu núc tiếng.",
+          "bbox": [
+            861,
+            569,
+            1862,
+            617
+          ],
+          "confidence": 77.61
+        },
+        {
+          "text": "Lước biết vua này năm mươi tám năm ở ngôi;",
+          "bbox": [
+            860,
+            654,
+            1940,
+            698
+          ],
+          "confidence": 88.09
+        },
+        {
+          "text": "Phen này vùng vây một van ba ngàn đặm.",
+          "bbox": [
+            862,
+            739,
+            1833,
+            790
+          ],
+          "confidence": 88.65
+        },
+        {
+          "text": "Cò sú trỏ về triều, điểm lành hợp quê bói,",
+          "bbox": [
+            861,
+            825,
+            1813,
+            871
+          ],
+          "confidence": 82.31
+        },
+        {
+          "text": "Thêm rực rỡ khoán thư nơi gác vàng. (4)",
+          "bbox": [
+            860,
+            913,
+            1747,
+            958
+          ],
+          "confidence": 88.46
+        },
+        {
+          "text": "CHU THICH:",
+          "bbox": [
+            419,
+            1019,
+            709,
+            1057
+          ],
+          "confidence": 92.88
+        },
+        {
+          "text": "1. Vua: Túc vua Quang Toản.",
+          "bbox": [
+            571,
+            1090,
+            1177,
+            1131
+          ],
+          "confidence": 89.8
+        },
+        {
+          "text": "2. Trung Ha: Chỉ đất Hoa Ha, tức Trung Quốc.",
+          "bbox": [
+            565,
+            1162,
+            1539,
+            1205
+          ],
+          "confidence": 97.22
+        },
+        {
+          "text": "3.Năm mươi tám năm ở ngôi: Vua Kiên Long ở ngôi được 60 năm (1736-",
+          "bbox": [
+            566,
+            1237,
+            2124,
+            1282
+          ],
+          "confidence": 97.54
+        },
+        {
+          "text": "1796), năm mươi tám năm, tức năm 1795.",
+          "bbox": [
+            422,
+            1314,
+            1310,
+            1355
+          ],
+          "confidence": 97.91
+        },
+        {
+          "text": "4. Câu này ý nói công trạng đi sử của ông sẽ được ghi trong khoán thư nơi",
+          "bbox": [
+            567,
+            1389,
+            2126,
+            1439
+          ],
+          "confidence": 88.82
+        },
+        {
+          "text": "gác văng.",
+          "bbox": [
+            419,
+            1477,
+            622,
+            1506
+          ],
+          "confidence": 68.23
+        },
+        {
+          "text": "DICH THO:",
+          "bbox": [
+            419,
+            1577,
+            673,
+            1616
+          ],
+          "confidence": 97.74
+        },
+        {
+          "text": "Sự nghiệp phi thường đức phi thường,",
+          "bbox": [
+            887,
+            1654,
+            1764,
+            1708
+          ],
+          "confidence": 92.66
+        },
+        {
+          "text": "Sú hoa hai đô xứng hiện lương.",
+          "bbox": [
+            887,
+            1736,
+            1608,
+            1781
+          ],
+          "confidence": 86.55
+        },
+        {
+          "text": "Lây lừng Hoa Hạ người khen ngợi;",
+          "bbox": [
+            886,
+            1818,
+            2097,
+            1871
+          ],
+          "confidence": 90.5
+        },
+        {
+          "text": "Gân gũi Phú Xuân vua mến thương.",
+          "bbox": [
+            889,
+            1904,
+            1719,
+            1950
+          ],
+          "confidence": 93.65
+        },
+        {
+          "text": "Cung khuyết Kiên Long từng giáp mặt;",
+          "bbox": [
+            890,
+            1991,
+            1786,
+            2046
+          ],
+          "confidence": 98.2
+        },
+        {
+          "text": "Biên cương ngàn đảm đất còn vương.",
+          "bbox": [
+            885,
+            2080,
+            1737,
+            2126
+          ],
+          "confidence": 95.83
+        },
+        {
+          "text": "Cò sú về triều nêu gương sáng;",
+          "bbox": [
+            888,
+            2169,
+            1589,
+            2212
+          ],
+          "confidence": 71.7
+        },
+        {
+          "text": "Công tích gác vàng rạng khoán chương.",
+          "bbox": [
+            888,
+            2256,
+            1794,
+            2308
+          ],
+          "confidence": 90.52
+        },
+        {
+          "text": "nãm, rạ",
+          "bbox": [
+            1852,
+            2346,
+            2093,
+            2363
+          ],
+          "confidence": 43.42
+        },
+        {
+          "text": "Do thi Hao",
+          "bbox": [
+            1818,
+            2360,
+            2121,
+            2390
+          ],
+          "confidence": 74.14
+        },
+        {
+          "text": "8. 送偗方遵悉入靼之作",
+          "bbox": [
+            767,
+            2493,
+            1748,
+            2548
+          ],
+          "confidence": 57.05
+        },
+        {
+          "text": "0.达你及过田八玩之作",
+          "bbox": [
+            767,
+            2540,
+            1743,
+            2571
+          ],
+          "confidence": 57.64
+        },
+        {
+          "text": "日升共慶晚年逢",
+          "bbox": [
+            929,
+            2707,
+            1506,
+            2768
+          ],
+          "confidence": 99.89
+        },
+        {
+          "text": "更迭臣勞肆覲中",
+          "bbox": [
+            919,
+            2829,
+            1499,
+            2893
+          ],
+          "confidence": 99.94
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2563,
+          3195
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 42.044,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              7,
+              19,
+              286,
+              45
+            ],
+            "generated_text": "ngothinhamle1.pdf",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.905,
+            "confidence": 96.3,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              1440,
+              205,
+              2124,
+              244
+            ],
+            "generated_text": "CAM ĐƯỜNG NHAN THOAI",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.11,
+            "confidence": 92.7,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              402,
+              245,
+              2142,
+              258
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.465,
+            "confidence": 85.18,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              860,
+              323,
+              1862,
+              377
+            ],
+            "generated_text": "Tài phi thường, sự nghiệp cũng phi thường,",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.201,
+            "confidence": 97.25,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              861,
+              406,
+              1850,
+              451
+            ],
+            "generated_text": "Hai lần đi sứ, vượt cả người hiện khi trước.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.524,
+            "confidence": 91.48,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              860,
+              489,
+              1778,
+              533
+            ],
+            "generated_text": "Gần gũi Phú Xuân, sớm được vua yêu; (1)",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.776,
+            "confidence": 93.33,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              861,
+              569,
+              1862,
+              617
+            ],
+            "generated_text": "Danh lửng Trung Ha, thom lâu núc tiếng.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.454,
+            "confidence": 77.61,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              860,
+              654,
+              1940,
+              698
+            ],
+            "generated_text": "Lước biết vua này năm mươi tám năm ở ngôi;",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.565,
+            "confidence": 88.09,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              862,
+              739,
+              1833,
+              790
+            ],
+            "generated_text": "Phen này vùng vây một van ba ngàn đặm.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.522,
+            "confidence": 88.65,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              861,
+              825,
+              1813,
+              871
+            ],
+            "generated_text": "Cò sú trỏ về triều, điểm lành hợp quê bói,",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.634,
+            "confidence": 82.31,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              860,
+              913,
+              1747,
+              958
+            ],
+            "generated_text": "Thêm rực rỡ khoán thư nơi gác vàng. (4)",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.692,
+            "confidence": 88.46,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              419,
+              1019,
+              709,
+              1057
+            ],
+            "generated_text": "CHU THICH:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.735,
+            "confidence": 92.88,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              571,
+              1090,
+              1177,
+              1131
+            ],
+            "generated_text": "1. Vua: Túc vua Quang Toản.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.378,
+            "confidence": 89.8,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              565,
+              1162,
+              1539,
+              1205
+            ],
+            "generated_text": "2. Trung Ha: Chỉ đất Hoa Ha, tức Trung Quốc.",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.596,
+            "confidence": 97.22,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              566,
+              1237,
+              2124,
+              1282
+            ],
+            "generated_text": "3.Năm mươi tám năm ở ngôi: Vua Kiên Long ở ngôi được 60 năm (1736-",
+            "n_lines": 1,
+            "tokens": 33,
+            "seconds": 2.496,
+            "confidence": 97.54,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              422,
+              1314,
+              1310,
+              1355
+            ],
+            "generated_text": "1796), năm mươi tám năm, tức năm 1795.",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.739,
+            "confidence": 97.91,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              567,
+              1389,
+              2126,
+              1439
+            ],
+            "generated_text": "4. Câu này ý nói công trạng đi sử của ông sẽ được ghi trong khoán thư nơi",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 2.012,
+            "confidence": 88.82,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              419,
+              1477,
+              622,
+              1506
+            ],
+            "generated_text": "gác văng.",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.719,
+            "confidence": 68.23,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              419,
+              1577,
+              673,
+              1616
+            ],
+            "generated_text": "DICH THO:",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.663,
+            "confidence": 97.74,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              887,
+              1654,
+              1764,
+              1708
+            ],
+            "generated_text": "Sự nghiệp phi thường đức phi thường,",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 1.053,
+            "confidence": 92.66,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              887,
+              1736,
+              1608,
+              1781
+            ],
+            "generated_text": "Sú hoa hai đô xứng hiện lương.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.126,
+            "confidence": 86.55,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              886,
+              1818,
+              2097,
+              1871
+            ],
+            "generated_text": "Lây lừng Hoa Hạ người khen ngợi;",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.231,
+            "confidence": 90.5,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              889,
+              1904,
+              1719,
+              1950
+            ],
+            "generated_text": "Gân gũi Phú Xuân vua mến thương.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.422,
+            "confidence": 93.65,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              890,
+              1991,
+              1786,
+              2046
+            ],
+            "generated_text": "Cung khuyết Kiên Long từng giáp mặt;",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.293,
+            "confidence": 98.2,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              885,
+              2080,
+              1737,
+              2126
+            ],
+            "generated_text": "Biên cương ngàn đảm đất còn vương.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.354,
+            "confidence": 95.83,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              888,
+              2169,
+              1589,
+              2212
+            ],
+            "generated_text": "Cò sú về triều nêu gương sáng;",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.127,
+            "confidence": 71.7,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              888,
+              2256,
+              1794,
+              2308
+            ],
+            "generated_text": "Công tích gác vàng rạng khoán chương.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.308,
+            "confidence": 90.52,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              1852,
+              2346,
+              2093,
+              2363
+            ],
+            "generated_text": "nãm, rạ",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.771,
+            "confidence": 43.42,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              1818,
+              2360,
+              2121,
+              2390
+            ],
+            "generated_text": "Do thi Hao",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.604,
+            "confidence": 74.14,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              767,
+              2493,
+              1748,
+              2548
+            ],
+            "generated_text": "8. 送偗方遵悉入靼之作",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.46,
+            "confidence": 57.05,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              767,
+              2540,
+              1743,
+              2571
+            ],
+            "generated_text": "0.达你及过田八玩之作",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 1.105,
+            "confidence": 57.64,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 32,
+            "box": [
+              929,
+              2707,
+              1506,
+              2768
+            ],
+            "generated_text": "日升共慶晚年逢",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.91,
+            "confidence": 99.89,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 33,
+            "box": [
+              919,
+              2829,
+              1499,
+              2893
+            ],
+            "generated_text": "更迭臣勞肆覲中",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.092,
+            "confidence": 99.94,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              508,
+              7,
+              685,
+              16
+            ],
+            "ink": 61
+          },
+          {
+            "box": [
+              1082,
+              614,
+              1810,
+              624
+            ],
+            "ink": 278
+          },
+          {
+            "box": [
+              713,
+              1201,
+              1458,
+              1211
+            ],
+            "ink": 257
+          },
+          {
+            "box": [
+              1126,
+              1278,
+              2006,
+              1287
+            ],
+            "ink": 226
+          },
+          {
+            "box": [
+              1112,
+              2123,
+              1721,
+              2133
+            ],
+            "ink": 286
+          },
+          {
+            "box": [
+              1306,
+              2211,
+              1577,
+              2220
+            ],
+            "ink": 226
+          },
+          {
+            "box": [
+              1199,
+              3110,
+              1533,
+              3120
+            ],
+            "ink": 193
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

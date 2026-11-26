@@ -1,0 +1,231 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "qwen",
+  "page": 422,
+  "runs": [
+    {
+      "key": "5519d1089aa4c9d759f02177c9aa688aac9136f870dd69b09f0df29826788413",
+      "parameters": {
+        "image_sha256": "ad51faff938e4b96f722a7e660c67e12082ac92c12a8d202398864b341b3f54b",
+        "engine": {
+          "name": "qwen",
+          "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "model_revision": "main",
+          "transformers_version": "4.57.6",
+          "torch_version": "2.5.1+cu121",
+          "cuda_version": "12.1",
+          "bitsandbytes_version": "0.50.2",
+          "quantization": {
+            "load_in_4bit": true,
+            "quant_type": "nf4",
+            "double_quant": true,
+            "compute_dtype": "float16"
+          },
+          "mode": "all",
+          "min_pixels": 50176,
+          "max_pixels": 802816,
+          "band_inches": 2.0,
+          "max_new_tokens": 768,
+          "repetition_penalty": 1.05,
+          "adapter_version": 3,
+          "prompt_version": 3,
+          "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74"
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T21:09:41+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_422.png",
+      "image_size": [
+        2594,
+        3223
+      ],
+      "crop_box": [
+        0,
+        0,
+        2594,
+        3223
+      ],
+      "lines": [
+        {
+          "text": "BANG GIAO HẢO THOẠI",
+          "bbox": [
+            7,
+            2,
+            2171,
+            266
+          ],
+          "confidence": 95.33
+        },
+        {
+          "text": "大，字小覆昏，聖人無私之好惡，本是道而儀型萬國。夫孰不遵王之路也哉！小番幸在蓋容，均蒙覆載，來",
+          "bbox": [
+            7,
+            266,
+            2171,
+            529
+          ],
+          "confidence": 95.33
+        },
+        {
+          "text": "年詣闕祝釐，固其素心之所願者。近奉奏事，表內謹已披陳無隱，不敢再漸。惟視天門萬里，前是表裏扞格之時，雖小番恭順之誠，寔對鑒臨而抗衡之跡，播諸聞見，所以提撕，解釋於其間，使之下情上通。",
+          "bbox": [
+            462,
+            592,
+            2167,
+            1098
+          ],
+          "confidence": 91.09
+        },
+        {
+          "text": "小番得有今日之遭遇者，寔賴尊大人體大皇涵育之仁，而其明足以察秋毫，信足以馴海鷗。小番固已銘感悅服，無待於云云。自隨人[胡文]從回音之後，方當繕稟陳謝，嗣奉檄諭：“前期謝事二表，已蒙詳閱，轉爲奏",
+          "bbox": [
+            462,
+            1100,
+            2166,
+            1644
+          ],
+          "confidence": 94.06
+        },
+        {
+          "text": "又親侄行程之次，六月已達湖南，早晚於七月底，到京展覲，一體報知，捧讀再三，不勝喜慰。至如本國奉建提領大員之廟，堂宇竣功，謹奉侯敬官諡，號設牌供奉。",
+          "bbox": [
+            464,
+            1717,
+            2163,
+            2213
+          ],
+          "confidence": 94.53
+        },
+        {
+          "text": "又如黎氏旧臣，投进内地，经奉旨安插，此尤仰见圣天子好生之德，海隅苍生，共惟帝臣，故不忍以逋播之余鄙外待之。小番僻在遐陬，遥奉德意，凡黎宗属之在黎城者，亦皆给以民田，俾承宗祀，不曾有所疑忌，使之失所有愿官，即随才收录，不愿者，任行所志。良以革易",
+          "bbox": [
+            463,
+            2286,
+            2173,
+            3047
+          ],
+          "confidence": 94.03
+        }
+      ],
+      "raw": {
+        "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+        "model_revision": "main",
+        "mode": "all",
+        "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74",
+        "dpi": 300,
+        "image_size": [
+          2594,
+          3223
+        ],
+        "band_target_height": 600,
+        "bbox_granularity": "band_even_split",
+        "max_new_tokens": 768,
+        "max_pixels": 802816,
+        "inference_seconds": 29.843,
+        "bands": [
+          {
+            "band": 1,
+            "y0": 6,
+            "y1": 560,
+            "ink_box": [
+              7,
+              2,
+              2171,
+              529
+            ],
+            "generated_text": "BANG GIAO HẢO THOẠI\n大，字小覆昏，聖人無私之好惡，本是道而儀型萬國。夫孰不遵王之路也哉！小番幸在蓋容，均蒙覆載，來",
+            "n_lines": 2,
+            "tokens": 59,
+            "seconds": 4.164,
+            "confidence": 95.33,
+            "flags": []
+          },
+          {
+            "band": 2,
+            "y0": 560,
+            "y1": 1103,
+            "ink_box": [
+              462,
+              592,
+              2167,
+              1098
+            ],
+            "generated_text": "年詣闕祝釐，固其素心之所願者。近奉奏事，表內謹已披陳無隱，不敢再漸。惟視天門萬里，前是表裏扞格之時，雖小番恭順之誠，寔對鑒臨而抗衡之跡，播諸聞見，所以提撕，解釋於其間，使之下情上通。",
+            "n_lines": 1,
+            "tokens": 92,
+            "seconds": 6.255,
+            "confidence": 91.09,
+            "flags": []
+          },
+          {
+            "band": 3,
+            "y0": 1103,
+            "y1": 1681,
+            "ink_box": [
+              462,
+              1100,
+              2166,
+              1644
+            ],
+            "generated_text": "小番得有今日之遭遇者，寔賴尊大人體大皇涵育之仁，而其明足以察秋毫，信足以馴海鷗。小番固已銘感悅服，無待於云云。自隨人[胡文]從回音之後，方當繕稟陳謝，嗣奉檄諭：“前期謝事二表，已蒙詳閱，轉爲奏",
+            "n_lines": 1,
+            "tokens": 97,
+            "seconds": 6.6,
+            "confidence": 94.06,
+            "flags": []
+          },
+          {
+            "band": 4,
+            "y0": 1681,
+            "y1": 2249,
+            "ink_box": [
+              464,
+              1717,
+              2163,
+              2213
+            ],
+            "generated_text": "又親侄行程之次，六月已達湖南，早晚於七月底，到京展覲，一體報知，捧讀再三，不勝喜慰。至如本國奉建提領大員之廟，堂宇竣功，謹奉侯敬官諡，號設牌供奉。",
+            "n_lines": 1,
+            "tokens": 73,
+            "seconds": 5.05,
+            "confidence": 94.53,
+            "flags": []
+          },
+          {
+            "band": 5,
+            "y0": 2249,
+            "y1": 3043,
+            "ink_box": [
+              463,
+              2286,
+              2173,
+              3047
+            ],
+            "generated_text": "又如黎氏旧臣，投进内地，经奉旨安插，此尤仰见圣天子好生之德，海隅苍生，共惟帝臣，故不忍以逋播之余鄙外待之。小番僻在遐陬，遥奉德意，凡黎宗属之在黎城者，亦皆给以民田，俾承宗祀，不曾有所疑忌，使之失所有愿官，即随才收录，不愿者，任行所志。良以革易",
+            "n_lines": 1,
+            "tokens": 115,
+            "seconds": 7.745,
+            "confidence": 94.03,
+            "flags": []
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "61cbea5c0055c260ccfc12f884e0febca7b2783b",
+        "git_describe": "61cbea5",
+        "git_dirty": true,
+        "gpu": "NVIDIA L4",
+        "dtype": "float16",
+        "adapter_version": 3
+      }
+    }
+  ]
+}

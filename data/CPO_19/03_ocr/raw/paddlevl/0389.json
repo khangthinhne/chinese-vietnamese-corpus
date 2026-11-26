@@ -1,0 +1,311 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 389,
+  "runs": [
+    {
+      "key": "9bd305e34420065420fadb594f056acba4a1ac75ffc09305408a3525b6f69eae",
+      "parameters": {
+        "image_sha256": "a3346f9f1bc8a1b3ce2903dc90d2093a88384206ea11f940c17dabd195114443",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T15:34:53+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_389.png",
+      "image_size": [
+        2544,
+        3179
+      ],
+      "crop_box": [
+        0,
+        0,
+        2544,
+        3179
+      ],
+      "lines": [
+        {
+          "text": "ngothinhamle1.pdf",
+          "bbox": [
+            7,
+            19,
+            286,
+            45
+          ],
+          "confidence": 96.3
+        },
+        {
+          "text": "邦亦好註",
+          "bbox": [
+            1102,
+            749,
+            1461,
+            798
+          ],
+          "confidence": 75.42
+        },
+        {
+          "text": "万人劝西",
+          "bbox": [
+            1107,
+            790,
+            1455,
+            819
+          ],
+          "confidence": 26.47
+        },
+        {
+          "text": "BANG GIAO HAO THOAI",
+          "bbox": [
+            856,
+            922,
+            1718,
+            980
+          ],
+          "confidence": 99.63
+        },
+        {
+          "text": "Sưu tầm, dich thuật",
+          "bbox": [
+            1028,
+            1306,
+            1543,
+            1349
+          ],
+          "confidence": 88.18
+        },
+        {
+          "text": "DO THI HAO-PHAM THI THOA-NGUYÊN CÔNG VIỆT",
+          "bbox": [
+            591,
+            1382,
+            1983,
+            1429
+          ],
+          "confidence": 92.95
+        },
+        {
+          "text": "Giới thiệu, hiểu định",
+          "bbox": [
+            1021,
+            1468,
+            1553,
+            1511
+          ],
+          "confidence": 86.81
+        },
+        {
+          "text": "LAM GIANG",
+          "bbox": [
+            1124,
+            1545,
+            1448,
+            1590
+          ],
+          "confidence": 99.72
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2544,
+          3179
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 7.72,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              7,
+              19,
+              286,
+              45
+            ],
+            "generated_text": "ngothinhamle1.pdf",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.891,
+            "confidence": 96.3,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              1102,
+              749,
+              1461,
+              798
+            ],
+            "generated_text": "邦亦好註",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.776,
+            "confidence": 75.42,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              1107,
+              790,
+              1455,
+              819
+            ],
+            "generated_text": "万人劝西",
+            "n_lines": 1,
+            "tokens": 4,
+            "seconds": 0.598,
+            "confidence": 26.47,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              856,
+              922,
+              1718,
+              980
+            ],
+            "generated_text": "BANG GIAO HAO THOAI",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.979,
+            "confidence": 99.63,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              1028,
+              1306,
+              1543,
+              1349
+            ],
+            "generated_text": "Sưu tầm, dich thuật",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.909,
+            "confidence": 88.18,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              591,
+              1382,
+              1983,
+              1429
+            ],
+            "generated_text": "DO THI HAO-PHAM THI THOA-NGUYÊN CÔNG VIỆT",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 2.017,
+            "confidence": 92.95,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              1021,
+              1468,
+              1553,
+              1511
+            ],
+            "generated_text": "Giới thiệu, hiểu định",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.914,
+            "confidence": 86.81,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              1124,
+              1545,
+              1448,
+              1590
+            ],
+            "generated_text": "LAM GIANG",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.635,
+            "confidence": 99.72,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              646,
+              1374,
+              1933,
+              1384
+            ],
+            "ink": 323
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

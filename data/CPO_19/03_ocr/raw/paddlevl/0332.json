@@ -1,0 +1,1015 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 332,
+  "runs": [
+    {
+      "key": "20e691e1c18893972a20a7e852619a9818ec5711637574b65fc9a507d1c2c791",
+      "parameters": {
+        "image_sha256": "170aa7fd67956246f5661dd163e0702b3be2585d144ef3c4ebdf2c1ca499ecc5",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T14:55:20+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_332.png",
+      "image_size": [
+        2582,
+        3208
+      ],
+      "crop_box": [
+        0,
+        0,
+        2582,
+        3208
+      ],
+      "lines": [
+        {
+          "text": "ngothinhamch1.pdf",
+          "bbox": [
+            7,
+            11,
+            2067,
+            45
+          ],
+          "confidence": 98.25
+        },
+        {
+          "text": "NGŮ THI NHAM TOAN TAP - TAP III",
+          "bbox": [
+            445,
+            193,
+            1218,
+            232
+          ],
+          "confidence": 75.77
+        },
+        {
+          "text": "DICH NGHIA:",
+          "bbox": [
+            445,
+            293,
+            754,
+            332
+          ],
+          "confidence": 99.01
+        },
+        {
+          "text": "TẳNG NGUYỄN DƯƠNG XUYỆN, TRƯƠNG NGÔ XUYỆN",
+          "bbox": [
+            643,
+            348,
+            2043,
+            403
+          ],
+          "confidence": 87.12
+        },
+        {
+          "text": "An cân tiến nhau ba chén rượu,",
+          "bbox": [
+            796,
+            477,
+            1526,
+            522
+          ],
+          "confidence": 89.81
+        },
+        {
+          "text": "Quyền luyện khó dút, mối tình van đảm.",
+          "bbox": [
+            798,
+            546,
+            1736,
+            592
+          ],
+          "confidence": 89.08
+        },
+        {
+          "text": "Đòi đẹp, lân phượng nên bảo trọng,",
+          "bbox": [
+            797,
+            615,
+            1609,
+            668
+          ],
+          "confidence": 90.35
+        },
+        {
+          "text": "Sóm báo tin mai(1) về thành Thăng Long.",
+          "bbox": [
+            799,
+            680,
+            1734,
+            726
+          ],
+          "confidence": 90.43
+        },
+        {
+          "text": "CHU THICH:",
+          "bbox": [
+            446,
+            756,
+            734,
+            796
+          ],
+          "confidence": 90.25
+        },
+        {
+          "text": "1. Câu này lấy ý trong hai câu thơ:",
+          "bbox": [
+            597,
+            821,
+            1314,
+            862
+          ],
+          "confidence": 97.18
+        },
+        {
+          "text": "Giang Nam vô số hữu,",
+          "bbox": [
+            799,
+            887,
+            1268,
+            929
+          ],
+          "confidence": 90.85
+        },
+        {
+          "text": "Liêu tăng nhất chi mai.",
+          "bbox": [
+            797,
+            954,
+            1292,
+            996
+          ],
+          "confidence": 96.45
+        },
+        {
+          "text": "(Ở đất Giang Nam không có gì cả,",
+          "bbox": [
+            800,
+            1021,
+            1512,
+            1062
+          ],
+          "confidence": 95.45
+        },
+        {
+          "text": "Hãy xin tăng một nhành mai).",
+          "bbox": [
+            799,
+            1087,
+            1442,
+            1129
+          ],
+          "confidence": 95.25
+        },
+        {
+          "text": "Tin mai thường được dùng để chỉ việc đưa tin, thư tín.",
+          "bbox": [
+            593,
+            1153,
+            1731,
+            1196
+          ],
+          "confidence": 94.31
+        },
+        {
+          "text": "DICH THO:",
+          "bbox": [
+            447,
+            1242,
+            1050,
+            1281
+          ],
+          "confidence": 98.41
+        },
+        {
+          "text": "Ăn cân đưa tiến rượu ba chén,",
+          "bbox": [
+            970,
+            1309,
+            1667,
+            1352
+          ],
+          "confidence": 81.14
+        },
+        {
+          "text": "Quyền luyện khó lìa muôn đăm tình.",
+          "bbox": [
+            976,
+            1382,
+            1819,
+            1427
+          ],
+          "confidence": 86.12
+        },
+        {
+          "text": "Đòi đẹp phương lân nên bảo trọng,",
+          "bbox": [
+            973,
+            1457,
+            1771,
+            1510
+          ],
+          "confidence": 90.43
+        },
+        {
+          "text": "Tin mai sớm báo tối Long thành.",
+          "bbox": [
+            977,
+            1530,
+            1728,
+            1576
+          ],
+          "confidence": 95.06
+        },
+        {
+          "text": "Làm Giang",
+          "bbox": [
+            1883,
+            1616,
+            2157,
+            1649
+          ],
+          "confidence": 90.65
+        },
+        {
+          "text": "35清明前一日蛆翰林洋澤對燭書懷",
+          "bbox": [
+            626,
+            1753,
+            2045,
+            1808
+          ],
+          "confidence": 80.0
+        },
+        {
+          "text": "55.清明前日共翰杯汗拜封陶言依",
+          "bbox": [
+            624,
+            1800,
+            2056,
+            1833
+          ],
+          "confidence": 52.14
+        },
+        {
+          "text": "先後皆登道義門",
+          "bbox": [
+            1068,
+            1945,
+            1605,
+            2009
+          ],
+          "confidence": 99.94
+        },
+        {
+          "text": "吾儒命脈本同源",
+          "bbox": [
+            1070,
+            2070,
+            1609,
+            2131
+          ],
+          "confidence": 99.86
+        },
+        {
+          "text": "君兄與我竹爲友",
+          "bbox": [
+            860,
+            2197,
+            1610,
+            2258
+          ],
+          "confidence": 98.84
+        },
+        {
+          "text": "我弟如君蓮作村",
+          "bbox": [
+            1071,
+            2320,
+            1613,
+            2384
+          ],
+          "confidence": 99.8
+        },
+        {
+          "text": "已定斯年逢此會",
+          "bbox": [
+            1076,
+            2446,
+            1961,
+            2508
+          ],
+          "confidence": 96.02
+        },
+        {
+          "text": "何妨此日舉斯樽",
+          "bbox": [
+            1012,
+            2570,
+            1614,
+            2630
+          ],
+          "confidence": 99.93
+        },
+        {
+          "text": "家鄉千里休言遠",
+          "bbox": [
+            1074,
+            2695,
+            1613,
+            2759
+          ],
+          "confidence": 99.95
+        },
+        {
+          "text": "並見東山初出暾",
+          "bbox": [
+            1065,
+            2824,
+            1607,
+            2884
+          ],
+          "confidence": 99.93
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2582,
+          3208
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 37.141,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              7,
+              11,
+              2067,
+              45
+            ],
+            "generated_text": "ngothinhamch1.pdf",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.998,
+            "confidence": 98.25,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              445,
+              193,
+              1218,
+              232
+            ],
+            "generated_text": "NGŮ THI NHAM TOAN TAP - TAP III",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.322,
+            "confidence": 75.77,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              427,
+              233,
+              2169,
+              246
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.459,
+            "confidence": 74.23,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              445,
+              293,
+              754,
+              332
+            ],
+            "generated_text": "DICH NGHIA:",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.763,
+            "confidence": 99.01,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              643,
+              348,
+              2043,
+              403
+            ],
+            "generated_text": "TẳNG NGUYỄN DƯƠNG XUYỆN, TRƯƠNG NGÔ XUYỆN",
+            "n_lines": 1,
+            "tokens": 42,
+            "seconds": 3.032,
+            "confidence": 87.12,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              796,
+              477,
+              1526,
+              522
+            ],
+            "generated_text": "An cân tiến nhau ba chén rượu,",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.195,
+            "confidence": 89.81,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              798,
+              546,
+              1736,
+              592
+            ],
+            "generated_text": "Quyền luyện khó dút, mối tình van đảm.",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.636,
+            "confidence": 89.08,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              797,
+              615,
+              1609,
+              668
+            ],
+            "generated_text": "Đòi đẹp, lân phượng nên bảo trọng,",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.299,
+            "confidence": 90.35,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              799,
+              680,
+              1734,
+              726
+            ],
+            "generated_text": "Sóm báo tin mai(1) về thành Thăng Long.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.433,
+            "confidence": 90.43,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              446,
+              756,
+              734,
+              796
+            ],
+            "generated_text": "CHU THICH:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.734,
+            "confidence": 90.25,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              597,
+              821,
+              1314,
+              862
+            ],
+            "generated_text": "1. Câu này lấy ý trong hai câu thơ:",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.31,
+            "confidence": 97.18,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              799,
+              887,
+              1268,
+              929
+            ],
+            "generated_text": "Giang Nam vô số hữu,",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.951,
+            "confidence": 90.85,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              797,
+              954,
+              1292,
+              996
+            ],
+            "generated_text": "Liêu tăng nhất chi mai.",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.891,
+            "confidence": 96.45,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              800,
+              1021,
+              1512,
+              1062
+            ],
+            "generated_text": "(Ở đất Giang Nam không có gì cả,",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.251,
+            "confidence": 95.45,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              799,
+              1087,
+              1442,
+              1129
+            ],
+            "generated_text": "Hãy xin tăng một nhành mai).",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.261,
+            "confidence": 95.25,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              593,
+              1153,
+              1731,
+              1196
+            ],
+            "generated_text": "Tin mai thường được dùng để chỉ việc đưa tin, thư tín.",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.79,
+            "confidence": 94.31,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              447,
+              1242,
+              1050,
+              1281
+            ],
+            "generated_text": "DICH THO:",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.723,
+            "confidence": 98.41,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              970,
+              1309,
+              1667,
+              1352
+            ],
+            "generated_text": "Ăn cân đưa tiến rượu ba chén,",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.373,
+            "confidence": 81.14,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              976,
+              1382,
+              1819,
+              1427
+            ],
+            "generated_text": "Quyền luyện khó lìa muôn đăm tình.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.366,
+            "confidence": 86.12,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              973,
+              1457,
+              1771,
+              1510
+            ],
+            "generated_text": "Đòi đẹp phương lân nên bảo trọng,",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.207,
+            "confidence": 90.43,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              977,
+              1530,
+              1728,
+              1576
+            ],
+            "generated_text": "Tin mai sớm báo tối Long thành.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.195,
+            "confidence": 95.06,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              1883,
+              1616,
+              2157,
+              1649
+            ],
+            "generated_text": "Làm Giang",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.666,
+            "confidence": 90.65,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              626,
+              1753,
+              2045,
+              1808
+            ],
+            "generated_text": "35清明前一日蛆翰林洋澤對燭書懷",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.807,
+            "confidence": 80.0,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              624,
+              1800,
+              2056,
+              1833
+            ],
+            "generated_text": "55.清明前日共翰杯汗拜封陶言依",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.352,
+            "confidence": 52.14,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              1068,
+              1945,
+              1605,
+              2009
+            ],
+            "generated_text": "先後皆登道義門",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.824,
+            "confidence": 99.94,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              1070,
+              2070,
+              1609,
+              2131
+            ],
+            "generated_text": "吾儒命脈本同源",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.954,
+            "confidence": 99.86,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              860,
+              2197,
+              1610,
+              2258
+            ],
+            "generated_text": "君兄與我竹爲友",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.825,
+            "confidence": 98.84,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              1071,
+              2320,
+              1613,
+              2384
+            ],
+            "generated_text": "我弟如君蓮作村",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.952,
+            "confidence": 99.8,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              1076,
+              2446,
+              1961,
+              2508
+            ],
+            "generated_text": "已定斯年逢此會",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.835,
+            "confidence": 96.02,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              1012,
+              2570,
+              1614,
+              2630
+            ],
+            "generated_text": "何妨此日舉斯樽",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.991,
+            "confidence": 99.93,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              1074,
+              2695,
+              1613,
+              2759
+            ],
+            "generated_text": "家鄉千里休言遠",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.765,
+            "confidence": 99.95,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 32,
+            "box": [
+              1065,
+              2824,
+              1607,
+              2884
+            ],
+            "generated_text": "並見東山初出暾",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.976,
+            "confidence": 99.93,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              521,
+              186,
+              1120,
+              196
+            ],
+            "ink": 236
+          },
+          {
+            "box": [
+              821,
+              588,
+              2026,
+              599
+            ],
+            "ink": 271
+          },
+          {
+            "box": [
+              785,
+              858,
+              1053,
+              869
+            ],
+            "ink": 262
+          },
+          {
+            "box": [
+              808,
+              1059,
+              1508,
+              1069
+            ],
+            "ink": 261
+          },
+          {
+            "box": [
+              861,
+              1126,
+              1421,
+              1135
+            ],
+            "ink": 178
+          },
+          {
+            "box": [
+              897,
+              1192,
+              1554,
+              1202
+            ],
+            "ink": 203
+          },
+          {
+            "box": [
+              994,
+              1424,
+              1640,
+              1434
+            ],
+            "ink": 231
+          },
+          {
+            "box": [
+              1891,
+              1605,
+              2067,
+              1616
+            ],
+            "ink": 294
+          },
+          {
+            "box": [
+              464,
+              2967,
+              545,
+              2976
+            ],
+            "ink": 220
+          },
+          {
+            "box": [
+              468,
+              2983,
+              550,
+              2993
+            ],
+            "ink": 292
+          },
+          {
+            "box": [
+              461,
+              3001,
+              545,
+              3010
+            ],
+            "ink": 173
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

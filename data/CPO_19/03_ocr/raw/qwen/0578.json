@@ -1,0 +1,251 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "qwen",
+  "page": 578,
+  "runs": [
+    {
+      "key": "6ab9060cc4ab3306cabb3a2c80a6e11aa02ccbc3555c3f81d9fc71d4b2431930",
+      "parameters": {
+        "image_sha256": "c4a112250f56bdd9714b31a714645b869f826274ecdfe2d0078b0a6a70a7602e",
+        "engine": {
+          "name": "qwen",
+          "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "model_revision": "main",
+          "transformers_version": "4.57.6",
+          "torch_version": "2.5.1+cu121",
+          "cuda_version": "12.1",
+          "bitsandbytes_version": "0.50.2",
+          "quantization": {
+            "load_in_4bit": true,
+            "quant_type": "nf4",
+            "double_quant": true,
+            "compute_dtype": "float16"
+          },
+          "mode": "all",
+          "min_pixels": 50176,
+          "max_pixels": 802816,
+          "band_inches": 2.0,
+          "max_new_tokens": 768,
+          "repetition_penalty": 1.05,
+          "adapter_version": 3,
+          "prompt_version": 3,
+          "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74"
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T22:49:29+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_578.png",
+      "image_size": [
+        2575,
+        3206
+      ],
+      "crop_box": [
+        0,
+        0,
+        2575,
+        3206
+      ],
+      "lines": [
+        {
+          "text": "BANG GIAO HẢO THOẠI",
+          "bbox": [
+            7,
+            9,
+            2101,
+            174
+          ],
+          "confidence": 90.97
+        },
+        {
+          "text": "40. 呈天朝巡撫大人",
+          "bbox": [
+            7,
+            174,
+            2101,
+            340
+          ],
+          "confidence": 90.97
+        },
+        {
+          "text": "(奉賜人復呈謝并祈奉準遣子入覲。國王書)",
+          "bbox": [
+            7,
+            340,
+            2101,
+            505
+          ],
+          "confidence": 90.97
+        },
+        {
+          "text": "小番，自前年投效，一片恭顺，蒙列位上宪体悉真衷，曲为声明题达。",
+          "bbox": [
+            392,
+            608,
+            2097,
+            852
+          ],
+          "confidence": 82.25
+        },
+        {
+          "text": "仰邀天子非常宠渥，节次承恩，荣华绚耀，诚外藩曚古希奇之遇，夢想不到，欣忭无涯，竊当自问，何",
+          "bbox": [
+            392,
+            852,
+            2097,
+            1096
+          ],
+          "confidence": 82.25
+        },
+        {
+          "text": "以得此？盖左江道官为之先容，公阁督部堂玉成其事，上憲大人亦为小番见好，事事周旋。故边陬微诚，得以上达高聳，疋膺異眷，寔惟大人培護封扶之力。小番久在包容，而不自知，誠有慊于中者。",
+          "bbox": [
+            390,
+            1159,
+            2160,
+            1634
+          ],
+          "confidence": 85.37
+        },
+        {
+          "text": "去年，謹委陪臣奉表入覲，奉聖諭，開春燈節前抵京，與暹羅國使同領筵宴。日者陪价業已過關，小番未及面囑邊情，因有書函具述本國與暹羅構隙事緐，",
+          "bbox": [
+            389,
+            1690,
+            2146,
+            2086
+          ],
+          "confidence": 92.82
+        },
+        {
+          "text": "俾陪臣知，悉以備奏對，因又囑買人復寄回，留奉親之寶。此乃自家私情，不敢贅錄。訣意左江道官析閱原函，轉呈憲覽，即蒙據情題達，並將原札恭呈御覽。欽奉聖心，嘉予敘下敕書獎慰，特賜內庫人復一角，想寵數之自來，寔憑上憲仁端之發，有以成就之也。",
+          "bbox": [
+            389,
+            2124,
+            2092,
+            2999
+          ],
+          "confidence": 90.26
+        }
+      ],
+      "raw": {
+        "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+        "model_revision": "main",
+        "mode": "all",
+        "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74",
+        "dpi": 300,
+        "image_size": [
+          2575,
+          3206
+        ],
+        "band_target_height": 600,
+        "bbox_granularity": "band_even_split",
+        "max_new_tokens": 768,
+        "max_pixels": 802816,
+        "inference_seconds": 27.927,
+        "bands": [
+          {
+            "band": 1,
+            "y0": 13,
+            "y1": 547,
+            "ink_box": [
+              7,
+              9,
+              2101,
+              505
+            ],
+            "generated_text": "BANG GIAO HẢO THOẠI\n\n40. 呈天朝巡撫大人\n(奉賜人復呈謝并祈奉準遣子入覲。國王書)",
+            "n_lines": 3,
+            "tokens": 48,
+            "seconds": 3.531,
+            "confidence": 90.97,
+            "flags": []
+          },
+          {
+            "band": 2,
+            "y0": 547,
+            "y1": 1127,
+            "ink_box": [
+              392,
+              608,
+              2097,
+              1096
+            ],
+            "generated_text": "小番，自前年投效，一片恭顺，蒙列位上宪体悉真衷，曲为声明题达。\n仰邀天子非常宠渥，节次承恩，荣华绚耀，诚外藩曚古希奇之遇，夢想不到，欣忭无涯，竊当自问，何",
+            "n_lines": 2,
+            "tokens": 74,
+            "seconds": 5.126,
+            "confidence": 82.25,
+            "flags": []
+          },
+          {
+            "band": 3,
+            "y0": 1127,
+            "y1": 1664,
+            "ink_box": [
+              390,
+              1159,
+              2160,
+              1634
+            ],
+            "generated_text": "以得此？盖左江道官为之先容，公阁督部堂玉成其事，上憲大人亦为小番见好，事事周旋。故边陬微诚，得以上达高聳，疋膺異眷，寔惟大人培護封扶之力。小番久在包容，而不自知，誠有慊于中者。",
+            "n_lines": 1,
+            "tokens": 86,
+            "seconds": 6.023,
+            "confidence": 85.37,
+            "flags": []
+          },
+          {
+            "band": 4,
+            "y0": 1664,
+            "y1": 2128,
+            "ink_box": [
+              389,
+              1690,
+              2146,
+              2086
+            ],
+            "generated_text": "去年，謹委陪臣奉表入覲，奉聖諭，開春燈節前抵京，與暹羅國使同領筵宴。日者陪价業已過關，小番未及面囑邊情，因有書函具述本國與暹羅構隙事緐，",
+            "n_lines": 1,
+            "tokens": 73,
+            "seconds": 5.017,
+            "confidence": 92.82,
+            "flags": []
+          },
+          {
+            "band": 5,
+            "y0": 2128,
+            "y1": 2995,
+            "ink_box": [
+              389,
+              2124,
+              2092,
+              2999
+            ],
+            "generated_text": "俾陪臣知，悉以備奏對，因又囑買人復寄回，留奉親之寶。此乃自家私情，不敢贅錄。訣意左江道官析閱原函，轉呈憲覽，即蒙據情題達，並將原札恭呈御覽。欽奉聖心，嘉予敘下敕書獎慰，特賜內庫人復一角，想寵數之自來，寔憑上憲仁端之發，有以成就之也。",
+            "n_lines": 1,
+            "tokens": 121,
+            "seconds": 8.2,
+            "confidence": 90.26,
+            "flags": []
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "61cbea5c0055c260ccfc12f884e0febca7b2783b",
+        "git_describe": "61cbea5",
+        "git_dirty": true,
+        "gpu": "NVIDIA L4",
+        "dtype": "float16",
+        "adapter_version": 3
+      }
+    }
+  ]
+}

@@ -1,0 +1,778 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 24,
+  "runs": [
+    {
+      "key": "d23e9cb8affd33b22d3198c9381ec1065f36fb6880d3fd67270d2e9523371a5f",
+      "parameters": {
+        "image_sha256": "a9614cf3690bd55903e3923cacfe8eb3f9d8cce8942130a96d3e5d5842d61b6e",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T11:23:38+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_024.png",
+      "image_size": [
+        2624,
+        3239
+      ],
+      "crop_box": [
+        0,
+        0,
+        2624,
+        3239
+      ],
+      "lines": [
+        {
+          "text": "ngothinhamle1.pdf",
+          "bbox": [
+            6,
+            15,
+            1461,
+            45
+          ],
+          "confidence": 95.19
+        },
+        {
+          "text": "HOANG HOA DO PHA",
+          "bbox": [
+            834,
+            185,
+            2161,
+            223
+          ],
+          "confidence": 95.06
+        },
+        {
+          "text": "KHAO DI:",
+          "bbox": [
+            453,
+            294,
+            1469,
+            333
+          ],
+          "confidence": 96.91
+        },
+        {
+          "text": "a. Bản A.117c/1: Bát tháp 八 t.",
+          "bbox": [
+            350,
+            368,
+            1241,
+            412
+          ],
+          "confidence": 84.51
+        },
+        {
+          "text": "b. Bản A.117c/1: Phát nhận 髮軔.",
+          "bbox": [
+            583,
+            446,
+            2259,
+            490
+          ],
+          "confidence": 91.32
+        },
+        {
+          "text": "c. Bản A.117c/1 và bản A.404: Tư chu 資周.",
+          "bbox": [
+            384,
+            525,
+            1487,
+            569
+          ],
+          "confidence": 95.82
+        },
+        {
+          "text": "d. Bản A.117c/1 và bản A.404: Mai khôi 梅魁.",
+          "bbox": [
+            586,
+            602,
+            1531,
+            651
+          ],
+          "confidence": 95.16
+        },
+        {
+          "text": "CHU THICH:",
+          "bbox": [
+            456,
+            708,
+            2065,
+            751
+          ],
+          "confidence": 99.44
+        },
+        {
+          "text": "1.Xuân chín chục: Chỉ tròn một mùa xuân, khoảng chín mười ngày (lấy",
+          "bbox": [
+            609,
+            786,
+            2162,
+            840
+          ],
+          "confidence": 93.6
+        },
+        {
+          "text": "con sổ tròn).",
+          "bbox": [
+            454,
+            878,
+            715,
+            908
+          ],
+          "confidence": 85.48
+        },
+        {
+          "text": "6. 受降城",
+          "bbox": [
+            859,
+            996,
+            1867,
+            1074
+          ],
+          "confidence": 99.35
+        },
+        {
+          "text": "路經幕府入馮祥",
+          "bbox": [
+            971,
+            1173,
+            1709,
+            1236
+          ],
+          "confidence": 99.95
+        },
+        {
+          "text": "故受降城是故疆",
+          "bbox": [
+            1015,
+            1311,
+            2327,
+            1377
+          ],
+          "confidence": 99.85
+        },
+        {
+          "text": "山似諒山溪較少",
+          "bbox": [
+            985,
+            1452,
+            2176,
+            1515
+          ],
+          "confidence": 99.86
+        },
+        {
+          "text": "石稱下石里偏長",
+          "bbox": [
+            1019,
+            1592,
+            1579,
+            1652
+          ],
+          "confidence": 99.89
+        },
+        {
+          "text": "水車轉軸雷喧岸",
+          "bbox": [
+            1014,
+            1727,
+            1819,
+            1793
+          ],
+          "confidence": 99.93
+        },
+        {
+          "text": "火號標臺雪滿塘",
+          "bbox": [
+            1016,
+            1867,
+            2036,
+            1932
+          ],
+          "confidence": 99.76
+        },
+        {
+          "text": "卻說行城成甚事",
+          "bbox": [
+            520,
+            2005,
+            1934,
+            2072
+          ],
+          "confidence": 97.49
+        },
+        {
+          "text": "令人千載罵宜陽",
+          "bbox": [
+            910,
+            2144,
+            1909,
+            2210
+          ],
+          "confidence": 98.17
+        },
+        {
+          "text": "PHIEN AM:",
+          "bbox": [
+            454,
+            2328,
+            1950,
+            2367
+          ],
+          "confidence": 96.35
+        },
+        {
+          "text": "THU HÀNG THÀNH",
+          "bbox": [
+            1056,
+            2419,
+            1990,
+            2466
+          ],
+          "confidence": 93.87
+        },
+        {
+          "text": "Lộ kinh mạc phủ nhập Bảng Tường,",
+          "bbox": [
+            896,
+            2559,
+            1941,
+            2615
+          ],
+          "confidence": 93.14
+        },
+        {
+          "text": "Cô Thụ Hàng thành thị có cường.",
+          "bbox": [
+            899,
+            2646,
+            1986,
+            2701
+          ],
+          "confidence": 88.83
+        },
+        {
+          "text": "Sơn tụ Lạng Sơn khê hiệu thiếu;",
+          "bbox": [
+            895,
+            2733,
+            1967,
+            2787
+          ],
+          "confidence": 88.47
+        },
+        {
+          "text": "Thạch xứng Hà Thạch lý thiên trường.",
+          "bbox": [
+            899,
+            2819,
+            1779,
+            2875
+          ],
+          "confidence": 87.02
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2624,
+          3239
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 30.675,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              6,
+              15,
+              1461,
+              45
+            ],
+            "generated_text": "ngothinhamle1.pdf",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.904,
+            "confidence": 95.19,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              834,
+              185,
+              2161,
+              223
+            ],
+            "generated_text": "HOANG HOA DO PHA",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.823,
+            "confidence": 95.06,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              455,
+              228,
+              2166,
+              241
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.454,
+            "confidence": 14.88,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              453,
+              294,
+              1469,
+              333
+            ],
+            "generated_text": "KHAO DI:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.776,
+            "confidence": 96.91,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              350,
+              368,
+              1241,
+              412
+            ],
+            "generated_text": "a. Bản A.117c/1: Bát tháp 八 t.",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.758,
+            "confidence": 84.51,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              583,
+              446,
+              2259,
+              490
+            ],
+            "generated_text": "b. Bản A.117c/1: Phát nhận 髮軔.",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 2.056,
+            "confidence": 91.32,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              384,
+              525,
+              1487,
+              569
+            ],
+            "generated_text": "c. Bản A.117c/1 và bản A.404: Tư chu 資周.",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.355,
+            "confidence": 95.82,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              586,
+              602,
+              1531,
+              651
+            ],
+            "generated_text": "d. Bản A.117c/1 và bản A.404: Mai khôi 梅魁.",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.283,
+            "confidence": 95.16,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              456,
+              708,
+              2065,
+              751
+            ],
+            "generated_text": "CHU THICH:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.729,
+            "confidence": 99.44,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              609,
+              786,
+              2162,
+              840
+            ],
+            "generated_text": "1.Xuân chín chục: Chỉ tròn một mùa xuân, khoảng chín mười ngày (lấy",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 2.388,
+            "confidence": 93.6,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              454,
+              878,
+              715,
+              908
+            ],
+            "generated_text": "con sổ tròn).",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.788,
+            "confidence": 85.48,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              859,
+              996,
+              1867,
+              1074
+            ],
+            "generated_text": "6. 受降城",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.702,
+            "confidence": 99.35,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              971,
+              1173,
+              1709,
+              1236
+            ],
+            "generated_text": "路經幕府入馮祥",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 1.055,
+            "confidence": 99.95,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              1015,
+              1311,
+              2327,
+              1377
+            ],
+            "generated_text": "故受降城是故疆",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.938,
+            "confidence": 99.85,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              985,
+              1452,
+              2176,
+              1515
+            ],
+            "generated_text": "山似諒山溪較少",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 1.087,
+            "confidence": 99.86,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              1019,
+              1592,
+              1579,
+              1652
+            ],
+            "generated_text": "石稱下石里偏長",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.848,
+            "confidence": 99.89,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              1014,
+              1727,
+              1819,
+              1793
+            ],
+            "generated_text": "水車轉軸雷喧岸",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.921,
+            "confidence": 99.93,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              1016,
+              1867,
+              2036,
+              1932
+            ],
+            "generated_text": "火號標臺雪滿塘",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.869,
+            "confidence": 99.76,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              520,
+              2005,
+              1934,
+              2072
+            ],
+            "generated_text": "卻說行城成甚事",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.928,
+            "confidence": 97.49,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              910,
+              2144,
+              1909,
+              2210
+            ],
+            "generated_text": "令人千載罵宜陽",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.93,
+            "confidence": 98.17,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              454,
+              2328,
+              1950,
+              2367
+            ],
+            "generated_text": "PHIEN AM:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.738,
+            "confidence": 96.35,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              1056,
+              2419,
+              1990,
+              2466
+            ],
+            "generated_text": "THU HÀNG THÀNH",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.984,
+            "confidence": 93.87,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              896,
+              2559,
+              1941,
+              2615
+            ],
+            "generated_text": "Lộ kinh mạc phủ nhập Bảng Tường,",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.444,
+            "confidence": 93.14,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              899,
+              2646,
+              1986,
+              2701
+            ],
+            "generated_text": "Cô Thụ Hàng thành thị có cường.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.297,
+            "confidence": 88.83,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              895,
+              2733,
+              1967,
+              2787
+            ],
+            "generated_text": "Sơn tụ Lạng Sơn khê hiệu thiếu;",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.434,
+            "confidence": 88.47,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              899,
+              2819,
+              1779,
+              2875
+            ],
+            "generated_text": "Thạch xứng Hà Thạch lý thiên trường.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.18,
+            "confidence": 87.02,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              2122,
+              2961,
+              2183,
+              2973
+            ],
+            "ink": 249
+          },
+          {
+            "box": [
+              2119,
+              2997,
+              2171,
+              3006
+            ],
+            "ink": 149
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

@@ -1,0 +1,848 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 105,
+  "runs": [
+    {
+      "key": "d8d3965ad1efd2a074585e41ce783af117f338017e807e1a54952008ff86fc4b",
+      "parameters": {
+        "image_sha256": "78754170082fb9c980be98e132037febf23556af6a68dc151f05c637b237d7d7",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T12:17:09+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_105.png",
+      "image_size": [
+        2544,
+        3182
+      ],
+      "crop_box": [
+        0,
+        0,
+        2544,
+        3182
+      ],
+      "lines": [
+        {
+          "text": "ngothinhamch1.pdf",
+          "bbox": [
+            7,
+            19,
+            2298,
+            45
+          ],
+          "confidence": 99.05
+        },
+        {
+          "text": "NGO THI NHAM TOAN TAP - TAP III",
+          "bbox": [
+            385,
+            181,
+            1158,
+            219
+          ],
+          "confidence": 97.75
+        },
+        {
+          "text": "46.全州記見",
+          "bbox": [
+            954,
+            268,
+            1531,
+            339
+          ],
+          "confidence": 96.34
+        },
+        {
+          "text": "架石懸摟俯碧灣",
+          "bbox": [
+            933,
+            466,
+            1520,
+            531
+          ],
+          "confidence": 97.75
+        },
+        {
+          "text": "罘罳高掛絳紗圜",
+          "bbox": [
+            937,
+            593,
+            1501,
+            654
+          ],
+          "confidence": 98.27
+        },
+        {
+          "text": "富商盧屋後元日",
+          "bbox": [
+            936,
+            719,
+            1510,
+            781
+          ],
+          "confidence": 98.69
+        },
+        {
+          "text": "行旅舟車貞觀間",
+          "bbox": [
+            932,
+            842,
+            1516,
+            904
+          ],
+          "confidence": 99.93
+        },
+        {
+          "text": "平世錦章施白屋",
+          "bbox": [
+            934,
+            967,
+            1521,
+            1025
+          ],
+          "confidence": 98.01
+        },
+        {
+          "text": "雄州臺館滿青山",
+          "bbox": [
+            861,
+            1090,
+            1517,
+            1155
+          ],
+          "confidence": 99.92
+        },
+        {
+          "text": "上頭應有題詩日",
+          "bbox": [
+            933,
+            1217,
+            1511,
+            1281
+          ],
+          "confidence": 98.29
+        },
+        {
+          "text": "收拾風光五乘還",
+          "bbox": [
+            933,
+            1343,
+            1523,
+            1406
+          ],
+          "confidence": 99.63
+        },
+        {
+          "text": "PHIEN AM:",
+          "bbox": [
+            388,
+            1497,
+            642,
+            1537
+          ],
+          "confidence": 97.43
+        },
+        {
+          "text": "TOAN CHÂU KY KIEN (A)",
+          "bbox": [
+            945,
+            1570,
+            1532,
+            1616
+          ],
+          "confidence": 85.82
+        },
+        {
+          "text": "Giá thach huyện lâu phủ bích loan,",
+          "bbox": [
+            835,
+            1701,
+            1650,
+            1747
+          ],
+          "confidence": 90.17
+        },
+        {
+          "text": "Phâu ti cạo quải giáng sa hoàn.",
+          "bbox": [
+            833,
+            1786,
+            1816,
+            1830
+          ],
+          "confidence": 82.08
+        },
+        {
+          "text": "Phú thương lư (lư (or lư (or (c (b) Hậu Nguyên nhất;",
+          "bbox": [
+            833,
+            1866,
+            1708,
+            1920
+          ],
+          "confidence": 64.7
+        },
+        {
+          "text": "Hành lũ chu xa Trình Quán gian.",
+          "bbox": [
+            803,
+            1949,
+            1614,
+            1996
+          ],
+          "confidence": 92.76
+        },
+        {
+          "text": "Bình thế cấm chương thi bach óc;",
+          "bbox": [
+            833,
+            2033,
+            1603,
+            2079
+          ],
+          "confidence": 90.08
+        },
+        {
+          "text": "Hùng châu đài quán măn thanh san.",
+          "bbox": [
+            833,
+            2116,
+            1692,
+            2161
+          ],
+          "confidence": 95.32
+        },
+        {
+          "text": "Thương đâu ứng hữu đế thi nhất,",
+          "bbox": [
+            838,
+            2198,
+            1608,
+            2244
+          ],
+          "confidence": 85.89
+        },
+        {
+          "text": "Thu thập phong quang ngũ thắng hoàn.",
+          "bbox": [
+            832,
+            2281,
+            1753,
+            2334
+          ],
+          "confidence": 87.85
+        },
+        {
+          "text": "DICH NGHIA:",
+          "bbox": [
+            391,
+            2371,
+            1543,
+            2411
+          ],
+          "confidence": 98.66
+        },
+        {
+          "text": "GHI LAI NHỮNG ĐIỀU TRÔNG THẤY Ở TOÀN CHÂU(1)",
+          "bbox": [
+            570,
+            2432,
+            1919,
+            2491
+          ],
+          "confidence": 93.42
+        },
+        {
+          "text": "Lâu dụng trên vách đá, nhòm xuống vũng biếc,",
+          "bbox": [
+            744,
+            2575,
+            1829,
+            2628
+          ],
+          "confidence": 88.66
+        },
+        {
+          "text": "Bình phong treo cao, the hồng quán quanh.",
+          "bbox": [
+            744,
+            2658,
+            1743,
+            2711
+          ],
+          "confidence": 95.75
+        },
+        {
+          "text": "Nhà của phú thương, giống thời Hậu Nguyên;",
+          "bbox": [
+            744,
+            2739,
+            1836,
+            2793
+          ],
+          "confidence": 88.01
+        },
+        {
+          "text": "Thuyên xe lũ khách, tưa thời Trinh Quán.",
+          "bbox": [
+            744,
+            2822,
+            1788,
+            2869
+          ],
+          "confidence": 80.86
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2544,
+          3182
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 34.421,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              7,
+              19,
+              2298,
+              45
+            ],
+            "generated_text": "ngothinhamch1.pdf",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 1.082,
+            "confidence": 99.05,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              385,
+              181,
+              1158,
+              219
+            ],
+            "generated_text": "NGO THI NHAM TOAN TAP - TAP III",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.256,
+            "confidence": 97.75,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              387,
+              225,
+              2098,
+              238
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.451,
+            "confidence": 89.83,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              954,
+              268,
+              1531,
+              339
+            ],
+            "generated_text": "46.全州記見",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.822,
+            "confidence": 96.34,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              933,
+              466,
+              1520,
+              531
+            ],
+            "generated_text": "架石懸摟俯碧灣",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.083,
+            "confidence": 97.75,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              937,
+              593,
+              1501,
+              654
+            ],
+            "generated_text": "罘罳高掛絳紗圜",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.595,
+            "confidence": 98.27,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              936,
+              719,
+              1510,
+              781
+            ],
+            "generated_text": "富商盧屋後元日",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.972,
+            "confidence": 98.69,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              932,
+              842,
+              1516,
+              904
+            ],
+            "generated_text": "行旅舟車貞觀間",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.982,
+            "confidence": 99.93,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              934,
+              967,
+              1521,
+              1025
+            ],
+            "generated_text": "平世錦章施白屋",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.968,
+            "confidence": 98.01,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              861,
+              1090,
+              1517,
+              1155
+            ],
+            "generated_text": "雄州臺館滿青山",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.788,
+            "confidence": 99.92,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              933,
+              1217,
+              1511,
+              1281
+            ],
+            "generated_text": "上頭應有題詩日",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.966,
+            "confidence": 98.29,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              933,
+              1343,
+              1523,
+              1406
+            ],
+            "generated_text": "收拾風光五乘還",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.785,
+            "confidence": 99.63,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              388,
+              1497,
+              642,
+              1537
+            ],
+            "generated_text": "PHIEN AM:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.71,
+            "confidence": 97.43,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              945,
+              1570,
+              1532,
+              1616
+            ],
+            "generated_text": "TOAN CHÂU KY KIEN (A)",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.281,
+            "confidence": 85.82,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              835,
+              1701,
+              1650,
+              1747
+            ],
+            "generated_text": "Giá thach huyện lâu phủ bích loan,",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.214,
+            "confidence": 90.17,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              833,
+              1786,
+              1816,
+              1830
+            ],
+            "generated_text": "Phâu ti cạo quải giáng sa hoàn.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.303,
+            "confidence": 82.08,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              833,
+              1866,
+              1708,
+              1920
+            ],
+            "generated_text": "Phú thương lư (lư (or lư (or (c (b) Hậu Nguyên nhất;",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 2.078,
+            "confidence": 64.7,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              803,
+              1949,
+              1614,
+              1996
+            ],
+            "generated_text": "Hành lũ chu xa Trình Quán gian.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.156,
+            "confidence": 92.76,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              833,
+              2033,
+              1603,
+              2079
+            ],
+            "generated_text": "Bình thế cấm chương thi bach óc;",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.264,
+            "confidence": 90.08,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              833,
+              2116,
+              1692,
+              2161
+            ],
+            "generated_text": "Hùng châu đài quán măn thanh san.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.295,
+            "confidence": 95.32,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              838,
+              2198,
+              1608,
+              2244
+            ],
+            "generated_text": "Thương đâu ứng hữu đế thi nhất,",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.255,
+            "confidence": 85.89,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              832,
+              2281,
+              1753,
+              2334
+            ],
+            "generated_text": "Thu thập phong quang ngũ thắng hoàn.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.308,
+            "confidence": 87.85,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              391,
+              2371,
+              1543,
+              2411
+            ],
+            "generated_text": "DICH NGHIA:",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.859,
+            "confidence": 98.66,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              570,
+              2432,
+              1919,
+              2491
+            ],
+            "generated_text": "GHI LAI NHỮNG ĐIỀU TRÔNG THẤY Ở TOÀN CHÂU(1)",
+            "n_lines": 1,
+            "tokens": 37,
+            "seconds": 2.614,
+            "confidence": 93.42,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              744,
+              2575,
+              1829,
+              2628
+            ],
+            "generated_text": "Lâu dụng trên vách đá, nhòm xuống vũng biếc,",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.765,
+            "confidence": 88.66,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              744,
+              2658,
+              1743,
+              2711
+            ],
+            "generated_text": "Bình phong treo cao, the hồng quán quanh.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.52,
+            "confidence": 95.75,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              744,
+              2739,
+              1836,
+              2793
+            ],
+            "generated_text": "Nhà của phú thương, giống thời Hậu Nguyên;",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.559,
+            "confidence": 88.01,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              744,
+              2822,
+              1788,
+              2869
+            ],
+            "generated_text": "Thuyên xe lũ khách, tưa thời Trinh Quán.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.486,
+            "confidence": 80.86,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              960,
+              0,
+              1521,
+              5
+            ],
+            "ink": 96
+          },
+          {
+            "box": [
+              463,
+              174,
+              1060,
+              183
+            ],
+            "ink": 215
+          },
+          {
+            "box": [
+              1116,
+              1827,
+              1354,
+              1838
+            ],
+            "ink": 259
+          },
+          {
+            "box": [
+              935,
+              2240,
+              1602,
+              2251
+            ],
+            "ink": 303
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

@@ -1,0 +1,856 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 80,
+  "runs": [
+    {
+      "key": "f651a9f7012057c9e2eab99a27b31d29a076cf99ef6ab924b76b19d4546920ed",
+      "parameters": {
+        "image_sha256": "9fc40b17c90d3d74cf65bd5bb51c083d82027cbdea51ea319e420d1d8b7b3651",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T11:59:57+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_080.png",
+      "image_size": [
+        2575,
+        3207
+      ],
+      "crop_box": [
+        0,
+        0,
+        2575,
+        3207
+      ],
+      "lines": [
+        {
+          "text": "ngothinhamle1.pdf",
+          "bbox": [
+            6,
+            19,
+            287,
+            45
+          ],
+          "confidence": 96.54
+        },
+        {
+          "text": "HOANG HOA ĐỔ PHA",
+          "bbox": [
+            1334,
+            190,
+            2099,
+            229
+          ],
+          "confidence": 86.69
+        },
+        {
+          "text": "Phong tục địa phương, đàn ông đâu búi tó;",
+          "bbox": [
+            803,
+            297,
+            1781,
+            349
+          ],
+          "confidence": 93.76
+        },
+        {
+          "text": "Trang phục thôn quê, phụ nữ không bó chân.",
+          "bbox": [
+            779,
+            379,
+            1844,
+            430
+          ],
+          "confidence": 99.33
+        },
+        {
+          "text": "Bên bỏ, nhà dân dựa khóm trúc;",
+          "bbox": [
+            804,
+            461,
+            1547,
+            507
+          ],
+          "confidence": 89.5
+        },
+        {
+          "text": "Bãi phắng, trẻ trâu thả diệu chơi.",
+          "bbox": [
+            803,
+            543,
+            1576,
+            588
+          ],
+          "confidence": 86.63
+        },
+        {
+          "text": "Muốn tìm phủ Uý Đà ngày xưa hùng cứ, (A)",
+          "bbox": [
+            802,
+            624,
+            1777,
+            678
+          ],
+          "confidence": 92.79
+        },
+        {
+          "text": "Chỉ có núi xa mít mùng, mây khói phủ che.",
+          "bbox": [
+            804,
+            708,
+            1797,
+            753
+          ],
+          "confidence": 91.96
+        },
+        {
+          "text": "KHAO DI:",
+          "bbox": [
+            391,
+            793,
+            611,
+            831
+          ],
+          "confidence": 89.62
+        },
+        {
+          "text": "a. Bản A.1579: Tầm giang 潯江.",
+          "bbox": [
+            539,
+            868,
+            1203,
+            910
+          ],
+          "confidence": 93.41
+        },
+        {
+          "text": "b. Bản A.1579: Thổ lộ 土路.",
+          "bbox": [
+            537,
+            946,
+            1107,
+            988
+          ],
+          "confidence": 95.33
+        },
+        {
+          "text": "c. Bản A.1579: Lâm sở 林所.",
+          "bbox": [
+            537,
+            1024,
+            1379,
+            1066
+          ],
+          "confidence": 88.92
+        },
+        {
+          "text": "NGUYÊN CHU:",
+          "bbox": [
+            390,
+            1129,
+            725,
+            1168
+          ],
+          "confidence": 91.06
+        },
+        {
+          "text": "A.Cố đồ của Triệu Uý Đà ở huyện Phiên Ngung, phủ Quảng Châu, tỉnh",
+          "bbox": [
+            538,
+            1204,
+            2099,
+            1257
+          ],
+          "confidence": 94.55
+        },
+        {
+          "text": "Quảng Đông. Từ Ngô Giang xuôi thuyên độ hơn 10 ngày.",
+          "bbox": [
+            391,
+            1284,
+            1592,
+            1334
+          ],
+          "confidence": 96.36
+        },
+        {
+          "text": "33. 疑九疑",
+          "bbox": [
+            602,
+            1419,
+            1452,
+            1490
+          ],
+          "confidence": 98.81
+        },
+        {
+          "text": "九疑葬舜久傳疑",
+          "bbox": [
+            953,
+            1593,
+            1542,
+            1655
+          ],
+          "confidence": 99.54
+        },
+        {
+          "text": "虛實須從事理摧",
+          "bbox": [
+            533,
+            1710,
+            1543,
+            1774
+          ],
+          "confidence": 95.71
+        },
+        {
+          "text": "五服桓圭非内粤",
+          "bbox": [
+            953,
+            1830,
+            1649,
+            1890
+          ],
+          "confidence": 97.74
+        },
+        {
+          "text": "七旬干羽始班师",
+          "bbox": [
+            953,
+            1948,
+            1537,
+            2007
+          ],
+          "confidence": 92.73
+        },
+        {
+          "text": "蒼梧那得朝群後",
+          "bbox": [
+            335,
+            2064,
+            1914,
+            2129
+          ],
+          "confidence": 99.64
+        },
+        {
+          "text": "斑竹何曾泣二妃",
+          "bbox": [
+            950,
+            2187,
+            1541,
+            2245
+          ],
+          "confidence": 98.54
+        },
+        {
+          "text": "穿鑿出來殊孟浪",
+          "bbox": [
+            955,
+            2302,
+            1538,
+            2367
+          ],
+          "confidence": 99.71
+        },
+        {
+          "text": "購金祗療漢儒饑",
+          "bbox": [
+            950,
+            2420,
+            1540,
+            2483
+          ],
+          "confidence": 96.6
+        },
+        {
+          "text": "PHIEN AM:",
+          "bbox": [
+            391,
+            2551,
+            645,
+            2589
+          ],
+          "confidence": 99.57
+        },
+        {
+          "text": "NGHI CUỘNGHI",
+          "bbox": [
+            1021,
+            2622,
+            1460,
+            2667
+          ],
+          "confidence": 90.9
+        },
+        {
+          "text": "Cửu Nghi táng Thuấn cửu truyền nghi,",
+          "bbox": [
+            837,
+            2748,
+            1738,
+            2803
+          ],
+          "confidence": 85.8
+        },
+        {
+          "text": "Hu thục tu tòng su lý suy. (a)",
+          "bbox": [
+            832,
+            2827,
+            1466,
+            2873
+          ],
+          "confidence": 77.73
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2575,
+          3207
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 35.443,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              6,
+              19,
+              287,
+              45
+            ],
+            "generated_text": "ngothinhamle1.pdf",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.897,
+            "confidence": 96.54,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              1334,
+              190,
+              2099,
+              229
+            ],
+            "generated_text": "HOANG HOA ĐỔ PHA",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 1.01,
+            "confidence": 86.69,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              392,
+              234,
+              2103,
+              247
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.449,
+            "confidence": 90.17,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              803,
+              297,
+              1781,
+              349
+            ],
+            "generated_text": "Phong tục địa phương, đàn ông đâu búi tó;",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.715,
+            "confidence": 93.76,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              779,
+              379,
+              1844,
+              430
+            ],
+            "generated_text": "Trang phục thôn quê, phụ nữ không bó chân.",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.69,
+            "confidence": 99.33,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              804,
+              461,
+              1547,
+              507
+            ],
+            "generated_text": "Bên bỏ, nhà dân dựa khóm trúc;",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.241,
+            "confidence": 89.5,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              803,
+              543,
+              1576,
+              588
+            ],
+            "generated_text": "Bãi phắng, trẻ trâu thả diệu chơi.",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.438,
+            "confidence": 86.63,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              802,
+              624,
+              1777,
+              678
+            ],
+            "generated_text": "Muốn tìm phủ Uý Đà ngày xưa hùng cứ, (A)",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.867,
+            "confidence": 92.79,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              804,
+              708,
+              1797,
+              753
+            ],
+            "generated_text": "Chỉ có núi xa mít mùng, mây khói phủ che.",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.719,
+            "confidence": 91.96,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              391,
+              793,
+              611,
+              831
+            ],
+            "generated_text": "KHAO DI:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.689,
+            "confidence": 89.62,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              539,
+              868,
+              1203,
+              910
+            ],
+            "generated_text": "a. Bản A.1579: Tầm giang 潯江.",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.648,
+            "confidence": 93.41,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              537,
+              946,
+              1107,
+              988
+            ],
+            "generated_text": "b. Bản A.1579: Thổ lộ 土路.",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.618,
+            "confidence": 95.33,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              537,
+              1024,
+              1379,
+              1066
+            ],
+            "generated_text": "c. Bản A.1579: Lâm sở 林所.",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.54,
+            "confidence": 88.92,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              390,
+              1129,
+              725,
+              1168
+            ],
+            "generated_text": "NGUYÊN CHU:",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.884,
+            "confidence": 91.06,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              538,
+              1204,
+              2099,
+              1257
+            ],
+            "generated_text": "A.Cố đồ của Triệu Uý Đà ở huyện Phiên Ngung, phủ Quảng Châu, tỉnh",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 2.306,
+            "confidence": 94.55,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              391,
+              1284,
+              1592,
+              1334
+            ],
+            "generated_text": "Quảng Đông. Từ Ngô Giang xuôi thuyên độ hơn 10 ngày.",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.718,
+            "confidence": 96.36,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              602,
+              1419,
+              1452,
+              1490
+            ],
+            "generated_text": "33. 疑九疑",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.8,
+            "confidence": 98.81,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              953,
+              1593,
+              1542,
+              1655
+            ],
+            "generated_text": "九疑葬舜久傳疑",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.854,
+            "confidence": 99.54,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              533,
+              1710,
+              1543,
+              1774
+            ],
+            "generated_text": "虛實須從事理摧",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.106,
+            "confidence": 95.71,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              953,
+              1830,
+              1649,
+              1890
+            ],
+            "generated_text": "五服桓圭非内粤",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.916,
+            "confidence": 97.74,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              953,
+              1948,
+              1537,
+              2007
+            ],
+            "generated_text": "七旬干羽始班师",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.857,
+            "confidence": 92.73,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              335,
+              2064,
+              1914,
+              2129
+            ],
+            "generated_text": "蒼梧那得朝群後",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.956,
+            "confidence": 99.64,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              950,
+              2187,
+              1541,
+              2245
+            ],
+            "generated_text": "斑竹何曾泣二妃",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.861,
+            "confidence": 98.54,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              955,
+              2302,
+              1538,
+              2367
+            ],
+            "generated_text": "穿鑿出來殊孟浪",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.971,
+            "confidence": 99.71,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              950,
+              2420,
+              1540,
+              2483
+            ],
+            "generated_text": "購金祗療漢儒饑",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.216,
+            "confidence": 96.6,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              391,
+              2551,
+              645,
+              2589
+            ],
+            "generated_text": "PHIEN AM:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.715,
+            "confidence": 99.57,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              1021,
+              2622,
+              1460,
+              2667
+            ],
+            "generated_text": "NGHI CUỘNGHI",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.884,
+            "confidence": 90.9,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              837,
+              2748,
+              1738,
+              2803
+            ],
+            "generated_text": "Cửu Nghi táng Thuấn cửu truyền nghi,",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.458,
+            "confidence": 85.8,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              832,
+              2827,
+              1466,
+              2873
+            ],
+            "generated_text": "Hu thục tu tòng su lý suy. (a)",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.415,
+            "confidence": 77.73,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              1165,
+              750,
+              1617,
+              760
+            ],
+            "ink": 237
+          },
+          {
+            "box": [
+              975,
+              2870,
+              1402,
+              2882
+            ],
+            "ink": 295
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}
