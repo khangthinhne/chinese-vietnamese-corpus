@@ -258,6 +258,8 @@ def assign_document_unified(work_id: str, doc: Document, layer_cfg: dict, meta_c
       "LÊN NÚI MẪU TỬ" mà OCR làm mất chữ "DỊCH NGHĨA"). Review `implicit_layer_start`.
     - `notes_after_attribution` (tuỳ chọn), vd {"am"}: trong lớp đó, sau dòng khớp `attribution_patterns` (dòng
       nguồn "Trích ..."), các dòng tiếp theo là chú thích: không gán lớp cho tới tiêu đề/tiêu đề viết hoa kế tiếp.
+    - Tiêu đề mục tường minh đặt lại số dòng nội dung của lớp đó; dòng `is_header` (tiêu đề chạy, dòng Việt nhiễu)
+      không tính là dòng nội dung (CPO_18.005: rác + tiêu đề chạy làm "PHIÊN ÂM:" rồi tiêu đề bài mở nhầm nghia).
     """
     review: list[dict] = []
     headings: list[dict] = []
@@ -316,6 +318,7 @@ def assign_document_unified(work_id: str, doc: Document, layer_cfg: dict, meta_c
                             headings.append(h_info)
                 current = target
                 started.add(target)
+                body_lines[target] = 0           # tiêu đề tường minh: nội dung của lớp tính lại từ đây
                 h_info = _heading(work_id, doc, target, "start", ln)
                 h_info["heading_id"] = f"{doc.id}.P{ln.page:04d}.H{len(headings) + 1:03d}"
                 headings.append(h_info)
@@ -367,7 +370,8 @@ def assign_document_unified(work_id: str, doc: Document, layer_cfg: dict, meta_c
         grouped.setdefault(target, []).append(ln)
         last_layer = target
         # dòng nội dung = có chữ thường (tiêu đề viết hoa nhiều dòng, kể cả dòng kết thúc bằng dấu phẩy, không tính)
-        if any(c.islower() for c in ln.text) and (keep_line is None or keep_line(target, ln)):
+        if (any(c.islower() for c in ln.text) and (keep_line is None or keep_line(target, ln))
+                and not (is_header and is_header(ln))):
             body_lines[target] = body_lines.get(target, 0) + 1
         if (target in attribution and body_lines.get(target, 0) > 0
                 and matches(attribution[target], ln.text)):

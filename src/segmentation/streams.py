@@ -171,9 +171,11 @@ def header_matcher(headers: set[str]):
 
 
 def header_predicate(lines: list[OcrLine]):
-    """Hàm ln -> bool: dòng là tiêu đề chạy (lặp trên nhiều trang, kể cả bản OCR sai dấu)."""
+    """Hàm ln -> bool: dòng KHÔNG mang cấu trúc: tiêu đề chạy (lặp trên nhiều trang, kể cả bản OCR sai dấu) hoặc
+    dòng Việt nhiễu (`is_noise_vie`). Máy trạng thái không dùng các dòng này để ngầm mở lớp, mở lớp kế tiếp, hay
+    đếm là dòng nội dung."""
     match = header_matcher(running_headers(lines))
-    return lambda ln: match(ln.text)
+    return lambda ln: match(ln.text) or (getattr(ln, "writing_system", "") == "vie" and is_noise_vie(ln.text))
 
 
 def running_headers(lines: list[OcrLine], min_pages: int = HEADER_MIN_PAGES) -> set[str]:
@@ -187,12 +189,26 @@ def running_headers(lines: list[OcrLine], min_pages: int = HEADER_MIN_PAGES) -> 
 
 
 MIN_HAN_BLOCK_LINES = 2                  # khối Hán 1 dòng (trích dẫn trong chú thích) không mở tài liệu
-VIE_NOISE_MAX_LETTERS = 1                # dòng Việt chỉ 0-1 chữ cái (rác OCR "E", "I") không phải phần Việt
+# Dòng Việt nhiễu (rác OCR của Qwen trên trang chữ Hán, chữ viết tay bên lề): không phải "phần Việt" của bài.
+# Gặp ở audit 2026-11-26: "E", "**N**", "Điều" (CPO_18 tr.235: tách đôi bài, phiên âm gắn sang bài sau),
+# "of contradiction!", "Vandana =", "Stone", "Dome", "cuer".
+VIE_NOISE_MAX_LETTERS = 4                # <= 4 chữ cái: nhiễu
+VIE_NOISE_FOREIGN_MAX_WORDS = 3          # hoặc <= 3 từ, không có chữ cái riêng của tiếng Việt và <= 20 chữ cái
+VIE_NOISE_FOREIGN_MAX_LETTERS = 20
+_VIE_ONLY_LETTERS = frozenset("đăâêôơư" "ảạẳẵặằắẩẫậầấẻẽẹểễệềếỉĩịỏõọổỗộồốởỡợờớủũụửữựừứỷỹỵỳý")
 
 
-def _is_noise_vie(text: str) -> bool:
-    """Dòng Việt rác (vd "E" giữa bài thơ Hán CPO_19 tr.217): không làm đứt khối Hán."""
-    return sum(c.isalpha() for c in text) <= VIE_NOISE_MAX_LETTERS
+def is_noise_vie(text: str) -> bool:
+    """Dòng Việt nhiễu: không làm đứt khối Hán, không ngầm mở/chuyển lớp, không tính là dòng nội dung."""
+    letters = sum(c.isalpha() for c in text)
+    if letters <= VIE_NOISE_MAX_LETTERS:
+        return True
+    lower = unicodedata.normalize("NFC", text).lower()
+    return (letters <= VIE_NOISE_FOREIGN_MAX_LETTERS and len(text.split()) <= VIE_NOISE_FOREIGN_MAX_WORDS
+            and not any(c in _VIE_ONLY_LETTERS for c in lower))
+
+
+_is_noise_vie = is_noise_vie                       # tên cũ
 
 
 def allowed_document_starts(merged: list[OcrLine], headers: set[str] | None = None,
