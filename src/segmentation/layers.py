@@ -299,7 +299,7 @@ def assign_document_unified(work_id: str, doc: Document, layer_cfg: dict, meta_c
                             is_header=None, title_next: dict[str, str] | None = None,
                             notes_after_attribution: set[str] | frozenset[str] = frozenset(),
                             note_entry_ends: set[str] | frozenset[str] = frozenset(),
-                            am_detector=None) -> DocumentLayers:
+                            am_detector=None, overrides=()) -> DocumentLayers:
     """Gán dòng của MỘT tài liệu vào các lớp (han/am/nghia/tho) từ stream OCR duy nhất.
 
     - Không phụ thuộc vào 'source' (chi_tra/vie).
@@ -325,6 +325,7 @@ def assign_document_unified(work_id: str, doc: Document, layer_cfg: dict, meta_c
     - Dòng bị `keep_line` loại được ghi review `dropped_cross_stream` (từng dòng), không mất dấu.
     - `am_detector` (tuỳ chọn, `src.segmentation.am_detect.AmDetector`): lớp am được MỞ NGẦM (không có tiêu đề
       PHIÊN ÂM) mà không khớp cách đọc Hán–Việt của chữ Hán -> chuyển sang nghia, review `am_reassigned_to_nghia`.
+    - `overrides` (tuỳ chọn): ghi đè của config cho tài liệu này (`src.segmentation.overrides`), áp dụng sau cùng.
     """
     review: list[dict] = []
     headings: list[dict] = []
@@ -500,8 +501,14 @@ def assign_document_unified(work_id: str, doc: Document, layer_cfg: dict, meta_c
             review.append(review_row(work_id, doc.id, "nghia", "am_reassigned_to_nghia",
                                      sorted({x.page for x in am_lines}), why, [am_lines[0].source_id]))
 
+    whole_excluded = False
+    if overrides:
+        from src.segmentation.overrides import apply_overrides
+        review.extend(apply_overrides(work_id, doc.id, grouped, implicit_am, list(overrides)))
+        whole_excluded = not grouped        # cả tài liệu bị gỡ: không báo thiếu lớp
+
     for n in names:
-        optional = bool(layer_cfg[n].get("optional"))
+        optional = bool(layer_cfg[n].get("optional")) or whole_excluded
         if starts[n] and n not in started and not optional:
             review.append(review_row(work_id, doc.id, n, "missing_heading",
                                      doc.pages, ""))
