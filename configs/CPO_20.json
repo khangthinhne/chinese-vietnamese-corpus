@@ -26,7 +26,11 @@
       "ocr_streams": "han_vie",
       "notes_after_attribution": ["am"],
       "note_entry_ends": ["am", "nghia", "tho"],
-      "am_detection": {"enabled": true, "min_match": 0.35},
+      "am_detection": {"enabled": true, "min_match": 0.35, "split_lines": true},
+      "verse_tho_split": true,
+      "document_overrides": [
+        {"start_page": 118, "action": "exclude", "pages": "123-134", "reason": "CPO_20.053 tr.123-134: Thơ Nôm Phan Huy Ích (tr.123-125) và Dụ nhị súy quốc âm chiếu văn (tr.126-134) là văn Nôm, sách không in chữ Hán/Nôm đối ứng; loại khỏi lớp dóng, giữ bài tựa tr.118-122 (duyệt 2026-11-27)"}
+      ],
       "document": {
         "start_patterns": [
           "^\\s*[\\u4e00-\\u9fff]{2,12}\\s*$"
@@ -96,7 +100,8 @@
     "clean": {
       "common": {
         "excluded_pages": "321-621",
-        "footnotes": {"note_entries": true}
+        "stream_running_headers": true, "stream_note_markers": true, "am_markers_extended": true, "capture_source_lines": true,
+        "footnotes": {"note_entries": true, "note_entry_markers": true}
       },
       "am": {
         "drop_pattern": [

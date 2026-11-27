@@ -14,7 +14,8 @@ Dùng cho các bài mà luật chung xử lý sai và người duyệt đã quy�
   `override_note`). Cả hai đều gỡ dòng khỏi lớp; mỗi dòng bị gỡ có một dòng review (không mất dấu) và mỗi lần áp
   dụng có một dòng review `document_override` mang lý do.
 - `layers` (mặc định: mọi lớp của tài liệu); `implicit_am_only`: với lớp am chỉ gỡ phần MỞ NGẦM (trước tiêu đề
-  PHIÊN ÂM tường minh).
+  PHIÊN ÂM tường minh); `pages` ("123-134" hoặc [123, 124]): chỉ gỡ dòng nằm trên các trang này (CPO_20.053: thơ và
+  chiếu Nôm tr.123-134 không có chữ Hán đối ứng, phần tựa tr.118-122 giữ nguyên).
 - Ghi đè không khớp tài liệu nào được báo ở log (cảnh báo) để không âm thầm mất hiệu lực khi ranh giới đổi.
 """
 
@@ -35,6 +36,18 @@ class DocumentOverride:
     layers: tuple[str, ...] = ()
     implicit_am_only: bool = False
     han_prefix: str = ""
+    pages: frozenset[int] = frozenset()
+
+
+def _pages(value, where: str) -> frozenset[int]:
+    if value in (None, "", []):
+        return frozenset()
+    if isinstance(value, str):
+        from src.common.corpus import parse_pages
+        return frozenset(parse_pages(value))
+    if isinstance(value, list) and all(isinstance(p, int) for p in value):
+        return frozenset(value)
+    raise ValueError(f"{where}: pages phải là chuỗi khoảng trang hoặc danh sách số")
 
 
 def parse_overrides(raw: list | None) -> list[DocumentOverride]:
@@ -43,7 +56,7 @@ def parse_overrides(raw: list | None) -> list[DocumentOverride]:
         where = f"segmentation.document_overrides[{i}]"
         if not isinstance(item, dict):
             raise ValueError(f"{where}: phải là object")
-        bad = set(item) - {"start_page", "action", "reason", "layers", "implicit_am_only", "han_prefix"}
+        bad = set(item) - {"start_page", "action", "reason", "layers", "implicit_am_only", "han_prefix", "pages"}
         if bad:
             raise ValueError(f"{where}: khoá lạ {sorted(bad)}")
         if item.get("action") not in ACTIONS:
@@ -54,7 +67,7 @@ def parse_overrides(raw: list | None) -> list[DocumentOverride]:
             raise ValueError(f"{where}: start_page phải là số trang")
         out.append(DocumentOverride(int(item["start_page"]), item["action"], str(item["reason"]).strip(),
                                     tuple(item.get("layers") or ()), bool(item.get("implicit_am_only")),
-                                    str(item.get("han_prefix") or "")))
+                                    str(item.get("han_prefix") or ""), _pages(item.get("pages"), where)))
     return out
 
 
@@ -77,6 +90,8 @@ def apply_overrides(work_id: str, doc_id: str, grouped: dict[str, list], implici
                 target = [x for x in lines if id(x) in implicit_ids]
             else:
                 target = list(lines)
+            if ov.pages:
+                target = [x for x in target if x.page in ov.pages]
             if not target:
                 continue
             gone = {id(x) for x in target}

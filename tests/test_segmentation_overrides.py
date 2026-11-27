@@ -51,3 +51,23 @@ def test_notes_on_implicit_am_only_keeps_explicit_phien_am():
     assert notes[0].startswith("(6) VK") and len(notes) == 2
     base = assign(TEXTS)
     assert len(base.lines["am"]) == 3
+
+
+def test_override_limited_to_pages():
+    from src.segmentation.model import Document
+    from src.segmentation.layers import assign_document_unified
+    from src.segmentation import streams
+    from tests.test_segmentation_audit_fixes import CFG, line
+    texts = [("han", 1, "天氣和暢雖六陰節候盛陽常自如稼穡"), ("vie", 2, "Xứ ấy trời đất ấm áp, mùa đông không lạnh lắm,"),
+             ("vie", 3, "Hiên sách băng trông mái bắc lân,"), ("vie", 4, "Một đài bày đặt có thanh tân.")]
+    doc = Document(id="W.001", pages=[1, 2, 3, 4],
+                   lines=[line(s, p, i, t, 100 * i) for i, (s, p, t) in enumerate(texts, 1)])
+    ov = parse_overrides([{"start_page": 1, "action": "exclude", "pages": "3-4", "reason": "thơ Nôm, không có chữ Hán"}])
+    assert ov[0].pages == frozenset({3, 4})
+    res = assign_document_unified("W", doc, CFG, {}, keep_line=streams.keep_line, dropped={},
+                                  implicit_next={"han": "am"}, is_header=streams.header_predicate(doc.lines),
+                                  overrides=ov)
+    assert [x.text for x in res.lines["am"]] == ["Xứ ấy trời đất ấm áp, mùa đông không lạnh lắm,"]
+    assert sum(r["reason"] == "override_excluded" for r in res.review) == 2
+    with pytest.raises(ValueError):
+        parse_overrides([{"start_page": 1, "action": "exclude", "pages": {"a": 1}, "reason": "x"}])

@@ -273,8 +273,57 @@ foreach ($w in "CPO_18","CPO_19","CPO_20") {
 }
 ```
 
-## Việc cần bạn quyết
+## Việc cần bạn quyết (đã quyết, xem mục 7)
 1. Bật các cờ đề xuất ở mục 4 vào config thật. Đây là điều kiện để đạt cổng.
 2. Giải phóng ổ C: rồi OCR lại 19 trang (hoặc cho phép đặt bản sao/pagefile sang ổ E:).
 3. CPO_20.053 tr.123–134 (Nôm, không có chữ Hán): loại khỏi lớp dóng hay tách bài.
 4. CPO_18.012: giữ `exclude` hay gộp vào .013.
+
+## 7. Áp quyết định của người dùng (2026-11-27, sau báo cáo)
+1. **Bật các cờ đề xuất trong config thật**: 3 work có `clean.common` (`stream_running_headers`, `stream_note_markers`,
+   `am_markers_extended`, `capture_source_lines`, `footnotes.note_entry_markers`; CPO_19 thêm
+   `footnotes.note_entries`) và `segmentation` (`am_detection.split_lines`, `verse_tho_split`). `--dry-run` xác nhận các
+   cờ được truyền cho cả 4 lệnh clean của mỗi work.
+2. **Giải phóng ổ C:** chỉ di chuyển dữ liệu của Claude: scratchpad của phiên này (bản sao dữ liệu, 4 worktree). Chúng
+   được chuyển sang `E:\claude_scratch\8d960ee1\`; worktree được chép, kiểm số file, rồi `git worktree repair`, trạng
+   thái git giữ nguyên. `~/.claude` và file của chương trình khác không bị đụng. Ổ C: tăng từ 2,1 GB lên 4,2 GB trống,
+   đủ để Qwen nạp model.
+3. **CPO_20.053 tr.123–134** (thơ Nôm Phan Huy Ích và Dụ nhị súy quốc âm chiếu văn, sách không in chữ Hán/Nôm đối
+   ứng): loại khỏi lớp dóng bằng `document_overrides` có khoá mới `pages` (`{"start_page": 118, "action": "exclude",
+   "pages": "123-134", ...}`). Lý do ghi trong config và trong review `document_override`; 179 dòng có review
+   `override_excluded`. Bài tựa tr.118–122 giữ nguyên.
+4. **CPO_18.013** là bản dọc của văn bia CPO_18.012, nên **loại cả bài** (`exclude`, 259 dòng). .012 vẫn bị loại như
+   trước.
+
+**Đo bằng config thật mới** (bản sao `E:\claude_scratch\8d960ee1\clean_full\m_final`):
+
+| | CỔNG 1–3 | Rò rỉ lớp tệ nhất | Hán–âm ±10% | Bead hợp lệ |
+|---|---|---|---|---|
+| CPO_18 | **ĐẠT** | 0% | 0,917 | 1080/1158 (giảm 28 so với 1108: cặp của .013 đã loại theo quyết định 4) |
+| CPO_19 | **ĐẠT** | nghia 0,38% | 0,873 | 3511/3837 |
+| CPO_20 | **ĐẠT** | am 0,37% | 0,873 | 2048/2579 (cặp Nôm của .053 đã loại) |
+
+**OCR lại 19 trang** (Qwen, my_nlp, `HF_HUB_OFFLINE=1`, `QWEN_BAND_INCHES=1.0`, trên bản sao `03_ocr`, raw cũ giữ
+nguyên; 19/19 trang chạy xong, 0 lỗi). So với dòng Latin paddlevl:
+- **Tốt hơn rõ (16 trang):**
+  - CPO_18 tr.208, 286 (387 dòng lặp xuống 6), 353, 369 (hết dòng bịa của .019), 470 (hết câu tiếng Anh);
+  - CPO_19 tr.102 (hết pinyin);
+  - CPO_20 tr.76, 90, 215, 296 (hết pinyin), 298, 622, 646 (có lại "Dịch nghĩa:" và tiêu đề), 678, 685, 771. Các trang
+    CPO_20 có độ phủ tăng từ 0,33–0,60 lên trên 0,9.
+- **Không tốt hơn (3 trang), cần sửa tay:** CPO_18 tr.402, 523, 528. Các trang này gần như chỉ có mực thấm từ mặt sau và
+  Qwen bịa ở cả run cũ lẫn run mới. tr.402 và 523 nên giữ run cũ. Nội dung thật trên đó là chú thích, trừ 2 dòng văn
+  xuôi ở tr.528.
+- Run mới **chưa được đưa vào `data/` thật**. Lệnh để tự chạy (GPU khoảng 12 phút; raw cũ giữ nguyên, run mới nối
+  thêm):
+  ```powershell
+  $env:HF_HUB_OFFLINE="1"; $env:QWEN_BAND_INCHES="1.0"
+  python -m src.ocr.ocr --config configs/CPO_18.json --layer vie --engines qwen --pages 208,286,353,369,470
+  python -m src.ocr.ocr --config configs/CPO_19.json --layer vie --engines qwen --pages 102
+  python -m src.ocr.ocr --config configs/CPO_20.json --layer vie --engines qwen --pages 76,90,215,296,298,622,646,678,685,771
+  Remove-Item Env:QWEN_BAND_INCHES
+  python -m src.ocr.build_layers --config configs/CPO_18.json   # tương tự CPO_19, CPO_20
+  ```
+  Sau đó chạy chuỗi lệnh ở mục "Chạy lại vào data/ thật" và đo lại cổng mà không cần `--pending-pages`, trừ
+  CPO_18 402, 523, 528.
+
+Test: **476 passed**, 1 skipped (thêm test ghi đè theo trang).

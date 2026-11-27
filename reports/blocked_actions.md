@@ -14,3 +14,8 @@
 
   - **Đã xử lý 2026-11-27:** người dùng duyệt tại máy; các commit được tạo theo thứ tự đề xuất trong
     `reports/segmentation_audit_20261126.md` mục 7.
+
+## 2026-11-27: commit áp quyết định (config + ghi đè theo trang + báo cáo mục 7)
+- Bị chặn: `git add configs/CPO_18.json configs/CPO_19.json configs/CPO_20.json src/segmentation/overrides.py tests/test_segmentation_overrides.py reports/clean_full_20261127.md && git commit` trên nhánh `fix/clean-full`.
+- Lý do bộ phân loại: Destructive or Unwanted Actions (commit chưa được duyệt riêng).
+- Trạng thái: thay đổi để nguyên trong cây làm việc, đã qua test (476 passed); chờ người dùng duyệt commit.
