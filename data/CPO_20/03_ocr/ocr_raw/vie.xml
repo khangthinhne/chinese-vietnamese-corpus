@@ -6,6 +6,9 @@
                 <ENGINE NAME="qwen" MODEL_ID="Qwen/Qwen2.5-VL-3B-Instruct" MODEL_REVISION="main" TRANSFORMERS_VERSION="4.57.6" TORCH_VERSION="2.5.1+cu121" CUDA_VERSION="12.1" BITSANDBYTES_VERSION="0.50.2" MODE="all" MIN_PIXELS="50176" MAX_PIXELS="802816" BAND_INCHES="2.0" MAX_NEW_TOKENS="768" REPETITION_PENALTY="1.05" ADAPTER_VERSION="3" PROMPT_VERSION="3" PROMPT_SHA256="b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74">
                     <QUANTIZATION>{"compute_dtype": "float16", "double_quant": true, "load_in_4bit": true, "quant_type": "nf4"}</QUANTIZATION>
                 </ENGINE>
+                <ENGINE NAME="qwen" MODEL_ID="Qwen/Qwen2.5-VL-3B-Instruct" MODEL_REVISION="main" TRANSFORMERS_VERSION="4.57.6" TORCH_VERSION="2.5.1+cu121" CUDA_VERSION="12.1" BITSANDBYTES_VERSION="0.50.2" MODE="all" MIN_PIXELS="50176" MAX_PIXELS="802816" BAND_INCHES="1.0" MAX_NEW_TOKENS="768" REPETITION_PENALTY="1.05" ADAPTER_VERSION="4" PROMPT_VERSION="3" PROMPT_SHA256="b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74">
+                    <QUANTIZATION>{"compute_dtype": "float16", "double_quant": true, "load_in_4bit": true, "quant_type": "nf4"}</QUANTIZATION>
+                </ENGINE>
                 <ENGINE NAME="qwen" MODEL_ID="Qwen/Qwen2.5-VL-3B-Instruct" MODEL_REVISION="main" TRANSFORMERS_VERSION="4.57.6" TORCH_VERSION="2.5.1+cu121" CUDA_VERSION="12.1" BITSANDBYTES_VERSION="0.50.2" MODE="all" MIN_PIXELS="50176" MAX_PIXELS="802816" BAND_INCHES="2.0" MAX_NEW_TOKENS="768" REPETITION_PENALTY="1.05" ADAPTER_VERSION="4" PROMPT_VERSION="3" PROMPT_SHA256="b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74">
                     <QUANTIZATION>{"compute_dtype": "float16", "double_quant": true, "load_in_4bit": true, "quant_type": "nf4"}</QUANTIZATION>
                 </ENGINE>
@@ -670,30 +673,29 @@
                 </RUN>
             </RUNS>
         </PAGE>
-        <PAGE NUMBER="25" IMAGE="E:\Projects\han-viet-corpus\data\CPO_20\02_extraction\pages\page_025.png" IMAGE_SHA256="fa1d99b9656a41dbcf69cf03b11e263a373d8ea3f6dd27e1a4bb1d89a57a409c" RAW="03_ocr/raw/0025.json" SELECTED_ENGINE="qwen" SELECTED_KEY="7e18495e19051daac23a6fb59522060e8edc245053b074573f02842c95f34ee3" CONFIDENCE="86.55" EMPTY="false" N_LINES="23" N_SRC_LINES="23" N_DROPPED="0" CJK_REMOVED="0">
-            <LINE ID="P0025.L001" ORDER="1" NO="1" SRC_LINE="1" BBOX="113,302,1788,382" CONFIDENCE="69.48">Phía trên của ảnh có một đoạn văn bản được viết bằng chữ Hán và chữ Nôm. Dưới đây là phiên âm của đoạn văn này:</LINE>
-            <LINE ID="P0025.L002" ORDER="2" NO="2" SRC_LINE="2" BBOX="113,382,1788,462" CONFIDENCE="69.48">HỌA ĐÁP VŨ CÔNG BỘ 1</LINE>
-            <LINE ID="P0025.L003" ORDER="3" NO="3" SRC_LINE="3" BBOX="113,462,1788,542" CONFIDENCE="69.48">Việt thủy Yên sơn viễn giá nhân,</LINE>
-            <LINE ID="P0025.L004" ORDER="4" NO="4" SRC_LINE="4" BBOX="113,542,1788,623" CONFIDENCE="69.48">Mai đình trường vịnh nhất ban xuân.</LINE>
-            <LINE ID="P0025.L005" ORDER="5" NO="5" SRC_LINE="5" BBOX="113,623,1788,703" CONFIDENCE="69.48">Nhân sinh tế ngộ đa phi ý,</LINE>
-            <LINE ID="P0025.L006" ORDER="6" NO="6" SRC_LINE="6" BBOX="113,703,1788,783" CONFIDENCE="69.48">Quân tử giao du cứu tất thân.</LINE>
-            <LINE ID="P0025.L007" ORDER="7" NO="7" SRC_LINE="7" BBOX="113,783,1788,863" CONFIDENCE="69.48">Thử khứ hiểm di kinh khách lỗ</LINE>
-            <LINE ID="P0025.L008" ORDER="8" NO="8" SRC_LINE="8" BBOX="223,855,1788,942" CONFIDENCE="87.72">Bản lai trung tín tráng ngô thân.</LINE>
-            <LINE ID="P0025.L009" ORDER="9" NO="9" SRC_LINE="9" BBOX="223,942,1788,1028" CONFIDENCE="87.72">Chu tu thả hỷ liêu chính duệ,</LINE>
-            <LINE ID="P0025.L010" ORDER="10" NO="10" SRC_LINE="10" BBOX="223,1028,1788,1115" CONFIDENCE="87.72">My cổ tình hoài bán tiệt phân.</LINE>
-            <LINE ID="P0025.L011" ORDER="11" NO="11" SRC_LINE="11" BBOX="223,1115,1788,1202" CONFIDENCE="87.72">Trích Tinh sà ký hành</LINE>
-            <LINE ID="P0025.L012" ORDER="12" NO="12" SRC_LINE="12" BBOX="223,1202,1788,1288" CONFIDENCE="87.72">Dịch nghĩa:</LINE>
-            <LINE ID="P0025.L013" ORDER="13" NO="13" SRC_LINE="13" BBOX="223,1288,1788,1375" CONFIDENCE="87.72">HỌA THƠ, ĐÁP THƯỢNG THƯ</LINE>
-            <LINE ID="P0025.L014" ORDER="14" NO="14" SRC_LINE="14" BBOX="449,1367,1788,1439" CONFIDENCE="95.78">BỘ CÔNG HỌ VŨ</LINE>
-            <LINE ID="P0025.L015" ORDER="15" NO="15" SRC_LINE="15" BBOX="449,1439,1788,1511" CONFIDENCE="95.78">Thắng ngựa đi trên miền non Yên nước Việt xa xôi,</LINE>
-            <LINE ID="P0025.L016" ORDER="16" NO="16" SRC_LINE="16" BBOX="449,1511,1788,1583" CONFIDENCE="95.78">Chén rượu câu thơ chốn đình mai chung một màu xuân.</LINE>
-            <LINE ID="P0025.L017" ORDER="17" NO="17" SRC_LINE="17" BBOX="449,1583,1788,1654" CONFIDENCE="95.78">Đời người gặp gỡ nhiều điều trái ý,</LINE>
-            <LINE ID="P0025.L018" ORDER="18" NO="18" SRC_LINE="18" BBOX="449,1654,1788,1726" CONFIDENCE="95.78">Quân tử giao du lâu tất thân nhau.</LINE>
-            <LINE ID="P0025.L019" ORDER="19" NO="19" SRC_LINE="19" BBOX="449,1726,1788,1798" CONFIDENCE="95.78">Chuyến đi này khó dễ đều qua đất khách,</LINE>
-            <LINE ID="P0025.L020" ORDER="20" NO="20" SRC_LINE="20" BBOX="449,1798,1788,1870" CONFIDENCE="95.78">Lòng trung tín sẵn có làm thân mình mạnh mẽ.</LINE>
-            <LINE ID="P0025.L021" ORDER="21" NO="21" SRC_LINE="21" BBOX="146,1862,1788,2106" CONFIDENCE="94.98">Thăm hỏi khắp nơi, hãy mừng có bạn đường,</LINE>
-            <LINE ID="P0025.L022" ORDER="22" NO="22" SRC_LINE="22" BBOX="146,2106,1788,2349" CONFIDENCE="94.98">Tâm tình này cùng chia sẻ nỗi vất vả.</LINE>
-            <LINE ID="P0025.L023" ORDER="23" NO="23" SRC_LINE="23" BBOX="146,2349,1788,2593" CONFIDENCE="94.98">1. Vũ Công bộ: Thượng thư Bộ Công Vũ Huy Tấn, người làng Mộ Trạch huyện Đường An, năm 1790, cùng đi sứ nhà Thanh với Phan Huy Ích; từng giữ chức Thị lang Bộ Công, tước Hạo Trạch hầu.</LINE>
+        <PAGE NUMBER="25" IMAGE="E:\Projects\han-viet-corpus\data\CPO_20\02_extraction\pages\page_025.png" IMAGE_SHA256="fa1d99b9656a41dbcf69cf03b11e263a373d8ea3f6dd27e1a4bb1d89a57a409c" RAW="03_ocr/raw/0025.json" SELECTED_ENGINE="qwen" SELECTED_KEY="7e18495e19051daac23a6fb59522060e8edc245053b074573f02842c95f34ee3" CONFIDENCE="88.79" EMPTY="false" N_LINES="22" N_SRC_LINES="23" N_DROPPED="1" CJK_REMOVED="0">
+            <LINE ID="P0025.L001" ORDER="1" NO="1" SRC_LINE="2" BBOX="113,382,1788,462" CONFIDENCE="69.48">HỌA ĐÁP VŨ CÔNG BỘ 1</LINE>
+            <LINE ID="P0025.L002" ORDER="2" NO="2" SRC_LINE="3" BBOX="113,462,1788,542" CONFIDENCE="69.48">Việt thủy Yên sơn viễn giá nhân,</LINE>
+            <LINE ID="P0025.L003" ORDER="3" NO="3" SRC_LINE="4" BBOX="113,542,1788,623" CONFIDENCE="69.48">Mai đình trường vịnh nhất ban xuân.</LINE>
+            <LINE ID="P0025.L004" ORDER="4" NO="4" SRC_LINE="5" BBOX="113,623,1788,703" CONFIDENCE="69.48">Nhân sinh tế ngộ đa phi ý,</LINE>
+            <LINE ID="P0025.L005" ORDER="5" NO="5" SRC_LINE="6" BBOX="113,703,1788,783" CONFIDENCE="69.48">Quân tử giao du cứu tất thân.</LINE>
+            <LINE ID="P0025.L006" ORDER="6" NO="6" SRC_LINE="7" BBOX="113,783,1788,863" CONFIDENCE="69.48">Thử khứ hiểm di kinh khách lỗ</LINE>
+            <LINE ID="P0025.L007" ORDER="7" NO="7" SRC_LINE="8" BBOX="223,855,1788,942" CONFIDENCE="87.72">Bản lai trung tín tráng ngô thân.</LINE>
+            <LINE ID="P0025.L008" ORDER="8" NO="8" SRC_LINE="9" BBOX="223,942,1788,1028" CONFIDENCE="87.72">Chu tu thả hỷ liêu chính duệ,</LINE>
+            <LINE ID="P0025.L009" ORDER="9" NO="9" SRC_LINE="10" BBOX="223,1028,1788,1115" CONFIDENCE="87.72">My cổ tình hoài bán tiệt phân.</LINE>
+            <LINE ID="P0025.L010" ORDER="10" NO="10" SRC_LINE="11" BBOX="223,1115,1788,1202" CONFIDENCE="87.72">Trích Tinh sà ký hành</LINE>
+            <LINE ID="P0025.L011" ORDER="11" NO="11" SRC_LINE="12" BBOX="223,1202,1788,1288" CONFIDENCE="87.72">Dịch nghĩa:</LINE>
+            <LINE ID="P0025.L012" ORDER="12" NO="12" SRC_LINE="13" BBOX="223,1288,1788,1375" CONFIDENCE="87.72">HỌA THƠ, ĐÁP THƯỢNG THƯ</LINE>
+            <LINE ID="P0025.L013" ORDER="13" NO="13" SRC_LINE="14" BBOX="449,1367,1788,1439" CONFIDENCE="95.78">BỘ CÔNG HỌ VŨ</LINE>
+            <LINE ID="P0025.L014" ORDER="14" NO="14" SRC_LINE="15" BBOX="449,1439,1788,1511" CONFIDENCE="95.78">Thắng ngựa đi trên miền non Yên nước Việt xa xôi,</LINE>
+            <LINE ID="P0025.L015" ORDER="15" NO="15" SRC_LINE="16" BBOX="449,1511,1788,1583" CONFIDENCE="95.78">Chén rượu câu thơ chốn đình mai chung một màu xuân.</LINE>
+            <LINE ID="P0025.L016" ORDER="16" NO="16" SRC_LINE="17" BBOX="449,1583,1788,1654" CONFIDENCE="95.78">Đời người gặp gỡ nhiều điều trái ý,</LINE>
+            <LINE ID="P0025.L017" ORDER="17" NO="17" SRC_LINE="18" BBOX="449,1654,1788,1726" CONFIDENCE="95.78">Quân tử giao du lâu tất thân nhau.</LINE>
+            <LINE ID="P0025.L018" ORDER="18" NO="18" SRC_LINE="19" BBOX="449,1726,1788,1798" CONFIDENCE="95.78">Chuyến đi này khó dễ đều qua đất khách,</LINE>
+            <LINE ID="P0025.L019" ORDER="19" NO="19" SRC_LINE="20" BBOX="449,1798,1788,1870" CONFIDENCE="95.78">Lòng trung tín sẵn có làm thân mình mạnh mẽ.</LINE>
+            <LINE ID="P0025.L020" ORDER="20" NO="20" SRC_LINE="21" BBOX="146,1862,1788,2106" CONFIDENCE="94.98">Thăm hỏi khắp nơi, hãy mừng có bạn đường,</LINE>
+            <LINE ID="P0025.L021" ORDER="21" NO="21" SRC_LINE="22" BBOX="146,2106,1788,2349" CONFIDENCE="94.98">Tâm tình này cùng chia sẻ nỗi vất vả.</LINE>
+            <LINE ID="P0025.L022" ORDER="22" NO="22" SRC_LINE="23" BBOX="146,2349,1788,2593" CONFIDENCE="94.98">1. Vũ Công bộ: Thượng thư Bộ Công Vũ Huy Tấn, người làng Mộ Trạch huyện Đường An, năm 1790, cùng đi sứ nhà Thanh với Phan Huy Ích; từng giữ chức Thị lang Bộ Công, tước Hạo Trạch hầu.</LINE>
             <RUNS>
                 <RUN KEY="7e18495e19051daac23a6fb59522060e8edc245053b074573f02842c95f34ee3" CREATED_AT="2026-11-24T05:01:20+00:00" IMAGE="E:\Projects\han-viet-corpus\data\CPO_20\02_extraction\pages\page_025.png" IMAGE_WIDTH="1865" IMAGE_HEIGHT="2851" CROP_BOX="0,0,1865,2851" SOURCE="03_ocr/raw/0025.json" SELECTION="only">
                     <PARAMETERS>
@@ -1404,31 +1406,29 @@
                 </RUN>
             </RUNS>
         </PAGE>
-        <PAGE NUMBER="47" IMAGE="E:\Projects\han-viet-corpus\data\CPO_20\02_extraction\pages\page_047.png" IMAGE_SHA256="78c782b002051bce3fc18f0e7e2af4c493fbb2f991d4a78ca2be1c41a58078b4" RAW="03_ocr/raw/0047.json" SELECTED_ENGINE="qwen" SELECTED_KEY="251d0fb4822abf2ec4b3ce45b87f0dc798a447277c85f19168912c3d775ec786" CONFIDENCE="84.72" EMPTY="false" N_LINES="24" N_SRC_LINES="24" N_DROPPED="0" CJK_REMOVED="0">
-            <LINE ID="P0047.L001" ORDER="1" NO="1" SRC_LINE="1" BBOX="240,291,1788,356" CONFIDENCE="66.96">Phía trên của ảnh có dòng chữ "Phiên âm:" và một đoạn văn bằng tiếng Việt. Dòng chữ này có thể được dịch sang tiếng Việt như sau:</LINE>
-            <LINE ID="P0047.L002" ORDER="2" NO="2" SRC_LINE="2" BBOX="240,356,1788,421" CONFIDENCE="66.96">"Phiên âm:"</LINE>
-            <LINE ID="P0047.L003" ORDER="3" NO="3" SRC_LINE="3" BBOX="240,421,1788,487" CONFIDENCE="66.96">"HỌA TIẾN HÌNH THỊ THANH PHÁI LÊ HẦU</LINE>
-            <LINE ID="P0047.L004" ORDER="4" NO="4" SRC_LINE="4" BBOX="240,487,1788,552" CONFIDENCE="66.96">PHỐ HỒNG NGHĨA NHẬM"</LINE>
-            <LINE ID="P0047.L005" ORDER="5" NO="5" SRC_LINE="5" BBOX="240,552,1788,617" CONFIDENCE="66.96">Dòng văn dưới đó có thể được dịch như sau:</LINE>
-            <LINE ID="P0047.L006" ORDER="6" NO="6" SRC_LINE="6" BBOX="240,617,1788,682" CONFIDENCE="66.96">"Xu sảnh tam niên hạ ốc đàm,</LINE>
-            <LINE ID="P0047.L007" ORDER="7" NO="7" SRC_LINE="7" BBOX="240,682,1788,748" CONFIDENCE="66.96">Phù dao kiện cách cánh đồ Nam.</LINE>
-            <LINE ID="P0047.L008" ORDER="8" NO="8" SRC_LINE="8" BBOX="240,748,1788,813" CONFIDENCE="66.96">Nguyệt dung Đà hải thanh đổi lăng,</LINE>
-            <LINE ID="P0047.L009" ORDER="9" NO="9" SRC_LINE="9" BBOX="240,813,1788,878" CONFIDENCE="66.96">Vân quyển Bình sơn tể hiếu lam."</LINE>
-            <LINE ID="P0047.L010" ORDER="10" NO="10" SRC_LINE="10" BBOX="207,870,1788,965" CONFIDENCE="89.2">Địa tại khâm hầu biên nhậm trọng,</LINE>
-            <LINE ID="P0047.L011" ORDER="11" NO="11" SRC_LINE="11" BBOX="207,965,1788,1061" CONFIDENCE="89.2">Nhân vi bảo chương tuấn tài kham.</LINE>
-            <LINE ID="P0047.L012" ORDER="12" NO="12" SRC_LINE="12" BBOX="207,1061,1788,1156" CONFIDENCE="89.2">Thiều thiều Thục đạo duy cầm hạc;</LINE>
-            <LINE ID="P0047.L013" ORDER="13" NO="13" SRC_LINE="13" BBOX="207,1156,1788,1252" CONFIDENCE="89.2">Yếu đắc phương huy bất cố tăm.</LINE>
-            <LINE ID="P0047.L014" ORDER="14" NO="14" SRC_LINE="14" BBOX="207,1252,1788,1347" CONFIDENCE="89.2">Trích Dật thi lược toàn</LINE>
-            <LINE ID="P0047.L015" ORDER="15" NO="15" SRC_LINE="15" BBOX="290,1339,1788,1493" CONFIDENCE="91.87">HỌA TIỂN QUÁN THỊ LÀNG BỘ HÌNH LÀ THANH PHÁI HẦU HỌ LÊ ĐI NHẬM CHỨC Ở HÒA NGHĨA</LINE>
-            <LINE ID="P0047.L016" ORDER="16" NO="16" SRC_LINE="16" BBOX="290,1493,1788,1646" CONFIDENCE="91.87">Ba năm ở tòa cơ mật, được ơn mưa móc dồi dào,</LINE>
-            <LINE ID="P0047.L017" ORDER="17" NO="17" SRC_LINE="17" BBOX="290,1646,1788,1800" CONFIDENCE="91.87">Cánh băng cưỡi gió bay lên, lại tính chuyện xuống</LINE>
-            <LINE ID="P0047.L018" ORDER="18" NO="18" SRC_LINE="18" BBOX="215,1792,1788,1906" CONFIDENCE="91.69">phương Nam.</LINE>
-            <LINE ID="P0047.L019" ORDER="19" NO="19" SRC_LINE="19" BBOX="215,1906,1788,2019" CONFIDENCE="91.69">Ánh trăng trải mặt bể Đà Nẵng, làm lảng sóng cồn,</LINE>
-            <LINE ID="P0047.L020" ORDER="20" NO="20" SRC_LINE="20" BBOX="215,2019,1788,2133" CONFIDENCE="91.69">Mây cuốn đỉnh Ngự Bình, khi núi sớm tan hết.</LINE>
-            <LINE ID="P0047.L021" ORDER="21" NO="21" SRC_LINE="21" BBOX="215,2133,1788,2246" CONFIDENCE="91.69">Nơi ấy với kinh đô như vạt áo, như cổ họng, việc coi giữ biên cương rất năng nề,</LINE>
-            <LINE ID="P0047.L022" ORDER="22" NO="22" SRC_LINE="22" BBOX="215,2246,1788,2360" CONFIDENCE="91.69">1. Nhân vi bảo chương: Người làm thành lũy. Ý nói người tương tài giữ đất nước như hào lũy vệ thành.</LINE>
-            <LINE ID="P0047.L023" ORDER="23" NO="23" SRC_LINE="23" BBOX="215,2360,1788,2473" CONFIDENCE="91.69">2. Thục đạo: Đường Thục. Ý nói đường đi hiểm trở khó qua được. Lý Thái Bạch trong bài "Thục đạo nan" có câu: "Thục đạo chi nan, nan ư thường thanh thiên" (Đường vào đất Thục khó đi, khó hơn lên trời xanh).</LINE>
-            <LINE ID="P0047.L024" ORDER="24" NO="24" SRC_LINE="24" BBOX="215,2473,1788,2587" CONFIDENCE="91.69">3. Cầm hạc: Cây đàn và chim hạc. Triệu Biện thời Tống khi làm quan đi phó nhậm đâu cũng chỉ đem cây đàn và chim hạc. Ý nói cánh làm quan thanh liêm và giản dị.</LINE>
+        <PAGE NUMBER="47" IMAGE="E:\Projects\han-viet-corpus\data\CPO_20\02_extraction\pages\page_047.png" IMAGE_SHA256="78c782b002051bce3fc18f0e7e2af4c493fbb2f991d4a78ca2be1c41a58078b4" RAW="03_ocr/raw/0047.json" SELECTED_ENGINE="qwen" SELECTED_KEY="251d0fb4822abf2ec4b3ce45b87f0dc798a447277c85f19168912c3d775ec786" CONFIDENCE="87.33" EMPTY="false" N_LINES="22" N_SRC_LINES="24" N_DROPPED="2" CJK_REMOVED="0">
+            <LINE ID="P0047.L001" ORDER="1" NO="1" SRC_LINE="2" BBOX="240,356,1788,421" CONFIDENCE="66.96">"Phiên âm:"</LINE>
+            <LINE ID="P0047.L002" ORDER="2" NO="2" SRC_LINE="3" BBOX="240,421,1788,487" CONFIDENCE="66.96">"HỌA TIẾN HÌNH THỊ THANH PHÁI LÊ HẦU</LINE>
+            <LINE ID="P0047.L003" ORDER="3" NO="3" SRC_LINE="4" BBOX="240,487,1788,552" CONFIDENCE="66.96">PHỐ HỒNG NGHĨA NHẬM"</LINE>
+            <LINE ID="P0047.L004" ORDER="4" NO="4" SRC_LINE="6" BBOX="240,617,1788,682" CONFIDENCE="66.96">"Xu sảnh tam niên hạ ốc đàm,</LINE>
+            <LINE ID="P0047.L005" ORDER="5" NO="5" SRC_LINE="7" BBOX="240,682,1788,748" CONFIDENCE="66.96">Phù dao kiện cách cánh đồ Nam.</LINE>
+            <LINE ID="P0047.L006" ORDER="6" NO="6" SRC_LINE="8" BBOX="240,748,1788,813" CONFIDENCE="66.96">Nguyệt dung Đà hải thanh đổi lăng,</LINE>
+            <LINE ID="P0047.L007" ORDER="7" NO="7" SRC_LINE="9" BBOX="240,813,1788,878" CONFIDENCE="66.96">Vân quyển Bình sơn tể hiếu lam."</LINE>
+            <LINE ID="P0047.L008" ORDER="8" NO="8" SRC_LINE="10" BBOX="207,870,1788,965" CONFIDENCE="89.2">Địa tại khâm hầu biên nhậm trọng,</LINE>
+            <LINE ID="P0047.L009" ORDER="9" NO="9" SRC_LINE="11" BBOX="207,965,1788,1061" CONFIDENCE="89.2">Nhân vi bảo chương tuấn tài kham.</LINE>
+            <LINE ID="P0047.L010" ORDER="10" NO="10" SRC_LINE="12" BBOX="207,1061,1788,1156" CONFIDENCE="89.2">Thiều thiều Thục đạo duy cầm hạc;</LINE>
+            <LINE ID="P0047.L011" ORDER="11" NO="11" SRC_LINE="13" BBOX="207,1156,1788,1252" CONFIDENCE="89.2">Yếu đắc phương huy bất cố tăm.</LINE>
+            <LINE ID="P0047.L012" ORDER="12" NO="12" SRC_LINE="14" BBOX="207,1252,1788,1347" CONFIDENCE="89.2">Trích Dật thi lược toàn</LINE>
+            <LINE ID="P0047.L013" ORDER="13" NO="13" SRC_LINE="15" BBOX="290,1339,1788,1493" CONFIDENCE="91.87">HỌA TIỂN QUÁN THỊ LÀNG BỘ HÌNH LÀ THANH PHÁI HẦU HỌ LÊ ĐI NHẬM CHỨC Ở HÒA NGHĨA</LINE>
+            <LINE ID="P0047.L014" ORDER="14" NO="14" SRC_LINE="16" BBOX="290,1493,1788,1646" CONFIDENCE="91.87">Ba năm ở tòa cơ mật, được ơn mưa móc dồi dào,</LINE>
+            <LINE ID="P0047.L015" ORDER="15" NO="15" SRC_LINE="17" BBOX="290,1646,1788,1800" CONFIDENCE="91.87">Cánh băng cưỡi gió bay lên, lại tính chuyện xuống</LINE>
+            <LINE ID="P0047.L016" ORDER="16" NO="16" SRC_LINE="18" BBOX="215,1792,1788,1906" CONFIDENCE="91.69">phương Nam.</LINE>
+            <LINE ID="P0047.L017" ORDER="17" NO="17" SRC_LINE="19" BBOX="215,1906,1788,2019" CONFIDENCE="91.69">Ánh trăng trải mặt bể Đà Nẵng, làm lảng sóng cồn,</LINE>
+            <LINE ID="P0047.L018" ORDER="18" NO="18" SRC_LINE="20" BBOX="215,2019,1788,2133" CONFIDENCE="91.69">Mây cuốn đỉnh Ngự Bình, khi núi sớm tan hết.</LINE>
+            <LINE ID="P0047.L019" ORDER="19" NO="19" SRC_LINE="21" BBOX="215,2133,1788,2246" CONFIDENCE="91.69">Nơi ấy với kinh đô như vạt áo, như cổ họng, việc coi giữ biên cương rất năng nề,</LINE>
+            <LINE ID="P0047.L020" ORDER="20" NO="20" SRC_LINE="22" BBOX="215,2246,1788,2360" CONFIDENCE="91.69">1. Nhân vi bảo chương: Người làm thành lũy. Ý nói người tương tài giữ đất nước như hào lũy vệ thành.</LINE>
+            <LINE ID="P0047.L021" ORDER="21" NO="21" SRC_LINE="23" BBOX="215,2360,1788,2473" CONFIDENCE="91.69">2. Thục đạo: Đường Thục. Ý nói đường đi hiểm trở khó qua được. Lý Thái Bạch trong bài "Thục đạo nan" có câu: "Thục đạo chi nan, nan ư thường thanh thiên" (Đường vào đất Thục khó đi, khó hơn lên trời xanh).</LINE>
+            <LINE ID="P0047.L022" ORDER="22" NO="22" SRC_LINE="24" BBOX="215,2473,1788,2587" CONFIDENCE="91.69">3. Cầm hạc: Cây đàn và chim hạc. Triệu Biện thời Tống khi làm quan đi phó nhậm đâu cũng chỉ đem cây đàn và chim hạc. Ý nói cánh làm quan thanh liêm và giản dị.</LINE>
             <RUNS>
                 <RUN KEY="251d0fb4822abf2ec4b3ce45b87f0dc798a447277c85f19168912c3d775ec786" CREATED_AT="2026-11-24T05:16:53+00:00" IMAGE="E:\Projects\han-viet-corpus\data\CPO_20\02_extraction\pages\page_047.png" IMAGE_WIDTH="1865" IMAGE_HEIGHT="2851" CROP_BOX="0,0,1865,2851" SOURCE="03_ocr/raw/0047.json" SELECTION="only">
                     <PARAMETERS>
@@ -2391,22 +2391,24 @@
                 </RUN>
             </RUNS>
         </PAGE>
-        <PAGE NUMBER="76" IMAGE="E:\Projects\han-viet-corpus\data\CPO_20\02_extraction\pages\page_076.png" IMAGE_SHA256="df050ebf81e9a96e0cd58e943c1f792d73aa0f715b4bf1922707fd5b2ff2865e" RAW="03_ocr/raw/0076.json" SELECTED_ENGINE="qwen" SELECTED_KEY="416bb45fc5484b151e1f6844e936566839328c5dd271e0a718fd119f69cbd25b" CONFIDENCE="82.48" EMPTY="false" N_LINES="10" N_SRC_LINES="19" N_DROPPED="9" CJK_REMOVED="85">
-            <LINE ID="P0076.L001" ORDER="1" NO="1" SRC_LINE="10" BBOX="484,1303,1788,1401" CONFIDENCE="85.2">ĐÁP THỊ HIỂU LÝ XÁ ĐỆ 1</LINE>
-            <LINE ID="P0076.L002" ORDER="2" NO="2" SRC_LINE="11" BBOX="484,1401,1788,1498" CONFIDENCE="85.2">KỲ TAM</LINE>
-            <LINE ID="P0076.L003" ORDER="3" NO="3" SRC_LINE="12" BBOX="484,1498,1788,1595" CONFIDENCE="85.2">Hoàn hoàn khải giáp bái thiên hồn,</LINE>
-            <LINE ID="P0076.L004" ORDER="4" NO="4" SRC_LINE="13" BBOX="484,1595,1788,1693" CONFIDENCE="85.2">Chu kỳ hùng lâm thủy thảo thôn.</LINE>
-            <LINE ID="P0076.L005" ORDER="5" NO="5" SRC_LINE="14" BBOX="254,1685,1788,1833" CONFIDENCE="81.21">Chiếm đầu hổ truyền quân táo thịnh,</LINE>
-            <LINE ID="P0076.L006" ORDER="6" NO="6" SRC_LINE="15" BBOX="254,1833,1788,1980" CONFIDENCE="81.21">Vọng dương thù thị địch phàm tốn.</LINE>
-            <LINE ID="P0076.L007" ORDER="7" NO="7" SRC_LINE="16" BBOX="254,1980,1788,2128" CONFIDENCE="81.21">Kết tinh sương túc tư quân súy,</LINE>
-            <LINE ID="P0076.L008" ORDER="8" NO="8" SRC_LINE="17" BBOX="254,2128,1788,2276" CONFIDENCE="81.21">Bột lăng ² trấn thanh hệ thử phiên.</LINE>
-            <LINE ID="P0076.L009" ORDER="9" NO="9" SRC_LINE="18" BBOX="254,2276,1788,2423" CONFIDENCE="81.21">Khu vụ tổng bằng nhàn xử trí,</LINE>
-            <LINE ID="P0076.L010" ORDER="10" NO="10" SRC_LINE="19" BBOX="254,2423,1788,2571" CONFIDENCE="81.21">Các thần thừa nguyệt phiếm phương tốn.</LINE>
+        <PAGE NUMBER="76" IMAGE="E:\Projects\han-viet-corpus\data\CPO_20\02_extraction\pages\page_076.png" IMAGE_SHA256="df050ebf81e9a96e0cd58e943c1f792d73aa0f715b4bf1922707fd5b2ff2865e" RAW="03_ocr/raw/qwen/0076.json" SELECTED_ENGINE="qwen" SELECTED_KEY="e7edc2e3ed7d1fffe99086bdfa153d22901f6ea22e46eb7eb1e4cfb7f03e3ddd" CONFIDENCE="89.1" EMPTY="false" N_LINES="12" N_SRC_LINES="21" N_DROPPED="9" CJK_REMOVED="60">
+            <LINE ID="P0076.L001" ORDER="1" NO="1" SRC_LINE="10" BBOX="484,1303,1788,1420" CONFIDENCE="87.69">ĐÁP THỊ HIỂU LÝ XÁ ĐÊ ¹</LINE>
+            <LINE ID="P0076.L002" ORDER="2" NO="2" SRC_LINE="11" BBOX="484,1420,1788,1537" CONFIDENCE="87.69">KỲ TAM</LINE>
+            <LINE ID="P0076.L003" ORDER="3" NO="3" SRC_LINE="12" BBOX="502,1529,1788,1611" CONFIDENCE="85.57">Hoàn hoàn khải giáp bái thiên hồn,</LINE>
+            <LINE ID="P0076.L004" ORDER="4" NO="4" SRC_LINE="13" BBOX="502,1611,1788,1693" CONFIDENCE="85.57">Chu kỳ hùng lâm thủy thảo thôn.</LINE>
+            <LINE ID="P0076.L005" ORDER="5" NO="5" SRC_LINE="14" BBOX="499,1685,1788,1746" CONFIDENCE="81.99">Chiếm đầu hổ truyền quân táo thịnh,</LINE>
+            <LINE ID="P0076.L006" ORDER="6" NO="6" SRC_LINE="15" BBOX="499,1746,1788,1807" CONFIDENCE="81.99">Vọng dương thù thị địch phàm tân.</LINE>
+            <LINE ID="P0076.L007" ORDER="7" NO="7" SRC_LINE="16" BBOX="499,1807,1788,1868" CONFIDENCE="81.99">Kết tinh sương túc tư quẩn súy,</LINE>
+            <LINE ID="P0076.L008" ORDER="8" NO="8" SRC_LINE="17" BBOX="499,1868,1788,1929" CONFIDENCE="81.99">Bột lăng ² trần thanh hệ thử phiên.</LINE>
+            <LINE ID="P0076.L009" ORDER="9" NO="9" SRC_LINE="18" BBOX="499,1929,1788,1990" CONFIDENCE="81.99">Khu vụ tổng bằng nhàn xử trí,</LINE>
+            <LINE ID="P0076.L010" ORDER="10" NO="10" SRC_LINE="19" BBOX="262,1982,1788,2145" CONFIDENCE="92.22">Các thần thừa nguyệt phiếm phương tôn.</LINE>
+            <LINE ID="P0076.L011" ORDER="11" NO="11" SRC_LINE="20" BBOX="254,2137,1788,2354" CONFIDENCE="91.51">1. Nguyên dẫn: Tiếp được ba bài thơ họa lại, lời lẽ điêu luyện có khí mạnh rất đáng khen. Hiện nay trong kinh việc quân đang khẩn cấp, tôi bổ việc ngắm vịnh nhàn tản. Nay đem tình trạng điều binh chống địch để miêu tả sức hùng hậu của quân ta, rồi làm thành thơ theo văn cũ gửi cho em, có thể coi là sự ghi chép về việc bố phòng quân sự, cho biết thế mạnh mà yên lòng người ở xa, ngoài ra không đề cập tới nhiều việc khác.</LINE>
+            <LINE ID="P0076.L012" ORDER="12" NO="12" SRC_LINE="21" BBOX="254,2354,1788,2571" CONFIDENCE="91.51">2. Bột lăng: Bột Bột, tên một vùng bột ở Đông Bắc Trung Quốc, xưa hay có giặc. Trong bài "Bột Bột sạch bụi" ỷ nói hết giặc.</LINE>
             <RUNS>
-                <RUN KEY="416bb45fc5484b151e1f6844e936566839328c5dd271e0a718fd119f69cbd25b" CREATED_AT="2026-11-24T05:38:50+00:00" IMAGE="E:\Projects\han-viet-corpus\data\CPO_20\02_extraction\pages\page_076.png" IMAGE_WIDTH="1865" IMAGE_HEIGHT="2834" CROP_BOX="0,0,1865,2834" SOURCE="03_ocr/raw/0076.json" SELECTION="only">
+                <RUN KEY="e7edc2e3ed7d1fffe99086bdfa153d22901f6ea22e46eb7eb1e4cfb7f03e3ddd" CREATED_AT="2026-11-26T23:25:29+00:00" IMAGE="E:\Projects\han-viet-corpus\data\CPO_20\02_extraction\pages\page_076.png" IMAGE_WIDTH="1865" IMAGE_HEIGHT="2834" CROP_BOX="0,0,1865,2834" SOURCE="03_ocr/raw/qwen/0076.json" SELECTION="manifest">
                     <PARAMETERS>
                         <PARAM NAME="image_sha256">df050ebf81e9a96e0cd58e943c1f792d73aa0f715b4bf1922707fd5b2ff2865e</PARAM>
-                        <ENGINE NAME="qwen" MODEL_ID="Qwen/Qwen2.5-VL-3B-Instruct" MODEL_REVISION="main" TRANSFORMERS_VERSION="4.57.6" TORCH_VERSION="2.5.1+cu121" CUDA_VERSION="12.1" BITSANDBYTES_VERSION="0.50.2" MODE="all" MIN_PIXELS="50176" MAX_PIXELS="802816" BAND_INCHES="2.0" MAX_NEW_TOKENS="768" REPETITION_PENALTY="1.05" ADAPTER_VERSION="3" PROMPT_VERSION="3" PROMPT_SHA256="b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74">
+                        <ENGINE NAME="qwen" MODEL_ID="Qwen/Qwen2.5-VL-3B-Instruct" MODEL_REVISION="main" TRANSFORMERS_VERSION="4.57.6" TORCH_VERSION="2.5.1+cu121" CUDA_VERSION="12.1" BITSANDBYTES_VERSION="0.50.2" MODE="all" MIN_PIXELS="50176" MAX_PIXELS="802816" BAND_INCHES="1.0" MAX_NEW_TOKENS="768" REPETITION_PENALTY="1.05" ADAPTER_VERSION="4" PROMPT_VERSION="3" PROMPT_SHA256="b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74">
                             <QUANTIZATION>{"compute_dtype": "float16", "double_quant": true, "load_in_4bit": true, "quant_type": "nf4"}</QUANTIZATION>
                         </ENGINE>
                         <PARAM NAME="lang">all</PARAM>
@@ -2840,21 +2842,25 @@
                 </RUN>
             </RUNS>
         </PAGE>
-        <PAGE NUMBER="90" IMAGE="E:\Projects\han-viet-corpus\data\CPO_20\02_extraction\pages\page_090.png" IMAGE_SHA256="7c396dc06e4e30b41464206806fd7cfd53281793686779b4dbc6570e94837926" RAW="03_ocr/raw/0090.json" SELECTED_ENGINE="qwen" SELECTED_KEY="9f40ef327556ecafe171f8aac609d65ae25ff01de3d33fd1f1e3623f4be94471" CONFIDENCE="86.33" EMPTY="false" N_LINES="9" N_SRC_LINES="396" N_DROPPED="387" CJK_REMOVED="410">
-            <LINE ID="P0090.L001" ORDER="1" NO="1" SRC_LINE="388" BBOX="482,1431,1788,1508" CONFIDENCE="87.26">Nhung Trương Dạ Túc Kỷ Sự 1</LINE>
-            <LINE ID="P0090.L002" ORDER="2" NO="2" SRC_LINE="389" BBOX="482,1508,1788,1585" CONFIDENCE="87.26">Thái thốc 2 khư hồi noãn luật tân,</LINE>
-            <LINE ID="P0090.L003" ORDER="3" NO="3" SRC_LINE="390" BBOX="482,1585,1788,1661" CONFIDENCE="87.26">Hải sơn nhất đới khởi nhung trần.</LINE>
-            <LINE ID="P0090.L004" ORDER="4" NO="4" SRC_LINE="391" BBOX="482,1661,1788,1738" CONFIDENCE="87.26">Thúy hoa 3 sức giá tương xung trận,</LINE>
-            <LINE ID="P0090.L005" ORDER="5" NO="5" SRC_LINE="392" BBOX="482,1738,1788,1815" CONFIDENCE="87.26">Hỏa pháo trì thanh khởi báo xuân?</LINE>
-            <LINE ID="P0090.L006" ORDER="6" NO="6" SRC_LINE="393" BBOX="246,1807,1788,1997" CONFIDENCE="85.11">Cảm kích viên tiền huề tạm khách,</LINE>
-            <LINE ID="P0090.L007" ORDER="7" NO="7" SRC_LINE="394" BBOX="246,1997,1788,2187" CONFIDENCE="85.11">Thê lưỡng lũy ngoại hạ qua nhân.</LINE>
-            <LINE ID="P0090.L008" ORDER="8" NO="8" SRC_LINE="395" BBOX="246,2187,1788,2376" CONFIDENCE="85.11">Bình cơ lợi độn quan kim dạ,</LINE>
-            <LINE ID="P0090.L009" ORDER="9" NO="9" SRC_LINE="396" BBOX="246,2376,1788,2566" CONFIDENCE="85.11">Bình chúc yêu lai dịch báo tần.</LINE>
+        <PAGE NUMBER="90" IMAGE="E:\Projects\han-viet-corpus\data\CPO_20\02_extraction\pages\page_090.png" IMAGE_SHA256="7c396dc06e4e30b41464206806fd7cfd53281793686779b4dbc6570e94837926" RAW="03_ocr/raw/qwen/0090.json" SELECTED_ENGINE="qwen" SELECTED_KEY="03a964397fbe7d785d39632b29f617ce1e406c4abe5d0f2b69896ac75befeace" CONFIDENCE="91.8" EMPTY="false" N_LINES="13" N_SRC_LINES="41" N_DROPPED="28" CJK_REMOVED="45">
+            <LINE ID="P0090.L001" ORDER="1" NO="1" SRC_LINE="29" BBOX="401,1299,1788,1425" CONFIDENCE="90.33">NHÂN TUẤT NGUYÊN NHẬT,</LINE>
+            <LINE ID="P0090.L002" ORDER="2" NO="2" SRC_LINE="30" BBOX="401,1425,1788,1550" CONFIDENCE="90.33">NHUNG TRƯỜNG DẠ TÚC KỶ SỰ 1</LINE>
+            <LINE ID="P0090.L003" ORDER="3" NO="3" SRC_LINE="31" BBOX="496,1542,1788,1610" CONFIDENCE="91.82">Thái thốc ² khư hồi noãn luật tân,</LINE>
+            <LINE ID="P0090.L004" ORDER="4" NO="4" SRC_LINE="32" BBOX="496,1610,1788,1678" CONFIDENCE="91.82">Hải sơn nhất dời khởi nhung trân.</LINE>
+            <LINE ID="P0090.L005" ORDER="5" NO="5" SRC_LINE="33" BBOX="496,1678,1788,1747" CONFIDENCE="91.82">Thúy hoa ³ sức giá tương xung trận,</LINE>
+            <LINE ID="P0090.L006" ORDER="6" NO="6" SRC_LINE="34" BBOX="496,1747,1788,1815" CONFIDENCE="91.82">Hỏa pháo trì thanh khởi báo xuân?</LINE>
+            <LINE ID="P0090.L007" ORDER="7" NO="7" SRC_LINE="35" BBOX="256,1807,1788,1879" CONFIDENCE="91.46">Cảm kích viên tiền huề tạm khách,</LINE>
+            <LINE ID="P0090.L008" ORDER="8" NO="8" SRC_LINE="36" BBOX="256,1879,1788,1950" CONFIDENCE="91.46">Thê lương lũ ngoại hạ qua nhân.</LINE>
+            <LINE ID="P0090.L009" ORDER="9" NO="9" SRC_LINE="37" BBOX="256,1950,1788,2021" CONFIDENCE="91.46">Bình cơ lợi độn quan kim dạ,</LINE>
+            <LINE ID="P0090.L010" ORDER="10" NO="10" SRC_LINE="38" BBOX="256,2021,1788,2093" CONFIDENCE="91.46">Bình chúc yêu lai dịch báo tần.</LINE>
+            <LINE ID="P0090.L011" ORDER="11" NO="11" SRC_LINE="39" BBOX="251,2085,1788,2393" CONFIDENCE="91.07">Ngày mùng một nhà vua từ Thanh Hà tiến ra, buổi trưa tới đồn Doanh Ngói, rồi tiến đến đồn Doanh Lỗi cách Lũy Thầy vài dặm. Tôi phượng mệnh ngoài cửa đồn cùng binh sĩ lấy lá thông đựng lên làm chỗ ngủ. Đến đêm quân tiện phong phân bên ngoài lũy lén vào nhốt chông áp sát lũy giặc. Giặc trong lũy, bắn súng to, súng nhỏ ra suốt đêm không ngớt, quân ta bị thương vong nhiều, tôi buồn phiền không ngủ được, đợi nghe tin từ nhà trạm tàu về, nhân đó ngâm thơ để ghi nỗi lòng.</LINE>
+            <LINE ID="P0090.L012" ORDER="12" NO="12" SRC_LINE="40" BBOX="246,2385,1788,2475" CONFIDENCE="94.25">2. Thái thốc: Một trong 12 ống luật nói (Kinh Lễ), mỗi ống luật tương ứng với một tháng, Thái thốc thuộc về tháng giêng.</LINE>
+            <LINE ID="P0090.L013" ORDER="13" NO="13" SRC_LINE="41" BBOX="246,2475,1788,2566" CONFIDENCE="94.25">3. Thủy hoa: Loại cờ của Thiên tử, dùng lông chim trà trang trí.</LINE>
             <RUNS>
-                <RUN KEY="9f40ef327556ecafe171f8aac609d65ae25ff01de3d33fd1f1e3623f4be94471" CREATED_AT="2026-11-24T05:45:02+00:00" IMAGE="E:\Projects\han-viet-corpus\data\CPO_20\02_extraction\pages\page_090.png" IMAGE_WIDTH="1865" IMAGE_HEIGHT="2834" CROP_BOX="0,0,1865,2834" SOURCE="03_ocr/raw/0090.json" SELECTION="only">
+                <RUN KEY="03a964397fbe7d785d39632b29f617ce1e406c4abe5d0f2b69896ac75befeace" CREATED_AT="2026-11-26T23:26:01+00:00" IMAGE="E:\Projects\han-viet-corpus\data\CPO_20\02_extraction\pages\page_090.png" IMAGE_WIDTH="1865" IMAGE_HEIGHT="2834" CROP_BOX="0,0,1865,2834" SOURCE="03_ocr/raw/qwen/0090.json" SELECTION="manifest">
                     <PARAMETERS>
                         <PARAM NAME="image_sha256">7c396dc06e4e30b41464206806fd7cfd53281793686779b4dbc6570e94837926</PARAM>
-                        <ENGINE NAME="qwen" MODEL_ID="Qwen/Qwen2.5-VL-3B-Instruct" MODEL_REVISION="main" TRANSFORMERS_VERSION="4.57.6" TORCH_VERSION="2.5.1+cu121" CUDA_VERSION="12.1" BITSANDBYTES_VERSION="0.50.2" MODE="all" MIN_PIXELS="50176" MAX_PIXELS="802816" BAND_INCHES="2.0" MAX_NEW_TOKENS="768" REPETITION_PENALTY="1.05" ADAPTER_VERSION="3" PROMPT_VERSION="3" PROMPT_SHA256="b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74">
+                        <ENGINE NAME="qwen" MODEL_ID="Qwen/Qwen2.5-VL-3B-Instruct" MODEL_REVISION="main" TRANSFORMERS_VERSION="4.57.6" TORCH_VERSION="2.5.1+cu121" CUDA_VERSION="12.1" BITSANDBYTES_VERSION="0.50.2" MODE="all" MIN_PIXELS="50176" MAX_PIXELS="802816" BAND_INCHES="1.0" MAX_NEW_TOKENS="768" REPETITION_PENALTY="1.05" ADAPTER_VERSION="4" PROMPT_VERSION="3" PROMPT_SHA256="b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74">
                             <QUANTIZATION>{"compute_dtype": "float16", "double_quant": true, "load_in_4bit": true, "quant_type": "nf4"}</QUANTIZATION>
                         </ENGINE>
                         <PARAM NAME="lang">all</PARAM>
@@ -6741,27 +6747,25 @@
                 </RUN>
             </RUNS>
         </PAGE>
-        <PAGE NUMBER="215" IMAGE="E:\Projects\han-viet-corpus\data\CPO_20\02_extraction\pages\page_215.png" IMAGE_SHA256="5ecb28e8cfefd9a4e658a50723321e7a22ce6dc12e89877d58ead89f49dc1a1b" RAW="03_ocr/raw/0215.json" SELECTED_ENGINE="qwen" SELECTED_KEY="8731671d3531f92af1eb331ff51307bb5485f35d3c73c3e13ad51a7e76a530a0" CONFIDENCE="82.39" EMPTY="false" N_LINES="15" N_SRC_LINES="31" N_DROPPED="16" CJK_REMOVED="43">
-            <LINE ID="P0215.L001" ORDER="1" NO="1" SRC_LINE="1" BBOX="176,268,1746,353" CONFIDENCE="75.01">Tuyết như ngọc phủ lấp mặt sông hồ chẳng thấy một bóng chim,</LINE>
-            <LINE ID="P0215.L002" ORDER="2" NO="2" SRC_LINE="2" BBOX="176,353,1746,438" CONFIDENCE="75.01">Tuyết như muối chất đống trên mỏm đá ngoài, nội có hình dáng muông thú.</LINE>
-            <LINE ID="P0215.L003" ORDER="3" NO="3" SRC_LINE="3" BBOX="176,438,1746,523" CONFIDENCE="75.01">Nhất là trong gian nhà lạnh nơi núi sâu,</LINE>
-            <LINE ID="P0215.L004" ORDER="4" NO="4" SRC_LINE="4" BBOX="176,523,1746,609" CONFIDENCE="75.01">Không còn phân biệt được cây mai ra hoa với cây bạch già nua.</LINE>
-            <LINE ID="P0215.L005" ORDER="5" NO="5" SRC_LINE="5" BBOX="176,609,1746,694" CONFIDENCE="75.01">Dịch thơ:</LINE>
-            <LINE ID="P0215.L006" ORDER="6" NO="6" SRC_LINE="6" BBOX="176,694,1746,779" CONFIDENCE="75.01">Lày phây mưa tuyết phủ ngập đường,</LINE>
-            <LINE ID="P0215.L007" ORDER="7" NO="7" SRC_LINE="7" BBOX="176,779,1746,864" CONFIDENCE="75.01">Trên đỉnh núi cao tuyết trắng như trời.</LINE>
-            <LINE ID="P0215.L008" ORDER="8" NO="8" SRC_LINE="8" BBOX="154,856,1746,928" CONFIDENCE="91.77">Mười cỗ xe đầy sắc sáng choang.</LINE>
-            <LINE ID="P0215.L009" ORDER="9" NO="9" SRC_LINE="9" BBOX="154,928,1746,1000" CONFIDENCE="91.77">Mai nở lụng trài rơi rác bạc,</LINE>
-            <LINE ID="P0215.L010" ORDER="10" NO="10" SRC_LINE="10" BBOX="154,1000,1746,1072" CONFIDENCE="91.77">Người đi mặt đất lộn soi gương.</LINE>
-            <LINE ID="P0215.L011" ORDER="11" NO="11" SRC_LINE="11" BBOX="154,1072,1746,1144" CONFIDENCE="91.77">Ngọc che mặt nước, không chim chóc,</LINE>
-            <LINE ID="P0215.L012" ORDER="12" NO="12" SRC_LINE="12" BBOX="154,1144,1746,1217" CONFIDENCE="91.77">Muối đọng đầu non, dáng thú muông.</LINE>
-            <LINE ID="P0215.L013" ORDER="13" NO="13" SRC_LINE="13" BBOX="154,1217,1746,1289" CONFIDENCE="91.77">Ngắm cảnh lâu dài trong núi vắng,</LINE>
-            <LINE ID="P0215.L014" ORDER="14" NO="14" SRC_LINE="14" BBOX="154,1289,1746,1361" CONFIDENCE="91.77">Đâu mai, đâu bách thực khôn tường.</LINE>
-            <LINE ID="P0215.L015" ORDER="15" NO="15" SRC_LINE="15" BBOX="154,1361,1746,1433" CONFIDENCE="91.77">Nguyễn Văn Bách dịch</LINE>
+        <PAGE NUMBER="215" IMAGE="E:\Projects\han-viet-corpus\data\CPO_20\02_extraction\pages\page_215.png" IMAGE_SHA256="5ecb28e8cfefd9a4e658a50723321e7a22ce6dc12e89877d58ead89f49dc1a1b" RAW="03_ocr/raw/qwen/0215.json" SELECTED_ENGINE="qwen" SELECTED_KEY="45e18691ac8d331a9da0c359e29a02c38a833afbbd0fe3e6eb44ade4d893d60f" CONFIDENCE="88.36" EMPTY="false" N_LINES="13" N_SRC_LINES="21" N_DROPPED="8" CJK_REMOVED="54">
+            <LINE ID="P0215.L001" ORDER="1" NO="1" SRC_LINE="1" BBOX="409,268,1746,348" CONFIDENCE="87.84">Tuyết như ngọc phủ lấp mặt sông hồ chẳng thấy một bóng chim,</LINE>
+            <LINE ID="P0215.L002" ORDER="2" NO="2" SRC_LINE="2" BBOX="409,348,1746,429" CONFIDENCE="87.84">Tuyết như muỗi chật dọng trên mỏm đá ngoài, nội có hình dáng muông thú.</LINE>
+            <LINE ID="P0215.L003" ORDER="3" NO="3" SRC_LINE="3" BBOX="409,429,1746,509" CONFIDENCE="87.84">Nhất là trong gian nhà lạnh nơi núi sâu,</LINE>
+            <LINE ID="P0215.L004" ORDER="4" NO="4" SRC_LINE="4" BBOX="176,501,1746,772" CONFIDENCE="84.8">Không còn phân biệt được cây mai ra hoa với cây bách già nưa.</LINE>
+            <LINE ID="P0215.L005" ORDER="5" NO="5" SRC_LINE="5" BBOX="154,764,1746,834" CONFIDENCE="88.2">Lây phây mưa tuyết phủ ngập đường,</LINE>
+            <LINE ID="P0215.L006" ORDER="6" NO="6" SRC_LINE="6" BBOX="154,834,1746,903" CONFIDENCE="88.2">Mười cỗ xe đầy sắc sáng choang.</LINE>
+            <LINE ID="P0215.L007" ORDER="7" NO="7" SRC_LINE="7" BBOX="154,903,1746,972" CONFIDENCE="88.2">Mai nở lưng trời rơi rác bạc,</LINE>
+            <LINE ID="P0215.L008" ORDER="8" NO="8" SRC_LINE="8" BBOX="154,972,1746,1042" CONFIDENCE="88.2">Người đi mặt đất lộn soi gương.</LINE>
+            <LINE ID="P0215.L009" ORDER="9" NO="9" SRC_LINE="9" BBOX="399,1034,1746,1097" CONFIDENCE="89.23">Ngọc che mặt nước, không chim chóc,</LINE>
+            <LINE ID="P0215.L010" ORDER="10" NO="10" SRC_LINE="10" BBOX="399,1097,1746,1160" CONFIDENCE="89.23">Muối đọng đầu non, dáng thú muông.</LINE>
+            <LINE ID="P0215.L011" ORDER="11" NO="11" SRC_LINE="11" BBOX="399,1160,1746,1223" CONFIDENCE="89.23">Ngắm cảnh lâu dài trong núi vắng,</LINE>
+            <LINE ID="P0215.L012" ORDER="12" NO="12" SRC_LINE="12" BBOX="399,1223,1746,1286" CONFIDENCE="89.23">Đầu mai, đầu bách thực khôn tường.</LINE>
+            <LINE ID="P0215.L013" ORDER="13" NO="13" SRC_LINE="13" BBOX="1186,1278,1746,1433" CONFIDENCE="98.82">Nguyễn Văn Bách dịch</LINE>
             <RUNS>
-                <RUN KEY="8731671d3531f92af1eb331ff51307bb5485f35d3c73c3e13ad51a7e76a530a0" CREATED_AT="2026-11-24T06:50:46+00:00" IMAGE="E:\Projects\han-viet-corpus\data\CPO_20\02_extraction\pages\page_215.png" IMAGE_WIDTH="1823" IMAGE_HEIGHT="2815" CROP_BOX="0,0,1823,2815" SOURCE="03_ocr/raw/0215.json" SELECTION="only">
+                <RUN KEY="45e18691ac8d331a9da0c359e29a02c38a833afbbd0fe3e6eb44ade4d893d60f" CREATED_AT="2026-11-26T23:26:24+00:00" IMAGE="E:\Projects\han-viet-corpus\data\CPO_20\02_extraction\pages\page_215.png" IMAGE_WIDTH="1823" IMAGE_HEIGHT="2815" CROP_BOX="0,0,1823,2815" SOURCE="03_ocr/raw/qwen/0215.json" SELECTION="manifest">
                     <PARAMETERS>
                         <PARAM NAME="image_sha256">5ecb28e8cfefd9a4e658a50723321e7a22ce6dc12e89877d58ead89f49dc1a1b</PARAM>
-                        <ENGINE NAME="qwen" MODEL_ID="Qwen/Qwen2.5-VL-3B-Instruct" MODEL_REVISION="main" TRANSFORMERS_VERSION="4.57.6" TORCH_VERSION="2.5.1+cu121" CUDA_VERSION="12.1" BITSANDBYTES_VERSION="0.50.2" MODE="all" MIN_PIXELS="50176" MAX_PIXELS="802816" BAND_INCHES="2.0" MAX_NEW_TOKENS="768" REPETITION_PENALTY="1.05" ADAPTER_VERSION="3" PROMPT_VERSION="3" PROMPT_SHA256="b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74">
+                        <ENGINE NAME="qwen" MODEL_ID="Qwen/Qwen2.5-VL-3B-Instruct" MODEL_REVISION="main" TRANSFORMERS_VERSION="4.57.6" TORCH_VERSION="2.5.1+cu121" CUDA_VERSION="12.1" BITSANDBYTES_VERSION="0.50.2" MODE="all" MIN_PIXELS="50176" MAX_PIXELS="802816" BAND_INCHES="1.0" MAX_NEW_TOKENS="768" REPETITION_PENALTY="1.05" ADAPTER_VERSION="4" PROMPT_VERSION="3" PROMPT_SHA256="b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74">
                             <QUANTIZATION>{"compute_dtype": "float16", "double_quant": true, "load_in_4bit": true, "quant_type": "nf4"}</QUANTIZATION>
                         </ENGINE>
                         <PARAM NAME="lang">all</PARAM>
@@ -9325,49 +9329,23 @@
                 </RUN>
             </RUNS>
         </PAGE>
-        <PAGE NUMBER="296" IMAGE="E:\Projects\han-viet-corpus\data\CPO_20\02_extraction\pages\page_296.png" IMAGE_SHA256="bc0d8d8f08c57b30ad7f4702ada9a9b4a4901096a40ffea100e4e02b25559136" RAW="03_ocr/raw/0296.json" SELECTED_ENGINE="qwen" SELECTED_KEY="6e7dcace584c9a0da178e503877efbdf8776c27e1345d33ff2279aa5b30d93f4" CONFIDENCE="88.0" EMPTY="false" N_LINES="37" N_SRC_LINES="41" N_DROPPED="4" CJK_REMOVED="53">
-            <LINE ID="P0296.L001" ORDER="1" NO="1" SRC_LINE="5" BBOX="298,859,1762,878" CONFIDENCE="75.48">Phân âm:</LINE>
-            <LINE ID="P0296.L002" ORDER="2" NO="2" SRC_LINE="6" BBOX="298,878,1762,898" CONFIDENCE="75.48">Phần âm của các từ trong hình là:</LINE>
-            <LINE ID="P0296.L003" ORDER="3" NO="3" SRC_LINE="7" BBOX="298,898,1762,917" CONFIDENCE="75.48">-: zhuǎn</LINE>
-            <LINE ID="P0296.L004" ORDER="4" NO="4" SRC_LINE="8" BBOX="298,917,1762,936" CONFIDENCE="75.48">-: jī</LINE>
-            <LINE ID="P0296.L005" ORDER="5" NO="5" SRC_LINE="9" BBOX="298,936,1762,955" CONFIDENCE="75.48">-: fēng</LINE>
-            <LINE ID="P0296.L006" ORDER="6" NO="6" SRC_LINE="10" BBOX="298,955,1762,975" CONFIDENCE="75.48">-: yí</LINE>
-            <LINE ID="P0296.L007" ORDER="7" NO="7" SRC_LINE="11" BBOX="298,975,1762,994" CONFIDENCE="75.48">-: tāng</LINE>
-            <LINE ID="P0296.L008" ORDER="8" NO="8" SRC_LINE="12" BBOX="298,994,1762,1013" CONFIDENCE="75.48">-: mì</LINE>
-            <LINE ID="P0296.L009" ORDER="9" NO="9" SRC_LINE="13" BBOX="298,1013,1762,1033" CONFIDENCE="75.48">-: yì</LINE>
-            <LINE ID="P0296.L010" ORDER="10" NO="10" SRC_LINE="14" BBOX="298,1033,1762,1052" CONFIDENCE="75.48">-: yì</LINE>
-            <LINE ID="P0296.L011" ORDER="11" NO="11" SRC_LINE="15" BBOX="298,1052,1762,1071" CONFIDENCE="75.48">-: zhèn</LINE>
-            <LINE ID="P0296.L012" ORDER="12" NO="12" SRC_LINE="16" BBOX="298,1071,1762,1091" CONFIDENCE="75.48">-: líng</LINE>
-            <LINE ID="P0296.L013" ORDER="13" NO="13" SRC_LINE="17" BBOX="298,1091,1762,1110" CONFIDENCE="75.48">-: yíng</LINE>
-            <LINE ID="P0296.L014" ORDER="14" NO="14" SRC_LINE="18" BBOX="298,1110,1762,1129" CONFIDENCE="75.48">-: dá</LINE>
-            <LINE ID="P0296.L015" ORDER="15" NO="15" SRC_LINE="19" BBOX="298,1129,1762,1148" CONFIDENCE="75.48">-: huò</LINE>
-            <LINE ID="P0296.L016" ORDER="16" NO="16" SRC_LINE="20" BBOX="298,1148,1762,1168" CONFIDENCE="75.48">-: lìng</LINE>
-            <LINE ID="P0296.L017" ORDER="17" NO="17" SRC_LINE="21" BBOX="298,1168,1762,1187" CONFIDENCE="75.48">-: shí</LINE>
-            <LINE ID="P0296.L018" ORDER="18" NO="18" SRC_LINE="22" BBOX="298,1187,1762,1206" CONFIDENCE="75.48">-: mǎ</LINE>
-            <LINE ID="P0296.L019" ORDER="19" NO="19" SRC_LINE="23" BBOX="298,1206,1762,1226" CONFIDENCE="75.48">-: jīn</LINE>
-            <LINE ID="P0296.L020" ORDER="20" NO="20" SRC_LINE="24" BBOX="298,1226,1762,1245" CONFIDENCE="75.48">-: hé</LINE>
-            <LINE ID="P0296.L021" ORDER="21" NO="21" SRC_LINE="25" BBOX="298,1245,1762,1264" CONFIDENCE="75.48">-: yī</LINE>
-            <LINE ID="P0296.L022" ORDER="22" NO="22" SRC_LINE="26" BBOX="298,1264,1762,1284" CONFIDENCE="75.48">-: zú</LINE>
-            <LINE ID="P0296.L023" ORDER="23" NO="23" SRC_LINE="27" BBOX="298,1284,1762,1303" CONFIDENCE="75.48">-: jiǎo</LINE>
-            <LINE ID="P0296.L024" ORDER="24" NO="24" SRC_LINE="28" BBOX="298,1303,1762,1322" CONFIDENCE="75.48">-: chóng</LINE>
-            <LINE ID="P0296.L025" ORDER="25" NO="25" SRC_LINE="29" BBOX="298,1322,1762,1341" CONFIDENCE="75.48">-: fán</LINE>
-            <LINE ID="P0296.L026" ORDER="26" NO="26" SRC_LINE="30" BBOX="298,1341,1762,1361" CONFIDENCE="75.48">-: cǐ</LINE>
-            <LINE ID="P0296.L027" ORDER="27" NO="27" SRC_LINE="31" BBOX="298,1361,1762,1380" CONFIDENCE="75.48">-: yī</LINE>
-            <LINE ID="P0296.L028" ORDER="28" NO="28" SRC_LINE="32" BBOX="476,1372,1762,1485" CONFIDENCE="89.46">VỌNG TỨC MẶC ¹ THÀNH HỮU CẢM</LINE>
-            <LINE ID="P0296.L029" ORDER="29" NO="29" SRC_LINE="33" BBOX="476,1485,1762,1598" CONFIDENCE="89.46">Kiến thuyết Trần gia Túc Mạc thành,</LINE>
-            <LINE ID="P0296.L030" ORDER="30" NO="30" SRC_LINE="34" BBOX="476,1598,1762,1710" CONFIDENCE="89.46">Nhữn tiền phong cảnh bất thăng tình.</LINE>
-            <LINE ID="P0296.L031" ORDER="31" NO="31" SRC_LINE="35" BBOX="476,1710,1762,1823" CONFIDENCE="89.46">Chương Dương, ² Hàm Tử ³ do như cố,</LINE>
-            <LINE ID="P0296.L032" ORDER="32" NO="32" SRC_LINE="36" BBOX="476,1823,1762,1936" CONFIDENCE="89.46">Hưng Đạo, ⁴ Chiêu Văn ⁵ vị tái sinh.</LINE>
-            <LINE ID="P0296.L033" ORDER="33" NO="33" SRC_LINE="37" BBOX="270,1928,1762,2043" CONFIDENCE="93.26">1. Túc Mạc: Tên đất, thuộc phủ Thiên Trường, nay thuộc tỉnh Nam Định, là quê hương của nhà Trần.</LINE>
-            <LINE ID="P0296.L034" ORDER="34" NO="34" SRC_LINE="38" BBOX="270,2043,1762,2158" CONFIDENCE="93.26">2. Chương Dương: Bến đò ở huyện Thượng Phúc, nay là Thường Tín thuộc Hà Tây. Trần Quang Khải đã đánh bại Thoát Hoan ở đó.</LINE>
-            <LINE ID="P0296.L035" ORDER="35" NO="35" SRC_LINE="39" BBOX="270,2158,1762,2273" CONFIDENCE="93.26">3. Hàm Tử: Nay thuộc huyện Khoái Châu tỉnh Hưng Yên. Trần Nhật Duật đã phá quân Toạ Đô ở đó.</LINE>
-            <LINE ID="P0296.L036" ORDER="36" NO="36" SRC_LINE="40" BBOX="270,2273,1762,2388" CONFIDENCE="93.26">4. Hưng Đạo: Túc Hưng Đạo Vương Trần Quốc Tuấn.</LINE>
-            <LINE ID="P0296.L037" ORDER="37" NO="37" SRC_LINE="41" BBOX="270,2388,1762,2503" CONFIDENCE="93.26">5. Chiêu Văn: Túc Chiêu Văn Vương Trần Nhật Duật.</LINE>
+        <PAGE NUMBER="296" IMAGE="E:\Projects\han-viet-corpus\data\CPO_20\02_extraction\pages\page_296.png" IMAGE_SHA256="bc0d8d8f08c57b30ad7f4702ada9a9b4a4901096a40ffea100e4e02b25559136" RAW="03_ocr/raw/qwen/0296.json" SELECTED_ENGINE="qwen" SELECTED_KEY="25bebe7dec8f95a27b15590c6639fd7cf1041cb73f3676585899f8b10cbcd05f" CONFIDENCE="92.22" EMPTY="false" N_LINES="11" N_SRC_LINES="20" N_DROPPED="9" CJK_REMOVED="56">
+            <LINE ID="P0296.L001" ORDER="1" NO="1" SRC_LINE="10" BBOX="298,1233,1762,1380" CONFIDENCE="71.39">Phiên âm:</LINE>
+            <LINE ID="P0296.L002" ORDER="2" NO="2" SRC_LINE="11" BBOX="476,1372,1762,1530" CONFIDENCE="94.13">VỌNG TỨC MẶC ¹ THÀNH HỮU CẢM</LINE>
+            <LINE ID="P0296.L003" ORDER="3" NO="3" SRC_LINE="12" BBOX="520,1522,1762,1626" CONFIDENCE="89.95">Kiến thuyết Trần gia Tức Mạc thành,</LINE>
+            <LINE ID="P0296.L004" ORDER="4" NO="4" SRC_LINE="13" BBOX="520,1626,1762,1729" CONFIDENCE="89.95">Nhữn tiền phong cảnh bất thăng tình.</LINE>
+            <LINE ID="P0296.L005" ORDER="5" NO="5" SRC_LINE="14" BBOX="520,1729,1762,1832" CONFIDENCE="89.95">Chương Dương, ² Hàm Tử ³ do như cố,</LINE>
+            <LINE ID="P0296.L006" ORDER="6" NO="6" SRC_LINE="15" BBOX="520,1832,1762,1936" CONFIDENCE="89.95">Hưng Đạo, ⁴ Chiêu Văn ⁵ vị tái sinh.</LINE>
+            <LINE ID="P0296.L007" ORDER="7" NO="7" SRC_LINE="16" BBOX="279,1928,1762,2189" CONFIDENCE="91.23">Tức Mạc: Tên đất, thuộc phủ Thiện Trường, nay thuộc tỉnh Nam Định, là quê hương của nhà Trần.</LINE>
+            <LINE ID="P0296.L008" ORDER="8" NO="8" SRC_LINE="17" BBOX="270,2181,1762,2261" CONFIDENCE="94.0">2. Chương Dương: Bến đò ở huyện Thượng Phúc, nay là Thường Tín thuộc Hà Tây. Trần Quang Khải đã đánh bại Thoát Hoan ở đó.</LINE>
+            <LINE ID="P0296.L009" ORDER="9" NO="9" SRC_LINE="18" BBOX="270,2261,1762,2342" CONFIDENCE="94.0">3. Hàm Tử: Nay thuộc huyện Khoái Châu tỉnh Hưng Yên. Trần Nhật Duật đã phá quân Toà Đô ở đó.</LINE>
+            <LINE ID="P0296.L010" ORDER="10" NO="10" SRC_LINE="19" BBOX="270,2342,1762,2423" CONFIDENCE="94.0">4. Hưng Đạo: Tức Hưng Đạo Vương Trần Quốc Tuấn.</LINE>
+            <LINE ID="P0296.L011" ORDER="11" NO="11" SRC_LINE="20" BBOX="270,2423,1762,2503" CONFIDENCE="94.0">5. Chiêu Văn: Tức Chiêu Văn Vương Trần Nhật Duật.</LINE>
             <RUNS>
-                <RUN KEY="6e7dcace584c9a0da178e503877efbdf8776c27e1345d33ff2279aa5b30d93f4" CREATED_AT="2026-11-24T07:38:04+00:00" IMAGE="E:\Projects\han-viet-corpus\data\CPO_20\02_extraction\pages\page_296.png" IMAGE_WIDTH="1839" IMAGE_HEIGHT="2803" CROP_BOX="0,0,1839,2803" SOURCE="03_ocr/raw/0296.json" SELECTION="only">
+                <RUN KEY="25bebe7dec8f95a27b15590c6639fd7cf1041cb73f3676585899f8b10cbcd05f" CREATED_AT="2026-11-26T23:26:47+00:00" IMAGE="E:\Projects\han-viet-corpus\data\CPO_20\02_extraction\pages\page_296.png" IMAGE_WIDTH="1839" IMAGE_HEIGHT="2803" CROP_BOX="0,0,1839,2803" SOURCE="03_ocr/raw/qwen/0296.json" SELECTION="manifest">
                     <PARAMETERS>
                         <PARAM NAME="image_sha256">bc0d8d8f08c57b30ad7f4702ada9a9b4a4901096a40ffea100e4e02b25559136</PARAM>
-                        <ENGINE NAME="qwen" MODEL_ID="Qwen/Qwen2.5-VL-3B-Instruct" MODEL_REVISION="main" TRANSFORMERS_VERSION="4.57.6" TORCH_VERSION="2.5.1+cu121" CUDA_VERSION="12.1" BITSANDBYTES_VERSION="0.50.2" MODE="all" MIN_PIXELS="50176" MAX_PIXELS="802816" BAND_INCHES="2.0" MAX_NEW_TOKENS="768" REPETITION_PENALTY="1.05" ADAPTER_VERSION="3" PROMPT_VERSION="3" PROMPT_SHA256="b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74">
+                        <ENGINE NAME="qwen" MODEL_ID="Qwen/Qwen2.5-VL-3B-Instruct" MODEL_REVISION="main" TRANSFORMERS_VERSION="4.57.6" TORCH_VERSION="2.5.1+cu121" CUDA_VERSION="12.1" BITSANDBYTES_VERSION="0.50.2" MODE="all" MIN_PIXELS="50176" MAX_PIXELS="802816" BAND_INCHES="1.0" MAX_NEW_TOKENS="768" REPETITION_PENALTY="1.05" ADAPTER_VERSION="4" PROMPT_VERSION="3" PROMPT_SHA256="b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74">
                             <QUANTIZATION>{"compute_dtype": "float16", "double_quant": true, "load_in_4bit": true, "quant_type": "nf4"}</QUANTIZATION>
                         </ENGINE>
                         <PARAM NAME="lang">all</PARAM>
@@ -9425,23 +9403,25 @@
                 </RUN>
             </RUNS>
         </PAGE>
-        <PAGE NUMBER="298" IMAGE="E:\Projects\han-viet-corpus\data\CPO_20\02_extraction\pages\page_298.png" IMAGE_SHA256="e487036853c20882327a8dea687612d45abc4316d5863dced244c50c6183efed" RAW="03_ocr/raw/0298.json" SELECTED_ENGINE="qwen" SELECTED_KEY="385d95ac16684d7a87e4c8dd6dddf186a9a7cf5ccfc35d5572e1ecb29ff4dfc3" CONFIDENCE="87.74" EMPTY="false" N_LINES="11" N_SRC_LINES="16" N_DROPPED="5" CJK_REMOVED="32">
-            <LINE ID="P0298.L001" ORDER="1" NO="1" SRC_LINE="6" BBOX="537,852,1762,951" CONFIDENCE="86.02">ĐỀ VÕ VI TỰ 1</LINE>
-            <LINE ID="P0298.L002" ORDER="2" NO="2" SRC_LINE="7" BBOX="537,951,1762,1050" CONFIDENCE="86.02">Xung tiêu chày Hán thạch sầm nham,</LINE>
-            <LINE ID="P0298.L003" ORDER="3" NO="3" SRC_LINE="8" BBOX="537,1050,1762,1149" CONFIDENCE="86.02">Đình đặc cô phong kết tiểu am.</LINE>
-            <LINE ID="P0298.L004" ORDER="4" NO="4" SRC_LINE="9" BBOX="537,1149,1762,1248" CONFIDENCE="86.02">Nguyện tả hóa công bài bố lực,</LINE>
-            <LINE ID="P0298.L005" ORDER="5" NO="5" SRC_LINE="10" BBOX="537,1248,1762,1347" CONFIDENCE="86.02">Trực tương phiến thạch bổ Thiên Nam.</LINE>
-            <LINE ID="P0298.L006" ORDER="6" NO="6" SRC_LINE="11" BBOX="301,1339,1762,1487" CONFIDENCE="80.02">Dịch nghĩa:</LINE>
-            <LINE ID="P0298.L007" ORDER="7" NO="7" SRC_LINE="12" BBOX="301,1487,1762,1634" CONFIDENCE="80.02">ĐỀ CHỮA VÔ VI</LINE>
-            <LINE ID="P0298.L008" ORDER="8" NO="8" SRC_LINE="13" BBOX="267,1626,1762,1847" CONFIDENCE="90.55">Núi đá lởm chởm cao vút trời mây,</LINE>
-            <LINE ID="P0298.L009" ORDER="9" NO="9" SRC_LINE="14" BBOX="267,1847,1762,2068" CONFIDENCE="90.55">Một chiếc am nhỏ dựng trên ngọn núi chơ vơ sừng sừng.</LINE>
-            <LINE ID="P0298.L010" ORDER="10" NO="10" SRC_LINE="15" BBOX="267,2068,1762,2289" CONFIDENCE="90.55">Muốn mượn sức sấp đặt của tạo hóa,</LINE>
-            <LINE ID="P0298.L011" ORDER="11" NO="11" SRC_LINE="16" BBOX="267,2289,1762,2510" CONFIDENCE="90.55">Đem ngay phiến đá để vá trời Nam.</LINE>
+        <PAGE NUMBER="298" IMAGE="E:\Projects\han-viet-corpus\data\CPO_20\02_extraction\pages\page_298.png" IMAGE_SHA256="e487036853c20882327a8dea687612d45abc4316d5863dced244c50c6183efed" RAW="03_ocr/raw/qwen/0298.json" SELECTED_ENGINE="qwen" SELECTED_KEY="a808c8710d745e959992e620281259244229b3ad84e360b22ce1878247acdc43" CONFIDENCE="88.76" EMPTY="false" N_LINES="13" N_SRC_LINES="18" N_DROPPED="5" CJK_REMOVED="30">
+            <LINE ID="P0298.L001" ORDER="1" NO="1" SRC_LINE="6" BBOX="318,750,1762,885" CONFIDENCE="80.25">Phiên âm:</LINE>
+            <LINE ID="P0298.L002" ORDER="2" NO="2" SRC_LINE="7" BBOX="318,885,1762,1020" CONFIDENCE="80.25">Đề vô vi tự 1</LINE>
+            <LINE ID="P0298.L003" ORDER="3" NO="3" SRC_LINE="8" BBOX="537,1012,1762,1096" CONFIDENCE="86.18">Xung tiêu chày Hán thạch sầm nham,</LINE>
+            <LINE ID="P0298.L004" ORDER="4" NO="4" SRC_LINE="9" BBOX="537,1096,1762,1180" CONFIDENCE="86.18">Đình đặc cô phong kết tiểu am.</LINE>
+            <LINE ID="P0298.L005" ORDER="5" NO="5" SRC_LINE="10" BBOX="537,1180,1762,1263" CONFIDENCE="86.18">Nguyện tá hóa công bài bố lực,</LINE>
+            <LINE ID="P0298.L006" ORDER="6" NO="6" SRC_LINE="11" BBOX="537,1263,1762,1347" CONFIDENCE="86.18">Trực tương phiến thạch bổ Thiên Nam.</LINE>
+            <LINE ID="P0298.L007" ORDER="7" NO="7" SRC_LINE="12" BBOX="301,1339,1762,1487" CONFIDENCE="80.02">Dịch nghĩa:</LINE>
+            <LINE ID="P0298.L008" ORDER="8" NO="8" SRC_LINE="13" BBOX="301,1487,1762,1634" CONFIDENCE="80.02">ĐỀ CHỮA VÔ VI</LINE>
+            <LINE ID="P0298.L009" ORDER="9" NO="9" SRC_LINE="14" BBOX="523,1626,1762,1734" CONFIDENCE="94.16">Núi đá lởm chởm cao vút trời mây,</LINE>
+            <LINE ID="P0298.L010" ORDER="10" NO="10" SRC_LINE="15" BBOX="523,1734,1762,1841" CONFIDENCE="94.16">Một chiếc am nhỏ dựng trên ngọn núi chơ vơ sừng sừng.</LINE>
+            <LINE ID="P0298.L011" ORDER="11" NO="11" SRC_LINE="16" BBOX="523,1841,1762,1948" CONFIDENCE="94.16">Muốn mượn sức sấp đặt của tạo hóa,</LINE>
+            <LINE ID="P0298.L012" ORDER="12" NO="12" SRC_LINE="17" BBOX="523,1948,1762,2056" CONFIDENCE="94.16">Đem ngay phiến đá để vá trời Nam.</LINE>
+            <LINE ID="P0298.L013" ORDER="13" NO="13" SRC_LINE="18" BBOX="267,2226,1762,2510" CONFIDENCE="88.5">Nguyên dẫn: Chùa này ở trên núi Long Châu xã Tứ Nê, huyện Yên Sơn, xưa có hành cung, phong cảnh rất đẹp. Dưới chân núi có một ngọn núi lẻ loi đứng tách hẳn; lần bậc trèo lên, trên đỉnh núi có ngôi chùa nhỏ ba gian, biến đế là chùa Vô Vi. Lên cao nhìn xa, tâm thần lảng lánh, thấy trên vách có sắn bài thơ tiêu luật đê vịnh của bác hiền quý ngày xưa, bên hoa nguyên vân.</LINE>
             <RUNS>
-                <RUN KEY="385d95ac16684d7a87e4c8dd6dddf186a9a7cf5ccfc35d5572e1ecb29ff4dfc3" CREATED_AT="2026-11-24T07:41:21+00:00" IMAGE="E:\Projects\han-viet-corpus\data\CPO_20\02_extraction\pages\page_298.png" IMAGE_WIDTH="1839" IMAGE_HEIGHT="2803" CROP_BOX="0,0,1839,2803" SOURCE="03_ocr/raw/0298.json" SELECTION="only">
+                <RUN KEY="a808c8710d745e959992e620281259244229b3ad84e360b22ce1878247acdc43" CREATED_AT="2026-11-26T23:27:13+00:00" IMAGE="E:\Projects\han-viet-corpus\data\CPO_20\02_extraction\pages\page_298.png" IMAGE_WIDTH="1839" IMAGE_HEIGHT="2803" CROP_BOX="0,0,1839,2803" SOURCE="03_ocr/raw/qwen/0298.json" SELECTION="manifest">
                     <PARAMETERS>
                         <PARAM NAME="image_sha256">e487036853c20882327a8dea687612d45abc4316d5863dced244c50c6183efed</PARAM>
-                        <ENGINE NAME="qwen" MODEL_ID="Qwen/Qwen2.5-VL-3B-Instruct" MODEL_REVISION="main" TRANSFORMERS_VERSION="4.57.6" TORCH_VERSION="2.5.1+cu121" CUDA_VERSION="12.1" BITSANDBYTES_VERSION="0.50.2" MODE="all" MIN_PIXELS="50176" MAX_PIXELS="802816" BAND_INCHES="2.0" MAX_NEW_TOKENS="768" REPETITION_PENALTY="1.05" ADAPTER_VERSION="3" PROMPT_VERSION="3" PROMPT_SHA256="b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74">
+                        <ENGINE NAME="qwen" MODEL_ID="Qwen/Qwen2.5-VL-3B-Instruct" MODEL_REVISION="main" TRANSFORMERS_VERSION="4.57.6" TORCH_VERSION="2.5.1+cu121" CUDA_VERSION="12.1" BITSANDBYTES_VERSION="0.50.2" MODE="all" MIN_PIXELS="50176" MAX_PIXELS="802816" BAND_INCHES="1.0" MAX_NEW_TOKENS="768" REPETITION_PENALTY="1.05" ADAPTER_VERSION="4" PROMPT_VERSION="3" PROMPT_SHA256="b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74">
                             <QUANTIZATION>{"compute_dtype": "float16", "double_quant": true, "load_in_4bit": true, "quant_type": "nf4"}</QUANTIZATION>
                         </ENGINE>
                         <PARAM NAME="lang">all</PARAM>
@@ -10188,21 +10168,26 @@
                 </RUN>
             </RUNS>
         </PAGE>
-        <PAGE NUMBER="622" IMAGE="E:\Projects\han-viet-corpus\data\CPO_20\02_extraction\pages\page_622.png" IMAGE_SHA256="0990d3140be286404013c72d8dfc0cc81eaf3792c6cca3c635b8e8d744d29975" RAW="03_ocr/raw/qwen/0622.json" SELECTED_ENGINE="qwen" SELECTED_KEY="c678552f0faaf3494bcf413aeae8c5a6bf423c5e7277b241f3a62a674f53406e" CONFIDENCE="83.14" EMPTY="false" N_LINES="9" N_SRC_LINES="16" N_DROPPED="7" CJK_REMOVED="44">
-            <LINE ID="P0622.L001" ORDER="1" NO="1" SRC_LINE="8" BBOX="266,1189,1763,1365" CONFIDENCE="82.68">HỌA ĐỒNG GIANG HẦU NGUYÊN VẠN</LINE>
-            <LINE ID="P0622.L002" ORDER="2" NO="2" SRC_LINE="9" BBOX="495,1357,1763,1422" CONFIDENCE="85.11">Ngô sài đồng thị xuất Nam nha,</LINE>
-            <LINE ID="P0622.L003" ORDER="3" NO="3" SRC_LINE="10" BBOX="495,1422,1763,1487" CONFIDENCE="85.11">Thực hành công phu tại bất hoa.</LINE>
-            <LINE ID="P0622.L004" ORDER="4" NO="4" SRC_LINE="11" BBOX="495,1487,1763,1553" CONFIDENCE="85.11">Thiện ác trùng đầu luân nghi chuyển,</LINE>
-            <LINE ID="P0622.L005" ORDER="5" NO="5" SRC_LINE="12" BBOX="495,1553,1763,1618" CONFIDENCE="85.11">Cùng thông đáo để khích cầu qua.</LINE>
-            <LINE ID="P0622.L006" ORDER="6" NO="6" SRC_LINE="13" BBOX="495,1618,1763,1683" CONFIDENCE="85.11">Cư nhiên thuận cảnh tâm thường thay,</LINE>
-            <LINE ID="P0622.L007" ORDER="7" NO="7" SRC_LINE="14" BBOX="495,1683,1763,1748" CONFIDENCE="85.11">Thấu liều thành quan lạc cánh đa.</LINE>
-            <LINE ID="P0622.L008" ORDER="8" NO="8" SRC_LINE="15" BBOX="251,1740,1763,2140" CONFIDENCE="76.3">Tạo vật thừ trừ ngư giả phúc,</LINE>
-            <LINE ID="P0622.L009" ORDER="9" NO="9" SRC_LINE="16" BBOX="251,2140,1763,2540" CONFIDENCE="76.3">Thủ thư tiểu Lão ý văn hà.</LINE>
+        <PAGE NUMBER="622" IMAGE="E:\Projects\han-viet-corpus\data\CPO_20\02_extraction\pages\page_622.png" IMAGE_SHA256="0990d3140be286404013c72d8dfc0cc81eaf3792c6cca3c635b8e8d744d29975" RAW="03_ocr/raw/qwen/0622.json" SELECTED_ENGINE="qwen" SELECTED_KEY="f3e3da1ee1f92423699a8a61bd6bdb581640a8220ee737a25b50f9ee27c0a239" CONFIDENCE="88.49" EMPTY="false" N_LINES="14" N_SRC_LINES="18" N_DROPPED="4" CJK_REMOVED="43">
+            <LINE ID="P0622.L001" ORDER="1" NO="1" SRC_LINE="1" BBOX="716,242,1763,481" CONFIDENCE="15.14">� � URLConnection</LINE>
+            <LINE ID="P0622.L002" ORDER="2" NO="2" SRC_LINE="6" BBOX="266,1010,1763,1224" CONFIDENCE="91.13">Phiên âm:</LINE>
+            <LINE ID="P0622.L003" ORDER="3" NO="3" SRC_LINE="7" BBOX="426,1216,1763,1315" CONFIDENCE="86.78">HỌA ĐỒNG GIANG HẦU NGUYỄN VẠN</LINE>
+            <LINE ID="P0622.L004" ORDER="4" NO="4" SRC_LINE="8" BBOX="426,1315,1763,1413" CONFIDENCE="86.78">Ngô sài đồng thị xuất Nam nha,</LINE>
+            <LINE ID="P0622.L005" ORDER="5" NO="5" SRC_LINE="9" BBOX="426,1413,1763,1512" CONFIDENCE="86.78">Thực hành công phu tại bất hoa.</LINE>
+            <LINE ID="P0622.L006" ORDER="6" NO="6" SRC_LINE="10" BBOX="495,1504,1763,1565" CONFIDENCE="90.27">Thiện ác tùng đầu luân nghĩ chuyển,</LINE>
+            <LINE ID="P0622.L007" ORDER="7" NO="7" SRC_LINE="11" BBOX="495,1565,1763,1626" CONFIDENCE="90.27">Cùng thông đáo để khích cầu qua.</LINE>
+            <LINE ID="P0622.L008" ORDER="8" NO="8" SRC_LINE="12" BBOX="495,1626,1763,1687" CONFIDENCE="90.27">Cư nhiên thuận cảnh tâm thường thái,</LINE>
+            <LINE ID="P0622.L009" ORDER="9" NO="9" SRC_LINE="13" BBOX="495,1687,1763,1748" CONFIDENCE="90.27">Thấu liễu thành quan lạc cánh đa.</LINE>
+            <LINE ID="P0622.L010" ORDER="10" NO="10" SRC_LINE="14" BBOX="493,1740,1763,1881" CONFIDENCE="78.05">Tạo vật thừa trừ ngư giả phúc,</LINE>
+            <LINE ID="P0622.L011" ORDER="11" NO="11" SRC_LINE="15" BBOX="493,1881,1763,2022" CONFIDENCE="78.05">Thủ thư tiểu Lão ý văn hà.</LINE>
+            <LINE ID="P0622.L012" ORDER="12" NO="12" SRC_LINE="16" BBOX="251,2202,1763,2315" CONFIDENCE="93.08">Nam nha: Thời Đường, phủ Tể tướng gọi là Nam nha. Nam nha còn có nghĩa nữa là chỉ các dinh thự ở về phía Nam cung vua. Ở đây tác giả dùng để chỉ giới Nho sĩ, quan lại nói chung.</LINE>
+            <LINE ID="P0622.L013" ORDER="13" NO="13" SRC_LINE="17" BBOX="251,2315,1763,2427" CONFIDENCE="93.08">Thành quan: Cửa đi vào con đường thành thực.</LINE>
+            <LINE ID="P0622.L014" ORDER="14" NO="14" SRC_LINE="18" BBOX="251,2427,1763,2540" CONFIDENCE="93.08">Thủ thư tiểu Lão: Do câu "Tri kỳ hùng thú kỳ thư; Tri kỳ bạch thú kỳ hạc", nghĩa là "Biết là con đực thì chọn lấy con cái; biết là trắng thì giữ lấy đen".</LINE>
             <RUNS>
-                <RUN KEY="c678552f0faaf3494bcf413aeae8c5a6bf423c5e7277b241f3a62a674f53406e" CREATED_AT="2026-11-25T17:05:10+00:00" IMAGE="E:\Projects\han-viet-corpus\data\CPO_20\02_extraction\pages\page_622.png" IMAGE_WIDTH="1840" IMAGE_HEIGHT="2803" CROP_BOX="0,0,1840,2803" SOURCE="03_ocr/raw/qwen/0622.json" SELECTION="manifest">
+                <RUN KEY="f3e3da1ee1f92423699a8a61bd6bdb581640a8220ee737a25b50f9ee27c0a239" CREATED_AT="2026-11-26T23:27:40+00:00" IMAGE="E:\Projects\han-viet-corpus\data\CPO_20\02_extraction\pages\page_622.png" IMAGE_WIDTH="1840" IMAGE_HEIGHT="2803" CROP_BOX="0,0,1840,2803" SOURCE="03_ocr/raw/qwen/0622.json" SELECTION="manifest">
                     <PARAMETERS>
                         <PARAM NAME="image_sha256">0990d3140be286404013c72d8dfc0cc81eaf3792c6cca3c635b8e8d744d29975</PARAM>
-                        <ENGINE NAME="qwen" MODEL_ID="Qwen/Qwen2.5-VL-3B-Instruct" MODEL_REVISION="main" TRANSFORMERS_VERSION="4.57.6" TORCH_VERSION="2.5.1+cu121" CUDA_VERSION="12.1" BITSANDBYTES_VERSION="0.50.2" MODE="all" MIN_PIXELS="50176" MAX_PIXELS="802816" BAND_INCHES="2.0" MAX_NEW_TOKENS="768" REPETITION_PENALTY="1.05" ADAPTER_VERSION="3" PROMPT_VERSION="3" PROMPT_SHA256="b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74">
+                        <ENGINE NAME="qwen" MODEL_ID="Qwen/Qwen2.5-VL-3B-Instruct" MODEL_REVISION="main" TRANSFORMERS_VERSION="4.57.6" TORCH_VERSION="2.5.1+cu121" CUDA_VERSION="12.1" BITSANDBYTES_VERSION="0.50.2" MODE="all" MIN_PIXELS="50176" MAX_PIXELS="802816" BAND_INCHES="1.0" MAX_NEW_TOKENS="768" REPETITION_PENALTY="1.05" ADAPTER_VERSION="4" PROMPT_VERSION="3" PROMPT_SHA256="b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74">
                             <QUANTIZATION>{"compute_dtype": "float16", "double_quant": true, "load_in_4bit": true, "quant_type": "nf4"}</QUANTIZATION>
                         </ENGINE>
                         <PARAM NAME="lang">all</PARAM>
@@ -10862,15 +10847,19 @@
                 </RUN>
             </RUNS>
         </PAGE>
-        <PAGE NUMBER="646" IMAGE="E:\Projects\han-viet-corpus\data\CPO_20\02_extraction\pages\page_646.png" IMAGE_SHA256="d88a46a850a9035e791bd08ef8e54a61a667d355ad33b471113f12fbb19c904b" RAW="03_ocr/raw/qwen/0646.json" SELECTED_ENGINE="qwen" SELECTED_KEY="52fa77111f8742f1877d0ae7d5de34d1a7378761e83b4b4e62f47efbc391f1bd" CONFIDENCE="92.96" EMPTY="false" N_LINES="3" N_SRC_LINES="4" N_DROPPED="1" CJK_REMOVED="44">
-            <LINE ID="P0646.L001" ORDER="1" NO="1" SRC_LINE="2" BBOX="240,801,1763,1499" CONFIDENCE="95.43">Một hôm ta đang soi gương ở trong hiệu sách, bỗng có một người đến trước mặt, tự xưng là Đạo tử ở Nhuệ Giang. Ta ngừng mắt trông, thấy phong tư thể mạo giống hệt như mình, trong lòng lấy làm lạ, vái chào mời cùng ngồi. Người ấy cười mà bảo rằng: Bạn biết đạo? Ta trả lời: Tôi chưa biết học, biết sao được đạo? Khách mới dịu mặt đáp rằng: Khi xưa Phu tử ta có dạy: "Điều gì biết thì nói là biết. Điều gì không biết, nói là không biết, thế là biết". Bạn đúng là người như thế. Nói đến cái bản thể của đạo thì rộng lớn hơn cái gì bao bọc ở ngoài đường, nhỏ bé không cái gì lọt vào trong được. Từ một thân, một nhà suy ra đến nước, đến thiên hạ, không vật gì là không có, không lúc nào là không tồn tại.</LINE>
-            <LINE ID="P0646.L002" ORDER="2" NO="2" SRC_LINE="3" BBOX="235,1491,1763,2099" CONFIDENCE="89.49">Đạo thực là rất mực! Những người có thể thông suốt được bao gồm đầy đủ thật là hiếm. Cho nên cửa Khổng ba ngàn học trò, mà cái ý "nhất quán", chỉ có Tăng Tử nghe hiểu được và đáp bằng một tiếng "dạ", Thuần báo cho Vũ cũng nói: "Lòng đạo rất nhỏ". Xem thế cố nhân cho học với đạo là một. Phàm học tức là đạo. Học đạo mà được mực cao nhất thì: nếu đạt mà ở địa vị trên, tuy mặc áo chùng ngồi ngoảnh mặt hướng nam cũng chẳng lấy thế làm sung sướng. Cùng mà ở địa vị dưới, tuy có cánh tay gối đầu, ăn cơm hẩm nhưng trong đó vẫn có cái vui. Dùng thì ra mà hành đạo, bỏ thì ẩn một nơi, điều đó đối với ta không quan hệ gì lắm. Khi chưa gặp được thời thì là, thì là.</LINE>
-            <LINE ID="P0646.L003" ORDER="3" NO="3" SRC_LINE="4" BBOX="227,2091,1763,2546" CONFIDENCE="94.15">Thời thì ta làm Sào Phủ, làm Hứa Do. Khi đã thạo chí thì ta làm Y Doãn, làm Chu Công. Các vị ấy đều là những người ở nhà thì đem thân theo đạo, ra đời thì đem đạo theo thân cả. Từ khi thánh hiền không ra đời nữa đạo học không được rõ rệt. Người làm kẻ sĩ ở đời chia học với đạo ra làm hai. Thấy người đời xưa hỏi điều nhân để học thì người đời nay cũng đem chữ "hỏi nhân" đọc tràn đi, mà chưa chắc đã biết cái gọi là chữ nhân là như thế nào. Thấy người đời xưa hỏi 650</LINE>
+        <PAGE NUMBER="646" IMAGE="E:\Projects\han-viet-corpus\data\CPO_20\02_extraction\pages\page_646.png" IMAGE_SHA256="d88a46a850a9035e791bd08ef8e54a61a667d355ad33b471113f12fbb19c904b" RAW="03_ocr/raw/qwen/0646.json" SELECTED_ENGINE="qwen" SELECTED_KEY="78e372f81ab7fb11249aa1763dd6914c0e38b4c934167158c038c08c60e7dfa6" CONFIDENCE="92.64" EMPTY="false" N_LINES="7" N_SRC_LINES="8" N_DROPPED="1" CJK_REMOVED="32">
+            <LINE ID="P0646.L001" ORDER="1" NO="1" SRC_LINE="2" BBOX="249,498,1763,655" CONFIDENCE="94.23">Dịch nghĩa:</LINE>
+            <LINE ID="P0646.L002" ORDER="2" NO="2" SRC_LINE="3" BBOX="374,647,1763,809" CONFIDENCE="97.43">BÀI KÝ: NGƯỜI NÓI CHUYÊN VỚI BÓNG</LINE>
+            <LINE ID="P0646.L003" ORDER="3" NO="3" SRC_LINE="4" BBOX="245,801,1763,1109" CONFIDENCE="86.2">Một hôm ta đang soi gương ở trong hiệu sách, bỗng có một người đến trước mặt, tự xưng là Đạo tử ở Nhuệ Giang. Ta ngừng mắt trông, thấy phong tư thể mạo giống hệt như mình, trong lòng lấy làm lạ, vái chào mời cùng ngồi. Người ấy cười mà bảo rằng: Bạn biết đạo chăng? Ta trả lời: Tôi chưa biết học, biết sao được, được Khi (khi)</LINE>
+            <LINE ID="P0646.L004" ORDER="4" NO="4" SRC_LINE="5" BBOX="240,1101,1763,1499" CONFIDENCE="93.87">Ta tra lôi. Tôi chưa biết học, biết sao được đạo? Khách mới dịu nét đáp rằng: Khi xưa Phu tử ta có dạy: "Điều gì biết thì nói là biết. Điều gì không biết, nói là không biết, thế là biết". Bạn đúng là người như thế. Nói đến cái bản thể của đạo thì rộng lớn hơn cái gì bao bọc ở ngoài đường, nhỏ bé không cái gì lọt vào trong được. Từ một thân, một nhà suy ra đến nước, đến thiên hạ, không vật gì là không có, không lúc nào là không tồn tại.</LINE>
+            <LINE ID="P0646.L005" ORDER="5" NO="5" SRC_LINE="6" BBOX="237,1491,1763,1799" CONFIDENCE="94.24">Đạo thực là rất mực! Những người có thể thông suốt được bao gồm đầy đủ thật là hiếm. Cho nên cửa Khổng ba ngàn học trò, mà cái ý "nhất quán", chỉ có Tăng Tử nghe hiểu được và đáp bằng một tiếng "dạ". Thuần báo cho Vũ cũng nói: "Lòng đạo rất nhỏ". Xem thế cổ nhân cho học với đạo là một. Phàm học tức là đạo. Học đạo mà</LINE>
+            <LINE ID="P0646.L006" ORDER="6" NO="6" SRC_LINE="7" BBOX="235,1791,1763,2099" CONFIDENCE="93.15">đến được mực cao nhất thì: nếu đạt mà ở địa vị trên, tuy mặc áo chùng ngồi ngoảnh mặt hướng nam cũng chẳng lấy thế làm sung sướng. Cùng mà ở địa vị dưới, tuy có cánh tay gối đầu, ăn cơm hẩm nhưng trong đó vẫn có cái vui. Dùng thì ra mà hành đạo, bỏ thì ẩn một nơi, điều đó đối với ta không quan hệ gì lắm. Khi chưa gặp được</LINE>
+            <LINE ID="P0646.L007" ORDER="7" NO="7" SRC_LINE="8" BBOX="227,2091,1763,2546" CONFIDENCE="94.15">Thời thì ta làm Sào Phủ, làm Hứa Do. Khi đã thạo chí thì ta làm Y Doãn, làm Chu Công. Các vị ấy đều là những người ở nhà thì đem thân theo đạo, ra đời thì đem đạo theo thân cả. Từ khi thánh hiền không ra đời nữa đạo học không được rõ rệt. Người làm kẻ sĩ ở đời chia học với đạo ra làm hai. Thấy người đời xưa hỏi điều nhân để học thì người đời nay cũng đem chữ "hỏi nhân" đọc tràn đi, mà chưa chắc đã biết cái gọi là chữ nhân là như thế nào. Thấy người đời xưa hỏi 650</LINE>
             <RUNS>
-                <RUN KEY="52fa77111f8742f1877d0ae7d5de34d1a7378761e83b4b4e62f47efbc391f1bd" CREATED_AT="2026-11-25T17:50:52+00:00" IMAGE="E:\Projects\han-viet-corpus\data\CPO_20\02_extraction\pages\page_646.png" IMAGE_WIDTH="1840" IMAGE_HEIGHT="2803" CROP_BOX="0,0,1840,2803" SOURCE="03_ocr/raw/qwen/0646.json" SELECTION="manifest">
+                <RUN KEY="78e372f81ab7fb11249aa1763dd6914c0e38b4c934167158c038c08c60e7dfa6" CREATED_AT="2026-11-26T23:28:25+00:00" IMAGE="E:\Projects\han-viet-corpus\data\CPO_20\02_extraction\pages\page_646.png" IMAGE_WIDTH="1840" IMAGE_HEIGHT="2803" CROP_BOX="0,0,1840,2803" SOURCE="03_ocr/raw/qwen/0646.json" SELECTION="manifest">
                     <PARAMETERS>
                         <PARAM NAME="image_sha256">d88a46a850a9035e791bd08ef8e54a61a667d355ad33b471113f12fbb19c904b</PARAM>
-                        <ENGINE NAME="qwen" MODEL_ID="Qwen/Qwen2.5-VL-3B-Instruct" MODEL_REVISION="main" TRANSFORMERS_VERSION="4.57.6" TORCH_VERSION="2.5.1+cu121" CUDA_VERSION="12.1" BITSANDBYTES_VERSION="0.50.2" MODE="all" MIN_PIXELS="50176" MAX_PIXELS="802816" BAND_INCHES="2.0" MAX_NEW_TOKENS="768" REPETITION_PENALTY="1.05" ADAPTER_VERSION="3" PROMPT_VERSION="3" PROMPT_SHA256="b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74">
+                        <ENGINE NAME="qwen" MODEL_ID="Qwen/Qwen2.5-VL-3B-Instruct" MODEL_REVISION="main" TRANSFORMERS_VERSION="4.57.6" TORCH_VERSION="2.5.1+cu121" CUDA_VERSION="12.1" BITSANDBYTES_VERSION="0.50.2" MODE="all" MIN_PIXELS="50176" MAX_PIXELS="802816" BAND_INCHES="1.0" MAX_NEW_TOKENS="768" REPETITION_PENALTY="1.05" ADAPTER_VERSION="4" PROMPT_VERSION="3" PROMPT_SHA256="b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74">
                             <QUANTIZATION>{"compute_dtype": "float16", "double_quant": true, "load_in_4bit": true, "quant_type": "nf4"}</QUANTIZATION>
                         </ENGINE>
                         <PARAM NAME="lang">all</PARAM>
@@ -11942,22 +11931,23 @@
                 </RUN>
             </RUNS>
         </PAGE>
-        <PAGE NUMBER="678" IMAGE="E:\Projects\han-viet-corpus\data\CPO_20\02_extraction\pages\page_678.png" IMAGE_SHA256="6ae6f362dcbe683a08bc16791446426ca1eafd48dc14b28993072da1a970e259" RAW="03_ocr/raw/qwen/0678.json" SELECTED_ENGINE="qwen" SELECTED_KEY="be9a4cc00291d9f29c93bf0a5d7cd5f70181acd57dcca661c5600fa864e762bc" CONFIDENCE="84.73" EMPTY="false" N_LINES="10" N_SRC_LINES="42" N_DROPPED="32" CJK_REMOVED="38">
-            <LINE ID="P0678.L001" ORDER="1" NO="1" SRC_LINE="1" BBOX="496,249,1762,385" CONFIDENCE="83.68">Dạ sầu như chày, vội vàng đốt đèn đuốc,</LINE>
-            <LINE ID="P0678.L002" ORDER="2" NO="2" SRC_LINE="2" BBOX="496,385,1762,521" CONFIDENCE="83.68">Xương cốt như gián, mỏi tựa lan can.</LINE>
-            <LINE ID="P0678.L003" ORDER="3" NO="3" SRC_LINE="3" BBOX="496,521,1762,657" CONFIDENCE="83.68">Muốn mượn đêm thanh để khuây trâm điều lo nghĩ,</LINE>
-            <LINE ID="P0678.L004" ORDER="4" NO="4" SRC_LINE="4" BBOX="496,657,1762,793" CONFIDENCE="83.68">Ngoài cửa sổ đằng đông, vầng hồng đã cao tới ba con sào.</LINE>
-            <LINE ID="P0678.L005" ORDER="5" NO="5" SRC_LINE="37" BBOX="182,1462,1762,1594" CONFIDENCE="86.17">Phiên âm:</LINE>
-            <LINE ID="P0678.L006" ORDER="6" NO="6" SRC_LINE="38" BBOX="182,1594,1762,1726" CONFIDENCE="86.17">NHÀN TRUNG TỰ THUẬT</LINE>
-            <LINE ID="P0678.L007" ORDER="7" NO="7" SRC_LINE="39" BBOX="215,1718,1762,1924" CONFIDENCE="85.85">Tứ thập đầu tu tiệm tiệm ban,</LINE>
-            <LINE ID="P0678.L008" ORDER="8" NO="8" SRC_LINE="40" BBOX="215,1924,1762,2130" CONFIDENCE="85.85">Phùng thời một nại thử trấn gian.</LINE>
-            <LINE ID="P0678.L009" ORDER="9" NO="9" SRC_LINE="41" BBOX="215,2130,1762,2336" CONFIDENCE="85.85">"Tam dư" 1 thị nhật thành ngô chuyệt,</LINE>
-            <LINE ID="P0678.L010" ORDER="10" NO="10" SRC_LINE="42" BBOX="215,2336,1762,2542" CONFIDENCE="85.85">"Thập mẫu chi gian" 2 dữ tử hoàn.</LINE>
+        <PAGE NUMBER="678" IMAGE="E:\Projects\han-viet-corpus\data\CPO_20\02_extraction\pages\page_678.png" IMAGE_SHA256="6ae6f362dcbe683a08bc16791446426ca1eafd48dc14b28993072da1a970e259" RAW="03_ocr/raw/qwen/0678.json" SELECTED_ENGINE="qwen" SELECTED_KEY="c7227b825e9ceae567f515adc1881a3c0d8350c17ec34db1c1f30ac85ed4fe93" CONFIDENCE="91.44" EMPTY="false" N_LINES="11" N_SRC_LINES="20" N_DROPPED="9" CJK_REMOVED="62">
+            <LINE ID="P0678.L001" ORDER="1" NO="1" SRC_LINE="1" BBOX="496,249,1762,325" CONFIDENCE="86.31">Dạ sâu như chày, vội vàng đốt đèn đuốc,</LINE>
+            <LINE ID="P0678.L002" ORDER="2" NO="2" SRC_LINE="2" BBOX="496,325,1762,401" CONFIDENCE="86.31">Xương cốt như gián, mỗi mệt tựa lan can.</LINE>
+            <LINE ID="P0678.L003" ORDER="3" NO="3" SRC_LINE="3" BBOX="496,401,1762,477" CONFIDENCE="86.31">Muốn mượn đêm thanh để khuây trăm điều lo nghĩ,</LINE>
+            <LINE ID="P0678.L004" ORDER="4" NO="4" SRC_LINE="4" BBOX="496,477,1762,553" CONFIDENCE="86.31">Ngoài cửa sổ đáng đông, vầng hồng đã cao tới ba con sào.</LINE>
+            <LINE ID="P0678.L005" ORDER="5" NO="5" SRC_LINE="14" BBOX="215,1536,1762,1726" CONFIDENCE="94.26">NHÀN TRUNG TỰ THUẬT</LINE>
+            <LINE ID="P0678.L006" ORDER="6" NO="6" SRC_LINE="15" BBOX="215,1718,1762,1794" CONFIDENCE="90.77">Tứ thập đầu tu tiệm tiệm ban,</LINE>
+            <LINE ID="P0678.L007" ORDER="7" NO="7" SRC_LINE="16" BBOX="215,1794,1762,1870" CONFIDENCE="90.77">Phùng thời một nại thử truân gian.</LINE>
+            <LINE ID="P0678.L008" ORDER="8" NO="8" SRC_LINE="17" BBOX="215,1870,1762,1947" CONFIDENCE="90.77">"Tam dư" 1 thị nhật thành ngô chuyệt,</LINE>
+            <LINE ID="P0678.L009" ORDER="9" NO="9" SRC_LINE="18" BBOX="215,1947,1762,2023" CONFIDENCE="90.77">"Thập mẫu chi gian" 2 dử tử hoàn.</LINE>
+            <LINE ID="P0678.L010" ORDER="10" NO="10" SRC_LINE="19" BBOX="220,2015,1762,2323" CONFIDENCE="92.73">1. Tam du: Chi sự chăm chỉ, miệt mài học tập. Đổng Ngộ đời Hậu Hán là người hiếu học, có người đến xin theo học ông. Ngộ không dạy và bảo: "Anh cứ về đọc sách một trăm lần thì tự hiểu được nghĩa". Người học trò nói "Khốn nỗi không có ngày giờ". Ngộ bảo "lấy tam du". Túc là ba loại thì thưa: đêm là thưa của ngày, mùa đông là thưa của năm, lúc mưa đầm là thưa của nắng. Về sau trong văn cổ Hán ngữ dùng chữ "học túc tam du" học đủ ba chỗ thưa để chỉ người chăm chỉ miệt mài học tập.</LINE>
+            <LINE ID="P0678.L011" ORDER="11" NO="11" SRC_LINE="20" BBOX="227,2315,1762,2542" CONFIDENCE="92.74">2. Thập mẫu chi gian: "Trong khoảng mười mẫu", tên một bài thơ trong Ngụy phong, Kính Thi. Chu Hy cho rằng bài thơ này có ý nói: khi chính sự hỗn loạn, quốc gia nguy vong, người hiền không thích làm quan trong triều nữa và muốn cùng bè bạn vợ con về nơi ruộng vườn. 682</LINE>
             <RUNS>
-                <RUN KEY="be9a4cc00291d9f29c93bf0a5d7cd5f70181acd57dcca661c5600fa864e762bc" CREATED_AT="2026-11-25T18:35:01+00:00" IMAGE="E:\Projects\han-viet-corpus\data\CPO_20\02_extraction\pages\page_678.png" IMAGE_WIDTH="1839" IMAGE_HEIGHT="2803" CROP_BOX="0,0,1839,2803" SOURCE="03_ocr/raw/qwen/0678.json" SELECTION="manifest">
+                <RUN KEY="c7227b825e9ceae567f515adc1881a3c0d8350c17ec34db1c1f30ac85ed4fe93" CREATED_AT="2026-11-26T23:29:00+00:00" IMAGE="E:\Projects\han-viet-corpus\data\CPO_20\02_extraction\pages\page_678.png" IMAGE_WIDTH="1839" IMAGE_HEIGHT="2803" CROP_BOX="0,0,1839,2803" SOURCE="03_ocr/raw/qwen/0678.json" SELECTION="manifest">
                     <PARAMETERS>
                         <PARAM NAME="image_sha256">6ae6f362dcbe683a08bc16791446426ca1eafd48dc14b28993072da1a970e259</PARAM>
-                        <ENGINE NAME="qwen" MODEL_ID="Qwen/Qwen2.5-VL-3B-Instruct" MODEL_REVISION="main" TRANSFORMERS_VERSION="4.57.6" TORCH_VERSION="2.5.1+cu121" CUDA_VERSION="12.1" BITSANDBYTES_VERSION="0.50.2" MODE="all" MIN_PIXELS="50176" MAX_PIXELS="802816" BAND_INCHES="2.0" MAX_NEW_TOKENS="768" REPETITION_PENALTY="1.05" ADAPTER_VERSION="3" PROMPT_VERSION="3" PROMPT_SHA256="b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74">
+                        <ENGINE NAME="qwen" MODEL_ID="Qwen/Qwen2.5-VL-3B-Instruct" MODEL_REVISION="main" TRANSFORMERS_VERSION="4.57.6" TORCH_VERSION="2.5.1+cu121" CUDA_VERSION="12.1" BITSANDBYTES_VERSION="0.50.2" MODE="all" MIN_PIXELS="50176" MAX_PIXELS="802816" BAND_INCHES="1.0" MAX_NEW_TOKENS="768" REPETITION_PENALTY="1.05" ADAPTER_VERSION="4" PROMPT_VERSION="3" PROMPT_SHA256="b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74">
                             <QUANTIZATION>{"compute_dtype": "float16", "double_quant": true, "load_in_4bit": true, "quant_type": "nf4"}</QUANTIZATION>
                         </ENGINE>
                         <PARAM NAME="lang">all</PARAM>
@@ -12174,21 +12164,26 @@
                 </RUN>
             </RUNS>
         </PAGE>
-        <PAGE NUMBER="685" IMAGE="E:\Projects\han-viet-corpus\data\CPO_20\02_extraction\pages\page_685.png" IMAGE_SHA256="d89573b0c0f3dc4a75aad6836eea61f2af4b27fbac38f9d5040b6587c36b6582" RAW="03_ocr/raw/qwen/0685.json" SELECTED_ENGINE="qwen" SELECTED_KEY="30e871ad2ead0035ad5cfc13e509de118c9d767555f2f3ec8dfcf8d19a87e149" CONFIDENCE="85.82" EMPTY="false" N_LINES="9" N_SRC_LINES="18" N_DROPPED="9" CJK_REMOVED="58">
-            <LINE ID="P0685.L001" ORDER="1" NO="1" SRC_LINE="10" BBOX="360,1445,1746,1519" CONFIDENCE="87.34">CỔ YÊU SƠN 1</LINE>
-            <LINE ID="P0685.L002" ORDER="2" NO="2" SRC_LINE="11" BBOX="360,1519,1746,1592" CONFIDENCE="87.34">Tại Ái Châu 2 sơn thử nhất điều,</LINE>
-            <LINE ID="P0685.L003" ORDER="3" NO="3" SRC_LINE="12" BBOX="360,1592,1746,1666" CONFIDENCE="87.34">Trùng trùng hoàn trĩ thạch thiếu nghiêu.</LINE>
-            <LINE ID="P0685.L004" ORDER="4" NO="4" SRC_LINE="13" BBOX="360,1666,1746,1740" CONFIDENCE="87.34">Lưỡng bài tiểu bích khai nham diện,</LINE>
-            <LINE ID="P0685.L005" ORDER="5" NO="5" SRC_LINE="14" BBOX="360,1740,1746,1814" CONFIDENCE="87.34">Trung nạp trường xuyên thúc cổ yêu.</LINE>
-            <LINE ID="P0685.L006" ORDER="6" NO="6" SRC_LINE="15" BBOX="360,1814,1746,1887" CONFIDENCE="87.34">Bạng lộc điêm ngư song liệt tử,</LINE>
-            <LINE ID="P0685.L007" ORDER="7" NO="7" SRC_LINE="16" BBOX="360,1887,1746,1961" CONFIDENCE="87.34">Tế nhân mao trúc nhất hàng kiều.</LINE>
-            <LINE ID="P0685.L008" ORDER="8" NO="8" SRC_LINE="17" BBOX="143,1953,1746,2261" CONFIDENCE="81.04">Dục cầu nhân trí 3 tuân lai lịch,</LINE>
-            <LINE ID="P0685.L009" ORDER="9" NO="9" SRC_LINE="18" BBOX="143,2261,1746,2570" CONFIDENCE="81.04">Lạc thử 4 tòng lai duyet kery trieu?</LINE>
+        <PAGE NUMBER="685" IMAGE="E:\Projects\han-viet-corpus\data\CPO_20\02_extraction\pages\page_685.png" IMAGE_SHA256="d89573b0c0f3dc4a75aad6836eea61f2af4b27fbac38f9d5040b6587c36b6582" RAW="03_ocr/raw/qwen/0685.json" SELECTED_ENGINE="qwen" SELECTED_KEY="a5a8c7e176de1d23287ba3eff1c23493eda5fe088a83451dc3dbb90303bb26f7" CONFIDENCE="87.86" EMPTY="false" N_LINES="14" N_SRC_LINES="23" N_DROPPED="9" CJK_REMOVED="62">
+            <LINE ID="P0685.L001" ORDER="1" NO="1" SRC_LINE="10" BBOX="134,1243,1746,1453" CONFIDENCE="89.15">Phiên âm:</LINE>
+            <LINE ID="P0685.L002" ORDER="2" NO="2" SRC_LINE="11" BBOX="476,1445,1746,1573" CONFIDENCE="87.94">CỔ YÊU SƠN 1</LINE>
+            <LINE ID="P0685.L003" ORDER="3" NO="3" SRC_LINE="12" BBOX="360,1565,1746,1631" CONFIDENCE="86.66">Tại Ái Châu ² sơn thử nhất điều,</LINE>
+            <LINE ID="P0685.L004" ORDER="4" NO="4" SRC_LINE="13" BBOX="360,1631,1746,1697" CONFIDENCE="86.66">Trùng trùng hoàn trĩ thạch thiều nghiêu.</LINE>
+            <LINE ID="P0685.L005" ORDER="5" NO="5" SRC_LINE="14" BBOX="360,1697,1746,1763" CONFIDENCE="86.66">Lương bài tiểu bích khai nham diện,</LINE>
+            <LINE ID="P0685.L006" ORDER="6" NO="6" SRC_LINE="15" BBOX="360,1763,1746,1829" CONFIDENCE="86.66">Trung nạp trường xuyên thúc cổ yêu.</LINE>
+            <LINE ID="P0685.L007" ORDER="7" NO="7" SRC_LINE="16" BBOX="360,1829,1746,1895" CONFIDENCE="86.66">Bạng lộc điêm ngư song liệt tử,</LINE>
+            <LINE ID="P0685.L008" ORDER="8" NO="8" SRC_LINE="17" BBOX="360,1895,1746,1961" CONFIDENCE="86.66">Tế nhân mao trúc nhất hàng kiều.</LINE>
+            <LINE ID="P0685.L009" ORDER="9" NO="9" SRC_LINE="18" BBOX="363,1953,1746,2077" CONFIDENCE="90.17">Dục cầu nhân trí ³ tuân lai lịch,</LINE>
+            <LINE ID="P0685.L010" ORDER="10" NO="10" SRC_LINE="19" BBOX="363,2077,1746,2201" CONFIDENCE="90.17">Lạc thử ⁴ tòng lai duyệt kỷ triều?</LINE>
+            <LINE ID="P0685.L011" ORDER="11" NO="11" SRC_LINE="20" BBOX="143,2193,1746,2287" CONFIDENCE="88.14">1. Nguyên chủ: "Cổ yêu sơn thuộc xã Đoan Vi ở Thanh Hóa, tục gọi núi Kềm Trống".</LINE>
+            <LINE ID="P0685.L012" ORDER="12" NO="12" SRC_LINE="21" BBOX="143,2287,1746,2381" CONFIDENCE="88.14">2. Ái châu: Châu Ái, tục Thanh Hóa bấy giờ.</LINE>
+            <LINE ID="P0685.L013" ORDER="13" NO="13" SRC_LINE="22" BBOX="143,2381,1746,2476" CONFIDENCE="88.14">3. Nhân Tri... lạc thử: Tác giả lấy chữ ở sách Luận ngữ: "Trí giá lạc thủy, nhân giá lạc sơn" (Người trí thích nước, người nhân thích núi).</LINE>
+            <LINE ID="P0685.L014" ORDER="14" NO="14" SRC_LINE="23" BBOX="143,2476,1746,2570" CONFIDENCE="88.14">4. Như 3.</LINE>
             <RUNS>
-                <RUN KEY="30e871ad2ead0035ad5cfc13e509de118c9d767555f2f3ec8dfcf8d19a87e149" CREATED_AT="2026-11-25T18:45:54+00:00" IMAGE="E:\Projects\han-viet-corpus\data\CPO_20\02_extraction\pages\page_685.png" IMAGE_WIDTH="1823" IMAGE_HEIGHT="2814" CROP_BOX="0,0,1823,2814" SOURCE="03_ocr/raw/qwen/0685.json" SELECTION="manifest">
+                <RUN KEY="a5a8c7e176de1d23287ba3eff1c23493eda5fe088a83451dc3dbb90303bb26f7" CREATED_AT="2026-11-26T23:29:24+00:00" IMAGE="E:\Projects\han-viet-corpus\data\CPO_20\02_extraction\pages\page_685.png" IMAGE_WIDTH="1823" IMAGE_HEIGHT="2814" CROP_BOX="0,0,1823,2814" SOURCE="03_ocr/raw/qwen/0685.json" SELECTION="manifest">
                     <PARAMETERS>
                         <PARAM NAME="image_sha256">d89573b0c0f3dc4a75aad6836eea61f2af4b27fbac38f9d5040b6587c36b6582</PARAM>
-                        <ENGINE NAME="qwen" MODEL_ID="Qwen/Qwen2.5-VL-3B-Instruct" MODEL_REVISION="main" TRANSFORMERS_VERSION="4.57.6" TORCH_VERSION="2.5.1+cu121" CUDA_VERSION="12.1" BITSANDBYTES_VERSION="0.50.2" MODE="all" MIN_PIXELS="50176" MAX_PIXELS="802816" BAND_INCHES="2.0" MAX_NEW_TOKENS="768" REPETITION_PENALTY="1.05" ADAPTER_VERSION="3" PROMPT_VERSION="3" PROMPT_SHA256="b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74">
+                        <ENGINE NAME="qwen" MODEL_ID="Qwen/Qwen2.5-VL-3B-Instruct" MODEL_REVISION="main" TRANSFORMERS_VERSION="4.57.6" TORCH_VERSION="2.5.1+cu121" CUDA_VERSION="12.1" BITSANDBYTES_VERSION="0.50.2" MODE="all" MIN_PIXELS="50176" MAX_PIXELS="802816" BAND_INCHES="1.0" MAX_NEW_TOKENS="768" REPETITION_PENALTY="1.05" ADAPTER_VERSION="4" PROMPT_VERSION="3" PROMPT_SHA256="b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74">
                             <QUANTIZATION>{"compute_dtype": "float16", "double_quant": true, "load_in_4bit": true, "quant_type": "nf4"}</QUANTIZATION>
                         </ENGINE>
                         <PARAM NAME="lang">all</PARAM>
@@ -14978,35 +14973,42 @@
                 </RUN>
             </RUNS>
         </PAGE>
-        <PAGE NUMBER="771" IMAGE="E:\Projects\han-viet-corpus\data\CPO_20\02_extraction\pages\page_771.png" IMAGE_SHA256="cb13e180dfb71b3581c5f4b7bbe93c62feae0247e334e858a38c8878c7e9547a" RAW="03_ocr/raw/qwen/0771.json" SELECTED_ENGINE="qwen" SELECTED_KEY="8cc1adcb8db6ade7cf2b1aab56cbc47e3e02617f46f2aecf5f3dc8a845ca994d" CONFIDENCE="93.05" EMPTY="false" N_LINES="23" N_SRC_LINES="23" N_DROPPED="0" CJK_REMOVED="0">
-            <LINE ID="P0771.L001" ORDER="1" NO="1" SRC_LINE="1" BBOX="140,268,1743,361" CONFIDENCE="83.45">TÚY NGÂM</LINE>
-            <LINE ID="P0771.L002" ORDER="2" NO="2" SRC_LINE="2" BBOX="140,361,1743,454" CONFIDENCE="83.45">Kỳ nhất</LINE>
-            <LINE ID="P0771.L003" ORDER="3" NO="3" SRC_LINE="3" BBOX="140,454,1743,547" CONFIDENCE="83.45">Ta hồ nhân sinh kỷ đa tâm,</LINE>
-            <LINE ID="P0771.L004" ORDER="4" NO="4" SRC_LINE="4" BBOX="140,547,1743,640" CONFIDENCE="83.45">Duy hữu tâm sâu vạn tuổ.</LINE>
-            <LINE ID="P0771.L005" ORDER="5" NO="5" SRC_LINE="5" BBOX="140,640,1743,733" CONFIDENCE="83.45">Như dục thử tâm vô câu loạn,</LINE>
-            <LINE ID="P0771.L006" ORDER="6" NO="6" SRC_LINE="6" BBOX="140,733,1743,826" CONFIDENCE="83.45">Trừ thị yêm yêm chung nhật túy.</LINE>
-            <LINE ID="P0771.L007" ORDER="7" NO="7" SRC_LINE="7" BBOX="380,818,1743,878" CONFIDENCE="93.16">Quân bất kiến:</LINE>
-            <LINE ID="P0771.L008" ORDER="8" NO="8" SRC_LINE="8" BBOX="380,878,1743,939" CONFIDENCE="93.16">Thiên thiên hữu tử Đào Uyên Minh,</LINE>
-            <LINE ID="P0771.L009" ORDER="9" NO="9" SRC_LINE="9" BBOX="380,939,1743,1000" CONFIDENCE="93.16">Tống triều phú quý bất năng lụy.</LINE>
-            <LINE ID="P0771.L010" ORDER="10" NO="10" SRC_LINE="10" BBOX="380,1000,1743,1060" CONFIDENCE="93.16">Nguyên Gia tử cấp Đàn tướng quân,</LINE>
-            <LINE ID="P0771.L011" ORDER="11" NO="11" SRC_LINE="11" BBOX="380,1060,1743,1120" CONFIDENCE="93.16">Uyên Minh Nghĩa Hy thư Giáp Tý.</LINE>
-            <LINE ID="P0771.L012" ORDER="12" NO="12" SRC_LINE="12" BBOX="380,1120,1743,1181" CONFIDENCE="93.16">Hựu bất kiến:</LINE>
-            <LINE ID="P0771.L013" ORDER="13" NO="13" SRC_LINE="13" BBOX="380,1181,1743,1242" CONFIDENCE="93.16">Ta đà tận nhật Lý Thanh Liên,</LINE>
-            <LINE ID="P0771.L014" ORDER="14" NO="14" SRC_LINE="14" BBOX="380,1242,1743,1302" CONFIDENCE="93.16">Phong lưu thiên tử phú bất khởi.</LINE>
-            <LINE ID="P0771.L015" ORDER="15" NO="15" SRC_LINE="15" BBOX="380,1302,1743,1362" CONFIDENCE="93.16">Thiên Bảo tử cấp Dương Quý Phi,</LINE>
-            <LINE ID="P0771.L016" ORDER="16" NO="16" SRC_LINE="16" BBOX="380,1362,1743,1423" CONFIDENCE="93.16">Thanh Liên kinh du nhiên thệ.</LINE>
-            <LINE ID="P0771.L017" ORDER="17" NO="17" SRC_LINE="17" BBOX="146,1415,1743,1751" CONFIDENCE="87.32">Tử thần nguyên bất phụ ngô nhân,</LINE>
-            <LINE ID="P0771.L018" ORDER="18" NO="18" SRC_LINE="18" BBOX="146,1751,1743,2086" CONFIDENCE="87.32">Khuyến quân thả chước dưỡng hạo khí.</LINE>
-            <LINE ID="P0771.L019" ORDER="19" NO="19" SRC_LINE="19" BBOX="149,2078,1743,2178" CONFIDENCE="95.6">6. Lý Thanh Liên: Tức Lý Bạch, nhà thơ lớn của Trung Quốc thời Đường.</LINE>
-            <LINE ID="P0771.L020" ORDER="20" NO="20" SRC_LINE="20" BBOX="149,2178,1743,2278" CONFIDENCE="95.6">7. Phong lưu thiên tử: Chỉ Đường Huyền Tông. Có lần Đường Huyền Tông cho Cao Lực sĩ mời Lý Bạch vào cung làm thơ. Lý Bạch say, đỡ không dậy được.</LINE>
-            <LINE ID="P0771.L021" ORDER="21" NO="21" SRC_LINE="21" BBOX="149,2278,1743,2379" CONFIDENCE="95.6">8. Thiên Bảo: Niên hiệu Đường Huyền Tông.</LINE>
-            <LINE ID="P0771.L022" ORDER="22" NO="22" SRC_LINE="22" BBOX="149,2379,1743,2479" CONFIDENCE="95.6">9. Dương Quý Phi: Ái phi của Đường Huyền Tông. Khi chạy loạn An Lộc Sơn, Đường Huyền Tông buộc phải cho giết Dương Quý Phi để tháo lòng tướng sĩ, vì họ cho rằng do Đường Huyền Tông yêu Dương Quý Phi mê muội, để cho Dương Quốc Trung là anh Dương Quý Phi lộng hành nên mới gây ra loạn An Lộc Sơn.</LINE>
-            <LINE ID="P0771.L023" ORDER="23" NO="23" SRC_LINE="23" BBOX="149,2479,1743,2579" CONFIDENCE="95.6">10. Dương hạo khí: Nuôi trong mình cái hạo khí của trời đất.</LINE>
+        <PAGE NUMBER="771" IMAGE="E:\Projects\han-viet-corpus\data\CPO_20\02_extraction\pages\page_771.png" IMAGE_SHA256="cb13e180dfb71b3581c5f4b7bbe93c62feae0247e334e858a38c8878c7e9547a" RAW="03_ocr/raw/qwen/0771.json" SELECTED_ENGINE="qwen" SELECTED_KEY="3f00de4d5e1fed1c543c24569a3caae43b78cf801b59f40617054a1288e1459d" CONFIDENCE="89.96" EMPTY="false" N_LINES="30" N_SRC_LINES="30" N_DROPPED="0" CJK_REMOVED="0">
+            <LINE ID="P0771.L001" ORDER="1" NO="1" SRC_LINE="1" BBOX="140,268,1743,361" CONFIDENCE="81.98">Phiên âm:</LINE>
+            <LINE ID="P0771.L002" ORDER="2" NO="2" SRC_LINE="2" BBOX="140,361,1743,455" CONFIDENCE="81.98">TÚY NGẦM</LINE>
+            <LINE ID="P0771.L003" ORDER="3" NO="3" SRC_LINE="3" BBOX="140,455,1743,548" CONFIDENCE="81.98">Kỳ nhất</LINE>
+            <LINE ID="P0771.L004" ORDER="4" NO="4" SRC_LINE="4" BBOX="379,540,1743,612" CONFIDENCE="87.39">Ta hồ nhân sinh kỷ đa tâm,</LINE>
+            <LINE ID="P0771.L005" ORDER="5" NO="5" SRC_LINE="5" BBOX="379,612,1743,683" CONFIDENCE="87.39">Duy hữu tâm sâu vạn tự.</LINE>
+            <LINE ID="P0771.L006" ORDER="6" NO="6" SRC_LINE="6" BBOX="379,683,1743,754" CONFIDENCE="87.39">Như dục thử tâm vô câu loạn,</LINE>
+            <LINE ID="P0771.L007" ORDER="7" NO="7" SRC_LINE="7" BBOX="379,754,1743,826" CONFIDENCE="87.39">Trừ thì yêm yêm chung nhật túy.</LINE>
+            <LINE ID="P0771.L008" ORDER="8" NO="8" SRC_LINE="8" BBOX="380,818,1743,879" CONFIDENCE="91.19">Quân bất kiến:</LINE>
+            <LINE ID="P0771.L009" ORDER="9" NO="9" SRC_LINE="9" BBOX="380,879,1743,940" CONFIDENCE="91.19">Thiên thiên hữu tửu Đào Uyên Minh,</LINE>
+            <LINE ID="P0771.L010" ORDER="10" NO="10" SRC_LINE="10" BBOX="380,940,1743,1001" CONFIDENCE="91.19">Tống triều phú quý bất năng lụy.</LINE>
+            <LINE ID="P0771.L011" ORDER="11" NO="11" SRC_LINE="11" BBOX="380,1001,1743,1062" CONFIDENCE="91.19">Nguyên Gia tử cấp Đàn tướng quân,</LINE>
+            <LINE ID="P0771.L012" ORDER="12" NO="12" SRC_LINE="12" BBOX="380,1054,1743,1116" CONFIDENCE="90.71">Uyên Minh Nghĩa Hy 5 thư Giáp Tý.</LINE>
+            <LINE ID="P0771.L013" ORDER="13" NO="13" SRC_LINE="13" BBOX="380,1116,1743,1179" CONFIDENCE="90.71">Hựu bất kiến:</LINE>
+            <LINE ID="P0771.L014" ORDER="14" NO="14" SRC_LINE="14" BBOX="380,1179,1743,1241" CONFIDENCE="90.71">Ta đà tận nhật Lý Thanh Liên, 6</LINE>
+            <LINE ID="P0771.L015" ORDER="15" NO="15" SRC_LINE="15" BBOX="380,1233,1743,1296" CONFIDENCE="85.57">Phong lụa thiên tử 7 phu bất khởi.</LINE>
+            <LINE ID="P0771.L016" ORDER="16" NO="16" SRC_LINE="16" BBOX="380,1296,1743,1360" CONFIDENCE="85.57">Thiên Bảo 8 tử cập Dương Quý Phi,</LINE>
+            <LINE ID="P0771.L017" ORDER="17" NO="17" SRC_LINE="17" BBOX="380,1360,1743,1423" CONFIDENCE="85.57">Thanh Liên kỳ kình du nhiên thê.</LINE>
+            <LINE ID="P0771.L018" ORDER="18" NO="18" SRC_LINE="18" BBOX="146,1415,1743,1513" CONFIDENCE="93.5">Tử thần nguyên bất phụ ngô nhân,</LINE>
+            <LINE ID="P0771.L019" ORDER="19" NO="19" SRC_LINE="19" BBOX="146,1513,1743,1612" CONFIDENCE="93.5">Khuyến quân thả chước dưỡng hạo khí.</LINE>
+            <LINE ID="P0771.L020" ORDER="20" NO="20" SRC_LINE="20" BBOX="148,1604,1743,1681" CONFIDENCE="89.69">1. Đào Nguyên Minh: Tức Đào Tiềm, nhà thơ, vì tổ tiên là bầy tôi nhà Tấn, nên không chịu ra làm quan với nhà Tống, ông lui về nhà ở ẩn, làm thơ.</LINE>
+            <LINE ID="P0771.L021" ORDER="21" NO="21" SRC_LINE="21" BBOX="148,1681,1743,1758" CONFIDENCE="89.69">2. Tống triều: Ở đây chỉ nhà Tống thời Nam Triệu do Lưu Dụ lập ra thay triều Tấn, chứ không phải nhà Tống do Triệu Khuông Dận sáng lập.</LINE>
+            <LINE ID="P0771.L022" ORDER="22" NO="22" SRC_LINE="22" BBOX="148,1758,1743,1835" CONFIDENCE="89.69">3. Nguyên Gia: Niên hiệu của Tống Văn Đế, con Lưu Dụ.</LINE>
+            <LINE ID="P0771.L023" ORDER="23" NO="23" SRC_LINE="23" BBOX="148,1835,1743,1912" CONFIDENCE="89.69">4. Đàn tướng quân: Đàn Đạo Tế, một danh tướng thời Tống, vì uy danh lừng lẫy, nên được cử làm Tống Văn Đế.</LINE>
+            <LINE ID="P0771.L024" ORDER="24" NO="24" SRC_LINE="24" BBOX="148,1904,1743,2086" CONFIDENCE="88.7">Nghĩa Hy: Niên hiệu Tấn Cung Đế. Sau khi Tấn Cung Đế bị bắt buộc phái truyền ngôi cho Tống Thái Tổ Lưu Dụ, Đào Úy Minh làm thơ văn chỉ đề năm theo Giáp Tý (theo lịch Can Chi), chứ không chịu để niên hiệu nhà Tống đế tỏ lòng trung.</LINE>
+            <LINE ID="P0771.L025" ORDER="25" NO="25" SRC_LINE="25" BBOX="149,2078,1743,2155" CONFIDENCE="93.91">6. Lý Thanh Liễn: Tức Lý Bạch, nhà thơ lớn của Trung Quốc thời Đường.</LINE>
+            <LINE ID="P0771.L026" ORDER="26" NO="26" SRC_LINE="26" BBOX="149,2155,1743,2232" CONFIDENCE="93.91">7. Phong lưu thiên tử: Chỉ Đường Huyền Tông. Có lần Đường Huyền Tông cho Cao Lực sĩ mời Lý Bạch vào cung làm thơ. Lý Bạch say, đỡ không dậy được.</LINE>
+            <LINE ID="P0771.L027" ORDER="27" NO="27" SRC_LINE="27" BBOX="149,2232,1743,2309" CONFIDENCE="93.91">8. Thiên Bảo: Niên hiệu Đường Huyền Tông.</LINE>
+            <LINE ID="P0771.L028" ORDER="28" NO="28" SRC_LINE="28" BBOX="149,2309,1743,2386" CONFIDENCE="93.91">9. Dương Quý Phi: Ái phi của Đường Huyền Tông. Khi chạy loạn An Lộc Sơn, Đường Huyền Tông buộc phải cho giết Dương Quý Phi để thỏa lòng tướng sĩ, vì họ cho</LINE>
+            <LINE ID="P0771.L029" ORDER="29" NO="29" SRC_LINE="29" BBOX="151,2378,1743,2478" CONFIDENCE="86.95">Đương Huyền Tông bị phái cho giết Dương Quý Phi vì rằng do Đương Huyền Tông yêu Dương Quý Phi mê muội, để cho Dương Quốc Trung là anh Dương Quý Phi lộng hành nên mới gây ra loạn An Lộc Sơn.</LINE>
+            <LINE ID="P0771.L030" ORDER="30" NO="30" SRC_LINE="30" BBOX="151,2478,1743,2579" CONFIDENCE="86.95">10. Dương hạo khí: Nuôi trong mình cái hạo khí của trời đất.</LINE>
             <RUNS>
-                <RUN KEY="8cc1adcb8db6ade7cf2b1aab56cbc47e3e02617f46f2aecf5f3dc8a845ca994d" CREATED_AT="2026-11-25T19:23:04+00:00" IMAGE="E:\Projects\han-viet-corpus\data\CPO_20\02_extraction\pages\page_771.png" IMAGE_WIDTH="1821" IMAGE_HEIGHT="2814" CROP_BOX="0,0,1821,2814" SOURCE="03_ocr/raw/qwen/0771.json" SELECTION="manifest">
+                <RUN KEY="3f00de4d5e1fed1c543c24569a3caae43b78cf801b59f40617054a1288e1459d" CREATED_AT="2026-11-26T23:30:10+00:00" IMAGE="E:\Projects\han-viet-corpus\data\CPO_20\02_extraction\pages\page_771.png" IMAGE_WIDTH="1821" IMAGE_HEIGHT="2814" CROP_BOX="0,0,1821,2814" SOURCE="03_ocr/raw/qwen/0771.json" SELECTION="manifest">
                     <PARAMETERS>
                         <PARAM NAME="image_sha256">cb13e180dfb71b3581c5f4b7bbe93c62feae0247e334e858a38c8878c7e9547a</PARAM>
-                        <ENGINE NAME="qwen" MODEL_ID="Qwen/Qwen2.5-VL-3B-Instruct" MODEL_REVISION="main" TRANSFORMERS_VERSION="4.57.6" TORCH_VERSION="2.5.1+cu121" CUDA_VERSION="12.1" BITSANDBYTES_VERSION="0.50.2" MODE="all" MIN_PIXELS="50176" MAX_PIXELS="802816" BAND_INCHES="2.0" MAX_NEW_TOKENS="768" REPETITION_PENALTY="1.05" ADAPTER_VERSION="3" PROMPT_VERSION="3" PROMPT_SHA256="b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74">
+                        <ENGINE NAME="qwen" MODEL_ID="Qwen/Qwen2.5-VL-3B-Instruct" MODEL_REVISION="main" TRANSFORMERS_VERSION="4.57.6" TORCH_VERSION="2.5.1+cu121" CUDA_VERSION="12.1" BITSANDBYTES_VERSION="0.50.2" MODE="all" MIN_PIXELS="50176" MAX_PIXELS="802816" BAND_INCHES="1.0" MAX_NEW_TOKENS="768" REPETITION_PENALTY="1.05" ADAPTER_VERSION="4" PROMPT_VERSION="3" PROMPT_SHA256="b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74">
                             <QUANTIZATION>{"compute_dtype": "float16", "double_quant": true, "load_in_4bit": true, "quant_type": "nf4"}</QUANTIZATION>
                         </ENGINE>
                         <PARAM NAME="lang">all</PARAM>

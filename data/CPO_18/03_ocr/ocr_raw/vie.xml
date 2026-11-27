@@ -6,6 +6,9 @@
                 <ENGINE NAME="qwen" MODEL_ID="Qwen/Qwen2.5-VL-3B-Instruct" MODEL_REVISION="main" TRANSFORMERS_VERSION="4.57.6" TORCH_VERSION="2.5.1+cu121" CUDA_VERSION="12.1" BITSANDBYTES_VERSION="0.50.2" MODE="all" MIN_PIXELS="50176" MAX_PIXELS="802816" BAND_INCHES="2.0" MAX_NEW_TOKENS="768" REPETITION_PENALTY="1.05" ADAPTER_VERSION="3" PROMPT_VERSION="3" PROMPT_SHA256="b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74">
                     <QUANTIZATION>{"compute_dtype": "float16", "double_quant": true, "load_in_4bit": true, "quant_type": "nf4"}</QUANTIZATION>
                 </ENGINE>
+                <ENGINE NAME="qwen" MODEL_ID="Qwen/Qwen2.5-VL-3B-Instruct" MODEL_REVISION="main" TRANSFORMERS_VERSION="4.57.6" TORCH_VERSION="2.5.1+cu121" CUDA_VERSION="12.1" BITSANDBYTES_VERSION="0.50.2" MODE="all" MIN_PIXELS="50176" MAX_PIXELS="802816" BAND_INCHES="1.0" MAX_NEW_TOKENS="768" REPETITION_PENALTY="1.05" ADAPTER_VERSION="4" PROMPT_VERSION="3" PROMPT_SHA256="b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74">
+                    <QUANTIZATION>{"compute_dtype": "float16", "double_quant": true, "load_in_4bit": true, "quant_type": "nf4"}</QUANTIZATION>
+                </ENGINE>
                 <ENGINE NAME="qwen" MODEL_ID="Qwen/Qwen2.5-VL-3B-Instruct" MODEL_REVISION="main" TRANSFORMERS_VERSION="4.57.6" TORCH_VERSION="2.5.1+cu121" CUDA_VERSION="12.1" BITSANDBYTES_VERSION="0.50.2" MODE="all" MIN_PIXELS="50176" MAX_PIXELS="802816" BAND_INCHES="2.0" MAX_NEW_TOKENS="768" REPETITION_PENALTY="1.05" ADAPTER_VERSION="4" PROMPT_VERSION="3" PROMPT_SHA256="b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74">
                     <QUANTIZATION>{"compute_dtype": "float16", "double_quant": true, "load_in_4bit": true, "quant_type": "nf4"}</QUANTIZATION>
                 </ENGINE>
@@ -101,17 +104,16 @@
                 </RUN>
             </RUNS>
         </PAGE>
-        <PAGE NUMBER="208" IMAGE="E:\Projects\han-viet-corpus\data\CPO_18\02_extraction\pages\page_208.png" IMAGE_SHA256="e5661834fd45b1d00adddded488760bbcf7f94fe8287c328a201ed918a69fb74" RAW="03_ocr/raw/qwen/0208.json" SELECTED_ENGINE="qwen" SELECTED_KEY="37cf41a00a7921dbc36a7d301e0c41c2f2e6b90db602151b60839a112e1dcc6e" CONFIDENCE="60.62" EMPTY="false" N_LINES="5" N_SRC_LINES="11" N_DROPPED="6" CJK_REMOVED="180">
-            <LINE ID="P0208.L001" ORDER="1" NO="1" SRC_LINE="1" BBOX="13,0,2269,197" CONFIDENCE="93.8">Sưu tầm và khảo luận tác phẩm chữ Hán của người Việt Nam trước TK 10</LINE>
-            <LINE ID="P0208.L002" ORDER="2" NO="2" SRC_LINE="2" BBOX="13,197,2269,395" CONFIDENCE="93.8">thượng", bản Mạc Tư Khoa chép là, cũng đọc là thượng.</LINE>
-            <LINE ID="P0208.L003" ORDER="3" NO="3" SRC_LINE="3" BBOX="13,395,2269,592" CONFIDENCE="93.8">(11) Kính lễ: nguyên văn là "hòa nam" (Vandana) có nghĩa là</LINE>
-            <LINE ID="P0208.L004" ORDER="4" NO="4" SRC_LINE="4" BBOX="119,595,2455,869" CONFIDENCE="10.0">kính lễ. Theo Tăng sử lược thì người Tây Vực mỗi khi gặp nhau, thường chắp tay chào bằng hai tiếng "hòa nam".</LINE>
-            <LINE ID="P0208.L005" ORDER="5" NO="5" SRC_LINE="5" BBOX="119,869,2455,1143" CONFIDENCE="10.0">Vandana =</LINE>
+        <PAGE NUMBER="208" IMAGE="E:\Projects\han-viet-corpus\data\CPO_18\02_extraction\pages\page_208.png" IMAGE_SHA256="e5661834fd45b1d00adddded488760bbcf7f94fe8287c328a201ed918a69fb74" RAW="03_ocr/raw/qwen/0208.json" SELECTED_ENGINE="qwen" SELECTED_KEY="42418317ec7cbd0a9bde39df50043020faf43daadbc761952e0566b1795ee533" CONFIDENCE="94.78" EMPTY="false" N_LINES="4" N_SRC_LINES="15" N_DROPPED="11" CJK_REMOVED="207">
+            <LINE ID="P0208.L001" ORDER="1" NO="1" SRC_LINE="1" BBOX="13,0,2269,223" CONFIDENCE="98.61">Sưu tầm và khảo luận tác phẩm chữ Hán của người Việt Nam trước TK 10</LINE>
+            <LINE ID="P0208.L002" ORDER="2" NO="2" SRC_LINE="2" BBOX="410,292,2261,464" CONFIDENCE="92.87">thượng", bản Mạc Tư Khoa chép là, cũng đọc là thượng.</LINE>
+            <LINE ID="P0208.L003" ORDER="3" NO="3" SRC_LINE="3" BBOX="288,507,2260,592" CONFIDENCE="95.85">(11) Kính lễ: nguyên văn là "hòa nam" (Vandana) có nghĩa là</LINE>
+            <LINE ID="P0208.L004" ORDER="4" NO="4" SRC_LINE="4" BBOX="119,595,2455,1037" CONFIDENCE="92.75">kính lễ. Theo Tăng sử lược thì người Tây Vực mỗi khi gặp nhau, thường chắp tay chào bằng hai tiếng "hòa nam".</LINE>
             <RUNS>
-                <RUN KEY="37cf41a00a7921dbc36a7d301e0c41c2f2e6b90db602151b60839a112e1dcc6e" CREATED_AT="2026-11-26T09:15:44+00:00" IMAGE="E:\Projects\han-viet-corpus\data\CPO_18\02_extraction\pages\page_208.png" IMAGE_WIDTH="2480" IMAGE_HEIGHT="3509" CROP_BOX="0,0,2480,3509" SOURCE="03_ocr/raw/qwen/0208.json" SELECTION="manifest">
+                <RUN KEY="42418317ec7cbd0a9bde39df50043020faf43daadbc761952e0566b1795ee533" CREATED_AT="2026-11-26T23:14:18+00:00" IMAGE="E:\Projects\han-viet-corpus\data\CPO_18\02_extraction\pages\page_208.png" IMAGE_WIDTH="2480" IMAGE_HEIGHT="3509" CROP_BOX="0,0,2480,3509" SOURCE="03_ocr/raw/qwen/0208.json" SELECTION="manifest">
                     <PARAMETERS>
                         <PARAM NAME="image_sha256">e5661834fd45b1d00adddded488760bbcf7f94fe8287c328a201ed918a69fb74</PARAM>
-                        <ENGINE NAME="qwen" MODEL_ID="Qwen/Qwen2.5-VL-3B-Instruct" MODEL_REVISION="main" TRANSFORMERS_VERSION="4.57.6" TORCH_VERSION="2.5.1+cu121" CUDA_VERSION="12.1" BITSANDBYTES_VERSION="0.50.2" MODE="all" MIN_PIXELS="50176" MAX_PIXELS="802816" BAND_INCHES="2.0" MAX_NEW_TOKENS="768" REPETITION_PENALTY="1.05" ADAPTER_VERSION="4" PROMPT_VERSION="3" PROMPT_SHA256="b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74">
+                        <ENGINE NAME="qwen" MODEL_ID="Qwen/Qwen2.5-VL-3B-Instruct" MODEL_REVISION="main" TRANSFORMERS_VERSION="4.57.6" TORCH_VERSION="2.5.1+cu121" CUDA_VERSION="12.1" BITSANDBYTES_VERSION="0.50.2" MODE="all" MIN_PIXELS="50176" MAX_PIXELS="802816" BAND_INCHES="1.0" MAX_NEW_TOKENS="768" REPETITION_PENALTY="1.05" ADAPTER_VERSION="4" PROMPT_VERSION="3" PROMPT_SHA256="b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74">
                             <QUANTIZATION>{"compute_dtype": "float16", "double_quant": true, "load_in_4bit": true, "quant_type": "nf4"}</QUANTIZATION>
                         </ENGINE>
                         <PARAM NAME="lang">all</PARAM>
@@ -1532,375 +1534,6 @@
                 </RUN>
             </RUNS>
         </PAGE>
-        <PAGE NUMBER="261" IMAGE="/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_261.png" IMAGE_SHA256="68ea5a8ac12fe0d72fa1a721b129d94c4a771a0f0a99c3b0f60b1988f13c5f86" RAW="03_ocr/raw/qwen/0261.json" SELECTED_ENGINE="qwen" SELECTED_KEY="9d8738f1bcb61f0a3a7682949049fb2f35210414c7bf1911c8f5425dfe3b7a2e" CONFIDENCE="89.27" EMPTY="false" N_LINES="4" N_SRC_LINES="6" N_DROPPED="2" CJK_REMOVED="16">
-            <LINE ID="P0261.L001" ORDER="1" NO="1" SRC_LINE="1" BBOX="2257,14,2273,250" CONFIDENCE="72.41">[UNCLEAR]</LINE>
-            <LINE ID="P0261.L002" ORDER="2" NO="2" SRC_LINE="4" BBOX="220,1442,2273,2050" CONFIDENCE="53.45">[UNCLEAR]</LINE>
-            <LINE ID="P0261.L003" ORDER="3" NO="3" SRC_LINE="5" BBOX="217,2042,2273,2850" CONFIDENCE="75.05">[UNCLEAR]</LINE>
-            <LINE ID="P0261.L004" ORDER="4" NO="4" SRC_LINE="6" BBOX="214,2901,2475,3509" CONFIDENCE="93.1">Bản chụp thu nhỏ mặt 1 của tờ bìa trong sách "Toàn Thượng cổ Tam đại Tần Hán Tam quốc Lục triều văn", theo bản Mạc Tư Khoa Chữ in trên tờ bìa là nhan đề sách</LINE>
-            <RUNS>
-                <RUN KEY="9d8738f1bcb61f0a3a7682949049fb2f35210414c7bf1911c8f5425dfe3b7a2e" CREATED_AT="2026-11-25T19:34:19+00:00" IMAGE="/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_261.png" IMAGE_WIDTH="2480" IMAGE_HEIGHT="3509" CROP_BOX="0,0,2480,3509" SOURCE="03_ocr/raw/qwen/0261.json" SELECTION="manifest">
-                    <PARAMETERS>
-                        <PARAM NAME="image_sha256">68ea5a8ac12fe0d72fa1a721b129d94c4a771a0f0a99c3b0f60b1988f13c5f86</PARAM>
-                        <ENGINE NAME="qwen" MODEL_ID="Qwen/Qwen2.5-VL-3B-Instruct" MODEL_REVISION="main" TRANSFORMERS_VERSION="4.57.6" TORCH_VERSION="2.5.1+cu121" CUDA_VERSION="12.1" BITSANDBYTES_VERSION="0.50.2" MODE="all" MIN_PIXELS="50176" MAX_PIXELS="802816" BAND_INCHES="2.0" MAX_NEW_TOKENS="768" REPETITION_PENALTY="1.05" ADAPTER_VERSION="3" PROMPT_VERSION="3" PROMPT_SHA256="b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74">
-                            <QUANTIZATION>{"compute_dtype": "float16", "double_quant": true, "load_in_4bit": true, "quant_type": "nf4"}</QUANTIZATION>
-                        </ENGINE>
-                        <PARAM NAME="lang">all</PARAM>
-                        <PARAM NAME="region" />
-                        <PARAM NAME="psm">6</PARAM>
-                        <PARAM NAME="dpi">300</PARAM>
-                        <PARAM NAME="preprocessing">rgb-crop-v1</PARAM>
-                    </PARAMETERS>
-                </RUN>
-            </RUNS>
-        </PAGE>
-        <PAGE NUMBER="262" IMAGE="/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_262.png" IMAGE_SHA256="353a02b83cf5938ae128c9a0124c6570482c074d92e049d49a3f01feac7c17db" RAW="03_ocr/raw/qwen/0262.json" SELECTED_ENGINE="qwen" SELECTED_KEY="77261fbdfb5c3289a0943769804611f68266cb512a6b88f0849f201e0b852562" CONFIDENCE="89.34" EMPTY="false" N_LINES="1" N_SRC_LINES="5" N_DROPPED="4" CJK_REMOVED="25">
-            <LINE ID="P0262.L001" ORDER="1" NO="1" SRC_LINE="5" BBOX="141,2851,2475,3509" CONFIDENCE="89.34">Bản chụp thu nhỏ mặt 2 của tờ bìa trong sách "Toàn Thượng cổ Tai đại Tần Hán Tam quốc Lục triều văn" theo bản Mạc Tư Khoa Chữ i trên tờ bìa là (Quang Tự Giáp Ngọ quý xuân Hoàng Cương Vương thị san hất = Hoàng Cương Vương Dục Táo in xong vào tháng 3 năm Quang Tự Giáp Ngọ, 1894).</LINE>
-            <RUNS>
-                <RUN KEY="77261fbdfb5c3289a0943769804611f68266cb512a6b88f0849f201e0b852562" CREATED_AT="2026-11-25T19:34:31+00:00" IMAGE="/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_262.png" IMAGE_WIDTH="2480" IMAGE_HEIGHT="3509" CROP_BOX="0,0,2480,3509" SOURCE="03_ocr/raw/qwen/0262.json" SELECTION="manifest">
-                    <PARAMETERS>
-                        <PARAM NAME="image_sha256">353a02b83cf5938ae128c9a0124c6570482c074d92e049d49a3f01feac7c17db</PARAM>
-                        <ENGINE NAME="qwen" MODEL_ID="Qwen/Qwen2.5-VL-3B-Instruct" MODEL_REVISION="main" TRANSFORMERS_VERSION="4.57.6" TORCH_VERSION="2.5.1+cu121" CUDA_VERSION="12.1" BITSANDBYTES_VERSION="0.50.2" MODE="all" MIN_PIXELS="50176" MAX_PIXELS="802816" BAND_INCHES="2.0" MAX_NEW_TOKENS="768" REPETITION_PENALTY="1.05" ADAPTER_VERSION="3" PROMPT_VERSION="3" PROMPT_SHA256="b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74">
-                            <QUANTIZATION>{"compute_dtype": "float16", "double_quant": true, "load_in_4bit": true, "quant_type": "nf4"}</QUANTIZATION>
-                        </ENGINE>
-                        <PARAM NAME="lang">all</PARAM>
-                        <PARAM NAME="region" />
-                        <PARAM NAME="psm">6</PARAM>
-                        <PARAM NAME="dpi">300</PARAM>
-                        <PARAM NAME="preprocessing">rgb-crop-v1</PARAM>
-                    </PARAMETERS>
-                </RUN>
-            </RUNS>
-        </PAGE>
-        <PAGE NUMBER="263" IMAGE="/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_263.png" IMAGE_SHA256="90b7f6fc8c071ff584db1a4663e3bd4952d8d228378c6ef2f0c747d060800664" RAW="03_ocr/raw/qwen/0263.json" SELECTED_ENGINE="qwen" SELECTED_KEY="007274228062909e967a09700aef0da8f54ea5e09b2c02b1a2b9ba2bf955a260" CONFIDENCE="94.37" EMPTY="false" N_LINES="1" N_SRC_LINES="16" N_DROPPED="15" CJK_REMOVED="125">
-            <LINE ID="P0263.L001" ORDER="1" NO="1" SRC_LINE="16" BBOX="0,2720,2480,3498" CONFIDENCE="94.37">Bản chụp thu nhỏ "Sáu bức thư" hiện chép trong "Toàn Thượng có Tam đại Tần Hán Tam quốc Luc triều văn", phần "Toàn Tổng văn", theo Bản Mạc Tư Khoa.</LINE>
-            <RUNS>
-                <RUN KEY="007274228062909e967a09700aef0da8f54ea5e09b2c02b1a2b9ba2bf955a260" CREATED_AT="2026-11-25T19:34:46+00:00" IMAGE="/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_263.png" IMAGE_WIDTH="2480" IMAGE_HEIGHT="3509" CROP_BOX="0,0,2480,3509" SOURCE="03_ocr/raw/qwen/0263.json" SELECTION="manifest">
-                    <PARAMETERS>
-                        <PARAM NAME="image_sha256">90b7f6fc8c071ff584db1a4663e3bd4952d8d228378c6ef2f0c747d060800664</PARAM>
-                        <ENGINE NAME="qwen" MODEL_ID="Qwen/Qwen2.5-VL-3B-Instruct" MODEL_REVISION="main" TRANSFORMERS_VERSION="4.57.6" TORCH_VERSION="2.5.1+cu121" CUDA_VERSION="12.1" BITSANDBYTES_VERSION="0.50.2" MODE="all" MIN_PIXELS="50176" MAX_PIXELS="802816" BAND_INCHES="2.0" MAX_NEW_TOKENS="768" REPETITION_PENALTY="1.05" ADAPTER_VERSION="3" PROMPT_VERSION="3" PROMPT_SHA256="b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74">
-                            <QUANTIZATION>{"compute_dtype": "float16", "double_quant": true, "load_in_4bit": true, "quant_type": "nf4"}</QUANTIZATION>
-                        </ENGINE>
-                        <PARAM NAME="lang">all</PARAM>
-                        <PARAM NAME="region" />
-                        <PARAM NAME="psm">6</PARAM>
-                        <PARAM NAME="dpi">300</PARAM>
-                        <PARAM NAME="preprocessing">rgb-crop-v1</PARAM>
-                    </PARAMETERS>
-                </RUN>
-            </RUNS>
-        </PAGE>
-        <PAGE NUMBER="264" IMAGE="/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_264.png" IMAGE_SHA256="ba2aab9c0a0636db4d9ff2512ec1aa4f2d4d5bf9da62c6eb0d57698361e7072c" RAW="03_ocr/raw/qwen/0264.json" SELECTED_ENGINE="qwen" SELECTED_KEY="c32df6e0807b3d04bbc268f2a4347279173fdd9e0e9316581b10988b7df66457" CONFIDENCE="91.53" EMPTY="false" N_LINES="1" N_SRC_LINES="27" N_DROPPED="26" CJK_REMOVED="311">
-            <LINE ID="P0264.L001" ORDER="1" NO="1" SRC_LINE="27" BBOX="283,2913,2475,3509" CONFIDENCE="91.53">(Như trên)</LINE>
-            <RUNS>
-                <RUN KEY="c32df6e0807b3d04bbc268f2a4347279173fdd9e0e9316581b10988b7df66457" CREATED_AT="2026-11-25T19:35:09+00:00" IMAGE="/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_264.png" IMAGE_WIDTH="2480" IMAGE_HEIGHT="3509" CROP_BOX="0,0,2480,3509" SOURCE="03_ocr/raw/qwen/0264.json" SELECTION="manifest">
-                    <PARAMETERS>
-                        <PARAM NAME="image_sha256">ba2aab9c0a0636db4d9ff2512ec1aa4f2d4d5bf9da62c6eb0d57698361e7072c</PARAM>
-                        <ENGINE NAME="qwen" MODEL_ID="Qwen/Qwen2.5-VL-3B-Instruct" MODEL_REVISION="main" TRANSFORMERS_VERSION="4.57.6" TORCH_VERSION="2.5.1+cu121" CUDA_VERSION="12.1" BITSANDBYTES_VERSION="0.50.2" MODE="all" MIN_PIXELS="50176" MAX_PIXELS="802816" BAND_INCHES="2.0" MAX_NEW_TOKENS="768" REPETITION_PENALTY="1.05" ADAPTER_VERSION="3" PROMPT_VERSION="3" PROMPT_SHA256="b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74">
-                            <QUANTIZATION>{"compute_dtype": "float16", "double_quant": true, "load_in_4bit": true, "quant_type": "nf4"}</QUANTIZATION>
-                        </ENGINE>
-                        <PARAM NAME="lang">all</PARAM>
-                        <PARAM NAME="region" />
-                        <PARAM NAME="psm">6</PARAM>
-                        <PARAM NAME="dpi">300</PARAM>
-                        <PARAM NAME="preprocessing">rgb-crop-v1</PARAM>
-                    </PARAMETERS>
-                </RUN>
-            </RUNS>
-        </PAGE>
-        <PAGE NUMBER="265" IMAGE="/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_265.png" IMAGE_SHA256="d68d4df0e4947df465a9ad7a46c7cfa1e4420f8c22ca03b2dcc65fd2b35f51e3" RAW="03_ocr/raw/qwen/0265.json" SELECTED_ENGINE="qwen" SELECTED_KEY="fa3a78029c3efac01cc1d81070f43165bd760a90c9233a5285a60c21ea787e54" CONFIDENCE="79.54" EMPTY="false" N_LINES="1" N_SRC_LINES="797" N_DROPPED="796" CJK_REMOVED="296">
-            <LINE ID="P0265.L001" ORDER="1" NO="1" SRC_LINE="797" BBOX="314,2974,2480,3498" CONFIDENCE="79.54">giangvien.net</LINE>
-            <RUNS>
-                <RUN KEY="fa3a78029c3efac01cc1d81070f43165bd760a90c9233a5285a60c21ea787e54" CREATED_AT="2026-11-25T19:37:09+00:00" IMAGE="/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_265.png" IMAGE_WIDTH="2480" IMAGE_HEIGHT="3509" CROP_BOX="0,0,2480,3509" SOURCE="03_ocr/raw/qwen/0265.json" SELECTION="manifest">
-                    <PARAMETERS>
-                        <PARAM NAME="image_sha256">d68d4df0e4947df465a9ad7a46c7cfa1e4420f8c22ca03b2dcc65fd2b35f51e3</PARAM>
-                        <ENGINE NAME="qwen" MODEL_ID="Qwen/Qwen2.5-VL-3B-Instruct" MODEL_REVISION="main" TRANSFORMERS_VERSION="4.57.6" TORCH_VERSION="2.5.1+cu121" CUDA_VERSION="12.1" BITSANDBYTES_VERSION="0.50.2" MODE="all" MIN_PIXELS="50176" MAX_PIXELS="802816" BAND_INCHES="2.0" MAX_NEW_TOKENS="768" REPETITION_PENALTY="1.05" ADAPTER_VERSION="3" PROMPT_VERSION="3" PROMPT_SHA256="b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74">
-                            <QUANTIZATION>{"compute_dtype": "float16", "double_quant": true, "load_in_4bit": true, "quant_type": "nf4"}</QUANTIZATION>
-                        </ENGINE>
-                        <PARAM NAME="lang">all</PARAM>
-                        <PARAM NAME="region" />
-                        <PARAM NAME="psm">6</PARAM>
-                        <PARAM NAME="dpi">300</PARAM>
-                        <PARAM NAME="preprocessing">rgb-crop-v1</PARAM>
-                    </PARAMETERS>
-                </RUN>
-            </RUNS>
-        </PAGE>
-        <PAGE NUMBER="266" IMAGE="/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_266.png" IMAGE_SHA256="913353b617d58fe2533562272f79d226d0b6541aefc4f1a237e23c23c6137a5d" RAW="03_ocr/raw/qwen/0266.json" SELECTED_ENGINE="qwen" SELECTED_KEY="deaa69b9b26252ac268ef35c7e602896c65dacc87a958b4a6e2f75c560bcfcb6" CONFIDENCE="96.34" EMPTY="false" N_LINES="1" N_SRC_LINES="38" N_DROPPED="37" CJK_REMOVED="246">
-            <LINE ID="P0266.L001" ORDER="1" NO="1" SRC_LINE="38" BBOX="342,2814,2480,3497" CONFIDENCE="96.34">(Như trên)</LINE>
-            <RUNS>
-                <RUN KEY="deaa69b9b26252ac268ef35c7e602896c65dacc87a958b4a6e2f75c560bcfcb6" CREATED_AT="2026-11-25T19:37:30+00:00" IMAGE="/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_266.png" IMAGE_WIDTH="2480" IMAGE_HEIGHT="3509" CROP_BOX="0,0,2480,3509" SOURCE="03_ocr/raw/qwen/0266.json" SELECTION="manifest">
-                    <PARAMETERS>
-                        <PARAM NAME="image_sha256">913353b617d58fe2533562272f79d226d0b6541aefc4f1a237e23c23c6137a5d</PARAM>
-                        <ENGINE NAME="qwen" MODEL_ID="Qwen/Qwen2.5-VL-3B-Instruct" MODEL_REVISION="main" TRANSFORMERS_VERSION="4.57.6" TORCH_VERSION="2.5.1+cu121" CUDA_VERSION="12.1" BITSANDBYTES_VERSION="0.50.2" MODE="all" MIN_PIXELS="50176" MAX_PIXELS="802816" BAND_INCHES="2.0" MAX_NEW_TOKENS="768" REPETITION_PENALTY="1.05" ADAPTER_VERSION="3" PROMPT_VERSION="3" PROMPT_SHA256="b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74">
-                            <QUANTIZATION>{"compute_dtype": "float16", "double_quant": true, "load_in_4bit": true, "quant_type": "nf4"}</QUANTIZATION>
-                        </ENGINE>
-                        <PARAM NAME="lang">all</PARAM>
-                        <PARAM NAME="region" />
-                        <PARAM NAME="psm">6</PARAM>
-                        <PARAM NAME="dpi">300</PARAM>
-                        <PARAM NAME="preprocessing">rgb-crop-v1</PARAM>
-                    </PARAMETERS>
-                </RUN>
-            </RUNS>
-        </PAGE>
-        <PAGE NUMBER="267" IMAGE="/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_267.png" IMAGE_SHA256="3d6cce7dd3778abebf6e95619e3c30a82e39fcc09ce7bd4a07d28c9752a3b774" RAW="03_ocr/raw/qwen/0267.json" SELECTED_ENGINE="qwen" SELECTED_KEY="b393f227b72d2c28374c241b57ab397a2d2a53ed6d05bac5f8ac18eae01e549d" CONFIDENCE="80.51" EMPTY="false" N_LINES="2" N_SRC_LINES="175" N_DROPPED="173" CJK_REMOVED="822">
-            <LINE ID="P0267.L001" ORDER="1" NO="1" SRC_LINE="1" BBOX="2257,18,2271,395" CONFIDENCE="69.04">[UNCLEAR]</LINE>
-            <LINE ID="P0267.L002" ORDER="2" NO="2" SRC_LINE="175" BBOX="218,2824,2475,3509" CONFIDENCE="90.83">(Như trên)</LINE>
-            <RUNS>
-                <RUN KEY="b393f227b72d2c28374c241b57ab397a2d2a53ed6d05bac5f8ac18eae01e549d" CREATED_AT="2026-11-25T19:38:37+00:00" IMAGE="/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_267.png" IMAGE_WIDTH="2480" IMAGE_HEIGHT="3509" CROP_BOX="0,0,2480,3509" SOURCE="03_ocr/raw/qwen/0267.json" SELECTION="manifest">
-                    <PARAMETERS>
-                        <PARAM NAME="image_sha256">3d6cce7dd3778abebf6e95619e3c30a82e39fcc09ce7bd4a07d28c9752a3b774</PARAM>
-                        <ENGINE NAME="qwen" MODEL_ID="Qwen/Qwen2.5-VL-3B-Instruct" MODEL_REVISION="main" TRANSFORMERS_VERSION="4.57.6" TORCH_VERSION="2.5.1+cu121" CUDA_VERSION="12.1" BITSANDBYTES_VERSION="0.50.2" MODE="all" MIN_PIXELS="50176" MAX_PIXELS="802816" BAND_INCHES="2.0" MAX_NEW_TOKENS="768" REPETITION_PENALTY="1.05" ADAPTER_VERSION="3" PROMPT_VERSION="3" PROMPT_SHA256="b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74">
-                            <QUANTIZATION>{"compute_dtype": "float16", "double_quant": true, "load_in_4bit": true, "quant_type": "nf4"}</QUANTIZATION>
-                        </ENGINE>
-                        <PARAM NAME="lang">all</PARAM>
-                        <PARAM NAME="region" />
-                        <PARAM NAME="psm">6</PARAM>
-                        <PARAM NAME="dpi">300</PARAM>
-                        <PARAM NAME="preprocessing">rgb-crop-v1</PARAM>
-                    </PARAMETERS>
-                </RUN>
-            </RUNS>
-        </PAGE>
-        <PAGE NUMBER="268" IMAGE="/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_268.png" IMAGE_SHA256="1e15bd70568fe0d35f99b7cae12b6615b20b2033c8df52a0a2e6df5626a84f33" RAW="03_ocr/raw/qwen/0268.json" SELECTED_ENGINE="qwen" SELECTED_KEY="5240f7259c64d038316a1cc2832cadd13e519aa80c4a9346232873c9e82fea20" CONFIDENCE="75.45" EMPTY="false" N_LINES="1" N_SRC_LINES="41" N_DROPPED="40" CJK_REMOVED="316">
-            <LINE ID="P0268.L001" ORDER="1" NO="1" SRC_LINE="41" BBOX="455,3161,2475,3497" CONFIDENCE="75.45">(Như trên)</LINE>
-            <RUNS>
-                <RUN KEY="5240f7259c64d038316a1cc2832cadd13e519aa80c4a9346232873c9e82fea20" CREATED_AT="2026-11-25T19:39:03+00:00" IMAGE="/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_268.png" IMAGE_WIDTH="2480" IMAGE_HEIGHT="3509" CROP_BOX="0,0,2480,3509" SOURCE="03_ocr/raw/qwen/0268.json" SELECTION="manifest">
-                    <PARAMETERS>
-                        <PARAM NAME="image_sha256">1e15bd70568fe0d35f99b7cae12b6615b20b2033c8df52a0a2e6df5626a84f33</PARAM>
-                        <ENGINE NAME="qwen" MODEL_ID="Qwen/Qwen2.5-VL-3B-Instruct" MODEL_REVISION="main" TRANSFORMERS_VERSION="4.57.6" TORCH_VERSION="2.5.1+cu121" CUDA_VERSION="12.1" BITSANDBYTES_VERSION="0.50.2" MODE="all" MIN_PIXELS="50176" MAX_PIXELS="802816" BAND_INCHES="2.0" MAX_NEW_TOKENS="768" REPETITION_PENALTY="1.05" ADAPTER_VERSION="3" PROMPT_VERSION="3" PROMPT_SHA256="b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74">
-                            <QUANTIZATION>{"compute_dtype": "float16", "double_quant": true, "load_in_4bit": true, "quant_type": "nf4"}</QUANTIZATION>
-                        </ENGINE>
-                        <PARAM NAME="lang">all</PARAM>
-                        <PARAM NAME="region" />
-                        <PARAM NAME="psm">6</PARAM>
-                        <PARAM NAME="dpi">300</PARAM>
-                        <PARAM NAME="preprocessing">rgb-crop-v1</PARAM>
-                    </PARAMETERS>
-                </RUN>
-            </RUNS>
-        </PAGE>
-        <PAGE NUMBER="269" IMAGE="/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_269.png" IMAGE_SHA256="900c1e9e4a25c50fb43c0459ca5a9f24ff8832ef9c5f3fc623bbe8d4d194e651" RAW="03_ocr/raw/qwen/0269.json" SELECTED_ENGINE="qwen" SELECTED_KEY="50df8540a86bbbe83b81be55f9d8d9b0da91c9658a2f92f1945a3f47d98ab0ca" CONFIDENCE="69.06" EMPTY="false" N_LINES="1" N_SRC_LINES="42" N_DROPPED="41" CJK_REMOVED="345">
-            <LINE ID="P0269.L001" ORDER="1" NO="1" SRC_LINE="42" BBOX="299,2963,2480,3497" CONFIDENCE="69.06">jiangvien.net</LINE>
-            <RUNS>
-                <RUN KEY="50df8540a86bbbe83b81be55f9d8d9b0da91c9658a2f92f1945a3f47d98ab0ca" CREATED_AT="2026-11-25T19:39:31+00:00" IMAGE="/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_269.png" IMAGE_WIDTH="2480" IMAGE_HEIGHT="3509" CROP_BOX="0,0,2480,3509" SOURCE="03_ocr/raw/qwen/0269.json" SELECTION="manifest">
-                    <PARAMETERS>
-                        <PARAM NAME="image_sha256">900c1e9e4a25c50fb43c0459ca5a9f24ff8832ef9c5f3fc623bbe8d4d194e651</PARAM>
-                        <ENGINE NAME="qwen" MODEL_ID="Qwen/Qwen2.5-VL-3B-Instruct" MODEL_REVISION="main" TRANSFORMERS_VERSION="4.57.6" TORCH_VERSION="2.5.1+cu121" CUDA_VERSION="12.1" BITSANDBYTES_VERSION="0.50.2" MODE="all" MIN_PIXELS="50176" MAX_PIXELS="802816" BAND_INCHES="2.0" MAX_NEW_TOKENS="768" REPETITION_PENALTY="1.05" ADAPTER_VERSION="3" PROMPT_VERSION="3" PROMPT_SHA256="b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74">
-                            <QUANTIZATION>{"compute_dtype": "float16", "double_quant": true, "load_in_4bit": true, "quant_type": "nf4"}</QUANTIZATION>
-                        </ENGINE>
-                        <PARAM NAME="lang">all</PARAM>
-                        <PARAM NAME="region" />
-                        <PARAM NAME="psm">6</PARAM>
-                        <PARAM NAME="dpi">300</PARAM>
-                        <PARAM NAME="preprocessing">rgb-crop-v1</PARAM>
-                    </PARAMETERS>
-                </RUN>
-            </RUNS>
-        </PAGE>
-        <PAGE NUMBER="270" IMAGE="/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_270.png" IMAGE_SHA256="08e6d30834581afcea2ac34f2c742c456331221ef1708476f1b7d8449d7e579e" RAW="03_ocr/raw/qwen/0270.json" SELECTED_ENGINE="qwen" SELECTED_KEY="c5992f8ca93fa41b572ac1b0587a269fa2c4d99d82adc31add276b556ff36546" CONFIDENCE="89.23" EMPTY="false" N_LINES="1" N_SRC_LINES="27" N_DROPPED="26" CJK_REMOVED="281">
-            <LINE ID="P0270.L001" ORDER="1" NO="1" SRC_LINE="27" BBOX="859,2953,2475,3497" CONFIDENCE="89.23">(Như trên)</LINE>
-            <RUNS>
-                <RUN KEY="c5992f8ca93fa41b572ac1b0587a269fa2c4d99d82adc31add276b556ff36546" CREATED_AT="2026-11-25T19:39:53+00:00" IMAGE="/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_270.png" IMAGE_WIDTH="2480" IMAGE_HEIGHT="3509" CROP_BOX="0,0,2480,3509" SOURCE="03_ocr/raw/qwen/0270.json" SELECTION="manifest">
-                    <PARAMETERS>
-                        <PARAM NAME="image_sha256">08e6d30834581afcea2ac34f2c742c456331221ef1708476f1b7d8449d7e579e</PARAM>
-                        <ENGINE NAME="qwen" MODEL_ID="Qwen/Qwen2.5-VL-3B-Instruct" MODEL_REVISION="main" TRANSFORMERS_VERSION="4.57.6" TORCH_VERSION="2.5.1+cu121" CUDA_VERSION="12.1" BITSANDBYTES_VERSION="0.50.2" MODE="all" MIN_PIXELS="50176" MAX_PIXELS="802816" BAND_INCHES="2.0" MAX_NEW_TOKENS="768" REPETITION_PENALTY="1.05" ADAPTER_VERSION="3" PROMPT_VERSION="3" PROMPT_SHA256="b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74">
-                            <QUANTIZATION>{"compute_dtype": "float16", "double_quant": true, "load_in_4bit": true, "quant_type": "nf4"}</QUANTIZATION>
-                        </ENGINE>
-                        <PARAM NAME="lang">all</PARAM>
-                        <PARAM NAME="region" />
-                        <PARAM NAME="psm">6</PARAM>
-                        <PARAM NAME="dpi">300</PARAM>
-                        <PARAM NAME="preprocessing">rgb-crop-v1</PARAM>
-                    </PARAMETERS>
-                </RUN>
-            </RUNS>
-        </PAGE>
-        <PAGE NUMBER="271" IMAGE="/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_271.png" IMAGE_SHA256="f004c70d8ea23ecc9cbeca06ba4b7583e5f6c2b66aa254d5b458128dda5ccbf8" RAW="03_ocr/raw/qwen/0271.json" SELECTED_ENGINE="qwen" SELECTED_KEY="215884721ced274429f8e4830c0cb87c9751c29190109d1d206e7468875c6589" CONFIDENCE="86.34" EMPTY="false" N_LINES="2" N_SRC_LINES="45" N_DROPPED="43" CJK_REMOVED="361">
-            <LINE ID="P0271.L001" ORDER="1" NO="1" SRC_LINE="1" BBOX="2226,144,2241,408" CONFIDENCE="74.72">[UNCLEAR]</LINE>
-            <LINE ID="P0271.L002" ORDER="2" NO="2" SRC_LINE="45" BBOX="277,2824,2475,3509" CONFIDENCE="96.8">(Như trên)</LINE>
-            <RUNS>
-                <RUN KEY="215884721ced274429f8e4830c0cb87c9751c29190109d1d206e7468875c6589" CREATED_AT="2026-11-25T19:40:21+00:00" IMAGE="/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_271.png" IMAGE_WIDTH="2480" IMAGE_HEIGHT="3509" CROP_BOX="0,0,2480,3509" SOURCE="03_ocr/raw/qwen/0271.json" SELECTION="manifest">
-                    <PARAMETERS>
-                        <PARAM NAME="image_sha256">f004c70d8ea23ecc9cbeca06ba4b7583e5f6c2b66aa254d5b458128dda5ccbf8</PARAM>
-                        <ENGINE NAME="qwen" MODEL_ID="Qwen/Qwen2.5-VL-3B-Instruct" MODEL_REVISION="main" TRANSFORMERS_VERSION="4.57.6" TORCH_VERSION="2.5.1+cu121" CUDA_VERSION="12.1" BITSANDBYTES_VERSION="0.50.2" MODE="all" MIN_PIXELS="50176" MAX_PIXELS="802816" BAND_INCHES="2.0" MAX_NEW_TOKENS="768" REPETITION_PENALTY="1.05" ADAPTER_VERSION="3" PROMPT_VERSION="3" PROMPT_SHA256="b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74">
-                            <QUANTIZATION>{"compute_dtype": "float16", "double_quant": true, "load_in_4bit": true, "quant_type": "nf4"}</QUANTIZATION>
-                        </ENGINE>
-                        <PARAM NAME="lang">all</PARAM>
-                        <PARAM NAME="region" />
-                        <PARAM NAME="psm">6</PARAM>
-                        <PARAM NAME="dpi">300</PARAM>
-                        <PARAM NAME="preprocessing">rgb-crop-v1</PARAM>
-                    </PARAMETERS>
-                </RUN>
-            </RUNS>
-        </PAGE>
-        <PAGE NUMBER="273" IMAGE="/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_273.png" IMAGE_SHA256="a9da3214602e7e022084a81907129e590fab4b5a80c60f1aea1ebe32e1b5a345" RAW="03_ocr/raw/qwen/0273.json" SELECTED_ENGINE="qwen" SELECTED_KEY="95f663bfaa6670ee201ae1df3f219814556b8c580f7b3ca02ab4df8f176fbd88" CONFIDENCE="59.36" EMPTY="false" N_LINES="2" N_SRC_LINES="20" N_DROPPED="18" CJK_REMOVED="122">
-            <LINE ID="P0273.L001" ORDER="1" NO="1" SRC_LINE="5" BBOX="229,1347,2173,1408" CONFIDENCE="54.89">Exam</LINE>
-            <LINE ID="P0273.L002" ORDER="2" NO="2" SRC_LINE="20" BBOX="1947,3147,2480,3497" CONFIDENCE="61.34">giangviet</LINE>
-            <RUNS>
-                <RUN KEY="95f663bfaa6670ee201ae1df3f219814556b8c580f7b3ca02ab4df8f176fbd88" CREATED_AT="2026-11-25T19:42:31+00:00" IMAGE="/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_273.png" IMAGE_WIDTH="2480" IMAGE_HEIGHT="3509" CROP_BOX="0,0,2480,3509" SOURCE="03_ocr/raw/qwen/0273.json" SELECTION="manifest">
-                    <PARAMETERS>
-                        <PARAM NAME="image_sha256">a9da3214602e7e022084a81907129e590fab4b5a80c60f1aea1ebe32e1b5a345</PARAM>
-                        <ENGINE NAME="qwen" MODEL_ID="Qwen/Qwen2.5-VL-3B-Instruct" MODEL_REVISION="main" TRANSFORMERS_VERSION="4.57.6" TORCH_VERSION="2.5.1+cu121" CUDA_VERSION="12.1" BITSANDBYTES_VERSION="0.50.2" MODE="all" MIN_PIXELS="50176" MAX_PIXELS="802816" BAND_INCHES="2.0" MAX_NEW_TOKENS="768" REPETITION_PENALTY="1.05" ADAPTER_VERSION="3" PROMPT_VERSION="3" PROMPT_SHA256="b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74">
-                            <QUANTIZATION>{"compute_dtype": "float16", "double_quant": true, "load_in_4bit": true, "quant_type": "nf4"}</QUANTIZATION>
-                        </ENGINE>
-                        <PARAM NAME="lang">all</PARAM>
-                        <PARAM NAME="region" />
-                        <PARAM NAME="psm">6</PARAM>
-                        <PARAM NAME="dpi">300</PARAM>
-                        <PARAM NAME="preprocessing">rgb-crop-v1</PARAM>
-                    </PARAMETERS>
-                </RUN>
-            </RUNS>
-        </PAGE>
-        <PAGE NUMBER="274" IMAGE="/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_274.png" IMAGE_SHA256="241af6b63e4c05cd819a8f8e0dc24befac4c68f58d2ea50b2aa5e56ebbb1ab6b" RAW="03_ocr/raw/qwen/0274.json" SELECTED_ENGINE="qwen" SELECTED_KEY="0edccdc4aa8bcb689a9eac0939bd71c78b3c81bddb4a5524d6101e2bdbcf4559" CONFIDENCE="90.21" EMPTY="false" N_LINES="1" N_SRC_LINES="18" N_DROPPED="17" CJK_REMOVED="94">
-            <LINE ID="P0274.L001" ORDER="1" NO="1" SRC_LINE="18" BBOX="267,2842,2475,3497" CONFIDENCE="90.21">Bản chụp thu nhỏ "Sáu bức thư" hiện chép trong "Toàn Thượng cổ Tam đại Tần Hán Tam quốc Lục triều văn", phần "Toàn Tống văn" theo Bản Bạc Kinh, do Trung Hoa thư cục in ấn, Thượng Hải, 1958.</LINE>
-            <RUNS>
-                <RUN KEY="0edccdc4aa8bcb689a9eac0939bd71c78b3c81bddb4a5524d6101e2bdbcf4559" CREATED_AT="2026-11-25T19:42:45+00:00" IMAGE="/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_274.png" IMAGE_WIDTH="2480" IMAGE_HEIGHT="3509" CROP_BOX="0,0,2480,3509" SOURCE="03_ocr/raw/qwen/0274.json" SELECTION="manifest">
-                    <PARAMETERS>
-                        <PARAM NAME="image_sha256">241af6b63e4c05cd819a8f8e0dc24befac4c68f58d2ea50b2aa5e56ebbb1ab6b</PARAM>
-                        <ENGINE NAME="qwen" MODEL_ID="Qwen/Qwen2.5-VL-3B-Instruct" MODEL_REVISION="main" TRANSFORMERS_VERSION="4.57.6" TORCH_VERSION="2.5.1+cu121" CUDA_VERSION="12.1" BITSANDBYTES_VERSION="0.50.2" MODE="all" MIN_PIXELS="50176" MAX_PIXELS="802816" BAND_INCHES="2.0" MAX_NEW_TOKENS="768" REPETITION_PENALTY="1.05" ADAPTER_VERSION="3" PROMPT_VERSION="3" PROMPT_SHA256="b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74">
-                            <QUANTIZATION>{"compute_dtype": "float16", "double_quant": true, "load_in_4bit": true, "quant_type": "nf4"}</QUANTIZATION>
-                        </ENGINE>
-                        <PARAM NAME="lang">all</PARAM>
-                        <PARAM NAME="region" />
-                        <PARAM NAME="psm">6</PARAM>
-                        <PARAM NAME="dpi">300</PARAM>
-                        <PARAM NAME="preprocessing">rgb-crop-v1</PARAM>
-                    </PARAMETERS>
-                </RUN>
-            </RUNS>
-        </PAGE>
-        <PAGE NUMBER="275" IMAGE="/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_275.png" IMAGE_SHA256="87600c53afc3786252b9961d22e8223aba4796e73dc2615d220201b3b5fa56ff" RAW="03_ocr/raw/qwen/0275.json" SELECTED_ENGINE="qwen" SELECTED_KEY="b3400bd9e450980a13c9b7a9d5762208fb8669cf106eaad4b09035302a346275" CONFIDENCE="84.48" EMPTY="false" N_LINES="2" N_SRC_LINES="18" N_DROPPED="16" CJK_REMOVED="164">
-            <LINE ID="P0275.L001" ORDER="1" NO="1" SRC_LINE="1" BBOX="2263,0,2283,475" CONFIDENCE="76.63">[UNCLEAR]</LINE>
-            <LINE ID="P0275.L002" ORDER="2" NO="2" SRC_LINE="18" BBOX="828,2832,2475,3497" CONFIDENCE="91.55">(Như trên)</LINE>
-            <RUNS>
-                <RUN KEY="b3400bd9e450980a13c9b7a9d5762208fb8669cf106eaad4b09035302a346275" CREATED_AT="2026-11-25T19:43:00+00:00" IMAGE="/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_275.png" IMAGE_WIDTH="2480" IMAGE_HEIGHT="3509" CROP_BOX="0,0,2480,3509" SOURCE="03_ocr/raw/qwen/0275.json" SELECTION="manifest">
-                    <PARAMETERS>
-                        <PARAM NAME="image_sha256">87600c53afc3786252b9961d22e8223aba4796e73dc2615d220201b3b5fa56ff</PARAM>
-                        <ENGINE NAME="qwen" MODEL_ID="Qwen/Qwen2.5-VL-3B-Instruct" MODEL_REVISION="main" TRANSFORMERS_VERSION="4.57.6" TORCH_VERSION="2.5.1+cu121" CUDA_VERSION="12.1" BITSANDBYTES_VERSION="0.50.2" MODE="all" MIN_PIXELS="50176" MAX_PIXELS="802816" BAND_INCHES="2.0" MAX_NEW_TOKENS="768" REPETITION_PENALTY="1.05" ADAPTER_VERSION="3" PROMPT_VERSION="3" PROMPT_SHA256="b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74">
-                            <QUANTIZATION>{"compute_dtype": "float16", "double_quant": true, "load_in_4bit": true, "quant_type": "nf4"}</QUANTIZATION>
-                        </ENGINE>
-                        <PARAM NAME="lang">all</PARAM>
-                        <PARAM NAME="region" />
-                        <PARAM NAME="psm">6</PARAM>
-                        <PARAM NAME="dpi">300</PARAM>
-                        <PARAM NAME="preprocessing">rgb-crop-v1</PARAM>
-                    </PARAMETERS>
-                </RUN>
-            </RUNS>
-        </PAGE>
-        <PAGE NUMBER="276" IMAGE="/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_276.png" IMAGE_SHA256="061578a69ea4c0f3997f0654bb0c6533799b08fa0f8edd58267ce0923af6c356" RAW="03_ocr/raw/qwen/0276.json" SELECTED_ENGINE="qwen" SELECTED_KEY="163a045462aaf8a64cfdede47a171587c68ed2d8120bde0387e643dafa748d5b" CONFIDENCE="89.81" EMPTY="false" N_LINES="1" N_SRC_LINES="31" N_DROPPED="30" CJK_REMOVED="241">
-            <LINE ID="P0276.L001" ORDER="1" NO="1" SRC_LINE="31" BBOX="1288,2953,2475,3497" CONFIDENCE="89.81">(Như trên)</LINE>
-            <RUNS>
-                <RUN KEY="163a045462aaf8a64cfdede47a171587c68ed2d8120bde0387e643dafa748d5b" CREATED_AT="2026-11-25T19:43:19+00:00" IMAGE="/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_276.png" IMAGE_WIDTH="2480" IMAGE_HEIGHT="3509" CROP_BOX="0,0,2480,3509" SOURCE="03_ocr/raw/qwen/0276.json" SELECTION="manifest">
-                    <PARAMETERS>
-                        <PARAM NAME="image_sha256">061578a69ea4c0f3997f0654bb0c6533799b08fa0f8edd58267ce0923af6c356</PARAM>
-                        <ENGINE NAME="qwen" MODEL_ID="Qwen/Qwen2.5-VL-3B-Instruct" MODEL_REVISION="main" TRANSFORMERS_VERSION="4.57.6" TORCH_VERSION="2.5.1+cu121" CUDA_VERSION="12.1" BITSANDBYTES_VERSION="0.50.2" MODE="all" MIN_PIXELS="50176" MAX_PIXELS="802816" BAND_INCHES="2.0" MAX_NEW_TOKENS="768" REPETITION_PENALTY="1.05" ADAPTER_VERSION="3" PROMPT_VERSION="3" PROMPT_SHA256="b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74">
-                            <QUANTIZATION>{"compute_dtype": "float16", "double_quant": true, "load_in_4bit": true, "quant_type": "nf4"}</QUANTIZATION>
-                        </ENGINE>
-                        <PARAM NAME="lang">all</PARAM>
-                        <PARAM NAME="region" />
-                        <PARAM NAME="psm">6</PARAM>
-                        <PARAM NAME="dpi">300</PARAM>
-                        <PARAM NAME="preprocessing">rgb-crop-v1</PARAM>
-                    </PARAMETERS>
-                </RUN>
-            </RUNS>
-        </PAGE>
-        <PAGE NUMBER="277" IMAGE="/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_277.png" IMAGE_SHA256="74f97242ece994411e1bc2bf25564444d7535e0a332da48b60d5d2db3e782437" RAW="03_ocr/raw/qwen/0277.json" SELECTED_ENGINE="qwen" SELECTED_KEY="bc64dfcf5429d93bdf24f293a98c63a587f8ca1f1619045a5976e2aac6f79448" CONFIDENCE="92.05" EMPTY="false" N_LINES="2" N_SRC_LINES="45" N_DROPPED="43" CJK_REMOVED="235">
-            <LINE ID="P0277.L001" ORDER="1" NO="1" SRC_LINE="1" BBOX="418,250,466,276" CONFIDENCE="82.67">[UNCLEAR]</LINE>
-            <LINE ID="P0277.L002" ORDER="2" NO="2" SRC_LINE="45" BBOX="1947,2953,2475,3497" CONFIDENCE="98.54">giangvien.net</LINE>
-            <RUNS>
-                <RUN KEY="bc64dfcf5429d93bdf24f293a98c63a587f8ca1f1619045a5976e2aac6f79448" CREATED_AT="2026-11-25T19:43:39+00:00" IMAGE="/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_277.png" IMAGE_WIDTH="2480" IMAGE_HEIGHT="3509" CROP_BOX="0,0,2480,3509" SOURCE="03_ocr/raw/qwen/0277.json" SELECTION="manifest">
-                    <PARAMETERS>
-                        <PARAM NAME="image_sha256">74f97242ece994411e1bc2bf25564444d7535e0a332da48b60d5d2db3e782437</PARAM>
-                        <ENGINE NAME="qwen" MODEL_ID="Qwen/Qwen2.5-VL-3B-Instruct" MODEL_REVISION="main" TRANSFORMERS_VERSION="4.57.6" TORCH_VERSION="2.5.1+cu121" CUDA_VERSION="12.1" BITSANDBYTES_VERSION="0.50.2" MODE="all" MIN_PIXELS="50176" MAX_PIXELS="802816" BAND_INCHES="2.0" MAX_NEW_TOKENS="768" REPETITION_PENALTY="1.05" ADAPTER_VERSION="3" PROMPT_VERSION="3" PROMPT_SHA256="b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74">
-                            <QUANTIZATION>{"compute_dtype": "float16", "double_quant": true, "load_in_4bit": true, "quant_type": "nf4"}</QUANTIZATION>
-                        </ENGINE>
-                        <PARAM NAME="lang">all</PARAM>
-                        <PARAM NAME="region" />
-                        <PARAM NAME="psm">6</PARAM>
-                        <PARAM NAME="dpi">300</PARAM>
-                        <PARAM NAME="preprocessing">rgb-crop-v1</PARAM>
-                    </PARAMETERS>
-                </RUN>
-            </RUNS>
-        </PAGE>
-        <PAGE NUMBER="278" IMAGE="/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_278.png" IMAGE_SHA256="26e0c2c321696372704ac292fa69a65f3a80c7906b268fc5e59af7316a3a5629" RAW="03_ocr/raw/qwen/0278.json" SELECTED_ENGINE="qwen" SELECTED_KEY="e70298911f4a3ce8c664673b0aa486102f548a61bfd18d14bf347e9465b4c1aa" CONFIDENCE="95.36" EMPTY="false" N_LINES="1" N_SRC_LINES="34" N_DROPPED="33" CJK_REMOVED="198">
-            <LINE ID="P0278.L001" ORDER="1" NO="1" SRC_LINE="34" BBOX="1305,2953,2475,3497" CONFIDENCE="95.36">(Như trên)</LINE>
-            <RUNS>
-                <RUN KEY="e70298911f4a3ce8c664673b0aa486102f548a61bfd18d14bf347e9465b4c1aa" CREATED_AT="2026-11-25T19:43:56+00:00" IMAGE="/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_278.png" IMAGE_WIDTH="2480" IMAGE_HEIGHT="3509" CROP_BOX="0,0,2480,3509" SOURCE="03_ocr/raw/qwen/0278.json" SELECTION="manifest">
-                    <PARAMETERS>
-                        <PARAM NAME="image_sha256">26e0c2c321696372704ac292fa69a65f3a80c7906b268fc5e59af7316a3a5629</PARAM>
-                        <ENGINE NAME="qwen" MODEL_ID="Qwen/Qwen2.5-VL-3B-Instruct" MODEL_REVISION="main" TRANSFORMERS_VERSION="4.57.6" TORCH_VERSION="2.5.1+cu121" CUDA_VERSION="12.1" BITSANDBYTES_VERSION="0.50.2" MODE="all" MIN_PIXELS="50176" MAX_PIXELS="802816" BAND_INCHES="2.0" MAX_NEW_TOKENS="768" REPETITION_PENALTY="1.05" ADAPTER_VERSION="3" PROMPT_VERSION="3" PROMPT_SHA256="b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74">
-                            <QUANTIZATION>{"compute_dtype": "float16", "double_quant": true, "load_in_4bit": true, "quant_type": "nf4"}</QUANTIZATION>
-                        </ENGINE>
-                        <PARAM NAME="lang">all</PARAM>
-                        <PARAM NAME="region" />
-                        <PARAM NAME="psm">6</PARAM>
-                        <PARAM NAME="dpi">300</PARAM>
-                        <PARAM NAME="preprocessing">rgb-crop-v1</PARAM>
-                    </PARAMETERS>
-                </RUN>
-            </RUNS>
-        </PAGE>
-        <PAGE NUMBER="279" IMAGE="/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_279.png" IMAGE_SHA256="4d838067a0d3ec2b0c8b171b4683c147cd460860c6e376180036aa000748641e" RAW="03_ocr/raw/qwen/0279.json" SELECTED_ENGINE="qwen" SELECTED_KEY="6a377912505979d44a6b3aca3f370d5ccffc5b0b52f05e4fb0854c16b9c3c86e" CONFIDENCE="91.34" EMPTY="false" N_LINES="2" N_SRC_LINES="33" N_DROPPED="31" CJK_REMOVED="272">
-            <LINE ID="P0279.L001" ORDER="1" NO="1" SRC_LINE="1" BBOX="347,242,387,266" CONFIDENCE="81.02">[UNCLEAR]</LINE>
-            <LINE ID="P0279.L002" ORDER="2" NO="2" SRC_LINE="33" BBOX="1947,2953,2475,3497" CONFIDENCE="98.48">giangvien.net</LINE>
-            <RUNS>
-                <RUN KEY="6a377912505979d44a6b3aca3f370d5ccffc5b0b52f05e4fb0854c16b9c3c86e" CREATED_AT="2026-11-25T19:44:18+00:00" IMAGE="/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_279.png" IMAGE_WIDTH="2480" IMAGE_HEIGHT="3509" CROP_BOX="0,0,2480,3509" SOURCE="03_ocr/raw/qwen/0279.json" SELECTION="manifest">
-                    <PARAMETERS>
-                        <PARAM NAME="image_sha256">4d838067a0d3ec2b0c8b171b4683c147cd460860c6e376180036aa000748641e</PARAM>
-                        <ENGINE NAME="qwen" MODEL_ID="Qwen/Qwen2.5-VL-3B-Instruct" MODEL_REVISION="main" TRANSFORMERS_VERSION="4.57.6" TORCH_VERSION="2.5.1+cu121" CUDA_VERSION="12.1" BITSANDBYTES_VERSION="0.50.2" MODE="all" MIN_PIXELS="50176" MAX_PIXELS="802816" BAND_INCHES="2.0" MAX_NEW_TOKENS="768" REPETITION_PENALTY="1.05" ADAPTER_VERSION="3" PROMPT_VERSION="3" PROMPT_SHA256="b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74">
-                            <QUANTIZATION>{"compute_dtype": "float16", "double_quant": true, "load_in_4bit": true, "quant_type": "nf4"}</QUANTIZATION>
-                        </ENGINE>
-                        <PARAM NAME="lang">all</PARAM>
-                        <PARAM NAME="region" />
-                        <PARAM NAME="psm">6</PARAM>
-                        <PARAM NAME="dpi">300</PARAM>
-                        <PARAM NAME="preprocessing">rgb-crop-v1</PARAM>
-                    </PARAMETERS>
-                </RUN>
-            </RUNS>
-        </PAGE>
-        <PAGE NUMBER="280" IMAGE="/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_280.png" IMAGE_SHA256="3dca018b71f6c5775f5444a529f3f9ab7634a485f234c3e3cdbc993a6d01b0ee" RAW="03_ocr/raw/qwen/0280.json" SELECTED_ENGINE="qwen" SELECTED_KEY="f537f541250077067050ac805c04eba7a7f20f071775d73e324d77026880bf1c" CONFIDENCE="90.98" EMPTY="false" N_LINES="1" N_SRC_LINES="48" N_DROPPED="47" CJK_REMOVED="295">
-            <LINE ID="P0280.L001" ORDER="1" NO="1" SRC_LINE="48" BBOX="1240,2889,2475,3497" CONFIDENCE="90.98">(Như trên)</LINE>
-            <RUNS>
-                <RUN KEY="f537f541250077067050ac805c04eba7a7f20f071775d73e324d77026880bf1c" CREATED_AT="2026-11-25T19:44:43+00:00" IMAGE="/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_280.png" IMAGE_WIDTH="2480" IMAGE_HEIGHT="3509" CROP_BOX="0,0,2480,3509" SOURCE="03_ocr/raw/qwen/0280.json" SELECTION="manifest">
-                    <PARAMETERS>
-                        <PARAM NAME="image_sha256">3dca018b71f6c5775f5444a529f3f9ab7634a485f234c3e3cdbc993a6d01b0ee</PARAM>
-                        <ENGINE NAME="qwen" MODEL_ID="Qwen/Qwen2.5-VL-3B-Instruct" MODEL_REVISION="main" TRANSFORMERS_VERSION="4.57.6" TORCH_VERSION="2.5.1+cu121" CUDA_VERSION="12.1" BITSANDBYTES_VERSION="0.50.2" MODE="all" MIN_PIXELS="50176" MAX_PIXELS="802816" BAND_INCHES="2.0" MAX_NEW_TOKENS="768" REPETITION_PENALTY="1.05" ADAPTER_VERSION="3" PROMPT_VERSION="3" PROMPT_SHA256="b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74">
-                            <QUANTIZATION>{"compute_dtype": "float16", "double_quant": true, "load_in_4bit": true, "quant_type": "nf4"}</QUANTIZATION>
-                        </ENGINE>
-                        <PARAM NAME="lang">all</PARAM>
-                        <PARAM NAME="region" />
-                        <PARAM NAME="psm">6</PARAM>
-                        <PARAM NAME="dpi">300</PARAM>
-                        <PARAM NAME="preprocessing">rgb-crop-v1</PARAM>
-                    </PARAMETERS>
-                </RUN>
-            </RUNS>
-        </PAGE>
-        <PAGE NUMBER="281" IMAGE="/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_281.png" IMAGE_SHA256="aeab999173c00de2bfec4243a55ea3ff48c2af89e0dc5bf0834ebafab4b3f83b" RAW="03_ocr/raw/qwen/0281.json" SELECTED_ENGINE="qwen" SELECTED_KEY="e7f88dac9ba4456a7af13505df650d0613698e81e8d68ca6f0756869a2b05426" CONFIDENCE="97.2" EMPTY="false" N_LINES="1" N_SRC_LINES="263" N_DROPPED="262" CJK_REMOVED="1071">
-            <LINE ID="P0281.L001" ORDER="1" NO="1" SRC_LINE="263" BBOX="1947,2953,2475,3497" CONFIDENCE="97.2">giangvien.net</LINE>
-            <RUNS>
-                <RUN KEY="e7f88dac9ba4456a7af13505df650d0613698e81e8d68ca6f0756869a2b05426" CREATED_AT="2026-11-25T19:45:48+00:00" IMAGE="/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_281.png" IMAGE_WIDTH="2480" IMAGE_HEIGHT="3509" CROP_BOX="0,0,2480,3509" SOURCE="03_ocr/raw/qwen/0281.json" SELECTION="manifest">
-                    <PARAMETERS>
-                        <PARAM NAME="image_sha256">aeab999173c00de2bfec4243a55ea3ff48c2af89e0dc5bf0834ebafab4b3f83b</PARAM>
-                        <ENGINE NAME="qwen" MODEL_ID="Qwen/Qwen2.5-VL-3B-Instruct" MODEL_REVISION="main" TRANSFORMERS_VERSION="4.57.6" TORCH_VERSION="2.5.1+cu121" CUDA_VERSION="12.1" BITSANDBYTES_VERSION="0.50.2" MODE="all" MIN_PIXELS="50176" MAX_PIXELS="802816" BAND_INCHES="2.0" MAX_NEW_TOKENS="768" REPETITION_PENALTY="1.05" ADAPTER_VERSION="3" PROMPT_VERSION="3" PROMPT_SHA256="b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74">
-                            <QUANTIZATION>{"compute_dtype": "float16", "double_quant": true, "load_in_4bit": true, "quant_type": "nf4"}</QUANTIZATION>
-                        </ENGINE>
-                        <PARAM NAME="lang">all</PARAM>
-                        <PARAM NAME="region" />
-                        <PARAM NAME="psm">6</PARAM>
-                        <PARAM NAME="dpi">300</PARAM>
-                        <PARAM NAME="preprocessing">rgb-crop-v1</PARAM>
-                    </PARAMETERS>
-                </RUN>
-            </RUNS>
-        </PAGE>
         <PAGE NUMBER="282" IMAGE="/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_282.png" IMAGE_SHA256="0eb0772e1427d100b71281f5d674e4515ed4192b8a7fc5a1c89d6d501251d333" RAW="03_ocr/raw/qwen/0282.json" SELECTED_ENGINE="qwen" SELECTED_KEY="fbf2b1aa7321a62d077c476629647d4194e91eadd49df7b47e7db2e00fd529c4" CONFIDENCE="96.82" EMPTY="false" N_LINES="11" N_SRC_LINES="11" N_DROPPED="0" CJK_REMOVED="0">
             <LINE ID="P0282.L001" ORDER="1" NO="1" SRC_LINE="1" BBOX="366,552,2380,723" CONFIDENCE="96.95">II. BÀI VĂN BIA Ở ĐẠO TRÀNG BẢO AN</LINE>
             <LINE ID="P0282.L002" ORDER="2" NO="2" SRC_LINE="2" BBOX="366,723,2380,893" CONFIDENCE="96.95">Có tất cả 6 dị bản về bài văn bia này:</LINE>
@@ -1990,399 +1623,18 @@
                 </RUN>
             </RUNS>
         </PAGE>
-        <PAGE NUMBER="286" IMAGE="E:\Projects\han-viet-corpus\data\CPO_18\02_extraction\pages\page_286.png" IMAGE_SHA256="e3076fbe02b8a79a4a8e7f774d08816bde9077ed242bd94ae5870fb154d51cef" RAW="03_ocr/raw/qwen/0286.json" SELECTED_ENGINE="qwen" SELECTED_KEY="5aac102f849e83607240b0dd8d53cb3a1e3f6f2363d0d8254f85dd0f642a80af" CONFIDENCE="45.4" EMPTY="false" N_LINES="387" N_SRC_LINES="397" N_DROPPED="10" CJK_REMOVED="68">
-            <LINE ID="P0286.L001" ORDER="1" NO="1" SRC_LINE="1" BBOX="93,0,2286,229" CONFIDENCE="92.19">Sưu tầm và khảo luận tác phẩm chữ Hán của người Việt Nam trước TK 10</LINE>
-            <LINE ID="P0286.L002" ORDER="2" NO="2" SRC_LINE="3" BBOX="1025,492,1444,493" CONFIDENCE="30.0">ier</LINE>
-            <LINE ID="P0286.L003" ORDER="3" NO="3" SRC_LINE="4" BBOX="1025,493,1444,495" CONFIDENCE="30.0">Cn</LINE>
-            <LINE ID="P0286.L004" ORDER="4" NO="4" SRC_LINE="5" BBOX="1025,495,1444,496" CONFIDENCE="30.0">T</LINE>
-            <LINE ID="P0286.L005" ORDER="5" NO="5" SRC_LINE="6" BBOX="1025,496,1444,497" CONFIDENCE="30.0">N</LINE>
-            <LINE ID="P0286.L006" ORDER="6" NO="6" SRC_LINE="7" BBOX="1025,497,1444,499" CONFIDENCE="30.0">M</LINE>
-            <LINE ID="P0286.L007" ORDER="7" NO="7" SRC_LINE="8" BBOX="1025,499,1444,500" CONFIDENCE="30.0">S</LINE>
-            <LINE ID="P0286.L008" ORDER="8" NO="8" SRC_LINE="9" BBOX="1025,500,1444,501" CONFIDENCE="30.0">A</LINE>
-            <LINE ID="P0286.L009" ORDER="9" NO="9" SRC_LINE="10" BBOX="1025,501,1444,502" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L010" ORDER="10" NO="10" SRC_LINE="11" BBOX="1025,502,1444,504" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L011" ORDER="11" NO="11" SRC_LINE="12" BBOX="1025,504,1444,505" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L012" ORDER="12" NO="12" SRC_LINE="13" BBOX="1025,505,1444,506" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L013" ORDER="13" NO="13" SRC_LINE="14" BBOX="1025,506,1444,508" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L014" ORDER="14" NO="14" SRC_LINE="15" BBOX="1025,508,1444,509" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L015" ORDER="15" NO="15" SRC_LINE="16" BBOX="1025,509,1444,510" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L016" ORDER="16" NO="16" SRC_LINE="17" BBOX="1025,510,1444,512" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L017" ORDER="17" NO="17" SRC_LINE="18" BBOX="1025,512,1444,513" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L018" ORDER="18" NO="18" SRC_LINE="19" BBOX="1025,513,1444,514" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L019" ORDER="19" NO="19" SRC_LINE="20" BBOX="1025,514,1444,516" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L020" ORDER="20" NO="20" SRC_LINE="21" BBOX="1025,516,1444,517" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L021" ORDER="21" NO="21" SRC_LINE="22" BBOX="1025,517,1444,518" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L022" ORDER="22" NO="22" SRC_LINE="23" BBOX="1025,518,1444,519" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L023" ORDER="23" NO="23" SRC_LINE="24" BBOX="1025,519,1444,521" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L024" ORDER="24" NO="24" SRC_LINE="25" BBOX="1025,521,1444,522" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L025" ORDER="25" NO="25" SRC_LINE="26" BBOX="1025,522,1444,523" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L026" ORDER="26" NO="26" SRC_LINE="27" BBOX="1025,523,1444,525" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L027" ORDER="27" NO="27" SRC_LINE="28" BBOX="1025,525,1444,526" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L028" ORDER="28" NO="28" SRC_LINE="29" BBOX="1025,526,1444,527" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L029" ORDER="29" NO="29" SRC_LINE="30" BBOX="1025,527,1444,529" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L030" ORDER="30" NO="30" SRC_LINE="31" BBOX="1025,529,1444,530" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L031" ORDER="31" NO="31" SRC_LINE="32" BBOX="1025,530,1444,531" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L032" ORDER="32" NO="32" SRC_LINE="33" BBOX="1025,531,1444,533" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L033" ORDER="33" NO="33" SRC_LINE="34" BBOX="1025,533,1444,534" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L034" ORDER="34" NO="34" SRC_LINE="35" BBOX="1025,534,1444,535" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L035" ORDER="35" NO="35" SRC_LINE="36" BBOX="1025,535,1444,536" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L036" ORDER="36" NO="36" SRC_LINE="37" BBOX="1025,536,1444,538" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L037" ORDER="37" NO="37" SRC_LINE="38" BBOX="1025,538,1444,539" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L038" ORDER="38" NO="38" SRC_LINE="39" BBOX="1025,539,1444,540" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L039" ORDER="39" NO="39" SRC_LINE="40" BBOX="1025,540,1444,542" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L040" ORDER="40" NO="40" SRC_LINE="41" BBOX="1025,542,1444,543" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L041" ORDER="41" NO="41" SRC_LINE="42" BBOX="1025,543,1444,544" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L042" ORDER="42" NO="42" SRC_LINE="43" BBOX="1025,544,1444,546" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L043" ORDER="43" NO="43" SRC_LINE="44" BBOX="1025,546,1444,547" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L044" ORDER="44" NO="44" SRC_LINE="45" BBOX="1025,547,1444,548" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L045" ORDER="45" NO="45" SRC_LINE="46" BBOX="1025,548,1444,550" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L046" ORDER="46" NO="46" SRC_LINE="47" BBOX="1025,550,1444,551" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L047" ORDER="47" NO="47" SRC_LINE="48" BBOX="1025,551,1444,552" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L048" ORDER="48" NO="48" SRC_LINE="49" BBOX="1025,552,1444,553" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L049" ORDER="49" NO="49" SRC_LINE="50" BBOX="1025,553,1444,555" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L050" ORDER="50" NO="50" SRC_LINE="51" BBOX="1025,555,1444,556" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L051" ORDER="51" NO="51" SRC_LINE="52" BBOX="1025,556,1444,557" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L052" ORDER="52" NO="52" SRC_LINE="53" BBOX="1025,557,1444,559" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L053" ORDER="53" NO="53" SRC_LINE="54" BBOX="1025,559,1444,560" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L054" ORDER="54" NO="54" SRC_LINE="55" BBOX="1025,560,1444,561" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L055" ORDER="55" NO="55" SRC_LINE="56" BBOX="1025,561,1444,563" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L056" ORDER="56" NO="56" SRC_LINE="57" BBOX="1025,563,1444,564" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L057" ORDER="57" NO="57" SRC_LINE="58" BBOX="1025,564,1444,565" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L058" ORDER="58" NO="58" SRC_LINE="59" BBOX="1025,565,1444,567" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L059" ORDER="59" NO="59" SRC_LINE="60" BBOX="1025,567,1444,568" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L060" ORDER="60" NO="60" SRC_LINE="61" BBOX="1025,568,1444,569" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L061" ORDER="61" NO="61" SRC_LINE="62" BBOX="1025,569,1444,570" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L062" ORDER="62" NO="62" SRC_LINE="63" BBOX="1025,570,1444,572" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L063" ORDER="63" NO="63" SRC_LINE="64" BBOX="1025,572,1444,573" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L064" ORDER="64" NO="64" SRC_LINE="65" BBOX="1025,573,1444,574" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L065" ORDER="65" NO="65" SRC_LINE="66" BBOX="1025,574,1444,576" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L066" ORDER="66" NO="66" SRC_LINE="67" BBOX="1025,576,1444,577" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L067" ORDER="67" NO="67" SRC_LINE="68" BBOX="1025,577,1444,578" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L068" ORDER="68" NO="68" SRC_LINE="69" BBOX="1025,578,1444,580" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L069" ORDER="69" NO="69" SRC_LINE="70" BBOX="1025,580,1444,581" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L070" ORDER="70" NO="70" SRC_LINE="71" BBOX="1025,581,1444,582" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L071" ORDER="71" NO="71" SRC_LINE="72" BBOX="1025,582,1444,584" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L072" ORDER="72" NO="72" SRC_LINE="73" BBOX="1025,584,1444,585" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L073" ORDER="73" NO="73" SRC_LINE="74" BBOX="1025,585,1444,586" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L074" ORDER="74" NO="74" SRC_LINE="75" BBOX="1025,586,1444,587" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L075" ORDER="75" NO="75" SRC_LINE="76" BBOX="1025,587,1444,589" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L076" ORDER="76" NO="76" SRC_LINE="77" BBOX="1025,589,1444,590" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L077" ORDER="77" NO="77" SRC_LINE="78" BBOX="1025,590,1444,591" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L078" ORDER="78" NO="78" SRC_LINE="79" BBOX="1025,591,1444,593" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L079" ORDER="79" NO="79" SRC_LINE="80" BBOX="1025,593,1444,594" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L080" ORDER="80" NO="80" SRC_LINE="81" BBOX="1025,594,1444,595" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L081" ORDER="81" NO="81" SRC_LINE="82" BBOX="1025,595,1444,597" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L082" ORDER="82" NO="82" SRC_LINE="83" BBOX="1025,597,1444,598" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L083" ORDER="83" NO="83" SRC_LINE="84" BBOX="1025,598,1444,599" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L084" ORDER="84" NO="84" SRC_LINE="85" BBOX="1025,599,1444,601" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L085" ORDER="85" NO="85" SRC_LINE="86" BBOX="1025,601,1444,602" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L086" ORDER="86" NO="86" SRC_LINE="87" BBOX="1025,602,1444,603" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L087" ORDER="87" NO="87" SRC_LINE="88" BBOX="1025,603,1444,604" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L088" ORDER="88" NO="88" SRC_LINE="89" BBOX="1025,604,1444,606" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L089" ORDER="89" NO="89" SRC_LINE="90" BBOX="1025,606,1444,607" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L090" ORDER="90" NO="90" SRC_LINE="91" BBOX="1025,607,1444,608" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L091" ORDER="91" NO="91" SRC_LINE="92" BBOX="1025,608,1444,610" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L092" ORDER="92" NO="92" SRC_LINE="93" BBOX="1025,610,1444,611" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L093" ORDER="93" NO="93" SRC_LINE="94" BBOX="1025,611,1444,612" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L094" ORDER="94" NO="94" SRC_LINE="95" BBOX="1025,612,1444,614" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L095" ORDER="95" NO="95" SRC_LINE="96" BBOX="1025,614,1444,615" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L096" ORDER="96" NO="96" SRC_LINE="97" BBOX="1025,615,1444,616" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L097" ORDER="97" NO="97" SRC_LINE="98" BBOX="1025,616,1444,618" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L098" ORDER="98" NO="98" SRC_LINE="99" BBOX="1025,618,1444,619" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L099" ORDER="99" NO="99" SRC_LINE="100" BBOX="1025,619,1444,620" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L100" ORDER="100" NO="100" SRC_LINE="101" BBOX="1025,620,1444,622" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L101" ORDER="101" NO="101" SRC_LINE="102" BBOX="1025,622,1444,623" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L102" ORDER="102" NO="102" SRC_LINE="103" BBOX="1025,623,1444,624" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L103" ORDER="103" NO="103" SRC_LINE="104" BBOX="1025,624,1444,625" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L104" ORDER="104" NO="104" SRC_LINE="105" BBOX="1025,625,1444,627" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L105" ORDER="105" NO="105" SRC_LINE="106" BBOX="1025,627,1444,628" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L106" ORDER="106" NO="106" SRC_LINE="107" BBOX="1025,628,1444,629" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L107" ORDER="107" NO="107" SRC_LINE="108" BBOX="1025,629,1444,631" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L108" ORDER="108" NO="108" SRC_LINE="109" BBOX="1025,631,1444,632" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L109" ORDER="109" NO="109" SRC_LINE="110" BBOX="1025,632,1444,633" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L110" ORDER="110" NO="110" SRC_LINE="111" BBOX="1025,633,1444,635" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L111" ORDER="111" NO="111" SRC_LINE="112" BBOX="1025,635,1444,636" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L112" ORDER="112" NO="112" SRC_LINE="113" BBOX="1025,636,1444,637" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L113" ORDER="113" NO="113" SRC_LINE="114" BBOX="1025,637,1444,639" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L114" ORDER="114" NO="114" SRC_LINE="115" BBOX="1025,639,1444,640" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L115" ORDER="115" NO="115" SRC_LINE="116" BBOX="1025,640,1444,641" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L116" ORDER="116" NO="116" SRC_LINE="117" BBOX="1025,641,1444,642" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L117" ORDER="117" NO="117" SRC_LINE="118" BBOX="1025,642,1444,644" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L118" ORDER="118" NO="118" SRC_LINE="119" BBOX="1025,644,1444,645" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L119" ORDER="119" NO="119" SRC_LINE="120" BBOX="1025,645,1444,646" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L120" ORDER="120" NO="120" SRC_LINE="121" BBOX="1025,646,1444,648" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L121" ORDER="121" NO="121" SRC_LINE="122" BBOX="1025,648,1444,649" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L122" ORDER="122" NO="122" SRC_LINE="123" BBOX="1025,649,1444,650" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L123" ORDER="123" NO="123" SRC_LINE="124" BBOX="1025,650,1444,652" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L124" ORDER="124" NO="124" SRC_LINE="125" BBOX="1025,652,1444,653" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L125" ORDER="125" NO="125" SRC_LINE="126" BBOX="1025,653,1444,654" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L126" ORDER="126" NO="126" SRC_LINE="127" BBOX="1025,654,1444,656" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L127" ORDER="127" NO="127" SRC_LINE="128" BBOX="1025,656,1444,657" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L128" ORDER="128" NO="128" SRC_LINE="129" BBOX="1025,657,1444,658" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L129" ORDER="129" NO="129" SRC_LINE="130" BBOX="1025,658,1444,659" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L130" ORDER="130" NO="130" SRC_LINE="131" BBOX="1025,659,1444,661" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L131" ORDER="131" NO="131" SRC_LINE="132" BBOX="1025,661,1444,662" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L132" ORDER="132" NO="132" SRC_LINE="133" BBOX="1025,662,1444,663" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L133" ORDER="133" NO="133" SRC_LINE="134" BBOX="1025,663,1444,665" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L134" ORDER="134" NO="134" SRC_LINE="135" BBOX="1025,665,1444,666" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L135" ORDER="135" NO="135" SRC_LINE="136" BBOX="1025,666,1444,667" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L136" ORDER="136" NO="136" SRC_LINE="137" BBOX="1025,667,1444,669" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L137" ORDER="137" NO="137" SRC_LINE="138" BBOX="1025,669,1444,670" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L138" ORDER="138" NO="138" SRC_LINE="139" BBOX="1025,670,1444,671" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L139" ORDER="139" NO="139" SRC_LINE="140" BBOX="1025,671,1444,673" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L140" ORDER="140" NO="140" SRC_LINE="141" BBOX="1025,673,1444,674" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L141" ORDER="141" NO="141" SRC_LINE="142" BBOX="1025,674,1444,675" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L142" ORDER="142" NO="142" SRC_LINE="143" BBOX="1025,675,1444,676" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L143" ORDER="143" NO="143" SRC_LINE="144" BBOX="1025,676,1444,678" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L144" ORDER="144" NO="144" SRC_LINE="145" BBOX="1025,678,1444,679" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L145" ORDER="145" NO="145" SRC_LINE="146" BBOX="1025,679,1444,680" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L146" ORDER="146" NO="146" SRC_LINE="147" BBOX="1025,680,1444,682" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L147" ORDER="147" NO="147" SRC_LINE="148" BBOX="1025,682,1444,683" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L148" ORDER="148" NO="148" SRC_LINE="149" BBOX="1025,683,1444,684" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L149" ORDER="149" NO="149" SRC_LINE="150" BBOX="1025,684,1444,686" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L150" ORDER="150" NO="150" SRC_LINE="151" BBOX="1025,686,1444,687" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L151" ORDER="151" NO="151" SRC_LINE="152" BBOX="1025,687,1444,688" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L152" ORDER="152" NO="152" SRC_LINE="153" BBOX="1025,688,1444,690" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L153" ORDER="153" NO="153" SRC_LINE="154" BBOX="1025,690,1444,691" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L154" ORDER="154" NO="154" SRC_LINE="155" BBOX="1025,691,1444,692" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L155" ORDER="155" NO="155" SRC_LINE="156" BBOX="1025,692,1444,693" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L156" ORDER="156" NO="156" SRC_LINE="157" BBOX="1025,693,1444,695" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L157" ORDER="157" NO="157" SRC_LINE="158" BBOX="1025,695,1444,696" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L158" ORDER="158" NO="158" SRC_LINE="159" BBOX="1025,696,1444,697" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L159" ORDER="159" NO="159" SRC_LINE="160" BBOX="1025,697,1444,699" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L160" ORDER="160" NO="160" SRC_LINE="161" BBOX="1025,699,1444,700" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L161" ORDER="161" NO="161" SRC_LINE="162" BBOX="1025,700,1444,701" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L162" ORDER="162" NO="162" SRC_LINE="163" BBOX="1025,701,1444,703" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L163" ORDER="163" NO="163" SRC_LINE="164" BBOX="1025,703,1444,704" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L164" ORDER="164" NO="164" SRC_LINE="165" BBOX="1025,704,1444,705" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L165" ORDER="165" NO="165" SRC_LINE="166" BBOX="1025,705,1444,707" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L166" ORDER="166" NO="166" SRC_LINE="167" BBOX="1025,707,1444,708" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L167" ORDER="167" NO="167" SRC_LINE="168" BBOX="1025,708,1444,709" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L168" ORDER="168" NO="168" SRC_LINE="169" BBOX="1025,709,1444,710" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L169" ORDER="169" NO="169" SRC_LINE="170" BBOX="1025,710,1444,712" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L170" ORDER="170" NO="170" SRC_LINE="171" BBOX="1025,712,1444,713" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L171" ORDER="171" NO="171" SRC_LINE="172" BBOX="1025,713,1444,714" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L172" ORDER="172" NO="172" SRC_LINE="173" BBOX="1025,714,1444,716" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L173" ORDER="173" NO="173" SRC_LINE="174" BBOX="1025,716,1444,717" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L174" ORDER="174" NO="174" SRC_LINE="175" BBOX="1025,717,1444,718" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L175" ORDER="175" NO="175" SRC_LINE="176" BBOX="1025,718,1444,720" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L176" ORDER="176" NO="176" SRC_LINE="177" BBOX="1025,720,1444,721" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L177" ORDER="177" NO="177" SRC_LINE="178" BBOX="1025,721,1444,722" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L178" ORDER="178" NO="178" SRC_LINE="179" BBOX="1025,722,1444,724" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L179" ORDER="179" NO="179" SRC_LINE="180" BBOX="1025,724,1444,725" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L180" ORDER="180" NO="180" SRC_LINE="181" BBOX="1025,725,1444,726" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L181" ORDER="181" NO="181" SRC_LINE="182" BBOX="1025,726,1444,727" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L182" ORDER="182" NO="182" SRC_LINE="183" BBOX="1025,727,1444,729" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L183" ORDER="183" NO="183" SRC_LINE="184" BBOX="1025,729,1444,730" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L184" ORDER="184" NO="184" SRC_LINE="185" BBOX="1025,730,1444,731" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L185" ORDER="185" NO="185" SRC_LINE="186" BBOX="1025,731,1444,733" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L186" ORDER="186" NO="186" SRC_LINE="187" BBOX="1025,733,1444,734" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L187" ORDER="187" NO="187" SRC_LINE="188" BBOX="1025,734,1444,735" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L188" ORDER="188" NO="188" SRC_LINE="189" BBOX="1025,735,1444,737" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L189" ORDER="189" NO="189" SRC_LINE="190" BBOX="1025,737,1444,738" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L190" ORDER="190" NO="190" SRC_LINE="191" BBOX="1025,738,1444,739" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L191" ORDER="191" NO="191" SRC_LINE="192" BBOX="1025,739,1444,741" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L192" ORDER="192" NO="192" SRC_LINE="193" BBOX="1025,741,1444,742" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L193" ORDER="193" NO="193" SRC_LINE="194" BBOX="1025,742,1444,743" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L194" ORDER="194" NO="194" SRC_LINE="195" BBOX="1025,743,1444,744" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L195" ORDER="195" NO="195" SRC_LINE="196" BBOX="1025,744,1444,746" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L196" ORDER="196" NO="196" SRC_LINE="197" BBOX="1025,746,1444,747" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L197" ORDER="197" NO="197" SRC_LINE="198" BBOX="1025,747,1444,748" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L198" ORDER="198" NO="198" SRC_LINE="199" BBOX="1025,748,1444,750" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L199" ORDER="199" NO="199" SRC_LINE="200" BBOX="1025,750,1444,751" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L200" ORDER="200" NO="200" SRC_LINE="201" BBOX="1025,751,1444,752" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L201" ORDER="201" NO="201" SRC_LINE="202" BBOX="1025,752,1444,754" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L202" ORDER="202" NO="202" SRC_LINE="203" BBOX="1025,754,1444,755" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L203" ORDER="203" NO="203" SRC_LINE="204" BBOX="1025,755,1444,756" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L204" ORDER="204" NO="204" SRC_LINE="205" BBOX="1025,756,1444,758" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L205" ORDER="205" NO="205" SRC_LINE="206" BBOX="1025,758,1444,759" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L206" ORDER="206" NO="206" SRC_LINE="207" BBOX="1025,759,1444,760" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L207" ORDER="207" NO="207" SRC_LINE="208" BBOX="1025,760,1444,761" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L208" ORDER="208" NO="208" SRC_LINE="209" BBOX="1025,761,1444,763" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L209" ORDER="209" NO="209" SRC_LINE="210" BBOX="1025,763,1444,764" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L210" ORDER="210" NO="210" SRC_LINE="211" BBOX="1025,764,1444,765" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L211" ORDER="211" NO="211" SRC_LINE="212" BBOX="1025,765,1444,767" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L212" ORDER="212" NO="212" SRC_LINE="213" BBOX="1025,767,1444,768" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L213" ORDER="213" NO="213" SRC_LINE="214" BBOX="1025,768,1444,769" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L214" ORDER="214" NO="214" SRC_LINE="215" BBOX="1025,769,1444,771" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L215" ORDER="215" NO="215" SRC_LINE="216" BBOX="1025,771,1444,772" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L216" ORDER="216" NO="216" SRC_LINE="217" BBOX="1025,772,1444,773" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L217" ORDER="217" NO="217" SRC_LINE="218" BBOX="1025,773,1444,775" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L218" ORDER="218" NO="218" SRC_LINE="219" BBOX="1025,775,1444,776" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L219" ORDER="219" NO="219" SRC_LINE="220" BBOX="1025,776,1444,777" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L220" ORDER="220" NO="220" SRC_LINE="221" BBOX="1025,777,1444,778" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L221" ORDER="221" NO="221" SRC_LINE="222" BBOX="1025,778,1444,780" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L222" ORDER="222" NO="222" SRC_LINE="223" BBOX="1025,780,1444,781" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L223" ORDER="223" NO="223" SRC_LINE="224" BBOX="1025,781,1444,782" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L224" ORDER="224" NO="224" SRC_LINE="225" BBOX="1025,782,1444,784" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L225" ORDER="225" NO="225" SRC_LINE="226" BBOX="1025,784,1444,785" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L226" ORDER="226" NO="226" SRC_LINE="227" BBOX="1025,785,1444,786" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L227" ORDER="227" NO="227" SRC_LINE="228" BBOX="1025,786,1444,788" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L228" ORDER="228" NO="228" SRC_LINE="229" BBOX="1025,788,1444,789" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L229" ORDER="229" NO="229" SRC_LINE="230" BBOX="1025,789,1444,790" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L230" ORDER="230" NO="230" SRC_LINE="231" BBOX="1025,790,1444,792" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L231" ORDER="231" NO="231" SRC_LINE="232" BBOX="1025,792,1444,793" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L232" ORDER="232" NO="232" SRC_LINE="233" BBOX="1025,793,1444,794" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L233" ORDER="233" NO="233" SRC_LINE="234" BBOX="1025,794,1444,795" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L234" ORDER="234" NO="234" SRC_LINE="235" BBOX="1025,795,1444,797" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L235" ORDER="235" NO="235" SRC_LINE="236" BBOX="1025,797,1444,798" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L236" ORDER="236" NO="236" SRC_LINE="237" BBOX="1025,798,1444,799" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L237" ORDER="237" NO="237" SRC_LINE="238" BBOX="1025,799,1444,801" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L238" ORDER="238" NO="238" SRC_LINE="239" BBOX="1025,801,1444,802" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L239" ORDER="239" NO="239" SRC_LINE="240" BBOX="1025,802,1444,803" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L240" ORDER="240" NO="240" SRC_LINE="241" BBOX="1025,803,1444,805" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L241" ORDER="241" NO="241" SRC_LINE="242" BBOX="1025,805,1444,806" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L242" ORDER="242" NO="242" SRC_LINE="243" BBOX="1025,806,1444,807" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L243" ORDER="243" NO="243" SRC_LINE="244" BBOX="1025,807,1444,809" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L244" ORDER="244" NO="244" SRC_LINE="245" BBOX="1025,809,1444,810" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L245" ORDER="245" NO="245" SRC_LINE="246" BBOX="1025,810,1444,811" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L246" ORDER="246" NO="246" SRC_LINE="247" BBOX="1025,811,1444,812" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L247" ORDER="247" NO="247" SRC_LINE="248" BBOX="1025,812,1444,814" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L248" ORDER="248" NO="248" SRC_LINE="249" BBOX="1025,814,1444,815" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L249" ORDER="249" NO="249" SRC_LINE="250" BBOX="1025,815,1444,816" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L250" ORDER="250" NO="250" SRC_LINE="251" BBOX="1025,816,1444,818" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L251" ORDER="251" NO="251" SRC_LINE="252" BBOX="1025,818,1444,819" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L252" ORDER="252" NO="252" SRC_LINE="253" BBOX="1025,819,1444,820" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L253" ORDER="253" NO="253" SRC_LINE="254" BBOX="1025,820,1444,822" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L254" ORDER="254" NO="254" SRC_LINE="255" BBOX="1025,822,1444,823" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L255" ORDER="255" NO="255" SRC_LINE="256" BBOX="1025,823,1444,824" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L256" ORDER="256" NO="256" SRC_LINE="257" BBOX="1025,824,1444,826" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L257" ORDER="257" NO="257" SRC_LINE="258" BBOX="1025,826,1444,827" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L258" ORDER="258" NO="258" SRC_LINE="259" BBOX="1025,827,1444,828" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L259" ORDER="259" NO="259" SRC_LINE="260" BBOX="1025,828,1444,829" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L260" ORDER="260" NO="260" SRC_LINE="261" BBOX="1025,829,1444,831" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L261" ORDER="261" NO="261" SRC_LINE="262" BBOX="1025,831,1444,832" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L262" ORDER="262" NO="262" SRC_LINE="263" BBOX="1025,832,1444,833" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L263" ORDER="263" NO="263" SRC_LINE="264" BBOX="1025,833,1444,835" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L264" ORDER="264" NO="264" SRC_LINE="265" BBOX="1025,835,1444,836" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L265" ORDER="265" NO="265" SRC_LINE="266" BBOX="1025,836,1444,837" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L266" ORDER="266" NO="266" SRC_LINE="267" BBOX="1025,837,1444,839" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L267" ORDER="267" NO="267" SRC_LINE="268" BBOX="1025,839,1444,840" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L268" ORDER="268" NO="268" SRC_LINE="269" BBOX="1025,840,1444,841" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L269" ORDER="269" NO="269" SRC_LINE="270" BBOX="1025,841,1444,843" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L270" ORDER="270" NO="270" SRC_LINE="271" BBOX="1025,843,1444,844" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L271" ORDER="271" NO="271" SRC_LINE="272" BBOX="1025,844,1444,845" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L272" ORDER="272" NO="272" SRC_LINE="273" BBOX="1025,845,1444,846" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L273" ORDER="273" NO="273" SRC_LINE="274" BBOX="1025,846,1444,848" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L274" ORDER="274" NO="274" SRC_LINE="275" BBOX="1025,848,1444,849" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L275" ORDER="275" NO="275" SRC_LINE="276" BBOX="1025,849,1444,850" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L276" ORDER="276" NO="276" SRC_LINE="277" BBOX="1025,850,1444,852" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L277" ORDER="277" NO="277" SRC_LINE="278" BBOX="1025,852,1444,853" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L278" ORDER="278" NO="278" SRC_LINE="279" BBOX="1025,853,1444,854" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L279" ORDER="279" NO="279" SRC_LINE="280" BBOX="1025,854,1444,856" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L280" ORDER="280" NO="280" SRC_LINE="281" BBOX="1025,856,1444,857" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L281" ORDER="281" NO="281" SRC_LINE="282" BBOX="1025,857,1444,858" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L282" ORDER="282" NO="282" SRC_LINE="283" BBOX="1025,858,1444,860" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L283" ORDER="283" NO="283" SRC_LINE="284" BBOX="1025,860,1444,861" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L284" ORDER="284" NO="284" SRC_LINE="285" BBOX="1025,861,1444,862" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L285" ORDER="285" NO="285" SRC_LINE="286" BBOX="1025,862,1444,863" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L286" ORDER="286" NO="286" SRC_LINE="287" BBOX="1025,863,1444,865" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L287" ORDER="287" NO="287" SRC_LINE="288" BBOX="1025,865,1444,866" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L288" ORDER="288" NO="288" SRC_LINE="289" BBOX="1025,866,1444,867" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L289" ORDER="289" NO="289" SRC_LINE="290" BBOX="1025,867,1444,869" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L290" ORDER="290" NO="290" SRC_LINE="291" BBOX="1025,869,1444,870" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L291" ORDER="291" NO="291" SRC_LINE="292" BBOX="1025,870,1444,871" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L292" ORDER="292" NO="292" SRC_LINE="293" BBOX="1025,871,1444,873" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L293" ORDER="293" NO="293" SRC_LINE="294" BBOX="1025,873,1444,874" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L294" ORDER="294" NO="294" SRC_LINE="295" BBOX="1025,874,1444,875" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L295" ORDER="295" NO="295" SRC_LINE="296" BBOX="1025,875,1444,877" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L296" ORDER="296" NO="296" SRC_LINE="297" BBOX="1025,877,1444,878" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L297" ORDER="297" NO="297" SRC_LINE="298" BBOX="1025,878,1444,879" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L298" ORDER="298" NO="298" SRC_LINE="299" BBOX="1025,879,1444,881" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L299" ORDER="299" NO="299" SRC_LINE="300" BBOX="1025,881,1444,882" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L300" ORDER="300" NO="300" SRC_LINE="301" BBOX="1025,882,1444,883" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L301" ORDER="301" NO="301" SRC_LINE="302" BBOX="1025,883,1444,884" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L302" ORDER="302" NO="302" SRC_LINE="303" BBOX="1025,884,1444,886" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L303" ORDER="303" NO="303" SRC_LINE="304" BBOX="1025,886,1444,887" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L304" ORDER="304" NO="304" SRC_LINE="305" BBOX="1025,887,1444,888" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L305" ORDER="305" NO="305" SRC_LINE="306" BBOX="1025,888,1444,890" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L306" ORDER="306" NO="306" SRC_LINE="307" BBOX="1025,890,1444,891" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L307" ORDER="307" NO="307" SRC_LINE="308" BBOX="1025,891,1444,892" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L308" ORDER="308" NO="308" SRC_LINE="309" BBOX="1025,892,1444,894" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L309" ORDER="309" NO="309" SRC_LINE="310" BBOX="1025,894,1444,895" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L310" ORDER="310" NO="310" SRC_LINE="311" BBOX="1025,895,1444,896" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L311" ORDER="311" NO="311" SRC_LINE="312" BBOX="1025,896,1444,898" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L312" ORDER="312" NO="312" SRC_LINE="313" BBOX="1025,898,1444,899" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L313" ORDER="313" NO="313" SRC_LINE="314" BBOX="1025,899,1444,900" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L314" ORDER="314" NO="314" SRC_LINE="315" BBOX="1025,900,1444,901" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L315" ORDER="315" NO="315" SRC_LINE="316" BBOX="1025,901,1444,903" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L316" ORDER="316" NO="316" SRC_LINE="317" BBOX="1025,903,1444,904" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L317" ORDER="317" NO="317" SRC_LINE="318" BBOX="1025,904,1444,905" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L318" ORDER="318" NO="318" SRC_LINE="319" BBOX="1025,905,1444,907" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L319" ORDER="319" NO="319" SRC_LINE="320" BBOX="1025,907,1444,908" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L320" ORDER="320" NO="320" SRC_LINE="321" BBOX="1025,908,1444,909" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L321" ORDER="321" NO="321" SRC_LINE="322" BBOX="1025,909,1444,911" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L322" ORDER="322" NO="322" SRC_LINE="323" BBOX="1025,911,1444,912" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L323" ORDER="323" NO="323" SRC_LINE="324" BBOX="1025,912,1444,913" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L324" ORDER="324" NO="324" SRC_LINE="325" BBOX="1025,913,1444,915" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L325" ORDER="325" NO="325" SRC_LINE="326" BBOX="1025,915,1444,916" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L326" ORDER="326" NO="326" SRC_LINE="327" BBOX="1025,916,1444,917" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L327" ORDER="327" NO="327" SRC_LINE="328" BBOX="1025,917,1444,918" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L328" ORDER="328" NO="328" SRC_LINE="329" BBOX="1025,918,1444,920" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L329" ORDER="329" NO="329" SRC_LINE="330" BBOX="1025,920,1444,921" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L330" ORDER="330" NO="330" SRC_LINE="331" BBOX="1025,921,1444,922" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L331" ORDER="331" NO="331" SRC_LINE="332" BBOX="1025,922,1444,924" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L332" ORDER="332" NO="332" SRC_LINE="333" BBOX="1025,924,1444,925" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L333" ORDER="333" NO="333" SRC_LINE="334" BBOX="1025,925,1444,926" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L334" ORDER="334" NO="334" SRC_LINE="335" BBOX="1025,926,1444,928" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L335" ORDER="335" NO="335" SRC_LINE="336" BBOX="1025,928,1444,929" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L336" ORDER="336" NO="336" SRC_LINE="337" BBOX="1025,929,1444,930" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L337" ORDER="337" NO="337" SRC_LINE="338" BBOX="1025,930,1444,932" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L338" ORDER="338" NO="338" SRC_LINE="339" BBOX="1025,932,1444,933" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L339" ORDER="339" NO="339" SRC_LINE="340" BBOX="1025,933,1444,934" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L340" ORDER="340" NO="340" SRC_LINE="341" BBOX="1025,934,1444,935" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L341" ORDER="341" NO="341" SRC_LINE="342" BBOX="1025,935,1444,937" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L342" ORDER="342" NO="342" SRC_LINE="343" BBOX="1025,937,1444,938" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L343" ORDER="343" NO="343" SRC_LINE="344" BBOX="1025,938,1444,939" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L344" ORDER="344" NO="344" SRC_LINE="345" BBOX="1025,939,1444,941" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L345" ORDER="345" NO="345" SRC_LINE="346" BBOX="1025,941,1444,942" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L346" ORDER="346" NO="346" SRC_LINE="347" BBOX="1025,942,1444,943" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L347" ORDER="347" NO="347" SRC_LINE="348" BBOX="1025,943,1444,945" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L348" ORDER="348" NO="348" SRC_LINE="349" BBOX="1025,945,1444,946" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L349" ORDER="349" NO="349" SRC_LINE="350" BBOX="1025,946,1444,947" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L350" ORDER="350" NO="350" SRC_LINE="351" BBOX="1025,947,1444,949" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L351" ORDER="351" NO="351" SRC_LINE="352" BBOX="1025,949,1444,950" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L352" ORDER="352" NO="352" SRC_LINE="353" BBOX="1025,950,1444,951" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L353" ORDER="353" NO="353" SRC_LINE="354" BBOX="1025,951,1444,952" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L354" ORDER="354" NO="354" SRC_LINE="355" BBOX="1025,952,1444,954" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L355" ORDER="355" NO="355" SRC_LINE="356" BBOX="1025,954,1444,955" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L356" ORDER="356" NO="356" SRC_LINE="357" BBOX="1025,955,1444,956" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L357" ORDER="357" NO="357" SRC_LINE="358" BBOX="1025,956,1444,958" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L358" ORDER="358" NO="358" SRC_LINE="359" BBOX="1025,958,1444,959" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L359" ORDER="359" NO="359" SRC_LINE="360" BBOX="1025,959,1444,960" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L360" ORDER="360" NO="360" SRC_LINE="361" BBOX="1025,960,1444,962" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L361" ORDER="361" NO="361" SRC_LINE="362" BBOX="1025,962,1444,963" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L362" ORDER="362" NO="362" SRC_LINE="363" BBOX="1025,963,1444,964" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L363" ORDER="363" NO="363" SRC_LINE="364" BBOX="1025,964,1444,966" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L364" ORDER="364" NO="364" SRC_LINE="365" BBOX="1025,966,1444,967" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L365" ORDER="365" NO="365" SRC_LINE="366" BBOX="1025,967,1444,968" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L366" ORDER="366" NO="366" SRC_LINE="367" BBOX="1025,968,1444,969" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L367" ORDER="367" NO="367" SRC_LINE="368" BBOX="1025,969,1444,971" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L368" ORDER="368" NO="368" SRC_LINE="369" BBOX="1025,971,1444,972" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L369" ORDER="369" NO="369" SRC_LINE="370" BBOX="1025,972,1444,973" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L370" ORDER="370" NO="370" SRC_LINE="371" BBOX="1025,973,1444,975" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L371" ORDER="371" NO="371" SRC_LINE="372" BBOX="1025,975,1444,976" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L372" ORDER="372" NO="372" SRC_LINE="373" BBOX="1025,976,1444,977" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L373" ORDER="373" NO="373" SRC_LINE="374" BBOX="1025,977,1444,979" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L374" ORDER="374" NO="374" SRC_LINE="375" BBOX="1025,979,1444,980" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L375" ORDER="375" NO="375" SRC_LINE="376" BBOX="1025,980,1444,981" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L376" ORDER="376" NO="376" SRC_LINE="377" BBOX="1025,981,1444,983" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L377" ORDER="377" NO="377" SRC_LINE="378" BBOX="1025,983,1444,984" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L378" ORDER="378" NO="378" SRC_LINE="379" BBOX="1025,984,1444,985" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L379" ORDER="379" NO="379" SRC_LINE="380" BBOX="1025,985,1444,986" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L380" ORDER="380" NO="380" SRC_LINE="381" BBOX="1025,986,1444,988" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L381" ORDER="381" NO="381" SRC_LINE="382" BBOX="1025,988,1444,989" CONFIDENCE="30.0">E</LINE>
-            <LINE ID="P0286.L382" ORDER="382" NO="382" SRC_LINE="383" BBOX="1025,989,1444,990" CONFIDENCE="30.0">I</LINE>
-            <LINE ID="P0286.L383" ORDER="383" NO="383" SRC_LINE="384" BBOX="1025,990,1444,992" CONFIDENCE="30.0">O</LINE>
-            <LINE ID="P0286.L384" ORDER="384" NO="384" SRC_LINE="385" BBOX="1025,992,1444,993" CONFIDENCE="30.0">U</LINE>
-            <LINE ID="P0286.L385" ORDER="385" NO="385" SRC_LINE="395" BBOX="375,2948,2476,3135" CONFIDENCE="89.28">PHIÊN ÂM :</LINE>
-            <LINE ID="P0286.L386" ORDER="386" NO="386" SRC_LINE="396" BBOX="375,3135,2476,3322" CONFIDENCE="89.28">ĐẠI TÙY CỬU CHÂN QUẬN BẢO AN</LINE>
-            <LINE ID="P0286.L387" ORDER="387" NO="387" SRC_LINE="397" BBOX="375,3322,2476,3509" CONFIDENCE="89.28">ĐẠO TRƯỜNG (1) CHI BI VĂN</LINE>
+        <PAGE NUMBER="286" IMAGE="E:\Projects\han-viet-corpus\data\CPO_18\02_extraction\pages\page_286.png" IMAGE_SHA256="e3076fbe02b8a79a4a8e7f774d08816bde9077ed242bd94ae5870fb154d51cef" RAW="03_ocr/raw/qwen/0286.json" SELECTED_ENGINE="qwen" SELECTED_KEY="fa5ba15e4753164f66726d3d993f7bf0804a79070935392be5a7256928dae45f" CONFIDENCE="86.73" EMPTY="false" N_LINES="6" N_SRC_LINES="24" N_DROPPED="18" CJK_REMOVED="98">
+            <LINE ID="P0286.L001" ORDER="1" NO="1" SRC_LINE="1" BBOX="93,0,1895,200" CONFIDENCE="97.83">Sưu tầm và khảo luận tác phẩm chữ Hán của người Việt Nam trước TK 10</LINE>
+            <LINE ID="P0286.L002" ORDER="2" NO="2" SRC_LINE="19" BBOX="507,2948,2476,3038" CONFIDENCE="82.33">PHIÊN ÂM:</LINE>
+            <LINE ID="P0286.L003" ORDER="3" NO="3" SRC_LINE="20" BBOX="507,3038,2476,3127" CONFIDENCE="82.33">ĐẠI TỤY CỬU CHÂN QUẬN BẢO AN</LINE>
+            <LINE ID="P0286.L004" ORDER="4" NO="4" SRC_LINE="21" BBOX="507,3127,2476,3217" CONFIDENCE="82.33">ĐÀO TRƯỜNG (1) CHI LỊ VĂN</LINE>
+            <LINE ID="P0286.L005" ORDER="5" NO="5" SRC_LINE="22" BBOX="375,3209,2367,3309" CONFIDENCE="71.68">ĐẠO TRƯỜNG / CHI BÌ VÂN</LINE>
+            <LINE ID="P0286.L006" ORDER="6" NO="6" SRC_LINE="24" BBOX="375,3409,2367,3509" CONFIDENCE="71.68">giangviet</LINE>
             <RUNS>
-                <RUN KEY="5aac102f849e83607240b0dd8d53cb3a1e3f6f2363d0d8254f85dd0f642a80af" CREATED_AT="2026-11-26T09:16:47+00:00" IMAGE="E:\Projects\han-viet-corpus\data\CPO_18\02_extraction\pages\page_286.png" IMAGE_WIDTH="2480" IMAGE_HEIGHT="3509" CROP_BOX="0,0,2480,3509" SOURCE="03_ocr/raw/qwen/0286.json" SELECTION="manifest">
+                <RUN KEY="fa5ba15e4753164f66726d3d993f7bf0804a79070935392be5a7256928dae45f" CREATED_AT="2026-11-26T23:14:39+00:00" IMAGE="E:\Projects\han-viet-corpus\data\CPO_18\02_extraction\pages\page_286.png" IMAGE_WIDTH="2480" IMAGE_HEIGHT="3509" CROP_BOX="0,0,2480,3509" SOURCE="03_ocr/raw/qwen/0286.json" SELECTION="manifest">
                     <PARAMETERS>
                         <PARAM NAME="image_sha256">e3076fbe02b8a79a4a8e7f774d08816bde9077ed242bd94ae5870fb154d51cef</PARAM>
-                        <ENGINE NAME="qwen" MODEL_ID="Qwen/Qwen2.5-VL-3B-Instruct" MODEL_REVISION="main" TRANSFORMERS_VERSION="4.57.6" TORCH_VERSION="2.5.1+cu121" CUDA_VERSION="12.1" BITSANDBYTES_VERSION="0.50.2" MODE="all" MIN_PIXELS="50176" MAX_PIXELS="802816" BAND_INCHES="2.0" MAX_NEW_TOKENS="768" REPETITION_PENALTY="1.05" ADAPTER_VERSION="4" PROMPT_VERSION="3" PROMPT_SHA256="b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74">
+                        <ENGINE NAME="qwen" MODEL_ID="Qwen/Qwen2.5-VL-3B-Instruct" MODEL_REVISION="main" TRANSFORMERS_VERSION="4.57.6" TORCH_VERSION="2.5.1+cu121" CUDA_VERSION="12.1" BITSANDBYTES_VERSION="0.50.2" MODE="all" MIN_PIXELS="50176" MAX_PIXELS="802816" BAND_INCHES="1.0" MAX_NEW_TOKENS="768" REPETITION_PENALTY="1.05" ADAPTER_VERSION="4" PROMPT_VERSION="3" PROMPT_SHA256="b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74">
                             <QUANTIZATION>{"compute_dtype": "float16", "double_quant": true, "load_in_4bit": true, "quant_type": "nf4"}</QUANTIZATION>
                         </ENGINE>
                         <PARAM NAME="lang">all</PARAM>
@@ -2985,43 +2237,6 @@
                 </RUN>
             </RUNS>
         </PAGE>
-        <PAGE NUMBER="306" IMAGE="/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_306.png" IMAGE_SHA256="418af9ad105e080eb7a4e04903f371f073f37c3f6311130beebbebca5d559743" RAW="03_ocr/raw/qwen/0306.json" SELECTED_ENGINE="qwen" SELECTED_KEY="c375faae354e514840802401cd00c6abca28e5b82b903b2b4846d01c37a7b373" CONFIDENCE="93.74" EMPTY="false" N_LINES="2" N_SRC_LINES="33" N_DROPPED="31" CJK_REMOVED="145">
-            <LINE ID="P0306.L001" ORDER="1" NO="1" SRC_LINE="32" BBOX="734,2996,2475,3246" CONFIDENCE="93.74">Bản chụp thu nhỏ bài "Bạch văn chiếu xuân hải phú" hiện chép trong sách "Cường dư văn chiến".</LINE>
-            <LINE ID="P0306.L002" ORDER="2" NO="2" SRC_LINE="33" BBOX="734,3246,2475,3497" CONFIDENCE="93.74">Thư viện Viện Nghiên cứu Hán Nôm, VHv. 2439/12</LINE>
-            <RUNS>
-                <RUN KEY="c375faae354e514840802401cd00c6abca28e5b82b903b2b4846d01c37a7b373" CREATED_AT="2026-11-25T19:59:30+00:00" IMAGE="/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_306.png" IMAGE_WIDTH="2480" IMAGE_HEIGHT="3509" CROP_BOX="0,0,2480,3509" SOURCE="03_ocr/raw/qwen/0306.json" SELECTION="manifest">
-                    <PARAMETERS>
-                        <PARAM NAME="image_sha256">418af9ad105e080eb7a4e04903f371f073f37c3f6311130beebbebca5d559743</PARAM>
-                        <ENGINE NAME="qwen" MODEL_ID="Qwen/Qwen2.5-VL-3B-Instruct" MODEL_REVISION="main" TRANSFORMERS_VERSION="4.57.6" TORCH_VERSION="2.5.1+cu121" CUDA_VERSION="12.1" BITSANDBYTES_VERSION="0.50.2" MODE="all" MIN_PIXELS="50176" MAX_PIXELS="802816" BAND_INCHES="2.0" MAX_NEW_TOKENS="768" REPETITION_PENALTY="1.05" ADAPTER_VERSION="3" PROMPT_VERSION="3" PROMPT_SHA256="b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74">
-                            <QUANTIZATION>{"compute_dtype": "float16", "double_quant": true, "load_in_4bit": true, "quant_type": "nf4"}</QUANTIZATION>
-                        </ENGINE>
-                        <PARAM NAME="lang">all</PARAM>
-                        <PARAM NAME="region" />
-                        <PARAM NAME="psm">6</PARAM>
-                        <PARAM NAME="dpi">300</PARAM>
-                        <PARAM NAME="preprocessing">rgb-crop-v1</PARAM>
-                    </PARAMETERS>
-                </RUN>
-            </RUNS>
-        </PAGE>
-        <PAGE NUMBER="307" IMAGE="/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_307.png" IMAGE_SHA256="2909fb5267429ebea5aaa3140a76b8c28d01e95cb60b33a2acbed629deb67eb9" RAW="03_ocr/raw/qwen/0307.json" SELECTED_ENGINE="qwen" SELECTED_KEY="b25e0335b5b3656aec49934a26cac3b7bc826daf9782849f5f0d076d051d3378" CONFIDENCE="92.71" EMPTY="false" N_LINES="1" N_SRC_LINES="26" N_DROPPED="25" CJK_REMOVED="174">
-            <LINE ID="P0307.L001" ORDER="1" NO="1" SRC_LINE="26" BBOX="1182,2860,2480,3497" CONFIDENCE="92.71">(Như trên)</LINE>
-            <RUNS>
-                <RUN KEY="b25e0335b5b3656aec49934a26cac3b7bc826daf9782849f5f0d076d051d3378" CREATED_AT="2026-11-25T20:00:32+00:00" IMAGE="/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_307.png" IMAGE_WIDTH="2480" IMAGE_HEIGHT="3509" CROP_BOX="0,0,2480,3509" SOURCE="03_ocr/raw/qwen/0307.json" SELECTION="manifest">
-                    <PARAMETERS>
-                        <PARAM NAME="image_sha256">2909fb5267429ebea5aaa3140a76b8c28d01e95cb60b33a2acbed629deb67eb9</PARAM>
-                        <ENGINE NAME="qwen" MODEL_ID="Qwen/Qwen2.5-VL-3B-Instruct" MODEL_REVISION="main" TRANSFORMERS_VERSION="4.57.6" TORCH_VERSION="2.5.1+cu121" CUDA_VERSION="12.1" BITSANDBYTES_VERSION="0.50.2" MODE="all" MIN_PIXELS="50176" MAX_PIXELS="802816" BAND_INCHES="2.0" MAX_NEW_TOKENS="768" REPETITION_PENALTY="1.05" ADAPTER_VERSION="3" PROMPT_VERSION="3" PROMPT_SHA256="b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74">
-                            <QUANTIZATION>{"compute_dtype": "float16", "double_quant": true, "load_in_4bit": true, "quant_type": "nf4"}</QUANTIZATION>
-                        </ENGINE>
-                        <PARAM NAME="lang">all</PARAM>
-                        <PARAM NAME="region" />
-                        <PARAM NAME="psm">6</PARAM>
-                        <PARAM NAME="dpi">300</PARAM>
-                        <PARAM NAME="preprocessing">rgb-crop-v1</PARAM>
-                    </PARAMETERS>
-                </RUN>
-            </RUNS>
-        </PAGE>
         <PAGE NUMBER="308" IMAGE="/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_308.png" IMAGE_SHA256="659cd18558482a693be7066aa44c70e48a3b771deb7a0fcf49ae76169aa639a8" RAW="03_ocr/raw/qwen/0308.json" SELECTED_ENGINE="qwen" SELECTED_KEY="1f40ef93aa4e10b66312a68134c5342658c43c7342e417d8c78f15a5a21e7414" CONFIDENCE="97.19" EMPTY="false" N_LINES="4" N_SRC_LINES="9" N_DROPPED="5" CJK_REMOVED="142">
             <LINE ID="P0308.L001" ORDER="1" NO="1" SRC_LINE="1" BBOX="359,684,2474,905" CONFIDENCE="94.76">V. BÀI VĂN SÁCH CỦA KHƯƠNG CÔNG PHỤ</LINE>
             <LINE ID="P0308.L002" ORDER="2" NO="2" SRC_LINE="2" BBOX="359,905,2474,1126" CONFIDENCE="94.76">Bài Đối trực ngôn cực gián sách của Khương Công</LINE>
@@ -3510,61 +2725,6 @@
                 </RUN>
             </RUNS>
         </PAGE>
-        <PAGE NUMBER="327" IMAGE="/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_327.png" IMAGE_SHA256="bc0e4da687a37a0b1047752bc82606852935e50c9311a647a1858f7e5ac79900" RAW="03_ocr/raw/qwen/0327.json" SELECTED_ENGINE="qwen" SELECTED_KEY="24066389daee6fc067ea5c9c3e298f7e39d927062ebc94f2f4492e90a688df6b" CONFIDENCE="77.37" EMPTY="false" N_LINES="1" N_SRC_LINES="33" N_DROPPED="32" CJK_REMOVED="518">
-            <LINE ID="P0327.L001" ORDER="1" NO="1" SRC_LINE="33" BBOX="259,2837,2475,3498" CONFIDENCE="77.37">Bản chụp thu nhỏ bài "Bạch vân chiều xuân hài phú" và bài "Đôi trúc ngọn cụt giản sách" hiện chép trong "Toàn Đường văn" theo bản in Hội văn thư cục. Đài Bắc. 1961.</LINE>
-            <RUNS>
-                <RUN KEY="24066389daee6fc067ea5c9c3e298f7e39d927062ebc94f2f4492e90a688df6b" CREATED_AT="2026-11-25T20:12:30+00:00" IMAGE="/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_327.png" IMAGE_WIDTH="2480" IMAGE_HEIGHT="3509" CROP_BOX="0,0,2480,3509" SOURCE="03_ocr/raw/qwen/0327.json" SELECTION="manifest">
-                    <PARAMETERS>
-                        <PARAM NAME="image_sha256">bc0e4da687a37a0b1047752bc82606852935e50c9311a647a1858f7e5ac79900</PARAM>
-                        <ENGINE NAME="qwen" MODEL_ID="Qwen/Qwen2.5-VL-3B-Instruct" MODEL_REVISION="main" TRANSFORMERS_VERSION="4.57.6" TORCH_VERSION="2.5.1+cu121" CUDA_VERSION="12.1" BITSANDBYTES_VERSION="0.50.2" MODE="all" MIN_PIXELS="50176" MAX_PIXELS="802816" BAND_INCHES="2.0" MAX_NEW_TOKENS="768" REPETITION_PENALTY="1.05" ADAPTER_VERSION="3" PROMPT_VERSION="3" PROMPT_SHA256="b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74">
-                            <QUANTIZATION>{"compute_dtype": "float16", "double_quant": true, "load_in_4bit": true, "quant_type": "nf4"}</QUANTIZATION>
-                        </ENGINE>
-                        <PARAM NAME="lang">all</PARAM>
-                        <PARAM NAME="region" />
-                        <PARAM NAME="psm">6</PARAM>
-                        <PARAM NAME="dpi">300</PARAM>
-                        <PARAM NAME="preprocessing">rgb-crop-v1</PARAM>
-                    </PARAMETERS>
-                </RUN>
-            </RUNS>
-        </PAGE>
-        <PAGE NUMBER="328" IMAGE="/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_328.png" IMAGE_SHA256="4174fed3b606adebe878261a4158112b8d85fd5b0a1d2502b93b800fbcf21d5b" RAW="03_ocr/raw/qwen/0328.json" SELECTED_ENGINE="qwen" SELECTED_KEY="5d0498d6e9c6a19f71d18a163d7caa15d389004517fe12e0a5e5b154d4f37504" CONFIDENCE="49.1" EMPTY="false" N_LINES="1" N_SRC_LINES="42" N_DROPPED="41" CJK_REMOVED="362">
-            <LINE ID="P0328.L001" ORDER="1" NO="1" SRC_LINE="1" BBOX="189,0,2290,336" CONFIDENCE="49.1">[UNCLEAR]</LINE>
-            <RUNS>
-                <RUN KEY="5d0498d6e9c6a19f71d18a163d7caa15d389004517fe12e0a5e5b154d4f37504" CREATED_AT="2026-11-25T20:12:58+00:00" IMAGE="/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_328.png" IMAGE_WIDTH="2480" IMAGE_HEIGHT="3509" CROP_BOX="0,0,2480,3509" SOURCE="03_ocr/raw/qwen/0328.json" SELECTION="manifest">
-                    <PARAMETERS>
-                        <PARAM NAME="image_sha256">4174fed3b606adebe878261a4158112b8d85fd5b0a1d2502b93b800fbcf21d5b</PARAM>
-                        <ENGINE NAME="qwen" MODEL_ID="Qwen/Qwen2.5-VL-3B-Instruct" MODEL_REVISION="main" TRANSFORMERS_VERSION="4.57.6" TORCH_VERSION="2.5.1+cu121" CUDA_VERSION="12.1" BITSANDBYTES_VERSION="0.50.2" MODE="all" MIN_PIXELS="50176" MAX_PIXELS="802816" BAND_INCHES="2.0" MAX_NEW_TOKENS="768" REPETITION_PENALTY="1.05" ADAPTER_VERSION="3" PROMPT_VERSION="3" PROMPT_SHA256="b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74">
-                            <QUANTIZATION>{"compute_dtype": "float16", "double_quant": true, "load_in_4bit": true, "quant_type": "nf4"}</QUANTIZATION>
-                        </ENGINE>
-                        <PARAM NAME="lang">all</PARAM>
-                        <PARAM NAME="region" />
-                        <PARAM NAME="psm">6</PARAM>
-                        <PARAM NAME="dpi">300</PARAM>
-                        <PARAM NAME="preprocessing">rgb-crop-v1</PARAM>
-                    </PARAMETERS>
-                </RUN>
-            </RUNS>
-        </PAGE>
-        <PAGE NUMBER="329" IMAGE="/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_329.png" IMAGE_SHA256="08216303515ca3e523dabb8b7daabb1d1f6ce56f847000819db130fc29a1730d" RAW="03_ocr/raw/qwen/0329.json" SELECTED_ENGINE="qwen" SELECTED_KEY="bb54c23c8aec8803810cd7d6a1b11309e090093b60a28c015f56fb119ceca769" CONFIDENCE="91.02" EMPTY="false" N_LINES="2" N_SRC_LINES="42" N_DROPPED="40" CJK_REMOVED="783">
-            <LINE ID="P0329.L001" ORDER="1" NO="1" SRC_LINE="1" BBOX="194,165,210,394" CONFIDENCE="86.95">[UNCLEAR]</LINE>
-            <LINE ID="P0329.L002" ORDER="2" NO="2" SRC_LINE="42" BBOX="222,2850,2480,3498" CONFIDENCE="94.68">(Như trên)</LINE>
-            <RUNS>
-                <RUN KEY="bb54c23c8aec8803810cd7d6a1b11309e090093b60a28c015f56fb119ceca769" CREATED_AT="2026-11-25T20:13:46+00:00" IMAGE="/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_329.png" IMAGE_WIDTH="2480" IMAGE_HEIGHT="3509" CROP_BOX="0,0,2480,3509" SOURCE="03_ocr/raw/qwen/0329.json" SELECTION="manifest">
-                    <PARAMETERS>
-                        <PARAM NAME="image_sha256">08216303515ca3e523dabb8b7daabb1d1f6ce56f847000819db130fc29a1730d</PARAM>
-                        <ENGINE NAME="qwen" MODEL_ID="Qwen/Qwen2.5-VL-3B-Instruct" MODEL_REVISION="main" TRANSFORMERS_VERSION="4.57.6" TORCH_VERSION="2.5.1+cu121" CUDA_VERSION="12.1" BITSANDBYTES_VERSION="0.50.2" MODE="all" MIN_PIXELS="50176" MAX_PIXELS="802816" BAND_INCHES="2.0" MAX_NEW_TOKENS="768" REPETITION_PENALTY="1.05" ADAPTER_VERSION="3" PROMPT_VERSION="3" PROMPT_SHA256="b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74">
-                            <QUANTIZATION>{"compute_dtype": "float16", "double_quant": true, "load_in_4bit": true, "quant_type": "nf4"}</QUANTIZATION>
-                        </ENGINE>
-                        <PARAM NAME="lang">all</PARAM>
-                        <PARAM NAME="region" />
-                        <PARAM NAME="psm">6</PARAM>
-                        <PARAM NAME="dpi">300</PARAM>
-                        <PARAM NAME="preprocessing">rgb-crop-v1</PARAM>
-                    </PARAMETERS>
-                </RUN>
-            </RUNS>
-        </PAGE>
         <PAGE NUMBER="331" IMAGE="/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_331.png" IMAGE_SHA256="7b7c5f635f546613f289ff2c6323e7feb4aadc1ba43e0d09ad9e133e9e7305d4" RAW="03_ocr/raw/qwen/0331.json" SELECTED_ENGINE="qwen" SELECTED_KEY="a56fed81da362e7d24fc3a13ee6e1357c32ddd769fdbc8f95e736b4a72771d0e" CONFIDENCE="94.38" EMPTY="false" N_LINES="4" N_SRC_LINES="11" N_DROPPED="7" CJK_REMOVED="161">
             <LINE ID="P0331.L001" ORDER="1" NO="1" SRC_LINE="1" BBOX="0,655,2480,873" CONFIDENCE="92.11">VI BÀI PHÁN CỦA KHƯƠNG CÔNG PHỤC</LINE>
             <LINE ID="P0331.L002" ORDER="2" NO="2" SRC_LINE="2" BBOX="276,978,2480,1238" CONFIDENCE="95.71">Bài Đổi Bình bộ thí xạ phán của Khương Công Phục hiện được chép trong Toàn Đường văn Q. 622, và đây là bản duy nhất mà ngày nay còn có thể tìm thấy.</LINE>
@@ -3677,24 +2837,6 @@
                 </RUN>
             </RUNS>
         </PAGE>
-        <PAGE NUMBER="335" IMAGE="/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_335.png" IMAGE_SHA256="f0a0410ec0cb278193f3f77e29bb52c9d6a2a59f45235807df1a28317b53bcec" RAW="03_ocr/raw/qwen/0335.json" SELECTED_ENGINE="qwen" SELECTED_KEY="b6048e0dfc2a9fda40e7abd368fa79810a72bdd94793f855c52ca5a550020817" CONFIDENCE="85.18" EMPTY="false" N_LINES="1" N_SRC_LINES="168" N_DROPPED="167" CJK_REMOVED="1163">
-            <LINE ID="P0335.L001" ORDER="1" NO="1" SRC_LINE="168" BBOX="178,2820,2476,3498" CONFIDENCE="85.18">Bản chụp thu nhỏ bìa "Đối Bình Bộ thí xạ phán" hiện chép trong "Toàn Dương văn", theo bản in Hồi văn thư cúc, Đài Bắc. 1961.</LINE>
-            <RUNS>
-                <RUN KEY="b6048e0dfc2a9fda40e7abd368fa79810a72bdd94793f855c52ca5a550020817" CREATED_AT="2026-11-25T20:17:07+00:00" IMAGE="/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_335.png" IMAGE_WIDTH="2480" IMAGE_HEIGHT="3509" CROP_BOX="0,0,2480,3509" SOURCE="03_ocr/raw/qwen/0335.json" SELECTION="manifest">
-                    <PARAMETERS>
-                        <PARAM NAME="image_sha256">f0a0410ec0cb278193f3f77e29bb52c9d6a2a59f45235807df1a28317b53bcec</PARAM>
-                        <ENGINE NAME="qwen" MODEL_ID="Qwen/Qwen2.5-VL-3B-Instruct" MODEL_REVISION="main" TRANSFORMERS_VERSION="4.57.6" TORCH_VERSION="2.5.1+cu121" CUDA_VERSION="12.1" BITSANDBYTES_VERSION="0.50.2" MODE="all" MIN_PIXELS="50176" MAX_PIXELS="802816" BAND_INCHES="2.0" MAX_NEW_TOKENS="768" REPETITION_PENALTY="1.05" ADAPTER_VERSION="3" PROMPT_VERSION="3" PROMPT_SHA256="b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74">
-                            <QUANTIZATION>{"compute_dtype": "float16", "double_quant": true, "load_in_4bit": true, "quant_type": "nf4"}</QUANTIZATION>
-                        </ENGINE>
-                        <PARAM NAME="lang">all</PARAM>
-                        <PARAM NAME="region" />
-                        <PARAM NAME="psm">6</PARAM>
-                        <PARAM NAME="dpi">300</PARAM>
-                        <PARAM NAME="preprocessing">rgb-crop-v1</PARAM>
-                    </PARAMETERS>
-                </RUN>
-            </RUNS>
-        </PAGE>
         <PAGE NUMBER="337" IMAGE="/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_337.png" IMAGE_SHA256="f4e6e9db32fd11ca1231ae78906eae25d54cd9b2fbd40ca399c4650e7138a82a" RAW="03_ocr/raw/qwen/0337.json" SELECTED_ENGINE="qwen" SELECTED_KEY="684f6b4ece45552da091bad7ae65fc35559fcc43a700eb2984d27076d7faf3ec" CONFIDENCE="95.83" EMPTY="false" N_LINES="5" N_SRC_LINES="10" N_DROPPED="5" CJK_REMOVED="243">
             <LINE ID="P0337.L001" ORDER="1" NO="1" SRC_LINE="3" BBOX="330,523,2480,791" CONFIDENCE="96.92">VII. BÀI VĂN KHẮC TRÊN CHUÔNG THANH MAI</LINE>
             <LINE ID="P0337.L002" ORDER="2" NO="2" SRC_LINE="4" BBOX="330,791,2480,1058" CONFIDENCE="96.92">Nguyên bản chữ Hán bài văn khắc trên chuông</LINE>
@@ -3772,9 +2914,8 @@
                 </RUN>
             </RUNS>
         </PAGE>
-        <PAGE NUMBER="341" IMAGE="/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_341.png" IMAGE_SHA256="8bc1a4e2784981e7a7b09804b0285f63a2c221490e66cce5bb038c86a6d2a0fa" RAW="03_ocr/raw/qwen/0341.json" SELECTED_ENGINE="qwen" SELECTED_KEY="2467a94705a801be998a3cbaca61e1590b78276531e75bc0e5eaccab30d308c2" CONFIDENCE="58.49" EMPTY="false" N_LINES="2" N_SRC_LINES="14" N_DROPPED="12" CJK_REMOVED="239">
+        <PAGE NUMBER="341" IMAGE="/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_341.png" IMAGE_SHA256="8bc1a4e2784981e7a7b09804b0285f63a2c221490e66cce5bb038c86a6d2a0fa" RAW="03_ocr/raw/qwen/0341.json" SELECTED_ENGINE="qwen" SELECTED_KEY="2467a94705a801be998a3cbaca61e1590b78276531e75bc0e5eaccab30d308c2" CONFIDENCE="58.49" EMPTY="false" N_LINES="1" N_SRC_LINES="14" N_DROPPED="13" CJK_REMOVED="239">
             <LINE ID="P0341.L001" ORDER="1" NO="1" SRC_LINE="1" BBOX="20,0,2470,238" CONFIDENCE="58.49">Phần II: Nguyên văn tác phẩm dịch và chú thích</LINE>
-            <LINE ID="P0341.L002" ORDER="2" NO="2" SRC_LINE="2" BBOX="20,238,2470,475" CONFIDENCE="58.49">Dựa trên thông tin được cung cấp, tôi có thể hiểu rằng đây là một phần của một sách hoặc tài liệu học thuật, tập trung vào việc dịch và chú thích các tác phẩm văn học hoặc văn hóa. Tuy nhiên, để cung cấp thông tin chính xác nhất, tôi cần thêm thông tin về nội dung cụ thể của phần này.</LINE>
             <RUNS>
                 <RUN KEY="2467a94705a801be998a3cbaca61e1590b78276531e75bc0e5eaccab30d308c2" CREATED_AT="2026-11-25T20:19:47+00:00" IMAGE="/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_341.png" IMAGE_WIDTH="2480" IMAGE_HEIGHT="3509" CROP_BOX="0,0,2480,3509" SOURCE="03_ocr/raw/qwen/0341.json" SELECTION="manifest">
                     <PARAMETERS>
@@ -4379,43 +3520,6 @@
                 </RUN>
             </RUNS>
         </PAGE>
-        <PAGE NUMBER="361" IMAGE="/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_361.png" IMAGE_SHA256="1b3d9c17568f570248cb6e176c6ef37a3daf68757667569484da5cf45a3157f3" RAW="03_ocr/raw/qwen/0361.json" SELECTED_ENGINE="qwen" SELECTED_KEY="eca38b43662f314da4ffd0befeeb01f6b253c6555f4ccbe8ff35c274f1332384" CONFIDENCE="77.26" EMPTY="false" N_LINES="2" N_SRC_LINES="31" N_DROPPED="29" CJK_REMOVED="146">
-            <LINE ID="P0361.L001" ORDER="1" NO="1" SRC_LINE="1" BBOX="2253,0,2269,22" CONFIDENCE="68.95">[UNCLEAR]</LINE>
-            <LINE ID="P0361.L002" ORDER="2" NO="2" SRC_LINE="31" BBOX="333,2909,2475,3509" CONFIDENCE="78.06">Bản chụp thu nhỏ bìa ký và bài thơ của Liêu Hữu Phương hiện chép trong "Toàn Đường thi thoại".</LINE>
-            <RUNS>
-                <RUN KEY="eca38b43662f314da4ffd0befeeb01f6b253c6555f4ccbe8ff35c274f1332384" CREATED_AT="2026-11-25T20:31:35+00:00" IMAGE="/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_361.png" IMAGE_WIDTH="2480" IMAGE_HEIGHT="3509" CROP_BOX="0,0,2480,3509" SOURCE="03_ocr/raw/qwen/0361.json" SELECTION="manifest">
-                    <PARAMETERS>
-                        <PARAM NAME="image_sha256">1b3d9c17568f570248cb6e176c6ef37a3daf68757667569484da5cf45a3157f3</PARAM>
-                        <ENGINE NAME="qwen" MODEL_ID="Qwen/Qwen2.5-VL-3B-Instruct" MODEL_REVISION="main" TRANSFORMERS_VERSION="4.57.6" TORCH_VERSION="2.5.1+cu121" CUDA_VERSION="12.1" BITSANDBYTES_VERSION="0.50.2" MODE="all" MIN_PIXELS="50176" MAX_PIXELS="802816" BAND_INCHES="2.0" MAX_NEW_TOKENS="768" REPETITION_PENALTY="1.05" ADAPTER_VERSION="3" PROMPT_VERSION="3" PROMPT_SHA256="b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74">
-                            <QUANTIZATION>{"compute_dtype": "float16", "double_quant": true, "load_in_4bit": true, "quant_type": "nf4"}</QUANTIZATION>
-                        </ENGINE>
-                        <PARAM NAME="lang">all</PARAM>
-                        <PARAM NAME="region" />
-                        <PARAM NAME="psm">6</PARAM>
-                        <PARAM NAME="dpi">300</PARAM>
-                        <PARAM NAME="preprocessing">rgb-crop-v1</PARAM>
-                    </PARAMETERS>
-                </RUN>
-            </RUNS>
-        </PAGE>
-        <PAGE NUMBER="362" IMAGE="/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_362.png" IMAGE_SHA256="9987cdab09c3eaf6bf2d9b7692c69c054fcc7167ea87917a157d78dc98926490" RAW="03_ocr/raw/qwen/0362.json" SELECTED_ENGINE="qwen" SELECTED_KEY="fdb10f6e45818fa26988ac7165fd80ec81aa6279e2e1782e01afd4cf2c02d604" CONFIDENCE="52.69" EMPTY="false" N_LINES="1" N_SRC_LINES="46" N_DROPPED="45" CJK_REMOVED="201">
-            <LINE ID="P0362.L001" ORDER="1" NO="1" SRC_LINE="46" BBOX="548,2860,2475,3497" CONFIDENCE="52.69">( Như trên)</LINE>
-            <RUNS>
-                <RUN KEY="fdb10f6e45818fa26988ac7165fd80ec81aa6279e2e1782e01afd4cf2c02d604" CREATED_AT="2026-11-25T20:31:54+00:00" IMAGE="/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_362.png" IMAGE_WIDTH="2480" IMAGE_HEIGHT="3509" CROP_BOX="0,0,2480,3509" SOURCE="03_ocr/raw/qwen/0362.json" SELECTION="manifest">
-                    <PARAMETERS>
-                        <PARAM NAME="image_sha256">9987cdab09c3eaf6bf2d9b7692c69c054fcc7167ea87917a157d78dc98926490</PARAM>
-                        <ENGINE NAME="qwen" MODEL_ID="Qwen/Qwen2.5-VL-3B-Instruct" MODEL_REVISION="main" TRANSFORMERS_VERSION="4.57.6" TORCH_VERSION="2.5.1+cu121" CUDA_VERSION="12.1" BITSANDBYTES_VERSION="0.50.2" MODE="all" MIN_PIXELS="50176" MAX_PIXELS="802816" BAND_INCHES="2.0" MAX_NEW_TOKENS="768" REPETITION_PENALTY="1.05" ADAPTER_VERSION="3" PROMPT_VERSION="3" PROMPT_SHA256="b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74">
-                            <QUANTIZATION>{"compute_dtype": "float16", "double_quant": true, "load_in_4bit": true, "quant_type": "nf4"}</QUANTIZATION>
-                        </ENGINE>
-                        <PARAM NAME="lang">all</PARAM>
-                        <PARAM NAME="region" />
-                        <PARAM NAME="psm">6</PARAM>
-                        <PARAM NAME="dpi">300</PARAM>
-                        <PARAM NAME="preprocessing">rgb-crop-v1</PARAM>
-                    </PARAMETERS>
-                </RUN>
-            </RUNS>
-        </PAGE>
         <PAGE NUMBER="363" IMAGE="/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_363.png" IMAGE_SHA256="9c48ed6bc4cf588f77a40a683c48e509303191c20e5f5d50d1d18418f52c2a13" RAW="03_ocr/raw/qwen/0363.json" SELECTED_ENGINE="qwen" SELECTED_KEY="60856d91e5d561ebc1cf5da5c85453ff8acb03cc56b47cadc5ee427f32ff05af" CONFIDENCE="94.02" EMPTY="false" N_LINES="7" N_SRC_LINES="10" N_DROPPED="3" CJK_REMOVED="38">
             <LINE ID="P0363.L001" ORDER="1" NO="1" SRC_LINE="1" BBOX="280,154,355,177" CONFIDENCE="81.46">[UNCLEAR]</LINE>
             <LINE ID="P0363.L002" ORDER="2" NO="2" SRC_LINE="2" BBOX="281,721,2480,1008" CONFIDENCE="88.04">IX. BÀI THƠ KHUYẾT DANH "TIẾN MÃ THỰC"</LINE>
@@ -4584,21 +3688,28 @@
                 </RUN>
             </RUNS>
         </PAGE>
-        <PAGE NUMBER="369" IMAGE="/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_369.png" IMAGE_SHA256="28a692e14fadde05a3a115a7e8b59847573870b8379924c0cafdf6d6183dc84f" RAW="03_ocr/raw/qwen/0369.json" SELECTED_ENGINE="qwen" SELECTED_KEY="42b7c0766d8668f5349ac92efe60319d454d738d2be659b8f1bfe21e4854f606" CONFIDENCE="83.74" EMPTY="false" N_LINES="9" N_SRC_LINES="11" N_DROPPED="2" CJK_REMOVED="30">
-            <LINE ID="P0369.L001" ORDER="1" NO="1" SRC_LINE="1" BBOX="317,0,2417,221" CONFIDENCE="45.07">Phần II: Nguyên văn tác phẩm dịch và chú thích</LINE>
-            <LINE ID="P0369.L002" ORDER="2" NO="2" SRC_LINE="2" BBOX="317,221,2417,442" CONFIDENCE="45.07">Một ngày, một người đến gặp một thầy. Người ta hỏi: "Thầy có thể giúp gì cho tôi không?" Thầy nói: "Đều là một sự thật, không phải là một sự thật." Sau đó, thầy bắt đầu giảng dạy.</LINE>
-            <LINE ID="P0369.L003" ORDER="3" NO="3" SRC_LINE="5" BBOX="74,734,2084,865" CONFIDENCE="92.15">PHIÊN ÂM</LINE>
-            <LINE ID="P0369.L004" ORDER="4" NO="4" SRC_LINE="6" BBOX="74,865,2084,997" CONFIDENCE="92.15">TỨC TÂM TỨC PHẬT</LINE>
-            <LINE ID="P0369.L005" ORDER="5" NO="5" SRC_LINE="7" BBOX="353,1034,2157,1322" CONFIDENCE="90.76">THIỆN HỘI - CẢM THÀNH</LINE>
-            <LINE ID="P0369.L006" ORDER="6" NO="6" SRC_LINE="8" BBOX="353,1322,2157,1611" CONFIDENCE="90.76">... Thiện Hội (...) xuất gia, tự hiệu Tổ Phong, biến du phương ngoại, cầu học Thiền yếu. Hậu ngộ Kiến Sơ Cảm Thành tiện ủ sự chi, nhất thập dư niên lược vô quyện sắc. Thường nhất nhật nhập thất vấn viết: "Giáo trung đạo Thích Ca Như Lai nhân địa tu hành, lịch tam đại a</LINE>
-            <LINE ID="P0369.L007" ORDER="7" NO="7" SRC_LINE="9" BBOX="80,1609,2161,2157" CONFIDENCE="90.71">tăng kỳ kiếp thủy đắc thành Phật. Kim Đại đức mỗi vị tức tâm tức Phật, mỗ giáp vị mình, nguyện nhất khai thị". Thành viết: "Giáo trung thị thập ma nhân thuyết?" Sư văn: "Khởi bất thị Phật thuyết da?" Thành viết: "Nhược thị Phật thuyết, vị thập ma Văn Thù kinh vân: "Ngô trú thế tứ thập cửu niên vị thường thuyết</LINE>
-            <LINE ID="P0369.L008" ORDER="8" NO="8" SRC_LINE="10" BBOX="365,2155,2162,2600" CONFIDENCE="88.23">nhất tự dữ nhân". Thả cổ đức đạo: "Tầm văn thủ chứng giả ích trệ; khổ hạnh cầu Phật giả câu mê; ly tâm cầu Phật giả (1) ngoại đạo; chấp tâm cầu (2) Phật giả vi ma (3). Sư văn: "Như thị tắc thử tâm thị ná cá Phật?" Thành vân: "Tích hữu nhân ư Mã Tổ vấn tức tâm tức Phật, ná</LINE>
-            <LINE ID="P0369.L009" ORDER="9" NO="9" SRC_LINE="11" BBOX="79,2605,2475,3497" CONFIDENCE="91.84">cá thị Phật, Tổ vân : "Nhữ nghi ná cá bất thị Phật chỉ xuất khán", kỳ nhân vô đối. Tổ vân : "Đạt tức biến cảnh, bất ngộ vĩnh quai sơ (4). Chỉ giá (5) thoại đầu, nhữ hoàn hội ma ?" Sư ư ngôn hạ ứng vân : "Mỗ giáp hội gia". Thành viết : Nhữ tác ma sinh hội ?" Sư vân : "Biến nhất thiết xứ, vô phi Phật tâm". Tiện lễ bái. Thành viết : "Trực tu dự ma !" Nhân dĩ Thiện Hội danh yên ...</LINE>
+        <PAGE NUMBER="369" IMAGE="E:\Projects\han-viet-corpus\data\CPO_18\02_extraction\pages\page_369.png" IMAGE_SHA256="a1a74d662968a777eeed7c0011a74830671852812b310c260349032839276c7f" RAW="03_ocr/raw/qwen/0369.json" SELECTED_ENGINE="qwen" SELECTED_KEY="42e1505e2850f018b29cfb9a8677b8f41d3e325341d9a884f0efa140df7f15ef" CONFIDENCE="87.46" EMPTY="false" N_LINES="16" N_SRC_LINES="19" N_DROPPED="3" CJK_REMOVED="48">
+            <LINE ID="P0369.L001" ORDER="1" NO="1" SRC_LINE="1" BBOX="317,0,2417,246" CONFIDENCE="95.52">Phần II: Nguyên văn tác phẩm dịch và chú thích</LINE>
+            <LINE ID="P0369.L002" ORDER="2" NO="2" SRC_LINE="5" BBOX="74,747,2084,850" CONFIDENCE="83.38">PHIÊN ÂM:</LINE>
+            <LINE ID="P0369.L003" ORDER="3" NO="3" SRC_LINE="6" BBOX="1045,915,1954,1015" CONFIDENCE="98.17">TỨC TÂM TỨC PHẬT</LINE>
+            <LINE ID="P0369.L004" ORDER="4" NO="4" SRC_LINE="7" BBOX="1045,1015,1954,1115" CONFIDENCE="98.17">THIỆN HỘI - CẢM THÀNH</LINE>
+            <LINE ID="P0369.L005" ORDER="5" NO="5" SRC_LINE="8" BBOX="353,1152,2157,1427" CONFIDENCE="87.19">Thiện Hội (…) xuất gia, tự hiệu Tổ Phong, biến du phương ngoại, cầu học Thiền yếu. Hậu ngộ Kiến Sơ Cảm Thành tiện ủy sự chi, nhất thập dư niên lược vô quyện.</LINE>
+            <LINE ID="P0369.L006" ORDER="6" NO="6" SRC_LINE="9" BBOX="357,1431,2155,1703" CONFIDENCE="92.31">sắc. Thường nhất nhật nhập thất vấn viết: "Giáo trung đạo Thích Ca Như Lai nhân địa tu hành, lịch tam đài a tăng kỳ kiếp thủy đắc thành Phật. Kim Đại đức mỗi vị</LINE>
+            <LINE ID="P0369.L007" ORDER="7" NO="7" SRC_LINE="10" BBOX="80,1704,2160,1974" CONFIDENCE="89.34">tức tâm tức Phật, mõ giáp vị minh, nguyện nhất khai thị". Thành viết: "Giáo trung thị thập ma nhân thuyết?" Sư vấn: "Khởi bất thị Phật thuyết da?" Thành</LINE>
+            <LINE ID="P0369.L008" ORDER="8" NO="8" SRC_LINE="11" BBOX="360,1980,2161,2068" CONFIDENCE="82.83">"Nhược thị Phật thuyết, vị thập ma Văn Thù kinh</LINE>
+            <LINE ID="P0369.L009" ORDER="9" NO="9" SRC_LINE="12" BBOX="360,2068,2161,2157" CONFIDENCE="82.83">vân: "Ngô trú thế tứ thập cứu niên vị thường thuyết"</LINE>
+            <LINE ID="P0369.L010" ORDER="10" NO="10" SRC_LINE="13" BBOX="365,2155,2162,2429" CONFIDENCE="88.79">nhất tự dữ nhân". Thả cổ đức đạo: "Tầm văn thủ chứng giả ích trệ; khổ hạnh cầu Phật giả câu mê; ly tâm cầu Phật giả (1) ngoại đạo; chấp tâm cầu (2) Phật giả vi ma (3)."</LINE>
+            <LINE ID="P0369.L011" ORDER="11" NO="11" SRC_LINE="14" BBOX="365,2426,2162,2513" CONFIDENCE="88.31">Sư văn: "Như thị tắc thử tâm thị ná cá Phật?"</LINE>
+            <LINE ID="P0369.L012" ORDER="12" NO="12" SRC_LINE="15" BBOX="365,2513,2162,2600" CONFIDENCE="88.31">Thành văn: "Tích hữu nhân ư Mã Tổ văn tức tâm tức Phật, ná</LINE>
+            <LINE ID="P0369.L013" ORDER="13" NO="13" SRC_LINE="16" BBOX="369,2605,2161,2875" CONFIDENCE="89.4">Cá thị Phật, Tổ văn: "Nhữ nghi ná cá bất thị Phật chỉ xuất khán", kỳ nhân vô đối. Tổ văn: "Đạt tức biến cảnh, bất ngộ vĩnh quai sơ (4). Chỉ giá (5) thoại đầu, nhữ hoàn</LINE>
+            <LINE ID="P0369.L014" ORDER="14" NO="14" SRC_LINE="17" BBOX="79,2874,2475,3026" CONFIDENCE="82.65">hội ma ?" Sư ư ngôn hạ ứng văn : "Mỗ giáp hội giã".</LINE>
+            <LINE ID="P0369.L015" ORDER="15" NO="15" SRC_LINE="18" BBOX="79,3026,2475,3178" CONFIDENCE="82.65">Thành viết: Nhữ tác ma sinh hội ?" Sư văn : "Biến nhất thiết xứ, vô phi Phật tâm". Tiện lễ bái. Thành viết: "Tự tu dự ma !" Nhận dĩ Thiên Hậu danh văn.</LINE>
+            <LINE ID="P0369.L016" ORDER="16" NO="16" SRC_LINE="19" BBOX="364,3170,2302,3499" CONFIDENCE="67.65">"Trực tu dự ma !" Nhân di Thiện Hội danh yến ...</LINE>
             <RUNS>
-                <RUN KEY="42b7c0766d8668f5349ac92efe60319d454d738d2be659b8f1bfe21e4854f606" CREATED_AT="2026-11-25T20:34:59+00:00" IMAGE="/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_369.png" IMAGE_WIDTH="2480" IMAGE_HEIGHT="3509" CROP_BOX="0,0,2480,3509" SOURCE="03_ocr/raw/qwen/0369.json" SELECTION="manifest">
+                <RUN KEY="42e1505e2850f018b29cfb9a8677b8f41d3e325341d9a884f0efa140df7f15ef" CREATED_AT="2026-11-26T23:17:10+00:00" IMAGE="E:\Projects\han-viet-corpus\data\CPO_18\02_extraction\pages\page_369.png" IMAGE_WIDTH="2480" IMAGE_HEIGHT="3509" CROP_BOX="0,0,2480,3509" SOURCE="03_ocr/raw/qwen/0369.json" SELECTION="manifest">
                     <PARAMETERS>
-                        <PARAM NAME="image_sha256">28a692e14fadde05a3a115a7e8b59847573870b8379924c0cafdf6d6183dc84f</PARAM>
-                        <ENGINE NAME="qwen" MODEL_ID="Qwen/Qwen2.5-VL-3B-Instruct" MODEL_REVISION="main" TRANSFORMERS_VERSION="4.57.6" TORCH_VERSION="2.5.1+cu121" CUDA_VERSION="12.1" BITSANDBYTES_VERSION="0.50.2" MODE="all" MIN_PIXELS="50176" MAX_PIXELS="802816" BAND_INCHES="2.0" MAX_NEW_TOKENS="768" REPETITION_PENALTY="1.05" ADAPTER_VERSION="3" PROMPT_VERSION="3" PROMPT_SHA256="b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74">
+                        <PARAM NAME="image_sha256">a1a74d662968a777eeed7c0011a74830671852812b310c260349032839276c7f</PARAM>
+                        <ENGINE NAME="qwen" MODEL_ID="Qwen/Qwen2.5-VL-3B-Instruct" MODEL_REVISION="main" TRANSFORMERS_VERSION="4.57.6" TORCH_VERSION="2.5.1+cu121" CUDA_VERSION="12.1" BITSANDBYTES_VERSION="0.50.2" MODE="all" MIN_PIXELS="50176" MAX_PIXELS="802816" BAND_INCHES="1.0" MAX_NEW_TOKENS="768" REPETITION_PENALTY="1.05" ADAPTER_VERSION="4" PROMPT_VERSION="3" PROMPT_SHA256="b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74">
                             <QUANTIZATION>{"compute_dtype": "float16", "double_quant": true, "load_in_4bit": true, "quant_type": "nf4"}</QUANTIZATION>
                         </ENGINE>
                         <PARAM NAME="lang">all</PARAM>
@@ -7217,20 +6328,25 @@
                 </RUN>
             </RUNS>
         </PAGE>
-        <PAGE NUMBER="470" IMAGE="/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_470.png" IMAGE_SHA256="d2d90f3c3fd53f43be55e6617305cf8f6dd4ed482e0faa1c0172a68c6fea18af" RAW="03_ocr/raw/qwen/0470.json" SELECTED_ENGINE="qwen" SELECTED_KEY="44100cd1d10f0a691b7aeac810f08b6b44dec0f7cc5b1d156164deeaf82a3198" CONFIDENCE="84.65" EMPTY="false" N_LINES="8" N_SRC_LINES="10" N_DROPPED="2" CJK_REMOVED="129">
-            <LINE ID="P0470.L001" ORDER="1" NO="1" SRC_LINE="1" BBOX="214,92,2233,382" CONFIDENCE="92.58">Sưu tầm và khảo luận tác phẩm chữ Hán của người Việt Nam trước TK 10</LINE>
-            <LINE ID="P0470.L002" ORDER="2" NO="2" SRC_LINE="4" BBOX="233,1202,2430,1546" CONFIDENCE="26.51">", the three hundred and first verse of the poem "The Three Hundred and First Verse" by Li Bai.</LINE>
-            <LINE ID="P0470.L003" ORDER="3" NO="3" SRC_LINE="5" BBOX="237,1695,2422,1901" CONFIDENCE="92.45">PHIÊN ÂM:</LINE>
-            <LINE ID="P0470.L004" ORDER="4" NO="4" SRC_LINE="6" BBOX="237,1901,2422,2107" CONFIDENCE="92.45">Vấn viết: Phù sự mạc quá ư thành, thuyết mạc quá ư thực. Lão Tử trừ hoa sức chi tử, sùng chất phác chi ngữ. Phật kinh thuyết bất chỉ kỳ sự, đồ quảng thủ thí</LINE>
-            <LINE ID="P0470.L005" ORDER="5" NO="5" SRC_LINE="7" BBOX="240,2109,2412,2397" CONFIDENCE="90.74">Thí dụ phi đạo chi yếu. Hợp dị vi đồng, phi sự chi diệu, tuy từ đa ngữ bác, do ngọc tiết nhất xa, bất dị vi bảo hĩ.</LINE>
-            <LINE ID="P0470.L006" ORDER="6" NO="6" SRC_LINE="8" BBOX="240,2397,2412,2685" CONFIDENCE="90.74">Mâu Tử viết: Sự thường cộng kiến giả, khả thuyết dĩ thực. Nhất nhân kiến, nhất nhân bất kiến giả, nan dử thành ngôn giả. Tích nhân vị kiến lân, văn thường</LINE>
-            <LINE ID="P0470.L007" ORDER="7" NO="7" SRC_LINE="9" BBOX="244,2689,2475,3093" CONFIDENCE="90.08">kiến giả lân hà loại hồ? Kiến giả viết: Lân như lân gia.</LINE>
-            <LINE ID="P0470.L008" ORDER="8" NO="8" SRC_LINE="10" BBOX="244,3093,2475,3497" CONFIDENCE="90.08">Vấn giả viết: Nhược ngô thường kiến lân tắc bất vấn tử hĩ, nhi vân lân như lân, ninh khả giải tai! Kiến giả viết: Lân quân thân, ngưu vĩ, lộc đề, mã bối. Vấn giả hoắc giải. Khổng Tử viết: "Nhân bất tri nhi bất uấn, bất diệc quân tử hồ?" Lão Tử viết: "Thiên địa chi gian kỳ do thác thục hồ?" Hựu viết: "Thí đạo ư thiên hạ, do</LINE>
+        <PAGE NUMBER="470" IMAGE="E:\Projects\han-viet-corpus\data\CPO_18\02_extraction\pages\page_470.png" IMAGE_SHA256="9e5eb0a7c082a7ba6daf99b200e5958afe4530cf7b04b38da4e1b2cca1ec079a" RAW="03_ocr/raw/qwen/0470.json" SELECTED_ENGINE="qwen" SELECTED_KEY="5d7e37a125f1cef0c14a9e02cbe3cac6f404558f9198af0cb9a53960e1b3cf6e" CONFIDENCE="83.79" EMPTY="false" N_LINES="13" N_SRC_LINES="19" N_DROPPED="6" CJK_REMOVED="146">
+            <LINE ID="P0470.L001" ORDER="1" NO="1" SRC_LINE="1" BBOX="214,92,2233,223" CONFIDENCE="96.57">Sưu tầm và khảo luận tác phẩm chữ Hán của người Việt Nam trước TK 10</LINE>
+            <LINE ID="P0470.L002" ORDER="2" NO="2" SRC_LINE="8" BBOX="359,1695,721,1768" CONFIDENCE="86.32">PHIÊN ÂM:</LINE>
+            <LINE ID="P0470.L003" ORDER="3" NO="3" SRC_LINE="9" BBOX="237,1800,2422,2014" CONFIDENCE="91.06">Vấn viết: Phù sự mạc quá ư thành, thuyết mạc quá ư thực. Lão Tử trừ hoa sức chi tử, sùng chất phác chi</LINE>
+            <LINE ID="P0470.L004" ORDER="4" NO="4" SRC_LINE="10" BBOX="239,2016,2198,2296" CONFIDENCE="92.01">ngữ. Phật kinh thuyết bất chỉ kỳ sự, đồ quảng thủ thí dụ. Thí dụ phi đạo chi yếu. Hợp dị vi đồng, phi sự chi diệu, tuy từ đa ngữ bác, do ngọc tiết nhất xa, bất dị vi</LINE>
+            <LINE ID="P0470.L005" ORDER="5" NO="5" SRC_LINE="11" BBOX="240,2300,2412,2450" CONFIDENCE="87.86">bảo hĩ.</LINE>
+            <LINE ID="P0470.L006" ORDER="6" NO="6" SRC_LINE="12" BBOX="240,2450,2412,2599" CONFIDENCE="87.86">Mâu Tử viết: Sự thường cộng kiến giả, khả thuyết dĩ thực. Nhất nhân kiến, nhất nhân bất kiến giả, nan</LINE>
+            <LINE ID="P0470.L007" ORDER="7" NO="7" SRC_LINE="13" BBOX="244,2598,2190,2867" CONFIDENCE="89.69">dữ thành ngôn giả. Tích nhân vị kiến lân, văn thường kiến giả lân hà loại hồ? Kiến giả viết: Lân như lân giả. Vấn giả viết: Nhược ngô thường kiến lân tắc bất văn tử</LINE>
+            <LINE ID="P0470.L008" ORDER="8" NO="8" SRC_LINE="14" BBOX="248,2870,2475,2930" CONFIDENCE="66.16">hĩ, nhi vân lân như lân, ninh khả giải tai! Kiến giả viết:</LINE>
+            <LINE ID="P0470.L009" ORDER="9" NO="9" SRC_LINE="15" BBOX="248,2930,2475,2991" CONFIDENCE="66.16">Lân quân thân, ngưu vĩ, lộc đề, mã bối. Vấn giả hoắc</LINE>
+            <LINE ID="P0470.L010" ORDER="10" NO="10" SRC_LINE="16" BBOX="248,2991,2475,3051" CONFIDENCE="66.16">giải. Khổng Tử viết: "Nhân bất tri nhi bất uẩn, bất diệc</LINE>
+            <LINE ID="P0470.L011" ORDER="11" NO="11" SRC_LINE="17" BBOX="248,3051,2475,3112" CONFIDENCE="66.16">quân tử lồ ử. Tử viết: "Thiên địa chỉ vien lòe do</LINE>
+            <LINE ID="P0470.L012" ORDER="12" NO="12" SRC_LINE="18" BBOX="248,3112,2475,3172" CONFIDENCE="66.16">thuần nhiên, không có gì khác biệt."</LINE>
+            <LINE ID="P0470.L013" ORDER="13" NO="13" SRC_LINE="19" BBOX="255,3164,2306,3499" CONFIDENCE="84.08">quân tư hồ?". Lão Tư viết: "Thiên địa chỉ gian kỳ do thác thực hồ?" Hựu viết: "Thí đạo ư thiên hạ, do</LINE>
             <RUNS>
-                <RUN KEY="44100cd1d10f0a691b7aeac810f08b6b44dec0f7cc5b1d156164deeaf82a3198" CREATED_AT="2026-11-25T21:31:52+00:00" IMAGE="/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_470.png" IMAGE_WIDTH="2480" IMAGE_HEIGHT="3509" CROP_BOX="0,0,2480,3509" SOURCE="03_ocr/raw/qwen/0470.json" SELECTION="manifest">
+                <RUN KEY="5d7e37a125f1cef0c14a9e02cbe3cac6f404558f9198af0cb9a53960e1b3cf6e" CREATED_AT="2026-11-26T23:19:30+00:00" IMAGE="E:\Projects\han-viet-corpus\data\CPO_18\02_extraction\pages\page_470.png" IMAGE_WIDTH="2480" IMAGE_HEIGHT="3509" CROP_BOX="0,0,2480,3509" SOURCE="03_ocr/raw/qwen/0470.json" SELECTION="manifest">
                     <PARAMETERS>
-                        <PARAM NAME="image_sha256">d2d90f3c3fd53f43be55e6617305cf8f6dd4ed482e0faa1c0172a68c6fea18af</PARAM>
-                        <ENGINE NAME="qwen" MODEL_ID="Qwen/Qwen2.5-VL-3B-Instruct" MODEL_REVISION="main" TRANSFORMERS_VERSION="4.57.6" TORCH_VERSION="2.5.1+cu121" CUDA_VERSION="12.1" BITSANDBYTES_VERSION="0.50.2" MODE="all" MIN_PIXELS="50176" MAX_PIXELS="802816" BAND_INCHES="2.0" MAX_NEW_TOKENS="768" REPETITION_PENALTY="1.05" ADAPTER_VERSION="3" PROMPT_VERSION="3" PROMPT_SHA256="b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74">
+                        <PARAM NAME="image_sha256">9e5eb0a7c082a7ba6daf99b200e5958afe4530cf7b04b38da4e1b2cca1ec079a</PARAM>
+                        <ENGINE NAME="qwen" MODEL_ID="Qwen/Qwen2.5-VL-3B-Instruct" MODEL_REVISION="main" TRANSFORMERS_VERSION="4.57.6" TORCH_VERSION="2.5.1+cu121" CUDA_VERSION="12.1" BITSANDBYTES_VERSION="0.50.2" MODE="all" MIN_PIXELS="50176" MAX_PIXELS="802816" BAND_INCHES="1.0" MAX_NEW_TOKENS="768" REPETITION_PENALTY="1.05" ADAPTER_VERSION="4" PROMPT_VERSION="3" PROMPT_SHA256="b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74">
                             <QUANTIZATION>{"compute_dtype": "float16", "double_quant": true, "load_in_4bit": true, "quant_type": "nf4"}</QUANTIZATION>
                         </ENGINE>
                         <PARAM NAME="lang">all</PARAM>

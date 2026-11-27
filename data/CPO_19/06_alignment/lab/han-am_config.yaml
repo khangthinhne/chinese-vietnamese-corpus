@@ -1,0 +1,39 @@
+dataset:
+  name: CPO_19_parallel
+  input_file: E:/Projects/han-viet-corpus/data/CPO_19/06_alignment/lab/han-am_input.csv
+  columns:
+    encoding: utf-8-sig
+    sinonom_column: HanNom
+    quocngu_column: DichAm
+    fallback_column: null
+    id_column: ID
+dictionary:
+  translation_dict: E:/Projects/han-viet-corpus/third_party/SN-QN-alignment/dict/QuocNgu_SinoNom_TongHop3.csv
+  similarity_dict: E:/Projects/han-viet-corpus/third_party/SN-QN-alignment/dict/SinoNom_Similar_Dic_v2.csv
+  encoding: utf-8-sig
+alignment:
+  damaged_tokens:
+  - '[MASK]'
+  costs:
+    match: 0
+    mismatch: 1
+    insertion: 1
+    deletion: 1
+output:
+  directory: E:/Projects/han-viet-corpus/data/CPO_19/06_alignment/lab/out
+  filename: CPO_19_parallel.tsv
+  statistics_filename: statistic.json
+  color_mapping:
+    match:
+      hex: '000000'
+    mismatch:
+      hex: FF0000
+    ocr_fallback:
+      hex: 008000
+    similarity:
+      hex: 0000FF
+processing:
+  verbose: true
+  show_progress: false
+quick_test: false
+test_limit: 10

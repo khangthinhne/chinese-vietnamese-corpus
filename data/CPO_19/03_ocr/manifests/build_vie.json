@@ -3,18 +3,18 @@
   "work_id": "CPO_19",
   "layer": "vie",
   "engine": "qwen",
-  "built_at": "2026-11-26T12:27:45+00:00",
+  "built_at": "2026-11-27T02:45:01+00:00",
   "xml": "03_ocr/ocr_raw/vie.xml",
   "text_dir": "03_ocr/ocr_raw_text/vie",
   "totals": {
-    "pages_requested": 829,
-    "pages_with_run": 829,
-    "pages_with_lines": 822,
-    "n_src": 15151,
-    "n_kept": 11594,
-    "n_dropped": 3557,
-    "cjk_removed": 70199,
-    "n_rejected": 1,
+    "pages_requested": 820,
+    "pages_with_run": 820,
+    "pages_with_lines": 813,
+    "n_src": 14987,
+    "n_kept": 11434,
+    "n_dropped": 3553,
+    "cjk_removed": 69830,
+    "n_rejected": 12,
     "n_merged_units": 0
   },
   "filter": {
@@ -1582,14 +1582,14 @@
       "page": 102,
       "status": "ok",
       "selection": "manifest",
-      "key": "d8091874d3087040bd0c3386e5d7536f154c766d5b8348d3c0342f9c78c68f5c",
-      "raw": "03_ocr/raw/0102.json",
-      "n_src": 29,
-      "n_kept": 19,
+      "key": "44f5fb952299b930ab4a79c1114dec3c3713d05c424e517540c6470804f03627",
+      "raw": "03_ocr/raw/qwen/0102.json",
+      "n_src": 25,
+      "n_kept": 15,
       "n_dropped": 10,
-      "cjk_removed": 66,
+      "cjk_removed": 59,
       "n_rejected": 0,
-      "n_src_non_han": 19,
+      "n_src_non_han": 15,
       "n_dropped_non_han": 0,
       "rejected": [],
       "merged": []
@@ -3153,13 +3153,29 @@
       "key": "b52d2dfa01683da94d626d9d753f4ae05d3982be59810d5d38dde5323891a36b",
       "raw": "03_ocr/raw/qwen/0200.json",
       "n_src": 26,
-      "n_kept": 17,
-      "n_dropped": 9,
+      "n_kept": 14,
+      "n_dropped": 12,
       "cjk_removed": 58,
-      "n_rejected": 0,
+      "n_rejected": 3,
       "n_src_non_han": 17,
-      "n_dropped_non_han": 0,
-      "rejected": [],
+      "n_dropped_non_han": 3,
+      "rejected": [
+        {
+          "src_line": 12,
+          "reason": "pinyin",
+          "text": "Yǔ hòu yín hé yī sè qí"
+        },
+        {
+          "src_line": 13,
+          "reason": "pinyin",
+          "text": "Jiā dào piān yí xīn xià hǎo"
+        },
+        {
+          "src_line": 14,
+          "reason": "pinyin",
+          "text": "Zuo pān hóng liú yòu pān lí"
+        }
+      ],
       "merged": []
     },
     {
@@ -3441,13 +3457,29 @@
       "key": "c331aa47bcad309d4b0134df193e16470fe8bfd5752b24cc2c91edc097a99ed4",
       "raw": "03_ocr/raw/qwen/0218.json",
       "n_src": 32,
-      "n_kept": 27,
-      "n_dropped": 5,
+      "n_kept": 24,
+      "n_dropped": 8,
       "cjk_removed": 25,
-      "n_rejected": 0,
+      "n_rejected": 3,
       "n_src_non_han": 27,
-      "n_dropped_non_han": 0,
-      "rejected": [],
+      "n_dropped_non_han": 3,
+      "rejected": [
+        {
+          "src_line": 8,
+          "reason": "pinyin",
+          "text": "Yān cí zhì zhù jīng"
+        },
+        {
+          "src_line": 9,
+          "reason": "pinyin",
+          "text": "máng zhōng ǒu guān wù"
+        },
+        {
+          "src_line": 10,
+          "reason": "pinyin",
+          "text": "jiě qù sēng sòng yíng"
+        }
+      ],
       "merged": []
     },
     {
@@ -3825,13 +3857,24 @@
       "key": "acb4d604df118e984c1d8c77a4ff31fb9b09cf5e89e1abe65f9ed6e9f262b36f",
       "raw": "03_ocr/raw/qwen/0242.json",
       "n_src": 26,
-      "n_kept": 17,
-      "n_dropped": 9,
+      "n_kept": 15,
+      "n_dropped": 11,
       "cjk_removed": 58,
-      "n_rejected": 0,
+      "n_rejected": 2,
       "n_src_non_han": 17,
-      "n_dropped_non_han": 0,
-      "rejected": [],
+      "n_dropped_non_han": 2,
+      "rejected": [
+        {
+          "src_line": 22,
+          "reason": "pinyin",
+          "text": "Xián kàn wéi yǒu xíng yún hǎo"
+        },
+        {
+          "src_line": 23,
+          "reason": "pinyin",
+          "text": "Fēi zhào qiān nián zhǐ zì yóu"
+        }
+      ],
       "merged": []
     },
     {
@@ -4071,150 +4114,6 @@
       "n_rejected": 0,
       "n_src_non_han": 16,
       "n_dropped_non_han": 5,
-      "rejected": [],
-      "merged": []
-    },
-    {
-      "page": 258,
-      "status": "ok",
-      "selection": "manifest",
-      "key": "43be7fa404f57237cc08b25e2130f0b573a6e4e84523c83cdef4e4fcd3ea9772",
-      "raw": "03_ocr/raw/qwen/0258.json",
-      "n_src": 7,
-      "n_kept": 6,
-      "n_dropped": 1,
-      "cjk_removed": 4,
-      "n_rejected": 0,
-      "n_src_non_han": 6,
-      "n_dropped_non_han": 0,
-      "rejected": [],
-      "merged": []
-    },
-    {
-      "page": 259,
-      "status": "ok",
-      "selection": "manifest",
-      "key": "a186a2e605937f34994ebbc06c5c5158801276f697d1bf92f3b003371577f615",
-      "raw": "03_ocr/raw/qwen/0259.json",
-      "n_src": 13,
-      "n_kept": 12,
-      "n_dropped": 1,
-      "cjk_removed": 4,
-      "n_rejected": 0,
-      "n_src_non_han": 12,
-      "n_dropped_non_han": 0,
-      "rejected": [],
-      "merged": []
-    },
-    {
-      "page": 260,
-      "status": "ok",
-      "selection": "manifest",
-      "key": "241ab9ec97b368f7eb02759ef0387069b717aa486be35720a5f9af9401b23964",
-      "raw": "03_ocr/raw/qwen/0260.json",
-      "n_src": 17,
-      "n_kept": 17,
-      "n_dropped": 0,
-      "cjk_removed": 0,
-      "n_rejected": 0,
-      "n_src_non_han": 17,
-      "n_dropped_non_han": 0,
-      "rejected": [],
-      "merged": []
-    },
-    {
-      "page": 261,
-      "status": "ok",
-      "selection": "manifest",
-      "key": "f1824ae948a6a03f960d245e1c7d742922281c54a89613ed7ea19cf1b5dbddbe",
-      "raw": "03_ocr/raw/qwen/0261.json",
-      "n_src": 19,
-      "n_kept": 19,
-      "n_dropped": 0,
-      "cjk_removed": 0,
-      "n_rejected": 0,
-      "n_src_non_han": 19,
-      "n_dropped_non_han": 0,
-      "rejected": [],
-      "merged": []
-    },
-    {
-      "page": 262,
-      "status": "ok",
-      "selection": "manifest",
-      "key": "ed4ddc6ca774e9817730da1a4fbd9235655f061ce32187b73fd5def2a1fbeb83",
-      "raw": "03_ocr/raw/qwen/0262.json",
-      "n_src": 33,
-      "n_kept": 33,
-      "n_dropped": 0,
-      "cjk_removed": 0,
-      "n_rejected": 0,
-      "n_src_non_han": 33,
-      "n_dropped_non_han": 0,
-      "rejected": [],
-      "merged": []
-    },
-    {
-      "page": 263,
-      "status": "ok",
-      "selection": "manifest",
-      "key": "fa64d83095ad44c83a44b0dd8039bacee6d4e7263617d4046b9bded801739d7d",
-      "raw": "03_ocr/raw/qwen/0263.json",
-      "n_src": 28,
-      "n_kept": 28,
-      "n_dropped": 0,
-      "cjk_removed": 0,
-      "n_rejected": 0,
-      "n_src_non_han": 28,
-      "n_dropped_non_han": 0,
-      "rejected": [],
-      "merged": []
-    },
-    {
-      "page": 264,
-      "status": "ok",
-      "selection": "manifest",
-      "key": "37e0c4129b8e1288511345110939f9e8f52e3fb1bc914232aeef4b6d34cbc78e",
-      "raw": "03_ocr/raw/qwen/0264.json",
-      "n_src": 19,
-      "n_kept": 18,
-      "n_dropped": 1,
-      "cjk_removed": 0,
-      "n_rejected": 0,
-      "n_src_non_han": 19,
-      "n_dropped_non_han": 1,
-      "rejected": [],
-      "merged": []
-    },
-    {
-      "page": 265,
-      "status": "ok",
-      "selection": "manifest",
-      "key": "8974a16a33e2132b588d63455cc6d3e126033958310807fa1c73b9d01ec335ad",
-      "raw": "03_ocr/raw/qwen/0265.json",
-      "n_src": 14,
-      "n_kept": 11,
-      "n_dropped": 3,
-      "cjk_removed": 0,
-      "n_rejected": 0,
-      "n_src_non_han": 14,
-      "n_dropped_non_han": 3,
-      "rejected": [],
-      "merged": []
-    },
-    {
-      "page": 266,
-      "status": "ok",
-      "selection": "manifest",
-      "key": "499a5237cdd9b7d7deade6564d99d74945835991028d55e3a379683e014921fa",
-      "raw": "03_ocr/raw/qwen/0266.json",
-      "n_src": 10,
-      "n_kept": 1,
-      "n_dropped": 9,
-      "cjk_removed": 354,
-      "n_rejected": 0,
-      "n_src_non_han": 1,
-      "n_dropped_non_han": 0,
       "rejected": [],
       "merged": []
     },
@@ -5297,13 +5196,29 @@
       "key": "5edfb564552bc2e8720ad39786ad4190a76a1010b3ee52a8fb24bafc0c7d2b8c",
       "raw": "03_ocr/raw/qwen/0334.json",
       "n_src": 28,
-      "n_kept": 19,
-      "n_dropped": 9,
+      "n_kept": 16,
+      "n_dropped": 12,
       "cjk_removed": 64,
-      "n_rejected": 0,
+      "n_rejected": 3,
       "n_src_non_han": 19,
-      "n_dropped_non_han": 0,
-      "rejected": [],
+      "n_dropped_non_han": 3,
+      "rejected": [
+        {
+          "src_line": 17,
+          "reason": "pinyin",
+          "text": "Jiān lǐ níng zhī gé láo"
+        },
+        {
+          "src_line": 18,
+          "reason": "pinyin",
+          "text": "Làng hòu bì shí yǒu xiǎn fèn"
+        },
+        {
+          "src_line": 19,
+          "reason": "pinyin",
+          "text": "Huī lái zǎo wǎn zuì chún niàng"
+        }
+      ],
       "merged": []
     },
     {

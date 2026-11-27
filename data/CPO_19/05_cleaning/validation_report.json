@@ -1,71 +1,277 @@
 {
   "work_id": "CPO_19",
-  "valid": false,
+  "valid": true,
   "summary": {
-    "errors": 3,
-    "warnings": 2,
-    "infos": 0,
+    "errors": 0,
+    "warnings": 17,
+    "infos": 6,
     "cleaned_sentences": {
-      "han": 0,
-      "am": 464,
-      "nghia": 352,
-      "tho": 268
+      "han": 3780,
+      "am": 3970,
+      "nghia": 3426,
+      "tho": 587
     },
-    "documents": 9
+    "documents": 271
   },
   "issues": [
     {
       "severity": "warning",
       "scope": "cleaning",
-      "target": "tho",
-      "message": "Phát hiện câu trùng lặp văn bản trong tài liệu CPO_19.003: các ID CPO_19.tho.00038, CPO_19.tho.00066",
+      "target": "han",
+      "message": "Phát hiện câu trùng lặp văn bản trong tài liệu CPO_19.169: các ID CPO_19.han.01742, CPO_19.han.01746, CPO_19.han.01756",
       "details": {
         "sentence_ids": [
-          "CPO_19.tho.00038",
-          "CPO_19.tho.00066"
+          "CPO_19.han.01742",
+          "CPO_19.han.01746",
+          "CPO_19.han.01756"
+        ]
+      }
+    },
+    {
+      "severity": "info",
+      "scope": "cleaning",
+      "target": "am",
+      "message": "Câu dài: CPO_19.am.01819 (634 ký tự)",
+      "details": {}
+    },
+    {
+      "severity": "info",
+      "scope": "cleaning",
+      "target": "am",
+      "message": "Câu dài: CPO_19.am.02071 (633 ký tự)",
+      "details": {}
+    },
+    {
+      "severity": "info",
+      "scope": "cleaning",
+      "target": "am",
+      "message": "Câu dài: CPO_19.am.02248 (744 ký tự)",
+      "details": {}
+    },
+    {
+      "severity": "warning",
+      "scope": "cleaning",
+      "target": "am",
+      "message": "Phát hiện câu trùng lặp văn bản trong tài liệu CPO_19.009: các ID CPO_19.am.00063, CPO_19.am.00092",
+      "details": {
+        "sentence_ids": [
+          "CPO_19.am.00063",
+          "CPO_19.am.00092"
         ]
       }
     },
     {
       "severity": "warning",
       "scope": "cleaning",
-      "target": "tho",
-      "message": "Phát hiện câu trùng lặp văn bản trong tài liệu CPO_19.003: các ID CPO_19.tho.00069, CPO_19.tho.00118, CPO_19.tho.00127, CPO_19.tho.00136, CPO_19.tho.00145, CPO_19.tho.00154, CPO_19.tho.00163, CPO_19.tho.00172, CPO_19.tho.00181, CPO_19.tho.00190",
+      "target": "am",
+      "message": "Phát hiện câu trùng lặp văn bản trong tài liệu CPO_19.169: các ID CPO_19.am.01715, CPO_19.am.01728",
       "details": {
         "sentence_ids": [
-          "CPO_19.tho.00069",
-          "CPO_19.tho.00118",
-          "CPO_19.tho.00127",
-          "CPO_19.tho.00136",
-          "CPO_19.tho.00145",
-          "CPO_19.tho.00154",
-          "CPO_19.tho.00163",
-          "CPO_19.tho.00172",
-          "CPO_19.tho.00181",
-          "CPO_19.tho.00190"
+          "CPO_19.am.01715",
+          "CPO_19.am.01728"
         ]
       }
     },
     {
-      "severity": "error",
-      "scope": "alignment",
-      "target": "han-am",
-      "message": "Lớp nguồn han chưa có câu đã làm sạch",
+      "severity": "warning",
+      "scope": "cleaning",
+      "target": "am",
+      "message": "Phát hiện câu trùng lặp văn bản trong tài liệu CPO_19.224: các ID CPO_19.am.02760, CPO_19.am.02761",
+      "details": {
+        "sentence_ids": [
+          "CPO_19.am.02760",
+          "CPO_19.am.02761"
+        ]
+      }
+    },
+    {
+      "severity": "warning",
+      "scope": "cleaning",
+      "target": "am",
+      "message": "Phát hiện câu trùng lặp văn bản trong tài liệu CPO_19.251: các ID CPO_19.am.03256, CPO_19.am.03264, CPO_19.am.03277, CPO_19.am.03288, CPO_19.am.03293, CPO_19.am.03300, CPO_19.am.03306, CPO_19.am.03311, CPO_19.am.03316, CPO_19.am.03324",
+      "details": {
+        "sentence_ids": [
+          "CPO_19.am.03256",
+          "CPO_19.am.03264",
+          "CPO_19.am.03277",
+          "CPO_19.am.03288",
+          "CPO_19.am.03293",
+          "CPO_19.am.03300",
+          "CPO_19.am.03306",
+          "CPO_19.am.03311",
+          "CPO_19.am.03316",
+          "CPO_19.am.03324"
+        ]
+      }
+    },
+    {
+      "severity": "warning",
+      "scope": "cleaning",
+      "target": "am",
+      "message": "Phát hiện câu trùng lặp văn bản trong tài liệu CPO_19.265: các ID CPO_19.am.03746, CPO_19.am.03766",
+      "details": {
+        "sentence_ids": [
+          "CPO_19.am.03746",
+          "CPO_19.am.03766"
+        ]
+      }
+    },
+    {
+      "severity": "info",
+      "scope": "cleaning",
+      "target": "nghia",
+      "message": "Câu dài: CPO_19.nghia.01676 (660 ký tự)",
       "details": {}
     },
     {
-      "severity": "error",
-      "scope": "alignment",
-      "target": "han-nghia",
-      "message": "Lớp nguồn han chưa có câu đã làm sạch",
+      "severity": "info",
+      "scope": "cleaning",
+      "target": "nghia",
+      "message": "Câu dài: CPO_19.nghia.02745 (622 ký tự)",
       "details": {}
     },
     {
-      "severity": "error",
-      "scope": "alignment",
-      "target": "han-tho",
-      "message": "Lớp nguồn han chưa có câu đã làm sạch",
+      "severity": "info",
+      "scope": "cleaning",
+      "target": "nghia",
+      "message": "Câu dài: CPO_19.nghia.03371 (638 ký tự)",
       "details": {}
+    },
+    {
+      "severity": "warning",
+      "scope": "cleaning",
+      "target": "nghia",
+      "message": "Phát hiện câu trùng lặp văn bản trong tài liệu CPO_19.092: các ID CPO_19.nghia.00686, CPO_19.nghia.00687",
+      "details": {
+        "sentence_ids": [
+          "CPO_19.nghia.00686",
+          "CPO_19.nghia.00687"
+        ]
+      }
+    },
+    {
+      "severity": "warning",
+      "scope": "cleaning",
+      "target": "nghia",
+      "message": "Phát hiện câu trùng lặp văn bản trong tài liệu CPO_19.092: các ID CPO_19.nghia.00693, CPO_19.nghia.00694",
+      "details": {
+        "sentence_ids": [
+          "CPO_19.nghia.00693",
+          "CPO_19.nghia.00694"
+        ]
+      }
+    },
+    {
+      "severity": "warning",
+      "scope": "cleaning",
+      "target": "nghia",
+      "message": "Phát hiện câu trùng lặp văn bản trong tài liệu CPO_19.092: các ID CPO_19.nghia.00697, CPO_19.nghia.00698",
+      "details": {
+        "sentence_ids": [
+          "CPO_19.nghia.00697",
+          "CPO_19.nghia.00698"
+        ]
+      }
+    },
+    {
+      "severity": "warning",
+      "scope": "cleaning",
+      "target": "nghia",
+      "message": "Phát hiện câu trùng lặp văn bản trong tài liệu CPO_19.093: các ID CPO_19.nghia.00702, CPO_19.nghia.00703",
+      "details": {
+        "sentence_ids": [
+          "CPO_19.nghia.00702",
+          "CPO_19.nghia.00703"
+        ]
+      }
+    },
+    {
+      "severity": "warning",
+      "scope": "cleaning",
+      "target": "nghia",
+      "message": "Phát hiện câu trùng lặp văn bản trong tài liệu CPO_19.093: các ID CPO_19.nghia.00706, CPO_19.nghia.00707",
+      "details": {
+        "sentence_ids": [
+          "CPO_19.nghia.00706",
+          "CPO_19.nghia.00707"
+        ]
+      }
+    },
+    {
+      "severity": "warning",
+      "scope": "cleaning",
+      "target": "nghia",
+      "message": "Phát hiện câu trùng lặp văn bản trong tài liệu CPO_19.093: các ID CPO_19.nghia.00711, CPO_19.nghia.00712",
+      "details": {
+        "sentence_ids": [
+          "CPO_19.nghia.00711",
+          "CPO_19.nghia.00712"
+        ]
+      }
+    },
+    {
+      "severity": "warning",
+      "scope": "cleaning",
+      "target": "nghia",
+      "message": "Phát hiện câu trùng lặp văn bản trong tài liệu CPO_19.169: các ID CPO_19.nghia.01332, CPO_19.nghia.01340",
+      "details": {
+        "sentence_ids": [
+          "CPO_19.nghia.01332",
+          "CPO_19.nghia.01340"
+        ]
+      }
+    },
+    {
+      "severity": "warning",
+      "scope": "cleaning",
+      "target": "nghia",
+      "message": "Phát hiện câu trùng lặp văn bản trong tài liệu CPO_19.178: các ID CPO_19.nghia.01491, CPO_19.nghia.01493",
+      "details": {
+        "sentence_ids": [
+          "CPO_19.nghia.01491",
+          "CPO_19.nghia.01493"
+        ]
+      }
+    },
+    {
+      "severity": "warning",
+      "scope": "cleaning",
+      "target": "nghia",
+      "message": "Phát hiện câu trùng lặp văn bản trong tài liệu CPO_19.219: các ID CPO_19.nghia.02247, CPO_19.nghia.02268",
+      "details": {
+        "sentence_ids": [
+          "CPO_19.nghia.02247",
+          "CPO_19.nghia.02268"
+        ]
+      }
+    },
+    {
+      "severity": "warning",
+      "scope": "cleaning",
+      "target": "nghia",
+      "message": "Phát hiện câu trùng lặp văn bản trong tài liệu CPO_19.251: các ID CPO_19.nghia.02855, CPO_19.nghia.02862, CPO_19.nghia.02884, CPO_19.nghia.02889, CPO_19.nghia.02907, CPO_19.nghia.02920",
+      "details": {
+        "sentence_ids": [
+          "CPO_19.nghia.02855",
+          "CPO_19.nghia.02862",
+          "CPO_19.nghia.02884",
+          "CPO_19.nghia.02889",
+          "CPO_19.nghia.02907",
+          "CPO_19.nghia.02920"
+        ]
+      }
+    },
+    {
+      "severity": "warning",
+      "scope": "cleaning",
+      "target": "nghia",
+      "message": "Phát hiện câu trùng lặp văn bản trong tài liệu CPO_19.251: các ID CPO_19.nghia.02874, CPO_19.nghia.02897",
+      "details": {
+        "sentence_ids": [
+          "CPO_19.nghia.02874",
+          "CPO_19.nghia.02897"
+        ]
+      }
     }
   ]
 }

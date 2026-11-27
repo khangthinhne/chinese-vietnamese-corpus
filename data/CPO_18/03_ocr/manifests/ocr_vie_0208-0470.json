@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_18",
+  "layer": "vie",
+  "engine": "qwen",
+  "engine_descriptor": {
+    "name": "qwen",
+    "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+    "model_revision": "main",
+    "transformers_version": "4.57.6",
+    "torch_version": "2.5.1+cu121",
+    "cuda_version": "12.1",
+    "bitsandbytes_version": "0.50.2",
+    "quantization": {
+      "load_in_4bit": true,
+      "quant_type": "nf4",
+      "double_quant": true,
+      "compute_dtype": "float16"
+    },
+    "mode": "all",
+    "min_pixels": 50176,
+    "max_pixels": 802816,
+    "band_inches": 1.0,
+    "max_new_tokens": 768,
+    "repetition_penalty": 1.05,
+    "adapter_version": 4,
+    "prompt_version": 3,
+    "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74"
+  },
+  "updated_at": "2026-11-27T02:42:38+00:00",
+  "source": {
+    "path": "E:\\Projects\\han-viet-corpus\\data\\CPO_18\\02_extraction\\pages"
+  },
+  "provenance": {
+    "git_commit": "d4ebc58204765928c91060a1e824079c72acca2f",
+    "git_describe": "d4ebc58",
+    "git_dirty": false,
+    "gpu": "NVIDIA GeForce RTX 3050 6GB Laptop GPU",
+    "dtype": "float16",
+    "adapter_version": 4
+  },
+  "parameters": {
+    "region": null,
+    "psm": 6,
+    "dpi": 300,
+    "force_reocr": false
+  },
+  "missing_images": [],
+  "error_pages": [],
+  "pages": [
+    {
+      "page": 208,
+      "engine": "qwen",
+      "key": "42418317ec7cbd0a9bde39df50043020faf43daadbc761952e0566b1795ee533",
+      "status": "ocr",
+      "raw": "03_ocr/raw/qwen/0208.json",
+      "n_lines": 15,
+      "confidence": 85.31200000000001,
+      "created_at": "2026-11-26T23:14:18+00:00"
+    },
+    {
+      "page": 286,
+      "engine": "qwen",
+      "key": "fa5ba15e4753164f66726d3d993f7bf0804a79070935392be5a7256928dae45f",
+      "status": "ocr",
+      "raw": "03_ocr/raw/qwen/0286.json",
+      "n_lines": 24,
+      "confidence": 84.95718045112783,
+      "created_at": "2026-11-26T23:14:39+00:00"
+    },
+    {
+      "page": 369,
+      "engine": "qwen",
+      "key": "42e1505e2850f018b29cfb9a8677b8f41d3e325341d9a884f0efa140df7f15ef",
+      "status": "ocr",
+      "raw": "03_ocr/raw/qwen/0369.json",
+      "n_lines": 19,
+      "confidence": 87.43691814946618,
+      "created_at": "2026-11-26T23:17:10+00:00"
+    },
+    {
+      "page": 470,
+      "engine": "qwen",
+      "key": "5d7e37a125f1cef0c14a9e02cbe3cac6f404558f9198af0cb9a53960e1b3cf6e",
+      "status": "ocr",
+      "raw": "03_ocr/raw/qwen/0470.json",
+      "n_lines": 19,
+      "confidence": 81.15123131046613,
+      "created_at": "2026-11-26T23:19:30+00:00"
+    }
+  ],
+  "pages_requested": "208,286,369,470",
+  "note": "OCR lại 2026-11-27 (QWEN_BAND_INCHES=1.0), chuyển từ bản sao; reports/clean_full_20261127.md; tr.353 giữ run cũ (run mới vie_degenerate)"
+}

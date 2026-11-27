@@ -1,0 +1,29 @@
+$ D:\Program Files\miniconda3\envs\my_nlp\python.exe align_texts.py E:\Projects\han-viet-corpus\data\CPO_20\06_alignment\lab\han-am_config.yaml
+--- stdout ---
+Loaded configuration: CPO_20_parallel
+Input: E:\Projects\han-viet-corpus\data\CPO_20\06_alignment\lab\han-am_input.csv
+Output: E:\Projects\han-viet-corpus\data\CPO_20\06_alignment\lab\out\CPO_20_parallel.tsv
+Output: E:\Projects\han-viet-corpus\data\CPO_20\06_alignment\lab\out\CPO_20_parallel.xlsx
+Output: E:\Projects\han-viet-corpus\data\CPO_20\06_alignment\lab\out\CPO_20_parallel_color.xlsx
+Output: E:\Projects\han-viet-corpus\data\CPO_20\06_alignment\lab\out\statistic.json
+Loading input CSV: E:\Projects\han-viet-corpus\data\CPO_20\06_alignment\lab\han-am_input.csv
+Using columns: HanNom='HanNom', DichAm='DichAm' (no OCR fallback)
+Loading translation dictionary: E:\Projects\han-viet-corpus\third_party\SN-QN-alignment\dict\QuocNgu_SinoNom_TongHop3.csv
+Loaded 7366 QuocNgu entries
+Loading similarity dictionary: E:\Projects\han-viet-corpus\third_party\SN-QN-alignment\dict\SinoNom_Similar_Dic_v2.csv
+Loaded 26044 character similarity entries
+Processing 2235 text pairs...
+Using costs: {'match': 0, 'mismatch': 1, 'insertion': 1, 'deletion': 1}
+Alignment TSV saved to: E:\Projects\han-viet-corpus\data\CPO_20\06_alignment\lab\out\CPO_20_parallel.tsv
+Plain Excel saved to: E:\Projects\han-viet-corpus\data\CPO_20\06_alignment\lab\out\CPO_20_parallel.xlsx
+Colorized Excel saved to: E:\Projects\han-viet-corpus\data\CPO_20\06_alignment\lab\out\CPO_20_parallel_color.xlsx
+Statistics saved to: E:\Projects\han-viet-corpus\data\CPO_20\06_alignment\lab\out\statistic.json
+
+Alignment Results:
+Total characters processed: 26869
+Total matches: 14696
+Match rate: 54.70%
+Mismatch rate: 45.30%
+Alignment completed successfully!
+
+--- stderr ---
