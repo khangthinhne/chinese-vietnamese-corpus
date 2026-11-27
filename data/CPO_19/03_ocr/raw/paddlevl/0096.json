@@ -1,0 +1,787 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 96,
+  "runs": [
+    {
+      "key": "64a87844ad6449e4471a0ea10b4c248c16033cd68866a2157558c38048d1efe9",
+      "parameters": {
+        "image_sha256": "0efbe07aa61ccc929239e562cd1ed279118f334b6a024bb638d120c37a2d817f",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T12:11:22+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_096.png",
+      "image_size": [
+        2580,
+        3027
+      ],
+      "crop_box": [
+        0,
+        0,
+        2580,
+        3027
+      ],
+      "lines": [
+        {
+          "text": "ngothinhamle1.pdf",
+          "bbox": [
+            6,
+            19,
+            287,
+            45
+          ],
+          "confidence": 96.54
+        },
+        {
+          "text": "HOÀNG HOA ĐÔ PHA",
+          "bbox": [
+            1378,
+            195,
+            2106,
+            235
+          ],
+          "confidence": 88.18
+        },
+        {
+          "text": "40. 甘棠古渡",
+          "bbox": [
+            433,
+            282,
+            1517,
+            355
+          ],
+          "confidence": 98.92
+        },
+        {
+          "text": "連環引出軸艫橋",
+          "bbox": [
+            569,
+            479,
+            1521,
+            542
+          ],
+          "confidence": 99.63
+        },
+        {
+          "text": "無假長虹束漢腰",
+          "bbox": [
+            929,
+            603,
+            1736,
+            667
+          ],
+          "confidence": 99.81
+        },
+        {
+          "text": "能臣經畫德首昭",
+          "bbox": [
+            932,
+            682,
+            1517,
+            732
+          ],
+          "confidence": 82.84
+        },
+        {
+          "text": "紹南棠苃符姬處",
+          "bbox": [
+            933,
+            793,
+            1794,
+            857
+          ],
+          "confidence": 85.31
+        },
+        {
+          "text": "洧北乘輿小鄭僑",
+          "bbox": [
+            880,
+            917,
+            1524,
+            980
+          ],
+          "confidence": 99.4
+        },
+        {
+          "text": "古渡崇祠難駐訪",
+          "bbox": [
+            853,
+            1042,
+            1845,
+            1105
+          ],
+          "confidence": 99.83
+        },
+        {
+          "text": "姓名留記待回鑣",
+          "bbox": [
+            932,
+            1168,
+            1524,
+            1227
+          ],
+          "confidence": 99.46
+        },
+        {
+          "text": "PHIEN AM:",
+          "bbox": [
+            401,
+            1344,
+            657,
+            1384
+          ],
+          "confidence": 98.51
+        },
+        {
+          "text": "CAM ĐƯỜNG CÔ ĐÔ",
+          "bbox": [
+            995,
+            1414,
+            1574,
+            1464
+          ],
+          "confidence": 93.01
+        },
+        {
+          "text": "Liên hoàn dân xuất trực lưu kiêu,",
+          "bbox": [
+            845,
+            1555,
+            1590,
+            1601
+          ],
+          "confidence": 87.57
+        },
+        {
+          "text": "Vô giá trưởng thông thức Hán yêu.",
+          "bbox": [
+            848,
+            1643,
+            1620,
+            1698
+          ],
+          "confidence": 71.4
+        },
+        {
+          "text": "Tri thế quy mô nhân thuật diệu;",
+          "bbox": [
+            849,
+            1731,
+            1590,
+            1776
+          ],
+          "confidence": 91.95
+        },
+        {
+          "text": "Năng thân kinh hoạch đức âm chiêu.",
+          "bbox": [
+            844,
+            1818,
+            1711,
+            1864
+          ],
+          "confidence": 94.76
+        },
+        {
+          "text": "Thiêu Nam đường bat phù Cơ Thích;",
+          "bbox": [
+            849,
+            1905,
+            1697,
+            1951
+          ],
+          "confidence": 90.95
+        },
+        {
+          "text": "Vĩ Bắc thừa du tiểu Trình Kiều.",
+          "bbox": [
+            848,
+            1992,
+            1576,
+            2037
+          ],
+          "confidence": 84.71
+        },
+        {
+          "text": "Cô độ sùng tử nan trú phòng,",
+          "bbox": [
+            848,
+            2079,
+            1533,
+            2134
+          ],
+          "confidence": 85.05
+        },
+        {
+          "text": "Tính danh lưu kí đãi hồi biểu.",
+          "bbox": [
+            848,
+            2166,
+            1547,
+            2212
+          ],
+          "confidence": 95.15
+        },
+        {
+          "text": "DICH NGHIA:",
+          "bbox": [
+            399,
+            2265,
+            709,
+            2304
+          ],
+          "confidence": 98.96
+        },
+        {
+          "text": "BEN CU CAM ĐƯỜNG (A)",
+          "bbox": [
+            956,
+            2345,
+            1544,
+            2391
+          ],
+          "confidence": 84.08
+        },
+        {
+          "text": "Thuyên ghép thành cầu nối liền vườn ra,",
+          "bbox": [
+            552,
+            2478,
+            1758,
+            2531
+          ],
+          "confidence": 82.73
+        },
+        {
+          "text": "Chăng phải mượn câu vòng bước lưng sông Hán.",
+          "bbox": [
+            781,
+            2560,
+            1894,
+            2616
+          ],
+          "confidence": 91.33
+        },
+        {
+          "text": "Quy mô đòi thỉnh, nhân thuật diệu kỳ;",
+          "bbox": [
+            531,
+            2643,
+            1668,
+            2697
+          ],
+          "confidence": 90.09
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2580,
+          3027
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 28.769,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              6,
+              19,
+              287,
+              45
+            ],
+            "generated_text": "ngothinhamle1.pdf",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.916,
+            "confidence": 96.54,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              1378,
+              195,
+              2106,
+              235
+            ],
+            "generated_text": "HOÀNG HOA ĐÔ PHA",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.955,
+            "confidence": 88.18,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              400,
+              240,
+              2111,
+              254
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.461,
+            "confidence": 62.95,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              433,
+              282,
+              1517,
+              355
+            ],
+            "generated_text": "40. 甘棠古渡",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.932,
+            "confidence": 98.92,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              569,
+              479,
+              1521,
+              542
+            ],
+            "generated_text": "連環引出軸艫橋",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 1.051,
+            "confidence": 99.63,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              929,
+              603,
+              1736,
+              667
+            ],
+            "generated_text": "無假長虹束漢腰",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.814,
+            "confidence": 99.81,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              932,
+              682,
+              1517,
+              732
+            ],
+            "generated_text": "能臣經畫德首昭",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.911,
+            "confidence": 82.84,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              933,
+              793,
+              1794,
+              857
+            ],
+            "generated_text": "紹南棠苃符姬處",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.077,
+            "confidence": 85.31,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              880,
+              917,
+              1524,
+              980
+            ],
+            "generated_text": "洧北乘輿小鄭僑",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.379,
+            "confidence": 99.4,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              853,
+              1042,
+              1845,
+              1105
+            ],
+            "generated_text": "古渡崇祠難駐訪",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.129,
+            "confidence": 99.83,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              932,
+              1168,
+              1524,
+              1227
+            ],
+            "generated_text": "姓名留記待回鑣",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.925,
+            "confidence": 99.46,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              401,
+              1344,
+              657,
+              1384
+            ],
+            "generated_text": "PHIEN AM:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.719,
+            "confidence": 98.51,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              995,
+              1414,
+              1574,
+              1464
+            ],
+            "generated_text": "CAM ĐƯỜNG CÔ ĐÔ",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.236,
+            "confidence": 93.01,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              845,
+              1555,
+              1590,
+              1601
+            ],
+            "generated_text": "Liên hoàn dân xuất trực lưu kiêu,",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.192,
+            "confidence": 87.57,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              848,
+              1643,
+              1620,
+              1698
+            ],
+            "generated_text": "Vô giá trưởng thông thức Hán yêu.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.132,
+            "confidence": 71.4,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              849,
+              1731,
+              1590,
+              1776
+            ],
+            "generated_text": "Tri thế quy mô nhân thuật diệu;",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 1.009,
+            "confidence": 91.95,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              844,
+              1818,
+              1711,
+              1864
+            ],
+            "generated_text": "Năng thân kinh hoạch đức âm chiêu.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.241,
+            "confidence": 94.76,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              849,
+              1905,
+              1697,
+              1951
+            ],
+            "generated_text": "Thiêu Nam đường bat phù Cơ Thích;",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.244,
+            "confidence": 90.95,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              848,
+              1992,
+              1576,
+              2037
+            ],
+            "generated_text": "Vĩ Bắc thừa du tiểu Trình Kiều.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.245,
+            "confidence": 84.71,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              848,
+              2079,
+              1533,
+              2134
+            ],
+            "generated_text": "Cô độ sùng tử nan trú phòng,",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.169,
+            "confidence": 85.05,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              848,
+              2166,
+              1547,
+              2212
+            ],
+            "generated_text": "Tính danh lưu kí đãi hồi biểu.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.315,
+            "confidence": 95.15,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              399,
+              2265,
+              709,
+              2304
+            ],
+            "generated_text": "DICH NGHIA:",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.763,
+            "confidence": 98.96,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              956,
+              2345,
+              1544,
+              2391
+            ],
+            "generated_text": "BEN CU CAM ĐƯỜNG (A)",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.294,
+            "confidence": 84.08,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              552,
+              2478,
+              1758,
+              2531
+            ],
+            "generated_text": "Thuyên ghép thành cầu nối liền vườn ra,",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.293,
+            "confidence": 82.73,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              781,
+              2560,
+              1894,
+              2616
+            ],
+            "generated_text": "Chăng phải mượn câu vòng bước lưng sông Hán.",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.787,
+            "confidence": 91.33,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              531,
+              2643,
+              1668,
+              2697
+            ],
+            "generated_text": "Quy mô đòi thỉnh, nhân thuật diệu kỳ;",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.577,
+            "confidence": 90.09,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              1215,
+              9,
+              1537,
+              21
+            ],
+            "ink": 88
+          },
+          {
+            "box": [
+              902,
+              1773,
+              1582,
+              1785
+            ],
+            "ink": 254
+          },
+          {
+            "box": [
+              933,
+              1947,
+              1691,
+              1959
+            ],
+            "ink": 268
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

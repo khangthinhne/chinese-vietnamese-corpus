@@ -119,6 +119,18 @@ def validate_corpus(layout: DataLayout, layers: list[str] | None = None,
             except Exception:
                 pass
 
+    # Hai luồng (segmentation.ocr_streams = "han_vie"): source_id = "<luồng>.<ID dòng>" của 03_ocr/ocr_raw/{han,vie}.xml
+    for stream in ("han", "vie"):
+        stream_path = layout.ocr_layer_xml_path(stream)
+        if stream_path.exists():
+            try:
+                for page_el in segxml.file_element(segxml.read_root(stream_path)).findall("PAGE"):
+                    for line_el in page_el.findall("LINE"):
+                        if line_el.get("ID"):
+                            raw_ocr_line_ids.add(f"{stream}.{line_el.get('ID')}")
+            except Exception:
+                log.warning("Không đọc được %s để kiểm tra source_id", stream_path)
+
     # 2. Kiểm tra phân đoạn đoạn / lớp (04_segmentation/layers/<layer>.xml)
     target_layers = layers or ["han", "am", "nghia"]
     known_segment_ids: dict[str, set[str]] = {}
@@ -264,6 +276,19 @@ def create_parser():
     return p
 
 
+def validation_inputs(layout: DataLayout, config: str | None) -> list[Path]:
+    """Mọi file validate đọc: 04_segmentation/, 05_cleaning/ (trừ chính báo cáo), config. Kiểm tra cặp chỉ đọc câu
+    đã làm sạch, không đọc 06_alignment/ (bước align chạy SAU validate)."""
+    files: list[Path] = [layout.segmentation_dir]
+    files += [p for p in (layout.ocr_layer_xml_path("han"), layout.ocr_layer_xml_path("vie")) if p.exists()]
+    if layout.cleaning_root.is_dir():
+        files += [p for p in layout.cleaning_root.rglob("*")
+                  if p.is_file() and p.name != "validation_report.json"]
+    if config:
+        files.append(Path(config))
+    return files
+
+
 def run(args) -> Path:
     layout = DataLayout(Path(args.data_root), args.work_id)
     layers = [l.strip() for l in args.layers.split(",")] if getattr(args, "layers", None) else None
@@ -276,11 +301,20 @@ def run(args) -> Path:
         if not pairs:
             pairs = list(cfg.get("pairs", {})) or None
 
+    out_dir = layout.cleaning_root
+    report_path = out_dir / "validation_report.json"
+    stage = f"validate:{','.join(layers or [])}:{','.join(pairs or [])}"
+    inputs = validation_inputs(layout, getattr(args, "config", None))
+    if not getattr(args, "force", False) and deps.is_fresh(layout, stage, inputs, report_path):
+        previous = json.loads(report_path.read_text(encoding="utf-8"))
+        log.info("%s đã có, đầu vào không đổi: bỏ qua kiểm tra", report_path.name)
+        if previous.get("valid") is False:
+            raise ValueError(f"Corpus {args.work_id} không vượt qua kiểm tra hợp lệ (báo cáo cũ, đầu vào không đổi)")
+        return report_path
+
     report = validate_corpus(layout, layers, pairs)
 
-    out_dir = layout.cleaning_root
     layout.ensure(out_dir)
-    report_path = out_dir / "validation_report.json"
     atomic_write_text(report_path, json.dumps(report.as_dict(), ensure_ascii=False, indent=2))
 
     MetadataStore(layout).update("validation", {
@@ -289,6 +323,7 @@ def run(args) -> Path:
         "report_path": layout.rel(report_path),
         "review_required": bool(report.summary["warnings"] or report.summary["errors"]),
     })
+    deps.record(layout, stage, inputs, [report_path])
 
     log.info("Validation %s: %d errors, %d warnings, %d infos -> %s",
              "PASSED" if report.valid else "FAILED",

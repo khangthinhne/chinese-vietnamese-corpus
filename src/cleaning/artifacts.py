@@ -16,7 +16,9 @@ import re
 from dataclasses import dataclass, field
 
 from src.cleaning.audit import Audit
-from src.cleaning.model import MARKER_RE, OCRCleaningConfig, OCR_ARTIFACT, RawLine, UNCERTAIN
+from src.cleaning.model import (AM_DIGIT_AFTER_PUNCT_RE, AM_DIGIT_LINE_END_RE, AM_DIGIT_MARKER_RE, NUMBERING_WORD_RE,
+                                PAGE_NOTE_MARKER_RE)
+from src.cleaning.model import LETTER_MARKER_RE, MARKER_RE, OCRCleaningConfig, OCR_ARTIFACT, RawLine, UNCERTAIN
 
 # chữ Latin đơn lẻ / chữ+cục số không thuộc từ: "lợi N cho", "nước ta. M4"
 _ISOLATED_LATIN = re.compile(r"(?<![A-Za-zÀ-ỹđĐ])([A-Za-z]|[A-Za-z]\d)(?![A-Za-zÀ-ỹđĐ])")
@@ -30,8 +32,12 @@ class CleaningResult:
     uncertain: list[str] = field(default_factory=list)                  # ký/token được cờ
 
 
+VIET_LAYERS = ("am", "nghia", "tho")
+
+
 def clean_ocr_artifacts(text: str, config: OCRCleaningConfig,
-                        audit: Audit | None = None, line: RawLine | None = None) -> CleaningResult:
+                        audit: Audit | None = None, line: RawLine | None = None,
+                        layer: str | None = None) -> CleaningResult:
     res = CleaningResult(text=text)
     out = text
     if config.strip_markers:
@@ -41,6 +47,44 @@ def clean_ocr_artifacts(text: str, config: OCRCleaningConfig,
         if n and audit is not None and line is not None:
             audit.add("remove_marker", "in_text_marker", rule="MARKER_RE", line=line,
                       original=text, processed=out)
+    if config.strip_markers and config.strip_letter_markers and layer in VIET_LAYERS:
+        before = out
+        found = [m.group(0) for m in LETTER_MARKER_RE.finditer(out)]
+        out = LETTER_MARKER_RE.sub("", out)
+        res.removed.extend(("letter_marker", m) for m in found)
+        if found and audit is not None and line is not None:
+            audit.add("remove_marker", "in_text_marker", rule="LETTER_MARKER_RE", line=line,
+                      original=before, processed=out)
+    if config.strip_markers and layer == "am":
+        before = out
+        found = [m.group(0).strip() for m in AM_DIGIT_MARKER_RE.finditer(out)]
+        out = AM_DIGIT_MARKER_RE.sub("", out)
+        res.removed.extend(("am_digit_marker", m) for m in found)
+        if found and audit is not None and line is not None:
+            audit.add("remove_marker", "in_text_marker", rule="AM_DIGIT_MARKER_RE", line=line,
+                      original=before, processed=out)
+        if getattr(config, "am_markers_extended", False) and not NUMBERING_WORD_RE.search(out):
+            for rx, rule in ((AM_DIGIT_AFTER_PUNCT_RE, "AM_DIGIT_AFTER_PUNCT_RE"),
+                             (AM_DIGIT_LINE_END_RE, "AM_DIGIT_LINE_END_RE")):
+                before = out
+                found = [m.group(0).strip() for m in rx.finditer(out)]
+                out = rx.sub("", out)
+                res.removed.extend(("am_digit_marker", m) for m in found)
+                if found and audit is not None and line is not None:
+                    audit.add("remove_marker", "in_text_marker", rule=rule, line=line, original=before, processed=out)
+
+    notes = getattr(config, "page_note_numbers", None) or {}
+    if (config.strip_markers and layer in ("nghia", "tho") and line is not None and notes.get(line.page)
+            and not re.match(r"^\s*\d{1,2}\s*[.)]", out)):
+        nums = notes[line.page]
+        before = out
+        found = [m.group(1) for m in PAGE_NOTE_MARKER_RE.finditer(out) if m.group(1) in nums]
+        if found:
+            out = PAGE_NOTE_MARKER_RE.sub(lambda m: "" if m.group(1) in nums else m.group(0), out)
+            res.removed.extend(("page_note_marker", d) for d in found)
+            if audit is not None:
+                audit.add("remove_marker", "in_text_marker", rule="PAGE_NOTE_MARKER_RE", line=line,
+                          original=before, processed=out)
 
     for pat in config.remove_patterns:
         rx = re.compile(pat)
@@ -86,7 +130,7 @@ def clean_lines(lines: list[RawLine], cfg: OCRCleaningConfig, audit: Audit, laye
     """Áp dụng cho từng dòng; cờ uncertain gắn lên RawLine.flags (han không cờ Latin)."""
     out: list[RawLine] = []
     for ln in lines:
-        res = clean_ocr_artifacts(ln.text, cfg, audit, ln)
+        res = clean_ocr_artifacts(ln.text, cfg, audit, ln, layer=layer)
         new = RawLine(ln.id, ln.page, res.text, ln.is_last_on_page, ln.raw_text, list(ln.flags),
                       list(ln.source_ids), ln.document_id)
         for ch in res.uncertain:

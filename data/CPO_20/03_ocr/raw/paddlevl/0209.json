@@ -1,0 +1,631 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_20",
+  "engine": "paddlevl",
+  "page": 209,
+  "runs": [
+    {
+      "key": "c5004324b9cb6687fcde5276c81b501322805b73390327f0f21ff2061b5015c2",
+      "parameters": {
+        "image_sha256": "6bb74e9d827b0e60dd3c4a70fc1834c4c1d3848a7fd0ae28435cdb83b50a9c3a",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T06:14:39+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_209.png",
+      "image_size": [
+        1823,
+        2815
+      ],
+      "crop_box": [
+        0,
+        0,
+        1823,
+        2815
+      ],
+      "lines": [
+        {
+          "text": "Dich nghĩa:",
+          "bbox": [
+            162,
+            274,
+            399,
+            307
+          ],
+          "confidence": 97.08
+        },
+        {
+          "text": "CAM XUỐC KHI QUA SÔNG NGUYẾT ĐỨC",
+          "bbox": [
+            277,
+            388,
+            1480,
+            451
+          ],
+          "confidence": 88.09
+        },
+        {
+          "text": "Một dài sông dài nước chảy cuồn cuộn.",
+          "bbox": [
+            387,
+            527,
+            1186,
+            576
+          ],
+          "confidence": 86.01
+        },
+        {
+          "text": "Chuyện được thua của các đời còn thấy ở trước mắt.",
+          "bbox": [
+            386,
+            587,
+            1452,
+            636
+          ],
+          "confidence": 94.45
+        },
+        {
+          "text": "Bên bờ, sương mỏng xóa mở đầu vết cũ.",
+          "bbox": [
+            385,
+            648,
+            1208,
+            694
+          ],
+          "confidence": 93.56
+        },
+        {
+          "text": "Trên sông lạnh gió thu thổi, nước triều đàng.",
+          "bbox": [
+            384,
+            706,
+            1317,
+            755
+          ],
+          "confidence": 91.51
+        },
+        {
+          "text": "Cơ trời đâu bề biển đối không lường được.",
+          "bbox": [
+            385,
+            764,
+            1252,
+            812
+          ],
+          "confidence": 87.23
+        },
+        {
+          "text": "Cuộc đời tươi tốt hay khôn héo chẳng thể giống nhau.",
+          "bbox": [
+            384,
+            825,
+            1491,
+            873
+          ],
+          "confidence": 95.36
+        },
+        {
+          "text": "Thương tâm thay, việc cũ chỉ còn vắng trắng trên sông",
+          "bbox": [
+            384,
+            886,
+            1521,
+            933
+          ],
+          "confidence": 92.0
+        },
+        {
+          "text": "buổi sớm.",
+          "bbox": [
+            1395,
+            961,
+            1594,
+            992
+          ],
+          "confidence": 85.42
+        },
+        {
+          "text": "Giữa khói sóng biết viếng người anh hùng ở chốn nào?",
+          "bbox": [
+            382,
+            1003,
+            1511,
+            1053
+          ],
+          "confidence": 94.3
+        },
+        {
+          "text": "Vich thơ:",
+          "bbox": [
+            152,
+            1189,
+            342,
+            1217
+          ],
+          "confidence": 78.9
+        },
+        {
+          "text": "Sống dài một dài mệnh mông.",
+          "bbox": [
+            495,
+            1298,
+            1125,
+            1340
+          ],
+          "confidence": 83.57
+        },
+        {
+          "text": "Trải bao thắng bại thoáng trông mơ hồ.",
+          "bbox": [
+            381,
+            1356,
+            1197,
+            1406
+          ],
+          "confidence": 80.87
+        },
+        {
+          "text": "Bò bên sương phủ dấu xua,",
+          "bbox": [
+            493,
+            1417,
+            1057,
+            1458
+          ],
+          "confidence": 84.93
+        },
+        {
+          "text": "Gió thu lạnh thổi, động thu sóng đôi.",
+          "bbox": [
+            379,
+            1473,
+            1149,
+            1517
+          ],
+          "confidence": 77.58
+        },
+        {
+          "text": "Đây với đầu biển cơ trời,",
+          "bbox": [
+            493,
+            1532,
+            1005,
+            1575
+          ],
+          "confidence": 80.85
+        },
+        {
+          "text": "Thinh suy biến đổi sự đời khôn động.",
+          "bbox": [
+            377,
+            1590,
+            1152,
+            1633
+          ],
+          "confidence": 81.77
+        },
+        {
+          "text": "Việc xưa trắng nước chanh lòng.",
+          "bbox": [
+            495,
+            1651,
+            1157,
+            1692
+          ],
+          "confidence": 89.46
+        },
+        {
+          "text": "Bảng khuông khói sóng anh hùng nơi đâu.",
+          "bbox": [
+            374,
+            1709,
+            1255,
+            1758
+          ],
+          "confidence": 87.8
+        },
+        {
+          "text": "Nguyễn Văn Bách dịch",
+          "bbox": [
+            1161,
+            1779,
+            1585,
+            1817
+          ],
+          "confidence": 95.41
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          1823,
+          2815
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 9.681,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              162,
+              274,
+              399,
+              307
+            ],
+            "generated_text": "Dich nghĩa:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.242,
+            "confidence": 97.08,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              277,
+              388,
+              1480,
+              451
+            ],
+            "generated_text": "CAM XUỐC KHI QUA SÔNG NGUYẾT ĐỨC",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.742,
+            "confidence": 88.09,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              387,
+              527,
+              1186,
+              576
+            ],
+            "generated_text": "Một dài sông dài nước chảy cuồn cuộn.",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.542,
+            "confidence": 86.01,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              386,
+              587,
+              1452,
+              636
+            ],
+            "generated_text": "Chuyện được thua của các đời còn thấy ở trước mắt.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.52,
+            "confidence": 94.45,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              385,
+              648,
+              1208,
+              694
+            ],
+            "generated_text": "Bên bờ, sương mỏng xóa mở đầu vết cũ.",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.549,
+            "confidence": 93.56,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              384,
+              706,
+              1317,
+              755
+            ],
+            "generated_text": "Trên sông lạnh gió thu thổi, nước triều đàng.",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.519,
+            "confidence": 91.51,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              385,
+              764,
+              1252,
+              812
+            ],
+            "generated_text": "Cơ trời đâu bề biển đối không lường được.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.466,
+            "confidence": 87.23,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              384,
+              825,
+              1491,
+              873
+            ],
+            "generated_text": "Cuộc đời tươi tốt hay khôn héo chẳng thể giống nhau.",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.719,
+            "confidence": 95.36,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              384,
+              886,
+              1521,
+              933
+            ],
+            "generated_text": "Thương tâm thay, việc cũ chỉ còn vắng trắng trên sông",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.581,
+            "confidence": 92.0,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              1395,
+              961,
+              1594,
+              992
+            ],
+            "generated_text": "buổi sớm.",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.254,
+            "confidence": 85.42,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              382,
+              1003,
+              1511,
+              1053
+            ],
+            "generated_text": "Giữa khói sóng biết viếng người anh hùng ở chốn nào?",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.604,
+            "confidence": 94.3,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              152,
+              1189,
+              342,
+              1217
+            ],
+            "generated_text": "Vich thơ:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.249,
+            "confidence": 78.9,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              495,
+              1298,
+              1125,
+              1340
+            ],
+            "generated_text": "Sống dài một dài mệnh mông.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 0.397,
+            "confidence": 83.57,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              381,
+              1356,
+              1197,
+              1406
+            ],
+            "generated_text": "Trải bao thắng bại thoáng trông mơ hồ.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.463,
+            "confidence": 80.87,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              493,
+              1417,
+              1057,
+              1458
+            ],
+            "generated_text": "Bò bên sương phủ dấu xua,",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.444,
+            "confidence": 84.93,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              379,
+              1473,
+              1149,
+              1517
+            ],
+            "generated_text": "Gió thu lạnh thổi, động thu sóng đôi.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.441,
+            "confidence": 77.58,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              493,
+              1532,
+              1005,
+              1575
+            ],
+            "generated_text": "Đây với đầu biển cơ trời,",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.341,
+            "confidence": 80.85,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              377,
+              1590,
+              1152,
+              1633
+            ],
+            "generated_text": "Thinh suy biến đổi sự đời khôn động.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.467,
+            "confidence": 81.77,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              495,
+              1651,
+              1157,
+              1692
+            ],
+            "generated_text": "Việc xưa trắng nước chanh lòng.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 0.363,
+            "confidence": 89.46,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              374,
+              1709,
+              1255,
+              1758
+            ],
+            "generated_text": "Bảng khuông khói sóng anh hùng nơi đâu.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.472,
+            "confidence": 87.8,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              1161,
+              1779,
+              1585,
+              1817
+            ],
+            "generated_text": "Nguyễn Văn Bách dịch",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.304,
+            "confidence": 95.41,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      }
+    }
+  ]
+}

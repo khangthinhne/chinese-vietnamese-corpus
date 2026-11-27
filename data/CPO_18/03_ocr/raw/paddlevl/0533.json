@@ -1,0 +1,703 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_18",
+  "engine": "paddlevl",
+  "page": 533,
+  "runs": [
+    {
+      "key": "971a08a97bc132150b397b11fbb5ebb1d7c10f60223b28c8d6abab1e21d989e0",
+      "parameters": {
+        "image_sha256": "2e26ebdca8b7dbda8f7411b699ca4660708c040b00daa5fd1d54db74df727693",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T19:02:46+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_533.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        0,
+        2480,
+        3509
+      ],
+      "lines": [
+        {
+          "text": "5. BAI THO TRUONG TICH TANG",
+          "bbox": [
+            617,
+            714,
+            1785,
+            786
+          ],
+          "confidence": 89.03
+        },
+        {
+          "text": "NHA SU NHAT NAM",
+          "bbox": [
+            872,
+            842,
+            1552,
+            913
+          ],
+          "confidence": 89.58
+        },
+        {
+          "text": "Trường Tích 張籍 tên chủ là Văn Xương 文昌，",
+          "bbox": [
+            393,
+            1038,
+            2106,
+            1114
+          ],
+          "confidence": 85.45
+        },
+        {
+          "text": "người Tô Châu, Trung Quốc, đỗ Tiến sĩ vào năm Trình",
+          "bbox": [
+            261,
+            1133,
+            2110,
+            1212
+          ],
+          "confidence": 95.01
+        },
+        {
+          "text": "Nguyên 5 (789). Đọc các bài Lĩnh biểu phùng cổ nhân",
+          "bbox": [
+            263,
+            1229,
+            2107,
+            1302
+          ],
+          "confidence": 93.64
+        },
+        {
+          "text": "嶺表逢故人 và bài Man trung 蠻中 của Trương Tịch,",
+          "bbox": [
+            266,
+            1314,
+            2108,
+            1398
+          ],
+          "confidence": 96.12
+        },
+        {
+          "text": "ta thấy hình như ông đã có lần sang nước ta, dù các bản",
+          "bbox": [
+            263,
+            1413,
+            2109,
+            1481
+          ],
+          "confidence": 96.04
+        },
+        {
+          "text": "tiểu sử về ông trước nay chưa một nơi nào nói đến. Bài",
+          "bbox": [
+            263,
+            1498,
+            2112,
+            1571
+          ],
+          "confidence": 95.67
+        },
+        {
+          "text": "Sơn trung tăng Nhật Nam tăng hiện chép trong Toàn",
+          "bbox": [
+            263,
+            1591,
+            2108,
+            1672
+          ],
+          "confidence": 95.2
+        },
+        {
+          "text": "Đường thi, đê lục sách, Q. 382 - 386, có lẽ được sáng tác",
+          "bbox": [
+            260,
+            1684,
+            2113,
+            1758
+          ],
+          "confidence": 95.46
+        },
+        {
+          "text": "vào dip Trương Tịch đi qua vùng Nhật Nam, tức bắc",
+          "bbox": [
+            262,
+            1773,
+            2114,
+            1851
+          ],
+          "confidence": 94.15
+        },
+        {
+          "text": "Trung Bộ ngày nay.",
+          "bbox": [
+            265,
+            1885,
+            947,
+            1931
+          ],
+          "confidence": 85.94
+        },
+        {
+          "text": "Sau đây là nguyên văn chủ Hán và bản phiên âm,",
+          "bbox": [
+            398,
+            1992,
+            2118,
+            2059
+          ],
+          "confidence": 96.87
+        },
+        {
+          "text": "dich bài thơ Trương Tích tăng nhà sư Nhật Nam.",
+          "bbox": [
+            268,
+            2081,
+            1891,
+            2148
+          ],
+          "confidence": 88.01
+        },
+        {
+          "text": "山中贈日南僧",
+          "bbox": [
+            912,
+            2320,
+            1524,
+            2402
+          ],
+          "confidence": 99.92
+        },
+        {
+          "text": "獨向雙峯老，",
+          "bbox": [
+            626,
+            2492,
+            1117,
+            2569
+          ],
+          "confidence": 99.39
+        },
+        {
+          "text": "松門閉兩崖(一作涯)。",
+          "bbox": [
+            623,
+            2617,
+            1510,
+            2694
+          ],
+          "confidence": 95.52
+        },
+        {
+          "text": "翻經上蕉葉，",
+          "bbox": [
+            627,
+            2743,
+            1118,
+            2819
+          ],
+          "confidence": 94.75
+        },
+        {
+          "text": "掛衲落藤花(一作橙花，一作胜花)。",
+          "bbox": [
+            622,
+            2861,
+            2006,
+            2944
+          ],
+          "confidence": 97.72
+        },
+        {
+          "text": "甃石新開井，",
+          "bbox": [
+            630,
+            2991,
+            2475,
+            3072
+          ],
+          "confidence": 92.76
+        },
+        {
+          "text": "穿林自種茶。",
+          "bbox": [
+            631,
+            3116,
+            2355,
+            3194
+          ],
+          "confidence": 91.28
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          3509
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 7.528,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              617,
+              714,
+              1785,
+              786
+            ],
+            "generated_text": "5. BAI THO TRUONG TICH TANG",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 0.307,
+            "confidence": 89.03,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              872,
+              842,
+              1552,
+              913
+            ],
+            "generated_text": "NHA SU NHAT NAM",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.205,
+            "confidence": 89.58,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              393,
+              1038,
+              2106,
+              1114
+            ],
+            "generated_text": "Trường Tích 張籍 tên chủ là Văn Xương 文昌，",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.405,
+            "confidence": 85.45,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              261,
+              1133,
+              2110,
+              1212
+            ],
+            "generated_text": "người Tô Châu, Trung Quốc, đỗ Tiến sĩ vào năm Trình",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.446,
+            "confidence": 95.01,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              263,
+              1229,
+              2107,
+              1302
+            ],
+            "generated_text": "Nguyên 5 (789). Đọc các bài Lĩnh biểu phùng cổ nhân",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.549,
+            "confidence": 93.64,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              266,
+              1314,
+              2108,
+              1398
+            ],
+            "generated_text": "嶺表逢故人 và bài Man trung 蠻中 của Trương Tịch,",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.504,
+            "confidence": 96.12,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              263,
+              1413,
+              2109,
+              1481
+            ],
+            "generated_text": "ta thấy hình như ông đã có lần sang nước ta, dù các bản",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.367,
+            "confidence": 96.04,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              263,
+              1498,
+              2112,
+              1571
+            ],
+            "generated_text": "tiểu sử về ông trước nay chưa một nơi nào nói đến. Bài",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.426,
+            "confidence": 95.67,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              263,
+              1591,
+              2108,
+              1672
+            ],
+            "generated_text": "Sơn trung tăng Nhật Nam tăng hiện chép trong Toàn",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.387,
+            "confidence": 95.2,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              260,
+              1684,
+              2113,
+              1758
+            ],
+            "generated_text": "Đường thi, đê lục sách, Q. 382 - 386, có lẽ được sáng tác",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 0.648,
+            "confidence": 95.46,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              262,
+              1773,
+              2114,
+              1851
+            ],
+            "generated_text": "vào dip Trương Tịch đi qua vùng Nhật Nam, tức bắc",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.448,
+            "confidence": 94.15,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              265,
+              1885,
+              947,
+              1931
+            ],
+            "generated_text": "Trung Bộ ngày nay.",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.202,
+            "confidence": 85.94,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              398,
+              1992,
+              2118,
+              2059
+            ],
+            "generated_text": "Sau đây là nguyên văn chủ Hán và bản phiên âm,",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.406,
+            "confidence": 96.87,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              268,
+              2081,
+              1891,
+              2148
+            ],
+            "generated_text": "dich bài thơ Trương Tích tăng nhà sư Nhật Nam.",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.424,
+            "confidence": 88.01,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              912,
+              2320,
+              1524,
+              2402
+            ],
+            "generated_text": "山中贈日南僧",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.208,
+            "confidence": 99.92,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              626,
+              2492,
+              1117,
+              2569
+            ],
+            "generated_text": "獨向雙峯老，",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.225,
+            "confidence": 99.39,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              623,
+              2617,
+              1510,
+              2694
+            ],
+            "generated_text": "松門閉兩崖(一作涯)。",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 0.31,
+            "confidence": 95.52,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              627,
+              2743,
+              1118,
+              2819
+            ],
+            "generated_text": "翻經上蕉葉，",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.185,
+            "confidence": 94.75,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              622,
+              2861,
+              2006,
+              2944
+            ],
+            "generated_text": "掛衲落藤花(一作橙花，一作胜花)。",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.465,
+            "confidence": 97.72,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              630,
+              2991,
+              2475,
+              3072
+            ],
+            "generated_text": "甃石新開井，",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.224,
+            "confidence": 92.76,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              631,
+              3116,
+              2355,
+              3194
+            ],
+            "generated_text": "穿林自種茶。",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.183,
+            "confidence": 91.28,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              324,
+              1298,
+              949,
+              1307
+            ],
+            "ink": 487
+          },
+          {
+            "box": [
+              266,
+              1867,
+              730,
+              1887
+            ],
+            "ink": 1309
+          },
+          {
+            "box": [
+              439,
+              1929,
+              908,
+              1942
+            ],
+            "ink": 747
+          },
+          {
+            "box": [
+              645,
+              2056,
+              1817,
+              2067
+            ],
+            "ink": 565
+          },
+          {
+            "box": [
+              312,
+              2144,
+              1656,
+              2156
+            ],
+            "ink": 675
+          },
+          {
+            "box": [
+              2035,
+              3301,
+              2190,
+              3326
+            ],
+            "ink": 1955
+          },
+          {
+            "box": [
+              2050,
+              3326,
+              2180,
+              3340
+            ],
+            "ink": 923
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "61cbea5c0055c260ccfc12f884e0febca7b2783b",
+        "git_describe": "61cbea5",
+        "git_dirty": true,
+        "gpu": "NVIDIA L4",
+        "dtype": "bfloat16",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

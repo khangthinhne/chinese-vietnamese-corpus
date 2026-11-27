@@ -1,0 +1,1030 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 146,
+  "runs": [
+    {
+      "key": "5ef9c37f74f3ca17e42fb8683e04dde4bc048e607e4790d2501a019982ee1ceb",
+      "parameters": {
+        "image_sha256": "f09b3e7907cb326b1caf3f861037babe8b06054703f8fc1bbb6d01a5fe80e1c1",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T12:45:43+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_146.png",
+      "image_size": [
+        2656,
+        3276
+      ],
+      "crop_box": [
+        0,
+        0,
+        2656,
+        3276
+      ],
+      "lines": [
+        {
+          "text": "ngothinhamle1.pdf",
+          "bbox": [
+            7,
+            19,
+            1595,
+            45
+          ],
+          "confidence": 92.77
+        },
+        {
+          "text": "HOANG HOA ĐỔ PHA",
+          "bbox": [
+            1585,
+            215,
+            2048,
+            253
+          ],
+          "confidence": 86.37
+        },
+        {
+          "text": "DICH NGHIA:",
+          "bbox": [
+            340,
+            328,
+            1237,
+            366
+          ],
+          "confidence": 98.57
+        },
+        {
+          "text": "VIỆNG QUAN TAM LỦ DAI PHU NƯỚC SỐ\\(^{(1)}\\)",
+          "bbox": [
+            649,
+            400,
+            1736,
+            448
+          ],
+          "confidence": 86.29
+        },
+        {
+          "text": "Chăng phải nhớ tới Hoài Sa mà oán vua Sở, (2)",
+          "bbox": [
+            643,
+            533,
+            1684,
+            580
+          ],
+          "confidence": 85.27
+        },
+        {
+          "text": "Trời kia khó hỏi, hỏi sông Tiêu, Tương.",
+          "bbox": [
+            640,
+            615,
+            1570,
+            662
+          ],
+          "confidence": 92.72
+        },
+        {
+          "text": "Nghĩ đem miệng lưỡi phò nước tổ; (4)",
+          "bbox": [
+            642,
+            699,
+            1453,
+            743
+          ],
+          "confidence": 86.47
+        },
+        {
+          "text": "Nào tiếc thit da, ở chốn hiếm nghèo.",
+          "bbox": [
+            642,
+            781,
+            1469,
+            824
+          ],
+          "confidence": 92.81
+        },
+        {
+          "text": "Việc cũ bao phen, buôn cùng động nước;",
+          "bbox": [
+            639,
+            862,
+            1580,
+            906
+          ],
+          "confidence": 90.34
+        },
+        {
+          "text": "Li Tao (5) còn mãi, viếng ánh tà dương.",
+          "bbox": [
+            641,
+            943,
+            1505,
+            987
+          ],
+          "confidence": 88.62
+        },
+        {
+          "text": "Có đường tối Cửu Nghi mà gặp Ngu Thuấn,",
+          "bbox": [
+            643,
+            1024,
+            1674,
+            1076
+          ],
+          "confidence": 88.1
+        },
+        {
+          "text": "Chắc hẳn có thêm một bác động lương.",
+          "bbox": [
+            642,
+            1106,
+            1528,
+            1150
+          ],
+          "confidence": 85.63
+        },
+        {
+          "text": "KHAO DI",
+          "bbox": [
+            341,
+            1191,
+            549,
+            1229
+          ],
+          "confidence": 95.59
+        },
+        {
+          "text": "a. Bản A.117C/1, VHv.16/1 chép: Trân sự kỉ hội kinh thệ thủy 陳事幾回經",
+          "bbox": [
+            489,
+            1265,
+            2037,
+            1314
+          ],
+          "confidence": 93.13
+        },
+        {
+          "text": "逝水 (Việc đòi bao phen kinh động nước xiết).",
+          "bbox": [
+            340,
+            1344,
+            1291,
+            1389
+          ],
+          "confidence": 92.34
+        },
+        {
+          "text": "Bản A.404: Trần sự kỷ hội kinh thê thuy 塵事幾回經逝水.",
+          "bbox": [
+            503,
+            1422,
+            1735,
+            1472
+          ],
+          "confidence": 85.93
+        },
+        {
+          "text": "b. Bản A.404: Tao từ 1 騷詞.",
+          "bbox": [
+            502,
+            1502,
+            1208,
+            1542
+          ],
+          "confidence": 80.56
+        },
+        {
+          "text": "c. Bản A.404: Ngu đế 虞帝",
+          "bbox": [
+            501,
+            1579,
+            1045,
+            1620
+          ],
+          "confidence": 91.09
+        },
+        {
+          "text": "CHU THICH:",
+          "bbox": [
+            341,
+            1660,
+            628,
+            1698
+          ],
+          "confidence": 99.22
+        },
+        {
+          "text": "1.Tam lũ đại phu: Túc Khuất Nguyên, người nước Sở.",
+          "bbox": [
+            493,
+            1734,
+            1614,
+            1776
+          ],
+          "confidence": 88.52
+        },
+        {
+          "text": "2.Hoài Sa (nhó Trường Sa): Một thiên trong Cửu chương ở Sở tử của",
+          "bbox": [
+            489,
+            1811,
+            2043,
+            1858
+          ],
+          "confidence": 92.63
+        },
+        {
+          "text": "Khuất Nguyên. Đại lược nói: Tuy ta bị đuổi ra Trường Sa, nhưng không vì cùng",
+          "bbox": [
+            338,
+            1888,
+            2044,
+            1939
+          ],
+          "confidence": 96.05
+        },
+        {
+          "text": "khốn mà thay đổi hành động...",
+          "bbox": [
+            337,
+            1967,
+            1488,
+            2009
+          ],
+          "confidence": 92.55
+        },
+        {
+          "text": "3.Tiêu, Tương: Tên hai dòng sông thuộc địa phận tỉnh Hồ Nam, liên với",
+          "bbox": [
+            488,
+            2046,
+            2042,
+            2096
+          ],
+          "confidence": 95.86
+        },
+        {
+          "text": "sông Mich La là nơi Khuất Nguyên đã trầm mình. Khuất Nguyên có thơ Thiên",
+          "bbox": [
+            337,
+            2125,
+            2045,
+            2174
+          ],
+          "confidence": 94.36
+        },
+        {
+          "text": "vấn (hỏi trời). Ở đây ý nói, trời xa khó hỏi, thì hỏi sông Tiêu, Tương cũng sẽ rõ.",
+          "bbox": [
+            337,
+            2203,
+            1986,
+            2251
+          ],
+          "confidence": 96.58
+        },
+        {
+          "text": "4.Nước tố: Dịch chữ “Tông quốc,” Khuất Nguyên người cùng họ với vua",
+          "bbox": [
+            486,
+            2281,
+            2039,
+            2331
+          ],
+          "confidence": 88.85
+        },
+        {
+          "text": "Sở, nên gọi nước Sở là \"Tông quốc.\"",
+          "bbox": [
+            336,
+            2359,
+            1076,
+            2399
+          ],
+          "confidence": 86.15
+        },
+        {
+          "text": "5.Li Tao: Một bài thơ nổi tiếng của Khuất Nguyên.",
+          "bbox": [
+            485,
+            2436,
+            1553,
+            2480
+          ],
+          "confidence": 94.95
+        },
+        {
+          "text": "6.Cũu Nghi: Một ngọn núi ở Hồ Nam, nơi vua Thuấn đi tuần thú phương",
+          "bbox": [
+            485,
+            2514,
+            2039,
+            2564
+          ],
+          "confidence": 91.66
+        },
+        {
+          "text": "nam rơi chet ơ do.",
+          "bbox": [
+            333,
+            2604,
+            712,
+            2633
+          ],
+          "confidence": 66.1
+        },
+        {
+          "text": "DICH THO:",
+          "bbox": [
+            346,
+            2669,
+            599,
+            2707
+          ],
+          "confidence": 96.93
+        },
+        {
+          "text": "Nào phải Hoài Sa oán Sở Vương,",
+          "bbox": [
+            741,
+            2762,
+            1570,
+            2808
+          ],
+          "confidence": 90.1
+        },
+        {
+          "text": "Trời kia khó hỏi, hỏi Tiêu Tương.",
+          "bbox": [
+            744,
+            2836,
+            1500,
+            2881
+          ],
+          "confidence": 98.82
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2656,
+          3276
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 57.403,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              7,
+              19,
+              1595,
+              45
+            ],
+            "generated_text": "ngothinhamle1.pdf",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.894,
+            "confidence": 92.77,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              1585,
+              215,
+              2048,
+              253
+            ],
+            "generated_text": "HOANG HOA ĐỔ PHA",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 1.004,
+            "confidence": 86.37,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              343,
+              258,
+              2052,
+              272
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.453,
+            "confidence": 19.35,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              340,
+              328,
+              1237,
+              366
+            ],
+            "generated_text": "DICH NGHIA:",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.788,
+            "confidence": 98.57,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              649,
+              400,
+              1736,
+              448
+            ],
+            "generated_text": "VIỆNG QUAN TAM LỦ DAI PHU NƯỚC SỐ\\(^{(1)}\\)",
+            "n_lines": 1,
+            "tokens": 34,
+            "seconds": 2.784,
+            "confidence": 86.29,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              643,
+              533,
+              1684,
+              580
+            ],
+            "generated_text": "Chăng phải nhớ tới Hoài Sa mà oán vua Sở, (2)",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.854,
+            "confidence": 85.27,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              640,
+              615,
+              1570,
+              662
+            ],
+            "generated_text": "Trời kia khó hỏi, hỏi sông Tiêu, Tương.",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.561,
+            "confidence": 92.72,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              642,
+              699,
+              1453,
+              743
+            ],
+            "generated_text": "Nghĩ đem miệng lưỡi phò nước tổ; (4)",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.664,
+            "confidence": 86.47,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              642,
+              781,
+              1469,
+              824
+            ],
+            "generated_text": "Nào tiếc thit da, ở chốn hiếm nghèo.",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.551,
+            "confidence": 92.81,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              639,
+              862,
+              1580,
+              906
+            ],
+            "generated_text": "Việc cũ bao phen, buôn cùng động nước;",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.355,
+            "confidence": 90.34,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              641,
+              943,
+              1505,
+              987
+            ],
+            "generated_text": "Li Tao (5) còn mãi, viếng ánh tà dương.",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.614,
+            "confidence": 88.62,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              643,
+              1024,
+              1674,
+              1076
+            ],
+            "generated_text": "Có đường tối Cửu Nghi mà gặp Ngu Thuấn,",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.612,
+            "confidence": 88.1,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              642,
+              1106,
+              1528,
+              1150
+            ],
+            "generated_text": "Chắc hẳn có thêm một bác động lương.",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.497,
+            "confidence": 85.63,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              341,
+              1191,
+              549,
+              1229
+            ],
+            "generated_text": "KHAO DI",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.667,
+            "confidence": 95.59,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              489,
+              1265,
+              2037,
+              1314
+            ],
+            "generated_text": "a. Bản A.117C/1, VHv.16/1 chép: Trân sự kỉ hội kinh thệ thủy 陳事幾回經",
+            "n_lines": 1,
+            "tokens": 42,
+            "seconds": 3.155,
+            "confidence": 93.13,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              340,
+              1344,
+              1291,
+              1389
+            ],
+            "generated_text": "逝水 (Việc đòi bao phen kinh động nước xiết).",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.503,
+            "confidence": 92.34,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              503,
+              1422,
+              1735,
+              1472
+            ],
+            "generated_text": "Bản A.404: Trần sự kỷ hội kinh thê thuy 塵事幾回經逝水.",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 2.23,
+            "confidence": 85.93,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              502,
+              1502,
+              1208,
+              1542
+            ],
+            "generated_text": "b. Bản A.404: Tao từ 1 騷詞.",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.601,
+            "confidence": 80.56,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              501,
+              1579,
+              1045,
+              1620
+            ],
+            "generated_text": "c. Bản A.404: Ngu đế 虞帝",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.428,
+            "confidence": 91.09,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              341,
+              1660,
+              628,
+              1698
+            ],
+            "generated_text": "CHU THICH:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.733,
+            "confidence": 99.22,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              493,
+              1734,
+              1614,
+              1776
+            ],
+            "generated_text": "1.Tam lũ đại phu: Túc Khuất Nguyên, người nước Sở.",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 2.013,
+            "confidence": 88.52,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              489,
+              1811,
+              2043,
+              1858
+            ],
+            "generated_text": "2.Hoài Sa (nhó Trường Sa): Một thiên trong Cửu chương ở Sở tử của",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 2.23,
+            "confidence": 92.63,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              338,
+              1888,
+              2044,
+              1939
+            ],
+            "generated_text": "Khuất Nguyên. Đại lược nói: Tuy ta bị đuổi ra Trường Sa, nhưng không vì cùng",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 2.347,
+            "confidence": 96.05,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              337,
+              1967,
+              1488,
+              2009
+            ],
+            "generated_text": "khốn mà thay đổi hành động...",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 1.156,
+            "confidence": 92.55,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              488,
+              2046,
+              2042,
+              2096
+            ],
+            "generated_text": "3.Tiêu, Tương: Tên hai dòng sông thuộc địa phận tỉnh Hồ Nam, liên với",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 2.239,
+            "confidence": 95.86,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              337,
+              2125,
+              2045,
+              2174
+            ],
+            "generated_text": "sông Mich La là nơi Khuất Nguyên đã trầm mình. Khuất Nguyên có thơ Thiên",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.281,
+            "confidence": 94.36,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              337,
+              2203,
+              1986,
+              2251
+            ],
+            "generated_text": "vấn (hỏi trời). Ở đây ý nói, trời xa khó hỏi, thì hỏi sông Tiêu, Tương cũng sẽ rõ.",
+            "n_lines": 1,
+            "tokens": 40,
+            "seconds": 3.103,
+            "confidence": 96.58,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              486,
+              2281,
+              2039,
+              2331
+            ],
+            "generated_text": "4.Nước tố: Dịch chữ “Tông quốc,” Khuất Nguyên người cùng họ với vua",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.171,
+            "confidence": 88.85,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              336,
+              2359,
+              1076,
+              2399
+            ],
+            "generated_text": "Sở, nên gọi nước Sở là \"Tông quốc.\"",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.319,
+            "confidence": 86.15,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              485,
+              2436,
+              1553,
+              2480
+            ],
+            "generated_text": "5.Li Tao: Một bài thơ nổi tiếng của Khuất Nguyên.",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.864,
+            "confidence": 94.95,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              485,
+              2514,
+              2039,
+              2564
+            ],
+            "generated_text": "6.Cũu Nghi: Một ngọn núi ở Hồ Nam, nơi vua Thuấn đi tuần thú phương",
+            "n_lines": 1,
+            "tokens": 33,
+            "seconds": 2.524,
+            "confidence": 91.66,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 32,
+            "box": [
+              333,
+              2604,
+              712,
+              2633
+            ],
+            "generated_text": "nam rơi chet ơ do.",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.979,
+            "confidence": 66.1,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 33,
+            "box": [
+              346,
+              2669,
+              599,
+              2707
+            ],
+            "generated_text": "DICH THO:",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.668,
+            "confidence": 96.93,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 34,
+            "box": [
+              741,
+              2762,
+              1570,
+              2808
+            ],
+            "generated_text": "Nào phải Hoài Sa oán Sở Vương,",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.239,
+            "confidence": 90.1,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 35,
+            "box": [
+              744,
+              2836,
+              1500,
+              2881
+            ],
+            "generated_text": "Trời kia khó hỏi, hỏi Tiêu Tương.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.316,
+            "confidence": 98.82,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              682,
+              739,
+              1413,
+              749
+            ],
+            "ink": 265
+          },
+          {
+            "box": [
+              701,
+              902,
+              1555,
+              913
+            ],
+            "ink": 305
+          },
+          {
+            "box": [
+              1116,
+              1148,
+              1512,
+              1157
+            ],
+            "ink": 226
+          },
+          {
+            "box": [
+              729,
+              1773,
+              1359,
+              1782
+            ],
+            "ink": 227
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

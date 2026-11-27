@@ -1,0 +1,987 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 296,
+  "runs": [
+    {
+      "key": "cf92e6e34d2e4b892bd9570662e6d4bc5b110b1c66e914b39a6519300496cb36",
+      "parameters": {
+        "image_sha256": "294543d7f6855423c8921a4c66365761acd8401be74e523f76a5e03ff2517ee7",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T14:33:02+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_296.png",
+      "image_size": [
+        2699,
+        3314
+      ],
+      "crop_box": [
+        0,
+        0,
+        2699,
+        3314
+      ],
+      "lines": [
+        {
+          "text": "ngothinhamch1.pdf",
+          "bbox": [
+            7,
+            19,
+            296,
+            45
+          ],
+          "confidence": 98.71
+        },
+        {
+          "text": "NGO THI NHAM TOAN TAP - TAP III",
+          "bbox": [
+            468,
+            243,
+            1241,
+            283
+          ],
+          "confidence": 88.32
+        },
+        {
+          "text": "Tao Đàn Đô suý chân hào hùng,",
+          "bbox": [
+            880,
+            350,
+            2086,
+            394
+          ],
+          "confidence": 88.38
+        },
+        {
+          "text": "Thi lô kế khai kiêu kế điệp.",
+          "bbox": [
+            881,
+            431,
+            1497,
+            476
+          ],
+          "confidence": 91.94
+        },
+        {
+          "text": "Vô qua ấp tốn tửu tam bôi,",
+          "bbox": [
+            880,
+            513,
+            1494,
+            557
+          ],
+          "confidence": 78.77
+        },
+        {
+          "text": "Hưu biện Hoàng Châu thượng trung hiệp.",
+          "bbox": [
+            877,
+            594,
+            1843,
+            647
+          ],
+          "confidence": 93.04
+        },
+        {
+          "text": "Liên anh đăng tư đình tiến tri,",
+          "bbox": [
+            877,
+            676,
+            1588,
+            721
+          ],
+          "confidence": 81.97
+        },
+        {
+          "text": "Vi đại liên thân ha liên tiếp.",
+          "bbox": [
+            881,
+            759,
+            1530,
+            803
+          ],
+          "confidence": 88.85
+        },
+        {
+          "text": "DICH NGHIA:",
+          "bbox": [
+            469,
+            845,
+            778,
+            883
+          ],
+          "confidence": 98.8
+        },
+        {
+          "text": "HOA NGUYÊN VĂN BÀI THỐ VÍNH SEN CỦA QUAN BÔ CÔNG",
+          "bbox": [
+            547,
+            909,
+            2097,
+            961
+          ],
+          "confidence": 90.96
+        },
+        {
+          "text": "VỤ HAO TRACH (BÔN BÀI)",
+          "bbox": [
+            1004,
+            993,
+            1636,
+            1038
+          ],
+          "confidence": 87.58
+        },
+        {
+          "text": "Say đánh trân thớ, làm bạn lá vàng,",
+          "bbox": [
+            884,
+            1199,
+            1716,
+            1244
+          ],
+          "confidence": 77.56
+        },
+        {
+          "text": "Cung đã trong bao, vô câu sach bui.",
+          "bbox": [
+            885,
+            1278,
+            1703,
+            1322
+          ],
+          "confidence": 90.15
+        },
+        {
+          "text": "Phó sự Tao Đàn ho Đỗ thất hào hùng,",
+          "bbox": [
+            885,
+            1355,
+            1817,
+            1400
+          ],
+          "confidence": 81.38
+        },
+        {
+          "text": "Đường thọ mở ra, câu thọ tiếp nối.",
+          "bbox": [
+            884,
+            1434,
+            1670,
+            1479
+          ],
+          "confidence": 89.14
+        },
+        {
+          "text": "Chăng qua khiêm tốn, ba chén rượu mời nhau,",
+          "bbox": [
+            886,
+            1511,
+            1998,
+            1557
+          ],
+          "confidence": 85.66
+        },
+        {
+          "text": "Chó bàn đến Hoàng Châu, leo trong khe núi.",
+          "bbox": [
+            887,
+            1588,
+            1917,
+            1634
+          ],
+          "confidence": 96.09
+        },
+        {
+          "text": "Mâm sen moc lên trên ao trước đình,",
+          "bbox": [
+            886,
+            1666,
+            1731,
+            1711
+          ],
+          "confidence": 87.96
+        },
+        {
+          "text": "Để thấy thân sen mừng sen thắng trận.",
+          "bbox": [
+            887,
+            1744,
+            2194,
+            1793
+          ],
+          "confidence": 91.13
+        },
+        {
+          "text": "CHU THICH:",
+          "bbox": [
+            476,
+            1825,
+            764,
+            1865
+          ],
+          "confidence": 95.08
+        },
+        {
+          "text": "1.Họ Đỗ: Chỉ Đỗ Nhuận là Phó nguyên suý trong Hội Tao Đàn do Lê",
+          "bbox": [
+            627,
+            1892,
+            2183,
+            1943
+          ],
+          "confidence": 95.37
+        },
+        {
+          "text": "Thánh Tông lập ra.",
+          "bbox": [
+            474,
+            1973,
+            888,
+            2015
+          ],
+          "confidence": 98.95
+        },
+        {
+          "text": "2.Ba chén rượu: Lấy chữ trong câu thơ của Thiệu Tử:",
+          "bbox": [
+            624,
+            2043,
+            1740,
+            2089
+          ],
+          "confidence": 95.21
+        },
+        {
+          "text": "Đường Nghiêu áp tốn tam bôi tửu,",
+          "bbox": [
+            885,
+            2119,
+            1604,
+            2161
+          ],
+          "confidence": 83.98
+        },
+        {
+          "text": "Thang vũ chính Chu nhất cục kỳ.",
+          "bbox": [
+            889,
+            2193,
+            1587,
+            2235
+          ],
+          "confidence": 91.9
+        },
+        {
+          "text": "(Nghiêu Thuấn nhường ngôi cho nhau như mọi nhau ba chén rượu,",
+          "bbox": [
+            626,
+            2266,
+            2038,
+            2315
+          ],
+          "confidence": 92.0
+        },
+        {
+          "text": "Thang Vũ diệt Chuẩn tựa đánh một ván cỏ.",
+          "bbox": [
+            625,
+            2342,
+            1505,
+            2385
+          ],
+          "confidence": 85.15
+        },
+        {
+          "text": "Ý nói việc làm nhanh chóng dễ dàng.",
+          "bbox": [
+            623,
+            2415,
+            1402,
+            2458
+          ],
+          "confidence": 96.88
+        },
+        {
+          "text": "11廿一",
+          "bbox": [
+            1160,
+            2582,
+            1460,
+            2604
+          ],
+          "confidence": 53.29
+        },
+        {
+          "text": "上生·共一",
+          "bbox": [
+            1162,
+            2614,
+            1859,
+            2640
+          ],
+          "confidence": 64.97
+        },
+        {
+          "text": "投機不必題紅葉",
+          "bbox": [
+            1010,
+            2741,
+            1635,
+            2801
+          ],
+          "confidence": 99.69
+        },
+        {
+          "text": "得趣金蓮隨地帖",
+          "bbox": [
+            1013,
+            2865,
+            1635,
+            2928
+          ],
+          "confidence": 98.49
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2699,
+          3314
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 43.42,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              7,
+              19,
+              296,
+              45
+            ],
+            "generated_text": "ngothinhamch1.pdf",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.923,
+            "confidence": 98.71,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              468,
+              243,
+              1241,
+              283
+            ],
+            "generated_text": "NGO THI NHAM TOAN TAP - TAP III",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.27,
+            "confidence": 88.32,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              450,
+              284,
+              2191,
+              298
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.462,
+            "confidence": 21.76,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              880,
+              350,
+              2086,
+              394
+            ],
+            "generated_text": "Tao Đàn Đô suý chân hào hùng,",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.288,
+            "confidence": 88.38,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              881,
+              431,
+              1497,
+              476
+            ],
+            "generated_text": "Thi lô kế khai kiêu kế điệp.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.458,
+            "confidence": 91.94,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              880,
+              513,
+              1494,
+              557
+            ],
+            "generated_text": "Vô qua ấp tốn tửu tam bôi,",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.38,
+            "confidence": 78.77,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              877,
+              594,
+              1843,
+              647
+            ],
+            "generated_text": "Hưu biện Hoàng Châu thượng trung hiệp.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.374,
+            "confidence": 93.04,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              877,
+              676,
+              1588,
+              721
+            ],
+            "generated_text": "Liên anh đăng tư đình tiến tri,",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.187,
+            "confidence": 81.97,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              881,
+              759,
+              1530,
+              803
+            ],
+            "generated_text": "Vi đại liên thân ha liên tiếp.",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.191,
+            "confidence": 88.85,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              469,
+              845,
+              778,
+              883
+            ],
+            "generated_text": "DICH NGHIA:",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.754,
+            "confidence": 98.8,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              547,
+              909,
+              2097,
+              961
+            ],
+            "generated_text": "HOA NGUYÊN VĂN BÀI THỐ VÍNH SEN CỦA QUAN BÔ CÔNG",
+            "n_lines": 1,
+            "tokens": 36,
+            "seconds": 2.74,
+            "confidence": 90.96,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              1004,
+              993,
+              1636,
+              1038
+            ],
+            "generated_text": "VỤ HAO TRACH (BÔN BÀI)",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.548,
+            "confidence": 87.58,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              884,
+              1199,
+              1716,
+              1244
+            ],
+            "generated_text": "Say đánh trân thớ, làm bạn lá vàng,",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.302,
+            "confidence": 77.56,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              885,
+              1278,
+              1703,
+              1322
+            ],
+            "generated_text": "Cung đã trong bao, vô câu sach bui.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.308,
+            "confidence": 90.15,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              885,
+              1355,
+              1817,
+              1400
+            ],
+            "generated_text": "Phó sự Tao Đàn ho Đỗ thất hào hùng,",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.456,
+            "confidence": 81.38,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              884,
+              1434,
+              1670,
+              1479
+            ],
+            "generated_text": "Đường thọ mở ra, câu thọ tiếp nối.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.407,
+            "confidence": 89.14,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              886,
+              1511,
+              1998,
+              1557
+            ],
+            "generated_text": "Chăng qua khiêm tốn, ba chén rượu mời nhau,",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.721,
+            "confidence": 85.66,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              887,
+              1588,
+              1917,
+              1634
+            ],
+            "generated_text": "Chó bàn đến Hoàng Châu, leo trong khe núi.",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.626,
+            "confidence": 96.09,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              886,
+              1666,
+              1731,
+              1711
+            ],
+            "generated_text": "Mâm sen moc lên trên ao trước đình,",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.121,
+            "confidence": 87.96,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              887,
+              1744,
+              2194,
+              1793
+            ],
+            "generated_text": "Để thấy thân sen mừng sen thắng trận.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.259,
+            "confidence": 91.13,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              476,
+              1825,
+              764,
+              1865
+            ],
+            "generated_text": "CHU THICH:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.747,
+            "confidence": 95.08,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              627,
+              1892,
+              2183,
+              1943
+            ],
+            "generated_text": "1.Họ Đỗ: Chỉ Đỗ Nhuận là Phó nguyên suý trong Hội Tao Đàn do Lê",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 2.39,
+            "confidence": 95.37,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              474,
+              1973,
+              888,
+              2015
+            ],
+            "generated_text": "Thánh Tông lập ra.",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.974,
+            "confidence": 98.95,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              624,
+              2043,
+              1740,
+              2089
+            ],
+            "generated_text": "2.Ba chén rượu: Lấy chữ trong câu thơ của Thiệu Tử:",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 2.165,
+            "confidence": 95.21,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              885,
+              2119,
+              1604,
+              2161
+            ],
+            "generated_text": "Đường Nghiêu áp tốn tam bôi tửu,",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.392,
+            "confidence": 83.98,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              889,
+              2193,
+              1587,
+              2235
+            ],
+            "generated_text": "Thang vũ chính Chu nhất cục kỳ.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.129,
+            "confidence": 91.9,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              626,
+              2266,
+              2038,
+              2315
+            ],
+            "generated_text": "(Nghiêu Thuấn nhường ngôi cho nhau như mọi nhau ba chén rượu,",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.844,
+            "confidence": 92.0,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              625,
+              2342,
+              1505,
+              2385
+            ],
+            "generated_text": "Thang Vũ diệt Chuẩn tựa đánh một ván cỏ.",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.638,
+            "confidence": 85.15,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              623,
+              2415,
+              1402,
+              2458
+            ],
+            "generated_text": "Ý nói việc làm nhanh chóng dễ dàng.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.219,
+            "confidence": 96.88,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              1160,
+              2582,
+              1460,
+              2604
+            ],
+            "generated_text": "11廿一",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.626,
+            "confidence": 53.29,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              1162,
+              2614,
+              1859,
+              2640
+            ],
+            "generated_text": "上生·共一",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.695,
+            "confidence": 64.97,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 32,
+            "box": [
+              1010,
+              2741,
+              1635,
+              2801
+            ],
+            "generated_text": "投機不必題紅葉",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.841,
+            "confidence": 99.69,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 33,
+            "box": [
+              1013,
+              2865,
+              1635,
+              2928
+            ],
+            "generated_text": "得趣金蓮隨地帖",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.982,
+            "confidence": 98.49,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              1259,
+              1092,
+              1381,
+              1102
+            ],
+            "ink": 365
+          },
+          {
+            "box": [
+              1253,
+              1103,
+              1388,
+              1114
+            ],
+            "ink": 360
+          },
+          {
+            "box": [
+              982,
+              1319,
+              1663,
+              1329
+            ],
+            "ink": 250
+          },
+          {
+            "box": [
+              1039,
+              1397,
+              1775,
+              1406
+            ],
+            "ink": 245
+          },
+          {
+            "box": [
+              1172,
+              2606,
+              1344,
+              2615
+            ],
+            "ink": 330
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_18",
+  "layer": "vie",
+  "engine": "qwen",
+  "engine_descriptor": {
+    "name": "qwen",
+    "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+    "model_revision": "main",
+    "transformers_version": "4.57.6",
+    "torch_version": "2.5.1+cu121",
+    "cuda_version": "12.1",
+    "bitsandbytes_version": "0.50.2",
+    "quantization": {
+      "load_in_4bit": true,
+      "quant_type": "nf4",
+      "double_quant": true,
+      "compute_dtype": "float16"
+    },
+    "mode": "all",
+    "min_pixels": 50176,
+    "max_pixels": 802816,
+    "band_inches": 2.0,
+    "max_new_tokens": 768,
+    "repetition_penalty": 1.05,
+    "adapter_version": 4,
+    "prompt_version": 3,
+    "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74"
+  },
+  "updated_at": "2026-11-26T09:20:01+00:00",
+  "source": {
+    "path": "E:\\Projects\\han-viet-corpus\\data\\CPO_18\\02_extraction\\pages"
+  },
+  "provenance": {
+    "git_commit": "a14f00840383ca282ccb519580df107802486602",
+    "git_describe": "a14f008",
+    "git_dirty": false,
+    "gpu": "NVIDIA GeForce RTX 3050 6GB Laptop GPU",
+    "dtype": "float16",
+    "adapter_version": 4
+  },
+  "parameters": {
+    "region": null,
+    "psm": 6,
+    "dpi": 300,
+    "force_reocr": true
+  },
+  "pages": [
+    {
+      "page": 208,
+      "engine": "qwen",
+      "key": "37cf41a00a7921dbc36a7d301e0c41c2f2e6b90db602151b60839a112e1dcc6e",
+      "status": "ocr",
+      "raw": "03_ocr/raw/qwen/0208.json",
+      "n_lines": 11,
+      "confidence": 63.50354124748492,
+      "created_at": "2026-11-26T09:15:44+00:00"
+    },
+    {
+      "page": 286,
+      "engine": "qwen",
+      "key": "5aac102f849e83607240b0dd8d53cb3a1e3f6f2363d0d8254f85dd0f642a80af",
+      "status": "ocr",
+      "raw": "03_ocr/raw/qwen/0286.json",
+      "n_lines": 397,
+      "confidence": 48.28604770017034,
+      "created_at": "2026-11-26T09:16:47+00:00"
+    },
+    {
+      "page": 393,
+      "engine": "qwen",
+      "key": "fb7254e949165015e9e69a942223b06c36f3611be5ce256f942441811463d72f",
+      "status": "ocr",
+      "raw": "03_ocr/raw/qwen/0393.json",
+      "n_lines": 5,
+      "confidence": 80.91808510638297,
+      "created_at": "2026-11-26T09:16:51+00:00"
+    },
+    {
+      "page": 523,
+      "engine": "qwen",
+      "key": "6d16219a6c5dd5f49b317d09513dc1334e312f3781a2f688b7a749f84c7be959",
+      "status": "ocr",
+      "raw": "03_ocr/raw/qwen/0523.json",
+      "n_lines": 11,
+      "confidence": 76.83441860465116,
+      "created_at": "2026-11-26T09:19:53+00:00"
+    },
+    {
+      "page": 539,
+      "engine": "qwen",
+      "key": "1d16ca32ba6dd08adeacffa45fbd52748caaa4aed196ffcc3b41d40d53f4c161",
+      "status": "ocr",
+      "raw": "03_ocr/raw/qwen/0539.json",
+      "n_lines": 8,
+      "confidence": 88.85013888888888,
+      "created_at": "2026-11-26T09:20:01+00:00"
+    }
+  ],
+  "missing_images": [],
+  "error_pages": [],
+  "pages_requested": "208,286,393,523,539"
+}

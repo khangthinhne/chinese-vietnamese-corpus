@@ -1,0 +1,268 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_18",
+  "engine": "qwen",
+  "page": 309,
+  "runs": [
+    {
+      "key": "f8665931dde9479b09a50f859bb857b23ba3b4118148a7d8aec862c9cfb0262d",
+      "parameters": {
+        "image_sha256": "c527239c14076d4b5b5d9457ff8051c2aa2d38207e17c78eed6b8878c96df04b",
+        "engine": {
+          "name": "qwen",
+          "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "model_revision": "main",
+          "transformers_version": "4.57.6",
+          "torch_version": "2.5.1+cu121",
+          "cuda_version": "12.1",
+          "bitsandbytes_version": "0.50.2",
+          "quantization": {
+            "load_in_4bit": true,
+            "quant_type": "nf4",
+            "double_quant": true,
+            "compute_dtype": "float16"
+          },
+          "mode": "all",
+          "min_pixels": 50176,
+          "max_pixels": 802816,
+          "band_inches": 2.0,
+          "max_new_tokens": 768,
+          "repetition_penalty": 1.05,
+          "adapter_version": 3,
+          "prompt_version": 3,
+          "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74"
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T20:01:12+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_309.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        0,
+        2480,
+        3509
+      ],
+      "lines": [
+        {
+          "text": "Phần II: Nguyên văn tác phẩm dịch và chú thích",
+          "bbox": [
+            173,
+            96,
+            2011,
+            379
+          ],
+          "confidence": 91.7
+        },
+        {
+          "text": "汉高於桀，紂；劉毅方晉武於桓，靈；但見含，兩無猜怒；故君不失聖，臣不失忠。子既其，應詳往行；四賢優劣，佇辨深疑；在於朕躬有",
+          "bbox": [
+            173,
+            379,
+            2011,
+            662
+          ],
+          "confidence": 91.7
+        },
+        {
+          "text": "不逮，条问之外，委悉书之；必无面从，以重不。",
+          "bbox": [
+            189,
+            688,
+            2128,
+            1206
+          ],
+          "confidence": 82.99
+        },
+        {
+          "text": "也，乃復誦謙，詢諫議，不敢滿假，不敢荒。",
+          "bbox": [
+            188,
+            1234,
+            2018,
+            1496
+          ],
+          "confidence": 41.17
+        },
+        {
+          "text": "下元統國，休業，慎重憲，疇咨管，",
+          "bbox": [
+            188,
+            1496,
+            2018,
+            1757
+          ],
+          "confidence": 41.17
+        },
+        {
+          "text": "思以啓沃。臣狂簡,不知化源,謹昧死稽,輒愚。",
+          "bbox": [
+            164,
+            1782,
+            2178,
+            2306
+          ],
+          "confidence": 65.04
+        },
+        {
+          "text": "使禮讓興行，刑罰不用；而人猶輕犯，吏尚循；爲盗者未奔，不仁者未遠；豈臣非稷，契而致",
+          "bbox": [
+            176,
+            2331,
+            2014,
+            2797
+          ],
+          "confidence": 80.33
+        },
+        {
+          "text": "臣聞禹稱善人，不善者遠矣。伏見陛下徵於空山，拔變，龍於下位；聘名士，禮賢者；善欲之徒，發惟新之詔；使吏肅，人悅，法明，令",
+          "bbox": [
+            193,
+            2866,
+            2475,
+            3497
+          ],
+          "confidence": 90.33
+        }
+      ],
+      "raw": {
+        "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+        "model_revision": "main",
+        "mode": "all",
+        "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          3509
+        ],
+        "band_target_height": 600,
+        "bbox_granularity": "band_even_split",
+        "max_new_tokens": 768,
+        "max_pixels": 802816,
+        "inference_seconds": 19.851,
+        "bands": [
+          {
+            "band": 1,
+            "y0": 100,
+            "y1": 674,
+            "ink_box": [
+              173,
+              96,
+              2011,
+              662
+            ],
+            "generated_text": "Phần II: Nguyên văn tác phẩm dịch và chú thích\n\n汉高於桀，紂；劉毅方晉武於桓，靈；但見含，兩無猜怒；故君不失聖，臣不失忠。子既其，應詳往行；四賢優劣，佇辨深疑；在於朕躬有",
+            "n_lines": 2,
+            "tokens": 76,
+            "seconds": 5.306,
+            "confidence": 91.7,
+            "flags": []
+          },
+          {
+            "band": 2,
+            "y0": 674,
+            "y1": 1219,
+            "ink_box": [
+              189,
+              688,
+              2128,
+              1206
+            ],
+            "generated_text": "不逮，条问之外，委悉书之；必无面从，以重不。",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.853,
+            "confidence": 82.99,
+            "flags": []
+          },
+          {
+            "band": 3,
+            "y0": 1219,
+            "y1": 1769,
+            "ink_box": [
+              188,
+              1234,
+              2018,
+              1757
+            ],
+            "generated_text": "也，乃復誦謙，詢諫議，不敢滿假，不敢荒。\n下元統國，休業，慎重憲，疇咨管，",
+            "n_lines": 2,
+            "tokens": 40,
+            "seconds": 3.007,
+            "confidence": 41.17,
+            "flags": []
+          },
+          {
+            "band": 4,
+            "y0": 1769,
+            "y1": 2318,
+            "ink_box": [
+              164,
+              1782,
+              2178,
+              2306
+            ],
+            "generated_text": "思以啓沃。臣狂簡,不知化源,謹昧死稽,輒愚。",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 2.067,
+            "confidence": 65.04,
+            "flags": []
+          },
+          {
+            "band": 5,
+            "y0": 2318,
+            "y1": 2831,
+            "ink_box": [
+              176,
+              2331,
+              2014,
+              2797
+            ],
+            "generated_text": "使禮讓興行，刑罰不用；而人猶輕犯，吏尚循；爲盗者未奔，不仁者未遠；豈臣非稷，契而致",
+            "n_lines": 1,
+            "tokens": 42,
+            "seconds": 3.16,
+            "confidence": 80.33,
+            "flags": []
+          },
+          {
+            "band": 6,
+            "y0": 2831,
+            "y1": 3493,
+            "ink_box": [
+              193,
+              2866,
+              2475,
+              3497
+            ],
+            "generated_text": "臣聞禹稱善人，不善者遠矣。伏見陛下徵於空山，拔變，龍於下位；聘名士，禮賢者；善欲之徒，發惟新之詔；使吏肅，人悅，法明，令",
+            "n_lines": 1,
+            "tokens": 62,
+            "seconds": 4.421,
+            "confidence": 90.33,
+            "flags": []
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "61cbea5c0055c260ccfc12f884e0febca7b2783b",
+        "git_describe": "61cbea5",
+        "git_dirty": true,
+        "gpu": "NVIDIA L4",
+        "dtype": "float16",
+        "adapter_version": 3
+      }
+    }
+  ]
+}

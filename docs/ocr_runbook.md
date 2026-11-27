@@ -25,10 +25,14 @@ bash scripts/ocr_work.sh CPO_19 5-623
 DRY_RUN=1 bash scripts/ocr_work.sh CPO_19 5-623
 STEPS="han build check" PACK=1 MEMBER=tv2 bash scripts/ocr_work.sh CPO_19 5-623
 ```
-**Colab (T4):** mở `notebooks/ocr_colab.ipynb` trên Colab, chỉ sửa ô 1 (`WORK`, `PAGES`, `MEMBER`, đường dẫn PDF
-trên Drive), rồi *Run all*. Notebook làm hết các bước trong runbook này: cài hai môi trường, tải model, kiểm tra
-SHA-256 của PDF, giải gói hạt giống, dry-run, extract, han, vie, build, check, pack. Kết quả và gói nằm trên Drive,
-nên phiên bị ngắt chỉ cần *Run all* lại.
+**Notebook (Colab T4 hoặc local):** `notebooks/ocr_work.ipynb`. Chỉ sửa ô 1 (`WORK`, `PAGES`, `MEMBER`, đường dẫn
+PDF), rồi *Run all*. Notebook tự nhận nơi chạy.
+- Colab: cài hai môi trường, tải model, lưu kết quả và gói lên Drive.
+- Local (kernel `my_nlp`): bỏ qua cài đặt, dùng `.venv-paddle` + `my_nlp` có sẵn, gọi đúng `ocr_work.ps1`/`.sh` ở trên;
+  kết quả ở `data/`, gói ở `dist/`.
+
+Cả hai đều làm: kiểm tra SHA-256 của PDF, giải gói hạt giống, dry-run, extract, han, vie, build, check, pack.
+Bị ngắt thì *Run all* lại.
 Các bước: `extract` (trích ảnh còn thiếu) -> `han` -> `vie` -> `build` -> `check` (-> `pack`). Bị ngắt (tắt máy,
 OOM, Ctrl+C) thì CHẠY LẠI ĐÚNG LỆNH ĐÓ: trang đã có run được bỏ qua (`--skip-done`), không mất gì
 (`raw/*.json` chỉ được thêm run, không bao giờ bị sửa/xoá). Hai model không bao giờ chạy cùng lúc.
@@ -126,6 +130,7 @@ file thô (khoá khác), `build_layers` chọn run theo manifest, rồi run hợ
 | `*_xml`, `*_txt_name`, `vie_has_cjk`, `*_empty_line`, `*_control_char` | error | XML/TXT hỏng: chạy lại `build_layers` |
 | `han_many_lines`, `han_long_line`, `han_single_char_lines`, `han_gap_units` | warning | trang Hán có thể bị cắt sai/đọc theo cột: mở ảnh xem; nếu in dọc thì đặt `paddlevl_orientation` |
 | `vie_low_conf`, `vie_english_like`, `*_run_no_lines` | warning | Qwen kém chắc / dịch sang tiếng Anh / trang không ra dòng nào |
+| `vie_cross_low_precision`, `vie_cross_low_recall`, `vie_unconfirmed_line` | warning | So vie.xml với chữ Latin paddlevl đọc trên cùng trang (`src/ocr/cross_check.py`, 4-gram chữ cái bỏ dấu): Qwen có chữ paddlevl không thấy (bịa/lặp), Qwen bỏ sót (hay gặp: chú thích chữ nhỏ), dòng Qwen không được xác nhận. paddlevl cũng có lúc bịa: mở ảnh trước khi OCR lại |
 | `han_only_page`, `blank_page`, `han_simplified`, `*_multi_run` | info | trang chỉ có Hán / trang trắng / chữ giản thể (chuẩn hoá ở bước clean) / nhiều run |
 
 `--sample 5 --seed 0` in 5 trang song ngữ ngẫu nhiên để soát bằng mắt (ảnh <-> `han/NNNN.txt`, `vie/NNNN.txt`).

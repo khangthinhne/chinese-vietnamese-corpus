@@ -1,0 +1,312 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_18",
+  "engine": "paddlevl",
+  "page": 402,
+  "runs": [
+    {
+      "key": "b1e9eacd5427c27463c59185173f95a0fb8c5e1a39bfb611b47212102d256d76",
+      "parameters": {
+        "image_sha256": "c3e500cbd59d6070bd9acb1632d7b570f1b5f30ea0b532ab46aa3dac18760941",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T15:29:40+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_402.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        0,
+        2480,
+        3509
+      ],
+      "lines": [
+        {
+          "text": "Sưu tấm và khảo luận tác phẩm chủ Hán của người Việt Nam trước TK 10",
+          "bbox": [
+            307,
+            87,
+            1909,
+            160
+          ],
+          "confidence": 93.97
+        },
+        {
+          "text": "___",
+          "bbox": [
+            289,
+            184,
+            2294,
+            214
+          ],
+          "confidence": 37.19
+        },
+        {
+          "text": "(10) Quế đổ : một thú sâu trong cây quế, người xưa thường",
+          "bbox": [
+            309,
+            348,
+            2285,
+            428
+          ],
+          "confidence": 88.63
+        },
+        {
+          "text": "tâm mật thành một loại mút quý.",
+          "bbox": [
+            2,
+            441,
+            1485,
+            506
+          ],
+          "confidence": 83.94
+        },
+        {
+          "text": "(11)Sinh thủy : chưa rõ loại gì, chắc có khác với loại chim",
+          "bbox": [
+            2,
+            565,
+            2285,
+            643
+          ],
+          "confidence": 92.51
+        },
+        {
+          "text": "thúy nói bên trên.",
+          "bbox": [
+            433,
+            659,
+            1303,
+            721
+          ],
+          "confidence": 93.2
+        },
+        {
+          "text": "372",
+          "bbox": [
+            307,
+            3379,
+            2094,
+            3434
+          ],
+          "confidence": 98.24
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          3509
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 8.452,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              307,
+              87,
+              1909,
+              160
+            ],
+            "generated_text": "Sưu tấm và khảo luận tác phẩm chủ Hán của người Việt Nam trước TK 10",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 1.722,
+            "confidence": 93.97,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              289,
+              184,
+              2294,
+              214
+            ],
+            "generated_text": "___",
+            "n_lines": 1,
+            "tokens": 2,
+            "seconds": 0.483,
+            "confidence": 37.19,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              309,
+              348,
+              2285,
+              428
+            ],
+            "generated_text": "(10) Quế đổ : một thú sâu trong cây quế, người xưa thường",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 1.809,
+            "confidence": 88.63,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              2,
+              441,
+              1485,
+              506
+            ],
+            "generated_text": "tâm mật thành một loại mút quý.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.044,
+            "confidence": 83.94,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              2,
+              565,
+              2285,
+              643
+            ],
+            "generated_text": "(11)Sinh thủy : chưa rõ loại gì, chắc có khác với loại chim",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.927,
+            "confidence": 92.51,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              433,
+              659,
+              1303,
+              721
+            ],
+            "generated_text": "thúy nói bên trên.",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.846,
+            "confidence": 93.2,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              307,
+              3379,
+              2094,
+              3434
+            ],
+            "generated_text": "372",
+            "n_lines": 1,
+            "tokens": 4,
+            "seconds": 0.619,
+            "confidence": 98.24,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              2,
+              502,
+              1450,
+              515
+            ],
+            "ink": 730
+          },
+          {
+            "box": [
+              2,
+              2996,
+              2476,
+              3007
+            ],
+            "ink": 680
+          },
+          {
+            "box": [
+              2,
+              3039,
+              2435,
+              3053
+            ],
+            "ink": 896
+          },
+          {
+            "box": [
+              2065,
+              3306,
+              2191,
+              3320
+            ],
+            "ink": 927
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

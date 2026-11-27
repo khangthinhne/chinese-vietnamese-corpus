@@ -1,0 +1,1085 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 262,
+  "runs": [
+    {
+      "key": "3be13d9fab8e97b31264719d89d53210daa9cfee7bc07a0ff26d54a6ebcb7800",
+      "parameters": {
+        "image_sha256": "69cf46d1d4edcb5739e9ef8c18b3ee873d252539c9d2af89b894d3cbb4c1c903",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T14:09:49+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_262.png",
+      "image_size": [
+        2588,
+        3215
+      ],
+      "crop_box": [
+        0,
+        0,
+        2588,
+        3215
+      ],
+      "lines": [
+        {
+          "text": "ngothinhamch1.pdf",
+          "bbox": [
+            7,
+            19,
+            296,
+            45
+          ],
+          "confidence": 98.71
+        },
+        {
+          "text": "NGÔ THI NHAM TOAN TẬP - TẬP III",
+          "bbox": [
+            426,
+            205,
+            1775,
+            245
+          ],
+          "confidence": 88.46
+        },
+        {
+          "text": "Ngã nguyên tảo thanh bình,",
+          "bbox": [
+            892,
+            310,
+            1903,
+            354
+          ],
+          "confidence": 85.29
+        },
+        {
+          "text": "Tu trình khoan bí sách.",
+          "bbox": [
+            897,
+            392,
+            1437,
+            436
+          ],
+          "confidence": 99.33
+        },
+        {
+          "text": "Ta mong sớm được thanh bình,",
+          "bbox": [
+            866,
+            475,
+            1580,
+            519
+          ],
+          "confidence": 95.56
+        },
+        {
+          "text": "Đường dài dây cương được lỏng.",
+          "bbox": [
+            768,
+            556,
+            1598,
+            602
+          ],
+          "confidence": 95.15
+        },
+        {
+          "text": "Để rồi ông trở về vui thú với cảnh điên viên ở quê nhà:",
+          "bbox": [
+            573,
+            638,
+            1823,
+            684
+          ],
+          "confidence": 90.84
+        },
+        {
+          "text": "Diện viên đặc ưu du,",
+          "bbox": [
+            892,
+            734,
+            1372,
+            765
+          ],
+          "confidence": 77.29
+        },
+        {
+          "text": "Thuân lư tụy hứng thích.",
+          "bbox": [
+            896,
+            803,
+            1476,
+            848
+          ],
+          "confidence": 82.64
+        },
+        {
+          "text": "Tiếp trì ngã thảo lư.",
+          "bbox": [
+            896,
+            886,
+            1358,
+            930
+          ],
+          "confidence": 78.65
+        },
+        {
+          "text": "Kính cúc ngu Bành Trach.",
+          "bbox": [
+            892,
+            968,
+            1504,
+            1012
+          ],
+          "confidence": 90.67
+        },
+        {
+          "text": "Được nhọn nhỏ vui thú điện viên,",
+          "bbox": [
+            866,
+            1050,
+            1637,
+            1095
+          ],
+          "confidence": 82.02
+        },
+        {
+          "text": "An rau rút gối cá vước tuy thích.",
+          "bbox": [
+            865,
+            1135,
+            1612,
+            1177
+          ],
+          "confidence": 83.56
+        },
+        {
+          "text": "Lại ở gian nhà co của ta,",
+          "bbox": [
+            867,
+            1227,
+            1431,
+            1258
+          ],
+          "confidence": 91.53
+        },
+        {
+          "text": "Vui với lương cúc như Đào Tiêm.",
+          "bbox": [
+            864,
+            1296,
+            1619,
+            1341
+          ],
+          "confidence": 84.76
+        },
+        {
+          "text": "Kinh đương triệu thư thất ngẫu thành",
+          "bbox": [
+            1239,
+            1371,
+            2130,
+            1416
+          ],
+          "confidence": 86.63
+        },
+        {
+          "text": "(Qua thủ phòng đường triều ngẫu hứng làm thơ)",
+          "bbox": [
+            1011,
+            1445,
+            2131,
+            1497
+          ],
+          "confidence": 86.43
+        },
+        {
+          "text": "Thế độ duyệt thực hệ, dự hoài quy.",
+          "bbox": [
+            925,
+            1592,
+            1715,
+            1637
+          ],
+          "confidence": 88.84
+        },
+        {
+          "text": "Đường đòi trải hết chũ, ta muốn về.",
+          "bbox": [
+            925,
+            1666,
+            1743,
+            1711
+          ],
+          "confidence": 83.97
+        },
+        {
+          "text": "Phiếm trúc châu hệ Tô Nhuê hà.",
+          "bbox": [
+            922,
+            1815,
+            1664,
+            1859
+          ],
+          "confidence": 90.53
+        },
+        {
+          "text": "Boi thuyền nan chủ, trên sông Tô, sông Nhuê.",
+          "bbox": [
+            924,
+            1893,
+            1983,
+            1938
+          ],
+          "confidence": 90.44
+        },
+        {
+          "text": "Hoa vũ để thu phong tù",
+          "bbox": [
+            1560,
+            1972,
+            2135,
+            2016
+          ],
+          "confidence": 82.37
+        },
+        {
+          "text": "(Hoa bài tử gió thu của Nguy Văn Đế)",
+          "bbox": [
+            1254,
+            2049,
+            2131,
+            2094
+          ],
+          "confidence": 92.59
+        },
+        {
+          "text": "Khi ước nguyện ấy chưa thực hiện được, ông đành:",
+          "bbox": [
+            573,
+            2127,
+            1737,
+            2179
+          ],
+          "confidence": 97.49
+        },
+        {
+          "text": "Hành tàng thủ ý phó chiên đảo.",
+          "bbox": [
+            835,
+            2204,
+            1564,
+            2249
+          ],
+          "confidence": 93.6
+        },
+        {
+          "text": "Hành hay tàng phó mặc xoay vận.",
+          "bbox": [
+            839,
+            2282,
+            1627,
+            2326
+          ],
+          "confidence": 91.97
+        },
+        {
+          "text": "Và ông nội với bạn:",
+          "bbox": [
+            580,
+            2372,
+            1017,
+            2404
+          ],
+          "confidence": 81.31
+        },
+        {
+          "text": "Quan hướng ngã như hồng quyện dực.",
+          "bbox": [
+            839,
+            2437,
+            1717,
+            2490
+          ],
+          "confidence": 88.15
+        },
+        {
+          "text": "Tình cảnh làm quan của tôi như chim hồng mỗi cánh.",
+          "bbox": [
+            692,
+            2514,
+            1925,
+            2559
+          ],
+          "confidence": 94.86
+        },
+        {
+          "text": "Hoài hương thư ký niên khế Nguyên Tả Khê",
+          "bbox": [
+            864,
+            2592,
+            2132,
+            2637
+          ],
+          "confidence": 89.9
+        },
+        {
+          "text": "(Nhớ quê viết gửi người bạn cùng khoa là Nguyễn Tả Khê)",
+          "bbox": [
+            786,
+            2670,
+            2130,
+            2723
+          ],
+          "confidence": 93.26
+        },
+        {
+          "text": "Ngoài những bài có nội dung như đã sơ bộ nêu ở trên, số còn lại",
+          "bbox": [
+            576,
+            2752,
+            2132,
+            2805
+          ],
+          "confidence": 96.18
+        },
+        {
+          "text": "phần nhiều là thơ phụng hoa, chúc tụng, đưa tiên bạn bè... như: Tiên",
+          "bbox": [
+            428,
+            2834,
+            2131,
+            2886
+          ],
+          "confidence": 90.63
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2588,
+          3215
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 44.38,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              7,
+              19,
+              296,
+              45
+            ],
+            "generated_text": "ngothinhamch1.pdf",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.921,
+            "confidence": 98.71,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              426,
+              205,
+              1775,
+              245
+            ],
+            "generated_text": "NGÔ THI NHAM TOAN TẬP - TẬP III",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.653,
+            "confidence": 88.46,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              409,
+              245,
+              2147,
+              259
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.466,
+            "confidence": 77.18,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              892,
+              310,
+              1903,
+              354
+            ],
+            "generated_text": "Ngã nguyên tảo thanh bình,",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.2,
+            "confidence": 85.29,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              897,
+              392,
+              1437,
+              436
+            ],
+            "generated_text": "Tu trình khoan bí sách.",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.926,
+            "confidence": 99.33,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              866,
+              475,
+              1580,
+              519
+            ],
+            "generated_text": "Ta mong sớm được thanh bình,",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.066,
+            "confidence": 95.56,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              768,
+              556,
+              1598,
+              602
+            ],
+            "generated_text": "Đường dài dây cương được lỏng.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.224,
+            "confidence": 95.15,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              573,
+              638,
+              1823,
+              684
+            ],
+            "generated_text": "Để rồi ông trở về vui thú với cảnh điên viên ở quê nhà:",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.735,
+            "confidence": 90.84,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              892,
+              734,
+              1372,
+              765
+            ],
+            "generated_text": "Diện viên đặc ưu du,",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.953,
+            "confidence": 77.29,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              896,
+              803,
+              1476,
+              848
+            ],
+            "generated_text": "Thuân lư tụy hứng thích.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.235,
+            "confidence": 82.64,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              896,
+              886,
+              1358,
+              930
+            ],
+            "generated_text": "Tiếp trì ngã thảo lư.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.131,
+            "confidence": 78.65,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              892,
+              968,
+              1504,
+              1012
+            ],
+            "generated_text": "Kính cúc ngu Bành Trach.",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 1.108,
+            "confidence": 90.67,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              866,
+              1050,
+              1637,
+              1095
+            ],
+            "generated_text": "Được nhọn nhỏ vui thú điện viên,",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.199,
+            "confidence": 82.02,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              865,
+              1135,
+              1612,
+              1177
+            ],
+            "generated_text": "An rau rút gối cá vước tuy thích.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.188,
+            "confidence": 83.56,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              867,
+              1227,
+              1431,
+              1258
+            ],
+            "generated_text": "Lại ở gian nhà co của ta,",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.982,
+            "confidence": 91.53,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              864,
+              1296,
+              1619,
+              1341
+            ],
+            "generated_text": "Vui với lương cúc như Đào Tiêm.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.204,
+            "confidence": 84.76,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              1239,
+              1371,
+              2130,
+              1416
+            ],
+            "generated_text": "Kinh đương triệu thư thất ngẫu thành",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.294,
+            "confidence": 86.63,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              1011,
+              1445,
+              2131,
+              1497
+            ],
+            "generated_text": "(Qua thủ phòng đường triều ngẫu hứng làm thơ)",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.717,
+            "confidence": 86.43,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              925,
+              1592,
+              1715,
+              1637
+            ],
+            "generated_text": "Thế độ duyệt thực hệ, dự hoài quy.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.195,
+            "confidence": 88.84,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              925,
+              1666,
+              1743,
+              1711
+            ],
+            "generated_text": "Đường đòi trải hết chũ, ta muốn về.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.346,
+            "confidence": 83.97,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              922,
+              1815,
+              1664,
+              1859
+            ],
+            "generated_text": "Phiếm trúc châu hệ Tô Nhuê hà.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.357,
+            "confidence": 90.53,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              924,
+              1893,
+              1983,
+              1938
+            ],
+            "generated_text": "Boi thuyền nan chủ, trên sông Tô, sông Nhuê.",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.768,
+            "confidence": 90.44,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              1560,
+              1972,
+              2135,
+              2016
+            ],
+            "generated_text": "Hoa vũ để thu phong tù",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 1.044,
+            "confidence": 82.37,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              1254,
+              2049,
+              2131,
+              2094
+            ],
+            "generated_text": "(Hoa bài tử gió thu của Nguy Văn Đế)",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.42,
+            "confidence": 92.59,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              573,
+              2127,
+              1737,
+              2179
+            ],
+            "generated_text": "Khi ước nguyện ấy chưa thực hiện được, ông đành:",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.72,
+            "confidence": 97.49,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              835,
+              2204,
+              1564,
+              2249
+            ],
+            "generated_text": "Hành tàng thủ ý phó chiên đảo.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.118,
+            "confidence": 93.6,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              839,
+              2282,
+              1627,
+              2326
+            ],
+            "generated_text": "Hành hay tàng phó mặc xoay vận.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.201,
+            "confidence": 91.97,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              580,
+              2372,
+              1017,
+              2404
+            ],
+            "generated_text": "Và ông nội với bạn:",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.865,
+            "confidence": 81.31,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              839,
+              2437,
+              1717,
+              2490
+            ],
+            "generated_text": "Quan hướng ngã như hồng quyện dực.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.293,
+            "confidence": 88.15,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              692,
+              2514,
+              1925,
+              2559
+            ],
+            "generated_text": "Tình cảnh làm quan của tôi như chim hồng mỗi cánh.",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.426,
+            "confidence": 94.86,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              864,
+              2592,
+              2132,
+              2637
+            ],
+            "generated_text": "Hoài hương thư ký niên khế Nguyên Tả Khê",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.481,
+            "confidence": 89.9,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 32,
+            "box": [
+              786,
+              2670,
+              2130,
+              2723
+            ],
+            "generated_text": "(Nhớ quê viết gửi người bạn cùng khoa là Nguyễn Tả Khê)",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.748,
+            "confidence": 93.26,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 33,
+            "box": [
+              576,
+              2752,
+              2132,
+              2805
+            ],
+            "generated_text": "Ngoài những bài có nội dung như đã sơ bộ nêu ở trên, số còn lại",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.875,
+            "confidence": 96.18,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 34,
+            "box": [
+              428,
+              2834,
+              2131,
+              2886
+            ],
+            "generated_text": "phần nhiều là thơ phụng hoa, chúc tụng, đưa tiên bạn bè... như: Tiên",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 2.317,
+            "confidence": 90.63,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              933,
+              352,
+              1535,
+              362
+            ],
+            "ink": 249
+          },
+          {
+            "box": [
+              993,
+              598,
+              1582,
+              609
+            ],
+            "ink": 326
+          },
+          {
+            "box": [
+              899,
+              722,
+              1549,
+              738
+            ],
+            "ink": 637
+          },
+          {
+            "box": [
+              866,
+              1215,
+              1382,
+              1227
+            ],
+            "ink": 401
+          },
+          {
+            "box": [
+              578,
+              1532,
+              686,
+              1546
+            ],
+            "ink": 514
+          },
+          {
+            "box": [
+              575,
+              1551,
+              685,
+              1563
+            ],
+            "ink": 379
+          },
+          {
+            "box": [
+              1092,
+              1934,
+              1963,
+              1944
+            ],
+            "ink": 313
+          },
+          {
+            "box": [
+              1264,
+              2090,
+              2123,
+              2102
+            ],
+            "ink": 386
+          },
+          {
+            "box": [
+              1040,
+              2323,
+              1499,
+              2333
+            ],
+            "ink": 250
+          },
+          {
+            "box": [
+              572,
+              2361,
+              931,
+              2373
+            ],
+            "ink": 432
+          },
+          {
+            "box": [
+              1359,
+              2635,
+              1883,
+              2645
+            ],
+            "ink": 246
+          },
+          {
+            "box": [
+              452,
+              2977,
+              523,
+              2986
+            ],
+            "ink": 291
+          },
+          {
+            "box": [
+              436,
+              2998,
+              520,
+              3007
+            ],
+            "ink": 230
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

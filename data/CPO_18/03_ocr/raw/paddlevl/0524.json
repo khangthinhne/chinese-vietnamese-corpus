@@ -1,0 +1,842 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_18",
+  "engine": "paddlevl",
+  "page": 524,
+  "runs": [
+    {
+      "key": "63fec187cb4a2aac14b6b1c38d6cf08f3c675c852f2ee1065546913575ab428a",
+      "parameters": {
+        "image_sha256": "376e79431de6816badf8d5b5076c9238c80752bbfb374b5cd3d6e5ffe18c7c30",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T19:01:37+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_524.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        0,
+        2480,
+        3509
+      ],
+      "lines": [
+        {
+          "text": "3. BÀI THỔ THÂM THUYỀN KỸ TẢNG",
+          "bbox": [
+            588,
+            575,
+            1901,
+            664
+          ],
+          "confidence": 80.81
+        },
+        {
+          "text": "THƯƠNG NHẦN VỐ NGAI",
+          "bbox": [
+            773,
+            722,
+            1697,
+            795
+          ],
+          "confidence": 86.61
+        },
+        {
+          "text": "Thăm Thuyên Kỳ 沈佺期 (656? - 714) tên chủ là",
+          "bbox": [
+            450,
+            927,
+            2193,
+            1006
+          ],
+          "confidence": 91.92
+        },
+        {
+          "text": "Vân Khanh 雲卿, người Tương Châu, Hà Nam; Trung",
+          "bbox": [
+            329,
+            1032,
+            2195,
+            1108
+          ],
+          "confidence": 95.06
+        },
+        {
+          "text": "Quốc, vì định líu tối vu án Trương Dich Chi 張易之 mà",
+          "bbox": [
+            333,
+            1126,
+            2190,
+            1204
+          ],
+          "confidence": 84.66
+        },
+        {
+          "text": "bi đày tối Hoan Châu (nay là đất Nghê An và Hà Tĩnh).",
+          "bbox": [
+            331,
+            1224,
+            2187,
+            1290
+          ],
+          "confidence": 97.42
+        },
+        {
+          "text": "Vu án Trường Dich Chi xây ra vào năm 705, khi Vũ",
+          "bbox": [
+            331,
+            1316,
+            2188,
+            1382
+          ],
+          "confidence": 92.86
+        },
+        {
+          "text": "Hàu bi Lý Hiên (Đường Trung Tông) lật đổ. Từ đó có thể",
+          "bbox": [
+            334,
+            1407,
+            2187,
+            1473
+          ],
+          "confidence": 87.7
+        },
+        {
+          "text": "biết được Thăm Thuyên Kỳ bi đày sang nước ta và yết",
+          "bbox": [
+            332,
+            1499,
+            2187,
+            1564
+          ],
+          "confidence": 88.12
+        },
+        {
+          "text": "kiến Vô Ngai vào khoảng năm 705 hoặc ít lâu sau đây.",
+          "bbox": [
+            333,
+            1590,
+            2120,
+            1655
+          ],
+          "confidence": 92.21
+        },
+        {
+          "text": "Thơ Thăm Thuyên Kỳ được chép trong Toàn Đường",
+          "bbox": [
+            453,
+            1701,
+            2185,
+            1767
+          ],
+          "confidence": 90.55
+        },
+        {
+          "text": "thi, đê nhi sách, Q. 95 - 97, trong đó có những bài sáng",
+          "bbox": [
+            334,
+            1796,
+            2366,
+            1860
+          ],
+          "confidence": 97.9
+        },
+        {
+          "text": "tác trên đất Việt Nam như Sơ đạt Hoan Châu 初達驩",
+          "bbox": [
+            335,
+            1884,
+            2182,
+            1952
+          ],
+          "confidence": 94.33
+        },
+        {
+          "text": "州 (2 bài), Lĩnh biểu phùng hàn thực 頤表逢寒",
+          "bbox": [
+            347,
+            1976,
+            2179,
+            2051
+          ],
+          "confidence": 82.12
+        },
+        {
+          "text": "食,Hoan Châu Nam đình da vong 驩州南亭夜望,Đê",
+          "bbox": [
+            342,
+            2069,
+            2183,
+            2146
+          ],
+          "confidence": 89.02
+        },
+        {
+          "text": "da tử thu 題椰子樹, Cửu Chân sơn Tình Cứ tử yết Vô",
+          "bbox": [
+            337,
+            2162,
+            2182,
+            2239
+          ],
+          "confidence": 81.79
+        },
+        {
+          "text": "Ngại Thương Nhân 九眞山淨居寺謁無礙上人，",
+          "bbox": [
+            334,
+            2256,
+            2180,
+            2335
+          ],
+          "confidence": 95.42
+        },
+        {
+          "text": "Tam nhất độc toa Hoan Châu tư ức cứu du 三日獨坐",
+          "bbox": [
+            342,
+            2348,
+            2175,
+            2416
+          ],
+          "confidence": 85.1
+        },
+        {
+          "text": "驩州思憶舊遊,Tòng Hoan Châu giải trách di trú sơn",
+          "bbox": [
+            342,
+            2441,
+            2174,
+            2519
+          ],
+          "confidence": 91.09
+        },
+        {
+          "text": "gian thủy đình tăng Tô sú quân 從驩州廨宅移住山",
+          "bbox": [
+            333,
+            2534,
+            2172,
+            2610
+          ],
+          "confidence": 91.6
+        },
+        {
+          "text": "間水亭贈蘇使君, Tòng Sùng sơn hướng Việt Thường",
+          "bbox": [
+            351,
+            2624,
+            2184,
+            2704
+          ],
+          "confidence": 92.94
+        },
+        {
+          "text": "從崇山向越常，Đó An Hải nhập Long Biên 度安海",
+          "bbox": [
+            344,
+            2716,
+            2179,
+            2795
+          ],
+          "confidence": 94.96
+        },
+        {
+          "text": "入龍編V.V.",
+          "bbox": [
+            347,
+            2817,
+            729,
+            2870
+          ],
+          "confidence": 95.25
+        },
+        {
+          "text": "Sau đây là nguyên văn chữ Hán và bản phiên âm,",
+          "bbox": [
+            465,
+            2923,
+            2443,
+            2990
+          ],
+          "confidence": 95.97
+        },
+        {
+          "text": "dich, chủ thích bài thơ Thấm Thuyên Kỳ tăng Thượng",
+          "bbox": [
+            342,
+            3009,
+            2441,
+            3082
+          ],
+          "confidence": 88.85
+        },
+        {
+          "text": "nhân Vô Ngai.",
+          "bbox": [
+            340,
+            3097,
+            2374,
+            3159
+          ],
+          "confidence": 78.97
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          3509
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 12.654,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              588,
+              575,
+              1901,
+              664
+            ],
+            "generated_text": "3. BÀI THỔ THÂM THUYỀN KỸ TẢNG",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 0.634,
+            "confidence": 80.81,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              773,
+              722,
+              1697,
+              795
+            ],
+            "generated_text": "THƯƠNG NHẦN VỐ NGAI",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.424,
+            "confidence": 86.61,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              450,
+              927,
+              2193,
+              1006
+            ],
+            "generated_text": "Thăm Thuyên Kỳ 沈佺期 (656? - 714) tên chủ là",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.583,
+            "confidence": 91.92,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              329,
+              1032,
+              2195,
+              1108
+            ],
+            "generated_text": "Vân Khanh 雲卿, người Tương Châu, Hà Nam; Trung",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.417,
+            "confidence": 95.06,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              333,
+              1126,
+              2190,
+              1204
+            ],
+            "generated_text": "Quốc, vì định líu tối vu án Trương Dich Chi 張易之 mà",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.512,
+            "confidence": 84.66,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              331,
+              1224,
+              2187,
+              1290
+            ],
+            "generated_text": "bi đày tối Hoan Châu (nay là đất Nghê An và Hà Tĩnh).",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.547,
+            "confidence": 97.42,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              331,
+              1316,
+              2188,
+              1382
+            ],
+            "generated_text": "Vu án Trường Dich Chi xây ra vào năm 705, khi Vũ",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.468,
+            "confidence": 92.86,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              334,
+              1407,
+              2187,
+              1473
+            ],
+            "generated_text": "Hàu bi Lý Hiên (Đường Trung Tông) lật đổ. Từ đó có thể",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.545,
+            "confidence": 87.7,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              332,
+              1499,
+              2187,
+              1564
+            ],
+            "generated_text": "biết được Thăm Thuyên Kỳ bi đày sang nước ta và yết",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.428,
+            "confidence": 88.12,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              333,
+              1590,
+              2120,
+              1655
+            ],
+            "generated_text": "kiến Vô Ngai vào khoảng năm 705 hoặc ít lâu sau đây.",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.489,
+            "confidence": 92.21,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              453,
+              1701,
+              2185,
+              1767
+            ],
+            "generated_text": "Thơ Thăm Thuyên Kỳ được chép trong Toàn Đường",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.384,
+            "confidence": 90.55,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              334,
+              1796,
+              2366,
+              1860
+            ],
+            "generated_text": "thi, đê nhi sách, Q. 95 - 97, trong đó có những bài sáng",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.543,
+            "confidence": 97.9,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              335,
+              1884,
+              2182,
+              1952
+            ],
+            "generated_text": "tác trên đất Việt Nam như Sơ đạt Hoan Châu 初達驩",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.505,
+            "confidence": 94.33,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              347,
+              1976,
+              2179,
+              2051
+            ],
+            "generated_text": "州 (2 bài), Lĩnh biểu phùng hàn thực 頤表逢寒",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.501,
+            "confidence": 82.12,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              342,
+              2069,
+              2183,
+              2146
+            ],
+            "generated_text": "食,Hoan Châu Nam đình da vong 驩州南亭夜望,Đê",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.548,
+            "confidence": 89.02,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              337,
+              2162,
+              2182,
+              2239
+            ],
+            "generated_text": "da tử thu 題椰子樹, Cửu Chân sơn Tình Cứ tử yết Vô",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.613,
+            "confidence": 81.79,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              334,
+              2256,
+              2180,
+              2335
+            ],
+            "generated_text": "Ngại Thương Nhân 九眞山淨居寺謁無礙上人，",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.605,
+            "confidence": 95.42,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              342,
+              2348,
+              2175,
+              2416
+            ],
+            "generated_text": "Tam nhất độc toa Hoan Châu tư ức cứu du 三日獨坐",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.513,
+            "confidence": 85.1,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              342,
+              2441,
+              2174,
+              2519
+            ],
+            "generated_text": "驩州思憶舊遊,Tòng Hoan Châu giải trách di trú sơn",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.569,
+            "confidence": 91.09,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              333,
+              2534,
+              2172,
+              2610
+            ],
+            "generated_text": "gian thủy đình tăng Tô sú quân 從驩州廨宅移住山",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.569,
+            "confidence": 91.6,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              351,
+              2624,
+              2184,
+              2704
+            ],
+            "generated_text": "間水亭贈蘇使君, Tòng Sùng sơn hướng Việt Thường",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.484,
+            "confidence": 92.94,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              344,
+              2716,
+              2179,
+              2795
+            ],
+            "generated_text": "從崇山向越常，Đó An Hải nhập Long Biên 度安海",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.464,
+            "confidence": 94.96,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              347,
+              2817,
+              729,
+              2870
+            ],
+            "generated_text": "入龍編V.V.",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.208,
+            "confidence": 95.25,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              465,
+              2923,
+              2443,
+              2990
+            ],
+            "generated_text": "Sau đây là nguyên văn chữ Hán và bản phiên âm,",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.426,
+            "confidence": 95.97,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              342,
+              3009,
+              2441,
+              3082
+            ],
+            "generated_text": "dich, chủ thích bài thơ Thấm Thuyên Kỳ tăng Thượng",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.467,
+            "confidence": 88.85,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              340,
+              3097,
+              2374,
+              3159
+            ],
+            "generated_text": "nhân Vô Ngai.",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.206,
+            "confidence": 78.97,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              401,
+              1471,
+              1585,
+              1485
+            ],
+            "ink": 871
+          },
+          {
+            "box": [
+              570,
+              1563,
+              2098,
+              1576
+            ],
+            "ink": 695
+          },
+          {
+            "box": [
+              939,
+              1765,
+              2172,
+              1778
+            ],
+            "ink": 770
+          },
+          {
+            "box": [
+              427,
+              1856,
+              2177,
+              1870
+            ],
+            "ink": 888
+          },
+          {
+            "box": [
+              689,
+              3156,
+              2298,
+              3166
+            ],
+            "ink": 608
+          },
+          {
+            "box": [
+              350,
+              3301,
+              2190,
+              3325
+            ],
+            "ink": 1921
+          },
+          {
+            "box": [
+              339,
+              3325,
+              2181,
+              3342
+            ],
+            "ink": 1282
+          },
+          {
+            "box": [
+              1964,
+              3464,
+              2390,
+              3474
+            ],
+            "ink": 698
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "61cbea5c0055c260ccfc12f884e0febca7b2783b",
+        "git_describe": "61cbea5",
+        "git_dirty": true,
+        "gpu": "NVIDIA L4",
+        "dtype": "bfloat16",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

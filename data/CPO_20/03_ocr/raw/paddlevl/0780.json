@@ -1,0 +1,605 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_20",
+  "engine": "paddlevl",
+  "page": 780,
+  "runs": [
+    {
+      "key": "7e324de8e75ffe6f2538e83b8e4a5f26407492d94a63237168f8bd2844f8d728",
+      "parameters": {
+        "image_sha256": "020a062ba7b0fc96dd48dc1a69918866d26ef8e927f2461c6f8a2c7e7759f837",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T14:39:01+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_780.png",
+      "image_size": [
+        1839,
+        2804
+      ],
+      "crop_box": [
+        0,
+        0,
+        1839,
+        2804
+      ],
+      "lines": [
+        {
+          "text": "Dich nghĩa:",
+          "bbox": [
+            182,
+            241,
+            435,
+            271
+          ],
+          "confidence": 83.26
+        },
+        {
+          "text": "SAU KHI ÔM, XUA NÔI LO BUÔN",
+          "bbox": [
+            424,
+            343,
+            1547,
+            407
+          ],
+          "confidence": 88.81
+        },
+        {
+          "text": "Không phải vì ham nghèo mà không làm quan,",
+          "bbox": [
+            426,
+            496,
+            1427,
+            541
+          ],
+          "confidence": 98.05
+        },
+        {
+          "text": "Làm quan dễ thôi, làm người mới khó.",
+          "bbox": [
+            427,
+            553,
+            1244,
+            597
+          ],
+          "confidence": 98.1
+        },
+        {
+          "text": "Lòng ta không phải đá, càng khốn cùng lại càng vững,",
+          "bbox": [
+            427,
+            613,
+            1583,
+            663
+          ],
+          "confidence": 96.1
+        },
+        {
+          "text": "Đạo trời, như vòng tròn, đi qua rồi lại quay lại.",
+          "bbox": [
+            427,
+            674,
+            1426,
+            722
+          ],
+          "confidence": 94.85
+        },
+        {
+          "text": "Mươn cốc rượu nhat nuốt trôi bát cơm, xua đi nổi buồn,",
+          "bbox": [
+            427,
+            733,
+            1596,
+            778
+          ],
+          "confidence": 89.5
+        },
+        {
+          "text": "Bép tàn còn giữ được tý lửa đỡ cho đêm động lạnh.",
+          "bbox": [
+            427,
+            793,
+            1508,
+            842
+          ],
+          "confidence": 90.77
+        },
+        {
+          "text": "Một đời được hay mất tiêu tan với giấc chiêm bao,",
+          "bbox": [
+            427,
+            854,
+            1494,
+            900
+          ],
+          "confidence": 95.29
+        },
+        {
+          "text": "Chỉ còn lại chút râu mày tỏ cùng trời đất.",
+          "bbox": [
+            427,
+            917,
+            1318,
+            959
+          ],
+          "confidence": 94.98
+        },
+        {
+          "text": "Dich thơ:",
+          "bbox": [
+            188,
+            1231,
+            668,
+            1261
+          ],
+          "confidence": 90.81
+        },
+        {
+          "text": "Há phải ham nghèo bỏ tước phong,",
+          "bbox": [
+            393,
+            1337,
+            1174,
+            1381
+          ],
+          "confidence": 94.11
+        },
+        {
+          "text": "Làm người trọn đảo khó vô cùng.",
+          "bbox": [
+            429,
+            1398,
+            1138,
+            1440
+          ],
+          "confidence": 92.53
+        },
+        {
+          "text": "Lòng ta chẳng đá, càng thêm vững,",
+          "bbox": [
+            429,
+            1457,
+            1738,
+            1506
+          ],
+          "confidence": 97.35
+        },
+        {
+          "text": "Thợ tạo xoay vòng, bĩ lại thông.",
+          "bbox": [
+            434,
+            1518,
+            1105,
+            1564
+          ],
+          "confidence": 86.5
+        },
+        {
+          "text": "Rượu nhat đưa cơm nên giác đầy,",
+          "bbox": [
+            431,
+            1578,
+            1144,
+            1620
+          ],
+          "confidence": 79.0
+        },
+        {
+          "text": "Lò tàn rấm lửa đò đêm đông.",
+          "bbox": [
+            431,
+            1637,
+            1369,
+            1679
+          ],
+          "confidence": 82.55
+        },
+        {
+          "text": "Cuộc đời được mất những con mồng,",
+          "bbox": [
+            434,
+            1698,
+            1232,
+            1743
+          ],
+          "confidence": 86.55
+        },
+        {
+          "text": "Để lại râu mày với núi sông.",
+          "bbox": [
+            432,
+            1757,
+            1043,
+            1800
+          ],
+          "confidence": 94.87
+        },
+        {
+          "text": "Nguyễn Văn Bách dịch.",
+          "bbox": [
+            1233,
+            1821,
+            1669,
+            1862
+          ],
+          "confidence": 91.56
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          1839,
+          2804
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 9.608,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              182,
+              241,
+              435,
+              271
+            ],
+            "generated_text": "Dich nghĩa:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.248,
+            "confidence": 83.26,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              424,
+              343,
+              1547,
+              407
+            ],
+            "generated_text": "SAU KHI ÔM, XUA NÔI LO BUÔN",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.507,
+            "confidence": 88.81,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              426,
+              496,
+              1427,
+              541
+            ],
+            "generated_text": "Không phải vì ham nghèo mà không làm quan,",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.431,
+            "confidence": 98.05,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              427,
+              553,
+              1244,
+              597
+            ],
+            "generated_text": "Làm quan dễ thôi, làm người mới khó.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.437,
+            "confidence": 98.1,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              427,
+              613,
+              1583,
+              663
+            ],
+            "generated_text": "Lòng ta không phải đá, càng khốn cùng lại càng vững,",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.62,
+            "confidence": 96.1,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              427,
+              674,
+              1426,
+              722
+            ],
+            "generated_text": "Đạo trời, như vòng tròn, đi qua rồi lại quay lại.",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.59,
+            "confidence": 94.85,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              427,
+              733,
+              1596,
+              778
+            ],
+            "generated_text": "Mươn cốc rượu nhat nuốt trôi bát cơm, xua đi nổi buồn,",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.792,
+            "confidence": 89.5,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              427,
+              793,
+              1508,
+              842
+            ],
+            "generated_text": "Bép tàn còn giữ được tý lửa đỡ cho đêm động lạnh.",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.641,
+            "confidence": 90.77,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              427,
+              854,
+              1494,
+              900
+            ],
+            "generated_text": "Một đời được hay mất tiêu tan với giấc chiêm bao,",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.645,
+            "confidence": 95.29,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              427,
+              917,
+              1318,
+              959
+            ],
+            "generated_text": "Chỉ còn lại chút râu mày tỏ cùng trời đất.",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.548,
+            "confidence": 94.98,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              188,
+              1231,
+              668,
+              1261
+            ],
+            "generated_text": "Dich thơ:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.246,
+            "confidence": 90.81,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              393,
+              1337,
+              1174,
+              1381
+            ],
+            "generated_text": "Há phải ham nghèo bỏ tước phong,",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.428,
+            "confidence": 94.11,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              429,
+              1398,
+              1138,
+              1440
+            ],
+            "generated_text": "Làm người trọn đảo khó vô cùng.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 0.386,
+            "confidence": 92.53,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              429,
+              1457,
+              1738,
+              1506
+            ],
+            "generated_text": "Lòng ta chẳng đá, càng thêm vững,",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.504,
+            "confidence": 97.35,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              434,
+              1518,
+              1105,
+              1564
+            ],
+            "generated_text": "Thợ tạo xoay vòng, bĩ lại thông.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.421,
+            "confidence": 86.5,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              431,
+              1578,
+              1144,
+              1620
+            ],
+            "generated_text": "Rượu nhat đưa cơm nên giác đầy,",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.491,
+            "confidence": 79.0,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              431,
+              1637,
+              1369,
+              1679
+            ],
+            "generated_text": "Lò tàn rấm lửa đò đêm đông.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.507,
+            "confidence": 82.55,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              434,
+              1698,
+              1232,
+              1743
+            ],
+            "generated_text": "Cuộc đời được mất những con mồng,",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 0.4,
+            "confidence": 86.55,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              432,
+              1757,
+              1043,
+              1800
+            ],
+            "generated_text": "Để lại râu mày với núi sông.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.415,
+            "confidence": 94.87,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              1233,
+              1821,
+              1669,
+              1862
+            ],
+            "generated_text": "Nguyễn Văn Bách dịch.",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.349,
+            "confidence": 91.56,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      }
+    }
+  ]
+}

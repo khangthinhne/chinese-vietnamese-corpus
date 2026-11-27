@@ -1,0 +1,764 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_18",
+  "engine": "paddlevl",
+  "page": 424,
+  "runs": [
+    {
+      "key": "750e22f3df6ef64a80be45caeed09c8f1a527f8b54a694aeb325083e598eb576",
+      "parameters": {
+        "image_sha256": "18714639c55791919cfd31d33981ce83dd82c35092f16f93a85a945c198c396c",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T15:46:46+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_424.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        0,
+        2480,
+        3509
+      ],
+      "lines": [
+        {
+          "text": "Sưu tấm và khảo luận tác phẩm chủ Hán của người Việt Nam trước TK 10",
+          "bbox": [
+            261,
+            58,
+            1806,
+            129
+          ],
+          "confidence": 94.48
+        },
+        {
+          "text": "：",
+          "bbox": [
+            244,
+            147,
+            2181,
+            181
+          ],
+          "confidence": 41.0
+        },
+        {
+          "text": "DICH NGHIA:",
+          "bbox": [
+            381,
+            326,
+            801,
+            381
+          ],
+          "confidence": 93.82
+        },
+        {
+          "text": "Hỏi rằng : Sao gọi là đạo ? Đạo giống như cái gì ?",
+          "bbox": [
+            382,
+            445,
+            2040,
+            522
+          ],
+          "confidence": 95.35
+        },
+        {
+          "text": "Mâu Từ đáp : Nói đạo, tức là nói về sự đặt dân. Dắt",
+          "bbox": [
+            381,
+            576,
+            2420,
+            646
+          ],
+          "confidence": 83.91
+        },
+        {
+          "text": "dẫn người ta đi tới chỗ vô vi. Nhưng đặt mà không có gì",
+          "bbox": [
+            260,
+            672,
+            2172,
+            749
+          ],
+          "confidence": 89.07
+        },
+        {
+          "text": "Ở phía trước, dân mà không có gì ở phía sau, đưa lên mà",
+          "bbox": [
+            257,
+            767,
+            2174,
+            843
+          ],
+          "confidence": 96.92
+        },
+        {
+          "text": "không có gì ở phía trên, đè xuống mà không có gì ở phía",
+          "bbox": [
+            257,
+            860,
+            2175,
+            940
+          ],
+          "confidence": 92.74
+        },
+        {
+          "text": "dưới. Nhìn không thấy hình, nghe không thấy tiếng.",
+          "bbox": [
+            260,
+            954,
+            2175,
+            1032
+          ],
+          "confidence": 97.69
+        },
+        {
+          "text": "Bốn phương là to rộng, mà nó còn bao trùm (36) bên",
+          "bbox": [
+            260,
+            1049,
+            2174,
+            1117
+          ],
+          "confidence": 95.51
+        },
+        {
+          "text": "ngoài ; tỏ hào là bé nhỏ, mà nó còn lot thôm (37) bên",
+          "bbox": [
+            259,
+            1137,
+            2174,
+            1210
+          ],
+          "confidence": 90.22
+        },
+        {
+          "text": "trong. Cho nên goi la dao.",
+          "bbox": [
+            259,
+            1254,
+            1091,
+            1300
+          ],
+          "confidence": 95.12
+        },
+        {
+          "text": "CHU THICH:",
+          "bbox": [
+            382,
+            1474,
+            774,
+            1531
+          ],
+          "confidence": 93.73
+        },
+        {
+          "text": "(36) Nguyên nghĩa là cái giải buộc.",
+          "bbox": [
+            260,
+            1598,
+            1300,
+            1658
+          ],
+          "confidence": 97.77
+        },
+        {
+          "text": "(37) Nguyên nghĩa là tiếng loc cọc của xe.",
+          "bbox": [
+            260,
+            1721,
+            2421,
+            1783
+          ],
+          "confidence": 94.21
+        },
+        {
+          "text": "問曰：孔子以五經爲道教，可拱而誦，履而",
+          "bbox": [
+            392,
+            2161,
+            2168,
+            2247
+          ],
+          "confidence": 98.42
+        },
+        {
+          "text": "行。今子說道虛無，怳惚不見，其意不指其",
+          "bbox": [
+            263,
+            2292,
+            2173,
+            2378
+          ],
+          "confidence": 96.35
+        },
+        {
+          "text": "事.何與聖人言異乎?",
+          "bbox": [
+            269,
+            2418,
+            1071,
+            2498
+          ],
+          "confidence": 88.09
+        },
+        {
+          "text": "牟子曰：不可以所習爲重，所希爲輕；或於外",
+          "bbox": [
+            395,
+            2587,
+            2175,
+            2675
+          ],
+          "confidence": 98.96
+        },
+        {
+          "text": "類，失於中情。立事不失道德，猶調弦不失宮",
+          "bbox": [
+            270,
+            2717,
+            2175,
+            2802
+          ],
+          "confidence": 99.02
+        },
+        {
+          "text": "商。天道法四时，人道法五常。老子曰：“有物",
+          "bbox": [
+            275,
+            2842,
+            2182,
+            2928
+          ],
+          "confidence": 95.43
+        },
+        {
+          "text": "混成，先天地生，可以爲天下母，吾不知其名，強",
+          "bbox": [
+            273,
+            2971,
+            2475,
+            3058
+          ],
+          "confidence": 97.15
+        },
+        {
+          "text": "字之曰道”。道之爲物，居家可以事親，宰國可",
+          "bbox": [
+            278,
+            3096,
+            2374,
+            3181
+          ],
+          "confidence": 95.42
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          3509
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 31.969,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              261,
+              58,
+              1806,
+              129
+            ],
+            "generated_text": "Sưu tấm và khảo luận tác phẩm chủ Hán của người Việt Nam trước TK 10",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 1.708,
+            "confidence": 94.48,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              244,
+              147,
+              2181,
+              181
+            ],
+            "generated_text": "：",
+            "n_lines": 1,
+            "tokens": 2,
+            "seconds": 0.489,
+            "confidence": 41.0,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              381,
+              326,
+              801,
+              381
+            ],
+            "generated_text": "DICH NGHIA:",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.796,
+            "confidence": 93.82,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              382,
+              445,
+              2040,
+              522
+            ],
+            "generated_text": "Hỏi rằng : Sao gọi là đạo ? Đạo giống như cái gì ?",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.498,
+            "confidence": 95.35,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              381,
+              576,
+              2420,
+              646
+            ],
+            "generated_text": "Mâu Từ đáp : Nói đạo, tức là nói về sự đặt dân. Dắt",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 1.914,
+            "confidence": 83.91,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              260,
+              672,
+              2172,
+              749
+            ],
+            "generated_text": "dẫn người ta đi tới chỗ vô vi. Nhưng đặt mà không có gì",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.484,
+            "confidence": 89.07,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              257,
+              767,
+              2174,
+              843
+            ],
+            "generated_text": "Ở phía trước, dân mà không có gì ở phía sau, đưa lên mà",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.616,
+            "confidence": 96.92,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              257,
+              860,
+              2175,
+              940
+            ],
+            "generated_text": "không có gì ở phía trên, đè xuống mà không có gì ở phía",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.561,
+            "confidence": 92.74,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              260,
+              954,
+              2175,
+              1032
+            ],
+            "generated_text": "dưới. Nhìn không thấy hình, nghe không thấy tiếng.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.313,
+            "confidence": 97.69,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              260,
+              1049,
+              2174,
+              1117
+            ],
+            "generated_text": "Bốn phương là to rộng, mà nó còn bao trùm (36) bên",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.725,
+            "confidence": 95.51,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              259,
+              1137,
+              2174,
+              1210
+            ],
+            "generated_text": "ngoài ; tỏ hào là bé nhỏ, mà nó còn lot thôm (37) bên",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 1.839,
+            "confidence": 90.22,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              259,
+              1254,
+              1091,
+              1300
+            ],
+            "generated_text": "trong. Cho nên goi la dao.",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.971,
+            "confidence": 95.12,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              382,
+              1474,
+              774,
+              1531
+            ],
+            "generated_text": "CHU THICH:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.686,
+            "confidence": 93.73,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              260,
+              1598,
+              1300,
+              1658
+            ],
+            "generated_text": "(36) Nguyên nghĩa là cái giải buộc.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.29,
+            "confidence": 97.77,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              260,
+              1721,
+              2421,
+              1783
+            ],
+            "generated_text": "(37) Nguyên nghĩa là tiếng loc cọc của xe.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.48,
+            "confidence": 94.21,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              392,
+              2161,
+              2168,
+              2247
+            ],
+            "generated_text": "問曰：孔子以五經爲道教，可拱而誦，履而",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.408,
+            "confidence": 98.42,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              263,
+              2292,
+              2173,
+              2378
+            ],
+            "generated_text": "行。今子說道虛無，怳惚不見，其意不指其",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.72,
+            "confidence": 96.35,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              269,
+              2418,
+              1071,
+              2498
+            ],
+            "generated_text": "事.何與聖人言異乎?",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.987,
+            "confidence": 88.09,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              395,
+              2587,
+              2175,
+              2675
+            ],
+            "generated_text": "牟子曰：不可以所習爲重，所希爲輕；或於外",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.491,
+            "confidence": 98.96,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              270,
+              2717,
+              2175,
+              2802
+            ],
+            "generated_text": "類，失於中情。立事不失道德，猶調弦不失宮",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.48,
+            "confidence": 99.02,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              275,
+              2842,
+              2182,
+              2928
+            ],
+            "generated_text": "商。天道法四时，人道法五常。老子曰：“有物",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.42,
+            "confidence": 95.43,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              273,
+              2971,
+              2475,
+              3058
+            ],
+            "generated_text": "混成，先天地生，可以爲天下母，吾不知其名，強",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.574,
+            "confidence": 97.15,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              278,
+              3096,
+              2374,
+              3181
+            ],
+            "generated_text": "字之曰道”。道之爲物，居家可以事親，宰國可",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.517,
+            "confidence": 95.42,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              422,
+              1115,
+              1060,
+              1127
+            ],
+            "ink": 604
+          },
+          {
+            "box": [
+              267,
+              1236,
+              995,
+              1255
+            ],
+            "ink": 1114
+          },
+          {
+            "box": [
+              395,
+              1301,
+              1021,
+              1310
+            ],
+            "ink": 416
+          },
+          {
+            "box": [
+              269,
+              1655,
+              1244,
+              1669
+            ],
+            "ink": 782
+          },
+          {
+            "box": [
+              270,
+              1779,
+              2414,
+              1793
+            ],
+            "ink": 789
+          },
+          {
+            "box": [
+              2066,
+              3306,
+              2190,
+              3319
+            ],
+            "ink": 781
+          },
+          {
+            "box": [
+              286,
+              3318,
+              2187,
+              3345
+            ],
+            "ink": 1971
+          },
+          {
+            "box": [
+              284,
+              3349,
+              2101,
+              3364
+            ],
+            "ink": 985
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

@@ -1,0 +1,241 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "qwen",
+  "page": 449,
+  "runs": [
+    {
+      "key": "cfde4decc2e6ca89ba3cea555df84f5abcb8e6301fb52cc05df4e291b6854456",
+      "parameters": {
+        "image_sha256": "01c2accf03b3f14384dab8073ecff872399b9704e341fa3da2ba4c7dae2e8c3d",
+        "engine": {
+          "name": "qwen",
+          "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "model_revision": "main",
+          "transformers_version": "4.57.6",
+          "torch_version": "2.5.1+cu121",
+          "cuda_version": "12.1",
+          "bitsandbytes_version": "0.50.2",
+          "quantization": {
+            "load_in_4bit": true,
+            "quant_type": "nf4",
+            "double_quant": true,
+            "compute_dtype": "float16"
+          },
+          "mode": "all",
+          "min_pixels": 50176,
+          "max_pixels": 802816,
+          "band_inches": 2.0,
+          "max_new_tokens": 768,
+          "repetition_penalty": 1.05,
+          "adapter_version": 3,
+          "prompt_version": 3,
+          "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74"
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T21:27:18+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_449.png",
+      "image_size": [
+        2569,
+        3199
+      ],
+      "crop_box": [
+        0,
+        0,
+        2569,
+        3199
+      ],
+      "lines": [
+        {
+          "text": "NGÔ THÌ NHẬM TOÀN TẬP - TẬP III",
+          "bbox": [
+            7,
+            0,
+            2102,
+            162
+          ],
+          "confidence": 90.0
+        },
+        {
+          "text": "13. 又一道",
+          "bbox": [
+            7,
+            162,
+            2102,
+            325
+          ],
+          "confidence": 90.0
+        },
+        {
+          "text": "(按定啓關日期。國王稟)",
+          "bbox": [
+            7,
+            325,
+            2102,
+            487
+          ],
+          "confidence": 90.0
+        },
+        {
+          "text": "乾隆五十四年八月十三日，接到本國昇龍城留守潘文璘啓稱：於本月初二日，接見諒山鎮目飛遞公文一甬，內開：於七月二十六日大人接奉撫部院憲札開，接奉制憲大人來札，欽奉大皇帝諭旨錫封，已派委大員資來奉",
+          "bbox": [
+            380,
+            595,
+            2097,
+            1097
+          ],
+          "confidence": 94.45
+        },
+        {
+          "text": "敕書，前赴國城宣示，並奉查照本國公館需用，夫馬驛遞，與向來冊封典禮，伺候章程，一切事宜，列摺回禀，以憑轉遞查等情。",
+          "bbox": [
+            392,
+            1105,
+            2097,
+            1637
+          ],
+          "confidence": 89.25
+        },
+        {
+          "text": "仆自初秋，往治义安新邑，以其地为本国土中，南达富春，足以控扼诸蛮，北达昇龙，足以号令诸镇，程途里路，往来适均，国人亦便于鸠集。见在工築未竣，其富城昇龙二城，亦并存为南北二府。盖自念本",
+          "bbox": [
+            393,
+            1702,
+            2096,
+            2175
+          ],
+          "confidence": 89.21
+        },
+        {
+          "text": "國既屬天朝南服籬，敢不料里綢繆，以稱一方保障。茲聞有恩封寵命，將事大員到關，日期在邇，治邑一事，暫且停緩，仍飭下將士前赴昇龍，準備侯遞典禮。惟本國氣候，清華以北潦盛於夏，以南潦盛於秋。僕以八月夏旬，自乂安發行，跋涉山溪，過水疊",
+          "bbox": [
+            395,
+            2239,
+            2098,
+            2969
+          ],
+          "confidence": 91.64
+        }
+      ],
+      "raw": {
+        "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+        "model_revision": "main",
+        "mode": "all",
+        "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74",
+        "dpi": 300,
+        "image_size": [
+          2569,
+          3199
+        ],
+        "band_target_height": 600,
+        "bbox_granularity": "band_even_split",
+        "max_new_tokens": 768,
+        "max_pixels": 802816,
+        "inference_seconds": 27.299,
+        "bands": [
+          {
+            "band": 1,
+            "y0": 4,
+            "y1": 520,
+            "ink_box": [
+              7,
+              0,
+              2102,
+              487
+            ],
+            "generated_text": "NGÔ THÌ NHẬM TOÀN TẬP - TẬP III\n\n13. 又一道\n(按定啓關日期。國王稟)",
+            "n_lines": 3,
+            "tokens": 40,
+            "seconds": 2.99,
+            "confidence": 90.0,
+            "flags": []
+          },
+          {
+            "band": 2,
+            "y0": 520,
+            "y1": 1101,
+            "ink_box": [
+              380,
+              595,
+              2097,
+              1097
+            ],
+            "generated_text": "乾隆五十四年八月十三日，接到本國昇龍城留守潘文璘啓稱：於本月初二日，接見諒山鎮目飛遞公文一甬，內開：於七月二十六日大人接奉撫部院憲札開，接奉制憲大人來札，欽奉大皇帝諭旨錫封，已派委大員資來奉",
+            "n_lines": 1,
+            "tokens": 93,
+            "seconds": 6.388,
+            "confidence": 94.45,
+            "flags": []
+          },
+          {
+            "band": 3,
+            "y0": 1101,
+            "y1": 1670,
+            "ink_box": [
+              392,
+              1105,
+              2097,
+              1637
+            ],
+            "generated_text": "敕書，前赴國城宣示，並奉查照本國公館需用，夫馬驛遞，與向來冊封典禮，伺候章程，一切事宜，列摺回禀，以憑轉遞查等情。",
+            "n_lines": 1,
+            "tokens": 58,
+            "seconds": 4.131,
+            "confidence": 89.25,
+            "flags": []
+          },
+          {
+            "band": 4,
+            "y0": 1670,
+            "y1": 2207,
+            "ink_box": [
+              393,
+              1702,
+              2096,
+              2175
+            ],
+            "generated_text": "仆自初秋，往治义安新邑，以其地为本国土中，南达富春，足以控扼诸蛮，北达昇龙，足以号令诸镇，程途里路，往来适均，国人亦便于鸠集。见在工築未竣，其富城昇龙二城，亦并存为南北二府。盖自念本",
+            "n_lines": 1,
+            "tokens": 86,
+            "seconds": 5.876,
+            "confidence": 89.21,
+            "flags": []
+          },
+          {
+            "band": 5,
+            "y0": 2207,
+            "y1": 2965,
+            "ink_box": [
+              395,
+              2239,
+              2098,
+              2969
+            ],
+            "generated_text": "國既屬天朝南服籬，敢不料里綢繆，以稱一方保障。茲聞有恩封寵命，將事大員到關，日期在邇，治邑一事，暫且停緩，仍飭下將士前赴昇龍，準備侯遞典禮。惟本國氣候，清華以北潦盛於夏，以南潦盛於秋。僕以八月夏旬，自乂安發行，跋涉山溪，過水疊",
+            "n_lines": 1,
+            "tokens": 117,
+            "seconds": 7.884,
+            "confidence": 91.64,
+            "flags": []
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "61cbea5c0055c260ccfc12f884e0febca7b2783b",
+        "git_describe": "61cbea5",
+        "git_dirty": true,
+        "gpu": "NVIDIA L4",
+        "dtype": "float16",
+        "adapter_version": 3
+      }
+    }
+  ]
+}

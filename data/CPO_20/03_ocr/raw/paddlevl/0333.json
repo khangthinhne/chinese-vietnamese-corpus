@@ -1,0 +1,832 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_20",
+  "engine": "paddlevl",
+  "page": 333,
+  "runs": [
+    {
+      "key": "e526053095b87150e5b9321e39e35c446c8b85e077779b01d1400171f7168c13",
+      "parameters": {
+        "image_sha256": "91664ece54ed8be62d0aae40b01d332c932d44cd85212a4eec929bb915473643",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T06:56:31+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_333.png",
+      "image_size": [
+        1820,
+        2814
+      ],
+      "crop_box": [
+        0,
+        0,
+        1820,
+        2814
+      ],
+      "lines": [
+        {
+          "text": "Những Ngọc Lan vân chưa kén được ai vừa lòng.",
+          "bbox": [
+            181,
+            274,
+            1171,
+            319
+          ],
+          "confidence": 90.45
+        },
+        {
+          "text": "Đến nay, Thị Huệ câu hôn cho em trai, chúa sợ mất lòng à ta.",
+          "bbox": [
+            259,
+            339,
+            1614,
+            394
+          ],
+          "confidence": 91.55
+        },
+        {
+          "text": "bất đắc dĩ mà phải gượng nhận lời.",
+          "bbox": [
+            179,
+            404,
+            904,
+            448
+          ],
+          "confidence": 87.06
+        },
+        {
+          "text": "Lại nói, Đăng Mâu Lân này vốn là một tên hung bao; từ khi Thi",
+          "bbox": [
+            259,
+            471,
+            1614,
+            524
+          ],
+          "confidence": 94.4
+        },
+        {
+          "text": "Huệ được chúa yêu dấu Lân lại càng ý vào thế chi để làm những việc",
+          "bbox": [
+            177,
+            531,
+            1614,
+            583
+          ],
+          "confidence": 91.72
+        },
+        {
+          "text": "càn rỡ. Hết thảy áo quần, xe kiệu của y, nhất nhất đều ráp kiểu theo",
+          "bbox": [
+            177,
+            589,
+            1614,
+            641
+          ],
+          "confidence": 91.8
+        },
+        {
+          "text": "đúng như của vua chúa. Thường ngày, Lân vẫn đem theo vài chúc tên",
+          "bbox": [
+            176,
+            649,
+            1614,
+            701
+          ],
+          "confidence": 91.51
+        },
+        {
+          "text": "tay sai, cầm gươm vác giáo đi nghênh ngang khắp kinh áp. Hề gặp xe",
+          "bbox": [
+            176,
+            712,
+            1613,
+            761
+          ],
+          "confidence": 93.44
+        },
+        {
+          "text": "kiệu, bất kỳ là của đám quan quân nào, Lân cũng đều cả khía đánh",
+          "bbox": [
+            174,
+            767,
+            1613,
+            819
+          ],
+          "confidence": 93.87
+        },
+        {
+          "text": "nhau làm cho họ nhục nhã, rồi lấy thế làm thích thú. Gặp đàn bà con",
+          "bbox": [
+            174,
+            826,
+            1613,
+            877
+          ],
+          "confidence": 98.52
+        },
+        {
+          "text": "gái giữa đường, hẽ người nào trông vừa mất, tức thì Lân sai tay chân",
+          "bbox": [
+            173,
+            889,
+            1611,
+            936
+          ],
+          "confidence": 87.05
+        },
+        {
+          "text": "quây màn trưởng ngay tại chỗ, rồi lôi người ấy vào hiếp liền Ai",
+          "bbox": [
+            173,
+            948,
+            1610,
+            995
+          ],
+          "confidence": 91.29
+        },
+        {
+          "text": "không chịu, Lân xéo luôn đấu vú. Chồng hoặc cha kẻ bị nan, nếu dám",
+          "bbox": [
+            173,
+            1003,
+            1610,
+            1053
+          ],
+          "confidence": 89.1
+        },
+        {
+          "text": "hé răng kêu ca, lập tức Lân sai quân văn gây răng, hoặc cũng có",
+          "bbox": [
+            171,
+            1064,
+            1608,
+            1116
+          ],
+          "confidence": 95.7
+        },
+        {
+          "text": "người bị đánh đen chết. Người thiên hạ sợ Lân hơn sợ beo sói.",
+          "bbox": [
+            171,
+            1122,
+            1455,
+            1169
+          ],
+          "confidence": 89.65
+        },
+        {
+          "text": "Chúa cũng biết thế, nên tuy đã trót nhận lời gả công chúa cho",
+          "bbox": [
+            251,
+            1194,
+            1607,
+            1242
+          ],
+          "confidence": 93.91
+        },
+        {
+          "text": "Lân mà trong bụng vấn còn có ý thương tiếc. Và lại chúa nghĩ công",
+          "bbox": [
+            170,
+            1256,
+            1608,
+            1302
+          ],
+          "confidence": 90.63
+        },
+        {
+          "text": "chúa người yếu ốt, mảnh khảnh, không thể chịu nổi một tên đàn ông",
+          "bbox": [
+            168,
+            1311,
+            1607,
+            1358
+          ],
+          "confidence": 90.08
+        },
+        {
+          "text": "cường bạo như thế. Nên đến ngày về nhà Lân, chúa lấy cơ ràng công",
+          "bbox": [
+            168,
+            1370,
+            1605,
+            1417
+          ],
+          "confidence": 89.57
+        },
+        {
+          "text": "chúa chưa từng lên đầu lên sỏi, để không cho phép Lân hợp cân",
+          "bbox": [
+            167,
+            1430,
+            1600,
+            1475
+          ],
+          "confidence": 89.53
+        },
+        {
+          "text": "Rôi chúa sai viên quan a bão cùng nhiều thì nữ đi theo để hộ vệ công",
+          "bbox": [
+            167,
+            1489,
+            1605,
+            1533
+          ],
+          "confidence": 82.19
+        },
+        {
+          "text": "chúa. Tiếp đó, chúa lại phải thêm cả viên nội sai là Sử Trung hầu",
+          "bbox": [
+            165,
+            1545,
+            1602,
+            1591
+          ],
+          "confidence": 98.58
+        },
+        {
+          "text": "đến làm giảm chế, không cho Lân xâm phạm tới công chúa.",
+          "bbox": [
+            165,
+            1605,
+            1394,
+            1649
+          ],
+          "confidence": 90.17
+        },
+        {
+          "text": "Ai ăn, cô gái không e sợ,",
+          "bbox": [
+            387,
+            1759,
+            903,
+            1789
+          ],
+          "confidence": 76.38
+        },
+        {
+          "text": "Hoan hý, chàng trai lại đồ dang.",
+          "bbox": [
+            388,
+            1806,
+            1061,
+            1848
+          ],
+          "confidence": 75.65
+        },
+        {
+          "text": "Chưa biết việc tối thế nào? Hãy xem hỏi sau phân giải.",
+          "bbox": [
+            243,
+            1876,
+            1379,
+            1919
+          ],
+          "confidence": 90.2
+        },
+        {
+          "text": "也",
+          "bbox": [
+            265,
+            2431,
+            745,
+            2446
+          ],
+          "confidence": 18.41
+        },
+        {
+          "text": "1. Theo lẽ xưa, đêm tân hôn vợ chồng uống chung một chén rượu, gọi là hợp cân.",
+          "bbox": [
+            238,
+            2470,
+            1569,
+            2508
+          ],
+          "confidence": 86.91
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          1820,
+          2814
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 17.57,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              181,
+              274,
+              1171,
+              319
+            ],
+            "generated_text": "Những Ngọc Lan vân chưa kén được ai vừa lòng.",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.601,
+            "confidence": 90.45,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              259,
+              339,
+              1614,
+              394
+            ],
+            "generated_text": "Đến nay, Thị Huệ câu hôn cho em trai, chúa sợ mất lòng à ta.",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 0.76,
+            "confidence": 91.55,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              179,
+              404,
+              904,
+              448
+            ],
+            "generated_text": "bất đắc dĩ mà phải gượng nhận lời.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.432,
+            "confidence": 87.06,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              259,
+              471,
+              1614,
+              524
+            ],
+            "generated_text": "Lại nói, Đăng Mâu Lân này vốn là một tên hung bao; từ khi Thi",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.617,
+            "confidence": 94.4,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              177,
+              531,
+              1614,
+              583
+            ],
+            "generated_text": "Huệ được chúa yêu dấu Lân lại càng ý vào thế chi để làm những việc",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.623,
+            "confidence": 91.72,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              177,
+              589,
+              1614,
+              641
+            ],
+            "generated_text": "càn rỡ. Hết thảy áo quần, xe kiệu của y, nhất nhất đều ráp kiểu theo",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 0.78,
+            "confidence": 91.8,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              176,
+              649,
+              1614,
+              701
+            ],
+            "generated_text": "đúng như của vua chúa. Thường ngày, Lân vẫn đem theo vài chúc tên",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.686,
+            "confidence": 91.51,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              176,
+              712,
+              1613,
+              761
+            ],
+            "generated_text": "tay sai, cầm gươm vác giáo đi nghênh ngang khắp kinh áp. Hề gặp xe",
+            "n_lines": 1,
+            "tokens": 32,
+            "seconds": 0.868,
+            "confidence": 93.44,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              174,
+              767,
+              1613,
+              819
+            ],
+            "generated_text": "kiệu, bất kỳ là của đám quan quân nào, Lân cũng đều cả khía đánh",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.66,
+            "confidence": 93.87,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              174,
+              826,
+              1613,
+              877
+            ],
+            "generated_text": "nhau làm cho họ nhục nhã, rồi lấy thế làm thích thú. Gặp đàn bà con",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 0.814,
+            "confidence": 98.52,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              173,
+              889,
+              1611,
+              936
+            ],
+            "generated_text": "gái giữa đường, hẽ người nào trông vừa mất, tức thì Lân sai tay chân",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.661,
+            "confidence": 87.05,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              173,
+              948,
+              1610,
+              995
+            ],
+            "generated_text": "quây màn trưởng ngay tại chỗ, rồi lôi người ấy vào hiếp liền Ai",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.702,
+            "confidence": 91.29,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              173,
+              1003,
+              1610,
+              1053
+            ],
+            "generated_text": "không chịu, Lân xéo luôn đấu vú. Chồng hoặc cha kẻ bị nan, nếu dám",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 0.74,
+            "confidence": 89.1,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              171,
+              1064,
+              1608,
+              1116
+            ],
+            "generated_text": "hé răng kêu ca, lập tức Lân sai quân văn gây răng, hoặc cũng có",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.663,
+            "confidence": 95.7,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              171,
+              1122,
+              1455,
+              1169
+            ],
+            "generated_text": "người bị đánh đen chết. Người thiên hạ sợ Lân hơn sợ beo sói.",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 0.699,
+            "confidence": 89.65,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              251,
+              1194,
+              1607,
+              1242
+            ],
+            "generated_text": "Chúa cũng biết thế, nên tuy đã trót nhận lời gả công chúa cho",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.555,
+            "confidence": 93.91,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              170,
+              1256,
+              1608,
+              1302
+            ],
+            "generated_text": "Lân mà trong bụng vấn còn có ý thương tiếc. Và lại chúa nghĩ công",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.621,
+            "confidence": 90.63,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              168,
+              1311,
+              1607,
+              1358
+            ],
+            "generated_text": "chúa người yếu ốt, mảnh khảnh, không thể chịu nổi một tên đàn ông",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.662,
+            "confidence": 90.08,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              168,
+              1370,
+              1605,
+              1417
+            ],
+            "generated_text": "cường bạo như thế. Nên đến ngày về nhà Lân, chúa lấy cơ ràng công",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.636,
+            "confidence": 89.57,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              167,
+              1430,
+              1600,
+              1475
+            ],
+            "generated_text": "chúa chưa từng lên đầu lên sỏi, để không cho phép Lân hợp cân",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.598,
+            "confidence": 89.53,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              167,
+              1489,
+              1605,
+              1533
+            ],
+            "generated_text": "Rôi chúa sai viên quan a bão cùng nhiều thì nữ đi theo để hộ vệ công",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.578,
+            "confidence": 82.19,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              165,
+              1545,
+              1602,
+              1591
+            ],
+            "generated_text": "chúa. Tiếp đó, chúa lại phải thêm cả viên nội sai là Sử Trung hầu",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.641,
+            "confidence": 98.58,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              165,
+              1605,
+              1394,
+              1649
+            ],
+            "generated_text": "đến làm giảm chế, không cho Lân xâm phạm tới công chúa.",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.55,
+            "confidence": 90.17,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              387,
+              1759,
+              903,
+              1789
+            ],
+            "generated_text": "Ai ăn, cô gái không e sợ,",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.362,
+            "confidence": 76.38,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              388,
+              1806,
+              1061,
+              1848
+            ],
+            "generated_text": "Hoan hý, chàng trai lại đồ dang.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.412,
+            "confidence": 75.65,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              243,
+              1876,
+              1379,
+              1919
+            ],
+            "generated_text": "Chưa biết việc tối thế nào? Hãy xem hỏi sau phân giải.",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.612,
+            "confidence": 90.2,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              265,
+              2431,
+              745,
+              2446
+            ],
+            "generated_text": "也",
+            "n_lines": 1,
+            "tokens": 2,
+            "seconds": 0.182,
+            "confidence": 18.41,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              238,
+              2470,
+              1569,
+              2508
+            ],
+            "generated_text": "1. Theo lẽ xưa, đêm tân hôn vợ chồng uống chung một chén rượu, gọi là hợp cân.",
+            "n_lines": 1,
+            "tokens": 37,
+            "seconds": 0.852,
+            "confidence": 86.91,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              256,
+              1684,
+              417,
+              1697
+            ],
+            "ink": 651
+          },
+          {
+            "box": [
+              251,
+              1694,
+              415,
+              1713
+            ],
+            "ink": 898
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      }
+    }
+  ]
+}

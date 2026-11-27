@@ -1,0 +1,629 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 584,
+  "runs": [
+    {
+      "key": "fc7b28fe63a940f222c7fd528c67aa1530bc8d7920e3360b35a1467ac1f8f5a5",
+      "parameters": {
+        "image_sha256": "103756f34d7bfd09387b00168393c66860581d949cb4580939b8016eba686b0c",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T18:32:47+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_584.png",
+      "image_size": [
+        2613,
+        3236
+      ],
+      "crop_box": [
+        0,
+        0,
+        2613,
+        3236
+      ],
+      "lines": [
+        {
+          "text": "ngothinhamle1.pdf",
+          "bbox": [
+            7,
+            19,
+            286,
+            45
+          ],
+          "confidence": 95.75
+        },
+        {
+          "text": "BANG GIAO HÀO THOAI",
+          "bbox": [
+            1577,
+            205,
+            2096,
+            245
+          ],
+          "confidence": 88.41
+        },
+        {
+          "text": "中堂福公爺訓示法度，惟下邦界在外服，事事簡",
+          "bbox": [
+            399,
+            297,
+            2089,
+            362
+          ],
+          "confidence": 99.78
+        },
+        {
+          "text": "樸，禮訓未閑，欽奉諭音：君前臣名之禮，不以內外間",
+          "bbox": [
+            391,
+            455,
+            2091,
+            520
+          ],
+          "confidence": 98.37
+        },
+        {
+          "text": "隔。聖謨洋洋，寶訓孔彰，二位中堂大人，宣揚而敷暢",
+          "bbox": [
+            396,
+            615,
+            2096,
+            679
+          ],
+          "confidence": 99.83
+        },
+        {
+          "text": "之，小番敢不服膺恪共侯度，庶幾永荷天恩，以仰答",
+          "bbox": [
+            392,
+            771,
+            2095,
+            835
+          ],
+          "confidence": 99.91
+        },
+        {
+          "text": "聖天子之休命。",
+          "bbox": [
+            396,
+            930,
+            1951,
+            988
+          ],
+          "confidence": 99.87
+        },
+        {
+          "text": "至如黎維祁，前經奏請，查尋眷屬之在本國者，起",
+          "bbox": [
+            483,
+            1097,
+            2096,
+            1163
+          ],
+          "confidence": 99.89
+        },
+        {
+          "text": "送北上，俾得一門團聚。欽奉聖旨放下，並承中堂公刊",
+          "bbox": [
+            394,
+            1240,
+            2095,
+            1307
+          ],
+          "confidence": 99.64
+        },
+        {
+          "text": "送告文，小番寔切查訪，而伊等内懷疑阻，卒無一人",
+          "bbox": [
+            394,
+            1385,
+            2099,
+            1449
+          ],
+          "confidence": 99.66
+        },
+        {
+          "text": "願送。今奉庭寄，遵旨諭知:近日維祁聽唆一案。上廑",
+          "bbox": [
+            394,
+            1526,
+            2094,
+            1591
+          ],
+          "confidence": 97.15
+        },
+        {
+          "text": "聖懷，其伊眷屬之難尋者，著小番無容查訪。",
+          "bbox": [
+            397,
+            1666,
+            1804,
+            1733
+          ],
+          "confidence": 99.96
+        },
+        {
+          "text": "仰惟大皇帝！仁至義盡，春溫秋肅，一以至公之道",
+          "bbox": [
+            483,
+            1822,
+            2098,
+            1888
+          ],
+          "confidence": 99.81
+        },
+        {
+          "text": "行之潤之以雨露，非私好也。鼓之以雷霆，非私惡",
+          "bbox": [
+            380,
+            1965,
+            2093,
+            2030
+          ],
+          "confidence": 99.9
+        },
+        {
+          "text": "也，聖人之喜怒以天，敷闢榮枯，咸其自取而已！小",
+          "bbox": [
+            394,
+            2108,
+            2091,
+            2172
+          ],
+          "confidence": 99.52
+        },
+        {
+          "text": "番與維祁尋釁，寔不敢預知其人之然否？而幸仇者之",
+          "bbox": [
+            399,
+            2250,
+            2098,
+            2316
+          ],
+          "confidence": 99.8
+        },
+        {
+          "text": "哉。惟曰：大皇帝受天命以正享國，故承天意以正行",
+          "bbox": [
+            397,
+            2394,
+            2099,
+            2459
+          ],
+          "confidence": 99.32
+        },
+        {
+          "text": "事，不能云云譽大也。小番莊訟庭寄，節次宣諭周詳。",
+          "bbox": [
+            397,
+            2536,
+            2066,
+            2599
+          ],
+          "confidence": 99.91
+        },
+        {
+          "text": "夫！以外藩遼遠，而閣老寄信前來，與督府大臣一",
+          "bbox": [
+            484,
+            2683,
+            2094,
+            2749
+          ],
+          "confidence": 99.71
+        },
+        {
+          "text": "例。竊思，本國自丁黎以後，不得列於內諸侯。今小番",
+          "bbox": [
+            397,
+            2821,
+            2092,
+            2887
+          ],
+          "confidence": 98.98
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2613,
+          3236
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 11.054,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              7,
+              19,
+              286,
+              45
+            ],
+            "generated_text": "ngothinhamle1.pdf",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.232,
+            "confidence": 95.75,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              1577,
+              205,
+              2096,
+              245
+            ],
+            "generated_text": "BANG GIAO HÀO THOAI",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.272,
+            "confidence": 88.41,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              393,
+              249,
+              2104,
+              263
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.067,
+            "confidence": 69.89,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              399,
+              297,
+              2089,
+              362
+            ],
+            "generated_text": "中堂福公爺訓示法度，惟下邦界在外服，事事簡",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.54,
+            "confidence": 99.78,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              391,
+              455,
+              2091,
+              520
+            ],
+            "generated_text": "樸，禮訓未閑，欽奉諭音：君前臣名之禮，不以內外間",
+            "n_lines": 1,
+            "tokens": 34,
+            "seconds": 0.744,
+            "confidence": 98.37,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              396,
+              615,
+              2096,
+              679
+            ],
+            "generated_text": "隔。聖謨洋洋，寶訓孔彰，二位中堂大人，宣揚而敷暢",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 0.664,
+            "confidence": 99.83,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              392,
+              771,
+              2095,
+              835
+            ],
+            "generated_text": "之，小番敢不服膺恪共侯度，庶幾永荷天恩，以仰答",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.608,
+            "confidence": 99.91,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              396,
+              930,
+              1951,
+              988
+            ],
+            "generated_text": "聖天子之休命。",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.189,
+            "confidence": 99.87,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              483,
+              1097,
+              2096,
+              1163
+            ],
+            "generated_text": "至如黎維祁，前經奏請，查尋眷屬之在本國者，起",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.536,
+            "confidence": 99.89,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              394,
+              1240,
+              2095,
+              1307
+            ],
+            "generated_text": "送北上，俾得一門團聚。欽奉聖旨放下，並承中堂公刊",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.575,
+            "confidence": 99.64,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              394,
+              1385,
+              2099,
+              1449
+            ],
+            "generated_text": "送告文，小番寔切查訪，而伊等内懷疑阻，卒無一人",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 0.64,
+            "confidence": 99.66,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              394,
+              1526,
+              2094,
+              1591
+            ],
+            "generated_text": "願送。今奉庭寄，遵旨諭知:近日維祁聽唆一案。上廑",
+            "n_lines": 1,
+            "tokens": 33,
+            "seconds": 0.718,
+            "confidence": 97.15,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              397,
+              1666,
+              1804,
+              1733
+            ],
+            "generated_text": "聖懷，其伊眷屬之難尋者，著小番無容查訪。",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.583,
+            "confidence": 99.96,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              483,
+              1822,
+              2098,
+              1888
+            ],
+            "generated_text": "仰惟大皇帝！仁至義盡，春溫秋肅，一以至公之道",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.549,
+            "confidence": 99.81,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              380,
+              1965,
+              2093,
+              2030
+            ],
+            "generated_text": "行之潤之以雨露，非私好也。鼓之以雷霆，非私惡",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.516,
+            "confidence": 99.9,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              394,
+              2108,
+              2091,
+              2172
+            ],
+            "generated_text": "也，聖人之喜怒以天，敷闢榮枯，咸其自取而已！小",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.576,
+            "confidence": 99.52,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              399,
+              2250,
+              2098,
+              2316
+            ],
+            "generated_text": "番與維祁尋釁，寔不敢預知其人之然否？而幸仇者之",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.627,
+            "confidence": 99.8,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              397,
+              2394,
+              2099,
+              2459
+            ],
+            "generated_text": "哉。惟曰：大皇帝受天命以正享國，故承天意以正行",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.52,
+            "confidence": 99.32,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              397,
+              2536,
+              2066,
+              2599
+            ],
+            "generated_text": "事，不能云云譽大也。小番莊訟庭寄，節次宣諭周詳。",
+            "n_lines": 1,
+            "tokens": 34,
+            "seconds": 0.746,
+            "confidence": 99.91,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              484,
+              2683,
+              2094,
+              2749
+            ],
+            "generated_text": "夫！以外藩遼遠，而閣老寄信前來，與督府大臣一",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.564,
+            "confidence": 99.71,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              397,
+              2821,
+              2092,
+              2887
+            ],
+            "generated_text": "例。竊思，本國自丁黎以後，不得列於內諸侯。今小番",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.585,
+            "confidence": 98.98,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "61cbea5c0055c260ccfc12f884e0febca7b2783b",
+        "git_describe": "61cbea5",
+        "git_dirty": true,
+        "gpu": "NVIDIA L4",
+        "dtype": "bfloat16",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

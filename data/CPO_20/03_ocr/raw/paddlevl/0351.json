@@ -1,0 +1,1014 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_20",
+  "engine": "paddlevl",
+  "page": 351,
+  "runs": [
+    {
+      "key": "d25b3a8945c32fdff2e8748eac0d7c36af37a6a0f1dc5b4eb084ee728b0c1fa6",
+      "parameters": {
+        "image_sha256": "230013d5d5fdfc112bfbbfaa8e42579b0fd8a1b79e59dd210ac03f4e8853a3cb",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T07:03:55+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_351.png",
+      "image_size": [
+        1821,
+        2814
+      ],
+      "crop_box": [
+        0,
+        0,
+        1821,
+        2814
+      ],
+      "lines": [
+        {
+          "text": "trời lại trong sáng, mọi người đều cho đó là cái điểm thái bình, thánh",
+          "bbox": [
+            154,
+            280,
+            1593,
+            326
+          ],
+          "confidence": 97.81
+        },
+        {
+          "text": "chúa. Kế qua người lại trên đường đều hý hững nói: “Chúa ta lập",
+          "bbox": [
+            134,
+            338,
+            1594,
+            385
+          ],
+          "confidence": 89.0
+        },
+        {
+          "text": "rối!\". Thế rối họ truyền miệng nhau mà reo mừng, kinh kỳ hôm ấy vì",
+          "bbox": [
+            156,
+            396,
+            1591,
+            443
+          ],
+          "confidence": 95.49
+        },
+        {
+          "text": "thể phải nghi phiên chơ.",
+          "bbox": [
+            154,
+            463,
+            668,
+            498
+          ],
+          "confidence": 77.82
+        },
+        {
+          "text": "Quân lính đặt chiếc sập ngụ ở ngoài phủ đường, các quan đều dùng",
+          "bbox": [
+            235,
+            525,
+            1593,
+            574
+          ],
+          "confidence": 87.81
+        },
+        {
+          "text": "thế tử lên ngôi chúa. Cuộc lễ mừng xong rồi, các quan mới đem đạo",
+          "bbox": [
+            154,
+            585,
+            1593,
+            629
+          ],
+          "confidence": 92.31
+        },
+        {
+          "text": "sắc của nhà vua và tờ chỉ của thánh mẫu du ba quân về phò lập chúa,",
+          "bbox": [
+            156,
+            643,
+            1591,
+            687
+          ],
+          "confidence": 94.23
+        },
+        {
+          "text": "tối dán ở của các. Những tờ ấy đều là tam thời thảo ra, nhưng được",
+          "bbox": [
+            154,
+            703,
+            1593,
+            745
+          ],
+          "confidence": 90.38
+        },
+        {
+          "text": "goi là mệnh lệnh đinh sẵn.",
+          "bbox": [
+            156,
+            764,
+            1144,
+            803
+          ],
+          "confidence": 88.78
+        },
+        {
+          "text": "Hôm ấy, việc biến xảy ra, Thị Huệ khiếp sợ vô cùng, phải thay đổi",
+          "bbox": [
+            234,
+            833,
+            1591,
+            881
+          ],
+          "confidence": 97.48
+        },
+        {
+          "text": "quân áo, nấp ở hậu cung. Các gia thần của vị chúa nhỏ cũng đều chạy",
+          "bbox": [
+            154,
+            892,
+            1591,
+            942
+          ],
+          "confidence": 92.75
+        },
+        {
+          "text": "trốn hết cả. Riêng Quân Diễm bế chúa lánh đi ở một nơi khác, từ sớm",
+          "bbox": [
+            154,
+            951,
+            1591,
+            994
+          ],
+          "confidence": 91.13
+        },
+        {
+          "text": "đến tôi không được miếng gì vào mồm, chúa gào khóc nheo nhéo. Quận",
+          "bbox": [
+            154,
+            1011,
+            1589,
+            1059
+          ],
+          "confidence": 92.53
+        },
+        {
+          "text": "Diễm phải đọa: \"Không được khóc to, kẻo quân lính nghe tiếng, chúng",
+          "bbox": [
+            154,
+            1069,
+            1591,
+            1119
+          ],
+          "confidence": 89.4
+        },
+        {
+          "text": "nó kéo đến đánh chết!\" Chúa nhỏ sợ hãi mới không khóc nữa.",
+          "bbox": [
+            154,
+            1128,
+            1449,
+            1169
+          ],
+          "confidence": 96.69
+        },
+        {
+          "text": "Đến đêm, thành mẫu sai người đi tìm Thị Huệ cùng chúa nhỏ về",
+          "bbox": [
+            235,
+            1198,
+            1586,
+            1241
+          ],
+          "confidence": 94.62
+        },
+        {
+          "text": "cung, cho thay quân áo và ăn uống. Chúa nhỏ vì quá sợ hãi không ăn",
+          "bbox": [
+            152,
+            1258,
+            1586,
+            1299
+          ],
+          "confidence": 95.89
+        },
+        {
+          "text": "uống gì được bệnh càng thêm nguy kích.",
+          "bbox": [
+            152,
+            1317,
+            1083,
+            1364
+          ],
+          "confidence": 96.59
+        },
+        {
+          "text": "Chúa mới (Trình Tông) bèn treo giải hề người nào chữa khỏi",
+          "bbox": [
+            235,
+            1386,
+            1585,
+            1428
+          ],
+          "confidence": 91.18
+        },
+        {
+          "text": "bệnh cho chúa nhỏ thì thưởng một trăm lang bạc và phong cho tước",
+          "bbox": [
+            154,
+            1445,
+            1586,
+            1486
+          ],
+          "confidence": 94.31
+        },
+        {
+          "text": "hầu. Nhưng rốt cục không có ai nhận chữa.",
+          "bbox": [
+            152,
+            1503,
+            1035,
+            1545
+          ],
+          "confidence": 87.27
+        },
+        {
+          "text": "Hôm sau, chúa mới ra lệnh cho quan tham tụng Tứ Xuyên hầu,",
+          "bbox": [
+            234,
+            1573,
+            1585,
+            1616
+          ],
+          "confidence": 93.09
+        },
+        {
+          "text": "thay chúa nhỏ làm một tờ khái xin tự lui xướng làm vương đệ. Tờ",
+          "bbox": [
+            152,
+            1633,
+            1585,
+            1674
+          ],
+          "confidence": 89.85
+        },
+        {
+          "text": "khải làm xong, chúa mới giao xương cho các đình thần bàn bạc. Các",
+          "bbox": [
+            152,
+            1689,
+            1585,
+            1733
+          ],
+          "confidence": 88.95
+        },
+        {
+          "text": "quan xin giảng phong chúa nhỏ làm Cung quốc công. Được ít lâu sau",
+          "bbox": [
+            152,
+            1750,
+            1585,
+            1799
+          ],
+          "confidence": 97.24
+        },
+        {
+          "text": "thi Cung quốc công qua đời.",
+          "bbox": [
+            151,
+            1815,
+            721,
+            1849
+          ],
+          "confidence": 98.47
+        },
+        {
+          "text": "Lại nói, bọn quân lính tuy đã giết chết anh em Quân Huy, nhưng",
+          "bbox": [
+            234,
+            1876,
+            1586,
+            1925
+          ],
+          "confidence": 97.02
+        },
+        {
+          "text": "con giận vấn chưa hả. Phò lập thế tử Tông lên ngôi chúa xong xuôi, họ",
+          "bbox": [
+            151,
+            1936,
+            1583,
+            1983
+          ],
+          "confidence": 86.91
+        },
+        {
+          "text": "lại kéo đến quỳ ở trước mặt chúa xin phá tất cả dinh cơ của Quân Huy.",
+          "bbox": [
+            151,
+            1992,
+            1564,
+            2036
+          ],
+          "confidence": 92.43
+        },
+        {
+          "text": "Chúa ứng lợi ngay. Ba quân đều reo lớn;",
+          "bbox": [
+            232,
+            2065,
+            1058,
+            2108
+          ],
+          "confidence": 88.28
+        },
+        {
+          "text": "- Quan cứ lệnh, lính cứ truyền, mau đi phá hủy dinh Quận Huy",
+          "bbox": [
+            231,
+            2135,
+            1583,
+            2182
+          ],
+          "confidence": 93.97
+        },
+        {
+          "text": "ann em di",
+          "bbox": [
+            151,
+            2206,
+            367,
+            2229
+          ],
+          "confidence": 92.62
+        },
+        {
+          "text": "Chỉ trong chốc lát, nhà cửa của Quận Huy bị phá tan tành, một",
+          "bbox": [
+            232,
+            2263,
+            1653,
+            2306
+          ],
+          "confidence": 95.12
+        },
+        {
+          "text": "mảnh ngói cũng không còn. Rồi bọn quân lính càng thừa thế hoành",
+          "bbox": [
+            149,
+            2321,
+            1580,
+            2364
+          ],
+          "confidence": 95.7
+        },
+        {
+          "text": "hành. Phàm các quan văn võ hễ ai thuộc bè đảng Thị Huệ và Quận",
+          "bbox": [
+            149,
+            2377,
+            1579,
+            2421
+          ],
+          "confidence": 87.65
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          1821,
+          2814
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 21.6,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              154,
+              280,
+              1593,
+              326
+            ],
+            "generated_text": "trời lại trong sáng, mọi người đều cho đó là cái điểm thái bình, thánh",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.61,
+            "confidence": 97.81,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              134,
+              338,
+              1594,
+              385
+            ],
+            "generated_text": "chúa. Kế qua người lại trên đường đều hý hững nói: “Chúa ta lập",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.628,
+            "confidence": 89.0,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              156,
+              396,
+              1591,
+              443
+            ],
+            "generated_text": "rối!\". Thế rối họ truyền miệng nhau mà reo mừng, kinh kỳ hôm ấy vì",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 0.786,
+            "confidence": 95.49,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              154,
+              463,
+              668,
+              498
+            ],
+            "generated_text": "thể phải nghi phiên chơ.",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.335,
+            "confidence": 77.82,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              235,
+              525,
+              1593,
+              574
+            ],
+            "generated_text": "Quân lính đặt chiếc sập ngụ ở ngoài phủ đường, các quan đều dùng",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.647,
+            "confidence": 87.81,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              154,
+              585,
+              1593,
+              629
+            ],
+            "generated_text": "thế tử lên ngôi chúa. Cuộc lễ mừng xong rồi, các quan mới đem đạo",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 0.708,
+            "confidence": 92.31,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              156,
+              643,
+              1591,
+              687
+            ],
+            "generated_text": "sắc của nhà vua và tờ chỉ của thánh mẫu du ba quân về phò lập chúa,",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 0.716,
+            "confidence": 94.23,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              154,
+              703,
+              1593,
+              745
+            ],
+            "generated_text": "tối dán ở của các. Những tờ ấy đều là tam thời thảo ra, nhưng được",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.659,
+            "confidence": 90.38,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              156,
+              764,
+              1144,
+              803
+            ],
+            "generated_text": "goi là mệnh lệnh đinh sẵn.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.475,
+            "confidence": 88.78,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              234,
+              833,
+              1591,
+              881
+            ],
+            "generated_text": "Hôm ấy, việc biến xảy ra, Thị Huệ khiếp sợ vô cùng, phải thay đổi",
+            "n_lines": 1,
+            "tokens": 32,
+            "seconds": 0.756,
+            "confidence": 97.48,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              154,
+              892,
+              1591,
+              942
+            ],
+            "generated_text": "quân áo, nấp ở hậu cung. Các gia thần của vị chúa nhỏ cũng đều chạy",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 0.755,
+            "confidence": 92.75,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              154,
+              951,
+              1591,
+              994
+            ],
+            "generated_text": "trốn hết cả. Riêng Quân Diễm bế chúa lánh đi ở một nơi khác, từ sớm",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 0.76,
+            "confidence": 91.13,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              154,
+              1011,
+              1589,
+              1059
+            ],
+            "generated_text": "đến tôi không được miếng gì vào mồm, chúa gào khóc nheo nhéo. Quận",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 0.75,
+            "confidence": 92.53,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              154,
+              1069,
+              1591,
+              1119
+            ],
+            "generated_text": "Diễm phải đọa: \"Không được khóc to, kẻo quân lính nghe tiếng, chúng",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 0.729,
+            "confidence": 89.4,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              154,
+              1128,
+              1449,
+              1169
+            ],
+            "generated_text": "nó kéo đến đánh chết!\" Chúa nhỏ sợ hãi mới không khóc nữa.",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.675,
+            "confidence": 96.69,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              235,
+              1198,
+              1586,
+              1241
+            ],
+            "generated_text": "Đến đêm, thành mẫu sai người đi tìm Thị Huệ cùng chúa nhỏ về",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.607,
+            "confidence": 94.62,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              152,
+              1258,
+              1586,
+              1299
+            ],
+            "generated_text": "cung, cho thay quân áo và ăn uống. Chúa nhỏ vì quá sợ hãi không ăn",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 0.705,
+            "confidence": 95.89,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              152,
+              1317,
+              1083,
+              1364
+            ],
+            "generated_text": "uống gì được bệnh càng thêm nguy kích.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.457,
+            "confidence": 96.59,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              235,
+              1386,
+              1585,
+              1428
+            ],
+            "generated_text": "Chúa mới (Trình Tông) bèn treo giải hề người nào chữa khỏi",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.575,
+            "confidence": 91.18,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              154,
+              1445,
+              1586,
+              1486
+            ],
+            "generated_text": "bệnh cho chúa nhỏ thì thưởng một trăm lang bạc và phong cho tước",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.583,
+            "confidence": 94.31,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              152,
+              1503,
+              1035,
+              1545
+            ],
+            "generated_text": "hầu. Nhưng rốt cục không có ai nhận chữa.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.48,
+            "confidence": 87.27,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              234,
+              1573,
+              1585,
+              1616
+            ],
+            "generated_text": "Hôm sau, chúa mới ra lệnh cho quan tham tụng Tứ Xuyên hầu,",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.627,
+            "confidence": 93.09,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              152,
+              1633,
+              1585,
+              1674
+            ],
+            "generated_text": "thay chúa nhỏ làm một tờ khái xin tự lui xướng làm vương đệ. Tờ",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.656,
+            "confidence": 89.85,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              152,
+              1689,
+              1585,
+              1733
+            ],
+            "generated_text": "khải làm xong, chúa mới giao xương cho các đình thần bàn bạc. Các",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.677,
+            "confidence": 88.95,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              152,
+              1750,
+              1585,
+              1799
+            ],
+            "generated_text": "quan xin giảng phong chúa nhỏ làm Cung quốc công. Được ít lâu sau",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.616,
+            "confidence": 97.24,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              151,
+              1815,
+              721,
+              1849
+            ],
+            "generated_text": "thi Cung quốc công qua đời.",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.321,
+            "confidence": 98.47,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              234,
+              1876,
+              1586,
+              1925
+            ],
+            "generated_text": "Lại nói, bọn quân lính tuy đã giết chết anh em Quân Huy, nhưng",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.623,
+            "confidence": 97.02,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              151,
+              1936,
+              1583,
+              1983
+            ],
+            "generated_text": "con giận vấn chưa hả. Phò lập thế tử Tông lên ngôi chúa xong xuôi, họ",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 0.74,
+            "confidence": 86.91,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              151,
+              1992,
+              1564,
+              2036
+            ],
+            "generated_text": "lại kéo đến quỳ ở trước mặt chúa xin phá tất cả dinh cơ của Quân Huy.",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 0.694,
+            "confidence": 92.43,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              232,
+              2065,
+              1058,
+              2108
+            ],
+            "generated_text": "Chúa ứng lợi ngay. Ba quân đều reo lớn;",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.499,
+            "confidence": 88.28,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              231,
+              2135,
+              1583,
+              2182
+            ],
+            "generated_text": "- Quan cứ lệnh, lính cứ truyền, mau đi phá hủy dinh Quận Huy",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 0.707,
+            "confidence": 93.97,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 32,
+            "box": [
+              151,
+              2206,
+              367,
+              2229
+            ],
+            "generated_text": "ann em di",
+            "n_lines": 1,
+            "tokens": 4,
+            "seconds": 0.195,
+            "confidence": 92.62,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 33,
+            "box": [
+              232,
+              2263,
+              1653,
+              2306
+            ],
+            "generated_text": "Chỉ trong chốc lát, nhà cửa của Quận Huy bị phá tan tành, một",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.603,
+            "confidence": 95.12,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 34,
+            "box": [
+              149,
+              2321,
+              1580,
+              2364
+            ],
+            "generated_text": "mảnh ngói cũng không còn. Rồi bọn quân lính càng thừa thế hoành",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.597,
+            "confidence": 95.7,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 35,
+            "box": [
+              149,
+              2377,
+              1579,
+              2421
+            ],
+            "generated_text": "hành. Phàm các quan văn võ hễ ai thuộc bè đảng Thị Huệ và Quận",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.643,
+            "confidence": 87.65,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              220,
+              1295,
+              1516,
+              1305
+            ],
+            "ink": 508
+          },
+          {
+            "box": [
+              762,
+              1483,
+              1394,
+              1492
+            ],
+            "ink": 443
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      }
+    }
+  ]
+}

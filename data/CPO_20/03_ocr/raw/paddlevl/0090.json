@@ -954,6 +954,971 @@
         "any_truncated": false,
         "lang": "all"
       }
+    },
+    {
+      "key": "96e49e881dcc3a5d3c5c5f3f176de0ea98200eb2e2e33cb369bf2cc747d53de4",
+      "parameters": {
+        "image_sha256": "7c396dc06e4e30b41464206806fd7cfd53281793686779b4dbc6570e94837926",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "row_pitch_split": {
+            "lags": [
+              24,
+              240
+            ],
+            "min_ac": 0.15,
+            "tall": 1.6,
+            "valley_rel": 0.5
+          },
+          "deskew": [
+            2.5,
+            0.1,
+            0.2
+          ],
+          "char_lines_join": [
+            3,
+            2
+          ],
+          "adapter_version": 7
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-26T04:12:31+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_090.png",
+      "image_size": [
+        1865,
+        2834
+      ],
+      "crop_box": [
+        0,
+        0,
+        1865,
+        2834
+      ],
+      "lines": [
+        {
+          "text": "壬戌元日戎埸夜",
+          "bbox": [
+            718,
+            329,
+            1317,
+            402
+          ],
+          "confidence": 89.81
+        },
+        {
+          "text": "伯尔韦",
+          "bbox": [
+            902,
+            449,
+            1137,
+            480
+          ],
+          "confidence": 52.67
+        },
+        {
+          "text": "11-1 小しゃ す",
+          "bbox": [
+            908,
+            477,
+            1133,
+            497
+          ],
+          "confidence": 43.82
+        },
+        {
+          "text": "太簇嘘同煖律新",
+          "bbox": [
+            726,
+            593,
+            1314,
+            644
+          ],
+          "confidence": 96.27
+        },
+        {
+          "text": "海山一帶起茂歷",
+          "bbox": [
+            716,
+            666,
+            1320,
+            717
+          ],
+          "confidence": 81.64
+        },
+        {
+          "text": "翠花飭駕將衝陣",
+          "bbox": [
+            716,
+            733,
+            1496,
+            787
+          ],
+          "confidence": 99.54
+        },
+        {
+          "text": "火砲驰磬党报春",
+          "bbox": [
+            716,
+            804,
+            1311,
+            859
+          ],
+          "confidence": 80.33
+        },
+        {
+          "text": "感激轅前攜槧客",
+          "bbox": [
+            713,
+            876,
+            1310,
+            933
+          ],
+          "confidence": 98.24
+        },
+        {
+          "text": "淒涼墨外荷戈人",
+          "bbox": [
+            713,
+            950,
+            1308,
+            1006
+          ],
+          "confidence": 93.14
+        },
+        {
+          "text": "兵機利鈍開今夜",
+          "bbox": [
+            716,
+            1022,
+            1310,
+            1079
+          ],
+          "confidence": 99.16
+        },
+        {
+          "text": "兼燭邀來驛報頃",
+          "bbox": [
+            712,
+            1097,
+            1306,
+            1153
+          ],
+          "confidence": 88.01
+        },
+        {
+          "text": "Thiên âm:",
+          "bbox": [
+            268,
+            1231,
+            490,
+            1259
+          ],
+          "confidence": 76.38
+        },
+        {
+          "text": "NHẬM TUẬT NGUYỄN NHẬT.",
+          "bbox": [
+            401,
+            1359,
+            1436,
+            1425
+          ],
+          "confidence": 85.11
+        },
+        {
+          "text": "NHUNG TRƯỜNG DA TỤC KỶ SỰ",
+          "bbox": [
+            482,
+            1437,
+            1513,
+            1506
+          ],
+          "confidence": 87.86
+        },
+        {
+          "text": "Thái thốc² khu hồi noăn luật tân.",
+          "bbox": [
+            498,
+            1578,
+            1216,
+            1633
+          ],
+          "confidence": 71.99
+        },
+        {
+          "text": "Hái sơn nhất đới khởi nhưng trần.",
+          "bbox": [
+            498,
+            1643,
+            1222,
+            1692
+          ],
+          "confidence": 82.41
+        },
+        {
+          "text": "Thủy hoa \" sức giá tương xung trân,",
+          "bbox": [
+            502,
+            1706,
+            1242,
+            1752
+          ],
+          "confidence": 83.34
+        },
+        {
+          "text": "Hóa pháo trị thanh khỏi báo xuân?",
+          "bbox": [
+            496,
+            1764,
+            1233,
+            1811
+          ],
+          "confidence": 88.14
+        },
+        {
+          "text": "Cám kích viên tiến huế tam khách.",
+          "bbox": [
+            496,
+            1821,
+            1238,
+            1870
+          ],
+          "confidence": 84.13
+        },
+        {
+          "text": "Thê lương lũy ngoại hạ qua nhân.",
+          "bbox": [
+            495,
+            1882,
+            1491,
+            1930
+          ],
+          "confidence": 88.29
+        },
+        {
+          "text": "Bình cơ lợi độn quan kim da.",
+          "bbox": [
+            493,
+            1942,
+            1100,
+            1986
+          ],
+          "confidence": 88.01
+        },
+        {
+          "text": "Bình chức yêu lại dịch báo tần.",
+          "bbox": [
+            491,
+            1998,
+            1139,
+            2045
+          ],
+          "confidence": 91.92
+        },
+        {
+          "text": "1. Nguyên dẫn: Ngày mừng một nhà vua từ Thanh Hà tiến ra, bưởi trưa tối đốn",
+          "bbox": [
+            256,
+            2101,
+            1714,
+            2159
+          ],
+          "confidence": 85.5
+        },
+        {
+          "text": "Doanh Ngói, rồi tiến đến đơn Doanh Lỗi cách Lũy Thấy vài đảm. Tôi phung mệnh ngoài",
+          "bbox": [
+            257,
+            2151,
+            1714,
+            2205
+          ],
+          "confidence": 84.47
+        },
+        {
+          "text": "của đơn cùng bình sĩ lấy là thông dụng lên làm chỗ ngủ. Đến đêm quân tiên phong phân",
+          "bbox": [
+            252,
+            2197,
+            1714,
+            2254
+          ],
+          "confidence": 85.95
+        },
+        {
+          "text": "bo bên ngoài lũy lén vào nhổ chồng áp sát lũy giặc. Giặc trong lũy, bán súng to, súng nhỏ",
+          "bbox": [
+            254,
+            2246,
+            1711,
+            2301
+          ],
+          "confidence": 91.9
+        },
+        {
+          "text": "ra suốt đêm không ngót, quân ta bị thương vong nhiều, tôi buôn phiền không ngủ được,",
+          "bbox": [
+            251,
+            2293,
+            1709,
+            2348
+          ],
+          "confidence": 87.02
+        },
+        {
+          "text": "đội nghe tin từ nhà trạm tâu về, nhân đố ngâm thơ để ghi nổi lòng.",
+          "bbox": [
+            251,
+            2340,
+            1709,
+            2388
+          ],
+          "confidence": 74.97
+        },
+        {
+          "text": "2. Thái thóc: Một trong 12 ống luật nói (Kinh Lễ), mỗi ống luật tương ứng với",
+          "bbox": [
+            282,
+            2380,
+            1709,
+            2443
+          ],
+          "confidence": 94.66
+        },
+        {
+          "text": "một tháng, Thái thốc thuộc về tháng giêng.",
+          "bbox": [
+            248,
+            2435,
+            1706,
+            2476
+          ],
+          "confidence": 94.63
+        },
+        {
+          "text": "3. Thủy hoa: Loại cỏ của Thiên tử, dùng lông chim trả trang trí.",
+          "bbox": [
+            335,
+            2477,
+            1408,
+            2532
+          ],
+          "confidence": 90.66
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          1865,
+          2834
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 15.964,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              718,
+              329,
+              1317,
+              402
+            ],
+            "generated_text": "壬戌元日戎埸夜",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.308,
+            "confidence": 89.81,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              902,
+              449,
+              1137,
+              480
+            ],
+            "generated_text": "伯\n尔\n韦",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.238,
+            "confidence": 52.67,
+            "flags": [
+              "char_lines_joined"
+            ],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              908,
+              477,
+              1133,
+              497
+            ],
+            "generated_text": "11-1 小しゃ す",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.314,
+            "confidence": 43.82,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              726,
+              593,
+              1314,
+              644
+            ],
+            "generated_text": "太簇嘘同煖律新",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.338,
+            "confidence": 96.27,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              716,
+              666,
+              1320,
+              717
+            ],
+            "generated_text": "海山一帶起茂歷",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.306,
+            "confidence": 81.64,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              716,
+              733,
+              1496,
+              787
+            ],
+            "generated_text": "翠花飭駕將衝陣",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.484,
+            "confidence": 99.54,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              716,
+              804,
+              1311,
+              859
+            ],
+            "generated_text": "火砲驰磬党报春",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.373,
+            "confidence": 80.33,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              713,
+              876,
+              1310,
+              933
+            ],
+            "generated_text": "感激轅前攜槧客",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 0.389,
+            "confidence": 98.24,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              713,
+              950,
+              1308,
+              1006
+            ],
+            "generated_text": "淒涼墨外荷戈人",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.366,
+            "confidence": 93.14,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              716,
+              1022,
+              1310,
+              1079
+            ],
+            "generated_text": "兵機利鈍開今夜",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.329,
+            "confidence": 99.16,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              712,
+              1097,
+              1306,
+              1153
+            ],
+            "generated_text": "兼燭邀來驛報頃",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.407,
+            "confidence": 88.01,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              268,
+              1231,
+              490,
+              1259
+            ],
+            "generated_text": "Thiên âm:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.251,
+            "confidence": 76.38,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              401,
+              1359,
+              1436,
+              1425
+            ],
+            "generated_text": "NHẬM TUẬT NGUYỄN NHẬT.",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.604,
+            "confidence": 85.11,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              482,
+              1437,
+              1513,
+              1506
+            ],
+            "generated_text": "NHUNG TRƯỜNG DA TỤC KỶ SỰ",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.632,
+            "confidence": 87.86,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              498,
+              1578,
+              1216,
+              1633
+            ],
+            "generated_text": "Thái thốc² khu hồi noăn luật tân.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.483,
+            "confidence": 71.99,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              498,
+              1643,
+              1222,
+              1692
+            ],
+            "generated_text": "Hái sơn nhất đới khởi nhưng trần.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.401,
+            "confidence": 82.41,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              502,
+              1706,
+              1242,
+              1752
+            ],
+            "generated_text": "Thủy hoa \" sức giá tương xung trân,",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.448,
+            "confidence": 83.34,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              496,
+              1764,
+              1233,
+              1811
+            ],
+            "generated_text": "Hóa pháo trị thanh khỏi báo xuân?",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.43,
+            "confidence": 88.14,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              496,
+              1821,
+              1238,
+              1870
+            ],
+            "generated_text": "Cám kích viên tiến huế tam khách.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 0.384,
+            "confidence": 84.13,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              495,
+              1882,
+              1491,
+              1930
+            ],
+            "generated_text": "Thê lương lũy ngoại hạ qua nhân.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.438,
+            "confidence": 88.29,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              493,
+              1942,
+              1100,
+              1986
+            ],
+            "generated_text": "Bình cơ lợi độn quan kim da.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 0.408,
+            "confidence": 88.01,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              491,
+              1998,
+              1139,
+              2045
+            ],
+            "generated_text": "Bình chức yêu lại dịch báo tần.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 0.414,
+            "confidence": 91.92,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              256,
+              2057,
+              856,
+              2081
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.145,
+            "confidence": 9.24,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              256,
+              2101,
+              1714,
+              2159
+            ],
+            "generated_text": "1. Nguyên dẫn: Ngày mừng một nhà vua từ Thanh Hà tiến ra, bưởi trưa tối đốn",
+            "n_lines": 1,
+            "tokens": 33,
+            "seconds": 0.77,
+            "confidence": 85.5,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              257,
+              2151,
+              1714,
+              2205
+            ],
+            "generated_text": "Doanh Ngói, rồi tiến đến đơn Doanh Lỗi cách Lũy Thấy vài đảm. Tôi phung mệnh ngoài",
+            "n_lines": 1,
+            "tokens": 37,
+            "seconds": 0.915,
+            "confidence": 84.47,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              252,
+              2197,
+              1714,
+              2254
+            ],
+            "generated_text": "của đơn cùng bình sĩ lấy là thông dụng lên làm chỗ ngủ. Đến đêm quân tiên phong phân",
+            "n_lines": 1,
+            "tokens": 32,
+            "seconds": 0.756,
+            "confidence": 85.95,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              254,
+              2246,
+              1711,
+              2301
+            ],
+            "generated_text": "bo bên ngoài lũy lén vào nhổ chồng áp sát lũy giặc. Giặc trong lũy, bán súng to, súng nhỏ",
+            "n_lines": 1,
+            "tokens": 42,
+            "seconds": 1.152,
+            "confidence": 91.9,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              251,
+              2293,
+              1709,
+              2348
+            ],
+            "generated_text": "ra suốt đêm không ngót, quân ta bị thương vong nhiều, tôi buôn phiền không ngủ được,",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 0.718,
+            "confidence": 87.02,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              251,
+              2340,
+              1709,
+              2388
+            ],
+            "generated_text": "đội nghe tin từ nhà trạm tâu về, nhân đố ngâm thơ để ghi nổi lòng.",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 0.707,
+            "confidence": 74.97,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              282,
+              2380,
+              1709,
+              2443
+            ],
+            "generated_text": "2. Thái thóc: Một trong 12 ống luật nói (Kinh Lễ), mỗi ống luật tương ứng với",
+            "n_lines": 1,
+            "tokens": 37,
+            "seconds": 0.841,
+            "confidence": 94.66,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              248,
+              2435,
+              1706,
+              2476
+            ],
+            "generated_text": "một tháng, Thái thốc thuộc về tháng giêng.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.447,
+            "confidence": 94.63,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 32,
+            "box": [
+              335,
+              2477,
+              1408,
+              2532
+            ],
+            "generated_text": "3. Thủy hoa: Loại cỏ của Thiên tử, dùng lông chim trả trang trí.",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.766,
+            "confidence": 90.66,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              903,
+              427,
+              1139,
+              441
+            ],
+            "ink": 690
+          },
+          {
+            "box": [
+              910,
+              439,
+              1133,
+              452
+            ],
+            "ink": 633
+          },
+          {
+            "box": [
+              498,
+              1695,
+              727,
+              1706
+            ],
+            "ink": 322
+          },
+          {
+            "box": [
+              496,
+              1993,
+              645,
+              2002
+            ],
+            "ink": 270
+          }
+        ],
+        "deskew_deg": 0.0,
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "7a0a8d9befaa9c2afee66139d5b233593b81f86e",
+        "git_describe": "7a0a8d9",
+        "git_dirty": true,
+        "gpu": "NVIDIA GeForce RTX 3050 6GB Laptop GPU",
+        "dtype": "bfloat16",
+        "adapter_version": 7
+      }
     }
   ]
 }

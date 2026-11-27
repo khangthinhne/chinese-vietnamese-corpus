@@ -1,0 +1,866 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 565,
+  "runs": [
+    {
+      "key": "5f172c4f5d7c12e6aa000c5a502201d17348ad4900dd07d4ae1e1a27b5a3581a",
+      "parameters": {
+        "image_sha256": "f6d306eea046bf45c47cdcfac69f0c933766e7d6ae9e79d67e132634b95a6ed7",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T18:27:55+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_565.png",
+      "image_size": [
+        2694,
+        3310
+      ],
+      "crop_box": [
+        0,
+        0,
+        2694,
+        3310
+      ],
+      "lines": [
+        {
+          "text": "ngothinhamch1.pdf",
+          "bbox": [
+            7,
+            19,
+            2058,
+            45
+          ],
+          "confidence": 99.23
+        },
+        {
+          "text": "NGŮ THI NHAM TOẠN TẠP - TẬP III",
+          "bbox": [
+            476,
+            252,
+            1249,
+            291
+          ],
+          "confidence": 76.24
+        },
+        {
+          "text": "Lai nước tôi từ đời Lý đời Trân lai đây, vẫn đóng đô ở thành Thăng",
+          "bbox": [
+            626,
+            353,
+            2186,
+            398
+          ],
+          "confidence": 86.52
+        },
+        {
+          "text": "Long, ăn mệnh Thiên triều đều tới phong ở đấy. Gần đây vương khí tan",
+          "bbox": [
+            476,
+            431,
+            2185,
+            476
+          ],
+          "confidence": 91.5
+        },
+        {
+          "text": "nguội, nay nước tôi từ Thuận Quảng trở vào nam, cương giới so với trước",
+          "bbox": [
+            475,
+            508,
+            2187,
+            560
+          ],
+          "confidence": 95.02
+        },
+        {
+          "text": "đây rộng hơn nhiều, đặt đồ dụng nước thấy chỉ có ở Nghệ An là nơi trung",
+          "bbox": [
+            477,
+            584,
+            2188,
+            636
+          ],
+          "confidence": 93.92
+        },
+        {
+          "text": "tâm. Đã chọn núi Phượng Hoàng đất ấy đặt làm Trung đô, đã đề đạt cho",
+          "bbox": [
+            477,
+            662,
+            2188,
+            715
+          ],
+          "confidence": 92.76
+        },
+        {
+          "text": "Tà giang Thang đai nhân biết rõ.",
+          "bbox": [
+            476,
+            741,
+            1243,
+            785
+          ],
+          "confidence": 88.36
+        },
+        {
+          "text": "Trộm nghĩ, đô áp lúc mới dựng là việc trọng đại, vậy đã nêu đủ lý",
+          "bbox": [
+            625,
+            818,
+            2188,
+            871
+          ],
+          "confidence": 93.09
+        },
+        {
+          "text": "do băm trình xem xét. Từ nay về sau hết thảy công văn qua lại, so với",
+          "bbox": [
+            478,
+            893,
+            2319,
+            938
+          ],
+          "confidence": 94.24
+        },
+        {
+          "text": "Thăng Long thời hạn tăng lên gấp đôi, ngược mong thế tất cho, may khỏi",
+          "bbox": [
+            476,
+            966,
+            2186,
+            1019
+          ],
+          "confidence": 90.88
+        },
+        {
+          "text": "lỗi châm trẽ. Lai bồi giới của tiểu phiên tôi đưa công văn chiếu hội được",
+          "bbox": [
+            476,
+            1039,
+            2187,
+            1086
+          ],
+          "confidence": 88.55
+        },
+        {
+          "text": "ban tôi, tôi kính đọc hai ba lần, ngược thấy Đại nhân thấu tổ tình xa, lại",
+          "bbox": [
+            476,
+            1114,
+            2187,
+            1160
+          ],
+          "confidence": 91.69
+        },
+        {
+          "text": "thêm khen thưởng, thực thì không được như thế, đáng hổ thẹn nhiều.",
+          "bbox": [
+            477,
+            1189,
+            2186,
+            1240
+          ],
+          "confidence": 92.28
+        },
+        {
+          "text": "Con tôi Quang Thuỷ còn đường học lễ, lời khen “cây ngọc mọc sân” chưa",
+          "bbox": [
+            479,
+            1263,
+            2186,
+            1316
+          ],
+          "confidence": 91.58
+        },
+        {
+          "text": "dám phanh áo để nhận lời chức ấy. Đến như gia tướng Ngô Văn Sở sau",
+          "bbox": [
+            479,
+            1336,
+            2186,
+            1387
+          ],
+          "confidence": 92.82
+        },
+        {
+          "text": "trước bôn tẩu, đều làm công việc trong chức phân, được ban cho lụa mâu,",
+          "bbox": [
+            478,
+            1410,
+            2185,
+            1461
+          ],
+          "confidence": 92.01
+        },
+        {
+          "text": "sự “yêu nhà tôi qua” ấy phải mang đôi như thế nào!",
+          "bbox": [
+            479,
+            1484,
+            1663,
+            1530
+          ],
+          "confidence": 90.95
+        },
+        {
+          "text": "（呈謝代製祝幸儀物幷祈爲轉謝恩表文",
+          "bbox": [
+            606,
+            1770,
+            2051,
+            1841
+          ],
+          "confidence": 97.71
+        },
+        {
+          "text": "及請許進貢等情。國王書呈)",
+          "bbox": [
+            811,
+            1861,
+            1853,
+            1930
+          ],
+          "confidence": 94.32
+        },
+        {
+          "text": "爲咨呈事：小番締造新邦，事事簡樸，華路藍縷，未",
+          "bbox": [
+            631,
+            2062,
+            2185,
+            2128
+          ],
+          "confidence": 98.08
+        },
+        {
+          "text": "知有明堂桓信之盛，王會朝著之尊。自進京展覲，密",
+          "bbox": [
+            482,
+            2197,
+            2181,
+            2262
+          ],
+          "confidence": 99.94
+        },
+        {
+          "text": "勿鈞韶，蒙公中堂引翼而扶持之，周旋軒陛之間，幸免",
+          "bbox": [
+            488,
+            2329,
+            2185,
+            2394
+          ],
+          "confidence": 99.83
+        },
+        {
+          "text": "於戾。及奉旨回國，念惟大皇帝覆育洪恩，皆夢想",
+          "bbox": [
+            481,
+            2462,
+            2184,
+            2528
+          ],
+          "confidence": 99.67
+        },
+        {
+          "text": "所不到之事。海瀕遐遠，上答無階，而叩謝天恩，又不敢稽",
+          "bbox": [
+            483,
+            2599,
+            2188,
+            2663
+          ],
+          "confidence": 99.75
+        },
+        {
+          "text": "滯沉擱。小邦鳩集維始，尋常土物，更無飭觀之件，著絮",
+          "bbox": [
+            483,
+            2732,
+            2186,
+            2797
+          ],
+          "confidence": 99.75
+        },
+        {
+          "text": "照料得來，臨時遣价，儀物淺薄，小番寔深慚愧。",
+          "bbox": [
+            487,
+            2867,
+            2028,
+            2932
+          ],
+          "confidence": 99.77
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2694,
+          3310
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 15.437,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              7,
+              19,
+              2058,
+              45
+            ],
+            "generated_text": "ngothinhamch1.pdf",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.233,
+            "confidence": 99.23,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              476,
+              252,
+              1249,
+              291
+            ],
+            "generated_text": "NGŮ THI NHAM TOẠN TẠP - TẬP III",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.561,
+            "confidence": 76.24,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              478,
+              296,
+              2192,
+              309
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.066,
+            "confidence": 13.49,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              626,
+              353,
+              2186,
+              398
+            ],
+            "generated_text": "Lai nước tôi từ đời Lý đời Trân lai đây, vẫn đóng đô ở thành Thăng",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.585,
+            "confidence": 86.52,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              476,
+              431,
+              2185,
+              476
+            ],
+            "generated_text": "Long, ăn mệnh Thiên triều đều tới phong ở đấy. Gần đây vương khí tan",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.597,
+            "confidence": 91.5,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              475,
+              508,
+              2187,
+              560
+            ],
+            "generated_text": "nguội, nay nước tôi từ Thuận Quảng trở vào nam, cương giới so với trước",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.498,
+            "confidence": 95.02,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              477,
+              584,
+              2188,
+              636
+            ],
+            "generated_text": "đây rộng hơn nhiều, đặt đồ dụng nước thấy chỉ có ở Nghệ An là nơi trung",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.582,
+            "confidence": 93.92,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              477,
+              662,
+              2188,
+              715
+            ],
+            "generated_text": "tâm. Đã chọn núi Phượng Hoàng đất ấy đặt làm Trung đô, đã đề đạt cho",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 0.669,
+            "confidence": 92.76,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              476,
+              741,
+              1243,
+              785
+            ],
+            "generated_text": "Tà giang Thang đai nhân biết rõ.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.334,
+            "confidence": 88.36,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              625,
+              818,
+              2188,
+              871
+            ],
+            "generated_text": "Trộm nghĩ, đô áp lúc mới dựng là việc trọng đại, vậy đã nêu đủ lý",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 0.641,
+            "confidence": 93.09,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              478,
+              893,
+              2319,
+              938
+            ],
+            "generated_text": "do băm trình xem xét. Từ nay về sau hết thảy công văn qua lại, so với",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.594,
+            "confidence": 94.24,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              476,
+              966,
+              2186,
+              1019
+            ],
+            "generated_text": "Thăng Long thời hạn tăng lên gấp đôi, ngược mong thế tất cho, may khỏi",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.577,
+            "confidence": 90.88,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              476,
+              1039,
+              2187,
+              1086
+            ],
+            "generated_text": "lỗi châm trẽ. Lai bồi giới của tiểu phiên tôi đưa công văn chiếu hội được",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.595,
+            "confidence": 88.55,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              476,
+              1114,
+              2187,
+              1160
+            ],
+            "generated_text": "ban tôi, tôi kính đọc hai ba lần, ngược thấy Đại nhân thấu tổ tình xa, lại",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.577,
+            "confidence": 91.69,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              477,
+              1189,
+              2186,
+              1240
+            ],
+            "generated_text": "thêm khen thưởng, thực thì không được như thế, đáng hổ thẹn nhiều.",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.535,
+            "confidence": 92.28,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              479,
+              1263,
+              2186,
+              1316
+            ],
+            "generated_text": "Con tôi Quang Thuỷ còn đường học lễ, lời khen “cây ngọc mọc sân” chưa",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 0.642,
+            "confidence": 91.58,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              479,
+              1336,
+              2186,
+              1387
+            ],
+            "generated_text": "dám phanh áo để nhận lời chức ấy. Đến như gia tướng Ngô Văn Sở sau",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.612,
+            "confidence": 92.82,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              478,
+              1410,
+              2185,
+              1461
+            ],
+            "generated_text": "trước bôn tẩu, đều làm công việc trong chức phân, được ban cho lụa mâu,",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.618,
+            "confidence": 92.01,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              479,
+              1484,
+              1663,
+              1530
+            ],
+            "generated_text": "sự “yêu nhà tôi qua” ấy phải mang đôi như thế nào!",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.454,
+            "confidence": 90.95,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              606,
+              1770,
+              2051,
+              1841
+            ],
+            "generated_text": "（呈謝代製祝幸儀物幷祈爲轉謝恩表文",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.493,
+            "confidence": 97.71,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              811,
+              1861,
+              1853,
+              1930
+            ],
+            "generated_text": "及請許進貢等情。國王書呈)",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.375,
+            "confidence": 94.32,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              631,
+              2062,
+              2185,
+              2128
+            ],
+            "generated_text": "爲咨呈事：小番締造新邦，事事簡樸，華路藍縷，未",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 0.679,
+            "confidence": 98.08,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              482,
+              2197,
+              2181,
+              2262
+            ],
+            "generated_text": "知有明堂桓信之盛，王會朝著之尊。自進京展覲，密",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.58,
+            "confidence": 99.94,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              488,
+              2329,
+              2185,
+              2394
+            ],
+            "generated_text": "勿鈞韶，蒙公中堂引翼而扶持之，周旋軒陛之間，幸免",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.598,
+            "confidence": 99.83,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              481,
+              2462,
+              2184,
+              2528
+            ],
+            "generated_text": "於戾。及奉旨回國，念惟大皇帝覆育洪恩，皆夢想",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.579,
+            "confidence": 99.67,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              483,
+              2599,
+              2188,
+              2663
+            ],
+            "generated_text": "所不到之事。海瀕遐遠，上答無階，而叩謝天恩，又不敢稽",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.62,
+            "confidence": 99.75,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              483,
+              2732,
+              2186,
+              2797
+            ],
+            "generated_text": "滯沉擱。小邦鳩集維始，尋常土物，更無飭觀之件，著絮",
+            "n_lines": 1,
+            "tokens": 36,
+            "seconds": 0.802,
+            "confidence": 99.75,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              487,
+              2867,
+              2028,
+              2932
+            ],
+            "generated_text": "照料得來，臨時遣价，儀物淺薄，小番寔深慚愧。",
+            "n_lines": 1,
+            "tokens": 33,
+            "seconds": 0.736,
+            "confidence": 99.77,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              667,
+              395,
+              2181,
+              405
+            ],
+            "ink": 359
+          },
+          {
+            "box": [
+              565,
+              472,
+              1989,
+              483
+            ],
+            "ink": 506
+          },
+          {
+            "box": [
+              614,
+              1083,
+              2157,
+              1092
+            ],
+            "ink": 308
+          },
+          {
+            "box": [
+              1133,
+              1661,
+              1515,
+              1678
+            ],
+            "ink": 972
+          },
+          {
+            "box": [
+              1142,
+              1683,
+              1507,
+              1698
+            ],
+            "ink": 1091
+          },
+          {
+            "box": [
+              1132,
+              1707,
+              1490,
+              1721
+            ],
+            "ink": 769
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "61cbea5c0055c260ccfc12f884e0febca7b2783b",
+        "git_describe": "61cbea5",
+        "git_dirty": true,
+        "gpu": "NVIDIA L4",
+        "dtype": "bfloat16",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

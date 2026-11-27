@@ -1,0 +1,865 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 663,
+  "runs": [
+    {
+      "key": "ef3425f9e48ba31e7ee5df3a38f5439b32a046d2ce04b980f912856266113531",
+      "parameters": {
+        "image_sha256": "d7cbf43d6e418bff9ebf66db2193d56d9d6e68bb28064be7fb6e72055468aa79",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.9.1+cu128",
+          "cuda_version": "12.8",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-26T08:30:35+00:00",
+      "image": "/marimo/.cpo19_ocr/repo/data/CPO_19/02_extraction/pages/page_663.png",
+      "image_size": [
+        2200,
+        3125
+      ],
+      "crop_box": [
+        0,
+        0,
+        2200,
+        3125
+      ],
+      "lines": [
+        {
+          "text": "NGÔ THI NHAM TOAN TẬP - TẬP III",
+          "bbox": [
+            234,
+            71,
+            1008,
+            112
+          ],
+          "confidence": 82.59
+        },
+        {
+          "text": "Xung phiên: Dao lâm nhung mac, trở tiếp tiên thiệu.",
+          "bbox": [
+            359,
+            178,
+            1580,
+            223
+          ],
+          "confidence": 87.46
+        },
+        {
+          "text": "Chu đình chi bảo ngọc huy hoàng, trung hướng dao triêm ư thánh",
+          "bbox": [
+            383,
+            258,
+            1940,
+            310
+          ],
+          "confidence": 93.37
+        },
+        {
+          "text": "trạch; Việt điện chi lam yên miên mạo, hạ lâm hạt xứng ử hiện lao.",
+          "bbox": [
+            234,
+            339,
+            1771,
+            391
+          ],
+          "confidence": 87.57
+        },
+        {
+          "text": "Cần ủy bôi thân, đại cung kỳ lĩnh.",
+          "bbox": [
+            384,
+            421,
+            1169,
+            465
+          ],
+          "confidence": 88.17
+        },
+        {
+          "text": "Sắc dụ ân thưởng, lánh cụ bất điên thổ nghi; liêu thân kính ý, vọng",
+          "bbox": [
+            381,
+            503,
+            1982,
+            557
+          ],
+          "confidence": 80.44
+        },
+        {
+          "text": "từ thu tôn vi ha.",
+          "bbox": [
+            235,
+            599,
+            610,
+            631
+          ],
+          "confidence": 90.77
+        },
+        {
+          "text": "DICH NGHIA:",
+          "bbox": [
+            250,
+            688,
+            851,
+            727
+          ],
+          "confidence": 99.01
+        },
+        {
+          "text": "THU TRINH TRƯỜNG ĐẠI NHAN PHU CHINH ĐƯỜNG",
+          "bbox": [
+            391,
+            785,
+            1785,
+            832
+          ],
+          "confidence": 91.0
+        },
+        {
+          "text": "KHAM SU LIEM CHAU, THIEN TRIEU",
+          "bbox": [
+            607,
+            857,
+            1571,
+            903
+          ],
+          "confidence": 88.77
+        },
+        {
+          "text": "Ngày nay: Trời sáng rỡ ràng, sao lành chói lọi.",
+          "bbox": [
+            387,
+            1012,
+            1448,
+            1064
+          ],
+          "confidence": 95.89
+        },
+        {
+          "text": "Biến quế vâng tuyên sứ mệnh, bông thủ (1) màu mỡ chia đều; ngọc",
+          "bbox": [
+            388,
+            1093,
+            1941,
+            1147
+          ],
+          "confidence": 89.54
+        },
+        {
+          "text": "quan kính phung ân chương, lục tiêu (2) móc mưa nhuần tươi.",
+          "bbox": [
+            240,
+            1176,
+            1629,
+            1223
+          ],
+          "confidence": 86.02
+        },
+        {
+          "text": "Xung phiên tôi: Xa nơi nhung mac, cách trở xe tiến.",
+          "bbox": [
+            386,
+            1259,
+            1566,
+            1305
+          ],
+          "confidence": 92.1
+        },
+        {
+          "text": "Sân Chu ngọc báu huy hoàng, những mong xa đảm ơn thánh; cõi",
+          "bbox": [
+            388,
+            1340,
+            1941,
+            1393
+          ],
+          "confidence": 93.07
+        },
+        {
+          "text": "Việt khói lam mờ mịt, gần kê sao xứng lòng hiên.",
+          "bbox": [
+            237,
+            1423,
+            1366,
+            1474
+          ],
+          "confidence": 87.21
+        },
+        {
+          "text": "Xin ủy bôi thân, lĩnh thay ân thưởng.",
+          "bbox": [
+            387,
+            1505,
+            1247,
+            1552
+          ],
+          "confidence": 88.71
+        },
+        {
+          "text": "Xương dụ ban thưởng, đủ đầy những không lắm thổ ngơi; tạm tỏ",
+          "bbox": [
+            388,
+            1586,
+            1941,
+            1639
+          ],
+          "confidence": 83.34
+        },
+        {
+          "text": "lòng thành, mong sao được đổi on thu nhận.",
+          "bbox": [
+            239,
+            1672,
+            1249,
+            1718
+          ],
+          "confidence": 86.88
+        },
+        {
+          "text": "CHU THICH:",
+          "bbox": [
+            241,
+            1775,
+            530,
+            1814
+          ],
+          "confidence": 97.8
+        },
+        {
+          "text": "1. Bông thủ: Thủ là cây lúa. Bông thủ, tên một thiên trong Kinh Thi,",
+          "bbox": [
+            394,
+            1840,
+            1940,
+            1885
+          ],
+          "confidence": 94.34
+        },
+        {
+          "text": "khen đức chính của nhà vua và quân thân.",
+          "bbox": [
+            240,
+            1914,
+            1804,
+            1956
+          ],
+          "confidence": 92.49
+        },
+        {
+          "text": "2.Lục tiêu: Tiêu, tên một loài cây. Lục tiêu, tên một chương trong Tiếu",
+          "bbox": [
+            391,
+            1981,
+            1941,
+            2029
+          ],
+          "confidence": 93.66
+        },
+        {
+          "text": "nhã, Kinh Thi, ca ngợi ân trách của nhà vua.",
+          "bbox": [
+            242,
+            2054,
+            1188,
+            2096
+          ],
+          "confidence": 91.49
+        },
+        {
+          "text": "64. 呈天朝大老爺",
+          "bbox": [
+            227,
+            2222,
+            1414,
+            2292
+          ],
+          "confidence": 93.59
+        },
+        {
+          "text": "（使部陪臣）",
+          "bbox": [
+            282,
+            2320,
+            1290,
+            2381
+          ],
+          "confidence": 99.11
+        },
+        {
+          "text": "今春，卑奉進京展覲，告請封事，重蒙尊台提撕引",
+          "bbox": [
+            391,
+            2517,
+            1940,
+            2583
+          ],
+          "confidence": 99.9
+        },
+        {
+          "text": "翼，渥沐天恩，國情獲濟，隨車之潤，榮祝寔深。",
+          "bbox": [
+            247,
+            2676,
+            1739,
+            2741
+          ],
+          "confidence": 99.84
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2200,
+          3125
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 4.883,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              234,
+              71,
+              1008,
+              112
+            ],
+            "generated_text": "NGÔ THI NHAM TOAN TẬP - TẬP III",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.166,
+            "confidence": 82.59,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              238,
+              115,
+              1949,
+              131
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.029,
+            "confidence": 55.8,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              359,
+              178,
+              1580,
+              223
+            ],
+            "generated_text": "Xung phiên: Dao lâm nhung mac, trở tiếp tiên thiệu.",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.158,
+            "confidence": 87.46,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              383,
+              258,
+              1940,
+              310
+            ],
+            "generated_text": "Chu đình chi bảo ngọc huy hoàng, trung hướng dao triêm ư thánh",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.192,
+            "confidence": 93.37,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              234,
+              339,
+              1771,
+              391
+            ],
+            "generated_text": "trạch; Việt điện chi lam yên miên mạo, hạ lâm hạt xứng ử hiện lao.",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.226,
+            "confidence": 87.57,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              384,
+              421,
+              1169,
+              465
+            ],
+            "generated_text": "Cần ủy bôi thân, đại cung kỳ lĩnh.",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.157,
+            "confidence": 88.17,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              381,
+              503,
+              1982,
+              557
+            ],
+            "generated_text": "Sắc dụ ân thưởng, lánh cụ bất điên thổ nghi; liêu thân kính ý, vọng",
+            "n_lines": 1,
+            "tokens": 32,
+            "seconds": 0.245,
+            "confidence": 80.44,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              235,
+              599,
+              610,
+              631
+            ],
+            "generated_text": "từ thu tôn vi ha.",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.089,
+            "confidence": 90.77,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              250,
+              688,
+              851,
+              727
+            ],
+            "generated_text": "DICH NGHIA:",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.068,
+            "confidence": 99.01,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              391,
+              785,
+              1785,
+              832
+            ],
+            "generated_text": "THU TRINH TRƯỜNG ĐẠI NHAN PHU CHINH ĐƯỜNG",
+            "n_lines": 1,
+            "tokens": 32,
+            "seconds": 0.259,
+            "confidence": 91.0,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              607,
+              857,
+              1571,
+              903
+            ],
+            "generated_text": "KHAM SU LIEM CHAU, THIEN TRIEU",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.136,
+            "confidence": 88.77,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              387,
+              1012,
+              1448,
+              1064
+            ],
+            "generated_text": "Ngày nay: Trời sáng rỡ ràng, sao lành chói lọi.",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.167,
+            "confidence": 95.89,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              388,
+              1093,
+              1941,
+              1147
+            ],
+            "generated_text": "Biến quế vâng tuyên sứ mệnh, bông thủ (1) màu mỡ chia đều; ngọc",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 0.25,
+            "confidence": 89.54,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              240,
+              1176,
+              1629,
+              1223
+            ],
+            "generated_text": "quan kính phung ân chương, lục tiêu (2) móc mưa nhuần tươi.",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 0.24,
+            "confidence": 86.02,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              386,
+              1259,
+              1566,
+              1305
+            ],
+            "generated_text": "Xung phiên tôi: Xa nơi nhung mac, cách trở xe tiến.",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.163,
+            "confidence": 92.1,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              388,
+              1340,
+              1941,
+              1393
+            ],
+            "generated_text": "Sân Chu ngọc báu huy hoàng, những mong xa đảm ơn thánh; cõi",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.217,
+            "confidence": 93.07,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              237,
+              1423,
+              1366,
+              1474
+            ],
+            "generated_text": "Việt khói lam mờ mịt, gần kê sao xứng lòng hiên.",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.204,
+            "confidence": 87.21,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              387,
+              1505,
+              1247,
+              1552
+            ],
+            "generated_text": "Xin ủy bôi thân, lĩnh thay ân thưởng.",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.165,
+            "confidence": 88.71,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              388,
+              1586,
+              1941,
+              1639
+            ],
+            "generated_text": "Xương dụ ban thưởng, đủ đầy những không lắm thổ ngơi; tạm tỏ",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.226,
+            "confidence": 83.34,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              239,
+              1672,
+              1249,
+              1718
+            ],
+            "generated_text": "lòng thành, mong sao được đổi on thu nhận.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.117,
+            "confidence": 86.88,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              241,
+              1775,
+              530,
+              1814
+            ],
+            "generated_text": "CHU THICH:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.065,
+            "confidence": 97.8,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              394,
+              1840,
+              1940,
+              1885
+            ],
+            "generated_text": "1. Bông thủ: Thủ là cây lúa. Bông thủ, tên một thiên trong Kinh Thi,",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.213,
+            "confidence": 94.34,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              240,
+              1914,
+              1804,
+              1956
+            ],
+            "generated_text": "khen đức chính của nhà vua và quân thân.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.134,
+            "confidence": 92.49,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              391,
+              1981,
+              1941,
+              2029
+            ],
+            "generated_text": "2.Lục tiêu: Tiêu, tên một loài cây. Lục tiêu, tên một chương trong Tiếu",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 0.222,
+            "confidence": 93.66,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              242,
+              2054,
+              1188,
+              2096
+            ],
+            "generated_text": "nhã, Kinh Thi, ca ngợi ân trách của nhà vua.",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.165,
+            "confidence": 91.49,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              227,
+              2222,
+              1414,
+              2292
+            ],
+            "generated_text": "64. 呈天朝大老爺",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 0.11,
+            "confidence": 93.59,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              282,
+              2320,
+              1290,
+              2381
+            ],
+            "generated_text": "（使部陪臣）",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.073,
+            "confidence": 99.11,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              391,
+              2517,
+              1940,
+              2583
+            ],
+            "generated_text": "今春，卑奉進京展覲，告請封事，重蒙尊台提撕引",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.192,
+            "confidence": 99.9,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              247,
+              2676,
+              1739,
+              2741
+            ],
+            "generated_text": "翼，渥沐天恩，國情獲濟，隨車之潤，榮祝寔深。",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 0.233,
+            "confidence": 99.84,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              475,
+              221,
+              1318,
+              230
+            ],
+            "ink": 306
+          },
+          {
+            "box": [
+              699,
+              847,
+              1519,
+              860
+            ],
+            "ink": 496
+          },
+          {
+            "box": [
+              255,
+              1219,
+              956,
+              1228
+            ],
+            "ink": 352
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": null,
+        "git_describe": null,
+        "git_dirty": null,
+        "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+        "dtype": "bfloat16",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

@@ -1,0 +1,261 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_18",
+  "engine": "qwen",
+  "page": 284,
+  "runs": [
+    {
+      "key": "19a03ddae363ab2df95fd1a88ed1dd3fc324ae97a5f4a0d3df00c50b4abef23f",
+      "parameters": {
+        "image_sha256": "d7c456e9a52c65e59415a5b9e361b88052fe8b3fd8bf52ddcfd096697cb59298",
+        "engine": {
+          "name": "qwen",
+          "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "model_revision": "main",
+          "transformers_version": "4.57.6",
+          "torch_version": "2.5.1+cu121",
+          "cuda_version": "12.1",
+          "bitsandbytes_version": "0.50.2",
+          "quantization": {
+            "load_in_4bit": true,
+            "quant_type": "nf4",
+            "double_quant": true,
+            "compute_dtype": "float16"
+          },
+          "mode": "all",
+          "min_pixels": 50176,
+          "max_pixels": 802816,
+          "band_inches": 2.0,
+          "max_new_tokens": 768,
+          "repetition_penalty": 1.05,
+          "adapter_version": 3,
+          "prompt_version": 3,
+          "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74"
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T19:48:45+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_284.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        0,
+        2480,
+        3509
+      ],
+      "lines": [
+        {
+          "text": "Sưu tầm và khảo luận tác phẩm chữ Hán của người Việt Nam trước TK 10",
+          "bbox": [
+            224,
+            39,
+            2300,
+            331
+          ],
+          "confidence": 91.23
+        },
+        {
+          "text": "愛，德，明，利，驥五州諸軍事，愛州刺史□□□□□□□將軍，改封穆風侯。牧知故□，自位三代，享年眉壽。靜居生地，思遂福民。",
+          "bbox": [
+            224,
+            331,
+            2300,
+            624
+          ],
+          "confidence": 91.23
+        },
+        {
+          "text": "学時有德有法門，家行圓滿。 每常懺禮，靈像放光，無所隨，是焉遊處。而年世浸遲，壽長，平將軍，郡州刺史，愛刺史。黎穆刺，左",
+          "bbox": [
+            236,
+            651,
+            2303,
+            1155
+          ],
+          "confidence": 60.4
+        },
+        {
+          "text": "卫使君之□。□挺生灵，□□望，情当追慕，崇立洞回。乃收□□□。□□祠宗哲人，宜委是社民。長子益慈嗣□□史□□□□弟八和雅，都威将軍，日太守尊人大□使□□侯德",
+          "bbox": [
+            237,
+            1183,
+            2299,
+            1685
+          ],
+          "confidence": 83.55
+        },
+        {
+          "text": "州逐江海乱离，选从螺□道□□，□合徒宣威□□之憑，奔竄荒□□□□□。五常永而深蒙嗟□，□诏三洞，行从祛未，訓學人之所行，加愛碑及金□□上□□□□诸将",
+          "bbox": [
+            243,
+            1715,
+            2300,
+            2200
+          ],
+          "confidence": 72.77
+        },
+        {
+          "text": "軍愛紫大將軍而屏斥愛州改金紫大夫，九真太守，又[ ] [ ]",
+          "bbox": [
+            246,
+            2206,
+            2305,
+            2730
+          ],
+          "confidence": 10.0
+        },
+        {
+          "text": "機兵，隨機□潛□□山民。交趾之南郡□□□法。□而臨本郡。杖劍而制兵□。□臣之。□郡□吳相□之建整修之禮□□□□□□洛地而主洞爲溪。風樹雕靈，憑得物用物",
+          "bbox": [
+            239,
+            2753,
+            2475,
+            3497
+          ],
+          "confidence": 86.74
+        }
+      ],
+      "raw": {
+        "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+        "model_revision": "main",
+        "mode": "all",
+        "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          3509
+        ],
+        "band_target_height": 600,
+        "bbox_granularity": "band_even_split",
+        "max_new_tokens": 768,
+        "max_pixels": 802816,
+        "inference_seconds": 75.695,
+        "bands": [
+          {
+            "band": 1,
+            "y0": 43,
+            "y1": 637,
+            "ink_box": [
+              224,
+              39,
+              2300,
+              624
+            ],
+            "generated_text": "Sưu tầm và khảo luận tác phẩm chữ Hán của người Việt Nam trước TK 10\n\n愛，德，明，利，驥五州諸軍事，愛州刺史□□□□□□□將軍，改封穆風侯。牧知故□，自位三代，享年眉壽。靜居生地，思遂福民。",
+            "n_lines": 2,
+            "tokens": 82,
+            "seconds": 5.727,
+            "confidence": 91.23,
+            "flags": []
+          },
+          {
+            "band": 2,
+            "y0": 637,
+            "y1": 1169,
+            "ink_box": [
+              236,
+              651,
+              2303,
+              1155
+            ],
+            "generated_text": "学時有德有法門，家行圓滿。 每常懺禮，靈像放光，無所隨，是焉遊處。而年世浸遲，壽長，平將軍，郡州刺史，愛刺史。黎穆刺，左",
+            "n_lines": 1,
+            "tokens": 63,
+            "seconds": 4.449,
+            "confidence": 60.4,
+            "flags": []
+          },
+          {
+            "band": 3,
+            "y0": 1169,
+            "y1": 1699,
+            "ink_box": [
+              237,
+              1183,
+              2299,
+              1685
+            ],
+            "generated_text": "卫使君之□。□挺生灵，□□望，情当追慕，崇立洞回。乃收□□□。□□祠宗哲人，宜委是社民。長子益慈嗣□□史□□□□弟八和雅，都威将軍，日太守尊人大□使□□侯德",
+            "n_lines": 1,
+            "tokens": 78,
+            "seconds": 5.38,
+            "confidence": 83.55,
+            "flags": []
+          },
+          {
+            "band": 4,
+            "y0": 1699,
+            "y1": 2203,
+            "ink_box": [
+              243,
+              1715,
+              2300,
+              2200
+            ],
+            "generated_text": "州逐江海乱离，选从螺□道□□，□合徒宣威□□之憑，奔竄荒□□□□□。五常永而深蒙嗟□，□诏三洞，行从祛未，訓學人之所行，加愛碑及金□□上□□□□诸将",
+            "n_lines": 1,
+            "tokens": 75,
+            "seconds": 5.266,
+            "confidence": 72.77,
+            "flags": []
+          },
+          {
+            "band": 5,
+            "y0": 2203,
+            "y1": 2740,
+            "ink_box": [
+              246,
+              2206,
+              2305,
+              2730
+            ],
+            "generated_text": "軍愛紫大將軍而屏斥愛州改金紫大夫，九真太守，又[ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ]",
+            "n_lines": 1,
+            "tokens": 768,
+            "seconds": 49.451,
+            "confidence": 10.0,
+            "flags": [
+              "repetition_collapsed",
+              "truncated"
+            ]
+          },
+          {
+            "band": 6,
+            "y0": 2740,
+            "y1": 3493,
+            "ink_box": [
+              239,
+              2753,
+              2475,
+              3497
+            ],
+            "generated_text": "機兵，隨機□潛□□山民。交趾之南郡□□□法。□而臨本郡。杖劍而制兵□。□臣之。□郡□吳相□之建整修之禮□□□□□□洛地而主洞爲溪。風樹雕靈，憑得物用物",
+            "n_lines": 1,
+            "tokens": 76,
+            "seconds": 5.385,
+            "confidence": 86.74,
+            "flags": []
+          }
+        ],
+        "any_degenerate": true,
+        "any_truncated": true,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "61cbea5c0055c260ccfc12f884e0febca7b2783b",
+        "git_describe": "61cbea5",
+        "git_dirty": true,
+        "gpu": "NVIDIA L4",
+        "dtype": "float16",
+        "adapter_version": 3
+      }
+    }
+  ]
+}

@@ -21,6 +21,7 @@ from src.segmentation.documents import review_row
 from src.segmentation.model import Document, DocumentLayers, LayerLine, OcrLine
 from src.segmentation.patterns import (
     DEFAULT_HEADING_PREFIX,
+    Matcher,
     compile_matcher,
     compile_patterns,
     matched_labels,
@@ -29,8 +30,94 @@ from src.segmentation.patterns import (
 
 DEFAULT_SOURCE = {"han": "chi_tra", "am": "vie", "nghia": "vie", "tho": "vie"}
 
+# Mục chú thích đầu dòng: "1. Nguyên dẫn: ...", "2) Y đài: ..." (số, dấu chấm/ngoặc, thuật ngữ ngắn, dấu hai chấm).
+NOTE_ENTRY_RE = re.compile(r"^\s*\d{1,2}\s*[.)]\s*[^\d\s][^:：]{0,40}[:：]\s*\S")
+
+
+# Tiêu đề khối ghi chú kết thúc lớp nghia, so khớp mờ theo lỗi OCR thường gặp: KHẢO DỊ / KHÁO DỊ / KHAO DI /
+# KHẢO DỊC (CPO_19), NGUYÊN CHÚ, CHÚ THÍCH; phải theo sau là ':' hoặc hết dòng, được phép có nội dung cùng dòng
+# ("KHẢO DỊC: a. Bản A.404: ..."). Tắt bằng `segmentation.layers.nghia.note_heading_end: false`.
+NOTE_HEADING_RE = re.compile(
+    r"^(?:[lI|]\s+)?(?:KH[ẢAÁÃẠÀ]O\s*D[ỊIÍÌĨ]C?|NGUY[ÊEỀẾ]N\s+CH[ÚUÙỦ]|CH[ÚUÙ]\s+TH[ÍIÌ]CH)\s*(?:[:：]|$)",
+    re.IGNORECASE)
+
+
+class _NoteHeadingMatcher(Matcher):
+    """end_patterns của lớp nghia + NOTE_HEADING_RE (không đòi heading đứng một mình)."""
+
+    def __init__(self, base: Matcher):
+        self.base = base
+        self.patterns = list(base.patterns) + [NOTE_HEADING_RE]
+        self.heading, self.prefix = base.heading, base.prefix
+
+    def __len__(self) -> int:              # "có end_patterns cấu hình không" giữ nguyên nghĩa cũ (luật review)
+        return len(self.base)
+
+    def matches_probe(self, probe: str) -> bool:
+        return (self.base.matches_probe(probe) or bool(NOTE_HEADING_RE.match(probe))
+                or fuzzy_note_heading(probe))
+
+
+# So khớp mờ tiêu đề mục (OCR hay sai: "DỊCH THOẠI:", "DỊCH NHĨA:", "Phần âm:", "CHÚ TÍCH:"): sau khi bỏ dấu, khoảng
+# cách sửa tới tiêu đề chuẩn <= 2 (tiêu đề >= 8 chữ cái) hoặc <= 1. Chỉ xét dòng <= 3 từ và kết thúc bằng ":" hoặc viết
+# hoa toàn bộ, để câu thân văn ngắn ("Đích thị") không bị coi là tiêu đề. "Dịch phú" là tiêu đề hợp lệ của lớp tho.
+SECTION_HEADINGS = {"am": ("phien am",), "nghia": ("dich nghia",), "tho": ("dich tho", "dich phu")}
+NOTE_HEADINGS = ("chu thich", "khao di", "nguyen chu")
+FUZZY_HEADING_MAX_WORDS = 3
+
+
+def _fold_heading(text: str) -> str | None:
+    t = unicodedata.normalize("NFC", text).strip()
+    colon = t.endswith((":", "："))
+    t = t.rstrip(":： .")
+    letters = [c for c in t if c.isalpha()]
+    if not letters or len(t.split()) > FUZZY_HEADING_MAX_WORDS or not (colon or all(c.isupper() for c in letters)):
+        return None
+    t = unicodedata.normalize("NFD", t.lower().replace("đ", "d"))
+    t = "".join(c for c in t if not unicodedata.combining(c))
+    return re.sub(r"\s+", " ", re.sub(r"[^a-z ]", " ", t)).strip() or None
+
+
+def _edit_distance(a: str, b: str) -> int:
+    prev = list(range(len(b) + 1))
+    for i, ca in enumerate(a, 1):
+        cur = [i]
+        for j, cb in enumerate(b, 1):
+            cur.append(min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + (ca != cb)))
+        prev = cur
+    return prev[-1]
+
+
+def _fuzzy_match(text: str, canon: dict[str, tuple[str, ...]]) -> str | None:
+    folded = _fold_heading(text)
+    if not folded:
+        return None
+    scored = sorted((_edit_distance(folded, c), key) for key, cs in canon.items() for c in cs
+                    if _edit_distance(folded, c) <= (2 if len(c.replace(" ", "")) >= 7 else 1))
+    if not scored or (len(scored) > 1 and scored[0][0] == scored[1][0] and scored[0][1] != scored[1][1]):
+        return None
+    return scored[0][1]
+
+
+def fuzzy_section_layer(text: str, layers) -> str | None:
+    """Lớp (am/nghia/tho) mà dòng là tiêu đề mục mở lớp, theo so khớp mờ; None nếu không phải."""
+    canon = {k: v for k, v in SECTION_HEADINGS.items() if k in layers}
+    return _fuzzy_match(text, canon) if canon else None
+
+
+def fuzzy_note_heading(text: str) -> bool:
+    """Dòng là tiêu đề khối ghi chú (CHÚ THÍCH/KHẢO DỊ/NGUYÊN CHÚ) theo so khớp mờ."""
+    return _fuzzy_match(text, {"note": NOTE_HEADINGS}) is not None
+
 
 def _compile_layer_matcher(layer_cfg: dict, kind: str, name: str):
+    matcher = _compile_layer_matcher_base(layer_cfg, kind, name)
+    if kind == "end_patterns" and name.endswith(".nghia.end_patterns") and layer_cfg.get("note_heading_end", True):
+        return _NoteHeadingMatcher(matcher)
+    return matcher
+
+
+def _compile_layer_matcher_base(layer_cfg: dict, kind: str, name: str):
     case_sensitive = bool(layer_cfg.get("case_sensitive", False))
     mode = layer_cfg.get("heading_mode")
     heading = bool(mode) if not isinstance(mode, dict) else mode.get("enabled", True)
@@ -210,7 +297,9 @@ def assign_document_unified(work_id: str, doc: Document, layer_cfg: dict, meta_c
                             keep_line=None, dropped: dict[str, int] | None = None,
                             implicit_next: dict[str, str] | None = None,
                             is_header=None, title_next: dict[str, str] | None = None,
-                            notes_after_attribution: set[str] | frozenset[str] = frozenset()) -> DocumentLayers:
+                            notes_after_attribution: set[str] | frozenset[str] = frozenset(),
+                            note_entry_ends: set[str] | frozenset[str] = frozenset(),
+                            am_detector=None, overrides=(), verse_tho: bool = False) -> DocumentLayers:
     """Gán dòng của MỘT tài liệu vào các lớp (han/am/nghia/tho) từ stream OCR duy nhất.
 
     - Không phụ thuộc vào 'source' (chi_tra/vie).
@@ -227,6 +316,16 @@ def assign_document_unified(work_id: str, doc: Document, layer_cfg: dict, meta_c
       "LÊN NÚI MẪU TỬ" mà OCR làm mất chữ "DỊCH NGHĨA"). Review `implicit_layer_start`.
     - `notes_after_attribution` (tuỳ chọn), vd {"am"}: trong lớp đó, sau dòng khớp `attribution_patterns` (dòng
       nguồn "Trích ..."), các dòng tiếp theo là chú thích: không gán lớp cho tới tiêu đề/tiêu đề viết hoa kế tiếp.
+    - `note_entry_ends` (tuỳ chọn), vd {"am", "nghia", "tho"}: trong các lớp đó, dòng mục chú thích "1. Thuật ngữ: ..."
+      (`NOTE_ENTRY_RE`) mở vùng chú thích cuối trang: nó và các dòng sau trên CÙNG TRANG không gán lớp; sang trang
+      mới mà chưa gặp tiêu đề thì lớp cũ chạy tiếp (CPO_20 in chú thích cuối trang không có tiêu đề CHÚ THÍCH,
+      audit 2026-11-26).
+    - Tiêu đề mục tường minh đặt lại số dòng nội dung của lớp đó; dòng `is_header` (tiêu đề chạy, dòng Việt nhiễu)
+      không tính là dòng nội dung (CPO_18.005: rác + tiêu đề chạy làm "PHIÊN ÂM:" rồi tiêu đề bài mở nhầm nghia).
+    - Dòng bị `keep_line` loại được ghi review `dropped_cross_stream` (từng dòng), không mất dấu.
+    - `am_detector` (tuỳ chọn, `src.segmentation.am_detect.AmDetector`): lớp am được MỞ NGẦM (không có tiêu đề
+      PHIÊN ÂM) mà không khớp cách đọc Hán–Việt của chữ Hán -> chuyển sang nghia, review `am_reassigned_to_nghia`.
+    - `overrides` (tuỳ chọn): ghi đè của config cho tài liệu này (`src.segmentation.overrides`), áp dụng sau cùng.
     """
     review: list[dict] = []
     headings: list[dict] = []
@@ -260,14 +359,25 @@ def assign_document_unified(work_id: str, doc: Document, layer_cfg: dict, meta_c
     current: str | None = default_start
     started: set[str] = {default_start} if default_start else set()
     body_lines: dict[str, int] = {}              # số dòng nội dung không viết hoa đã gán cho mỗi lớp
+    notes_page: int | None = None                # trang đang có chú thích cuối trang (note_entry_ends)
+    implicit_started: set[str] = set()           # lớp được mở ngầm sau khối Hán (không có tiêu đề mục)
+    am_implicit_run = False                      # lớp am hiện đang chạy từ lần mở ngầm (chưa gặp tiêu đề PHIÊN ÂM)
+    implicit_am: list[OcrLine] = []              # dòng am gán trong lúc đó (bộ nhận diện chỉ xét/chuyển các dòng này)
     last_layer: str | None = current             # lớp nội dung gần nhất (để thoát khỏi đoạn chú thích)
     attribution = {n: compile_patterns(layer_cfg[n].get("attribution_patterns"),
                                        f"segmentation.layers.{n}.attribution_patterns", False)
                    for n in notes_after_attribution if n in layer_cfg}
 
+    heading_layers = [n for n in names if layer_cfg.get(n, {}).get("heading_mode")]
     for ln in all_lines:
         starts_hit = matched_labels(starts, ln.text)
         ends_hit = matched_labels(ends, ln.text)
+        if not starts_hit and heading_layers:
+            fuzzy = fuzzy_section_layer(ln.text, heading_layers)
+            if fuzzy:
+                starts_hit = [fuzzy]
+                review.append(review_row(work_id, doc.id, fuzzy, "fuzzy_section_heading",
+                                         [ln.page], ln.text, [ln.source_id]))
 
         if len(starts_hit) > 1:
             review.append(review_row(work_id, doc.id, "", "layer_overlap",
@@ -285,6 +395,9 @@ def assign_document_unified(work_id: str, doc: Document, layer_cfg: dict, meta_c
                             headings.append(h_info)
                 current = target
                 started.add(target)
+                body_lines[target] = 0           # tiêu đề tường minh: nội dung của lớp tính lại từ đây
+                if target == "am":
+                    am_implicit_run = False
                 h_info = _heading(work_id, doc, target, "start", ln)
                 h_info["heading_id"] = f"{doc.id}.P{ln.page:04d}.H{len(headings) + 1:03d}"
                 headings.append(h_info)
@@ -317,6 +430,8 @@ def assign_document_unified(work_id: str, doc: Document, layer_cfg: dict, meta_c
                                          [ln.page], ln.text, [ln.source_id]))
                 current = nxt
                 started.add(nxt)
+                implicit_started.add(nxt)
+                am_implicit_run = am_implicit_run or nxt == "am"
 
         if title_next and is_upper_title(ln.text) and not (is_header and is_header(ln)):
             prev = current or last_layer
@@ -328,15 +443,27 @@ def assign_document_unified(work_id: str, doc: Document, layer_cfg: dict, meta_c
                 current = nxt
                 started.add(nxt)
 
+        if notes_page is not None and ln.page != notes_page:
+            if current is None and last_layer:   # chú thích cuối trang đã hết: nội dung lớp chạy tiếp sang trang mới
+                current = last_layer
+            notes_page = None
+        if (current in note_entry_ends and NOTE_ENTRY_RE.match(ln.text)
+                and (keep_line is None or keep_line(current, ln))):
+            last_layer = current
+            current = None                       # mục chú thích "1. Thuật ngữ: ...": hết lớp tới cuối trang
+            notes_page = ln.page
         target = current
         if target is None:
             review.append(review_row(work_id, doc.id, "", "unassigned_line",
                                      [ln.page], ln.text, [ln.source_id]))
             continue
         grouped.setdefault(target, []).append(ln)
+        if target == "am" and am_implicit_run:
+            implicit_am.append(ln)
         last_layer = target
         # dòng nội dung = có chữ thường (tiêu đề viết hoa nhiều dòng, kể cả dòng kết thúc bằng dấu phẩy, không tính)
-        if any(c.islower() for c in ln.text) and (keep_line is None or keep_line(target, ln)):
+        if (any(c.islower() for c in ln.text) and (keep_line is None or keep_line(target, ln))
+                and not (is_header and is_header(ln))):
             body_lines[target] = body_lines.get(target, 0) + 1
         if (target in attribution and body_lines.get(target, 0) > 0
                 and matches(attribution[target], ln.text)):
@@ -347,13 +474,65 @@ def assign_document_unified(work_id: str, doc: Document, layer_cfg: dict, meta_c
             kept = [ln for ln in grouped[layer] if keep_line(layer, ln)]
             if dropped is not None and len(kept) != len(grouped[layer]):
                 dropped[layer] = dropped.get(layer, 0) + len(grouped[layer]) - len(kept)
+            for ln in grouped[layer]:
+                if not keep_line(layer, ln):
+                    review.append(review_row(work_id, doc.id, layer, "dropped_cross_stream",
+                                             [ln.page], ln.text, [ln.source_id]))
             if kept:
                 grouped[layer] = kept
             else:
                 del grouped[layer]
 
+    kept_ids = {id(x) for x in grouped.get("am", [])}
+    implicit_am = [x for x in implicit_am if id(x) in kept_ids]       # bỏ dòng đã bị loại khác luồng
+    if am_detector is not None and implicit_am and grouped.get("han"):
+        # Chỉ phần am MỞ NGẦM; phần sau tiêu đề PHIÊN ÂM tường minh giữ nguyên (CPO_20.053: tựa dịch nghĩa mở
+        # ngầm, rồi "Phiên âm:" một bài chiếu Nôm ở tr.126-134).
+        move, why = am_detector.decide(min(doc.pages) if doc.pages else 0,
+                                       [x.text for x in grouped["han"]], [x.text for x in implicit_am])
+        if move:
+            moved = {id(x) for x in implicit_am}
+            am_lines = implicit_am
+            rest = [x for x in grouped.pop("am") if id(x) not in moved]
+            if rest:
+                grouped["am"] = rest
+            grouped["nghia"] = am_lines + grouped.get("nghia", [])
+            started.add("nghia")
+            review.append(review_row(work_id, doc.id, "nghia", "am_reassigned_to_nghia",
+                                     sorted({x.page for x in am_lines}), why, [am_lines[0].source_id]))
+
+    if am_detector is not None and getattr(am_detector, "split_lines", False) and grouped.get("am") \
+            and grouped.get("han"):
+        am_sorted = sorted(grouped["am"], key=lambda x: (x.page, x.index))
+        k = am_detector.split([x.text for x in grouped["han"]], [x.text for x in am_sorted],
+                              [bool(is_header and is_header(x)) for x in am_sorted])
+        if k:
+            tail = am_sorted[k:]
+            grouped["am"] = am_sorted[:k]
+            grouped["nghia"] = tail + grouped.get("nghia", [])
+            started.add("nghia")
+            review.append(review_row(work_id, doc.id, "nghia", "am_tail_split_to_nghia",
+                                     sorted({x.page for x in tail}), tail[0].text, [tail[0].source_id]))
+
+    if verse_tho and "tho" not in grouped and grouped.get("am") and grouped.get("nghia"):
+        from src.segmentation.am_detect import verse_tho_split
+        ng = sorted(grouped["nghia"], key=lambda x: (x.page, x.index))
+        k = verse_tho_split([x.text for x in sorted(grouped["am"], key=lambda x: (x.page, x.index))],
+                            [x.text for x in ng])
+        if k:
+            grouped["nghia"], grouped["tho"] = ng[:k], ng[k:]
+            started.add("tho")
+            review.append(review_row(work_id, doc.id, "tho", "nghia_tail_split_to_tho",
+                                     sorted({x.page for x in ng[k:]}), ng[k].text, [ng[k].source_id]))
+
+    whole_excluded = False
+    if overrides:
+        from src.segmentation.overrides import apply_overrides
+        review.extend(apply_overrides(work_id, doc.id, grouped, implicit_am, list(overrides)))
+        whole_excluded = not grouped        # cả tài liệu bị gỡ: không báo thiếu lớp
+
     for n in names:
-        optional = bool(layer_cfg[n].get("optional"))
+        optional = bool(layer_cfg[n].get("optional")) or whole_excluded
         if starts[n] and n not in started and not optional:
             review.append(review_row(work_id, doc.id, n, "missing_heading",
                                      doc.pages, ""))
@@ -391,6 +570,40 @@ def assign_document_unified(work_id: str, doc: Document, layer_cfg: dict, meta_c
             review.append(review_row(work_id, doc.id, layer,
                                      "metadata_uncertain", u.get("pages", []),
                                      u.get("text", ""), u.get("source_ids", [])))
+        by_id = {x.id: x for x in rows}
+        for ln, _ in md.restored:
+            src = by_id.get(ln.id)
+            review.append(review_row(work_id, doc.id, layer, "han_title_line_restored", [ln.page], ln.text,
+                                     list(src.source_ids) if src else []))
+    suspect = han_title_suspect(metadata_rows)
+    if suspect:
+        review.append(review_row(work_id, doc.id, "han", "han_title_suspect", suspect["pages"], suspect["text"]))
 
     return DocumentLayers(lines=lines_by_layer, headings=headings,
                           metadata_rows=metadata_rows, uncertain=uncertain, review=review)
+
+
+HAN_TITLE_SUSPECT_RATIO = 0.5
+
+
+def han_title_suspect(metadata_rows: list[dict]) -> dict | None:
+    """Tiêu đề Hán nghi là rác OCR (tiêu đề chữ to): số chữ Hán lệch số âm tiết của tiêu đề âm > 50% (và > 2).
+    Chỉ cảnh báo review, không sửa dữ liệu."""
+    def first_title(layer):
+        for row in metadata_rows:
+            if row.get("layer") == layer:
+                for f in row.get("fields", []):
+                    if f.get("field") == "title":
+                        return f
+        return None
+    han, am = first_title("han"), first_title("am")
+    if not han or not am:
+        return None
+    n_han = sum(1 for c in han["text"] if "㐀" <= c <= "鿿" or "豈" <= c <= "﫿")
+    n_am = len(re.findall(r"[^\W\d_]+", am["text"]))
+    if not n_han or not n_am:
+        return None
+    gap = abs(n_han - n_am)
+    if gap > 2 and gap > HAN_TITLE_SUSPECT_RATIO * max(n_han, n_am):
+        return {"text": f"{han['text']} ({n_han} chữ) / {am['text']} ({n_am} âm tiết)", "pages": han.get("pages", [])}
+    return None

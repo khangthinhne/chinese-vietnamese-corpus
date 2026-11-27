@@ -1,0 +1,659 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_20",
+  "engine": "paddlevl",
+  "page": 190,
+  "runs": [
+    {
+      "key": "d90ffa575e6f12cf6dfd64069e883b10e0ea1f8f6f48f8a6501ee79f2ab04dd1",
+      "parameters": {
+        "image_sha256": "40c7d3f959ed83617d5bef07a4e6ba295a1ff65bbaf369218d7123fc0a1046d5",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T06:11:30+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_190.png",
+      "image_size": [
+        1840,
+        2803
+      ],
+      "crop_box": [
+        0,
+        0,
+        1840,
+        2803
+      ],
+      "lines": [
+        {
+          "text": "Dich nghĩa:",
+          "bbox": [
+            276,
+            249,
+            1761,
+            280
+          ],
+          "confidence": 97.79
+        },
+        {
+          "text": "TIÊN EM LÀ TÓ NHU",
+          "bbox": [
+            605,
+            361,
+            1247,
+            424
+          ],
+          "confidence": 85.88
+        },
+        {
+          "text": "TỪ PHÚ XUẦN TRỐ VỀ BẮC",
+          "bbox": [
+            309,
+            438,
+            1347,
+            505
+          ],
+          "confidence": 89.01
+        },
+        {
+          "text": "Nghìn dặm ăn cắn tiễn chú trợ về.",
+          "bbox": [
+            509,
+            764,
+            1236,
+            811
+          ],
+          "confidence": 74.14
+        },
+        {
+          "text": "Rót một chén rượu nơi trưởng định vắng vẻ.",
+          "bbox": [
+            509,
+            826,
+            1427,
+            875
+          ],
+          "confidence": 89.57
+        },
+        {
+          "text": "Nơi Đảo Ngư, hôm nay cánh hồng bay đi một mình,",
+          "bbox": [
+            508,
+            883,
+            1588,
+            938
+          ],
+          "confidence": 94.66
+        },
+        {
+          "text": "Chốn Phương Thành, ngày nào chim ích lai đến?",
+          "bbox": [
+            507,
+            942,
+            1531,
+            995
+          ],
+          "confidence": 93.37
+        },
+        {
+          "text": "Nữa cõi lòng sầu bút nào tả xiết.",
+          "bbox": [
+            505,
+            1001,
+            1192,
+            1050
+          ],
+          "confidence": 88.06
+        },
+        {
+          "text": "Van học ưu tư khó quét sạch không?",
+          "bbox": [
+            509,
+            1064,
+            1264,
+            1111
+          ],
+          "confidence": 88.93
+        },
+        {
+          "text": "Đúng là người đi xa thì nặng tình quê quán,",
+          "bbox": [
+            504,
+            1123,
+            1424,
+            1173
+          ],
+          "confidence": 93.57
+        },
+        {
+          "text": "Gió mát, trắng sáng cùng bồi hồi.",
+          "bbox": [
+            502,
+            1184,
+            1210,
+            1231
+          ],
+          "confidence": 86.55
+        },
+        {
+          "text": "Uich thơ:",
+          "bbox": [
+            266,
+            1362,
+            462,
+            1392
+          ],
+          "confidence": 78.16
+        },
+        {
+          "text": "Trường đình vắng lạnh đưa em,",
+          "bbox": [
+            616,
+            1478,
+            1281,
+            1527
+          ],
+          "confidence": 76.84
+        },
+        {
+          "text": "Dăm xa rượu chuốc chén men đm lòng.",
+          "bbox": [
+            498,
+            1539,
+            1308,
+            1584
+          ],
+          "confidence": 84.72
+        },
+        {
+          "text": "Đào Ngư thui thúi cánh hồng.",
+          "bbox": [
+            613,
+            1595,
+            1239,
+            1644
+          ],
+          "confidence": 73.07
+        },
+        {
+          "text": "Phương Thành máy độ lại rong thuyền vào?",
+          "bbox": [
+            496,
+            1653,
+            1417,
+            1706
+          ],
+          "confidence": 95.71
+        },
+        {
+          "text": "Tình sâu biết tà nhường bao?",
+          "bbox": [
+            615,
+            1712,
+            1228,
+            1761
+          ],
+          "confidence": 80.05
+        },
+        {
+          "text": "Tương tự muốn học ai nào gõ xong?",
+          "bbox": [
+            498,
+            1776,
+            1238,
+            1822
+          ],
+          "confidence": 89.5
+        },
+        {
+          "text": "Gia hương, lũ thú nặng lòng,",
+          "bbox": [
+            613,
+            1837,
+            1214,
+            1886
+          ],
+          "confidence": 92.82
+        },
+        {
+          "text": "Chạnh tình gió mát trắng trong bụi ngùi.",
+          "bbox": [
+            496,
+            1892,
+            1356,
+            1944
+          ],
+          "confidence": 89.13
+        },
+        {
+          "text": "Nguyễn Văn Bách dịch",
+          "bbox": [
+            1287,
+            1973,
+            1706,
+            2011
+          ],
+          "confidence": 94.61
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          1840,
+          2803
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 9.119,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              276,
+              249,
+              1761,
+              280
+            ],
+            "generated_text": "Dich nghĩa:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.244,
+            "confidence": 97.79,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              605,
+              361,
+              1247,
+              424
+            ],
+            "generated_text": "TIÊN EM LÀ TÓ NHU",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.367,
+            "confidence": 85.88,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              309,
+              438,
+              1347,
+              505
+            ],
+            "generated_text": "TỪ PHÚ XUẦN TRỐ VỀ BẮC",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.66,
+            "confidence": 89.01,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              509,
+              764,
+              1236,
+              811
+            ],
+            "generated_text": "Nghìn dặm ăn cắn tiễn chú trợ về.",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.499,
+            "confidence": 74.14,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              509,
+              826,
+              1427,
+              875
+            ],
+            "generated_text": "Rót một chén rượu nơi trưởng định vắng vẻ.",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.512,
+            "confidence": 89.57,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              508,
+              883,
+              1588,
+              938
+            ],
+            "generated_text": "Nơi Đảo Ngư, hôm nay cánh hồng bay đi một mình,",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.589,
+            "confidence": 94.66,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              507,
+              942,
+              1531,
+              995
+            ],
+            "generated_text": "Chốn Phương Thành, ngày nào chim ích lai đến?",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.484,
+            "confidence": 93.37,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              505,
+              1001,
+              1192,
+              1050
+            ],
+            "generated_text": "Nữa cõi lòng sầu bút nào tả xiết.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.457,
+            "confidence": 88.06,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              509,
+              1064,
+              1264,
+              1111
+            ],
+            "generated_text": "Van học ưu tư khó quét sạch không?",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.415,
+            "confidence": 88.93,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              504,
+              1123,
+              1424,
+              1173
+            ],
+            "generated_text": "Đúng là người đi xa thì nặng tình quê quán,",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.464,
+            "confidence": 93.57,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              502,
+              1184,
+              1210,
+              1231
+            ],
+            "generated_text": "Gió mát, trắng sáng cùng bồi hồi.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.413,
+            "confidence": 86.55,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              266,
+              1362,
+              462,
+              1392
+            ],
+            "generated_text": "Uich thơ:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.235,
+            "confidence": 78.16,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              616,
+              1478,
+              1281,
+              1527
+            ],
+            "generated_text": "Trường đình vắng lạnh đưa em,",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 0.384,
+            "confidence": 76.84,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              498,
+              1539,
+              1308,
+              1584
+            ],
+            "generated_text": "Dăm xa rượu chuốc chén men đm lòng.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.46,
+            "confidence": 84.72,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              613,
+              1595,
+              1239,
+              1644
+            ],
+            "generated_text": "Đào Ngư thui thúi cánh hồng.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.44,
+            "confidence": 73.07,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              496,
+              1653,
+              1417,
+              1706
+            ],
+            "generated_text": "Phương Thành máy độ lại rong thuyền vào?",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.42,
+            "confidence": 95.71,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              615,
+              1712,
+              1228,
+              1761
+            ],
+            "generated_text": "Tình sâu biết tà nhường bao?",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.378,
+            "confidence": 80.05,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              498,
+              1776,
+              1238,
+              1822
+            ],
+            "generated_text": "Tương tự muốn học ai nào gõ xong?",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 0.379,
+            "confidence": 89.5,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              613,
+              1837,
+              1214,
+              1886
+            ],
+            "generated_text": "Gia hương, lũ thú nặng lòng,",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.502,
+            "confidence": 92.82,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              496,
+              1892,
+              1356,
+              1944
+            ],
+            "generated_text": "Chạnh tình gió mát trắng trong bụi ngùi.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.447,
+            "confidence": 89.13,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              1287,
+              1973,
+              1706,
+              2011
+            ],
+            "generated_text": "Nguyễn Văn Bách dịch",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.367,
+            "confidence": 94.61,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              285,
+              239,
+              1758,
+              249
+            ],
+            "ink": 272
+          },
+          {
+            "box": [
+              273,
+              1353,
+              415,
+              1363
+            ],
+            "ink": 274
+          },
+          {
+            "box": [
+              256,
+              2526,
+              328,
+              2535
+            ],
+            "ink": 190
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      }
+    }
+  ]
+}

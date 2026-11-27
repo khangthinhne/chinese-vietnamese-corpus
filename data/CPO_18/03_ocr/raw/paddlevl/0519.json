@@ -1,0 +1,1051 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_18",
+  "engine": "paddlevl",
+  "page": 519,
+  "runs": [
+    {
+      "key": "543de5181bccc0598ea6fc628f4a573f960b4eac96be5679eaea8fa912ceea58",
+      "parameters": {
+        "image_sha256": "21c56a09d43dca0ebba6b8f429dd15db8c485257862072ddc1e8197387ab638f",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T19:00:40+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_519.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        0,
+        2480,
+        3509
+      ],
+      "lines": [
+        {
+          "text": "[",
+          "bbox": [
+            278,
+            258,
+            2423,
+            274
+          ],
+          "confidence": 24.67
+        },
+        {
+          "text": "\"Hiện giả ti thế, nhân hiểu thường tại\". Ngô lăm Luc",
+          "bbox": [
+            293,
+            355,
+            2423,
+            416
+          ],
+          "confidence": 80.21
+        },
+        {
+          "text": "nghê, quan truyền ký, Nghiêu hũu tô lac ; Thuấn hũu",
+          "bbox": [
+            296,
+            442,
+            2423,
+            504
+          ],
+          "confidence": 87.19
+        },
+        {
+          "text": "Thương Ngô chi sơn ; Vũ hữu Cối Kê chi lăng ; Bá Di,",
+          "bbox": [
+            296,
+            528,
+            2423,
+            591
+          ],
+          "confidence": 92.0
+        },
+        {
+          "text": "Thúc Tê hữu Thú Dương chi mô ; Văn Vương bất cấp",
+          "bbox": [
+            296,
+            617,
+            2423,
+            679
+          ],
+          "confidence": 93.75
+        },
+        {
+          "text": "tru Tru nhi một ; Vũ Vương bất nặng dãi Thành Vương",
+          "bbox": [
+            298,
+            703,
+            2423,
+            767
+          ],
+          "confidence": 87.84
+        },
+        {
+          "text": "đại nhi bằng, Chu Công hữu cải táng chi thiên, Trọng",
+          "bbox": [
+            299,
+            792,
+            2423,
+            867
+          ],
+          "confidence": 94.65
+        },
+        {
+          "text": "Ni hữu lưỡng doanh chi mông, Bá Ngư hữu tiên phu chi",
+          "bbox": [
+            299,
+            883,
+            2423,
+            947
+          ],
+          "confidence": 93.79
+        },
+        {
+          "text": "niên, Từ Lô hữu trở hai chi ngũ, Bá Ngưu hữu vong",
+          "bbox": [
+            297,
+            971,
+            2423,
+            1035
+          ],
+          "confidence": 91.68
+        },
+        {
+          "text": "mệnh chi văn, Tăng Sâm hữu khái túc chi từ, Nhan",
+          "bbox": [
+            300,
+            1060,
+            2423,
+            1124
+          ],
+          "confidence": 93.2
+        },
+        {
+          "text": "Uyên hữu bất hanh đoán mệnh chi ký, miêu nhi bất tú",
+          "bbox": [
+            298,
+            1148,
+            2160,
+            1212
+          ],
+          "confidence": 92.04
+        },
+        {
+          "text": "chi du, giai trú tại kinh điển, thánh nhân chí ngôn giả.",
+          "bbox": [
+            296,
+            1237,
+            2160,
+            1308
+          ],
+          "confidence": 82.52
+        },
+        {
+          "text": "Ngô dĩ Kinh truyền vi chúng, thế nhân vi nghiêm vân.",
+          "bbox": [
+            299,
+            1325,
+            2160,
+            1389
+          ],
+          "confidence": 90.56
+        },
+        {
+          "text": "Nhi bắt tủ giả, khi bắt hoặc hộ?",
+          "bbox": [
+            299,
+            1412,
+            1372,
+            1476
+          ],
+          "confidence": 82.57
+        },
+        {
+          "text": "DICH NGHIA:",
+          "bbox": [
+            423,
+            1655,
+            864,
+            1709
+          ],
+          "confidence": 95.54
+        },
+        {
+          "text": "Hỏi rằng : Đạo gia (185) nói Nghiêu, Thuấn, Chu,",
+          "bbox": [
+            425,
+            1753,
+            2163,
+            1819
+          ],
+          "confidence": 94.36
+        },
+        {
+          "text": "Không và bảy mươi hai dê tủ (186) đều bất tử ; còn các",
+          "bbox": [
+            300,
+            1841,
+            2165,
+            1907
+          ],
+          "confidence": 90.64
+        },
+        {
+          "text": "nhà Tiên, Phát lai nói người ta đều phải chết, không ai",
+          "bbox": [
+            299,
+            1931,
+            2166,
+            1996
+          ],
+          "confidence": 98.29
+        },
+        {
+          "text": "tránh khỏi, thế là thế nào?",
+          "bbox": [
+            300,
+            2019,
+            1214,
+            2082
+          ],
+          "confidence": 98.48
+        },
+        {
+          "text": "Mâu Tử đáp : Đấy là những lời vớ vấn, không phải",
+          "bbox": [
+            426,
+            2145,
+            2423,
+            2210
+          ],
+          "confidence": 86.66
+        },
+        {
+          "text": "cách nói của thánh nhân. Lão Từ nói : \"Trời đất còn",
+          "bbox": [
+            299,
+            2235,
+            2423,
+            2301
+          ],
+          "confidence": 92.17
+        },
+        {
+          "text": "không được lâu dài\", hướng nữa là người ! Không Từ",
+          "bbox": [
+            299,
+            2325,
+            2162,
+            2392
+          ],
+          "confidence": 96.84
+        },
+        {
+          "text": "nói: \"Bác hiện tại lánh đời, lòng nhân hiểu luôn luôn còn",
+          "bbox": [
+            301,
+            2416,
+            2160,
+            2481
+          ],
+          "confidence": 92.58
+        },
+        {
+          "text": "đó\". Tôi xem Lục nghệ, độc truyền ký, thấy vua Nghiêu",
+          "bbox": [
+            303,
+            2505,
+            2160,
+            2578
+          ],
+          "confidence": 90.93
+        },
+        {
+          "text": "có chết ; vua Thuận có núi Thương Ngô (187) ; vua Vũ có",
+          "bbox": [
+            300,
+            2593,
+            2162,
+            2660
+          ],
+          "confidence": 91.35
+        },
+        {
+          "text": "lăng Cối Kê ; Bá Di, Thúc Tê có mộ ở Thú Dương ; Văn",
+          "bbox": [
+            301,
+            2681,
+            2161,
+            2755
+          ],
+          "confidence": 91.92
+        },
+        {
+          "text": "Vương chưa kịp giết Trụ đã mất ; Vũ Vương không thể",
+          "bbox": [
+            301,
+            2770,
+            2160,
+            2842
+          ],
+          "confidence": 93.81
+        },
+        {
+          "text": "đọi Thành Vương lón, đã qua đời ; Chu Công có thiên",
+          "bbox": [
+            302,
+            2860,
+            2156,
+            2928
+          ],
+          "confidence": 84.4
+        },
+        {
+          "text": "sách nói về việc cải táng ; Trọng Ni có giấc mộng lương",
+          "bbox": [
+            302,
+            2949,
+            2475,
+            3022
+          ],
+          "confidence": 92.2
+        },
+        {
+          "text": "doanh (188) ; Bá Ngư (189) mất trước cha, Từ Lô có nói về",
+          "bbox": [
+            302,
+            3037,
+            2436,
+            3104
+          ],
+          "confidence": 96.57
+        },
+        {
+          "text": "hình phat tương thit, Bá Ngưu (190) có văn viết về vong.",
+          "bbox": [
+            302,
+            3126,
+            2334,
+            3198
+          ],
+          "confidence": 93.34
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          3509
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 14.947,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              278,
+              258,
+              2423,
+              274
+            ],
+            "generated_text": "[",
+            "n_lines": 1,
+            "tokens": 2,
+            "seconds": 0.089,
+            "confidence": 24.67,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              293,
+              355,
+              2423,
+              416
+            ],
+            "generated_text": "\"Hiện giả ti thế, nhân hiểu thường tại\". Ngô lăm Luc",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.422,
+            "confidence": 80.21,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              296,
+              442,
+              2423,
+              504
+            ],
+            "generated_text": "nghê, quan truyền ký, Nghiêu hũu tô lac ; Thuấn hũu",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.572,
+            "confidence": 87.19,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              296,
+              528,
+              2423,
+              591
+            ],
+            "generated_text": "Thương Ngô chi sơn ; Vũ hữu Cối Kê chi lăng ; Bá Di,",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.561,
+            "confidence": 92.0,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              296,
+              617,
+              2423,
+              679
+            ],
+            "generated_text": "Thúc Tê hữu Thú Dương chi mô ; Văn Vương bất cấp",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.482,
+            "confidence": 93.75,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              298,
+              703,
+              2423,
+              767
+            ],
+            "generated_text": "tru Tru nhi một ; Vũ Vương bất nặng dãi Thành Vương",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.506,
+            "confidence": 87.84,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              299,
+              792,
+              2423,
+              867
+            ],
+            "generated_text": "đại nhi bằng, Chu Công hữu cải táng chi thiên, Trọng",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.485,
+            "confidence": 94.65,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              299,
+              883,
+              2423,
+              947
+            ],
+            "generated_text": "Ni hữu lưỡng doanh chi mông, Bá Ngư hữu tiên phu chi",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.562,
+            "confidence": 93.79,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              297,
+              971,
+              2423,
+              1035
+            ],
+            "generated_text": "niên, Từ Lô hữu trở hai chi ngũ, Bá Ngưu hữu vong",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.571,
+            "confidence": 91.68,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              300,
+              1060,
+              2423,
+              1124
+            ],
+            "generated_text": "mệnh chi văn, Tăng Sâm hữu khái túc chi từ, Nhan",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.508,
+            "confidence": 93.2,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              298,
+              1148,
+              2160,
+              1212
+            ],
+            "generated_text": "Uyên hữu bất hanh đoán mệnh chi ký, miêu nhi bất tú",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.533,
+            "confidence": 92.04,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              296,
+              1237,
+              2160,
+              1308
+            ],
+            "generated_text": "chi du, giai trú tại kinh điển, thánh nhân chí ngôn giả.",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.485,
+            "confidence": 82.52,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              299,
+              1325,
+              2160,
+              1389
+            ],
+            "generated_text": "Ngô dĩ Kinh truyền vi chúng, thế nhân vi nghiêm vân.",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.447,
+            "confidence": 90.56,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              299,
+              1412,
+              1372,
+              1476
+            ],
+            "generated_text": "Nhi bắt tủ giả, khi bắt hoặc hộ?",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.334,
+            "confidence": 82.57,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              423,
+              1655,
+              864,
+              1709
+            ],
+            "generated_text": "DICH NGHIA:",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.181,
+            "confidence": 95.54,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              425,
+              1753,
+              2163,
+              1819
+            ],
+            "generated_text": "Hỏi rằng : Đạo gia (185) nói Nghiêu, Thuấn, Chu,",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.507,
+            "confidence": 94.36,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              300,
+              1841,
+              2165,
+              1907
+            ],
+            "generated_text": "Không và bảy mươi hai dê tủ (186) đều bất tử ; còn các",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.605,
+            "confidence": 90.64,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              299,
+              1931,
+              2166,
+              1996
+            ],
+            "generated_text": "nhà Tiên, Phát lai nói người ta đều phải chết, không ai",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.446,
+            "confidence": 98.29,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              300,
+              2019,
+              1214,
+              2082
+            ],
+            "generated_text": "tránh khỏi, thế là thế nào?",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.267,
+            "confidence": 98.48,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              426,
+              2145,
+              2423,
+              2210
+            ],
+            "generated_text": "Mâu Tử đáp : Đấy là những lời vớ vấn, không phải",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.469,
+            "confidence": 86.66,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              299,
+              2235,
+              2423,
+              2301
+            ],
+            "generated_text": "cách nói của thánh nhân. Lão Từ nói : \"Trời đất còn",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.463,
+            "confidence": 92.17,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              299,
+              2325,
+              2162,
+              2392
+            ],
+            "generated_text": "không được lâu dài\", hướng nữa là người ! Không Từ",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.423,
+            "confidence": 96.84,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              301,
+              2416,
+              2160,
+              2481
+            ],
+            "generated_text": "nói: \"Bác hiện tại lánh đời, lòng nhân hiểu luôn luôn còn",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.523,
+            "confidence": 92.58,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              303,
+              2505,
+              2160,
+              2578
+            ],
+            "generated_text": "đó\". Tôi xem Lục nghệ, độc truyền ký, thấy vua Nghiêu",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.541,
+            "confidence": 90.93,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              300,
+              2593,
+              2162,
+              2660
+            ],
+            "generated_text": "có chết ; vua Thuận có núi Thương Ngô (187) ; vua Vũ có",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.604,
+            "confidence": 91.35,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              301,
+              2681,
+              2161,
+              2755
+            ],
+            "generated_text": "lăng Cối Kê ; Bá Di, Thúc Tê có mộ ở Thú Dương ; Văn",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.586,
+            "confidence": 91.92,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              301,
+              2770,
+              2160,
+              2842
+            ],
+            "generated_text": "Vương chưa kịp giết Trụ đã mất ; Vũ Vương không thể",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.487,
+            "confidence": 93.81,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              302,
+              2860,
+              2156,
+              2928
+            ],
+            "generated_text": "đọi Thành Vương lón, đã qua đời ; Chu Công có thiên",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.468,
+            "confidence": 84.4,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              302,
+              2949,
+              2475,
+              3022
+            ],
+            "generated_text": "sách nói về việc cải táng ; Trọng Ni có giấc mộng lương",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.483,
+            "confidence": 92.2,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              302,
+              3037,
+              2436,
+              3104
+            ],
+            "generated_text": "doanh (188) ; Bá Ngư (189) mất trước cha, Từ Lô có nói về",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 0.644,
+            "confidence": 96.57,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              302,
+              3126,
+              2334,
+              3198
+            ],
+            "generated_text": "hình phat tương thit, Bá Ngưu (190) có văn viết về vong.",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.616,
+            "confidence": 93.34,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 32,
+            "box": [
+              56,
+              3484,
+              2423,
+              3509
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.07,
+            "confidence": 38.74,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              65,
+              16,
+              184,
+              28
+            ],
+            "ink": 743
+          },
+          {
+            "box": [
+              1989,
+              187,
+              2423,
+              204
+            ],
+            "ink": 1135
+          },
+          {
+            "box": [
+              1989,
+              206,
+              2423,
+              219
+            ],
+            "ink": 782
+          },
+          {
+            "box": [
+              520,
+              416,
+              2423,
+              425
+            ],
+            "ink": 446
+          },
+          {
+            "box": [
+              342,
+              502,
+              2423,
+              514
+            ],
+            "ink": 678
+          },
+          {
+            "box": [
+              515,
+              590,
+              2423,
+              599
+            ],
+            "ink": 494
+          },
+          {
+            "box": [
+              1118,
+              678,
+              2423,
+              688
+            ],
+            "ink": 527
+          },
+          {
+            "box": [
+              518,
+              767,
+              2423,
+              777
+            ],
+            "ink": 565
+          },
+          {
+            "box": [
+              703,
+              944,
+              2423,
+              957
+            ],
+            "ink": 768
+          },
+          {
+            "box": [
+              449,
+              1032,
+              2423,
+              1043
+            ],
+            "ink": 625
+          },
+          {
+            "box": [
+              357,
+              1386,
+              1921,
+              1399
+            ],
+            "ink": 797
+          },
+          {
+            "box": [
+              704,
+              1818,
+              1957,
+              1828
+            ],
+            "ink": 465
+          },
+          {
+            "box": [
+              810,
+              2208,
+              2423,
+              2220
+            ],
+            "ink": 606
+          },
+          {
+            "box": [
+              470,
+              2389,
+              2032,
+              2401
+            ],
+            "ink": 655
+          },
+          {
+            "box": [
+              2058,
+              3298,
+              2190,
+              3320
+            ],
+            "ink": 1569
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "61cbea5c0055c260ccfc12f884e0febca7b2783b",
+        "git_describe": "61cbea5",
+        "git_dirty": true,
+        "gpu": "NVIDIA L4",
+        "dtype": "bfloat16",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

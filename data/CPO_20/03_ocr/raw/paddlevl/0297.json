@@ -1,0 +1,969 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_20",
+  "engine": "paddlevl",
+  "page": 297,
+  "runs": [
+    {
+      "key": "59f3312eae0d99fe7836e67a4bb3e5b1683669d069a05ba626d19cf980376a19",
+      "parameters": {
+        "image_sha256": "4c139c497fa8058c18ea5dd1c0bfa10da576be0bbd908f56a24cd7fc6391a3bd",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T06:45:01+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_297.png",
+      "image_size": [
+        1823,
+        2814
+      ],
+      "crop_box": [
+        0,
+        0,
+        1823,
+        2814
+      ],
+      "lines": [
+        {
+          "text": "Liên cốc phong nghi thang mộc áp.",
+          "bbox": [
+            427,
+            266,
+            1155,
+            315
+          ],
+          "confidence": 94.19
+        },
+        {
+          "text": "Tiên suy hiệu lệnh trấn kiểm doanh.",
+          "bbox": [
+            427,
+            325,
+            1189,
+            366
+          ],
+          "confidence": 94.7
+        },
+        {
+          "text": "Chiêu Lăng thach mã ¹ kim hà xứ,",
+          "bbox": [
+            427,
+            383,
+            1149,
+            424
+          ],
+          "confidence": 85.65
+        },
+        {
+          "text": "Nê cước trùng phiên thủ nhất kinh.",
+          "bbox": [
+            429,
+            443,
+            1168,
+            483
+          ],
+          "confidence": 88.14
+        },
+        {
+          "text": "Dich nghĩa:",
+          "bbox": [
+            201,
+            574,
+            440,
+            604
+          ],
+          "confidence": 87.48
+        },
+        {
+          "text": "அவர் தந்தான் என்று நான் துல்லியமாக தெரிவிக்க",
+          "bbox": [
+            284,
+            675,
+            1560,
+            711
+          ],
+          "confidence": 49.38
+        },
+        {
+          "text": "CAM TUONG KHI NGAM THANH TUC MAC",
+          "bbox": [
+            282,
+            703,
+            1560,
+            739
+          ],
+          "confidence": 98.32
+        },
+        {
+          "text": "Nghe nói đây là thành Tức Mặc của nhà Trân,",
+          "bbox": [
+            431,
+            826,
+            1396,
+            869
+          ],
+          "confidence": 91.19
+        },
+        {
+          "text": "Phong cảnh trước mặt chan chứa bao tinh.",
+          "bbox": [
+            431,
+            887,
+            1307,
+            928
+          ],
+          "confidence": 90.83
+        },
+        {
+          "text": "Chương Dương, Hàm Tử văn như xưa,",
+          "bbox": [
+            431,
+            945,
+            1210,
+            988
+          ],
+          "confidence": 85.3
+        },
+        {
+          "text": "Hưng Đạo, Chiêu Văn chưa sống lại.",
+          "bbox": [
+            431,
+            1005,
+            1182,
+            1047
+          ],
+          "confidence": 93.8
+        },
+        {
+          "text": "Đây là nơi quê vua từng in nghi vệ ngựa xe,",
+          "bbox": [
+            431,
+            1065,
+            1336,
+            1112
+          ],
+          "confidence": 91.88
+        },
+        {
+          "text": "Đây là dinh trấn thủ tụng vang hiệu lệnh roi vọt.",
+          "bbox": [
+            431,
+            1123,
+            1453,
+            1166
+          ],
+          "confidence": 82.87
+        },
+        {
+          "text": "Ngưa đá tai Chiêu Lăng nay ở nơi đâu?",
+          "bbox": [
+            431,
+            1183,
+            1247,
+            1224
+          ],
+          "confidence": 85.78
+        },
+        {
+          "text": "Lai phiền vì vô ngựa đính bùn qua đấy lần nữa?",
+          "bbox": [
+            432,
+            1240,
+            1425,
+            1283
+          ],
+          "confidence": 79.81
+        },
+        {
+          "text": "Dich tha:",
+          "bbox": [
+            199,
+            1431,
+            392,
+            1458
+          ],
+          "confidence": 70.29
+        },
+        {
+          "text": "Thành Trần, Tức Mặc nghe đôn",
+          "bbox": [
+            551,
+            1534,
+            1214,
+            1577
+          ],
+          "confidence": 91.9
+        },
+        {
+          "text": "Mất nhìn phong cảnh nổi buồn khôn khuây!",
+          "bbox": [
+            431,
+            1590,
+            1346,
+            1636
+          ],
+          "confidence": 91.82
+        },
+        {
+          "text": "Chương Dương, Hàm Tử còn đấy,",
+          "bbox": [
+            549,
+            1651,
+            1236,
+            1694
+          ],
+          "confidence": 89.81
+        },
+        {
+          "text": "Chiêu Văn, Hung Đạo chưa ngày tái sinh!",
+          "bbox": [
+            432,
+            1711,
+            1297,
+            1753
+          ],
+          "confidence": 89.81
+        },
+        {
+          "text": "Xe rồng, đất chúa, uy linh,",
+          "bbox": [
+            546,
+            1770,
+            1100,
+            1811
+          ],
+          "confidence": 85.49
+        },
+        {
+          "text": "Ngon roi hùng trấn, kiểm doanh thuở nào!",
+          "bbox": [
+            431,
+            1826,
+            1316,
+            1870
+          ],
+          "confidence": 90.7
+        },
+        {
+          "text": "Chiêu Lăng, ngựa đá giở đâu?",
+          "bbox": [
+            549,
+            1887,
+            1177,
+            1932
+          ],
+          "confidence": 82.98
+        },
+        {
+          "text": "Phiên thêm chuyên nữa vô câu lâm bùn!",
+          "bbox": [
+            431,
+            1947,
+            1271,
+            1988
+          ],
+          "confidence": 84.63
+        },
+        {
+          "text": "Ngô Linh Ngọc dịch",
+          "bbox": [
+            1272,
+            2009,
+            1644,
+            2045
+          ],
+          "confidence": 88.54
+        },
+        {
+          "text": "1. Chiêu Lăng thạch mã: Ngựa đá ở Chiêu Lăng. Theo truyền thuyết, sau khi",
+          "bbox": [
+            291,
+            2147,
+            1646,
+            2187
+          ],
+          "confidence": 94.45
+        },
+        {
+          "text": "đánh thắng quân Nguyên, Trần Nhân Tổng đến làm lễ ở Chiêu Lăng, thấy chân ngựa",
+          "bbox": [
+            202,
+            2191,
+            1647,
+            2232
+          ],
+          "confidence": 94.78
+        },
+        {
+          "text": "đá ở đấy đều định bùn dường như ngựa chiến vừa đi xông pha trận mạc đuổi giặc",
+          "bbox": [
+            202,
+            2237,
+            1647,
+            2278
+          ],
+          "confidence": 88.32
+        },
+        {
+          "text": "ngoại xăm trổ về. Trần Nhân Tông bèn tức cánh làm hai câu thơ:",
+          "bbox": [
+            202,
+            2284,
+            1292,
+            2321
+          ],
+          "confidence": 89.69
+        },
+        {
+          "text": "Xã tắc lương hội lao thạch mã,",
+          "bbox": [
+            793,
+            2329,
+            1300,
+            2365
+          ],
+          "confidence": 78.78
+        },
+        {
+          "text": "Son hà thiên có điện kim âu.",
+          "bbox": [
+            791,
+            2374,
+            1269,
+            2409
+          ],
+          "confidence": 83.11
+        },
+        {
+          "text": "(Xã tác hai phen chôn ngụa đá,",
+          "bbox": [
+            791,
+            2421,
+            1308,
+            2454
+          ],
+          "confidence": 86.37
+        },
+        {
+          "text": "Non sông ngàn thuốc vững âu vàng.",
+          "bbox": [
+            791,
+            2466,
+            1380,
+            2500
+          ],
+          "confidence": 84.81
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          1823,
+          2814
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 16.286,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              427,
+              266,
+              1155,
+              315
+            ],
+            "generated_text": "Liên cốc phong nghi thang mộc áp.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.442,
+            "confidence": 94.19,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              427,
+              325,
+              1189,
+              366
+            ],
+            "generated_text": "Tiên suy hiệu lệnh trấn kiểm doanh.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.407,
+            "confidence": 94.7,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              427,
+              383,
+              1149,
+              424
+            ],
+            "generated_text": "Chiêu Lăng thach mã ¹ kim hà xứ,",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.456,
+            "confidence": 85.65,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              429,
+              443,
+              1168,
+              483
+            ],
+            "generated_text": "Nê cước trùng phiên thủ nhất kinh.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 0.396,
+            "confidence": 88.14,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              201,
+              574,
+              440,
+              604
+            ],
+            "generated_text": "Dich nghĩa:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.253,
+            "confidence": 87.48,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              284,
+              675,
+              1560,
+              711
+            ],
+            "generated_text": "அவர் தந்தான் என்று நான் துல்லியமாக தெரிவிக்க",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.541,
+            "confidence": 49.38,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              282,
+              703,
+              1560,
+              739
+            ],
+            "generated_text": "CAM TUONG KHI NGAM THANH TUC MAC",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.403,
+            "confidence": 98.32,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              431,
+              826,
+              1396,
+              869
+            ],
+            "generated_text": "Nghe nói đây là thành Tức Mặc của nhà Trân,",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.464,
+            "confidence": 91.19,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              431,
+              887,
+              1307,
+              928
+            ],
+            "generated_text": "Phong cảnh trước mặt chan chứa bao tinh.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.432,
+            "confidence": 90.83,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              431,
+              945,
+              1210,
+              988
+            ],
+            "generated_text": "Chương Dương, Hàm Tử văn như xưa,",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.444,
+            "confidence": 85.3,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              431,
+              1005,
+              1182,
+              1047
+            ],
+            "generated_text": "Hưng Đạo, Chiêu Văn chưa sống lại.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.427,
+            "confidence": 93.8,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              431,
+              1065,
+              1336,
+              1112
+            ],
+            "generated_text": "Đây là nơi quê vua từng in nghi vệ ngựa xe,",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.557,
+            "confidence": 91.88,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              431,
+              1123,
+              1453,
+              1166
+            ],
+            "generated_text": "Đây là dinh trấn thủ tụng vang hiệu lệnh roi vọt.",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.613,
+            "confidence": 82.87,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              431,
+              1183,
+              1247,
+              1224
+            ],
+            "generated_text": "Ngưa đá tai Chiêu Lăng nay ở nơi đâu?",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.482,
+            "confidence": 85.78,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              432,
+              1240,
+              1425,
+              1283
+            ],
+            "generated_text": "Lai phiền vì vô ngựa đính bùn qua đấy lần nữa?",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.585,
+            "confidence": 79.81,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              199,
+              1431,
+              392,
+              1458
+            ],
+            "generated_text": "Dich tha:",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.26,
+            "confidence": 70.29,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              551,
+              1534,
+              1214,
+              1577
+            ],
+            "generated_text": "Thành Trần, Tức Mặc nghe đôn",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.434,
+            "confidence": 91.9,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              431,
+              1590,
+              1346,
+              1636
+            ],
+            "generated_text": "Mất nhìn phong cảnh nổi buồn khôn khuây!",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.498,
+            "confidence": 91.82,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              549,
+              1651,
+              1236,
+              1694
+            ],
+            "generated_text": "Chương Dương, Hàm Tử còn đấy,",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.401,
+            "confidence": 89.81,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              432,
+              1711,
+              1297,
+              1753
+            ],
+            "generated_text": "Chiêu Văn, Hung Đạo chưa ngày tái sinh!",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.447,
+            "confidence": 89.81,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              546,
+              1770,
+              1100,
+              1811
+            ],
+            "generated_text": "Xe rồng, đất chúa, uy linh,",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.434,
+            "confidence": 85.49,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              431,
+              1826,
+              1316,
+              1870
+            ],
+            "generated_text": "Ngon roi hùng trấn, kiểm doanh thuở nào!",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.479,
+            "confidence": 90.7,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              549,
+              1887,
+              1177,
+              1932
+            ],
+            "generated_text": "Chiêu Lăng, ngựa đá giở đâu?",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.462,
+            "confidence": 82.98,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              431,
+              1947,
+              1271,
+              1988
+            ],
+            "generated_text": "Phiên thêm chuyên nữa vô câu lâm bùn!",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.484,
+            "confidence": 84.63,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              1272,
+              2009,
+              1644,
+              2045
+            ],
+            "generated_text": "Ngô Linh Ngọc dịch",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.302,
+            "confidence": 88.54,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              220,
+              2118,
+              795,
+              2132
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.142,
+            "confidence": 10.75,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              291,
+              2147,
+              1646,
+              2187
+            ],
+            "generated_text": "1. Chiêu Lăng thạch mã: Ngựa đá ở Chiêu Lăng. Theo truyền thuyết, sau khi",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 0.766,
+            "confidence": 94.45,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              202,
+              2191,
+              1647,
+              2232
+            ],
+            "generated_text": "đánh thắng quân Nguyên, Trần Nhân Tổng đến làm lễ ở Chiêu Lăng, thấy chân ngựa",
+            "n_lines": 1,
+            "tokens": 33,
+            "seconds": 0.829,
+            "confidence": 94.78,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              202,
+              2237,
+              1647,
+              2278
+            ],
+            "generated_text": "đá ở đấy đều định bùn dường như ngựa chiến vừa đi xông pha trận mạc đuổi giặc",
+            "n_lines": 1,
+            "tokens": 35,
+            "seconds": 0.91,
+            "confidence": 88.32,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              202,
+              2284,
+              1292,
+              2321
+            ],
+            "generated_text": "ngoại xăm trổ về. Trần Nhân Tông bèn tức cánh làm hai câu thơ:",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.794,
+            "confidence": 89.69,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              793,
+              2329,
+              1300,
+              2365
+            ],
+            "generated_text": "Xã tắc lương hội lao thạch mã,",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.437,
+            "confidence": 78.78,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 32,
+            "box": [
+              791,
+              2374,
+              1269,
+              2409
+            ],
+            "generated_text": "Son hà thiên có điện kim âu.",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.375,
+            "confidence": 83.11,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 33,
+            "box": [
+              791,
+              2421,
+              1308,
+              2454
+            ],
+            "generated_text": "(Xã tác hai phen chôn ngụa đá,",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.433,
+            "confidence": 86.37,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 34,
+            "box": [
+              791,
+              2466,
+              1380,
+              2500
+            ],
+            "generated_text": "Non sông ngàn thuốc vững âu vàng.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.497,
+            "confidence": 84.81,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              468,
+              1220,
+              1013,
+              1229
+            ],
+            "ink": 293
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      }
+    }
+  ]
+}

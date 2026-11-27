@@ -1,0 +1,247 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_20",
+  "engine": "qwen",
+  "page": 710,
+  "runs": [
+    {
+      "key": "7a990fe028efb88b035879e69027bcdd5b1c1103db92d17dd115d11c99527514",
+      "parameters": {
+        "image_sha256": "e890b7fd9febe09b845e5d40ed3529fac4cede5e62641e2f6cdc7f470f619978",
+        "engine": {
+          "name": "qwen",
+          "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "model_revision": "main",
+          "transformers_version": "4.57.6",
+          "torch_version": "2.5.1+cu121",
+          "cuda_version": "12.1",
+          "bitsandbytes_version": "0.50.2",
+          "quantization": {
+            "load_in_4bit": true,
+            "quant_type": "nf4",
+            "double_quant": true,
+            "compute_dtype": "float16"
+          },
+          "mode": "all",
+          "min_pixels": 50176,
+          "max_pixels": 802816,
+          "band_inches": 2.0,
+          "max_new_tokens": 768,
+          "repetition_penalty": 1.05,
+          "adapter_version": 3,
+          "prompt_version": 3,
+          "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74"
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T18:58:30+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_710.png",
+      "image_size": [
+        1839,
+        2803
+      ],
+      "crop_box": [
+        0,
+        0,
+        1839,
+        2803
+      ],
+      "lines": [
+        {
+          "text": "其高者，上遣尺之田乎。",
+          "bbox": [
+            287,
+            642,
+            1762,
+            763
+          ],
+          "confidence": 71.74
+        },
+        {
+          "text": "叟之聳眉，言曰：噫我農民，以穀為命。自春至夏，時播。沾體足。",
+          "bbox": [
+            287,
+            763,
+            1762,
+            883
+          ],
+          "confidence": 71.74
+        },
+        {
+          "text": "含餓忍饑，日望秋成。斗酒田舍。",
+          "bbox": [
+            287,
+            883,
+            1762,
+            1004
+          ],
+          "confidence": 71.74
+        },
+        {
+          "text": "誰知一夕，蒼海綠野。今子舟其上者，",
+          "bbox": [
+            287,
+            1004,
+            1762,
+            1124
+          ],
+          "confidence": 71.74
+        },
+        {
+          "text": "皆我稼也。",
+          "bbox": [
+            287,
+            1124,
+            1762,
+            1245
+          ],
+          "confidence": 71.74
+        },
+        {
+          "text": "一寸望无际，何深沉。",
+          "bbox": [
+            279,
+            1237,
+            1762,
+            1347
+          ],
+          "confidence": 55.53
+        },
+        {
+          "text": "子且勿问，重伤我心。",
+          "bbox": [
+            279,
+            1347,
+            1762,
+            1457
+          ],
+          "confidence": 55.53
+        },
+        {
+          "text": "余视如大水，中禾根败顶。",
+          "bbox": [
+            279,
+            1457,
+            1762,
+            1567
+          ],
+          "confidence": 55.53
+        },
+        {
+          "text": "如未济之濡首。",
+          "bbox": [
+            279,
+            1567,
+            1762,
+            1677
+          ],
+          "confidence": 55.53
+        },
+        {
+          "text": "然有仁心，莫施援手。",
+          "bbox": [
+            279,
+            1677,
+            1762,
+            1787
+          ],
+          "confidence": 55.53
+        },
+        {
+          "text": "舟遙巡而不發，將返掉而回顧。",
+          "bbox": [
+            262,
+            1779,
+            1762,
+            2542
+          ],
+          "confidence": 80.35
+        }
+      ],
+      "raw": {
+        "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+        "model_revision": "main",
+        "mode": "all",
+        "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74",
+        "dpi": 300,
+        "image_size": [
+          1839,
+          2803
+        ],
+        "band_target_height": 600,
+        "bbox_granularity": "band_even_split",
+        "max_new_tokens": 768,
+        "max_pixels": 802816,
+        "inference_seconds": 13.045,
+        "bands": [
+          {
+            "band": 1,
+            "y0": 646,
+            "y1": 1241,
+            "ink_box": [
+              287,
+              642,
+              1762,
+              1245
+            ],
+            "generated_text": "其高者，上遣尺之田乎。\n叟之聳眉，言曰：噫我農民，以穀為命。自春至夏，時播。沾體足。\n含餓忍饑，日望秋成。斗酒田舍。\n誰知一夕，蒼海綠野。今子舟其上者，\n皆我稼也。",
+            "n_lines": 5,
+            "tokens": 84,
+            "seconds": 6.103,
+            "confidence": 71.74,
+            "flags": []
+          },
+          {
+            "band": 2,
+            "y0": 1241,
+            "y1": 1783,
+            "ink_box": [
+              279,
+              1237,
+              1762,
+              1787
+            ],
+            "generated_text": "一寸望无际，何深沉。\n子且勿问，重伤我心。\n余视如大水，中禾根败顶。\n如未济之濡首。\n然有仁心，莫施援手。",
+            "n_lines": 5,
+            "tokens": 50,
+            "seconds": 4.398,
+            "confidence": 55.53,
+            "flags": []
+          },
+          {
+            "band": 3,
+            "y0": 1783,
+            "y1": 2538,
+            "ink_box": [
+              262,
+              1779,
+              1762,
+              2542
+            ],
+            "generated_text": "舟遙巡而不發，將返掉而回顧。",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 2.535,
+            "confidence": 80.35,
+            "flags": []
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "9f9251f525e6fb14a7842465d834ea0d351ab96e",
+        "git_describe": "9f9251f",
+        "git_dirty": true,
+        "gpu": "NVIDIA GeForce RTX 3050 6GB Laptop GPU",
+        "dtype": "float16",
+        "adapter_version": 3
+      }
+    }
+  ]
+}

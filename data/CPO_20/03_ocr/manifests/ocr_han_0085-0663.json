@@ -1,0 +1,214 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_20",
+  "layer": "han",
+  "engine": "paddlevl",
+  "engine_descriptor": {
+    "name": "paddlevl",
+    "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+    "model_revision": "main",
+    "transformers_version": "5.24.0",
+    "torch_version": "2.14.1+cu126",
+    "cuda_version": "12.6",
+    "dtype": "bfloat16",
+    "orientation": "horizontal",
+    "max_pixels": 1003520,
+    "band_inches": 2.0,
+    "max_new_tokens": 512,
+    "prompt": "OCR:",
+    "col_rel_threshold": 0.05,
+    "min_unit_ink_rel": 0.08,
+    "min_pixels": 147456,
+    "min_band_side": 56,
+    "min_span_px": 14,
+    "loop_pattern": "(.{6,80}?)\\1{3,}",
+    "max_identical_run": 2,
+    "confidence_caps": [
+      10.0,
+      30.0
+    ],
+    "ink_percentiles": [
+      2.0,
+      98.0,
+      0.1
+    ],
+    "row_pitch_split": {
+      "lags": [
+        24,
+        240
+      ],
+      "min_ac": 0.15,
+      "tall": 1.6,
+      "valley_rel": 0.5
+    },
+    "deskew": [
+      2.5,
+      0.1,
+      0.2
+    ],
+    "adapter_version": 6
+  },
+  "updated_at": "2026-11-26T04:06:57+00:00",
+  "source": {
+    "path": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages"
+  },
+  "provenance": {
+    "git_commit": "7a0a8d9befaa9c2afee66139d5b233593b81f86e",
+    "git_describe": "7a0a8d9",
+    "git_dirty": true,
+    "gpu": "NVIDIA GeForce RTX 3050 6GB Laptop GPU",
+    "dtype": "bfloat16",
+    "adapter_version": 6
+  },
+  "parameters": {
+    "region": null,
+    "psm": 6,
+    "dpi": 300,
+    "force_reocr": true
+  },
+  "pages": [
+    {
+      "page": 85,
+      "engine": "paddlevl",
+      "key": "fad8d2f3ef0f005aad4298e3207b1eb324c5019f69ded246b8e934b1b06bcc67",
+      "status": "ocr",
+      "raw": "03_ocr/raw/paddlevl/0085.json",
+      "n_lines": 28,
+      "confidence": 89.0624295190713,
+      "created_at": "2026-11-26T04:03:05+00:00"
+    },
+    {
+      "page": 87,
+      "engine": "paddlevl",
+      "key": "5bace435887062a4f2ad3f378beb03c405d345a3fc576fa032296b9eb4256439",
+      "status": "ocr",
+      "raw": "03_ocr/raw/paddlevl/0087.json",
+      "n_lines": 32,
+      "confidence": 91.15341521394612,
+      "created_at": "2026-11-26T04:03:22+00:00"
+    },
+    {
+      "page": 97,
+      "engine": "paddlevl",
+      "key": "9c91d81a714acd333ccb2dd6eb661a14d2db171f646564df53eea482aa48205c",
+      "status": "ocr",
+      "raw": "03_ocr/raw/paddlevl/0097.json",
+      "n_lines": 22,
+      "confidence": 87.26603674540682,
+      "created_at": "2026-11-26T04:03:35+00:00"
+    },
+    {
+      "page": 103,
+      "engine": "paddlevl",
+      "key": "a00262ea9b18ce54a03eeb7714d07e83317e8931233f3fd33e99f0378606bcae",
+      "status": "ocr",
+      "raw": "03_ocr/raw/paddlevl/0103.json",
+      "n_lines": 22,
+      "confidence": 85.53297587131367,
+      "created_at": "2026-11-26T04:03:49+00:00"
+    },
+    {
+      "page": 105,
+      "engine": "paddlevl",
+      "key": "53be0ad961d74d09287994a4a11879b5f0d8c4cb613e20dcd2209728f3f6add2",
+      "status": "ocr",
+      "raw": "03_ocr/raw/paddlevl/0105.json",
+      "n_lines": 33,
+      "confidence": 87.93016821345708,
+      "created_at": "2026-11-26T04:04:10+00:00"
+    },
+    {
+      "page": 107,
+      "engine": "paddlevl",
+      "key": "d876e4bfdcefd36dc31db89cdba741a12e039049c7a0f8bc5a881ee190c07bd2",
+      "status": "ocr",
+      "raw": "03_ocr/raw/paddlevl/0107.json",
+      "n_lines": 35,
+      "confidence": 92.19524886877828,
+      "created_at": "2026-11-26T04:04:32+00:00"
+    },
+    {
+      "page": 113,
+      "engine": "paddlevl",
+      "key": "bdb23def1df854962fea7378a7628893bfd86c7b130638fdf6d3e80b68e1c7b3",
+      "status": "ocr",
+      "raw": "03_ocr/raw/paddlevl/0113.json",
+      "n_lines": 30,
+      "confidence": 89.5042741935484,
+      "created_at": "2026-11-26T04:04:49+00:00"
+    },
+    {
+      "page": 268,
+      "engine": "paddlevl",
+      "key": "e187eb186a458831d02d6cada7abe1a67b1f165fb3b5db7538d75750da9adc30",
+      "status": "ocr",
+      "raw": "03_ocr/raw/paddlevl/0268.json",
+      "n_lines": 46,
+      "confidence": 93.05920338983051,
+      "created_at": "2026-11-26T04:05:06+00:00"
+    },
+    {
+      "page": 270,
+      "engine": "paddlevl",
+      "key": "365e07628576b4a960946c75d2998536a06c217cb1d05651185f74acc3f9c143",
+      "status": "ocr",
+      "raw": "03_ocr/raw/paddlevl/0270.json",
+      "n_lines": 28,
+      "confidence": 90.0529734848485,
+      "created_at": "2026-11-26T04:05:23+00:00"
+    },
+    {
+      "page": 272,
+      "engine": "paddlevl",
+      "key": "349ef9109b64f8759c53c91d1817c1710eae97609e0c35ace8556a4fff6ac16e",
+      "status": "ocr",
+      "raw": "03_ocr/raw/paddlevl/0272.json",
+      "n_lines": 30,
+      "confidence": 90.9150081300813,
+      "created_at": "2026-11-26T04:05:43+00:00"
+    },
+    {
+      "page": 274,
+      "engine": "paddlevl",
+      "key": "6d386c404e5a633ec41e6a02b665ca9c2e2581fa686aeff95a5bbadb2c633f33",
+      "status": "ocr",
+      "raw": "03_ocr/raw/paddlevl/0274.json",
+      "n_lines": 33,
+      "confidence": 92.66366799204772,
+      "created_at": "2026-11-26T04:06:05+00:00"
+    },
+    {
+      "page": 276,
+      "engine": "paddlevl",
+      "key": "81bda8d2fd9155f3cf743488e21db838715e0abeaea259be777c203f57ecc0be",
+      "status": "ocr",
+      "raw": "03_ocr/raw/paddlevl/0276.json",
+      "n_lines": 22,
+      "confidence": 91.93656135194709,
+      "created_at": "2026-11-26T04:06:20+00:00"
+    },
+    {
+      "page": 645,
+      "engine": "paddlevl",
+      "key": "241802b3f5c5a4423e641ca9ce0c55ae4b0c4b5678dbb5df1c886b9461670d48",
+      "status": "ocr",
+      "raw": "03_ocr/raw/paddlevl/0645.json",
+      "n_lines": 33,
+      "confidence": 94.30489666136724,
+      "created_at": "2026-11-26T04:06:39+00:00"
+    },
+    {
+      "page": 663,
+      "engine": "paddlevl",
+      "key": "7ec1967176f3fba49c983e036b98f1f7d7e12904dc86a3d7872c6c5faa81b8ac",
+      "status": "ocr",
+      "raw": "03_ocr/raw/paddlevl/0663.json",
+      "n_lines": 31,
+      "confidence": 94.10581712062255,
+      "created_at": "2026-11-26T04:06:57+00:00"
+    }
+  ],
+  "missing_images": [],
+  "error_pages": [],
+  "pages_requested": "85,87,97,103,105,107,113,268,270,272,274,276,645,663"
+}

@@ -51,6 +51,7 @@ _VI_PUNCT_SPACING = re.compile(r"\s+([,.:;?!…])")
 def clean_sentence_han(text: str) -> str:
     """Chuẩn hoá câu Hán: NFC, chuyển dấu ASCII sang dấu Hán chuẩn, bỏ khoảng trắng giữa chữ Hán và quanh dấu câu."""
     text = unicodedata.normalize("NFC", text)
+    text = text.replace("□", "[MASK]")          # chữ khuyết -> token tool dóng Hán-Âm hiểu là 1 chữ hỏng
     # Thay thế dấu câu ASCII đơn lẻ bằng dấu CJK
     chars = []
     for c in text:
@@ -82,7 +83,7 @@ class SentenceCleaner:
         text = sentence.text
         if self.layer == "han":
             text = clean_sentence_han(text)
-            ok = sum(1 for c in text if cjk_ratio(c) > 0) >= 2
+            ok = sum(1 for c in text.replace("[MASK]", "口") if cjk_ratio(c) > 0) >= 2   # [MASK] = 1 chữ
         else:
             text = clean_sentence_vi(text)
             ok = any(ch.isalnum() for ch in text)
@@ -218,6 +219,9 @@ def main(argv: list[str] | None = None) -> int:
     args = parse_args(parser, argv)
     try:
         run(args)
+    except deps.UpToDate as exc:          # đầu ra còn mới: bỏ qua, không phải lỗi
+        log.info("%s", exc)
+        return 0
     except (OSError, ValueError, FileNotFoundError) as exc:
         log.error("%s", exc)
         return 1

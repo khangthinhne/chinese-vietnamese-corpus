@@ -972,6 +972,9 @@ def main(argv: list[str] | None = None) -> int:
             if handler is not None:
                 logging.getLogger().removeHandler(handler)
                 handler.close()
+    except deps.UpToDate as exc:          # đầu ra còn mới: bỏ qua, không phải lỗi
+        log.info("%s", exc)
+        return 0
     except (OSError, ValueError, RuntimeError, KeyError, TypeError, subprocess.SubprocessError) as exc:
         log.error("%s", exc)
         return 1

@@ -1,0 +1,804 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 152,
+  "runs": [
+    {
+      "key": "abf606cd9daa19564394741553661e7ca1257310ab0e56424f91b20b60cc1e5c",
+      "parameters": {
+        "image_sha256": "1c8b5096a18f32e0caef1610975bfa91203e0bc34e11f29a947942c6aab5340f",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T12:49:57+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_152.png",
+      "image_size": [
+        2706,
+        3319
+      ],
+      "crop_box": [
+        0,
+        0,
+        2706,
+        3319
+      ],
+      "lines": [
+        {
+          "text": "ngothinhamle1.pdf",
+          "bbox": [
+            7,
+            19,
+            286,
+            45
+          ],
+          "confidence": 96.3
+        },
+        {
+          "text": "HOANG HOA ĐỔ PHA",
+          "bbox": [
+            1372,
+            259,
+            2058,
+            298
+          ],
+          "confidence": 83.3
+        },
+        {
+          "text": "龍之出沒，樓臺之接續，舳舻之往還，神仙之遺跡，人",
+          "bbox": [
+            348,
+            342,
+            2038,
+            407
+          ],
+          "confidence": 99.5
+        },
+        {
+          "text": "境之現在，則吾言不工，而吾獨心會之耳。時同幹希",
+          "bbox": [
+            349,
+            481,
+            2031,
+            547
+          ],
+          "confidence": 99.94
+        },
+        {
+          "text": "史公先唱，余觸景生情，不揣畫葫，續成四韻。",
+          "bbox": [
+            352,
+            619,
+            1932,
+            683
+          ],
+          "confidence": 99.82
+        },
+        {
+          "text": "秋霽銀湖漠晚煙",
+          "bbox": [
+            916,
+            759,
+            1460,
+            817
+          ],
+          "confidence": 99.83
+        },
+        {
+          "text": "樓頭憑拭思悠然",
+          "bbox": [
+            365,
+            887,
+            1934,
+            949
+          ],
+          "confidence": 99.28
+        },
+        {
+          "text": "千峰蒼翠無波頃",
+          "bbox": [
+            791,
+            1017,
+            1464,
+            1079
+          ],
+          "confidence": 98.73
+        },
+        {
+          "text": "萬象黃昏未月前",
+          "bbox": [
+            931,
+            1147,
+            1468,
+            1211
+          ],
+          "confidence": 99.02
+        },
+        {
+          "text": "洞府潛龍雲隱隱",
+          "bbox": [
+            928,
+            1278,
+            1466,
+            1340
+          ],
+          "confidence": 99.86
+        },
+        {
+          "text": "衡陽回雁樹翩翩",
+          "bbox": [
+            925,
+            1409,
+            1469,
+            1467
+          ],
+          "confidence": 99.8
+        },
+        {
+          "text": "閑觀默會乾坤意",
+          "bbox": [
+            930,
+            1538,
+            1467,
+            1600
+          ],
+          "confidence": 98.94
+        },
+        {
+          "text": "凹這邊來凸這邊",
+          "bbox": [
+            929,
+            1671,
+            1983,
+            1730
+          ],
+          "confidence": 99.16
+        },
+        {
+          "text": "PHIEN AM:",
+          "bbox": [
+            350,
+            1820,
+            1166,
+            1858
+          ],
+          "confidence": 99.46
+        },
+        {
+          "text": "NHAC DUONG KY THANG",
+          "bbox": [
+            823,
+            1899,
+            1533,
+            1944
+          ],
+          "confidence": 88.67
+        },
+        {
+          "text": "Dư tăng văn tiến bối phụng sự chủ công ngôn: “Thuận phong quá",
+          "bbox": [
+            496,
+            2046,
+            2054,
+            2100
+          ],
+          "confidence": 83.42
+        },
+        {
+          "text": "Động Đình chi lạc.\"(a) Thị hành dã, dĩ văn xuân nhập Sở, phụng Đại",
+          "bbox": [
+            346,
+            2128,
+            2054,
+            2184
+          ],
+          "confidence": 86.71
+        },
+        {
+          "text": "Hoàng đế chỉ thôi nhập cận, sân khân kiêm trình. Đáo Tương thời, động",
+          "bbox": [
+            347,
+            2211,
+            2057,
+            2263
+          ],
+          "confidence": 85.17
+        },
+        {
+          "text": "phong chính thinh, bất lợi phàm tiếp, nãi do han lô hành tẩu. Tỉ thu sơ",
+          "bbox": [
+            348,
+            2293,
+            2059,
+            2339
+          ],
+          "confidence": 87.11
+        },
+        {
+          "text": "hội thiêu,(b) tương cấp Hán Khấu, tố lưu nhi cường lạo tiến bôn, chu",
+          "bbox": [
+            347,
+            2374,
+            2054,
+            2427
+          ],
+          "confidence": 80.3
+        },
+        {
+          "text": "hoàng bất đắc thương; hưu tự Vũ Xương khởi lục hồi Việt. Thừa phong du",
+          "bbox": [
+            347,
+            2456,
+            2053,
+            2509
+          ],
+          "confidence": 90.87
+        },
+        {
+          "text": "hỗ chi lac chi nan hữu như thi phù.",
+          "bbox": [
+            347,
+            2538,
+            1166,
+            2581
+          ],
+          "confidence": 81.27
+        },
+        {
+          "text": "Nhac Dương lâu tai hộ chi động, Nhac Châu (c) thành chi tây. Dư",
+          "bbox": [
+            495,
+            2636,
+            2057,
+            2682
+          ],
+          "confidence": 82.16
+        },
+        {
+          "text": "đáo Nhạc thời, nhân dữ động cán chư công đăng lâu túng quan, chỉ tắc",
+          "bbox": [
+            347,
+            2718,
+            2053,
+            2770
+          ],
+          "confidence": 82.04
+        },
+        {
+          "text": "hô quang thủy tĩnh,\" nhất bích van khoảnh, cực mục vô tế, bất tri kì tân",
+          "bbox": [
+            346,
+            2799,
+            2050,
+            2846
+          ],
+          "confidence": 90.7
+        },
+        {
+          "text": "nhai; dao vọng Quân Sơn (d) đúng xuất ba tâm, uyên nhiên nhất toạ La",
+          "bbox": [
+            347,
+            2883,
+            2092,
+            2935
+          ],
+          "confidence": 85.45
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2706,
+          3319
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 42.878,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              7,
+              19,
+              286,
+              45
+            ],
+            "generated_text": "ngothinhamle1.pdf",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.907,
+            "confidence": 96.3,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              1372,
+              259,
+              2058,
+              298
+            ],
+            "generated_text": "HOANG HOA ĐỔ PHA",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.979,
+            "confidence": 83.3,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              350,
+              304,
+              2062,
+              317
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.458,
+            "confidence": 10.6,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              348,
+              342,
+              2038,
+              407
+            ],
+            "generated_text": "龍之出沒，樓臺之接續，舳舻之往還，神仙之遺跡，人",
+            "n_lines": 1,
+            "tokens": 32,
+            "seconds": 2.385,
+            "confidence": 99.5,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              349,
+              481,
+              2031,
+              547
+            ],
+            "generated_text": "境之現在，則吾言不工，而吾獨心會之耳。時同幹希",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 1.926,
+            "confidence": 99.94,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              352,
+              619,
+              1932,
+              683
+            ],
+            "generated_text": "史公先唱，余觸景生情，不揣畫葫，續成四韻。",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 1.98,
+            "confidence": 99.82,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              916,
+              759,
+              1460,
+              817
+            ],
+            "generated_text": "秋霽銀湖漠晚煙",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.108,
+            "confidence": 99.83,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              365,
+              887,
+              1934,
+              949
+            ],
+            "generated_text": "樓頭憑拭思悠然",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.956,
+            "confidence": 99.28,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              791,
+              1017,
+              1464,
+              1079
+            ],
+            "generated_text": "千峰蒼翠無波頃",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.173,
+            "confidence": 98.73,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              931,
+              1147,
+              1468,
+              1211
+            ],
+            "generated_text": "萬象黃昏未月前",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.826,
+            "confidence": 99.02,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              928,
+              1278,
+              1466,
+              1340
+            ],
+            "generated_text": "洞府潛龍雲隱隱",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.2,
+            "confidence": 99.86,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              925,
+              1409,
+              1469,
+              1467
+            ],
+            "generated_text": "衡陽回雁樹翩翩",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.799,
+            "confidence": 99.8,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              930,
+              1538,
+              1467,
+              1600
+            ],
+            "generated_text": "閑觀默會乾坤意",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.898,
+            "confidence": 98.94,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              929,
+              1671,
+              1983,
+              1730
+            ],
+            "generated_text": "凹這邊來凸這邊",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.92,
+            "confidence": 99.16,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              350,
+              1820,
+              1166,
+              1858
+            ],
+            "generated_text": "PHIEN AM:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.734,
+            "confidence": 99.46,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              823,
+              1899,
+              1533,
+              1944
+            ],
+            "generated_text": "NHAC DUONG KY THANG",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.886,
+            "confidence": 88.67,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              496,
+              2046,
+              2054,
+              2100
+            ],
+            "generated_text": "Dư tăng văn tiến bối phụng sự chủ công ngôn: “Thuận phong quá",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 2.034,
+            "confidence": 83.42,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              346,
+              2128,
+              2054,
+              2184
+            ],
+            "generated_text": "Động Đình chi lạc.\"(a) Thị hành dã, dĩ văn xuân nhập Sở, phụng Đại",
+            "n_lines": 1,
+            "tokens": 34,
+            "seconds": 2.71,
+            "confidence": 86.71,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              347,
+              2211,
+              2057,
+              2263
+            ],
+            "generated_text": "Hoàng đế chỉ thôi nhập cận, sân khân kiêm trình. Đáo Tương thời, động",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.282,
+            "confidence": 85.17,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              348,
+              2293,
+              2059,
+              2339
+            ],
+            "generated_text": "phong chính thinh, bất lợi phàm tiếp, nãi do han lô hành tẩu. Tỉ thu sơ",
+            "n_lines": 1,
+            "tokens": 33,
+            "seconds": 2.639,
+            "confidence": 87.11,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              347,
+              2374,
+              2054,
+              2427
+            ],
+            "generated_text": "hội thiêu,(b) tương cấp Hán Khấu, tố lưu nhi cường lạo tiến bôn, chu",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 2.493,
+            "confidence": 80.3,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              347,
+              2456,
+              2053,
+              2509
+            ],
+            "generated_text": "hoàng bất đắc thương; hưu tự Vũ Xương khởi lục hồi Việt. Thừa phong du",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 2.426,
+            "confidence": 90.87,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              347,
+              2538,
+              1166,
+              2581
+            ],
+            "generated_text": "hỗ chi lac chi nan hữu như thi phù.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.286,
+            "confidence": 81.27,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              495,
+              2636,
+              2057,
+              2682
+            ],
+            "generated_text": "Nhac Dương lâu tai hộ chi động, Nhac Châu (c) thành chi tây. Dư",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 2.026,
+            "confidence": 82.16,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              347,
+              2718,
+              2053,
+              2770
+            ],
+            "generated_text": "đáo Nhạc thời, nhân dữ động cán chư công đăng lâu túng quan, chỉ tắc",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 2.123,
+            "confidence": 82.04,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              346,
+              2799,
+              2050,
+              2846
+            ],
+            "generated_text": "hô quang thủy tĩnh,\" nhất bích van khoảnh, cực mục vô tế, bất tri kì tân",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 2.485,
+            "confidence": 90.7,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              347,
+              2883,
+              2092,
+              2935
+            ],
+            "generated_text": "nhai; dao vọng Quân Sơn (d) đúng xuất ba tâm, uyên nhiên nhất toạ La",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 2.234,
+            "confidence": 85.45,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              345,
+              2335,
+              1561,
+              2346
+            ],
+            "ink": 354
+          },
+          {
+            "box": [
+              574,
+              2679,
+              1934,
+              2688
+            ],
+            "ink": 264
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

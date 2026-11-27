@@ -1,0 +1,609 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_18",
+  "engine": "paddlevl",
+  "page": 297,
+  "runs": [
+    {
+      "key": "f927cd1ae54e9a16e7cd48132ca2120cdf1fac48b466a8570f8b9fd96767bc48",
+      "parameters": {
+        "image_sha256": "7ff8d6482b8f20ab761e401c20e511012ffaa07213c3f6862c7c306dbd3673c5",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T13:57:23+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_297.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        0,
+        2480,
+        3509
+      ],
+      "lines": [
+        {
+          "text": "，",
+          "bbox": [
+            13,
+            0,
+            2477,
+            40
+          ],
+          "confidence": 32.25
+        },
+        {
+          "text": "Phần II : Nguyên văn tác phẩm dịch và chủ thích",
+          "bbox": [
+            1123,
+            209,
+            2477,
+            260
+          ],
+          "confidence": 90.67
+        },
+        {
+          "text": "I",
+          "bbox": [
+            244,
+            291,
+            2477,
+            310
+          ],
+          "confidence": 69.46
+        },
+        {
+          "text": "= Ta (...) sáu mươi tuổi, nghe bất đẳu xuôi tai\" (Luân",
+          "bbox": [
+            396,
+            389,
+            2477,
+            449
+          ],
+          "confidence": 84.74
+        },
+        {
+          "text": "ngu. Vị chính).",
+          "bbox": [
+            398,
+            486,
+            2477,
+            527
+          ],
+          "confidence": 74.24
+        },
+        {
+          "text": "(10) Đăng Công : chỉ Đại Thừa Đăng.",
+          "bbox": [
+            267,
+            571,
+            2477,
+            631
+          ],
+          "confidence": 94.76
+        },
+        {
+          "text": "(11) Pháp tích : chiếu pháp, nơi bàn luận hoặc nghe thuyết",
+          "bbox": [
+            268,
+            674,
+            2477,
+            746
+          ],
+          "confidence": 97.12
+        },
+        {
+          "text": "giảng về giáo lý dao Phát.",
+          "bbox": [
+            401,
+            755,
+            2477,
+            815
+          ],
+          "confidence": 94.57
+        },
+        {
+          "text": "(12) Thân chết : dich thoát chữ \"từ vương\", có nghĩa là ông",
+          "bbox": [
+            268,
+            858,
+            2477,
+            919
+          ],
+          "confidence": 91.59
+        },
+        {
+          "text": "vua trông coi về sự chết. Cũng có thể chủ vương Đ là một",
+          "bbox": [
+            398,
+            942,
+            2477,
+            1001
+          ],
+          "confidence": 83.66
+        },
+        {
+          "text": "viết nhầm của chủ vong 亡, và tử vong 死亡 có nghĩa là",
+          "bbox": [
+            398,
+            1026,
+            2477,
+            1088
+          ],
+          "confidence": 81.83
+        },
+        {
+          "text": "cal chet.",
+          "bbox": [
+            398,
+            1125,
+            661,
+            1165
+          ],
+          "confidence": 72.33
+        },
+        {
+          "text": "(13) Thân Châu : đây chỉ Trung Quốc.",
+          "bbox": [
+            268,
+            1207,
+            1481,
+            1267
+          ],
+          "confidence": 92.75
+        },
+        {
+          "text": "(14) Thánh cảnh : nước Phát, đầy hoặc chỉ An Đô, hoặc chỉ",
+          "bbox": [
+            269,
+            1322,
+            2189,
+            1383
+          ],
+          "confidence": 89.02
+        },
+        {
+          "text": "một xứ sở đất nước nào đó mà Đạo Hy và Đại Thừa Đăng",
+          "bbox": [
+            401,
+            1405,
+            2190,
+            1467
+          ],
+          "confidence": 93.45
+        },
+        {
+          "text": "từng đến để nghiên cứu đạo Phật.",
+          "bbox": [
+            295,
+            1486,
+            1460,
+            1546
+          ],
+          "confidence": 91.15
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          3509
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 22.85,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              13,
+              0,
+              2477,
+              40
+            ],
+            "generated_text": "，",
+            "n_lines": 1,
+            "tokens": 2,
+            "seconds": 0.567,
+            "confidence": 32.25,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              1123,
+              209,
+              2477,
+              260
+            ],
+            "generated_text": "Phần II : Nguyên văn tác phẩm dịch và chủ thích",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.301,
+            "confidence": 90.67,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              244,
+              291,
+              2477,
+              310
+            ],
+            "generated_text": "I",
+            "n_lines": 1,
+            "tokens": 2,
+            "seconds": 0.557,
+            "confidence": 69.46,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              396,
+              389,
+              2477,
+              449
+            ],
+            "generated_text": "= Ta (...) sáu mươi tuổi, nghe bất đẳu xuôi tai\" (Luân",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 2.149,
+            "confidence": 84.74,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              398,
+              486,
+              2477,
+              527
+            ],
+            "generated_text": "ngu. Vị chính).",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.828,
+            "confidence": 74.24,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              267,
+              571,
+              2477,
+              631
+            ],
+            "generated_text": "(10) Đăng Công : chỉ Đại Thừa Đăng.",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.558,
+            "confidence": 94.76,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              268,
+              674,
+              2477,
+              746
+            ],
+            "generated_text": "(11) Pháp tích : chiếu pháp, nơi bàn luận hoặc nghe thuyết",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 2.054,
+            "confidence": 97.12,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              401,
+              755,
+              2477,
+              815
+            ],
+            "generated_text": "giảng về giáo lý dao Phát.",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 1.08,
+            "confidence": 94.57,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              268,
+              858,
+              2477,
+              919
+            ],
+            "generated_text": "(12) Thân chết : dich thoát chữ \"từ vương\", có nghĩa là ông",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 2.086,
+            "confidence": 91.59,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              398,
+              942,
+              2477,
+              1001
+            ],
+            "generated_text": "vua trông coi về sự chết. Cũng có thể chủ vương Đ là một",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.803,
+            "confidence": 83.66,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              398,
+              1026,
+              2477,
+              1088
+            ],
+            "generated_text": "viết nhầm của chủ vong 亡, và tử vong 死亡 có nghĩa là",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.87,
+            "confidence": 81.83,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              398,
+              1125,
+              661,
+              1165
+            ],
+            "generated_text": "cal chet.",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.623,
+            "confidence": 72.33,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              268,
+              1207,
+              1481,
+              1267
+            ],
+            "generated_text": "(13) Thân Châu : đây chỉ Trung Quốc.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.345,
+            "confidence": 92.75,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              269,
+              1322,
+              2189,
+              1383
+            ],
+            "generated_text": "(14) Thánh cảnh : nước Phát, đầy hoặc chỉ An Đô, hoặc chỉ",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 1.963,
+            "confidence": 89.02,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              401,
+              1405,
+              2190,
+              1467
+            ],
+            "generated_text": "một xứ sở đất nước nào đó mà Đạo Hy và Đại Thừa Đăng",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.734,
+            "confidence": 93.45,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              295,
+              1486,
+              1460,
+              1546
+            ],
+            "generated_text": "từng đến để nghiên cứu đạo Phật.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.329,
+            "confidence": 91.15,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              487,
+              470,
+              2477,
+              485
+            ],
+            "ink": 966
+          },
+          {
+            "box": [
+              278,
+              630,
+              2477,
+              641
+            ],
+            "ink": 634
+          },
+          {
+            "box": [
+              401,
+              811,
+              2477,
+              827
+            ],
+            "ink": 1055
+          },
+          {
+            "box": [
+              280,
+              918,
+              2477,
+              929
+            ],
+            "ink": 645
+          },
+          {
+            "box": [
+              670,
+              999,
+              2477,
+              1011
+            ],
+            "ink": 704
+          },
+          {
+            "box": [
+              1125,
+              1084,
+              2477,
+              1094
+            ],
+            "ink": 521
+          },
+          {
+            "box": [
+              279,
+              1265,
+              1361,
+              1275
+            ],
+            "ink": 558
+          },
+          {
+            "box": [
+              508,
+              1544,
+              1404,
+              1553
+            ],
+            "ink": 512
+          },
+          {
+            "box": [
+              2066,
+              3307,
+              2477,
+              3319
+            ],
+            "ink": 830
+          },
+          {
+            "box": [
+              2018,
+              3349,
+              2199,
+              3368
+            ],
+            "ink": 1502
+          },
+          {
+            "box": [
+              1970,
+              3374,
+              2194,
+              3387
+            ],
+            "ink": 875
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

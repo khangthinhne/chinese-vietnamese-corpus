@@ -1,0 +1,241 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "qwen",
+  "page": 566,
+  "runs": [
+    {
+      "key": "e5e3c190fe46f70e2117e407feeb4e873d2069655c76d0b0f0092cf884561c4e",
+      "parameters": {
+        "image_sha256": "6f7b9f6e08bd01af462a04df796d018f5bb94515899cfe61992ba8c8a8d56354",
+        "engine": {
+          "name": "qwen",
+          "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "model_revision": "main",
+          "transformers_version": "4.57.6",
+          "torch_version": "2.5.1+cu121",
+          "cuda_version": "12.1",
+          "bitsandbytes_version": "0.50.2",
+          "quantization": {
+            "load_in_4bit": true,
+            "quant_type": "nf4",
+            "double_quant": true,
+            "compute_dtype": "float16"
+          },
+          "mode": "all",
+          "min_pixels": 50176,
+          "max_pixels": 802816,
+          "band_inches": 2.0,
+          "max_new_tokens": 768,
+          "repetition_penalty": 1.05,
+          "adapter_version": 3,
+          "prompt_version": 3,
+          "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74"
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T22:41:58+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_566.png",
+      "image_size": [
+        2694,
+        3313
+      ],
+      "crop_box": [
+        0,
+        0,
+        2694,
+        3313
+      ],
+      "lines": [
+        {
+          "text": "BANG GIAO HẢO THOẠI",
+          "bbox": [
+            7,
+            13,
+            2232,
+            289
+          ],
+          "confidence": 93.55
+        },
+        {
+          "text": "夫！承恩而不圖報，是豈有天良者之心。上年進獻方物，內有闕略，當補足處。既奉憲恩爲捐所有代製金如",
+          "bbox": [
+            7,
+            289,
+            2232,
+            565
+          ],
+          "confidence": 93.55
+        },
+        {
+          "text": "意二柄，以奉祝釐，進奉之儀，其彌縫於禮節之間，為小番將來計者，心良苦矣。小番蒙恩深厚，超越常格，沉思靜想，有言之不能盡，描之不能巧者。蓋自展覲以及",
+          "bbox": [
+            522,
+            643,
+            2228,
+            1012
+          ],
+          "confidence": 95.21
+        },
+        {
+          "text": "還國，隆霄異數，凡皆藩候之不常得，史册之未前聞。",
+          "bbox": [
+            520,
+            1076,
+            2227,
+            1340
+          ],
+          "confidence": 91.68
+        },
+        {
+          "text": "洪鈞賦物，豈求報於區區？然後宣愷悌之封，補貞明之錘，以鼓動屯蒙而昭蘇伏蟄者乎？然泰山一抔，滄海一勺，苟可報稱於萬分之一者，豈無不盡之心？玄衰",
+          "bbox": [
+            520,
+            1340,
+            2227,
+            1604
+          ],
+          "confidence": 91.68
+        },
+        {
+          "text": "及颛路车乘黄，诸侯受天子之赐，亦当思所以报天子之德。昔周公主陕，召公主洛，疆以周索，诸侯不命其承媚。兹一人惟天子使，此其所以报也。",
+          "bbox": [
+            523,
+            1665,
+            2226,
+            2184
+          ],
+          "confidence": 88.2
+        },
+        {
+          "text": "之治。自闽粤以南，繫寔主之，小番叨司南服，效力封疆，乃其職守，有所指顧，即東西趨赴，敢不如命，應侯順德，上以答聖天子陶造之仁，次以酬公中堂成就之恩，小番之切望也。今接王分府來札，責以前遣謝貢品簡陋，小番踎踎輾轉，萬不自安。",
+          "bbox": [
+            525,
+            2264,
+            2232,
+            3056
+          ],
+          "confidence": 87.55
+        }
+      ],
+      "raw": {
+        "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+        "model_revision": "main",
+        "mode": "all",
+        "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74",
+        "dpi": 300,
+        "image_size": [
+          2694,
+          3313
+        ],
+        "band_target_height": 600,
+        "bbox_granularity": "band_even_split",
+        "max_new_tokens": 768,
+        "max_pixels": 802816,
+        "inference_seconds": 27.855,
+        "bands": [
+          {
+            "band": 1,
+            "y0": 17,
+            "y1": 604,
+            "ink_box": [
+              7,
+              13,
+              2232,
+              565
+            ],
+            "generated_text": "BANG GIAO HẢO THOẠI\n夫！承恩而不圖報，是豈有天良者之心。上年進獻方物，內有闕略，當補足處。既奉憲恩爲捐所有代製金如",
+            "n_lines": 2,
+            "tokens": 59,
+            "seconds": 4.183,
+            "confidence": 93.55,
+            "flags": []
+          },
+          {
+            "band": 2,
+            "y0": 604,
+            "y1": 1051,
+            "ink_box": [
+              522,
+              643,
+              2228,
+              1012
+            ],
+            "generated_text": "意二柄，以奉祝釐，進奉之儀，其彌縫於禮節之間，為小番將來計者，心良苦矣。小番蒙恩深厚，超越常格，沉思靜想，有言之不能盡，描之不能巧者。蓋自展覲以及",
+            "n_lines": 1,
+            "tokens": 71,
+            "seconds": 4.914,
+            "confidence": 95.21,
+            "flags": []
+          },
+          {
+            "band": 3,
+            "y0": 1051,
+            "y1": 1640,
+            "ink_box": [
+              520,
+              1076,
+              2227,
+              1604
+            ],
+            "generated_text": "還國，隆霄異數，凡皆藩候之不常得，史册之未前聞。\n洪鈞賦物，豈求報於區區？然後宣愷悌之封，補貞明之錘，以鼓動屯蒙而昭蘇伏蟄者乎？然泰山一抔，滄海一勺，苟可報稱於萬分之一者，豈無不盡之心？玄衰",
+            "n_lines": 2,
+            "tokens": 100,
+            "seconds": 6.786,
+            "confidence": 91.68,
+            "flags": []
+          },
+          {
+            "band": 4,
+            "y0": 1640,
+            "y1": 2223,
+            "ink_box": [
+              523,
+              1665,
+              2226,
+              2184
+            ],
+            "generated_text": "及颛路车乘黄，诸侯受天子之赐，亦当思所以报天子之德。昔周公主陕，召公主洛，疆以周索，诸侯不命其承媚。兹一人惟天子使，此其所以报也。",
+            "n_lines": 1,
+            "tokens": 59,
+            "seconds": 4.176,
+            "confidence": 88.2,
+            "flags": []
+          },
+          {
+            "band": 5,
+            "y0": 2223,
+            "y1": 3052,
+            "ink_box": [
+              525,
+              2264,
+              2232,
+              3056
+            ],
+            "generated_text": "之治。自闽粤以南，繫寔主之，小番叨司南服，效力封疆，乃其職守，有所指顧，即東西趨赴，敢不如命，應侯順德，上以答聖天子陶造之仁，次以酬公中堂成就之恩，小番之切望也。今接王分府來札，責以前遣謝貢品簡陋，小番踎踎輾轉，萬不自安。",
+            "n_lines": 1,
+            "tokens": 113,
+            "seconds": 7.765,
+            "confidence": 87.55,
+            "flags": []
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "61cbea5c0055c260ccfc12f884e0febca7b2783b",
+        "git_describe": "61cbea5",
+        "git_dirty": true,
+        "gpu": "NVIDIA L4",
+        "dtype": "float16",
+        "adapter_version": 3
+      }
+    }
+  ]
+}

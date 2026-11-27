@@ -1,0 +1,798 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_20",
+  "engine": "paddlevl",
+  "page": 747,
+  "runs": [
+    {
+      "key": "bbe3de2116a8c0ba19bf24d4cfb1b7bb0904e183bb61b1cb2d3b8df172caf5df",
+      "parameters": {
+        "image_sha256": "58046b7125744581c72d9f366e18ebd320b544e8dd22aa2f50761a6cfa6d03cb",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T14:32:11+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_747.png",
+      "image_size": [
+        1821,
+        2814
+      ],
+      "crop_box": [
+        0,
+        0,
+        1821,
+        2814
+      ],
+      "lines": [
+        {
+          "text": "Dich nghĩa:",
+          "bbox": [
+            129,
+            266,
+            378,
+            298
+          ],
+          "confidence": 92.56
+        },
+        {
+          "text": "Ở LẠI NHÀ TRỐ CỬ",
+          "bbox": [
+            368,
+            383,
+            957,
+            443
+          ],
+          "confidence": 84.45
+        },
+        {
+          "text": "Năm Nhâm Dần (1782) ta đến làng này,",
+          "bbox": [
+            368,
+            530,
+            1212,
+            574
+          ],
+          "confidence": 93.05
+        },
+        {
+          "text": "Vất bút đi học nghề nông, nghề thương.",
+          "bbox": [
+            368,
+            589,
+            1194,
+            641
+          ],
+          "confidence": 97.62
+        },
+        {
+          "text": "Năm Nhâm Tuất (1802) ta lại đến đây,",
+          "bbox": [
+            368,
+            649,
+            1183,
+            693
+          ],
+          "confidence": 97.15
+        },
+        {
+          "text": "Theo đòi việc văn chương lễ nghĩa.",
+          "bbox": [
+            368,
+            709,
+            1090,
+            753
+          ],
+          "confidence": 95.27
+        },
+        {
+          "text": "Tình cảnh ngày một thay đổi.",
+          "bbox": [
+            368,
+            770,
+            990,
+            819
+          ],
+          "confidence": 96.14
+        },
+        {
+          "text": "Ngoái đầu lại, âm thầm tự thương mình.",
+          "bbox": [
+            370,
+            830,
+            1210,
+            880
+          ],
+          "confidence": 89.99
+        },
+        {
+          "text": "Hai mươi năm đã trôi qua.",
+          "bbox": [
+            370,
+            890,
+            921,
+            931
+          ],
+          "confidence": 95.98
+        },
+        {
+          "text": "Việc nhân thế biết bao cảnh tang thương dâu bể.",
+          "bbox": [
+            368,
+            950,
+            1385,
+            992
+          ],
+          "confidence": 91.12
+        },
+        {
+          "text": "栘亭店賦",
+          "bbox": [
+            710,
+            1203,
+            991,
+            1259
+          ],
+          "confidence": 65.59
+        },
+        {
+          "text": "JG J TX JN",
+          "bbox": [
+            710,
+            1251,
+            993,
+            1281
+          ],
+          "confidence": 35.83
+        },
+        {
+          "text": "朝發珠橋鎮",
+          "bbox": [
+            685,
+            1373,
+            1041,
+            1427
+          ],
+          "confidence": 97.78
+        },
+        {
+          "text": "暮棲仙侶亭",
+          "bbox": [
+            687,
+            1444,
+            1043,
+            1499
+          ],
+          "confidence": 92.39
+        },
+        {
+          "text": "乾坤不窮眼",
+          "bbox": [
+            685,
+            1514,
+            1043,
+            1569
+          ],
+          "confidence": 98.45
+        },
+        {
+          "text": "身世無定浮",
+          "bbox": [
+            290,
+            1587,
+            1043,
+            1642
+          ],
+          "confidence": 91.25
+        },
+        {
+          "text": "麥黍百年感",
+          "bbox": [
+            407,
+            1662,
+            1043,
+            1714
+          ],
+          "confidence": 94.22
+        },
+        {
+          "text": "鳥魚五夜驚",
+          "bbox": [
+            685,
+            1734,
+            1327,
+            1789
+          ],
+          "confidence": 98.99
+        },
+        {
+          "text": "更深促倦僕",
+          "bbox": [
+            687,
+            1806,
+            1041,
+            1861
+          ],
+          "confidence": 94.55
+        },
+        {
+          "text": "繼燭待天明",
+          "bbox": [
+            685,
+            1880,
+            1041,
+            1936
+          ],
+          "confidence": 86.96
+        },
+        {
+          "text": "Phiên âm:",
+          "bbox": [
+            134,
+            2037,
+            982,
+            2067
+          ],
+          "confidence": 92.08
+        },
+        {
+          "text": "LỮ ĐÌNH DA PHU",
+          "bbox": [
+            371,
+            2156,
+            896,
+            2212
+          ],
+          "confidence": 81.16
+        },
+        {
+          "text": "Triệu phát Châu Kiều trấn,",
+          "bbox": [
+            371,
+            2296,
+            941,
+            2343
+          ],
+          "confidence": 89.81
+        },
+        {
+          "text": "Mô thê Tiên Lữ đình.",
+          "bbox": [
+            371,
+            2359,
+            821,
+            2401
+          ],
+          "confidence": 90.84
+        },
+        {
+          "text": "Càn khôn bất cung nhăn,",
+          "bbox": [
+            371,
+            2416,
+            902,
+            2462
+          ],
+          "confidence": 88.05
+        },
+        {
+          "text": "Thân thế vô định bình.",
+          "bbox": [
+            371,
+            2474,
+            854,
+            2521
+          ],
+          "confidence": 98.49
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          1821,
+          2814
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 9.319,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              129,
+              266,
+              378,
+              298
+            ],
+            "generated_text": "Dich nghĩa:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.24,
+            "confidence": 92.56,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              368,
+              383,
+              957,
+              443
+            ],
+            "generated_text": "Ở LẠI NHÀ TRỐ CỬ",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.514,
+            "confidence": 84.45,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              368,
+              530,
+              1212,
+              574
+            ],
+            "generated_text": "Năm Nhâm Dần (1782) ta đến làng này,",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.549,
+            "confidence": 93.05,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              368,
+              589,
+              1194,
+              641
+            ],
+            "generated_text": "Vất bút đi học nghề nông, nghề thương.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.496,
+            "confidence": 97.62,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              368,
+              649,
+              1183,
+              693
+            ],
+            "generated_text": "Năm Nhâm Tuất (1802) ta lại đến đây,",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.51,
+            "confidence": 97.15,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              368,
+              709,
+              1090,
+              753
+            ],
+            "generated_text": "Theo đòi việc văn chương lễ nghĩa.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.422,
+            "confidence": 95.27,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              368,
+              770,
+              990,
+              819
+            ],
+            "generated_text": "Tình cảnh ngày một thay đổi.",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.396,
+            "confidence": 96.14,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              370,
+              830,
+              1210,
+              880
+            ],
+            "generated_text": "Ngoái đầu lại, âm thầm tự thương mình.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.425,
+            "confidence": 89.99,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              370,
+              890,
+              921,
+              931
+            ],
+            "generated_text": "Hai mươi năm đã trôi qua.",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.368,
+            "confidence": 95.98,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              368,
+              950,
+              1385,
+              992
+            ],
+            "generated_text": "Việc nhân thế biết bao cảnh tang thương dâu bể.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.506,
+            "confidence": 91.12,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              710,
+              1203,
+              991,
+              1259
+            ],
+            "generated_text": "栘亭店賦",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.312,
+            "confidence": 65.59,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              710,
+              1251,
+              993,
+              1281
+            ],
+            "generated_text": "JG J TX JN",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.265,
+            "confidence": 35.83,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              685,
+              1373,
+              1041,
+              1427
+            ],
+            "generated_text": "朝發珠橋鎮",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.246,
+            "confidence": 97.78,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              687,
+              1444,
+              1043,
+              1499
+            ],
+            "generated_text": "暮棲仙侶亭",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.33,
+            "confidence": 92.39,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              685,
+              1514,
+              1043,
+              1569
+            ],
+            "generated_text": "乾坤不窮眼",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.275,
+            "confidence": 98.45,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              290,
+              1587,
+              1043,
+              1642
+            ],
+            "generated_text": "身世無定浮",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.239,
+            "confidence": 91.25,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              407,
+              1662,
+              1043,
+              1714
+            ],
+            "generated_text": "麥黍百年感",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.323,
+            "confidence": 94.22,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              685,
+              1734,
+              1327,
+              1789
+            ],
+            "generated_text": "鳥魚五夜驚",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.347,
+            "confidence": 98.99,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              687,
+              1806,
+              1041,
+              1861
+            ],
+            "generated_text": "更深促倦僕",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.277,
+            "confidence": 94.55,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              685,
+              1880,
+              1041,
+              1936
+            ],
+            "generated_text": "繼燭待天明",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.29,
+            "confidence": 86.96,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              134,
+              2037,
+              982,
+              2067
+            ],
+            "generated_text": "Phiên âm:",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.241,
+            "confidence": 92.08,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              371,
+              2156,
+              896,
+              2212
+            ],
+            "generated_text": "LỮ ĐÌNH DA PHU",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.34,
+            "confidence": 81.16,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              371,
+              2296,
+              941,
+              2343
+            ],
+            "generated_text": "Triệu phát Châu Kiều trấn,",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.358,
+            "confidence": 89.81,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              371,
+              2359,
+              821,
+              2401
+            ],
+            "generated_text": "Mô thê Tiên Lữ đình.",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.371,
+            "confidence": 90.84,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              371,
+              2416,
+              902,
+              2462
+            ],
+            "generated_text": "Càn khôn bất cung nhăn,",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.38,
+            "confidence": 88.05,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              371,
+              2474,
+              854,
+              2521
+            ],
+            "generated_text": "Thân thế vô định bình.",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.298,
+            "confidence": 98.49,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              134,
+              258,
+              343,
+              269
+            ],
+            "ink": 317
+          },
+          {
+            "box": [
+              610,
+              750,
+              1013,
+              759
+            ],
+            "ink": 227
+          },
+          {
+            "box": [
+              424,
+              989,
+              1219,
+              999
+            ],
+            "ink": 213
+          },
+          {
+            "box": [
+              1514,
+              2532,
+              1585,
+              2545
+            ],
+            "ink": 281
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      }
+    }
+  ]
+}

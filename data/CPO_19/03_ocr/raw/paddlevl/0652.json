@@ -1,0 +1,919 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 652,
+  "runs": [
+    {
+      "key": "29b536b121817094631c7d154b6ac9c01783238358324c14ac2e7408b4b90fbb",
+      "parameters": {
+        "image_sha256": "7d7a8974bc3176afba6bd71d0c07cf85531f0a9132c99ea6d8c2aa607ae63797",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.9.1+cu128",
+          "cuda_version": "12.8",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-26T08:29:33+00:00",
+      "image": "/marimo/.cpo19_ocr/repo/data/CPO_19/02_extraction/pages/page_652.png",
+      "image_size": [
+        2094,
+        2985
+      ],
+      "crop_box": [
+        0,
+        0,
+        2094,
+        2985
+      ],
+      "lines": [
+        {
+          "text": "BANG GIAO HAO THOAI",
+          "bbox": [
+            1382,
+            86,
+            1901,
+            124
+          ],
+          "confidence": 99.59
+        },
+        {
+          "text": "閻，開格賜臨。小番啣結眞衷，瞻望鼎湖，寔切樊號之",
+          "bbox": [
+            206,
+            177,
+            1902,
+            240
+          ],
+          "confidence": 97.76
+        },
+        {
+          "text": "想，禮當躬自奔赴，叩謁梓宮，庶表哀慕微忱。",
+          "bbox": [
+            203,
+            312,
+            1660,
+            377
+          ],
+          "confidence": 99.91
+        },
+        {
+          "text": "見在本國海澨一帶，防訊正殷，未便遠離封守。謹",
+          "bbox": [
+            351,
+            458,
+            1900,
+            522
+          ],
+          "confidence": 99.57
+        },
+        {
+          "text": "奉拜表陳情，並恭挽太上皇帝金箋，遴委親臣，資捧儀",
+          "bbox": [
+            201,
+            577,
+            1903,
+            642
+          ],
+          "confidence": 97.73
+        },
+        {
+          "text": "物，代躬詣闕進香，具有表草金箋進覽，蒙悉舊",
+          "bbox": [
+            203,
+            695,
+            1898,
+            762
+          ],
+          "confidence": 99.47
+        },
+        {
+          "text": "情。會同督撫大人，轉爲驛路奏達，仰蒙恩旨賜進，庶",
+          "bbox": [
+            201,
+            815,
+            1902,
+            880
+          ],
+          "confidence": 99.3
+        },
+        {
+          "text": "幾遐邦眞悃，表暴于高厚之間，小番不勝大願。南薰協",
+          "bbox": [
+            203,
+            934,
+            1902,
+            1000
+          ],
+          "confidence": 99.39
+        },
+        {
+          "text": "律，遙惟衰繡，凝和順時納祉。",
+          "bbox": [
+            201,
+            1054,
+            1211,
+            1115
+          ],
+          "confidence": 97.3
+        },
+        {
+          "text": "PHIEN AM:",
+          "bbox": [
+            201,
+            1201,
+            456,
+            1240
+          ],
+          "confidence": 99.42
+        },
+        {
+          "text": "TRINH CAT DAI NHAN",
+          "bbox": [
+            754,
+            1275,
+            1357,
+            1319
+          ],
+          "confidence": 96.5
+        },
+        {
+          "text": "(TỪ VƯƠNG THỪ TRÌNH)",
+          "bbox": [
+            765,
+            1359,
+            1351,
+            1401
+          ],
+          "confidence": 89.42
+        },
+        {
+          "text": "Gia Khánh tứ niên tam nguyệt nhất, phụng tiếp đáo Tây phủ đài",
+          "bbox": [
+            350,
+            1481,
+            1903,
+            1535
+          ],
+          "confidence": 92.63
+        },
+        {
+          "text": "chiếu hội công văn, nội khai: Đại Hành Thái thương Hoàng để lòng ngư",
+          "bbox": [
+            198,
+            1562,
+            1908,
+            1618
+          ],
+          "confidence": 89.47
+        },
+        {
+          "text": "thương tân, tuyên thi điện lê, nguyệt để tục phụng di cáo, tổng đáo tiểu",
+          "bbox": [
+            199,
+            1647,
+            1903,
+            1701
+          ],
+          "confidence": 84.18
+        },
+        {
+          "text": "phiên, kính cung khấu lĩnh, cấn tức suất động quốc nội thần liêu kỳ lão,",
+          "bbox": [
+            198,
+            1729,
+            1901,
+            1774
+          ],
+          "confidence": 92.21
+        },
+        {
+          "text": "bắc hướng tích dũng, triệu tích phần hương, tinh sức quốc trung, sở tại",
+          "bbox": [
+            198,
+            1811,
+            1903,
+            1864
+          ],
+          "confidence": 87.94
+        },
+        {
+          "text": "đia phương quân nhân, dĩ phung đáo di cáo chi nhất vi thuy, quân thành",
+          "bbox": [
+            197,
+            1892,
+            1903,
+            1937
+          ],
+          "confidence": 89.67
+        },
+        {
+          "text": "phuc, nhi thấp thất nhất, phung hành văn thư, phung lam ấn lam bút,",
+          "bbox": [
+            198,
+            1973,
+            1901,
+            2018
+          ],
+          "confidence": 90.24
+        },
+        {
+          "text": "cung y diễn lễ tuần hành.",
+          "bbox": [
+            197,
+            2068,
+            786,
+            2099
+          ],
+          "confidence": 73.39
+        },
+        {
+          "text": "Từ duy tiểu phiên thế ha Thiên án, du nhai viết cách,ngưỡng",
+          "bbox": [
+            350,
+            2137,
+            1905,
+            2182
+          ],
+          "confidence": 89.68
+        },
+        {
+          "text": "mông ái đôi, vong vô cùng chi nhất báo, tình vi chi cảm bất dĩ. Cần",
+          "bbox": [
+            197,
+            2219,
+            1898,
+            2264
+          ],
+          "confidence": 89.77
+        },
+        {
+          "text": "chiếu Hôi điển, ngoại phiên tiến hướng, công tế thiên hôn, khai cách tử",
+          "bbox": [
+            197,
+            2301,
+            1908,
+            2346
+          ],
+          "confidence": 85.98
+        },
+        {
+          "text": "làm. Tiếu phiên hàm kết chân trung, chiêm vong đỉnh hộ, thực thiết",
+          "bbox": [
+            198,
+            2384,
+            1903,
+            2428
+          ],
+          "confidence": 87.56
+        },
+        {
+          "text": "phàn hào chi tương, lê đường cung tự bôn phó, khấu yết tử cung, thú",
+          "bbox": [
+            193,
+            2466,
+            1907,
+            2519
+          ],
+          "confidence": 86.87
+        },
+        {
+          "text": "biểu ai mơ vi thám.",
+          "bbox": [
+            198,
+            2560,
+            663,
+            2591
+          ],
+          "confidence": 72.74
+        },
+        {
+          "text": "Hiện tại bản quốc hải thê nhất đôi, phòng tấn chính ân, vi tiên",
+          "bbox": [
+            346,
+            2628,
+            1903,
+            2673
+          ],
+          "confidence": 81.43
+        },
+        {
+          "text": "viên ly phong thủ. Cần phung bái biểu trần tình, tinh cung văn Thái",
+          "bbox": [
+            198,
+            2710,
+            1902,
+            2755
+          ],
+          "confidence": 88.9
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2094,
+          2985
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 5.536,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              1382,
+              86,
+              1901,
+              124
+            ],
+            "generated_text": "BANG GIAO HAO THOAI",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.09,
+            "confidence": 99.59,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              200,
+              128,
+              1909,
+              143
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.027,
+            "confidence": 5.93,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              206,
+              177,
+              1902,
+              240
+            ],
+            "generated_text": "閻，開格賜臨。小番啣結眞衷，瞻望鼎湖，寔切樊號之",
+            "n_lines": 1,
+            "tokens": 37,
+            "seconds": 0.304,
+            "confidence": 97.76,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              203,
+              312,
+              1660,
+              377
+            ],
+            "generated_text": "想，禮當躬自奔赴，叩謁梓宮，庶表哀慕微忱。",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.213,
+            "confidence": 99.91,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              351,
+              458,
+              1900,
+              522
+            ],
+            "generated_text": "見在本國海澨一帶，防訊正殷，未便遠離封守。謹",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.217,
+            "confidence": 99.57,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              201,
+              577,
+              1903,
+              642
+            ],
+            "generated_text": "奉拜表陳情，並恭挽太上皇帝金箋，遴委親臣，資捧儀",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 0.25,
+            "confidence": 97.73,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              203,
+              695,
+              1898,
+              762
+            ],
+            "generated_text": "物，代躬詣闕進香，具有表草金箋進覽，蒙悉舊",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 0.222,
+            "confidence": 99.47,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              201,
+              815,
+              1902,
+              880
+            ],
+            "generated_text": "情。會同督撫大人，轉爲驛路奏達，仰蒙恩旨賜進，庶",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 0.249,
+            "confidence": 99.3,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              203,
+              934,
+              1902,
+              1000
+            ],
+            "generated_text": "幾遐邦眞悃，表暴于高厚之間，小番不勝大願。南薰協",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 0.228,
+            "confidence": 99.39,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              201,
+              1054,
+              1211,
+              1115
+            ],
+            "generated_text": "律，遙惟衰繡，凝和順時納祉。",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.165,
+            "confidence": 97.3,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              201,
+              1201,
+              456,
+              1240
+            ],
+            "generated_text": "PHIEN AM:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.065,
+            "confidence": 99.42,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              754,
+              1275,
+              1357,
+              1319
+            ],
+            "generated_text": "TRINH CAT DAI NHAN",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.083,
+            "confidence": 96.5,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              765,
+              1359,
+              1351,
+              1401
+            ],
+            "generated_text": "(TỪ VƯƠNG THỪ TRÌNH)",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.158,
+            "confidence": 89.42,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              350,
+              1481,
+              1903,
+              1535
+            ],
+            "generated_text": "Gia Khánh tứ niên tam nguyệt nhất, phụng tiếp đáo Tây phủ đài",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.225,
+            "confidence": 92.63,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              198,
+              1562,
+              1908,
+              1618
+            ],
+            "generated_text": "chiếu hội công văn, nội khai: Đại Hành Thái thương Hoàng để lòng ngư",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.234,
+            "confidence": 89.47,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              199,
+              1647,
+              1903,
+              1701
+            ],
+            "generated_text": "thương tân, tuyên thi điện lê, nguyệt để tục phụng di cáo, tổng đáo tiểu",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 0.237,
+            "confidence": 84.18,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              198,
+              1729,
+              1901,
+              1774
+            ],
+            "generated_text": "phiên, kính cung khấu lĩnh, cấn tức suất động quốc nội thần liêu kỳ lão,",
+            "n_lines": 1,
+            "tokens": 33,
+            "seconds": 0.252,
+            "confidence": 92.21,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              198,
+              1811,
+              1903,
+              1864
+            ],
+            "generated_text": "bắc hướng tích dũng, triệu tích phần hương, tinh sức quốc trung, sở tại",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.218,
+            "confidence": 87.94,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              197,
+              1892,
+              1903,
+              1937
+            ],
+            "generated_text": "đia phương quân nhân, dĩ phung đáo di cáo chi nhất vi thuy, quân thành",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.209,
+            "confidence": 89.67,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              198,
+              1973,
+              1901,
+              2018
+            ],
+            "generated_text": "phuc, nhi thấp thất nhất, phung hành văn thư, phung lam ấn lam bút,",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.213,
+            "confidence": 90.24,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              197,
+              2068,
+              786,
+              2099
+            ],
+            "generated_text": "cung y diễn lễ tuần hành.",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.095,
+            "confidence": 73.39,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              350,
+              2137,
+              1905,
+              2182
+            ],
+            "generated_text": "Từ duy tiểu phiên thế ha Thiên án, du nhai viết cách,ngưỡng",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.194,
+            "confidence": 89.68,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              197,
+              2219,
+              1898,
+              2264
+            ],
+            "generated_text": "mông ái đôi, vong vô cùng chi nhất báo, tình vi chi cảm bất dĩ. Cần",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.231,
+            "confidence": 89.77,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              197,
+              2301,
+              1908,
+              2346
+            ],
+            "generated_text": "chiếu Hôi điển, ngoại phiên tiến hướng, công tế thiên hôn, khai cách tử",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 0.222,
+            "confidence": 85.98,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              198,
+              2384,
+              1903,
+              2428
+            ],
+            "generated_text": "làm. Tiếu phiên hàm kết chân trung, chiêm vong đỉnh hộ, thực thiết",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.206,
+            "confidence": 87.56,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              193,
+              2466,
+              1907,
+              2519
+            ],
+            "generated_text": "phàn hào chi tương, lê đường cung tự bôn phó, khấu yết tử cung, thú",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 0.242,
+            "confidence": 86.87,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              198,
+              2560,
+              663,
+              2591
+            ],
+            "generated_text": "biểu ai mơ vi thám.",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.088,
+            "confidence": 72.74,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              346,
+              2628,
+              1903,
+              2673
+            ],
+            "generated_text": "Hiện tại bản quốc hải thê nhất đôi, phòng tấn chính ân, vi tiên",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.185,
+            "confidence": 81.43,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              198,
+              2710,
+              1902,
+              2755
+            ],
+            "generated_text": "viên ly phong thủ. Cần phung bái biểu trần tình, tinh cung văn Thái",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.212,
+            "confidence": 88.9,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              194,
+              1771,
+              1898,
+              1782
+            ],
+            "ink": 414
+          },
+          {
+            "box": [
+              229,
+              1933,
+              1654,
+              1945
+            ],
+            "ink": 555
+          },
+          {
+            "box": [
+              193,
+              2014,
+              1899,
+              2027
+            ],
+            "ink": 646
+          },
+          {
+            "box": [
+              377,
+              2061,
+              763,
+              2072
+            ],
+            "ink": 456
+          },
+          {
+            "box": [
+              389,
+              2179,
+              1898,
+              2191
+            ],
+            "ink": 405
+          },
+          {
+            "box": [
+              296,
+              2262,
+              1190,
+              2272
+            ],
+            "ink": 303
+          },
+          {
+            "box": [
+              388,
+              2343,
+              1580,
+              2354
+            ],
+            "ink": 407
+          },
+          {
+            "box": [
+              412,
+              2670,
+              1864,
+              2681
+            ],
+            "ink": 367
+          },
+          {
+            "box": [
+              330,
+              2751,
+              1655,
+              2763
+            ],
+            "ink": 471
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": null,
+        "git_describe": null,
+        "git_dirty": null,
+        "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+        "dtype": "bfloat16",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

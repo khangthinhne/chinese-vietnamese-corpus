@@ -1,0 +1,752 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 404,
+  "runs": [
+    {
+      "key": "1d9c43753a571219e20bb800f8033d0c60fb0c9510f99bf7b9222c8b1a216db2",
+      "parameters": {
+        "image_sha256": "a121ffdea83440855916d37387dd012abe27389b465d98dc19d39f06819b3de8",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T15:50:21+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_404.png",
+      "image_size": [
+        2550,
+        3185
+      ],
+      "crop_box": [
+        0,
+        0,
+        2550,
+        3185
+      ],
+      "lines": [
+        {
+          "text": "ngothinhamle1.pdf",
+          "bbox": [
+            7,
+            19,
+            286,
+            45
+          ],
+          "confidence": 96.3
+        },
+        {
+          "text": "BANG GIAO HAO THOAI",
+          "bbox": [
+            1584,
+            184,
+            2101,
+            223
+          ],
+          "confidence": 99.55
+        },
+        {
+          "text": "大皇帝差遣，而士毅自來迎戰，遂爲僕之從者所而死，不",
+          "bbox": [
+            405,
+            277,
+            2101,
+            342
+          ],
+          "confidence": 98.85
+        },
+        {
+          "text": "計其數，其見在拏住尚千餘口，第言語不通，那識誰爲",
+          "bbox": [
+            404,
+            396,
+            2089,
+            461
+          ],
+          "confidence": 98.02
+        },
+        {
+          "text": "弁爲兵，僕已給之廩食，安頓一所。僕從無侵疆犯境，",
+          "bbox": [
+            404,
+            514,
+            2083,
+            578
+          ],
+          "confidence": 99.01
+        },
+        {
+          "text": "以得罪於上國，而士毅將僕一片恭順眞衷，都拋擲",
+          "bbox": [
+            407,
+            631,
+            2109,
+            694
+          ],
+          "confidence": 98.45
+        },
+        {
+          "text": "下了，又騰書境內，欲甘心於僕而後爲快，因是構起兵端，",
+          "bbox": [
+            406,
+            747,
+            2083,
+            813
+          ],
+          "confidence": 98.54
+        },
+        {
+          "text": "使生靈罹此慘毒。僕遠在海瀕，動輒爲士毅所脅，今事勢",
+          "bbox": [
+            400,
+            865,
+            2107,
+            931
+          ],
+          "confidence": 99.31
+        },
+        {
+          "text": "推移，已辜負螳臂當車之謗。",
+          "bbox": [
+            403,
+            984,
+            1252,
+            1046
+          ],
+          "confidence": 99.17
+        },
+        {
+          "text": "接得台諭，心目俱豁，尊台眞是大皇帝棟樑柱石之",
+          "bbox": [
+            555,
+            1101,
+            2109,
+            1165
+          ],
+          "confidence": 97.73
+        },
+        {
+          "text": "臣，故能宣揚德意，料理邊情，若是之誠切，明篤者也。",
+          "bbox": [
+            409,
+            1228,
+            2087,
+            1292
+          ],
+          "confidence": 99.94
+        },
+        {
+          "text": "如士毅者，欺罔之罪，可勝言哉！",
+          "bbox": [
+            404,
+            1354,
+            1329,
+            1415
+          ],
+          "confidence": 99.68
+        },
+        {
+          "text": "今蒙波照盛情，謹奉投遞，陳謝表章，耑祈轉爲題",
+          "bbox": [
+            555,
+            1478,
+            2105,
+            1542
+          ],
+          "confidence": 98.06
+        },
+        {
+          "text": "達，仰邀大皇帝恩典，謹當奉藩修貢，使軍民免於兵戈之",
+          "bbox": [
+            404,
+            1602,
+            2109,
+            1668
+          ],
+          "confidence": 99.95
+        },
+        {
+          "text": "苦，僕之大願望也。",
+          "bbox": [
+            406,
+            1731,
+            978,
+            1791
+          ],
+          "confidence": 99.6
+        },
+        {
+          "text": "夫！師在和不在眾，兵貴精不貴多，善勝者勝於至",
+          "bbox": [
+            488,
+            1854,
+            2105,
+            1920
+          ],
+          "confidence": 99.69
+        },
+        {
+          "text": "柔，非彊凌弱，多脅寡之謂。倘前情未白，天朝不能少爲",
+          "bbox": [
+            406,
+            1988,
+            2104,
+            2054
+          ],
+          "confidence": 98.88
+        },
+        {
+          "text": "寬容必動兵戰，是小國不得以盡事大之敬，僕亦聽天所命",
+          "bbox": [
+            408,
+            2122,
+            2118,
+            2188
+          ],
+          "confidence": 99.93
+        },
+        {
+          "text": "而已。別有士毅檄文一套，皆是陵轢激變之辭，一體繳",
+          "bbox": [
+            408,
+            2257,
+            2103,
+            2321
+          ],
+          "confidence": 96.42
+        },
+        {
+          "text": "納，希惟鑒審。",
+          "bbox": [
+            406,
+            2391,
+            849,
+            2449
+          ],
+          "confidence": 94.65
+        },
+        {
+          "text": "PHIEN AM:",
+          "bbox": [
+            402,
+            2540,
+            657,
+            2578
+          ],
+          "confidence": 99.25
+        },
+        {
+          "text": "BÁM THIEN TRIEU QUANG TAY PHAN TUAN TÀ GIANG BINH",
+          "bbox": [
+            433,
+            2627,
+            2071,
+            2676
+          ],
+          "confidence": 85.49
+        },
+        {
+          "text": "BI DAO TONG LY BIEN VU THANG DAI NHÂN",
+          "bbox": [
+            640,
+            2704,
+            1863,
+            2751
+          ],
+          "confidence": 92.86
+        },
+        {
+          "text": "(BIEN CẦU BÌNH DUYÊN DO. QUỐC VƯƠNG BÂM)",
+          "bbox": [
+            680,
+            2795,
+            1832,
+            2838
+          ],
+          "confidence": 88.36
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2550,
+          3185
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 46.008,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              7,
+              19,
+              286,
+              45
+            ],
+            "generated_text": "ngothinhamle1.pdf",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.896,
+            "confidence": 96.3,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              1584,
+              184,
+              2101,
+              223
+            ],
+            "generated_text": "BANG GIAO HAO THOAI",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.96,
+            "confidence": 99.55,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              404,
+              228,
+              2110,
+              242
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.455,
+            "confidence": 95.54,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              405,
+              277,
+              2101,
+              342
+            ],
+            "generated_text": "大皇帝差遣，而士毅自來迎戰，遂爲僕之從者所而死，不",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 2.041,
+            "confidence": 98.85,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              404,
+              396,
+              2089,
+              461
+            ],
+            "generated_text": "計其數，其見在拏住尚千餘口，第言語不通，那識誰爲",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 2.226,
+            "confidence": 98.02,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              404,
+              514,
+              2083,
+              578
+            ],
+            "generated_text": "弁爲兵，僕已給之廩食，安頓一所。僕從無侵疆犯境，",
+            "n_lines": 1,
+            "tokens": 34,
+            "seconds": 2.536,
+            "confidence": 99.01,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              407,
+              631,
+              2109,
+              694
+            ],
+            "generated_text": "以得罪於上國，而士毅將僕一片恭順眞衷，都拋擲",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 2.207,
+            "confidence": 98.45,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              406,
+              747,
+              2083,
+              813
+            ],
+            "generated_text": "下了，又騰書境內，欲甘心於僕而後爲快，因是構起兵端，",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 2.219,
+            "confidence": 98.54,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              400,
+              865,
+              2107,
+              931
+            ],
+            "generated_text": "使生靈罹此慘毒。僕遠在海瀕，動輒爲士毅所脅，今事勢",
+            "n_lines": 1,
+            "tokens": 39,
+            "seconds": 2.851,
+            "confidence": 99.31,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              403,
+              984,
+              1252,
+              1046
+            ],
+            "generated_text": "推移，已辜負螳臂當車之謗。",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.39,
+            "confidence": 99.17,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              555,
+              1101,
+              2109,
+              1165
+            ],
+            "generated_text": "接得台諭，心目俱豁，尊台眞是大皇帝棟樑柱石之",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.07,
+            "confidence": 97.73,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              409,
+              1228,
+              2087,
+              1292
+            ],
+            "generated_text": "臣，故能宣揚德意，料理邊情，若是之誠切，明篤者也。",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 2.193,
+            "confidence": 99.94,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              404,
+              1354,
+              1329,
+              1415
+            ],
+            "generated_text": "如士毅者，欺罔之罪，可勝言哉！",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.498,
+            "confidence": 99.68,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              555,
+              1478,
+              2105,
+              1542
+            ],
+            "generated_text": "今蒙波照盛情，謹奉投遞，陳謝表章，耑祈轉爲題",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 2.134,
+            "confidence": 98.06,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              404,
+              1602,
+              2109,
+              1668
+            ],
+            "generated_text": "達，仰邀大皇帝恩典，謹當奉藩修貢，使軍民免於兵戈之",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 2.189,
+            "confidence": 99.95,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              406,
+              1731,
+              978,
+              1791
+            ],
+            "generated_text": "苦，僕之大願望也。",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.182,
+            "confidence": 99.6,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              488,
+              1854,
+              2105,
+              1920
+            ],
+            "generated_text": "夫！師在和不在眾，兵貴精不貴多，善勝者勝於至",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 1.972,
+            "confidence": 99.69,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              406,
+              1988,
+              2104,
+              2054
+            ],
+            "generated_text": "柔，非彊凌弱，多脅寡之謂。倘前情未白，天朝不能少爲",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 2.318,
+            "confidence": 98.88,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              408,
+              2122,
+              2118,
+              2188
+            ],
+            "generated_text": "寬容必動兵戰，是小國不得以盡事大之敬，僕亦聽天所命",
+            "n_lines": 1,
+            "tokens": 32,
+            "seconds": 2.393,
+            "confidence": 99.93,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              408,
+              2257,
+              2103,
+              2321
+            ],
+            "generated_text": "而已。別有士毅檄文一套，皆是陵轢激變之辭，一體繳",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 2.285,
+            "confidence": 96.42,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              406,
+              2391,
+              849,
+              2449
+            ],
+            "generated_text": "納，希惟鑒審。",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.044,
+            "confidence": 94.65,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              402,
+              2540,
+              657,
+              2578
+            ],
+            "generated_text": "PHIEN AM:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.729,
+            "confidence": 99.25,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              433,
+              2627,
+              2071,
+              2676
+            ],
+            "generated_text": "BÁM THIEN TRIEU QUANG TAY PHAN TUAN TÀ GIANG BINH",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.974,
+            "confidence": 85.49,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              640,
+              2704,
+              1863,
+              2751
+            ],
+            "generated_text": "BI DAO TONG LY BIEN VU THANG DAI NHÂN",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.489,
+            "confidence": 92.86,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              680,
+              2795,
+              1832,
+              2838
+            ],
+            "generated_text": "(BIEN CẦU BÌNH DUYÊN DO. QUỐC VƯƠNG BÂM)",
+            "n_lines": 1,
+            "tokens": 33,
+            "seconds": 2.754,
+            "confidence": 88.36,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              503,
+              0,
+              1246,
+              8
+            ],
+            "ink": 193
+          },
+          {
+            "box": [
+              492,
+              2616,
+              1709,
+              2630
+            ],
+            "ink": 537
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

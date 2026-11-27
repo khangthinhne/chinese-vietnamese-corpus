@@ -1,0 +1,986 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 605,
+  "runs": [
+    {
+      "key": "ff7fa48ca928e84755679c2b1c4e6990d0a1d2be39c09c32c51daad41b6943db",
+      "parameters": {
+        "image_sha256": "4c66af24fec3579f46b26ccb41b94055f592fe1c3d674307a30e836a5204f381",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T18:38:33+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_605.png",
+      "image_size": [
+        2719,
+        3332
+      ],
+      "crop_box": [
+        0,
+        0,
+        2719,
+        3332
+      ],
+      "lines": [
+        {
+          "text": "ngothinhamch1.pdf",
+          "bbox": [
+            7,
+            19,
+            2112,
+            45
+          ],
+          "confidence": 98.96
+        },
+        {
+          "text": "NGÔ THI NHÂM TOAN TẬP - TẬP III",
+          "bbox": [
+            464,
+            232,
+            1238,
+            274
+          ],
+          "confidence": 88.16
+        },
+        {
+          "text": "thiên tư hiểu học, tuy can qua không tổng, bất vọng giảng đạo, cứ thường",
+          "bbox": [
+            465,
+            339,
+            2175,
+            393
+          ],
+          "confidence": 93.4
+        },
+        {
+          "text": "nghi luận, hữu tiền đại thư tích chi sở vi phát điều đạt xuất lại. Ti thực",
+          "bbox": [
+            466,
+            420,
+            2173,
+            468
+          ],
+          "confidence": 84.57
+        },
+        {
+          "text": "xu bôi văn kiến hàm vinh nhi hữu đặc dã. Chí ư cung thuận nhất niệm,",
+          "bbox": [
+            464,
+            503,
+            2170,
+            550
+          ],
+          "confidence": 92.72
+        },
+        {
+          "text": "phục sự Đại Hoàng đế, chân kiến đặc đạo lý tối đai, cái dĩ sự thân chi",
+          "bbox": [
+            467,
+            584,
+            2174,
+            632
+          ],
+          "confidence": 92.08
+        },
+        {
+          "text": "đao, sự thiên tôn chi nhi dục thân chi.",
+          "bbox": [
+            468,
+            668,
+            1341,
+            712
+          ],
+          "confidence": 84.89
+        },
+        {
+          "text": "Tiên bám dĩ thiên hoàng kim ngọc vi thỉnh, thủ ti học Xuân thu",
+          "bbox": [
+            618,
+            770,
+            2175,
+            816
+          ],
+          "confidence": 91.11
+        },
+        {
+          "text": "nhi dục kỳ càu nghĩa, phi bán Quớc Vương sỏ thụ chi ý dã. Thiết tú, Tam",
+          "bbox": [
+            470,
+            851,
+            2174,
+            905
+          ],
+          "confidence": 70.43
+        },
+        {
+          "text": "Đai chi vương, thánh hiện thế xuất, Tam Đai chi hầu, trí tuêp diệc bất",
+          "bbox": [
+            467,
+            933,
+            2176,
+            980
+          ],
+          "confidence": 83.9
+        },
+        {
+          "text": "thiểu. Nhất thòi khanh tá, cứ thi quốc sự thi quân, sử kỳ liên thân vương",
+          "bbox": [
+            470,
+            1015,
+            2176,
+            1061
+          ],
+          "confidence": 90.31
+        },
+        {
+          "text": "cơ, quả vi bất hợp ư đạo? Tắc Đường lệ chi chương, bất tải ư Thi, nhi miện",
+          "bbox": [
+            470,
+            1095,
+            2174,
+            1148
+          ],
+          "confidence": 92.25
+        },
+        {
+          "text": "nghênh chi lễ, Không Từ bất dĩ đáp Lô quân hỹ. Thủ sự thực ti bản ý, vị",
+          "bbox": [
+            470,
+            1176,
+            2175,
+            1230
+          ],
+          "confidence": 90.54
+        },
+        {
+          "text": "tăng khái tri Quốc Vương. Sử quả xuất Quốc Vương chi ý, tự ti thiên học",
+          "bbox": [
+            472,
+            1257,
+            2175,
+            1312
+          ],
+          "confidence": 90.63
+        },
+        {
+          "text": "khởi kiến, việc dĩ vi cấp đường để đạo lý, quyết bất cẩm hữu vi dị đã.",
+          "bbox": [
+            471,
+            1341,
+            2048,
+            1394
+          ],
+          "confidence": 83.67
+        },
+        {
+          "text": "Quốc Vương khởi tư khuyến mâu, thác thổ nhi nam, dĩ hữu nhân",
+          "bbox": [
+            621,
+            1446,
+            2174,
+            1491
+          ],
+          "confidence": 87.53
+        },
+        {
+          "text": "dân xã tắc, ký mông Đại Hoàng đế thụ vi ngoại bình, đảng đặc phục liên",
+          "bbox": [
+            472,
+            1527,
+            2173,
+            1582
+          ],
+          "confidence": 93.41
+        },
+        {
+          "text": "phế phủ, tức Măn Châu Mông Có chư vương, nặng dĩ tử tế hiệu lao ư",
+          "bbox": [
+            472,
+            1611,
+            2180,
+            1665
+          ],
+          "confidence": 85.07
+        },
+        {
+          "text": "động bắc, quốc vương khởi bất nặng dĩ Chu Trân tuyên lực Ứ tây nam?",
+          "bbox": [
+            472,
+            1693,
+            2177,
+            1747
+          ],
+          "confidence": 85.4
+        },
+        {
+          "text": "Đại Hoàng để thông ngữ hoàn vũ, như thiên địa chỉ vô tư phú tái, kỳ ư",
+          "bbox": [
+            471,
+            1776,
+            2180,
+            1829
+          ],
+          "confidence": 85.52
+        },
+        {
+          "text": "chủ quốc, mạc bất dĩ tử thi chi. Đăn kỳ cố phục chi tình, tiên tự Măn",
+          "bbox": [
+            473,
+            1857,
+            2175,
+            1905
+          ],
+          "confidence": 86.83
+        },
+        {
+          "text": "Châu Mông Cô chi cận giả thủy nhĩ. Tự ti quản lại chi kiến, vị tất dĩ viễn",
+          "bbox": [
+            475,
+            1938,
+            2175,
+            1991
+          ],
+          "confidence": 84.91
+        },
+        {
+          "text": "cân phân bỉ thủ đả? Có giá, vương triệu công khanh đại phu dũ chú hâu",
+          "bbox": [
+            473,
+            2020,
+            2175,
+            2072
+          ],
+          "confidence": 75.18
+        },
+        {
+          "text": "ngũ đắng chi quân, kỳ đãi ngộ sự thế hữu dị, cái chu hầu hữu vi quân chi",
+          "bbox": [
+            473,
+            2102,
+            2175,
+            2157
+          ],
+          "confidence": 89.36
+        },
+        {
+          "text": "phận, cố dĩ vươn cơ quy chi, hụt dĩ động tính chi công chủ vị chi công",
+          "bbox": [
+            472,
+            2185,
+            2177,
+            2239
+          ],
+          "confidence": 83.01
+        },
+        {
+          "text": "chủ, nhi vương triều công khanh, bất đắc dĩ yên. Thiên ý Thiên triều",
+          "bbox": [
+            473,
+            2267,
+            2176,
+            2316
+          ],
+          "confidence": 96.29
+        },
+        {
+          "text": "pháp độ, Hán đại nhân bất đắc thượng thiên hoàng, hưu bất đắc dĩ Măn",
+          "bbox": [
+            474,
+            2351,
+            2176,
+            2403
+          ],
+          "confidence": 91.46
+        },
+        {
+          "text": "vi hôn, kỳ nghĩa việc do thị đã. Đăn tự Thiên triều phát tương Mãn Châu",
+          "bbox": [
+            476,
+            2432,
+            2177,
+            2486
+          ],
+          "confidence": 87.9
+        },
+        {
+          "text": "dĩ lai, tây nam di phiên vô hữu dĩ thương thiên hoàng thỉnh giã. Có kỳ sự",
+          "bbox": [
+            474,
+            2514,
+            2182,
+            2568
+          ],
+          "confidence": 87.73
+        },
+        {
+          "text": "xuất ư sáng kiến, như sơ văn giả di vi nghi nan.",
+          "bbox": [
+            472,
+            2608,
+            1558,
+            2646
+          ],
+          "confidence": 68.26
+        },
+        {
+          "text": "Phù! Dĩ bao kiến thỉnh an thân vương chi lẽ, Đại Hoàng để thù ngộ",
+          "bbox": [
+            620,
+            2699,
+            2179,
+            2751
+          ],
+          "confidence": 94.01
+        },
+        {
+          "text": "bản quốc Quốc Vương, bất dĩ vi hiểm, thủ phi Mãn Châu Mông Cổ chi sở",
+          "bbox": [
+            475,
+            2781,
+            2183,
+            2833
+          ],
+          "confidence": 90.91
+        },
+        {
+          "text": "thường đặc. Ủ kỳ sở bất thường đặc nhi quốc vương dĩ sơ độ bệ kiến đặc",
+          "bbox": [
+            474,
+            2862,
+            2179,
+            2915
+          ],
+          "confidence": 92.8
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2719,
+          3332
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 21.883,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              7,
+              19,
+              2112,
+              45
+            ],
+            "generated_text": "ngothinhamch1.pdf",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.239,
+            "confidence": 98.96,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              464,
+              232,
+              1238,
+              274
+            ],
+            "generated_text": "NGÔ THI NHÂM TOAN TẬP - TẬP III",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.518,
+            "confidence": 88.16,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              467,
+              276,
+              2181,
+              293
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.067,
+            "confidence": 51.46,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              465,
+              339,
+              2175,
+              393
+            ],
+            "generated_text": "thiên tư hiểu học, tuy can qua không tổng, bất vọng giảng đạo, cứ thường",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.638,
+            "confidence": 93.4,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              466,
+              420,
+              2173,
+              468
+            ],
+            "generated_text": "nghi luận, hữu tiền đại thư tích chi sở vi phát điều đạt xuất lại. Ti thực",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.61,
+            "confidence": 84.57,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              464,
+              503,
+              2170,
+              550
+            ],
+            "generated_text": "xu bôi văn kiến hàm vinh nhi hữu đặc dã. Chí ư cung thuận nhất niệm,",
+            "n_lines": 1,
+            "tokens": 33,
+            "seconds": 0.735,
+            "confidence": 92.72,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              467,
+              584,
+              2174,
+              632
+            ],
+            "generated_text": "phục sự Đại Hoàng đế, chân kiến đặc đạo lý tối đai, cái dĩ sự thân chi",
+            "n_lines": 1,
+            "tokens": 32,
+            "seconds": 0.733,
+            "confidence": 92.08,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              468,
+              668,
+              1341,
+              712
+            ],
+            "generated_text": "đao, sự thiên tôn chi nhi dục thân chi.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.412,
+            "confidence": 84.89,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              618,
+              770,
+              2175,
+              816
+            ],
+            "generated_text": "Tiên bám dĩ thiên hoàng kim ngọc vi thỉnh, thủ ti học Xuân thu",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.566,
+            "confidence": 91.11,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              470,
+              851,
+              2174,
+              905
+            ],
+            "generated_text": "nhi dục kỳ càu nghĩa, phi bán Quớc Vương sỏ thụ chi ý dã. Thiết tú, Tam",
+            "n_lines": 1,
+            "tokens": 41,
+            "seconds": 0.913,
+            "confidence": 70.43,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              467,
+              933,
+              2176,
+              980
+            ],
+            "generated_text": "Đai chi vương, thánh hiện thế xuất, Tam Đai chi hầu, trí tuêp diệc bất",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.647,
+            "confidence": 83.9,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              470,
+              1015,
+              2176,
+              1061
+            ],
+            "generated_text": "thiểu. Nhất thòi khanh tá, cứ thi quốc sự thi quân, sử kỳ liên thân vương",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 0.704,
+            "confidence": 90.31,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              470,
+              1095,
+              2174,
+              1148
+            ],
+            "generated_text": "cơ, quả vi bất hợp ư đạo? Tắc Đường lệ chi chương, bất tải ư Thi, nhi miện",
+            "n_lines": 1,
+            "tokens": 36,
+            "seconds": 0.796,
+            "confidence": 92.25,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              470,
+              1176,
+              2175,
+              1230
+            ],
+            "generated_text": "nghênh chi lễ, Không Từ bất dĩ đáp Lô quân hỹ. Thủ sự thực ti bản ý, vị",
+            "n_lines": 1,
+            "tokens": 35,
+            "seconds": 0.769,
+            "confidence": 90.54,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              472,
+              1257,
+              2175,
+              1312
+            ],
+            "generated_text": "tăng khái tri Quốc Vương. Sử quả xuất Quốc Vương chi ý, tự ti thiên học",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.589,
+            "confidence": 90.63,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              471,
+              1341,
+              2048,
+              1394
+            ],
+            "generated_text": "khởi kiến, việc dĩ vi cấp đường để đạo lý, quyết bất cẩm hữu vi dị đã.",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 0.672,
+            "confidence": 83.67,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              621,
+              1446,
+              2174,
+              1491
+            ],
+            "generated_text": "Quốc Vương khởi tư khuyến mâu, thác thổ nhi nam, dĩ hữu nhân",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.637,
+            "confidence": 87.53,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              472,
+              1527,
+              2173,
+              1582
+            ],
+            "generated_text": "dân xã tắc, ký mông Đại Hoàng đế thụ vi ngoại bình, đảng đặc phục liên",
+            "n_lines": 1,
+            "tokens": 33,
+            "seconds": 0.735,
+            "confidence": 93.41,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              472,
+              1611,
+              2180,
+              1665
+            ],
+            "generated_text": "phế phủ, tức Măn Châu Mông Có chư vương, nặng dĩ tử tế hiệu lao ư",
+            "n_lines": 1,
+            "tokens": 33,
+            "seconds": 0.736,
+            "confidence": 85.07,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              472,
+              1693,
+              2177,
+              1747
+            ],
+            "generated_text": "động bắc, quốc vương khởi bất nặng dĩ Chu Trân tuyên lực Ứ tây nam?",
+            "n_lines": 1,
+            "tokens": 33,
+            "seconds": 0.736,
+            "confidence": 85.4,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              471,
+              1776,
+              2180,
+              1829
+            ],
+            "generated_text": "Đại Hoàng để thông ngữ hoàn vũ, như thiên địa chỉ vô tư phú tái, kỳ ư",
+            "n_lines": 1,
+            "tokens": 32,
+            "seconds": 0.727,
+            "confidence": 85.52,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              473,
+              1857,
+              2175,
+              1905
+            ],
+            "generated_text": "chủ quốc, mạc bất dĩ tử thi chi. Đăn kỳ cố phục chi tình, tiên tự Măn",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 0.695,
+            "confidence": 86.83,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              475,
+              1938,
+              2175,
+              1991
+            ],
+            "generated_text": "Châu Mông Cô chi cận giả thủy nhĩ. Tự ti quản lại chi kiến, vị tất dĩ viễn",
+            "n_lines": 1,
+            "tokens": 32,
+            "seconds": 0.704,
+            "confidence": 84.91,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              473,
+              2020,
+              2175,
+              2072
+            ],
+            "generated_text": "cân phân bỉ thủ đả? Có giá, vương triệu công khanh đại phu dũ chú hâu",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 0.688,
+            "confidence": 75.18,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              473,
+              2102,
+              2175,
+              2157
+            ],
+            "generated_text": "ngũ đắng chi quân, kỳ đãi ngộ sự thế hữu dị, cái chu hầu hữu vi quân chi",
+            "n_lines": 1,
+            "tokens": 33,
+            "seconds": 0.741,
+            "confidence": 89.36,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              472,
+              2185,
+              2177,
+              2239
+            ],
+            "generated_text": "phận, cố dĩ vươn cơ quy chi, hụt dĩ động tính chi công chủ vị chi công",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.612,
+            "confidence": 83.01,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              473,
+              2267,
+              2176,
+              2316
+            ],
+            "generated_text": "chủ, nhi vương triều công khanh, bất đắc dĩ yên. Thiên ý Thiên triều",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 0.658,
+            "confidence": 96.29,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              474,
+              2351,
+              2176,
+              2403
+            ],
+            "generated_text": "pháp độ, Hán đại nhân bất đắc thượng thiên hoàng, hưu bất đắc dĩ Măn",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 0.688,
+            "confidence": 91.46,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              476,
+              2432,
+              2177,
+              2486
+            ],
+            "generated_text": "vi hôn, kỳ nghĩa việc do thị đã. Đăn tự Thiên triều phát tương Mãn Châu",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 0.653,
+            "confidence": 87.9,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              474,
+              2514,
+              2182,
+              2568
+            ],
+            "generated_text": "dĩ lai, tây nam di phiên vô hữu dĩ thương thiên hoàng thỉnh giã. Có kỳ sự",
+            "n_lines": 1,
+            "tokens": 32,
+            "seconds": 0.713,
+            "confidence": 87.73,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              472,
+              2608,
+              1558,
+              2646
+            ],
+            "generated_text": "xuất ư sáng kiến, như sơ văn giả di vi nghi nan.",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.462,
+            "confidence": 68.26,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 32,
+            "box": [
+              620,
+              2699,
+              2179,
+              2751
+            ],
+            "generated_text": "Phù! Dĩ bao kiến thỉnh an thân vương chi lẽ, Đại Hoàng để thù ngộ",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 0.649,
+            "confidence": 94.01,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 33,
+            "box": [
+              475,
+              2781,
+              2183,
+              2833
+            ],
+            "generated_text": "bản quốc Quốc Vương, bất dĩ vi hiểm, thủ phi Mãn Châu Mông Cổ chi sở",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 0.666,
+            "confidence": 90.91,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 34,
+            "box": [
+              474,
+              2862,
+              2179,
+              2915
+            ],
+            "generated_text": "thường đặc. Ủ kỳ sở bất thường đặc nhi quốc vương dĩ sơ độ bệ kiến đặc",
+            "n_lines": 1,
+            "tokens": 34,
+            "seconds": 0.764,
+            "confidence": 92.8,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              1212,
+              1058,
+              2168,
+              1068
+            ],
+            "ink": 332
+          },
+          {
+            "box": [
+              546,
+              2598,
+              1445,
+              2612
+            ],
+            "ink": 768
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "61cbea5c0055c260ccfc12f884e0febca7b2783b",
+        "git_describe": "61cbea5",
+        "git_dirty": true,
+        "gpu": "NVIDIA L4",
+        "dtype": "bfloat16",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

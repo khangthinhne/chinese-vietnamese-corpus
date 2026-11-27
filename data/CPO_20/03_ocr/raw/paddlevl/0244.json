@@ -1,0 +1,798 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_20",
+  "engine": "paddlevl",
+  "page": 244,
+  "runs": [
+    {
+      "key": "3ba84946ad49bb855f36fc3d46e515baa8030690d537c1b1512ff7e672fce500",
+      "parameters": {
+        "image_sha256": "19720eb7fb0bf18d1111f3d88efd49032febb8ee729328fd3ec6190b98547b7c",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T06:23:34+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_244.png",
+      "image_size": [
+        1839,
+        2804
+      ],
+      "crop_box": [
+        0,
+        0,
+        1839,
+        2804
+      ],
+      "lines": [
+        {
+          "text": "Uich nghĩa:",
+          "bbox": [
+            302,
+            249,
+            553,
+            282
+          ],
+          "confidence": 83.77
+        },
+        {
+          "text": "HỘA VĂN BÀI THÀNH LIỆT SƠN",
+          "bbox": [
+            548,
+            369,
+            1519,
+            443
+          ],
+          "confidence": 90.36
+        },
+        {
+          "text": "Lúc trẻ đã từng lên tòa thành trên núi này.",
+          "bbox": [
+            535,
+            514,
+            1444,
+            569
+          ],
+          "confidence": 98.91
+        },
+        {
+          "text": "Nơi gươm giáo xưa, giờ là bức bình phong bằng đá.",
+          "bbox": [
+            532,
+            577,
+            1583,
+            643
+          ],
+          "confidence": 93.59
+        },
+        {
+          "text": "Nước Đại Việt có số trời, do người đạo đức làm chủ.",
+          "bbox": [
+            532,
+            635,
+            1601,
+            694
+          ],
+          "confidence": 95.21
+        },
+        {
+          "text": "Giác Minh điện cuồng có gắng máy cũng uống công.",
+          "bbox": [
+            529,
+            686,
+            1605,
+            758
+          ],
+          "confidence": 78.5
+        },
+        {
+          "text": "Mây bay tán loạn, che mờ bến đò Sông Lam,",
+          "bbox": [
+            527,
+            750,
+            1593,
+            816
+          ],
+          "confidence": 92.38
+        },
+        {
+          "text": "Cây ở xa trồng giống hàng quân trên đỉnh Núi Lap.",
+          "bbox": [
+            527,
+            814,
+            1604,
+            873
+          ],
+          "confidence": 89.18
+        },
+        {
+          "text": "Sự việc cũ như muốn nhờ nhà thơ tả lại.",
+          "bbox": [
+            524,
+            870,
+            1582,
+            925
+          ],
+          "confidence": 85.64
+        },
+        {
+          "text": "Rêu ở bậc đá, cỏ mọc quanh sắc biếc giao nhau.",
+          "bbox": [
+            521,
+            923,
+            1504,
+            989
+          ],
+          "confidence": 91.98
+        },
+        {
+          "text": "入石河舟泊明良江待潮",
+          "bbox": [
+            582,
+            1109,
+            1738,
+            1195
+          ],
+          "confidence": 99.54
+        },
+        {
+          "text": "兩到黃昏冷氣驕",
+          "bbox": [
+            696,
+            1276,
+            1638,
+            1336
+          ],
+          "confidence": 97.74
+        },
+        {
+          "text": "入春朔吹尚飄飄",
+          "bbox": [
+            701,
+            1348,
+            1286,
+            1404
+          ],
+          "confidence": 80.01
+        },
+        {
+          "text": "乾坤大設雙流水",
+          "bbox": [
+            695,
+            1415,
+            1285,
+            1475
+          ],
+          "confidence": 99.12
+        },
+        {
+          "text": "雄伯遺歸一斷橋",
+          "bbox": [
+            693,
+            1489,
+            1285,
+            1547
+          ],
+          "confidence": 96.61
+        },
+        {
+          "text": "岸市館疏煙寂寂",
+          "bbox": [
+            687,
+            1559,
+            1276,
+            1622
+          ],
+          "confidence": 99.57
+        },
+        {
+          "text": "渡頭人遽夜招招",
+          "bbox": [
+            685,
+            1629,
+            1272,
+            1695
+          ],
+          "confidence": 98.64
+        },
+        {
+          "text": "停篙勿與水爭進",
+          "bbox": [
+            684,
+            1701,
+            1271,
+            1772
+          ],
+          "confidence": 95.77
+        },
+        {
+          "text": "雲詔東天海已潮",
+          "bbox": [
+            681,
+            1773,
+            1269,
+            1842
+          ],
+          "confidence": 80.07
+        },
+        {
+          "text": "Phiên âm:",
+          "bbox": [
+            263,
+            1899,
+            484,
+            1931
+          ],
+          "confidence": 89.7
+        },
+        {
+          "text": "NHẬP THẾCH HÀ CHU BẠC",
+          "bbox": [
+            485,
+            2020,
+            1316,
+            2093
+          ],
+          "confidence": 89.66
+        },
+        {
+          "text": "MINH LƯỢNG GIANG ĐẠI TRẢO",
+          "bbox": [
+            426,
+            2098,
+            1371,
+            2176
+          ],
+          "confidence": 91.38
+        },
+        {
+          "text": "Vu đáo hoàng hôn lãnh khí kiêu.",
+          "bbox": [
+            496,
+            2247,
+            1171,
+            2297
+          ],
+          "confidence": 93.23
+        },
+        {
+          "text": "Nhập xuân sóc súy thương phiêu tiêu.",
+          "bbox": [
+            488,
+            2305,
+            1267,
+            2359
+          ],
+          "confidence": 90.34
+        },
+        {
+          "text": "Căn khôn đại thiết song lưu thủy.",
+          "bbox": [
+            487,
+            2360,
+            1185,
+            2413
+          ],
+          "confidence": 93.08
+        },
+        {
+          "text": "Hung bà dì quy nhất đoạn kiểu.",
+          "bbox": [
+            485,
+            2422,
+            1140,
+            2471
+          ],
+          "confidence": 73.6
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          1839,
+          2804
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 36.733,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              302,
+              249,
+              553,
+              282
+            ],
+            "generated_text": "Uich nghĩa:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.76,
+            "confidence": 83.77,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              548,
+              369,
+              1519,
+              443
+            ],
+            "generated_text": "HỘA VĂN BÀI THÀNH LIỆT SƠN",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 2.493,
+            "confidence": 90.36,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              535,
+              514,
+              1444,
+              569
+            ],
+            "generated_text": "Lúc trẻ đã từng lên tòa thành trên núi này.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.262,
+            "confidence": 98.91,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              532,
+              577,
+              1583,
+              643
+            ],
+            "generated_text": "Nơi gươm giáo xưa, giờ là bức bình phong bằng đá.",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 2.393,
+            "confidence": 93.59,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              532,
+              635,
+              1601,
+              694
+            ],
+            "generated_text": "Nước Đại Việt có số trời, do người đạo đức làm chủ.",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.931,
+            "confidence": 95.21,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              529,
+              686,
+              1605,
+              758
+            ],
+            "generated_text": "Giác Minh điện cuồng có gắng máy cũng uống công.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.595,
+            "confidence": 78.5,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              527,
+              750,
+              1593,
+              816
+            ],
+            "generated_text": "Mây bay tán loạn, che mờ bến đò Sông Lam,",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.728,
+            "confidence": 92.38,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              527,
+              814,
+              1604,
+              873
+            ],
+            "generated_text": "Cây ở xa trồng giống hàng quân trên đỉnh Núi Lap.",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.721,
+            "confidence": 89.18,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              524,
+              870,
+              1582,
+              925
+            ],
+            "generated_text": "Sự việc cũ như muốn nhờ nhà thơ tả lại.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.41,
+            "confidence": 85.64,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              521,
+              923,
+              1504,
+              989
+            ],
+            "generated_text": "Rêu ở bậc đá, cỏ mọc quanh sắc biếc giao nhau.",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 2.296,
+            "confidence": 91.98,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              582,
+              1109,
+              1738,
+              1195
+            ],
+            "generated_text": "入石河舟泊明良江待潮",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.924,
+            "confidence": 99.54,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              696,
+              1276,
+              1638,
+              1336
+            ],
+            "generated_text": "兩到黃昏冷氣驕",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 1.151,
+            "confidence": 97.74,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              701,
+              1348,
+              1286,
+              1404
+            ],
+            "generated_text": "入春朔吹尚飄飄",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.125,
+            "confidence": 80.01,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              695,
+              1415,
+              1285,
+              1475
+            ],
+            "generated_text": "乾坤大設雙流水",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.557,
+            "confidence": 99.12,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              693,
+              1489,
+              1285,
+              1547
+            ],
+            "generated_text": "雄伯遺歸一斷橋",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.338,
+            "confidence": 96.61,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              687,
+              1559,
+              1276,
+              1622
+            ],
+            "generated_text": "岸市館疏煙寂寂",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.882,
+            "confidence": 99.57,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              685,
+              1629,
+              1272,
+              1695
+            ],
+            "generated_text": "渡頭人遽夜招招",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.928,
+            "confidence": 98.64,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              684,
+              1701,
+              1271,
+              1772
+            ],
+            "generated_text": "停篙勿與水爭進",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 1.145,
+            "confidence": 95.77,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              681,
+              1773,
+              1269,
+              1842
+            ],
+            "generated_text": "雲詔東天海已潮",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.869,
+            "confidence": 80.07,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              263,
+              1899,
+              484,
+              1931
+            ],
+            "generated_text": "Phiên âm:",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.634,
+            "confidence": 89.7,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              485,
+              2020,
+              1316,
+              2093
+            ],
+            "generated_text": "NHẬP THẾCH HÀ CHU BẠC",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.774,
+            "confidence": 89.66,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              426,
+              2098,
+              1371,
+              2176
+            ],
+            "generated_text": "MINH LƯỢNG GIANG ĐẠI TRẢO",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 2.147,
+            "confidence": 91.38,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              496,
+              2247,
+              1171,
+              2297
+            ],
+            "generated_text": "Vu đáo hoàng hôn lãnh khí kiêu.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.687,
+            "confidence": 93.23,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              488,
+              2305,
+              1267,
+              2359
+            ],
+            "generated_text": "Nhập xuân sóc súy thương phiêu tiêu.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.52,
+            "confidence": 90.34,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              487,
+              2360,
+              1185,
+              2413
+            ],
+            "generated_text": "Căn khôn đại thiết song lưu thủy.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.285,
+            "confidence": 93.08,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              485,
+              2422,
+              1140,
+              2471
+            ],
+            "generated_text": "Hung bà dì quy nhất đoạn kiểu.",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 1.175,
+            "confidence": 73.6,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              535,
+              568,
+              1443,
+              577
+            ],
+            "ink": 225
+          },
+          {
+            "box": [
+              495,
+              2241,
+              664,
+              2251
+            ],
+            "ink": 297
+          },
+          {
+            "box": [
+              485,
+              2410,
+              1183,
+              2419
+            ],
+            "ink": 258
+          },
+          {
+            "box": [
+              248,
+              2508,
+              326,
+              2524
+            ],
+            "ink": 458
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      }
+    }
+  ]
+}

@@ -1,0 +1,251 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "qwen",
+  "page": 718,
+  "runs": [
+    {
+      "key": "d050928c4ed6768d57d90e8fda84173017577d572a893ba02b8ea227e09bcb64",
+      "parameters": {
+        "image_sha256": "2368866965b51f1c7b55cf0a6c5a3b41c2140627a64770343c9e2ceda1b722df",
+        "engine": {
+          "name": "qwen",
+          "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "model_revision": "main",
+          "transformers_version": "4.57.6",
+          "torch_version": "2.9.1+cu128",
+          "cuda_version": "12.8",
+          "bitsandbytes_version": "0.50.2",
+          "quantization": {
+            "load_in_4bit": true,
+            "quant_type": "nf4",
+            "double_quant": true,
+            "compute_dtype": "float16"
+          },
+          "mode": "all",
+          "min_pixels": 50176,
+          "max_pixels": 802816,
+          "band_inches": 2.0,
+          "max_new_tokens": 768,
+          "repetition_penalty": 1.05,
+          "adapter_version": 3,
+          "prompt_version": 3,
+          "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74"
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-26T08:55:54+00:00",
+      "image": "/marimo/.cpo19_ocr/repo/data/CPO_19/02_extraction/pages/page_718.png",
+      "image_size": [
+        2144,
+        3030
+      ],
+      "crop_box": [
+        0,
+        0,
+        2144,
+        3030
+      ],
+      "lines": [
+        {
+          "text": "BANG GIAO HAO THOAI",
+          "bbox": [
+            148,
+            103,
+            1874,
+            321
+          ],
+          "confidence": 94.1
+        },
+        {
+          "text": "一節，臣表內言：聖人之心，天地至公之心也，栽者培之，傾者覆之。句旁奉御批：“深知朕心之言，可嘉之至。欽此！”",
+          "bbox": [
+            148,
+            321,
+            1874,
+            539
+          ],
+          "confidence": 94.1
+        },
+        {
+          "text": "臣敬恭捧誦，舉手加額，不自知其何以得此於天也。自臣叨蒙恩寵，賜昨交南，異渥殊私，不知紀極。聖心培篤於臣至隆極厚。臣維知一心恭順，事大皇帝如天如父，儼若鑒臨之在乎其前，此由聖人至誠不息。其",
+          "bbox": [
+            147,
+            609,
+            1854,
+            1109
+          ],
+          "confidence": 94.82
+        },
+        {
+          "text": "道易則易知，易知則易親。故凡臣有所奏陳，並從肝鬲中流露，聖主以知心許之。此知字，乃臣受聖主之知信矣哉！知子莫若父，知臣莫若君，臣嘉感之極，而不知所云也。",
+          "bbox": [
+            148,
+            1179,
+            1849,
+            1699
+          ],
+          "confidence": 98.02
+        },
+        {
+          "text": "一節，臣表內備陳，黎嗣君蓄志含沙，雖在羈管之中，猶思反噬之計。句旁奉御批：“彼將安往，已令軍機大臣問罪矣。欽此！”",
+          "bbox": [
+            126,
+            1749,
+            1851,
+            1999
+          ],
+          "confidence": 95.7
+        },
+        {
+          "text": "大哉王言，一哉王心！皇天無親而王法不漏，有如",
+          "bbox": [
+            126,
+            1999,
+            1851,
+            2250
+          ],
+          "confidence": 95.7
+        },
+        {
+          "text": "此夫！",
+          "bbox": [
+            145,
+            2286,
+            1912,
+            2601
+          ],
+          "confidence": 89.68
+        },
+        {
+          "text": "一節，臣表內備陳，黎嗣君遙使維祗與臣尋覈。句旁奉御批：“此係必有之事，今去此孽，為汝志喜。欽此！”",
+          "bbox": [
+            145,
+            2601,
+            1912,
+            2916
+          ],
+          "confidence": 89.68
+        }
+      ],
+      "raw": {
+        "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+        "model_revision": "main",
+        "mode": "all",
+        "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74",
+        "dpi": 300,
+        "image_size": [
+          2144,
+          3030
+        ],
+        "band_target_height": 600,
+        "bbox_granularity": "band_even_split",
+        "max_new_tokens": 768,
+        "max_pixels": 802816,
+        "inference_seconds": 8.476,
+        "bands": [
+          {
+            "band": 1,
+            "y0": 107,
+            "y1": 573,
+            "ink_box": [
+              148,
+              103,
+              1874,
+              539
+            ],
+            "generated_text": "BANG GIAO HAO THOAI\n\n一節，臣表內言：聖人之心，天地至公之心也，栽者培之，傾者覆之。句旁奉御批：“深知朕心之言，可嘉之至。欽此！”",
+            "n_lines": 2,
+            "tokens": 61,
+            "seconds": 1.448,
+            "confidence": 94.1,
+            "flags": []
+          },
+          {
+            "band": 2,
+            "y0": 573,
+            "y1": 1143,
+            "ink_box": [
+              147,
+              609,
+              1854,
+              1109
+            ],
+            "generated_text": "臣敬恭捧誦，舉手加額，不自知其何以得此於天也。自臣叨蒙恩寵，賜昨交南，異渥殊私，不知紀極。聖心培篤於臣至隆極厚。臣維知一心恭順，事大皇帝如天如父，儼若鑒臨之在乎其前，此由聖人至誠不息。其",
+            "n_lines": 1,
+            "tokens": 95,
+            "seconds": 2.134,
+            "confidence": 94.82,
+            "flags": []
+          },
+          {
+            "band": 3,
+            "y0": 1143,
+            "y1": 1710,
+            "ink_box": [
+              148,
+              1179,
+              1849,
+              1699
+            ],
+            "generated_text": "道易則易知，易知則易親。故凡臣有所奏陳，並從肝鬲中流露，聖主以知心許之。此知字，乃臣受聖主之知信矣哉！知子莫若父，知臣莫若君，臣嘉感之極，而不知所云也。",
+            "n_lines": 1,
+            "tokens": 75,
+            "seconds": 1.733,
+            "confidence": 98.02,
+            "flags": []
+          },
+          {
+            "band": 4,
+            "y0": 1710,
+            "y1": 2255,
+            "ink_box": [
+              126,
+              1749,
+              1851,
+              2250
+            ],
+            "generated_text": "一節，臣表內備陳，黎嗣君蓄志含沙，雖在羈管之中，猶思反噬之計。句旁奉御批：“彼將安往，已令軍機大臣問罪矣。欽此！”\n大哉王言，一哉王心！皇天無親而王法不漏，有如",
+            "n_lines": 2,
+            "tokens": 79,
+            "seconds": 1.821,
+            "confidence": 95.7,
+            "flags": []
+          },
+          {
+            "band": 5,
+            "y0": 2255,
+            "y1": 2912,
+            "ink_box": [
+              145,
+              2286,
+              1912,
+              2916
+            ],
+            "generated_text": "此夫！\n一節，臣表內備陳，黎嗣君遙使維祗與臣尋覈。句旁奉御批：“此係必有之事，今去此孽，為汝志喜。欽此！”",
+            "n_lines": 2,
+            "tokens": 54,
+            "seconds": 1.324,
+            "confidence": 89.68,
+            "flags": []
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": null,
+        "git_describe": null,
+        "git_dirty": null,
+        "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+        "dtype": "float16",
+        "adapter_version": 3
+      }
+    }
+  ]
+}

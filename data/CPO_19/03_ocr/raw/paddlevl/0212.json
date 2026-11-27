@@ -1,0 +1,865 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 212,
+  "runs": [
+    {
+      "key": "3403351496de5aa3395997bc5f8bc19722f3b69f0310f11d7e37eb219affea66",
+      "parameters": {
+        "image_sha256": "767c65c1a8137b8c1a82ceeee9cdaa321b725d26f011e3ea554c686224b16d90",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T13:34:28+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_212.png",
+      "image_size": [
+        2613,
+        3233
+      ],
+      "crop_box": [
+        0,
+        0,
+        2613,
+        3233
+      ],
+      "lines": [
+        {
+          "text": "ngothinhamle1.pdf",
+          "bbox": [
+            7,
+            19,
+            1297,
+            45
+          ],
+          "confidence": 95.23
+        },
+        {
+          "text": "HOANG HOA ĐỔ PHA",
+          "bbox": [
+            1587,
+            200,
+            2052,
+            239
+          ],
+          "confidence": 88.29
+        },
+        {
+          "text": "4. Hoàng Hi: Tức Phục Hi (còn goi là Bào Hi) là vua hiền thời cổ theo",
+          "bbox": [
+            491,
+            304,
+            2048,
+            347
+          ],
+          "confidence": 91.93
+        },
+        {
+          "text": "truyền thuyết Trung Quốc. Tương truyền, Phục Hi là người đã đặt ra tám quẻ",
+          "bbox": [
+            340,
+            382,
+            2050,
+            432
+          ],
+          "confidence": 92.05
+        },
+        {
+          "text": "trong Kinh Dịch.",
+          "bbox": [
+            339,
+            473,
+            698,
+            502
+          ],
+          "confidence": 97.85
+        },
+        {
+          "text": "5. Rừng Lý Hậu thiên: Chỉ tám quỷ: Kiên, Khản, Cấn, Chấn, Tốn, Li,",
+          "bbox": [
+            493,
+            537,
+            2047,
+            580
+          ],
+          "confidence": 80.34
+        },
+        {
+          "text": "Khôn, Đoài do Văn Vương diễn giải, khác với tâm quỹ Tiên thiên của Phuc Hi.",
+          "bbox": [
+            341,
+            615,
+            1985,
+            657
+          ],
+          "confidence": 89.95
+        },
+        {
+          "text": "Phuc Hi vach ra bát quái là Tiên thiên. Thân Nông chồng bát quái thành",
+          "bbox": [
+            491,
+            692,
+            2051,
+            735
+          ],
+          "confidence": 94.88
+        },
+        {
+          "text": "các quê là Trung thiên, Hoàng Đế hoàn bi các quê là Hậu thiên, nhưng chuá có",
+          "bbox": [
+            341,
+            770,
+            2050,
+            813
+          ],
+          "confidence": 86.2
+        },
+        {
+          "text": "lời, đến Văn Vương mới diễn giải thành lời gọi là Hệ tử, tức là Quái tử.",
+          "bbox": [
+            341,
+            848,
+            1819,
+            897
+          ],
+          "confidence": 96.68
+        },
+        {
+          "text": "95. 涉漳河",
+          "bbox": [
+            966,
+            983,
+            1402,
+            1045
+          ],
+          "confidence": 92.34
+        },
+        {
+          "text": "露飛官柳浥飛塵",
+          "bbox": [
+            878,
+            1171,
+            2185,
+            1236
+          ],
+          "confidence": 99.68
+        },
+        {
+          "text": "晨晝漳河笑問津",
+          "bbox": [
+            876,
+            1296,
+            1464,
+            1361
+          ],
+          "confidence": 99.03
+        },
+        {
+          "text": "水入雨宵添雨漲",
+          "bbox": [
+            876,
+            1424,
+            1467,
+            1479
+          ],
+          "confidence": 97.97
+        },
+        {
+          "text": "湍迴舟子艤舟頻",
+          "bbox": [
+            880,
+            1545,
+            1467,
+            1606
+          ],
+          "confidence": 99.85
+        },
+        {
+          "text": "銘心一望恩波闊",
+          "bbox": [
+            127,
+            1669,
+            1563,
+            1731
+          ],
+          "confidence": 98.89
+        },
+        {
+          "text": "回首重瞻道岸新",
+          "bbox": [
+            882,
+            1795,
+            1468,
+            1857
+          ],
+          "confidence": 99.98
+        },
+        {
+          "text": "西去東山今臥穩",
+          "bbox": [
+            881,
+            1922,
+            1469,
+            1980
+          ],
+          "confidence": 99.91
+        },
+        {
+          "text": "中流不是濟川人",
+          "bbox": [
+            885,
+            2045,
+            1469,
+            2104
+          ],
+          "confidence": 99.43
+        },
+        {
+          "text": "PHIEN AM:",
+          "bbox": [
+            348,
+            2210,
+            604,
+            2249
+          ],
+          "confidence": 99.52
+        },
+        {
+          "text": "THIEP CHUONG HA",
+          "bbox": [
+            943,
+            2285,
+            1456,
+            2330
+          ],
+          "confidence": 96.79
+        },
+        {
+          "text": "T ^ _1 ' _1·^_ ^' _1 ·_^",
+          "bbox": [
+            799,
+            2417,
+            1423,
+            2433
+          ],
+          "confidence": 59.93
+        },
+        {
+          "text": "Ló phi quan liêu áp phi trán,",
+          "bbox": [
+            792,
+            2429,
+            1463,
+            2461
+          ],
+          "confidence": 84.5
+        },
+        {
+          "text": "Thân trú Chương Hà tiêu vấn tân.",
+          "bbox": [
+            797,
+            2498,
+            1585,
+            2542
+          ],
+          "confidence": 91.22
+        },
+        {
+          "text": "Thủy nhập vũ tiêu thiêm vũ trương;",
+          "bbox": [
+            797,
+            2580,
+            1620,
+            2624
+          ],
+          "confidence": 93.4
+        },
+        {
+          "text": "Xuyên hôi chu tử nghĩ chu tân.",
+          "bbox": [
+            790,
+            2661,
+            1503,
+            2705
+          ],
+          "confidence": 86.17
+        },
+        {
+          "text": "Minh tâm nhất vong ân ba khoát;",
+          "bbox": [
+            793,
+            2743,
+            1657,
+            2788
+          ],
+          "confidence": 92.16
+        },
+        {
+          "text": "Hôi thủ trùng chiêm đạo ngăn tân.",
+          "bbox": [
+            793,
+            2826,
+            1595,
+            2872
+          ],
+          "confidence": 81.07
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2613,
+          3233
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 39.223,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              7,
+              19,
+              1297,
+              45
+            ],
+            "generated_text": "ngothinhamle1.pdf",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.861,
+            "confidence": 95.23,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              1587,
+              200,
+              2052,
+              239
+            ],
+            "generated_text": "HOANG HOA ĐỔ PHA",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.989,
+            "confidence": 88.29,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              343,
+              244,
+              2055,
+              257
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.455,
+            "confidence": 44.48,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              491,
+              304,
+              2048,
+              347
+            ],
+            "generated_text": "4. Hoàng Hi: Tức Phục Hi (còn goi là Bào Hi) là vua hiền thời cổ theo",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 2.356,
+            "confidence": 91.93,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              340,
+              382,
+              2050,
+              432
+            ],
+            "generated_text": "truyền thuyết Trung Quốc. Tương truyền, Phục Hi là người đã đặt ra tám quẻ",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 2.113,
+            "confidence": 92.05,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              339,
+              473,
+              698,
+              502
+            ],
+            "generated_text": "trong Kinh Dịch.",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.838,
+            "confidence": 97.85,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              493,
+              537,
+              2047,
+              580
+            ],
+            "generated_text": "5. Rừng Lý Hậu thiên: Chỉ tám quỷ: Kiên, Khản, Cấn, Chấn, Tốn, Li,",
+            "n_lines": 1,
+            "tokens": 35,
+            "seconds": 2.633,
+            "confidence": 80.34,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              341,
+              615,
+              1985,
+              657
+            ],
+            "generated_text": "Khôn, Đoài do Văn Vương diễn giải, khác với tâm quỹ Tiên thiên của Phuc Hi.",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 2.299,
+            "confidence": 89.95,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              491,
+              692,
+              2051,
+              735
+            ],
+            "generated_text": "Phuc Hi vach ra bát quái là Tiên thiên. Thân Nông chồng bát quái thành",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.148,
+            "confidence": 94.88,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              341,
+              770,
+              2050,
+              813
+            ],
+            "generated_text": "các quê là Trung thiên, Hoàng Đế hoàn bi các quê là Hậu thiên, nhưng chuá có",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 2.473,
+            "confidence": 86.2,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              341,
+              848,
+              1819,
+              897
+            ],
+            "generated_text": "lời, đến Văn Vương mới diễn giải thành lời gọi là Hệ tử, tức là Quái tử.",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 2.328,
+            "confidence": 96.68,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              966,
+              983,
+              1402,
+              1045
+            ],
+            "generated_text": "95. 涉漳河",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.857,
+            "confidence": 92.34,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              878,
+              1171,
+              2185,
+              1236
+            ],
+            "generated_text": "露飛官柳浥飛塵",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.217,
+            "confidence": 99.68,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              876,
+              1296,
+              1464,
+              1361
+            ],
+            "generated_text": "晨晝漳河笑問津",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.967,
+            "confidence": 99.03,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              876,
+              1424,
+              1467,
+              1479
+            ],
+            "generated_text": "水入雨宵添雨漲",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 1.026,
+            "confidence": 97.97,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              880,
+              1545,
+              1467,
+              1606
+            ],
+            "generated_text": "湍迴舟子艤舟頻",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.346,
+            "confidence": 99.85,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              127,
+              1669,
+              1563,
+              1731
+            ],
+            "generated_text": "銘心一望恩波闊",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.066,
+            "confidence": 98.89,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              882,
+              1795,
+              1468,
+              1857
+            ],
+            "generated_text": "回首重瞻道岸新",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.793,
+            "confidence": 99.98,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              881,
+              1922,
+              1469,
+              1980
+            ],
+            "generated_text": "西去東山今臥穩",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.106,
+            "confidence": 99.91,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              885,
+              2045,
+              1469,
+              2104
+            ],
+            "generated_text": "中流不是濟川人",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.793,
+            "confidence": 99.43,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              348,
+              2210,
+              604,
+              2249
+            ],
+            "generated_text": "PHIEN AM:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.711,
+            "confidence": 99.52,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              943,
+              2285,
+              1456,
+              2330
+            ],
+            "generated_text": "THIEP CHUONG HA",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.847,
+            "confidence": 96.79,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              799,
+              2417,
+              1423,
+              2433
+            ],
+            "generated_text": "T ^ _1 ' _1·^_ ^' _1 ·_^",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.572,
+            "confidence": 59.93,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              792,
+              2429,
+              1463,
+              2461
+            ],
+            "generated_text": "Ló phi quan liêu áp phi trán,",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.094,
+            "confidence": 84.5,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              797,
+              2498,
+              1585,
+              2542
+            ],
+            "generated_text": "Thân trú Chương Hà tiêu vấn tân.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.267,
+            "confidence": 91.22,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              797,
+              2580,
+              1620,
+              2624
+            ],
+            "generated_text": "Thủy nhập vũ tiêu thiêm vũ trương;",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.414,
+            "confidence": 93.4,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              790,
+              2661,
+              1503,
+              2705
+            ],
+            "generated_text": "Xuyên hôi chu tử nghĩ chu tân.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.187,
+            "confidence": 86.17,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              793,
+              2743,
+              1657,
+              2788
+            ],
+            "generated_text": "Minh tâm nhất vong ân ba khoát;",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.177,
+            "confidence": 92.16,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              793,
+              2826,
+              1595,
+              2872
+            ],
+            "generated_text": "Hôi thủ trùng chiêm đạo ngăn tân.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.283,
+            "confidence": 81.07,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              345,
+              461,
+              675,
+              473
+            ],
+            "ink": 470
+          },
+          {
+            "box": [
+              560,
+              732,
+              1841,
+              742
+            ],
+            "ink": 299
+          },
+          {
+            "box": [
+              436,
+              809,
+              1870,
+              820
+            ],
+            "ink": 437
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

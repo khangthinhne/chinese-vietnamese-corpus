@@ -1,0 +1,485 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_20",
+  "engine": "paddlevl",
+  "page": 711,
+  "runs": [
+    {
+      "key": "dd16a26f17a600cbe87c4c743a5b107fcf83699f644fc7c37a3ec9febf84e283",
+      "parameters": {
+        "image_sha256": "03000a2c3df4c54d12bb189b24b8f5ae329bd07cb0ec7a395b5bb491fb3ac8d3",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T14:24:04+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_711.png",
+      "image_size": [
+        1823,
+        2814
+      ],
+      "crop_box": [
+        0,
+        0,
+        1823,
+        2814
+      ],
+      "lines": [
+        {
+          "text": "童子進曰：自我先生，卜築書齋。",
+          "bbox": [
+            190,
+            855,
+            1581,
+            920
+          ],
+          "confidence": 95.11
+        },
+        {
+          "text": "書田而舌耕，地不能為之窮，天不能為之災",
+          "bbox": [
+            190,
+            912,
+            1588,
+            984
+          ],
+          "confidence": 99.18
+        },
+        {
+          "text": "每聞秋風，必爽然興懷。",
+          "bbox": [
+            190,
+            990,
+            1242,
+            1052
+          ],
+          "confidence": 98.41
+        },
+        {
+          "text": "或攜壺于橋上，或濯纓于水涯。",
+          "bbox": [
+            190,
+            1053,
+            1192,
+            1119
+          ],
+          "confidence": 93.9
+        },
+        {
+          "text": "而今秋色浩瀚，水面风来。",
+          "bbox": [
+            192,
+            1120,
+            1330,
+            1184
+          ],
+          "confidence": 92.82
+        },
+        {
+          "text": "霜橋月觀洲渚榮迴.",
+          "bbox": [
+            192,
+            1190,
+            1544,
+            1252
+          ],
+          "confidence": 90.52
+        },
+        {
+          "text": "琴樽適興，不其甚佳。",
+          "bbox": [
+            193,
+            1256,
+            919,
+            1319
+          ],
+          "confidence": 93.94
+        },
+        {
+          "text": "先生之意，若不豫何哉？",
+          "bbox": [
+            195,
+            1320,
+            985,
+            1384
+          ],
+          "confidence": 97.0
+        },
+        {
+          "text": "曰：風月扁舟，於予成癖。",
+          "bbox": [
+            195,
+            1386,
+            978,
+            1449
+          ],
+          "confidence": 92.27
+        },
+        {
+          "text": "惟樂生於心，而後見於跡。",
+          "bbox": [
+            195,
+            1448,
+            1424,
+            1513
+          ],
+          "confidence": 92.81
+        },
+        {
+          "text": "又必以其時可也，苟非時則物我扞隔。",
+          "bbox": [
+            196,
+            1505,
+            1452,
+            1583
+          ],
+          "confidence": 95.25
+        },
+        {
+          "text": "豈吾與爾之所能獨適哉！",
+          "bbox": [
+            198,
+            1582,
+            1038,
+            1649
+          ],
+          "confidence": 95.76
+        },
+        {
+          "text": "我今為士，在四民中。",
+          "bbox": [
+            198,
+            1653,
+            899,
+            1714
+          ],
+          "confidence": 92.18
+        },
+        {
+          "text": "不耕而食，是係諸農。",
+          "bbox": [
+            199,
+            1719,
+            873,
+            1780
+          ],
+          "confidence": 94.79
+        },
+        {
+          "text": "一穀不收，我誰與供。",
+          "bbox": [
+            201,
+            1786,
+            874,
+            1847
+          ],
+          "confidence": 96.13
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          1823,
+          2814
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 6.44,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              190,
+              855,
+              1581,
+              920
+            ],
+            "generated_text": "童子進曰：自我先生，卜築書齋。",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.432,
+            "confidence": 95.11,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              190,
+              912,
+              1588,
+              984
+            ],
+            "generated_text": "書田而舌耕，地不能為之窮，天不能為之災",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.63,
+            "confidence": 99.18,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              190,
+              990,
+              1242,
+              1052
+            ],
+            "generated_text": "每聞秋風，必爽然興懷。",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.412,
+            "confidence": 98.41,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              190,
+              1053,
+              1192,
+              1119
+            ],
+            "generated_text": "或攜壺于橋上，或濯纓于水涯。",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.598,
+            "confidence": 93.9,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              192,
+              1120,
+              1330,
+              1184
+            ],
+            "generated_text": "而今秋色浩瀚，水面风来。",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.374,
+            "confidence": 92.82,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              192,
+              1190,
+              1544,
+              1252
+            ],
+            "generated_text": "霜橋月觀洲渚榮迴.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.433,
+            "confidence": 90.52,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              193,
+              1256,
+              919,
+              1319
+            ],
+            "generated_text": "琴樽適興，不其甚佳。",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 0.402,
+            "confidence": 93.94,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              195,
+              1320,
+              985,
+              1384
+            ],
+            "generated_text": "先生之意，若不豫何哉？",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.31,
+            "confidence": 97.0,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              195,
+              1386,
+              978,
+              1449
+            ],
+            "generated_text": "曰：風月扁舟，於予成癖。",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 0.368,
+            "confidence": 92.27,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              195,
+              1448,
+              1424,
+              1513
+            ],
+            "generated_text": "惟樂生於心，而後見於跡。",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.464,
+            "confidence": 92.81,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              196,
+              1505,
+              1452,
+              1583
+            ],
+            "generated_text": "又必以其時可也，苟非時則物我扞隔。",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.511,
+            "confidence": 95.25,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              198,
+              1582,
+              1038,
+              1649
+            ],
+            "generated_text": "豈吾與爾之所能獨適哉！",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 0.374,
+            "confidence": 95.76,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              198,
+              1653,
+              899,
+              1714
+            ],
+            "generated_text": "我今為士，在四民中。",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.36,
+            "confidence": 92.18,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              199,
+              1719,
+              873,
+              1780
+            ],
+            "generated_text": "不耕而食，是係諸農。",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.366,
+            "confidence": 94.79,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              201,
+              1786,
+              874,
+              1847
+            ],
+            "generated_text": "一穀不收，我誰與供。",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.405,
+            "confidence": 96.13,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              1536,
+              2498,
+              1608,
+              2509
+            ],
+            "ink": 256
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      }
+    }
+  ]
+}

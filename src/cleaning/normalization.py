@@ -15,9 +15,16 @@ from src.common.corpus import normalize_line
 from src.cleaning.model import ASCII_TO_HAN, HAN_JUNK, RawLine, CleanConfig, LEADING_NUM_RE
 
 
+# Chữ khuyết "□" (và [MASK] đã có sẵn) -> token [MASK] mà tool dóng Hán-Âm của Lab hiểu là 1 chữ hỏng.
+# Giữ qua bước lọc bằng một ký tự tạm (Private Use Area) vì "[", "]" và chữ Latin bị xoá khỏi dòng Hán.
+HAN_MASK = "[MASK]"
+_MASK_SENTINEL = ""
+
+
 def clean_han_line(text: str, cfg: CleanConfig) -> str:
     text = unicodedata.normalize("NFC", text)
     text = LEADING_NUM_RE.sub("", text)
+    text = text.replace(HAN_MASK, _MASK_SENTINEL).replace("□", _MASK_SENTINEL)
     text = "".join(ASCII_TO_HAN.get(c, c) for c in text)
     kept = []
     for c in text:
@@ -28,7 +35,7 @@ def clean_han_line(text: str, cfg: CleanConfig) -> str:
         kept.append(c)
     text = "".join(kept)
     text = re.sub(r"([，。！？；：、])\1+", r"\1", text)   # dấu lặp do OCR
-    return text.strip("，、：—–…")                         # dấu ngắt/gạch ở biên dòng vô nghĩa
+    return text.strip("，、：—–…").replace(_MASK_SENTINEL, HAN_MASK)   # dấu ngắt/gạch ở biên dòng vô nghĩa
 
 
 def clean_vi_line(text: str, cfg: CleanConfig) -> str:

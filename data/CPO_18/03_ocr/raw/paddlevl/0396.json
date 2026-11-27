@@ -1,0 +1,720 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_18",
+  "engine": "paddlevl",
+  "page": 396,
+  "runs": [
+    {
+      "key": "8b95002861d66d80f4edc4e0b574d6a094722d592e218a8ec344b04ebcf3ea04",
+      "parameters": {
+        "image_sha256": "f801e0fed1f90c7de3c40ef18f9540437a76a17e2e65b73474e9e50d3de0cadf",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T15:23:47+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_396.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        0,
+        2480,
+        3509
+      ],
+      "lines": [
+        {
+          "text": "Sưu tấm và khảo luận tác phẩm chủ Hán của người Việt Nam trước TK 10",
+          "bbox": [
+            0,
+            124,
+            1890,
+            191
+          ],
+          "confidence": 96.05
+        },
+        {
+          "text": "___",
+          "bbox": [
+            232,
+            218,
+            2269,
+            245
+          ],
+          "confidence": 40.05
+        },
+        {
+          "text": "趙佗上漢文帝書",
+          "bbox": [
+            829,
+            402,
+            1621,
+            494
+          ],
+          "confidence": 99.55
+        },
+        {
+          "text": "蠻夷大長老夫臣佗昧死再拜，上書皇帝陛下：",
+          "bbox": [
+            0,
+            777,
+            2237,
+            866
+          ],
+          "confidence": 99.53
+        },
+        {
+          "text": "老夫故粤吏也。高皇帝幸賜臣佗璽以爲南",
+          "bbox": [
+            380,
+            946,
+            2240,
+            1037
+          ],
+          "confidence": 97.26
+        },
+        {
+          "text": "越王，使爲外臣，時納貢職。孝惠皇帝即位，義",
+          "bbox": [
+            0,
+            1080,
+            2242,
+            1170
+          ],
+          "confidence": 99.68
+        },
+        {
+          "text": "不忍絕，所以賜老夫者厚甚。高後自臨用事，近",
+          "bbox": [
+            0,
+            1210,
+            2245,
+            1298
+          ],
+          "confidence": 94.85
+        },
+        {
+          "text": "細士，信讒臣，別異蠻夷，出令曰：“無予蠻夷外",
+          "bbox": [
+            0,
+            1341,
+            2240,
+            1429
+          ],
+          "confidence": 99.0
+        },
+        {
+          "text": "越金鐵田器：馬，牛，羊即與，與牡，毋與牝”。老",
+          "bbox": [
+            0,
+            1473,
+            2457,
+            1560
+          ],
+          "confidence": 94.86
+        },
+        {
+          "text": "夫處越，馬齒已長，自以祭祀不修，有死罪，使內",
+          "bbox": [
+            0,
+            1602,
+            2228,
+            1689
+          ],
+          "confidence": 96.9
+        },
+        {
+          "text": "史潘，中尉高，御史平凡三輩上書謝過，皆不",
+          "bbox": [
+            0,
+            1730,
+            2233,
+            1817
+          ],
+          "confidence": 98.5
+        },
+        {
+          "text": "返。又風聞老夫父母墳墓已坏削，兄弟宗族已",
+          "bbox": [
+            0,
+            1860,
+            2229,
+            1946
+          ],
+          "confidence": 97.85
+        },
+        {
+          "text": "誅論。諸吏相與議曰：“今内不得振於漢，外無",
+          "bbox": [
+            0,
+            1987,
+            2238,
+            2072
+          ],
+          "confidence": 98.4
+        },
+        {
+          "text": "以自高異”，故更號爲帝，自帝其國，非敢有害於",
+          "bbox": [
+            0,
+            2111,
+            2237,
+            2200
+          ],
+          "confidence": 98.67
+        },
+        {
+          "text": "天下也。高皇后聞之，大怒，削去南越之籍，使",
+          "bbox": [
+            0,
+            2241,
+            2233,
+            2328
+          ],
+          "confidence": 99.45
+        },
+        {
+          "text": "使不通。老夫竊疑長沙王讒臣，故敢發兵以伐",
+          "bbox": [
+            0,
+            2364,
+            2231,
+            2455
+          ],
+          "confidence": 99.76
+        },
+        {
+          "text": "其邊。且南方卑濕，蠻夷中，西有西甌，其中半",
+          "bbox": [
+            0,
+            2491,
+            2226,
+            2582
+          ],
+          "confidence": 99.72
+        },
+        {
+          "text": "羸南面稱王；東有閩越，其众數千人亦稱王；西",
+          "bbox": [
+            0,
+            2614,
+            2221,
+            2705
+          ],
+          "confidence": 96.72
+        },
+        {
+          "text": "北有長沙，其半蠻夷亦稱王；老夫故敢妄竊帝號",
+          "bbox": [
+            0,
+            2735,
+            2228,
+            2832
+          ],
+          "confidence": 99.53
+        },
+        {
+          "text": "聊以自娱。老夫身定百邑之地，東西南北數千",
+          "bbox": [
+            0,
+            2861,
+            2222,
+            2955
+          ],
+          "confidence": 98.45
+        },
+        {
+          "text": "萬里，帶甲百萬有餘，然北面臣事漢，何也？不敢",
+          "bbox": [
+            0,
+            2984,
+            2475,
+            3078
+          ],
+          "confidence": 98.23
+        },
+        {
+          "text": "背先人之故。",
+          "bbox": [
+            0,
+            3108,
+            2355,
+            3189
+          ],
+          "confidence": 91.63
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          3509
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 37.769,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              0,
+              124,
+              1890,
+              191
+            ],
+            "generated_text": "Sưu tấm và khảo luận tác phẩm chủ Hán của người Việt Nam trước TK 10",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 1.833,
+            "confidence": 96.05,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              232,
+              218,
+              2269,
+              245
+            ],
+            "generated_text": "___",
+            "n_lines": 1,
+            "tokens": 2,
+            "seconds": 0.481,
+            "confidence": 40.05,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              829,
+              402,
+              1621,
+              494
+            ],
+            "generated_text": "趙佗上漢文帝書",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.012,
+            "confidence": 99.55,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              0,
+              777,
+              2237,
+              866
+            ],
+            "generated_text": "蠻夷大長老夫臣佗昧死再拜，上書皇帝陛下：",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.796,
+            "confidence": 99.53,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              380,
+              946,
+              2240,
+              1037
+            ],
+            "generated_text": "老夫故粤吏也。高皇帝幸賜臣佗璽以爲南",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.637,
+            "confidence": 97.26,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              0,
+              1080,
+              2242,
+              1170
+            ],
+            "generated_text": "越王，使爲外臣，時納貢職。孝惠皇帝即位，義",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.861,
+            "confidence": 99.68,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              0,
+              1210,
+              2245,
+              1298
+            ],
+            "generated_text": "不忍絕，所以賜老夫者厚甚。高後自臨用事，近",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 1.998,
+            "confidence": 94.85,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              0,
+              1341,
+              2240,
+              1429
+            ],
+            "generated_text": "細士，信讒臣，別異蠻夷，出令曰：“無予蠻夷外",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.196,
+            "confidence": 99.0,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              0,
+              1473,
+              2457,
+              1560
+            ],
+            "generated_text": "越金鐵田器：馬，牛，羊即與，與牡，毋與牝”。老",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 2.124,
+            "confidence": 94.86,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              0,
+              1602,
+              2228,
+              1689
+            ],
+            "generated_text": "夫處越，馬齒已長，自以祭祀不修，有死罪，使內",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.934,
+            "confidence": 96.9,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              0,
+              1730,
+              2233,
+              1817
+            ],
+            "generated_text": "史潘，中尉高，御史平凡三輩上書謝過，皆不",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.729,
+            "confidence": 98.5,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              0,
+              1860,
+              2229,
+              1946
+            ],
+            "generated_text": "返。又風聞老夫父母墳墓已坏削，兄弟宗族已",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.67,
+            "confidence": 97.85,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              0,
+              1987,
+              2238,
+              2072
+            ],
+            "generated_text": "誅論。諸吏相與議曰：“今内不得振於漢，外無",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.803,
+            "confidence": 98.4,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              0,
+              2111,
+              2237,
+              2200
+            ],
+            "generated_text": "以自高異”，故更號爲帝，自帝其國，非敢有害於",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.743,
+            "confidence": 98.67,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              0,
+              2241,
+              2233,
+              2328
+            ],
+            "generated_text": "天下也。高皇后聞之，大怒，削去南越之籍，使",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.603,
+            "confidence": 99.45,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              0,
+              2364,
+              2231,
+              2455
+            ],
+            "generated_text": "使不通。老夫竊疑長沙王讒臣，故敢發兵以伐",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.863,
+            "confidence": 99.76,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              0,
+              2491,
+              2226,
+              2582
+            ],
+            "generated_text": "其邊。且南方卑濕，蠻夷中，西有西甌，其中半",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 2.083,
+            "confidence": 99.72,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              0,
+              2614,
+              2221,
+              2705
+            ],
+            "generated_text": "羸南面稱王；東有閩越，其众數千人亦稱王；西",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 2.058,
+            "confidence": 96.72,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              0,
+              2735,
+              2228,
+              2832
+            ],
+            "generated_text": "北有長沙，其半蠻夷亦稱王；老夫故敢妄竊帝號",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 2.005,
+            "confidence": 99.53,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              0,
+              2861,
+              2222,
+              2955
+            ],
+            "generated_text": "聊以自娱。老夫身定百邑之地，東西南北數千",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.519,
+            "confidence": 98.45,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              0,
+              2984,
+              2475,
+              3078
+            ],
+            "generated_text": "萬里，帶甲百萬有餘，然北面臣事漢，何也？不敢",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 2.058,
+            "confidence": 98.23,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              0,
+              3108,
+              2355,
+              3189
+            ],
+            "generated_text": "背先人之故。",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.758,
+            "confidence": 91.63,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              1607,
+              610,
+              1760,
+              623
+            ],
+            "ink": 662
+          },
+          {
+            "box": [
+              1594,
+              622,
+              1750,
+              639
+            ],
+            "ink": 900
+          },
+          {
+            "box": [
+              1594,
+              650,
+              1756,
+              662
+            ],
+            "ink": 535
+          },
+          {
+            "box": [
+              2065,
+              3303,
+              2464,
+              3323
+            ],
+            "ink": 1075
+          },
+          {
+            "box": [
+              260,
+              3373,
+              2096,
+              3391
+            ],
+            "ink": 1076
+          },
+          {
+            "box": [
+              256,
+              3389,
+              2076,
+              3420
+            ],
+            "ink": 2200
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

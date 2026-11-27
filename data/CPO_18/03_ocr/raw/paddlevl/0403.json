@@ -1,0 +1,798 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_18",
+  "engine": "paddlevl",
+  "page": 403,
+  "runs": [
+    {
+      "key": "05e9159acf75f16c2abebad26d2790f966726ad77cc3c892b5ac8f63c23889b3",
+      "parameters": {
+        "image_sha256": "70fce6d968995b213f7ab3822618850124d8e12fe044b02ec5cccfe95841829b",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T15:30:21+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_403.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        0,
+        2480,
+        3509
+      ],
+      "lines": [
+        {
+          "text": "2.MAU TU LY HOAC LUAN",
+          "bbox": [
+            783,
+            654,
+            1720,
+            725
+          ],
+          "confidence": 93.35
+        },
+        {
+          "text": "Lý hoặc luân (luân giải những điều còn nghi hoặc)",
+          "bbox": [
+            433,
+            965,
+            2139,
+            1030
+          ],
+          "confidence": 89.83
+        },
+        {
+          "text": "là tác phẩm của Mâu Bác (1), người Giao Châu (2), sống",
+          "bbox": [
+            299,
+            1061,
+            2465,
+            1128
+          ],
+          "confidence": 97.14
+        },
+        {
+          "text": "vào khoảng cuối thế kỷ II đầu thế kỷ III sau Công",
+          "bbox": [
+            296,
+            1153,
+            2146,
+            1218
+          ],
+          "confidence": 96.91
+        },
+        {
+          "text": "nguyên.",
+          "bbox": [
+            301,
+            1264,
+            589,
+            1308
+          ],
+          "confidence": 82.7
+        },
+        {
+          "text": "Mâu Bác từng đất mẹ rồi Thương Ngô (Quảng Tây)",
+          "bbox": [
+            440,
+            1369,
+            2142,
+            1446
+          ],
+          "confidence": 91.66
+        },
+        {
+          "text": "chay sang miền Bắc nước ta, tránh loạn. Tại đây, ông đế",
+          "bbox": [
+            302,
+            1461,
+            2143,
+            1537
+          ],
+          "confidence": 93.52
+        },
+        {
+          "text": "tâm nghiên cứu Phát giáo Luy Lâu (Thuân Thành, Tiên",
+          "bbox": [
+            303,
+            1552,
+            2145,
+            1620
+          ],
+          "confidence": 95.28
+        },
+        {
+          "text": "Sơn, Bắc Ninh, trung tâm chính trị văn hóa Giao Châu",
+          "bbox": [
+            305,
+            1644,
+            2148,
+            1712
+          ],
+          "confidence": 96.3
+        },
+        {
+          "text": "hội này), có nhiều khám phá và phát hiện quan trọng.",
+          "bbox": [
+            32,
+            1737,
+            2469,
+            1812
+          ],
+          "confidence": 92.78
+        },
+        {
+          "text": "Ông viết Lý hoặc luân đế trình bày những mối mẻ mà",
+          "bbox": [
+            306,
+            1826,
+            2469,
+            1893
+          ],
+          "confidence": 92.25
+        },
+        {
+          "text": "ông tìm thấy nơi Phật giáo, đồng thời bảo vệ đạo Phật",
+          "bbox": [
+            306,
+            1914,
+            2469,
+            1993
+          ],
+          "confidence": 94.98
+        },
+        {
+          "text": "trước sự tấn công từ nhiều phía của đạo Nho, thuyết",
+          "bbox": [
+            307,
+            2005,
+            2156,
+            2073
+          ],
+          "confidence": 93.65
+        },
+        {
+          "text": "Hoàng Lão và thuật tu tiên, luyện thuốc trưởng sinh",
+          "bbox": [
+            309,
+            2099,
+            2469,
+            2164
+          ],
+          "confidence": 90.16
+        },
+        {
+          "text": "đang thinh hành ở nước ta thời bấy giờ.",
+          "bbox": [
+            310,
+            2183,
+            2469,
+            2250
+          ],
+          "confidence": 95.52
+        },
+        {
+          "text": "Lý hoặc luận sau khi ra đời, đã có những tiếng vang",
+          "bbox": [
+            443,
+            2311,
+            2467,
+            2382
+          ],
+          "confidence": 97.66
+        },
+        {
+          "text": "nhất định. Nó để lại dấu ăn trong Sáu bức thư tranh",
+          "bbox": [
+            308,
+            2402,
+            2469,
+            2472
+          ],
+          "confidence": 91.45
+        },
+        {
+          "text": "luân về đạo Phật giữa Đạo Cao, Pháp Minh hai trí thức",
+          "bbox": [
+            310,
+            2491,
+            2469,
+            2560
+          ],
+          "confidence": 97.55
+        },
+        {
+          "text": "nước ta với Lý Miễu, Thứ sử Giao Châu thời Lưu Tổng",
+          "bbox": [
+            312,
+            2580,
+            2469,
+            2649
+          ],
+          "confidence": 94.97
+        },
+        {
+          "text": "(419 - 478). Nó còn được Tăng Hữu (445 - 518), người đời",
+          "bbox": [
+            315,
+            2670,
+            2469,
+            2743
+          ],
+          "confidence": 96.77
+        },
+        {
+          "text": "Lượng dùng làm tác phẩm mở đầu cho Hoàng minh tập,",
+          "bbox": [
+            317,
+            2758,
+            2469,
+            2834
+          ],
+          "confidence": 91.73
+        },
+        {
+          "text": "một bô chuyên luận về đạo Phật. Sách Thiên uyên tập",
+          "bbox": [
+            318,
+            2848,
+            2469,
+            2918
+          ],
+          "confidence": 90.37
+        },
+        {
+          "text": "anh của Việt Nam khi nói về Phật giáo Luy Lâu có nhắc",
+          "bbox": [
+            313,
+            2937,
+            2475,
+            3009
+          ],
+          "confidence": 96.21
+        },
+        {
+          "text": "tối Mâu Bác (Bd. Thiên uyên tập anh của Ngô Đức Thọ -",
+          "bbox": [
+            318,
+            3021,
+            2469,
+            3097
+          ],
+          "confidence": 90.09
+        },
+        {
+          "text": "Nguyễn Thúy Nga, Nxb. Văn học, Hà Nội, 1990, tr. 80 -",
+          "bbox": [
+            318,
+            3109,
+            2469,
+            3195
+          ],
+          "confidence": 94.62
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          3509
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 40.164,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              783,
+              654,
+              1720,
+              725
+            ],
+            "generated_text": "2.MAU TU LY HOAC LUAN",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.987,
+            "confidence": 93.35,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              433,
+              965,
+              2139,
+              1030
+            ],
+            "generated_text": "Lý hoặc luân (luân giải những điều còn nghi hoặc)",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.323,
+            "confidence": 89.83,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              299,
+              1061,
+              2465,
+              1128
+            ],
+            "generated_text": "là tác phẩm của Mâu Bác (1), người Giao Châu (2), sống",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.699,
+            "confidence": 97.14,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              296,
+              1153,
+              2146,
+              1218
+            ],
+            "generated_text": "vào khoảng cuối thế kỷ II đầu thế kỷ III sau Công",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.457,
+            "confidence": 96.91,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              301,
+              1264,
+              589,
+              1308
+            ],
+            "generated_text": "nguyên.",
+            "n_lines": 1,
+            "tokens": 4,
+            "seconds": 0.566,
+            "confidence": 82.7,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              440,
+              1369,
+              2142,
+              1446
+            ],
+            "generated_text": "Mâu Bác từng đất mẹ rồi Thương Ngô (Quảng Tây)",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.608,
+            "confidence": 91.66,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              302,
+              1461,
+              2143,
+              1537
+            ],
+            "generated_text": "chay sang miền Bắc nước ta, tránh loạn. Tại đây, ông đế",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.621,
+            "confidence": 93.52,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              303,
+              1552,
+              2145,
+              1620
+            ],
+            "generated_text": "tâm nghiên cứu Phát giáo Luy Lâu (Thuân Thành, Tiên",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.753,
+            "confidence": 95.28,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              305,
+              1644,
+              2148,
+              1712
+            ],
+            "generated_text": "Sơn, Bắc Ninh, trung tâm chính trị văn hóa Giao Châu",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.643,
+            "confidence": 96.3,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              32,
+              1737,
+              2469,
+              1812
+            ],
+            "generated_text": "hội này), có nhiều khám phá và phát hiện quan trọng.",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.624,
+            "confidence": 92.78,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              306,
+              1826,
+              2469,
+              1893
+            ],
+            "generated_text": "Ông viết Lý hoặc luân đế trình bày những mối mẻ mà",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.705,
+            "confidence": 92.25,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              306,
+              1914,
+              2469,
+              1993
+            ],
+            "generated_text": "ông tìm thấy nơi Phật giáo, đồng thời bảo vệ đạo Phật",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.742,
+            "confidence": 94.98,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              307,
+              2005,
+              2156,
+              2073
+            ],
+            "generated_text": "trước sự tấn công từ nhiều phía của đạo Nho, thuyết",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.519,
+            "confidence": 93.65,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              309,
+              2099,
+              2469,
+              2164
+            ],
+            "generated_text": "Hoàng Lão và thuật tu tiên, luyện thuốc trưởng sinh",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.515,
+            "confidence": 90.16,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              310,
+              2183,
+              2469,
+              2250
+            ],
+            "generated_text": "đang thinh hành ở nước ta thời bấy giờ.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.23,
+            "confidence": 95.52,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              443,
+              2311,
+              2467,
+              2382
+            ],
+            "generated_text": "Lý hoặc luận sau khi ra đời, đã có những tiếng vang",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.393,
+            "confidence": 97.66,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              308,
+              2402,
+              2469,
+              2472
+            ],
+            "generated_text": "nhất định. Nó để lại dấu ăn trong Sáu bức thư tranh",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.672,
+            "confidence": 91.45,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              310,
+              2491,
+              2469,
+              2560
+            ],
+            "generated_text": "luân về đạo Phật giữa Đạo Cao, Pháp Minh hai trí thức",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.616,
+            "confidence": 97.55,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              312,
+              2580,
+              2469,
+              2649
+            ],
+            "generated_text": "nước ta với Lý Miễu, Thứ sử Giao Châu thời Lưu Tổng",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.877,
+            "confidence": 94.97,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              315,
+              2670,
+              2469,
+              2743
+            ],
+            "generated_text": "(419 - 478). Nó còn được Tăng Hữu (445 - 518), người đời",
+            "n_lines": 1,
+            "tokens": 33,
+            "seconds": 2.474,
+            "confidence": 96.77,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              317,
+              2758,
+              2469,
+              2834
+            ],
+            "generated_text": "Lượng dùng làm tác phẩm mở đầu cho Hoàng minh tập,",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.485,
+            "confidence": 91.73,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              318,
+              2848,
+              2469,
+              2918
+            ],
+            "generated_text": "một bô chuyên luận về đạo Phật. Sách Thiên uyên tập",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.752,
+            "confidence": 90.37,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              313,
+              2937,
+              2475,
+              3009
+            ],
+            "generated_text": "anh của Việt Nam khi nói về Phật giáo Luy Lâu có nhắc",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.546,
+            "confidence": 96.21,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              318,
+              3021,
+              2469,
+              3097
+            ],
+            "generated_text": "tối Mâu Bác (Bd. Thiên uyên tập anh của Ngô Đức Thọ -",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 1.945,
+            "confidence": 90.09,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              318,
+              3109,
+              2469,
+              3195
+            ],
+            "generated_text": "Nguyễn Thúy Nga, Nxb. Văn học, Hà Nội, 1990, tr. 80 -",
+            "n_lines": 1,
+            "tokens": 32,
+            "seconds": 2.405,
+            "confidence": 94.62,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              976,
+              640,
+              1663,
+              657
+            ],
+            "ink": 1166
+          },
+          {
+            "box": [
+              502,
+              1027,
+              2130,
+              1042
+            ],
+            "ink": 1003
+          },
+          {
+            "box": [
+              516,
+              1617,
+              1976,
+              1626
+            ],
+            "ink": 568
+          },
+          {
+            "box": [
+              416,
+              1890,
+              2469,
+              1902
+            ],
+            "ink": 777
+          },
+          {
+            "box": [
+              2082,
+              3284,
+              2469,
+              3297
+            ],
+            "ink": 894
+          },
+          {
+            "box": [
+              2064,
+              3301,
+              2469,
+              3329
+            ],
+            "ink": 2092
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

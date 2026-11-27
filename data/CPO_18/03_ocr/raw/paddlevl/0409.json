@@ -1,0 +1,994 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_18",
+  "engine": "paddlevl",
+  "page": 409,
+  "runs": [
+    {
+      "key": "4e75c5f9b6b9e53371a263018c8e7fec3512f4506c325227f6af11e5e284e11f",
+      "parameters": {
+        "image_sha256": "6b218650b67696708480c55e90a6156db7a331906d9a8ae16e701628cdf7b3cc",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T15:34:47+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_409.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        0,
+        2480,
+        3509
+      ],
+      "lines": [
+        {
+          "text": "[",
+          "bbox": [
+            277,
+            224,
+            2102,
+            234
+          ],
+          "confidence": 21.96
+        },
+        {
+          "text": "]",
+          "bbox": [
+            277,
+            234,
+            2102,
+            244
+          ],
+          "confidence": 21.96
+        },
+        {
+          "text": "vi bôi Ngũ kinh nhi hướng di đô. Duc tranh tắc phi đạo.",
+          "bbox": [
+            296,
+            326,
+            2099,
+            392
+          ],
+          "confidence": 81.64
+        },
+        {
+          "text": "duc mặc tắc bất nặng. Toai dì bút mặc chi gian lược dẫn",
+          "bbox": [
+            71,
+            417,
+            2101,
+            482
+          ],
+          "confidence": 81.22
+        },
+        {
+          "text": "thánh hiên chi ngôn chúng giải chi, danh viết “Mâu Từ",
+          "bbox": [
+            301,
+            507,
+            2104,
+            572
+          ],
+          "confidence": 88.98
+        },
+        {
+          "text": "Lý hoac luan.",
+          "bbox": [
+            303,
+            615,
+            804,
+            660
+          ],
+          "confidence": 84.59
+        },
+        {
+          "text": "DICH NGHIA:",
+          "bbox": [
+            438,
+            828,
+            891,
+            883
+          ],
+          "confidence": 95.5
+        },
+        {
+          "text": "LY HOAC LUAN",
+          "bbox": [
+            1056,
+            957,
+            1434,
+            1014
+          ],
+          "confidence": 97.57
+        },
+        {
+          "text": "MAU BAC",
+          "bbox": [
+            1407,
+            1084,
+            1654,
+            1133
+          ],
+          "confidence": 98.57
+        },
+        {
+          "text": "l’ua de",
+          "bbox": [
+            1134,
+            1212,
+            1368,
+            1255
+          ],
+          "confidence": 89.33
+        },
+        {
+          "text": "Mâu Tử học khắp Kinh truyền (1), Chủ tử (2). Sách vô",
+          "bbox": [
+            441,
+            1321,
+            2109,
+            1389
+          ],
+          "confidence": 89.05
+        },
+        {
+          "text": "luân lớn nhỏ, không loại nào là không ham. Tuy không",
+          "bbox": [
+            301,
+            1414,
+            2108,
+            1489
+          ],
+          "confidence": 98.42
+        },
+        {
+          "text": "khoái bình pháp, nhưng vấn đọc. Đọc cả các sách về",
+          "bbox": [
+            301,
+            1504,
+            2110,
+            1572
+          ],
+          "confidence": 88.66
+        },
+        {
+          "text": "thân tiên bất tử, song không tin, vì thấy hoang đường.",
+          "bbox": [
+            303,
+            1592,
+            2041,
+            1667
+          ],
+          "confidence": 91.89
+        },
+        {
+          "text": "Hôi bấy giờ, sau khi Linh Đế mất (3), thiên ha loan",
+          "bbox": [
+            447,
+            1717,
+            2108,
+            1785
+          ],
+          "confidence": 87.93
+        },
+        {
+          "text": "lac, chỉ có Giao Châu (4) là còn hơi yên tĩnh. Nhân tài",
+          "bbox": [
+            306,
+            1810,
+            2111,
+            1878
+          ],
+          "confidence": 93.12
+        },
+        {
+          "text": "phương Bắc đều lánh về đây ở, phần nhiều theo phép",
+          "bbox": [
+            308,
+            1899,
+            2112,
+            1968
+          ],
+          "confidence": 91.75
+        },
+        {
+          "text": "thần tiên tích cốc (5), trường sinh (6), đường thời có nhiều",
+          "bbox": [
+            311,
+            1988,
+            2113,
+            2058
+          ],
+          "confidence": 90.73
+        },
+        {
+          "text": "người theo hoc. Mâu Từ thường dem Ngũ kinh (?) ra văn",
+          "bbox": [
+            312,
+            2081,
+            2113,
+            2147
+          ],
+          "confidence": 84.52
+        },
+        {
+          "text": "veo ho, Đao gia (8), thuật sĩ (9) không ai đám ứng đối, ví",
+          "bbox": [
+            310,
+            2169,
+            2115,
+            2237
+          ],
+          "confidence": 90.16
+        },
+        {
+          "text": "Mâu Từ với Manh Kha (10) chống Dương Chu, Mặc",
+          "bbox": [
+            316,
+            2257,
+            2112,
+            2326
+          ],
+          "confidence": 95.05
+        },
+        {
+          "text": "Trước đó, Mâu Từ đưa me sang ti nan ở Giao Chỉ (12).",
+          "bbox": [
+            456,
+            2471,
+            2115,
+            2540
+          ],
+          "confidence": 93.91
+        },
+        {
+          "text": "Đến năm 26 tuổi, về Thượng Ngô (13) lấy vợ. Quan Thái",
+          "bbox": [
+            319,
+            2560,
+            2116,
+            2633
+          ],
+          "confidence": 96.56
+        },
+        {
+          "text": "thú bản quân (14) nghe Mâu Tử học hành nổi tiếng, mọi",
+          "bbox": [
+            321,
+            2651,
+            2117,
+            2720
+          ],
+          "confidence": 92.54
+        },
+        {
+          "text": "đến gặp để bỏ dụng. Mâu Từ nghĩ mình đang độ sung",
+          "bbox": [
+            323,
+            2741,
+            2119,
+            2815
+          ],
+          "confidence": 91.48
+        },
+        {
+          "text": "sức, chỉ chuyên về hoc ván, lai thấy thời buổi đang lôn",
+          "bbox": [
+            323,
+            2827,
+            2117,
+            2896
+          ],
+          "confidence": 85.34
+        },
+        {
+          "text": "xôn, không có ý định làm quan, nên không đến.",
+          "bbox": [
+            320,
+            2918,
+            2443,
+            2990
+          ],
+          "confidence": 96.61
+        },
+        {
+          "text": "Hồi này các châu quân đang nghi ngờ nhau, giao",
+          "bbox": [
+            466,
+            3037,
+            2443,
+            3117
+          ],
+          "confidence": 87.61
+        },
+        {
+          "text": "thông ách tắc. Thái thủ thấy Mâu Tử học rộng, biết",
+          "bbox": [
+            324,
+            3126,
+            2443,
+            3204
+          ],
+          "confidence": 94.0
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          3509
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 39.666,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              277,
+              224,
+              2102,
+              244
+            ],
+            "generated_text": "[\n]",
+            "n_lines": 2,
+            "tokens": 4,
+            "seconds": 0.597,
+            "confidence": 21.96,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              296,
+              326,
+              2099,
+              392
+            ],
+            "generated_text": "vi bôi Ngũ kinh nhi hướng di đô. Duc tranh tắc phi đạo.",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.798,
+            "confidence": 81.64,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              71,
+              417,
+              2101,
+              482
+            ],
+            "generated_text": "duc mặc tắc bất nặng. Toai dì bút mặc chi gian lược dẫn",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 1.965,
+            "confidence": 81.22,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              301,
+              507,
+              2104,
+              572
+            ],
+            "generated_text": "thánh hiên chi ngôn chúng giải chi, danh viết “Mâu Từ",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.608,
+            "confidence": 88.98,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              303,
+              615,
+              804,
+              660
+            ],
+            "generated_text": "Lý hoac luan.",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.794,
+            "confidence": 84.59,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              438,
+              828,
+              891,
+              883
+            ],
+            "generated_text": "DICH NGHIA:",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.712,
+            "confidence": 95.5,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              1056,
+              957,
+              1434,
+              1014
+            ],
+            "generated_text": "LY HOAC LUAN",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.692,
+            "confidence": 97.57,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              1407,
+              1084,
+              1654,
+              1133
+            ],
+            "generated_text": "MAU BAC",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.609,
+            "confidence": 98.57,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              1134,
+              1212,
+              1368,
+              1255
+            ],
+            "generated_text": "l’ua de",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.607,
+            "confidence": 89.33,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              441,
+              1321,
+              2109,
+              1389
+            ],
+            "generated_text": "Mâu Tử học khắp Kinh truyền (1), Chủ tử (2). Sách vô",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 1.858,
+            "confidence": 89.05,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              301,
+              1414,
+              2108,
+              1489
+            ],
+            "generated_text": "luân lớn nhỏ, không loại nào là không ham. Tuy không",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.283,
+            "confidence": 98.42,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              301,
+              1504,
+              2110,
+              1572
+            ],
+            "generated_text": "khoái bình pháp, nhưng vấn đọc. Đọc cả các sách về",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.646,
+            "confidence": 88.66,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              303,
+              1592,
+              2041,
+              1667
+            ],
+            "generated_text": "thân tiên bất tử, song không tin, vì thấy hoang đường.",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.423,
+            "confidence": 91.89,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              447,
+              1717,
+              2108,
+              1785
+            ],
+            "generated_text": "Hôi bấy giờ, sau khi Linh Đế mất (3), thiên ha loan",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.627,
+            "confidence": 87.93,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              306,
+              1810,
+              2111,
+              1878
+            ],
+            "generated_text": "lac, chỉ có Giao Châu (4) là còn hơi yên tĩnh. Nhân tài",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.785,
+            "confidence": 93.12,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              308,
+              1899,
+              2112,
+              1968
+            ],
+            "generated_text": "phương Bắc đều lánh về đây ở, phần nhiều theo phép",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.41,
+            "confidence": 91.75,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              311,
+              1988,
+              2113,
+              2058
+            ],
+            "generated_text": "thần tiên tích cốc (5), trường sinh (6), đường thời có nhiều",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.455,
+            "confidence": 90.73,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              312,
+              2081,
+              2113,
+              2147
+            ],
+            "generated_text": "người theo hoc. Mâu Từ thường dem Ngũ kinh (?) ra văn",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.538,
+            "confidence": 84.52,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              310,
+              2169,
+              2115,
+              2237
+            ],
+            "generated_text": "veo ho, Đao gia (8), thuật sĩ (9) không ai đám ứng đối, ví",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 1.901,
+            "confidence": 90.16,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              316,
+              2257,
+              2112,
+              2326
+            ],
+            "generated_text": "Mâu Từ với Manh Kha (10) chống Dương Chu, Mặc",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.638,
+            "confidence": 95.05,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              456,
+              2471,
+              2115,
+              2540
+            ],
+            "generated_text": "Trước đó, Mâu Từ đưa me sang ti nan ở Giao Chỉ (12).",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.734,
+            "confidence": 93.91,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              319,
+              2560,
+              2116,
+              2633
+            ],
+            "generated_text": "Đến năm 26 tuổi, về Thượng Ngô (13) lấy vợ. Quan Thái",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 1.855,
+            "confidence": 96.56,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              321,
+              2651,
+              2117,
+              2720
+            ],
+            "generated_text": "thú bản quân (14) nghe Mâu Tử học hành nổi tiếng, mọi",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.787,
+            "confidence": 92.54,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              323,
+              2741,
+              2119,
+              2815
+            ],
+            "generated_text": "đến gặp để bỏ dụng. Mâu Từ nghĩ mình đang độ sung",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.502,
+            "confidence": 91.48,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              323,
+              2827,
+              2117,
+              2896
+            ],
+            "generated_text": "sức, chỉ chuyên về hoc ván, lai thấy thời buổi đang lôn",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.522,
+            "confidence": 85.34,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              320,
+              2918,
+              2443,
+              2990
+            ],
+            "generated_text": "xôn, không có ý định làm quan, nên không đến.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.283,
+            "confidence": 96.61,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              466,
+              3037,
+              2443,
+              3117
+            ],
+            "generated_text": "Hồi này các châu quân đang nghi ngờ nhau, giao",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.35,
+            "confidence": 87.61,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              324,
+              3126,
+              2443,
+              3204
+            ],
+            "generated_text": "thông ách tắc. Thái thủ thấy Mâu Tử học rộng, biết",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.685,
+            "confidence": 94.0,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              1952,
+              159,
+              2098,
+              172
+            ],
+            "ink": 833
+          },
+          {
+            "box": [
+              1951,
+              177,
+              2098,
+              190
+            ],
+            "ink": 731
+          },
+          {
+            "box": [
+              444,
+              390,
+              2096,
+              402
+            ],
+            "ink": 599
+          },
+          {
+            "box": [
+              364,
+              481,
+              1935,
+              492
+            ],
+            "ink": 512
+          },
+          {
+            "box": [
+              890,
+              570,
+              1491,
+              580
+            ],
+            "ink": 414
+          },
+          {
+            "box": [
+              302,
+              599,
+              786,
+              617
+            ],
+            "ink": 1122
+          },
+          {
+            "box": [
+              1125,
+              1195,
+              1359,
+              1205
+            ],
+            "ink": 547
+          },
+          {
+            "box": [
+              734,
+              1568,
+              1573,
+              1579
+            ],
+            "ink": 531
+          },
+          {
+            "box": [
+              310,
+              1968,
+              1434,
+              1978
+            ],
+            "ink": 501
+          },
+          {
+            "box": [
+              364,
+              2146,
+              1608,
+              2157
+            ],
+            "ink": 523
+          },
+          {
+            "box": [
+              372,
+              2233,
+              1884,
+              2244
+            ],
+            "ink": 695
+          },
+          {
+            "box": [
+              318,
+              2351,
+              564,
+              2366
+            ],
+            "ink": 925
+          },
+          {
+            "box": [
+              318,
+              2370,
+              562,
+              2391
+            ],
+            "ink": 1718
+          },
+          {
+            "box": [
+              317,
+              2396,
+              583,
+              2413
+            ],
+            "ink": 1188
+          },
+          {
+            "box": [
+              2379,
+              2997,
+              2475,
+              3006
+            ],
+            "ink": 521
+          },
+          {
+            "box": [
+              2034,
+              3269,
+              2443,
+              3284
+            ],
+            "ink": 967
+          },
+          {
+            "box": [
+              2029,
+              3299,
+              2443,
+              3319
+            ],
+            "ink": 1498
+          },
+          {
+            "box": [
+              1991,
+              3487,
+              2278,
+              3502
+            ],
+            "ink": 1089
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

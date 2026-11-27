@@ -1,0 +1,954 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 283,
+  "runs": [
+    {
+      "key": "e1801c80b32b820e98bd38eb076df8227f9213e2aaaf0220b35d881c1dcbc00f",
+      "parameters": {
+        "image_sha256": "17ac0ec00acee779d14672b7f8bf6aee97d7faf67d533ae8bb853330671820bc",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T14:24:03+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_283.png",
+      "image_size": [
+        2657,
+        3279
+      ],
+      "crop_box": [
+        0,
+        0,
+        2657,
+        3279
+      ],
+      "lines": [
+        {
+          "text": "ngothinhamle1.pdf",
+          "bbox": [
+            7,
+            19,
+            286,
+            45
+          ],
+          "confidence": 96.3
+        },
+        {
+          "text": "CAM ĐƯỜNG NHAN THOAI",
+          "bbox": [
+            1541,
+            228,
+            2121,
+            268
+          ],
+          "confidence": 84.62
+        },
+        {
+          "text": "Trong chuông, gà gáy rộn báo sang canh.",
+          "bbox": [
+            828,
+            347,
+            1771,
+            400
+          ],
+          "confidence": 96.54
+        },
+        {
+          "text": "Trân bút bay hoa, khó mặc áo giáp;",
+          "bbox": [
+            828,
+            428,
+            1642,
+            473
+          ],
+          "confidence": 98.27
+        },
+        {
+          "text": "Đảm nghiên liễu động, dễ bốc thành mây.",
+          "bbox": [
+            640,
+            509,
+            1789,
+            556
+          ],
+          "confidence": 90.3
+        },
+        {
+          "text": "Muốn hoc khanh sĩ nhà Chu tài lất léo,",
+          "bbox": [
+            828,
+            592,
+            1732,
+            639
+          ],
+          "confidence": 93.86
+        },
+        {
+          "text": "Lại mô gánh vác trọng trách cho Chu Cơ.",
+          "bbox": [
+            829,
+            675,
+            1810,
+            729
+          ],
+          "confidence": 87.98
+        },
+        {
+          "text": "CHU THICH:",
+          "bbox": [
+            418,
+            788,
+            705,
+            826
+          ],
+          "confidence": 99.15
+        },
+        {
+          "text": "1. Nhà đãi lâu: Chỗ quần thân châu trực giờ để vào châu.",
+          "bbox": [
+            568,
+            860,
+            1757,
+            904
+          ],
+          "confidence": 87.54
+        },
+        {
+          "text": "2. Chu Co: Tức Chu Công, họ Co tên Đán, là một hiện thần nhà Chu, được",
+          "bbox": [
+            565,
+            939,
+            2124,
+            982
+          ],
+          "confidence": 87.08
+        },
+        {
+          "text": "tước phong ở đất Chu.",
+          "bbox": [
+            416,
+            1018,
+            884,
+            1059
+          ],
+          "confidence": 98.95
+        },
+        {
+          "text": "DICH THO:",
+          "bbox": [
+            417,
+            1127,
+            672,
+            1166
+          ],
+          "confidence": 97.63
+        },
+        {
+          "text": "Trong nhà “Đãi lâu” sáng thâu đêm,",
+          "bbox": [
+            889,
+            1201,
+            1723,
+            1246
+          ],
+          "confidence": 92.41
+        },
+        {
+          "text": "Trên gác “Quang Minh” rực ánh đèn.",
+          "bbox": [
+            889,
+            1284,
+            2050,
+            1330
+          ],
+          "confidence": 95.96
+        },
+        {
+          "text": "Chim vân ngủ say cây tĩnh mịch;",
+          "bbox": [
+            511,
+            1368,
+            1658,
+            1412
+          ],
+          "confidence": 80.65
+        },
+        {
+          "text": "Gà vừa đáo đác báo canh tàn.",
+          "bbox": [
+            428,
+            1450,
+            1573,
+            1494
+          ],
+          "confidence": 95.5
+        },
+        {
+          "text": "Ao nghiên dâm liệu máy dường toả;",
+          "bbox": [
+            884,
+            1533,
+            1709,
+            1579
+          ],
+          "confidence": 85.91
+        },
+        {
+          "text": "Trân bút bay hoa giác chửa yên.",
+          "bbox": [
+            890,
+            1615,
+            1624,
+            1660
+          ],
+          "confidence": 88.19
+        },
+        {
+          "text": "Ung dung muốn học Chu khanh sĩ,",
+          "bbox": [
+            891,
+            1698,
+            1694,
+            1742
+          ],
+          "confidence": 93.43
+        },
+        {
+          "text": "Lai mến ông Cơ tiếng còn truyền.",
+          "bbox": [
+            885,
+            1780,
+            1640,
+            1824
+          ],
+          "confidence": 86.98
+        },
+        {
+          "text": "Đô Thi Hảo",
+          "bbox": [
+            1845,
+            1863,
+            2122,
+            1908
+          ],
+          "confidence": 89.05
+        },
+        {
+          "text": "7送丘郭大表送官城佐表估（并引）",
+          "bbox": [
+            538,
+            2011,
+            1980,
+            2056
+          ],
+          "confidence": 68.34
+        },
+        {
+          "text": "1.达共部左牟峨且城佚牟使（亚引）",
+          "bbox": [
+            552,
+            2048,
+            1983,
+            2090
+          ],
+          "confidence": 75.3
+        },
+        {
+          "text": "兹者玉關啓鑰，台駕載旌，誼台啣命使燕，觀光",
+          "bbox": [
+            571,
+            2229,
+            2111,
+            2296
+          ],
+          "confidence": 98.42
+        },
+        {
+          "text": "上國。轔轔之雅嚮，彌揖賢光；續洋洋之和聲，式華",
+          "bbox": [
+            420,
+            2353,
+            2095,
+            2420
+          ],
+          "confidence": 99.83
+        },
+        {
+          "text": "韙餞。卮言爲敬，郢韻併成。",
+          "bbox": [
+            422,
+            2479,
+            2196,
+            2542
+          ],
+          "confidence": 99.32
+        },
+        {
+          "text": "才非常事業非常",
+          "bbox": [
+            818,
+            2603,
+            1535,
+            2666
+          ],
+          "confidence": 97.46
+        },
+        {
+          "text": "雨度皇華軋古良",
+          "bbox": [
+            952,
+            2729,
+            1531,
+            2791
+          ],
+          "confidence": 97.36
+        },
+        {
+          "text": "親近富春先得眷",
+          "bbox": [
+            948,
+            2853,
+            1538,
+            2917
+          ],
+          "confidence": 99.81
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2657,
+          3279
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 40.465,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              7,
+              19,
+              286,
+              45
+            ],
+            "generated_text": "ngothinhamle1.pdf",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.917,
+            "confidence": 96.3,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              1541,
+              228,
+              2121,
+              268
+            ],
+            "generated_text": "CAM ĐƯỜNG NHAN THOAI",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.23,
+            "confidence": 84.62,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              398,
+              268,
+              2139,
+              283
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.46,
+            "confidence": 24.22,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              828,
+              347,
+              1771,
+              400
+            ],
+            "generated_text": "Trong chuông, gà gáy rộn báo sang canh.",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.707,
+            "confidence": 96.54,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              828,
+              428,
+              1642,
+              473
+            ],
+            "generated_text": "Trân bút bay hoa, khó mặc áo giáp;",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.421,
+            "confidence": 98.27,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              640,
+              509,
+              1789,
+              556
+            ],
+            "generated_text": "Đảm nghiên liễu động, dễ bốc thành mây.",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.732,
+            "confidence": 90.3,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              828,
+              592,
+              1732,
+              639
+            ],
+            "generated_text": "Muốn hoc khanh sĩ nhà Chu tài lất léo,",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.385,
+            "confidence": 93.86,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              829,
+              675,
+              1810,
+              729
+            ],
+            "generated_text": "Lại mô gánh vác trọng trách cho Chu Cơ.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.528,
+            "confidence": 87.98,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              418,
+              788,
+              705,
+              826
+            ],
+            "generated_text": "CHU THICH:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.735,
+            "confidence": 99.15,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              568,
+              860,
+              1757,
+              904
+            ],
+            "generated_text": "1. Nhà đãi lâu: Chỗ quần thân châu trực giờ để vào châu.",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 1.83,
+            "confidence": 87.54,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              565,
+              939,
+              2124,
+              982
+            ],
+            "generated_text": "2. Chu Co: Tức Chu Công, họ Co tên Đán, là một hiện thần nhà Chu, được",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 2.103,
+            "confidence": 87.08,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              416,
+              1018,
+              884,
+              1059
+            ],
+            "generated_text": "tước phong ở đất Chu.",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.951,
+            "confidence": 98.95,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              417,
+              1127,
+              672,
+              1166
+            ],
+            "generated_text": "DICH THO:",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.667,
+            "confidence": 97.63,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              889,
+              1201,
+              1723,
+              1246
+            ],
+            "generated_text": "Trong nhà “Đãi lâu” sáng thâu đêm,",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.365,
+            "confidence": 92.41,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              889,
+              1284,
+              2050,
+              1330
+            ],
+            "generated_text": "Trên gác “Quang Minh” rực ánh đèn.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.578,
+            "confidence": 95.96,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              511,
+              1368,
+              1658,
+              1412
+            ],
+            "generated_text": "Chim vân ngủ say cây tĩnh mịch;",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.518,
+            "confidence": 80.65,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              428,
+              1450,
+              1573,
+              1494
+            ],
+            "generated_text": "Gà vừa đáo đác báo canh tàn.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.516,
+            "confidence": 95.5,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              884,
+              1533,
+              1709,
+              1579
+            ],
+            "generated_text": "Ao nghiên dâm liệu máy dường toả;",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.222,
+            "confidence": 85.91,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              890,
+              1615,
+              1624,
+              1660
+            ],
+            "generated_text": "Trân bút bay hoa giác chửa yên.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.12,
+            "confidence": 88.19,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              891,
+              1698,
+              1694,
+              1742
+            ],
+            "generated_text": "Ung dung muốn học Chu khanh sĩ,",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.076,
+            "confidence": 93.43,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              885,
+              1780,
+              1640,
+              1824
+            ],
+            "generated_text": "Lai mến ông Cơ tiếng còn truyền.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.133,
+            "confidence": 86.98,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              1845,
+              1863,
+              2122,
+              1908
+            ],
+            "generated_text": "Đô Thi Hảo",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.727,
+            "confidence": 89.05,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              538,
+              2011,
+              1980,
+              2056
+            ],
+            "generated_text": "7送丘郭大表送官城佐表估（并引）",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.416,
+            "confidence": 68.34,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              552,
+              2048,
+              1983,
+              2090
+            ],
+            "generated_text": "1.达共部左牟峨且城佚牟使（亚引）",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.606,
+            "confidence": 75.3,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              571,
+              2229,
+              2111,
+              2296
+            ],
+            "generated_text": "兹者玉關啓鑰，台駕載旌，誼台啣命使燕，觀光",
+            "n_lines": 1,
+            "tokens": 34,
+            "seconds": 2.466,
+            "confidence": 98.42,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              420,
+              2353,
+              2095,
+              2420
+            ],
+            "generated_text": "上國。轔轔之雅嚮，彌揖賢光；續洋洋之和聲，式華",
+            "n_lines": 1,
+            "tokens": 34,
+            "seconds": 2.495,
+            "confidence": 99.83,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              422,
+              2479,
+              2196,
+              2542
+            ],
+            "generated_text": "韙餞。卮言爲敬，郢韻併成。",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 2.019,
+            "confidence": 99.32,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              818,
+              2603,
+              1535,
+              2666
+            ],
+            "generated_text": "才非常事業非常",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.782,
+            "confidence": 97.46,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              952,
+              2729,
+              1531,
+              2791
+            ],
+            "generated_text": "雨度皇華軋古良",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.969,
+            "confidence": 97.36,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              948,
+              2853,
+              1538,
+              2917
+            ],
+            "generated_text": "親近富春先得眷",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.786,
+            "confidence": 99.81,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              892,
+              470,
+              1639,
+              481
+            ],
+            "ink": 318
+          },
+          {
+            "box": [
+              984,
+              553,
+              1761,
+              563
+            ],
+            "ink": 236
+          },
+          {
+            "box": [
+              993,
+              1244,
+              1715,
+              1253
+            ],
+            "ink": 216
+          },
+          {
+            "box": [
+              1004,
+              1327,
+              1486,
+              1338
+            ],
+            "ink": 290
+          },
+          {
+            "box": [
+              1152,
+              1409,
+              1642,
+              1419
+            ],
+            "ink": 272
+          },
+          {
+            "box": [
+              988,
+              1577,
+              1698,
+              1586
+            ],
+            "ink": 245
+          },
+          {
+            "box": [
+              948,
+              1657,
+              1549,
+              1668
+            ],
+            "ink": 285
+          },
+          {
+            "box": [
+              957,
+              1740,
+              1687,
+              1749
+            ],
+            "ink": 234
+          },
+          {
+            "box": [
+              926,
+              1821,
+              1564,
+              1832
+            ],
+            "ink": 296
+          },
+          {
+            "box": [
+              2031,
+              2998,
+              2119,
+              3009
+            ],
+            "ink": 307
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

@@ -1,0 +1,895 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_18",
+  "engine": "paddlevl",
+  "page": 401,
+  "runs": [
+    {
+      "key": "a95bcee6811a5bdc375cacf8b0e9f33ec563e63352190c71480b99ecf18ff110",
+      "parameters": {
+        "image_sha256": "b83829dc66b76ecbdb9879e63b5a3d966a05d1cef564ccb615708ef2893d82d6",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T15:29:31+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_401.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        0,
+        2480,
+        3509
+      ],
+      "lines": [
+        {
+          "text": "___",
+          "bbox": [
+            254,
+            252,
+            2130,
+            274
+          ],
+          "confidence": 26.6
+        },
+        {
+          "text": "này dâu chết xương cũng không mục nát, vậy xin cải",
+          "bbox": [
+            277,
+            355,
+            2128,
+            428
+          ],
+          "confidence": 94.46
+        },
+        {
+          "text": "hiệu không dám xưng Hoàng đế nữa.",
+          "bbox": [
+            275,
+            441,
+            1529,
+            508
+          ],
+          "confidence": 88.02
+        },
+        {
+          "text": "Nhân có sự giả, xin ngoảnh mặt về bắc, kính dâng",
+          "bbox": [
+            417,
+            569,
+            2133,
+            636
+          ],
+          "confidence": 86.42
+        },
+        {
+          "text": "biểu một đôi ngọc trắng, một nghìn con chim thúy, mười",
+          "bbox": [
+            278,
+            662,
+            2134,
+            736
+          ],
+          "confidence": 95.76
+        },
+        {
+          "text": "chiếc sùng tê, năm trăm tủ bối (9), một hộp quế đổ (10),",
+          "bbox": [
+            281,
+            747,
+            2459,
+            827
+          ],
+          "confidence": 90.54
+        },
+        {
+          "text": "bốn mươi đôi sinh thủy (11) và hai đôi chim công.",
+          "bbox": [
+            280,
+            840,
+            1862,
+            910
+          ],
+          "confidence": 93.42
+        },
+        {
+          "text": "Mao muội lay hai lay, kính gửi lên để Hoàng đế bệ",
+          "bbox": [
+            419,
+            969,
+            2456,
+            1046
+          ],
+          "confidence": 81.21
+        },
+        {
+          "text": "ha biet.",
+          "bbox": [
+            282,
+            1085,
+            554,
+            1129
+          ],
+          "confidence": 99.18
+        },
+        {
+          "text": "CHU THICH:",
+          "bbox": [
+            421,
+            1328,
+            848,
+            1385
+          ],
+          "confidence": 89.13
+        },
+        {
+          "text": "(1) Mường rọ : dịch chữ \"man di\"; người Trung Quốc thời có",
+          "bbox": [
+            286,
+            1442,
+            2138,
+            1514
+          ],
+          "confidence": 81.48
+        },
+        {
+          "text": "thường dùng từ này để gọi chung các dân tộc ở phía nam",
+          "bbox": [
+            419,
+            1528,
+            2457,
+            1599
+          ],
+          "confidence": 97.04
+        },
+        {
+          "text": "Trường Giang, nhằm phân biệt với dân tộc Hán ở phía",
+          "bbox": [
+            419,
+            1609,
+            2138,
+            1673
+          ],
+          "confidence": 96.45
+        },
+        {
+          "text": "bắc Trường Giang.",
+          "bbox": [
+            418,
+            1695,
+            2459,
+            1754
+          ],
+          "confidence": 91.11
+        },
+        {
+          "text": "(2) Đất Việt : đây chỉ đất Quảng Đông của Trung Quốc ngày",
+          "bbox": [
+            31,
+            1811,
+            2459,
+            1887
+          ],
+          "confidence": 96.45
+        },
+        {
+          "text": "nay, nơi Triệu Đà từng giũ chức Huyện lệnh, rồi Quận",
+          "bbox": [
+            421,
+            1899,
+            2459,
+            1972
+          ],
+          "confidence": 90.63
+        },
+        {
+          "text": "(3) Nguyên nghĩa là làm chủ hầu, hàng năm nộp công thuê,",
+          "bbox": [
+            289,
+            2102,
+            2459,
+            2174
+          ],
+          "confidence": 95.4
+        },
+        {
+          "text": "đây dich “giũ lê triều cổng” cho dê hiểu.",
+          "bbox": [
+            426,
+            2186,
+            2459,
+            2245
+          ],
+          "confidence": 84.82
+        },
+        {
+          "text": "(4) Cao Hâu : tức Lũ Hàu, vợ Hán Cao Tổ Lưu Bang, lâm",
+          "bbox": [
+            291,
+            2299,
+            2459,
+            2365
+          ],
+          "confidence": 91.95
+        },
+        {
+          "text": "triệu trong 8 năm, từ 187 đến 180 TCN.",
+          "bbox": [
+            425,
+            2389,
+            2459,
+            2446
+          ],
+          "confidence": 99.3
+        },
+        {
+          "text": "(5) Trường Sa vương : chỉ Ngô Như.",
+          "bbox": [
+            292,
+            2507,
+            2459,
+            2568
+          ],
+          "confidence": 82.25
+        },
+        {
+          "text": "(6) Tây Âu : nay thuộc về Quảng Tây, Trung Quốc.",
+          "bbox": [
+            294,
+            2627,
+            2459,
+            2698
+          ],
+          "confidence": 98.69
+        },
+        {
+          "text": "(7) Màn Việt : nay thuộc về Chiết Giang, Phúc Kiến của",
+          "bbox": [
+            296,
+            2741,
+            2151,
+            2808
+          ],
+          "confidence": 94.46
+        },
+        {
+          "text": "Trung Quốc.",
+          "bbox": [
+            442,
+            2845,
+            2459,
+            2888
+          ],
+          "confidence": 98.11
+        },
+        {
+          "text": "(8) Trường Sa : nay thuộc về Hồ Nam.",
+          "bbox": [
+            294,
+            2952,
+            2475,
+            3019
+          ],
+          "confidence": 97.7
+        },
+        {
+          "text": "(9) Từ bối : một thứ vỏ sờ óc đẹp, người xưa từng dùng làm",
+          "bbox": [
+            291,
+            3061,
+            2459,
+            3140
+          ],
+          "confidence": 89.04
+        },
+        {
+          "text": "tiên trong khi giao dịch.",
+          "bbox": [
+            425,
+            3150,
+            2459,
+            3218
+          ],
+          "confidence": 97.25
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          3509
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 39.399,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              254,
+              252,
+              2130,
+              274
+            ],
+            "generated_text": "___",
+            "n_lines": 1,
+            "tokens": 2,
+            "seconds": 0.483,
+            "confidence": 26.6,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              277,
+              355,
+              2128,
+              428
+            ],
+            "generated_text": "này dâu chết xương cũng không mục nát, vậy xin cải",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.521,
+            "confidence": 94.46,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              275,
+              441,
+              1529,
+              508
+            ],
+            "generated_text": "hiệu không dám xưng Hoàng đế nữa.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.331,
+            "confidence": 88.02,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              417,
+              569,
+              2133,
+              636
+            ],
+            "generated_text": "Nhân có sự giả, xin ngoảnh mặt về bắc, kính dâng",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.518,
+            "confidence": 86.42,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              278,
+              662,
+              2134,
+              736
+            ],
+            "generated_text": "biểu một đôi ngọc trắng, một nghìn con chim thúy, mười",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.578,
+            "confidence": 95.76,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              281,
+              747,
+              2459,
+              827
+            ],
+            "generated_text": "chiếc sùng tê, năm trăm tủ bối (9), một hộp quế đổ (10),",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 2.306,
+            "confidence": 90.54,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              280,
+              840,
+              1862,
+              910
+            ],
+            "generated_text": "bốn mươi đôi sinh thủy (11) và hai đôi chim công.",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.572,
+            "confidence": 93.42,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              419,
+              969,
+              2456,
+              1046
+            ],
+            "generated_text": "Mao muội lay hai lay, kính gửi lên để Hoàng đế bệ",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.642,
+            "confidence": 81.21,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              282,
+              1085,
+              554,
+              1129
+            ],
+            "generated_text": "ha biet.",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.622,
+            "confidence": 99.18,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              421,
+              1328,
+              848,
+              1385
+            ],
+            "generated_text": "CHU THICH:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.73,
+            "confidence": 89.13,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              286,
+              1442,
+              2138,
+              1514
+            ],
+            "generated_text": "(1) Mường rọ : dịch chữ \"man di\"; người Trung Quốc thời có",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.572,
+            "confidence": 81.48,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              419,
+              1528,
+              2457,
+              1599
+            ],
+            "generated_text": "thường dùng từ này để gọi chung các dân tộc ở phía nam",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.521,
+            "confidence": 97.04,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              419,
+              1609,
+              2138,
+              1673
+            ],
+            "generated_text": "Trường Giang, nhằm phân biệt với dân tộc Hán ở phía",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.583,
+            "confidence": 96.45,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              418,
+              1695,
+              2459,
+              1754
+            ],
+            "generated_text": "bắc Trường Giang.",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.89,
+            "confidence": 91.11,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              31,
+              1811,
+              2459,
+              1887
+            ],
+            "generated_text": "(2) Đất Việt : đây chỉ đất Quảng Đông của Trung Quốc ngày",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.778,
+            "confidence": 96.45,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              421,
+              1899,
+              2459,
+              1972
+            ],
+            "generated_text": "nay, nơi Triệu Đà từng giũ chức Huyện lệnh, rồi Quận",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.725,
+            "confidence": 90.63,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              289,
+              2102,
+              2459,
+              2174
+            ],
+            "generated_text": "(3) Nguyên nghĩa là làm chủ hầu, hàng năm nộp công thuê,",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.848,
+            "confidence": 95.4,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              426,
+              2186,
+              2459,
+              2245
+            ],
+            "generated_text": "đây dich “giũ lê triều cổng” cho dê hiểu.",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.601,
+            "confidence": 84.82,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              291,
+              2299,
+              2459,
+              2365
+            ],
+            "generated_text": "(4) Cao Hâu : tức Lũ Hàu, vợ Hán Cao Tổ Lưu Bang, lâm",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.186,
+            "confidence": 91.95,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              425,
+              2389,
+              2459,
+              2446
+            ],
+            "generated_text": "triệu trong 8 năm, từ 187 đến 180 TCN.",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.735,
+            "confidence": 99.3,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              292,
+              2507,
+              2459,
+              2568
+            ],
+            "generated_text": "(5) Trường Sa vương : chỉ Ngô Như.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.402,
+            "confidence": 82.25,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              294,
+              2627,
+              2459,
+              2698
+            ],
+            "generated_text": "(6) Tây Âu : nay thuộc về Quảng Tây, Trung Quốc.",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.622,
+            "confidence": 98.69,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              296,
+              2741,
+              2151,
+              2808
+            ],
+            "generated_text": "(7) Màn Việt : nay thuộc về Chiết Giang, Phúc Kiến của",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.59,
+            "confidence": 94.46,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              442,
+              2845,
+              2459,
+              2888
+            ],
+            "generated_text": "Trung Quốc.",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.688,
+            "confidence": 98.11,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              294,
+              2952,
+              2475,
+              3019
+            ],
+            "generated_text": "(8) Trường Sa : nay thuộc về Hồ Nam.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.313,
+            "confidence": 97.7,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              291,
+              3061,
+              2459,
+              3140
+            ],
+            "generated_text": "(9) Từ bối : một thứ vỏ sờ óc đẹp, người xưa từng dùng làm",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 2.072,
+            "confidence": 89.04,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              425,
+              3150,
+              2459,
+              3218
+            ],
+            "generated_text": "tiên trong khi giao dịch.",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.968,
+            "confidence": 97.25,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              1976,
+              188,
+              2126,
+              204
+            ],
+            "ink": 1046
+          },
+          {
+            "box": [
+              1975,
+              208,
+              2126,
+              222
+            ],
+            "ink": 770
+          },
+          {
+            "box": [
+              365,
+              504,
+              1266,
+              513
+            ],
+            "ink": 408
+          },
+          {
+            "box": [
+              855,
+              632,
+              2131,
+              643
+            ],
+            "ink": 614
+          },
+          {
+            "box": [
+              619,
+              1669,
+              2032,
+              1682
+            ],
+            "ink": 803
+          },
+          {
+            "box": [
+              503,
+              2245,
+              2459,
+              2256
+            ],
+            "ink": 578
+          },
+          {
+            "box": [
+              429,
+              2833,
+              2459,
+              2842
+            ],
+            "ink": 543
+          },
+          {
+            "box": [
+              2333,
+              3041,
+              2459,
+              3052
+            ],
+            "ink": 709
+          },
+          {
+            "box": [
+              2056,
+              3305,
+              2459,
+              3327
+            ],
+            "ink": 1640
+          },
+          {
+            "box": [
+              2051,
+              3325,
+              2459,
+              3341
+            ],
+            "ink": 1096
+          },
+          {
+            "box": [
+              2027,
+              3348,
+              2459,
+              3359
+            ],
+            "ink": 657
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

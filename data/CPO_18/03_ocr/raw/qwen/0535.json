@@ -1,0 +1,335 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_18",
+  "engine": "qwen",
+  "page": 535,
+  "runs": [
+    {
+      "key": "edb50b06ae79999c4b518440a8995e2573d9e2efe3523883986eaa727b9644e1",
+      "parameters": {
+        "image_sha256": "00da4c0318e98a4e13dd53b620909ff89cb0c6bf56cb809f72064a8a1850fbd1",
+        "engine": {
+          "name": "qwen",
+          "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "model_revision": "main",
+          "transformers_version": "4.57.6",
+          "torch_version": "2.5.1+cu121",
+          "cuda_version": "12.1",
+          "bitsandbytes_version": "0.50.2",
+          "quantization": {
+            "load_in_4bit": true,
+            "quant_type": "nf4",
+            "double_quant": true,
+            "compute_dtype": "float16"
+          },
+          "mode": "all",
+          "min_pixels": 50176,
+          "max_pixels": 802816,
+          "band_inches": 2.0,
+          "max_new_tokens": 768,
+          "repetition_penalty": 1.05,
+          "adapter_version": 3,
+          "prompt_version": 3,
+          "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74"
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T22:05:50+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_535.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        0,
+        2480,
+        3509
+      ],
+      "lines": [
+        {
+          "text": "[UNCLEAR]",
+          "bbox": [
+            43,
+            0,
+            2441,
+            18
+          ],
+          "confidence": 64.77
+        },
+        {
+          "text": "6. HAI BÀI THƠ DƯƠNG CỤ NGUYÊN",
+          "bbox": [
+            534,
+            603,
+            1877,
+            721
+          ],
+          "confidence": 89.91
+        },
+        {
+          "text": "TẶNG PHÁP SƯ ĐỊNH",
+          "bbox": [
+            534,
+            721,
+            1877,
+            840
+          ],
+          "confidence": 89.91
+        },
+        {
+          "text": "Dương Cự Nguyên 楊巨源 tên chữ là Cảnh Sơn 景山, người Hà Trung, Sơn Tây, Trung Quốc. Ông đỗ Tiến sĩ năm Trịnh Nguyên 5 (789). Ông có 2 bài thơ tặng Pháp sư Định, hiện chép trong Toàn Đường thi, đệ ngũ sách, Q. 333.",
+          "bbox": [
+            271,
+            938,
+            2135,
+            1396
+          ],
+          "confidence": 95.39
+        },
+        {
+          "text": "Sau đây là nguyên văn chữ Hán và bản phiên âm, dịch, chú thích hai bài thơ Dương Cự Nguyên tặng Pháp sư Định.",
+          "bbox": [
+            274,
+            1432,
+            2138,
+            1705
+          ],
+          "confidence": 96.66
+        },
+        {
+          "text": "供奉定師歸安南",
+          "bbox": [
+            814,
+            1921,
+            1649,
+            2112
+          ],
+          "confidence": 44.43
+        },
+        {
+          "text": "故鄉越, 萬雲白雲峯",
+          "bbox": [
+            814,
+            2112,
+            1649,
+            2303
+          ],
+          "confidence": 44.43
+        },
+        {
+          "text": "經天去，",
+          "bbox": [
+            991,
+            2339,
+            1501,
+            2454
+          ],
+          "confidence": 58.95
+        },
+        {
+          "text": "香花入海逢。",
+          "bbox": [
+            991,
+            2454,
+            1501,
+            2569
+          ],
+          "confidence": 58.95
+        },
+        {
+          "text": "驚濤清梵徹,",
+          "bbox": [
+            991,
+            2569,
+            1501,
+            2683
+          ],
+          "confidence": 58.95
+        },
+        {
+          "text": "曇閲化城重。",
+          "bbox": [
+            991,
+            2683,
+            1501,
+            2798
+          ],
+          "confidence": 58.95
+        },
+        {
+          "text": "心到長安陌，",
+          "bbox": [
+            58,
+            2833,
+            2475,
+            3171
+          ],
+          "confidence": 95.1
+        },
+        {
+          "text": "交州後夜鍾。",
+          "bbox": [
+            58,
+            3171,
+            2475,
+            3509
+          ],
+          "confidence": 95.1
+        }
+      ],
+      "raw": {
+        "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+        "model_revision": "main",
+        "mode": "all",
+        "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          3509
+        ],
+        "band_target_height": 600,
+        "bbox_granularity": "band_even_split",
+        "max_new_tokens": 768,
+        "max_pixels": 802816,
+        "inference_seconds": 15.096,
+        "bands": [
+          {
+            "band": 1,
+            "y0": 0,
+            "y1": 310,
+            "ink_box": [
+              43,
+              0,
+              2441,
+              18
+            ],
+            "generated_text": "[UNCLEAR]",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.448,
+            "confidence": 64.77,
+            "flags": []
+          },
+          {
+            "band": 2,
+            "y0": 310,
+            "y1": 889,
+            "ink_box": [
+              534,
+              603,
+              1877,
+              840
+            ],
+            "generated_text": "6. HAI BÀI THƠ DƯƠNG CỤ NGUYÊN\nTẶNG PHÁP SƯ ĐỊNH",
+            "n_lines": 2,
+            "tokens": 32,
+            "seconds": 2.192,
+            "confidence": 89.91,
+            "flags": []
+          },
+          {
+            "band": 3,
+            "y0": 889,
+            "y1": 1414,
+            "ink_box": [
+              271,
+              938,
+              2135,
+              1396
+            ],
+            "generated_text": "Dương Cự Nguyên 楊巨源 tên chữ là Cảnh Sơn 景山, người Hà Trung, Sơn Tây, Trung Quốc. Ông đỗ Tiến sĩ năm Trịnh Nguyên 5 (789). Ông có 2 bài thơ tặng Pháp sư Định, hiện chép trong Toàn Đường thi, đệ ngũ sách, Q. 333.",
+            "n_lines": 1,
+            "tokens": 81,
+            "seconds": 5.541,
+            "confidence": 95.39,
+            "flags": []
+          },
+          {
+            "band": 4,
+            "y0": 1414,
+            "y1": 1812,
+            "ink_box": [
+              274,
+              1432,
+              2138,
+              1705
+            ],
+            "generated_text": "Sau đây là nguyên văn chữ Hán và bản phiên âm, dịch, chú thích hai bài thơ Dương Cự Nguyên tặng Pháp sư Định.",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 2.256,
+            "confidence": 96.66,
+            "flags": []
+          },
+          {
+            "band": 5,
+            "y0": 1812,
+            "y1": 2321,
+            "ink_box": [
+              814,
+              1921,
+              1649,
+              2303
+            ],
+            "generated_text": "供奉定師歸安南\n故鄉越, 萬雲白雲峯",
+            "n_lines": 2,
+            "tokens": 21,
+            "seconds": 1.512,
+            "confidence": 44.43,
+            "flags": []
+          },
+          {
+            "band": 6,
+            "y0": 2321,
+            "y1": 2815,
+            "ink_box": [
+              991,
+              2339,
+              1501,
+              2798
+            ],
+            "generated_text": "經天去，\n香花入海逢。\n驚濤清梵徹,\n曇閲化城重。",
+            "n_lines": 4,
+            "tokens": 26,
+            "seconds": 1.774,
+            "confidence": 58.95,
+            "flags": []
+          },
+          {
+            "band": 7,
+            "y0": 2815,
+            "y1": 3509,
+            "ink_box": [
+              58,
+              2833,
+              2475,
+              3509
+            ],
+            "generated_text": "心到長安陌，\n交州後夜鍾。",
+            "n_lines": 2,
+            "tokens": 14,
+            "seconds": 1.337,
+            "confidence": 95.1,
+            "flags": []
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "61cbea5c0055c260ccfc12f884e0febca7b2783b",
+        "git_describe": "61cbea5",
+        "git_dirty": true,
+        "gpu": "NVIDIA L4",
+        "dtype": "float16",
+        "adapter_version": 3
+      }
+    }
+  ]
+}

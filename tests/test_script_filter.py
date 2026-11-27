@@ -14,7 +14,7 @@ def test_han_pure_line_kept_unchanged():
 
 
 def test_han_keeps_cjk_punctuation_strips_latin_digits_and_spaces():
-    assert filter_han_line("1. 諒山道中（二首）") == "諒山道中（二首）"
+    assert filter_han_line("1. 諒山道中（二首）") == "1. 諒山道中（二首）"      # số thứ tự tiêu đề được giữ
     assert filter_han_line("夫道處清虛，四大理常。 abc 12") == "夫道處清虛，四大理常。"
     assert filter_han_line("初 聞　其") == "初聞其"
 

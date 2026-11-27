@@ -1,0 +1,843 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_18",
+  "engine": "paddlevl",
+  "page": 365,
+  "runs": [
+    {
+      "key": "6b49133506939245e1a203d8162fe13b80c29e3486eae36022750524318d78cc",
+      "parameters": {
+        "image_sha256": "2d9b03c4893175fa0d5fc127397989f4a747320de9dd2c84ac6a53358b13c49c",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T15:01:33+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_365.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        0,
+        2480,
+        3509
+      ],
+      "lines": [
+        {
+          "text": "Phần II : Nguyên văn tác phẩm dịch và chủ thích",
+          "bbox": [
+            1160,
+            170,
+            2140,
+            218
+          ],
+          "confidence": 88.6
+        },
+        {
+          "text": "「」",
+          "bbox": [
+            301,
+            250,
+            2144,
+            268
+          ],
+          "confidence": 37.84
+        },
+        {
+          "text": "CHU THICH :",
+          "bbox": [
+            452,
+            357,
+            2432,
+            412
+          ],
+          "confidence": 92.9
+        },
+        {
+          "text": "(1) Đầu để do chúng tôi đặt. Mã Thực sang làm quan ở nước",
+          "bbox": [
+            322,
+            475,
+            2432,
+            535
+          ],
+          "confidence": 96.74
+        },
+        {
+          "text": "ta vào khoảng đầu năm Khai Thành (836 - 840), vốn là",
+          "bbox": [
+            451,
+            559,
+            2432,
+            618
+          ],
+          "confidence": 98.09
+        },
+        {
+          "text": "một viên Đô hộ có chính sách cai tri khôn khéo, mi dân",
+          "bbox": [
+            52,
+            642,
+            2432,
+            701
+          ],
+          "confidence": 93.87
+        },
+        {
+          "text": "mà Đường thư goi là “có chính tích”, “dân các đồng đều",
+          "bbox": [
+            455,
+            726,
+            2432,
+            785
+          ],
+          "confidence": 91.36
+        },
+        {
+          "text": "(2) Kiểm Nam : nay là vùng đất phía nam tỉnh Quý Châu,",
+          "bbox": [
+            324,
+            925,
+            2432,
+            995
+          ],
+          "confidence": 96.91
+        },
+        {
+          "text": "Trung Quốc. Việt sử thông giám cương mục chép là Kiểm",
+          "bbox": [
+            452,
+            1007,
+            2432,
+            1081
+          ],
+          "confidence": 96.6
+        },
+        {
+          "text": "Trung, tức Quý Châu.",
+          "bbox": [
+            452,
+            1093,
+            2432,
+            1153
+          ],
+          "confidence": 98.45
+        },
+        {
+          "text": "(3) Hộ phương hoàng : truyền Tuân Húc ở Tấn thư có chép :",
+          "bbox": [
+            325,
+            1211,
+            2429,
+            1284
+          ],
+          "confidence": 89.55
+        },
+        {
+          "text": "“Húc từ chức Trung thư giám chuyên sang chức Thương",
+          "bbox": [
+            452,
+            1296,
+            2432,
+            1359
+          ],
+          "confidence": 88.63
+        },
+        {
+          "text": "thu lệnh, người ta đến chức mừng thì Húc bảo rằng:",
+          "bbox": [
+            453,
+            1379,
+            2432,
+            1442
+          ],
+          "confidence": 91.16
+        },
+        {
+          "text": "“Cướp hộ phượng hoàng của ta, các ngài còn chúc nổi gì!”",
+          "bbox": [
+            452,
+            1461,
+            2432,
+            1534
+          ],
+          "confidence": 87.21
+        },
+        {
+          "text": "(Đoạt ngã phượng hoàng trì, chủ quân hà hạ da).Nguyên",
+          "bbox": [
+            455,
+            1545,
+            2159,
+            1617
+          ],
+          "confidence": 94.2
+        },
+        {
+          "text": "tòa Trung thư đặt gần chính quyền trung ương, Trung",
+          "bbox": [
+            453,
+            1629,
+            2160,
+            1700
+          ],
+          "confidence": 96.24
+        },
+        {
+          "text": "thu giám vốn là chức béo bỏ, được trung ương tin sùng, ai",
+          "bbox": [
+            453,
+            1713,
+            2432,
+            1773
+          ],
+          "confidence": 90.77
+        },
+        {
+          "text": "đã giữ chức này thì không muốn rồi nó nữa, và Tuân Húc",
+          "bbox": [
+            58,
+            1792,
+            2432,
+            1855
+          ],
+          "confidence": 91.89
+        },
+        {
+          "text": "goi nó là \"hỗ phương hoàng\".",
+          "bbox": [
+            457,
+            1876,
+            2432,
+            1935
+          ],
+          "confidence": 92.19
+        },
+        {
+          "text": "Chũ “hỗ phương hoàng” dùng trong bài cũng với nghĩa",
+          "bbox": [
+            537,
+            1998,
+            2167,
+            2058
+          ],
+          "confidence": 90.25
+        },
+        {
+          "text": "áy, ý nói Mã Thực bước phải rời cái \"Đô hộ phủ\" béo bỏ đ",
+          "bbox": [
+            457,
+            2079,
+            2168,
+            2141
+          ],
+          "confidence": 83.54
+        },
+        {
+          "text": "xú “An Nam” đế về Trung Quốc.",
+          "bbox": [
+            456,
+            2163,
+            1438,
+            2223
+          ],
+          "confidence": 89.15
+        },
+        {
+          "text": "(4) Đoan cuối nói về các chức quan mà Mã Thực sau đó đã",
+          "bbox": [
+            328,
+            2280,
+            2167,
+            2343
+          ],
+          "confidence": 95.99
+        },
+        {
+          "text": "kinh qua. Phân này không gắn lắm với bài thơ, chúng tôi",
+          "bbox": [
+            455,
+            2367,
+            2171,
+            2428
+          ],
+          "confidence": 92.47
+        },
+        {
+          "text": "lước bót.",
+          "bbox": [
+            459,
+            2465,
+            726,
+            2505
+          ],
+          "confidence": 79.07
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          3509
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 37.646,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              1160,
+              170,
+              2140,
+              218
+            ],
+            "generated_text": "Phần II : Nguyên văn tác phẩm dịch và chủ thích",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.419,
+            "confidence": 88.6,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              301,
+              250,
+              2144,
+              268
+            ],
+            "generated_text": "「」",
+            "n_lines": 1,
+            "tokens": 3,
+            "seconds": 0.548,
+            "confidence": 37.84,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              452,
+              357,
+              2432,
+              412
+            ],
+            "generated_text": "CHU THICH :",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.737,
+            "confidence": 92.9,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              322,
+              475,
+              2432,
+              535
+            ],
+            "generated_text": "(1) Đầu để do chúng tôi đặt. Mã Thực sang làm quan ở nước",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.792,
+            "confidence": 96.74,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              451,
+              559,
+              2432,
+              618
+            ],
+            "generated_text": "ta vào khoảng đầu năm Khai Thành (836 - 840), vốn là",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.917,
+            "confidence": 98.09,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              52,
+              642,
+              2432,
+              701
+            ],
+            "generated_text": "một viên Đô hộ có chính sách cai tri khôn khéo, mi dân",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.916,
+            "confidence": 93.87,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              455,
+              726,
+              2432,
+              785
+            ],
+            "generated_text": "mà Đường thư goi là “có chính tích”, “dân các đồng đều",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.863,
+            "confidence": 91.36,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              324,
+              925,
+              2432,
+              995
+            ],
+            "generated_text": "(2) Kiểm Nam : nay là vùng đất phía nam tỉnh Quý Châu,",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.793,
+            "confidence": 96.91,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              452,
+              1007,
+              2432,
+              1081
+            ],
+            "generated_text": "Trung Quốc. Việt sử thông giám cương mục chép là Kiểm",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.461,
+            "confidence": 96.6,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              452,
+              1093,
+              2432,
+              1153
+            ],
+            "generated_text": "Trung, tức Quý Châu.",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 1.058,
+            "confidence": 98.45,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              325,
+              1211,
+              2429,
+              1284
+            ],
+            "generated_text": "(3) Hộ phương hoàng : truyền Tuân Húc ở Tấn thư có chép :",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 1.971,
+            "confidence": 89.55,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              452,
+              1296,
+              2432,
+              1359
+            ],
+            "generated_text": "“Húc từ chức Trung thư giám chuyên sang chức Thương",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.422,
+            "confidence": 88.63,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              453,
+              1379,
+              2432,
+              1442
+            ],
+            "generated_text": "thu lệnh, người ta đến chức mừng thì Húc bảo rằng:",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.491,
+            "confidence": 91.16,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              452,
+              1461,
+              2432,
+              1534
+            ],
+            "generated_text": "“Cướp hộ phượng hoàng của ta, các ngài còn chúc nổi gì!”",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.751,
+            "confidence": 87.21,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              455,
+              1545,
+              2159,
+              1617
+            ],
+            "generated_text": "(Đoạt ngã phượng hoàng trì, chủ quân hà hạ da).Nguyên",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 1.822,
+            "confidence": 94.2,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              453,
+              1629,
+              2160,
+              1700
+            ],
+            "generated_text": "tòa Trung thư đặt gần chính quyền trung ương, Trung",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.356,
+            "confidence": 96.24,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              453,
+              1713,
+              2432,
+              1773
+            ],
+            "generated_text": "thu giám vốn là chức béo bỏ, được trung ương tin sùng, ai",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.773,
+            "confidence": 90.77,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              58,
+              1792,
+              2432,
+              1855
+            ],
+            "generated_text": "đã giữ chức này thì không muốn rồi nó nữa, và Tuân Húc",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.757,
+            "confidence": 91.89,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              457,
+              1876,
+              2432,
+              1935
+            ],
+            "generated_text": "goi nó là \"hỗ phương hoàng\".",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.195,
+            "confidence": 92.19,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              537,
+              1998,
+              2167,
+              2058
+            ],
+            "generated_text": "Chũ “hỗ phương hoàng” dùng trong bài cũng với nghĩa",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.464,
+            "confidence": 90.25,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              457,
+              2079,
+              2168,
+              2141
+            ],
+            "generated_text": "áy, ý nói Mã Thực bước phải rời cái \"Đô hộ phủ\" béo bỏ đ",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 2.089,
+            "confidence": 83.54,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              456,
+              2163,
+              1438,
+              2223
+            ],
+            "generated_text": "xú “An Nam” đế về Trung Quốc.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.108,
+            "confidence": 89.15,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              328,
+              2280,
+              2167,
+              2343
+            ],
+            "generated_text": "(4) Đoan cuối nói về các chức quan mà Mã Thực sau đó đã",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.656,
+            "confidence": 95.99,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              455,
+              2367,
+              2171,
+              2428
+            ],
+            "generated_text": "kinh qua. Phân này không gắn lắm với bài thơ, chúng tôi",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.603,
+            "confidence": 92.47,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              459,
+              2465,
+              726,
+              2505
+            ],
+            "generated_text": "lước bót.",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.684,
+            "confidence": 79.07,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              743,
+              783,
+              2432,
+              795
+            ],
+            "ink": 665
+          },
+          {
+            "box": [
+              452,
+              826,
+              2432,
+              839
+            ],
+            "ink": 754
+          },
+          {
+            "box": [
+              465,
+              853,
+              2432,
+              863
+            ],
+            "ink": 533
+          },
+          {
+            "box": [
+              1049,
+              1356,
+              2432,
+              1366
+            ],
+            "ink": 567
+          },
+          {
+            "box": [
+              310,
+              1769,
+              2432,
+              1779
+            ],
+            "ink": 675
+          },
+          {
+            "box": [
+              455,
+              1934,
+              2432,
+              1947
+            ],
+            "ink": 755
+          },
+          {
+            "box": [
+              814,
+              2054,
+              2068,
+              2069
+            ],
+            "ink": 928
+          },
+          {
+            "box": [
+              495,
+              2139,
+              1798,
+              2151
+            ],
+            "ink": 695
+          },
+          {
+            "box": [
+              2066,
+              3306,
+              2190,
+              3320
+            ],
+            "ink": 975
+          },
+          {
+            "box": [
+              2051,
+              3322,
+              2184,
+              3338
+            ],
+            "ink": 1152
+          },
+          {
+            "box": [
+              2063,
+              3339,
+              2169,
+              3350
+            ],
+            "ink": 701
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

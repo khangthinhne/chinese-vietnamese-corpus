@@ -534,6 +534,1026 @@
         "any_truncated": false,
         "lang": "all"
       }
+    },
+    {
+      "key": "d876e4bfdcefd36dc31db89cdba741a12e039049c7a0f8bc5a881ee190c07bd2",
+      "parameters": {
+        "image_sha256": "b207ac5b53362953fc54391e9ecc08eb66cf1b3628aabb90c56db838c2706a4a",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "row_pitch_split": {
+            "lags": [
+              24,
+              240
+            ],
+            "min_ac": 0.15,
+            "tall": 1.6,
+            "valley_rel": 0.5
+          },
+          "deskew": [
+            2.5,
+            0.1,
+            0.2
+          ],
+          "adapter_version": 6
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-26T04:04:32+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_107.png",
+      "image_size": [
+        1865,
+        2851
+      ],
+      "crop_box": [
+        0,
+        0,
+        1865,
+        2851
+      ],
+      "lines": [
+        {
+          "text": "TỪA QUYỀN TRỊC LÂM ĐẠI CHẦN",
+          "bbox": [
+            433,
+            408,
+            1790,
+            499
+          ],
+          "confidence": 83.69
+        },
+        {
+          "text": "VIÊN GIÁC",
+          "bbox": [
+            764,
+            501,
+            1789,
+            576
+          ],
+          "confidence": 84.43
+        },
+        {
+          "text": "Thanh âm là để kích động thính giác của quân chủng, làm cho",
+          "bbox": [
+            315,
+            628,
+            1790,
+            710
+          ],
+          "confidence": 87.18
+        },
+        {
+          "text": "kẻ mê muội được thức tinh, người tuệ ngộ được trong sáng, khiến cho",
+          "bbox": [
+            228,
+            685,
+            1790,
+            770
+          ],
+          "confidence": 88.73
+        },
+        {
+          "text": "“Đạo kia”² luôn vang động trong khoảng trời đất. Có lẽ những điều",
+          "bbox": [
+            226,
+            742,
+            1789,
+            828
+          ],
+          "confidence": 94.95
+        },
+        {
+          "text": "tình uẩn của nghĩa lý được tỏ rõ ở lời nói, không khác gì những cái bí",
+          "bbox": [
+            226,
+            801,
+            1789,
+            886
+          ],
+          "confidence": 93.64
+        },
+        {
+          "text": "tàng của tạo hóa phát ra thành sấm gió. Vậy, cái ý và cái tượng của",
+          "bbox": [
+            225,
+            861,
+            1790,
+            946
+          ],
+          "confidence": 96.23
+        },
+        {
+          "text": "thanh âm lớn lao thay!",
+          "bbox": [
+            223,
+            930,
+            1789,
+            998
+          ],
+          "confidence": 95.56
+        },
+        {
+          "text": "Xét ra nguồn gốc đạo phát ra tự trời, lưu hành khắp vũ trụ, phân",
+          "bbox": [
+            309,
+            992,
+            1790,
+            1075
+          ],
+          "confidence": 96.79
+        },
+        {
+          "text": "tán thành vạn vật cái thế thì đồng, nhưng cái dụng thì khác³, góc là",
+          "bbox": [
+            222,
+            1048,
+            1789,
+            1133
+          ],
+          "confidence": 84.49
+        },
+        {
+          "text": "một mà phần biết ra muôn vàn, đường đi đường như chia ngả, nhưng",
+          "bbox": [
+            220,
+            1107,
+            1789,
+            1192
+          ],
+          "confidence": 90.09
+        },
+        {
+          "text": "thống hội lại đến chỗ cực kỳ tinh vi thiết yếu, thì chẳng có gì vượt ra",
+          "bbox": [
+            219,
+            1165,
+            1790,
+            1250
+          ],
+          "confidence": 96.83
+        },
+        {
+          "text": "ngoài cái đảo lý ấy.",
+          "bbox": [
+            219,
+            1234,
+            1789,
+            1302
+          ],
+          "confidence": 92.39
+        },
+        {
+          "text": "Giáo lý của Thích Ca tuy nói là không tích, hư vô ³, nhưng điều",
+          "bbox": [
+            303,
+            1295,
+            1790,
+            1377
+          ],
+          "confidence": 87.65
+        },
+        {
+          "text": "cốt yếu chỉ là trừ bỏ chương lụy, hiểu thấu chân như °, sao cho “minh",
+          "bbox": [
+            216,
+            1351,
+            1790,
+            1430
+          ],
+          "confidence": 89.6
+        },
+        {
+          "text": "tâm, kiến tính\", những điều đó so với học thuyết \"thành ý, trí tri\"",
+          "bbox": [
+            214,
+            1409,
+            1789,
+            1489
+          ],
+          "confidence": 92.41
+        },
+        {
+          "text": "của nhà Nho ta, không sai trái nhau lắm.",
+          "bbox": [
+            212,
+            1468,
+            1789,
+            1546
+          ],
+          "confidence": 99.43
+        },
+        {
+          "text": "Nhó rằng Phu Tử ta ở cũng có nói “Phương Tây có bậc đại thánh",
+          "bbox": [
+            298,
+            1539,
+            1789,
+            1622
+          ],
+          "confidence": 84.87
+        },
+        {
+          "text": "nhân\". Thế thì Người vốn chưa hề chê bai đao Phật là đi đoan.",
+          "bbox": [
+            210,
+            1595,
+            1789,
+            1674
+          ],
+          "confidence": 87.18
+        },
+        {
+          "text": "Học giả ở đời hay câu chấp vào bề ngoài một cách nông cạn,",
+          "bbox": [
+            295,
+            1669,
+            1789,
+            1751
+          ],
+          "confidence": 96.44
+        },
+        {
+          "text": "hàng ngày đá kích đạo Phật, làm cho những người nâu sổng đứng",
+          "bbox": [
+            205,
+            1723,
+            1789,
+            1810
+          ],
+          "confidence": 87.92
+        },
+        {
+          "text": "|",
+          "bbox": [
+            203,
+            1846,
+            1788,
+            1896
+          ],
+          "confidence": 92.67
+        },
+        {
+          "text": "1. Viên giác là một trong Lục kinh của Phật giáo Đại Thừa. Trúc Làm đại chân",
+          "bbox": [
+            294,
+            1883,
+            1790,
+            1955
+          ],
+          "confidence": 95.13
+        },
+        {
+          "text": "viên giác là quyền sách Ngô Thì Nhậm viết về Phật học, nguyên tên là Trúc lâm tổng",
+          "bbox": [
+            201,
+            1929,
+            1789,
+            2006
+          ],
+          "confidence": 96.52
+        },
+        {
+          "text": "chỉ nguyên thanh, không rõ vì sao tác giả bài này lại gọi như trên.",
+          "bbox": [
+            200,
+            1977,
+            1789,
+            2053
+          ],
+          "confidence": 97.77
+        },
+        {
+          "text": "2. Đạo kia: Ý nói đạo vốn là một, Nho hay Phật cũng vẫn là đạo ấy cả.",
+          "bbox": [
+            287,
+            2026,
+            1789,
+            2097
+          ],
+          "confidence": 96.82
+        },
+        {
+          "text": "3. Nhà Nho thường cho mọi sự vật có hai phần là thể và dụng. Thế là nội dung",
+          "bbox": [
+            287,
+            2074,
+            1789,
+            2148
+          ],
+          "confidence": 93.91
+        },
+        {
+          "text": "của sự vật; dụng là công dụng của nó.",
+          "bbox": [
+            196,
+            2126,
+            1789,
+            2195
+          ],
+          "confidence": 96.68
+        },
+        {
+          "text": "4. Phát giáo quan niệm hết thảy mọi hiện tượng đều là tương, không có thật.",
+          "bbox": [
+            285,
+            2167,
+            1789,
+            2243
+          ],
+          "confidence": 97.88
+        },
+        {
+          "text": "5. Chân như: Từ nhà Phật, chân là thực có; như là có mãi, không bao giờ mất.",
+          "bbox": [
+            284,
+            2214,
+            1789,
+            2286
+          ],
+          "confidence": 88.69
+        },
+        {
+          "text": "không bao giờ thay đổi.",
+          "bbox": [
+            196,
+            2266,
+            1789,
+            2331
+          ],
+          "confidence": 99.4
+        },
+        {
+          "text": "6. Minh tâm kiến tinh: Từ nhà Phật, ý nói giữ gìn được tâm tính cho trong sáng.",
+          "bbox": [
+            281,
+            2308,
+            1789,
+            2383
+          ],
+          "confidence": 88.77
+        },
+        {
+          "text": "7. Thành ý, trí trị: Hai trong tấm điều nói ở sách Đại học của Nho gia. Thành ý:",
+          "bbox": [
+            280,
+            2356,
+            1789,
+            2427
+          ],
+          "confidence": 92.54
+        },
+        {
+          "text": "Giữ ý chí thành thực. Trí trị: Hiểu biết cho nhiều, cho sâu sắc vật.",
+          "bbox": [
+            191,
+            2399,
+            1790,
+            2473
+          ],
+          "confidence": 86.56
+        },
+        {
+          "text": "8. Phu Tử ta: Chỉ Khổng Tử.",
+          "bbox": [
+            278,
+            2449,
+            1790,
+            2519
+          ],
+          "confidence": 88.39
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          1865,
+          2851
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 21.131,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              433,
+              408,
+              1790,
+              499
+            ],
+            "generated_text": "TỪA QUYỀN TRỊC LÂM ĐẠI CHẦN",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 0.705,
+            "confidence": 83.69,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              764,
+              501,
+              1789,
+              576
+            ],
+            "generated_text": "VIÊN GIÁC",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.278,
+            "confidence": 84.43,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              315,
+              628,
+              1790,
+              710
+            ],
+            "generated_text": "Thanh âm là để kích động thính giác của quân chủng, làm cho",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.555,
+            "confidence": 87.18,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              228,
+              685,
+              1790,
+              770
+            ],
+            "generated_text": "kẻ mê muội được thức tinh, người tuệ ngộ được trong sáng, khiến cho",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.588,
+            "confidence": 88.73,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              226,
+              742,
+              1789,
+              828
+            ],
+            "generated_text": "“Đạo kia”² luôn vang động trong khoảng trời đất. Có lẽ những điều",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.625,
+            "confidence": 94.95,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              226,
+              801,
+              1789,
+              886
+            ],
+            "generated_text": "tình uẩn của nghĩa lý được tỏ rõ ở lời nói, không khác gì những cái bí",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.67,
+            "confidence": 93.64,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              225,
+              861,
+              1790,
+              946
+            ],
+            "generated_text": "tàng của tạo hóa phát ra thành sấm gió. Vậy, cái ý và cái tượng của",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.668,
+            "confidence": 96.23,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              223,
+              930,
+              1789,
+              998
+            ],
+            "generated_text": "thanh âm lớn lao thay!",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.328,
+            "confidence": 95.56,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              309,
+              992,
+              1790,
+              1075
+            ],
+            "generated_text": "Xét ra nguồn gốc đạo phát ra tự trời, lưu hành khắp vũ trụ, phân",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 0.703,
+            "confidence": 96.79,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              222,
+              1048,
+              1789,
+              1133
+            ],
+            "generated_text": "tán thành vạn vật cái thế thì đồng, nhưng cái dụng thì khác³, góc là",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.567,
+            "confidence": 84.49,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              220,
+              1107,
+              1789,
+              1192
+            ],
+            "generated_text": "một mà phần biết ra muôn vàn, đường đi đường như chia ngả, nhưng",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.571,
+            "confidence": 90.09,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              219,
+              1165,
+              1790,
+              1250
+            ],
+            "generated_text": "thống hội lại đến chỗ cực kỳ tinh vi thiết yếu, thì chẳng có gì vượt ra",
+            "n_lines": 1,
+            "tokens": 32,
+            "seconds": 0.778,
+            "confidence": 96.83,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              219,
+              1234,
+              1789,
+              1302
+            ],
+            "generated_text": "ngoài cái đảo lý ấy.",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.322,
+            "confidence": 92.39,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              303,
+              1295,
+              1790,
+              1377
+            ],
+            "generated_text": "Giáo lý của Thích Ca tuy nói là không tích, hư vô ³, nhưng điều",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.561,
+            "confidence": 87.65,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              216,
+              1351,
+              1790,
+              1430
+            ],
+            "generated_text": "cốt yếu chỉ là trừ bỏ chương lụy, hiểu thấu chân như °, sao cho “minh",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 0.778,
+            "confidence": 89.6,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              214,
+              1409,
+              1789,
+              1489
+            ],
+            "generated_text": "tâm, kiến tính\", những điều đó so với học thuyết \"thành ý, trí tri\"",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.629,
+            "confidence": 92.41,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              212,
+              1468,
+              1789,
+              1546
+            ],
+            "generated_text": "của nhà Nho ta, không sai trái nhau lắm.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.496,
+            "confidence": 99.43,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              298,
+              1539,
+              1789,
+              1622
+            ],
+            "generated_text": "Nhó rằng Phu Tử ta ở cũng có nói “Phương Tây có bậc đại thánh",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.658,
+            "confidence": 84.87,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              210,
+              1595,
+              1789,
+              1674
+            ],
+            "generated_text": "nhân\". Thế thì Người vốn chưa hề chê bai đao Phật là đi đoan.",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.709,
+            "confidence": 87.18,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              295,
+              1669,
+              1789,
+              1751
+            ],
+            "generated_text": "Học giả ở đời hay câu chấp vào bề ngoài một cách nông cạn,",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.597,
+            "confidence": 96.44,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              205,
+              1723,
+              1789,
+              1810
+            ],
+            "generated_text": "hàng ngày đá kích đạo Phật, làm cho những người nâu sổng đứng",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.632,
+            "confidence": 87.92,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              203,
+              1846,
+              1788,
+              1896
+            ],
+            "generated_text": "|",
+            "n_lines": 1,
+            "tokens": 2,
+            "seconds": 0.162,
+            "confidence": 92.67,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              294,
+              1883,
+              1790,
+              1955
+            ],
+            "generated_text": "1. Viên giác là một trong Lục kinh của Phật giáo Đại Thừa. Trúc Làm đại chân",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 0.716,
+            "confidence": 95.13,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              201,
+              1929,
+              1789,
+              2006
+            ],
+            "generated_text": "viên giác là quyền sách Ngô Thì Nhậm viết về Phật học, nguyên tên là Trúc lâm tổng",
+            "n_lines": 1,
+            "tokens": 34,
+            "seconds": 0.873,
+            "confidence": 96.52,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              200,
+              1977,
+              1789,
+              2053
+            ],
+            "generated_text": "chỉ nguyên thanh, không rõ vì sao tác giả bài này lại gọi như trên.",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.594,
+            "confidence": 97.77,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              287,
+              2026,
+              1789,
+              2097
+            ],
+            "generated_text": "2. Đạo kia: Ý nói đạo vốn là một, Nho hay Phật cũng vẫn là đạo ấy cả.",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 0.777,
+            "confidence": 96.82,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              287,
+              2074,
+              1789,
+              2148
+            ],
+            "generated_text": "3. Nhà Nho thường cho mọi sự vật có hai phần là thể và dụng. Thế là nội dung",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.701,
+            "confidence": 93.91,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              196,
+              2126,
+              1789,
+              2195
+            ],
+            "generated_text": "của sự vật; dụng là công dụng của nó.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 0.38,
+            "confidence": 96.68,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              285,
+              2167,
+              1789,
+              2243
+            ],
+            "generated_text": "4. Phát giáo quan niệm hết thảy mọi hiện tượng đều là tương, không có thật.",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 0.755,
+            "confidence": 97.88,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              284,
+              2214,
+              1789,
+              2286
+            ],
+            "generated_text": "5. Chân như: Từ nhà Phật, chân là thực có; như là có mãi, không bao giờ mất.",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 0.754,
+            "confidence": 88.69,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              196,
+              2266,
+              1789,
+              2331
+            ],
+            "generated_text": "không bao giờ thay đổi.",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.332,
+            "confidence": 99.4,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 32,
+            "box": [
+              281,
+              2308,
+              1789,
+              2383
+            ],
+            "generated_text": "6. Minh tâm kiến tinh: Từ nhà Phật, ý nói giữ gìn được tâm tính cho trong sáng.",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 0.719,
+            "confidence": 88.77,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 33,
+            "box": [
+              280,
+              2356,
+              1789,
+              2427
+            ],
+            "generated_text": "7. Thành ý, trí trị: Hai trong tấm điều nói ở sách Đại học của Nho gia. Thành ý:",
+            "n_lines": 1,
+            "tokens": 33,
+            "seconds": 0.804,
+            "confidence": 92.54,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 34,
+            "box": [
+              191,
+              2399,
+              1790,
+              2473
+            ],
+            "generated_text": "Giữ ý chí thành thực. Trí trị: Hiểu biết cho nhiều, cho sâu sắc vật.",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.682,
+            "confidence": 86.56,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 35,
+            "box": [
+              278,
+              2449,
+              1790,
+              2519
+            ],
+            "generated_text": "8. Phu Tử ta: Chỉ Khổng Tử.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.46,
+            "confidence": 88.39,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              109,
+              2778,
+              323,
+              2791
+            ],
+            "ink": 889
+          }
+        ],
+        "deskew_deg": 1.3,
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "7a0a8d9befaa9c2afee66139d5b233593b81f86e",
+        "git_describe": "7a0a8d9",
+        "git_dirty": true,
+        "gpu": "NVIDIA GeForce RTX 3050 6GB Laptop GPU",
+        "dtype": "bfloat16",
+        "adapter_version": 6
+      }
     }
   ]
 }

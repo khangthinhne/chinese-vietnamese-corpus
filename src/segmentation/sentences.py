@@ -215,10 +215,13 @@ def sentence_count_mismatches(han: dict[str, int], am: dict[str, int],
 def make_sentences(work_id: str, layer: str, lines: list[RawLine],
                    cfg: SentenceConfig | CleanConfig,
                    decisions: dict[str, str] | None = None,
+                   forced_modes: dict[str, str] | None = None,
                    ) -> tuple[list[Sentence], list[tuple[str, int, str, str]]]:
     """Sinh các câu Sentence độc lập từ danh sách dòng/segment.
 
     `decisions` (nếu truyền vào) nhận chế độ tách thực tế theo document_id khi split='auto'.
+    `forced_modes` (tuỳ chọn) {document_id: 'line'|'punct'}: thay cho lựa chọn tự động của tài liệu đó (dùng cho
+    `sentence.am_follow_han_split`: lớp am theo chế độ tách lớp han đã chọn).
     Trả về (sentences, dropped_rows).
     """
     dropped: list[tuple[str, int, str, str]] = []
@@ -233,7 +236,7 @@ def make_sentences(work_id: str, layer: str, lines: list[RawLine],
         if not text:
             return
         if layer == "han":
-            ok = sum(1 for c in text if cjk_ratio(c) > 0) >= 2
+            ok = sum(1 for c in text.replace("[MASK]", "口") if cjk_ratio(c) > 0) >= 2   # [MASK] = 1 chữ
         else:
             ok = any(ch.isalnum() for ch in text)
         owning_lines = [lines[k] for k in idxs]
@@ -306,7 +309,8 @@ def make_sentences(work_id: str, layer: str, lines: list[RawLine],
     for start, end in runs:
         group = lines[start:end]
         if split_mode == "auto":
-            mode = choose_han_split(group) if layer == "han" else choose_am_split(group)
+            mode = (forced_modes or {}).get(_document_id(group[0].id)) or (
+                choose_han_split(group) if layer == "han" else choose_am_split(group))
             if decisions is not None:
                 decisions[_document_id(group[0].id)] = mode
             if mode == "line":
@@ -387,6 +391,22 @@ def create_parser():
     return p
 
 
+def han_modes_for_am(layout: DataLayout, config: str | None) -> dict[str, str] | None:
+    """{document_id: chế độ tách lớp han} khi config bật `sentence.am_follow_han_split` (mặc định tắt), không thì None.
+
+    Hán tách theo dấu câu 。 (cặp câu) còn âm tách theo dòng (hoặc ngược lại) làm số câu lệch 2:1 và dóng hỏng;
+    cho lớp am đi theo lựa chọn của lớp han trong cùng tài liệu thì hai bên cùng đơn vị."""
+    if not config or not Path(config).exists():
+        return None
+    import json
+    if not json.loads(Path(config).read_text(encoding="utf-8")).get("sentence", {}).get("am_follow_han_split"):
+        return None
+    groups: dict[str, list[RawLine]] = {}
+    for ln in read_segment_input(layout, "han"):
+        groups.setdefault(_document_id(ln.id), []).append(ln)
+    return {doc: choose_han_split(lines) for doc, lines in groups.items()}
+
+
 def run(args) -> Path:
     layer = args.layer
     layout = DataLayout(Path(args.data_root), args.work_id)
@@ -410,8 +430,13 @@ def run(args) -> Path:
     deps.check_fresh(layout, f"sentence:{layer}", inputs, [out_xml], args.force,
                      f"{out_xml} đã tồn tại; dùng --force để chạy lại")
 
+    forced = han_modes_for_am(layout, getattr(args, "config", None)) if layer == "am" and cfg.split == "auto" else None
+    if forced is not None:
+        inputs.append(layout.cleaning_structural("han") if layout.cleaning_structural("han").exists()
+                      else layout.segmentation_layer("han"))
+        log.info("[am] sentence.am_follow_han_split: theo chế độ tách lớp han của %d tài liệu", len(forced))
     decisions: dict[str, str] = {}
-    sentences, dropped = make_sentences(args.work_id, layer, raw_lines, cfg, decisions)
+    sentences, dropped = make_sentences(args.work_id, layer, raw_lines, cfg, decisions, forced)
     if decisions:
         modes = Counter(decisions.values())
         log.info("[%s] split=auto: %d tài liệu tách theo dòng, %d theo dấu câu", layer,
@@ -472,6 +497,9 @@ def main(argv: list[str] | None = None) -> int:
     args = parse_args(parser, argv)
     try:
         run(args)
+    except deps.UpToDate as exc:          # đầu ra còn mới: bỏ qua, không phải lỗi
+        log.info("%s", exc)
+        return 0
     except (OSError, ValueError, FileNotFoundError) as exc:
         log.error("%s", exc)
         return 1

@@ -1,0 +1,633 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_20",
+  "engine": "paddlevl",
+  "page": 211,
+  "runs": [
+    {
+      "key": "7a15118345d65a58c2d9fa38dcf4027610d57d0de44bec9f3df8a3c4982a0241",
+      "parameters": {
+        "image_sha256": "97554e444e1c9e24085bcab334412ef17eb9d5dd2e895cb92c86f59822f4fe05",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T06:15:01+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_211.png",
+      "image_size": [
+        1823,
+        2815
+      ],
+      "crop_box": [
+        0,
+        0,
+        1823,
+        2815
+      ],
+      "lines": [
+        {
+          "text": "Dich nghĩa:",
+          "bbox": [
+            174,
+            261,
+            415,
+            301
+          ],
+          "confidence": 98.53
+        },
+        {
+          "text": "ĐỀ QUỲ MÔN QUAN",
+          "bbox": [
+            598,
+            375,
+            1196,
+            443
+          ],
+          "confidence": 83.39
+        },
+        {
+          "text": "Từ xưa nơi hiểm yếu này văn gọi là Quý Môn Quan,",
+          "bbox": [
+            404,
+            518,
+            1474,
+            571
+          ],
+          "confidence": 90.22
+        },
+        {
+          "text": "Núi non như giáo dụng la liệt, trấn giữ miền biên giới.",
+          "bbox": [
+            404,
+            578,
+            1530,
+            627
+          ],
+          "confidence": 96.38
+        },
+        {
+          "text": "Tiếng sưới nước nở làm lạnh những nắm xương khô,",
+          "bbox": [
+            402,
+            636,
+            1460,
+            685
+          ],
+          "confidence": 83.42
+        },
+        {
+          "text": "Màu cây âm u còn động lại hồn ma ho Mac.",
+          "bbox": [
+            402,
+            697,
+            1307,
+            742
+          ],
+          "confidence": 96.83
+        },
+        {
+          "text": "Suốt bưới sáng mây mù trùm lên ngôi miếu cổ,",
+          "bbox": [
+            404,
+            756,
+            1369,
+            801
+          ],
+          "confidence": 86.54
+        },
+        {
+          "text": "Trọn ngày hơi núi, phủ kín thôn hoang.",
+          "bbox": [
+            402,
+            815,
+            1221,
+            866
+          ],
+          "confidence": 95.81
+        },
+        {
+          "text": "Trong cả chuyến đi về ta dựa vào tấm lòng trung tín,",
+          "bbox": [
+            402,
+            875,
+            1496,
+            925
+          ],
+          "confidence": 94.15
+        },
+        {
+          "text": "Muôn núi nghìn khe nào đáng kể gì.",
+          "bbox": [
+            402,
+            934,
+            1157,
+            976
+          ],
+          "confidence": 92.28
+        },
+        {
+          "text": "Dich tho:",
+          "bbox": [
+            173,
+            1123,
+            364,
+            1153
+          ],
+          "confidence": 75.88
+        },
+        {
+          "text": "Của Quý ngàn xưa hiểm lạ thường.",
+          "bbox": [
+            402,
+            1231,
+            1158,
+            1279
+          ],
+          "confidence": 84.51
+        },
+        {
+          "text": "Núi như giáo dung giữ biên cương.",
+          "bbox": [
+            399,
+            1290,
+            1119,
+            1337
+          ],
+          "confidence": 87.52
+        },
+        {
+          "text": "Nghện ngào tiếng sưới xương ma lạnh,",
+          "bbox": [
+            399,
+            1348,
+            1197,
+            1397
+          ],
+          "confidence": 84.58
+        },
+        {
+          "text": "Uất ngàn cây phách Mac vương.",
+          "bbox": [
+            404,
+            1406,
+            1102,
+            1448
+          ],
+          "confidence": 94.0
+        },
+        {
+          "text": "Miểu cố trọn ngày mày móc ngậm,",
+          "bbox": [
+            399,
+            1468,
+            1116,
+            1514
+          ],
+          "confidence": 76.06
+        },
+        {
+          "text": "Thôn hoang, suốt bưới khói sương bương.",
+          "bbox": [
+            402,
+            1525,
+            1247,
+            1572
+          ],
+          "confidence": 79.93
+        },
+        {
+          "text": "Lòng ta sẵn cấy niềm trung tín,",
+          "bbox": [
+            399,
+            1587,
+            1363,
+            1631
+          ],
+          "confidence": 89.12
+        },
+        {
+          "text": "Muốn sưới ngàn khe bước nhẹ nhàng.",
+          "bbox": [
+            399,
+            1642,
+            1174,
+            1683
+          ],
+          "confidence": 83.45
+        },
+        {
+          "text": "Nguyễn Văn Bách dịch",
+          "bbox": [
+            1186,
+            1709,
+            1611,
+            1747
+          ],
+          "confidence": 92.44
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          1823,
+          2815
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 9.375,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              174,
+              261,
+              415,
+              301
+            ],
+            "generated_text": "Dich nghĩa:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.241,
+            "confidence": 98.53,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              598,
+              375,
+              1196,
+              443
+            ],
+            "generated_text": "ĐỀ QUỲ MÔN QUAN",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.434,
+            "confidence": 83.39,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              404,
+              518,
+              1474,
+              571
+            ],
+            "generated_text": "Từ xưa nơi hiểm yếu này văn gọi là Quý Môn Quan,",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.681,
+            "confidence": 90.22,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              404,
+              578,
+              1530,
+              627
+            ],
+            "generated_text": "Núi non như giáo dụng la liệt, trấn giữ miền biên giới.",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.669,
+            "confidence": 96.38,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              402,
+              636,
+              1460,
+              685
+            ],
+            "generated_text": "Tiếng sưới nước nở làm lạnh những nắm xương khô,",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.636,
+            "confidence": 83.42,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              402,
+              697,
+              1307,
+              742
+            ],
+            "generated_text": "Màu cây âm u còn động lại hồn ma ho Mac.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.455,
+            "confidence": 96.83,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              404,
+              756,
+              1369,
+              801
+            ],
+            "generated_text": "Suốt bưới sáng mây mù trùm lên ngôi miếu cổ,",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.608,
+            "confidence": 86.54,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              402,
+              815,
+              1221,
+              866
+            ],
+            "generated_text": "Trọn ngày hơi núi, phủ kín thôn hoang.",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.487,
+            "confidence": 95.81,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              402,
+              875,
+              1496,
+              925
+            ],
+            "generated_text": "Trong cả chuyến đi về ta dựa vào tấm lòng trung tín,",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.613,
+            "confidence": 94.15,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              402,
+              934,
+              1157,
+              976
+            ],
+            "generated_text": "Muôn núi nghìn khe nào đáng kể gì.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.435,
+            "confidence": 92.28,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              173,
+              1123,
+              364,
+              1153
+            ],
+            "generated_text": "Dich tho:",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.223,
+            "confidence": 75.88,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              402,
+              1231,
+              1158,
+              1279
+            ],
+            "generated_text": "Của Quý ngàn xưa hiểm lạ thường.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.433,
+            "confidence": 84.51,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              399,
+              1290,
+              1119,
+              1337
+            ],
+            "generated_text": "Núi như giáo dung giữ biên cương.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.461,
+            "confidence": 87.52,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              399,
+              1348,
+              1197,
+              1397
+            ],
+            "generated_text": "Nghện ngào tiếng sưới xương ma lạnh,",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.435,
+            "confidence": 84.58,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              404,
+              1406,
+              1102,
+              1448
+            ],
+            "generated_text": "Uất ngàn cây phách Mac vương.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 0.377,
+            "confidence": 94.0,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              399,
+              1468,
+              1116,
+              1514
+            ],
+            "generated_text": "Miểu cố trọn ngày mày móc ngậm,",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.434,
+            "confidence": 76.06,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              402,
+              1525,
+              1247,
+              1572
+            ],
+            "generated_text": "Thôn hoang, suốt bưới khói sương bương.",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.485,
+            "confidence": 79.93,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              399,
+              1587,
+              1363,
+              1631
+            ],
+            "generated_text": "Lòng ta sẵn cấy niềm trung tín,",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.5,
+            "confidence": 89.12,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              399,
+              1642,
+              1174,
+              1683
+            ],
+            "generated_text": "Muốn sưới ngàn khe bước nhẹ nhàng.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.456,
+            "confidence": 83.45,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              1186,
+              1709,
+              1611,
+              1747
+            ],
+            "generated_text": "Nguyễn Văn Bách dịch",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.31,
+            "confidence": 92.44,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              645,
+              973,
+              1130,
+              983
+            ],
+            "ink": 309
+          },
+          {
+            "box": [
+              557,
+              1445,
+              1088,
+              1456
+            ],
+            "ink": 319
+          },
+          {
+            "box": [
+              1531,
+              2533,
+              1606,
+              2544
+            ],
+            "ink": 287
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      }
+    }
+  ]
+}

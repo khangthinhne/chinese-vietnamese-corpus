@@ -1,0 +1,886 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_20",
+  "engine": "paddlevl",
+  "page": 192,
+  "runs": [
+    {
+      "key": "ed6f594431148ecb37081da914c92b3ac11db108ab6518add8590ce43d683a51",
+      "parameters": {
+        "image_sha256": "e31dcbff7497e3457c66340f0806b6d5ef44d25daab8719a09fee1fb89038705",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T06:11:52+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_192.png",
+      "image_size": [
+        1840,
+        2803
+      ],
+      "crop_box": [
+        0,
+        0,
+        1840,
+        2803
+      ],
+      "lines": [
+        {
+          "text": "Dich thơ:",
+          "bbox": [
+            260,
+            266,
+            1758,
+            296
+          ],
+          "confidence": 95.56
+        },
+        {
+          "text": "An cân anh tiến em đi.",
+          "bbox": [
+            610,
+            377,
+            1097,
+            419
+          ],
+          "confidence": 73.53
+        },
+        {
+          "text": "Dăm ngàn đau nổi phân ly nhạn bảy.",
+          "bbox": [
+            496,
+            435,
+            1281,
+            485
+          ],
+          "confidence": 81.11
+        },
+        {
+          "text": "Cảnh đời há mãi sum vẩy.",
+          "bbox": [
+            613,
+            494,
+            1169,
+            538
+          ],
+          "confidence": 84.34
+        },
+        {
+          "text": "Phân tôi sá ngại tháng ngày lênh đênh.",
+          "bbox": [
+            496,
+            554,
+            1330,
+            604
+          ],
+          "confidence": 75.0
+        },
+        {
+          "text": "Trăng sông, gió núi bao tĩnh,",
+          "bbox": [
+            455,
+            616,
+            1225,
+            662
+          ],
+          "confidence": 89.15
+        },
+        {
+          "text": "Gió đưa tay áo, nhẹ mạnh buồm xuôi.",
+          "bbox": [
+            496,
+            672,
+            1280,
+            719
+          ],
+          "confidence": 88.01
+        },
+        {
+          "text": "Thuyền về hôm sớm thú vui.",
+          "bbox": [
+            612,
+            731,
+            1211,
+            777
+          ],
+          "confidence": 86.92
+        },
+        {
+          "text": "Quanh nhìn chảng có ngóng trời Phú Xuân?",
+          "bbox": [
+            495,
+            790,
+            1420,
+            844
+          ],
+          "confidence": 92.1
+        },
+        {
+          "text": "Nguyễn Văn Bách dịch",
+          "bbox": [
+            1289,
+            934,
+            1708,
+            977
+          ],
+          "confidence": 93.77
+        },
+        {
+          "text": "慇懃千里送君還",
+          "bbox": [
+            694,
+            1106,
+            1288,
+            1167
+          ],
+          "confidence": 95.98
+        },
+        {
+          "text": "友念家情把袂間",
+          "bbox": [
+            693,
+            1183,
+            1288,
+            1239
+          ],
+          "confidence": 97.47
+        },
+        {
+          "text": "目注蝞帆穿海嶠",
+          "bbox": [
+            698,
+            1255,
+            1288,
+            1309
+          ],
+          "confidence": 81.41
+        },
+        {
+          "text": "魂隨蝶枕繞鄉關",
+          "bbox": [
+            691,
+            1322,
+            1288,
+            1380
+          ],
+          "confidence": 93.59
+        },
+        {
+          "text": "柳橋自我愁新別",
+          "bbox": [
+            691,
+            1394,
+            1291,
+            1452
+          ],
+          "confidence": 95.14
+        },
+        {
+          "text": "菊徑何人覓舊聞",
+          "bbox": [
+            691,
+            1465,
+            1286,
+            1525
+          ],
+          "confidence": 87.61
+        },
+        {
+          "text": "莫訝此行勞跋涉",
+          "bbox": [
+            691,
+            1539,
+            1283,
+            1598
+          ],
+          "confidence": 99.73
+        },
+        {
+          "text": "吟翁雙眼餞江山",
+          "bbox": [
+            690,
+            1612,
+            1281,
+            1670
+          ],
+          "confidence": 89.97
+        },
+        {
+          "text": "Phiên âm:",
+          "bbox": [
+            252,
+            1736,
+            474,
+            1777
+          ],
+          "confidence": 92.09
+        },
+        {
+          "text": "Kỳ tam",
+          "bbox": [
+            759,
+            1876,
+            994,
+            1928
+          ],
+          "confidence": 83.55
+        },
+        {
+          "text": "An cân thiên lý tổng quân hoàn,",
+          "bbox": [
+            487,
+            2005,
+            1410,
+            2055
+          ],
+          "confidence": 84.77
+        },
+        {
+          "text": "Hữu niệm, gia tỉnh bá duệ gian.",
+          "bbox": [
+            487,
+            2062,
+            1150,
+            2112
+          ],
+          "confidence": 84.68
+        },
+        {
+          "text": "Mục chú biến phạm xuyên hải kiệu,",
+          "bbox": [
+            487,
+            2120,
+            1231,
+            2173
+          ],
+          "confidence": 85.76
+        },
+        {
+          "text": "Hồn tùy điệp chấm nhiều hương quan.",
+          "bbox": [
+            485,
+            2179,
+            1281,
+            2232
+          ],
+          "confidence": 81.86
+        },
+        {
+          "text": "Liễu kiểu tự ngã sầu tân biệt.",
+          "bbox": [
+            485,
+            2237,
+            1108,
+            2289
+          ],
+          "confidence": 82.66
+        },
+        {
+          "text": "Cúc kính hà nhân mịch cụu nhàn.",
+          "bbox": [
+            485,
+            2296,
+            1192,
+            2348
+          ],
+          "confidence": 90.75
+        },
+        {
+          "text": "Mạc nhà thủ hành lao bật thiệp.",
+          "bbox": [
+            484,
+            2356,
+            1695,
+            2406
+          ],
+          "confidence": 82.07
+        },
+        {
+          "text": "Ngâm ông song nhân tiến giang san.",
+          "bbox": [
+            484,
+            2416,
+            1252,
+            2465
+          ],
+          "confidence": 90.26
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          1840,
+          2803
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 10.675,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              260,
+              266,
+              1758,
+              296
+            ],
+            "generated_text": "Dich thơ:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.281,
+            "confidence": 95.56,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              610,
+              377,
+              1097,
+              419
+            ],
+            "generated_text": "An cân anh tiến em đi.",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.32,
+            "confidence": 73.53,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              496,
+              435,
+              1281,
+              485
+            ],
+            "generated_text": "Dăm ngàn đau nổi phân ly nhạn bảy.",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.471,
+            "confidence": 81.11,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              613,
+              494,
+              1169,
+              538
+            ],
+            "generated_text": "Cảnh đời há mãi sum vẩy.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 0.417,
+            "confidence": 84.34,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              496,
+              554,
+              1330,
+              604
+            ],
+            "generated_text": "Phân tôi sá ngại tháng ngày lênh đênh.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.432,
+            "confidence": 75.0,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              455,
+              616,
+              1225,
+              662
+            ],
+            "generated_text": "Trăng sông, gió núi bao tĩnh,",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.421,
+            "confidence": 89.15,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              496,
+              672,
+              1280,
+              719
+            ],
+            "generated_text": "Gió đưa tay áo, nhẹ mạnh buồm xuôi.",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.501,
+            "confidence": 88.01,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              612,
+              731,
+              1211,
+              777
+            ],
+            "generated_text": "Thuyền về hôm sớm thú vui.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.41,
+            "confidence": 86.92,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              495,
+              790,
+              1420,
+              844
+            ],
+            "generated_text": "Quanh nhìn chảng có ngóng trời Phú Xuân?",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.46,
+            "confidence": 92.1,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              1289,
+              934,
+              1708,
+              977
+            ],
+            "generated_text": "Nguyễn Văn Bách dịch",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.349,
+            "confidence": 93.77,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              694,
+              1106,
+              1288,
+              1167
+            ],
+            "generated_text": "慇懃千里送君還",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.346,
+            "confidence": 95.98,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              693,
+              1183,
+              1288,
+              1239
+            ],
+            "generated_text": "友念家情把袂間",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.332,
+            "confidence": 97.47,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              698,
+              1255,
+              1288,
+              1309
+            ],
+            "generated_text": "目注蝞帆穿海嶠",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.377,
+            "confidence": 81.41,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              691,
+              1322,
+              1288,
+              1380
+            ],
+            "generated_text": "魂隨蝶枕繞鄉關",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.33,
+            "confidence": 93.59,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              691,
+              1394,
+              1291,
+              1452
+            ],
+            "generated_text": "柳橋自我愁新別",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.27,
+            "confidence": 95.14,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              691,
+              1465,
+              1286,
+              1525
+            ],
+            "generated_text": "菊徑何人覓舊聞",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.366,
+            "confidence": 87.61,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              691,
+              1539,
+              1283,
+              1598
+            ],
+            "generated_text": "莫訝此行勞跋涉",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.387,
+            "confidence": 99.73,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              690,
+              1612,
+              1281,
+              1670
+            ],
+            "generated_text": "吟翁雙眼餞江山",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.314,
+            "confidence": 89.97,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              252,
+              1736,
+              474,
+              1777
+            ],
+            "generated_text": "Phiên âm:",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.223,
+            "confidence": 92.09,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              759,
+              1876,
+              994,
+              1928
+            ],
+            "generated_text": "Kỳ tam",
+            "n_lines": 1,
+            "tokens": 4,
+            "seconds": 0.225,
+            "confidence": 83.55,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              487,
+              2005,
+              1410,
+              2055
+            ],
+            "generated_text": "An cân thiên lý tổng quân hoàn,",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.448,
+            "confidence": 84.77,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              487,
+              2062,
+              1150,
+              2112
+            ],
+            "generated_text": "Hữu niệm, gia tỉnh bá duệ gian.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.398,
+            "confidence": 84.68,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              487,
+              2120,
+              1231,
+              2173
+            ],
+            "generated_text": "Mục chú biến phạm xuyên hải kiệu,",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.458,
+            "confidence": 85.76,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              485,
+              2179,
+              1281,
+              2232
+            ],
+            "generated_text": "Hồn tùy điệp chấm nhiều hương quan.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.441,
+            "confidence": 81.86,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              485,
+              2237,
+              1108,
+              2289
+            ],
+            "generated_text": "Liễu kiểu tự ngã sầu tân biệt.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.472,
+            "confidence": 82.66,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              485,
+              2296,
+              1192,
+              2348
+            ],
+            "generated_text": "Cúc kính hà nhân mịch cụu nhàn.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.453,
+            "confidence": 90.75,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              484,
+              2356,
+              1695,
+              2406
+            ],
+            "generated_text": "Mạc nhà thủ hành lao bật thiệp.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 0.382,
+            "confidence": 82.07,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              484,
+              2416,
+              1252,
+              2465
+            ],
+            "generated_text": "Ngâm ông song nhân tiến giang san.",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.389,
+            "confidence": 90.26,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              266,
+              255,
+              1758,
+              268
+            ],
+            "ink": 363
+          },
+          {
+            "box": [
+              877,
+              1039,
+              1016,
+              1053
+            ],
+            "ink": 529
+          },
+          {
+            "box": [
+              885,
+              1056,
+              1013,
+              1067
+            ],
+            "ink": 339
+          },
+          {
+            "box": [
+              874,
+              1065,
+              1133,
+              1077
+            ],
+            "ink": 367
+          },
+          {
+            "box": [
+              879,
+              1073,
+              1021,
+              1086
+            ],
+            "ink": 441
+          },
+          {
+            "box": [
+              251,
+              2516,
+              326,
+              2529
+            ],
+            "ink": 336
+          },
+          {
+            "box": [
+              256,
+              2527,
+              328,
+              2543
+            ],
+            "ink": 547
+          },
+          {
+            "box": [
+              251,
+              2543,
+              324,
+              2554
+            ],
+            "ink": 301
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      }
+    }
+  ]
+}

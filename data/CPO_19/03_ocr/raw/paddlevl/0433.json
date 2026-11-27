@@ -1,0 +1,988 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 433,
+  "runs": [
+    {
+      "key": "ac073c06e70b57e30b18cf91246942eeaa232b6e88ba30d79f090bd2a17f38f3",
+      "parameters": {
+        "image_sha256": "9bf561139695c4f1d1a0edae89035472f3b797d874f9afec3bc204158c0c08d8",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T16:19:18+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_433.png",
+      "image_size": [
+        2563,
+        3194
+      ],
+      "crop_box": [
+        0,
+        0,
+        2563,
+        3194
+      ],
+      "lines": [
+        {
+          "text": "ngothinhamch1.pdf",
+          "bbox": [
+            7,
+            19,
+            296,
+            45
+          ],
+          "confidence": 98.71
+        },
+        {
+          "text": "NGŮ THÍ NHAM TOAN TẬP - TẬP III",
+          "bbox": [
+            451,
+            200,
+            1221,
+            238
+          ],
+          "confidence": 79.37
+        },
+        {
+          "text": "PHIEN AM:",
+          "bbox": [
+            451,
+            299,
+            705,
+            337
+          ],
+          "confidence": 99.66
+        },
+        {
+          "text": "BAM THIEN TRIEU TA GIANG DAO LAM DAI NHAN",
+          "bbox": [
+            624,
+            402,
+            1982,
+            447
+          ],
+          "confidence": 98.48
+        },
+        {
+          "text": "(THINH ĐINH PHU QUAN CUNG ĐON SỰ LÊ.",
+          "bbox": [
+            782,
+            487,
+            2005,
+            529
+          ],
+          "confidence": 88.15
+        },
+        {
+          "text": "THANG LONG LƯU THU QUAN BAM)",
+          "bbox": [
+            881,
+            569,
+            1734,
+            611
+          ],
+          "confidence": 91.26
+        },
+        {
+          "text": "Tư tiếp Lang Sơn Trần mục dịch hội công văn nhất dũng, nội khai",
+          "bbox": [
+            599,
+            704,
+            2155,
+            750
+          ],
+          "confidence": 86.8
+        },
+        {
+          "text": "phụng đại nhân trát thi, Kiên Long ngũ thấp tứ niên, thất nguyệt nhất,",
+          "bbox": [
+            444,
+            796,
+            2152,
+            849
+          ],
+          "confidence": 91.89
+        },
+        {
+          "text": "phụng Tước các độc bộ đường công lai trát, khâm phụng dự chỉ, phong",
+          "bbox": [
+            444,
+            886,
+            2159,
+            940
+          ],
+          "confidence": 95.68
+        },
+        {
+          "text": "bản quốc Quốc trường vi An Nam Quốc Vương, dĩ phái ủy đại viên lại đệ",
+          "bbox": [
+            450,
+            977,
+            2158,
+            1031
+          ],
+          "confidence": 87.1
+        },
+        {
+          "text": "sắc thư, tiên phó bản quốc tuyên thi, kế bất nguyệt thương cán, tức khả",
+          "bbox": [
+            449,
+            1068,
+            2156,
+            1121
+          ],
+          "confidence": 88.72
+        },
+        {
+          "text": "đáo quan. Diên đô nhu dung công quán phu mã, tảo tảo bi biên, tinh tra",
+          "bbox": [
+            449,
+            1159,
+            2155,
+            1203
+          ],
+          "confidence": 88.21
+        },
+        {
+          "text": "chiếu hướng lai sách phong điện lệ, tứ hầu chương trình. Nhất thiết sư",
+          "bbox": [
+            449,
+            1249,
+            2161,
+            1294
+          ],
+          "confidence": 84.91
+        },
+        {
+          "text": "nghi, tiên tương liệt tập bám trình, đặc bảng tra hạch đắng nhân. Ty",
+          "bbox": [
+            450,
+            1339,
+            2158,
+            1393
+          ],
+          "confidence": 91.96
+        },
+        {
+          "text": "đăng phủng độc bất thắng hoan biên.",
+          "bbox": [
+            450,
+            1431,
+            1312,
+            1476
+          ],
+          "confidence": 83.54
+        },
+        {
+          "text": "Kiến tư Quốc trường, tân kiến áp vu Nghệ An, ủy ty đăng lưu",
+          "bbox": [
+            596,
+            1531,
+            2155,
+            1586
+          ],
+          "confidence": 88.88
+        },
+        {
+          "text": "thủ Thắng Long, cấn dĩ trì dịch khái tri. Đê vũ lao liên tuân, văng",
+          "bbox": [
+            451,
+            1620,
+            2157,
+            1666
+          ],
+          "confidence": 87.13
+        },
+        {
+          "text": "phản ước chỉ nguyệt dư, thả bản quốc kinh loan chi hâu, tư Phú",
+          "bbox": [
+            452,
+            1708,
+            2155,
+            1753
+          ],
+          "confidence": 88.19
+        },
+        {
+          "text": "Lượng giang dĩ bắc áp lý tiêu điều, Lạng Sơn vưu vi quán măng.",
+          "bbox": [
+            449,
+            1794,
+            2151,
+            1849
+          ],
+          "confidence": 91.49
+        },
+        {
+          "text": "Phụng chiếu cổ lệ, Bắc Lạng nhị trấn diễn đô, tỉnh hữu công quán,",
+          "bbox": [
+            451,
+            1881,
+            2153,
+            1935
+          ],
+          "confidence": 92.43
+        },
+        {
+          "text": "cấp nhu dụng vật kiện, ty đăng cân dĩ tiện nghi, sức cai Trán mục,",
+          "bbox": [
+            452,
+            1967,
+            2153,
+            2021
+          ],
+          "confidence": 87.8
+        },
+        {
+          "text": "tuân phụng lý tác, duy khủng nhất kỳ thái tróc, thế nan nhất nhất",
+          "bbox": [
+            453,
+            2054,
+            2159,
+            2108
+          ],
+          "confidence": 96.71
+        },
+        {
+          "text": "chỉnh tê. Chí ư dịch đệ phu mã, phụng dĩ phải biệt trấn nhân lai,",
+          "bbox": [
+            453,
+            2141,
+            2154,
+            2194
+          ],
+          "confidence": 84.31
+        },
+        {
+          "text": "hậu phụng nghênh tiếp. Thắng hoặc thế lực bất phu, chí hữu linh tinh",
+          "bbox": [
+            454,
+            2228,
+            2158,
+            2284
+          ],
+          "confidence": 94.72
+        },
+        {
+          "text": "khoáng khuyết chi xứ, thực do tâm dữ lực vi, tốt nan lý hội, như phụng",
+          "bbox": [
+            453,
+            2316,
+            2160,
+            2370
+          ],
+          "confidence": 96.8
+        },
+        {
+          "text": "liệt tập bấm trình, hậu tra y lệ tuân hành. Thiết bằng đường kim sự",
+          "bbox": [
+            455,
+            2404,
+            2164,
+            2457
+          ],
+          "confidence": 92.13
+        },
+        {
+          "text": "thế bất cấp hướng lai thấp chi nhi tam, ty đăng khủng cụ di thâm,",
+          "bbox": [
+            455,
+            2491,
+            2156,
+            2545
+          ],
+          "confidence": 88.73
+        },
+        {
+          "text": "triếp cảm dự tiên khấu đạt, chuyên vọng thế tất viễn tỉnh, chuyên trình",
+          "bbox": [
+            456,
+            2578,
+            2159,
+            2630
+          ],
+          "confidence": 85.4
+        },
+        {
+          "text": "Chế hiện đại nhân thụy lượng, tòng trung chức định bài thi, nhất",
+          "bbox": [
+            457,
+            2665,
+            2161,
+            2718
+          ],
+          "confidence": 89.31
+        },
+        {
+          "text": "thiết sự nghi, tỷ đặc tuân phung chiếu biện, thú miễn suất lược chi",
+          "bbox": [
+            457,
+            2752,
+            2160,
+            2799
+          ],
+          "confidence": 91.92
+        },
+        {
+          "text": "cứu, cám bơi võ ky hy.",
+          "bbox": [
+            456,
+            2853,
+            981,
+            2885
+          ],
+          "confidence": 70.14
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2563,
+          3194
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 62.231,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              7,
+              19,
+              296,
+              45
+            ],
+            "generated_text": "ngothinhamch1.pdf",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.919,
+            "confidence": 98.71,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              451,
+              200,
+              1221,
+              238
+            ],
+            "generated_text": "NGŮ THÍ NHAM TOAN TẬP - TẬP III",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.687,
+            "confidence": 79.37,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              453,
+              243,
+              2162,
+              257
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.454,
+            "confidence": 93.27,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              451,
+              299,
+              705,
+              337
+            ],
+            "generated_text": "PHIEN AM:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.715,
+            "confidence": 99.66,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              624,
+              402,
+              1982,
+              447
+            ],
+            "generated_text": "BAM THIEN TRIEU TA GIANG DAO LAM DAI NHAN",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.565,
+            "confidence": 98.48,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              782,
+              487,
+              2005,
+              529
+            ],
+            "generated_text": "(THINH ĐINH PHU QUAN CUNG ĐON SỰ LÊ.",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.732,
+            "confidence": 88.15,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              881,
+              569,
+              1734,
+              611
+            ],
+            "generated_text": "THANG LONG LƯU THU QUAN BAM)",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.286,
+            "confidence": 91.26,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              599,
+              704,
+              2155,
+              750
+            ],
+            "generated_text": "Tư tiếp Lang Sơn Trần mục dịch hội công văn nhất dũng, nội khai",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 1.936,
+            "confidence": 86.8,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              444,
+              796,
+              2152,
+              849
+            ],
+            "generated_text": "phụng đại nhân trát thi, Kiên Long ngũ thấp tứ niên, thất nguyệt nhất,",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 2.328,
+            "confidence": 91.89,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              444,
+              886,
+              2159,
+              940
+            ],
+            "generated_text": "phụng Tước các độc bộ đường công lai trát, khâm phụng dự chỉ, phong",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 2.123,
+            "confidence": 95.68,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              450,
+              977,
+              2158,
+              1031
+            ],
+            "generated_text": "bản quốc Quốc trường vi An Nam Quốc Vương, dĩ phái ủy đại viên lại đệ",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 2.05,
+            "confidence": 87.1,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              449,
+              1068,
+              2156,
+              1121
+            ],
+            "generated_text": "sắc thư, tiên phó bản quốc tuyên thi, kế bất nguyệt thương cán, tức khả",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 2.405,
+            "confidence": 88.72,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              449,
+              1159,
+              2155,
+              1203
+            ],
+            "generated_text": "đáo quan. Diên đô nhu dung công quán phu mã, tảo tảo bi biên, tinh tra",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 2.473,
+            "confidence": 88.21,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              449,
+              1249,
+              2161,
+              1294
+            ],
+            "generated_text": "chiếu hướng lai sách phong điện lệ, tứ hầu chương trình. Nhất thiết sư",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.26,
+            "confidence": 84.91,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              450,
+              1339,
+              2158,
+              1393
+            ],
+            "generated_text": "nghi, tiên tương liệt tập bám trình, đặc bảng tra hạch đắng nhân. Ty",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 2.112,
+            "confidence": 91.96,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              450,
+              1431,
+              1312,
+              1476
+            ],
+            "generated_text": "đăng phủng độc bất thắng hoan biên.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.429,
+            "confidence": 83.54,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              596,
+              1531,
+              2155,
+              1586
+            ],
+            "generated_text": "Kiến tư Quốc trường, tân kiến áp vu Nghệ An, ủy ty đăng lưu",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.14,
+            "confidence": 88.88,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              451,
+              1620,
+              2157,
+              1666
+            ],
+            "generated_text": "thủ Thắng Long, cấn dĩ trì dịch khái tri. Đê vũ lao liên tuân, văng",
+            "n_lines": 1,
+            "tokens": 32,
+            "seconds": 2.545,
+            "confidence": 87.13,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              452,
+              1708,
+              2155,
+              1753
+            ],
+            "generated_text": "phản ước chỉ nguyệt dư, thả bản quốc kinh loan chi hâu, tư Phú",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 2.119,
+            "confidence": 88.19,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              449,
+              1794,
+              2151,
+              1849
+            ],
+            "generated_text": "Lượng giang dĩ bắc áp lý tiêu điều, Lạng Sơn vưu vi quán măng.",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.263,
+            "confidence": 91.49,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              451,
+              1881,
+              2153,
+              1935
+            ],
+            "generated_text": "Phụng chiếu cổ lệ, Bắc Lạng nhị trấn diễn đô, tỉnh hữu công quán,",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 2.474,
+            "confidence": 92.43,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              452,
+              1967,
+              2153,
+              2021
+            ],
+            "generated_text": "cấp nhu dụng vật kiện, ty đăng cân dĩ tiện nghi, sức cai Trán mục,",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 2.403,
+            "confidence": 87.8,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              453,
+              2054,
+              2159,
+              2108
+            ],
+            "generated_text": "tuân phụng lý tác, duy khủng nhất kỳ thái tróc, thế nan nhất nhất",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 2.118,
+            "confidence": 96.71,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              453,
+              2141,
+              2154,
+              2194
+            ],
+            "generated_text": "chỉnh tê. Chí ư dịch đệ phu mã, phụng dĩ phải biệt trấn nhân lai,",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 2.338,
+            "confidence": 84.31,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              454,
+              2228,
+              2158,
+              2284
+            ],
+            "generated_text": "hậu phụng nghênh tiếp. Thắng hoặc thế lực bất phu, chí hữu linh tinh",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 2.472,
+            "confidence": 94.72,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              453,
+              2316,
+              2160,
+              2370
+            ],
+            "generated_text": "khoáng khuyết chi xứ, thực do tâm dữ lực vi, tốt nan lý hội, như phụng",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 2.396,
+            "confidence": 96.8,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              455,
+              2404,
+              2164,
+              2457
+            ],
+            "generated_text": "liệt tập bấm trình, hậu tra y lệ tuân hành. Thiết bằng đường kim sự",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 2.054,
+            "confidence": 92.13,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              455,
+              2491,
+              2156,
+              2545
+            ],
+            "generated_text": "thế bất cấp hướng lai thấp chi nhi tam, ty đăng khủng cụ di thâm,",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 2.184,
+            "confidence": 88.73,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              456,
+              2578,
+              2159,
+              2630
+            ],
+            "generated_text": "triếp cảm dự tiên khấu đạt, chuyên vọng thế tất viễn tỉnh, chuyên trình",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 2.124,
+            "confidence": 85.4,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              457,
+              2665,
+              2161,
+              2718
+            ],
+            "generated_text": "Chế hiện đại nhân thụy lượng, tòng trung chức định bài thi, nhất",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.709,
+            "confidence": 89.31,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              457,
+              2752,
+              2160,
+              2799
+            ],
+            "generated_text": "thiết sự nghi, tỷ đặc tuân phung chiếu biện, thú miễn suất lược chi",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.256,
+            "confidence": 91.92,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 32,
+            "box": [
+              456,
+              2853,
+              981,
+              2885
+            ],
+            "generated_text": "cứu, cám bơi võ ky hy.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.154,
+            "confidence": 70.14,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              728,
+              747,
+              2006,
+              758
+            ],
+            "ink": 440
+          },
+          {
+            "box": [
+              557,
+              1200,
+              2000,
+              1212
+            ],
+            "ink": 515
+          },
+          {
+            "box": [
+              706,
+              1291,
+              2140,
+              1302
+            ],
+            "ink": 375
+          },
+          {
+            "box": [
+              537,
+              1474,
+              1262,
+              1483
+            ],
+            "ink": 335
+          },
+          {
+            "box": [
+              684,
+              1662,
+              2149,
+              1673
+            ],
+            "ink": 471
+          },
+          {
+            "box": [
+              449,
+              1749,
+              2013,
+              1761
+            ],
+            "ink": 478
+          },
+          {
+            "box": [
+              619,
+              2795,
+              2028,
+              2805
+            ],
+            "ink": 411
+          },
+          {
+            "box": [
+              488,
+              2843,
+              970,
+              2855
+            ],
+            "ink": 560
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

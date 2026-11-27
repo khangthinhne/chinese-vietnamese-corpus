@@ -1,0 +1,985 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_20",
+  "engine": "paddlevl",
+  "page": 502,
+  "runs": [
+    {
+      "key": "daeac4d37678c00f2e04a74c44ab43184966f9015ffc4fd15cfee4958e52ff19",
+      "parameters": {
+        "image_sha256": "b503120e40a1a868e8f186370531144f349574cbbd4aac80ed5db9aeb594dfbc",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T08:21:50+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_502.png",
+      "image_size": [
+        1839,
+        2803
+      ],
+      "crop_box": [
+        0,
+        0,
+        1839,
+        2803
+      ],
+      "lines": [
+        {
+          "text": "Luôn dip, vua Lê bèn sai Quỹ làm sự thần đi nghênh tiếp, đón",
+          "bbox": [
+            332,
+            235,
+            1718,
+            290
+          ],
+          "confidence": 92.91
+        },
+        {
+          "text": "chúa vê triệu.",
+          "bbox": [
+            242,
+            300,
+            540,
+            332
+          ],
+          "confidence": 82.19
+        },
+        {
+          "text": "Lúc đó, chúa ở Hàm Giang, nghe nói Nhương và Chỉnh ngấm",
+          "bbox": [
+            332,
+            366,
+            1716,
+            421
+          ],
+          "confidence": 94.92
+        },
+        {
+          "text": "ngăm thông tin tức với nhau, ngỡ rằng bọn chúng có mưu đồ gì khác.",
+          "bbox": [
+            242,
+            427,
+            1715,
+            480
+          ],
+          "confidence": 88.85
+        },
+        {
+          "text": "liên than răng:",
+          "bbox": [
+            242,
+            493,
+            568,
+            524
+          ],
+          "confidence": 83.15
+        },
+        {
+          "text": "- Đây không phải là chỗ yên lành có thể ở được. Ta thà vút",
+          "bbox": [
+            329,
+            557,
+            1716,
+            610
+          ],
+          "confidence": 94.42
+        },
+        {
+          "text": "biến vào núi còn hơn là ngồi lại mà chiu nhuc.",
+          "bbox": [
+            242,
+            619,
+            1232,
+            663
+          ],
+          "confidence": 84.84
+        },
+        {
+          "text": "Rôi chúa sai người hầu bí mật mượn mấy chiếc thuyền buôn.",
+          "bbox": [
+            330,
+            691,
+            1713,
+            746
+          ],
+          "confidence": 90.25
+        },
+        {
+          "text": "đang đêm đem cả đồ đăng, thuận gió giương buồm chạy thắng tới Sơn",
+          "bbox": [
+            238,
+            751,
+            1711,
+            806
+          ],
+          "confidence": 90.4
+        },
+        {
+          "text": "Nam. Sáng ngày Nhường mới biết, rất lấy làm kinh sợ mà nói:",
+          "bbox": [
+            238,
+            811,
+            1582,
+            863
+          ],
+          "confidence": 95.39
+        },
+        {
+          "text": "- Chúa đi sang Nam mà không báo cho ta biết trước, phải chăng",
+          "bbox": [
+            326,
+            886,
+            1711,
+            939
+          ],
+          "confidence": 97.61
+        },
+        {
+          "text": "là có ý ngờ ta? Nếu không theo chúa, lòng này không sao bộc bạch ra",
+          "bbox": [
+            237,
+            945,
+            1710,
+            1000
+          ],
+          "confidence": 97.26
+        },
+        {
+          "text": "được, thiên hạ sẽ cho ta là người thế nào?",
+          "bbox": [
+            235,
+            1006,
+            1133,
+            1052
+          ],
+          "confidence": 98.29
+        },
+        {
+          "text": "Tức thì, Nhường cũng cưỡi chiếc thuyền binh chay theo chúa.",
+          "bbox": [
+            323,
+            1076,
+            1618,
+            1130
+          ],
+          "confidence": 87.93
+        },
+        {
+          "text": "Chúa đến huyện Chân Định thì có Phạm Tôn Lân¹ lên thuyền",
+          "bbox": [
+            323,
+            1151,
+            1707,
+            1203
+          ],
+          "confidence": 93.93
+        },
+        {
+          "text": "yet kiến.",
+          "bbox": [
+            232,
+            1219,
+            426,
+            1248
+          ],
+          "confidence": 90.45
+        },
+        {
+          "text": "Lân quê ở làng Bác Trạch, huyện Chân Định,² vốn dòng đôi thế",
+          "bbox": [
+            323,
+            1284,
+            1708,
+            1336
+          ],
+          "confidence": 90.82
+        },
+        {
+          "text": "phiệt; ông tỗ đòi trước là Phạm Tôn Nhâm, một danh tướng của",
+          "bbox": [
+            231,
+            1345,
+            1705,
+            1395
+          ],
+          "confidence": 91.54
+        },
+        {
+          "text": "Trình Doanh, khoảng đầu niên hiệu Cảnh Hưng từng lập được nhiều",
+          "bbox": [
+            231,
+            1401,
+            1704,
+            1456
+          ],
+          "confidence": 95.04
+        },
+        {
+          "text": "chiên công, trong quân áp ai cũng kính phục. Tính Lân hào hiệp,",
+          "bbox": [
+            231,
+            1470,
+            1702,
+            1517
+          ],
+          "confidence": 94.84
+        },
+        {
+          "text": "khách ăn trong nhà thường có hàng trăm, khí giới cất giấu đầy đủ.",
+          "bbox": [
+            231,
+            1526,
+            1701,
+            1577
+          ],
+          "confidence": 95.95
+        },
+        {
+          "text": "Trong đám thổ hào của trấn Sơn Nam Hạ, Lân là bác nhất.",
+          "bbox": [
+            229,
+            1583,
+            1502,
+            1634
+          ],
+          "confidence": 92.8
+        },
+        {
+          "text": "Lúc ấy gặp chúa, Lân bàn việc binh cùng chúa, và vach chước",
+          "bbox": [
+            320,
+            1659,
+            1701,
+            1708
+          ],
+          "confidence": 92.85
+        },
+        {
+          "text": "tiến thủ. Chúa rất vui mừng và nói:",
+          "bbox": [
+            227,
+            1715,
+            991,
+            1763
+          ],
+          "confidence": 92.64
+        },
+        {
+          "text": "- Tiệc rằng ta gặp người muộn quá! Người hãy gắng giúp ta đế",
+          "bbox": [
+            317,
+            1795,
+            1697,
+            1848
+          ],
+          "confidence": 93.12
+        },
+        {
+          "text": "nổi công đức của tổ tiên ngày xưa.",
+          "bbox": [
+            226,
+            1853,
+            957,
+            1895
+          ],
+          "confidence": 91.67
+        },
+        {
+          "text": "Lần nọ1:",
+          "bbox": [
+            317,
+            1933,
+            503,
+            1961
+          ],
+          "confidence": 76.09
+        },
+        {
+          "text": "- Thần vốn không tài gì. May được nhờ oai linh của chúa, đám",
+          "bbox": [
+            314,
+            1995,
+            1696,
+            2047
+          ],
+          "confidence": 91.81
+        },
+        {
+          "text": "đâu không hết lòng hết sức.",
+          "bbox": [
+            224,
+            2055,
+            821,
+            2098
+          ],
+          "confidence": 96.44
+        },
+        {
+          "text": "Rối đó, Lân mời chúa về nhà, nhóm họp đồ đăng, hộ về cho chúa.",
+          "bbox": [
+            313,
+            2129,
+            1691,
+            2181
+          ],
+          "confidence": 84.99
+        },
+        {
+          "text": "Hôm sau, Nhường cũng đã theo đến nơi. Trước hết, Nhường sai",
+          "bbox": [
+            312,
+            2202,
+            1693,
+            2254
+          ],
+          "confidence": 94.76
+        },
+        {
+          "text": "người đưa một tờ khái cho chúa, trong nói:",
+          "bbox": [
+            221,
+            2263,
+            1130,
+            2310
+          ],
+          "confidence": 96.08
+        },
+        {
+          "text": "1. Cương mục chép là Phạm Đình Thiên.",
+          "bbox": [
+            313,
+            2438,
+            1010,
+            2476
+          ],
+          "confidence": 94.34
+        },
+        {
+          "text": "2. Nay là huyện Kiến Xương, tỉnh Thái Bình.",
+          "bbox": [
+            309,
+            2487,
+            1082,
+            2526
+          ],
+          "confidence": 97.66
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          1839,
+          2803
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 18.491,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              332,
+              235,
+              1718,
+              290
+            ],
+            "generated_text": "Luôn dip, vua Lê bèn sai Quỹ làm sự thần đi nghênh tiếp, đón",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.635,
+            "confidence": 92.91,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              242,
+              300,
+              540,
+              332
+            ],
+            "generated_text": "chúa vê triệu.",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.248,
+            "confidence": 82.19,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              332,
+              366,
+              1716,
+              421
+            ],
+            "generated_text": "Lúc đó, chúa ở Hàm Giang, nghe nói Nhương và Chỉnh ngấm",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.618,
+            "confidence": 94.92,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              242,
+              427,
+              1715,
+              480
+            ],
+            "generated_text": "ngăm thông tin tức với nhau, ngỡ rằng bọn chúng có mưu đồ gì khác.",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.612,
+            "confidence": 88.85,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              242,
+              493,
+              568,
+              524
+            ],
+            "generated_text": "liên than răng:",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.262,
+            "confidence": 83.15,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              329,
+              557,
+              1716,
+              610
+            ],
+            "generated_text": "- Đây không phải là chỗ yên lành có thể ở được. Ta thà vút",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.556,
+            "confidence": 94.42,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              242,
+              619,
+              1232,
+              663
+            ],
+            "generated_text": "biến vào núi còn hơn là ngồi lại mà chiu nhuc.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.492,
+            "confidence": 84.84,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              330,
+              691,
+              1713,
+              746
+            ],
+            "generated_text": "Rôi chúa sai người hầu bí mật mượn mấy chiếc thuyền buôn.",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.626,
+            "confidence": 90.25,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              238,
+              751,
+              1711,
+              806
+            ],
+            "generated_text": "đang đêm đem cả đồ đăng, thuận gió giương buồm chạy thắng tới Sơn",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 0.74,
+            "confidence": 90.4,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              238,
+              811,
+              1582,
+              863
+            ],
+            "generated_text": "Nam. Sáng ngày Nhường mới biết, rất lấy làm kinh sợ mà nói:",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.541,
+            "confidence": 95.39,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              326,
+              886,
+              1711,
+              939
+            ],
+            "generated_text": "- Chúa đi sang Nam mà không báo cho ta biết trước, phải chăng",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.534,
+            "confidence": 97.61,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              237,
+              945,
+              1710,
+              1000
+            ],
+            "generated_text": "là có ý ngờ ta? Nếu không theo chúa, lòng này không sao bộc bạch ra",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.628,
+            "confidence": 97.26,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              235,
+              1006,
+              1133,
+              1052
+            ],
+            "generated_text": "được, thiên hạ sẽ cho ta là người thế nào?",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.443,
+            "confidence": 98.29,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              323,
+              1076,
+              1618,
+              1130
+            ],
+            "generated_text": "Tức thì, Nhường cũng cưỡi chiếc thuyền binh chay theo chúa.",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.611,
+            "confidence": 87.93,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              323,
+              1151,
+              1707,
+              1203
+            ],
+            "generated_text": "Chúa đến huyện Chân Định thì có Phạm Tôn Lân¹ lên thuyền",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.578,
+            "confidence": 93.93,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              232,
+              1219,
+              426,
+              1248
+            ],
+            "generated_text": "yet kiến.",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.217,
+            "confidence": 90.45,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              323,
+              1284,
+              1708,
+              1336
+            ],
+            "generated_text": "Lân quê ở làng Bác Trạch, huyện Chân Định,² vốn dòng đôi thế",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 0.706,
+            "confidence": 90.82,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              231,
+              1345,
+              1705,
+              1395
+            ],
+            "generated_text": "phiệt; ông tỗ đòi trước là Phạm Tôn Nhâm, một danh tướng của",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.645,
+            "confidence": 91.54,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              231,
+              1401,
+              1704,
+              1456
+            ],
+            "generated_text": "Trình Doanh, khoảng đầu niên hiệu Cảnh Hưng từng lập được nhiều",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.572,
+            "confidence": 95.04,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              231,
+              1470,
+              1702,
+              1517
+            ],
+            "generated_text": "chiên công, trong quân áp ai cũng kính phục. Tính Lân hào hiệp,",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.653,
+            "confidence": 94.84,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              231,
+              1526,
+              1701,
+              1577
+            ],
+            "generated_text": "khách ăn trong nhà thường có hàng trăm, khí giới cất giấu đầy đủ.",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.631,
+            "confidence": 95.95,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              229,
+              1583,
+              1502,
+              1634
+            ],
+            "generated_text": "Trong đám thổ hào của trấn Sơn Nam Hạ, Lân là bác nhất.",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.621,
+            "confidence": 92.8,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              320,
+              1659,
+              1701,
+              1708
+            ],
+            "generated_text": "Lúc ấy gặp chúa, Lân bàn việc binh cùng chúa, và vach chước",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.654,
+            "confidence": 92.85,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              227,
+              1715,
+              991,
+              1763
+            ],
+            "generated_text": "tiến thủ. Chúa rất vui mừng và nói:",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.422,
+            "confidence": 92.64,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              317,
+              1795,
+              1697,
+              1848
+            ],
+            "generated_text": "- Tiệc rằng ta gặp người muộn quá! Người hãy gắng giúp ta đế",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.669,
+            "confidence": 93.12,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              226,
+              1853,
+              957,
+              1895
+            ],
+            "generated_text": "nổi công đức của tổ tiên ngày xưa.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 0.378,
+            "confidence": 91.67,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              317,
+              1933,
+              503,
+              1961
+            ],
+            "generated_text": "Lần nọ1:",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.259,
+            "confidence": 76.09,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              314,
+              1995,
+              1696,
+              2047
+            ],
+            "generated_text": "- Thần vốn không tài gì. May được nhờ oai linh của chúa, đám",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.614,
+            "confidence": 91.81,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              224,
+              2055,
+              821,
+              2098
+            ],
+            "generated_text": "đâu không hết lòng hết sức.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 0.407,
+            "confidence": 96.44,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              313,
+              2129,
+              1691,
+              2181
+            ],
+            "generated_text": "Rối đó, Lân mời chúa về nhà, nhóm họp đồ đăng, hộ về cho chúa.",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 0.731,
+            "confidence": 84.99,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              312,
+              2202,
+              1693,
+              2254
+            ],
+            "generated_text": "Hôm sau, Nhường cũng đã theo đến nơi. Trước hết, Nhường sai",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.591,
+            "confidence": 94.76,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 32,
+            "box": [
+              221,
+              2263,
+              1130,
+              2310
+            ],
+            "generated_text": "người đưa một tờ khái cho chúa, trong nói:",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.468,
+            "confidence": 96.08,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 33,
+            "box": [
+              220,
+              2395,
+              834,
+              2412
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.147,
+            "confidence": 63.88,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 34,
+            "box": [
+              313,
+              2438,
+              1010,
+              2476
+            ],
+            "generated_text": "1. Cương mục chép là Phạm Đình Thiên.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.483,
+            "confidence": 94.34,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 35,
+            "box": [
+              309,
+              2487,
+              1082,
+              2526
+            ],
+            "generated_text": "2. Nay là huyện Kiến Xương, tỉnh Thái Bình.",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.496,
+            "confidence": 97.66,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      }
+    }
+  ]
+}

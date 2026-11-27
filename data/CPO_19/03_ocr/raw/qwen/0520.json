@@ -1,0 +1,231 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "qwen",
+  "page": 520,
+  "runs": [
+    {
+      "key": "0253b26b01f5fcf1ce3bfc28a2e49d1c804c838e805ddd5ba622a59b699be360",
+      "parameters": {
+        "image_sha256": "a1ce766ee086b95ff9c8003a0c1011d745d614a4b318d90c979912388505d164",
+        "engine": {
+          "name": "qwen",
+          "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "model_revision": "main",
+          "transformers_version": "4.57.6",
+          "torch_version": "2.5.1+cu121",
+          "cuda_version": "12.1",
+          "bitsandbytes_version": "0.50.2",
+          "quantization": {
+            "load_in_4bit": true,
+            "quant_type": "nf4",
+            "double_quant": true,
+            "compute_dtype": "float16"
+          },
+          "mode": "all",
+          "min_pixels": 50176,
+          "max_pixels": 802816,
+          "band_inches": 2.0,
+          "max_new_tokens": 768,
+          "repetition_penalty": 1.05,
+          "adapter_version": 3,
+          "prompt_version": 3,
+          "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74"
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T22:12:04+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_520.png",
+      "image_size": [
+        2580,
+        3019
+      ],
+      "crop_box": [
+        0,
+        0,
+        2580,
+        3019
+      ],
+      "lines": [
+        {
+          "text": "BANG GIAO HẢO THOẠI",
+          "bbox": [
+            7,
+            0,
+            2086,
+            222
+          ],
+          "confidence": 64.69
+        },
+        {
+          "text": "需首之惩？惟大人体大皇帝柔怀之德，以简易之道行光驰谕于小国久假共习旧，众从阐明中出。",
+          "bbox": [
+            7,
+            222,
+            2086,
+            444
+          ],
+          "confidence": 64.69
+        },
+        {
+          "text": "遣親姬光顯隨表入覲，即轉為遞達，不盈旬月之間，奉大皇帝恩旨準予投誠，寵之以珍珠，訓之以玉，諭行價既奉賜進。大司馬出塞之兵隨撤，而暹羅之舟亦罷。此聖人以天下爲度，而委曲幹旋遂得表衷洞達。",
+          "bbox": [
+            373,
+            508,
+            2077,
+            976
+          ],
+          "confidence": 91.81
+        },
+        {
+          "text": "大人亦有苦心处焉，若夫六月二十六日，小番所遣谢恩之表，奉大人由驿转奏，仰蒙圣旨嘉悦，著即封为国王，又奉亲书御诗以赐之，此曚古奇逢，小番意想之所不到，欢忻感激，诚莫得而形容。奉尊谕云：“屢次具",
+          "bbox": [
+            373,
+            1049,
+            2077,
+            1549
+          ],
+          "confidence": 88.84
+        },
+        {
+          "text": "禀事得顺成。惟此一片热肠有以契圣心，而邀宠命。盖其情之终始事之颠末，小番心自知之。大人所以为小番谋者，先立招怀之局，以消兵战之端；次投解释之机，而就恩封之典，不上数月工夫，小番遂得出",
+          "bbox": [
+            374,
+            1618,
+            2074,
+            2115
+          ],
+          "confidence": 93.4
+        },
+        {
+          "text": "谷遷喬沐九重之恩波，為一方之司牧。凡所以曲成庸竈，直從急爐中點化出來，大皇帝聖德如天而幹紐周旋，寔惟大人展禹益之猷，行周召之志，故其事之順成，有如此之簡易者也。",
+          "bbox": [
+            374,
+            2186,
+            2074,
+            2939
+          ],
+          "confidence": 93.62
+        }
+      ],
+      "raw": {
+        "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+        "model_revision": "main",
+        "mode": "all",
+        "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74",
+        "dpi": 300,
+        "image_size": [
+          2580,
+          3019
+        ],
+        "band_target_height": 600,
+        "bbox_granularity": "band_even_split",
+        "max_new_tokens": 768,
+        "max_pixels": 802816,
+        "inference_seconds": 27.181,
+        "bands": [
+          {
+            "band": 1,
+            "y0": 3,
+            "y1": 475,
+            "ink_box": [
+              7,
+              0,
+              2086,
+              444
+            ],
+            "generated_text": "BANG GIAO HẢO THOẠI\n\n需首之惩？惟大人体大皇帝柔怀之德，以简易之道行光驰谕于小国久假共习旧，众从阐明中出。",
+            "n_lines": 2,
+            "tokens": 50,
+            "seconds": 3.575,
+            "confidence": 64.69,
+            "flags": []
+          },
+          {
+            "band": 2,
+            "y0": 475,
+            "y1": 1013,
+            "ink_box": [
+              373,
+              508,
+              2077,
+              976
+            ],
+            "generated_text": "遣親姬光顯隨表入覲，即轉為遞達，不盈旬月之間，奉大皇帝恩旨準予投誠，寵之以珍珠，訓之以玉，諭行價既奉賜進。大司馬出塞之兵隨撤，而暹羅之舟亦罷。此聖人以天下爲度，而委曲幹旋遂得表衷洞達。",
+            "n_lines": 1,
+            "tokens": 93,
+            "seconds": 6.3,
+            "confidence": 91.81,
+            "flags": []
+          },
+          {
+            "band": 3,
+            "y0": 1013,
+            "y1": 1583,
+            "ink_box": [
+              373,
+              1049,
+              2077,
+              1549
+            ],
+            "generated_text": "大人亦有苦心处焉，若夫六月二十六日，小番所遣谢恩之表，奉大人由驿转奏，仰蒙圣旨嘉悦，著即封为国王，又奉亲书御诗以赐之，此曚古奇逢，小番意想之所不到，欢忻感激，诚莫得而形容。奉尊谕云：“屢次具",
+            "n_lines": 1,
+            "tokens": 90,
+            "seconds": 6.109,
+            "confidence": 88.84,
+            "flags": []
+          },
+          {
+            "band": 4,
+            "y0": 1583,
+            "y1": 2150,
+            "ink_box": [
+              374,
+              1618,
+              2074,
+              2115
+            ],
+            "generated_text": "禀事得顺成。惟此一片热肠有以契圣心，而邀宠命。盖其情之终始事之颠末，小番心自知之。大人所以为小番谋者，先立招怀之局，以消兵战之端；次投解释之机，而就恩封之典，不上数月工夫，小番遂得出",
+            "n_lines": 1,
+            "tokens": 86,
+            "seconds": 5.873,
+            "confidence": 93.4,
+            "flags": []
+          },
+          {
+            "band": 5,
+            "y0": 2150,
+            "y1": 2935,
+            "ink_box": [
+              374,
+              2186,
+              2074,
+              2939
+            ],
+            "generated_text": "谷遷喬沐九重之恩波，為一方之司牧。凡所以曲成庸竈，直從急爐中點化出來，大皇帝聖德如天而幹紐周旋，寔惟大人展禹益之猷，行周召之志，故其事之順成，有如此之簡易者也。",
+            "n_lines": 1,
+            "tokens": 77,
+            "seconds": 5.295,
+            "confidence": 93.62,
+            "flags": []
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "61cbea5c0055c260ccfc12f884e0febca7b2783b",
+        "git_describe": "61cbea5",
+        "git_dirty": true,
+        "gpu": "NVIDIA L4",
+        "dtype": "float16",
+        "adapter_version": 3
+      }
+    }
+  ]
+}

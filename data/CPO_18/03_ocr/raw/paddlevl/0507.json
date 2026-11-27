@@ -1,0 +1,947 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_18",
+  "engine": "paddlevl",
+  "page": 507,
+  "runs": [
+    {
+      "key": "f4f1946bf88cadc3cca78fa3b3297b9db1ca8effd3166449a95ed2f5fdfa6943",
+      "parameters": {
+        "image_sha256": "ed924a6da96eb2bfb214a4827c42a69e7f9d21d754ae63edad18fa3aace390c5",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T18:58:01+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_507.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        0,
+        2480,
+        3509
+      ],
+      "lines": [
+        {
+          "text": "V",
+          "bbox": [
+            269,
+            212,
+            2129,
+            235
+          ],
+          "confidence": 25.06
+        },
+        {
+          "text": "Mâu Tử viết : Lão Tử vân : “Vật tráng tắc lão, vi chi",
+          "bbox": [
+            432,
+            312,
+            2125,
+            379
+          ],
+          "confidence": 92.63
+        },
+        {
+          "text": "bất đảo, táo dĩ\". Duy hữu đặc đảo giả bất sinh, diệc bất",
+          "bbox": [
+            292,
+            403,
+            2127,
+            469
+          ],
+          "confidence": 85.85
+        },
+        {
+          "text": "tráng ; bất tráng, diệc bất lão ; bất lão, diệc bất bệnh ;",
+          "bbox": [
+            295,
+            494,
+            2126,
+            560
+          ],
+          "confidence": 96.18
+        },
+        {
+          "text": "bất bệnh, diệc bất hủ. Thi dĩ Lão Từ dĩ thân vi đại hoan",
+          "bbox": [
+            293,
+            583,
+            2128,
+            649
+          ],
+          "confidence": 84.38
+        },
+        {
+          "text": "vên. Vũ Vương cứ bệnh, Chu Công khát mệnh ; Trong",
+          "bbox": [
+            292,
+            675,
+            2435,
+            740
+          ],
+          "confidence": 87.58
+        },
+        {
+          "text": "Ni hữu tất, Từ Lô thỉnh đảo. Ngô kiến thánh nhân giai",
+          "bbox": [
+            295,
+            765,
+            2129,
+            831
+          ],
+          "confidence": 92.26
+        },
+        {
+          "text": "hũu tất hĩ, vi đổ kỳ vô bệnh giả. Thân Nông thường thảo",
+          "bbox": [
+            293,
+            858,
+            2131,
+            923
+          ],
+          "confidence": 86.66
+        },
+        {
+          "text": "đai tử giả sổ tháp ; Hoàng Đế khế thù thu châm ư Kỳ",
+          "bbox": [
+            297,
+            947,
+            2432,
+            1014
+          ],
+          "confidence": 81.81
+        },
+        {
+          "text": "Bá. Thủ chi tam thành khỉ dương bất như kim chi Đạo",
+          "bbox": [
+            295,
+            1038,
+            2133,
+            1105
+          ],
+          "confidence": 85.43
+        },
+        {
+          "text": "sĩ hộ ? Sát tỉnh tư ngôn, diệc tức dì phế hĩ !",
+          "bbox": [
+            297,
+            1126,
+            1723,
+            1192
+          ],
+          "confidence": 80.99
+        },
+        {
+          "text": "DICH NGHIA:",
+          "bbox": [
+            436,
+            1411,
+            894,
+            1465
+          ],
+          "confidence": 94.83
+        },
+        {
+          "text": "Hỏi rằng : Người theo đạo nói có thể đấy lùi bệnh,",
+          "bbox": [
+            439,
+            1548,
+            2138,
+            1613
+          ],
+          "confidence": 92.34
+        },
+        {
+          "text": "không đau ốm, chẳng cần chấm cứu thuộc men gì mà",
+          "bbox": [
+            295,
+            1640,
+            2371,
+            1705
+          ],
+          "confidence": 88.36
+        },
+        {
+          "text": "cũng khỏi, có thất như vây không ? Thế sao nhà Phát",
+          "bbox": [
+            298,
+            1728,
+            2143,
+            1793
+          ],
+          "confidence": 91.14
+        },
+        {
+          "text": "khi có bệnh, văn phải châm cứu, thuốc men ?",
+          "bbox": [
+            297,
+            1817,
+            1791,
+            1880
+          ],
+          "confidence": 84.82
+        },
+        {
+          "text": "Mâu Tử đáp : Lão Tử nói : “Vật đã lớn thì phải giả,",
+          "bbox": [
+            438,
+            1945,
+            2147,
+            2010
+          ],
+          "confidence": 89.25
+        },
+        {
+          "text": "goi là lỗi đạo, sẽ sớm kết thúc\". Chỉ có người đặc đạo thì",
+          "bbox": [
+            300,
+            2035,
+            2150,
+            2100
+          ],
+          "confidence": 93.69
+        },
+        {
+          "text": "mói không sinh, cũng không lón ; đã không lón thì cũng",
+          "bbox": [
+            299,
+            2126,
+            2152,
+            2191
+          ],
+          "confidence": 96.23
+        },
+        {
+          "text": "không già ; đã không già thì cũng không bệnh ; đã",
+          "bbox": [
+            296,
+            2214,
+            2150,
+            2290
+          ],
+          "confidence": 90.87
+        },
+        {
+          "text": "không bênh thì cũng không mục nát. Cho nên Lão Tử",
+          "bbox": [
+            296,
+            2301,
+            2152,
+            2368
+          ],
+          "confidence": 90.91
+        },
+        {
+          "text": "coi tấm thân là mối lo lón. Vũ Vương làm bệnh, Chu",
+          "bbox": [
+            297,
+            2391,
+            2153,
+            2458
+          ],
+          "confidence": 90.17
+        },
+        {
+          "text": "Công xin trời tha mang sổng cho ; Trong Ni ôm đau, Từ",
+          "bbox": [
+            300,
+            2480,
+            2155,
+            2548
+          ],
+          "confidence": 92.82
+        },
+        {
+          "text": "Lô câu khán. Tôi thấy thánh nhân đều có đau ốm, chưa",
+          "bbox": [
+            301,
+            2570,
+            2157,
+            2636
+          ],
+          "confidence": 86.71
+        },
+        {
+          "text": "một ai là không cả. Thân Nông từng nêm có tìm thuốc,",
+          "bbox": [
+            302,
+            2659,
+            2156,
+            2725
+          ],
+          "confidence": 89.44
+        },
+        {
+          "text": "suýt chết máy chục lân ; Hoàng Đế đập đầu lay, đế Kỳ",
+          "bbox": [
+            302,
+            2744,
+            2160,
+            2816
+          ],
+          "confidence": 83.12
+        },
+        {
+          "text": "Bá (169) châm huyết cho. Lẽ nào ba vị thánh trên lại",
+          "bbox": [
+            304,
+            2835,
+            2435,
+            2902
+          ],
+          "confidence": 91.87
+        },
+        {
+          "text": "không bằng Đạo sĩ ngày nay ư ? Xem xét điều đó, cũng",
+          "bbox": [
+            303,
+            2922,
+            2453,
+            3000
+          ],
+          "confidence": 91.86
+        },
+        {
+          "text": "đủ để đẹp bỏ lời ông rồi.",
+          "bbox": [
+            305,
+            3013,
+            2441,
+            3078
+          ],
+          "confidence": 77.54
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          3509
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 13.945,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              269,
+              212,
+              2129,
+              235
+            ],
+            "generated_text": "V",
+            "n_lines": 1,
+            "tokens": 2,
+            "seconds": 0.09,
+            "confidence": 25.06,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              432,
+              312,
+              2125,
+              379
+            ],
+            "generated_text": "Mâu Tử viết : Lão Tử vân : “Vật tráng tắc lão, vi chi",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.584,
+            "confidence": 92.63,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              292,
+              403,
+              2127,
+              469
+            ],
+            "generated_text": "bất đảo, táo dĩ\". Duy hữu đặc đảo giả bất sinh, diệc bất",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 0.614,
+            "confidence": 85.85,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              295,
+              494,
+              2126,
+              560
+            ],
+            "generated_text": "tráng ; bất tráng, diệc bất lão ; bất lão, diệc bất bệnh ;",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.623,
+            "confidence": 96.18,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              293,
+              583,
+              2128,
+              649
+            ],
+            "generated_text": "bất bệnh, diệc bất hủ. Thi dĩ Lão Từ dĩ thân vi đại hoan",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.63,
+            "confidence": 84.38,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              292,
+              675,
+              2435,
+              740
+            ],
+            "generated_text": "vên. Vũ Vương cứ bệnh, Chu Công khát mệnh ; Trong",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.505,
+            "confidence": 87.58,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              295,
+              765,
+              2129,
+              831
+            ],
+            "generated_text": "Ni hữu tất, Từ Lô thỉnh đảo. Ngô kiến thánh nhân giai",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.57,
+            "confidence": 92.26,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              293,
+              858,
+              2131,
+              923
+            ],
+            "generated_text": "hũu tất hĩ, vi đổ kỳ vô bệnh giả. Thân Nông thường thảo",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.566,
+            "confidence": 86.66,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              297,
+              947,
+              2432,
+              1014
+            ],
+            "generated_text": "đai tử giả sổ tháp ; Hoàng Đế khế thù thu châm ư Kỳ",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.565,
+            "confidence": 81.81,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              295,
+              1038,
+              2133,
+              1105
+            ],
+            "generated_text": "Bá. Thủ chi tam thành khỉ dương bất như kim chi Đạo",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.448,
+            "confidence": 85.43,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              297,
+              1126,
+              1723,
+              1192
+            ],
+            "generated_text": "sĩ hộ ? Sát tỉnh tư ngôn, diệc tức dì phế hĩ !",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.532,
+            "confidence": 80.99,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              436,
+              1411,
+              894,
+              1465
+            ],
+            "generated_text": "DICH NGHIA:",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.183,
+            "confidence": 94.83,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              439,
+              1548,
+              2138,
+              1613
+            ],
+            "generated_text": "Hỏi rằng : Người theo đạo nói có thể đấy lùi bệnh,",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.451,
+            "confidence": 92.34,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              295,
+              1640,
+              2371,
+              1705
+            ],
+            "generated_text": "không đau ốm, chẳng cần chấm cứu thuộc men gì mà",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.546,
+            "confidence": 88.36,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              298,
+              1728,
+              2143,
+              1793
+            ],
+            "generated_text": "cũng khỏi, có thất như vây không ? Thế sao nhà Phát",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.449,
+            "confidence": 91.14,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              297,
+              1817,
+              1791,
+              1880
+            ],
+            "generated_text": "khi có bệnh, văn phải châm cứu, thuốc men ?",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.424,
+            "confidence": 84.82,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              438,
+              1945,
+              2147,
+              2010
+            ],
+            "generated_text": "Mâu Tử đáp : Lão Tử nói : “Vật đã lớn thì phải giả,",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.506,
+            "confidence": 89.25,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              300,
+              2035,
+              2150,
+              2100
+            ],
+            "generated_text": "goi là lỗi đạo, sẽ sớm kết thúc\". Chỉ có người đặc đạo thì",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.565,
+            "confidence": 93.69,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              299,
+              2126,
+              2152,
+              2191
+            ],
+            "generated_text": "mói không sinh, cũng không lón ; đã không lón thì cũng",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.385,
+            "confidence": 96.23,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              296,
+              2214,
+              2150,
+              2290
+            ],
+            "generated_text": "không già ; đã không già thì cũng không bệnh ; đã",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.343,
+            "confidence": 90.87,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              296,
+              2301,
+              2152,
+              2368
+            ],
+            "generated_text": "không bênh thì cũng không mục nát. Cho nên Lão Tử",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.446,
+            "confidence": 90.91,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              297,
+              2391,
+              2153,
+              2458
+            ],
+            "generated_text": "coi tấm thân là mối lo lón. Vũ Vương làm bệnh, Chu",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.522,
+            "confidence": 90.17,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              300,
+              2480,
+              2155,
+              2548
+            ],
+            "generated_text": "Công xin trời tha mang sổng cho ; Trong Ni ôm đau, Từ",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.535,
+            "confidence": 92.82,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              301,
+              2570,
+              2157,
+              2636
+            ],
+            "generated_text": "Lô câu khán. Tôi thấy thánh nhân đều có đau ốm, chưa",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.547,
+            "confidence": 86.71,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              302,
+              2659,
+              2156,
+              2725
+            ],
+            "generated_text": "một ai là không cả. Thân Nông từng nêm có tìm thuốc,",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.488,
+            "confidence": 89.44,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              302,
+              2744,
+              2160,
+              2816
+            ],
+            "generated_text": "suýt chết máy chục lân ; Hoàng Đế đập đầu lay, đế Kỳ",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.543,
+            "confidence": 83.12,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              304,
+              2835,
+              2435,
+              2902
+            ],
+            "generated_text": "Bá (169) châm huyết cho. Lẽ nào ba vị thánh trên lại",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.527,
+            "confidence": 91.87,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              303,
+              2922,
+              2453,
+              3000
+            ],
+            "generated_text": "không bằng Đạo sĩ ngày nay ư ? Xem xét điều đó, cũng",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.448,
+            "confidence": 91.86,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              305,
+              3013,
+              2441,
+              3078
+            ],
+            "generated_text": "đủ để đẹp bỏ lời ông rồi.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 0.305,
+            "confidence": 77.54,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              1977,
+              150,
+              2125,
+              163
+            ],
+            "ink": 845
+          },
+          {
+            "box": [
+              1642,
+              169,
+              2125,
+              180
+            ],
+            "ink": 684
+          },
+          {
+            "box": [
+              450,
+              556,
+              2125,
+              566
+            ],
+            "ink": 596
+          },
+          {
+            "box": [
+              292,
+              738,
+              2126,
+              751
+            ],
+            "ink": 780
+          },
+          {
+            "box": [
+              506,
+              920,
+              1973,
+              933
+            ],
+            "ink": 755
+          },
+          {
+            "box": [
+              547,
+              1010,
+              2432,
+              1024
+            ],
+            "ink": 887
+          },
+          {
+            "box": [
+              720,
+              1612,
+              2029,
+              1622
+            ],
+            "ink": 478
+          },
+          {
+            "box": [
+              432,
+              1793,
+              2102,
+              1804
+            ],
+            "ink": 562
+          },
+          {
+            "box": [
+              300,
+              2100,
+              1991,
+              2109
+            ],
+            "ink": 479
+          },
+          {
+            "box": [
+              445,
+              2544,
+              1662,
+              2554
+            ],
+            "ink": 611
+          },
+          {
+            "box": [
+              2081,
+              3246,
+              2432,
+              3259
+            ],
+            "ink": 849
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "61cbea5c0055c260ccfc12f884e0febca7b2783b",
+        "git_describe": "61cbea5",
+        "git_dirty": true,
+        "gpu": "NVIDIA L4",
+        "dtype": "bfloat16",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

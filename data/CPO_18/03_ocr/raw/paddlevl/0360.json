@@ -1,0 +1,513 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_18",
+  "engine": "paddlevl",
+  "page": 360,
+  "runs": [
+    {
+      "key": "8a9e8e3f137b1df1277ed0e52247eb5009367d7b5824a5a857c2dff6ab3d0948",
+      "parameters": {
+        "image_sha256": "1002c695b0f55afaebaffb9a01b105340601aa66212d87d52905b6a97eaf80f5",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T14:51:28+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_360.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        0,
+        2480,
+        3509
+      ],
+      "lines": [
+        {
+          "text": "Sụu tấm và khảo luận tác phẩm chủ Hán của người Việt Nam trước TK 10",
+          "bbox": [
+            227,
+            249,
+            1612,
+            322
+          ],
+          "confidence": 92.5
+        },
+        {
+          "text": "___",
+          "bbox": [
+            211,
+            332,
+            1949,
+            368
+          ],
+          "confidence": 34.96
+        },
+        {
+          "text": "DICH THÓ:",
+          "bbox": [
+            18,
+            444,
+            1760,
+            493
+          ],
+          "confidence": 80.53
+        },
+        {
+          "text": "Ôi bác lìa đời, tôi túi không,",
+          "bbox": [
+            21,
+            523,
+            1854,
+            588
+          ],
+          "confidence": 95.15
+        },
+        {
+          "text": "Bao phen lêu chōng những lông đong.",
+          "bbox": [
+            508,
+            607,
+            1657,
+            681
+          ],
+          "confidence": 75.97
+        },
+        {
+          "text": "Tương tri tổ chức tình thương cảm,",
+          "bbox": [
+            512,
+            692,
+            2148,
+            766
+          ],
+          "confidence": 86.66
+        },
+        {
+          "text": "Nhà của nơi nào đế ngóng trông ?",
+          "bbox": [
+            13,
+            777,
+            2134,
+            851
+          ],
+          "confidence": 87.1
+        },
+        {
+          "text": "CHU THICH :",
+          "bbox": [
+            220,
+            962,
+            2133,
+            1016
+          ],
+          "confidence": 85.28
+        },
+        {
+          "text": "(1) At Mùi : đáy chỉ nằm 815.",
+          "bbox": [
+            222,
+            1073,
+            2133,
+            1132
+          ],
+          "confidence": 85.15
+        },
+        {
+          "text": "(2) Nguyên Hòa : đấy chỉ niên hiệu của vua Hiến Tống nhà",
+          "bbox": [
+            224,
+            1168,
+            2134,
+            1239
+          ],
+          "confidence": 93.52
+        },
+        {
+          "text": "Dương.",
+          "bbox": [
+            324,
+            1261,
+            2134,
+            1301
+          ],
+          "confidence": 89.08
+        },
+        {
+          "text": "332",
+          "bbox": [
+            222,
+            3172,
+            2301,
+            3218
+          ],
+          "confidence": 98.77
+        },
+        {
+          "text": "25",
+          "bbox": [
+            0,
+            3298,
+            2290,
+            3351
+          ],
+          "confidence": 60.98
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          3509
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 13.774,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              227,
+              249,
+              1612,
+              322
+            ],
+            "generated_text": "Sụu tấm và khảo luận tác phẩm chủ Hán của người Việt Nam trước TK 10",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 2.054,
+            "confidence": 92.5,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              211,
+              332,
+              1949,
+              368
+            ],
+            "generated_text": "___",
+            "n_lines": 1,
+            "tokens": 2,
+            "seconds": 0.496,
+            "confidence": 34.96,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              18,
+              444,
+              1760,
+              493
+            ],
+            "generated_text": "DICH THÓ:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.736,
+            "confidence": 80.53,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              21,
+              523,
+              1854,
+              588
+            ],
+            "generated_text": "Ôi bác lìa đời, tôi túi không,",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.221,
+            "confidence": 95.15,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              508,
+              607,
+              1657,
+              681
+            ],
+            "generated_text": "Bao phen lêu chōng những lông đong.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.173,
+            "confidence": 75.97,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              512,
+              692,
+              2148,
+              766
+            ],
+            "generated_text": "Tương tri tổ chức tình thương cảm,",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.927,
+            "confidence": 86.66,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              13,
+              777,
+              2134,
+              851
+            ],
+            "generated_text": "Nhà của nơi nào đế ngóng trông ?",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.225,
+            "confidence": 87.1,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              220,
+              962,
+              2133,
+              1016
+            ],
+            "generated_text": "CHU THICH :",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.756,
+            "confidence": 85.28,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              222,
+              1073,
+              2133,
+              1132
+            ],
+            "generated_text": "(1) At Mùi : đáy chỉ nằm 815.",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.655,
+            "confidence": 85.15,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              224,
+              1168,
+              2134,
+              1239
+            ],
+            "generated_text": "(2) Nguyên Hòa : đấy chỉ niên hiệu của vua Hiến Tống nhà",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.66,
+            "confidence": 93.52,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              324,
+              1261,
+              2134,
+              1301
+            ],
+            "generated_text": "Dương.",
+            "n_lines": 1,
+            "tokens": 4,
+            "seconds": 0.622,
+            "confidence": 89.08,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              222,
+              3172,
+              2301,
+              3218
+            ],
+            "generated_text": "332",
+            "n_lines": 1,
+            "tokens": 4,
+            "seconds": 0.623,
+            "confidence": 98.77,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              0,
+              3298,
+              2290,
+              3351
+            ],
+            "generated_text": "25",
+            "n_lines": 1,
+            "tokens": 3,
+            "seconds": 0.624,
+            "confidence": 60.98,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              323,
+              1246,
+              2134,
+              1259
+            ],
+            "ink": 490
+          },
+          {
+            "box": [
+              2131,
+              2993,
+              2476,
+              3011
+            ],
+            "ink": 913
+          },
+          {
+            "box": [
+              2130,
+              3035,
+              2438,
+              3057
+            ],
+            "ink": 1145
+          },
+          {
+            "box": [
+              2130,
+              3154,
+              2301,
+              3168
+            ],
+            "ink": 661
+          },
+          {
+            "box": [
+              2110,
+              3261,
+              2212,
+              3275
+            ],
+            "ink": 619
+          },
+          {
+            "box": [
+              2021,
+              3355,
+              2102,
+              3364
+            ],
+            "ink": 393
+          },
+          {
+            "box": [
+              1970,
+              3373,
+              2096,
+              3388
+            ],
+            "ink": 697
+          },
+          {
+            "box": [
+              1968,
+              3402,
+              2072,
+              3418
+            ],
+            "ink": 699
+          },
+          {
+            "box": [
+              1954,
+              3418,
+              2038,
+              3430
+            ],
+            "ink": 532
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

@@ -1,0 +1,979 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 259,
+  "runs": [
+    {
+      "key": "a9a8cc0084771989917bfeac33a309a03b9dd93f766f4da8f79baf44514aa773",
+      "parameters": {
+        "image_sha256": "327ac1dc30a2b0158e9ea7673afc00e7e72122702fa8054db660e827b1031e64",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T14:07:09+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_259.png",
+      "image_size": [
+        2607,
+        3231
+      ],
+      "crop_box": [
+        0,
+        0,
+        2607,
+        3231
+      ],
+      "lines": [
+        {
+          "text": "ngothinhamle1.pdf",
+          "bbox": [
+            7,
+            19,
+            1480,
+            45
+          ],
+          "confidence": 91.81
+        },
+        {
+          "text": "CAM DƯỜNG NHAN THOAI",
+          "bbox": [
+            1501,
+            234,
+            2081,
+            274
+          ],
+          "confidence": 84.68
+        },
+        {
+          "text": "錦堂閒話",
+          "bbox": [
+            1047,
+            401,
+            1400,
+            469
+          ],
+          "confidence": 99.97
+        },
+        {
+          "text": "CAM ĐƯỜNG NHAN THOAI",
+          "bbox": [
+            816,
+            554,
+            1647,
+            605
+          ],
+          "confidence": 93.26
+        },
+        {
+          "text": "Cấm đường nhàn thoại là tập thơ Ngô Thì Nhâm sáng tác vào cuối",
+          "bbox": [
+            411,
+            690,
+            2082,
+            736
+          ],
+          "confidence": 89.72
+        },
+        {
+          "text": "đòi, khoảng từ những năm 1796 đến năm 1801. Trong tập thơ không nói",
+          "bbox": [
+            378,
+            773,
+            2083,
+            820
+          ],
+          "confidence": 91.82
+        },
+        {
+          "text": "rõ thời điểm sáng tác, nhưng căn cứ vào nội dung của một số bài thơ thì",
+          "bbox": [
+            377,
+            856,
+            2083,
+            901
+          ],
+          "confidence": 95.38
+        },
+        {
+          "text": "thấy rất rõ điều này, như đầu đê bài số 12 viết: “Năm Bính Thìn sau",
+          "bbox": [
+            377,
+            938,
+            2083,
+            983
+          ],
+          "confidence": 88.7
+        },
+        {
+          "text": "ngày rằm tháng chạp mộng gặp cha, kính cẩn ghi lại.\" Hay ở đầu đề bài",
+          "bbox": [
+            377,
+            1020,
+            2084,
+            1073
+          ],
+          "confidence": 89.39
+        },
+        {
+          "text": "số 38 cũng viết: “Tháng mười năm Bính Thìn kính cẩn đặt bàn đá ở Đàn",
+          "bbox": [
+            379,
+            1100,
+            2082,
+            1147
+          ],
+          "confidence": 95.98
+        },
+        {
+          "text": "Truy Viễn, kính ghi lại.” Năm Bính Thìn nói ở trên tức là năm 1796, năm",
+          "bbox": [
+            377,
+            1183,
+            2084,
+            1228
+          ],
+          "confidence": 96.54
+        },
+        {
+          "text": "Ngô Thì Nhâm vào Phú Xuân châu cân vua Quang Toản. Năm này ngoài",
+          "bbox": [
+            378,
+            1263,
+            2084,
+            1310
+          ],
+          "confidence": 95.4
+        },
+        {
+          "text": "một số bài thơ, sau này soạn giả Tùng thư Ngô gia văn phái tập hợp sắp",
+          "bbox": [
+            378,
+            1346,
+            2083,
+            1400
+          ],
+          "confidence": 95.67
+        },
+        {
+          "text": "xếp thành tập Cấm đường nhàn thoại này ra, Ngô Thì Nhậm còn tập thơ",
+          "bbox": [
+            376,
+            1428,
+            2085,
+            1480
+          ],
+          "confidence": 89.29
+        },
+        {
+          "text": "viết vào tháng Tám, nhân tiết chơi hoa cúc ở Phú Xuân, hoa thơ với Phan",
+          "bbox": [
+            376,
+            1508,
+            2082,
+            1555
+          ],
+          "confidence": 98.31
+        },
+        {
+          "text": "Huy Ich, mỗi người 50 bài, tập hợp thành tập thể riêng lấy tên Cúc đường",
+          "bbox": [
+            378,
+            1589,
+            2083,
+            1643
+          ],
+          "confidence": 94.72
+        },
+        {
+          "text": "bách vĩnh. Sau này soạn giả Tùng thư Ngô gia văn phái tách riêng 50 bài",
+          "bbox": [
+            378,
+            1671,
+            2083,
+            1724
+          ],
+          "confidence": 96.47
+        },
+        {
+          "text": "của Ngô Thì Nhâm để đưa vào Tùng thư, với đầu đề Cúc thu thi trân, có",
+          "bbox": [
+            376,
+            1753,
+            2083,
+            1801
+          ],
+          "confidence": 92.67
+        },
+        {
+          "text": "chó viết Cục hoa thí trán.",
+          "bbox": [
+            378,
+            1847,
+            967,
+            1879
+          ],
+          "confidence": 69.36
+        },
+        {
+          "text": "Trở lại thời điểm sáng tác tập Cấm đường nhàn thoại, xin đơn cử",
+          "bbox": [
+            526,
+            1917,
+            2136,
+            1966
+          ],
+          "confidence": 84.87
+        },
+        {
+          "text": "thêm, trong lời dẫn bài số 9 (Cây sen cạn), có câu: “Năm Đinh Ty, sau tết",
+          "bbox": [
+            378,
+            1998,
+            2083,
+            2047
+          ],
+          "confidence": 95.02
+        },
+        {
+          "text": "Đoan Dương năm ngày, phía trước sân bên trái, cạnh cây mẫu đơn, bỗng",
+          "bbox": [
+            378,
+            2079,
+            2083,
+            2130
+          ],
+          "confidence": 93.33
+        },
+        {
+          "text": "mọc lên cây hoa một gốc ba nhánh, lá như đồng tiên, mơn mơn trồng thất",
+          "bbox": [
+            378,
+            2160,
+            2082,
+            2209
+          ],
+          "confidence": 81.19
+        },
+        {
+          "text": "đáng yêu.” Năm Đinh Ty tức năm 1797. Hay ở bài 23: “Qua thu phòng",
+          "bbox": [
+            379,
+            2240,
+            2082,
+            2291
+          ],
+          "confidence": 96.0
+        },
+        {
+          "text": "đường triệu ngâu hứng làm thổ\" có câu:",
+          "bbox": [
+            378,
+            2325,
+            1287,
+            2367
+          ],
+          "confidence": 87.06
+        },
+        {
+          "text": "Nhỏ khi ta trôn tránh,",
+          "bbox": [
+            818,
+            2420,
+            1335,
+            2453
+          ],
+          "confidence": 75.56
+        },
+        {
+          "text": "Da làng le ở nhà này.",
+          "bbox": [
+            817,
+            2508,
+            1310,
+            2540
+          ],
+          "confidence": 88.0
+        },
+        {
+          "text": "Băm đốt tay đã một vòng sao,",
+          "bbox": [
+            818,
+            2586,
+            1496,
+            2627
+          ],
+          "confidence": 93.04
+        },
+        {
+          "text": "Việc xưa văn còn như trước mắt.",
+          "bbox": [
+            824,
+            2680,
+            1561,
+            2713
+          ],
+          "confidence": 84.17
+        },
+        {
+          "text": "Có lẽ nhân đi qua thư phòng xưa ở Thái Bình, nơi Ngô Thì Nhâm",
+          "bbox": [
+            525,
+            2757,
+            2080,
+            2807
+          ],
+          "confidence": 93.02
+        },
+        {
+          "text": "phải trốn tránh sau vụ Kiêu binh phế Trình Cán lập Trình Tổng năm",
+          "bbox": [
+            376,
+            2844,
+            2079,
+            2893
+          ],
+          "confidence": 92.72
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2607,
+          3231
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 59.952,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              7,
+              19,
+              1480,
+              45
+            ],
+            "generated_text": "ngothinhamle1.pdf",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.892,
+            "confidence": 91.81,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              1501,
+              234,
+              2081,
+              274
+            ],
+            "generated_text": "CAM DƯỜNG NHAN THOAI",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.213,
+            "confidence": 84.68,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              360,
+              275,
+              2099,
+              290
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.46,
+            "confidence": 40.62,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              1047,
+              401,
+              1400,
+              469
+            ],
+            "generated_text": "錦堂閒話",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.921,
+            "confidence": 99.97,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              816,
+              554,
+              1647,
+              605
+            ],
+            "generated_text": "CAM ĐƯỜNG NHAN THOAI",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.15,
+            "confidence": 93.26,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              411,
+              690,
+              2082,
+              736
+            ],
+            "generated_text": "Cấm đường nhàn thoại là tập thơ Ngô Thì Nhâm sáng tác vào cuối",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.959,
+            "confidence": 89.72,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              378,
+              773,
+              2083,
+              820
+            ],
+            "generated_text": "đòi, khoảng từ những năm 1796 đến năm 1801. Trong tập thơ không nói",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 2.341,
+            "confidence": 91.82,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              377,
+              856,
+              2083,
+              901
+            ],
+            "generated_text": "rõ thời điểm sáng tác, nhưng căn cứ vào nội dung của một số bài thơ thì",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 2.041,
+            "confidence": 95.38,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              377,
+              938,
+              2083,
+              983
+            ],
+            "generated_text": "thấy rất rõ điều này, như đầu đê bài số 12 viết: “Năm Bính Thìn sau",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 2.337,
+            "confidence": 88.7,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              377,
+              1020,
+              2084,
+              1073
+            ],
+            "generated_text": "ngày rằm tháng chạp mộng gặp cha, kính cẩn ghi lại.\" Hay ở đầu đề bài",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 2.473,
+            "confidence": 89.39,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              379,
+              1100,
+              2082,
+              1147
+            ],
+            "generated_text": "số 38 cũng viết: “Tháng mười năm Bính Thìn kính cẩn đặt bàn đá ở Đàn",
+            "n_lines": 1,
+            "tokens": 34,
+            "seconds": 2.687,
+            "confidence": 95.98,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              377,
+              1183,
+              2084,
+              1228
+            ],
+            "generated_text": "Truy Viễn, kính ghi lại.” Năm Bính Thìn nói ở trên tức là năm 1796, năm",
+            "n_lines": 1,
+            "tokens": 32,
+            "seconds": 2.551,
+            "confidence": 96.54,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              378,
+              1263,
+              2084,
+              1310
+            ],
+            "generated_text": "Ngô Thì Nhâm vào Phú Xuân châu cân vua Quang Toản. Năm này ngoài",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.277,
+            "confidence": 95.4,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              378,
+              1346,
+              2083,
+              1400
+            ],
+            "generated_text": "một số bài thơ, sau này soạn giả Tùng thư Ngô gia văn phái tập hợp sắp",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 2.323,
+            "confidence": 95.67,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              376,
+              1428,
+              2085,
+              1480
+            ],
+            "generated_text": "xếp thành tập Cấm đường nhàn thoại này ra, Ngô Thì Nhậm còn tập thơ",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.264,
+            "confidence": 89.29,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              376,
+              1508,
+              2082,
+              1555
+            ],
+            "generated_text": "viết vào tháng Tám, nhân tiết chơi hoa cúc ở Phú Xuân, hoa thơ với Phan",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.262,
+            "confidence": 98.31,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              378,
+              1589,
+              2083,
+              1643
+            ],
+            "generated_text": "Huy Ich, mỗi người 50 bài, tập hợp thành tập thể riêng lấy tên Cúc đường",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 2.12,
+            "confidence": 94.72,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              378,
+              1671,
+              2083,
+              1724
+            ],
+            "generated_text": "bách vĩnh. Sau này soạn giả Tùng thư Ngô gia văn phái tách riêng 50 bài",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 2.483,
+            "confidence": 96.47,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              376,
+              1753,
+              2083,
+              1801
+            ],
+            "generated_text": "của Ngô Thì Nhâm để đưa vào Tùng thư, với đầu đề Cúc thu thi trân, có",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 2.34,
+            "confidence": 92.67,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              378,
+              1847,
+              967,
+              1879
+            ],
+            "generated_text": "chó viết Cục hoa thí trán.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.219,
+            "confidence": 69.36,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              526,
+              1917,
+              2136,
+              1966
+            ],
+            "generated_text": "Trở lại thời điểm sáng tác tập Cấm đường nhàn thoại, xin đơn cử",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.91,
+            "confidence": 84.87,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              378,
+              1998,
+              2083,
+              2047
+            ],
+            "generated_text": "thêm, trong lời dẫn bài số 9 (Cây sen cạn), có câu: “Năm Đinh Ty, sau tết",
+            "n_lines": 1,
+            "tokens": 34,
+            "seconds": 2.691,
+            "confidence": 95.02,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              378,
+              2079,
+              2083,
+              2130
+            ],
+            "generated_text": "Đoan Dương năm ngày, phía trước sân bên trái, cạnh cây mẫu đơn, bỗng",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 2.488,
+            "confidence": 93.33,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              378,
+              2160,
+              2082,
+              2209
+            ],
+            "generated_text": "mọc lên cây hoa một gốc ba nhánh, lá như đồng tiên, mơn mơn trồng thất",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 2.202,
+            "confidence": 81.19,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              379,
+              2240,
+              2082,
+              2291
+            ],
+            "generated_text": "đáng yêu.” Năm Đinh Ty tức năm 1797. Hay ở bài 23: “Qua thu phòng",
+            "n_lines": 1,
+            "tokens": 32,
+            "seconds": 2.568,
+            "confidence": 96.0,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              378,
+              2325,
+              1287,
+              2367
+            ],
+            "generated_text": "đường triệu ngâu hứng làm thổ\" có câu:",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.438,
+            "confidence": 87.06,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              818,
+              2420,
+              1335,
+              2453
+            ],
+            "generated_text": "Nhỏ khi ta trôn tránh,",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.97,
+            "confidence": 75.56,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              817,
+              2508,
+              1310,
+              2540
+            ],
+            "generated_text": "Da làng le ở nhà này.",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.887,
+            "confidence": 88.0,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              818,
+              2586,
+              1496,
+              2627
+            ],
+            "generated_text": "Băm đốt tay đã một vòng sao,",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.044,
+            "confidence": 93.04,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              824,
+              2680,
+              1561,
+              2713
+            ],
+            "generated_text": "Việc xưa văn còn như trước mắt.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.138,
+            "confidence": 84.17,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              525,
+              2757,
+              2080,
+              2807
+            ],
+            "generated_text": "Có lẽ nhân đi qua thư phòng xưa ở Thái Bình, nơi Ngô Thì Nhâm",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 2.09,
+            "confidence": 93.02,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 32,
+            "box": [
+              376,
+              2844,
+              2079,
+              2893
+            ],
+            "generated_text": "phải trốn tránh sau vụ Kiêu binh phế Trình Cán lập Trình Tổng năm",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 2.203,
+            "confidence": 92.72,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              760,
+              733,
+              1788,
+              743
+            ],
+            "ink": 406
+          },
+          {
+            "box": [
+              449,
+              816,
+              1990,
+              826
+            ],
+            "ink": 445
+          },
+          {
+            "box": [
+              764,
+              899,
+              1725,
+              908
+            ],
+            "ink": 306
+          },
+          {
+            "box": [
+              421,
+              1306,
+              2012,
+              1316
+            ],
+            "ink": 434
+          },
+          {
+            "box": [
+              404,
+              1837,
+              919,
+              1849
+            ],
+            "ink": 671
+          },
+          {
+            "box": [
+              820,
+              2409,
+              1302,
+              2419
+            ],
+            "ink": 497
+          },
+          {
+            "box": [
+              823,
+              2498,
+              1257,
+              2509
+            ],
+            "ink": 618
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

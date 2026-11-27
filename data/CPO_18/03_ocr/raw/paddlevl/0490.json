@@ -1,0 +1,1147 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_18",
+  "engine": "paddlevl",
+  "page": 490,
+  "runs": [
+    {
+      "key": "82cd2d575cb43f38160287b0a54cd985a9ab62e03586d17dbd7bc9479cef30d9",
+      "parameters": {
+        "image_sha256": "8ed2562b816f0c3de580f3fef6052cb9d668c99352b5023c56392b5deaccee45",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T18:53:55+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_490.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        0,
+        2480,
+        3509
+      ],
+      "lines": [
+        {
+          "text": "Sụu tấm và khảo luận tác phẩm chủ Hán của người Việt Nam trước TK 10",
+          "bbox": [
+            328,
+            105,
+            1829,
+            170
+          ],
+          "confidence": 91.46
+        },
+        {
+          "text": "___",
+          "bbox": [
+            314,
+            199,
+            2190,
+            222
+          ],
+          "confidence": 34.14
+        },
+        {
+          "text": "Đây chỉ những bài hát dân gian nội thôn xóm. Văn",
+          "bbox": [
+            443,
+            306,
+            2179,
+            368
+          ],
+          "confidence": 95.02
+        },
+        {
+          "text": "tuyên, bài Tổng Ngọc đôi Sở vương vấn có đoạn : “Khách",
+          "bbox": [
+            443,
+            392,
+            2177,
+            454
+          ],
+          "confidence": 89.41
+        },
+        {
+          "text": "hiệu ca ư Sinh trung giả, kỳ thủy viết Ha lý Ba nhân.",
+          "bbox": [
+            443,
+            480,
+            2179,
+            541
+          ],
+          "confidence": 82.2
+        },
+        {
+          "text": "quốc trung thuộc nhi hoa giả số thiên nhân = Khách có",
+          "bbox": [
+            442,
+            566,
+            2181,
+            627
+          ],
+          "confidence": 94.48
+        },
+        {
+          "text": "người hát ở Sinh, bài đấu là Ha lý Ba nhân, trong nước",
+          "bbox": [
+            443,
+            652,
+            2181,
+            715
+          ],
+          "confidence": 93.71
+        },
+        {
+          "text": "thuộc và hoa theo có tối máy nghìn người\".",
+          "bbox": [
+            442,
+            739,
+            1705,
+            798
+          ],
+          "confidence": 90.47
+        },
+        {
+          "text": "(149) Thương, chủy, gióc : ba âm trong nhạc cổ.",
+          "bbox": [
+            329,
+            845,
+            1716,
+            907
+          ],
+          "confidence": 95.3
+        },
+        {
+          "text": "(150) Hàn Phi : công tử nước Hàn, sống vào thời Chiến quốc.",
+          "bbox": [
+            328,
+            953,
+            2174,
+            1016
+          ],
+          "confidence": 93.25
+        },
+        {
+          "text": "có tất nói lặp, nhưng viết được nhiều sách, cùng Lý Tử",
+          "bbox": [
+            439,
+            1041,
+            2179,
+            1102
+          ],
+          "confidence": 89.58
+        },
+        {
+          "text": "theo hoc Tuân Khanh. Thấy nước Hàn yếu kém, Hàn Phi",
+          "bbox": [
+            440,
+            1126,
+            2177,
+            1188
+          ],
+          "confidence": 96.81
+        },
+        {
+          "text": "nhiều lần viết thư góp ý kiến, nhưng không được vua",
+          "bbox": [
+            439,
+            1214,
+            2176,
+            1275
+          ],
+          "confidence": 97.43
+        },
+        {
+          "text": "dùng, bèn làm các tác phẩm như Cô phấn, Ngũ độ, Nói",
+          "bbox": [
+            442,
+            1299,
+            2175,
+            1361
+          ],
+          "confidence": 89.3
+        },
+        {
+          "text": "ngoại sử thuyết. Thuyết lâm. Thuyết nan, tất cả hơn 10",
+          "bbox": [
+            441,
+            1385,
+            2176,
+            1445
+          ],
+          "confidence": 91.0
+        },
+        {
+          "text": "van lời, vua Tân đọc thấy rất thích, muốn gặp ngay tác",
+          "bbox": [
+            439,
+            1472,
+            2175,
+            1533
+          ],
+          "confidence": 94.68
+        },
+        {
+          "text": "gia, bèn gấp rút đánh Hàn. Vua Hàn sai Hàn Phi đi sú",
+          "bbox": [
+            442,
+            1556,
+            2174,
+            1617
+          ],
+          "confidence": 92.62
+        },
+        {
+          "text": "Tần. Lý Tu. Diệu Giả nói xấu Hàn Phi, khiến ông bi vua",
+          "bbox": [
+            440,
+            1641,
+            2171,
+            1703
+          ],
+          "confidence": 87.56
+        },
+        {
+          "text": "Tán giao cho quan ngục tri tôi. Lý Tư sai người mang",
+          "bbox": [
+            442,
+            1727,
+            2354,
+            1788
+          ],
+          "confidence": 86.06
+        },
+        {
+          "text": "thuốc độc tối. Hàn Phi tư sát.",
+          "bbox": [
+            442,
+            1809,
+            1294,
+            1869
+          ],
+          "confidence": 88.04
+        },
+        {
+          "text": "(151) Tiếp Du : ho Luc, tên Thông, tên chủ là Tiếp Du, người",
+          "bbox": [
+            330,
+            1916,
+            2173,
+            1977
+          ],
+          "confidence": 94.7
+        },
+        {
+          "text": "nước Sở. Báy giờ là thời Chiêu Vương, chính sự không ôn",
+          "bbox": [
+            446,
+            2001,
+            2171,
+            2062
+          ],
+          "confidence": 90.01
+        },
+        {
+          "text": "định. Tiếp Dự bèn vấn tóc giả khùng, không làm quan,",
+          "bbox": [
+            449,
+            2085,
+            2166,
+            2147
+          ],
+          "confidence": 88.14
+        },
+        {
+          "text": "người dưỡng thời goi là \"Sở cuống\" (anh khùng nước Sở).",
+          "bbox": [
+            447,
+            2167,
+            2126,
+            2230
+          ],
+          "confidence": 82.85
+        },
+        {
+          "text": "(152) Ngọc Hòa : hay Hòa bích, một loại ngọc quý. Nguyên có",
+          "bbox": [
+            331,
+            2274,
+            2168,
+            2334
+          ],
+          "confidence": 98.56
+        },
+        {
+          "text": "người nước Sở là Hòa Thi (Biên Hòa) được một hòn ngọc",
+          "bbox": [
+            448,
+            2358,
+            2168,
+            2417
+          ],
+          "confidence": 97.74
+        },
+        {
+          "text": "chúa gia công ở núi Sở, đem hiện cho Lê Vương. Lê",
+          "bbox": [
+            447,
+            2440,
+            2169,
+            2500
+          ],
+          "confidence": 94.17
+        },
+        {
+          "text": "Vương cho là lửa, chặt chân trái của anh ta. Đến khi Vũ",
+          "bbox": [
+            449,
+            2520,
+            2167,
+            2582
+          ],
+          "confidence": 95.04
+        },
+        {
+          "text": "Vương kế vi, Hòa Thi lai mang hòn ngọc đến hiến, văn bị",
+          "bbox": [
+            449,
+            2603,
+            2167,
+            2672
+          ],
+          "confidence": 85.84
+        },
+        {
+          "text": "cho là lửa và phải mất thêm chân phải. Khi Văn Vương",
+          "bbox": [
+            449,
+            2689,
+            2168,
+            2749
+          ],
+          "confidence": 98.34
+        },
+        {
+          "text": "lên ngói, Hòa Thị ôm ngọc mà khóc dưới núi Kinh Sơn,",
+          "bbox": [
+            452,
+            2770,
+            2163,
+            2833
+          ],
+          "confidence": 91.79
+        },
+        {
+          "text": "vua sai người tối hỏi, nói : \"Thân không buôn vì chân bị",
+          "bbox": [
+            450,
+            2854,
+            2164,
+            2914
+          ],
+          "confidence": 86.61
+        },
+        {
+          "text": "chất đút, mà buôn vì ngọc quý bị coi là đá, người trình si",
+          "bbox": [
+            449,
+            2936,
+            2475,
+            3007
+          ],
+          "confidence": 92.33
+        },
+        {
+          "text": "bị gọi là kế lừa\". Vua bèn sai người mài giữa, quả nhiên",
+          "bbox": [
+            450,
+            3015,
+            2441,
+            3083
+          ],
+          "confidence": 93.98
+        },
+        {
+          "text": "được viên ngọc quý, liên đặt tên là \"Hòa bích\" (ngọc bích",
+          "bbox": [
+            451,
+            3098,
+            2373,
+            3168
+          ],
+          "confidence": 96.37
+        },
+        {
+          "text": "cua Hoa Thí).",
+          "bbox": [
+            449,
+            3188,
+            2280,
+            3231
+          ],
+          "confidence": 75.14
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          3509
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 17.273,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              328,
+              105,
+              1829,
+              170
+            ],
+            "generated_text": "Sụu tấm và khảo luận tác phẩm chủ Hán của người Việt Nam trước TK 10",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.563,
+            "confidence": 91.46,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              314,
+              199,
+              2190,
+              222
+            ],
+            "generated_text": "___",
+            "n_lines": 1,
+            "tokens": 2,
+            "seconds": 0.088,
+            "confidence": 34.14,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              443,
+              306,
+              2179,
+              368
+            ],
+            "generated_text": "Đây chỉ những bài hát dân gian nội thôn xóm. Văn",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.43,
+            "confidence": 95.02,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              443,
+              392,
+              2177,
+              454
+            ],
+            "generated_text": "tuyên, bài Tổng Ngọc đôi Sở vương vấn có đoạn : “Khách",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.571,
+            "confidence": 89.41,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              443,
+              480,
+              2179,
+              541
+            ],
+            "generated_text": "hiệu ca ư Sinh trung giả, kỳ thủy viết Ha lý Ba nhân.",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.499,
+            "confidence": 82.2,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              442,
+              566,
+              2181,
+              627
+            ],
+            "generated_text": "quốc trung thuộc nhi hoa giả số thiên nhân = Khách có",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.367,
+            "confidence": 94.48,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              443,
+              652,
+              2181,
+              715
+            ],
+            "generated_text": "người hát ở Sinh, bài đấu là Ha lý Ba nhân, trong nước",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.453,
+            "confidence": 93.71,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              442,
+              739,
+              1705,
+              798
+            ],
+            "generated_text": "thuộc và hoa theo có tối máy nghìn người\".",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.325,
+            "confidence": 90.47,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              329,
+              845,
+              1716,
+              907
+            ],
+            "generated_text": "(149) Thương, chủy, gióc : ba âm trong nhạc cổ.",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.526,
+            "confidence": 95.3,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              328,
+              953,
+              2174,
+              1016
+            ],
+            "generated_text": "(150) Hàn Phi : công tử nước Hàn, sống vào thời Chiến quốc.",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.535,
+            "confidence": 93.25,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              439,
+              1041,
+              2179,
+              1102
+            ],
+            "generated_text": "có tất nói lặp, nhưng viết được nhiều sách, cùng Lý Tử",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.514,
+            "confidence": 89.58,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              440,
+              1126,
+              2177,
+              1188
+            ],
+            "generated_text": "theo hoc Tuân Khanh. Thấy nước Hàn yếu kém, Hàn Phi",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.481,
+            "confidence": 96.81,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              439,
+              1214,
+              2176,
+              1275
+            ],
+            "generated_text": "nhiều lần viết thư góp ý kiến, nhưng không được vua",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.445,
+            "confidence": 97.43,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              442,
+              1299,
+              2175,
+              1361
+            ],
+            "generated_text": "dùng, bèn làm các tác phẩm như Cô phấn, Ngũ độ, Nói",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.459,
+            "confidence": 89.3,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              441,
+              1385,
+              2176,
+              1445
+            ],
+            "generated_text": "ngoại sử thuyết. Thuyết lâm. Thuyết nan, tất cả hơn 10",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.567,
+            "confidence": 91.0,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              439,
+              1472,
+              2175,
+              1533
+            ],
+            "generated_text": "van lời, vua Tân đọc thấy rất thích, muốn gặp ngay tác",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.516,
+            "confidence": 94.68,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              442,
+              1556,
+              2174,
+              1617
+            ],
+            "generated_text": "gia, bèn gấp rút đánh Hàn. Vua Hàn sai Hàn Phi đi sú",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.523,
+            "confidence": 92.62,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              440,
+              1641,
+              2171,
+              1703
+            ],
+            "generated_text": "Tần. Lý Tu. Diệu Giả nói xấu Hàn Phi, khiến ông bi vua",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.549,
+            "confidence": 87.56,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              442,
+              1727,
+              2354,
+              1788
+            ],
+            "generated_text": "Tán giao cho quan ngục tri tôi. Lý Tư sai người mang",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.427,
+            "confidence": 86.06,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              442,
+              1809,
+              1294,
+              1869
+            ],
+            "generated_text": "thuốc độc tối. Hàn Phi tư sát.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.363,
+            "confidence": 88.04,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              330,
+              1916,
+              2173,
+              1977
+            ],
+            "generated_text": "(151) Tiếp Du : ho Luc, tên Thông, tên chủ là Tiếp Du, người",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.582,
+            "confidence": 94.7,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              446,
+              2001,
+              2171,
+              2062
+            ],
+            "generated_text": "nước Sở. Báy giờ là thời Chiêu Vương, chính sự không ôn",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.489,
+            "confidence": 90.01,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              449,
+              2085,
+              2166,
+              2147
+            ],
+            "generated_text": "định. Tiếp Dự bèn vấn tóc giả khùng, không làm quan,",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.521,
+            "confidence": 88.14,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              447,
+              2167,
+              2126,
+              2230
+            ],
+            "generated_text": "người dưỡng thời goi là \"Sở cuống\" (anh khùng nước Sở).",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.547,
+            "confidence": 82.85,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              331,
+              2274,
+              2168,
+              2334
+            ],
+            "generated_text": "(152) Ngọc Hòa : hay Hòa bích, một loại ngọc quý. Nguyên có",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.582,
+            "confidence": 98.56,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              448,
+              2358,
+              2168,
+              2417
+            ],
+            "generated_text": "người nước Sở là Hòa Thi (Biên Hòa) được một hòn ngọc",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.482,
+            "confidence": 97.74,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              447,
+              2440,
+              2169,
+              2500
+            ],
+            "generated_text": "chúa gia công ở núi Sở, đem hiện cho Lê Vương. Lê",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.488,
+            "confidence": 94.17,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              449,
+              2520,
+              2167,
+              2582
+            ],
+            "generated_text": "Vương cho là lửa, chặt chân trái của anh ta. Đến khi Vũ",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.504,
+            "confidence": 95.04,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              449,
+              2603,
+              2167,
+              2672
+            ],
+            "generated_text": "Vương kế vi, Hòa Thi lai mang hòn ngọc đến hiến, văn bị",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.499,
+            "confidence": 85.84,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              449,
+              2689,
+              2168,
+              2749
+            ],
+            "generated_text": "cho là lửa và phải mất thêm chân phải. Khi Văn Vương",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.468,
+            "confidence": 98.34,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              452,
+              2770,
+              2163,
+              2833
+            ],
+            "generated_text": "lên ngói, Hòa Thị ôm ngọc mà khóc dưới núi Kinh Sơn,",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.607,
+            "confidence": 91.79,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 32,
+            "box": [
+              450,
+              2854,
+              2164,
+              2914
+            ],
+            "generated_text": "vua sai người tối hỏi, nói : \"Thân không buôn vì chân bị",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.487,
+            "confidence": 86.61,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 33,
+            "box": [
+              449,
+              2936,
+              2475,
+              3007
+            ],
+            "generated_text": "chất đút, mà buôn vì ngọc quý bị coi là đá, người trình si",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.52,
+            "confidence": 92.33,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 34,
+            "box": [
+              450,
+              3015,
+              2441,
+              3083
+            ],
+            "generated_text": "bị gọi là kế lừa\". Vua bèn sai người mài giữa, quả nhiên",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.542,
+            "confidence": 93.98,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 35,
+            "box": [
+              451,
+              3098,
+              2373,
+              3168
+            ],
+            "generated_text": "được viên ngọc quý, liên đặt tên là \"Hòa bích\" (ngọc bích",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.562,
+            "confidence": 96.37,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 36,
+            "box": [
+              449,
+              3188,
+              2280,
+              3231
+            ],
+            "generated_text": "cua Hoa Thí).",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.187,
+            "confidence": 75.14,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              553,
+              1101,
+              2041,
+              1113
+            ],
+            "ink": 670
+          },
+          {
+            "box": [
+              1019,
+              1274,
+              1985,
+              1287
+            ],
+            "ink": 744
+          },
+          {
+            "box": [
+              475,
+              1446,
+              1701,
+              1455
+            ],
+            "ink": 437
+          },
+          {
+            "box": [
+              485,
+              1530,
+              2033,
+              1544
+            ],
+            "ink": 866
+          },
+          {
+            "box": [
+              578,
+              1785,
+              2162,
+              1800
+            ],
+            "ink": 1029
+          },
+          {
+            "box": [
+              566,
+              1976,
+              2063,
+              1987
+            ],
+            "ink": 632
+          },
+          {
+            "box": [
+              775,
+              2061,
+              2058,
+              2070
+            ],
+            "ink": 531
+          },
+          {
+            "box": [
+              483,
+              2144,
+              2027,
+              2157
+            ],
+            "ink": 793
+          },
+          {
+            "box": [
+              485,
+              2227,
+              1815,
+              2240
+            ],
+            "ink": 748
+          },
+          {
+            "box": [
+              453,
+              2330,
+              1984,
+              2346
+            ],
+            "ink": 1303
+          },
+          {
+            "box": [
+              486,
+              2413,
+              2127,
+              2425
+            ],
+            "ink": 638
+          },
+          {
+            "box": [
+              491,
+              3175,
+              2281,
+              3191
+            ],
+            "ink": 1221
+          },
+          {
+            "box": [
+              334,
+              3349,
+              2107,
+              3370
+            ],
+            "ink": 1562
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "61cbea5c0055c260ccfc12f884e0febca7b2783b",
+        "git_describe": "61cbea5",
+        "git_dirty": true,
+        "gpu": "NVIDIA L4",
+        "dtype": "bfloat16",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

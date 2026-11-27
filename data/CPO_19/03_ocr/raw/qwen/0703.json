@@ -1,0 +1,251 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "qwen",
+  "page": 703,
+  "runs": [
+    {
+      "key": "6c134f8a5772d12a4153d8b3dad54d0553bce84d5ce7ff0123b27d61e67d2852",
+      "parameters": {
+        "image_sha256": "6c7b7c5d10adfaed6c31346a40a6f8579b66c9c51f5c459b4b80bcf6d9b97415",
+        "engine": {
+          "name": "qwen",
+          "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "model_revision": "main",
+          "transformers_version": "4.57.6",
+          "torch_version": "2.9.1+cu128",
+          "cuda_version": "12.8",
+          "bitsandbytes_version": "0.50.2",
+          "quantization": {
+            "load_in_4bit": true,
+            "quant_type": "nf4",
+            "double_quant": true,
+            "compute_dtype": "float16"
+          },
+          "mode": "all",
+          "min_pixels": 50176,
+          "max_pixels": 802816,
+          "band_inches": 2.0,
+          "max_new_tokens": 768,
+          "repetition_penalty": 1.05,
+          "adapter_version": 3,
+          "prompt_version": 3,
+          "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74"
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-26T08:52:53+00:00",
+      "image": "/marimo/.cpo19_ocr/repo/data/CPO_19/02_extraction/pages/page_703.png",
+      "image_size": [
+        2150,
+        3086
+      ],
+      "crop_box": [
+        0,
+        0,
+        2150,
+        3086
+      ],
+      "lines": [
+        {
+          "text": "NGÔ THÌ NHẬM TOÀN TẬP - TẬP III",
+          "bbox": [
+            191,
+            47,
+            1936,
+            237
+          ],
+          "confidence": 94.59
+        },
+        {
+          "text": "70.請還興化七州之地表",
+          "bbox": [
+            191,
+            237,
+            1936,
+            428
+          ],
+          "confidence": 94.59
+        },
+        {
+          "text": "臣仰荷天恩，賜履南服。欽奉御詩，訓以保守疆界，世傳子孫之道，夙夜祗懼，奉以守邦。",
+          "bbox": [
+            191,
+            428,
+            1936,
+            618
+          ],
+          "confidence": 94.59
+        },
+        {
+          "text": "今惟，臣起自布衣，幸有国邑，尺土寸民，皆大皇帝之赐，岂敢以彼疆此尘渍至尊？祇以交南分土叨忝作屏，四所抵，具在宝。",
+          "bbox": [
+            232,
+            633,
+            1928,
+            1162
+          ],
+          "confidence": 83.79
+        },
+        {
+          "text": "前莫敬寛以牛羊蝴蝶普園三峯内投，钦奉圣祖仁皇帝，赐莫俘于前黎，复还其地，乃在康熙二十八年事。其後土目幸福廉，又以其地内属，前黎累次奏请，并为边吏所阻，卒不得达。雍正六年，钦奉世宗",
+          "bbox": [
+            233,
+            1222,
+            1929,
+            1759
+          ],
+          "confidence": 88.29
+        },
+        {
+          "text": "憲皇帝，付下部議，以三峯內屬，事已經久，斷以本國睹祝河爲界，乃在宣光興化邊地，經前任雲貴督部鄂爾泰遵旨豎碑。自睹祝河以西，至車里國嵩陵、醴泉、黃巖、綏阜、合肥、萊州、謙州、等七州並屬本國",
+          "bbox": [
+            198,
+            1787,
+            2018,
+            2332
+          ],
+          "confidence": 95.99
+        },
+        {
+          "text": "興化之地。",
+          "bbox": [
+            236,
+            2349,
+            1937,
+            2606
+          ],
+          "confidence": 89.61
+        },
+        {
+          "text": "追前黎庚申，本國逆臣黃公瓚之父黃公舒，阻兵據守垂三十年。前黎姑息不辨，七州之民，以地勢遼",
+          "bbox": [
+            236,
+            2606,
+            1937,
+            2863
+          ],
+          "confidence": 89.61
+        }
+      ],
+      "raw": {
+        "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+        "model_revision": "main",
+        "mode": "all",
+        "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74",
+        "dpi": 300,
+        "image_size": [
+          2150,
+          3086
+        ],
+        "band_target_height": 600,
+        "bbox_granularity": "band_even_split",
+        "max_new_tokens": 768,
+        "max_pixels": 802816,
+        "inference_seconds": 8.623,
+        "bands": [
+          {
+            "band": 1,
+            "y0": 51,
+            "y1": 621,
+            "ink_box": [
+              191,
+              47,
+              1936,
+              618
+            ],
+            "generated_text": "NGÔ THÌ NHẬM TOÀN TẬP - TẬP III\n\n70.請還興化七州之地表\n\n臣仰荷天恩，賜履南服。欽奉御詩，訓以保守疆界，世傳子孫之道，夙夜祗懼，奉以守邦。",
+            "n_lines": 3,
+            "tokens": 73,
+            "seconds": 1.812,
+            "confidence": 94.59,
+            "flags": []
+          },
+          {
+            "band": 2,
+            "y0": 621,
+            "y1": 1196,
+            "ink_box": [
+              232,
+              633,
+              1928,
+              1162
+            ],
+            "generated_text": "今惟，臣起自布衣，幸有国邑，尺土寸民，皆大皇帝之赐，岂敢以彼疆此尘渍至尊？祇以交南分土叨忝作屏，四所抵，具在宝。",
+            "n_lines": 1,
+            "tokens": 55,
+            "seconds": 1.35,
+            "confidence": 83.79,
+            "flags": []
+          },
+          {
+            "band": 3,
+            "y0": 1196,
+            "y1": 1780,
+            "ink_box": [
+              233,
+              1222,
+              1929,
+              1759
+            ],
+            "generated_text": "前莫敬寛以牛羊蝴蝶普園三峯内投，钦奉圣祖仁皇帝，赐莫俘于前黎，复还其地，乃在康熙二十八年事。其後土目幸福廉，又以其地内属，前黎累次奏请，并为边吏所阻，卒不得达。雍正六年，钦奉世宗",
+            "n_lines": 1,
+            "tokens": 84,
+            "seconds": 1.918,
+            "confidence": 88.29,
+            "flags": []
+          },
+          {
+            "band": 4,
+            "y0": 1780,
+            "y1": 2342,
+            "ink_box": [
+              198,
+              1787,
+              2018,
+              2332
+            ],
+            "generated_text": "憲皇帝，付下部議，以三峯內屬，事已經久，斷以本國睹祝河爲界，乃在宣光興化邊地，經前任雲貴督部鄂爾泰遵旨豎碑。自睹祝河以西，至車里國嵩陵、醴泉、黃巖、綏阜、合肥、萊州、謙州、等七州並屬本國",
+            "n_lines": 1,
+            "tokens": 96,
+            "seconds": 2.283,
+            "confidence": 95.99,
+            "flags": []
+          },
+          {
+            "band": 5,
+            "y0": 2342,
+            "y1": 2859,
+            "ink_box": [
+              236,
+              2349,
+              1937,
+              2863
+            ],
+            "generated_text": "興化之地。\n\n追前黎庚申，本國逆臣黃公瓚之父黃公舒，阻兵據守垂三十年。前黎姑息不辨，七州之民，以地勢遼",
+            "n_lines": 2,
+            "tokens": 49,
+            "seconds": 1.245,
+            "confidence": 89.61,
+            "flags": []
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": null,
+        "git_describe": null,
+        "git_dirty": null,
+        "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+        "dtype": "float16",
+        "adapter_version": 3
+      }
+    }
+  ]
+}

@@ -1,0 +1,944 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 616,
+  "runs": [
+    {
+      "key": "11133a10cf4faf21ea4e08e383ecd98080f9360e3c3db849eb646a4e9020f748",
+      "parameters": {
+        "image_sha256": "deb26d5baae2e357d31b04f76b9c4292530418dfd9bf47c7fe7740f694a8e158",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T18:41:20+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_616.png",
+      "image_size": [
+        2607,
+        3238
+      ],
+      "crop_box": [
+        0,
+        0,
+        2607,
+        3238
+      ],
+      "lines": [
+        {
+          "text": "ngothinhamle1.pdf",
+          "bbox": [
+            7,
+            19,
+            1869,
+            45
+          ],
+          "confidence": 97.55
+        },
+        {
+          "text": "BANG GIAO HAO THOAI",
+          "bbox": [
+            1639,
+            209,
+            2159,
+            247
+          ],
+          "confidence": 99.57
+        },
+        {
+          "text": "邇清範于槐陰，敘離懷于菊碗。",
+          "bbox": [
+            602,
+            302,
+            1632,
+            367
+          ],
+          "confidence": 99.35
+        },
+        {
+          "text": "庶以答恩情之萬一，用慰遐思，臨楮神馳。遙遙祝",
+          "bbox": [
+            606,
+            422,
+            2161,
+            487
+          ],
+          "confidence": 99.69
+        },
+        {
+          "text": "慶，希惟照亮。不宣。",
+          "bbox": [
+            454,
+            541,
+            1127,
+            605
+          ],
+          "confidence": 99.49
+        },
+        {
+          "text": "PHIEN AM:",
+          "bbox": [
+            453,
+            673,
+            1515,
+            713
+          ],
+          "confidence": 96.78
+        },
+        {
+          "text": "TRINH THIÊN TRIỀU NOI CÁC ĐẠI THẦN",
+          "bbox": [
+            758,
+            744,
+            1861,
+            790
+          ],
+          "confidence": 86.98
+        },
+        {
+          "text": "VƯƠNG CÔNG GIẢN GIA",
+          "bbox": [
+            986,
+            822,
+            1644,
+            867
+          ],
+          "confidence": 90.32
+        },
+        {
+          "text": "Khánh duy: Nhân hải xung dung, cụ xâm quán Kim Ngưu chi",
+          "bbox": [
+            597,
+            958,
+            2157,
+            1010
+          ],
+          "confidence": 91.91
+        },
+        {
+          "text": "phái; đức tinh chiếu diệu, hồng quang lâm Hoả Tước chi triển.",
+          "bbox": [
+            451,
+            1043,
+            1886,
+            1091
+          ],
+          "confidence": 91.41
+        },
+        {
+          "text": "Kỳ trúc hà chiêm, lê lan vĩnh luyện.",
+          "bbox": [
+            597,
+            1133,
+            1417,
+            1178
+          ],
+          "confidence": 93.74
+        },
+        {
+          "text": "Đại Hoàng để thiên vô tư chiếu, phi khôi nhu viễn chi kinh; tôn",
+          "bbox": [
+            610,
+            1221,
+            2156,
+            1268
+          ],
+          "confidence": 93.78
+        },
+        {
+          "text": "đại nhân thái bất ha di, mâu tán ký nam chi hoá.",
+          "bbox": [
+            450,
+            1307,
+            1596,
+            1351
+          ],
+          "confidence": 90.26
+        },
+        {
+          "text": "Cảnh ngưỡng bao hàm chi khoáng óc, đa mông bang tí chi thinh tình.",
+          "bbox": [
+            600,
+            1395,
+            2137,
+            1449
+          ],
+          "confidence": 90.87
+        },
+        {
+          "text": "Tac nhân: Triển cận thiên đình, ngô chiêm huê sắc.",
+          "bbox": [
+            600,
+            1481,
+            1776,
+            1527
+          ],
+          "confidence": 92.51
+        },
+        {
+          "text": "Biên xa nam phần, tương mô di ân.",
+          "bbox": [
+            597,
+            1570,
+            1412,
+            1614
+          ],
+          "confidence": 82.71
+        },
+        {
+          "text": "Kinh ủy: Bôi giới nghệ khuyết tạ ân, tính phụ thốn tiên tham hậu.",
+          "bbox": [
+            597,
+            1663,
+            2115,
+            1716
+          ],
+          "confidence": 87.51
+        },
+        {
+          "text": "Hanh mông quân chiếu, bất khí phôn vi.",
+          "bbox": [
+            596,
+            1754,
+            1529,
+            1798
+          ],
+          "confidence": 92.94
+        },
+        {
+          "text": "Thế ngã hoàng nhất thế chi nhân, động truân thành ư ngọc giám;",
+          "bbox": [
+            599,
+            1845,
+            2158,
+            1899
+          ],
+          "confidence": 89.12
+        },
+        {
+          "text": "phá Trân có tư giao chi cách, thân hiểu nghi u dao hàm.",
+          "bbox": [
+            449,
+            1933,
+            1745,
+            1978
+          ],
+          "confidence": 82.54
+        },
+        {
+          "text": "Phủng tung lại hàn, thâm hoài nhã lương.",
+          "bbox": [
+            597,
+            2024,
+            1576,
+            2069
+          ],
+          "confidence": 90.44
+        },
+        {
+          "text": "Tiếu phiên hồi quốc hậu, thích bản quốc chi nam Vạn Tượng quốc",
+          "bbox": [
+            599,
+            2119,
+            2157,
+            2173
+          ],
+          "confidence": 92.97
+        },
+        {
+          "text": "câu bình vu nam bi, khách niên ha.",
+          "bbox": [
+            449,
+            2221,
+            1267,
+            2252
+          ],
+          "confidence": 89.75
+        },
+        {
+          "text": "Dao trưởng hoàng linh, hất tiêm Man xú.",
+          "bbox": [
+            594,
+            2300,
+            1543,
+            2345
+          ],
+          "confidence": 93.59
+        },
+        {
+          "text": "Kim nhân: Phung hiến tiếp âm, phu thư triển kính.",
+          "bbox": [
+            594,
+            2392,
+            1777,
+            2438
+          ],
+          "confidence": 87.88
+        },
+        {
+          "text": "Để toạ y y tà hũu, trừng chiêm phụ bật chi quang; minh đường xán",
+          "bbox": [
+            594,
+            2483,
+            2154,
+            2537
+          ],
+          "confidence": 90.58
+        },
+        {
+          "text": "xán hâu tiên, viên tướng y thương chi hôi.",
+          "bbox": [
+            445,
+            2574,
+            1405,
+            2618
+          ],
+          "confidence": 82.81
+        },
+        {
+          "text": "Hà hanh: Nam minh vĩnh thiếp, Bắc khuyết trùng lai.",
+          "bbox": [
+            593,
+            2665,
+            1840,
+            2711
+          ],
+          "confidence": 97.1
+        },
+        {
+          "text": "Nhĩ thanh pham vu hoè âm, tư ly hoài vu cúc uyên.",
+          "bbox": [
+            591,
+            2756,
+            1773,
+            2801
+          ],
+          "confidence": 88.07
+        },
+        {
+          "text": "Thú dĩ đáp ân tình chi van nhất, dung úy hà tư, lâm chủ thân trì.",
+          "bbox": [
+            597,
+            2847,
+            2118,
+            2895
+          ],
+          "confidence": 84.01
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2607,
+          3238
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 14.788,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              7,
+              19,
+              1869,
+              45
+            ],
+            "generated_text": "ngothinhamle1.pdf",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.238,
+            "confidence": 97.55,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              1639,
+              209,
+              2159,
+              247
+            ],
+            "generated_text": "BANG GIAO HAO THOAI",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.259,
+            "confidence": 99.57,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              455,
+              252,
+              2167,
+              267
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.068,
+            "confidence": 27.25,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              602,
+              302,
+              1632,
+              367
+            ],
+            "generated_text": "邇清範于槐陰，敘離懷于菊碗。",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.536,
+            "confidence": 99.35,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              606,
+              422,
+              2161,
+              487
+            ],
+            "generated_text": "庶以答恩情之萬一，用慰遐思，臨楮神馳。遙遙祝",
+            "n_lines": 1,
+            "tokens": 33,
+            "seconds": 0.744,
+            "confidence": 99.69,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              454,
+              541,
+              1127,
+              605
+            ],
+            "generated_text": "慶，希惟照亮。不宣。",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.303,
+            "confidence": 99.49,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              453,
+              673,
+              1515,
+              713
+            ],
+            "generated_text": "PHIEN AM:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.176,
+            "confidence": 96.78,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              758,
+              744,
+              1861,
+              790
+            ],
+            "generated_text": "TRINH THIÊN TRIỀU NOI CÁC ĐẠI THẦN",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 0.659,
+            "confidence": 86.98,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              986,
+              822,
+              1644,
+              867
+            ],
+            "generated_text": "VƯƠNG CÔNG GIẢN GIA",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.403,
+            "confidence": 90.32,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              597,
+              958,
+              2157,
+              1010
+            ],
+            "generated_text": "Khánh duy: Nhân hải xung dung, cụ xâm quán Kim Ngưu chi",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.56,
+            "confidence": 91.91,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              451,
+              1043,
+              1886,
+              1091
+            ],
+            "generated_text": "phái; đức tinh chiếu diệu, hồng quang lâm Hoả Tước chi triển.",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.617,
+            "confidence": 91.41,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              597,
+              1133,
+              1417,
+              1178
+            ],
+            "generated_text": "Kỳ trúc hà chiêm, lê lan vĩnh luyện.",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.424,
+            "confidence": 93.74,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              610,
+              1221,
+              2156,
+              1268
+            ],
+            "generated_text": "Đại Hoàng để thiên vô tư chiếu, phi khôi nhu viễn chi kinh; tôn",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.602,
+            "confidence": 93.78,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              450,
+              1307,
+              1596,
+              1351
+            ],
+            "generated_text": "đại nhân thái bất ha di, mâu tán ký nam chi hoá.",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.52,
+            "confidence": 90.26,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              600,
+              1395,
+              2137,
+              1449
+            ],
+            "generated_text": "Cảnh ngưỡng bao hàm chi khoáng óc, đa mông bang tí chi thinh tình.",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.633,
+            "confidence": 90.87,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              600,
+              1481,
+              1776,
+              1527
+            ],
+            "generated_text": "Tac nhân: Triển cận thiên đình, ngô chiêm huê sắc.",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.538,
+            "confidence": 92.51,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              597,
+              1570,
+              1412,
+              1614
+            ],
+            "generated_text": "Biên xa nam phần, tương mô di ân.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.339,
+            "confidence": 82.71,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              597,
+              1663,
+              2115,
+              1716
+            ],
+            "generated_text": "Kinh ủy: Bôi giới nghệ khuyết tạ ân, tính phụ thốn tiên tham hậu.",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 0.68,
+            "confidence": 87.51,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              596,
+              1754,
+              1529,
+              1798
+            ],
+            "generated_text": "Hanh mông quân chiếu, bất khí phôn vi.",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.435,
+            "confidence": 92.94,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              599,
+              1845,
+              2158,
+              1899
+            ],
+            "generated_text": "Thế ngã hoàng nhất thế chi nhân, động truân thành ư ngọc giám;",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.554,
+            "confidence": 89.12,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              449,
+              1933,
+              1745,
+              1978
+            ],
+            "generated_text": "phá Trân có tư giao chi cách, thân hiểu nghi u dao hàm.",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.523,
+            "confidence": 82.54,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              597,
+              2024,
+              1576,
+              2069
+            ],
+            "generated_text": "Phủng tung lại hàn, thâm hoài nhã lương.",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.423,
+            "confidence": 90.44,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              599,
+              2119,
+              2157,
+              2173
+            ],
+            "generated_text": "Tiếu phiên hồi quốc hậu, thích bản quốc chi nam Vạn Tượng quốc",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.505,
+            "confidence": 92.97,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              449,
+              2221,
+              1267,
+              2252
+            ],
+            "generated_text": "câu bình vu nam bi, khách niên ha.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.335,
+            "confidence": 89.75,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              594,
+              2300,
+              1543,
+              2345
+            ],
+            "generated_text": "Dao trưởng hoàng linh, hất tiêm Man xú.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.399,
+            "confidence": 93.59,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              594,
+              2392,
+              1777,
+              2438
+            ],
+            "generated_text": "Kim nhân: Phung hiến tiếp âm, phu thư triển kính.",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.462,
+            "confidence": 87.88,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              594,
+              2483,
+              2154,
+              2537
+            ],
+            "generated_text": "Để toạ y y tà hũu, trừng chiêm phụ bật chi quang; minh đường xán",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 0.671,
+            "confidence": 90.58,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              445,
+              2574,
+              1405,
+              2618
+            ],
+            "generated_text": "xán hâu tiên, viên tướng y thương chi hôi.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.4,
+            "confidence": 82.81,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              593,
+              2665,
+              1840,
+              2711
+            ],
+            "generated_text": "Hà hanh: Nam minh vĩnh thiếp, Bắc khuyết trùng lai.",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.562,
+            "confidence": 97.1,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              591,
+              2756,
+              1773,
+              2801
+            ],
+            "generated_text": "Nhĩ thanh pham vu hoè âm, tư ly hoài vu cúc uyên.",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.517,
+            "confidence": 88.07,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              597,
+              2847,
+              2118,
+              2895
+            ],
+            "generated_text": "Thú dĩ đáp ân tình chi van nhất, dung úy hà tư, lâm chủ thân trì.",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 0.696,
+            "confidence": 84.01,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              842,
+              736,
+              1812,
+              747
+            ],
+            "ink": 330
+          },
+          {
+            "box": [
+              449,
+              1088,
+              1326,
+              1098
+            ],
+            "ink": 325
+          },
+          {
+            "box": [
+              723,
+              2068,
+              1559,
+              2077
+            ],
+            "ink": 239
+          },
+          {
+            "box": [
+              481,
+              2208,
+              1216,
+              2225
+            ],
+            "ink": 725
+          },
+          {
+            "box": [
+              928,
+              2435,
+              1415,
+              2444
+            ],
+            "ink": 239
+          },
+          {
+            "box": [
+              583,
+              2617,
+              1366,
+              2626
+            ],
+            "ink": 228
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "61cbea5c0055c260ccfc12f884e0febca7b2783b",
+        "git_describe": "61cbea5",
+        "git_dirty": true,
+        "gpu": "NVIDIA L4",
+        "dtype": "bfloat16",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

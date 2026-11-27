@@ -22,13 +22,17 @@ from pathlib import Path
 from src.common.corpus import DataLayout, parse_pages
 from src.common.xmlstore import file_element
 from src.ocr import raw_store
+from src.ocr.cross_check import compare_page, latin_lines
 from src.ocr.build_layers import (LAYER_ENGINES, LAYER_WRITING_SYSTEMS, PAGE_TXT_RE, layer_manifest_paths,
                                   preferred_keys, select_run, verify_layer)
 from src.ocr.run_quality import bad_units, run_units
-from src.ocr.script_filter import CJK_IDEOGRAPH_RE, LAYERS, count_cjk
+from src.ocr.script_filter import CJK_IDEOGRAPH_RE, LAYERS, chatter_reason, count_cjk
 from src.ocr.work_config import CHECK_DEFAULTS, compact, image_pages
 
 LEVELS = ("error", "warning", "info")
+# Lỗi đã bao hàm cảnh báo cùng trang (đừng báo một nguyên nhân hai lần): trang no_text thì run rỗng là hiển nhiên.
+SUBSUMED_BY = {"no_text": ("han_run_no_lines", "vie_run_no_lines"),
+               "han_model_chatter": ("han_long_line",)}
 CONTROL_RE = re.compile(r"[\x00-\x08\x0b\x0c\x0e-\x1f\x7f\u200b-\u200f\ufeff]")
 VIE_SPECIFIC_RE = re.compile(r"[À-ỹĐđ]")
 ENGLISH_WORD_RE = re.compile(r"\b(?:the|and|of|is|are|this|that|with|from|which|have|text|image|words|written)\b",
@@ -51,6 +55,24 @@ def mean_conf(run: dict) -> float | None:
             if x.get("confidence") is not None and str(x.get("text") or "").strip()]
     total = sum(w for _, w in vals)
     return round(sum(c * w for c, w in vals) / total, 2) if total else None
+
+
+def merge_issues(issues: list[Issue]) -> list[Issue]:
+    """Gộp vấn đề trùng (cùng trang + mức + mã) thành một dòng; bỏ cảnh báo đã bị một lỗi cùng trang bao hàm.
+
+    Trước đây trang có N đơn vị lặp in N dòng han_degenerate, và P0692 in cả vie_run_no_lines lẫn no_text."""
+    codes_by_page: dict[int | None, set[str]] = {}
+    for i in issues:
+        codes_by_page.setdefault(i.page, set()).add(i.code)
+    hidden = {(p, c) for p, codes in codes_by_page.items() for e in codes for c in SUBSUMED_BY.get(e, ())}
+    merged: dict[tuple, list[str]] = {}
+    for i in issues:
+        if (i.page, i.code) in hidden:
+            continue
+        details = merged.setdefault((i.page, i.level, i.code), [])
+        if i.detail and i.detail not in details:
+            details.append(i.detail)
+    return [Issue(p, lv, code, "; ".join(d)) for (p, lv, code), d in merged.items()]
 
 
 def english_like(text: str) -> bool:
@@ -231,6 +253,12 @@ def check_work(layout: DataLayout, pages_spec: str | None, check: dict | None = 
                                     f"{str(unit.get('generated_text') or '')[:40]!r}"))
             if not run.get("lines"):
                 issues.append(Issue(p, "warning", f"{layer}_run_no_lines", f"run {engine} không có dòng nào"))
+        for layer, texts in (("han", han_lines), ("vie", vie_lines)):
+            chatter = [x for x in texts if chatter_reason(x, layer)]
+            if chatter:
+                issues.append(Issue(p, "error", f"{layer}_model_chatter",
+                                    f"{len(chatter)} dòng lời tự nói của mô hình còn trong {layer}.xml, "
+                                    f"vd {chatter[0][:30]!r}"))
         if han_run and vie_run:
             if not han_lines and not vie_lines:
                 r = ink(p)
@@ -251,6 +279,20 @@ def check_work(layout: DataLayout, pages_spec: str | None, check: dict | None = 
                 if r is not None and r >= check["vie_min_lines_ink"] and vie_lines:
                     issues.append(Issue(p, "error", "vie_too_few_lines",
                                         f"{len(vie_lines)} dòng Việt, không có Hán, mực {r:.3f}"))
+        if han_run and vie_lines:
+            cross = compare_page(latin_lines(han_run), vie_lines,
+                                 line_min_precision=check["vie_cross_line_precision"])
+            if cross is not None:
+                row["vie_cross"] = {k: cross[k] for k in ("precision", "recall", "f1")}
+                if cross["precision"] < check["vie_cross_min_precision"]:
+                    issues.append(Issue(p, "warning", "vie_cross_low_precision",
+                                        f"chỉ {cross['precision']:.2f} chữ Qwen có trong bản paddlevl (nghi bịa/lặp)"))
+                if cross["recall"] < check["vie_cross_min_recall"]:
+                    issues.append(Issue(p, "warning", "vie_cross_low_recall",
+                                        f"chỉ {cross['recall']:.2f} chữ paddlevl có trong Qwen (nghi bỏ sót)"))
+                for u in cross["unsupported"]:
+                    issues.append(Issue(p, "warning", "vie_unconfirmed_line",
+                                        f"L{u['line']:03d} ({u['precision']:.2f}): {u['text'][:70]}"))
         if vie_run and row["vie_conf"] is not None and vie_lines and row["vie_conf"] < check["qwen_low_conf"]:
             issues.append(Issue(p, "warning", "vie_low_conf", f"conf {row['vie_conf']}"))
         if han_run and han_lines:
@@ -263,6 +305,7 @@ def check_work(layout: DataLayout, pages_spec: str | None, check: dict | None = 
                     issues.append(Issue(p, "info", "han_simplified", "".join(simp[:20])))
         page_rows.append(row)
 
+    issues = merge_issues(issues)
     counts: dict[str, dict[str, int]] = {lv: {} for lv in LEVELS}
     for i in issues:
         counts[i.level][i.code] = counts[i.level].get(i.code, 0) + 1

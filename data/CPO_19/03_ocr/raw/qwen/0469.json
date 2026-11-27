@@ -1,0 +1,241 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "qwen",
+  "page": 469,
+  "runs": [
+    {
+      "key": "6ae858d8c0d90fa48402a45f01634139948ef56f7c30f774fadc5ca2e8d43229",
+      "parameters": {
+        "image_sha256": "abd3f993e1bd92f2a12d7b39a2df9cfde7fcd41d361c45bde753cb5459f1c79b",
+        "engine": {
+          "name": "qwen",
+          "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "model_revision": "main",
+          "transformers_version": "4.57.6",
+          "torch_version": "2.5.1+cu121",
+          "cuda_version": "12.1",
+          "bitsandbytes_version": "0.50.2",
+          "quantization": {
+            "load_in_4bit": true,
+            "quant_type": "nf4",
+            "double_quant": true,
+            "compute_dtype": "float16"
+          },
+          "mode": "all",
+          "min_pixels": 50176,
+          "max_pixels": 802816,
+          "band_inches": 2.0,
+          "max_new_tokens": 768,
+          "repetition_penalty": 1.05,
+          "adapter_version": 3,
+          "prompt_version": 3,
+          "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74"
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T21:40:13+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_469.png",
+      "image_size": [
+        2706,
+        3311
+      ],
+      "crop_box": [
+        0,
+        0,
+        2706,
+        3311
+      ],
+      "lines": [
+        {
+          "text": "NGÔ THÌ NHẬM TOÀN TẬP - TẬP III",
+          "bbox": [
+            7,
+            13,
+            2149,
+            182
+          ],
+          "confidence": 91.49
+        },
+        {
+          "text": "18. 又一道",
+          "bbox": [
+            7,
+            182,
+            2149,
+            352
+          ],
+          "confidence": 91.49
+        },
+        {
+          "text": "(呈請敕使就富春城宣封。國王書呈)",
+          "bbox": [
+            7,
+            352,
+            2149,
+            521
+          ],
+          "confidence": 91.49
+        },
+        {
+          "text": "兹钦奉恩敕书御诗，奉爵阁督部堂公，特派大人捧资，前往本国面交，小番祇领。仰惟綸綺辉煌，寔奎燦爛，貴衰章於象譯，華典册於龍編，誠出格寵榮，纖塵勺水，無以酬高深之萬一也。",
+          "bbox": [
+            439,
+            622,
+            2150,
+            1098
+          ],
+          "confidence": 82.2
+        },
+        {
+          "text": "乃者，小番因营邑于义安，亲往相宅，接得家将留守昇龙城，前後驰遞公文各套，奉左江林大人劄示恩封，已有成命。二位大人進關日期在即，小番喜不自胜，立行飞飭昇龍城文武員目，恭詣關上候迎。而定以",
+          "bbox": [
+            439,
+            1160,
+            2157,
+            1688
+          ],
+          "confidence": 89.41
+        },
+        {
+          "text": "八月二十八日，自义安前赴昇龍拜迎敕書，並參謁大人，歷陳心事，仍邀請就富春城宣封命以妥素懷。蓋小番邇來，許多注措，乃治蠧理勢之所必然，向來未屢漬。今奉天寵垂憐收爲屬國，豈容有所隱情。",
+          "bbox": [
+            204,
+            1727,
+            2147,
+            2228
+          ],
+          "confidence": 88.94
+        },
+        {
+          "text": "昇龍城者，前黎所都，目今旺氣銷歇，人氣希少，富春城舊已建邑，自小番鳩聚以來，稍成都會。由此而達南榮極南之界，尚一月程，向之呼噪風塵者，近始撫定而馴服之，若邑于昇龍，即地勢遙隔，呼應不相及。乂安是本國中土，爲是取中卜宅，而臺殿草創猶未",
+          "bbox": [
+            190,
+            2293,
+            2147,
+            3139
+          ],
+          "confidence": 94.97
+        }
+      ],
+      "raw": {
+        "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+        "model_revision": "main",
+        "mode": "all",
+        "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74",
+        "dpi": 300,
+        "image_size": [
+          2706,
+          3311
+        ],
+        "band_target_height": 600,
+        "bbox_granularity": "band_even_split",
+        "max_new_tokens": 768,
+        "max_pixels": 802816,
+        "inference_seconds": 29.237,
+        "bands": [
+          {
+            "band": 1,
+            "y0": 17,
+            "y1": 571,
+            "ink_box": [
+              7,
+              13,
+              2149,
+              521
+            ],
+            "generated_text": "NGÔ THÌ NHẬM TOÀN TẬP - TẬP III\n\n18. 又一道\n(呈請敕使就富春城宣封。國王書呈)",
+            "n_lines": 3,
+            "tokens": 44,
+            "seconds": 3.219,
+            "confidence": 91.49,
+            "flags": []
+          },
+          {
+            "band": 2,
+            "y0": 571,
+            "y1": 1128,
+            "ink_box": [
+              439,
+              622,
+              2150,
+              1098
+            ],
+            "generated_text": "兹钦奉恩敕书御诗，奉爵阁督部堂公，特派大人捧资，前往本国面交，小番祇领。仰惟綸綺辉煌，寔奎燦爛，貴衰章於象譯，華典册於龍編，誠出格寵榮，纖塵勺水，無以酬高深之萬一也。",
+            "n_lines": 1,
+            "tokens": 86,
+            "seconds": 5.854,
+            "confidence": 82.2,
+            "flags": []
+          },
+          {
+            "band": 3,
+            "y0": 1128,
+            "y1": 1693,
+            "ink_box": [
+              439,
+              1160,
+              2157,
+              1688
+            ],
+            "generated_text": "乃者，小番因营邑于义安，亲往相宅，接得家将留守昇龙城，前後驰遞公文各套，奉左江林大人劄示恩封，已有成命。二位大人進關日期在即，小番喜不自胜，立行飞飭昇龍城文武員目，恭詣關上候迎。而定以",
+            "n_lines": 1,
+            "tokens": 90,
+            "seconds": 6.069,
+            "confidence": 89.41,
+            "flags": []
+          },
+          {
+            "band": 4,
+            "y0": 1693,
+            "y1": 2261,
+            "ink_box": [
+              204,
+              1727,
+              2147,
+              2228
+            ],
+            "generated_text": "八月二十八日，自义安前赴昇龍拜迎敕書，並參謁大人，歷陳心事，仍邀請就富春城宣封命以妥素懷。蓋小番邇來，許多注措，乃治蠧理勢之所必然，向來未屢漬。今奉天寵垂憐收爲屬國，豈容有所隱情。",
+            "n_lines": 1,
+            "tokens": 92,
+            "seconds": 6.231,
+            "confidence": 88.94,
+            "flags": []
+          },
+          {
+            "band": 5,
+            "y0": 2261,
+            "y1": 3135,
+            "ink_box": [
+              190,
+              2293,
+              2147,
+              3139
+            ],
+            "generated_text": "昇龍城者，前黎所都，目今旺氣銷歇，人氣希少，富春城舊已建邑，自小番鳩聚以來，稍成都會。由此而達南榮極南之界，尚一月程，向之呼噪風塵者，近始撫定而馴服之，若邑于昇龍，即地勢遙隔，呼應不相及。乂安是本國中土，爲是取中卜宅，而臺殿草創猶未",
+            "n_lines": 1,
+            "tokens": 118,
+            "seconds": 7.831,
+            "confidence": 94.97,
+            "flags": []
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "61cbea5c0055c260ccfc12f884e0febca7b2783b",
+        "git_describe": "61cbea5",
+        "git_dirty": true,
+        "gpu": "NVIDIA L4",
+        "dtype": "float16",
+        "adapter_version": 3
+      }
+    }
+  ]
+}

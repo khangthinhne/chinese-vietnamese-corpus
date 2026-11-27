@@ -1,0 +1,241 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "qwen",
+  "page": 151,
+  "runs": [
+    {
+      "key": "c85dc3730e5044ccefc4f9357b956115935d651e9c8f3c3609d93463b9733b22",
+      "parameters": {
+        "image_sha256": "745de3bdc3cb9c7675d68ad08dac008a7dbe34b56c0b57d9a9ac6c0144498d6d",
+        "engine": {
+          "name": "qwen",
+          "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "model_revision": "main",
+          "transformers_version": "4.57.6",
+          "torch_version": "2.5.1+cu121",
+          "cuda_version": "12.1",
+          "bitsandbytes_version": "0.50.2",
+          "quantization": {
+            "load_in_4bit": true,
+            "quant_type": "nf4",
+            "double_quant": true,
+            "compute_dtype": "float16"
+          },
+          "mode": "all",
+          "min_pixels": 50176,
+          "max_pixels": 802816,
+          "band_inches": 2.0,
+          "max_new_tokens": 768,
+          "repetition_penalty": 1.05,
+          "adapter_version": 3,
+          "prompt_version": 3,
+          "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74"
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T19:05:15+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_151.png",
+      "image_size": [
+        2575,
+        3208
+      ],
+      "crop_box": [
+        0,
+        0,
+        2575,
+        3208
+      ],
+      "lines": [
+        {
+          "text": "NGÔ THÌ NHẬM TOÀN TẬP Ⅱ - TẬP III",
+          "bbox": [
+            7,
+            2,
+            2195,
+            193
+          ],
+          "confidence": 90.73
+        },
+        {
+          "text": "67. 岳陽記勝",
+          "bbox": [
+            7,
+            193,
+            2195,
+            383
+          ],
+          "confidence": 90.73
+        },
+        {
+          "text": "余曾聞前輩奉使諸公言：順風過洞庭之樂。是行",
+          "bbox": [
+            7,
+            383,
+            2195,
+            574
+          ],
+          "confidence": 90.73
+        },
+        {
+          "text": "也，以晚春入楚，奉大皇帝旨催入覲，趁紧兼程。到湘时，东风正盛，不利帆楫，乃由旱路行走。比秋初回軺，将及漢口，沂流而强潦箭奔，舟艣不得上；又自武昌起陸回粤，乘風遊湖之樂有如是夫！",
+          "bbox": [
+            485,
+            566,
+            2307,
+            1097
+          ],
+          "confidence": 86.25
+        },
+        {
+          "text": "岳阳楼在湖之东，岳州城之西。余到岳时，因与同干诸公登楼纵观，至则湖光水静，一碧万顷，极目无际，不知其津涯，遥望君山涌出波心，宛然一座罗浮翠黛，与锦纹联带。余顾盼良久欲觅舟游山，而",
+          "bbox": [
+            493,
+            1105,
+            2183,
+            1619
+          ],
+          "confidence": 92.93
+        },
+        {
+          "text": "落照西沉，只得在楼头眺望。其原委之所自以问吏，则曰：湖之西界云南、贵川，顺风三日，东岸可达西岸；西北通于四川，东北流于汉阳，西南即长沙诸洲，潇湘之水走而灌诸湖也。",
+          "bbox": [
+            492,
+            1687,
+            2183,
+            2175
+          ],
+          "confidence": 95.78
+        },
+        {
+          "text": "噫湖之所以大，非夫众流之力歟？众流聚而为湖，非夫造化之巧歟？造化之巧，图不尽意，书不尽言。能收拾而点缀之者，非夫达人之观歟？而余尘襟未静，俗冗难抛，盖造设之多奇，恨吾目之所及之未广也。至于烟波物水光色，禽鸟之翱翔，鱼",
+          "bbox": [
+            429,
+            2239,
+            2187,
+            2994
+          ],
+          "confidence": 90.11
+        }
+      ],
+      "raw": {
+        "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+        "model_revision": "main",
+        "mode": "all",
+        "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74",
+        "dpi": 300,
+        "image_size": [
+          2575,
+          3208
+        ],
+        "band_target_height": 600,
+        "bbox_granularity": "band_even_split",
+        "max_new_tokens": 768,
+        "max_pixels": 802816,
+        "inference_seconds": 27.961,
+        "bands": [
+          {
+            "band": 1,
+            "y0": 6,
+            "y1": 570,
+            "ink_box": [
+              7,
+              2,
+              2195,
+              574
+            ],
+            "generated_text": "NGÔ THÌ NHẬM TOÀN TẬP Ⅱ - TẬP III\n\n67. 岳陽記勝\n\n余曾聞前輩奉使諸公言：順風過洞庭之樂。是行",
+            "n_lines": 3,
+            "tokens": 54,
+            "seconds": 3.89,
+            "confidence": 90.73,
+            "flags": []
+          },
+          {
+            "band": 2,
+            "y0": 570,
+            "y1": 1099,
+            "ink_box": [
+              485,
+              566,
+              2307,
+              1097
+            ],
+            "generated_text": "也，以晚春入楚，奉大皇帝旨催入覲，趁紧兼程。到湘时，东风正盛，不利帆楫，乃由旱路行走。比秋初回軺，将及漢口，沂流而强潦箭奔，舟艣不得上；又自武昌起陸回粤，乘風遊湖之樂有如是夫！",
+            "n_lines": 1,
+            "tokens": 88,
+            "seconds": 6.093,
+            "confidence": 86.25,
+            "flags": []
+          },
+          {
+            "band": 3,
+            "y0": 1099,
+            "y1": 1652,
+            "ink_box": [
+              493,
+              1105,
+              2183,
+              1619
+            ],
+            "generated_text": "岳阳楼在湖之东，岳州城之西。余到岳时，因与同干诸公登楼纵观，至则湖光水静，一碧万顷，极目无际，不知其津涯，遥望君山涌出波心，宛然一座罗浮翠黛，与锦纹联带。余顾盼良久欲觅舟游山，而",
+            "n_lines": 1,
+            "tokens": 87,
+            "seconds": 5.928,
+            "confidence": 92.93,
+            "flags": []
+          },
+          {
+            "band": 4,
+            "y0": 1652,
+            "y1": 2210,
+            "ink_box": [
+              492,
+              1687,
+              2183,
+              2175
+            ],
+            "generated_text": "落照西沉，只得在楼头眺望。其原委之所自以问吏，则曰：湖之西界云南、贵川，顺风三日，东岸可达西岸；西北通于四川，东北流于汉阳，西南即长沙诸洲，潇湘之水走而灌诸湖也。",
+            "n_lines": 1,
+            "tokens": 72,
+            "seconds": 5.033,
+            "confidence": 95.78,
+            "flags": []
+          },
+          {
+            "band": 5,
+            "y0": 2210,
+            "y1": 2990,
+            "ink_box": [
+              429,
+              2239,
+              2187,
+              2994
+            ],
+            "generated_text": "噫湖之所以大，非夫众流之力歟？众流聚而为湖，非夫造化之巧歟？造化之巧，图不尽意，书不尽言。能收拾而点缀之者，非夫达人之观歟？而余尘襟未静，俗冗难抛，盖造设之多奇，恨吾目之所及之未广也。至于烟波物水光色，禽鸟之翱翔，鱼",
+            "n_lines": 1,
+            "tokens": 103,
+            "seconds": 6.988,
+            "confidence": 90.11,
+            "flags": []
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "61cbea5c0055c260ccfc12f884e0febca7b2783b",
+        "git_describe": "61cbea5",
+        "git_dirty": true,
+        "gpu": "NVIDIA L4",
+        "dtype": "float16",
+        "adapter_version": 3
+      }
+    }
+  ]
+}

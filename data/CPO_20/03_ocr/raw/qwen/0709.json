@@ -1,0 +1,291 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_20",
+  "engine": "qwen",
+  "page": 709,
+  "runs": [
+    {
+      "key": "e2289b0e308e563533df51540680e80fc0d0e6aeb13013ebf9a553fc03b94bc9",
+      "parameters": {
+        "image_sha256": "04c85b457ba9cd68aa46ad8777ee39337280334e1558ab867a70b156d2ba5399",
+        "engine": {
+          "name": "qwen",
+          "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "model_revision": "main",
+          "transformers_version": "4.57.6",
+          "torch_version": "2.5.1+cu121",
+          "cuda_version": "12.1",
+          "bitsandbytes_version": "0.50.2",
+          "quantization": {
+            "load_in_4bit": true,
+            "quant_type": "nf4",
+            "double_quant": true,
+            "compute_dtype": "float16"
+          },
+          "mode": "all",
+          "min_pixels": 50176,
+          "max_pixels": 802816,
+          "band_inches": 2.0,
+          "max_new_tokens": 768,
+          "repetition_penalty": 1.05,
+          "adapter_version": 3,
+          "prompt_version": 3,
+          "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74"
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T18:58:17+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_709.png",
+      "image_size": [
+        1823,
+        2814
+      ],
+      "crop_box": [
+        0,
+        0,
+        1823,
+        2814
+      ],
+      "lines": [
+        {
+          "text": "Mối tình chung thủy không thay đổi với kẻ ám người dương,",
+          "bbox": [
+            78,
+            77,
+            1746,
+            186
+          ],
+          "confidence": 93.87
+        },
+        {
+          "text": "Hồn phách thiêng liêng thường gặp nhau trong giấc mộng.",
+          "bbox": [
+            78,
+            186,
+            1746,
+            295
+          ],
+          "confidence": 93.87
+        },
+        {
+          "text": "Buồn nhất là khi tình giấc ngủ nơi đất khách,",
+          "bbox": [
+            78,
+            295,
+            1746,
+            404
+          ],
+          "confidence": 93.87
+        },
+        {
+          "text": "Mơ màng về khóm cỏ xanh nơi sân vắng và đám mây trên.",
+          "bbox": [
+            78,
+            404,
+            1746,
+            513
+          ],
+          "confidence": 93.87
+        },
+        {
+          "text": "núi xa.",
+          "bbox": [
+            591,
+            505,
+            1746,
+            749
+          ],
+          "confidence": 81.01
+        },
+        {
+          "text": "农话赋",
+          "bbox": [
+            591,
+            749,
+            1746,
+            993
+          ],
+          "confidence": 81.01
+        },
+        {
+          "text": "辛未之岁，六七月间。禾穀既同，比岁灾凶。",
+          "bbox": [
+            212,
+            985,
+            1746,
+            1132
+          ],
+          "confidence": 57.54
+        },
+        {
+          "text": "未之南，皋之东，农庶喜曰：丰。",
+          "bbox": [
+            212,
+            1132,
+            1746,
+            1279
+          ],
+          "confidence": 57.54
+        },
+        {
+          "text": "忽天惠雨，若倾盆者。夜下。",
+          "bbox": [
+            212,
+            1279,
+            1746,
+            1427
+          ],
+          "confidence": 57.54
+        },
+        {
+          "text": "淋漓室之泛竹舟出村郭而观之。",
+          "bbox": [
+            212,
+            1427,
+            1746,
+            1574
+          ],
+          "confidence": 57.54
+        },
+        {
+          "text": "不遇於是，維舟而問之曰：天災不幸，斯亦已焉。",
+          "bbox": [
+            213,
+            1566,
+            1746,
+            2141
+          ],
+          "confidence": 78.1
+        },
+        {
+          "text": "713",
+          "bbox": [
+            1555,
+            2133,
+            1746,
+            2543
+          ],
+          "confidence": 98.63
+        }
+      ],
+      "raw": {
+        "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+        "model_revision": "main",
+        "mode": "all",
+        "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74",
+        "dpi": 300,
+        "image_size": [
+          1823,
+          2814
+        ],
+        "band_target_height": 600,
+        "bbox_granularity": "band_even_split",
+        "max_new_tokens": 768,
+        "max_pixels": 802816,
+        "inference_seconds": 16.04,
+        "bands": [
+          {
+            "band": 1,
+            "y0": 81,
+            "y1": 509,
+            "ink_box": [
+              78,
+              77,
+              1746,
+              513
+            ],
+            "generated_text": "Mối tình chung thủy không thay đổi với kẻ ám người dương,\nHồn phách thiêng liêng thường gặp nhau trong giấc mộng.\nBuồn nhất là khi tình giấc ngủ nơi đất khách,\nMơ màng về khóm cỏ xanh nơi sân vắng và đám mây trên.",
+            "n_lines": 4,
+            "tokens": 70,
+            "seconds": 5.636,
+            "confidence": 93.87,
+            "flags": []
+          },
+          {
+            "band": 2,
+            "y0": 509,
+            "y1": 989,
+            "ink_box": [
+              591,
+              505,
+              1746,
+              993
+            ],
+            "generated_text": "núi xa.\n农话赋",
+            "n_lines": 2,
+            "tokens": 9,
+            "seconds": 1.64,
+            "confidence": 81.01,
+            "flags": []
+          },
+          {
+            "band": 3,
+            "y0": 989,
+            "y1": 1570,
+            "ink_box": [
+              212,
+              985,
+              1746,
+              1574
+            ],
+            "generated_text": "辛未之岁，六七月间。禾穀既同，比岁灾凶。\n未之南，皋之东，农庶喜曰：丰。\n忽天惠雨，若倾盆者。夜下。\n淋漓室之泛竹舟出村郭而观之。",
+            "n_lines": 4,
+            "tokens": 63,
+            "seconds": 5.16,
+            "confidence": 57.54,
+            "flags": []
+          },
+          {
+            "band": 4,
+            "y0": 1570,
+            "y1": 2137,
+            "ink_box": [
+              213,
+              1566,
+              1746,
+              2141
+            ],
+            "generated_text": "不遇於是，維舟而問之曰：天災不幸，斯亦已焉。",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 3.038,
+            "confidence": 78.1,
+            "flags": []
+          },
+          {
+            "band": 5,
+            "y0": 2137,
+            "y1": 2539,
+            "ink_box": [
+              1555,
+              2133,
+              1746,
+              2543
+            ],
+            "generated_text": "713",
+            "n_lines": 1,
+            "tokens": 4,
+            "seconds": 0.555,
+            "confidence": 98.63,
+            "flags": []
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "9f9251f525e6fb14a7842465d834ea0d351ab96e",
+        "git_describe": "9f9251f",
+        "git_dirty": true,
+        "gpu": "NVIDIA GeForce RTX 3050 6GB Laptop GPU",
+        "dtype": "float16",
+        "adapter_version": 3
+      }
+    }
+  ]
+}

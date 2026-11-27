@@ -1,0 +1,883 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 608,
+  "runs": [
+    {
+      "key": "e13e27a311a2e53d1b8aea906c6f86e0f94995524d796a29abb49f8db7644172",
+      "parameters": {
+        "image_sha256": "9bcddacf052dd6f5618ffe217077d819aec7a73bb0d59fc9d1d235aefe60b9b3",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T18:39:25+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_608.png",
+      "image_size": [
+        2574,
+        3194
+      ],
+      "crop_box": [
+        0,
+        0,
+        2574,
+        3194
+      ],
+      "lines": [
+        {
+          "text": "BANG GIAO HAO THOAI",
+          "bbox": [
+            1117,
+            122,
+            2059,
+            160
+          ],
+          "confidence": 99.39
+        },
+        {
+          "text": "phải là điều mà vua Măn Châu, Mông Cổ đã thường được. Ô trong sự",
+          "bbox": [
+            359,
+            227,
+            2060,
+            272
+          ],
+          "confidence": 92.31
+        },
+        {
+          "text": "không thương được, mà Quốc Vương tôi mới bắt đầu vào bề kiến đã được",
+          "bbox": [
+            357,
+            308,
+            2060,
+            354
+          ],
+          "confidence": 90.48
+        },
+        {
+          "text": "ngay, thiết nghĩ kết duyên Châu Trần cũng không phải là việc lạ. Kính",
+          "bbox": [
+            357,
+            390,
+            2060,
+            443
+          ],
+          "confidence": 99.54
+        },
+        {
+          "text": "vâng lời du của Dai nhân nói có câu: \"Sợ hãi không biết để đâu,\" thì ý",
+          "bbox": [
+            355,
+            471,
+            2061,
+            516
+          ],
+          "confidence": 89.83
+        },
+        {
+          "text": "nông can của tôi chưa hiểu được câu nói đó. Khi đã được trát chỉ bảo cho,",
+          "bbox": [
+            357,
+            553,
+            2135,
+            599
+          ],
+          "confidence": 97.64
+        },
+        {
+          "text": "tôi cũng không đảm không nói cho Quốc Vương tôi biết.",
+          "bbox": [
+            358,
+            636,
+            1627,
+            681
+          ],
+          "confidence": 93.66
+        },
+        {
+          "text": "Nay tôi từ Thăng Long vào châu, vâng theo lời du của Đại nhân về",
+          "bbox": [
+            508,
+            718,
+            2062,
+            763
+          ],
+          "confidence": 92.82
+        },
+        {
+          "text": "ý ấy, may chưa nói ra. Trộm nghe sang xuân sẽ tới Quảng Đông, hoặc giả",
+          "bbox": [
+            355,
+            800,
+            2060,
+            854
+          ],
+          "confidence": 96.66
+        },
+        {
+          "text": "có lần trình bày xin hiến chỉ, sẽ có cách dùng khác, chưa thể biết được,",
+          "bbox": [
+            356,
+            882,
+            2058,
+            928
+          ],
+          "confidence": 93.78
+        },
+        {
+          "text": "mong Đại nhân có ý kiến để làm lưu chiểu. Tôi về châu Quốc Vương sau",
+          "bbox": [
+            357,
+            964,
+            2058,
+            1010
+          ],
+          "confidence": 93.99
+        },
+        {
+          "text": "khi được mệnh, tôi đâu mùa xuân lại có tờ bấm vây. Tôi quá đôi ơn",
+          "bbox": [
+            355,
+            1046,
+            2058,
+            1091
+          ],
+          "confidence": 89.08
+        },
+        {
+          "text": "thương yêu, cho nên đảm cất tiếng nói nhàm, rất biết có lỗi, can pham uy",
+          "bbox": [
+            356,
+            1129,
+            2060,
+            1174
+          ],
+          "confidence": 89.14
+        },
+        {
+          "text": "lón, câu mong lương biến rộng thú cho. Nay vừa tiết tháng chạp, xa mong",
+          "bbox": [
+            355,
+            1212,
+            2060,
+            1265
+          ],
+          "confidence": 90.04
+        },
+        {
+          "text": "quản phu muôn phục tối dày.",
+          "bbox": [
+            357,
+            1308,
+            1035,
+            1340
+          ],
+          "confidence": 73.68
+        },
+        {
+          "text": "CHU THICH:",
+          "bbox": [
+            357,
+            1399,
+            645,
+            1438
+          ],
+          "confidence": 98.42
+        },
+        {
+          "text": "1.Tam Đại: Túc ba triệu đại: Ha, Thương, Chu.",
+          "bbox": [
+            510,
+            1470,
+            1496,
+            1513
+          ],
+          "confidence": 89.01
+        },
+        {
+          "text": "2.Đường lệ: Tên bài thơ trong Kinh Thi, nói cảnh anh em xum vậy, có",
+          "bbox": [
+            507,
+            1546,
+            2059,
+            1588
+          ],
+          "confidence": 94.23
+        },
+        {
+          "text": "khuôn phép.",
+          "bbox": [
+            356,
+            1633,
+            621,
+            1663
+          ],
+          "confidence": 97.74
+        },
+        {
+          "text": "AC安防从贮办外签仔昭书",
+          "bbox": [
+            674,
+            1792,
+            1741,
+            1822
+          ],
+          "confidence": 36.22
+        },
+        {
+          "text": "46.奇悟价阮宏猷寺候题書",
+          "bbox": [
+            662,
+            1814,
+            1731,
+            1868
+          ],
+          "confidence": 88.28
+        },
+        {
+          "text": "（且述濯羅谒爨）",
+          "bbox": [
+            916,
+            1908,
+            1498,
+            1951
+          ],
+          "confidence": 75.98
+        },
+        {
+          "text": "（共迹進維透景）",
+          "bbox": [
+            916,
+            1943,
+            1498,
+            1978
+          ],
+          "confidence": 74.32
+        },
+        {
+          "text": "初冬，爾等進關，行李匆匆，未及打點，我心深",
+          "bbox": [
+            506,
+            2119,
+            2054,
+            2182
+          ],
+          "confidence": 99.57
+        },
+        {
+          "text": "用體爾遠行底意。詩稱靡盬，易訓匪躬。凡皆臣子",
+          "bbox": [
+            365,
+            2278,
+            2051,
+            2343
+          ],
+          "confidence": 99.56
+        },
+        {
+          "text": "事主之所當勉也。",
+          "bbox": [
+            359,
+            2442,
+            1477,
+            2501
+          ],
+          "confidence": 93.83
+        },
+        {
+          "text": "今奉大皇帝海涵春育，一视同仁，我主臣自投欸",
+          "bbox": [
+            503,
+            2605,
+            2141,
+            2669
+          ],
+          "confidence": 98.37
+        },
+        {
+          "text": "以來，承恩最爲隆渥。阮光顯入覲行在僊莊，及其回",
+          "bbox": [
+            359,
+            2746,
+            2061,
+            2813
+          ],
+          "confidence": 99.49
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2574,
+          3194
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 13.652,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              1117,
+              122,
+              2059,
+              160
+            ],
+            "generated_text": "BANG GIAO HAO THOAI",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.259,
+            "confidence": 99.39,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              362,
+              165,
+              2067,
+              179
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.068,
+            "confidence": 98.61,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              359,
+              227,
+              2060,
+              272
+            ],
+            "generated_text": "phải là điều mà vua Măn Châu, Mông Cổ đã thường được. Ô trong sự",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.553,
+            "confidence": 92.31,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              357,
+              308,
+              2060,
+              354
+            ],
+            "generated_text": "không thương được, mà Quốc Vương tôi mới bắt đầu vào bề kiến đã được",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.52,
+            "confidence": 90.48,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              357,
+              390,
+              2060,
+              443
+            ],
+            "generated_text": "ngay, thiết nghĩ kết duyên Châu Trần cũng không phải là việc lạ. Kính",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.577,
+            "confidence": 99.54,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              355,
+              471,
+              2061,
+              516
+            ],
+            "generated_text": "vâng lời du của Dai nhân nói có câu: \"Sợ hãi không biết để đâu,\" thì ý",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.636,
+            "confidence": 89.83,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              357,
+              553,
+              2135,
+              599
+            ],
+            "generated_text": "nông can của tôi chưa hiểu được câu nói đó. Khi đã được trát chỉ bảo cho,",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.614,
+            "confidence": 97.64,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              358,
+              636,
+              1627,
+              681
+            ],
+            "generated_text": "tôi cũng không đảm không nói cho Quốc Vương tôi biết.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.401,
+            "confidence": 93.66,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              508,
+              718,
+              2062,
+              763
+            ],
+            "generated_text": "Nay tôi từ Thăng Long vào châu, vâng theo lời du của Đại nhân về",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.54,
+            "confidence": 92.82,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              355,
+              800,
+              2060,
+              854
+            ],
+            "generated_text": "ý ấy, may chưa nói ra. Trộm nghe sang xuân sẽ tới Quảng Đông, hoặc giả",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.641,
+            "confidence": 96.66,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              356,
+              882,
+              2058,
+              928
+            ],
+            "generated_text": "có lần trình bày xin hiến chỉ, sẽ có cách dùng khác, chưa thể biết được,",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.597,
+            "confidence": 93.78,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              357,
+              964,
+              2058,
+              1010
+            ],
+            "generated_text": "mong Đại nhân có ý kiến để làm lưu chiểu. Tôi về châu Quốc Vương sau",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.569,
+            "confidence": 93.99,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              355,
+              1046,
+              2058,
+              1091
+            ],
+            "generated_text": "khi được mệnh, tôi đâu mùa xuân lại có tờ bấm vây. Tôi quá đôi ơn",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 0.684,
+            "confidence": 89.08,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              356,
+              1129,
+              2060,
+              1174
+            ],
+            "generated_text": "thương yêu, cho nên đảm cất tiếng nói nhàm, rất biết có lỗi, can pham uy",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.628,
+            "confidence": 89.14,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              355,
+              1212,
+              2060,
+              1265
+            ],
+            "generated_text": "lón, câu mong lương biến rộng thú cho. Nay vừa tiết tháng chạp, xa mong",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 0.696,
+            "confidence": 90.04,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              357,
+              1308,
+              1035,
+              1340
+            ],
+            "generated_text": "quản phu muôn phục tối dày.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.347,
+            "confidence": 73.68,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              357,
+              1399,
+              645,
+              1438
+            ],
+            "generated_text": "CHU THICH:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.175,
+            "confidence": 98.42,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              510,
+              1470,
+              1496,
+              1513
+            ],
+            "generated_text": "1.Tam Đại: Túc ba triệu đại: Ha, Thương, Chu.",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.504,
+            "confidence": 89.01,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              507,
+              1546,
+              2059,
+              1588
+            ],
+            "generated_text": "2.Đường lệ: Tên bài thơ trong Kinh Thi, nói cảnh anh em xum vậy, có",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.65,
+            "confidence": 94.23,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              356,
+              1633,
+              621,
+              1663
+            ],
+            "generated_text": "khuôn phép.",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.172,
+            "confidence": 97.74,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              674,
+              1792,
+              1741,
+              1822
+            ],
+            "generated_text": "AC安防从贮办外签仔昭书",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.283,
+            "confidence": 36.22,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              662,
+              1814,
+              1731,
+              1868
+            ],
+            "generated_text": "46.奇悟价阮宏猷寺候题書",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.392,
+            "confidence": 88.28,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              916,
+              1908,
+              1498,
+              1951
+            ],
+            "generated_text": "（且述濯羅谒爨）",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.367,
+            "confidence": 75.98,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              916,
+              1943,
+              1498,
+              1978
+            ],
+            "generated_text": "（共迹進維透景）",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.238,
+            "confidence": 74.32,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              506,
+              2119,
+              2054,
+              2182
+            ],
+            "generated_text": "初冬，爾等進關，行李匆匆，未及打點，我心深",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.447,
+            "confidence": 99.57,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              365,
+              2278,
+              2051,
+              2343
+            ],
+            "generated_text": "用體爾遠行底意。詩稱靡盬，易訓匪躬。凡皆臣子",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 0.656,
+            "confidence": 99.56,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              359,
+              2442,
+              1477,
+              2501
+            ],
+            "generated_text": "事主之所當勉也。",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.216,
+            "confidence": 93.83,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              503,
+              2605,
+              2141,
+              2669
+            ],
+            "generated_text": "今奉大皇帝海涵春育，一视同仁，我主臣自投欸",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.508,
+            "confidence": 98.37,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              359,
+              2746,
+              2061,
+              2813
+            ],
+            "generated_text": "以來，承恩最爲隆渥。阮光顯入覲行在僊莊，及其回",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 0.708,
+            "confidence": 99.49,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              358,
+              268,
+              2049,
+              279
+            ],
+            "ink": 503
+          },
+          {
+            "box": [
+              477,
+              350,
+              2031,
+              360
+            ],
+            "ink": 482
+          },
+          {
+            "box": [
+              519,
+              678,
+              1438,
+              688
+            ],
+            "ink": 431
+          },
+          {
+            "box": [
+              575,
+              760,
+              1829,
+              770
+            ],
+            "ink": 432
+          },
+          {
+            "box": [
+              495,
+              1171,
+              2044,
+              1181
+            ],
+            "ink": 450
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "61cbea5c0055c260ccfc12f884e0febca7b2783b",
+        "git_describe": "61cbea5",
+        "git_dirty": true,
+        "gpu": "NVIDIA L4",
+        "dtype": "bfloat16",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

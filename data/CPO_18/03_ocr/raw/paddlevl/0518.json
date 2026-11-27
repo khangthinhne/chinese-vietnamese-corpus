@@ -1,0 +1,736 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_18",
+  "engine": "paddlevl",
+  "page": 518,
+  "runs": [
+    {
+      "key": "237cfd324a327779a9cc935f51b2d5d7c9fde0190990acbd6f183865e3703325",
+      "parameters": {
+        "image_sha256": "27c3bba9cefd1f15411e0b27603ac716298249049986c5eb4b3b71cf73872f3c",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T19:00:25+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_518.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        0,
+        2480,
+        3509
+      ],
+      "lines": [
+        {
+          "text": "Sưu tấm và khảo luận tác phẩm chủ Hán của người Việt Nam trước TK 10",
+          "bbox": [
+            280,
+            82,
+            1893,
+            152
+          ],
+          "confidence": 92.77
+        },
+        {
+          "text": "___",
+          "bbox": [
+            262,
+            174,
+            2280,
+            204
+          ],
+          "confidence": 34.53
+        },
+        {
+          "text": "(184) Tế Phi : viên quan Thái tế (Tế tướng) của nước Ngô, tên",
+          "bbox": [
+            279,
+            281,
+            2275,
+            354
+          ],
+          "confidence": 94.17
+        },
+        {
+          "text": "là Phi (theo Khang Hy tu điên).",
+          "bbox": [
+            406,
+            368,
+            1403,
+            432
+          ],
+          "confidence": 86.72
+        },
+        {
+          "text": "問曰：道家云堯舜周孔，七十二弟子皆不",
+          "bbox": [
+            413,
+            798,
+            2258,
+            886
+          ],
+          "confidence": 98.12
+        },
+        {
+          "text": "死，而僊佛家云人皆當死，莫能免，何哉？",
+          "bbox": [
+            281,
+            929,
+            1931,
+            1015
+          ],
+          "confidence": 96.34
+        },
+        {
+          "text": "牟子曰：此妖妄之言，非聖人所語也。老子",
+          "bbox": [
+            412,
+            1101,
+            2259,
+            1183
+          ],
+          "confidence": 98.98
+        },
+        {
+          "text": "曰：“天地尚不得長久”，而況人乎！孔子曰：“賢",
+          "bbox": [
+            288,
+            1229,
+            2260,
+            1315
+          ],
+          "confidence": 94.56
+        },
+        {
+          "text": "者避世，仁孝常在”。吾覽六藝，觀傳記，堯有殂",
+          "bbox": [
+            282,
+            1359,
+            2264,
+            1449
+          ],
+          "confidence": 99.58
+        },
+        {
+          "text": "落；舜有蒼梧之山；禹有會稽之陵；伯夷，叔齊有",
+          "bbox": [
+            286,
+            1492,
+            2259,
+            1580
+          ],
+          "confidence": 97.59
+        },
+        {
+          "text": "首陽之墓;文王不及誅紂而沒，武王不能待成王",
+          "bbox": [
+            287,
+            1621,
+            2262,
+            1707
+          ],
+          "confidence": 94.61
+        },
+        {
+          "text": "大而崩，周公有改葬之篇，仲尼有兩楹之夢，伯",
+          "bbox": [
+            291,
+            1747,
+            2261,
+            1834
+          ],
+          "confidence": 97.14
+        },
+        {
+          "text": "魚有先父之年，子路有葅醢之語，伯牛有亡命之",
+          "bbox": [
+            292,
+            1877,
+            2266,
+            1963
+          ],
+          "confidence": 98.77
+        },
+        {
+          "text": "文曾参有啓足之詞，顏淵有不幸短命之記，苗",
+          "bbox": [
+            296,
+            2004,
+            2259,
+            2090
+          ],
+          "confidence": 93.52
+        },
+        {
+          "text": "而不秀之喻，皆著在經典，聖人至言也。吾以經",
+          "bbox": [
+            300,
+            2132,
+            2266,
+            2216
+          ],
+          "confidence": 99.23
+        },
+        {
+          "text": "傳爲證，世人爲驗云。而不死者，豈不惑乎？",
+          "bbox": [
+            296,
+            2257,
+            2092,
+            2338
+          ],
+          "confidence": 98.4
+        },
+        {
+          "text": "PHIEN AM:",
+          "bbox": [
+            430,
+            2518,
+            805,
+            2573
+          ],
+          "confidence": 90.27
+        },
+        {
+          "text": "Ván viết : Đạo gia vân Nghiêu, Thuấn, Chu, Không,",
+          "bbox": [
+            429,
+            2636,
+            2270,
+            2712
+          ],
+          "confidence": 93.02
+        },
+        {
+          "text": "thất thập nhị đế tủ giai bất tủ, nhi Tiên, Phật gia vân",
+          "bbox": [
+            299,
+            2729,
+            2270,
+            2805
+          ],
+          "confidence": 84.03
+        },
+        {
+          "text": "nhân giai đường tủ, mạc năng miễn, hà tai?",
+          "bbox": [
+            300,
+            2816,
+            1825,
+            2891
+          ],
+          "confidence": 87.15
+        },
+        {
+          "text": "Mâu Từ viết : Thủ yêu vọng chi ngôn, phi thành",
+          "bbox": [
+            431,
+            2943,
+            2475,
+            3018
+          ],
+          "confidence": 89.21
+        },
+        {
+          "text": "nhân sở ngũ giả. Lão Từ viết : \"Thiên địa thượng bất",
+          "bbox": [
+            297,
+            3031,
+            2439,
+            3107
+          ],
+          "confidence": 86.55
+        },
+        {
+          "text": "đặc trưởng cửu\" nhi hướng nhân hộ ! Không Từ viết",
+          "bbox": [
+            299,
+            3116,
+            2355,
+            3196
+          ],
+          "confidence": 85.14
+        },
+        {
+          "text": "486",
+          "bbox": [
+            289,
+            3347,
+            2108,
+            3383
+          ],
+          "confidence": 84.72
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          3509
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 10.83,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              280,
+              82,
+              1893,
+              152
+            ],
+            "generated_text": "Sưu tấm và khảo luận tác phẩm chủ Hán của người Việt Nam trước TK 10",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.544,
+            "confidence": 92.77,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              262,
+              174,
+              2280,
+              204
+            ],
+            "generated_text": "___",
+            "n_lines": 1,
+            "tokens": 2,
+            "seconds": 0.088,
+            "confidence": 34.53,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              279,
+              281,
+              2275,
+              354
+            ],
+            "generated_text": "(184) Tế Phi : viên quan Thái tế (Tế tướng) của nước Ngô, tên",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.585,
+            "confidence": 94.17,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              406,
+              368,
+              1403,
+              432
+            ],
+            "generated_text": "là Phi (theo Khang Hy tu điên).",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 0.309,
+            "confidence": 86.72,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              413,
+              798,
+              2258,
+              886
+            ],
+            "generated_text": "問曰：道家云堯舜周孔，七十二弟子皆不",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.426,
+            "confidence": 98.12,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              281,
+              929,
+              1931,
+              1015
+            ],
+            "generated_text": "死，而僊佛家云人皆當死，莫能免，何哉？",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.49,
+            "confidence": 96.34,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              412,
+              1101,
+              2259,
+              1183
+            ],
+            "generated_text": "牟子曰：此妖妄之言，非聖人所語也。老子",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.419,
+            "confidence": 98.98,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              288,
+              1229,
+              2260,
+              1315
+            ],
+            "generated_text": "曰：“天地尚不得長久”，而況人乎！孔子曰：“賢",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.445,
+            "confidence": 94.56,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              282,
+              1359,
+              2264,
+              1449
+            ],
+            "generated_text": "者避世，仁孝常在”。吾覽六藝，觀傳記，堯有殂",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.609,
+            "confidence": 99.58,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              286,
+              1492,
+              2259,
+              1580
+            ],
+            "generated_text": "落；舜有蒼梧之山；禹有會稽之陵；伯夷，叔齊有",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.542,
+            "confidence": 97.59,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              287,
+              1621,
+              2262,
+              1707
+            ],
+            "generated_text": "首陽之墓;文王不及誅紂而沒，武王不能待成王",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.526,
+            "confidence": 94.61,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              291,
+              1747,
+              2261,
+              1834
+            ],
+            "generated_text": "大而崩，周公有改葬之篇，仲尼有兩楹之夢，伯",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.544,
+            "confidence": 97.14,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              292,
+              1877,
+              2266,
+              1963
+            ],
+            "generated_text": "魚有先父之年，子路有葅醢之語，伯牛有亡命之",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.546,
+            "confidence": 98.77,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              296,
+              2004,
+              2259,
+              2090
+            ],
+            "generated_text": "文曾参有啓足之詞，顏淵有不幸短命之記，苗",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.564,
+            "confidence": 93.52,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              300,
+              2132,
+              2266,
+              2216
+            ],
+            "generated_text": "而不秀之喻，皆著在經典，聖人至言也。吾以經",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.465,
+            "confidence": 99.23,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              296,
+              2257,
+              2092,
+              2338
+            ],
+            "generated_text": "傳爲證，世人爲驗云。而不死者，豈不惑乎？",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.438,
+            "confidence": 98.4,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              430,
+              2518,
+              805,
+              2573
+            ],
+            "generated_text": "PHIEN AM:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.164,
+            "confidence": 90.27,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              429,
+              2636,
+              2270,
+              2712
+            ],
+            "generated_text": "Ván viết : Đạo gia vân Nghiêu, Thuấn, Chu, Không,",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.508,
+            "confidence": 93.02,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              299,
+              2729,
+              2270,
+              2805
+            ],
+            "generated_text": "thất thập nhị đế tủ giai bất tủ, nhi Tiên, Phật gia vân",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.594,
+            "confidence": 84.03,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              300,
+              2816,
+              1825,
+              2891
+            ],
+            "generated_text": "nhân giai đường tủ, mạc năng miễn, hà tai?",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.422,
+            "confidence": 87.15,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              431,
+              2943,
+              2475,
+              3018
+            ],
+            "generated_text": "Mâu Từ viết : Thủ yêu vọng chi ngôn, phi thành",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.422,
+            "confidence": 89.21,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              297,
+              3031,
+              2439,
+              3107
+            ],
+            "generated_text": "nhân sở ngũ giả. Lão Từ viết : \"Thiên địa thượng bất",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.564,
+            "confidence": 86.55,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              299,
+              3116,
+              2355,
+              3196
+            ],
+            "generated_text": "đặc trưởng cửu\" nhi hướng nhân hộ ! Không Từ viết",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.483,
+            "confidence": 85.14,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              289,
+              3347,
+              2108,
+              3383
+            ],
+            "generated_text": "486",
+            "n_lines": 1,
+            "tokens": 4,
+            "seconds": 0.129,
+            "confidence": 84.72,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              1198,
+              631,
+              1301,
+              652
+            ],
+            "ink": 1230
+          },
+          {
+            "box": [
+              2066,
+              3307,
+              2190,
+              3319
+            ],
+            "ink": 727
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "61cbea5c0055c260ccfc12f884e0febca7b2783b",
+        "git_describe": "61cbea5",
+        "git_dirty": true,
+        "gpu": "NVIDIA L4",
+        "dtype": "bfloat16",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

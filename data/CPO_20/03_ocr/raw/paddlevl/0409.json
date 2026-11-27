@@ -1,0 +1,995 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_20",
+  "engine": "paddlevl",
+  "page": 409,
+  "runs": [
+    {
+      "key": "900722fafb22eaf93d497f247d1e99d607e2592f6a433f3a72e680845994337b",
+      "parameters": {
+        "image_sha256": "c159d81552c5b5b787b5785b9b5a8bc05fcb58d1aa7b0ea2296a65b0ec62936e",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T07:43:09+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_409.png",
+      "image_size": [
+        1823,
+        2814
+      ],
+      "crop_box": [
+        0,
+        0,
+        1823,
+        2814
+      ],
+      "lines": [
+        {
+          "text": "Những chuyện do ở mưu người xếp đặt, ta quyết không làm. Nếu kế",
+          "bbox": [
+            168,
+            264,
+            1599,
+            326
+          ],
+          "confidence": 95.65
+        },
+        {
+          "text": "nào còn dám nói đến chuyện đó, trầm sẽ lôi sang cho chúa, để theo",
+          "bbox": [
+            170,
+            324,
+            1602,
+            379
+          ],
+          "confidence": 92.49
+        },
+        {
+          "text": "chép mà làm tội.",
+          "bbox": [
+            170,
+            402,
+            518,
+            440
+          ],
+          "confidence": 90.06
+        },
+        {
+          "text": "Vì thế, muu ấy mới thôi.",
+          "bbox": [
+            246,
+            464,
+            759,
+            507
+          ],
+          "confidence": 88.76
+        },
+        {
+          "text": "Đến hồi này, thấy Bình làm việc tôn phờ, nhà vua bê ngoài tuy",
+          "bbox": [
+            249,
+            528,
+            1603,
+            579
+          ],
+          "confidence": 93.08
+        },
+        {
+          "text": "mùng nhưng bề trong thì lại lo. Những việc giao tiếp, tiếp đãi đều là",
+          "bbox": [
+            171,
+            583,
+            1602,
+            643
+          ],
+          "confidence": 92.41
+        },
+        {
+          "text": "bất đắc dĩ.",
+          "bbox": [
+            171,
+            661,
+            384,
+            698
+          ],
+          "confidence": 90.79
+        },
+        {
+          "text": "Kịp đến khi bệnh nặng, nhà vua bảo với hoàng tử tôn rằng:",
+          "bbox": [
+            251,
+            717,
+            1481,
+            769
+          ],
+          "confidence": 93.64
+        },
+        {
+          "text": "- Ta chỉ sớm tối là được trút hết gánh nặng, cái lo sẽ đồn cá vào",
+          "bbox": [
+            251,
+            787,
+            1608,
+            839
+          ],
+          "confidence": 90.57
+        },
+        {
+          "text": "thân mày, mày phải nghĩ tới điều đó!",
+          "bbox": [
+            174,
+            853,
+            944,
+            903
+          ],
+          "confidence": 95.77
+        },
+        {
+          "text": "Lúc sắp bằng, nhà vua lại trối thêm:",
+          "bbox": [
+            254,
+            925,
+            1014,
+            972
+          ],
+          "confidence": 90.3
+        },
+        {
+          "text": "- Sau khi ta nhắm mắt, việc nối ngôi là việc trọng đại, chuyện gi",
+          "bbox": [
+            254,
+            990,
+            1608,
+            1042
+          ],
+          "confidence": 92.0
+        },
+        {
+          "text": "cũng phải băm qua ông ấy, không được kinh suất.",
+          "bbox": [
+            176,
+            1051,
+            1219,
+            1105
+          ],
+          "confidence": 89.09
+        },
+        {
+          "text": "Nói xong, nhà vua băng. Hoàng tử tôn bèn lên nội ngói vua.",
+          "bbox": [
+            256,
+            1125,
+            1491,
+            1174
+          ],
+          "confidence": 89.54
+        },
+        {
+          "text": "Trước đó, từ lúc công chúa Ngọc Hán mới về với Bình, Bình đã",
+          "bbox": [
+            257,
+            1184,
+            1611,
+            1244
+          ],
+          "confidence": 97.63
+        },
+        {
+          "text": "hỏi công chúa về đức tính của các vị hoàng tử. Người nào thế nào,",
+          "bbox": [
+            177,
+            1247,
+            1611,
+            1303
+          ],
+          "confidence": 95.1
+        },
+        {
+          "text": "công chúa cũng đều kể thật với Bình. Khi Bình hỏi đến nhân phẩm",
+          "bbox": [
+            179,
+            1305,
+            1613,
+            1361
+          ],
+          "confidence": 95.09
+        },
+        {
+          "text": "của hoàng tử tôn như thế nào, công chúa chưa thoát khỏi thói thường",
+          "bbox": [
+            179,
+            1362,
+            1616,
+            1420
+          ],
+          "confidence": 93.27
+        },
+        {
+          "text": "của người đàn bà, nghĩ bụng anh thân hơn cháu, lại sợ hoàng tử tôn",
+          "bbox": [
+            181,
+            1426,
+            1613,
+            1480
+          ],
+          "confidence": 95.15
+        },
+        {
+          "text": "sẽ cướp mất ngôi của Sùng Nhượng công, bèn đáp:",
+          "bbox": [
+            182,
+            1490,
+            1572,
+            1538
+          ],
+          "confidence": 96.3
+        },
+        {
+          "text": "- Nhân phẩm của Hoàng tử tôn cũng tầm thường thôi!",
+          "bbox": [
+            262,
+            1559,
+            1386,
+            1608
+          ],
+          "confidence": 85.56
+        },
+        {
+          "text": "Do đó, Bình có ý không thích Hoàng tự tôn.",
+          "bbox": [
+            263,
+            1631,
+            1166,
+            1678
+          ],
+          "confidence": 94.77
+        },
+        {
+          "text": "Đến khi bệnh của hoàng thượng đã tới lúc hấp hối, triều đình",
+          "bbox": [
+            265,
+            1690,
+            1617,
+            1750
+          ],
+          "confidence": 94.9
+        },
+        {
+          "text": "bàn nhau lập hoàng tử tôn, và sai người ra nói với Bình. Bình không",
+          "bbox": [
+            184,
+            1748,
+            1621,
+            1809
+          ],
+          "confidence": 95.68
+        },
+        {
+          "text": "nghe. Sứ giả quay về nói lại ý Bình, cả triều bàn bạc phân vân, chưa",
+          "bbox": [
+            185,
+            1812,
+            1621,
+            1875
+          ],
+          "confidence": 95.12
+        },
+        {
+          "text": "biết quyết định ra sao. Thình lình trong bọn có một người lớn tiếng",
+          "bbox": [
+            185,
+            1872,
+            1622,
+            1927
+          ],
+          "confidence": 98.26
+        },
+        {
+          "text": "noi răng:",
+          "bbox": [
+            187,
+            1955,
+            371,
+            1984
+          ],
+          "confidence": 82.04
+        },
+        {
+          "text": "- Từ tôn không được làm vua, thiên hạ át loạn. Họ Lê sẽ mất, ấy",
+          "bbox": [
+            267,
+            1995,
+            1622,
+            2055
+          ],
+          "confidence": 92.9
+        },
+        {
+          "text": "là lỗi tại công chúa Ngọc Hán. Công chúa thực đã làm hại đến việc lớn",
+          "bbox": [
+            189,
+            2052,
+            1622,
+            2115
+          ],
+          "confidence": 93.83
+        },
+        {
+          "text": "của xã tắc, hãy xóa tên trong sổ họ đi, để cho công chuá về nước Tây",
+          "bbox": [
+            188,
+            2107,
+            1624,
+            2175
+          ],
+          "confidence": 91.04
+        },
+        {
+          "text": "Sơn mà yên hương giàu sang, họ ta chẳng thiếu gì một con người ấy!",
+          "bbox": [
+            190,
+            2176,
+            1560,
+            2232
+          ],
+          "confidence": 94.78
+        },
+        {
+          "text": "Triều đình nhìn xem ai, thì té ra là hoàng thân Vương quân công.",
+          "bbox": [
+            271,
+            2248,
+            1556,
+            2301
+          ],
+          "confidence": 90.22
+        },
+        {
+          "text": "Công chúa sợ hãi, bèn về phủ xin với Bình. Bấy giờ Bình mới bằng",
+          "bbox": [
+            273,
+            2310,
+            1627,
+            2371
+          ],
+          "confidence": 96.41
+        },
+        {
+          "text": "lòng. Sau khi hoàng thương bằng, trăm quan bèn phò tự tôn lên ngôi.",
+          "bbox": [
+            193,
+            2370,
+            1580,
+            2429
+          ],
+          "confidence": 93.97
+        },
+        {
+          "text": "Hôm ấy, Bình ở trong phủ, nghe tin hoàng thượng băng, liên sau",
+          "bbox": [
+            274,
+            2445,
+            1625,
+            2500
+          ],
+          "confidence": 91.67
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          1823,
+          2814
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 20.108,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              168,
+              264,
+              1599,
+              326
+            ],
+            "generated_text": "Những chuyện do ở mưu người xếp đặt, ta quyết không làm. Nếu kế",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.645,
+            "confidence": 95.65,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              170,
+              324,
+              1602,
+              379
+            ],
+            "generated_text": "nào còn dám nói đến chuyện đó, trầm sẽ lôi sang cho chúa, để theo",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.607,
+            "confidence": 92.49,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              170,
+              402,
+              518,
+              440
+            ],
+            "generated_text": "chép mà làm tội.",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.291,
+            "confidence": 90.06,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              246,
+              464,
+              759,
+              507
+            ],
+            "generated_text": "Vì thế, muu ấy mới thôi.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 0.379,
+            "confidence": 88.76,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              249,
+              528,
+              1603,
+              579
+            ],
+            "generated_text": "Đến hồi này, thấy Bình làm việc tôn phờ, nhà vua bê ngoài tuy",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.624,
+            "confidence": 93.08,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              171,
+              583,
+              1602,
+              643
+            ],
+            "generated_text": "mùng nhưng bề trong thì lại lo. Những việc giao tiếp, tiếp đãi đều là",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.613,
+            "confidence": 92.41,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              171,
+              661,
+              384,
+              698
+            ],
+            "generated_text": "bất đắc dĩ.",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.291,
+            "confidence": 90.79,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              251,
+              717,
+              1481,
+              769
+            ],
+            "generated_text": "Kịp đến khi bệnh nặng, nhà vua bảo với hoàng tử tôn rằng:",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.625,
+            "confidence": 93.64,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              251,
+              787,
+              1608,
+              839
+            ],
+            "generated_text": "- Ta chỉ sớm tối là được trút hết gánh nặng, cái lo sẽ đồn cá vào",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.679,
+            "confidence": 90.57,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              174,
+              853,
+              944,
+              903
+            ],
+            "generated_text": "thân mày, mày phải nghĩ tới điều đó!",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.409,
+            "confidence": 95.77,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              254,
+              925,
+              1014,
+              972
+            ],
+            "generated_text": "Lúc sắp bằng, nhà vua lại trối thêm:",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.455,
+            "confidence": 90.3,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              254,
+              990,
+              1608,
+              1042
+            ],
+            "generated_text": "- Sau khi ta nhắm mắt, việc nối ngôi là việc trọng đại, chuyện gi",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.624,
+            "confidence": 92.0,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              176,
+              1051,
+              1219,
+              1105
+            ],
+            "generated_text": "cũng phải băm qua ông ấy, không được kinh suất.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.512,
+            "confidence": 89.09,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              256,
+              1125,
+              1491,
+              1174
+            ],
+            "generated_text": "Nói xong, nhà vua băng. Hoàng tử tôn bèn lên nội ngói vua.",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.663,
+            "confidence": 89.54,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              257,
+              1184,
+              1611,
+              1244
+            ],
+            "generated_text": "Trước đó, từ lúc công chúa Ngọc Hán mới về với Bình, Bình đã",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.596,
+            "confidence": 97.63,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              177,
+              1247,
+              1611,
+              1303
+            ],
+            "generated_text": "hỏi công chúa về đức tính của các vị hoàng tử. Người nào thế nào,",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.601,
+            "confidence": 95.1,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              179,
+              1305,
+              1613,
+              1361
+            ],
+            "generated_text": "công chúa cũng đều kể thật với Bình. Khi Bình hỏi đến nhân phẩm",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.646,
+            "confidence": 95.09,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              179,
+              1362,
+              1616,
+              1420
+            ],
+            "generated_text": "của hoàng tử tôn như thế nào, công chúa chưa thoát khỏi thói thường",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.614,
+            "confidence": 93.27,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              181,
+              1426,
+              1613,
+              1480
+            ],
+            "generated_text": "của người đàn bà, nghĩ bụng anh thân hơn cháu, lại sợ hoàng tử tôn",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.681,
+            "confidence": 95.15,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              182,
+              1490,
+              1572,
+              1538
+            ],
+            "generated_text": "sẽ cướp mất ngôi của Sùng Nhượng công, bèn đáp:",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.549,
+            "confidence": 96.3,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              262,
+              1559,
+              1386,
+              1608
+            ],
+            "generated_text": "- Nhân phẩm của Hoàng tử tôn cũng tầm thường thôi!",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.562,
+            "confidence": 85.56,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              263,
+              1631,
+              1166,
+              1678
+            ],
+            "generated_text": "Do đó, Bình có ý không thích Hoàng tự tôn.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.465,
+            "confidence": 94.77,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              265,
+              1690,
+              1617,
+              1750
+            ],
+            "generated_text": "Đến khi bệnh của hoàng thượng đã tới lúc hấp hối, triều đình",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.587,
+            "confidence": 94.9,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              184,
+              1748,
+              1621,
+              1809
+            ],
+            "generated_text": "bàn nhau lập hoàng tử tôn, và sai người ra nói với Bình. Bình không",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.619,
+            "confidence": 95.68,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              185,
+              1812,
+              1621,
+              1875
+            ],
+            "generated_text": "nghe. Sứ giả quay về nói lại ý Bình, cả triều bàn bạc phân vân, chưa",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 0.732,
+            "confidence": 95.12,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              185,
+              1872,
+              1622,
+              1927
+            ],
+            "generated_text": "biết quyết định ra sao. Thình lình trong bọn có một người lớn tiếng",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.547,
+            "confidence": 98.26,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              187,
+              1955,
+              371,
+              1984
+            ],
+            "generated_text": "noi răng:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.237,
+            "confidence": 82.04,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              267,
+              1995,
+              1622,
+              2055
+            ],
+            "generated_text": "- Từ tôn không được làm vua, thiên hạ át loạn. Họ Lê sẽ mất, ấy",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 0.73,
+            "confidence": 92.9,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              189,
+              2052,
+              1622,
+              2115
+            ],
+            "generated_text": "là lỗi tại công chúa Ngọc Hán. Công chúa thực đã làm hại đến việc lớn",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.612,
+            "confidence": 93.83,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              188,
+              2107,
+              1624,
+              2175
+            ],
+            "generated_text": "của xã tắc, hãy xóa tên trong sổ họ đi, để cho công chuá về nước Tây",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.663,
+            "confidence": 91.04,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              190,
+              2176,
+              1560,
+              2232
+            ],
+            "generated_text": "Sơn mà yên hương giàu sang, họ ta chẳng thiếu gì một con người ấy!",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.649,
+            "confidence": 94.78,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 32,
+            "box": [
+              271,
+              2248,
+              1556,
+              2301
+            ],
+            "generated_text": "Triều đình nhìn xem ai, thì té ra là hoàng thân Vương quân công.",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.589,
+            "confidence": 90.22,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 33,
+            "box": [
+              273,
+              2310,
+              1627,
+              2371
+            ],
+            "generated_text": "Công chúa sợ hãi, bèn về phủ xin với Bình. Bấy giờ Bình mới bằng",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 0.724,
+            "confidence": 96.41,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 34,
+            "box": [
+              193,
+              2370,
+              1580,
+              2429
+            ],
+            "generated_text": "lòng. Sau khi hoàng thương bằng, trăm quan bèn phò tự tôn lên ngôi.",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.633,
+            "confidence": 93.97,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 35,
+            "box": [
+              274,
+              2445,
+              1625,
+              2500
+            ],
+            "generated_text": "Hôm ấy, Bình ở trong phủ, nghe tin hoàng thượng băng, liên sau",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.65,
+            "confidence": 91.67,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      }
+    }
+  ]
+}

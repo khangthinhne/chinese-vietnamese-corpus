@@ -1,0 +1,1052 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_18",
+  "engine": "paddlevl",
+  "page": 314,
+  "runs": [
+    {
+      "key": "213972c2e99cbc11b41d234a998ea5b7715b0964ffb8a09c46acb440bb33a5b5",
+      "parameters": {
+        "image_sha256": "520cd741a05b545038f535673f06f8999172ab64698f14b3c00c44f204c1e90b",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T14:12:19+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_314.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        0,
+        2480,
+        3509
+      ],
+      "lines": [
+        {
+          "text": "Sưu tấm và khảo luận tác phẩm chủ Hán của người Việt Nam trước TK 10",
+          "bbox": [
+            0,
+            114,
+            1903,
+            179
+          ],
+          "confidence": 93.25
+        },
+        {
+          "text": "___",
+          "bbox": [
+            264,
+            209,
+            2277,
+            234
+          ],
+          "confidence": 26.43
+        },
+        {
+          "text": "Phuc duy bê ha nguyên đức thống thiên, văn tư cư",
+          "bbox": [
+            407,
+            320,
+            2273,
+            388
+          ],
+          "confidence": 87.52
+        },
+        {
+          "text": "nghiệp, thân trùng quang chi phi tụ, phần thuân cổ chi",
+          "bbox": [
+            277,
+            416,
+            2271,
+            495
+          ],
+          "confidence": 84.95
+        },
+        {
+          "text": "hưu phong, quang khải hiến chương, trù tư quan khoái,",
+          "bbox": [
+            275,
+            511,
+            2270,
+            591
+          ],
+          "confidence": 88.63
+        },
+        {
+          "text": "tích thân chi sách tư dì khai óc. Thân cuồng giản, bất tri",
+          "bbox": [
+            277,
+            607,
+            2272,
+            676
+          ],
+          "confidence": 82.92
+        },
+        {
+          "text": "hóa nguyên, cân muôi tử khế tăng, triệp trân ngụ lư.",
+          "bbox": [
+            275,
+            703,
+            2142,
+            772
+          ],
+          "confidence": 79.76
+        },
+        {
+          "text": "Chế sách viết : “Trăm thiết bất tư sủy, cảm mô tiên",
+          "bbox": [
+            407,
+            857,
+            2270,
+            929
+          ],
+          "confidence": 82.03
+        },
+        {
+          "text": "vương ; thương pháp Hy, Hiên, ha tuân Nghiêu, Thuấn ;",
+          "bbox": [
+            273,
+            957,
+            2268,
+            1037
+          ],
+          "confidence": 92.78
+        },
+        {
+          "text": "hoàn đi tán chi thuận phác, chấn tương đối chi kỷ",
+          "bbox": [
+            273,
+            1052,
+            2271,
+            1121
+          ],
+          "confidence": 82.06
+        },
+        {
+          "text": "cương; sử lẽ nhượng hưng hạnh, hình phat bất dụng ;",
+          "bbox": [
+            275,
+            1149,
+            2268,
+            1228
+          ],
+          "confidence": 82.03
+        },
+        {
+          "text": "nhi nhân do khinh pham, lai thương tuân tư ; vi đạo giả",
+          "bbox": [
+            276,
+            1244,
+            2269,
+            1312
+          ],
+          "confidence": 89.94
+        },
+        {
+          "text": "vi bôn, bất nhân giả vi viên ; khỉ thân phi Tắc, Tiết nhi",
+          "bbox": [
+            272,
+            1336,
+            2269,
+            1407
+          ],
+          "confidence": 93.44
+        },
+        {
+          "text": "trí thi hộ? Vi quân ta Vũ, Thang sử chi nhiên giả?” Dai",
+          "bbox": [
+            274,
+            1433,
+            2268,
+            1501
+          ],
+          "confidence": 84.8
+        },
+        {
+          "text": "hi tai, be ha chi ngon ho !",
+          "bbox": [
+            275,
+            1546,
+            1142,
+            1592
+          ],
+          "confidence": 91.05
+        },
+        {
+          "text": "Thân văn Vũ xưng thiên nhân, bất thiên giả viên hĩ.",
+          "bbox": [
+            404,
+            1683,
+            2263,
+            1750
+          ],
+          "confidence": 94.05
+        },
+        {
+          "text": "Phuc kiến bê ha trưng án đất ư không sơn, bat Quì,",
+          "bbox": [
+            276,
+            1777,
+            2458,
+            1844
+          ],
+          "confidence": 84.5
+        },
+        {
+          "text": "Long ư ha vi ; sinh danh sī, lễ hiện giả ; thiên vô dục chi",
+          "bbox": [
+            277,
+            1870,
+            2263,
+            1937
+          ],
+          "confidence": 86.12
+        },
+        {
+          "text": "đô, phát duy tân chi chiếu ; sử lại túc, nhân duyệt, pháp",
+          "bbox": [
+            280,
+            1964,
+            2261,
+            2030
+          ],
+          "confidence": 92.92
+        },
+        {
+          "text": "minh, lệnh trương ; nhi do viết : “Quân ta Vũ, Thang”,",
+          "bbox": [
+            281,
+            2056,
+            2258,
+            2130
+          ],
+          "confidence": 94.98
+        },
+        {
+          "text": "“Thân phi Tắc, Tiết”; thủ bê ha nhương chi chí giã,",
+          "bbox": [
+            278,
+            2148,
+            2258,
+            2215
+          ],
+          "confidence": 82.32
+        },
+        {
+          "text": "thân hà cầm gián yên. Phù trúng ư đạo giả, di dĩ hưng",
+          "bbox": [
+            280,
+            2240,
+            2261,
+            2307
+          ],
+          "confidence": 80.51
+        },
+        {
+          "text": "hóa ; thất kỳ đạo giả, nan dĩ tòng nghi. Sự sàng kỳ",
+          "bbox": [
+            279,
+            2331,
+            2261,
+            2410
+          ],
+          "confidence": 92.81
+        },
+        {
+          "text": "phân, tác nhất hảo dị quai ; sự thấm kỳ phân, tác thù",
+          "bbox": [
+            282,
+            2426,
+            2257,
+            2492
+          ],
+          "confidence": 88.86
+        },
+        {
+          "text": "đô động quy. Kế tuế giả, phi nhất thời nhi khả dụng ; trí",
+          "bbox": [
+            285,
+            2513,
+            2261,
+            2592
+          ],
+          "confidence": 89.27
+        },
+        {
+          "text": "lý giả, phi nhất nhất nhi thành công. Đản lập pháp ư",
+          "bbox": [
+            283,
+            2607,
+            2259,
+            2681
+          ],
+          "confidence": 93.04
+        },
+        {
+          "text": "chế sự chi sơ, vong hóa ư kinh niên chi ngoại ; sử tồn ích",
+          "bbox": [
+            282,
+            2699,
+            2255,
+            2766
+          ],
+          "confidence": 85.32
+        },
+        {
+          "text": "giám ư hưng thế, hàn thủ tiệm ư xuân thu; hà ưu bất",
+          "bbox": [
+            283,
+            2789,
+            2256,
+            2858
+          ],
+          "confidence": 86.7
+        },
+        {
+          "text": "quân lý ư Hy, Hiên, đồng quang ư Nghiêu, Thuấn !",
+          "bbox": [
+            283,
+            2878,
+            2049,
+            2954
+          ],
+          "confidence": 91.48
+        },
+        {
+          "text": "Chế sách viết : \"Thiết hà mưu nhi khả dĩ Tây",
+          "bbox": [
+            416,
+            3025,
+            2441,
+            3093
+          ],
+          "confidence": 93.27
+        },
+        {
+          "text": "Nhung tức tư ? Thi hà thuật nhi khả dĩ ngoại hộ bất",
+          "bbox": [
+            276,
+            3116,
+            2355,
+            3183
+          ],
+          "confidence": 84.81
+        },
+        {
+          "text": "quynh ?\" giả. Bệ hạ phu huệ tâm, hòa Nhung Địch;",
+          "bbox": [
+            274,
+            3204,
+            2269,
+            3285
+          ],
+          "confidence": 89.87
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          3509
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 54.187,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              0,
+              114,
+              1903,
+              179
+            ],
+            "generated_text": "Sưu tấm và khảo luận tác phẩm chủ Hán của người Việt Nam trước TK 10",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 1.884,
+            "confidence": 93.25,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              264,
+              209,
+              2277,
+              234
+            ],
+            "generated_text": "___",
+            "n_lines": 1,
+            "tokens": 2,
+            "seconds": 0.474,
+            "confidence": 26.43,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              407,
+              320,
+              2273,
+              388
+            ],
+            "generated_text": "Phuc duy bê ha nguyên đức thống thiên, văn tư cư",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.569,
+            "confidence": 87.52,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              277,
+              416,
+              2271,
+              495
+            ],
+            "generated_text": "nghiệp, thân trùng quang chi phi tụ, phần thuân cổ chi",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.613,
+            "confidence": 84.95,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              275,
+              511,
+              2270,
+              591
+            ],
+            "generated_text": "hưu phong, quang khải hiến chương, trù tư quan khoái,",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.676,
+            "confidence": 88.63,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              277,
+              607,
+              2272,
+              676
+            ],
+            "generated_text": "tích thân chi sách tư dì khai óc. Thân cuồng giản, bất tri",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 1.917,
+            "confidence": 82.92,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              275,
+              703,
+              2142,
+              772
+            ],
+            "generated_text": "hóa nguyên, cân muôi tử khế tăng, triệp trân ngụ lư.",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 1.89,
+            "confidence": 79.76,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              407,
+              857,
+              2270,
+              929
+            ],
+            "generated_text": "Chế sách viết : “Trăm thiết bất tư sủy, cảm mô tiên",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.709,
+            "confidence": 82.03,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              273,
+              957,
+              2268,
+              1037
+            ],
+            "generated_text": "vương ; thương pháp Hy, Hiên, ha tuân Nghiêu, Thuấn ;",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.7,
+            "confidence": 92.78,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              273,
+              1052,
+              2271,
+              1121
+            ],
+            "generated_text": "hoàn đi tán chi thuận phác, chấn tương đối chi kỷ",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.522,
+            "confidence": 82.06,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              275,
+              1149,
+              2268,
+              1228
+            ],
+            "generated_text": "cương; sử lẽ nhượng hưng hạnh, hình phat bất dụng ;",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.571,
+            "confidence": 82.03,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              276,
+              1244,
+              2269,
+              1312
+            ],
+            "generated_text": "nhi nhân do khinh pham, lai thương tuân tư ; vi đạo giả",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.721,
+            "confidence": 89.94,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              272,
+              1336,
+              2269,
+              1407
+            ],
+            "generated_text": "vi bôn, bất nhân giả vi viên ; khỉ thân phi Tắc, Tiết nhi",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.696,
+            "confidence": 93.44,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              274,
+              1433,
+              2268,
+              1501
+            ],
+            "generated_text": "trí thi hộ? Vi quân ta Vũ, Thang sử chi nhiên giả?” Dai",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.72,
+            "confidence": 84.8,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              275,
+              1546,
+              1142,
+              1592
+            ],
+            "generated_text": "hi tai, be ha chi ngon ho !",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.979,
+            "confidence": 91.05,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              404,
+              1683,
+              2263,
+              1750
+            ],
+            "generated_text": "Thân văn Vũ xưng thiên nhân, bất thiên giả viên hĩ.",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.66,
+            "confidence": 94.05,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              276,
+              1777,
+              2458,
+              1844
+            ],
+            "generated_text": "Phuc kiến bê ha trưng án đất ư không sơn, bat Quì,",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.774,
+            "confidence": 84.5,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              277,
+              1870,
+              2263,
+              1937
+            ],
+            "generated_text": "Long ư ha vi ; sinh danh sī, lễ hiện giả ; thiên vô dục chi",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.789,
+            "confidence": 86.12,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              280,
+              1964,
+              2261,
+              2030
+            ],
+            "generated_text": "đô, phát duy tân chi chiếu ; sử lại túc, nhân duyệt, pháp",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.797,
+            "confidence": 92.92,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              281,
+              2056,
+              2258,
+              2130
+            ],
+            "generated_text": "minh, lệnh trương ; nhi do viết : “Quân ta Vũ, Thang”,",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.766,
+            "confidence": 94.98,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              278,
+              2148,
+              2258,
+              2215
+            ],
+            "generated_text": "“Thân phi Tắc, Tiết”; thủ bê ha nhương chi chí giã,",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.781,
+            "confidence": 82.32,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              280,
+              2240,
+              2261,
+              2307
+            ],
+            "generated_text": "thân hà cầm gián yên. Phù trúng ư đạo giả, di dĩ hưng",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 1.982,
+            "confidence": 80.51,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              279,
+              2331,
+              2261,
+              2410
+            ],
+            "generated_text": "hóa ; thất kỳ đạo giả, nan dĩ tòng nghi. Sự sàng kỳ",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 1.838,
+            "confidence": 92.81,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              282,
+              2426,
+              2257,
+              2492
+            ],
+            "generated_text": "phân, tác nhất hảo dị quai ; sự thấm kỳ phân, tác thù",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.871,
+            "confidence": 88.86,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              285,
+              2513,
+              2261,
+              2592
+            ],
+            "generated_text": "đô động quy. Kế tuế giả, phi nhất thời nhi khả dụng ; trí",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.613,
+            "confidence": 89.27,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              283,
+              2607,
+              2259,
+              2681
+            ],
+            "generated_text": "lý giả, phi nhất nhất nhi thành công. Đản lập pháp ư",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.55,
+            "confidence": 93.04,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              282,
+              2699,
+              2255,
+              2766
+            ],
+            "generated_text": "chế sự chi sơ, vong hóa ư kinh niên chi ngoại ; sử tồn ích",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 1.983,
+            "confidence": 85.32,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              283,
+              2789,
+              2256,
+              2858
+            ],
+            "generated_text": "giám ư hưng thế, hàn thủ tiệm ư xuân thu; hà ưu bất",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 1.992,
+            "confidence": 86.7,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              283,
+              2878,
+              2049,
+              2954
+            ],
+            "generated_text": "quân lý ư Hy, Hiên, đồng quang ư Nghiêu, Thuấn !",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.602,
+            "confidence": 91.48,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              416,
+              3025,
+              2441,
+              3093
+            ],
+            "generated_text": "Chế sách viết : \"Thiết hà mưu nhi khả dĩ Tây",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.791,
+            "confidence": 93.27,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              276,
+              3116,
+              2355,
+              3183
+            ],
+            "generated_text": "Nhung tức tư ? Thi hà thuật nhi khả dĩ ngoại hộ bất",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.898,
+            "confidence": 84.81,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 32,
+            "box": [
+              274,
+              3204,
+              2269,
+              3285
+            ],
+            "generated_text": "quynh ?\" giả. Bệ hạ phu huệ tâm, hòa Nhung Địch;",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 1.853,
+            "confidence": 89.87,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              515,
+              386,
+              1879,
+              397
+            ],
+            "ink": 676
+          },
+          {
+            "box": [
+              465,
+              768,
+              2104,
+              782
+            ],
+            "ink": 1068
+          },
+          {
+            "box": [
+              934,
+              1308,
+              2194,
+              1322
+            ],
+            "ink": 963
+          },
+          {
+            "box": [
+              455,
+              1500,
+              2226,
+              1512
+            ],
+            "ink": 787
+          },
+          {
+            "box": [
+              273,
+              1527,
+              1142,
+              1548
+            ],
+            "ink": 2011
+          },
+          {
+            "box": [
+              1005,
+              1749,
+              1888,
+              1758
+            ],
+            "ink": 591
+          },
+          {
+            "box": [
+              386,
+              1841,
+              2165,
+              1854
+            ],
+            "ink": 915
+          },
+          {
+            "box": [
+              408,
+              1936,
+              2072,
+              1948
+            ],
+            "ink": 860
+          },
+          {
+            "box": [
+              361,
+              2026,
+              2239,
+              2040
+            ],
+            "ink": 1070
+          },
+          {
+            "box": [
+              526,
+              2212,
+              2159,
+              2223
+            ],
+            "ink": 803
+          },
+          {
+            "box": [
+              743,
+              2305,
+              1931,
+              2318
+            ],
+            "ink": 874
+          },
+          {
+            "box": [
+              477,
+              3179,
+              2281,
+              3193
+            ],
+            "ink": 1113
+          },
+          {
+            "box": [
+              269,
+              3398,
+              2074,
+              3416
+            ],
+            "ink": 1515
+          },
+          {
+            "box": [
+              268,
+              3432,
+              2040,
+              3443
+            ],
+            "ink": 829
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

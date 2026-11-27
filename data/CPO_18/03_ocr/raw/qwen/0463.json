@@ -1,0 +1,278 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_18",
+  "engine": "qwen",
+  "page": 463,
+  "runs": [
+    {
+      "key": "9f388b7aa0ede9a8732bd8c9cd4c4c6f7208bd3983e96897a46aedcc5da4aa77",
+      "parameters": {
+        "image_sha256": "fb6fa48a6009aa6dfb9f8915b49a60b701420f1dea39b1c52e1a831a35d114bb",
+        "engine": {
+          "name": "qwen",
+          "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "model_revision": "main",
+          "transformers_version": "4.57.6",
+          "torch_version": "2.5.1+cu121",
+          "cuda_version": "12.1",
+          "bitsandbytes_version": "0.50.2",
+          "quantization": {
+            "load_in_4bit": true,
+            "quant_type": "nf4",
+            "double_quant": true,
+            "compute_dtype": "float16"
+          },
+          "mode": "all",
+          "min_pixels": 50176,
+          "max_pixels": 802816,
+          "band_inches": 2.0,
+          "max_new_tokens": 768,
+          "repetition_penalty": 1.05,
+          "adapter_version": 3,
+          "prompt_version": 3,
+          "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74"
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T21:28:01+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_463.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        0,
+        2480,
+        3509
+      ],
+      "lines": [
+        {
+          "text": "Ninh Thích đang vừa cho bò ăn vừa hát. Hoàn Công nghe thấy, biết là người có tài, liền cất nhắc làm quan.",
+          "bbox": [
+            25,
+            0,
+            2464,
+            597
+          ],
+          "confidence": 96.78
+        },
+        {
+          "text": "16",
+          "bbox": [
+            26,
+            589,
+            2464,
+            1155
+          ],
+          "confidence": 58.55
+        },
+        {
+          "text": "牟子曰：人斧斤繩墨，而不能使人巧。授人道，不能使人履而行之也。陶能罪盗，不能使貪夫爲夷，齊。誅無状，不能使恶人曾，竟不能化國。",
+          "bbox": [
+            302,
+            1147,
+            2464,
+            1615
+          ],
+          "confidence": 57.16
+        },
+        {
+          "text": "不能訓管，岂唐教之不著，周道之不备哉？然无恶人，何也？譬之世人通财而迷，可谓六艺邪乎？不能溺地人；飘风虽疾，不能使湛扬。",
+          "bbox": [
+            25,
+            1638,
+            2464,
+            2103
+          ],
+          "confidence": 59.74
+        },
+        {
+          "text": "当患人不能行，豈可謂佛道有惡乎？",
+          "bbox": [
+            302,
+            2150,
+            2464,
+            2326
+          ],
+          "confidence": 89.72
+        },
+        {
+          "text": "PHIÊN ÂM：",
+          "bbox": [
+            302,
+            2326,
+            2464,
+            2503
+          ],
+          "confidence": 89.72
+        },
+        {
+          "text": "Vấn viết: Phật đạo sùng vô vi, lạc thí dữ trì giới, căng căng như lâm thâm uyên giả. Kim sa môn đam",
+          "bbox": [
+            302,
+            2503,
+            2464,
+            2679
+          ],
+          "confidence": 89.72
+        },
+        {
+          "text": "hiếu tửu tương, hoặc súc thê tử, thủ tiện mại quý, chuyên hành trá dãi, thử nãi thế chi ngụy, nhi Phật đạo vị chi vô vi gia?",
+          "bbox": [
+            24,
+            2671,
+            2475,
+            3090
+          ],
+          "confidence": 85.95
+        },
+        {
+          "text": "Mâu Tử viết: Công Du năng dữ nhân phủ cân thằng mạc, nhi bất năng sử nhân xảo. Thánh nhân",
+          "bbox": [
+            24,
+            3090,
+            2475,
+            3509
+          ],
+          "confidence": 85.95
+        }
+      ],
+      "raw": {
+        "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+        "model_revision": "main",
+        "mode": "all",
+        "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          3509
+        ],
+        "band_target_height": 600,
+        "bbox_granularity": "band_even_split",
+        "max_new_tokens": 768,
+        "max_pixels": 802816,
+        "inference_seconds": 20.852,
+        "bands": [
+          {
+            "band": 1,
+            "y0": 0,
+            "y1": 593,
+            "ink_box": [
+              25,
+              0,
+              2464,
+              597
+            ],
+            "generated_text": "Ninh Thích đang vừa cho bò ăn vừa hát. Hoàn Công nghe thấy, biết là người có tài, liền cất nhắc làm quan.",
+            "n_lines": 1,
+            "tokens": 35,
+            "seconds": 2.698,
+            "confidence": 96.78,
+            "flags": []
+          },
+          {
+            "band": 2,
+            "y0": 593,
+            "y1": 1151,
+            "ink_box": [
+              26,
+              589,
+              2464,
+              1155
+            ],
+            "generated_text": "16",
+            "n_lines": 1,
+            "tokens": 3,
+            "seconds": 0.66,
+            "confidence": 58.55,
+            "flags": []
+          },
+          {
+            "band": 3,
+            "y0": 1151,
+            "y1": 1627,
+            "ink_box": [
+              302,
+              1147,
+              2464,
+              1615
+            ],
+            "generated_text": "牟子曰：人斧斤繩墨，而不能使人巧。授人道，不能使人履而行之也。陶能罪盗，不能使貪夫爲夷，齊。誅無状，不能使恶人曾，竟不能化國。",
+            "n_lines": 1,
+            "tokens": 60,
+            "seconds": 4.303,
+            "confidence": 57.16,
+            "flags": []
+          },
+          {
+            "band": 4,
+            "y0": 1627,
+            "y1": 2126,
+            "ink_box": [
+              25,
+              1638,
+              2464,
+              2103
+            ],
+            "generated_text": "不能訓管，岂唐教之不著，周道之不备哉？然无恶人，何也？譬之世人通财而迷，可谓六艺邪乎？不能溺地人；飘风虽疾，不能使湛扬。",
+            "n_lines": 1,
+            "tokens": 57,
+            "seconds": 4.148,
+            "confidence": 59.74,
+            "flags": []
+          },
+          {
+            "band": 5,
+            "y0": 2126,
+            "y1": 2675,
+            "ink_box": [
+              302,
+              2150,
+              2464,
+              2679
+            ],
+            "generated_text": "当患人不能行，豈可謂佛道有惡乎？\n\nPHIÊN ÂM：\nVấn viết: Phật đạo sùng vô vi, lạc thí dữ trì giới, căng căng như lâm thâm uyên giả. Kim sa môn đam",
+            "n_lines": 3,
+            "tokens": 57,
+            "seconds": 4.064,
+            "confidence": 89.72,
+            "flags": []
+          },
+          {
+            "band": 6,
+            "y0": 2675,
+            "y1": 3509,
+            "ink_box": [
+              24,
+              2671,
+              2475,
+              3509
+            ],
+            "generated_text": "hiếu tửu tương, hoặc súc thê tử, thủ tiện mại quý, chuyên hành trá dãi, thử nãi thế chi ngụy, nhi Phật đạo vị chi vô vi gia?\nMâu Tử viết: Công Du năng dữ nhân phủ cân thằng mạc, nhi bất năng sử nhân xảo. Thánh nhân",
+            "n_lines": 2,
+            "tokens": 71,
+            "seconds": 4.94,
+            "confidence": 85.95,
+            "flags": []
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "61cbea5c0055c260ccfc12f884e0febca7b2783b",
+        "git_describe": "61cbea5",
+        "git_dirty": true,
+        "gpu": "NVIDIA L4",
+        "dtype": "float16",
+        "adapter_version": 3
+      }
+    }
+  ]
+}

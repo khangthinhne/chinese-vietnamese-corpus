@@ -1,0 +1,1039 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_20",
+  "engine": "paddlevl",
+  "page": 551,
+  "runs": [
+    {
+      "key": "0f581019d959529ba7f02e96f4ddfc721db9e428d8d831a9822c3e5990d0f9c9",
+      "parameters": {
+        "image_sha256": "a604247113cc514710a8f32707ca0872dc972e4ef36541274e1dc693e610c9df",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T08:39:54+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_551.png",
+      "image_size": [
+        1821,
+        2814
+      ],
+      "crop_box": [
+        0,
+        0,
+        1821,
+        2814
+      ],
+      "lines": [
+        {
+          "text": "Bon Túc khai là tự tôn có ba anh em rất yêu mến nhau. Anh",
+          "bbox": [
+            241,
+            279,
+            1616,
+            324
+          ],
+          "confidence": 99.15
+        },
+        {
+          "text": "trưởng là Lê Duy Kỳ, tức là đắng nổi ngôi, thú hai là Tụ quận công",
+          "bbox": [
+            159,
+            335,
+            1619,
+            388
+          ],
+          "confidence": 89.99
+        },
+        {
+          "text": "Duy Tụ, thú ba là Lan quân công Duy Chỉ. Hiện nay, Duy Kỳ chạy",
+          "bbox": [
+            160,
+            394,
+            1619,
+            446
+          ],
+          "confidence": 89.83
+        },
+        {
+          "text": "xưởng lộ Sơn Nam Ha,¹ để chiêu tập nghĩa binh. Duy Tụ ở vùng",
+          "bbox": [
+            160,
+            450,
+            1621,
+            505
+          ],
+          "confidence": 89.44
+        },
+        {
+          "text": "Tuyên Quang, Hưng Hóa cũng đang nhóm hợp các người đồng chí xa",
+          "bbox": [
+            162,
+            514,
+            1621,
+            566
+          ],
+          "confidence": 92.8
+        },
+        {
+          "text": "làm thanh viên cho nhau. Nghe nói họ nương tựa lẫn nhau, thân dân",
+          "bbox": [
+            163,
+            572,
+            1621,
+            624
+          ],
+          "confidence": 91.96
+        },
+        {
+          "text": "thuận theo, quyết không đến nỗi tan tác. Nhưng không biết từ đấy về",
+          "bbox": [
+            163,
+            630,
+            1619,
+            683
+          ],
+          "confidence": 94.75
+        },
+        {
+          "text": "sau có thể hàng hái làm nên việc hay không? Tói đấy đã hơn bảy",
+          "bbox": [
+            165,
+            689,
+            1622,
+            742
+          ],
+          "confidence": 92.44
+        },
+        {
+          "text": "tám tháng, sự thể đối thay, họ có còn giữ được chỗ ấy mưa không,",
+          "bbox": [
+            165,
+            751,
+            1622,
+            803
+          ],
+          "confidence": 87.53
+        },
+        {
+          "text": "điều đó chúng tôi không được biết.",
+          "bbox": [
+            167,
+            817,
+            887,
+            863
+          ],
+          "confidence": 98.72
+        },
+        {
+          "text": "Nghi lại hỏi tin tức mẹ tự tôn nay ra sao?",
+          "bbox": [
+            249,
+            889,
+            1126,
+            933
+          ],
+          "confidence": 92.67
+        },
+        {
+          "text": "- Chúng tôi trước ở Cao Bằng, rồi rước quốc mẫu sang nội địa.",
+          "bbox": [
+            251,
+            1028,
+            1624,
+            1077
+          ],
+          "confidence": 93.17
+        },
+        {
+          "text": "tư tôn thì vẫn ở trong nước. Quan san cách trỏ, tin tức không thông.",
+          "bbox": [
+            168,
+            1086,
+            1621,
+            1136
+          ],
+          "confidence": 88.57
+        },
+        {
+          "text": "Nay nếu được phép thì xin lên về báo cho tự tôn biết tin của mẹ và",
+          "bbox": [
+            170,
+            1147,
+            1624,
+            1195
+          ],
+          "confidence": 95.48
+        },
+        {
+          "text": "gia quyến. Xin cho ba người chia đi hai ngả. Đình Mai xin đi đường",
+          "bbox": [
+            171,
+            1201,
+            1627,
+            1255
+          ],
+          "confidence": 96.51
+        },
+        {
+          "text": "của ái núi Mông Tụ, Quýnh và Đông xin theo đường Long Môn mà",
+          "bbox": [
+            171,
+            1262,
+            1625,
+            1314
+          ],
+          "confidence": 94.94
+        },
+        {
+          "text": "vượt biển. Ngừa trông đại nhân cho người đàn đến biên giới, đễ",
+          "bbox": [
+            171,
+            1319,
+            1624,
+            1374
+          ],
+          "confidence": 79.52
+        },
+        {
+          "text": "chúng tôi gấp đường chạy về; chừng trong một tháng, đò xem tìm tục",
+          "bbox": [
+            173,
+            1384,
+            1625,
+            1434
+          ],
+          "confidence": 87.98
+        },
+        {
+          "text": "ra sao, sẽ xin bắm rõ?",
+          "bbox": [
+            173,
+            1453,
+            640,
+            1491
+          ],
+          "confidence": 90.75
+        },
+        {
+          "text": "Nghi lại hỏi lâu nay ở bên ấy mùa màng ra sao?",
+          "bbox": [
+            257,
+            1519,
+            1268,
+            1563
+          ],
+          "confidence": 92.82
+        },
+        {
+          "text": "Túc thua:",
+          "bbox": [
+            259,
+            1605,
+            459,
+            1634
+          ],
+          "confidence": 91.5
+        },
+        {
+          "text": "- Nước chúng tôi luôn mấy năm bị mất mùa, giá gạo rất đất, một",
+          "bbox": [
+            259,
+            1655,
+            1630,
+            1706
+          ],
+          "confidence": 93.29
+        },
+        {
+          "text": "thùng gao giá đến sáu trăm đồng tiền. Lộ Sơn Nam Hạ vốn được gọi",
+          "bbox": [
+            176,
+            1712,
+            1630,
+            1766
+          ],
+          "confidence": 90.26
+        },
+        {
+          "text": "là nơi giàu có, bây giờ dân gian cũng không có thóc lúa để đành, các",
+          "bbox": [
+            177,
+            1770,
+            1632,
+            1827
+          ],
+          "confidence": 95.42
+        },
+        {
+          "text": "nhà đều trống rỗng như chiếc chuông treo. Tự tôn trước kia động ở xứ",
+          "bbox": [
+            177,
+            1833,
+            1633,
+            1884
+          ],
+          "confidence": 94.2
+        },
+        {
+          "text": "Ấy, vì lương thực không đủ, cho nên hề làm việc gì cũng bị thất bại.",
+          "bbox": [
+            179,
+            1890,
+            1630,
+            1944
+          ],
+          "confidence": 91.52
+        },
+        {
+          "text": "Chúng tôi khi ở nước nhà, chỉ nghe như thế, đó là việc thực.",
+          "bbox": [
+            179,
+            1951,
+            1432,
+            2003
+          ],
+          "confidence": 99.43
+        },
+        {
+          "text": "Nghị quay sang hỏi Lê Quýnh, Quýnh liên đáp:",
+          "bbox": [
+            263,
+            2026,
+            1254,
+            2080
+          ],
+          "confidence": 97.22
+        },
+        {
+          "text": "- Ho Lê giữ nước hơn ba trăm năm, dùng ân huệ bước chặt lòng",
+          "bbox": [
+            263,
+            2090,
+            1636,
+            2146
+          ],
+          "confidence": 90.22
+        },
+        {
+          "text": "người, dùng lễ nghĩa vun trồng sī khí. Cho nên, dù bọn phán nghịch",
+          "bbox": [
+            181,
+            2154,
+            1636,
+            2206
+          ],
+          "confidence": 92.52
+        },
+        {
+          "text": "tiếm quyền mà lòng người mến chúa cũ vẫn như xưa. Chỉ vì họ Trình",
+          "bbox": [
+            181,
+            2202,
+            1638,
+            2270
+          ],
+          "confidence": 92.11
+        },
+        {
+          "text": "hiếp chế, lòng dân cảm giận. Tây Sơn nhân lúc sơ hở ấy, mượn tiếng",
+          "bbox": [
+            182,
+            2271,
+            1639,
+            2325
+          ],
+          "confidence": 85.81
+        },
+        {
+          "text": "1. Năm Lê Cảnh Hưng thứ 2 (1741), chia xứ Sơn Nam làm 2 lộ, lộ Sơn Nam Hạ",
+          "bbox": [
+            270,
+            2391,
+            1638,
+            2442
+          ],
+          "confidence": 95.57
+        },
+        {
+          "text": "(thuộc vùng Nam Định, Thái Bình ngày nay)",
+          "bbox": [
+            184,
+            2454,
+            937,
+            2490
+          ],
+          "confidence": 98.42
+        },
+        {
+          "text": "2. Chỉ đất Trung Hoa.",
+          "bbox": [
+            268,
+            2502,
+            643,
+            2537
+          ],
+          "confidence": 95.39
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          1821,
+          2814
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 21.235,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              241,
+              279,
+              1616,
+              324
+            ],
+            "generated_text": "Bon Túc khai là tự tôn có ba anh em rất yêu mến nhau. Anh",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.563,
+            "confidence": 99.15,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              159,
+              335,
+              1619,
+              388
+            ],
+            "generated_text": "trưởng là Lê Duy Kỳ, tức là đắng nổi ngôi, thú hai là Tụ quận công",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 0.729,
+            "confidence": 89.99,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              160,
+              394,
+              1619,
+              446
+            ],
+            "generated_text": "Duy Tụ, thú ba là Lan quân công Duy Chỉ. Hiện nay, Duy Kỳ chạy",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 0.76,
+            "confidence": 89.83,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              160,
+              450,
+              1621,
+              505
+            ],
+            "generated_text": "xưởng lộ Sơn Nam Ha,¹ để chiêu tập nghĩa binh. Duy Tụ ở vùng",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.692,
+            "confidence": 89.44,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              162,
+              514,
+              1621,
+              566
+            ],
+            "generated_text": "Tuyên Quang, Hưng Hóa cũng đang nhóm hợp các người đồng chí xa",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.551,
+            "confidence": 92.8,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              163,
+              572,
+              1621,
+              624
+            ],
+            "generated_text": "làm thanh viên cho nhau. Nghe nói họ nương tựa lẫn nhau, thân dân",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.602,
+            "confidence": 91.96,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              163,
+              630,
+              1619,
+              683
+            ],
+            "generated_text": "thuận theo, quyết không đến nỗi tan tác. Nhưng không biết từ đấy về",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.562,
+            "confidence": 94.75,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              165,
+              689,
+              1622,
+              742
+            ],
+            "generated_text": "sau có thể hàng hái làm nên việc hay không? Tói đấy đã hơn bảy",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.579,
+            "confidence": 92.44,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              165,
+              751,
+              1622,
+              803
+            ],
+            "generated_text": "tám tháng, sự thể đối thay, họ có còn giữ được chỗ ấy mưa không,",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.636,
+            "confidence": 87.53,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              167,
+              817,
+              887,
+              863
+            ],
+            "generated_text": "điều đó chúng tôi không được biết.",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.38,
+            "confidence": 98.72,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              249,
+              889,
+              1126,
+              933
+            ],
+            "generated_text": "Nghi lại hỏi tin tức mẹ tự tôn nay ra sao?",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.494,
+            "confidence": 92.67,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              251,
+              1028,
+              1624,
+              1077
+            ],
+            "generated_text": "- Chúng tôi trước ở Cao Bằng, rồi rước quốc mẫu sang nội địa.",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.619,
+            "confidence": 93.17,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              168,
+              1086,
+              1621,
+              1136
+            ],
+            "generated_text": "tư tôn thì vẫn ở trong nước. Quan san cách trỏ, tin tức không thông.",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.607,
+            "confidence": 88.57,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              170,
+              1147,
+              1624,
+              1195
+            ],
+            "generated_text": "Nay nếu được phép thì xin lên về báo cho tự tôn biết tin của mẹ và",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.631,
+            "confidence": 95.48,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              171,
+              1201,
+              1627,
+              1255
+            ],
+            "generated_text": "gia quyến. Xin cho ba người chia đi hai ngả. Đình Mai xin đi đường",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.567,
+            "confidence": 96.51,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              171,
+              1262,
+              1625,
+              1314
+            ],
+            "generated_text": "của ái núi Mông Tụ, Quýnh và Đông xin theo đường Long Môn mà",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.664,
+            "confidence": 94.94,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              171,
+              1319,
+              1624,
+              1374
+            ],
+            "generated_text": "vượt biển. Ngừa trông đại nhân cho người đàn đến biên giới, đễ",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.614,
+            "confidence": 79.52,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              173,
+              1384,
+              1625,
+              1434
+            ],
+            "generated_text": "chúng tôi gấp đường chạy về; chừng trong một tháng, đò xem tìm tục",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.654,
+            "confidence": 87.98,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              173,
+              1453,
+              640,
+              1491
+            ],
+            "generated_text": "ra sao, sẽ xin bắm rõ?",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 0.379,
+            "confidence": 90.75,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              257,
+              1519,
+              1268,
+              1563
+            ],
+            "generated_text": "Nghi lại hỏi lâu nay ở bên ấy mùa màng ra sao?",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.573,
+            "confidence": 92.82,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              259,
+              1605,
+              459,
+              1634
+            ],
+            "generated_text": "Túc thua:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.255,
+            "confidence": 91.5,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              259,
+              1655,
+              1630,
+              1706
+            ],
+            "generated_text": "- Nước chúng tôi luôn mấy năm bị mất mùa, giá gạo rất đất, một",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.619,
+            "confidence": 93.29,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              176,
+              1712,
+              1630,
+              1766
+            ],
+            "generated_text": "thùng gao giá đến sáu trăm đồng tiền. Lộ Sơn Nam Hạ vốn được gọi",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.648,
+            "confidence": 90.26,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              177,
+              1770,
+              1632,
+              1827
+            ],
+            "generated_text": "là nơi giàu có, bây giờ dân gian cũng không có thóc lúa để đành, các",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.661,
+            "confidence": 95.42,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              177,
+              1833,
+              1633,
+              1884
+            ],
+            "generated_text": "nhà đều trống rỗng như chiếc chuông treo. Tự tôn trước kia động ở xứ",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 0.694,
+            "confidence": 94.2,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              179,
+              1890,
+              1630,
+              1944
+            ],
+            "generated_text": "Ấy, vì lương thực không đủ, cho nên hề làm việc gì cũng bị thất bại.",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.695,
+            "confidence": 91.52,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              179,
+              1951,
+              1432,
+              2003
+            ],
+            "generated_text": "Chúng tôi khi ở nước nhà, chỉ nghe như thế, đó là việc thực.",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.522,
+            "confidence": 99.43,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              263,
+              2026,
+              1254,
+              2080
+            ],
+            "generated_text": "Nghị quay sang hỏi Lê Quýnh, Quýnh liên đáp:",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.631,
+            "confidence": 97.22,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              263,
+              2090,
+              1636,
+              2146
+            ],
+            "generated_text": "- Ho Lê giữ nước hơn ba trăm năm, dùng ân huệ bước chặt lòng",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.641,
+            "confidence": 90.22,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              181,
+              2154,
+              1636,
+              2206
+            ],
+            "generated_text": "người, dùng lễ nghĩa vun trồng sī khí. Cho nên, dù bọn phán nghịch",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.673,
+            "confidence": 92.52,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              181,
+              2202,
+              1638,
+              2270
+            ],
+            "generated_text": "tiếm quyền mà lòng người mến chúa cũ vẫn như xưa. Chỉ vì họ Trình",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.65,
+            "confidence": 92.11,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 32,
+            "box": [
+              182,
+              2271,
+              1639,
+              2325
+            ],
+            "generated_text": "hiếp chế, lòng dân cảm giận. Tây Sơn nhân lúc sơ hở ấy, mượn tiếng",
+            "n_lines": 1,
+            "tokens": 32,
+            "seconds": 0.782,
+            "confidence": 85.81,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 33,
+            "box": [
+              185,
+              2368,
+              780,
+              2384
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.152,
+            "confidence": 13.94,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 34,
+            "box": [
+              270,
+              2391,
+              1638,
+              2442
+            ],
+            "generated_text": "1. Năm Lê Cảnh Hưng thứ 2 (1741), chia xứ Sơn Nam làm 2 lộ, lộ Sơn Nam Hạ",
+            "n_lines": 1,
+            "tokens": 39,
+            "seconds": 0.9,
+            "confidence": 95.57,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 35,
+            "box": [
+              184,
+              2454,
+              937,
+              2490
+            ],
+            "generated_text": "(thuộc vùng Nam Định, Thái Bình ngày nay)",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.514,
+            "confidence": 98.42,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 36,
+            "box": [
+              268,
+              2502,
+              643,
+              2537
+            ],
+            "generated_text": "2. Chỉ đất Trung Hoa.",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.339,
+            "confidence": 95.39,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              251,
+              975,
+              882,
+              989
+            ],
+            "ink": 828
+          },
+          {
+            "box": [
+              257,
+              990,
+              424,
+              1003
+            ],
+            "ink": 732
+          },
+          {
+            "box": [
+              268,
+              1762,
+              1605,
+              1774
+            ],
+            "ink": 623
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      }
+    }
+  ]
+}

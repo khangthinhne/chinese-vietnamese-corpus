@@ -147,12 +147,18 @@ def _clean_argv(cfg: dict, layer: str, base: list[str], force: bool, extra: list
     _opt(argv, "--split", cc.get("split"))
     for pat in cc.get("drop_pattern", []):
         argv += ["--drop-pattern", pat]
+    for name in cc.get("translator_names", []) or []:      # tên người dịch đứng một mình -> metadata
+        argv += ["--translator-name", name]
+    if cc.get("capture_notes") is False:
+        argv.append("--no-capture-notes")
     if boundaries:
         _opt(argv, "--start-after", cc.get("start_after"))
         _opt(argv, "--end-before", cc.get("end_before"))
     _opt(argv, "--abbrev", cc.get("abbrev"))
     for flag, key in (("--split-colon", "split_colon"), ("--no-heading-heuristic", "no_heading_heuristic"),
-                      ("--keep-markers", "keep_markers"), ("--no-headers", "remove_headers"),
+                      ("--keep-markers", "keep_markers"), ("--keep-letter-markers", "strip_letter_markers"),
+                      ("--no-headers", "remove_headers"),
+                      ("--keep-single-line-pages", "drop_recurring_single_lines"),
                       ("--no-footers", "remove_footers"), ("--no-duplicates", "remove_duplicates"),
                       ("--no-reconstruct", "reconstruct_page_boundaries"),
                       ("--no-footnotes", "enabled")):
@@ -162,12 +168,25 @@ def _clean_argv(cfg: dict, layer: str, base: list[str], force: bool, extra: list
         elif cc.get(key) is False:
             argv.append(flag)
     if cc.get("excluded_pages"):
-        argv += ["--exclude-pages", ",".join(str(p) for p in cc["excluded_pages"])]
+        pages = cc["excluded_pages"]          # danh sách [5, 6] hoặc chuỗi khoảng "321-621"
+        argv += ["--exclude-pages", pages if isinstance(pages, str) else ",".join(str(p) for p in pages)]
     _opt(argv, "--footnote-policy", cc.get("footnote_policy")
          or cc.get("footnotes", {}).get("policy"))
     _opt(argv, "--header-footer-min-pages", cc.get("header_footer_min_pages"))
     _opt(argv, "--dup-threshold", cc.get("duplicate_threshold"))
     _opt(argv, "--dup-min-len", cc.get("duplicate_min_len"))
+    if cc.get("footnotes", {}).get("note_entries") is True:
+        argv.append("--note-entries")
+    if cc.get("footnotes", {}).get("note_entry_markers") is True:
+        argv.append("--note-entry-markers")
+    if cc.get("stream_running_headers") is True:
+        argv.append("--stream-running-headers")
+    if cc.get("stream_note_markers") is True:
+        argv.append("--stream-note-markers")
+    if cc.get("am_markers_extended") is True:
+        argv.append("--am-markers-extended")
+    if cc.get("capture_source_lines") is True:
+        argv.append("--capture-source-lines")
     for flag, key in (("--no-paren-notes", "detect_parentheses"),
                       ("--no-bib-notes", "detect_bibliographic_notes")):
         if cc.get("footnotes", {}).get(key) is False:
@@ -307,6 +326,9 @@ def _new_plan(cfg: dict, steps: list[str], layers: list[str] | None, pairs: list
 
     if "layers" in steps and cfg.get("segmentation", {}).get("ocr_streams"):
         argv = [*base] + list(extra.get("layers", []))
+        streams_pages = ((cfg.get("ocr") or {}).get("streams") or {}).get("pages")
+        if streams_pages:                     # cùng phạm vi trang với OCR (vd CPO_20 bỏ 321-621)
+            argv += ["--pages", str(streams_pages)]
         if force:
             argv.append("--force")
         plan.append(("layers", argv))

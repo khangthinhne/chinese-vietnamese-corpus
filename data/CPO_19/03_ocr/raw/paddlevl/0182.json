@@ -1,0 +1,935 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 182,
+  "runs": [
+    {
+      "key": "ddbdafa79710caf9f0a950a5de401295a0767b6276d621136acd67bf5da61ed9",
+      "parameters": {
+        "image_sha256": "d9777d16f0ae2555529c833229767e1dab84fe452d789bcbf137259fde155e65",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T13:12:32+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_182.png",
+      "image_size": [
+        2575,
+        3203
+      ],
+      "crop_box": [
+        0,
+        0,
+        2575,
+        3203
+      ],
+      "lines": [
+        {
+          "text": "ngothinhamle1.pdf",
+          "bbox": [
+            7,
+            14,
+            717,
+            45
+          ],
+          "confidence": 95.05
+        },
+        {
+          "text": "HOÀNG HOA ĐỔ PHA",
+          "bbox": [
+            1596,
+            164,
+            2060,
+            203
+          ],
+          "confidence": 82.13
+        },
+        {
+          "text": "Tổng, Nguyên thắng bai, chén rượu đã với.",
+          "bbox": [
+            649,
+            266,
+            1851,
+            310
+          ],
+          "confidence": 84.78
+        },
+        {
+          "text": "Nay gặp bưới việc công, của ai không đóng,",
+          "bbox": [
+            650,
+            343,
+            1641,
+            394
+          ],
+          "confidence": 82.33
+        },
+        {
+          "text": "Để hành nhân van đăm, từ xa trở về.",
+          "bbox": [
+            650,
+            421,
+            1502,
+            464
+          ],
+          "confidence": 87.87
+        },
+        {
+          "text": "KHAO DI:",
+          "bbox": [
+            351,
+            493,
+            572,
+            532
+          ],
+          "confidence": 97.13
+        },
+        {
+          "text": "a. Bản A.117c/1: Dĩ 2.",
+          "bbox": [
+            500,
+            564,
+            967,
+            604
+          ],
+          "confidence": 86.92
+        },
+        {
+          "text": "b. Bản A.117c/1: Vãng 往.",
+          "bbox": [
+            498,
+            637,
+            1028,
+            677
+          ],
+          "confidence": 95.81
+        },
+        {
+          "text": "Bản A.1579: Phản 返.",
+          "bbox": [
+            499,
+            708,
+            959,
+            753
+          ],
+          "confidence": 93.75
+        },
+        {
+          "text": "CHU THICH:",
+          "bbox": [
+            353,
+            789,
+            642,
+            828
+          ],
+          "confidence": 98.93
+        },
+        {
+          "text": "1.Ai Vũ Thắng: Ô đây núi Kê Công, nơi giáp giới giữa hai tỉnh Hà Nam",
+          "bbox": [
+            506,
+            860,
+            2059,
+            910
+          ],
+          "confidence": 96.07
+        },
+        {
+          "text": "và Họ Bắc.",
+          "bbox": [
+            352,
+            947,
+            586,
+            976
+          ],
+          "confidence": 77.08
+        },
+        {
+          "text": "2.Các vương công: Ý nói vua đứng đầu các nước vùng Hoa Ha và Kinh Sở",
+          "bbox": [
+            503,
+            1008,
+            2062,
+            1051
+          ],
+          "confidence": 96.72
+        },
+        {
+          "text": "thời Chiên quốc.",
+          "bbox": [
+            353,
+            1095,
+            700,
+            1125
+          ],
+          "confidence": 93.55
+        },
+        {
+          "text": "3.Di và Ha: Trung Quốc xưa cho mình là Ha, ngoài ra là Di, như vùng",
+          "bbox": [
+            505,
+            1156,
+            2063,
+            1205
+          ],
+          "confidence": 96.7
+        },
+        {
+          "text": "Kinh Sở từ Hồ Bắc về phía nam là Di (Di Địch), vùng Hà Nam là Hạ (Hoa Hạ),",
+          "bbox": [
+            355,
+            1229,
+            2060,
+            1278
+          ],
+          "confidence": 95.72
+        },
+        {
+          "text": "mà của ai Vũ Thắng là nơi tranh chấp.",
+          "bbox": [
+            355,
+            1304,
+            1173,
+            1346
+          ],
+          "confidence": 92.02
+        },
+        {
+          "text": "4. Nguyên Tống: Nguyên đã diệt Tống lên trị vì thiên hạ, ải Vũ Thắng",
+          "bbox": [
+            505,
+            1376,
+            2062,
+            1427
+          ],
+          "confidence": 95.3
+        },
+        {
+          "text": "này đã từng là địa bàn tranh chấp quyết liệt giữa Tống và Nguyên.",
+          "bbox": [
+            354,
+            1451,
+            1771,
+            1501
+          ],
+          "confidence": 96.38
+        },
+        {
+          "text": "5.Tấn, Sở: Là hai nước luôn kình dịch với nhau thời Xuân Thu. Ai Vũ",
+          "bbox": [
+            506,
+            1525,
+            2063,
+            1569
+          ],
+          "confidence": 90.62
+        },
+        {
+          "text": "Thắng cũng là nơi tranh chấp.",
+          "bbox": [
+            354,
+            1601,
+            996,
+            1644
+          ],
+          "confidence": 98.31
+        },
+        {
+          "text": "81. 河南道中",
+          "bbox": [
+            916,
+            1735,
+            1471,
+            1807
+          ],
+          "confidence": 98.54
+        },
+        {
+          "text": "微子遺墟不可尋",
+          "bbox": [
+            883,
+            1909,
+            1507,
+            1973
+          ],
+          "confidence": 99.82
+        },
+        {
+          "text": "滿山麻麥慨商音",
+          "bbox": [
+            885,
+            2038,
+            1508,
+            2096
+          ],
+          "confidence": 96.2
+        },
+        {
+          "text": "溪浮虎骨流沙淺",
+          "bbox": [
+            887,
+            2158,
+            1507,
+            2222
+          ],
+          "confidence": 99.13
+        },
+        {
+          "text": "路積騾蹄印地深",
+          "bbox": [
+            883,
+            2285,
+            1507,
+            2344
+          ],
+          "confidence": 98.17
+        },
+        {
+          "text": "蕩道官塘槐鬱鬱",
+          "bbox": [
+            887,
+            2406,
+            1506,
+            2470
+          ],
+          "confidence": 99.91
+        },
+        {
+          "text": "石牆民舍竹陰陰",
+          "bbox": [
+            887,
+            2534,
+            1505,
+            2594
+          ],
+          "confidence": 99.52
+        },
+        {
+          "text": "象賢遺化依然在",
+          "bbox": [
+            888,
+            2656,
+            1509,
+            2719
+          ],
+          "confidence": 99.8
+        },
+        {
+          "text": "簡樸民風古到今",
+          "bbox": [
+            892,
+            2781,
+            1510,
+            2844
+          ],
+          "confidence": 99.28
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2575,
+          3203
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 41.866,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              7,
+              14,
+              717,
+              45
+            ],
+            "generated_text": "ngothinhamle1.pdf",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.875,
+            "confidence": 95.05,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              1596,
+              164,
+              2060,
+              203
+            ],
+            "generated_text": "HOÀNG HOA ĐỔ PHA",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.066,
+            "confidence": 82.13,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              352,
+              207,
+              2065,
+              221
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.467,
+            "confidence": 93.91,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              649,
+              266,
+              1851,
+              310
+            ],
+            "generated_text": "Tổng, Nguyên thắng bai, chén rượu đã với.",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.485,
+            "confidence": 84.78,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              650,
+              343,
+              1641,
+              394
+            ],
+            "generated_text": "Nay gặp bưới việc công, của ai không đóng,",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.618,
+            "confidence": 82.33,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              650,
+              421,
+              1502,
+              464
+            ],
+            "generated_text": "Để hành nhân van đăm, từ xa trở về.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.251,
+            "confidence": 87.87,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              351,
+              493,
+              572,
+              532
+            ],
+            "generated_text": "KHAO DI:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.703,
+            "confidence": 97.13,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              500,
+              564,
+              967,
+              604
+            ],
+            "generated_text": "a. Bản A.117c/1: Dĩ 2.",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.521,
+            "confidence": 86.92,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              498,
+              637,
+              1028,
+              677
+            ],
+            "generated_text": "b. Bản A.117c/1: Vãng 往.",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.628,
+            "confidence": 95.81,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              499,
+              708,
+              959,
+              753
+            ],
+            "generated_text": "Bản A.1579: Phản 返.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.268,
+            "confidence": 93.75,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              353,
+              789,
+              642,
+              828
+            ],
+            "generated_text": "CHU THICH:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.731,
+            "confidence": 98.93,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              506,
+              860,
+              2059,
+              910
+            ],
+            "generated_text": "1.Ai Vũ Thắng: Ô đây núi Kê Công, nơi giáp giới giữa hai tỉnh Hà Nam",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 2.259,
+            "confidence": 96.07,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              352,
+              947,
+              586,
+              976
+            ],
+            "generated_text": "và Họ Bắc.",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.831,
+            "confidence": 77.08,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              503,
+              1008,
+              2062,
+              1051
+            ],
+            "generated_text": "2.Các vương công: Ý nói vua đứng đầu các nước vùng Hoa Ha và Kinh Sở",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.192,
+            "confidence": 96.72,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              353,
+              1095,
+              700,
+              1125
+            ],
+            "generated_text": "thời Chiên quốc.",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.78,
+            "confidence": 93.55,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              505,
+              1156,
+              2063,
+              1205
+            ],
+            "generated_text": "3.Di và Ha: Trung Quốc xưa cho mình là Ha, ngoài ra là Di, như vùng",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 1.961,
+            "confidence": 96.7,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              355,
+              1229,
+              2060,
+              1278
+            ],
+            "generated_text": "Kinh Sở từ Hồ Bắc về phía nam là Di (Di Địch), vùng Hà Nam là Hạ (Hoa Hạ),",
+            "n_lines": 1,
+            "tokens": 34,
+            "seconds": 2.714,
+            "confidence": 95.72,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              355,
+              1304,
+              1173,
+              1346
+            ],
+            "generated_text": "mà của ai Vũ Thắng là nơi tranh chấp.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.417,
+            "confidence": 92.02,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              505,
+              1376,
+              2062,
+              1427
+            ],
+            "generated_text": "4. Nguyên Tống: Nguyên đã diệt Tống lên trị vì thiên hạ, ải Vũ Thắng",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 2.297,
+            "confidence": 95.3,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              354,
+              1451,
+              1771,
+              1501
+            ],
+            "generated_text": "này đã từng là địa bàn tranh chấp quyết liệt giữa Tống và Nguyên.",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 2.032,
+            "confidence": 96.38,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              506,
+              1525,
+              2063,
+              1569
+            ],
+            "generated_text": "5.Tấn, Sở: Là hai nước luôn kình dịch với nhau thời Xuân Thu. Ai Vũ",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 2.231,
+            "confidence": 90.62,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              354,
+              1601,
+              996,
+              1644
+            ],
+            "generated_text": "Thắng cũng là nơi tranh chấp.",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.182,
+            "confidence": 98.31,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              916,
+              1735,
+              1471,
+              1807
+            ],
+            "generated_text": "81. 河南道中",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.805,
+            "confidence": 98.54,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              883,
+              1909,
+              1507,
+              1973
+            ],
+            "generated_text": "微子遺墟不可尋",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 1.028,
+            "confidence": 99.82,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              885,
+              2038,
+              1508,
+              2096
+            ],
+            "generated_text": "滿山麻麥慨商音",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 1.02,
+            "confidence": 96.2,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              887,
+              2158,
+              1507,
+              2222
+            ],
+            "generated_text": "溪浮虎骨流沙淺",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.974,
+            "confidence": 99.13,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              883,
+              2285,
+              1507,
+              2344
+            ],
+            "generated_text": "路積騾蹄印地深",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 1.024,
+            "confidence": 98.17,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              887,
+              2406,
+              1506,
+              2470
+            ],
+            "generated_text": "蕩道官塘槐鬱鬱",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.22,
+            "confidence": 99.91,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              887,
+              2534,
+              1505,
+              2594
+            ],
+            "generated_text": "石牆民舍竹陰陰",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.273,
+            "confidence": 99.52,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              888,
+              2656,
+              1509,
+              2719
+            ],
+            "generated_text": "象賢遺化依然在",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 1.031,
+            "confidence": 99.8,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              892,
+              2781,
+              1510,
+              2844
+            ],
+            "generated_text": "簡樸民風古到今",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.978,
+            "confidence": 99.28,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              1734,
+              3,
+              1848,
+              12
+            ],
+            "ink": 50
+          },
+          {
+            "box": [
+              738,
+              306,
+              1431,
+              318
+            ],
+            "ink": 422
+          },
+          {
+            "box": [
+              382,
+              935,
+              549,
+              949
+            ],
+            "ink": 534
+          },
+          {
+            "box": [
+              739,
+              1047,
+              1798,
+              1058
+            ],
+            "ink": 317
+          },
+          {
+            "box": [
+              359,
+              1084,
+              671,
+              1096
+            ],
+            "ink": 452
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

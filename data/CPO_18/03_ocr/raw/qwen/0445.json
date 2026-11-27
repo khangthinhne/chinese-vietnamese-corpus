@@ -1,0 +1,268 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_18",
+  "engine": "qwen",
+  "page": 445,
+  "runs": [
+    {
+      "key": "f2ea416fe8cb3d4e58ae0c5f323d5691bdc5c43a05acc1e3e0031dabcb478a43",
+      "parameters": {
+        "image_sha256": "7286477b350720c5963ac4ecdef953fbc0e1658f8c85eb8ca906808c50255dcf",
+        "engine": {
+          "name": "qwen",
+          "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "model_revision": "main",
+          "transformers_version": "4.57.6",
+          "torch_version": "2.5.1+cu121",
+          "cuda_version": "12.1",
+          "bitsandbytes_version": "0.50.2",
+          "quantization": {
+            "load_in_4bit": true,
+            "quant_type": "nf4",
+            "double_quant": true,
+            "compute_dtype": "float16"
+          },
+          "mode": "all",
+          "min_pixels": 50176,
+          "max_pixels": 802816,
+          "band_inches": 2.0,
+          "max_new_tokens": 768,
+          "repetition_penalty": 1.05,
+          "adapter_version": 3,
+          "prompt_version": 3,
+          "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74"
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T21:15:49+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_445.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        0,
+        2480,
+        3509
+      ],
+      "lines": [
+        {
+          "text": "老子曰上德不德，是以有德；下不德，是以无德。三皇二帝，食衣，巢居",
+          "bbox": [
+            57,
+            0,
+            2435,
+            526
+          ],
+          "confidence": 54.94
+        },
+        {
+          "text": "穴處",
+          "bbox": [
+            308,
+            551,
+            2438,
+            1171
+          ],
+          "confidence": 10.28
+        },
+        {
+          "text": "夫见博则不迷，听听则不惑。尧舜周世事也；佛与老子无为志；仲尼栖栖七十余国，洗耳于渊。君子之道或出或处，或默或言，不溢其情，不淫其心。故其",
+          "bbox": [
+            312,
+            1224,
+            2438,
+            1716
+          ],
+          "confidence": 74.35
+        },
+        {
+          "text": "贵在乎所用，何棄之有乎？",
+          "bbox": [
+            308,
+            1741,
+            2152,
+            1931
+          ],
+          "confidence": 81.13
+        },
+        {
+          "text": "PHIÊN ÂM:",
+          "bbox": [
+            308,
+            1931,
+            2152,
+            2122
+          ],
+          "confidence": 81.13
+        },
+        {
+          "text": "Văn viết: Hoàng Đế thay y thường, chế phục sức. Cơ Tử Trần hồng phạm, mạo vi ngũ sự thủ. Khổng Tử",
+          "bbox": [
+            308,
+            2122,
+            2152,
+            2312
+          ],
+          "confidence": 81.13
+        },
+        {
+          "text": "tác Hiếu kinh, phục vi tam đức thủy, hựu viết: \"Chính kỳ y quan, tôn kỳ chiêm thị\". Nguyên Hiến tuy bần, bất ly hoa quan. Tứ Lộ ngộ nạn, bất vong kết anh. Kim sa môn thế đầu phát, bị xích bố; kiến nhân vô quỳ khởi chỉ lễ; uy nghi vô bàn tuyền chỉ dung chỉ. Hà kỳ vi mạo phục chi chế, quai tấn thân chi sức gia?",
+          "bbox": [
+            316,
+            2316,
+            2160,
+            2849
+          ],
+          "confidence": 90.64
+        },
+        {
+          "text": "Mâu Tử viết: Lão Tử văn: \"Thượng đức bất đức, thì dĩ hữu đức; hạ đức bất thất đức, thì dĩ vô đức\". Tam hoàng chi thời, thực nhục ý bì, sào cư huyệt xừ, dĩ sùng",
+          "bbox": [
+            52,
+            2875,
+            2475,
+            3509
+          ],
+          "confidence": 92.02
+        }
+      ],
+      "raw": {
+        "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+        "model_revision": "main",
+        "mode": "all",
+        "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          3509
+        ],
+        "band_target_height": 600,
+        "bbox_granularity": "band_even_split",
+        "max_new_tokens": 768,
+        "max_pixels": 802816,
+        "inference_seconds": 23.169,
+        "bands": [
+          {
+            "band": 1,
+            "y0": 0,
+            "y1": 537,
+            "ink_box": [
+              57,
+              0,
+              2435,
+              526
+            ],
+            "generated_text": "老子曰上德不德，是以有德；下不德，是以无德。三皇二帝，食衣，巢居",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 2.406,
+            "confidence": 54.94,
+            "flags": []
+          },
+          {
+            "band": 2,
+            "y0": 537,
+            "y1": 1208,
+            "ink_box": [
+              308,
+              551,
+              2438,
+              1171
+            ],
+            "generated_text": "穴處",
+            "n_lines": 1,
+            "tokens": 3,
+            "seconds": 0.669,
+            "confidence": 10.28,
+            "flags": []
+          },
+          {
+            "band": 3,
+            "y0": 1208,
+            "y1": 1728,
+            "ink_box": [
+              312,
+              1224,
+              2438,
+              1716
+            ],
+            "generated_text": "夫见博则不迷，听听则不惑。尧舜周世事也；佛与老子无为志；仲尼栖栖七十余国，洗耳于渊。君子之道或出或处，或默或言，不溢其情，不淫其心。故其",
+            "n_lines": 1,
+            "tokens": 65,
+            "seconds": 4.578,
+            "confidence": 74.35,
+            "flags": []
+          },
+          {
+            "band": 4,
+            "y0": 1728,
+            "y1": 2314,
+            "ink_box": [
+              308,
+              1741,
+              2152,
+              2312
+            ],
+            "generated_text": "贵在乎所用，何棄之有乎？\nPHIÊN ÂM:\nVăn viết: Hoàng Đế thay y thường, chế phục sức. Cơ Tử Trần hồng phạm, mạo vi ngũ sự thủ. Khổng Tử",
+            "n_lines": 3,
+            "tokens": 52,
+            "seconds": 3.81,
+            "confidence": 81.13,
+            "flags": []
+          },
+          {
+            "band": 5,
+            "y0": 2314,
+            "y1": 2862,
+            "ink_box": [
+              316,
+              2316,
+              2160,
+              2849
+            ],
+            "generated_text": "tác Hiếu kinh, phục vi tam đức thủy, hựu viết: \"Chính kỳ y quan, tôn kỳ chiêm thị\". Nguyên Hiến tuy bần, bất ly hoa quan. Tứ Lộ ngộ nạn, bất vong kết anh. Kim sa môn thế đầu phát, bị xích bố; kiến nhân vô quỳ khởi chỉ lễ; uy nghi vô bàn tuyền chỉ dung chỉ. Hà kỳ vi mạo phục chi chế, quai tấn thân chi sức gia?",
+            "n_lines": 1,
+            "tokens": 109,
+            "seconds": 7.326,
+            "confidence": 90.64,
+            "flags": []
+          },
+          {
+            "band": 6,
+            "y0": 2862,
+            "y1": 3509,
+            "ink_box": [
+              52,
+              2875,
+              2475,
+              3509
+            ],
+            "generated_text": "Mâu Tử viết: Lão Tử văn: \"Thượng đức bất đức, thì dĩ hữu đức; hạ đức bất thất đức, thì dĩ vô đức\". Tam hoàng chi thời, thực nhục ý bì, sào cư huyệt xừ, dĩ sùng",
+            "n_lines": 1,
+            "tokens": 61,
+            "seconds": 4.342,
+            "confidence": 92.02,
+            "flags": []
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "61cbea5c0055c260ccfc12f884e0febca7b2783b",
+        "git_describe": "61cbea5",
+        "git_dirty": true,
+        "gpu": "NVIDIA L4",
+        "dtype": "float16",
+        "adapter_version": 3
+      }
+    }
+  ]
+}

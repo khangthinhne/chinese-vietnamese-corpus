@@ -45,9 +45,9 @@ def test_structural_clean_all_layers_without_force(tmp_path):
     # audit dùng chung giữ bản ghi của mọi lớp đã có thay đổi (han không có dòng nào bị loại)
     assert all(f'LAYER="{layer}" ACTION="remove_line"' in audit for layer in ("am", "nghia", "tho"))
 
-    # chạy lại không --force: vẫn bị chặn bởi CHÍNH output của lớp đó, không ghi đè
+    # chạy lại không --force, đầu vào không đổi: bỏ qua êm (mã 0), không ghi đè
     before = layout.cleaning_structural("am").read_bytes()
-    assert clean(tmp_path, "am") == 1
+    assert clean(tmp_path, "am") == 0
     assert layout.cleaning_structural("am").read_bytes() == before
     assert clean(tmp_path, "am", "--force") == 0
 

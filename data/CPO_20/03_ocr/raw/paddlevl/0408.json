@@ -1,0 +1,995 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_20",
+  "engine": "paddlevl",
+  "page": 408,
+  "runs": [
+    {
+      "key": "11a412bdc74a3ffc9666eab3b6958637a0114b3d9ade437311b1b8b98e503be2",
+      "parameters": {
+        "image_sha256": "b7df991e67fffc108e0f835eddcac36185cef3ce4cd13dd48b918cc057c8671d",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T07:42:49+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_408.png",
+      "image_size": [
+        1839,
+        2804
+      ],
+      "crop_box": [
+        0,
+        0,
+        1839,
+        2804
+      ],
+      "lines": [
+        {
+          "text": "Sau khi nhà vua lên ngôi, bốn phương dần dần đẹp xong, thiên",
+          "bbox": [
+            345,
+            258,
+            1694,
+            312
+          ],
+          "confidence": 89.59
+        },
+        {
+          "text": "hạ lại bình yên. Chúa biết phúc của nhà vua rất lớn, nên càng hết",
+          "bbox": [
+            257,
+            319,
+            1697,
+            369
+          ],
+          "confidence": 98.65
+        },
+        {
+          "text": "sức tôn kính. Nhà vua cũng nhã nhặn, khiêm tốn, tin cậy vào chúa.",
+          "bbox": [
+            257,
+            378,
+            1694,
+            429
+          ],
+          "confidence": 95.88
+        },
+        {
+          "text": "Thỉnh thoảng chúa lại đăng tiến thức nọ thức kia, vì thế sự chi dùng",
+          "bbox": [
+            256,
+            435,
+            1697,
+            486
+          ],
+          "confidence": 90.17
+        },
+        {
+          "text": "của nhà vua cũng được thừa thải.",
+          "bbox": [
+            257,
+            499,
+            946,
+            536
+          ],
+          "confidence": 97.22
+        },
+        {
+          "text": "Lúc nhà vua ở ngôi, chằng qua chỉ rũ áo khoanh tay, tìm trò mua",
+          "bbox": [
+            345,
+            569,
+            1697,
+            618
+          ],
+          "confidence": 93.15
+        },
+        {
+          "text": "vui chú không có việc gì phải lo. Nhà vua lại giới về các kỹ nghệ lất",
+          "bbox": [
+            256,
+            627,
+            1696,
+            677
+          ],
+          "confidence": 92.47
+        },
+        {
+          "text": "vật. Bao nhiêu điệu Nhạc phủ, nhà vua đều chế ra bài mới, âm thanh",
+          "bbox": [
+            257,
+            685,
+            1696,
+            736
+          ],
+          "confidence": 93.0
+        },
+        {
+          "text": "cực kỳ du dương, trong sáng. Thường khi nhà vua lại còn theo tranh",
+          "bbox": [
+            256,
+            747,
+            1696,
+            795
+          ],
+          "confidence": 95.96
+        },
+        {
+          "text": "Tam Quốc, sai các cung nữ mặc áo trận, cầm giáo mác, chia thế trận",
+          "bbox": [
+            256,
+            809,
+            1696,
+            855
+          ],
+          "confidence": 95.35
+        },
+        {
+          "text": "ba nước Nguy - Ngô - Thục, rồi day họ các cách ngồi, đứng, đâm, đỡ,",
+          "bbox": [
+            257,
+            864,
+            1694,
+            914
+          ],
+          "confidence": 87.71
+        },
+        {
+          "text": "de mua vui trong lúc thư nhàn.",
+          "bbox": [
+            256,
+            931,
+            896,
+            964
+          ],
+          "confidence": 94.0
+        },
+        {
+          "text": "Những năm tuổi giả, nhà vua bị Thánh Tổ Trình Sâm đè nén đủ",
+          "bbox": [
+            342,
+            996,
+            1693,
+            1044
+          ],
+          "confidence": 90.49
+        },
+        {
+          "text": "đường, người khác hắn phải tức giận không thể chịu nổi, nhưng nhà",
+          "bbox": [
+            256,
+            1054,
+            1694,
+            1105
+          ],
+          "confidence": 94.48
+        },
+        {
+          "text": "vua thì vấn vui đùa như thường. Những người gần gũi nhà vua thấy",
+          "bbox": [
+            254,
+            1114,
+            1696,
+            1165
+          ],
+          "confidence": 94.55
+        },
+        {
+          "text": "vậy đều can ngăn. Nhà vua liền đáp rằng:",
+          "bbox": [
+            254,
+            1171,
+            1130,
+            1217
+          ],
+          "confidence": 96.31
+        },
+        {
+          "text": "- Các người mới chỉ biết một mà chưa biết hai. Nhà vua đối với",
+          "bbox": [
+            340,
+            1243,
+            1694,
+            1290
+          ],
+          "confidence": 96.91
+        },
+        {
+          "text": "nhà chúa, hiện nay đang ở vào thế bị ngờ vực; nếu trầm lấy việc mất",
+          "bbox": [
+            254,
+            1303,
+            1694,
+            1350
+          ],
+          "confidence": 97.13
+        },
+        {
+          "text": "quyền làm tức giận, thì nhà chúa ất phải ngấm ngầm tính việc chẳng",
+          "bbox": [
+            252,
+            1362,
+            1694,
+            1414
+          ],
+          "confidence": 88.81
+        },
+        {
+          "text": "hay. Vì vậy, trăm phải mượn hứng vui chơi như thường để tránh tai",
+          "bbox": [
+            254,
+            1421,
+            1693,
+            1467
+          ],
+          "confidence": 89.65
+        },
+        {
+          "text": "va đó thôi.",
+          "bbox": [
+            252,
+            1485,
+            481,
+            1515
+          ],
+          "confidence": 76.34
+        },
+        {
+          "text": "Có lần, nhà vua lại nói với các cung nữ rằng:",
+          "bbox": [
+            342,
+            1551,
+            1277,
+            1593
+          ],
+          "confidence": 96.28
+        },
+        {
+          "text": "- Trong đời ta, thế nào cũng có phen được trồng thấy cuộc nhất",
+          "bbox": [
+            340,
+            1623,
+            1693,
+            1667
+          ],
+          "confidence": 92.05
+        },
+        {
+          "text": "thống, nhưng đó chẳng phải là điều mà ta vui mừng.",
+          "bbox": [
+            254,
+            1679,
+            1344,
+            1725
+          ],
+          "confidence": 97.24
+        },
+        {
+          "text": "Các cung nữ hỏi lại:",
+          "bbox": [
+            342,
+            1751,
+            756,
+            1790
+          ],
+          "confidence": 95.22
+        },
+        {
+          "text": "- Nhà chúa chèn ép như vậy, nếu chúa bại là may cho nhà vua,",
+          "bbox": [
+            338,
+            1822,
+            1691,
+            1868
+          ],
+          "confidence": 97.42
+        },
+        {
+          "text": "cơ sao bệ hạ lại không vui mừng?",
+          "bbox": [
+            252,
+            1881,
+            951,
+            1922
+          ],
+          "confidence": 92.92
+        },
+        {
+          "text": "Nhà vua đáp:",
+          "bbox": [
+            340,
+            1957,
+            618,
+            1989
+          ],
+          "confidence": 99.5
+        },
+        {
+          "text": "- Trời sai nhà chúa phò ta. Chúa gánh cái lo, ta hướng cái vui.",
+          "bbox": [
+            338,
+            2021,
+            1688,
+            2068
+          ],
+          "confidence": 96.58
+        },
+        {
+          "text": "Mất chúa, tức là cái lo lại về ta, ta còn vui gì?",
+          "bbox": [
+            252,
+            2079,
+            1207,
+            2124
+          ],
+          "confidence": 98.93
+        },
+        {
+          "text": "Khi Đoan Nam vương Trịnh Tổng mới lên làm chúa, bon kiêu",
+          "bbox": [
+            340,
+            2148,
+            1690,
+            2197
+          ],
+          "confidence": 94.05
+        },
+        {
+          "text": "binh có lần đã nghĩ đến mưu tôn phò nhất thống và lén đến xin ý",
+          "bbox": [
+            252,
+            2208,
+            1688,
+            2257
+          ],
+          "confidence": 93.12
+        },
+        {
+          "text": "kiến nhà vua. Những người xung quanh cũng đã khuyên nhà vua nên",
+          "bbox": [
+            251,
+            2266,
+            1690,
+            2316
+          ],
+          "confidence": 98.36
+        },
+        {
+          "text": "nghe theo mưu ấy. Nhưng nhà vua nói:",
+          "bbox": [
+            251,
+            2328,
+            1054,
+            2369
+          ],
+          "confidence": 97.96
+        },
+        {
+          "text": "- Ta vì thành thật nghe theo trời nên mới được như thế này.",
+          "bbox": [
+            338,
+            2397,
+            1686,
+            2441
+          ],
+          "confidence": 95.03
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          1839,
+          2804
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 19.77,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              345,
+              258,
+              1694,
+              312
+            ],
+            "generated_text": "Sau khi nhà vua lên ngôi, bốn phương dần dần đẹp xong, thiên",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.62,
+            "confidence": 89.59,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              257,
+              319,
+              1697,
+              369
+            ],
+            "generated_text": "hạ lại bình yên. Chúa biết phúc của nhà vua rất lớn, nên càng hết",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.63,
+            "confidence": 98.65,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              257,
+              378,
+              1694,
+              429
+            ],
+            "generated_text": "sức tôn kính. Nhà vua cũng nhã nhặn, khiêm tốn, tin cậy vào chúa.",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 0.768,
+            "confidence": 95.88,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              256,
+              435,
+              1697,
+              486
+            ],
+            "generated_text": "Thỉnh thoảng chúa lại đăng tiến thức nọ thức kia, vì thế sự chi dùng",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.6,
+            "confidence": 90.17,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              257,
+              499,
+              946,
+              536
+            ],
+            "generated_text": "của nhà vua cũng được thừa thải.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 0.375,
+            "confidence": 97.22,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              345,
+              569,
+              1697,
+              618
+            ],
+            "generated_text": "Lúc nhà vua ở ngôi, chằng qua chỉ rũ áo khoanh tay, tìm trò mua",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.662,
+            "confidence": 93.15,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              256,
+              627,
+              1696,
+              677
+            ],
+            "generated_text": "vui chú không có việc gì phải lo. Nhà vua lại giới về các kỹ nghệ lất",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.647,
+            "confidence": 92.47,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              257,
+              685,
+              1696,
+              736
+            ],
+            "generated_text": "vật. Bao nhiêu điệu Nhạc phủ, nhà vua đều chế ra bài mới, âm thanh",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 0.744,
+            "confidence": 93.0,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              256,
+              747,
+              1696,
+              795
+            ],
+            "generated_text": "cực kỳ du dương, trong sáng. Thường khi nhà vua lại còn theo tranh",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.585,
+            "confidence": 95.96,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              256,
+              809,
+              1696,
+              855
+            ],
+            "generated_text": "Tam Quốc, sai các cung nữ mặc áo trận, cầm giáo mác, chia thế trận",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.662,
+            "confidence": 95.35,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              257,
+              864,
+              1694,
+              914
+            ],
+            "generated_text": "ba nước Nguy - Ngô - Thục, rồi day họ các cách ngồi, đứng, đâm, đỡ,",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 0.71,
+            "confidence": 87.71,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              256,
+              931,
+              896,
+              964
+            ],
+            "generated_text": "de mua vui trong lúc thư nhàn.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 0.403,
+            "confidence": 94.0,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              342,
+              996,
+              1693,
+              1044
+            ],
+            "generated_text": "Những năm tuổi giả, nhà vua bị Thánh Tổ Trình Sâm đè nén đủ",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.62,
+            "confidence": 90.49,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              256,
+              1054,
+              1694,
+              1105
+            ],
+            "generated_text": "đường, người khác hắn phải tức giận không thể chịu nổi, nhưng nhà",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.588,
+            "confidence": 94.48,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              254,
+              1114,
+              1696,
+              1165
+            ],
+            "generated_text": "vua thì vấn vui đùa như thường. Những người gần gũi nhà vua thấy",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.624,
+            "confidence": 94.55,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              254,
+              1171,
+              1130,
+              1217
+            ],
+            "generated_text": "vậy đều can ngăn. Nhà vua liền đáp rằng:",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.53,
+            "confidence": 96.31,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              340,
+              1243,
+              1694,
+              1290
+            ],
+            "generated_text": "- Các người mới chỉ biết một mà chưa biết hai. Nhà vua đối với",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.566,
+            "confidence": 96.91,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              254,
+              1303,
+              1694,
+              1350
+            ],
+            "generated_text": "nhà chúa, hiện nay đang ở vào thế bị ngờ vực; nếu trầm lấy việc mất",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.663,
+            "confidence": 97.13,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              252,
+              1362,
+              1694,
+              1414
+            ],
+            "generated_text": "quyền làm tức giận, thì nhà chúa ất phải ngấm ngầm tính việc chẳng",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 0.722,
+            "confidence": 88.81,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              254,
+              1421,
+              1693,
+              1467
+            ],
+            "generated_text": "hay. Vì vậy, trăm phải mượn hứng vui chơi như thường để tránh tai",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.632,
+            "confidence": 89.65,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              252,
+              1485,
+              481,
+              1515
+            ],
+            "generated_text": "va đó thôi.",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.252,
+            "confidence": 76.34,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              342,
+              1551,
+              1277,
+              1593
+            ],
+            "generated_text": "Có lần, nhà vua lại nói với các cung nữ rằng:",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.463,
+            "confidence": 96.28,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              340,
+              1623,
+              1693,
+              1667
+            ],
+            "generated_text": "- Trong đời ta, thế nào cũng có phen được trồng thấy cuộc nhất",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.505,
+            "confidence": 92.05,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              254,
+              1679,
+              1344,
+              1725
+            ],
+            "generated_text": "thống, nhưng đó chẳng phải là điều mà ta vui mừng.",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.609,
+            "confidence": 97.24,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              342,
+              1751,
+              756,
+              1790
+            ],
+            "generated_text": "Các cung nữ hỏi lại:",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.347,
+            "confidence": 95.22,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              338,
+              1822,
+              1691,
+              1868
+            ],
+            "generated_text": "- Nhà chúa chèn ép như vậy, nếu chúa bại là may cho nhà vua,",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.614,
+            "confidence": 97.42,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              252,
+              1881,
+              951,
+              1922
+            ],
+            "generated_text": "cơ sao bệ hạ lại không vui mừng?",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.411,
+            "confidence": 92.92,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              340,
+              1957,
+              618,
+              1989
+            ],
+            "generated_text": "Nhà vua đáp:",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.287,
+            "confidence": 99.5,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              338,
+              2021,
+              1688,
+              2068
+            ],
+            "generated_text": "- Trời sai nhà chúa phò ta. Chúa gánh cái lo, ta hướng cái vui.",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.638,
+            "confidence": 96.58,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              252,
+              2079,
+              1207,
+              2124
+            ],
+            "generated_text": "Mất chúa, tức là cái lo lại về ta, ta còn vui gì?",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.57,
+            "confidence": 98.93,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              340,
+              2148,
+              1690,
+              2197
+            ],
+            "generated_text": "Khi Đoan Nam vương Trịnh Tổng mới lên làm chúa, bon kiêu",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.578,
+            "confidence": 94.05,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 32,
+            "box": [
+              252,
+              2208,
+              1688,
+              2257
+            ],
+            "generated_text": "binh có lần đã nghĩ đến mưu tôn phò nhất thống và lén đến xin ý",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.623,
+            "confidence": 93.12,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 33,
+            "box": [
+              251,
+              2266,
+              1690,
+              2316
+            ],
+            "generated_text": "kiến nhà vua. Những người xung quanh cũng đã khuyên nhà vua nên",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.586,
+            "confidence": 98.36,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 34,
+            "box": [
+              251,
+              2328,
+              1054,
+              2369
+            ],
+            "generated_text": "nghe theo mưu ấy. Nhưng nhà vua nói:",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.436,
+            "confidence": 97.96,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 35,
+            "box": [
+              338,
+              2397,
+              1686,
+              2441
+            ],
+            "generated_text": "- Ta vì thành thật nghe theo trời nên mới được như thế này.",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.497,
+            "confidence": 95.03,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      }
+    }
+  ]
+}

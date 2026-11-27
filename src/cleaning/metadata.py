@@ -77,6 +77,8 @@ class DocumentMetadata:
     uncertain: list[MetadataUncertain] = field(default_factory=list)
     excluded: list[tuple[RawLine, str]] = field(default_factory=list, repr=False)  # (dòng, lý do)
     status: str = "ok"                           # ok | no_metadata (không tìm thấy khối nào)
+    # dòng từng bị gom vào tiêu đề Hán nhưng trả về chính văn (tiêu đề Hán tối đa 1 dòng + 1 phụ đề trong ngoặc)
+    restored: list[tuple[RawLine, str]] = field(default_factory=list, repr=False)
 
     def to_row(self, work_id: str, layer: str) -> dict:
         return {"work_id": work_id, "layer": layer, "document_id": self.document_id,
@@ -172,9 +174,23 @@ def document_id_of(line: RawLine) -> str:
 # --------------------------------------------------------------------------- #
 # Trích xuất theo từng tài liệu
 # --------------------------------------------------------------------------- #
+HAN_TITLE_MAX_LINES = 1                          # tiêu đề Hán: 1 dòng (+ 1 dòng phụ đề trong ngoặc)
+_HAN_SUBTITLE_RE = re.compile(r"^\s*[(（]")
+
+
+def _limit_han_title(title_lines: list[RawLine]) -> tuple[list[RawLine], list[RawLine]]:
+    """(dòng giữ làm tiêu đề, dòng trả về chính văn). Tiêu đề chữ to hay bị OCR thành rác, khi đó mẫu tiêu đề
+    ^[Hán]{2,12}$ gom luôn vài dòng thân văn đầu (CPO_20 tr.268 "又安天氣和暢…") vào "tiêu đề"."""
+    keep = title_lines[:HAN_TITLE_MAX_LINES]
+    rest = title_lines[HAN_TITLE_MAX_LINES:]
+    if rest and _HAN_SUBTITLE_RE.match(rest[0].raw_text or rest[0].text):
+        keep, rest = keep + rest[:1], rest[1:]
+    return keep, rest
+
+
 def _flush_block(doc: DocumentMetadata, block: list[tuple[RawLine, bool]],
                  explicit_author: list[RawLine], attr_lines: list[RawLine],
-                 cfg: MetadataConfig, han: bool) -> None:
+                 cfg: MetadataConfig, han: bool) -> list[RawLine]:
     """Chốt khối dòng metadata thu được trước khi thân bài bắt đầu.
 
     block = [(dòng, là_tiêu_đề_tường minh)]. Quy tắc tách tiêu đề / tác giả: dòng CUỐI
@@ -190,6 +206,10 @@ def _flush_block(doc: DocumentMetadata, block: list[tuple[RawLine, bool]],
         author_lines = [pool[-1]]
     author_ids = {id(ln) for ln in author_lines}
     title_lines = [ln for ln, _ in block if id(ln) not in author_ids]
+    restored: list[RawLine] = []
+    if han and len(title_lines) > HAN_TITLE_MAX_LINES:
+        title_lines, restored = _limit_han_title(title_lines)
+        doc.restored.extend((ln, "han_title_extra_line") for ln in restored)
     has_explicit_title = any(explicit for _, explicit in block)
     title_conf = "high" if (has_explicit_title or len(pool) >= 2) else "ambiguous"
     joiner = "" if han else " "
@@ -206,6 +226,7 @@ def _flush_block(doc: DocumentMetadata, block: list[tuple[RawLine, bool]],
     _emit("attribution", attr_lines, METADATA_ATTRIBUTION, "high")
     _emit("author", author_lines, METADATA_AUTHOR, "high")
     _emit("title", title_lines, METADATA_TITLE, title_conf)
+    return restored
 
 
 VERSE_LENGTHS = range(4, 8)                      # câu thơ Hán 4/5/6/7 chữ
@@ -242,7 +263,10 @@ def _classify_document(doc_id: str, lines: list[RawLine], cfg: MetadataConfig, h
     attr_lines: list[RawLine] = []
 
     def flush() -> None:
-        _flush_block(doc, block, explicit_author, attr_lines, cfg, han)
+        restored = _flush_block(doc, block, explicit_author, attr_lines, cfg, han)
+        if restored:                             # dòng thân văn bị gom nhầm vào tiêu đề: trả về chính văn
+            restored_ids = {id(x) for x in restored}
+            kept.extend(ln for ln, _ in block if id(ln) in restored_ids)
         block.clear()
         explicit_author.clear()
         attr_lines.clear()
@@ -356,6 +380,83 @@ def extract_metadata(lines: list[RawLine], cfg: MetadataConfig, layer: str
         kept.extend(dk if cfg.exclude_from_main_text else groups[did])
         docs.append(doc)
     return kept, MetadataResult(layer=layer, status="ok", documents=docs)
+
+
+# Dòng ghi chú của bài nằm giữa chính văn: niên đại sáng tác "(Làm mùa thu năm Bính Thìn 1796)" và người dịch
+# "Ngô Linh Ngọc dịch". Trước đây bị bỏ như chú thích/cuối trang; giờ ra khỏi chính văn nhưng VÀO metadata.
+COMPOSITION_RE = re.compile(r"^\s*[(（]\s*(?:Làm|Viết|Soạn|Sáng tác|Thơ làm|Bài này làm)\b[^()（）]{0,120}[)）]\s*\.?\s*$")
+TRANSLATOR_RE = re.compile(r"^\s*(?:[A-ZĐÀ-Ỹ][^\s,.;:!?()]*\s+){1,4}dịch(?:\s+thơ)?\s*\.?\s*$")
+# Lớp nghia/tho: dòng NGẮN kết thúc bằng "dịch" (kể cả OCR mất dấu "dich", viết thường "Ngô linh ngọc dịch", nhiều
+# người "Dương Minh và Thạch Can dịch", "Đỗ Ngọc Toại - Thạch Can dịch"). Không áp cho lớp am: câu phiên âm hay kết
+# thúc bằng chữ "dịch" ("Hình bất vì tâm dịch."). Dòng có dấu phẩy/chấm phẩy là câu thơ/văn, không phải tên.
+TRANSLATOR_SHORT_RE = re.compile(
+    r"^\s*[A-ZĐÀ-Ỹ][^\d,;:!?()]{0,60}?\s(?:dịch|dich)(?:\s+(?:thơ|tho))?\s*\.?\s*$")
+TRANSLATOR_MAX_WORDS = 8
+# Sửa D: dòng nguồn "Trích Dật thi lược toản", "Theo Tang thương ngẫu lục": tên sách viết hoa chữ đầu, <= 10 từ, KHÔNG
+# có dấu kết câu (dòng phiên âm "Trích thủy xao thiềm sổ cử bôi." có chữ thường sau "Trích" và dấu chấm -> giữ).
+SOURCE_LINE_RE = re.compile(r"^\s*\(?(?:Trích|Theo)\s+[A-ZĐÀ-Ỹ][^.!?;:]*?[)\s]*$")
+SOURCE_MAX_WORDS = 10
+
+
+def is_translator_line(text: str, layer: str) -> bool:
+    """Dòng tên người dịch (đưa vào metadata, không phải chính văn)."""
+    text = text.strip()
+    if TRANSLATOR_RE.match(text):
+        return True
+    if layer not in ("nghia", "tho") or len(text.split()) > TRANSLATOR_MAX_WORDS or not TRANSLATOR_SHORT_RE.match(text):
+        return False
+    words = [w for w in re.sub(r"\s+(?:dịch|dich)(?:\s+(?:thơ|tho))?\s*\.?\s*$", "", text).split()
+             if w.lower() not in ("và", "va", "-", "–", "&")]
+    return bool(words) and sum(w[0].isupper() for w in words) * 2 >= len(words)      # phần tên: đa số viết hoa
+
+
+def _name_key(text: str) -> str:
+    """Khoá so khớp tên đứng riêng một dòng: NFC, bỏ khoảng trắng và dấu câu/ký hiệu ở HAI ĐẦU, gộp khoảng trắng,
+    không phân biệt hoa thường. Chữ ở giữa giữ nguyên, nên tên nằm trong câu không bao giờ khớp."""
+    import unicodedata
+    t = unicodedata.normalize("NFC", text)
+    i, j = 0, len(t)
+    while i < j and (t[i].isspace() or unicodedata.category(t[i])[0] in "PS"):
+        i += 1
+    while j > i and (t[j - 1].isspace() or unicodedata.category(t[j - 1])[0] in "PS"):
+        j -= 1
+    return " ".join(t[i:j].split()).casefold()
+
+
+def capture_note_lines(lines: list[RawLine], cfg: MetadataConfig, layer: str
+                       ) -> tuple[list[RawLine], list[tuple[str, RawLine]]]:
+    """Tách dòng niên đại sáng tác / người dịch (lớp Việt) ra khỏi chính văn: [(field, dòng)].
+    `cfg.translator_names`: tên người dịch đứng MỘT MÌNH trên dòng (vd "Lâm Giang"), so khớp nguyên dòng."""
+    if layer == "han" or not getattr(cfg, "capture_notes", True):
+        return list(lines), []
+    names = {_name_key(n) for n in getattr(cfg, "translator_names", []) or [] if _name_key(n)}
+    kept, captured = [], []
+    for ln in lines:
+        text = ln.text.strip()
+        if COMPOSITION_RE.match(text):
+            captured.append(("composition", ln))
+        elif (getattr(cfg, "capture_source_lines", False) and SOURCE_LINE_RE.match(text)
+              and len(text.split()) <= SOURCE_MAX_WORDS):
+            captured.append(("source", ln))
+        elif is_translator_line(text, layer) or (names and _name_key(text) in names):
+            captured.append(("translator", ln))
+        else:
+            kept.append(ln)
+    return kept, captured
+
+
+def attach_captured(meta: MetadataResult, captured: list[tuple[str, RawLine]]) -> None:
+    """Gắn dòng đã tách vào metadata của đúng tài liệu (tạo bản ghi tài liệu nếu chưa có)."""
+    docs = {d.document_id: d for d in meta.documents}
+    for fld, ln in captured:
+        did = document_id_of(ln)
+        if did not in docs:
+            docs[did] = DocumentMetadata(document_id=did)
+            meta.documents.append(docs[did])
+        docs[did].fields.append(MetadataOccurrence(field=fld, text=(ln.raw_text or ln.text).strip(),
+                                                   source_ids=list(ln.source_ids), pages=[ln.page], lines=[ln]))
+    if captured and meta.status == "no_op":
+        meta.status = "ok"
 
 
 def classify_leading_block(lines: list[RawLine], cfg: MetadataConfig, layer: str,

@@ -1,0 +1,943 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_20",
+  "engine": "paddlevl",
+  "page": 411,
+  "runs": [
+    {
+      "key": "cbbcc3293cc442087a399edb362fc7055ad2a5e02d99961349598a14a263f818",
+      "parameters": {
+        "image_sha256": "4ab8642d5ac75ae17da068e95b3f3ba07ae49e937d635d88f81471f30616f72f",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T07:43:50+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_411.png",
+      "image_size": [
+        1823,
+        2814
+      ],
+      "crop_box": [
+        0,
+        0,
+        1823,
+        2814
+      ],
+      "lines": [
+        {
+          "text": "Các quan đều nói:",
+          "bbox": [
+            246,
+            283,
+            621,
+            318
+          ],
+          "confidence": 94.87
+        },
+        {
+          "text": "- Chúng tôi xin vâng mệnh!",
+          "bbox": [
+            245,
+            350,
+            909,
+            390
+          ],
+          "confidence": 96.42
+        },
+        {
+          "text": "Rồi họ liên chọn ngày để đưa tủ cung xưởng thuyền.",
+          "bbox": [
+            248,
+            414,
+            1317,
+            463
+          ],
+          "confidence": 83.7
+        },
+        {
+          "text": "Còn Bình thì suốt ngày sắm sửa cho lễ táng, các đồ tế lễ tuy đơn",
+          "bbox": [
+            248,
+            483,
+            1606,
+            533
+          ],
+          "confidence": 92.68
+        },
+        {
+          "text": "sơ, giản dị, nhưng lẽ nghi thì đều đấy đủ không thiếu sót gì.",
+          "bbox": [
+            173,
+            543,
+            1402,
+            596
+          ],
+          "confidence": 92.9
+        },
+        {
+          "text": "Đến ngày đưa đám, Bình tự cưới voi, đem ba ngàn quân, hộ tống",
+          "bbox": [
+            249,
+            614,
+            1610,
+            663
+          ],
+          "confidence": 93.1
+        },
+        {
+          "text": "từ cung đến bến đò, rồi chờ cho lễ rước từ cung xương thuyền xong",
+          "bbox": [
+            173,
+            674,
+            1610,
+            724
+          ],
+          "confidence": 88.36
+        },
+        {
+          "text": "xuôi đâu đấy, mới quay trở lại.",
+          "bbox": [
+            173,
+            740,
+            804,
+            784
+          ],
+          "confidence": 90.53
+        },
+        {
+          "text": "Lúc công chúa Ngọc Hán về phủ, Bình nhọn nhọn ra về tự đặc",
+          "bbox": [
+            252,
+            803,
+            1610,
+            855
+          ],
+          "confidence": 88.27
+        },
+        {
+          "text": "mà răng:",
+          "bbox": [
+            174,
+            884,
+            356,
+            914
+          ],
+          "confidence": 81.48
+        },
+        {
+          "text": "- Tiên để có hơn ba mươi người con trai, ngày nay báo hiệu lại chi",
+          "bbox": [
+            252,
+            937,
+            1611,
+            984
+          ],
+          "confidence": 92.78
+        },
+        {
+          "text": "ở một người con gái, nào ai giúp đỡ cho được máy may? Người xưa",
+          "bbox": [
+            176,
+            994,
+            1613,
+            1047
+          ],
+          "confidence": 96.21
+        },
+        {
+          "text": "thường bảo “Con gái làm rạng rỡ cho cả nhà cửa?” Quả cũng đúng thật!",
+          "bbox": [
+            176,
+            1050,
+            1599,
+            1105
+          ],
+          "confidence": 90.56
+        },
+        {
+          "text": "Công chúa cám tạ và nói:",
+          "bbox": [
+            256,
+            1139,
+            790,
+            1174
+          ],
+          "confidence": 89.14
+        },
+        {
+          "text": "- Nhờ công đức của thượng công, thiếp được báo hiệu với hoàng",
+          "bbox": [
+            256,
+            1194,
+            1614,
+            1245
+          ],
+          "confidence": 92.25
+        },
+        {
+          "text": "khảo mở mắt với anh chi em. Tục ngữ vẫn nói: “Trai không ăn mày",
+          "bbox": [
+            177,
+            1251,
+            1614,
+            1303
+          ],
+          "confidence": 92.65
+        },
+        {
+          "text": "vợ, gái phải ăn mày chồng\", chính là như thế đó!",
+          "bbox": [
+            177,
+            1314,
+            1185,
+            1363
+          ],
+          "confidence": 97.82
+        },
+        {
+          "text": "Bình nghe nói, thích lắm. Chợ có tin báo vua Tây Sơn sắp ra.",
+          "bbox": [
+            259,
+            1383,
+            1613,
+            1433
+          ],
+          "confidence": 93.72
+        },
+        {
+          "text": "Bình với sai Chính cho dân yết thị khắp kinh thành, nói là: “Thiên",
+          "bbox": [
+            179,
+            1436,
+            1614,
+            1492
+          ],
+          "confidence": 90.03
+        },
+        {
+          "text": "vương tuần du ra Bắc để xem xét phong tục, khoảng mười ngày nữa",
+          "bbox": [
+            179,
+            1498,
+            1616,
+            1550
+          ],
+          "confidence": 96.11
+        },
+        {
+          "text": "sẽ tối. Vây bổ cáo cho cả trong ngoài đều biết\". Một mặt, Bình sai",
+          "bbox": [
+            181,
+            1555,
+            1616,
+            1609
+          ],
+          "confidence": 91.18
+        },
+        {
+          "text": "người tâu với tư hoàng, xin cho văn võ trăm quan ra ngoài của ô đón",
+          "bbox": [
+            181,
+            1620,
+            1617,
+            1667
+          ],
+          "confidence": 91.61
+        },
+        {
+          "text": "Ngày mồng năm tháng tám, vua Tây Sơn đến kinh thành.",
+          "bbox": [
+            262,
+            1744,
+            1492,
+            1799
+          ],
+          "confidence": 92.75
+        },
+        {
+          "text": "Vua Tây Sơn chảng quán muôn đảm dương xa tối đấy, mà coi bộ",
+          "bbox": [
+            260,
+            1815,
+            1617,
+            1869
+          ],
+          "confidence": 83.14
+        },
+        {
+          "text": "lại hết sức hối hả, vội vã; mọi người đều không hiểu duyên cỡ làm",
+          "bbox": [
+            182,
+            1873,
+            1621,
+            1928
+          ],
+          "confidence": 90.13
+        },
+        {
+          "text": "Thất là:",
+          "bbox": [
+            263,
+            2025,
+            1191,
+            2056
+          ],
+          "confidence": 80.82
+        },
+        {
+          "text": "Cá kinh vượt biển giương vây nhảy,",
+          "bbox": [
+            409,
+            2086,
+            1586,
+            2129
+          ],
+          "confidence": 87.52
+        },
+        {
+          "text": "Cop dì lìa rừng muộn cánh bay.",
+          "bbox": [
+            410,
+            2146,
+            1077,
+            2187
+          ],
+          "confidence": 76.39
+        },
+        {
+          "text": "Chưa biết vua Tây Sơn đến về việc gì? Xin xem hỏi sau phân giải.",
+          "bbox": [
+            179,
+            2204,
+            1588,
+            2257
+          ],
+          "confidence": 92.26
+        },
+        {
+          "text": "也",
+          "bbox": [
+            195,
+            2343,
+            778,
+            2360
+          ],
+          "confidence": 19.99
+        },
+        {
+          "text": "1. Ở một bản khác, thấy có thêm một đoạn như sau: “Hoàng thương thân hành ra",
+          "bbox": [
+            270,
+            2368,
+            1625,
+            2418
+          ],
+          "confidence": 96.09
+        },
+        {
+          "text": "đón ở của Nam Giao và sai quan khâm mang đúng ở bên đường sau đó ngó lời chào",
+          "bbox": [
+            188,
+            2416,
+            1625,
+            2465
+          ],
+          "confidence": 90.83
+        },
+        {
+          "text": "mùng, rồi đi về. Chúa Tây Sơn sai người đáp lại, rồi truyền đánh xe vào thành\".",
+          "bbox": [
+            188,
+            2462,
+            1508,
+            2512
+          ],
+          "confidence": 92.48
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          1823,
+          2814
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 19.675,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              246,
+              283,
+              621,
+              318
+            ],
+            "generated_text": "Các quan đều nói:",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.299,
+            "confidence": 94.87,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              245,
+              350,
+              909,
+              390
+            ],
+            "generated_text": "- Chúng tôi xin vâng mệnh!",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.351,
+            "confidence": 96.42,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              248,
+              414,
+              1317,
+              463
+            ],
+            "generated_text": "Rồi họ liên chọn ngày để đưa tủ cung xưởng thuyền.",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.607,
+            "confidence": 83.7,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              248,
+              483,
+              1606,
+              533
+            ],
+            "generated_text": "Còn Bình thì suốt ngày sắm sửa cho lễ táng, các đồ tế lễ tuy đơn",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 0.717,
+            "confidence": 92.68,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              173,
+              543,
+              1402,
+              596
+            ],
+            "generated_text": "sơ, giản dị, nhưng lẽ nghi thì đều đấy đủ không thiếu sót gì.",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.669,
+            "confidence": 92.9,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              249,
+              614,
+              1610,
+              663
+            ],
+            "generated_text": "Đến ngày đưa đám, Bình tự cưới voi, đem ba ngàn quân, hộ tống",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 0.7,
+            "confidence": 93.1,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              173,
+              674,
+              1610,
+              724
+            ],
+            "generated_text": "từ cung đến bến đò, rồi chờ cho lễ rước từ cung xương thuyền xong",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 0.703,
+            "confidence": 88.36,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              173,
+              740,
+              804,
+              784
+            ],
+            "generated_text": "xuôi đâu đấy, mới quay trở lại.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.436,
+            "confidence": 90.53,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              252,
+              803,
+              1610,
+              855
+            ],
+            "generated_text": "Lúc công chúa Ngọc Hán về phủ, Bình nhọn nhọn ra về tự đặc",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.619,
+            "confidence": 88.27,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              174,
+              884,
+              356,
+              914
+            ],
+            "generated_text": "mà răng:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.236,
+            "confidence": 81.48,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              252,
+              937,
+              1611,
+              984
+            ],
+            "generated_text": "- Tiên để có hơn ba mươi người con trai, ngày nay báo hiệu lại chi",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.573,
+            "confidence": 92.78,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              176,
+              994,
+              1613,
+              1047
+            ],
+            "generated_text": "ở một người con gái, nào ai giúp đỡ cho được máy may? Người xưa",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.586,
+            "confidence": 96.21,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              176,
+              1050,
+              1599,
+              1105
+            ],
+            "generated_text": "thường bảo “Con gái làm rạng rỡ cho cả nhà cửa?” Quả cũng đúng thật!",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.694,
+            "confidence": 90.56,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              256,
+              1139,
+              790,
+              1174
+            ],
+            "generated_text": "Công chúa cám tạ và nói:",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.37,
+            "confidence": 89.14,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              256,
+              1194,
+              1614,
+              1245
+            ],
+            "generated_text": "- Nhờ công đức của thượng công, thiếp được báo hiệu với hoàng",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.562,
+            "confidence": 92.25,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              177,
+              1251,
+              1614,
+              1303
+            ],
+            "generated_text": "khảo mở mắt với anh chi em. Tục ngữ vẫn nói: “Trai không ăn mày",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.661,
+            "confidence": 92.65,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              177,
+              1314,
+              1185,
+              1363
+            ],
+            "generated_text": "vợ, gái phải ăn mày chồng\", chính là như thế đó!",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.559,
+            "confidence": 97.82,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              259,
+              1383,
+              1613,
+              1433
+            ],
+            "generated_text": "Bình nghe nói, thích lắm. Chợ có tin báo vua Tây Sơn sắp ra.",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 0.741,
+            "confidence": 93.72,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              179,
+              1436,
+              1614,
+              1492
+            ],
+            "generated_text": "Bình với sai Chính cho dân yết thị khắp kinh thành, nói là: “Thiên",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.657,
+            "confidence": 90.03,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              179,
+              1498,
+              1616,
+              1550
+            ],
+            "generated_text": "vương tuần du ra Bắc để xem xét phong tục, khoảng mười ngày nữa",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.636,
+            "confidence": 96.11,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              181,
+              1555,
+              1616,
+              1609
+            ],
+            "generated_text": "sẽ tối. Vây bổ cáo cho cả trong ngoài đều biết\". Một mặt, Bình sai",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.698,
+            "confidence": 91.18,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              181,
+              1620,
+              1617,
+              1667
+            ],
+            "generated_text": "người tâu với tư hoàng, xin cho văn võ trăm quan ra ngoài của ô đón",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.695,
+            "confidence": 91.61,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              262,
+              1744,
+              1492,
+              1799
+            ],
+            "generated_text": "Ngày mồng năm tháng tám, vua Tây Sơn đến kinh thành.",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.504,
+            "confidence": 92.75,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              260,
+              1815,
+              1617,
+              1869
+            ],
+            "generated_text": "Vua Tây Sơn chảng quán muôn đảm dương xa tối đấy, mà coi bộ",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.685,
+            "confidence": 83.14,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              182,
+              1873,
+              1621,
+              1928
+            ],
+            "generated_text": "lại hết sức hối hả, vội vã; mọi người đều không hiểu duyên cỡ làm",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 0.737,
+            "confidence": 90.13,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              263,
+              2025,
+              1191,
+              2056
+            ],
+            "generated_text": "Thất là:",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.245,
+            "confidence": 80.82,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              409,
+              2086,
+              1586,
+              2129
+            ],
+            "generated_text": "Cá kinh vượt biển giương vây nhảy,",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.463,
+            "confidence": 87.52,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              410,
+              2146,
+              1077,
+              2187
+            ],
+            "generated_text": "Cop dì lìa rừng muộn cánh bay.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.741,
+            "confidence": 76.39,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              179,
+              2204,
+              1588,
+              2257
+            ],
+            "generated_text": "Chưa biết vua Tây Sơn đến về việc gì? Xin xem hỏi sau phân giải.",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.767,
+            "confidence": 92.26,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              195,
+              2343,
+              778,
+              2360
+            ],
+            "generated_text": "也",
+            "n_lines": 1,
+            "tokens": 2,
+            "seconds": 0.217,
+            "confidence": 19.99,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              270,
+              2368,
+              1625,
+              2418
+            ],
+            "generated_text": "1. Ở một bản khác, thấy có thêm một đoạn như sau: “Hoàng thương thân hành ra",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 0.821,
+            "confidence": 96.09,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 32,
+            "box": [
+              188,
+              2416,
+              1625,
+              2465
+            ],
+            "generated_text": "đón ở của Nam Giao và sai quan khâm mang đúng ở bên đường sau đó ngó lời chào",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.912,
+            "confidence": 90.83,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 33,
+            "box": [
+              188,
+              2462,
+              1508,
+              2512
+            ],
+            "generated_text": "mùng, rồi đi về. Chúa Tây Sơn sai người đáp lại, rồi truyền đánh xe vào thành\".",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 0.812,
+            "confidence": 92.48,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      }
+    }
+  ]
+}

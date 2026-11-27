@@ -1,0 +1,410 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_18",
+  "engine": "paddlevl",
+  "page": 523,
+  "runs": [
+    {
+      "key": "d534866d207ab0fa87e930ec00e4a66ab374c68911d7a35e2f689bc907ee40ac",
+      "parameters": {
+        "image_sha256": "f204c39663759cf241fc781d8de554dfb087c388d662e0c4253746d5e13fd2a5",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T19:01:24+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_523.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        0,
+        2480,
+        3509
+      ],
+      "lines": [
+        {
+          "text": "2000",
+          "bbox": [
+            50,
+            0,
+            2429,
+            26
+          ],
+          "confidence": 21.05
+        },
+        {
+          "text": "Phu Luc",
+          "bbox": [
+            1992,
+            200,
+            2157,
+            236
+          ],
+          "confidence": 75.6
+        },
+        {
+          "text": "「」",
+          "bbox": [
+            272,
+            259,
+            2162,
+            288
+          ],
+          "confidence": 26.34
+        },
+        {
+          "text": "CHU THICH:",
+          "bbox": [
+            422,
+            365,
+            841,
+            421
+          ],
+          "confidence": 94.66
+        },
+        {
+          "text": "(193) Đạo kinh : tức Đạo đức kinh, tác phẩm của Lão Tử.",
+          "bbox": [
+            292,
+            484,
+            2016,
+            550
+          ],
+          "confidence": 94.95
+        },
+        {
+          "text": "(104) Nora di. - - - - - - - - - - - - - - - - - - - - - - -",
+          "bbox": [
+            295,
+            602,
+            2088,
+            632
+          ],
+          "confidence": 10.0
+        },
+        {
+          "text": "(194) Ngu giới : nam dieu kiêng cam cua dao Phật, gom dũng",
+          "bbox": [
+            292,
+            624,
+            2162,
+            678
+          ],
+          "confidence": 81.19
+        },
+        {
+          "text": "sát sinh đìng trộm cắn đìng tà đảm đìng nói hãy",
+          "bbox": [
+            423,
+            689,
+            2144,
+            729
+          ],
+          "confidence": 71.54
+        },
+        {
+          "text": "sat sớm, dùng trộm cap, dùng ta dam, dùng nơi bảy,",
+          "bbox": [
+            422,
+            721,
+            2159,
+            762
+          ],
+          "confidence": 82.96
+        },
+        {
+          "text": "dụng ương rượu.",
+          "bbox": [
+            422,
+            781,
+            2058,
+            827
+          ],
+          "confidence": 81.18
+        },
+        {
+          "text": "a90",
+          "bbox": [
+            2053,
+            3307,
+            2191,
+            3332
+          ],
+          "confidence": 28.19
+        },
+        {
+          "text": "ཀ་ཅན་ཁྱབ་ཁག་ཅིང་།་ཡང་ཡོད།་ཡ",
+          "bbox": [
+            50,
+            3473,
+            2031,
+            3509
+          ],
+          "confidence": 10.0
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          3509
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 5.375,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              50,
+              0,
+              2429,
+              26
+            ],
+            "generated_text": "2000",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.149,
+            "confidence": 21.05,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              1992,
+              200,
+              2157,
+              236
+            ],
+            "generated_text": "Phu Luc",
+            "n_lines": 1,
+            "tokens": 4,
+            "seconds": 0.121,
+            "confidence": 75.6,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              272,
+              259,
+              2162,
+              288
+            ],
+            "generated_text": "「」",
+            "n_lines": 1,
+            "tokens": 3,
+            "seconds": 0.107,
+            "confidence": 26.34,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              422,
+              365,
+              841,
+              421
+            ],
+            "generated_text": "CHU THICH:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.165,
+            "confidence": 94.66,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              292,
+              484,
+              2016,
+              550
+            ],
+            "generated_text": "(193) Đạo kinh : tức Đạo đức kinh, tác phẩm của Lão Tử.",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.565,
+            "confidence": 94.95,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              295,
+              602,
+              2088,
+              632
+            ],
+            "generated_text": "(104) Nora di. - - - - - - - - - - - - - - - - - - - - - - -",
+            "n_lines": 1,
+            "tokens": 32,
+            "seconds": 0.702,
+            "confidence": 10.0,
+            "flags": [
+              "loop_stopped"
+            ],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              292,
+              624,
+              2162,
+              678
+            ],
+            "generated_text": "(194) Ngu giới : nam dieu kiêng cam cua dao Phật, gom dũng",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.569,
+            "confidence": 81.19,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              423,
+              689,
+              2144,
+              729
+            ],
+            "generated_text": "sát sinh đìng trộm cắn đìng tà đảm đìng nói hãy",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.541,
+            "confidence": 71.54,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              422,
+              721,
+              2159,
+              762
+            ],
+            "generated_text": "sat sớm, dùng trộm cap, dùng ta dam, dùng nơi bảy,",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.586,
+            "confidence": 82.96,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              422,
+              781,
+              2058,
+              827
+            ],
+            "generated_text": "dụng ương rượu.",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.256,
+            "confidence": 81.18,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              2053,
+              3307,
+              2191,
+              3332
+            ],
+            "generated_text": "a90",
+            "n_lines": 1,
+            "tokens": 4,
+            "seconds": 0.124,
+            "confidence": 28.19,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              50,
+              3473,
+              2031,
+              3509
+            ],
+            "generated_text": "ཀ་ཅན་ཁྱབ་ཁག་ཅིང་།་ཡང་ཡོད།་ཡང་ཡོད།་ཡང་ཡོད།་ཡང་ཡོད།་ཡ",
+            "n_lines": 1,
+            "tokens": 72,
+            "seconds": 1.487,
+            "confidence": 10.0,
+            "flags": [
+              "repetition_collapsed",
+              "loop_stopped"
+            ],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [],
+        "any_degenerate": true,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "61cbea5c0055c260ccfc12f884e0febca7b2783b",
+        "git_describe": "61cbea5",
+        "git_dirty": true,
+        "gpu": "NVIDIA L4",
+        "dtype": "bfloat16",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

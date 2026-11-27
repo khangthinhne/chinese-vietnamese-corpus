@@ -1,0 +1,802 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_18",
+  "engine": "paddlevl",
+  "page": 486,
+  "runs": [
+    {
+      "key": "a6723f308cb37ea67b3449559349d94b416b0ed028b0c6f3680b1ef801011efd",
+      "parameters": {
+        "image_sha256": "3702e67520f26ccd7292e0996042bf113b1325105566c6b5d9c944632f65336a",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T18:52:53+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_486.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        0,
+        2480,
+        3509
+      ],
+      "lines": [
+        {
+          "text": "Sưu tầm và khảo luận tác phẩm chủ Hán của người Việt Nam trước TK 10",
+          "bbox": [
+            311,
+            70,
+            1891,
+            133
+          ],
+          "confidence": 94.17
+        },
+        {
+          "text": "[",
+          "bbox": [
+            293,
+            164,
+            2276,
+            176
+          ],
+          "confidence": 30.0
+        },
+        {
+          "text": "$\\begin{aligned}&\\int_{0}^{1}x^{2}dx=\\int_{1}^{2}x^{3}dx=\\int_{1}^{2}x^{4}dx=\\int_{1}^{2}x^{5}dx=\\int_{1}^{2}x^{6}dx=\\int_{1}^{2}x^{7}dx=\\int_{1}^{2}x^{8}dx=\\int_{1}^{2}x^{9}dx=\\int_{1}^{2}x^{10}dx=\\int_{1}^{2}x^{11}dx=\\int_{1}^{2}x^{12}dx=\\int_{1}^{2}x^{13}dx=\\int_{1}^{2}x^{14}dx=\\int_{1}^{2}x^{15}dx=\\int_{1}^{2}x^{16}dx=\\int_{1}^{2}x^{17}dx=\\int_{1}^{2}x^{18}dx=\\int_{1}^{2}x^{19}dx=\\int_{1}^{2}x^{20}dx=\\int_{1}^{2}x^{21}dx=\\int_{1}^{2}x^{22}dx=\\int_{1}^{2}x^{23}dx=\\int_{1}^{2}x^{24}dx=\\int_{1}^{2}x^{25}dx=\\int_{1}^{2}x^{26}dx=\\int_{1}^{2}x^{27}dx=\\int_{1}^{2}x^{28}dx=\\int_{1}^{2}x^{29}dx=\\int_{1}^{2}x^{30}dx=\\int_{1}^{2}x^{31}dx=\\int_{1}^{2}x^{32}dx=\\int_{1}^{2}x^{33}dx=\\int_{1}^{2}x^{34}dx=\\int_{1}^{2}x^{35}dx=\\int_{1}^{2}x^{36}dx=\\int_{1}^{2}x^{37}dx=\\int_{1}^{2}x^{38}dx=\\int_{1}^{2}x^{39}dx=\\int_{1}^{2}x^{40}dx=\\int_{1}^{2",
+          "bbox": [
+            293,
+            176,
+            2276,
+            187
+          ],
+          "confidence": 30.0
+        },
+        {
+          "text": "Mâu Tử đáp : Sao mà châm hiệu đến thế? Kia nói",
+          "bbox": [
+            430,
+            272,
+            2266,
+            341
+          ],
+          "confidence": 86.74
+        },
+        {
+          "text": "năng đảm luân đều có thời cơ của nó cả. Cứ Viên rằng :",
+          "bbox": [
+            307,
+            369,
+            2264,
+            436
+          ],
+          "confidence": 87.92
+        },
+        {
+          "text": "“Nước hữu dao thì ta ngay thắng, nước vô đạo thì ta thu",
+          "bbox": [
+            304,
+            464,
+            2263,
+            532
+          ],
+          "confidence": 91.23
+        },
+        {
+          "text": "mình lại và giũ lấy cái của ta\". Ninh Vũ Tử rằng : \"Nước",
+          "bbox": [
+            307,
+            560,
+            2265,
+            628
+          ],
+          "confidence": 88.72
+        },
+        {
+          "text": "hũu đạo thì ta làm người trí, nước vô đạo thì ta làm",
+          "bbox": [
+            305,
+            657,
+            2264,
+            724
+          ],
+          "confidence": 94.59
+        },
+        {
+          "text": "người ngu”. Không Từ răng : “Người có thể nói chuyện",
+          "bbox": [
+            305,
+            750,
+            2259,
+            820
+          ],
+          "confidence": 89.37
+        },
+        {
+          "text": "mà ta lại không nói, thế là phí người ; người không thể",
+          "bbox": [
+            306,
+            848,
+            2260,
+            928
+          ],
+          "confidence": 95.92
+        },
+        {
+          "text": "nói chuyện mà ta lại nói, thế là uống lời\". Cho nên trí",
+          "bbox": [
+            304,
+            944,
+            2261,
+            1012
+          ],
+          "confidence": 96.61
+        },
+        {
+          "text": "hay ngu đều có thời cơ của nó, mối lân đảm luân đều có",
+          "bbox": [
+            303,
+            1039,
+            2259,
+            1107
+          ],
+          "confidence": 84.56
+        },
+        {
+          "text": "dụng ý riêng, khi đáng nói đáng bàn thì sao lại không",
+          "bbox": [
+            304,
+            1134,
+            2259,
+            1212
+          ],
+          "confidence": 93.67
+        },
+        {
+          "text": "thúc hien !",
+          "bbox": [
+            303,
+            1245,
+            652,
+            1291
+          ],
+          "confidence": 78.76
+        },
+        {
+          "text": "問曰：子云佛道至尊，至快，無爲，澹泊；世人",
+          "bbox": [
+            437,
+            1671,
+            2248,
+            1757
+          ],
+          "confidence": 98.13
+        },
+        {
+          "text": "學士多譏毀之，云其辭說廓落難用，虛無難",
+          "bbox": [
+            308,
+            1800,
+            2245,
+            1886
+          ],
+          "confidence": 98.89
+        },
+        {
+          "text": "牟子曰：至味不合於眾口，大音不比於眾",
+          "bbox": [
+            439,
+            2094,
+            2237,
+            2177
+          ],
+          "confidence": 94.83
+        },
+        {
+          "text": "耳。作咸池，設大章，發簫韶，詠九成，莫之和",
+          "bbox": [
+            312,
+            2223,
+            2241,
+            2307
+          ],
+          "confidence": 99.34
+        },
+        {
+          "text": "也。張鄭衛之弦，歌時俗之音，必不期而拊手",
+          "bbox": [
+            311,
+            2352,
+            2243,
+            2434
+          ],
+          "confidence": 99.48
+        },
+        {
+          "text": "也。故宋玉云“客歌於郢爲下里之曲，和者干",
+          "bbox": [
+            313,
+            2482,
+            2239,
+            2561
+          ],
+          "confidence": 97.57
+        },
+        {
+          "text": "人：引商徵角，眾莫之應”。此皆悦邪聲，不曉於",
+          "bbox": [
+            316,
+            2607,
+            2244,
+            2689
+          ],
+          "confidence": 94.8
+        },
+        {
+          "text": "大度者也。韓非以管闕之見而謗堯舜；接輿以",
+          "bbox": [
+            320,
+            2734,
+            2238,
+            2816
+          ],
+          "confidence": 95.83
+        },
+        {
+          "text": "毛釐之分而刺仲尼，皆耽小而忽大者也。夫聞",
+          "bbox": [
+            321,
+            2860,
+            2235,
+            2940
+          ],
+          "confidence": 98.77
+        },
+        {
+          "text": "清商而謂之角，非彈弦之過，聽者之不聰矣。見",
+          "bbox": [
+            321,
+            2984,
+            2475,
+            3066
+          ],
+          "confidence": 99.3
+        },
+        {
+          "text": "和璧而名之石，非璧之贱也，视者之不明矣。神",
+          "bbox": [
+            322,
+            3110,
+            2355,
+            3191
+          ],
+          "confidence": 97.52
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          3509
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 21.72,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              311,
+              70,
+              1891,
+              133
+            ],
+            "generated_text": "Sưu tầm và khảo luận tác phẩm chủ Hán của người Việt Nam trước TK 10",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.553,
+            "confidence": 94.17,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              293,
+              164,
+              2276,
+              187
+            ],
+            "generated_text": "[\n$\\begin{aligned}&\\int_{0}^{1}x^{2}dx=\\int_{1}^{2}x^{3}dx=\\int_{1}^{2}x^{4}dx=\\int_{1}^{2}x^{5}dx=\\int_{1}^{2}x^{6}dx=\\int_{1}^{2}x^{7}dx=\\int_{1}^{2}x^{8}dx=\\int_{1}^{2}x^{9}dx=\\int_{1}^{2}x^{10}dx=\\int_{1}^{2}x^{11}dx=\\int_{1}^{2}x^{12}dx=\\int_{1}^{2}x^{13}dx=\\int_{1}^{2}x^{14}dx=\\int_{1}^{2}x^{15}dx=\\int_{1}^{2}x^{16}dx=\\int_{1}^{2}x^{17}dx=\\int_{1}^{2}x^{18}dx=\\int_{1}^{2}x^{19}dx=\\int_{1}^{2}x^{20}dx=\\int_{1}^{2}x^{21}dx=\\int_{1}^{2}x^{22}dx=\\int_{1}^{2}x^{23}dx=\\int_{1}^{2}x^{24}dx=\\int_{1}^{2}x^{25}dx=\\int_{1}^{2}x^{26}dx=\\int_{1}^{2}x^{27}dx=\\int_{1}^{2}x^{28}dx=\\int_{1}^{2}x^{29}dx=\\int_{1}^{2}x^{30}dx=\\int_{1}^{2}x^{31}dx=\\int_{1}^{2}x^{32}dx=\\int_{1}^{2}x^{33}dx=\\int_{1}^{2}x^{34}dx=\\int_{1}^{2}x^{35}dx=\\int_{1}^{2}x^{36}dx=\\int_{1}^{2}x^{37}dx=\\int_{1}^{2}x^{38}dx=\\int_{1}^{2}x^{39}dx=\\int_{1}^{2}x^{40}dx=\\int_{1}^{2",
+            "n_lines": 2,
+            "tokens": 512,
+            "seconds": 10.511,
+            "confidence": 30.0,
+            "flags": [
+              "truncated"
+            ],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              430,
+              272,
+              2266,
+              341
+            ],
+            "generated_text": "Mâu Tử đáp : Sao mà châm hiệu đến thế? Kia nói",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.468,
+            "confidence": 86.74,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              307,
+              369,
+              2264,
+              436
+            ],
+            "generated_text": "năng đảm luân đều có thời cơ của nó cả. Cứ Viên rằng :",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.514,
+            "confidence": 87.92,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              304,
+              464,
+              2263,
+              532
+            ],
+            "generated_text": "“Nước hữu dao thì ta ngay thắng, nước vô đạo thì ta thu",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.488,
+            "confidence": 91.23,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              307,
+              560,
+              2265,
+              628
+            ],
+            "generated_text": "mình lại và giũ lấy cái của ta\". Ninh Vũ Tử rằng : \"Nước",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.543,
+            "confidence": 88.72,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              305,
+              657,
+              2264,
+              724
+            ],
+            "generated_text": "hũu đạo thì ta làm người trí, nước vô đạo thì ta làm",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.432,
+            "confidence": 94.59,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              305,
+              750,
+              2259,
+              820
+            ],
+            "generated_text": "người ngu”. Không Từ răng : “Người có thể nói chuyện",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.459,
+            "confidence": 89.37,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              306,
+              848,
+              2260,
+              928
+            ],
+            "generated_text": "mà ta lại không nói, thế là phí người ; người không thể",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.391,
+            "confidence": 95.92,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              304,
+              944,
+              2261,
+              1012
+            ],
+            "generated_text": "nói chuyện mà ta lại nói, thế là uống lời\". Cho nên trí",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.446,
+            "confidence": 96.61,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              303,
+              1039,
+              2259,
+              1107
+            ],
+            "generated_text": "hay ngu đều có thời cơ của nó, mối lân đảm luân đều có",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.513,
+            "confidence": 84.56,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              304,
+              1134,
+              2259,
+              1212
+            ],
+            "generated_text": "dụng ý riêng, khi đáng nói đáng bàn thì sao lại không",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.449,
+            "confidence": 93.67,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              303,
+              1245,
+              652,
+              1291
+            ],
+            "generated_text": "thúc hien !",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.163,
+            "confidence": 78.76,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              437,
+              1671,
+              2248,
+              1757
+            ],
+            "generated_text": "問曰：子云佛道至尊，至快，無爲，澹泊；世人",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.503,
+            "confidence": 98.13,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              308,
+              1800,
+              2245,
+              1886
+            ],
+            "generated_text": "學士多譏毀之，云其辭說廓落難用，虛無難",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.604,
+            "confidence": 98.89,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              439,
+              2094,
+              2237,
+              2177
+            ],
+            "generated_text": "牟子曰：至味不合於眾口，大音不比於眾",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.384,
+            "confidence": 94.83,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              312,
+              2223,
+              2241,
+              2307
+            ],
+            "generated_text": "耳。作咸池，設大章，發簫韶，詠九成，莫之和",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.543,
+            "confidence": 99.34,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              311,
+              2352,
+              2243,
+              2434
+            ],
+            "generated_text": "也。張鄭衛之弦，歌時俗之音，必不期而拊手",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.541,
+            "confidence": 99.48,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              313,
+              2482,
+              2239,
+              2561
+            ],
+            "generated_text": "也。故宋玉云“客歌於郢爲下里之曲，和者干",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.506,
+            "confidence": 97.57,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              316,
+              2607,
+              2244,
+              2689
+            ],
+            "generated_text": "人：引商徵角，眾莫之應”。此皆悦邪聲，不曉於",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.522,
+            "confidence": 94.8,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              320,
+              2734,
+              2238,
+              2816
+            ],
+            "generated_text": "大度者也。韓非以管闕之見而謗堯舜；接輿以",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.598,
+            "confidence": 95.83,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              321,
+              2860,
+              2235,
+              2940
+            ],
+            "generated_text": "毛釐之分而刺仲尼，皆耽小而忽大者也。夫聞",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.466,
+            "confidence": 98.77,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              321,
+              2984,
+              2475,
+              3066
+            ],
+            "generated_text": "清商而謂之角，非彈弦之過，聽者之不聰矣。見",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 0.645,
+            "confidence": 99.3,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              322,
+              3110,
+              2355,
+              3191
+            ],
+            "generated_text": "和璧而名之石，非璧之贱也，视者之不明矣。神",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.473,
+            "confidence": 97.52,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              722,
+              532,
+              1825,
+              542
+            ],
+            "ink": 410
+          },
+          {
+            "box": [
+              348,
+              816,
+              2203,
+              830
+            ],
+            "ink": 1006
+          },
+          {
+            "box": [
+              1189,
+              1563,
+              1291,
+              1575
+            ],
+            "ink": 608
+          },
+          {
+            "box": [
+              318,
+              1938,
+              650,
+              1959
+            ],
+            "ink": 1644
+          },
+          {
+            "box": [
+              311,
+              1955,
+              649,
+              1975
+            ],
+            "ink": 1521
+          },
+          {
+            "box": [
+              322,
+              1990,
+              640,
+              2003
+            ],
+            "ink": 717
+          },
+          {
+            "box": [
+              2067,
+              3309,
+              2190,
+              3318
+            ],
+            "ink": 563
+          },
+          {
+            "box": [
+              308,
+              3349,
+              2108,
+              3375
+            ],
+            "ink": 1858
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": true,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "61cbea5c0055c260ccfc12f884e0febca7b2783b",
+        "git_describe": "61cbea5",
+        "git_dirty": true,
+        "gpu": "NVIDIA L4",
+        "dtype": "bfloat16",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

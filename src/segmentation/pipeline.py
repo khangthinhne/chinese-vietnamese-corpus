@@ -142,6 +142,11 @@ def run(args) -> None:
             merged, min_block_lines=int(seg.get("document", {}).get("min_han_block_lines",
                                                                    ocr_streams.MIN_HAN_BLOCK_LINES)))
         is_header = ocr_streams.header_predicate(merged)
+        from src.segmentation.am_detect import AmDetector
+        am_detector = AmDetector(seg.get("am_detection"), Path(__file__).resolve().parents[2])
+        from src.segmentation.overrides import overrides_for, parse_overrides
+        doc_overrides = parse_overrides(seg.get("document_overrides"))
+        used_overrides: set[int] = set()
         docs, review = segment_documents_unified(args.work_id, merged,
                                                  ocr_streams.document_config(seg.get("document", {})),
                                                  pages, allowed_starts=allowed)
@@ -191,6 +196,9 @@ def run(args) -> None:
         for doc in docs:
             if streams_mode:
                 implicit = seg.get("implicit_after_han", ocr_streams.IMPLICIT_AFTER_HAN)
+                first_han = next((x.text for x in doc.all_lines if x.writing_system == "han"), "")
+                matched = overrides_for(min(doc.pages) if doc.pages else 0, first_han, doc_overrides)
+                used_overrides.update(id(o) for o in matched)
                 assigned = assign_document_unified(args.work_id, doc, layer_cfg, meta_cfg,
                                                    keep_line=ocr_streams.keep_line,
                                                    dropped=stream_info["dropped_cross_stream"],
@@ -200,7 +208,13 @@ def run(args) -> None:
                                                                       ocr_streams.IMPLICIT_TITLE_NEXT),
                                                    notes_after_attribution=set(seg.get(
                                                        "notes_after_attribution",
-                                                       ocr_streams.NOTES_AFTER_ATTRIBUTION)))
+                                                       ocr_streams.NOTES_AFTER_ATTRIBUTION)),
+                                                   # mục chú thích "1. Thuật ngữ: ..." kết thúc lớp Việt (mặc định tắt)
+                                                   note_entry_ends=set(seg.get("note_entry_ends", [])),
+                                                   am_detector=am_detector,
+                                                   overrides=matched,
+                                                   # sửa G (mặc định tắt): dịch thơ dính vào nghia khi mất "Dịch thơ:"
+                                                   verse_tho=bool(seg.get("verse_tho_split", False)))
             elif is_unified:
                 assigned = assign_document_unified(args.work_id, doc, layer_cfg, meta_cfg)
             else:
@@ -220,6 +234,10 @@ def run(args) -> None:
                              "status": "ok"})
 
     if streams_mode:
+        for ov in doc_overrides:
+            if id(ov) not in used_overrides:
+                log.warning("Ghi đè document_overrides không khớp tài liệu nào (ranh giới đã đổi?): trang %d, %s",
+                            ov.start_page, ov.reason)
         review.extend(ocr_streams.pairing_review(args.work_id, doc_rows))
         outside = ocr_streams.document_page_check(layer_rows, doc_rows)
         if outside:
@@ -293,6 +311,9 @@ def main(argv: list[str] | None = None) -> int:
     try:
         args = parse_args(parser, argv)
         run(args)
+        return 0
+    except deps.UpToDate as exc:          # đầu ra còn mới: bỏ qua, không phải lỗi
+        log.info("%s", exc)
         return 0
     except (ValueError, FileExistsError, OSError) as exc:
         log.error("%s", exc)

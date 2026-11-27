@@ -1,0 +1,865 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 42,
+  "runs": [
+    {
+      "key": "01a25b0263ca3f9069dec4e55799831d0339f927ed53217faa298c87b87dcd20",
+      "parameters": {
+        "image_sha256": "89051364831d4a8b85bd566c020dc6dbd87b0c031d094100686a697f252e53cb",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T11:34:57+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_042.png",
+      "image_size": [
+        2656,
+        3277
+      ],
+      "crop_box": [
+        0,
+        0,
+        2656,
+        3277
+      ],
+      "lines": [
+        {
+          "text": "ngothinhamle1.pdf",
+          "bbox": [
+            6,
+            15,
+            1419,
+            49
+          ],
+          "confidence": 94.9
+        },
+        {
+          "text": "HOÀNG HOA ĐỔ PHA",
+          "bbox": [
+            1456,
+            209,
+            2114,
+            248
+          ],
+          "confidence": 84.17
+        },
+        {
+          "text": "廓然融我心",
+          "bbox": [
+            1040,
+            293,
+            1453,
+            354
+          ],
+          "confidence": 99.85
+        },
+        {
+          "text": "歸吾語我友",
+          "bbox": [
+            550,
+            409,
+            1454,
+            473
+          ],
+          "confidence": 98.64
+        },
+        {
+          "text": "幸哉生南邦",
+          "bbox": [
+            1041,
+            527,
+            1454,
+            592
+          ],
+          "confidence": 99.55
+        },
+        {
+          "text": "儼然佩紳綬",
+          "bbox": [
+            1037,
+            645,
+            1456,
+            708
+          ],
+          "confidence": 99.85
+        },
+        {
+          "text": "勿謂我不華",
+          "bbox": [
+            1044,
+            763,
+            1456,
+            826
+          ],
+          "confidence": 99.81
+        },
+        {
+          "text": "越裳有黄苟",
+          "bbox": [
+            731,
+            878,
+            1450,
+            945
+          ],
+          "confidence": 89.44
+        },
+        {
+          "text": "試看寧明江",
+          "bbox": [
+            1040,
+            1014,
+            1454,
+            1075
+          ],
+          "confidence": 99.94
+        },
+        {
+          "text": "滚滚水東走",
+          "bbox": [
+            1038,
+            1144,
+            1457,
+            1209
+          ],
+          "confidence": 91.02
+        },
+        {
+          "text": "發源何所自",
+          "bbox": [
+            1039,
+            1276,
+            1662,
+            1339
+          ],
+          "confidence": 99.37
+        },
+        {
+          "text": "午丁轉庚酉",
+          "bbox": [
+            1042,
+            1408,
+            1513,
+            1473
+          ],
+          "confidence": 99.55
+        },
+        {
+          "text": "PHIEN AM:",
+          "bbox": [
+            408,
+            1567,
+            1383,
+            1607
+          ],
+          "confidence": 99.57
+        },
+        {
+          "text": "HOÁN NHỊ NGÂM",
+          "bbox": [
+            1030,
+            1630,
+            1489,
+            1684
+          ],
+          "confidence": 85.43
+        },
+        {
+          "text": "(NGŨ NGÔN CỐ NHỊ THẬP VÂN)",
+          "bbox": [
+            887,
+            1709,
+            1632,
+            1763
+          ],
+          "confidence": 84.49
+        },
+        {
+          "text": "Triệu phát Nam Ninh thành,",
+          "bbox": [
+            913,
+            1844,
+            1583,
+            1890
+          ],
+          "confidence": 94.44
+        },
+        {
+          "text": "Mô túc Tam Giang khấu.",
+          "bbox": [
+            909,
+            1922,
+            1488,
+            1968
+          ],
+          "confidence": 94.74
+        },
+        {
+          "text": "Thu thủy tôi trừng ngừng,",
+          "bbox": [
+            912,
+            2003,
+            1513,
+            2059
+          ],
+          "confidence": 85.47
+        },
+        {
+          "text": "Thu sơn tôi thanh xấu.",
+          "bbox": [
+            912,
+            2086,
+            1435,
+            2133
+          ],
+          "confidence": 96.18
+        },
+        {
+          "text": "Trường không vô vấn yên,",
+          "bbox": [
+            912,
+            2174,
+            1503,
+            2229
+          ],
+          "confidence": 93.92
+        },
+        {
+          "text": "Tình đường thiếu trân cấu.",
+          "bbox": [
+            912,
+            2260,
+            1533,
+            2308
+          ],
+          "confidence": 80.51
+        },
+        {
+          "text": "Thôi bông khán thúy vi,",
+          "bbox": [
+            911,
+            2348,
+            1461,
+            2395
+          ],
+          "confidence": 87.31
+        },
+        {
+          "text": "Trâm ngâm tương cao hậu.",
+          "bbox": [
+            911,
+            2436,
+            1533,
+            2490
+          ],
+          "confidence": 88.51
+        },
+        {
+          "text": "Ngã hành vạn lý trình,",
+          "bbox": [
+            906,
+            2519,
+            1442,
+            2572
+          ],
+          "confidence": 89.55
+        },
+        {
+          "text": "Lai khú tam thời hâu.",
+          "bbox": [
+            907,
+            2600,
+            1417,
+            2646
+          ],
+          "confidence": 88.06
+        },
+        {
+          "text": "Mục đích hiệp nhĩ văn,",
+          "bbox": [
+            908,
+            2683,
+            1396,
+            2728
+          ],
+          "confidence": 81.66
+        },
+        {
+          "text": "Nam Bắc vô thủ thú.",
+          "bbox": [
+            906,
+            2765,
+            1386,
+            2809
+          ],
+          "confidence": 90.54
+        },
+        {
+          "text": "Nhật nguyệt đáo xử trung,",
+          "bbox": [
+            906,
+            2851,
+            1565,
+            2906
+          ],
+          "confidence": 86.13
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2656,
+          3277
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 27.281,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              6,
+              15,
+              1419,
+              49
+            ],
+            "generated_text": "ngothinhamle1.pdf",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.88,
+            "confidence": 94.9,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              1456,
+              209,
+              2114,
+              248
+            ],
+            "generated_text": "HOÀNG HOA ĐỔ PHA",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.218,
+            "confidence": 84.17,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              406,
+              252,
+              2119,
+              266
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.454,
+            "confidence": 54.22,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              1040,
+              293,
+              1453,
+              354
+            ],
+            "generated_text": "廓然融我心",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.673,
+            "confidence": 99.85,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              550,
+              409,
+              1454,
+              473
+            ],
+            "generated_text": "歸吾語我友",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.828,
+            "confidence": 98.64,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              1041,
+              527,
+              1454,
+              592
+            ],
+            "generated_text": "幸哉生南邦",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.725,
+            "confidence": 99.55,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              1037,
+              645,
+              1456,
+              708
+            ],
+            "generated_text": "儼然佩紳綬",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.11,
+            "confidence": 99.85,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              1044,
+              763,
+              1456,
+              826
+            ],
+            "generated_text": "勿謂我不華",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.796,
+            "confidence": 99.81,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              731,
+              878,
+              1450,
+              945
+            ],
+            "generated_text": "越裳有黄苟",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.778,
+            "confidence": 89.44,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              1040,
+              1014,
+              1454,
+              1075
+            ],
+            "generated_text": "試看寧明江",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.861,
+            "confidence": 99.94,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              1038,
+              1144,
+              1457,
+              1209
+            ],
+            "generated_text": "滚滚水東走",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.663,
+            "confidence": 91.02,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              1039,
+              1276,
+              1662,
+              1339
+            ],
+            "generated_text": "發源何所自",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.73,
+            "confidence": 99.37,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              1042,
+              1408,
+              1513,
+              1473
+            ],
+            "generated_text": "午丁轉庚酉",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.732,
+            "confidence": 99.55,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              408,
+              1567,
+              1383,
+              1607
+            ],
+            "generated_text": "PHIEN AM:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.782,
+            "confidence": 99.57,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              1030,
+              1630,
+              1489,
+              1684
+            ],
+            "generated_text": "HOÁN NHỊ NGÂM",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 1.008,
+            "confidence": 85.43,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              887,
+              1709,
+              1632,
+              1763
+            ],
+            "generated_text": "(NGŨ NGÔN CỐ NHỊ THẬP VÂN)",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 1.89,
+            "confidence": 84.49,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              913,
+              1844,
+              1583,
+              1890
+            ],
+            "generated_text": "Triệu phát Nam Ninh thành,",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.857,
+            "confidence": 94.44,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              909,
+              1922,
+              1488,
+              1968
+            ],
+            "generated_text": "Mô túc Tam Giang khấu.",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 1.096,
+            "confidence": 94.74,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              912,
+              2003,
+              1513,
+              2059
+            ],
+            "generated_text": "Thu thủy tôi trừng ngừng,",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 1.033,
+            "confidence": 85.47,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              912,
+              2086,
+              1435,
+              2133
+            ],
+            "generated_text": "Thu sơn tôi thanh xấu.",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.973,
+            "confidence": 96.18,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              912,
+              2174,
+              1503,
+              2229
+            ],
+            "generated_text": "Trường không vô vấn yên,",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.971,
+            "confidence": 93.92,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              912,
+              2260,
+              1533,
+              2308
+            ],
+            "generated_text": "Tình đường thiếu trân cấu.",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 1.113,
+            "confidence": 80.51,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              911,
+              2348,
+              1461,
+              2395
+            ],
+            "generated_text": "Thôi bông khán thúy vi,",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.107,
+            "confidence": 87.31,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              911,
+              2436,
+              1533,
+              2490
+            ],
+            "generated_text": "Trâm ngâm tương cao hậu.",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 1.104,
+            "confidence": 88.51,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              906,
+              2519,
+              1442,
+              2572
+            ],
+            "generated_text": "Ngã hành vạn lý trình,",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.92,
+            "confidence": 89.55,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              907,
+              2600,
+              1417,
+              2646
+            ],
+            "generated_text": "Lai khú tam thời hâu.",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.968,
+            "confidence": 88.06,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              908,
+              2683,
+              1396,
+              2728
+            ],
+            "generated_text": "Mục đích hiệp nhĩ văn,",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.07,
+            "confidence": 81.66,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              906,
+              2765,
+              1386,
+              2809
+            ],
+            "generated_text": "Nam Bắc vô thủ thú.",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.889,
+            "confidence": 90.54,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              906,
+              2851,
+              1565,
+              2906
+            ],
+            "generated_text": "Nhật nguyệt đáo xử trung,",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.048,
+            "confidence": 86.13,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              962,
+              1966,
+              1341,
+              1975
+            ],
+            "ink": 169
+          },
+          {
+            "box": [
+              1108,
+              2391,
+              1458,
+              2403
+            ],
+            "ink": 248
+          },
+          {
+            "box": [
+              2054,
+              3000,
+              2116,
+              3012
+            ],
+            "ink": 231
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

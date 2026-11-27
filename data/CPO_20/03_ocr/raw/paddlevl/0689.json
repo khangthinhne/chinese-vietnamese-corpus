@@ -1,0 +1,831 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_20",
+  "engine": "paddlevl",
+  "page": 689,
+  "runs": [
+    {
+      "key": "b8789d94b02e5af58879ff14f5e3f1ac6e3124599bb6156958f2c3b329dd8b53",
+      "parameters": {
+        "image_sha256": "f836dec68da3eb60f07771636780a7e77936aa237aefb0bb61a32298a6191163",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T14:14:58+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_689.png",
+      "image_size": [
+        1823,
+        2814
+      ],
+      "crop_box": [
+        0,
+        0,
+        1823,
+        2814
+      ],
+      "lines": [
+        {
+          "text": "Phiên âm:",
+          "bbox": [
+            140,
+            296,
+            343,
+            332
+          ],
+          "confidence": 94.18
+        },
+        {
+          "text": "THƯƠNG HOÀNH SỐN TÁC",
+          "bbox": [
+            359,
+            410,
+            1146,
+            469
+          ],
+          "confidence": 92.17
+        },
+        {
+          "text": "Bộ trùng nhất bộ quyện duyên phan,",
+          "bbox": [
+            154,
+            557,
+            1111,
+            605
+          ],
+          "confidence": 95.97
+        },
+        {
+          "text": "Tuấn hiểm tranh như Thực đạo¹ nan.",
+          "bbox": [
+            362,
+            614,
+            1125,
+            657
+          ],
+          "confidence": 83.32
+        },
+        {
+          "text": "Già lô thach mao nhân khổ ngại,",
+          "bbox": [
+            363,
+            674,
+            1041,
+            717
+          ],
+          "confidence": 91.27
+        },
+        {
+          "text": "Han thiên Nam Bắc lộ an bài.",
+          "bbox": [
+            363,
+            733,
+            982,
+            777
+          ],
+          "confidence": 96.7
+        },
+        {
+          "text": "Cảm minh dục phần như tương hước,",
+          "bbox": [
+            365,
+            794,
+            1114,
+            837
+          ],
+          "confidence": 90.34
+        },
+        {
+          "text": "Nghĩ tiểu đồ hành tại viễn quan.",
+          "bbox": [
+            365,
+            851,
+            1033,
+            897
+          ],
+          "confidence": 95.25
+        },
+        {
+          "text": "Quá thử bất tri trùng hiểm lịch,",
+          "bbox": [
+            365,
+            911,
+            1018,
+            956
+          ],
+          "confidence": 86.22
+        },
+        {
+          "text": "Trac anh vô khả sâu đàn quan\".",
+          "bbox": [
+            365,
+            972,
+            1029,
+            1016
+          ],
+          "confidence": 74.34
+        },
+        {
+          "text": "Uich nghia:",
+          "bbox": [
+            142,
+            1180,
+            379,
+            1209
+          ],
+          "confidence": 89.1
+        },
+        {
+          "text": "LÊN ĐỔO NGANG",
+          "bbox": [
+            543,
+            1292,
+            1049,
+            1350
+          ],
+          "confidence": 82.49
+        },
+        {
+          "text": "Bước rồi lại bước, mỗi mệt leo trèo,",
+          "bbox": [
+            371,
+            1434,
+            1088,
+            1481
+          ],
+          "confidence": 87.75
+        },
+        {
+          "text": "Hiểm trở tựa hỗ khó hơn đường vào đất Thực.",
+          "bbox": [
+            371,
+            1484,
+            1307,
+            1539
+          ],
+          "confidence": 86.99
+        },
+        {
+          "text": "Cô đá lấp lối đi làm vương chân người,",
+          "bbox": [
+            371,
+            1551,
+            1163,
+            1599
+          ],
+          "confidence": 87.01
+        },
+        {
+          "text": "Ngăn vùng Nam, Bắc một con đường đã an bài sẵn.",
+          "bbox": [
+            371,
+            1605,
+            1419,
+            1658
+          ],
+          "confidence": 91.89
+        },
+        {
+          "text": "Chim nhảy nhót hót vang dường gheo trêu,",
+          "bbox": [
+            373,
+            1669,
+            1250,
+            1716
+          ],
+          "confidence": 85.39
+        },
+        {
+          "text": "Ở xa trông, khách bộ hành như đàn kiên có.",
+          "bbox": [
+            374,
+            1722,
+            1275,
+            1775
+          ],
+          "confidence": 86.73
+        },
+        {
+          "text": "Đi qua đây, không biết phải qua máy lần hiểm trở,",
+          "bbox": [
+            373,
+            1776,
+            1411,
+            1834
+          ],
+          "confidence": 95.37
+        },
+        {
+          "text": "Giất dài mũ về ở ăn không xong, phải với đập mũ mà ra",
+          "bbox": [
+            374,
+            1833,
+            1528,
+            1892
+          ],
+          "confidence": 85.89
+        },
+        {
+          "text": "làm quan.",
+          "bbox": [
+            1366,
+            1897,
+            1569,
+            1928
+          ],
+          "confidence": 98.93
+        },
+        {
+          "text": "1. Thuc đảo: Đường vào đất Thục. Đất Thục, thuộc tính Tú Xuyên, Trung Quốc.",
+          "bbox": [
+            235,
+            2277,
+            1575,
+            2335
+          ],
+          "confidence": 88.9
+        },
+        {
+          "text": "Thời xưa được vào Thuc rất hiểm trở. Nhà thơ Lý Bạch có câu: \"Thực đạo chi nan,",
+          "bbox": [
+            152,
+            2327,
+            1577,
+            2373
+          ],
+          "confidence": 85.69
+        },
+        {
+          "text": "xhoi xua duong vao thục t",
+          "bbox": [
+            163,
+            2365,
+            1096,
+            2387
+          ],
+          "confidence": 37.67
+        },
+        {
+          "text": "nan u thương thiên\" (Đường vào Thực khó hơn đi lên trời).",
+          "bbox": [
+            154,
+            2379,
+            1549,
+            2429
+          ],
+          "confidence": 88.33
+        },
+        {
+          "text": "2. Trac anh: Giất bội trần bám trên dải mũ, chỉ việc thôi làm quan đi ở ăn; Đàn",
+          "bbox": [
+            234,
+            2421,
+            1578,
+            2476
+          ],
+          "confidence": 80.8
+        },
+        {
+          "text": "quan: Đập mũ, tức là đập bụi, sửa sang lại mũ, chỉ việc ra làm quan",
+          "bbox": [
+            154,
+            2473,
+            1578,
+            2529
+          ],
+          "confidence": 98.65
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          1823,
+          2814
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 13.409,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              140,
+              296,
+              343,
+              332
+            ],
+            "generated_text": "Phiên âm:",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.23,
+            "confidence": 94.18,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              359,
+              410,
+              1146,
+              469
+            ],
+            "generated_text": "THƯƠNG HOÀNH SỐN TÁC",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.478,
+            "confidence": 92.17,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              154,
+              557,
+              1111,
+              605
+            ],
+            "generated_text": "Bộ trùng nhất bộ quyện duyên phan,",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.428,
+            "confidence": 95.97,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              362,
+              614,
+              1125,
+              657
+            ],
+            "generated_text": "Tuấn hiểm tranh như Thực đạo¹ nan.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.424,
+            "confidence": 83.32,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              363,
+              674,
+              1041,
+              717
+            ],
+            "generated_text": "Già lô thach mao nhân khổ ngại,",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.394,
+            "confidence": 91.27,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              363,
+              733,
+              982,
+              777
+            ],
+            "generated_text": "Han thiên Nam Bắc lộ an bài.",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.375,
+            "confidence": 96.7,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              365,
+              794,
+              1114,
+              837
+            ],
+            "generated_text": "Cảm minh dục phần như tương hước,",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.453,
+            "confidence": 90.34,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              365,
+              851,
+              1033,
+              897
+            ],
+            "generated_text": "Nghĩ tiểu đồ hành tại viễn quan.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.399,
+            "confidence": 95.25,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              365,
+              911,
+              1018,
+              956
+            ],
+            "generated_text": "Quá thử bất tri trùng hiểm lịch,",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.516,
+            "confidence": 86.22,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              365,
+              972,
+              1029,
+              1016
+            ],
+            "generated_text": "Trac anh vô khả sâu đàn quan\".",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 0.372,
+            "confidence": 74.34,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              142,
+              1180,
+              379,
+              1209
+            ],
+            "generated_text": "Uich nghia:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.24,
+            "confidence": 89.1,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              543,
+              1292,
+              1049,
+              1350
+            ],
+            "generated_text": "LÊN ĐỔO NGANG",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.372,
+            "confidence": 82.49,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              371,
+              1434,
+              1088,
+              1481
+            ],
+            "generated_text": "Bước rồi lại bước, mỗi mệt leo trèo,",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.503,
+            "confidence": 87.75,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              371,
+              1484,
+              1307,
+              1539
+            ],
+            "generated_text": "Hiểm trở tựa hỗ khó hơn đường vào đất Thực.",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.502,
+            "confidence": 86.99,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              371,
+              1551,
+              1163,
+              1599
+            ],
+            "generated_text": "Cô đá lấp lối đi làm vương chân người,",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.456,
+            "confidence": 87.01,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              371,
+              1605,
+              1419,
+              1658
+            ],
+            "generated_text": "Ngăn vùng Nam, Bắc một con đường đã an bài sẵn.",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.612,
+            "confidence": 91.89,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              373,
+              1669,
+              1250,
+              1716
+            ],
+            "generated_text": "Chim nhảy nhót hót vang dường gheo trêu,",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.525,
+            "confidence": 85.39,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              374,
+              1722,
+              1275,
+              1775
+            ],
+            "generated_text": "Ở xa trông, khách bộ hành như đàn kiên có.",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.491,
+            "confidence": 86.73,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              373,
+              1776,
+              1411,
+              1834
+            ],
+            "generated_text": "Đi qua đây, không biết phải qua máy lần hiểm trở,",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.481,
+            "confidence": 95.37,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              374,
+              1833,
+              1528,
+              1892
+            ],
+            "generated_text": "Giất dài mũ về ở ăn không xong, phải với đập mũ mà ra",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.638,
+            "confidence": 85.89,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              1366,
+              1897,
+              1569,
+              1928
+            ],
+            "generated_text": "làm quan.",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.22,
+            "confidence": 98.93,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              151,
+              2257,
+              735,
+              2278
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.145,
+            "confidence": 8.73,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              235,
+              2277,
+              1575,
+              2335
+            ],
+            "generated_text": "1. Thuc đảo: Đường vào đất Thục. Đất Thục, thuộc tính Tú Xuyên, Trung Quốc.",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 0.745,
+            "confidence": 88.9,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              152,
+              2327,
+              1577,
+              2373
+            ],
+            "generated_text": "Thời xưa được vào Thuc rất hiểm trở. Nhà thơ Lý Bạch có câu: \"Thực đạo chi nan,",
+            "n_lines": 1,
+            "tokens": 34,
+            "seconds": 0.857,
+            "confidence": 85.69,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              163,
+              2365,
+              1096,
+              2387
+            ],
+            "generated_text": "xhoi xua duong vao thục t",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 0.406,
+            "confidence": 37.67,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              154,
+              2379,
+              1549,
+              2429
+            ],
+            "generated_text": "nan u thương thiên\" (Đường vào Thực khó hơn đi lên trời).",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.584,
+            "confidence": 88.33,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              234,
+              2421,
+              1578,
+              2476
+            ],
+            "generated_text": "2. Trac anh: Giất bội trần bám trên dải mũ, chỉ việc thôi làm quan đi ở ăn; Đàn",
+            "n_lines": 1,
+            "tokens": 33,
+            "seconds": 0.806,
+            "confidence": 80.8,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              154,
+              2473,
+              1578,
+              2529
+            ],
+            "generated_text": "quan: Đập mũ, tức là đập bụi, sửa sang lại mũ, chỉ việc ra làm quan",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 0.753,
+            "confidence": 98.65,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              149,
+              1173,
+              345,
+              1183
+            ],
+            "ink": 355
+          },
+          {
+            "box": [
+              1500,
+              2526,
+              1577,
+              2539
+            ],
+            "ink": 486
+          },
+          {
+            "box": [
+              1503,
+              2541,
+              1577,
+              2550
+            ],
+            "ink": 299
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      }
+    }
+  ]
+}

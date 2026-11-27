@@ -1,0 +1,875 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 465,
+  "runs": [
+    {
+      "key": "f6fb8db4f03dae802351b6e2c1c3bde0395bcadc773304f70b88e2d2eb57f736",
+      "parameters": {
+        "image_sha256": "4fa23b7cb6afd2f3b66144c2a623d0cce9556d823a08d3aa7c040e0104cd12cb",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T16:51:15+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_465.png",
+      "image_size": [
+        2607,
+        3232
+      ],
+      "crop_box": [
+        0,
+        0,
+        2607,
+        3232
+      ],
+      "lines": [
+        {
+          "text": "ngothinhamch1.pdf",
+          "bbox": [
+            7,
+            19,
+            537,
+            45
+          ],
+          "confidence": 97.53
+        },
+        {
+          "text": "NGÔ THI NHAM TOAN TẬP - TẬP III",
+          "bbox": [
+            478,
+            214,
+            1252,
+            254
+          ],
+          "confidence": 82.62
+        },
+        {
+          "text": "sang ly cấp, rất là mối mệt, ăn nghỉ không yên, muốn đêm cũng đi gấp đê",
+          "bbox": [
+            480,
+            320,
+            2187,
+            373
+          ],
+          "confidence": 90.27
+        },
+        {
+          "text": "sóm được gặp mặt, tuy trong lòng thì muốn thế, nhưng sức lực lại không",
+          "bbox": [
+            478,
+            400,
+            2189,
+            453
+          ],
+          "confidence": 96.53
+        },
+        {
+          "text": "gượng nổi. Và lại, lăn lội đường trường, bước đi khó nhọc, vậy những bước",
+          "bbox": [
+            479,
+            482,
+            2188,
+            535
+          ],
+          "confidence": 88.96
+        },
+        {
+          "text": "sương sớm, những lúc tuyết chiêu, cùng với những khi nắng gắt, rét dũ,",
+          "bbox": [
+            480,
+            563,
+            2187,
+            613
+          ],
+          "confidence": 92.28
+        },
+        {
+          "text": "không thể không tránh một chút để mà nghỉ ngơi, cho nên lúc đi đường",
+          "bbox": [
+            478,
+            642,
+            2190,
+            689
+          ],
+          "confidence": 94.87
+        },
+        {
+          "text": "không đám đi suốt ngày, chiếu đường đi cho vừa phải, ước độ 10 ngày mới",
+          "bbox": [
+            478,
+            724,
+            2189,
+            778
+          ],
+          "confidence": 93.01
+        },
+        {
+          "text": "đến thành Thăng Long, đúng vào khoảng trước hoặc sau ngày 15, rất",
+          "bbox": [
+            481,
+            808,
+            2189,
+            859
+          ],
+          "confidence": 98.72
+        },
+        {
+          "text": "mong hai vi Đai nhân xét rõ tình thức, thương đến kể ốm đau, tam dừng",
+          "bbox": [
+            480,
+            890,
+            2189,
+            936
+          ],
+          "confidence": 83.86
+        },
+        {
+          "text": "ngưa ở nơi công quán, tiểu phiên tôi xin đến ngay. Nếu Chế hiện có hỏi",
+          "bbox": [
+            479,
+            972,
+            2189,
+            1018
+          ],
+          "confidence": 95.38
+        },
+        {
+          "text": "điều gì, mong Đại nhân cố vì tiểu phiên tôi trả lời giúp cho, để khỏi bị lỗi.",
+          "bbox": [
+            482,
+            1052,
+            2188,
+            1105
+          ],
+          "confidence": 94.89
+        },
+        {
+          "text": "Đến như ngày hẹn tuyên phong, mong Đại nhân xét chọn lấy ngày tốt",
+          "bbox": [
+            480,
+            1135,
+            2190,
+            1187
+          ],
+          "confidence": 97.2
+        },
+        {
+          "text": "trong tháng, hiểu thị cho viên mục văn võ nước tôi, diễn tập nghi thức",
+          "bbox": [
+            480,
+            1216,
+            2190,
+            1268
+          ],
+          "confidence": 98.29
+        },
+        {
+          "text": "trước, may được thuộc lễ mà không nhắm, để dùng vào ngày đại lễ được",
+          "bbox": [
+            481,
+            1297,
+            2189,
+            1350
+          ],
+          "confidence": 92.11
+        },
+        {
+          "text": "hoàn thành, đó cũng chính là điều mong mỏi lớn của tiểu phiên tôi vây.",
+          "bbox": [
+            479,
+            1379,
+            2125,
+            1426
+          ],
+          "confidence": 93.73
+        },
+        {
+          "text": "CHU THICH:",
+          "bbox": [
+            482,
+            1483,
+            2237,
+            1522
+          ],
+          "confidence": 88.78
+        },
+        {
+          "text": "1.Lại một đạo: Trình hai sứ thân phụng sắc sang tuyên phong.",
+          "bbox": [
+            633,
+            1547,
+            1949,
+            1594
+          ],
+          "confidence": 93.9
+        },
+        {
+          "text": "（請定宣封期並遞虔謝中堂公壽祠",
+          "bbox": [
+            715,
+            1803,
+            1940,
+            1873
+          ],
+          "confidence": 98.85
+        },
+        {
+          "text": "候正。國王書呈)",
+          "bbox": [
+            1023,
+            1903,
+            1772,
+            1965
+          ],
+          "confidence": 92.64
+        },
+        {
+          "text": "本月初三日，僕自乂安發行，初九日抵清華地頭，翹",
+          "bbox": [
+            634,
+            2071,
+            2192,
+            2134
+          ],
+          "confidence": 99.53
+        },
+        {
+          "text": "望恩諭，趕速進道。第賤恙寒熱甫痊，痢症轉劇，甚覺",
+          "bbox": [
+            490,
+            2196,
+            2186,
+            2264
+          ],
+          "confidence": 99.78
+        },
+        {
+          "text": "委頓，未堪著緊行走。自伊地方進發，日行三鼓，約",
+          "bbox": [
+            488,
+            2325,
+            2187,
+            2389
+          ],
+          "confidence": 99.84
+        },
+        {
+          "text": "至十七日，可抵昇龍，耑候二位大人，諏吉宣封。謹按",
+          "bbox": [
+            490,
+            2450,
+            2192,
+            2511
+          ],
+          "confidence": 99.34
+        },
+        {
+          "text": "時憲書，本月十九日，頗合年命，今番膺受天寵，乃啓",
+          "bbox": [
+            490,
+            2574,
+            2225,
+            2641
+          ],
+          "confidence": 99.07
+        },
+        {
+          "text": "宇建邦維始，爲家世無疆之休。竊請以是日受封，庶得",
+          "bbox": [
+            492,
+            2701,
+            2191,
+            2766
+          ],
+          "confidence": 99.68
+        },
+        {
+          "text": "百祥允協，引之弗替。輒敢預先佈達，恭候台裁。",
+          "bbox": [
+            492,
+            2829,
+            2232,
+            2894
+          ],
+          "confidence": 99.95
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2607,
+          3232
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 54.072,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              7,
+              19,
+              537,
+              45
+            ],
+            "generated_text": "ngothinhamch1.pdf",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.904,
+            "confidence": 97.53,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              478,
+              214,
+              1252,
+              254
+            ],
+            "generated_text": "NGÔ THI NHAM TOAN TẬP - TẬP III",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.636,
+            "confidence": 82.62,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              482,
+              259,
+              2194,
+              273
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.45,
+            "confidence": 55.02,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              480,
+              320,
+              2187,
+              373
+            ],
+            "generated_text": "sang ly cấp, rất là mối mệt, ăn nghỉ không yên, muốn đêm cũng đi gấp đê",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.262,
+            "confidence": 90.27,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              478,
+              400,
+              2189,
+              453
+            ],
+            "generated_text": "sóm được gặp mặt, tuy trong lòng thì muốn thế, nhưng sức lực lại không",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.989,
+            "confidence": 96.53,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              479,
+              482,
+              2188,
+              535
+            ],
+            "generated_text": "gượng nổi. Và lại, lăn lội đường trường, bước đi khó nhọc, vậy những bước",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 2.335,
+            "confidence": 88.96,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              480,
+              563,
+              2187,
+              613
+            ],
+            "generated_text": "sương sớm, những lúc tuyết chiêu, cùng với những khi nắng gắt, rét dũ,",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 2.341,
+            "confidence": 92.28,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              478,
+              642,
+              2190,
+              689
+            ],
+            "generated_text": "không thể không tránh một chút để mà nghỉ ngơi, cho nên lúc đi đường",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.916,
+            "confidence": 94.87,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              478,
+              724,
+              2189,
+              778
+            ],
+            "generated_text": "không đám đi suốt ngày, chiếu đường đi cho vừa phải, ước độ 10 ngày mới",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 2.191,
+            "confidence": 93.01,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              481,
+              808,
+              2189,
+              859
+            ],
+            "generated_text": "đến thành Thăng Long, đúng vào khoảng trước hoặc sau ngày 15, rất",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.851,
+            "confidence": 98.72,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              480,
+              890,
+              2189,
+              936
+            ],
+            "generated_text": "mong hai vi Đai nhân xét rõ tình thức, thương đến kể ốm đau, tam dừng",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.27,
+            "confidence": 83.86,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              479,
+              972,
+              2189,
+              1018
+            ],
+            "generated_text": "ngưa ở nơi công quán, tiểu phiên tôi xin đến ngay. Nếu Chế hiện có hỏi",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 2.336,
+            "confidence": 95.38,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              482,
+              1052,
+              2188,
+              1105
+            ],
+            "generated_text": "điều gì, mong Đại nhân cố vì tiểu phiên tôi trả lời giúp cho, để khỏi bị lỗi.",
+            "n_lines": 1,
+            "tokens": 33,
+            "seconds": 2.614,
+            "confidence": 94.89,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              480,
+              1135,
+              2190,
+              1187
+            ],
+            "generated_text": "Đến như ngày hẹn tuyên phong, mong Đại nhân xét chọn lấy ngày tốt",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 2.12,
+            "confidence": 97.2,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              480,
+              1216,
+              2190,
+              1268
+            ],
+            "generated_text": "trong tháng, hiểu thị cho viên mục văn võ nước tôi, diễn tập nghi thức",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.85,
+            "confidence": 98.29,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              481,
+              1297,
+              2189,
+              1350
+            ],
+            "generated_text": "trước, may được thuộc lễ mà không nhắm, để dùng vào ngày đại lễ được",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.993,
+            "confidence": 92.11,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              479,
+              1379,
+              2125,
+              1426
+            ],
+            "generated_text": "hoàn thành, đó cũng chính là điều mong mỏi lớn của tiểu phiên tôi vây.",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.886,
+            "confidence": 93.73,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              482,
+              1483,
+              2237,
+              1522
+            ],
+            "generated_text": "CHU THICH:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.775,
+            "confidence": 88.78,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              633,
+              1547,
+              1949,
+              1594
+            ],
+            "generated_text": "1.Lại một đạo: Trình hai sứ thân phụng sắc sang tuyên phong.",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 1.998,
+            "confidence": 93.9,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              715,
+              1803,
+              1940,
+              1873
+            ],
+            "generated_text": "（請定宣封期並遞虔謝中堂公壽祠",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.876,
+            "confidence": 98.85,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              1023,
+              1903,
+              1772,
+              1965
+            ],
+            "generated_text": "候正。國王書呈)",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.846,
+            "confidence": 92.64,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              634,
+              2071,
+              2192,
+              2134
+            ],
+            "generated_text": "本月初三日，僕自乂安發行，初九日抵清華地頭，翹",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 2.172,
+            "confidence": 99.53,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              490,
+              2196,
+              2186,
+              2264
+            ],
+            "generated_text": "望恩諭，趕速進道。第賤恙寒熱甫痊，痢症轉劇，甚覺",
+            "n_lines": 1,
+            "tokens": 35,
+            "seconds": 2.542,
+            "confidence": 99.78,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              488,
+              2325,
+              2187,
+              2389
+            ],
+            "generated_text": "委頓，未堪著緊行走。自伊地方進發，日行三鼓，約",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 1.997,
+            "confidence": 99.84,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              490,
+              2450,
+              2192,
+              2511
+            ],
+            "generated_text": "至十七日，可抵昇龍，耑候二位大人，諏吉宣封。謹按",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 2.306,
+            "confidence": 99.34,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              490,
+              2574,
+              2225,
+              2641
+            ],
+            "generated_text": "時憲書，本月十九日，頗合年命，今番膺受天寵，乃啓",
+            "n_lines": 1,
+            "tokens": 33,
+            "seconds": 2.462,
+            "confidence": 99.07,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              492,
+              2701,
+              2191,
+              2766
+            ],
+            "generated_text": "宇建邦維始，爲家世無疆之休。竊請以是日受封，庶得",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 2.077,
+            "confidence": 99.68,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              492,
+              2829,
+              2232,
+              2894
+            ],
+            "generated_text": "百祥允協，引之弗替。輒敢預先佈達，恭候台裁。",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 2.072,
+            "confidence": 99.95,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              596,
+              685,
+              2185,
+              695
+            ],
+            "ink": 484
+          },
+          {
+            "box": [
+              580,
+              932,
+              2185,
+              942
+            ],
+            "ink": 433
+          },
+          {
+            "box": [
+              511,
+              1014,
+              1653,
+              1025
+            ],
+            "ink": 452
+          },
+          {
+            "box": [
+              753,
+              1422,
+              2097,
+              1431
+            ],
+            "ink": 326
+          },
+          {
+            "box": [
+              1140,
+              1705,
+              1513,
+              1719
+            ],
+            "ink": 858
+          },
+          {
+            "box": [
+              1148,
+              1725,
+              1505,
+              1740
+            ],
+            "ink": 1003
+          },
+          {
+            "box": [
+              1142,
+              1749,
+              1485,
+              1762
+            ],
+            "ink": 678
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

@@ -48,6 +48,10 @@ CHECK_DEFAULTS: dict[str, float] = {
     "vie_min_lines_ink": 0.05,        # trang có mực >= mức này mà vie < vie_min_lines dòng và han rỗng -> lỗi
     "vie_min_lines": 3,
     "blank_ink": 0.004,               # tỉ lệ điểm ảnh mực dưới mức này -> trang trắng
+    # So vie.xml (Qwen) với chữ Latin paddlevl đọc trên cùng trang (src/ocr/cross_check.py), chỉ cảnh báo:
+    "vie_cross_min_precision": 0.75,  # tỉ lệ 4-gram Qwen có trong paddlevl dưới mức này -> nghi Qwen bịa/lặp
+    "vie_cross_min_recall": 0.6,      # tỉ lệ 4-gram paddlevl có trong Qwen dưới mức này -> nghi Qwen bỏ sót
+    "vie_cross_line_precision": 0.35,  # dòng Qwen (>= 30 chữ cái) khớp dưới mức này -> dòng không xác nhận
 }
 
 

@@ -1,0 +1,900 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 64,
+  "runs": [
+    {
+      "key": "032249c06fcb77e7669ae719b590cec12ae96317eeb1f96940ef0f9520d41f22",
+      "parameters": {
+        "image_sha256": "65e74525cca736234b783b2bf468498cfcf734b7c40a6d03e5e2b57335cffc1d",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T11:49:32+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_064.png",
+      "image_size": [
+        2608,
+        3047
+      ],
+      "crop_box": [
+        0,
+        0,
+        2608,
+        3047
+      ],
+      "lines": [
+        {
+          "text": "ngothinhamle1.pdf",
+          "bbox": [
+            7,
+            19,
+            1033,
+            45
+          ],
+          "confidence": 94.88
+        },
+        {
+          "text": "HOÀNG HOÀ ĐỔ PHA",
+          "bbox": [
+            1632,
+            197,
+            2096,
+            235
+          ],
+          "confidence": 81.53
+        },
+        {
+          "text": "Từ xưa Việt Tây thuộc bờ cõi Uất Lâm, (2)",
+          "bbox": [
+            766,
+            363,
+            1695,
+            409
+          ],
+          "confidence": 89.52
+        },
+        {
+          "text": "Đường vào Côn Lôn, người Hán ở lãn với người Nùng.",
+          "bbox": [
+            767,
+            450,
+            2003,
+            502
+          ],
+          "confidence": 94.75
+        },
+        {
+          "text": "Ruộng khuất sau gò, phần nhiều trồng lúa;",
+          "bbox": [
+            767,
+            537,
+            1824,
+            589
+          ],
+          "confidence": 94.38
+        },
+        {
+          "text": "Núi không tre trúc, một nửa trông thông.",
+          "bbox": [
+            768,
+            624,
+            1715,
+            669
+          ],
+          "confidence": 94.06
+        },
+        {
+          "text": "Dương lên như đuôi cá, chái nhà nông trát đất;",
+          "bbox": [
+            768,
+            711,
+            1850,
+            757
+          ],
+          "confidence": 95.88
+        },
+        {
+          "text": "Trâm cài tóc bòm ngụa, trang phục thôn quê.",
+          "bbox": [
+            767,
+            800,
+            1805,
+            852
+          ],
+          "confidence": 91.67
+        },
+        {
+          "text": "Kiệu sứ chợt đến, cùng ngó nhìn chỉ trỏ,",
+          "bbox": [
+            768,
+            885,
+            1688,
+            937
+          ],
+          "confidence": 89.19
+        },
+        {
+          "text": "Vui vẻ gát đâu chào, tiếng nói khó nghe.",
+          "bbox": [
+            767,
+            972,
+            1696,
+            1018
+          ],
+          "confidence": 89.86
+        },
+        {
+          "text": "KHAO DI:",
+          "bbox": [
+            386,
+            1085,
+            1877,
+            1124
+          ],
+          "confidence": 96.88
+        },
+        {
+          "text": "a. Bản A.117c/1: Nguyên cương 原崗.",
+          "bbox": [
+            535,
+            1160,
+            1575,
+            1207
+          ],
+          "confidence": 94.54
+        },
+        {
+          "text": "Bản A.1579: Động nguyên ㎛原.",
+          "bbox": [
+            536,
+            1238,
+            1213,
+            1286
+          ],
+          "confidence": 81.76
+        },
+        {
+          "text": "b. Bản A.404: Thực đạo 植稻.",
+          "bbox": [
+            534,
+            1315,
+            1139,
+            1360
+          ],
+          "confidence": 97.49
+        },
+        {
+          "text": "CHU THICH:",
+          "bbox": [
+            390,
+            1427,
+            1109,
+            1466
+          ],
+          "confidence": 98.6
+        },
+        {
+          "text": "1.Côn Lôn: Tức dày Côn Lôn. Đường bộ từ Nam Ninh đi Quế Lâm phải",
+          "bbox": [
+            541,
+            1506,
+            2094,
+            1555
+          ],
+          "confidence": 88.41
+        },
+        {
+          "text": "qua dây núi này.",
+          "bbox": [
+            389,
+            1601,
+            748,
+            1632
+          ],
+          "confidence": 81.1
+        },
+        {
+          "text": "2.Uất Lâm: Một quận thuộc Quảng Tây.",
+          "bbox": [
+            539,
+            1670,
+            1389,
+            1721
+          ],
+          "confidence": 92.99
+        },
+        {
+          "text": "Việt Tây: Xem chủ thích số 1 bài 22.",
+          "bbox": [
+            536,
+            1754,
+            1300,
+            1796
+          ],
+          "confidence": 96.94
+        },
+        {
+          "text": "DICH THO:",
+          "bbox": [
+            389,
+            1868,
+            643,
+            1907
+          ],
+          "confidence": 93.83
+        },
+        {
+          "text": "Tư cố Việt Tây thuộc Uất Lâm,",
+          "bbox": [
+            861,
+            1947,
+            1563,
+            1992
+          ],
+          "confidence": 86.83
+        },
+        {
+          "text": "Dân cụ phần lớn Hán và Nùng.",
+          "bbox": [
+            856,
+            2035,
+            1581,
+            2080
+          ],
+          "confidence": 90.85
+        },
+        {
+          "text": "Ruộng quanh gò núi trồng nhiều lúa;",
+          "bbox": [
+            857,
+            2123,
+            1718,
+            2176
+          ],
+          "confidence": 94.61
+        },
+        {
+          "text": "Núi chăng trúc tre moc lắm thông.",
+          "bbox": [
+            856,
+            2211,
+            1888,
+            2255
+          ],
+          "confidence": 91.24
+        },
+        {
+          "text": "Nhà ở trát bùn dương vây cá;",
+          "bbox": [
+            856,
+            2298,
+            1535,
+            2342
+          ],
+          "confidence": 88.82
+        },
+        {
+          "text": "Phuc trang thôn đã tóc cài trâm.",
+          "bbox": [
+            857,
+            2385,
+            1604,
+            2429
+          ],
+          "confidence": 91.1
+        },
+        {
+          "text": "Ngó nhìn xe sứ, đưa tay chỉ,",
+          "bbox": [
+            856,
+            2471,
+            1501,
+            2515
+          ],
+          "confidence": 93.36
+        },
+        {
+          "text": "Tiếng nói liu lo, tỏ ý thân.",
+          "bbox": [
+            861,
+            2557,
+            1453,
+            2601
+          ],
+          "confidence": 88.22
+        },
+        {
+          "text": "Làm Giang",
+          "bbox": [
+            1822,
+            2658,
+            2095,
+            2689
+          ],
+          "confidence": 98.9
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2608,
+          3047
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 39.836,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              7,
+              19,
+              1033,
+              45
+            ],
+            "generated_text": "ngothinhamle1.pdf",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.971,
+            "confidence": 94.88,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              1632,
+              197,
+              2096,
+              235
+            ],
+            "generated_text": "HOÀNG HOÀ ĐỔ PHA",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.073,
+            "confidence": 81.53,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              389,
+              241,
+              2101,
+              254
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.457,
+            "confidence": 28.91,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              766,
+              363,
+              1695,
+              409
+            ],
+            "generated_text": "Từ xưa Việt Tây thuộc bờ cõi Uất Lâm, (2)",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.777,
+            "confidence": 89.52,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              767,
+              450,
+              2003,
+              502
+            ],
+            "generated_text": "Đường vào Côn Lôn, người Hán ở lãn với người Nùng.",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.611,
+            "confidence": 94.75,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              767,
+              537,
+              1824,
+              589
+            ],
+            "generated_text": "Ruộng khuất sau gò, phần nhiều trồng lúa;",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.499,
+            "confidence": 94.38,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              768,
+              624,
+              1715,
+              669
+            ],
+            "generated_text": "Núi không tre trúc, một nửa trông thông.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.431,
+            "confidence": 94.06,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              768,
+              711,
+              1850,
+              757
+            ],
+            "generated_text": "Dương lên như đuôi cá, chái nhà nông trát đất;",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.787,
+            "confidence": 95.88,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              767,
+              800,
+              1805,
+              852
+            ],
+            "generated_text": "Trâm cài tóc bòm ngụa, trang phục thôn quê.",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.858,
+            "confidence": 91.67,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              768,
+              885,
+              1688,
+              937
+            ],
+            "generated_text": "Kiệu sứ chợt đến, cùng ngó nhìn chỉ trỏ,",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.575,
+            "confidence": 89.19,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              767,
+              972,
+              1696,
+              1018
+            ],
+            "generated_text": "Vui vẻ gát đâu chào, tiếng nói khó nghe.",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.572,
+            "confidence": 89.86,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              386,
+              1085,
+              1877,
+              1124
+            ],
+            "generated_text": "KHAO DI:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.727,
+            "confidence": 96.88,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              535,
+              1160,
+              1575,
+              1207
+            ],
+            "generated_text": "a. Bản A.117c/1: Nguyên cương 原崗.",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 2.008,
+            "confidence": 94.54,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              536,
+              1238,
+              1213,
+              1286
+            ],
+            "generated_text": "Bản A.1579: Động nguyên ㎛原.",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.544,
+            "confidence": 81.76,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              534,
+              1315,
+              1139,
+              1360
+            ],
+            "generated_text": "b. Bản A.404: Thực đạo 植稻.",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.656,
+            "confidence": 97.49,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              390,
+              1427,
+              1109,
+              1466
+            ],
+            "generated_text": "CHU THICH:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.707,
+            "confidence": 98.6,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              541,
+              1506,
+              2094,
+              1555
+            ],
+            "generated_text": "1.Côn Lôn: Tức dày Côn Lôn. Đường bộ từ Nam Ninh đi Quế Lâm phải",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 2.301,
+            "confidence": 88.41,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              389,
+              1601,
+              748,
+              1632
+            ],
+            "generated_text": "qua dây núi này.",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.841,
+            "confidence": 81.1,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              539,
+              1670,
+              1389,
+              1721
+            ],
+            "generated_text": "2.Uất Lâm: Một quận thuộc Quảng Tây.",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.499,
+            "confidence": 92.99,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              536,
+              1754,
+              1300,
+              1796
+            ],
+            "generated_text": "Việt Tây: Xem chủ thích số 1 bài 22.",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.526,
+            "confidence": 96.94,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              389,
+              1868,
+              643,
+              1907
+            ],
+            "generated_text": "DICH THO:",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.664,
+            "confidence": 93.83,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              861,
+              1947,
+              1563,
+              1992
+            ],
+            "generated_text": "Tư cố Việt Tây thuộc Uất Lâm,",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.192,
+            "confidence": 86.83,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              856,
+              2035,
+              1581,
+              2080
+            ],
+            "generated_text": "Dân cụ phần lớn Hán và Nùng.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.134,
+            "confidence": 90.85,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              857,
+              2123,
+              1718,
+              2176
+            ],
+            "generated_text": "Ruộng quanh gò núi trồng nhiều lúa;",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.297,
+            "confidence": 94.61,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              856,
+              2211,
+              1888,
+              2255
+            ],
+            "generated_text": "Núi chăng trúc tre moc lắm thông.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.397,
+            "confidence": 91.24,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              856,
+              2298,
+              1535,
+              2342
+            ],
+            "generated_text": "Nhà ở trát bùn dương vây cá;",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.161,
+            "confidence": 88.82,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              857,
+              2385,
+              1604,
+              2429
+            ],
+            "generated_text": "Phuc trang thôn đã tóc cài trâm.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.198,
+            "confidence": 91.1,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              856,
+              2471,
+              1501,
+              2515
+            ],
+            "generated_text": "Ngó nhìn xe sứ, đưa tay chỉ,",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.337,
+            "confidence": 93.36,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              861,
+              2557,
+              1453,
+              2601
+            ],
+            "generated_text": "Tiếng nói liu lo, tỏ ý thân.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.363,
+            "confidence": 88.22,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              1822,
+              2658,
+              2095,
+              2689
+            ],
+            "generated_text": "Làm Giang",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.668,
+            "confidence": 98.9,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              985,
+              665,
+              1700,
+              677
+            ],
+            "ink": 338
+          },
+          {
+            "box": [
+              895,
+              754,
+              1847,
+              763
+            ],
+            "ink": 196
+          },
+          {
+            "box": [
+              932,
+              1014,
+              1625,
+              1025
+            ],
+            "ink": 288
+          },
+          {
+            "box": [
+              1830,
+              2647,
+              2004,
+              2656
+            ],
+            "ink": 209
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

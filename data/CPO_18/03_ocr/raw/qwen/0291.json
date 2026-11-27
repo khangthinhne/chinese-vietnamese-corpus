@@ -1,0 +1,315 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_18",
+  "engine": "qwen",
+  "page": 291,
+  "runs": [
+    {
+      "key": "52204b49c42da8592d20f7338da81131f71d8602277447b2e200004dc1e9ed93",
+      "parameters": {
+        "image_sha256": "ab50a90eafbf055d712f24694301d8e179ca1e270de5ddcc6801c343ad672321",
+        "engine": {
+          "name": "qwen",
+          "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "model_revision": "main",
+          "transformers_version": "4.57.6",
+          "torch_version": "2.5.1+cu121",
+          "cuda_version": "12.1",
+          "bitsandbytes_version": "0.50.2",
+          "quantization": {
+            "load_in_4bit": true,
+            "quant_type": "nf4",
+            "double_quant": true,
+            "compute_dtype": "float16"
+          },
+          "mode": "all",
+          "min_pixels": 50176,
+          "max_pixels": 802816,
+          "band_inches": 2.0,
+          "max_new_tokens": 768,
+          "repetition_penalty": 1.05,
+          "adapter_version": 3,
+          "prompt_version": 3,
+          "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74"
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T19:52:42+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_291.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        0,
+        2480,
+        3509
+      ],
+      "lines": [
+        {
+          "text": "Phần II: Nguyên văn tác phẩm dịch và chú thích",
+          "bbox": [
+            53,
+            0,
+            2209,
+            281
+          ],
+          "confidence": 87.44
+        },
+        {
+          "text": "xưng không 稱空 thì mới hiệp vẫn được trong bài mình. Ở đây đã chữa lại.",
+          "bbox": [
+            53,
+            281,
+            2209,
+            562
+          ],
+          "confidence": 87.44
+        },
+        {
+          "text": "(17) Bản A và Bản B: 言 có lẽ là chữ uất鬱, tạm chua lại, chờ cứu thêm.",
+          "bbox": [
+            296,
+            586,
+            2204,
+            750
+          ],
+          "confidence": 81.69
+        },
+        {
+          "text": "(18) Bản A: dục欲; Bản B: 欲.",
+          "bbox": [
+            296,
+            750,
+            2204,
+            914
+          ],
+          "confidence": 81.69
+        },
+        {
+          "text": "(19) Bản A: kiến 峭; Bản B: 峭. Phải là kiến thì mới ghép được với chữ sản 峭 tiếp sau đó để thành một.",
+          "bbox": [
+            296,
+            914,
+            2204,
+            1078
+          ],
+          "confidence": 81.69
+        },
+        {
+          "text": "(20) Bản A: lưu留; Bản B: lưu溜 (nghĩa không hợp ngữ cảnh).",
+          "bbox": [
+            295,
+            1090,
+            2209,
+            1370
+          ],
+          "confidence": 88.31
+        },
+        {
+          "text": "[UNCLEAR]",
+          "bbox": [
+            477,
+            1514,
+            575,
+            1554
+          ],
+          "confidence": 61.55
+        },
+        {
+          "text": "pouy",
+          "bbox": [
+            54,
+            1817,
+            518,
+            1981
+          ],
+          "confidence": 12.44
+        },
+        {
+          "text": "rue",
+          "bbox": [
+            54,
+            1981,
+            518,
+            2146
+          ],
+          "confidence": 12.44
+        },
+        {
+          "text": "x",
+          "bbox": [
+            2402,
+            2953,
+            2448,
+            2995
+          ],
+          "confidence": 44.54
+        },
+        {
+          "text": "271",
+          "bbox": [
+            43,
+            2987,
+            2476,
+            3509
+          ],
+          "confidence": 73.56
+        }
+      ],
+      "raw": {
+        "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+        "model_revision": "main",
+        "mode": "all",
+        "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          3509
+        ],
+        "band_target_height": 600,
+        "bbox_granularity": "band_even_split",
+        "max_new_tokens": 768,
+        "max_pixels": 802816,
+        "inference_seconds": 13.025,
+        "bands": [
+          {
+            "band": 1,
+            "y0": 0,
+            "y1": 574,
+            "ink_box": [
+              53,
+              0,
+              2209,
+              562
+            ],
+            "generated_text": "Phần II: Nguyên văn tác phẩm dịch và chú thích\n\nxưng không 稱空 thì mới hiệp vẫn được trong bài mình. Ở đây đã chữa lại.",
+            "n_lines": 2,
+            "tokens": 37,
+            "seconds": 2.803,
+            "confidence": 87.44,
+            "flags": []
+          },
+          {
+            "band": 2,
+            "y0": 574,
+            "y1": 1084,
+            "ink_box": [
+              296,
+              586,
+              2204,
+              1078
+            ],
+            "generated_text": "(17) Bản A và Bản B: 言 có lẽ là chữ uất鬱, tạm chua lại, chờ cứu thêm.\n(18) Bản A: dục欲; Bản B: 欲.\n(19) Bản A: kiến 峭; Bản B: 峭. Phải là kiến thì mới ghép được với chữ sản 峭 tiếp sau đó để thành một.",
+            "n_lines": 3,
+            "tokens": 91,
+            "seconds": 6.309,
+            "confidence": 81.69,
+            "flags": []
+          },
+          {
+            "band": 3,
+            "y0": 1084,
+            "y1": 1456,
+            "ink_box": [
+              295,
+              1090,
+              2209,
+              1370
+            ],
+            "generated_text": "(20) Bản A: lưu留; Bản B: lưu溜 (nghĩa không hợp ngữ cảnh).",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 1.957,
+            "confidence": 88.31,
+            "flags": []
+          },
+          {
+            "band": 4,
+            "y0": 1456,
+            "y1": 1686,
+            "ink_box": [
+              477,
+              1514,
+              575,
+              1554
+            ],
+            "generated_text": "[UNCLEAR]",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.427,
+            "confidence": 61.55,
+            "flags": []
+          },
+          {
+            "band": 5,
+            "y0": 1686,
+            "y1": 2391,
+            "ink_box": [
+              54,
+              1817,
+              518,
+              2146
+            ],
+            "generated_text": "pouy\nrue",
+            "n_lines": 2,
+            "tokens": 7,
+            "seconds": 0.573,
+            "confidence": 12.44,
+            "flags": []
+          },
+          {
+            "band": 6,
+            "y0": 2391,
+            "y1": 2991,
+            "ink_box": [
+              2402,
+              2953,
+              2448,
+              2995
+            ],
+            "generated_text": "x",
+            "n_lines": 1,
+            "tokens": 2,
+            "seconds": 0.232,
+            "confidence": 44.54,
+            "flags": []
+          },
+          {
+            "band": 7,
+            "y0": 2991,
+            "y1": 3509,
+            "ink_box": [
+              43,
+              2987,
+              2476,
+              3509
+            ],
+            "generated_text": "271",
+            "n_lines": 1,
+            "tokens": 4,
+            "seconds": 0.69,
+            "confidence": 73.56,
+            "flags": []
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "61cbea5c0055c260ccfc12f884e0febca7b2783b",
+        "git_describe": "61cbea5",
+        "git_dirty": true,
+        "gpu": "NVIDIA L4",
+        "dtype": "float16",
+        "adapter_version": 3
+      }
+    }
+  ]
+}

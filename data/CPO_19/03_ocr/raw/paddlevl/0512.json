@@ -1,0 +1,1057 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 512,
+  "runs": [
+    {
+      "key": "8b1e86c8b48729878877de0ad1fec0f759857163816acaa1db93be32ae2a857b",
+      "parameters": {
+        "image_sha256": "3f0c816ffd1a514d33ffcc5a674054e1f24558aba36b8fe6f99bc4c8d901a7d7",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T17:36:47+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_512.png",
+      "image_size": [
+        2594,
+        3221
+      ],
+      "crop_box": [
+        0,
+        0,
+        2594,
+        3221
+      ],
+      "lines": [
+        {
+          "text": "ngothinhamle1.pdf",
+          "bbox": [
+            7,
+            19,
+            286,
+            45
+          ],
+          "confidence": 96.3
+        },
+        {
+          "text": "BANG GIAO HAO THOAI",
+          "bbox": [
+            1591,
+            191,
+            2109,
+            230
+          ],
+          "confidence": 99.54
+        },
+        {
+          "text": "Bộc sở mưu viết: Giao Nam hoang phục, thô hiệu Trung Quốc lễ",
+          "bbox": [
+            563,
+            294,
+            2110,
+            346
+          ],
+          "confidence": 93.07
+        },
+        {
+          "text": "văn chi giáo, vô ninh dĩ nghi hô pháp? Bất việt cảnh vị nặng tham yết",
+          "bbox": [
+            405,
+            371,
+            2111,
+            424
+          ],
+          "confidence": 85.87
+        },
+        {
+          "text": "quân tiến, tức nhất giới bộ tê bất túc dĩ ngôn báo đã.",
+          "bbox": [
+            404,
+            447,
+            1607,
+            495
+          ],
+          "confidence": 82.94
+        },
+        {
+          "text": "Phản phúc tự chi, Đại nhân thinh đức sở dĩ gia hướng ư bộc bất",
+          "bbox": [
+            550,
+            528,
+            2111,
+            573
+          ],
+          "confidence": 88.08
+        },
+        {
+          "text": "thiển. Duy phụng thành mô tuân hầu đặc cung thuận bất thất dĩ sự",
+          "bbox": [
+            405,
+            605,
+            2115,
+            656
+          ],
+          "confidence": 90.61
+        },
+        {
+          "text": "thương, kỳ kính phỉ giải, dĩ thủ bang kỳ, vô phụ Đại Hoàng đế phong",
+          "bbox": [
+            406,
+            680,
+            2113,
+            737
+          ],
+          "confidence": 92.56
+        },
+        {
+          "text": "thực chi nhân, thiếu thù tôn Đại nhân bang phù chi thinh ý, thú dĩ báo",
+          "bbox": [
+            406,
+            761,
+            2111,
+            807
+          ],
+          "confidence": 90.67
+        },
+        {
+          "text": "nhân nhân nhĩ. Nhân mệnh nội thư gia phỏng cố Nhạc phủ, ký tụng công",
+          "bbox": [
+            406,
+            838,
+            2113,
+            892
+          ],
+          "confidence": 90.88
+        },
+        {
+          "text": "dục chi tư viết:",
+          "bbox": [
+            406,
+            931,
+            754,
+            962
+          ],
+          "confidence": 67.16
+        },
+        {
+          "text": "Giao chi sơn hữu Tần Viên,",
+          "bbox": [
+            555,
+            995,
+            1184,
+            1039
+          ],
+          "confidence": 92.32
+        },
+        {
+          "text": "Thach lân tuân kỳ ma huyên.",
+          "bbox": [
+            556,
+            1072,
+            1231,
+            1115
+          ],
+          "confidence": 84.45
+        },
+        {
+          "text": "Đai nhân khai hộ quan dĩ ninh biên,",
+          "bbox": [
+            566,
+            1149,
+            1418,
+            1193
+          ],
+          "confidence": 84.0
+        },
+        {
+          "text": "Nap ha áp ức van gia vu quan huyện.",
+          "bbox": [
+            552,
+            1238,
+            1419,
+            1271
+          ],
+          "confidence": 91.61
+        },
+        {
+          "text": "Thủ kỳ công dũ sơn tac kỳ cao kiên.",
+          "bbox": [
+            557,
+            1305,
+            1364,
+            1348
+          ],
+          "confidence": 92.66
+        },
+        {
+          "text": "Giao chi hải hữu Tư Dung,",
+          "bbox": [
+            570,
+            1382,
+            1192,
+            1426
+          ],
+          "confidence": 90.95
+        },
+        {
+          "text": "Thuỷ bánh bái kỳ liên không.",
+          "bbox": [
+            557,
+            1460,
+            2157,
+            1504
+          ],
+          "confidence": 89.97
+        },
+        {
+          "text": "Đai nhân thiếp kinh tấm dĩ triều đông,",
+          "bbox": [
+            553,
+            1537,
+            1455,
+            1581
+          ],
+          "confidence": 79.81
+        },
+        {
+          "text": "Điện tần bang ức van niên chi phi hồng.",
+          "bbox": [
+            554,
+            1616,
+            1476,
+            1659
+          ],
+          "confidence": 86.63
+        },
+        {
+          "text": "Thủ kỳ đức dũ hải tương vi xung dung.",
+          "bbox": [
+            558,
+            1694,
+            1455,
+            1738
+          ],
+          "confidence": 87.95
+        },
+        {
+          "text": "Tính thuật vu từ vi Đại nhân thiên lộc bách phúc, tung dao trì xích",
+          "bbox": [
+            558,
+            1771,
+            2111,
+            1817
+          ],
+          "confidence": 92.66
+        },
+        {
+          "text": "trát kinh phung hi vinh.",
+          "bbox": [
+            409,
+            1862,
+            972,
+            1894
+          ],
+          "confidence": 94.17
+        },
+        {
+          "text": "DICH NGHIA:",
+          "bbox": [
+            411,
+            1941,
+            720,
+            1979
+          ],
+          "confidence": 99.0
+        },
+        {
+          "text": "TRINH THANG DAI NHAN",
+          "bbox": [
+            915,
+            2021,
+            1609,
+            2066
+          ],
+          "confidence": 97.95
+        },
+        {
+          "text": "(LÊ PHONG ĐA XONG, ĐỀ THỦ XIN TẠ. QUỐC VƯƠNG THỦ TRÌNH)",
+          "bbox": [
+            486,
+            2111,
+            2039,
+            2155
+          ],
+          "confidence": 90.76
+        },
+        {
+          "text": "Trộm nghe Kinh Dịch nói rằng: “Hạc hót trong bóng dâm, con",
+          "bbox": [
+            559,
+            2239,
+            2112,
+            2292
+          ],
+          "confidence": 92.9
+        },
+        {
+          "text": "của nó hoa theo.” Lời Hê tử của Phu tử nói rằng: “Người quân tử ở",
+          "bbox": [
+            411,
+            2320,
+            2115,
+            2366
+          ],
+          "confidence": 93.22
+        },
+        {
+          "text": "trong nhà nói ra những điều lành, thì ở ngoài nghìn đảm người ta",
+          "bbox": [
+            411,
+            2402,
+            2112,
+            2455
+          ],
+          "confidence": 93.49
+        },
+        {
+          "text": "cũng hướng ứng.” Vì nghe tiếng hót mà tìm nhau, đó là cái lẽ đường",
+          "bbox": [
+            410,
+            2485,
+            2114,
+            2537
+          ],
+          "confidence": 92.17
+        },
+        {
+          "text": "nhiên của loài vật. Lời nói tốt lành cùng ứng với nhau, đó cũng là cái",
+          "bbox": [
+            411,
+            2567,
+            2113,
+            2612
+          ],
+          "confidence": 96.59
+        },
+        {
+          "text": "lẽ đường nhiên của đạo làm người.",
+          "bbox": [
+            410,
+            2649,
+            1235,
+            2693
+          ],
+          "confidence": 86.87
+        },
+        {
+          "text": "Vừa mùa hè năm Mâu Thân, tôi vì tình hình trong nước mà gõ",
+          "bbox": [
+            557,
+            2735,
+            2113,
+            2781
+          ],
+          "confidence": 96.78
+        },
+        {
+          "text": "của ái đê thư, không tha thú cho quan tiền nhiệm Độc bô đường gây ra",
+          "bbox": [
+            410,
+            2816,
+            2112,
+            2862
+          ],
+          "confidence": 78.57
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2594,
+          3221
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 57.325,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              7,
+              19,
+              286,
+              45
+            ],
+            "generated_text": "ngothinhamle1.pdf",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.898,
+            "confidence": 96.3,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              1591,
+              191,
+              2109,
+              230
+            ],
+            "generated_text": "BANG GIAO HAO THOAI",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.966,
+            "confidence": 99.54,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              409,
+              234,
+              2117,
+              252
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.453,
+            "confidence": 49.46,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              563,
+              294,
+              2110,
+              346
+            ],
+            "generated_text": "Bộc sở mưu viết: Giao Nam hoang phục, thô hiệu Trung Quốc lễ",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 1.947,
+            "confidence": 93.07,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              405,
+              371,
+              2111,
+              424
+            ],
+            "generated_text": "văn chi giáo, vô ninh dĩ nghi hô pháp? Bất việt cảnh vị nặng tham yết",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 2.393,
+            "confidence": 85.87,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              404,
+              447,
+              1607,
+              495
+            ],
+            "generated_text": "quân tiến, tức nhất giới bộ tê bất túc dĩ ngôn báo đã.",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.767,
+            "confidence": 82.94,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              550,
+              528,
+              2111,
+              573
+            ],
+            "generated_text": "Phản phúc tự chi, Đại nhân thinh đức sở dĩ gia hướng ư bộc bất",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.149,
+            "confidence": 88.08,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              405,
+              605,
+              2115,
+              656
+            ],
+            "generated_text": "thiển. Duy phụng thành mô tuân hầu đặc cung thuận bất thất dĩ sự",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.252,
+            "confidence": 90.61,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              406,
+              680,
+              2113,
+              737
+            ],
+            "generated_text": "thương, kỳ kính phỉ giải, dĩ thủ bang kỳ, vô phụ Đại Hoàng đế phong",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 2.401,
+            "confidence": 92.56,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              406,
+              761,
+              2111,
+              807
+            ],
+            "generated_text": "thực chi nhân, thiếu thù tôn Đại nhân bang phù chi thinh ý, thú dĩ báo",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 2.328,
+            "confidence": 90.67,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              406,
+              838,
+              2113,
+              892
+            ],
+            "generated_text": "nhân nhân nhĩ. Nhân mệnh nội thư gia phỏng cố Nhạc phủ, ký tụng công",
+            "n_lines": 1,
+            "tokens": 32,
+            "seconds": 2.536,
+            "confidence": 90.88,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              406,
+              931,
+              754,
+              962
+            ],
+            "generated_text": "dục chi tư viết:",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.897,
+            "confidence": 67.16,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              555,
+              995,
+              1184,
+              1039
+            ],
+            "generated_text": "Giao chi sơn hữu Tần Viên,",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.29,
+            "confidence": 92.32,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              556,
+              1072,
+              1231,
+              1115
+            ],
+            "generated_text": "Thach lân tuân kỳ ma huyên.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.088,
+            "confidence": 84.45,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              566,
+              1149,
+              1418,
+              1193
+            ],
+            "generated_text": "Đai nhân khai hộ quan dĩ ninh biên,",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.355,
+            "confidence": 84.0,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              552,
+              1238,
+              1419,
+              1271
+            ],
+            "generated_text": "Nap ha áp ức van gia vu quan huyện.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.229,
+            "confidence": 91.61,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              557,
+              1305,
+              1364,
+              1348
+            ],
+            "generated_text": "Thủ kỳ công dũ sơn tac kỳ cao kiên.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.403,
+            "confidence": 92.66,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              570,
+              1382,
+              1192,
+              1426
+            ],
+            "generated_text": "Giao chi hải hữu Tư Dung,",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.294,
+            "confidence": 90.95,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              557,
+              1460,
+              2157,
+              1504
+            ],
+            "generated_text": "Thuỷ bánh bái kỳ liên không.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.16,
+            "confidence": 89.97,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              553,
+              1537,
+              1455,
+              1581
+            ],
+            "generated_text": "Đai nhân thiếp kinh tấm dĩ triều đông,",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.491,
+            "confidence": 79.81,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              554,
+              1616,
+              1476,
+              1659
+            ],
+            "generated_text": "Điện tần bang ức van niên chi phi hồng.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.43,
+            "confidence": 86.63,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              558,
+              1694,
+              1455,
+              1738
+            ],
+            "generated_text": "Thủ kỳ đức dũ hải tương vi xung dung.",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.555,
+            "confidence": 87.95,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              558,
+              1771,
+              2111,
+              1817
+            ],
+            "generated_text": "Tính thuật vu từ vi Đại nhân thiên lộc bách phúc, tung dao trì xích",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 1.997,
+            "confidence": 92.66,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              409,
+              1862,
+              972,
+              1894
+            ],
+            "generated_text": "trát kinh phung hi vinh.",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.976,
+            "confidence": 94.17,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              411,
+              1941,
+              720,
+              1979
+            ],
+            "generated_text": "DICH NGHIA:",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.759,
+            "confidence": 99.0,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              915,
+              2021,
+              1609,
+              2066
+            ],
+            "generated_text": "TRINH THANG DAI NHAN",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.934,
+            "confidence": 97.95,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              486,
+              2111,
+              2039,
+              2155
+            ],
+            "generated_text": "(LÊ PHONG ĐA XONG, ĐỀ THỦ XIN TẠ. QUỐC VƯƠNG THỦ TRÌNH)",
+            "n_lines": 1,
+            "tokens": 45,
+            "seconds": 3.324,
+            "confidence": 90.76,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              559,
+              2239,
+              2112,
+              2292
+            ],
+            "generated_text": "Trộm nghe Kinh Dịch nói rằng: “Hạc hót trong bóng dâm, con",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.862,
+            "confidence": 92.9,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              411,
+              2320,
+              2115,
+              2366
+            ],
+            "generated_text": "của nó hoa theo.” Lời Hê tử của Phu tử nói rằng: “Người quân tử ở",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 2.319,
+            "confidence": 93.22,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              411,
+              2402,
+              2112,
+              2455
+            ],
+            "generated_text": "trong nhà nói ra những điều lành, thì ở ngoài nghìn đảm người ta",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.834,
+            "confidence": 93.49,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              410,
+              2485,
+              2114,
+              2537
+            ],
+            "generated_text": "cũng hướng ứng.” Vì nghe tiếng hót mà tìm nhau, đó là cái lẽ đường",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 2.116,
+            "confidence": 92.17,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 32,
+            "box": [
+              411,
+              2567,
+              2113,
+              2612
+            ],
+            "generated_text": "nhiên của loài vật. Lời nói tốt lành cùng ứng với nhau, đó cũng là cái",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 2.031,
+            "confidence": 96.59,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 33,
+            "box": [
+              410,
+              2649,
+              1235,
+              2693
+            ],
+            "generated_text": "lẽ đường nhiên của đạo làm người.",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 1.029,
+            "confidence": 86.87,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 34,
+            "box": [
+              557,
+              2735,
+              2113,
+              2781
+            ],
+            "generated_text": "Vừa mùa hè năm Mâu Thân, tôi vì tình hình trong nước mà gõ",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.667,
+            "confidence": 96.78,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 35,
+            "box": [
+              410,
+              2816,
+              2112,
+              2862
+            ],
+            "generated_text": "của ái đê thư, không tha thú cho quan tiền nhiệm Độc bô đường gây ra",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 2.191,
+            "confidence": 78.57,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              694,
+              569,
+              1980,
+              578
+            ],
+            "ink": 307
+          },
+          {
+            "box": [
+              560,
+              1227,
+              1377,
+              1237
+            ],
+            "ink": 408
+          },
+          {
+            "box": [
+              601,
+              1268,
+              1342,
+              1279
+            ],
+            "ink": 364
+          },
+          {
+            "box": [
+              690,
+              1736,
+              1436,
+              1745
+            ],
+            "ink": 266
+          },
+          {
+            "box": [
+              470,
+              1851,
+              949,
+              1860
+            ],
+            "ink": 277
+          },
+          {
+            "box": [
+              812,
+              2609,
+              1957,
+              2618
+            ],
+            "ink": 300
+          },
+          {
+            "box": [
+              609,
+              2858,
+              2031,
+              2869
+            ],
+            "ink": 464
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

@@ -1,0 +1,655 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 432,
+  "runs": [
+    {
+      "key": "74cad591d597ecf46ea339134e4b23d301217115d50a9a252972eba0469db444",
+      "parameters": {
+        "image_sha256": "f504adb6c9deb1cf3da787677c7215ae5cd5d1a05200a2e47e4efc3691e43396",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T16:18:15+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_432.png",
+      "image_size": [
+        2632,
+        3254
+      ],
+      "crop_box": [
+        0,
+        0,
+        2632,
+        3254
+      ],
+      "lines": [
+        {
+          "text": "ngothinhamle1.pdf",
+          "bbox": [
+            7,
+            19,
+            286,
+            45
+          ],
+          "confidence": 96.3
+        },
+        {
+          "text": "BANG GIAO HAO THOAI",
+          "bbox": [
+            1643,
+            252,
+            2162,
+            291
+          ],
+          "confidence": 99.51
+        },
+        {
+          "text": "9. 禀天朝左江道林大人",
+          "bbox": [
+            857,
+            355,
+            2156,
+            424
+          ],
+          "confidence": 96.93
+        },
+        {
+          "text": "（請定夫館供頓事例。昇龍留守官稟）",
+          "bbox": [
+            641,
+            464,
+            1976,
+            537
+          ],
+          "confidence": 98.21
+        },
+        {
+          "text": "茲接諒山鎮目驛回公文一甬，内開奉大人劄示：乾",
+          "bbox": [
+            614,
+            670,
+            2164,
+            734
+          ],
+          "confidence": 91.54
+        },
+        {
+          "text": "隆五十四年七月日，奉爵閣督部堂公來札，欽奉諭旨，封",
+          "bbox": [
+            462,
+            811,
+            2163,
+            875
+          ],
+          "confidence": 99.82
+        },
+        {
+          "text": "本國國長爲安南國王，已派委大員賚遞敕書，前赴本國宣",
+          "bbox": [
+            462,
+            951,
+            2165,
+            1017
+          ],
+          "confidence": 99.28
+        },
+        {
+          "text": "示，計八月上浣，即可到關。沿途需用，公館夫馬，早早備",
+          "bbox": [
+            463,
+            1095,
+            2165,
+            1160
+          ],
+          "confidence": 99.8
+        },
+        {
+          "text": "辨，並查照向來册封典禮，伺候章程。一切事宜，先將列",
+          "bbox": [
+            460,
+            1239,
+            2156,
+            1305
+          ],
+          "confidence": 95.24
+        },
+        {
+          "text": "摺稟呈，得憑查覈等因。卑等捧讀，不勝歡忭。",
+          "bbox": [
+            462,
+            1380,
+            1943,
+            1446
+          ],
+          "confidence": 98.97
+        },
+        {
+          "text": "見茲國長，新建邑于乂安，委卑等留守昇龍，謹已",
+          "bbox": [
+            617,
+            1523,
+            2157,
+            1589
+          ],
+          "confidence": 98.34
+        },
+        {
+          "text": "馳驛啓知。第雨潦連旬，往返約至月餘，且本國經亂之",
+          "bbox": [
+            458,
+            1657,
+            2163,
+            1722
+          ],
+          "confidence": 99.76
+        },
+        {
+          "text": "後，自富良江以北，邑里蕭條，諒山尤爲灌莽。奉照故",
+          "bbox": [
+            461,
+            1792,
+            2162,
+            1857
+          ],
+          "confidence": 99.69
+        },
+        {
+          "text": "例，北諒二鎮沿途，並有公館，及需用物件，卑等謹已便",
+          "bbox": [
+            461,
+            1927,
+            2162,
+            1993
+          ],
+          "confidence": 99.39
+        },
+        {
+          "text": "宜，飭該鎮目，遵奉理作，惟恐日期太捉，勢難一一整",
+          "bbox": [
+            462,
+            2061,
+            2160,
+            2129
+          ],
+          "confidence": 99.54
+        },
+        {
+          "text": "齊。至於驛遞夫馬，奉以派別鎮人來，侯奉迎接。倘或",
+          "bbox": [
+            461,
+            2194,
+            2159,
+            2261
+          ],
+          "confidence": 99.15
+        },
+        {
+          "text": "勢力不敷，至有零星曠缺之處，寔由心與力違，卒難理",
+          "bbox": [
+            460,
+            2329,
+            2160,
+            2396
+          ],
+          "confidence": 99.7
+        },
+        {
+          "text": "會，如奉列摺稟呈，侯查依例遵行。竊憑當今事勢不及",
+          "bbox": [
+            460,
+            2463,
+            2159,
+            2530
+          ],
+          "confidence": 99.83
+        },
+        {
+          "text": "向來十之二三，卑等恐懼爾深，輒敢預先叩達，耑望體",
+          "bbox": [
+            462,
+            2598,
+            2178,
+            2667
+          ],
+          "confidence": 99.52
+        },
+        {
+          "text": "悉遠情，轉呈制憲大人垂諒，從中酌定牌示，一切事宜，",
+          "bbox": [
+            463,
+            2732,
+            2135,
+            2798
+          ],
+          "confidence": 99.94
+        },
+        {
+          "text": "俾得遵奉照辨，庶免率略之咎，感佩無既矣。",
+          "bbox": [
+            458,
+            2865,
+            1909,
+            2931
+          ],
+          "confidence": 99.84
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2632,
+          3254
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 42.481,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              7,
+              19,
+              286,
+              45
+            ],
+            "generated_text": "ngothinhamle1.pdf",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.891,
+            "confidence": 96.3,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              1643,
+              252,
+              2162,
+              291
+            ],
+            "generated_text": "BANG GIAO HAO THOAI",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.965,
+            "confidence": 99.51,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              463,
+              296,
+              2170,
+              309
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.455,
+            "confidence": 15.43,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              857,
+              355,
+              2156,
+              424
+            ],
+            "generated_text": "9. 禀天朝左江道林大人",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.216,
+            "confidence": 96.93,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              641,
+              464,
+              1976,
+              537
+            ],
+            "generated_text": "（請定夫館供頓事例。昇龍留守官稟）",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.963,
+            "confidence": 98.21,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              614,
+              670,
+              2164,
+              734
+            ],
+            "generated_text": "茲接諒山鎮目驛回公文一甬，内開奉大人劄示：乾",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 2.27,
+            "confidence": 91.54,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              462,
+              811,
+              2163,
+              875
+            ],
+            "generated_text": "隆五十四年七月日，奉爵閣督部堂公來札，欽奉諭旨，封",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 2.251,
+            "confidence": 99.82,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              462,
+              951,
+              2165,
+              1017
+            ],
+            "generated_text": "本國國長爲安南國王，已派委大員賚遞敕書，前赴本國宣",
+            "n_lines": 1,
+            "tokens": 32,
+            "seconds": 2.356,
+            "confidence": 99.28,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              463,
+              1095,
+              2165,
+              1160
+            ],
+            "generated_text": "示，計八月上浣，即可到關。沿途需用，公館夫馬，早早備",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 1.993,
+            "confidence": 99.8,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              460,
+              1239,
+              2156,
+              1305
+            ],
+            "generated_text": "辨，並查照向來册封典禮，伺候章程。一切事宜，先將列",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.73,
+            "confidence": 95.24,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              462,
+              1380,
+              1943,
+              1446
+            ],
+            "generated_text": "摺稟呈，得憑查覈等因。卑等捧讀，不勝歡忭。",
+            "n_lines": 1,
+            "tokens": 32,
+            "seconds": 2.299,
+            "confidence": 98.97,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              617,
+              1523,
+              2157,
+              1589
+            ],
+            "generated_text": "見茲國長，新建邑于乂安，委卑等留守昇龍，謹已",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 2.128,
+            "confidence": 98.34,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              458,
+              1657,
+              2163,
+              1722
+            ],
+            "generated_text": "馳驛啓知。第雨潦連旬，往返約至月餘，且本國經亂之",
+            "n_lines": 1,
+            "tokens": 36,
+            "seconds": 2.67,
+            "confidence": 99.76,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              461,
+              1792,
+              2162,
+              1857
+            ],
+            "generated_text": "後，自富良江以北，邑里蕭條，諒山尤爲灌莽。奉照故",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 2.183,
+            "confidence": 99.69,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              461,
+              1927,
+              2162,
+              1993
+            ],
+            "generated_text": "例，北諒二鎮沿途，並有公館，及需用物件，卑等謹已便",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 2.171,
+            "confidence": 99.39,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              462,
+              2061,
+              2160,
+              2129
+            ],
+            "generated_text": "宜，飭該鎮目，遵奉理作，惟恐日期太捉，勢難一一整",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 1.9,
+            "confidence": 99.54,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              461,
+              2194,
+              2159,
+              2261
+            ],
+            "generated_text": "齊。至於驛遞夫馬，奉以派別鎮人來，侯奉迎接。倘或",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.108,
+            "confidence": 99.15,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              460,
+              2329,
+              2160,
+              2396
+            ],
+            "generated_text": "勢力不敷，至有零星曠缺之處，寔由心與力違，卒難理",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 2.311,
+            "confidence": 99.7,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              460,
+              2463,
+              2159,
+              2530
+            ],
+            "generated_text": "會，如奉列摺稟呈，侯查依例遵行。竊憑當今事勢不及",
+            "n_lines": 1,
+            "tokens": 32,
+            "seconds": 2.381,
+            "confidence": 99.83,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              462,
+              2598,
+              2178,
+              2667
+            ],
+            "generated_text": "向來十之二三，卑等恐懼爾深，輒敢預先叩達，耑望體",
+            "n_lines": 1,
+            "tokens": 32,
+            "seconds": 2.338,
+            "confidence": 99.52,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              463,
+              2732,
+              2135,
+              2798
+            ],
+            "generated_text": "悉遠情，轉呈制憲大人垂諒，從中酌定牌示，一切事宜，",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 2.044,
+            "confidence": 99.94,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              458,
+              2865,
+              1909,
+              2931
+            ],
+            "generated_text": "俾得遵奉照辨，庶免率略之咎，感佩無既矣。",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 1.858,
+            "confidence": 99.84,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

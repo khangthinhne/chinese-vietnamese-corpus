@@ -1,0 +1,953 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 75,
+  "runs": [
+    {
+      "key": "f1cb9d6a9aff19f221ad18cd90f807c77f72dea96e16faa1d99ac629b05526b1",
+      "parameters": {
+        "image_sha256": "ec4e978f878e4bdf04ddddc27660123bc63764505b9b49d29f4c845aac377e1f",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T11:57:06+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_075.png",
+      "image_size": [
+        2599,
+        3224
+      ],
+      "crop_box": [
+        0,
+        0,
+        2599,
+        3224
+      ],
+      "lines": [
+        {
+          "text": "ngothinhamch1.pdf",
+          "bbox": [
+            7,
+            19,
+            296,
+            45
+          ],
+          "confidence": 98.71
+        },
+        {
+          "text": "NGO THI NHAM TOAN TAP - TAP III",
+          "bbox": [
+            505,
+            191,
+            1277,
+            230
+          ],
+          "confidence": 90.9
+        },
+        {
+          "text": "DICH NGHIA:",
+          "bbox": [
+            505,
+            302,
+            814,
+            341
+          ],
+          "confidence": 98.4
+        },
+        {
+          "text": "THÁC NGŨ HIỂM (HAI BÀI)",
+          "bbox": [
+            1005,
+            376,
+            1706,
+            421
+          ],
+          "confidence": 90.64
+        },
+        {
+          "text": "Nơi binh mã Phuc Ba qua sông kéo tối,",
+          "bbox": [
+            887,
+            597,
+            1817,
+            642
+          ],
+          "confidence": 78.24
+        },
+        {
+          "text": "Nay hoá thành cát nổi đầy bến sông xanh.",
+          "bbox": [
+            886,
+            679,
+            1858,
+            724
+          ],
+          "confidence": 91.45
+        },
+        {
+          "text": "Tuyết bay bên bỏ như ảnh gươm ngồi sáng;",
+          "bbox": [
+            886,
+            758,
+            1880,
+            805
+          ],
+          "confidence": 89.62
+        },
+        {
+          "text": "Sấm gầm lòng suối tựa tiếng pháo vang.",
+          "bbox": [
+            473,
+            838,
+            2100,
+            883
+          ],
+          "confidence": 87.21
+        },
+        {
+          "text": "Mối hàn Dâm Đảm, cá hà đồn còn nơ; (2)",
+          "bbox": [
+            886,
+            917,
+            1795,
+            961
+          ],
+          "confidence": 87.39
+        },
+        {
+          "text": "Chỏ ý dĩ về, (3) chim núi văn còn kêu.",
+          "bbox": [
+            889,
+            996,
+            1715,
+            1040
+          ],
+          "confidence": 85.91
+        },
+        {
+          "text": "Thác Khôi Kính, hành nhân nhân thường qua lại,",
+          "bbox": [
+            886,
+            1074,
+            1902,
+            1119
+          ],
+          "confidence": 87.08
+        },
+        {
+          "text": "Bởi nhớ ông, tro tiên giấy chất đầy.",
+          "bbox": [
+            888,
+            1152,
+            1694,
+            1196
+          ],
+          "confidence": 87.06
+        },
+        {
+          "text": "KHAO DI:",
+          "bbox": [
+            507,
+            1233,
+            726,
+            1271
+          ],
+          "confidence": 89.86
+        },
+        {
+          "text": "a. Bản A.1579: Dũng xuất 浄出.",
+          "bbox": [
+            654,
+            1304,
+            1314,
+            1346
+          ],
+          "confidence": 81.76
+        },
+        {
+          "text": "NGUYÊN CHU:",
+          "bbox": [
+            506,
+            1406,
+            841,
+            1446
+          ],
+          "confidence": 87.92
+        },
+        {
+          "text": "A. Thác ở địa giới Hoành Châu, bên thác có miếu thờ Phuc Ba. Thác Khối",
+          "bbox": [
+            443,
+            1478,
+            2214,
+            1521
+          ],
+          "confidence": 89.67
+        },
+        {
+          "text": "Kính là thác đúng đầu trong năm thác hiểm, ở ngang bỏ sông trước miếu thờ.",
+          "bbox": [
+            507,
+            1552,
+            2135,
+            1602
+          ],
+          "confidence": 94.31
+        },
+        {
+          "text": "CHU THICH:",
+          "bbox": [
+            508,
+            1655,
+            1588,
+            1694
+          ],
+          "confidence": 93.37
+        },
+        {
+          "text": "1.Phuc Ba: Túc Mã Viên, (Xem chủ thích số 1 bài 17).",
+          "bbox": [
+            660,
+            1726,
+            1779,
+            1768
+          ],
+          "confidence": 93.19
+        },
+        {
+          "text": "2. Dâm Đảm: Tên xưa của hồ Tây. Tương truyền, Mã Viện đóng quân ở",
+          "bbox": [
+            657,
+            1799,
+            2213,
+            1843
+          ],
+          "confidence": 88.27
+        },
+        {
+          "text": "Lăng Bac, tức Đảm Đàm.",
+          "bbox": [
+            506,
+            1877,
+            1045,
+            1918
+          ],
+          "confidence": 78.28
+        },
+        {
+          "text": "Cá hà đôn: Là loài cá miệng nhỏ bụng to, không vây, lưng xanh nhạt,",
+          "bbox": [
+            659,
+            1950,
+            2211,
+            1999
+          ],
+          "confidence": 92.48
+        },
+        {
+          "text": "bụng trắng, cá độc, người ăn phải thương bị chết. Câu này chưa hiểu diễn cổ.",
+          "bbox": [
+            507,
+            2024,
+            2125,
+            2074
+          ],
+          "confidence": 89.56
+        },
+        {
+          "text": "3.Chổ ý dĩ: Xem chủ thích số 4 bài số 1.",
+          "bbox": [
+            659,
+            2099,
+            1482,
+            2141
+          ],
+          "confidence": 89.17
+        },
+        {
+          "text": "つへせー",
+          "bbox": [
+            1181,
+            2236,
+            1499,
+            2260
+          ],
+          "confidence": 81.97
+        },
+        {
+          "text": "五〇. 共一",
+          "bbox": [
+            1181,
+            2273,
+            1761,
+            2297
+          ],
+          "confidence": 50.17
+        },
+        {
+          "text": "人言五險上來難",
+          "bbox": [
+            1038,
+            2430,
+            1906,
+            2485
+          ],
+          "confidence": 98.13
+        },
+        {
+          "text": "我上來辰仔細看",
+          "bbox": [
+            1041,
+            2559,
+            1628,
+            2617
+          ],
+          "confidence": 95.23
+        },
+        {
+          "text": "搏兔隱隆三片石",
+          "bbox": [
+            1040,
+            2690,
+            1627,
+            2751
+          ],
+          "confidence": 94.17
+        },
+        {
+          "text": "掛蛇噴激雨條湍",
+          "bbox": [
+            1040,
+            2821,
+            1873,
+            2881
+          ],
+          "confidence": 96.51
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2599,
+          3224
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 44.559,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              7,
+              19,
+              296,
+              45
+            ],
+            "generated_text": "ngothinhamch1.pdf",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.925,
+            "confidence": 98.71,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              505,
+              191,
+              1277,
+              230
+            ],
+            "generated_text": "NGO THI NHAM TOAN TAP - TAP III",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.259,
+            "confidence": 90.9,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              508,
+              236,
+              2217,
+              249
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.459,
+            "confidence": 72.77,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              505,
+              302,
+              814,
+              341
+            ],
+            "generated_text": "DICH NGHIA:",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.766,
+            "confidence": 98.4,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              1005,
+              376,
+              1706,
+              421
+            ],
+            "generated_text": "THÁC NGŨ HIỂM (HAI BÀI)",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.486,
+            "confidence": 90.64,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              887,
+              597,
+              1817,
+              642
+            ],
+            "generated_text": "Nơi binh mã Phuc Ba qua sông kéo tối,",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.514,
+            "confidence": 78.24,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              886,
+              679,
+              1858,
+              724
+            ],
+            "generated_text": "Nay hoá thành cát nổi đầy bến sông xanh.",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.742,
+            "confidence": 91.45,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              886,
+              758,
+              1880,
+              805
+            ],
+            "generated_text": "Tuyết bay bên bỏ như ảnh gươm ngồi sáng;",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.599,
+            "confidence": 89.62,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              473,
+              838,
+              2100,
+              883
+            ],
+            "generated_text": "Sấm gầm lòng suối tựa tiếng pháo vang.",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.503,
+            "confidence": 87.21,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              886,
+              917,
+              1795,
+              961
+            ],
+            "generated_text": "Mối hàn Dâm Đảm, cá hà đồn còn nơ; (2)",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.871,
+            "confidence": 87.39,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              889,
+              996,
+              1715,
+              1040
+            ],
+            "generated_text": "Chỏ ý dĩ về, (3) chim núi văn còn kêu.",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.623,
+            "confidence": 85.91,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              886,
+              1074,
+              1902,
+              1119
+            ],
+            "generated_text": "Thác Khôi Kính, hành nhân nhân thường qua lại,",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.415,
+            "confidence": 87.08,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              888,
+              1152,
+              1694,
+              1196
+            ],
+            "generated_text": "Bởi nhớ ông, tro tiên giấy chất đầy.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.426,
+            "confidence": 87.06,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              507,
+              1233,
+              726,
+              1271
+            ],
+            "generated_text": "KHAO DI:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.7,
+            "confidence": 89.86,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              654,
+              1304,
+              1314,
+              1346
+            ],
+            "generated_text": "a. Bản A.1579: Dũng xuất 浄出.",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.6,
+            "confidence": 81.76,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              506,
+              1406,
+              841,
+              1446
+            ],
+            "generated_text": "NGUYÊN CHU:",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.892,
+            "confidence": 87.92,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              443,
+              1478,
+              2214,
+              1521
+            ],
+            "generated_text": "A. Thác ở địa giới Hoành Châu, bên thác có miếu thờ Phuc Ba. Thác Khối",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 2.548,
+            "confidence": 89.67,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              507,
+              1552,
+              2135,
+              1602
+            ],
+            "generated_text": "Kính là thác đúng đầu trong năm thác hiểm, ở ngang bỏ sông trước miếu thờ.",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 2.281,
+            "confidence": 94.31,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              508,
+              1655,
+              1588,
+              1694
+            ],
+            "generated_text": "CHU THICH:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.793,
+            "confidence": 93.37,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              660,
+              1726,
+              1779,
+              1768
+            ],
+            "generated_text": "1.Phuc Ba: Túc Mã Viên, (Xem chủ thích số 1 bài 17).",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.383,
+            "confidence": 93.19,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              657,
+              1799,
+              2213,
+              1843
+            ],
+            "generated_text": "2. Dâm Đảm: Tên xưa của hồ Tây. Tương truyền, Mã Viện đóng quân ở",
+            "n_lines": 1,
+            "tokens": 33,
+            "seconds": 2.529,
+            "confidence": 88.27,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              506,
+              1877,
+              1045,
+              1918
+            ],
+            "generated_text": "Lăng Bac, tức Đảm Đàm.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.176,
+            "confidence": 78.28,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              659,
+              1950,
+              2211,
+              1999
+            ],
+            "generated_text": "Cá hà đôn: Là loài cá miệng nhỏ bụng to, không vây, lưng xanh nhạt,",
+            "n_lines": 1,
+            "tokens": 32,
+            "seconds": 2.461,
+            "confidence": 92.48,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              507,
+              2024,
+              2125,
+              2074
+            ],
+            "generated_text": "bụng trắng, cá độc, người ăn phải thương bị chết. Câu này chưa hiểu diễn cổ.",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 2.405,
+            "confidence": 89.56,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              659,
+              2099,
+              1482,
+              2141
+            ],
+            "generated_text": "3.Chổ ý dĩ: Xem chủ thích số 4 bài số 1.",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.748,
+            "confidence": 89.17,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              1181,
+              2236,
+              1499,
+              2260
+            ],
+            "generated_text": "つへせー",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.641,
+            "confidence": 81.97,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              1181,
+              2273,
+              1761,
+              2297
+            ],
+            "generated_text": "五〇. 共一",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.839,
+            "confidence": 50.17,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              1038,
+              2430,
+              1906,
+              2485
+            ],
+            "generated_text": "人言五險上來難",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.99,
+            "confidence": 98.13,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              1041,
+              2559,
+              1628,
+              2617
+            ],
+            "generated_text": "我上來辰仔細看",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.788,
+            "confidence": 95.23,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              1040,
+              2690,
+              1627,
+              2751
+            ],
+            "generated_text": "搏兔隱隆三片石",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.99,
+            "confidence": 94.17,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              1040,
+              2821,
+              1873,
+              2881
+            ],
+            "generated_text": "掛蛇噴激雨條湍",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.206,
+            "confidence": 96.51,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              1095,
+              369,
+              1490,
+              378
+            ],
+            "ink": 301
+          },
+          {
+            "box": [
+              1287,
+              500,
+              1423,
+              511
+            ],
+            "ink": 398
+          },
+          {
+            "box": [
+              949,
+              801,
+              1877,
+              812
+            ],
+            "ink": 366
+          },
+          {
+            "box": [
+              1005,
+              880,
+              1796,
+              891
+            ],
+            "ink": 409
+          },
+          {
+            "box": [
+              1134,
+              1194,
+              1667,
+              1204
+            ],
+            "ink": 265
+          },
+          {
+            "box": [
+              1358,
+              1839,
+              2091,
+              1850
+            ],
+            "ink": 336
+          },
+          {
+            "box": [
+              1190,
+              2261,
+              1392,
+              2274
+            ],
+            "ink": 565
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

@@ -1,0 +1,258 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_18",
+  "engine": "qwen",
+  "page": 396,
+  "runs": [
+    {
+      "key": "ec616e03ffced34a7ad76b4e18e392ec33db290ee9ed04ff45cad9c9b6c9172a",
+      "parameters": {
+        "image_sha256": "f801e0fed1f90c7de3c40ef18f9540437a76a17e2e65b73474e9e50d3de0cadf",
+        "engine": {
+          "name": "qwen",
+          "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "model_revision": "main",
+          "transformers_version": "4.57.6",
+          "torch_version": "2.5.1+cu121",
+          "cuda_version": "12.1",
+          "bitsandbytes_version": "0.50.2",
+          "quantization": {
+            "load_in_4bit": true,
+            "quant_type": "nf4",
+            "double_quant": true,
+            "compute_dtype": "float16"
+          },
+          "mode": "all",
+          "min_pixels": 50176,
+          "max_pixels": 802816,
+          "band_inches": 2.0,
+          "max_new_tokens": 768,
+          "repetition_penalty": 1.05,
+          "adapter_version": 3,
+          "prompt_version": 3,
+          "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74"
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T20:47:40+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_396.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        0,
+        2480,
+        3509
+      ],
+      "lines": [
+        {
+          "text": "Sưu tầm và khảo luận tác phẩm chữ Hán của người Việt Nam trước TK 10",
+          "bbox": [
+            0,
+            0,
+            2269,
+            248
+          ],
+          "confidence": 94.77
+        },
+        {
+          "text": "趙佗上漢文帝書",
+          "bbox": [
+            0,
+            248,
+            2269,
+            497
+          ],
+          "confidence": 94.77
+        },
+        {
+          "text": "皇帝陛下：",
+          "bbox": [
+            0,
+            567,
+            2460,
+            1058
+          ],
+          "confidence": 31.37
+        },
+        {
+          "text": "越王，使外臣，时纳贡职。皇帝即位，不忍绝，所以赐老夫者厚。高后自临事，近细，信讬臣，别异蛮夷，出令曰：“无予蠻夷外越铁田器；马，牛，羊即，与牡，毋与牝”。老夫虚，马荒已长，自以祭祀不修，有死罪，使内",
+          "bbox": [
+            0,
+            1050,
+            2457,
+            1658
+          ],
+          "confidence": 74.31
+        },
+        {
+          "text": "夫處越，而齒已長，皆以奈花不修，有死罪，使內史潘，中尉高，御史平凡三上書謝過，皆不返。又風聞老夫父母墳墓已坏削，兄弟宗族已誅論。諸吏相與議曰：“今內不得振於漢，外無以自高異”，故更號爲帝，自帝其國，非敢有害於天下也。意在厚明主之仁，持之本心之篤。",
+          "bbox": [
+            0,
+            1650,
+            2472,
+            2258
+          ],
+          "confidence": 70.69
+        },
+        {
+          "text": "天下也。皇后闻之，大怒，削去南越之籍，使使不通。老夫疑长王讎臣，故敢发兵以伐其边。且南方卑湿，蠻夷，其中半赢，东有西甌，其中半赢，老夫故妄言",
+          "bbox": [
+            0,
+            2250,
+            2233,
+            2858
+          ],
+          "confidence": 45.88
+        },
+        {
+          "text": "聊以自娛。老夫定百邑之主，東西南北數千萬，帶有餘，然面臣事漢，何也？不故。",
+          "bbox": [
+            0,
+            2850,
+            2475,
+            3509
+          ],
+          "confidence": 59.27
+        }
+      ],
+      "raw": {
+        "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+        "model_revision": "main",
+        "mode": "all",
+        "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          3509
+        ],
+        "band_target_height": 600,
+        "bbox_granularity": "band_even_split",
+        "max_new_tokens": 768,
+        "max_pixels": 802816,
+        "inference_seconds": 25.387,
+        "bands": [
+          {
+            "band": 1,
+            "y0": 0,
+            "y1": 544,
+            "ink_box": [
+              0,
+              0,
+              2269,
+              497
+            ],
+            "generated_text": "Sưu tầm và khảo luận tác phẩm chữ Hán của người Việt Nam trước TK 10\n\n趙佗上漢文帝書",
+            "n_lines": 2,
+            "tokens": 29,
+            "seconds": 2.284,
+            "confidence": 94.77,
+            "flags": []
+          },
+          {
+            "band": 2,
+            "y0": 544,
+            "y1": 1054,
+            "ink_box": [
+              0,
+              567,
+              2460,
+              1058
+            ],
+            "generated_text": "皇帝陛下：",
+            "n_lines": 1,
+            "tokens": 4,
+            "seconds": 0.719,
+            "confidence": 31.37,
+            "flags": []
+          },
+          {
+            "band": 3,
+            "y0": 1054,
+            "y1": 1654,
+            "ink_box": [
+              0,
+              1050,
+              2457,
+              1658
+            ],
+            "generated_text": "越王，使外臣，时纳贡职。皇帝即位，不忍绝，所以赐老夫者厚。高后自临事，近细，信讬臣，别异蛮夷，出令曰：“无予蠻夷外越铁田器；马，牛，羊即，与牡，毋与牝”。老夫虚，马荒已长，自以祭祀不修，有死罪，使内",
+            "n_lines": 1,
+            "tokens": 96,
+            "seconds": 6.66,
+            "confidence": 74.31,
+            "flags": []
+          },
+          {
+            "band": 4,
+            "y0": 1654,
+            "y1": 2254,
+            "ink_box": [
+              0,
+              1650,
+              2472,
+              2258
+            ],
+            "generated_text": "夫處越，而齒已長，皆以奈花不修，有死罪，使內史潘，中尉高，御史平凡三上書謝過，皆不返。又風聞老夫父母墳墓已坏削，兄弟宗族已誅論。諸吏相與議曰：“今內不得振於漢，外無以自高異”，故更號爲帝，自帝其國，非敢有害於天下也。意在厚明主之仁，持之本心之篤。",
+            "n_lines": 1,
+            "tokens": 119,
+            "seconds": 8.059,
+            "confidence": 70.69,
+            "flags": []
+          },
+          {
+            "band": 5,
+            "y0": 2254,
+            "y1": 2854,
+            "ink_box": [
+              0,
+              2250,
+              2233,
+              2858
+            ],
+            "generated_text": "天下也。皇后闻之，大怒，削去南越之籍，使使不通。老夫疑长王讎臣，故敢发兵以伐其边。且南方卑湿，蠻夷，其中半赢，东有西甌，其中半赢，老夫故妄言",
+            "n_lines": 1,
+            "tokens": 68,
+            "seconds": 4.789,
+            "confidence": 45.88,
+            "flags": []
+          },
+          {
+            "band": 6,
+            "y0": 2854,
+            "y1": 3509,
+            "ink_box": [
+              0,
+              2850,
+              2475,
+              3509
+            ],
+            "generated_text": "聊以自娛。老夫定百邑之主，東西南北數千萬，帶有餘，然面臣事漢，何也？不故。",
+            "n_lines": 1,
+            "tokens": 37,
+            "seconds": 2.838,
+            "confidence": 59.27,
+            "flags": []
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "61cbea5c0055c260ccfc12f884e0febca7b2783b",
+        "git_describe": "61cbea5",
+        "git_dirty": true,
+        "gpu": "NVIDIA L4",
+        "dtype": "float16",
+        "adapter_version": 3
+      }
+    }
+  ]
+}

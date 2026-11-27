@@ -1,0 +1,294 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_18",
+  "engine": "paddlevl",
+  "page": 528,
+  "runs": [
+    {
+      "key": "f38a293e43ea5b9daa75a85fa161cb01dd84a6a030cc4829bd72221ae4afc761",
+      "parameters": {
+        "image_sha256": "d3d0d2b4b0bb264aaec7768c7599c28d1ad26f7ab9530103ced8b77980d34841",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T19:02:08+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_528.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        0,
+        2480,
+        3509
+      ],
+      "lines": [
+        {
+          "text": "Sụu tấm và khảo luận tác phẩm chủ Hán của người Việt Nam trước TK 10",
+          "bbox": [
+            277,
+            113,
+            1893,
+            178
+          ],
+          "confidence": 91.68
+        },
+        {
+          "text": "___",
+          "bbox": [
+            258,
+            205,
+            2273,
+            232
+          ],
+          "confidence": 55.06
+        },
+        {
+          "text": "đi quá chỗ thương dùng lại để chia tay là Hồ Khê lúc nào",
+          "bbox": [
+            400,
+            311,
+            2259,
+            381
+          ],
+          "confidence": 87.88
+        },
+        {
+          "text": "không biết, ba người nhìn nhau cười, từ đó có diễn \"Hồ",
+          "bbox": [
+            397,
+            398,
+            2261,
+            468
+          ],
+          "confidence": 87.21
+        },
+        {
+          "text": "Khê tam tiểu\" (Ba người cười ở khe Hồ). Đây muốn nói",
+          "bbox": [
+            399,
+            483,
+            2256,
+            554
+          ],
+          "confidence": 92.45
+        },
+        {
+          "text": "Thấm Thuyên Kỳ và Thượng nhân Vô Ngai đã say sưa",
+          "bbox": [
+            395,
+            571,
+            2254,
+            647
+          ],
+          "confidence": 86.66
+        },
+        {
+          "text": "tro chuyen.",
+          "bbox": [
+            396,
+            678,
+            741,
+            722
+          ],
+          "confidence": 75.58
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          3509
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 2.684,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              277,
+              113,
+              1893,
+              178
+            ],
+            "generated_text": "Sụu tấm và khảo luận tác phẩm chủ Hán của người Việt Nam trước TK 10",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.568,
+            "confidence": 91.68,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              258,
+              205,
+              2273,
+              232
+            ],
+            "generated_text": "___",
+            "n_lines": 1,
+            "tokens": 2,
+            "seconds": 0.091,
+            "confidence": 55.06,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              400,
+              311,
+              2259,
+              381
+            ],
+            "generated_text": "đi quá chỗ thương dùng lại để chia tay là Hồ Khê lúc nào",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.491,
+            "confidence": 87.88,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              397,
+              398,
+              2261,
+              468
+            ],
+            "generated_text": "không biết, ba người nhìn nhau cười, từ đó có diễn \"Hồ",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.446,
+            "confidence": 87.21,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              399,
+              483,
+              2256,
+              554
+            ],
+            "generated_text": "Khê tam tiểu\" (Ba người cười ở khe Hồ). Đây muốn nói",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.494,
+            "confidence": 92.45,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              395,
+              571,
+              2254,
+              647
+            ],
+            "generated_text": "Thấm Thuyên Kỳ và Thượng nhân Vô Ngai đã say sưa",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.449,
+            "confidence": 86.66,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              396,
+              678,
+              741,
+              722
+            ],
+            "generated_text": "tro chuyen.",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.144,
+            "confidence": 75.58,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              259,
+              3354,
+              2108,
+              3372
+            ],
+            "ink": 1834
+          },
+          {
+            "box": [
+              273,
+              3374,
+              2096,
+              3384
+            ],
+            "ink": 887
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "61cbea5c0055c260ccfc12f884e0febca7b2783b",
+        "git_describe": "61cbea5",
+        "git_dirty": true,
+        "gpu": "NVIDIA L4",
+        "dtype": "bfloat16",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

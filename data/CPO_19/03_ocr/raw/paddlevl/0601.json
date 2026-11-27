@@ -1,0 +1,960 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 601,
+  "runs": [
+    {
+      "key": "11ecdc419a08f39fe2ab87547255483fb97709824b6b84002ef7dcd500bd29a5",
+      "parameters": {
+        "image_sha256": "02f607c8fcaedc075aa90916a0ae5bc5446af938ff4f063fce31c215228e5ec3",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T18:37:32+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_601.png",
+      "image_size": [
+        2557,
+        3189
+      ],
+      "crop_box": [
+        0,
+        0,
+        2557,
+        3189
+      ],
+      "lines": [
+        {
+          "text": "ngothinhamch1.pdf",
+          "bbox": [
+            7,
+            19,
+            296,
+            45
+          ],
+          "confidence": 98.43
+        },
+        {
+          "text": "NGŨ THI NHAM TOAN TAP - TAP III",
+          "bbox": [
+            418,
+            169,
+            1191,
+            208
+          ],
+          "confidence": 80.91
+        },
+        {
+          "text": "Niên lai, Công trung đường dữ bản Quốc Vương nhất phiến thinh",
+          "bbox": [
+            576,
+            273,
+            2126,
+            325
+          ],
+          "confidence": 87.45
+        },
+        {
+          "text": "tình, Đại nhân lượng dĩ chiếu tất. Thủ nhất điều trọng kiện, thương mông",
+          "bbox": [
+            418,
+            354,
+            2127,
+            407
+          ],
+          "confidence": 93.74
+        },
+        {
+          "text": "Đại nhân hoà tự tiên vi bấm đạt từ Công trung đường chi tiến, cán thành",
+          "bbox": [
+            415,
+            436,
+            2124,
+            484
+          ],
+          "confidence": 81.34
+        },
+        {
+          "text": "mỹ hảo chi sự, vĩnh thư dịch thế chi âm, bản quốc thân dân minh khác vô",
+          "bbox": [
+            419,
+            517,
+            2125,
+            565
+          ],
+          "confidence": 84.68
+        },
+        {
+          "text": "tận, chuyên hậu kim nha tử báo chi thời. Bản quốc kỳ mục cần nghệ quan",
+          "bbox": [
+            418,
+            600,
+            2123,
+            648
+          ],
+          "confidence": 85.66
+        },
+        {
+          "text": "thương tu biểu đấu tiến, yêu Thiên chi hạnh. Ngưỡng mông Đại Hoàng đế",
+          "bbox": [
+            418,
+            682,
+            2135,
+            737
+          ],
+          "confidence": 89.59
+        },
+        {
+          "text": "doãn tòng sở thỉnh, thực bản quốc hy thế chi vinh, khả dĩ diệu chu giản",
+          "bbox": [
+            418,
+            764,
+            2122,
+            813
+          ],
+          "confidence": 87.0
+        },
+        {
+          "text": "biên, quang hộ lĩnh kiệu, nhi Đại nhân ngọc thành chi đức, ca tung vô",
+          "bbox": [
+            419,
+            847,
+            2123,
+            900
+          ],
+          "confidence": 94.77
+        },
+        {
+          "text": "cùng, trường đổi Nam Sơn chi tho hỹ.",
+          "bbox": [
+            418,
+            928,
+            1277,
+            973
+          ],
+          "confidence": 82.92
+        },
+        {
+          "text": "DICH NGHIA:",
+          "bbox": [
+            421,
+            1041,
+            729,
+            1079
+          ],
+          "confidence": 99.03
+        },
+        {
+          "text": "LAI MOT DAO",
+          "bbox": [
+            1083,
+            1122,
+            1456,
+            1167
+          ],
+          "confidence": 97.95
+        },
+        {
+          "text": "(TRINH THAY XIN KET HON. THU CỦA THI THÂN BÁN QUỐC)",
+          "bbox": [
+            554,
+            1208,
+            1989,
+            1252
+          ],
+          "confidence": 85.21
+        },
+        {
+          "text": "Bon tôi mỗi khi chờ mệnh trên của ai, thường trình lên Đại nhân",
+          "bbox": [
+            571,
+            1353,
+            2122,
+            1400
+          ],
+          "confidence": 87.92
+        },
+        {
+          "text": "soi xét; mỗi lần đi lại, gần tựa.gió xuân, tự nhớ trong khi bàn luận thân",
+          "bbox": [
+            422,
+            1440,
+            2121,
+            1491
+          ],
+          "confidence": 92.44
+        },
+        {
+          "text": "tình, luôn được Đại nhân chiếu cổ.",
+          "bbox": [
+            422,
+            1527,
+            1211,
+            1572
+          ],
+          "confidence": 93.31
+        },
+        {
+          "text": "Ngừa thấy Đại Hoàng đế, yêu mến vua nước tôi, ơn trách tràn trê,",
+          "bbox": [
+            572,
+            1624,
+            2122,
+            1674
+          ],
+          "confidence": 88.21
+        },
+        {
+          "text": "từ xưa ít thấy, tôi dân trong nước đều cùng đôi ơn đó. Có lẽ đòi trước, từ",
+          "bbox": [
+            422,
+            1707,
+            2125,
+            1753
+          ],
+          "confidence": 92.52
+        },
+        {
+          "text": "Đinh, Lý, Trân, Lê tôi đây, vâng ơn Thượng quốc, chưa bao giờ được như",
+          "bbox": [
+            423,
+            1789,
+            2125,
+            1841
+          ],
+          "confidence": 89.99
+        },
+        {
+          "text": "ngày nay. Đại Hoàng để đối với vua nước tôi, chăm sóc vun vén cho chăng",
+          "bbox": [
+            422,
+            1871,
+            2125,
+            1917
+          ],
+          "confidence": 89.11
+        },
+        {
+          "text": "khác gì cha con trong một gia đình, đúng với cái nghĩa “rất mong là một",
+          "bbox": [
+            421,
+            1952,
+            2124,
+            2004
+          ],
+          "confidence": 97.85
+        },
+        {
+          "text": "nhà\" để thờ Đại Thanh cho đến nghìn muôn đời vây.",
+          "bbox": [
+            423,
+            2034,
+            1623,
+            2080
+          ],
+          "confidence": 90.23
+        },
+        {
+          "text": "Kính thấy Đại Hoàng dễ coi muôn nước như con, các vua ở Bắc",
+          "bbox": [
+            572,
+            2129,
+            2125,
+            2173
+          ],
+          "confidence": 90.24
+        },
+        {
+          "text": "phiên đều được mang ơn gả cho Hoàng nữ, đó thực là đức thánh nhân có",
+          "bbox": [
+            422,
+            2209,
+            2125,
+            2256
+          ],
+          "confidence": 94.2
+        },
+        {
+          "text": "lòng như trời đất cha mẹ, nổi lại băng nghĩa lý, gần gũi đùm bọc, không",
+          "bbox": [
+            423,
+            2291,
+            2126,
+            2344
+          ],
+          "confidence": 94.78
+        },
+        {
+          "text": "bỏ sót những nơi xa, khiến cho phàm nơi được che chở, đâu cũng tôn thân,",
+          "bbox": [
+            422,
+            2373,
+            2124,
+            2419
+          ],
+          "confidence": 95.83
+        },
+        {
+          "text": "như chung khí huyết mà không bị phân chia tách bach. Thân dân nước",
+          "bbox": [
+            422,
+            2455,
+            2125,
+            2502
+          ],
+          "confidence": 96.25
+        },
+        {
+          "text": "tôi bàn riêng với nhau rằng: “Quốc Vương làm chủ một nước, nội trị",
+          "bbox": [
+            422,
+            2538,
+            2125,
+            2590
+          ],
+          "confidence": 94.15
+        },
+        {
+          "text": "không thể thiếu người.\" Nghĩ muốn gõ cửa đàng biểu, khản khoản câu",
+          "bbox": [
+            422,
+            2620,
+            2125,
+            2673
+          ],
+          "confidence": 83.78
+        },
+        {
+          "text": "hôn cho Quốc Vương, nhưng e việc ấy lớn lao, chưa có người gợi ý trước,",
+          "bbox": [
+            422,
+            2703,
+            2125,
+            2755
+          ],
+          "confidence": 93.93
+        },
+        {
+          "text": "đâu đám tư mình nói được, hắn có sự răn về việc \"dùng rìu đẽo cán.\"(1)",
+          "bbox": [
+            425,
+            2785,
+            2026,
+            2831
+          ],
+          "confidence": 87.8
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2557,
+          3189
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 18.151,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              7,
+              19,
+              296,
+              45
+            ],
+            "generated_text": "ngothinhamch1.pdf",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.231,
+            "confidence": 98.43,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              418,
+              169,
+              1191,
+              208
+            ],
+            "generated_text": "NGŨ THI NHAM TOAN TAP - TAP III",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.377,
+            "confidence": 80.91,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              421,
+              212,
+              2134,
+              230
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.068,
+            "confidence": 72.62,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              576,
+              273,
+              2126,
+              325
+            ],
+            "generated_text": "Niên lai, Công trung đường dữ bản Quốc Vương nhất phiến thinh",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.461,
+            "confidence": 87.45,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              418,
+              354,
+              2127,
+              407
+            ],
+            "generated_text": "tình, Đại nhân lượng dĩ chiếu tất. Thủ nhất điều trọng kiện, thương mông",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.636,
+            "confidence": 93.74,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              415,
+              436,
+              2124,
+              484
+            ],
+            "generated_text": "Đại nhân hoà tự tiên vi bấm đạt từ Công trung đường chi tiến, cán thành",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.59,
+            "confidence": 81.34,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              419,
+              517,
+              2125,
+              565
+            ],
+            "generated_text": "mỹ hảo chi sự, vĩnh thư dịch thế chi âm, bản quốc thân dân minh khác vô",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.627,
+            "confidence": 84.68,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              418,
+              600,
+              2123,
+              648
+            ],
+            "generated_text": "tận, chuyên hậu kim nha tử báo chi thời. Bản quốc kỳ mục cần nghệ quan",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 0.649,
+            "confidence": 85.66,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              418,
+              682,
+              2135,
+              737
+            ],
+            "generated_text": "thương tu biểu đấu tiến, yêu Thiên chi hạnh. Ngưỡng mông Đại Hoàng đế",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 0.675,
+            "confidence": 89.59,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              418,
+              764,
+              2122,
+              813
+            ],
+            "generated_text": "doãn tòng sở thỉnh, thực bản quốc hy thế chi vinh, khả dĩ diệu chu giản",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 0.671,
+            "confidence": 87.0,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              419,
+              847,
+              2123,
+              900
+            ],
+            "generated_text": "biên, quang hộ lĩnh kiệu, nhi Đại nhân ngọc thành chi đức, ca tung vô",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.645,
+            "confidence": 94.77,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              418,
+              928,
+              1277,
+              973
+            ],
+            "generated_text": "cùng, trường đổi Nam Sơn chi tho hỹ.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.369,
+            "confidence": 82.92,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              421,
+              1041,
+              729,
+              1079
+            ],
+            "generated_text": "DICH NGHIA:",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.192,
+            "confidence": 99.03,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              1083,
+              1122,
+              1456,
+              1167
+            ],
+            "generated_text": "LAI MOT DAO",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.173,
+            "confidence": 97.95,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              554,
+              1208,
+              1989,
+              1252
+            ],
+            "generated_text": "(TRINH THAY XIN KET HON. THU CỦA THI THÂN BÁN QUỐC)",
+            "n_lines": 1,
+            "tokens": 35,
+            "seconds": 0.789,
+            "confidence": 85.21,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              571,
+              1353,
+              2122,
+              1400
+            ],
+            "generated_text": "Bon tôi mỗi khi chờ mệnh trên của ai, thường trình lên Đại nhân",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.474,
+            "confidence": 87.92,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              422,
+              1440,
+              2121,
+              1491
+            ],
+            "generated_text": "soi xét; mỗi lần đi lại, gần tựa.gió xuân, tự nhớ trong khi bàn luận thân",
+            "n_lines": 1,
+            "tokens": 33,
+            "seconds": 0.75,
+            "confidence": 92.44,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              422,
+              1527,
+              1211,
+              1572
+            ],
+            "generated_text": "tình, luôn được Đại nhân chiếu cổ.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.365,
+            "confidence": 93.31,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              572,
+              1624,
+              2122,
+              1674
+            ],
+            "generated_text": "Ngừa thấy Đại Hoàng đế, yêu mến vua nước tôi, ơn trách tràn trê,",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.649,
+            "confidence": 88.21,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              422,
+              1707,
+              2125,
+              1753
+            ],
+            "generated_text": "từ xưa ít thấy, tôi dân trong nước đều cùng đôi ơn đó. Có lẽ đòi trước, từ",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 0.679,
+            "confidence": 92.52,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              423,
+              1789,
+              2125,
+              1841
+            ],
+            "generated_text": "Đinh, Lý, Trân, Lê tôi đây, vâng ơn Thượng quốc, chưa bao giờ được như",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 0.661,
+            "confidence": 89.99,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              422,
+              1871,
+              2125,
+              1917
+            ],
+            "generated_text": "ngày nay. Đại Hoàng để đối với vua nước tôi, chăm sóc vun vén cho chăng",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.624,
+            "confidence": 89.11,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              421,
+              1952,
+              2124,
+              2004
+            ],
+            "generated_text": "khác gì cha con trong một gia đình, đúng với cái nghĩa “rất mong là một",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.558,
+            "confidence": 97.85,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              423,
+              2034,
+              1623,
+              2080
+            ],
+            "generated_text": "nhà\" để thờ Đại Thanh cho đến nghìn muôn đời vây.",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.508,
+            "confidence": 90.23,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              572,
+              2129,
+              2125,
+              2173
+            ],
+            "generated_text": "Kính thấy Đại Hoàng dễ coi muôn nước như con, các vua ở Bắc",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.557,
+            "confidence": 90.24,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              422,
+              2209,
+              2125,
+              2256
+            ],
+            "generated_text": "phiên đều được mang ơn gả cho Hoàng nữ, đó thực là đức thánh nhân có",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.575,
+            "confidence": 94.2,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              423,
+              2291,
+              2126,
+              2344
+            ],
+            "generated_text": "lòng như trời đất cha mẹ, nổi lại băng nghĩa lý, gần gũi đùm bọc, không",
+            "n_lines": 1,
+            "tokens": 33,
+            "seconds": 0.754,
+            "confidence": 94.78,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              422,
+              2373,
+              2124,
+              2419
+            ],
+            "generated_text": "bỏ sót những nơi xa, khiến cho phàm nơi được che chở, đâu cũng tôn thân,",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 0.685,
+            "confidence": 95.83,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              422,
+              2455,
+              2125,
+              2502
+            ],
+            "generated_text": "như chung khí huyết mà không bị phân chia tách bach. Thân dân nước",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.579,
+            "confidence": 96.25,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              422,
+              2538,
+              2125,
+              2590
+            ],
+            "generated_text": "tôi bàn riêng với nhau rằng: “Quốc Vương làm chủ một nước, nội trị",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.579,
+            "confidence": 94.15,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              422,
+              2620,
+              2125,
+              2673
+            ],
+            "generated_text": "không thể thiếu người.\" Nghĩ muốn gõ cửa đàng biểu, khản khoản câu",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.611,
+            "confidence": 83.78,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 32,
+            "box": [
+              422,
+              2703,
+              2125,
+              2755
+            ],
+            "generated_text": "hôn cho Quốc Vương, nhưng e việc ấy lớn lao, chưa có người gợi ý trước,",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.62,
+            "confidence": 93.93,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 33,
+            "box": [
+              425,
+              2785,
+              2026,
+              2831
+            ],
+            "generated_text": "đâu đám tư mình nói được, hắn có sự răn về việc \"dùng rìu đẽo cán.\"(1)",
+            "n_lines": 1,
+            "tokens": 34,
+            "seconds": 0.764,
+            "confidence": 87.8,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              461,
+              480,
+              1860,
+              489
+            ],
+            "ink": 351
+          },
+          {
+            "box": [
+              454,
+              1913,
+              2121,
+              1923
+            ],
+            "ink": 394
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "61cbea5c0055c260ccfc12f884e0febca7b2783b",
+        "git_describe": "61cbea5",
+        "git_dirty": true,
+        "gpu": "NVIDIA L4",
+        "dtype": "bfloat16",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

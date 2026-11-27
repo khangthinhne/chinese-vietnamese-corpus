@@ -1,0 +1,667 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_20",
+  "engine": "paddlevl",
+  "page": 166,
+  "runs": [
+    {
+      "key": "b949941a07255759611348cc6e5c858cb291f064dc0df6097b237a36378ff082",
+      "parameters": {
+        "image_sha256": "c939ba80b80ac6732c3dade9f06bb3c10215bc4eae94da4243a6617e0dbd0f51",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T06:03:36+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_166.png",
+      "image_size": [
+        1840,
+        2803
+      ],
+      "crop_box": [
+        0,
+        0,
+        1840,
+        2803
+      ],
+      "lines": [
+        {
+          "text": "Phien am:",
+          "bbox": [
+            223,
+            352,
+            445,
+            379
+          ],
+          "confidence": 63.82
+        },
+        {
+          "text": "TRUNG QUẬN HUNG LONG TỪ",
+          "bbox": [
+            521,
+            468,
+            1392,
+            521
+          ],
+          "confidence": 71.56
+        },
+        {
+          "text": "LUỦ BIỆT LIÊN THÀNH THIÊN SỰ",
+          "bbox": [
+            440,
+            541,
+            1475,
+            602
+          ],
+          "confidence": 85.29
+        },
+        {
+          "text": "Hùng Long trùng quá khẩu thiên quan,",
+          "bbox": [
+            459,
+            686,
+            1271,
+            737
+          ],
+          "confidence": 87.4
+        },
+        {
+          "text": "Mang lý thiên du bán nhất nhàn.",
+          "bbox": [
+            459,
+            748,
+            1155,
+            792
+          ],
+          "confidence": 90.47
+        },
+        {
+          "text": "Van lý giang sơn nghệnh tổng xứ,",
+          "bbox": [
+            462,
+            809,
+            1166,
+            856
+          ],
+          "confidence": 85.38
+        },
+        {
+          "text": "Tam thu phong nguyệt văng hoàn gian.",
+          "bbox": [
+            457,
+            872,
+            1272,
+            916
+          ],
+          "confidence": 95.86
+        },
+        {
+          "text": "Khách tung hảo tự phi hồng quá.",
+          "bbox": [
+            457,
+            925,
+            1144,
+            970
+          ],
+          "confidence": 88.84
+        },
+        {
+          "text": "Hương tú tranh như quyên điều hoàn.",
+          "bbox": [
+            457,
+            989,
+            1238,
+            1030
+          ],
+          "confidence": 88.02
+        },
+        {
+          "text": "Tôi thi ngô nhân tình độc trong,",
+          "bbox": [
+            455,
+            1044,
+            1135,
+            1089
+          ],
+          "confidence": 86.57
+        },
+        {
+          "text": "Hội thời bất di biệt thời nan.",
+          "bbox": [
+            455,
+            1103,
+            1064,
+            1147
+          ],
+          "confidence": 87.92
+        },
+        {
+          "text": "Uich nghia:",
+          "bbox": [
+            218,
+            1289,
+            465,
+            1317
+          ],
+          "confidence": 84.2
+        },
+        {
+          "text": "LẠI QUẢ CHỦA HỰNG LỒNG,",
+          "bbox": [
+            515,
+            1406,
+            1378,
+            1466
+          ],
+          "confidence": 73.48
+        },
+        {
+          "text": "LUỞ BIỆT THIÊN SỰ LIÊN THÀNH",
+          "bbox": [
+            432,
+            1481,
+            1463,
+            1544
+          ],
+          "confidence": 87.01
+        },
+        {
+          "text": "Lấn thư hai đến chùa Hưng Long gõ của thiên.",
+          "bbox": [
+            452,
+            1626,
+            1425,
+            1673
+          ],
+          "confidence": 79.2
+        },
+        {
+          "text": "Giữa lúc bạn rộng, tam được nửa ngày nhàn.",
+          "bbox": [
+            451,
+            1686,
+            1355,
+            1731
+          ],
+          "confidence": 81.57
+        },
+        {
+          "text": "Đây là chốn đón đưa trên non Sông muôn đảm.",
+          "bbox": [
+            452,
+            1742,
+            1436,
+            1791
+          ],
+          "confidence": 91.69
+        },
+        {
+          "text": "Đấy là khoảng qua lại trong trăng gió ba thu.",
+          "bbox": [
+            452,
+            1801,
+            1395,
+            1855
+          ],
+          "confidence": 93.53
+        },
+        {
+          "text": "Dấu tích nơi đất khách giống như loài chim hồng bay qua,",
+          "bbox": [
+            451,
+            1862,
+            1652,
+            1913
+          ],
+          "confidence": 93.39
+        },
+        {
+          "text": "Y nghĩ về quê hương hết như con chim mỏi mệt trở về tỗ.",
+          "bbox": [
+            455,
+            1923,
+            1642,
+            1969
+          ],
+          "confidence": 87.33
+        },
+        {
+          "text": "Chí riêng có tình con người giữa chúng ta là năng nhất,",
+          "bbox": [
+            451,
+            1984,
+            1605,
+            2030
+          ],
+          "confidence": 85.74
+        },
+        {
+          "text": "Gặp nhau không phải dễ, nhưng xa nhau còn khó khăn hơn.",
+          "bbox": [
+            451,
+            2037,
+            1605,
+            2088
+          ],
+          "confidence": 98.93
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          1840,
+          2803
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 49.936,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              223,
+              352,
+              445,
+              379
+            ],
+            "generated_text": "Phien am:",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.733,
+            "confidence": 63.82,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              521,
+              468,
+              1392,
+              521
+            ],
+            "generated_text": "TRUNG QUẬN HUNG LONG TỪ",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.815,
+            "confidence": 71.56,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              440,
+              541,
+              1475,
+              602
+            ],
+            "generated_text": "LUỦ BIỆT LIÊN THÀNH THIÊN SỰ",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 3.48,
+            "confidence": 85.29,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              459,
+              686,
+              1271,
+              737
+            ],
+            "generated_text": "Hùng Long trùng quá khẩu thiên quan,",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.625,
+            "confidence": 87.4,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              459,
+              748,
+              1155,
+              792
+            ],
+            "generated_text": "Mang lý thiên du bán nhất nhàn.",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 1.538,
+            "confidence": 90.47,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              462,
+              809,
+              1166,
+              856
+            ],
+            "generated_text": "Van lý giang sơn nghệnh tổng xứ,",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.782,
+            "confidence": 85.38,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              457,
+              872,
+              1272,
+              916
+            ],
+            "generated_text": "Tam thu phong nguyệt văng hoàn gian.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 2.061,
+            "confidence": 95.86,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              457,
+              925,
+              1144,
+              970
+            ],
+            "generated_text": "Khách tung hảo tự phi hồng quá.",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 2.015,
+            "confidence": 88.84,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              457,
+              989,
+              1238,
+              1030
+            ],
+            "generated_text": "Hương tú tranh như quyên điều hoàn.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 2.005,
+            "confidence": 88.02,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              455,
+              1044,
+              1135,
+              1089
+            ],
+            "generated_text": "Tôi thi ngô nhân tình độc trong,",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.852,
+            "confidence": 86.57,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              455,
+              1103,
+              1064,
+              1147
+            ],
+            "generated_text": "Hội thời bất di biệt thời nan.",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 1.89,
+            "confidence": 87.92,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              218,
+              1289,
+              465,
+              1317
+            ],
+            "generated_text": "Uich nghia:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.914,
+            "confidence": 84.2,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              515,
+              1406,
+              1378,
+              1466
+            ],
+            "generated_text": "LẠI QUẢ CHỦA HỰNG LỒNG,",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 3.988,
+            "confidence": 73.48,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              432,
+              1481,
+              1463,
+              1544
+            ],
+            "generated_text": "LUỞ BIỆT THIÊN SỰ LIÊN THÀNH",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 2.969,
+            "confidence": 87.01,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              452,
+              1626,
+              1425,
+              1673
+            ],
+            "generated_text": "Lấn thư hai đến chùa Hưng Long gõ của thiên.",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 2.541,
+            "confidence": 79.2,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              451,
+              1686,
+              1355,
+              1731
+            ],
+            "generated_text": "Giữa lúc bạn rộng, tam được nửa ngày nhàn.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 2.521,
+            "confidence": 81.57,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              452,
+              1742,
+              1436,
+              1791
+            ],
+            "generated_text": "Đây là chốn đón đưa trên non Sông muôn đảm.",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 3.095,
+            "confidence": 91.69,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              452,
+              1801,
+              1395,
+              1855
+            ],
+            "generated_text": "Đấy là khoảng qua lại trong trăng gió ba thu.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 2.163,
+            "confidence": 93.53,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              451,
+              1862,
+              1652,
+              1913
+            ],
+            "generated_text": "Dấu tích nơi đất khách giống như loài chim hồng bay qua,",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 2.66,
+            "confidence": 93.39,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              455,
+              1923,
+              1642,
+              1969
+            ],
+            "generated_text": "Y nghĩ về quê hương hết như con chim mỏi mệt trở về tỗ.",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 3.343,
+            "confidence": 87.33,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              451,
+              1984,
+              1605,
+              2030
+            ],
+            "generated_text": "Chí riêng có tình con người giữa chúng ta là năng nhất,",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 2.418,
+            "confidence": 85.74,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              451,
+              2037,
+              1605,
+              2088
+            ],
+            "generated_text": "Gặp nhau không phải dễ, nhưng xa nhau còn khó khăn hơn.",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 2.523,
+            "confidence": 98.93,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              1002,
+              1669,
+              1424,
+              1678
+            ],
+            "ink": 274
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      }
+    }
+  ]
+}

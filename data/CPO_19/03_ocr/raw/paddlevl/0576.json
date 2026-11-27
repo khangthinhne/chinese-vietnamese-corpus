@@ -1,0 +1,866 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 576,
+  "runs": [
+    {
+      "key": "71e13ee648df69a9bbdd4a81264501b1d82d456d7b6bc28f7ccc77721c7fd504",
+      "parameters": {
+        "image_sha256": "4c503b1330709259b96c1704ed9a08899039ea5756043184bcd51602fb2036c5",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T18:30:50+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_576.png",
+      "image_size": [
+        2563,
+        3194
+      ],
+      "crop_box": [
+        0,
+        0,
+        2563,
+        3194
+      ],
+      "lines": [
+        {
+          "text": "ngothinhamle1.pdf",
+          "bbox": [
+            7,
+            19,
+            286,
+            45
+          ],
+          "confidence": 95.75
+        },
+        {
+          "text": "BANG GIAO HAO THOAI",
+          "bbox": [
+            1525,
+            196,
+            2098,
+            236
+          ],
+          "confidence": 99.46
+        },
+        {
+          "text": "本國界在南陬，心懸北極，一片衷誠，仰荷高明",
+          "bbox": [
+            542,
+            290,
+            2092,
+            355
+          ],
+          "confidence": 99.95
+        },
+        {
+          "text": "遠照，播於詩章，又寫梅寄，信用不眷注。蓋不惟宸奎睿",
+          "bbox": [
+            394,
+            425,
+            2098,
+            491
+          ],
+          "confidence": 99.93
+        },
+        {
+          "text": "藻，輝耀川巖，而雅思慈懷，所以覃施於小番者。非古",
+          "bbox": [
+            398,
+            558,
+            2097,
+            624
+          ],
+          "confidence": 99.63
+        },
+        {
+          "text": "今君臣遭遇所能，希其萬一。拂寶扇而清風被體，嘗",
+          "bbox": [
+            395,
+            692,
+            2097,
+            757
+          ],
+          "confidence": 99.76
+        },
+        {
+          "text": "珠菓而甘露沃心，其爲歡忭，莫可形容。",
+          "bbox": [
+            395,
+            827,
+            1668,
+            891
+          ],
+          "confidence": 96.0
+        },
+        {
+          "text": "見奉諭旨，不敢耑表陳謝，只得將祇領緣由，佈覆",
+          "bbox": [
+            545,
+            962,
+            2097,
+            1027
+          ],
+          "confidence": 99.75
+        },
+        {
+          "text": "于犀照之前，統祈體亮，代爲附摺奏謝，庶區區誠，欸",
+          "bbox": [
+            397,
+            1097,
+            2099,
+            1160
+          ],
+          "confidence": 98.9
+        },
+        {
+          "text": "得以上達高聰，是所切禱桂秋屆候，風月雙清，翹惟",
+          "bbox": [
+            396,
+            1230,
+            2100,
+            1296
+          ],
+          "confidence": 98.04
+        },
+        {
+          "text": "袞繡舒徐，順時納祉，臨箋神往，企望爲勞。",
+          "bbox": [
+            398,
+            1366,
+            1793,
+            1431
+          ],
+          "confidence": 98.16
+        },
+        {
+          "text": "PHIEN AM:",
+          "bbox": [
+            396,
+            1524,
+            652,
+            1562
+          ],
+          "confidence": 97.29
+        },
+        {
+          "text": "TRÌNH THIÊN TRIÊU LÊ BÔ THƯỜNG THU TRÂN DAI NHÂN",
+          "bbox": [
+            440,
+            1594,
+            2063,
+            1649
+          ],
+          "confidence": 88.94
+        },
+        {
+          "text": "(BI TRẦN KY LINH AN TỪ DUYÊN DO KY ĐẠI TÂU TA.",
+          "bbox": [
+            624,
+            1693,
+            1868,
+            1735
+          ],
+          "confidence": 86.66
+        },
+        {
+          "text": "QUÓC VƯƠNG THỦ TRÌNH)",
+          "bbox": [
+            927,
+            1779,
+            1570,
+            1820
+          ],
+          "confidence": 87.89
+        },
+        {
+          "text": "Tư phụng tiếp đáo định ký nhất phong, tinh Ngữ chế thi phiến",
+          "bbox": [
+            545,
+            1908,
+            2100,
+            1962
+          ],
+          "confidence": 85.11
+        },
+        {
+          "text": "nhất bính, quả càn nhất hấp, kính cung lĩnh thu, hân cầm dao tinh.",
+          "bbox": [
+            394,
+            1990,
+            2078,
+            2036
+          ],
+          "confidence": 91.11
+        },
+        {
+          "text": "Thiết tư, hà hoang hoá ngoại, thao tại bao hàm, tự triển cận hồi",
+          "bbox": [
+            544,
+            2080,
+            2100,
+            2132
+          ],
+          "confidence": 91.9
+        },
+        {
+          "text": "quốc dĩ lai, tích súng tiện phiên dịch lạc ư đạo. Thủ thú ăn hướng vưu",
+          "bbox": [
+            393,
+            2163,
+            2098,
+            2216
+          ],
+          "confidence": 82.94
+        },
+        {
+          "text": "vang điệp vì kiên chi vinh quang.",
+          "bbox": [
+            396,
+            2258,
+            2168,
+            2291
+          ],
+          "confidence": 84.0
+        },
+        {
+          "text": "Bản quốc giới tại nam trâu, tâm huyền Bắc Cực, nhất phiến",
+          "bbox": [
+            539,
+            2337,
+            2096,
+            2383
+          ],
+          "confidence": 95.59
+        },
+        {
+          "text": "trung thành, ngưỡng hà cao minh viên chiếu, bá ư thi chương, hựu tải",
+          "bbox": [
+            395,
+            2419,
+            2097,
+            2471
+          ],
+          "confidence": 87.03
+        },
+        {
+          "text": "mai ký tín dụng thi quyến chú. Cái bất duy thân khuê duệ tảo, huy",
+          "bbox": [
+            395,
+            2499,
+            2098,
+            2553
+          ],
+          "confidence": 85.86
+        },
+        {
+          "text": "diêu xuyên nham, nhi nhã tứ tử hoài, sở dĩ đảm thi ư tiểu phiên giả.",
+          "bbox": [
+            395,
+            2581,
+            2093,
+            2627
+          ],
+          "confidence": 82.57
+        },
+        {
+          "text": "Phi cô kim quân thân tao ngộ sở năng, hy kỳ van nhất. Phát bảo phiến",
+          "bbox": [
+            393,
+            2663,
+            2096,
+            2714
+          ],
+          "confidence": 94.09
+        },
+        {
+          "text": "nhi thanh phong bị thế, thường chu quả nhi cam lộ óc tâm kỳ vi hoan",
+          "bbox": [
+            395,
+            2744,
+            2096,
+            2797
+          ],
+          "confidence": 96.4
+        },
+        {
+          "text": "biên, mac kha hinh dung.",
+          "bbox": [
+            395,
+            2838,
+            1007,
+            2871
+          ],
+          "confidence": 92.76
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2563,
+          3194
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 15.139,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              7,
+              19,
+              286,
+              45
+            ],
+            "generated_text": "ngothinhamle1.pdf",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.229,
+            "confidence": 95.75,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              1525,
+              196,
+              2098,
+              236
+            ],
+            "generated_text": "BANG GIAO HAO THOAI",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.248,
+            "confidence": 99.46,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              394,
+              241,
+              2106,
+              256
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.066,
+            "confidence": 88.44,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              542,
+              290,
+              2092,
+              355
+            ],
+            "generated_text": "本國界在南陬，心懸北極，一片衷誠，仰荷高明",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.596,
+            "confidence": 99.95,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              394,
+              425,
+              2098,
+              491
+            ],
+            "generated_text": "遠照，播於詩章，又寫梅寄，信用不眷注。蓋不惟宸奎睿",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 0.637,
+            "confidence": 99.93,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              398,
+              558,
+              2097,
+              624
+            ],
+            "generated_text": "藻，輝耀川巖，而雅思慈懷，所以覃施於小番者。非古",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 0.681,
+            "confidence": 99.63,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              395,
+              692,
+              2097,
+              757
+            ],
+            "generated_text": "今君臣遭遇所能，希其萬一。拂寶扇而清風被體，嘗",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.549,
+            "confidence": 99.76,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              395,
+              827,
+              1668,
+              891
+            ],
+            "generated_text": "珠菓而甘露沃心，其爲歡忭，莫可形容。",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.494,
+            "confidence": 96.0,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              545,
+              962,
+              2097,
+              1027
+            ],
+            "generated_text": "見奉諭旨，不敢耑表陳謝，只得將祇領緣由，佈覆",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 0.683,
+            "confidence": 99.75,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              397,
+              1097,
+              2099,
+              1160
+            ],
+            "generated_text": "于犀照之前，統祈體亮，代爲附摺奏謝，庶區區誠，欸",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 0.663,
+            "confidence": 98.9,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              396,
+              1230,
+              2100,
+              1296
+            ],
+            "generated_text": "得以上達高聰，是所切禱桂秋屆候，風月雙清，翹惟",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 0.644,
+            "confidence": 98.04,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              398,
+              1366,
+              1793,
+              1431
+            ],
+            "generated_text": "袞繡舒徐，順時納祉，臨箋神往，企望爲勞。",
+            "n_lines": 1,
+            "tokens": 33,
+            "seconds": 0.717,
+            "confidence": 98.16,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              396,
+              1524,
+              652,
+              1562
+            ],
+            "generated_text": "PHIEN AM:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.166,
+            "confidence": 97.29,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              440,
+              1594,
+              2063,
+              1649
+            ],
+            "generated_text": "TRÌNH THIÊN TRIÊU LÊ BÔ THƯỜNG THU TRÂN DAI NHÂN",
+            "n_lines": 1,
+            "tokens": 33,
+            "seconds": 0.718,
+            "confidence": 88.94,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              624,
+              1693,
+              1868,
+              1735
+            ],
+            "generated_text": "(BI TRẦN KY LINH AN TỪ DUYÊN DO KY ĐẠI TÂU TA.",
+            "n_lines": 1,
+            "tokens": 34,
+            "seconds": 0.737,
+            "confidence": 86.66,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              927,
+              1779,
+              1570,
+              1820
+            ],
+            "generated_text": "QUÓC VƯƠNG THỦ TRÌNH)",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.412,
+            "confidence": 87.89,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              545,
+              1908,
+              2100,
+              1962
+            ],
+            "generated_text": "Tư phụng tiếp đáo định ký nhất phong, tinh Ngữ chế thi phiến",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.555,
+            "confidence": 85.11,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              394,
+              1990,
+              2078,
+              2036
+            ],
+            "generated_text": "nhất bính, quả càn nhất hấp, kính cung lĩnh thu, hân cầm dao tinh.",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 0.679,
+            "confidence": 91.11,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              544,
+              2080,
+              2100,
+              2132
+            ],
+            "generated_text": "Thiết tư, hà hoang hoá ngoại, thao tại bao hàm, tự triển cận hồi",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 0.659,
+            "confidence": 91.9,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              393,
+              2163,
+              2098,
+              2216
+            ],
+            "generated_text": "quốc dĩ lai, tích súng tiện phiên dịch lạc ư đạo. Thủ thú ăn hướng vưu",
+            "n_lines": 1,
+            "tokens": 32,
+            "seconds": 0.695,
+            "confidence": 82.94,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              396,
+              2258,
+              2168,
+              2291
+            ],
+            "generated_text": "vang điệp vì kiên chi vinh quang.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.334,
+            "confidence": 84.0,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              539,
+              2337,
+              2096,
+              2383
+            ],
+            "generated_text": "Bản quốc giới tại nam trâu, tâm huyền Bắc Cực, nhất phiến",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.474,
+            "confidence": 95.59,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              395,
+              2419,
+              2097,
+              2471
+            ],
+            "generated_text": "trung thành, ngưỡng hà cao minh viên chiếu, bá ư thi chương, hựu tải",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 0.654,
+            "confidence": 87.03,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              395,
+              2499,
+              2098,
+              2553
+            ],
+            "generated_text": "mai ký tín dụng thi quyến chú. Cái bất duy thân khuê duệ tảo, huy",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 0.634,
+            "confidence": 85.86,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              395,
+              2581,
+              2093,
+              2627
+            ],
+            "generated_text": "diêu xuyên nham, nhi nhã tứ tử hoài, sở dĩ đảm thi ư tiểu phiên giả.",
+            "n_lines": 1,
+            "tokens": 34,
+            "seconds": 0.736,
+            "confidence": 82.57,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              393,
+              2663,
+              2096,
+              2714
+            ],
+            "generated_text": "Phi cô kim quân thân tao ngộ sở năng, hy kỳ van nhất. Phát bảo phiến",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.596,
+            "confidence": 94.09,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              395,
+              2744,
+              2096,
+              2797
+            ],
+            "generated_text": "nhi thanh phong bị thế, thường chu quả nhi cam lộ óc tâm kỳ vi hoan",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.582,
+            "confidence": 96.4,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              395,
+              2838,
+              1007,
+              2871
+            ],
+            "generated_text": "biên, mac kha hinh dung.",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.294,
+            "confidence": 92.76,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              683,
+              1685,
+              1741,
+              1697
+            ],
+            "ink": 471
+          },
+          {
+            "box": [
+              621,
+              2033,
+              1525,
+              2042
+            ],
+            "ink": 322
+          },
+          {
+            "box": [
+              429,
+              2247,
+              980,
+              2262
+            ],
+            "ink": 664
+          },
+          {
+            "box": [
+              476,
+              2289,
+              1145,
+              2300
+            ],
+            "ink": 364
+          },
+          {
+            "box": [
+              674,
+              2379,
+              1971,
+              2389
+            ],
+            "ink": 366
+          },
+          {
+            "box": [
+              399,
+              2826,
+              908,
+              2839
+            ],
+            "ink": 522
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "61cbea5c0055c260ccfc12f884e0febca7b2783b",
+        "git_describe": "61cbea5",
+        "git_dirty": true,
+        "gpu": "NVIDIA L4",
+        "dtype": "bfloat16",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

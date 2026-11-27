@@ -1,0 +1,238 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_20",
+  "layer": "han",
+  "engine": "paddlevl",
+  "engine_descriptor": {
+    "name": "paddlevl",
+    "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+    "model_revision": "main",
+    "transformers_version": "5.24.0",
+    "torch_version": "2.14.1+cu126",
+    "cuda_version": "12.6",
+    "dtype": "bfloat16",
+    "orientation": "horizontal",
+    "max_pixels": 1003520,
+    "band_inches": 2.0,
+    "max_new_tokens": 512,
+    "prompt": "OCR:",
+    "col_rel_threshold": 0.05,
+    "min_unit_ink_rel": 0.08,
+    "min_pixels": 147456,
+    "min_band_side": 56,
+    "min_span_px": 14,
+    "loop_pattern": "(.{6,80}?)\\1{3,}",
+    "max_identical_run": 2,
+    "confidence_caps": [
+      10.0,
+      30.0
+    ],
+    "ink_percentiles": [
+      2.0,
+      98.0,
+      0.1
+    ],
+    "row_pitch_split": {
+      "lags": [
+        24,
+        240
+      ],
+      "min_ac": 0.15,
+      "tall": 1.6,
+      "valley_rel": 0.5
+    },
+    "deskew": [
+      2.5,
+      0.1,
+      0.2
+    ],
+    "char_lines_join": [
+      3,
+      2
+    ],
+    "adapter_version": 7
+  },
+  "updated_at": "2026-11-26T04:14:21+00:00",
+  "source": {
+    "path": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages"
+  },
+  "provenance": {
+    "git_commit": "7a0a8d9befaa9c2afee66139d5b233593b81f86e",
+    "git_describe": "7a0a8d9",
+    "git_dirty": true,
+    "gpu": "NVIDIA GeForce RTX 3050 6GB Laptop GPU",
+    "dtype": "bfloat16",
+    "adapter_version": 7
+  },
+  "parameters": {
+    "region": null,
+    "psm": 6,
+    "dpi": 300,
+    "force_reocr": true
+  },
+  "pages": [
+    {
+      "page": 14,
+      "engine": "paddlevl",
+      "key": "97ef327ed7088c7ca275563c0f1934a67d8ed91b49125f4cd5bb883493fec31c",
+      "status": "ocr",
+      "raw": "03_ocr/raw/paddlevl/0014.json",
+      "n_lines": 22,
+      "confidence": 85.88303240740741,
+      "created_at": "2026-11-26T04:11:46+00:00"
+    },
+    {
+      "page": 36,
+      "engine": "paddlevl",
+      "key": "623847e33ff390d8f4fb63e90733d5acd222416b5e669c7fd2b103eb4d05891a",
+      "status": "ocr",
+      "raw": "03_ocr/raw/paddlevl/0036.json",
+      "n_lines": 26,
+      "confidence": 90.61972826086956,
+      "created_at": "2026-11-26T04:11:56+00:00"
+    },
+    {
+      "page": 40,
+      "engine": "paddlevl",
+      "key": "abffde1deb5a09c243e791a4a5aaf7d384d5ddc77e660336970befb8f41cdea2",
+      "status": "ocr",
+      "raw": "03_ocr/raw/paddlevl/0040.json",
+      "n_lines": 13,
+      "confidence": 95.23777777777778,
+      "created_at": "2026-11-26T04:12:00+00:00"
+    },
+    {
+      "page": 68,
+      "engine": "paddlevl",
+      "key": "07b78ccb8867f64458f4de8c66cd40f24aee4dc32bdcee9e7456a5690f6e7dbd",
+      "status": "ocr",
+      "raw": "03_ocr/raw/paddlevl/0068.json",
+      "n_lines": 29,
+      "confidence": 89.14802906448682,
+      "created_at": "2026-11-26T04:12:15+00:00"
+    },
+    {
+      "page": 90,
+      "engine": "paddlevl",
+      "key": "96e49e881dcc3a5d3c5c5f3f176de0ea98200eb2e2e33cb369bf2cc747d53de4",
+      "status": "ocr",
+      "raw": "03_ocr/raw/paddlevl/0090.json",
+      "n_lines": 31,
+      "confidence": 86.45088319088319,
+      "created_at": "2026-11-26T04:12:31+00:00"
+    },
+    {
+      "page": 93,
+      "engine": "paddlevl",
+      "key": "9bfc56db7166073be22c3b89818005ad1fbebf79bbb5ad4d9e36c5d41a61bb8d",
+      "status": "ocr",
+      "raw": "03_ocr/raw/paddlevl/0093.json",
+      "n_lines": 21,
+      "confidence": 91.05095032397409,
+      "created_at": "2026-11-26T04:12:40+00:00"
+    },
+    {
+      "page": 160,
+      "engine": "paddlevl",
+      "key": "51061978412d1deca534813b036cb7f8663aac88dfd391f583cc345627877ebd",
+      "status": "ocr",
+      "raw": "03_ocr/raw/paddlevl/0160.json",
+      "n_lines": 20,
+      "confidence": 87.05005830903791,
+      "created_at": "2026-11-26T04:12:48+00:00"
+    },
+    {
+      "page": 175,
+      "engine": "paddlevl",
+      "key": "73d48bd93c27a5418296e34e42acf7a5852d2276c60543d31b3f2d5bf65d3051",
+      "status": "ocr",
+      "raw": "03_ocr/raw/paddlevl/0175.json",
+      "n_lines": 24,
+      "confidence": 87.84118257261412,
+      "created_at": "2026-11-26T04:12:58+00:00"
+    },
+    {
+      "page": 178,
+      "engine": "paddlevl",
+      "key": "7582aeb846f148c9fd481377b64f37b0a8c6084e505abad462cbbf3378e4146b",
+      "status": "ocr",
+      "raw": "03_ocr/raw/paddlevl/0178.json",
+      "n_lines": 24,
+      "confidence": 94.98074999999999,
+      "created_at": "2026-11-26T04:13:09+00:00"
+    },
+    {
+      "page": 228,
+      "engine": "paddlevl",
+      "key": "fedbc1b68637152c37c97dd4bd77261ac28ac36ba9e462c1220b16075463495d",
+      "status": "ocr",
+      "raw": "03_ocr/raw/paddlevl/0228.json",
+      "n_lines": 24,
+      "confidence": 86.7068016194332,
+      "created_at": "2026-11-26T04:13:18+00:00"
+    },
+    {
+      "page": 239,
+      "engine": "paddlevl",
+      "key": "b599f8310d495f092004c3cd58e0bb66c2e53df567802e714062b8299d57ea3b",
+      "status": "ocr",
+      "raw": "03_ocr/raw/paddlevl/0239.json",
+      "n_lines": 22,
+      "confidence": 89.15104477611939,
+      "created_at": "2026-11-26T04:13:27+00:00"
+    },
+    {
+      "page": 256,
+      "engine": "paddlevl",
+      "key": "a82cfde06cc234b77d2b9a4a0e9c0423453d5b2a8341119322781d8ef50f6335",
+      "status": "ocr",
+      "raw": "03_ocr/raw/paddlevl/0256.json",
+      "n_lines": 30,
+      "confidence": 88.96709219858155,
+      "created_at": "2026-11-26T04:13:35+00:00"
+    },
+    {
+      "page": 259,
+      "engine": "paddlevl",
+      "key": "32f0f278a41ba14db346df0c620fad6c27ca23e8c50601dde3a30d3635a1c138",
+      "status": "ocr",
+      "raw": "03_ocr/raw/paddlevl/0259.json",
+      "n_lines": 32,
+      "confidence": 92.4535260115607,
+      "created_at": "2026-11-26T04:13:45+00:00"
+    },
+    {
+      "page": 268,
+      "engine": "paddlevl",
+      "key": "02c0ed5add1ddee5ddb6f417eae77b98a65e82a3af8498109112440d9c935773",
+      "status": "ocr",
+      "raw": "03_ocr/raw/paddlevl/0268.json",
+      "n_lines": 28,
+      "confidence": 93.05920338983051,
+      "created_at": "2026-11-26T04:14:01+00:00"
+    },
+    {
+      "page": 280,
+      "engine": "paddlevl",
+      "key": "6fb97af18f21f3e3948cd78062e39868481e59c84910c9b8f1666e62f30a6093",
+      "status": "ocr",
+      "raw": "03_ocr/raw/paddlevl/0280.json",
+      "n_lines": 21,
+      "confidence": 89.4750743494424,
+      "created_at": "2026-11-26T04:14:11+00:00"
+    },
+    {
+      "page": 294,
+      "engine": "paddlevl",
+      "key": "173c944f69f1fa79859b3a6223b48b02acd5d94742e96e4900cff9a7c590e1ca",
+      "status": "ocr",
+      "raw": "03_ocr/raw/paddlevl/0294.json",
+      "n_lines": 22,
+      "confidence": 88.13636200716846,
+      "created_at": "2026-11-26T04:14:21+00:00"
+    }
+  ],
+  "missing_images": [],
+  "error_pages": [],
+  "pages_requested": "14,36,40,68,90,93,160,175,178,228,239,256,259,268,280,294"
+}

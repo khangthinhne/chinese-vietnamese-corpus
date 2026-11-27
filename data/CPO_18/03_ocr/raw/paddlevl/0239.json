@@ -1,0 +1,1051 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_18",
+  "engine": "paddlevl",
+  "page": 239,
+  "runs": [
+    {
+      "key": "a28235dddce4a771324922233ca8447998b48b3c5f8dd08a3ad0d7a2dcd32ff0",
+      "parameters": {
+        "image_sha256": "7fbf7cd58ca355d09d58a4173caf31039d35b8d2e414c8c174195db7d80ba14e",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T12:36:01+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_239.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        0,
+        2480,
+        3509
+      ],
+      "lines": [
+        {
+          "text": "Phần II : Nguyên văn tác phẩm dịch và chủ thích",
+          "bbox": [
+            1117,
+            189,
+            2479,
+            235
+          ],
+          "confidence": 88.67
+        },
+        {
+          "text": "▪",
+          "bbox": [
+            225,
+            267,
+            2480,
+            287
+          ],
+          "confidence": 24.85
+        },
+        {
+          "text": "minh chân lý, nhưng bản thân nó thi không phải là chân",
+          "bbox": [
+            383,
+            370,
+            2480,
+            430
+          ],
+          "confidence": 92.21
+        },
+        {
+          "text": "lý (Thiên Ngoại vật XXVI). Ở đây dịch thoát là \"muơn lồi",
+          "bbox": [
+            383,
+            464,
+            2163,
+            526
+          ],
+          "confidence": 88.79
+        },
+        {
+          "text": "van de linh hoi y chi.",
+          "bbox": [
+            381,
+            564,
+            1074,
+            605
+          ],
+          "confidence": 95.58
+        },
+        {
+          "text": "(6) Chỉ sự lễ bái Phát.",
+          "bbox": [
+            0,
+            671,
+            2480,
+            730
+          ],
+          "confidence": 91.72
+        },
+        {
+          "text": "(7) Diệu sắc (Surùpa) : chỉ \"báo thân\" (cái thân do quả báo",
+          "bbox": [
+            247,
+            793,
+            2480,
+            853
+          ],
+          "confidence": 91.94
+        },
+        {
+          "text": "mà có) và \"báo thỏ\" (tức \"thực báo vô chướng ngai thỏ\",",
+          "bbox": [
+            384,
+            880,
+            2480,
+            937
+          ],
+          "confidence": 85.49
+        },
+        {
+          "text": "một xứ sở của Phát do quả báo mà có). Đây là thế tướng",
+          "bbox": [
+            384,
+            961,
+            2480,
+            1021
+          ],
+          "confidence": 93.42
+        },
+        {
+          "text": "thú hai của Phát mang lấy xương cối trân, thu hương",
+          "bbox": [
+            380,
+            1044,
+            2480,
+            1105
+          ],
+          "confidence": 79.11
+        },
+        {
+          "text": "hoặc gánh chiu (or (chịu) nổi sướng hoặc khô do nghiệp trước quy",
+          "bbox": [
+            382,
+            1126,
+            2170,
+            1195
+          ],
+          "confidence": 69.79
+        },
+        {
+          "text": "(8) Đại giác : tức Phật. Theo quan niệm nhà Phật, kẻ phàm",
+          "bbox": [
+            248,
+            1327,
+            2170,
+            1399
+          ],
+          "confidence": 88.83
+        },
+        {
+          "text": "phu thuộc hang mê lầm, chưa giác ngộ. La Hán, Duyên",
+          "bbox": [
+            380,
+            1410,
+            2172,
+            1481
+          ],
+          "confidence": 95.42
+        },
+        {
+          "text": "Giác và Bộ Tát thì tuy đặc đạo, song sự giác ngộ chưa",
+          "bbox": [
+            380,
+            1495,
+            2169,
+            1563
+          ],
+          "confidence": 89.23
+        },
+        {
+          "text": "đây đủ. Chỉ có Phát là giác ngộ hoàn toàn, nên gọi là",
+          "bbox": [
+            380,
+            1576,
+            2169,
+            1645
+          ],
+          "confidence": 95.1
+        },
+        {
+          "text": "\"Đại giác\". Trong số đặc đảo, La Hán và Duyên Giác chỉ",
+          "bbox": [
+            378,
+            1655,
+            2172,
+            1722
+          ],
+          "confidence": 92.34
+        },
+        {
+          "text": "có thể \"tư giác\" (làm cho mình giác ngộ) mà không có khả",
+          "bbox": [
+            380,
+            1738,
+            2172,
+            1806
+          ],
+          "confidence": 96.19
+        },
+        {
+          "text": "năng \"giác tha\" (làm cho người khác giác ngộ), tự \"độ\" lấy",
+          "bbox": [
+            0,
+            1821,
+            2480,
+            1891
+          ],
+          "confidence": 94.93
+        },
+        {
+          "text": "minh, mà chăng \"độ\" được cho chúng sinh. Bộ Tát thì",
+          "bbox": [
+            384,
+            1900,
+            2480,
+            1968
+          ],
+          "confidence": 84.18
+        },
+        {
+          "text": "vừa \"tư giác\" vừa \"giác tha\", nhưng sự giác ngộ ấy chưa",
+          "bbox": [
+            382,
+            1988,
+            2179,
+            2055
+          ],
+          "confidence": 91.31
+        },
+        {
+          "text": "đây đủ. Chỉ có Phát là tư giác và giác tha tron ven mà",
+          "bbox": [
+            385,
+            2070,
+            2182,
+            2132
+          ],
+          "confidence": 91.47
+        },
+        {
+          "text": "(9) Tam, Ngũ : “Tam” tức “Tam Hoàng”, có nhiều thuyết.",
+          "bbox": [
+            252,
+            2268,
+            2480,
+            2334
+          ],
+          "confidence": 94.47
+        },
+        {
+          "text": "Theo Thương Thư đại truyền, thì là Toại Nhân, Phục Hy,",
+          "bbox": [
+            382,
+            2353,
+            2185,
+            2416
+          ],
+          "confidence": 88.7
+        },
+        {
+          "text": "Thần Nông. “Ngũ” tức “Ngũ Đê”, cũng có nhiều thuyết.",
+          "bbox": [
+            383,
+            2436,
+            2480,
+            2500
+          ],
+          "confidence": 89.01
+        },
+        {
+          "text": "Theo Sử ký, thì là Hoàng Đế, Xuyên Húc, Để Cốc, Đường",
+          "bbox": [
+            384,
+            2519,
+            2480,
+            2582
+          ],
+          "confidence": 94.92
+        },
+        {
+          "text": "Nghiêu, Ngu Thuấn. Đây là những thí dụ mà Đạo Cao",
+          "bbox": [
+            388,
+            2601,
+            2480,
+            2666
+          ],
+          "confidence": 91.53
+        },
+        {
+          "text": "từng dân trong bức thư thú nhất gửi Lý Miếu.",
+          "bbox": [
+            389,
+            2683,
+            2480,
+            2746
+          ],
+          "confidence": 85.37
+        },
+        {
+          "text": "(10) Mười hiệu Phát : theo quan niệm nhà Phát, thì Phát có",
+          "bbox": [
+            255,
+            2803,
+            2186,
+            2869
+          ],
+          "confidence": 92.87
+        },
+        {
+          "text": "mười danh hiệu, ấy là : 1. Như Lai (Tathāgata), bạc an",
+          "bbox": [
+            393,
+            2889,
+            2187,
+            2954
+          ],
+          "confidence": 94.1
+        },
+        {
+          "text": "nhiên tư tại hoàn toàn, vì đã \"đặc quả Chân Như\" thành",
+          "bbox": [
+            391,
+            2969,
+            2476,
+            3038
+          ],
+          "confidence": 94.01
+        },
+        {
+          "text": "biểu tượng của chân lý ; 2. Ứng cúng (Arhat), bạc đăng",
+          "bbox": [
+            390,
+            3050,
+            2480,
+            3130
+          ],
+          "confidence": 89.55
+        },
+        {
+          "text": "được thiên giới và người đời kính trọng, thờ cúng, vì đã",
+          "bbox": [
+            391,
+            3132,
+            2480,
+            3215
+          ],
+          "confidence": 93.08
+        },
+        {
+          "text": "\"dút dược hết phiền não\"; 3. Chính Biến Tri (Samya)",
+          "bbox": [
+            389,
+            3213,
+            2480,
+            3287
+          ],
+          "confidence": 90.68
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          3509
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 57.909,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              1117,
+              189,
+              2479,
+              235
+            ],
+            "generated_text": "Phần II : Nguyên văn tác phẩm dịch và chủ thích",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.293,
+            "confidence": 88.67,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              225,
+              267,
+              2480,
+              287
+            ],
+            "generated_text": "▪",
+            "n_lines": 1,
+            "tokens": 4,
+            "seconds": 0.678,
+            "confidence": 24.85,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              383,
+              370,
+              2480,
+              430
+            ],
+            "generated_text": "minh chân lý, nhưng bản thân nó thi không phải là chân",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.523,
+            "confidence": 92.21,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              383,
+              464,
+              2163,
+              526
+            ],
+            "generated_text": "lý (Thiên Ngoại vật XXVI). Ở đây dịch thoát là \"muơn lồi",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.05,
+            "confidence": 88.79,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              381,
+              564,
+              1074,
+              605
+            ],
+            "generated_text": "van de linh hoi y chi.",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.869,
+            "confidence": 95.58,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              0,
+              671,
+              2480,
+              730
+            ],
+            "generated_text": "(6) Chỉ sự lễ bái Phát.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.364,
+            "confidence": 91.72,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              247,
+              793,
+              2480,
+              853
+            ],
+            "generated_text": "(7) Diệu sắc (Surùpa) : chỉ \"báo thân\" (cái thân do quả báo",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 2.419,
+            "confidence": 91.94,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              384,
+              880,
+              2480,
+              937
+            ],
+            "generated_text": "mà có) và \"báo thỏ\" (tức \"thực báo vô chướng ngai thỏ\",",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.223,
+            "confidence": 85.49,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              384,
+              961,
+              2480,
+              1021
+            ],
+            "generated_text": "một xứ sở của Phát do quả báo mà có). Đây là thế tướng",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.935,
+            "confidence": 93.42,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              380,
+              1044,
+              2480,
+              1105
+            ],
+            "generated_text": "thú hai của Phát mang lấy xương cối trân, thu hương",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.667,
+            "confidence": 79.11,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              382,
+              1126,
+              2170,
+              1195
+            ],
+            "generated_text": "hoặc gánh chiu (or (chịu) nổi sướng hoặc khô do nghiệp trước quy",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.744,
+            "confidence": 69.79,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              248,
+              1327,
+              2170,
+              1399
+            ],
+            "generated_text": "(8) Đại giác : tức Phật. Theo quan niệm nhà Phật, kẻ phàm",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 1.837,
+            "confidence": 88.83,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              380,
+              1410,
+              2172,
+              1481
+            ],
+            "generated_text": "phu thuộc hang mê lầm, chưa giác ngộ. La Hán, Duyên",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.475,
+            "confidence": 95.42,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              380,
+              1495,
+              2169,
+              1563
+            ],
+            "generated_text": "Giác và Bộ Tát thì tuy đặc đạo, song sự giác ngộ chưa",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.698,
+            "confidence": 89.23,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              380,
+              1576,
+              2169,
+              1645
+            ],
+            "generated_text": "đây đủ. Chỉ có Phát là giác ngộ hoàn toàn, nên gọi là",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.746,
+            "confidence": 95.1,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              378,
+              1655,
+              2172,
+              1722
+            ],
+            "generated_text": "\"Đại giác\". Trong số đặc đảo, La Hán và Duyên Giác chỉ",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.758,
+            "confidence": 92.34,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              380,
+              1738,
+              2172,
+              1806
+            ],
+            "generated_text": "có thể \"tư giác\" (làm cho mình giác ngộ) mà không có khả",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 1.823,
+            "confidence": 96.19,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              0,
+              1821,
+              2480,
+              1891
+            ],
+            "generated_text": "năng \"giác tha\" (làm cho người khác giác ngộ), tự \"độ\" lấy",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 2.072,
+            "confidence": 94.93,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              384,
+              1900,
+              2480,
+              1968
+            ],
+            "generated_text": "minh, mà chăng \"độ\" được cho chúng sinh. Bộ Tát thì",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.685,
+            "confidence": 84.18,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              382,
+              1988,
+              2179,
+              2055
+            ],
+            "generated_text": "vừa \"tư giác\" vừa \"giác tha\", nhưng sự giác ngộ ấy chưa",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 1.884,
+            "confidence": 91.31,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              385,
+              2070,
+              2182,
+              2132
+            ],
+            "generated_text": "đây đủ. Chỉ có Phát là tư giác và giác tha tron ven mà",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.789,
+            "confidence": 91.47,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              252,
+              2268,
+              2480,
+              2334
+            ],
+            "generated_text": "(9) Tam, Ngũ : “Tam” tức “Tam Hoàng”, có nhiều thuyết.",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 1.995,
+            "confidence": 94.47,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              382,
+              2353,
+              2185,
+              2416
+            ],
+            "generated_text": "Theo Thương Thư đại truyền, thì là Toại Nhân, Phục Hy,",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.655,
+            "confidence": 88.7,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              383,
+              2436,
+              2480,
+              2500
+            ],
+            "generated_text": "Thần Nông. “Ngũ” tức “Ngũ Đê”, cũng có nhiều thuyết.",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 1.972,
+            "confidence": 89.01,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              384,
+              2519,
+              2480,
+              2582
+            ],
+            "generated_text": "Theo Sử ký, thì là Hoàng Đế, Xuyên Húc, Để Cốc, Đường",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 2.125,
+            "confidence": 94.92,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              388,
+              2601,
+              2480,
+              2666
+            ],
+            "generated_text": "Nghiêu, Ngu Thuấn. Đây là những thí dụ mà Đạo Cao",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.646,
+            "confidence": 91.53,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              389,
+              2683,
+              2480,
+              2746
+            ],
+            "generated_text": "từng dân trong bức thư thú nhất gửi Lý Miếu.",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.665,
+            "confidence": 85.37,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              255,
+              2803,
+              2186,
+              2869
+            ],
+            "generated_text": "(10) Mười hiệu Phát : theo quan niệm nhà Phát, thì Phát có",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.788,
+            "confidence": 92.87,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              393,
+              2889,
+              2187,
+              2954
+            ],
+            "generated_text": "mười danh hiệu, ấy là : 1. Như Lai (Tathāgata), bạc an",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 1.968,
+            "confidence": 94.1,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              391,
+              2969,
+              2476,
+              3038
+            ],
+            "generated_text": "nhiên tư tại hoàn toàn, vì đã \"đặc quả Chân Như\" thành",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.876,
+            "confidence": 94.01,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              390,
+              3050,
+              2480,
+              3130
+            ],
+            "generated_text": "biểu tượng của chân lý ; 2. Ứng cúng (Arhat), bạc đăng",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.097,
+            "confidence": 89.55,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 32,
+            "box": [
+              391,
+              3132,
+              2480,
+              3215
+            ],
+            "generated_text": "được thiên giới và người đời kính trọng, thờ cúng, vì đã",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.731,
+            "confidence": 93.08,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 33,
+            "box": [
+              389,
+              3213,
+              2480,
+              3287
+            ],
+            "generated_text": "\"dút dược hết phiền não\"; 3. Chính Biến Tri (Samya)",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.852,
+            "confidence": 90.68,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              7,
+              0,
+              167,
+              15
+            ],
+            "ink": 1213
+          },
+          {
+            "box": [
+              427,
+              550,
+              1057,
+              565
+            ],
+            "ink": 976
+          },
+          {
+            "box": [
+              385,
+              1233,
+              524,
+              1248
+            ],
+            "ink": 889
+          },
+          {
+            "box": [
+              384,
+              1257,
+              545,
+              1272
+            ],
+            "ink": 941
+          },
+          {
+            "box": [
+              471,
+              2128,
+              2007,
+              2137
+            ],
+            "ink": 381
+          },
+          {
+            "box": [
+              383,
+              2173,
+              2480,
+              2188
+            ],
+            "ink": 836
+          },
+          {
+            "box": [
+              386,
+              2197,
+              2480,
+              2212
+            ],
+            "ink": 931
+          },
+          {
+            "box": [
+              636,
+              3039,
+              2434,
+              3053
+            ],
+            "ink": 868
+          },
+          {
+            "box": [
+              2065,
+              3304,
+              2480,
+              3322
+            ],
+            "ink": 1157
+          },
+          {
+            "box": [
+              1970,
+              3372,
+              2177,
+              3390
+            ],
+            "ink": 1244
+          },
+          {
+            "box": [
+              1969,
+              3396,
+              2181,
+              3421
+            ],
+            "ink": 1738
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

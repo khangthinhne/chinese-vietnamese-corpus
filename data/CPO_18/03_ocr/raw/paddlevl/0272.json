@@ -1,0 +1,277 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_18",
+  "engine": "paddlevl",
+  "page": 272,
+  "runs": [
+    {
+      "key": "55e01b542b7ae72536229f8aab3ad90ab074fe9478eae8149352442a77bf36af",
+      "parameters": {
+        "image_sha256": "92d4d62c8e5bb4bd7f8d3df57c91ec528f258801f544b854ebfda39d30556003",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T13:30:44+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_272.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        0,
+        2480,
+        3509
+      ],
+      "lines": [
+        {
+          "text": "弘明集",
+          "bbox": [
+            322,
+            344,
+            2475,
+            538
+          ],
+          "confidence": 93.65
+        },
+        {
+          "text": "十一",
+          "bbox": [
+            322,
+            538,
+            2475,
+            731
+          ],
+          "confidence": 93.65
+        },
+        {
+          "text": "釋法明",
+          "bbox": [
+            322,
+            731,
+            2475,
+            925
+          ],
+          "confidence": 93.65
+        },
+        {
+          "text": "法明交州法師",
+          "bbox": [
+            322,
+            925,
+            2475,
+            1118
+          ],
+          "confidence": 93.65
+        },
+        {
+          "text": "荅李交州難佛不見形",
+          "bbox": [
+            322,
+            1118,
+            2475,
+            1312
+          ],
+          "confidence": 93.65
+        },
+        {
+          "text": "釋法明白巨論爰降敬覽移日馥苦幽蘭清若惠風貧道器非霜",
+          "bbox": [
+            322,
+            1312,
+            2475,
+            1505
+          ],
+          "confidence": 93.65
+        },
+        {
+          "text": "穎運非庖生動乖理閒獨躓戾駭良田辭納旨滯劇難星陳愚謂",
+          "bbox": [
+            322,
+            1505,
+            2475,
+            1699
+          ],
+          "confidence": 93.65
+        },
+        {
+          "text": "瓦陷寄奇鑒觀示見鞠躬歌讚感動靈變竝趣道之津梁清升之",
+          "bbox": [
+            322,
+            1699,
+            2475,
+            1893
+          ],
+          "confidence": 93.65
+        },
+        {
+          "text": "嘉會故宜寄觀雙舉疑驗兩行豈得罷絕示見頓漏神彩齊軌姬",
+          "bbox": [
+            322,
+            1893,
+            2475,
+            2086
+          ],
+          "confidence": 93.65
+        },
+        {
+          "text": "孔同範世訓放光動地徒爲空言夫法身凝絕妙色湛然故能隱",
+          "bbox": [
+            322,
+            2086,
+            2475,
+            2280
+          ],
+          "confidence": 93.65
+        },
+        {
+          "text": "顯順時行藏莫測顧則乘如而來隱則善逝而去卽言求旨何愆",
+          "bbox": [
+            322,
+            2280,
+            2475,
+            2473
+          ],
+          "confidence": 93.65
+        },
+        {
+          "text": "於十號哉餘暉所映足光季俗信者豈已螢燭增疑正向旦日白",
+          "bbox": [
+            322,
+            2473,
+            2475,
+            2667
+          ],
+          "confidence": 93.65
+        },
+        {
+          "text": "黑比肩墖像經書彌滿世界學者豈言無證自悔又引七經義兼",
+          "bbox": [
+            322,
+            2667,
+            2475,
+            2860
+          ],
+          "confidence": 93.65
+        },
+        {
+          "text": "未來積善餘慶積惡餘殃雖新新生藏交臂代謝善惡之業不得",
+          "bbox": [
+            322,
+            2860,
+            2475,
+            3054
+          ],
+          "confidence": 93.65
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          3509
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 117.387,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              322,
+              344,
+              2475,
+              3054
+            ],
+            "generated_text": "弘明集\n十一\n釋法明\n法明交州法師\n荅李交州難佛不見形\n釋法明白巨論爰降敬覽移日馥苦幽蘭清若惠風貧道器非霜\n穎運非庖生動乖理閒獨躓戾駭良田辭納旨滯劇難星陳愚謂\n瓦陷寄奇鑒觀示見鞠躬歌讚感動靈變竝趣道之津梁清升之\n嘉會故宜寄觀雙舉疑驗兩行豈得罷絕示見頓漏神彩齊軌姬\n孔同範世訓放光動地徒爲空言夫法身凝絕妙色湛然故能隱\n顯順時行藏莫測顧則乘如而來隱則善逝而去卽言求旨何愆\n於十號哉餘暉所映足光季俗信者豈已螢燭增疑正向旦日白\n黑比肩墖像經書彌滿世界學者豈言無證自悔又引七經義兼\n未來積善餘慶積惡餘殃雖新新生藏交臂代謝善惡之業不得",
+            "n_lines": 14,
+            "tokens": 347,
+            "seconds": 117.383,
+            "confidence": 93.65,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              1069,
+              3150,
+              2306,
+              3217
+            ],
+            "ink": 8773
+          },
+          {
+            "box": [
+              2065,
+              3304,
+              2190,
+              3321
+            ],
+            "ink": 953
+          },
+          {
+            "box": [
+              1971,
+              3376,
+              2096,
+              3385
+            ],
+            "ink": 422
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

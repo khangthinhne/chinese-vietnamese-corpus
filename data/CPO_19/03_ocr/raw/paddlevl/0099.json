@@ -1,0 +1,848 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 99,
+  "runs": [
+    {
+      "key": "c37bc905937fbe1330c6abb1e68c34cfa5de74f8d03cfee48b0b231ed9bad8d0",
+      "parameters": {
+        "image_sha256": "fe10126cc30e2b9ad5185b29438c92aac1da32208c057aa38805b49de531226c",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T12:13:18+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_099.png",
+      "image_size": [
+        2694,
+        3308
+      ],
+      "crop_box": [
+        0,
+        0,
+        2694,
+        3308
+      ],
+      "lines": [
+        {
+          "text": "ngothinhamch1.pdf",
+          "bbox": [
+            6,
+            19,
+            296,
+            45
+          ],
+          "confidence": 98.77
+        },
+        {
+          "text": "NGŮ THI NHAM TOAN TAP - TAP III",
+          "bbox": [
+            565,
+            221,
+            1338,
+            260
+          ],
+          "confidence": 78.76
+        },
+        {
+          "text": "んへーナ",
+          "bbox": [
+            1250,
+            308,
+            1568,
+            329
+          ],
+          "confidence": 49.55
+        },
+        {
+          "text": "42. 山壯",
+          "bbox": [
+            1235,
+            325,
+            1573,
+            373
+          ],
+          "confidence": 83.85
+        },
+        {
+          "text": "蘿藤籬落小林東",
+          "bbox": [
+            1115,
+            503,
+            1700,
+            568
+          ],
+          "confidence": 99.94
+        },
+        {
+          "text": "一半栽蔬一半松",
+          "bbox": [
+            1115,
+            631,
+            1796,
+            691
+          ],
+          "confidence": 98.79
+        },
+        {
+          "text": "耕鑿不知堯舜事",
+          "bbox": [
+            1114,
+            752,
+            1702,
+            822
+          ],
+          "confidence": 99.5
+        },
+        {
+          "text": "梯遲豈辨晉秦封",
+          "bbox": [
+            1114,
+            879,
+            1703,
+            943
+          ],
+          "confidence": 99.48
+        },
+        {
+          "text": "春深煙洞開銅雀",
+          "bbox": [
+            1114,
+            1007,
+            1703,
+            1068
+          ],
+          "confidence": 99.89
+        },
+        {
+          "text": "雨霽山塘戲玉龍",
+          "bbox": [
+            1119,
+            1128,
+            1724,
+            1192
+          ],
+          "confidence": 99.59
+        },
+        {
+          "text": "景入吟神忙應接",
+          "bbox": [
+            1117,
+            1253,
+            1708,
+            1316
+          ],
+          "confidence": 98.04
+        },
+        {
+          "text": "又多城市十分濃",
+          "bbox": [
+            1119,
+            1376,
+            1704,
+            1441
+          ],
+          "confidence": 99.54
+        },
+        {
+          "text": "PHIEN AM:",
+          "bbox": [
+            571,
+            1552,
+            1317,
+            1592
+          ],
+          "confidence": 95.19
+        },
+        {
+          "text": "SON TRANG",
+          "bbox": [
+            1261,
+            1625,
+            1736,
+            1672
+          ],
+          "confidence": 91.84
+        },
+        {
+          "text": "La đăng li lạc tiểu (a) làm động,",
+          "bbox": [
+            1015,
+            1758,
+            2082,
+            1812
+          ],
+          "confidence": 87.73
+        },
+        {
+          "text": "Nhất bán tài sở nhất bán tùng.",
+          "bbox": [
+            1014,
+            1844,
+            1732,
+            1890
+          ],
+          "confidence": 83.47
+        },
+        {
+          "text": "Canh tac bất tri Nghiêu Thuấn sư;",
+          "bbox": [
+            1019,
+            1930,
+            1821,
+            1978
+          ],
+          "confidence": 89.47
+        },
+        {
+          "text": "Thê trì khởi biên Tấn Tân phong.",
+          "bbox": [
+            1019,
+            2017,
+            1784,
+            2064
+          ],
+          "confidence": 86.81
+        },
+        {
+          "text": "Xuân thâm yên động khai (b) động tước;",
+          "bbox": [
+            1014,
+            2105,
+            1906,
+            2159
+          ],
+          "confidence": 87.15
+        },
+        {
+          "text": "Vũ tế sơn đường hí ngọc long.",
+          "bbox": [
+            1021,
+            2192,
+            1693,
+            2246
+          ],
+          "confidence": 93.78
+        },
+        {
+          "text": "Cảnh nhập ngâm thân (c) mang ứng tiếp,",
+          "bbox": [
+            1021,
+            2279,
+            1938,
+            2334
+          ],
+          "confidence": 89.2
+        },
+        {
+          "text": "Hưu đa thành thị thấp phân nùng.",
+          "bbox": [
+            1018,
+            2367,
+            1828,
+            2420
+          ],
+          "confidence": 89.78
+        },
+        {
+          "text": "DICH NGHIA:",
+          "bbox": [
+            574,
+            2479,
+            884,
+            2519
+          ],
+          "confidence": 97.58
+        },
+        {
+          "text": "XÓM NUI\\(^{(A)}\\)",
+          "bbox": [
+            598,
+            2560,
+            1567,
+            2606
+          ],
+          "confidence": 75.48
+        },
+        {
+          "text": "Cánh rừng nhỏ phía đông, dây leo đầy giậu,",
+          "bbox": [
+            871,
+            2695,
+            1879,
+            2748
+          ],
+          "confidence": 92.09
+        },
+        {
+          "text": "Một nửa trồng rau, một nửa là thông.",
+          "bbox": [
+            869,
+            2777,
+            1731,
+            2823
+          ],
+          "confidence": 89.53
+        },
+        {
+          "text": "Cày ruộng đào giếng, không cần biết việc đòi Nghiêu, Thuấn;",
+          "bbox": [
+            871,
+            2858,
+            2278,
+            2913
+          ],
+          "confidence": 93.73
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2694,
+          3308
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 30.547,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              6,
+              19,
+              296,
+              45
+            ],
+            "generated_text": "ngothinhamch1.pdf",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.908,
+            "confidence": 98.77,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              565,
+              221,
+              1338,
+              260
+            ],
+            "generated_text": "NGŮ THI NHAM TOAN TAP - TAP III",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.314,
+            "confidence": 78.76,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              568,
+              263,
+              2279,
+              278
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.458,
+            "confidence": 58.51,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              1250,
+              308,
+              1568,
+              329
+            ],
+            "generated_text": "んへーナ",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.631,
+            "confidence": 49.55,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              1235,
+              325,
+              1573,
+              373
+            ],
+            "generated_text": "42. 山壯",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.829,
+            "confidence": 83.85,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              1115,
+              503,
+              1700,
+              568
+            ],
+            "generated_text": "蘿藤籬落小林東",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.101,
+            "confidence": 99.94,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              1115,
+              631,
+              1796,
+              691
+            ],
+            "generated_text": "一半栽蔬一半松",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.783,
+            "confidence": 98.79,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              1114,
+              752,
+              1702,
+              822
+            ],
+            "generated_text": "耕鑿不知堯舜事",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 1.006,
+            "confidence": 99.5,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              1114,
+              879,
+              1703,
+              943
+            ],
+            "generated_text": "梯遲豈辨晉秦封",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.213,
+            "confidence": 99.48,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              1114,
+              1007,
+              1703,
+              1068
+            ],
+            "generated_text": "春深煙洞開銅雀",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.103,
+            "confidence": 99.89,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              1119,
+              1128,
+              1724,
+              1192
+            ],
+            "generated_text": "雨霽山塘戲玉龍",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.995,
+            "confidence": 99.59,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              1117,
+              1253,
+              1708,
+              1316
+            ],
+            "generated_text": "景入吟神忙應接",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.857,
+            "confidence": 98.04,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              1119,
+              1376,
+              1704,
+              1441
+            ],
+            "generated_text": "又多城市十分濃",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.85,
+            "confidence": 99.54,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              571,
+              1552,
+              1317,
+              1592
+            ],
+            "generated_text": "PHIEN AM:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.703,
+            "confidence": 95.19,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              1261,
+              1625,
+              1736,
+              1672
+            ],
+            "generated_text": "SON TRANG",
+            "n_lines": 1,
+            "tokens": 4,
+            "seconds": 0.581,
+            "confidence": 91.84,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              1015,
+              1758,
+              2082,
+              1812
+            ],
+            "generated_text": "La đăng li lạc tiểu (a) làm động,",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.43,
+            "confidence": 87.73,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              1014,
+              1844,
+              1732,
+              1890
+            ],
+            "generated_text": "Nhất bán tài sở nhất bán tùng.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.124,
+            "confidence": 83.47,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              1019,
+              1930,
+              1821,
+              1978
+            ],
+            "generated_text": "Canh tac bất tri Nghiêu Thuấn sư;",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.269,
+            "confidence": 89.47,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              1019,
+              2017,
+              1784,
+              2064
+            ],
+            "generated_text": "Thê trì khởi biên Tấn Tân phong.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.322,
+            "confidence": 86.81,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              1014,
+              2105,
+              1906,
+              2159
+            ],
+            "generated_text": "Xuân thâm yên động khai (b) động tước;",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.437,
+            "confidence": 87.15,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              1021,
+              2192,
+              1693,
+              2246
+            ],
+            "generated_text": "Vũ tế sơn đường hí ngọc long.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.103,
+            "confidence": 93.78,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              1021,
+              2279,
+              1938,
+              2334
+            ],
+            "generated_text": "Cảnh nhập ngâm thân (c) mang ứng tiếp,",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.451,
+            "confidence": 89.2,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              1018,
+              2367,
+              1828,
+              2420
+            ],
+            "generated_text": "Hưu đa thành thị thấp phân nùng.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.227,
+            "confidence": 89.78,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              574,
+              2479,
+              884,
+              2519
+            ],
+            "generated_text": "DICH NGHIA:",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.762,
+            "confidence": 97.58,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              598,
+              2560,
+              1567,
+              2606
+            ],
+            "generated_text": "XÓM NUI\\(^{(A)}\\)",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 1.111,
+            "confidence": 75.48,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              871,
+              2695,
+              1879,
+              2748
+            ],
+            "generated_text": "Cánh rừng nhỏ phía đông, dây leo đầy giậu,",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.836,
+            "confidence": 92.09,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              869,
+              2777,
+              1731,
+              2823
+            ],
+            "generated_text": "Một nửa trồng rau, một nửa là thông.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.308,
+            "confidence": 89.53,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              871,
+              2858,
+              2278,
+              2913
+            ],
+            "generated_text": "Cày ruộng đào giếng, không cần biết việc đòi Nghiêu, Thuấn;",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.832,
+            "confidence": 93.73,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              641,
+              214,
+              1239,
+              224
+            ],
+            "ink": 254
+          },
+          {
+            "box": [
+              1180,
+              1974,
+              1812,
+              1983
+            ],
+            "ink": 244
+          },
+          {
+            "box": [
+              924,
+              2819,
+              1714,
+              2829
+            ],
+            "ink": 287
+          },
+          {
+            "box": [
+              590,
+              3022,
+              672,
+              3033
+            ],
+            "ink": 256
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

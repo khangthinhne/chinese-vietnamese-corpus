@@ -1,0 +1,1013 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 172,
+  "runs": [
+    {
+      "key": "972c6ce36fbebf3309879caa526753c132b1822091a39f804ef07763ed745fa9",
+      "parameters": {
+        "image_sha256": "2f1112f5fc058d66d9e5dc2a4d36854ea3185dc6d87898cd2b4eecc38a0281de",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T13:05:10+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_172.png",
+      "image_size": [
+        2582,
+        3210
+      ],
+      "crop_box": [
+        0,
+        0,
+        2582,
+        3210
+      ],
+      "lines": [
+        {
+          "text": "ngothinhamle1.pdf",
+          "bbox": [
+            7,
+            19,
+            286,
+            45
+          ],
+          "confidence": 96.3
+        },
+        {
+          "text": "HOÀNG HOA ĐỔ PHA",
+          "bbox": [
+            1408,
+            186,
+            2088,
+            225
+          ],
+          "confidence": 79.23
+        },
+        {
+          "text": "PHIEN AM:",
+          "bbox": [
+            381,
+            298,
+            2041,
+            337
+          ],
+          "confidence": 98.93
+        },
+        {
+          "text": "QUA TONG TRANG NGUYÊN PHUNG KINH CO TRACH",
+          "bbox": [
+            547,
+            373,
+            1924,
+            419
+          ],
+          "confidence": 94.91
+        },
+        {
+          "text": "Để mông luân khôi đặc Mã lương.",
+          "bbox": [
+            826,
+            506,
+            1893,
+            549
+          ],
+          "confidence": 83.32
+        },
+        {
+          "text": "Trạng nguyên tín tức đích phi thường.",
+          "bbox": [
+            829,
+            587,
+            2133,
+            640
+          ],
+          "confidence": 92.87
+        },
+        {
+          "text": "Tính danh nhi tư tiêu kim thach;",
+          "bbox": [
+            831,
+            668,
+            2135,
+            712
+          ],
+          "confidence": 95.07
+        },
+        {
+          "text": "Sự nghiệp thiên thu ký đế tương.",
+          "bbox": [
+            829,
+            748,
+            1578,
+            793
+          ],
+          "confidence": 89.13
+        },
+        {
+          "text": "Tân pháp chi gian vô hiện thế;",
+          "bbox": [
+            832,
+            830,
+            1536,
+            874
+          ],
+          "confidence": 96.72
+        },
+        {
+          "text": "Đai khoa sở đặc thi văn chương.",
+          "bbox": [
+            828,
+            912,
+            1568,
+            956
+          ],
+          "confidence": 91.04
+        },
+        {
+          "text": "Nguy nga miếu mao trùng đan oách,",
+          "bbox": [
+            828,
+            995,
+            1672,
+            1039
+          ],
+          "confidence": 85.79
+        },
+        {
+          "text": "Quy hầu hoàn ứng ái (a) thử hương.",
+          "bbox": [
+            831,
+            1076,
+            1620,
+            1120
+          ],
+          "confidence": 83.77
+        },
+        {
+          "text": "DICH NGHIA:",
+          "bbox": [
+            382,
+            1163,
+            693,
+            1201
+          ],
+          "confidence": 99.24
+        },
+        {
+          "text": "QUA NHA CỦ CỦA PHUNG KINH TRANG NGUYÊN",
+          "bbox": [
+            599,
+            1237,
+            1873,
+            1284
+          ],
+          "confidence": 83.08
+        },
+        {
+          "text": "THÔI TÔNG\\(^{(1)}\\)",
+          "bbox": [
+            456,
+            1327,
+            1412,
+            1370
+          ],
+          "confidence": 87.14
+        },
+        {
+          "text": "Vua mông kén nhân tài, chọn được Mã Lương. (2)",
+          "bbox": [
+            735,
+            1456,
+            1838,
+            1502
+          ],
+          "confidence": 89.91
+        },
+        {
+          "text": "Tin đồn Trạng nguyên dịch thực phi thường.",
+          "bbox": [
+            735,
+            1538,
+            1762,
+            1590
+          ],
+          "confidence": 92.36
+        },
+        {
+          "text": "Ho tên hai chữ, nêu trên bảng vàng bia đá;",
+          "bbox": [
+            737,
+            1621,
+            1726,
+            1665
+          ],
+          "confidence": 91.64
+        },
+        {
+          "text": "Sự nghiệp ngàn thu, ghi trong sách lúa quyến là.",
+          "bbox": [
+            737,
+            1703,
+            1866,
+            1755
+          ],
+          "confidence": 92.26
+        },
+        {
+          "text": "Trong thời tân pháp (3) không hiến kế thay đổi;",
+          "bbox": [
+            736,
+            1783,
+            1780,
+            1829
+          ],
+          "confidence": 87.52
+        },
+        {
+          "text": "Sở đặc bác đại khoa, cây ở văn chương.",
+          "bbox": [
+            737,
+            1865,
+            1626,
+            1911
+          ],
+          "confidence": 89.15
+        },
+        {
+          "text": "Miêu mạo nguy nga mấy tầng sơn vẽ,",
+          "bbox": [
+            738,
+            1950,
+            1596,
+            2000
+          ],
+          "confidence": 85.02
+        },
+        {
+          "text": "Hãy nên trọng hậu, yêu mến hướng này.",
+          "bbox": [
+            739,
+            2031,
+            1668,
+            2083
+          ],
+          "confidence": 95.47
+        },
+        {
+          "text": "KHAO DI:",
+          "bbox": [
+            384,
+            2117,
+            1557,
+            2155
+          ],
+          "confidence": 96.02
+        },
+        {
+          "text": "a. Bản A.1579; VHv.16/12 chép: Thu 受",
+          "bbox": [
+            532,
+            2191,
+            1348,
+            2232
+          ],
+          "confidence": 96.18
+        },
+        {
+          "text": "CHU THICH:",
+          "bbox": [
+            385,
+            2272,
+            1554,
+            2311
+          ],
+          "confidence": 99.82
+        },
+        {
+          "text": "1.Phùng Kinh: Người thời Bắc Tống, từ thi hướng đến thi đình đều đỗ",
+          "bbox": [
+            536,
+            2347,
+            2089,
+            2396
+          ],
+          "confidence": 92.98
+        },
+        {
+          "text": "đầu. Trước ngày thi đình vua Tống năm mơ thấy kén được người tài, xem tên họ",
+          "bbox": [
+            384,
+            2425,
+            2088,
+            2474
+          ],
+          "confidence": 93.98
+        },
+        {
+          "text": "thì là Mã Lương. Hôm sau kén được Phùng Kỉnh.",
+          "bbox": [
+            383,
+            2502,
+            1422,
+            2544
+          ],
+          "confidence": 92.33
+        },
+        {
+          "text": "Lúc Vương An Thạch thi hành Tân pháp, Phùng Kinh có vạch ra những",
+          "bbox": [
+            532,
+            2575,
+            2088,
+            2624
+          ],
+          "confidence": 99.28
+        },
+        {
+          "text": "chỗ đồ trong Tân pháp, do đó bị Vương An Thạch ghét, rồi bị biếm trích.",
+          "bbox": [
+            382,
+            2648,
+            1895,
+            2698
+          ],
+          "confidence": 95.51
+        },
+        {
+          "text": "2.Mã Lượng: Tức Phùng Kinh, đem bộ chấm thủy ở chữ Phùng 馮chuyến",
+          "bbox": [
+            533,
+            2722,
+            2089,
+            2772
+          ],
+          "confidence": 89.68
+        },
+        {
+          "text": "sang chữ Kinh 京 thì Phùng Kinh 馮京 biến thành Mã Lượng 馬涼.",
+          "bbox": [
+            383,
+            2797,
+            1811,
+            2846
+          ],
+          "confidence": 92.52
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2582,
+          3210
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 50.571,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              7,
+              19,
+              286,
+              45
+            ],
+            "generated_text": "ngothinhamle1.pdf",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.896,
+            "confidence": 96.3,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              1408,
+              186,
+              2088,
+              225
+            ],
+            "generated_text": "HOÀNG HOA ĐỔ PHA",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.035,
+            "confidence": 79.23,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              382,
+              230,
+              2093,
+              244
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.456,
+            "confidence": 62.58,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              381,
+              298,
+              2041,
+              337
+            ],
+            "generated_text": "PHIEN AM:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.766,
+            "confidence": 98.93,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              547,
+              373,
+              1924,
+              419
+            ],
+            "generated_text": "QUA TONG TRANG NGUYÊN PHUNG KINH CO TRACH",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.589,
+            "confidence": 94.91,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              826,
+              506,
+              1893,
+              549
+            ],
+            "generated_text": "Để mông luân khôi đặc Mã lương.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.498,
+            "confidence": 83.32,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              829,
+              587,
+              2133,
+              640
+            ],
+            "generated_text": "Trạng nguyên tín tức đích phi thường.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.19,
+            "confidence": 92.87,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              831,
+              668,
+              2135,
+              712
+            ],
+            "generated_text": "Tính danh nhi tư tiêu kim thach;",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.193,
+            "confidence": 95.07,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              829,
+              748,
+              1578,
+              793
+            ],
+            "generated_text": "Sự nghiệp thiên thu ký đế tương.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.195,
+            "confidence": 89.13,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              832,
+              830,
+              1536,
+              874
+            ],
+            "generated_text": "Tân pháp chi gian vô hiện thế;",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 1.005,
+            "confidence": 96.72,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              828,
+              912,
+              1568,
+              956
+            ],
+            "generated_text": "Đai khoa sở đặc thi văn chương.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.177,
+            "confidence": 91.04,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              828,
+              995,
+              1672,
+              1039
+            ],
+            "generated_text": "Nguy nga miếu mao trùng đan oách,",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.235,
+            "confidence": 85.79,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              831,
+              1076,
+              1620,
+              1120
+            ],
+            "generated_text": "Quy hầu hoàn ứng ái (a) thử hương.",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.509,
+            "confidence": 83.77,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              382,
+              1163,
+              693,
+              1201
+            ],
+            "generated_text": "DICH NGHIA:",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.75,
+            "confidence": 99.24,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              599,
+              1237,
+              1873,
+              1284
+            ],
+            "generated_text": "QUA NHA CỦ CỦA PHUNG KINH TRANG NGUYÊN",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 1.938,
+            "confidence": 83.08,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              456,
+              1327,
+              1412,
+              1370
+            ],
+            "generated_text": "THÔI TÔNG\\(^{(1)}\\)",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.172,
+            "confidence": 87.14,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              735,
+              1456,
+              1838,
+              1502
+            ],
+            "generated_text": "Vua mông kén nhân tài, chọn được Mã Lương. (2)",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.852,
+            "confidence": 89.91,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              735,
+              1538,
+              1762,
+              1590
+            ],
+            "generated_text": "Tin đồn Trạng nguyên dịch thực phi thường.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.404,
+            "confidence": 92.36,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              737,
+              1621,
+              1726,
+              1665
+            ],
+            "generated_text": "Ho tên hai chữ, nêu trên bảng vàng bia đá;",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.665,
+            "confidence": 91.64,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              737,
+              1703,
+              1866,
+              1755
+            ],
+            "generated_text": "Sự nghiệp ngàn thu, ghi trong sách lúa quyến là.",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.714,
+            "confidence": 92.26,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              736,
+              1783,
+              1780,
+              1829
+            ],
+            "generated_text": "Trong thời tân pháp (3) không hiến kế thay đổi;",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.857,
+            "confidence": 87.52,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              737,
+              1865,
+              1626,
+              1911
+            ],
+            "generated_text": "Sở đặc bác đại khoa, cây ở văn chương.",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.496,
+            "confidence": 89.15,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              738,
+              1950,
+              1596,
+              2000
+            ],
+            "generated_text": "Miêu mạo nguy nga mấy tầng sơn vẽ,",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.48,
+            "confidence": 85.02,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              739,
+              2031,
+              1668,
+              2083
+            ],
+            "generated_text": "Hãy nên trọng hậu, yêu mến hướng này.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.462,
+            "confidence": 95.47,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              384,
+              2117,
+              1557,
+              2155
+            ],
+            "generated_text": "KHAO DI:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.681,
+            "confidence": 96.02,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              532,
+              2191,
+              1348,
+              2232
+            ],
+            "generated_text": "a. Bản A.1579; VHv.16/12 chép: Thu 受",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 1.995,
+            "confidence": 96.18,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              385,
+              2272,
+              1554,
+              2311
+            ],
+            "generated_text": "CHU THICH:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.809,
+            "confidence": 99.82,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              536,
+              2347,
+              2089,
+              2396
+            ],
+            "generated_text": "1.Phùng Kinh: Người thời Bắc Tống, từ thi hướng đến thi đình đều đỗ",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.176,
+            "confidence": 92.98,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              384,
+              2425,
+              2088,
+              2474
+            ],
+            "generated_text": "đầu. Trước ngày thi đình vua Tống năm mơ thấy kén được người tài, xem tên họ",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 2.225,
+            "confidence": 93.98,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              383,
+              2502,
+              1422,
+              2544
+            ],
+            "generated_text": "thì là Mã Lương. Hôm sau kén được Phùng Kỉnh.",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.795,
+            "confidence": 92.33,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              532,
+              2575,
+              2088,
+              2624
+            ],
+            "generated_text": "Lúc Vương An Thạch thi hành Tân pháp, Phùng Kinh có vạch ra những",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.892,
+            "confidence": 99.28,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 32,
+            "box": [
+              382,
+              2648,
+              1895,
+              2698
+            ],
+            "generated_text": "chỗ đồ trong Tân pháp, do đó bị Vương An Thạch ghét, rồi bị biếm trích.",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 2.375,
+            "confidence": 95.51,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 33,
+            "box": [
+              533,
+              2722,
+              2089,
+              2772
+            ],
+            "generated_text": "2.Mã Lượng: Tức Phùng Kinh, đem bộ chấm thủy ở chữ Phùng 馮chuyến",
+            "n_lines": 1,
+            "tokens": 35,
+            "seconds": 2.673,
+            "confidence": 89.68,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 34,
+            "box": [
+              383,
+              2797,
+              1811,
+              2846
+            ],
+            "generated_text": "sang chữ Kinh 京 thì Phùng Kinh 馮京 biến thành Mã Lượng 馬涼.",
+            "n_lines": 1,
+            "tokens": 32,
+            "seconds": 2.409,
+            "confidence": 92.52,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              867,
+              790,
+              1564,
+              802
+            ],
+            "ink": 365
+          },
+          {
+            "box": [
+              867,
+              1035,
+              1669,
+              1047
+            ],
+            "ink": 413
+          },
+          {
+            "box": [
+              851,
+              1117,
+              1605,
+              1128
+            ],
+            "ink": 322
+          },
+          {
+            "box": [
+              896,
+              1498,
+              1800,
+              1509
+            ],
+            "ink": 352
+          },
+          {
+            "box": [
+              848,
+              1825,
+              1777,
+              1836
+            ],
+            "ink": 341
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

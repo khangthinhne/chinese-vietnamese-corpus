@@ -1,0 +1,974 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_18",
+  "engine": "paddlevl",
+  "page": 236,
+  "runs": [
+    {
+      "key": "4077549589845d9e9739aa940632714c7f5f16241e386a734f4f7969b3e6ec5f",
+      "parameters": {
+        "image_sha256": "7d4ac430b8e17f4a89b91ce5c8ec88f8c4407662b03efc1da754de63b23455f6",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T12:33:13+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_236.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        0,
+        2480,
+        3509
+      ],
+      "lines": [
+        {
+          "text": "Sưu tấm và khảo luận tác phẩm chủ Hán của người Việt Nam trước TK 10",
+          "bbox": [
+            282,
+            154,
+            1824,
+            211
+          ],
+          "confidence": 94.82
+        },
+        {
+          "text": "[",
+          "bbox": [
+            265,
+            246,
+            2187,
+            270
+          ],
+          "confidence": 9.96
+        },
+        {
+          "text": "Lai luân tuy mỹ, cổ tư tuân hoàn chi thuyết nhĩ.",
+          "bbox": [
+            402,
+            352,
+            2174,
+            421
+          ],
+          "confidence": 81.6
+        },
+        {
+          "text": "Vong phục trac tân diện di, dĩ tây cô kim chi trê, sửi lô",
+          "bbox": [
+            278,
+            448,
+            2175,
+            516
+          ],
+          "confidence": 73.64
+        },
+        {
+          "text": "thàn nhiên, tích ngại đại thông giã. Thâm nguyên Đại",
+          "bbox": [
+            279,
+            543,
+            2172,
+            621
+          ],
+          "confidence": 87.17
+        },
+        {
+          "text": "hoa thương thụy nap hao khoan.",
+          "bbox": [
+            278,
+            653,
+            1342,
+            701
+          ],
+          "confidence": 89.23
+        },
+        {
+          "text": "Đê tủ Lý Miêu cản trình.",
+          "bbox": [
+            399,
+            769,
+            1213,
+            836
+          ],
+          "confidence": 80.28
+        },
+        {
+          "text": "(Toàn Thương có, Tam đai, Tân, Hán,",
+          "bbox": [
+            893,
+            883,
+            2087,
+            946
+          ],
+          "confidence": 94.95
+        },
+        {
+          "text": "Tam quốc, Luc triệu văn ; Toàn Tổng",
+          "bbox": [
+            912,
+            970,
+            2081,
+            1033
+          ],
+          "confidence": 94.4
+        },
+        {
+          "text": "van, quyền ngu tháp thất).",
+          "bbox": [
+            910,
+            1075,
+            1744,
+            1119
+          ],
+          "confidence": 76.48
+        },
+        {
+          "text": "DICH NGHIA:",
+          "bbox": [
+            397,
+            1231,
+            819,
+            1287
+          ],
+          "confidence": 90.53
+        },
+        {
+          "text": "THƯ GỮ PHÁP SƯ ĐAO CAO (II) (1)",
+          "bbox": [
+            745,
+            1358,
+            1650,
+            1421
+          ],
+          "confidence": 82.87
+        },
+        {
+          "text": "Lý Miêu xin kính lễ!",
+          "bbox": [
+            399,
+            1630,
+            1080,
+            1695
+          ],
+          "confidence": 86.48
+        },
+        {
+          "text": "Những lời bàn cao nhã của Pháp sử đã làm rõ ra",
+          "bbox": [
+            399,
+            1759,
+            2163,
+            1825
+          ],
+          "confidence": 95.38
+        },
+        {
+          "text": "rằng, bến bờ giác ngộ là do từ hoài nghi mà tìm được,",
+          "bbox": [
+            276,
+            1852,
+            2388,
+            1929
+          ],
+          "confidence": 91.78
+        },
+        {
+          "text": "thừa lòng tin tưởng thì không cần phải xem xét ; cúc",
+          "bbox": [
+            278,
+            1947,
+            2162,
+            2013
+          ],
+          "confidence": 94.16
+        },
+        {
+          "text": "cung tung niêm, cũng dù để tôi Đạo ... (2). Xem lai các",
+          "bbox": [
+            279,
+            2036,
+            2161,
+            2104
+          ],
+          "confidence": 85.78
+        },
+        {
+          "text": "điều dẫn giải vừa rồi của Pháp sư, càng thấy chỗ kín",
+          "bbox": [
+            284,
+            2125,
+            2159,
+            2196
+          ],
+          "confidence": 91.2
+        },
+        {
+          "text": "dao sau xa.",
+          "bbox": [
+            284,
+            2240,
+            645,
+            2284
+          ],
+          "confidence": 99.69
+        },
+        {
+          "text": "Tuy nhiên, nói như Pháp sư, cái gọi là tượng pháp (3)",
+          "bbox": [
+            399,
+            2351,
+            2160,
+            2429
+          ],
+          "confidence": 92.91
+        },
+        {
+          "text": "đã sai lệch với chính pháp (4), việc câu giác ngộ chỉ còn",
+          "bbox": [
+            288,
+            2443,
+            2158,
+            2509
+          ],
+          "confidence": 92.82
+        },
+        {
+          "text": "bằng vào lẽ thô sơ, mươn lời văn đế lĩnh hôi ý chỉ (5) mà",
+          "bbox": [
+            287,
+            2535,
+            2159,
+            2601
+          ],
+          "confidence": 86.41
+        },
+        {
+          "text": "không cân mục kích, vậy nên Cơ, Không mới để lời day",
+          "bbox": [
+            287,
+            2626,
+            2159,
+            2693
+          ],
+          "confidence": 84.55
+        },
+        {
+          "text": "về sau, ảnh sáng huy hoàng của Phát mới không biểu lộ,",
+          "bbox": [
+            287,
+            2718,
+            2156,
+            2784
+          ],
+          "confidence": 93.53
+        },
+        {
+          "text": "vì cứ xem sách vở thế gian cũng đã thừa đủ rồi. Nhưng",
+          "bbox": [
+            288,
+            2809,
+            2158,
+            2874
+          ],
+          "confidence": 94.89
+        },
+        {
+          "text": "nếu như vậy, thì \"tỏa ánh sáng, chuyên rung mặt đất\"",
+          "bbox": [
+            290,
+            2898,
+            2436,
+            2974
+          ],
+          "confidence": 90.17
+        },
+        {
+          "text": "để làm gì nữa?",
+          "bbox": [
+            292,
+            2989,
+            2475,
+            3052
+          ],
+          "confidence": 89.16
+        },
+        {
+          "text": "Đến như tin vào chính pháp, không chỉ có việc cúi.",
+          "bbox": [
+            412,
+            3113,
+            2355,
+            3190
+          ],
+          "confidence": 94.97
+        },
+        {
+          "text": "xướng ngảng lên (6), vậy mà Phát sự thì đầy đấy trong",
+          "bbox": [
+            284,
+            3198,
+            2275,
+            3283
+          ],
+          "confidence": 80.92
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          3509
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 41.855,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              282,
+              154,
+              1824,
+              211
+            ],
+            "generated_text": "Sưu tấm và khảo luận tác phẩm chủ Hán của người Việt Nam trước TK 10",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 1.821,
+            "confidence": 94.82,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              265,
+              246,
+              2187,
+              270
+            ],
+            "generated_text": "[",
+            "n_lines": 1,
+            "tokens": 2,
+            "seconds": 0.489,
+            "confidence": 9.96,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              402,
+              352,
+              2174,
+              421
+            ],
+            "generated_text": "Lai luân tuy mỹ, cổ tư tuân hoàn chi thuyết nhĩ.",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.744,
+            "confidence": 81.6,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              278,
+              448,
+              2175,
+              516
+            ],
+            "generated_text": "Vong phục trac tân diện di, dĩ tây cô kim chi trê, sửi lô",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 1.896,
+            "confidence": 73.64,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              279,
+              543,
+              2172,
+              621
+            ],
+            "generated_text": "thàn nhiên, tích ngại đại thông giã. Thâm nguyên Đại",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.424,
+            "confidence": 87.17,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              278,
+              653,
+              1342,
+              701
+            ],
+            "generated_text": "hoa thương thụy nap hao khoan.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.269,
+            "confidence": 89.23,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              399,
+              769,
+              1213,
+              836
+            ],
+            "generated_text": "Đê tủ Lý Miêu cản trình.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.031,
+            "confidence": 80.28,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              893,
+              883,
+              2087,
+              946
+            ],
+            "generated_text": "(Toàn Thương có, Tam đai, Tân, Hán,",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.529,
+            "confidence": 94.95,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              912,
+              970,
+              2081,
+              1033
+            ],
+            "generated_text": "Tam quốc, Luc triệu văn ; Toàn Tổng",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.329,
+            "confidence": 94.4,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              910,
+              1075,
+              1744,
+              1119
+            ],
+            "generated_text": "van, quyền ngu tháp thất).",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.97,
+            "confidence": 76.48,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              397,
+              1231,
+              819,
+              1287
+            ],
+            "generated_text": "DICH NGHIA:",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.68,
+            "confidence": 90.53,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              745,
+              1358,
+              1650,
+              1421
+            ],
+            "generated_text": "THƯ GỮ PHÁP SƯ ĐAO CAO (II) (1)",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 1.798,
+            "confidence": 82.87,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              399,
+              1630,
+              1080,
+              1695
+            ],
+            "generated_text": "Lý Miêu xin kính lễ!",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.091,
+            "confidence": 86.48,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              399,
+              1759,
+              2163,
+              1825
+            ],
+            "generated_text": "Những lời bàn cao nhã của Pháp sử đã làm rõ ra",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.462,
+            "confidence": 95.38,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              276,
+              1852,
+              2388,
+              1929
+            ],
+            "generated_text": "rằng, bến bờ giác ngộ là do từ hoài nghi mà tìm được,",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.78,
+            "confidence": 91.78,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              278,
+              1947,
+              2162,
+              2013
+            ],
+            "generated_text": "thừa lòng tin tưởng thì không cần phải xem xét ; cúc",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.435,
+            "confidence": 94.16,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              279,
+              2036,
+              2161,
+              2104
+            ],
+            "generated_text": "cung tung niêm, cũng dù để tôi Đạo ... (2). Xem lai các",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.596,
+            "confidence": 85.78,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              284,
+              2125,
+              2159,
+              2196
+            ],
+            "generated_text": "điều dẫn giải vừa rồi của Pháp sư, càng thấy chỗ kín",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.71,
+            "confidence": 91.2,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              284,
+              2240,
+              645,
+              2284
+            ],
+            "generated_text": "dao sau xa.",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.617,
+            "confidence": 99.69,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              399,
+              2351,
+              2160,
+              2429
+            ],
+            "generated_text": "Tuy nhiên, nói như Pháp sư, cái gọi là tượng pháp (3)",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.586,
+            "confidence": 92.91,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              288,
+              2443,
+              2158,
+              2509
+            ],
+            "generated_text": "đã sai lệch với chính pháp (4), việc câu giác ngộ chỉ còn",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.711,
+            "confidence": 92.82,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              287,
+              2535,
+              2159,
+              2601
+            ],
+            "generated_text": "bằng vào lẽ thô sơ, mươn lời văn đế lĩnh hôi ý chỉ (5) mà",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 2.243,
+            "confidence": 86.41,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              287,
+              2626,
+              2159,
+              2693
+            ],
+            "generated_text": "không cân mục kích, vậy nên Cơ, Không mới để lời day",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.648,
+            "confidence": 84.55,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              287,
+              2718,
+              2156,
+              2784
+            ],
+            "generated_text": "về sau, ảnh sáng huy hoàng của Phát mới không biểu lộ,",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.591,
+            "confidence": 93.53,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              288,
+              2809,
+              2158,
+              2874
+            ],
+            "generated_text": "vì cứ xem sách vở thế gian cũng đã thừa đủ rồi. Nhưng",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.75,
+            "confidence": 94.89,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              290,
+              2898,
+              2436,
+              2974
+            ],
+            "generated_text": "nếu như vậy, thì \"tỏa ánh sáng, chuyên rung mặt đất\"",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.827,
+            "confidence": 90.17,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              292,
+              2989,
+              2475,
+              3052
+            ],
+            "generated_text": "để làm gì nữa?",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.887,
+            "confidence": 89.16,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              412,
+              3113,
+              2355,
+              3190
+            ],
+            "generated_text": "Đến như tin vào chính pháp, không chỉ có việc cúi.",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.366,
+            "confidence": 94.97,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              284,
+              3198,
+              2275,
+              3283
+            ],
+            "generated_text": "xướng ngảng lên (6), vậy mà Phát sự thì đầy đấy trong",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.572,
+            "confidence": 80.92,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              338,
+              513,
+              1891,
+              526
+            ],
+            "ink": 801
+          },
+          {
+            "box": [
+              277,
+              636,
+              1265,
+              657
+            ],
+            "ink": 1647
+          },
+          {
+            "box": [
+              957,
+              1064,
+              1721,
+              1077
+            ],
+            "ink": 1004
+          },
+          {
+            "box": [
+              1451,
+              1514,
+              1708,
+              1530
+            ],
+            "ink": 1432
+          },
+          {
+            "box": [
+              1456,
+              1531,
+              1703,
+              1540
+            ],
+            "ink": 718
+          },
+          {
+            "box": [
+              1452,
+              1550,
+              1700,
+              1564
+            ],
+            "ink": 1190
+          },
+          {
+            "box": [
+              559,
+              2011,
+              2004,
+              2022
+            ],
+            "ink": 665
+          },
+          {
+            "box": [
+              397,
+              2102,
+              1978,
+              2114
+            ],
+            "ink": 839
+          },
+          {
+            "box": [
+              545,
+              2507,
+              1866,
+              2521
+            ],
+            "ink": 973
+          },
+          {
+            "box": [
+              453,
+              2689,
+              2135,
+              2702
+            ],
+            "ink": 917
+          },
+          {
+            "box": [
+              499,
+              2781,
+              2151,
+              2794
+            ],
+            "ink": 953
+          },
+          {
+            "box": [
+              291,
+              3401,
+              2072,
+              3416
+            ],
+            "ink": 1220
+          },
+          {
+            "box": [
+              302,
+              3418,
+              2036,
+              3429
+            ],
+            "ink": 873
+          },
+          {
+            "box": [
+              292,
+              3429,
+              2043,
+              3444
+            ],
+            "ink": 1110
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

@@ -1,0 +1,883 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 26,
+  "runs": [
+    {
+      "key": "9bef6fbd368fbbd358e9acd74ac7ce63ace0b95e73965f58ffee8bef1f9d6e6d",
+      "parameters": {
+        "image_sha256": "f2b464f4d617f0ae39595190dca47ea96c4d462fcd99bce7ebcc1b2020726f7c",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T11:24:59+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_026.png",
+      "image_size": [
+        2563,
+        3200
+      ],
+      "crop_box": [
+        0,
+        0,
+        2563,
+        3200
+      ],
+      "lines": [
+        {
+          "text": "ngothinhamle1.pdf",
+          "bbox": [
+            7,
+            19,
+            286,
+            45
+          ],
+          "confidence": 96.3
+        },
+        {
+          "text": "HOÀNG HOA ĐÔ PHA",
+          "bbox": [
+            1300,
+            192,
+            2168,
+            232
+          ],
+          "confidence": 82.64
+        },
+        {
+          "text": "CHU THICH:",
+          "bbox": [
+            459,
+            301,
+            748,
+            339
+          ],
+          "confidence": 97.97
+        },
+        {
+          "text": "1. Thành Thu Hàng: Do nhà Minh đặt ra sau khi nhân được đất do Mac",
+          "bbox": [
+            614,
+            375,
+            2167,
+            418
+          ],
+          "confidence": 94.84
+        },
+        {
+          "text": "Đăng Dung đăng đế xin hàng.",
+          "bbox": [
+            460,
+            454,
+            1098,
+            495
+          ],
+          "confidence": 83.78
+        },
+        {
+          "text": "2.Mạc phủ: Nơi tam trú quân của tướng lĩnh, quây màn trướng dễ có chỗ",
+          "bbox": [
+            612,
+            529,
+            2167,
+            582
+          ],
+          "confidence": 90.36
+        },
+        {
+          "text": "lam viec.",
+          "bbox": [
+            462,
+            622,
+            652,
+            651
+          ],
+          "confidence": 79.23
+        },
+        {
+          "text": "3.Nghi Dương: Quê Mạc Đăng Dung, thuộc phủ Kinh Môn, Hải Dương",
+          "bbox": [
+            613,
+            683,
+            2169,
+            735
+          ],
+          "confidence": 92.89
+        },
+        {
+          "text": "(nay là Kiến An, Hải Phòng). Họ Mạc từng đóng đồ đầy, gọi là Dương Kinh.",
+          "bbox": [
+            460,
+            759,
+            2085,
+            810
+          ],
+          "confidence": 90.42
+        },
+        {
+          "text": "DICH THO:",
+          "bbox": [
+            462,
+            870,
+            716,
+            907
+          ],
+          "confidence": 98.67
+        },
+        {
+          "text": "Đường qua mạc phủ tới Bảng Tường,",
+          "bbox": [
+            899,
+            943,
+            1751,
+            999
+          ],
+          "confidence": 90.17
+        },
+        {
+          "text": "Cương giới năm xưa thành Thu Hàng.",
+          "bbox": [
+            902,
+            1027,
+            1782,
+            1074
+          ],
+          "confidence": 95.81
+        },
+        {
+          "text": "Núi hét Lang Sơn khe sưới ít;",
+          "bbox": [
+            899,
+            1111,
+            1580,
+            1155
+          ],
+          "confidence": 83.65
+        },
+        {
+          "text": "Đá như Ha Thach đăm đường trường.",
+          "bbox": [
+            901,
+            1194,
+            1775,
+            1241
+          ],
+          "confidence": 85.99
+        },
+        {
+          "text": "Trục xoay xe nước, vang như sâm;",
+          "bbox": [
+            904,
+            1284,
+            1723,
+            1322
+          ],
+          "confidence": 93.35
+        },
+        {
+          "text": "Lửa hiệu trên đài, tuyệt rợp đường.",
+          "bbox": [
+            901,
+            1358,
+            1706,
+            1404
+          ],
+          "confidence": 86.62
+        },
+        {
+          "text": "Dám nói “hàng thành” thành sự nghiệp,",
+          "bbox": [
+            900,
+            1441,
+            1824,
+            1487
+          ],
+          "confidence": 93.87
+        },
+        {
+          "text": "Khiến người ngàn thuở rủa Nghi Dương.",
+          "bbox": [
+            899,
+            1522,
+            1835,
+            1577
+          ],
+          "confidence": 83.7
+        },
+        {
+          "text": "Làm Giang",
+          "bbox": [
+            1898,
+            1619,
+            2169,
+            1651
+          ],
+          "confidence": 99.52
+        },
+        {
+          "text": "7. 寧明江記見",
+          "bbox": [
+            1039,
+            1740,
+            1861,
+            1812
+          ],
+          "confidence": 95.64
+        },
+        {
+          "text": "不待分茅認嶺梅",
+          "bbox": [
+            713,
+            1908,
+            1883,
+            1969
+          ],
+          "confidence": 99.37
+        },
+        {
+          "text": "朔南界限自安排",
+          "bbox": [
+            1102,
+            2039,
+            1664,
+            2101
+          ],
+          "confidence": 99.8
+        },
+        {
+          "text": "千山丙拱雲黔降",
+          "bbox": [
+            1099,
+            2173,
+            1879,
+            2231
+          ],
+          "confidence": 99.7
+        },
+        {
+          "text": "一水乾流博朗來",
+          "bbox": [
+            1099,
+            2305,
+            1661,
+            2366
+          ],
+          "confidence": 95.32
+        },
+        {
+          "text": "地道隱機非偶爾",
+          "bbox": [
+            1096,
+            2437,
+            2142,
+            2497
+          ],
+          "confidence": 98.91
+        },
+        {
+          "text": "天工深意豈徒哉",
+          "bbox": [
+            1098,
+            2569,
+            1661,
+            2630
+          ],
+          "confidence": 99.29
+        },
+        {
+          "text": "寶書分定閑看熟",
+          "bbox": [
+            1099,
+            2700,
+            1658,
+            2762
+          ],
+          "confidence": 97.67
+        },
+        {
+          "text": "又把圖經一展開",
+          "bbox": [
+            1097,
+            2825,
+            1654,
+            2885
+          ],
+          "confidence": 99.32
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2563,
+          3200
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 33.495,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              7,
+              19,
+              286,
+              45
+            ],
+            "generated_text": "ngothinhamle1.pdf",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.896,
+            "confidence": 96.3,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              1300,
+              192,
+              2168,
+              232
+            ],
+            "generated_text": "HOÀNG HOA ĐÔ PHA",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.967,
+            "confidence": 82.64,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              463,
+              237,
+              2173,
+              251
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.453,
+            "confidence": 97.02,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              459,
+              301,
+              748,
+              339
+            ],
+            "generated_text": "CHU THICH:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.723,
+            "confidence": 97.97,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              614,
+              375,
+              2167,
+              418
+            ],
+            "generated_text": "1. Thành Thu Hàng: Do nhà Minh đặt ra sau khi nhân được đất do Mac",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.786,
+            "confidence": 94.84,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              460,
+              454,
+              1098,
+              495
+            ],
+            "generated_text": "Đăng Dung đăng đế xin hàng.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.242,
+            "confidence": 83.78,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              612,
+              529,
+              2167,
+              582
+            ],
+            "generated_text": "2.Mạc phủ: Nơi tam trú quân của tướng lĩnh, quây màn trướng dễ có chỗ",
+            "n_lines": 1,
+            "tokens": 33,
+            "seconds": 2.49,
+            "confidence": 90.36,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              462,
+              622,
+              652,
+              651
+            ],
+            "generated_text": "lam viec.",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.643,
+            "confidence": 79.23,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              613,
+              683,
+              2169,
+              735
+            ],
+            "generated_text": "3.Nghi Dương: Quê Mạc Đăng Dung, thuộc phủ Kinh Môn, Hải Dương",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 2.191,
+            "confidence": 92.89,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              460,
+              759,
+              2085,
+              810
+            ],
+            "generated_text": "(nay là Kiến An, Hải Phòng). Họ Mạc từng đóng đồ đầy, gọi là Dương Kinh.",
+            "n_lines": 1,
+            "tokens": 35,
+            "seconds": 2.653,
+            "confidence": 90.42,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              462,
+              870,
+              716,
+              907
+            ],
+            "generated_text": "DICH THO:",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.651,
+            "confidence": 98.67,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              899,
+              943,
+              1751,
+              999
+            ],
+            "generated_text": "Đường qua mạc phủ tới Bảng Tường,",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.218,
+            "confidence": 90.17,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              902,
+              1027,
+              1782,
+              1074
+            ],
+            "generated_text": "Cương giới năm xưa thành Thu Hàng.",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.1,
+            "confidence": 95.81,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              899,
+              1111,
+              1580,
+              1155
+            ],
+            "generated_text": "Núi hét Lang Sơn khe sưới ít;",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.343,
+            "confidence": 83.65,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              901,
+              1194,
+              1775,
+              1241
+            ],
+            "generated_text": "Đá như Ha Thach đăm đường trường.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.163,
+            "confidence": 85.99,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              904,
+              1284,
+              1723,
+              1322
+            ],
+            "generated_text": "Trục xoay xe nước, vang như sâm;",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.214,
+            "confidence": 93.35,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              901,
+              1358,
+              1706,
+              1404
+            ],
+            "generated_text": "Lửa hiệu trên đài, tuyệt rợp đường.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.192,
+            "confidence": 86.62,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              900,
+              1441,
+              1824,
+              1487
+            ],
+            "generated_text": "Dám nói “hàng thành” thành sự nghiệp,",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.18,
+            "confidence": 93.87,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              899,
+              1522,
+              1835,
+              1577
+            ],
+            "generated_text": "Khiến người ngàn thuở rủa Nghi Dương.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.422,
+            "confidence": 83.7,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              1898,
+              1619,
+              2169,
+              1651
+            ],
+            "generated_text": "Làm Giang",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.653,
+            "confidence": 99.52,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              1039,
+              1740,
+              1861,
+              1812
+            ],
+            "generated_text": "7. 寧明江記見",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 1.11,
+            "confidence": 95.64,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              713,
+              1908,
+              1883,
+              1969
+            ],
+            "generated_text": "不待分茅認嶺梅",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 1.061,
+            "confidence": 99.37,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              1102,
+              2039,
+              1664,
+              2101
+            ],
+            "generated_text": "朔南界限自安排",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.719,
+            "confidence": 99.8,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              1099,
+              2173,
+              1879,
+              2231
+            ],
+            "generated_text": "千山丙拱雲黔降",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.824,
+            "confidence": 99.7,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              1099,
+              2305,
+              1661,
+              2366
+            ],
+            "generated_text": "一水乾流博朗來",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.837,
+            "confidence": 95.32,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              1096,
+              2437,
+              2142,
+              2497
+            ],
+            "generated_text": "地道隱機非偶爾",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.973,
+            "confidence": 98.91,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              1098,
+              2569,
+              1661,
+              2630
+            ],
+            "generated_text": "天工深意豈徒哉",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.971,
+            "confidence": 99.29,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              1099,
+              2700,
+              1658,
+              2762
+            ],
+            "generated_text": "寶書分定閑看熟",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.969,
+            "confidence": 97.67,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              1097,
+              2825,
+              1654,
+              2885
+            ],
+            "generated_text": "又把圖經一展開",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.848,
+            "confidence": 99.32,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              552,
+              492,
+              1082,
+              501
+            ],
+            "ink": 258
+          },
+          {
+            "box": [
+              1021,
+              1071,
+              1767,
+              1081
+            ],
+            "ink": 299
+          },
+          {
+            "box": [
+              1135,
+              1239,
+              1759,
+              1248
+            ],
+            "ink": 251
+          },
+          {
+            "box": [
+              907,
+              1278,
+              1627,
+              1288
+            ],
+            "ink": 311
+          },
+          {
+            "box": [
+              1218,
+              1483,
+              1821,
+              1493
+            ],
+            "ink": 369
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

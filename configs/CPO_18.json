@@ -5,15 +5,17 @@
     "data_root": "data",
     "title": "Demo CPO_18",
     "source": "data/CPO_18/01_sources/CPO18.pdf",
-    "pages": "205-206",
+    "pages": "205-260,282-305,308-326,330-334,336-360,363-544",
     "dpi": 300
   },
   "ocr": {
     "streams": {
-      "pages": "205-212",
+      "pages": "205-260,282-305,308-326,330-334,336-360,363-544",
       "paddlevl_orientation": "horizontal",
       "engines": {"han": "paddlevl", "vie": "qwen"},
-      "check": {"qwen_low_conf": 60}
+      "check": {"qwen_low_conf": 60},
+      "source_sha256": "02097c62708a086d9c83e3ca404e3fef187c217e9efb6a40e3586612e2233396",
+      "source_pages": 565
     },
     "chi_tra": {
       "engines": "qwen",
@@ -42,6 +44,15 @@
 
   "segmentation": {
     "enabled": true,
+    "ocr_streams": "han_vie",
+    "am_detection": {"split_lines": true},
+    "verse_tho_split": true,
+    "document_overrides": [
+      {"start_page": 337, "action": "exclude", "reason": "CPO_18.012 (tr.337-339): lớp am chỉ là 1 dòng rác [UNCLEAR] của Qwen; nửa đầu văn bia chuông Thanh Mai, phiên âm của nó nằm trong bài kế (duyệt 2026-11-27)"},
+      {"start_page": 339, "action": "exclude", "reason": "CPO_18.013 (tr.339-357): bản dọc của văn bia chuông Thanh Mai, trùng nội dung CPO_18.012 (cũng đã loại); loại cả bài khỏi lớp dóng (duyệt 2026-11-27)"},
+      {"start_page": 358, "action": "notes", "reason": "CPO_18.015 (tr.358-359): khảo dị Bản B/C của Đề lữ sấn; 2 dòng Hán là chữ trích trong khảo dị (duyệt 2026-11-27)"},
+      {"start_page": 413, "action": "exclude", "reason": "CPO_18.028 (tr.413-415): lớp am là tiểu sử/chú thích, không phải phiên âm của chữ Hán tr.413 (duyệt 2026-11-27)"}
+    ],
     "document": {
       "numbered_heading": true,
       "start_patterns": [],
@@ -108,15 +119,23 @@
       }
     }
   },
+  "sentence": {"am_follow_han_split": true},
   "clean": {
+    "common": {
+      "excluded_pages": "261-281,306-307,327-329,335,361-362",
+      "stream_running_headers": true, "stream_note_markers": true, "am_markers_extended": true, "capture_source_lines": true,
+      "footnotes": {"note_entry_markers": true}
+    },
     "am": {
       "drop_pattern": [
-        "^Phần II"
+        "^Phần II",
+        "(?i)^\\s*s[ưu]u\\s+t[ầâa]m\\s+v[àa]\\s+kh[ảa]o\\s+lu[ậâa]n\\b"
       ]
     },
     "nghia": {
       "drop_pattern": [
-        "^Phần II"
+        "^Phần II",
+        "(?i)^\\s*s[ưu]u\\s+t[ầâa]m\\s+v[àa]\\s+kh[ảa]o\\s+lu[ậâa]n\\b"
       ]
     }
   },

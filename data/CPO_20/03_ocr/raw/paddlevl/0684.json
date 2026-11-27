@@ -1,0 +1,822 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_20",
+  "engine": "paddlevl",
+  "page": 684,
+  "runs": [
+    {
+      "key": "e8f103ded11a202d14c4710f8ea651da24fd23676f8c87a71d868883f0b43e0b",
+      "parameters": {
+        "image_sha256": "34c2717b34a417076b5fc34d473fddd0998b8015b0775f21392039051961dd65",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T14:14:07+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_684.png",
+      "image_size": [
+        1839,
+        2803
+      ],
+      "crop_box": [
+        0,
+        0,
+        1839,
+        2803
+      ],
+      "lines": [
+        {
+          "text": "Phిన am:",
+          "bbox": [
+            271,
+            260,
+            495,
+            288
+          ],
+          "confidence": 57.01
+        },
+        {
+          "text": "ĐỘ TRUNG TỰC SỰ",
+          "bbox": [
+            510,
+            383,
+            1099,
+            433
+          ],
+          "confidence": 87.67
+        },
+        {
+          "text": "Tùy sự đăng trình van lý đạo.",
+          "bbox": [
+            509,
+            522,
+            1135,
+            563
+          ],
+          "confidence": 87.13
+        },
+        {
+          "text": "Dương xuân phát luật ¹ đồng sơ tiêu.",
+          "bbox": [
+            510,
+            582,
+            1271,
+            622
+          ],
+          "confidence": 82.94
+        },
+        {
+          "text": "Thiều thiểu đạo lộ thanh phong quá.",
+          "bbox": [
+            510,
+            639,
+            1274,
+            683
+          ],
+          "confidence": 83.53
+        },
+        {
+          "text": "Mỗi mỗi nguyên diện tú thảo yêu.",
+          "bbox": [
+            510,
+            699,
+            1219,
+            742
+          ],
+          "confidence": 87.54
+        },
+        {
+          "text": "Châu huyện do đi truyền cổ hiệu².",
+          "bbox": [
+            510,
+            759,
+            1235,
+            802
+          ],
+          "confidence": 82.62
+        },
+        {
+          "text": "Giang sơn hữu di thuộc tân triều³.",
+          "bbox": [
+            509,
+            820,
+            1235,
+            861
+          ],
+          "confidence": 83.91
+        },
+        {
+          "text": "Thủ thân dĩ xuất phong ai lô.",
+          "bbox": [
+            509,
+            878,
+            1127,
+            920
+          ],
+          "confidence": 86.05
+        },
+        {
+          "text": "Phóng chước trần y độ đã kiểu.",
+          "bbox": [
+            509,
+            939,
+            1163,
+            981
+          ],
+          "confidence": 78.89
+        },
+        {
+          "text": "Uch nghia:",
+          "bbox": [
+            273,
+            1126,
+            520,
+            1156
+          ],
+          "confidence": 80.86
+        },
+        {
+          "text": "TỰC SỰ TRÊN ĐƯỜNG ĐI",
+          "bbox": [
+            507,
+            1245,
+            1388,
+            1303
+          ],
+          "confidence": 92.61
+        },
+        {
+          "text": "Theo sứ lên đường, xa xôi muôn đăm.",
+          "bbox": [
+            363,
+            1390,
+            1147,
+            1431
+          ],
+          "confidence": 83.0
+        },
+        {
+          "text": "Khi dương xuân này ra trong ống luật bằng giá mới tan.",
+          "bbox": [
+            363,
+            1448,
+            1533,
+            1498
+          ],
+          "confidence": 91.55
+        },
+        {
+          "text": "Đường đất thăm thẳm, gió mát thổi qua,",
+          "bbox": [
+            363,
+            1508,
+            1215,
+            1550
+          ],
+          "confidence": 94.11
+        },
+        {
+          "text": "Đông rương tốt tươi, cổ non mơn mổn.",
+          "bbox": [
+            363,
+            1570,
+            1160,
+            1608
+          ],
+          "confidence": 78.5
+        },
+        {
+          "text": "Các châu huyện còn sót lại truyền niên hiệu xưa.",
+          "bbox": [
+            365,
+            1626,
+            1385,
+            1667
+          ],
+          "confidence": 95.55
+        },
+        {
+          "text": "- Khắp non sông đã đổi khác, thuộc về triều đại mới.",
+          "bbox": [
+            334,
+            1683,
+            1436,
+            1727
+          ],
+          "confidence": 91.98
+        },
+        {
+          "text": "Thân này đã bước ra ngoài con đường gió bụi,",
+          "bbox": [
+            363,
+            1744,
+            1694,
+            1792
+          ],
+          "confidence": 99.0
+        },
+        {
+          "text": "Dán chiếc áo trần tục vượt qua cầu.",
+          "bbox": [
+            365,
+            1801,
+            1104,
+            1844
+          ],
+          "confidence": 91.41
+        },
+        {
+          "text": "1. Phát luật: Này ra trong ống luật, một loại dụng cụ để đo thời tiết của thời xưa,",
+          "bbox": [
+            368,
+            2126,
+            1719,
+            2167
+          ],
+          "confidence": 91.02
+        },
+        {
+          "text": "bằng ống trúc, có mười hai lỗ, sáu lỗ thuộc dương, ứng với sáu tháng dương, sáu lỗ",
+          "bbox": [
+            279,
+            2173,
+            1719,
+            2214
+          ],
+          "confidence": 94.26
+        },
+        {
+          "text": "thuộc âm ứng với sáu tháng âm. Cách chiêm nghiệm khí hậu xưa: lấy tro màng cây",
+          "bbox": [
+            277,
+            2221,
+            1719,
+            2257
+          ],
+          "confidence": 94.48
+        },
+        {
+          "text": "sấy đặt lên các lỗ, đến khí hậu nào thì tro ở lỗ ấy bay đi. Mùa xuân tháng giêng thuộc",
+          "bbox": [
+            277,
+            2266,
+            1719,
+            2305
+          ],
+          "confidence": 92.99
+        },
+        {
+          "text": "tháng dương thứ 3; khi lỗ thứ 3 trên ống luật tro bay đi, là báo hiệu thắng tam dương",
+          "bbox": [
+            277,
+            2313,
+            1719,
+            2351
+          ],
+          "confidence": 95.3
+        },
+        {
+          "text": "2. Cổ hiệu: Niên hiệu xưa, tức là niên hiệu của nhà Lê.",
+          "bbox": [
+            365,
+            2409,
+            1283,
+            2445
+          ],
+          "confidence": 95.57
+        },
+        {
+          "text": "3. Tân triệu: Triệu đại mới, chỉ nhà Tây Sơn.",
+          "bbox": [
+            365,
+            2456,
+            1122,
+            2492
+          ],
+          "confidence": 89.1
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          1839,
+          2803
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 15.565,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              271,
+              260,
+              495,
+              288
+            ],
+            "generated_text": "Phిన am:",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.569,
+            "confidence": 57.01,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              510,
+              383,
+              1099,
+              433
+            ],
+            "generated_text": "ĐỘ TRUNG TỰC SỰ",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.339,
+            "confidence": 87.67,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              509,
+              522,
+              1135,
+              563
+            ],
+            "generated_text": "Tùy sự đăng trình van lý đạo.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 0.42,
+            "confidence": 87.13,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              510,
+              582,
+              1271,
+              622
+            ],
+            "generated_text": "Dương xuân phát luật ¹ đồng sơ tiêu.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.441,
+            "confidence": 82.94,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              510,
+              639,
+              1274,
+              683
+            ],
+            "generated_text": "Thiều thiểu đạo lộ thanh phong quá.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.459,
+            "confidence": 83.53,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              510,
+              699,
+              1219,
+              742
+            ],
+            "generated_text": "Mỗi mỗi nguyên diện tú thảo yêu.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 0.376,
+            "confidence": 87.54,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              510,
+              759,
+              1235,
+              802
+            ],
+            "generated_text": "Châu huyện do đi truyền cổ hiệu².",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 0.395,
+            "confidence": 82.62,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              509,
+              820,
+              1235,
+              861
+            ],
+            "generated_text": "Giang sơn hữu di thuộc tân triều³.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.441,
+            "confidence": 83.91,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              509,
+              878,
+              1127,
+              920
+            ],
+            "generated_text": "Thủ thân dĩ xuất phong ai lô.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.407,
+            "confidence": 86.05,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              509,
+              939,
+              1163,
+              981
+            ],
+            "generated_text": "Phóng chước trần y độ đã kiểu.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 0.397,
+            "confidence": 78.89,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              273,
+              1126,
+              520,
+              1156
+            ],
+            "generated_text": "Uch nghia:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.24,
+            "confidence": 80.86,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              507,
+              1245,
+              1388,
+              1303
+            ],
+            "generated_text": "TỰC SỰ TRÊN ĐƯỜNG ĐI",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.551,
+            "confidence": 92.61,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              363,
+              1390,
+              1147,
+              1431
+            ],
+            "generated_text": "Theo sứ lên đường, xa xôi muôn đăm.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.419,
+            "confidence": 83.0,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              363,
+              1448,
+              1533,
+              1498
+            ],
+            "generated_text": "Khi dương xuân này ra trong ống luật bằng giá mới tan.",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.573,
+            "confidence": 91.55,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              363,
+              1508,
+              1215,
+              1550
+            ],
+            "generated_text": "Đường đất thăm thẳm, gió mát thổi qua,",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.558,
+            "confidence": 94.11,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              363,
+              1570,
+              1160,
+              1608
+            ],
+            "generated_text": "Đông rương tốt tươi, cổ non mơn mổn.",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.533,
+            "confidence": 78.5,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              365,
+              1626,
+              1385,
+              1667
+            ],
+            "generated_text": "Các châu huyện còn sót lại truyền niên hiệu xưa.",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.566,
+            "confidence": 95.55,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              334,
+              1683,
+              1436,
+              1727
+            ],
+            "generated_text": "- Khắp non sông đã đổi khác, thuộc về triều đại mới.",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.611,
+            "confidence": 91.98,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              363,
+              1744,
+              1694,
+              1792
+            ],
+            "generated_text": "Thân này đã bước ra ngoài con đường gió bụi,",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.448,
+            "confidence": 99.0,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              365,
+              1801,
+              1104,
+              1844
+            ],
+            "generated_text": "Dán chiếc áo trần tục vượt qua cầu.",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.491,
+            "confidence": 91.41,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              276,
+              2086,
+              876,
+              2102
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.147,
+            "confidence": 82.66,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              368,
+              2126,
+              1719,
+              2167
+            ],
+            "generated_text": "1. Phát luật: Này ra trong ống luật, một loại dụng cụ để đo thời tiết của thời xưa,",
+            "n_lines": 1,
+            "tokens": 32,
+            "seconds": 0.797,
+            "confidence": 91.02,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              279,
+              2173,
+              1719,
+              2214
+            ],
+            "generated_text": "bằng ống trúc, có mười hai lỗ, sáu lỗ thuộc dương, ứng với sáu tháng dương, sáu lỗ",
+            "n_lines": 1,
+            "tokens": 36,
+            "seconds": 0.844,
+            "confidence": 94.26,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              277,
+              2221,
+              1719,
+              2257
+            ],
+            "generated_text": "thuộc âm ứng với sáu tháng âm. Cách chiêm nghiệm khí hậu xưa: lấy tro màng cây",
+            "n_lines": 1,
+            "tokens": 32,
+            "seconds": 0.807,
+            "confidence": 94.48,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              277,
+              2266,
+              1719,
+              2305
+            ],
+            "generated_text": "sấy đặt lên các lỗ, đến khí hậu nào thì tro ở lỗ ấy bay đi. Mùa xuân tháng giêng thuộc",
+            "n_lines": 1,
+            "tokens": 34,
+            "seconds": 0.803,
+            "confidence": 92.99,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              277,
+              2313,
+              1719,
+              2351
+            ],
+            "generated_text": "tháng dương thứ 3; khi lỗ thứ 3 trên ống luật tro bay đi, là báo hiệu thắng tam dương",
+            "n_lines": 1,
+            "tokens": 33,
+            "seconds": 0.778,
+            "confidence": 95.3,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              365,
+              2409,
+              1283,
+              2445
+            ],
+            "generated_text": "2. Cổ hiệu: Niên hiệu xưa, tức là niên hiệu của nhà Lê.",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.62,
+            "confidence": 95.57,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              365,
+              2456,
+              1122,
+              2492
+            ],
+            "generated_text": "3. Tân triệu: Triệu đại mới, chỉ nhà Tây Sơn.",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.531,
+            "confidence": 89.1,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              279,
+              2368,
+              395,
+              2379
+            ],
+            "ink": 560
+          },
+          {
+            "box": [
+              281,
+              2382,
+              406,
+              2392
+            ],
+            "ink": 412
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      }
+    }
+  ]
+}

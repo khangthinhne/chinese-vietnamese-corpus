@@ -1,0 +1,990 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_18",
+  "engine": "paddlevl",
+  "page": 505,
+  "runs": [
+    {
+      "key": "2b26a67acf969a905637c74845320814a26a4a95b5bbd5e7c98eb19a4b8fb50c",
+      "parameters": {
+        "image_sha256": "2b7460e6a8a04000f1fd8ce9f894612845174333bf3ff69e33006f69145214e3",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T18:57:36+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_505.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        0,
+        2480,
+        3509
+      ],
+      "lines": [
+        {
+          "text": "：",
+          "bbox": [
+            220,
+            272,
+            2160,
+            290
+          ],
+          "confidence": 43.38
+        },
+        {
+          "text": "ngũ bách, tam bách tuê, nhiên ngô tòng kỳ hoc vi tam",
+          "bbox": [
+            242,
+            378,
+            2156,
+            443
+          ],
+          "confidence": 93.67
+        },
+        {
+          "text": "tuê gian, các tư vấn một. Sở dĩ nhiên gia, cái do tuyệt",
+          "bbox": [
+            245,
+            471,
+            2152,
+            535
+          ],
+          "confidence": 84.21
+        },
+        {
+          "text": "cốc bất thực, nhi giảm bách quả, hướng nhục tắc trong",
+          "bbox": [
+            243,
+            563,
+            2156,
+            629
+          ],
+          "confidence": 90.41
+        },
+        {
+          "text": "bàn, âm tửu tác khuynh tôn, tinh loan thân hôn. Cốc",
+          "bbox": [
+            242,
+            656,
+            2155,
+            721
+          ],
+          "confidence": 90.93
+        },
+        {
+          "text": "khí bất sung, nhĩ mục hôn mê, đảm tà bất cấm. Ngô vấn",
+          "bbox": [
+            243,
+            749,
+            2153,
+            816
+          ],
+          "confidence": 90.25
+        },
+        {
+          "text": "kỳ cổ hà, đáp viết : \"Lão Từ viết tốn chi hưu tốn, di chí u",
+          "bbox": [
+            242,
+            841,
+            2155,
+            909
+          ],
+          "confidence": 80.96
+        },
+        {
+          "text": "vô vi. Đô động nhất tôn nhĩ!\". Nhiên ngô quan chi,",
+          "bbox": [
+            240,
+            936,
+            2152,
+            1004
+          ],
+          "confidence": 85.12
+        },
+        {
+          "text": "đản nhất ích nhi bất tốn giả. Thi đi các bất chí tri mệnh",
+          "bbox": [
+            246,
+            1028,
+            2155,
+            1098
+          ],
+          "confidence": 81.89
+        },
+        {
+          "text": "nhi tủ hĩ. Thả Nghiêu, Thuấn, Chu, Không các bất nặng",
+          "bbox": [
+            243,
+            1121,
+            2158,
+            1196
+          ],
+          "confidence": 87.36
+        },
+        {
+          "text": "bách tải, nhi mat thế ngu hoặc dục phục thực tích cốc",
+          "bbox": [
+            241,
+            1215,
+            2157,
+            1283
+          ],
+          "confidence": 89.99
+        },
+        {
+          "text": "câu võ cùng chi tho, ai tai !",
+          "bbox": [
+            242,
+            1325,
+            1204,
+            1375
+          ],
+          "confidence": 71.53
+        },
+        {
+          "text": "DICH NGHIA:",
+          "bbox": [
+            386,
+            1558,
+            863,
+            1614
+          ],
+          "confidence": 95.49
+        },
+        {
+          "text": "Hỏi rằng : Thóc gao có thể đút bỏ được ư?",
+          "bbox": [
+            387,
+            1659,
+            1810,
+            1727
+          ],
+          "confidence": 86.85
+        },
+        {
+          "text": "Mâu Tử đáp : Khi tôi chưa hiểu đạo cả, thì cũng",
+          "bbox": [
+            386,
+            1773,
+            2157,
+            1840
+          ],
+          "confidence": 92.23
+        },
+        {
+          "text": "từng hoc tich cốc. Phép thuật này có tối hàng trăm hàng",
+          "bbox": [
+            245,
+            1866,
+            2157,
+            1933
+          ],
+          "confidence": 91.81
+        },
+        {
+          "text": "nghin kiểu, nhưng thực hiện không thấy hiệu quả,",
+          "bbox": [
+            245,
+            1958,
+            2469,
+            2034
+          ],
+          "confidence": 87.59
+        },
+        {
+          "text": "không thấy tin tưởng nên mối thôi. Cứ xem như ba",
+          "bbox": [
+            244,
+            2053,
+            2158,
+            2119
+          ],
+          "confidence": 90.29
+        },
+        {
+          "text": "người thầy mà tôi theo học, ông nào cũng nói mình đã",
+          "bbox": [
+            246,
+            2143,
+            2158,
+            2211
+          ],
+          "confidence": 95.44
+        },
+        {
+          "text": "sống 700 tuổi, hoặc 500 tuổi, hoặc 300 tuổi, thế mà tôi",
+          "bbox": [
+            248,
+            2233,
+            2157,
+            2302
+          ],
+          "confidence": 99.4
+        },
+        {
+          "text": "hoc ho chuẩn đẩy ba năm, tất cả đều chết ráo. Sở dĩ như",
+          "bbox": [
+            246,
+            2322,
+            2158,
+            2393
+          ],
+          "confidence": 87.11
+        },
+        {
+          "text": "vây, là do không chiu ăn cỏm, mà đi xài hàng trăm thức",
+          "bbox": [
+            244,
+            2421,
+            2159,
+            2485
+          ],
+          "confidence": 83.51
+        },
+        {
+          "text": "quả, ăn thit thì tôi cả mâm dây, nốc rượu thì đên",
+          "bbox": [
+            248,
+            2508,
+            2159,
+            2576
+          ],
+          "confidence": 83.03
+        },
+        {
+          "text": "nghiêng vò rót, tinh thần hôn loan. Vì thiếu hỏi cơm nên",
+          "bbox": [
+            246,
+            2597,
+            2159,
+            2666
+          ],
+          "confidence": 88.78
+        },
+        {
+          "text": "ù tai, mờ mất, lai không kiêng món tà dâm. Tôi hỏi có",
+          "bbox": [
+            246,
+            2684,
+            2163,
+            2756
+          ],
+          "confidence": 89.98
+        },
+        {
+          "text": "sao như vây, trả lời rằng: \"Lão Từ nói giảm bớt đi, giảm",
+          "bbox": [
+            247,
+            2777,
+            2164,
+            2848
+          ],
+          "confidence": 91.27
+        },
+        {
+          "text": "thêm nữa, cho đến vô vi. Vậy trò nên ngày ngày giảm",
+          "bbox": [
+            248,
+            2875,
+            2163,
+            2942
+          ],
+          "confidence": 90.38
+        },
+        {
+          "text": "bót thôi !\" (166) Nhưng tôi quan sát thì thấy môi ngày một",
+          "bbox": [
+            246,
+            2960,
+            2475,
+            3033
+          ],
+          "confidence": 90.91
+        },
+        {
+          "text": "tăng lên chủ không giảm. Cho nên ông nào cũng chưa",
+          "bbox": [
+            247,
+            3049,
+            2472,
+            3125
+          ],
+          "confidence": 92.81
+        },
+        {
+          "text": "đến tuổi \"tri mệnh\" (167) đã chết. Và Nghiêu, Thuận,",
+          "bbox": [
+            245,
+            3135,
+            2472,
+            3215
+          ],
+          "confidence": 94.97
+        },
+        {
+          "text": "Chu, Không không ai sống nổi trăm tuổi, vậy mà những",
+          "bbox": [
+            244,
+            3227,
+            2472,
+            3319
+          ],
+          "confidence": 88.92
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          3509
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 14.695,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              220,
+              272,
+              2160,
+              290
+            ],
+            "generated_text": "：",
+            "n_lines": 1,
+            "tokens": 2,
+            "seconds": 0.088,
+            "confidence": 43.38,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              242,
+              378,
+              2156,
+              443
+            ],
+            "generated_text": "ngũ bách, tam bách tuê, nhiên ngô tòng kỳ hoc vi tam",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.486,
+            "confidence": 93.67,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              245,
+              471,
+              2152,
+              535
+            ],
+            "generated_text": "tuê gian, các tư vấn một. Sở dĩ nhiên gia, cái do tuyệt",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.506,
+            "confidence": 84.21,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              243,
+              563,
+              2156,
+              629
+            ],
+            "generated_text": "cốc bất thực, nhi giảm bách quả, hướng nhục tắc trong",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.491,
+            "confidence": 90.41,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              242,
+              656,
+              2155,
+              721
+            ],
+            "generated_text": "bàn, âm tửu tác khuynh tôn, tinh loan thân hôn. Cốc",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.549,
+            "confidence": 90.93,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              243,
+              749,
+              2153,
+              816
+            ],
+            "generated_text": "khí bất sung, nhĩ mục hôn mê, đảm tà bất cấm. Ngô vấn",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 0.647,
+            "confidence": 90.25,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              242,
+              841,
+              2155,
+              909
+            ],
+            "generated_text": "kỳ cổ hà, đáp viết : \"Lão Từ viết tốn chi hưu tốn, di chí u",
+            "n_lines": 1,
+            "tokens": 32,
+            "seconds": 0.687,
+            "confidence": 80.96,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              240,
+              936,
+              2152,
+              1004
+            ],
+            "generated_text": "vô vi. Đô động nhất tôn nhĩ!\". Nhiên ngô quan chi,",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.512,
+            "confidence": 85.12,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              246,
+              1028,
+              2155,
+              1098
+            ],
+            "generated_text": "đản nhất ích nhi bất tốn giả. Thi đi các bất chí tri mệnh",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.505,
+            "confidence": 81.89,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              243,
+              1121,
+              2158,
+              1196
+            ],
+            "generated_text": "nhi tủ hĩ. Thả Nghiêu, Thuấn, Chu, Không các bất nặng",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.593,
+            "confidence": 87.36,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              241,
+              1215,
+              2157,
+              1283
+            ],
+            "generated_text": "bách tải, nhi mat thế ngu hoặc dục phục thực tích cốc",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.429,
+            "confidence": 89.99,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              242,
+              1325,
+              1204,
+              1375
+            ],
+            "generated_text": "câu võ cùng chi tho, ai tai !",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.272,
+            "confidence": 71.53,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              386,
+              1558,
+              863,
+              1614
+            ],
+            "generated_text": "DICH NGHIA:",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.184,
+            "confidence": 95.49,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              387,
+              1659,
+              1810,
+              1727
+            ],
+            "generated_text": "Hỏi rằng : Thóc gao có thể đút bỏ được ư?",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.446,
+            "confidence": 86.85,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              386,
+              1773,
+              2157,
+              1840
+            ],
+            "generated_text": "Mâu Tử đáp : Khi tôi chưa hiểu đạo cả, thì cũng",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.469,
+            "confidence": 92.23,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              245,
+              1866,
+              2157,
+              1933
+            ],
+            "generated_text": "từng hoc tich cốc. Phép thuật này có tối hàng trăm hàng",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.468,
+            "confidence": 91.81,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              245,
+              1958,
+              2469,
+              2034
+            ],
+            "generated_text": "nghin kiểu, nhưng thực hiện không thấy hiệu quả,",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.348,
+            "confidence": 87.59,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              244,
+              2053,
+              2158,
+              2119
+            ],
+            "generated_text": "không thấy tin tưởng nên mối thôi. Cứ xem như ba",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.405,
+            "confidence": 90.29,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              246,
+              2143,
+              2158,
+              2211
+            ],
+            "generated_text": "người thầy mà tôi theo học, ông nào cũng nói mình đã",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.389,
+            "confidence": 95.44,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              248,
+              2233,
+              2157,
+              2302
+            ],
+            "generated_text": "sống 700 tuổi, hoặc 500 tuổi, hoặc 300 tuổi, thế mà tôi",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.564,
+            "confidence": 99.4,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              246,
+              2322,
+              2158,
+              2393
+            ],
+            "generated_text": "hoc ho chuẩn đẩy ba năm, tất cả đều chết ráo. Sở dĩ như",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.586,
+            "confidence": 87.11,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              244,
+              2421,
+              2159,
+              2485
+            ],
+            "generated_text": "vây, là do không chiu ăn cỏm, mà đi xài hàng trăm thức",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.468,
+            "confidence": 83.51,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              248,
+              2508,
+              2159,
+              2576
+            ],
+            "generated_text": "quả, ăn thit thì tôi cả mâm dây, nốc rượu thì đên",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.514,
+            "confidence": 83.03,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              246,
+              2597,
+              2159,
+              2666
+            ],
+            "generated_text": "nghiêng vò rót, tinh thần hôn loan. Vì thiếu hỏi cơm nên",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.577,
+            "confidence": 88.78,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              246,
+              2684,
+              2163,
+              2756
+            ],
+            "generated_text": "ù tai, mờ mất, lai không kiêng món tà dâm. Tôi hỏi có",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.553,
+            "confidence": 89.98,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              247,
+              2777,
+              2164,
+              2848
+            ],
+            "generated_text": "sao như vây, trả lời rằng: \"Lão Từ nói giảm bớt đi, giảm",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.613,
+            "confidence": 91.27,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              248,
+              2875,
+              2163,
+              2942
+            ],
+            "generated_text": "thêm nữa, cho đến vô vi. Vậy trò nên ngày ngày giảm",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.453,
+            "confidence": 90.38,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              246,
+              2960,
+              2475,
+              3033
+            ],
+            "generated_text": "bót thôi !\" (166) Nhưng tôi quan sát thì thấy môi ngày một",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.524,
+            "confidence": 90.91,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              247,
+              3049,
+              2472,
+              3125
+            ],
+            "generated_text": "tăng lên chủ không giảm. Cho nên ông nào cũng chưa",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.378,
+            "confidence": 92.81,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              245,
+              3135,
+              2472,
+              3215
+            ],
+            "generated_text": "đến tuổi \"tri mệnh\" (167) đã chết. Và Nghiêu, Thuận,",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.58,
+            "confidence": 94.97,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              244,
+              3227,
+              2472,
+              3319
+            ],
+            "generated_text": "Chu, Không không ai sống nổi trăm tuổi, vậy mà những",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.406,
+            "confidence": 88.92,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              2001,
+              205,
+              2156,
+              219
+            ],
+            "ink": 948
+          },
+          {
+            "box": [
+              2001,
+              225,
+              2156,
+              237
+            ],
+            "ink": 664
+          },
+          {
+            "box": [
+              295,
+              442,
+              1999,
+              455
+            ],
+            "ink": 682
+          },
+          {
+            "box": [
+              400,
+              536,
+              2120,
+              546
+            ],
+            "ink": 494
+          },
+          {
+            "box": [
+              633,
+              627,
+              2152,
+              640
+            ],
+            "ink": 678
+          },
+          {
+            "box": [
+              555,
+              1280,
+              1956,
+              1291
+            ],
+            "ink": 478
+          },
+          {
+            "box": [
+              296,
+              1307,
+              1204,
+              1320
+            ],
+            "ink": 659
+          },
+          {
+            "box": [
+              375,
+              1930,
+              1785,
+              1941
+            ],
+            "ink": 635
+          },
+          {
+            "box": [
+              1975,
+              3380,
+              2472,
+              3393
+            ],
+            "ink": 871
+          },
+          {
+            "box": [
+              1957,
+              3403,
+              2472,
+              3428
+            ],
+            "ink": 1835
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "61cbea5c0055c260ccfc12f884e0febca7b2783b",
+        "git_describe": "61cbea5",
+        "git_dirty": true,
+        "gpu": "NVIDIA L4",
+        "dtype": "bfloat16",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

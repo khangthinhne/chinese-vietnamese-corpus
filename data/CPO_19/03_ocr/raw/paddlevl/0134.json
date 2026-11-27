@@ -1,0 +1,1014 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 134,
+  "runs": [
+    {
+      "key": "0f576f7c28d5d8ac007b7b8e662a2620448d2f53f6b3c8acaf53bbadb2490c48",
+      "parameters": {
+        "image_sha256": "95859bd6653ed5f0a7881dc5c5fa882b113395df0c05cd86cf628684d91e63e5",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T12:37:23+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_134.png",
+      "image_size": [
+        2557,
+        3189
+      ],
+      "crop_box": [
+        0,
+        0,
+        2557,
+        3189
+      ],
+      "lines": [
+        {
+          "text": "ngothinhamle1.pdf",
+          "bbox": [
+            7,
+            19,
+            286,
+            45
+          ],
+          "confidence": 96.3
+        },
+        {
+          "text": "HOANG HOA DO PHA",
+          "bbox": [
+            1575,
+            189,
+            2038,
+            227
+          ],
+          "confidence": 88.36
+        },
+        {
+          "text": "5.Nhan Trạch (đảm Nhạn): Răng Hành Sơn có ngọn Hồi Nhạn phong,",
+          "bbox": [
+            481,
+            294,
+            2034,
+            343
+          ],
+          "confidence": 93.56
+        },
+        {
+          "text": "tương truyền chim nhan trên đường di chuyển từ bắc xương nam thường quay",
+          "bbox": [
+            329,
+            372,
+            2108,
+            421
+          ],
+          "confidence": 89.73
+        },
+        {
+          "text": "về đâu ở đó. Đươi chân núi có đảm, tương truyền nhan bay về thương xuống tăm",
+          "bbox": [
+            328,
+            451,
+            2036,
+            494
+          ],
+          "confidence": 84.24
+        },
+        {
+          "text": "Ở đầm này, vì vậy mới có tên là đầm Nhan.",
+          "bbox": [
+            331,
+            529,
+            1234,
+            571
+          ],
+          "confidence": 89.69
+        },
+        {
+          "text": "6.Ở vùng Tương Am, tỉnh Hồ Nam gần hồ Đông Đình, có miếu thờ Trưng",
+          "bbox": [
+            482,
+            606,
+            2038,
+            648
+          ],
+          "confidence": 91.96
+        },
+        {
+          "text": "Trắc, goi là miếu Bà Trắc.",
+          "bbox": [
+            330,
+            685,
+            883,
+            725
+          ],
+          "confidence": 94.53
+        },
+        {
+          "text": "7.Mot quế (quế đô): Đã sử chép rằng: Triệu Đà sau khi thôn tính nước Âu",
+          "bbox": [
+            483,
+            760,
+            2039,
+            803
+          ],
+          "confidence": 91.18
+        },
+        {
+          "text": "Lạc, bắt Cà cuống ở Hồ Tây đăng cho Hán Văn Đế nói đối là “quế đồ” (con sâu",
+          "bbox": [
+            331,
+            838,
+            2039,
+            882
+          ],
+          "confidence": 87.87
+        },
+        {
+          "text": "ăn quê), Văn Đế biết là không phải bèn đặt tên là Đà cuống (Triệu Đà nói đối).",
+          "bbox": [
+            332,
+            916,
+            2036,
+            965
+          ],
+          "confidence": 97.26
+        },
+        {
+          "text": "Con sâu này chính là con cà cuống bây giờ. Câu này có lẽ ngụ ý chê việc Triệu",
+          "bbox": [
+            333,
+            997,
+            2038,
+            1046
+          ],
+          "confidence": 96.83
+        },
+        {
+          "text": "Đà thôn tính nước Au Lac và muốn động hoá Au Lac, song những việc đó chỉ",
+          "bbox": [
+            332,
+            1075,
+            2039,
+            1118
+          ],
+          "confidence": 94.18
+        },
+        {
+          "text": "uống công vô ích, người nước Nam, giòng giỏi của người Âu Lạc mãi mãi là người",
+          "bbox": [
+            332,
+            1153,
+            2040,
+            1203
+          ],
+          "confidence": 90.6
+        },
+        {
+          "text": "nước Nam cũng như con cà cuống là sản vật của nước Nam không bao giờ biến",
+          "bbox": [
+            333,
+            1232,
+            2039,
+            1275
+          ],
+          "confidence": 92.89
+        },
+        {
+          "text": "thành con “mot quê” được.",
+          "bbox": [
+            334,
+            1316,
+            890,
+            1353
+          ],
+          "confidence": 98.04
+        },
+        {
+          "text": "8.Núi Hùng Bi: Ô địa phận huyện Kỳ Dương, là một đấy núi cao giáp",
+          "bbox": [
+            485,
+            1386,
+            2040,
+            1436
+          ],
+          "confidence": 94.81
+        },
+        {
+          "text": "giữa Hồ Nam và Quảng Tây.",
+          "bbox": [
+            336,
+            1466,
+            958,
+            1508
+          ],
+          "confidence": 96.11
+        },
+        {
+          "text": "DICH THO:",
+          "bbox": [
+            336,
+            1575,
+            589,
+            1614
+          ],
+          "confidence": 90.37
+        },
+        {
+          "text": "Dai nui giáp ranh vung Sơ Việt,",
+          "bbox": [
+            745,
+            1665,
+            1482,
+            1697
+          ],
+          "confidence": 70.99
+        },
+        {
+          "text": "Hoàng Mao đường tram, nhân Phân Mao.",
+          "bbox": [
+            745,
+            1740,
+            1709,
+            1784
+          ],
+          "confidence": 97.33
+        },
+        {
+          "text": "Hành Sơn ranh giới, trời không đinh;",
+          "bbox": [
+            747,
+            1828,
+            1611,
+            1871
+          ],
+          "confidence": 92.63
+        },
+        {
+          "text": "Nhan Trach lông chim, đất giuc treo.",
+          "bbox": [
+            745,
+            1915,
+            1597,
+            1959
+          ],
+          "confidence": 90.69
+        },
+        {
+          "text": "Trạng Trắc lưỡi gươm khơi động phủ;",
+          "bbox": [
+            751,
+            2001,
+            1618,
+            2047
+          ],
+          "confidence": 78.17
+        },
+        {
+          "text": "Uý Đà mot quê rót hang sâu.",
+          "bbox": [
+            754,
+            2090,
+            1407,
+            2134
+          ],
+          "confidence": 95.11
+        },
+        {
+          "text": "Tây nam gio thoi tan oi bức,",
+          "bbox": [
+            754,
+            2189,
+            1394,
+            2220
+          ],
+          "confidence": 77.12
+        },
+        {
+          "text": "Chưa hắn Hùng Bi van nhân cao.",
+          "bbox": [
+            751,
+            2264,
+            1524,
+            2308
+          ],
+          "confidence": 90.23
+        },
+        {
+          "text": "Làm Giang",
+          "bbox": [
+            1772,
+            2363,
+            2043,
+            2393
+          ],
+          "confidence": 99.27
+        },
+        {
+          "text": "<Q>沮巨小恠西沾",
+          "bbox": [
+            852,
+            2486,
+            1589,
+            2520
+          ],
+          "confidence": 56.89
+        },
+        {
+          "text": "38.迥長沙憶貞誼",
+          "bbox": [
+            850,
+            2512,
+            1588,
+            2560
+          ],
+          "confidence": 77.95
+        },
+        {
+          "text": "不是長沙老賈生",
+          "bbox": [
+            890,
+            2679,
+            2032,
+            2742
+          ],
+          "confidence": 96.68
+        },
+        {
+          "text": "未遑天子惡紛更",
+          "bbox": [
+            887,
+            2805,
+            1471,
+            2867
+          ],
+          "confidence": 99.89
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2557,
+          3189
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 50.755,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              7,
+              19,
+              286,
+              45
+            ],
+            "generated_text": "ngothinhamle1.pdf",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.885,
+            "confidence": 96.3,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              1575,
+              189,
+              2038,
+              227
+            ],
+            "generated_text": "HOANG HOA DO PHA",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.821,
+            "confidence": 88.36,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              332,
+              232,
+              2042,
+              246
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.451,
+            "confidence": 86.5,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              481,
+              294,
+              2034,
+              343
+            ],
+            "generated_text": "5.Nhan Trạch (đảm Nhạn): Răng Hành Sơn có ngọn Hồi Nhạn phong,",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 2.274,
+            "confidence": 93.56,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              329,
+              372,
+              2108,
+              421
+            ],
+            "generated_text": "tương truyền chim nhan trên đường di chuyển từ bắc xương nam thường quay",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.871,
+            "confidence": 89.73,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              328,
+              451,
+              2036,
+              494
+            ],
+            "generated_text": "về đâu ở đó. Đươi chân núi có đảm, tương truyền nhan bay về thương xuống tăm",
+            "n_lines": 1,
+            "tokens": 34,
+            "seconds": 2.654,
+            "confidence": 84.24,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              331,
+              529,
+              1234,
+              571
+            ],
+            "generated_text": "Ở đầm này, vì vậy mới có tên là đầm Nhan.",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.552,
+            "confidence": 89.69,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              482,
+              606,
+              2038,
+              648
+            ],
+            "generated_text": "6.Ở vùng Tương Am, tỉnh Hồ Nam gần hồ Đông Đình, có miếu thờ Trưng",
+            "n_lines": 1,
+            "tokens": 32,
+            "seconds": 2.395,
+            "confidence": 91.96,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              330,
+              685,
+              883,
+              725
+            ],
+            "generated_text": "Trắc, goi là miếu Bà Trắc.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.221,
+            "confidence": 94.53,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              483,
+              760,
+              2039,
+              803
+            ],
+            "generated_text": "7.Mot quế (quế đô): Đã sử chép rằng: Triệu Đà sau khi thôn tính nước Âu",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 2.349,
+            "confidence": 91.18,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              331,
+              838,
+              2039,
+              882
+            ],
+            "generated_text": "Lạc, bắt Cà cuống ở Hồ Tây đăng cho Hán Văn Đế nói đối là “quế đồ” (con sâu",
+            "n_lines": 1,
+            "tokens": 36,
+            "seconds": 2.802,
+            "confidence": 87.87,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              332,
+              916,
+              2036,
+              965
+            ],
+            "generated_text": "ăn quê), Văn Đế biết là không phải bèn đặt tên là Đà cuống (Triệu Đà nói đối).",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 2.458,
+            "confidence": 97.26,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              333,
+              997,
+              2038,
+              1046
+            ],
+            "generated_text": "Con sâu này chính là con cà cuống bây giờ. Câu này có lẽ ngụ ý chê việc Triệu",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 2.377,
+            "confidence": 96.83,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              332,
+              1075,
+              2039,
+              1118
+            ],
+            "generated_text": "Đà thôn tính nước Au Lac và muốn động hoá Au Lac, song những việc đó chỉ",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.814,
+            "confidence": 94.18,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              332,
+              1153,
+              2040,
+              1203
+            ],
+            "generated_text": "uống công vô ích, người nước Nam, giòng giỏi của người Âu Lạc mãi mãi là người",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.244,
+            "confidence": 90.6,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              333,
+              1232,
+              2039,
+              1275
+            ],
+            "generated_text": "nước Nam cũng như con cà cuống là sản vật của nước Nam không bao giờ biến",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.829,
+            "confidence": 92.89,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              334,
+              1316,
+              890,
+              1353
+            ],
+            "generated_text": "thành con “mot quê” được.",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 1.02,
+            "confidence": 98.04,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              485,
+              1386,
+              2040,
+              1436
+            ],
+            "generated_text": "8.Núi Hùng Bi: Ô địa phận huyện Kỳ Dương, là một đấy núi cao giáp",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 2.342,
+            "confidence": 94.81,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              336,
+              1466,
+              958,
+              1508
+            ],
+            "generated_text": "giữa Hồ Nam và Quảng Tây.",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.167,
+            "confidence": 96.11,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              336,
+              1575,
+              589,
+              1614
+            ],
+            "generated_text": "DICH THO:",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.655,
+            "confidence": 90.37,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              745,
+              1665,
+              1482,
+              1697
+            ],
+            "generated_text": "Dai nui giáp ranh vung Sơ Việt,",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.232,
+            "confidence": 70.99,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              745,
+              1740,
+              1709,
+              1784
+            ],
+            "generated_text": "Hoàng Mao đường tram, nhân Phân Mao.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.293,
+            "confidence": 97.33,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              747,
+              1828,
+              1611,
+              1871
+            ],
+            "generated_text": "Hành Sơn ranh giới, trời không đinh;",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.281,
+            "confidence": 92.63,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              745,
+              1915,
+              1597,
+              1959
+            ],
+            "generated_text": "Nhan Trach lông chim, đất giuc treo.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.355,
+            "confidence": 90.69,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              751,
+              2001,
+              1618,
+              2047
+            ],
+            "generated_text": "Trạng Trắc lưỡi gươm khơi động phủ;",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.484,
+            "confidence": 78.17,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              754,
+              2090,
+              1407,
+              2134
+            ],
+            "generated_text": "Uý Đà mot quê rót hang sâu.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.315,
+            "confidence": 95.11,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              754,
+              2189,
+              1394,
+              2220
+            ],
+            "generated_text": "Tây nam gio thoi tan oi bức,",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.302,
+            "confidence": 77.12,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              751,
+              2264,
+              1524,
+              2308
+            ],
+            "generated_text": "Chưa hắn Hùng Bi van nhân cao.",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.061,
+            "confidence": 90.23,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              1772,
+              2363,
+              2043,
+              2393
+            ],
+            "generated_text": "Làm Giang",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.652,
+            "confidence": 99.27,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              852,
+              2486,
+              1589,
+              2520
+            ],
+            "generated_text": "<Q>沮巨小恠西沾",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.063,
+            "confidence": 56.89,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              850,
+              2512,
+              1588,
+              2560
+            ],
+            "generated_text": "38.迥長沙憶貞誼",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.421,
+            "confidence": 77.95,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 32,
+            "box": [
+              890,
+              2679,
+              2032,
+              2742
+            ],
+            "generated_text": "不是長沙老賈生",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.967,
+            "confidence": 96.68,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 33,
+            "box": [
+              887,
+              2805,
+              1471,
+              2867
+            ],
+            "generated_text": "未遑天子惡紛更",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.142,
+            "confidence": 99.89,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              523,
+              0,
+              2032,
+              12
+            ],
+            "ink": 380
+          },
+          {
+            "box": [
+              425,
+              490,
+              1933,
+              500
+            ],
+            "ink": 320
+          },
+          {
+            "box": [
+              651,
+              644,
+              2033,
+              654
+            ],
+            "ink": 340
+          },
+          {
+            "box": [
+              869,
+              1115,
+              1864,
+              1124
+            ],
+            "ink": 254
+          },
+          {
+            "box": [
+              645,
+              1271,
+              1890,
+              1280
+            ],
+            "ink": 261
+          },
+          {
+            "box": [
+              754,
+              1652,
+              1470,
+              1669
+            ],
+            "ink": 934
+          },
+          {
+            "box": [
+              863,
+              2046,
+              1521,
+              2055
+            ],
+            "ink": 272
+          },
+          {
+            "box": [
+              753,
+              2177,
+              1364,
+              2191
+            ],
+            "ink": 601
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

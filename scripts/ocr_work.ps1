@@ -32,6 +32,7 @@ param(
 )
 
 $ErrorActionPreference = "Stop"
+try { [Console]::OutputEncoding = [System.Text.Encoding]::UTF8 } catch { }   # output qua pipe (notebook, log) giữ dấu tiếng Việt
 $Usage = @"
 Cách dùng (từ gốc repo):
   powershell -ExecutionPolicy Bypass -File scripts\ocr_work.ps1 -Work CPO_19 -Pages 5-623 [-DryRun] [-Pack -Member tv2]

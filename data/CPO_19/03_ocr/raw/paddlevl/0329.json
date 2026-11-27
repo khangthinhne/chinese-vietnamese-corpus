@@ -1,0 +1,866 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 329,
+  "runs": [
+    {
+      "key": "d31ed387b62b9505c95cb17568bff22cea50c2613ba155c7c2719ab1832e8da9",
+      "parameters": {
+        "image_sha256": "26ccb51378570bbf25c06c35efaf74c000eae1ae60626de5286040b82aed1542",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T14:53:26+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_329.png",
+      "image_size": [
+        2557,
+        3183
+      ],
+      "crop_box": [
+        0,
+        0,
+        2557,
+        3183
+      ],
+      "lines": [
+        {
+          "text": "ngothinhamle1.pdf",
+          "bbox": [
+            6,
+            19,
+            287,
+            45
+          ],
+          "confidence": 96.54
+        },
+        {
+          "text": "CAM DƯỜNG NHAN THOAI",
+          "bbox": [
+            1484,
+            191,
+            2065,
+            231
+          ],
+          "confidence": 82.56
+        },
+        {
+          "text": "32.其五",
+          "bbox": [
+            1099,
+            320,
+            1401,
+            387
+          ],
+          "confidence": 95.8
+        },
+        {
+          "text": "寒齋燒燭正思量",
+          "bbox": [
+            978,
+            516,
+            1521,
+            581
+          ],
+          "confidence": 99.9
+        },
+        {
+          "text": "壯志還宜老益當",
+          "bbox": [
+            980,
+            643,
+            1519,
+            706
+          ],
+          "confidence": 97.45
+        },
+        {
+          "text": "浮世大都悲喜局",
+          "bbox": [
+            980,
+            768,
+            1520,
+            831
+          ],
+          "confidence": 99.38
+        },
+        {
+          "text": "高人豈在利名場",
+          "bbox": [
+            984,
+            892,
+            1522,
+            955
+          ],
+          "confidence": 99.85
+        },
+        {
+          "text": "知终知至斯无咎",
+          "bbox": [
+            980,
+            1018,
+            1522,
+            1078
+          ],
+          "confidence": 89.96
+        },
+        {
+          "text": "能静能安自不忙",
+          "bbox": [
+            981,
+            1141,
+            1521,
+            1204
+          ],
+          "confidence": 97.09
+        },
+        {
+          "text": "肝腑相期君與我",
+          "bbox": [
+            979,
+            1266,
+            1521,
+            1328
+          ],
+          "confidence": 99.74
+        },
+        {
+          "text": "扁舟宦海有蒼蒼",
+          "bbox": [
+            982,
+            1388,
+            1521,
+            1456
+          ],
+          "confidence": 99.34
+        },
+        {
+          "text": "PHIEN AM:",
+          "bbox": [
+            360,
+            1539,
+            615,
+            1580
+          ],
+          "confidence": 85.54
+        },
+        {
+          "text": "KYNGU",
+          "bbox": [
+            1104,
+            1614,
+            1320,
+            1659
+          ],
+          "confidence": 96.63
+        },
+        {
+          "text": "Hàn trai thiêu chúc chính tư lương,",
+          "bbox": [
+            886,
+            1742,
+            1705,
+            1789
+          ],
+          "confidence": 85.96
+        },
+        {
+          "text": "Tráng chí hoàn nghi lão ích đương.",
+          "bbox": [
+            889,
+            1820,
+            1699,
+            1875
+          ],
+          "confidence": 92.5
+        },
+        {
+          "text": "Phù thế đai đô bi hỆ cuc;",
+          "bbox": [
+            886,
+            1897,
+            1461,
+            1943
+          ],
+          "confidence": 83.93
+        },
+        {
+          "text": "Cao nhân khởi tại lợi danh trưởng.",
+          "bbox": [
+            889,
+            1976,
+            1690,
+            2023
+          ],
+          "confidence": 89.63
+        },
+        {
+          "text": "Tri chung tri chỉ tư vô cũu;",
+          "bbox": [
+            889,
+            2053,
+            1511,
+            2099
+          ],
+          "confidence": 82.02
+        },
+        {
+          "text": "Năng tĩnh năng an tự bất mang.",
+          "bbox": [
+            884,
+            2132,
+            1636,
+            2186
+          ],
+          "confidence": 89.75
+        },
+        {
+          "text": "Can phủ tương kỳ quân dữ ngã,",
+          "bbox": [
+            889,
+            2210,
+            1619,
+            2265
+          ],
+          "confidence": 90.17
+        },
+        {
+          "text": "Biên chu hoan hải hữu thương thương.",
+          "bbox": [
+            884,
+            2288,
+            1778,
+            2335
+          ],
+          "confidence": 96.61
+        },
+        {
+          "text": "DICH NGHIA:",
+          "bbox": [
+            359,
+            2388,
+            668,
+            2428
+          ],
+          "confidence": 90.71
+        },
+        {
+          "text": "BA15",
+          "bbox": [
+            1142,
+            2470,
+            1278,
+            2500
+          ],
+          "confidence": 90.79
+        },
+        {
+          "text": "Nhà vắng thấp đèn, đường phải suy xét,",
+          "bbox": [
+            799,
+            2583,
+            1722,
+            2638
+          ],
+          "confidence": 82.65
+        },
+        {
+          "text": "Tráng chí càng nên hợp với tuổi già.",
+          "bbox": [
+            798,
+            2665,
+            1625,
+            2719
+          ],
+          "confidence": 97.45
+        },
+        {
+          "text": "Cõi đời phù phiếm, đều là cuộc buồn vui;",
+          "bbox": [
+            800,
+            2747,
+            1733,
+            2799
+          ],
+          "confidence": 95.63
+        },
+        {
+          "text": "Đáng cao nhân há chỉ ở trong vòng danh lợi?",
+          "bbox": [
+            798,
+            2829,
+            1825,
+            2883
+          ],
+          "confidence": 95.49
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2557,
+          3183
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 29.59,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              6,
+              19,
+              287,
+              45
+            ],
+            "generated_text": "ngothinhamle1.pdf",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.902,
+            "confidence": 96.54,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              1484,
+              191,
+              2065,
+              231
+            ],
+            "generated_text": "CAM DƯỜNG NHAN THOAI",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.228,
+            "confidence": 82.56,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              342,
+              232,
+              2083,
+              245
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.463,
+            "confidence": 78.68,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              1099,
+              320,
+              1401,
+              387
+            ],
+            "generated_text": "32.其五",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.731,
+            "confidence": 95.8,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              978,
+              516,
+              1521,
+              581
+            ],
+            "generated_text": "寒齋燒燭正思量",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.193,
+            "confidence": 99.9,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              980,
+              643,
+              1519,
+              706
+            ],
+            "generated_text": "壯志還宜老益當",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.954,
+            "confidence": 97.45,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              980,
+              768,
+              1520,
+              831
+            ],
+            "generated_text": "浮世大都悲喜局",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.768,
+            "confidence": 99.38,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              984,
+              892,
+              1522,
+              955
+            ],
+            "generated_text": "高人豈在利名場",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.955,
+            "confidence": 99.85,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              980,
+              1018,
+              1522,
+              1078
+            ],
+            "generated_text": "知终知至斯无咎",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.975,
+            "confidence": 89.96,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              981,
+              1141,
+              1521,
+              1204
+            ],
+            "generated_text": "能静能安自不忙",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.827,
+            "confidence": 97.09,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              979,
+              1266,
+              1521,
+              1328
+            ],
+            "generated_text": "肝腑相期君與我",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.831,
+            "confidence": 99.74,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              982,
+              1388,
+              1521,
+              1456
+            ],
+            "generated_text": "扁舟宦海有蒼蒼",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.064,
+            "confidence": 99.34,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              360,
+              1539,
+              615,
+              1580
+            ],
+            "generated_text": "PHIEN AM:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.716,
+            "confidence": 85.54,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              1104,
+              1614,
+              1320,
+              1659
+            ],
+            "generated_text": "KYNGU",
+            "n_lines": 1,
+            "tokens": 4,
+            "seconds": 0.559,
+            "confidence": 96.63,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              886,
+              1742,
+              1705,
+              1789
+            ],
+            "generated_text": "Hàn trai thiêu chúc chính tư lương,",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.295,
+            "confidence": 85.96,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              889,
+              1820,
+              1699,
+              1875
+            ],
+            "generated_text": "Tráng chí hoàn nghi lão ích đương.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.301,
+            "confidence": 92.5,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              886,
+              1897,
+              1461,
+              1943
+            ],
+            "generated_text": "Phù thế đai đô bi hỆ cuc;",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.383,
+            "confidence": 83.93,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              889,
+              1976,
+              1690,
+              2023
+            ],
+            "generated_text": "Cao nhân khởi tại lợi danh trưởng.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.279,
+            "confidence": 89.63,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              889,
+              2053,
+              1511,
+              2099
+            ],
+            "generated_text": "Tri chung tri chỉ tư vô cũu;",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.238,
+            "confidence": 82.02,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              884,
+              2132,
+              1636,
+              2186
+            ],
+            "generated_text": "Năng tĩnh năng an tự bất mang.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.149,
+            "confidence": 89.75,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              889,
+              2210,
+              1619,
+              2265
+            ],
+            "generated_text": "Can phủ tương kỳ quân dữ ngã,",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.249,
+            "confidence": 90.17,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              884,
+              2288,
+              1778,
+              2335
+            ],
+            "generated_text": "Biên chu hoan hải hữu thương thương.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.376,
+            "confidence": 96.61,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              359,
+              2388,
+              668,
+              2428
+            ],
+            "generated_text": "DICH NGHIA:",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.763,
+            "confidence": 90.71,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              1142,
+              2470,
+              1278,
+              2500
+            ],
+            "generated_text": "BA15",
+            "n_lines": 1,
+            "tokens": 4,
+            "seconds": 0.569,
+            "confidence": 90.79,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              799,
+              2583,
+              1722,
+              2638
+            ],
+            "generated_text": "Nhà vắng thấp đèn, đường phải suy xét,",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.381,
+            "confidence": 82.65,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              798,
+              2665,
+              1625,
+              2719
+            ],
+            "generated_text": "Tráng chí càng nên hợp với tuổi già.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.17,
+            "confidence": 97.45,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              800,
+              2747,
+              1733,
+              2799
+            ],
+            "generated_text": "Cõi đời phù phiếm, đều là cuộc buồn vui;",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.722,
+            "confidence": 95.63,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              798,
+              2829,
+              1825,
+              2883
+            ],
+            "generated_text": "Đáng cao nhân há chỉ ở trong vòng danh lợi?",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.546,
+            "confidence": 95.49,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              1071,
+              0,
+              1508,
+              9
+            ],
+            "ink": 113
+          },
+          {
+            "box": [
+              1164,
+              2334,
+              1761,
+              2343
+            ],
+            "ink": 200
+          },
+          {
+            "box": [
+              884,
+              2456,
+              1275,
+              2471
+            ],
+            "ink": 452
+          },
+          {
+            "box": [
+              1974,
+              2961,
+              2056,
+              2971
+            ],
+            "ink": 228
+          },
+          {
+            "box": [
+              1979,
+              2978,
+              2057,
+              2987
+            ],
+            "ink": 198
+          },
+          {
+            "box": [
+              1093,
+              3103,
+              1677,
+              3114
+            ],
+            "ink": 353
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

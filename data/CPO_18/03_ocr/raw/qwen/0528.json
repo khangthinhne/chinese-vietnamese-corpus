@@ -1,0 +1,532 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_18",
+  "engine": "qwen",
+  "page": 528,
+  "runs": [
+    {
+      "key": "f7071e599b071b51538951c92142d387808641318fb0ebd694b245e90cc97f80",
+      "parameters": {
+        "image_sha256": "d3d0d2b4b0bb264aaec7768c7599c28d1ad26f7ab9530103ced8b77980d34841",
+        "engine": {
+          "name": "qwen",
+          "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "model_revision": "main",
+          "transformers_version": "4.57.6",
+          "torch_version": "2.5.1+cu121",
+          "cuda_version": "12.1",
+          "bitsandbytes_version": "0.50.2",
+          "quantization": {
+            "load_in_4bit": true,
+            "quant_type": "nf4",
+            "double_quant": true,
+            "compute_dtype": "float16"
+          },
+          "mode": "all",
+          "min_pixels": 50176,
+          "max_pixels": 802816,
+          "band_inches": 2.0,
+          "max_new_tokens": 768,
+          "repetition_penalty": 1.05,
+          "adapter_version": 3,
+          "prompt_version": 3,
+          "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74"
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T22:02:56+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_528.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        0,
+        2480,
+        3509
+      ],
+      "lines": [
+        {
+          "text": "Sưu tầm và khảo luận tác phẩm chữ Hán của người Việt Nam trước TK 10",
+          "bbox": [
+            37,
+            0,
+            2424,
+            282
+          ],
+          "confidence": 94.29
+        },
+        {
+          "text": "đi quá chỗ thường dừng lại để chia tay là Hổ Khê lúc nào không biết, ba người nhìn nhau cười, từ đó có diễn \"Hổ Khê tam tiểu\" (Ba người cười ở khe Hổ). Đây muốn nói",
+          "bbox": [
+            37,
+            282,
+            2424,
+            563
+          ],
+          "confidence": 94.29
+        },
+        {
+          "text": "Thẩm Thuyên Kỳ và Thượng nhân Vô Ngại đã say sưa trò chuyện.",
+          "bbox": [
+            395,
+            565,
+            2254,
+            736
+          ],
+          "confidence": 94.41
+        },
+        {
+          "text": "$\\gamma_{\\mu}^{\\alpha},\\tau,\\sigma\\in\\mathbb{H}\\quad d\\nu_{\\alpha}\\tilde{\\nu}_{\\beta}\\subset\\Omega_{j}$",
+          "bbox": [
+            262,
+            2174,
+            1893,
+            2316
+          ],
+          "confidence": 43.43
+        },
+        {
+          "text": "et",
+          "bbox": [
+            2335,
+            2952,
+            2476,
+            3049
+          ],
+          "confidence": 54.99
+        },
+        {
+          "text": "496",
+          "bbox": [
+            259,
+            3041,
+            2433,
+            3498
+          ],
+          "confidence": 88.47
+        }
+      ],
+      "raw": {
+        "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+        "model_revision": "main",
+        "mode": "all",
+        "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          3509
+        ],
+        "band_target_height": 600,
+        "bbox_granularity": "band_even_split",
+        "max_new_tokens": 768,
+        "max_pixels": 802816,
+        "inference_seconds": 11.003,
+        "bands": [
+          {
+            "band": 1,
+            "y0": 0,
+            "y1": 563,
+            "ink_box": [
+              37,
+              0,
+              2424,
+              563
+            ],
+            "generated_text": "Sưu tầm và khảo luận tác phẩm chữ Hán của người Việt Nam trước TK 10\n\nđi quá chỗ thường dừng lại để chia tay là Hổ Khê lúc nào không biết, ba người nhìn nhau cười, từ đó có diễn \"Hổ Khê tam tiểu\" (Ba người cười ở khe Hổ). Đây muốn nói",
+            "n_lines": 2,
+            "tokens": 76,
+            "seconds": 5.31,
+            "confidence": 94.29,
+            "flags": []
+          },
+          {
+            "band": 2,
+            "y0": 563,
+            "y1": 1163,
+            "ink_box": [
+              395,
+              565,
+              2254,
+              736
+            ],
+            "generated_text": "Thẩm Thuyên Kỳ và Thượng nhân Vô Ngại đã say sưa trò chuyện.",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.51,
+            "confidence": 94.41,
+            "flags": []
+          },
+          {
+            "band": 3,
+            "y0": 1163,
+            "y1": 1845,
+            "ink_box": [
+              1330,
+              1743,
+              1340,
+              1752
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.167,
+            "confidence": 40.17,
+            "flags": []
+          },
+          {
+            "band": 4,
+            "y0": 1845,
+            "y1": 2445,
+            "ink_box": [
+              262,
+              2174,
+              1893,
+              2316
+            ],
+            "generated_text": "$\\gamma_{\\mu}^{\\alpha},\\tau,\\sigma\\in\\mathbb{H}\\quad d\\nu_{\\alpha}\\tilde{\\nu}_{\\beta}\\subset\\Omega_{j}$",
+            "n_lines": 1,
+            "tokens": 45,
+            "seconds": 3.044,
+            "confidence": 43.43,
+            "flags": []
+          },
+          {
+            "band": 5,
+            "y0": 2445,
+            "y1": 3045,
+            "ink_box": [
+              2335,
+              2952,
+              2476,
+              3049
+            ],
+            "generated_text": "et",
+            "n_lines": 1,
+            "tokens": 2,
+            "seconds": 0.234,
+            "confidence": 54.99,
+            "flags": []
+          },
+          {
+            "band": 6,
+            "y0": 3045,
+            "y1": 3494,
+            "ink_box": [
+              259,
+              3041,
+              2433,
+              3498
+            ],
+            "generated_text": "496",
+            "n_lines": 1,
+            "tokens": 4,
+            "seconds": 0.708,
+            "confidence": 88.47,
+            "flags": []
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "61cbea5c0055c260ccfc12f884e0febca7b2783b",
+        "git_describe": "61cbea5",
+        "git_dirty": true,
+        "gpu": "NVIDIA L4",
+        "dtype": "float16",
+        "adapter_version": 3
+      }
+    },
+    {
+      "key": "e767fee38c9ddd3cf59c88331f889c7ecc13896eda3d33a7b58b1145fd9b19f8",
+      "parameters": {
+        "image_sha256": "bb56aeb19c4e98bcaf8479f1c6ef2c08dbfca5931438c5a45fde37e1fd2ab4a3",
+        "engine": {
+          "name": "qwen",
+          "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "model_revision": "main",
+          "transformers_version": "4.57.6",
+          "torch_version": "2.5.1+cu121",
+          "cuda_version": "12.1",
+          "bitsandbytes_version": "0.50.2",
+          "quantization": {
+            "load_in_4bit": true,
+            "quant_type": "nf4",
+            "double_quant": true,
+            "compute_dtype": "float16"
+          },
+          "mode": "all",
+          "min_pixels": 50176,
+          "max_pixels": 802816,
+          "band_inches": 1.0,
+          "max_new_tokens": 768,
+          "repetition_penalty": 1.05,
+          "adapter_version": 4,
+          "prompt_version": 3,
+          "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74"
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-26T23:23:38+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_18\\02_extraction\\pages\\page_528.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        0,
+        2480,
+        3509
+      ],
+      "lines": [
+        {
+          "text": "Sưu tầm và khảo luận tác phẩm chữ Hán của người Việt Nam trước TK 10",
+          "bbox": [
+            37,
+            0,
+            2424,
+            234
+          ],
+          "confidence": 98.34
+        },
+        {
+          "text": "đi quá chỗ thường dừng lại để chia tay là Hổ Khê lúc nào không biết, ba người nhìn nhau cười, từ đó có diễn \"Hổ Khê tam tiếu\" (Ba người cười ở khe Hổ). Đây muốn nói",
+          "bbox": [
+            397,
+            296,
+            2262,
+            563
+          ],
+          "confidence": 95.43
+        },
+        {
+          "text": "Thẩm Thuyên Kỳ và Thượng nhân Vô Ngại đã say sưa trò chuyện.",
+          "bbox": [
+            395,
+            565,
+            2254,
+            736
+          ],
+          "confidence": 94.45
+        },
+        {
+          "text": "$\\gamma_{\\mu}^{\\alpha},\\tau,\\sigma\\in\\mathbb{H}\\quad d\\nu_{\\alpha}\\tilde{\\nu}_{\\beta}\\subset\\Omega_{j}$",
+          "bbox": [
+            262,
+            2174,
+            1893,
+            2316
+          ],
+          "confidence": 43.47
+        },
+        {
+          "text": "et",
+          "bbox": [
+            2338,
+            2948,
+            2476,
+            3047
+          ],
+          "confidence": 67.67
+        },
+        {
+          "text": "48a",
+          "bbox": [
+            273,
+            3039,
+            2435,
+            3347
+          ],
+          "confidence": 30.82
+        },
+        {
+          "text": "496",
+          "bbox": [
+            259,
+            3339,
+            2132,
+            3499
+          ],
+          "confidence": 84.53
+        }
+      ],
+      "raw": {
+        "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+        "model_revision": "main",
+        "mode": "all",
+        "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          3509
+        ],
+        "band_target_height": 300,
+        "bbox_granularity": "band_even_split",
+        "max_new_tokens": 768,
+        "max_pixels": 802816,
+        "inference_seconds": 15.357,
+        "bands": [
+          {
+            "band": 1,
+            "y0": 0,
+            "y1": 265,
+            "ink_box": [
+              37,
+              0,
+              2424,
+              234
+            ],
+            "generated_text": "Sưu tầm và khảo luận tác phẩm chữ Hán của người Việt Nam trước TK 10",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 2.327,
+            "confidence": 98.34,
+            "flags": []
+          },
+          {
+            "band": 2,
+            "y0": 265,
+            "y1": 563,
+            "ink_box": [
+              397,
+              296,
+              2262,
+              563
+            ],
+            "generated_text": "đi quá chỗ thường dừng lại để chia tay là Hổ Khê lúc nào không biết, ba người nhìn nhau cười, từ đó có diễn \"Hổ Khê tam tiếu\" (Ba người cười ở khe Hổ). Đây muốn nói",
+            "n_lines": 1,
+            "tokens": 56,
+            "seconds": 4.422,
+            "confidence": 95.43,
+            "flags": []
+          },
+          {
+            "band": 3,
+            "y0": 563,
+            "y1": 863,
+            "ink_box": [
+              395,
+              565,
+              2254,
+              736
+            ],
+            "generated_text": "Thẩm Thuyên Kỳ và Thượng nhân Vô Ngại đã say sưa trò chuyện.",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.969,
+            "confidence": 94.45,
+            "flags": []
+          },
+          {
+            "band": 6,
+            "y0": 1463,
+            "y1": 1843,
+            "ink_box": [
+              1330,
+              1743,
+              1340,
+              1752
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.338,
+            "confidence": 41.62,
+            "flags": []
+          },
+          {
+            "band": 8,
+            "y0": 2143,
+            "y1": 2443,
+            "ink_box": [
+              262,
+              2174,
+              1893,
+              2316
+            ],
+            "generated_text": "$\\gamma_{\\mu}^{\\alpha},\\tau,\\sigma\\in\\mathbb{H}\\quad d\\nu_{\\alpha}\\tilde{\\nu}_{\\beta}\\subset\\Omega_{j}$",
+            "n_lines": 1,
+            "tokens": 45,
+            "seconds": 3.244,
+            "confidence": 43.47,
+            "flags": []
+          },
+          {
+            "band": 10,
+            "y0": 2743,
+            "y1": 3043,
+            "ink_box": [
+              2338,
+              2948,
+              2476,
+              3047
+            ],
+            "generated_text": "et",
+            "n_lines": 1,
+            "tokens": 2,
+            "seconds": 0.414,
+            "confidence": 67.67,
+            "flags": []
+          },
+          {
+            "band": 11,
+            "y0": 3043,
+            "y1": 3343,
+            "ink_box": [
+              273,
+              3039,
+              2435,
+              3347
+            ],
+            "generated_text": "48a",
+            "n_lines": 1,
+            "tokens": 4,
+            "seconds": 1.695,
+            "confidence": 30.82,
+            "flags": []
+          },
+          {
+            "band": 12,
+            "y0": 3343,
+            "y1": 3495,
+            "ink_box": [
+              259,
+              3339,
+              2132,
+              3499
+            ],
+            "generated_text": "496",
+            "n_lines": 1,
+            "tokens": 4,
+            "seconds": 0.93,
+            "confidence": 84.53,
+            "flags": []
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "d4ebc58204765928c91060a1e824079c72acca2f",
+        "git_describe": "d4ebc58",
+        "git_dirty": false,
+        "gpu": "NVIDIA GeForce RTX 3050 6GB Laptop GPU",
+        "dtype": "float16",
+        "adapter_version": 4
+      }
+    }
+  ]
+}

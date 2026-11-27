@@ -1,0 +1,761 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 585,
+  "runs": [
+    {
+      "key": "944cc676ba153a45044000d31852b39751b1dc7e63549001d011bea94562dde9",
+      "parameters": {
+        "image_sha256": "c57874dbc5a71acb5cc82e6382d13f338b09d565f70c3059fcf34099758d6286",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T18:33:02+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_585.png",
+      "image_size": [
+        2838,
+        3454
+      ],
+      "crop_box": [
+        0,
+        0,
+        2838,
+        3454
+      ],
+      "lines": [
+        {
+          "text": "ngothinhamch1.pdf",
+          "bbox": [
+            7,
+            19,
+            296,
+            45
+          ],
+          "confidence": 98.43
+        },
+        {
+          "text": "NGÔ THI NHAM TOAN TAP - TAP III",
+          "bbox": [
+            484,
+            283,
+            1260,
+            322
+          ],
+          "confidence": 73.33
+        },
+        {
+          "text": "畋畝起來，仰蒙栽培，有民有土，得從廷寄之列，聖天",
+          "bbox": [
+            485,
+            375,
+            2195,
+            440
+          ],
+          "confidence": 99.83
+        },
+        {
+          "text": "子進而夏之。二位中堂大人，分寅亮之猷，任鈞衡之",
+          "bbox": [
+            488,
+            509,
+            2198,
+            574
+          ],
+          "confidence": 99.77
+        },
+        {
+          "text": "重，仰體聖心，衣被下國，不以傖荒見外肝鬲之以事，",
+          "bbox": [
+            429,
+            643,
+            2174,
+            707
+          ],
+          "confidence": 99.49
+        },
+        {
+          "text": "眉目之以文。自小番未展覲以前，中朝雅化得之聞",
+          "bbox": [
+            492,
+            777,
+            2191,
+            840
+          ],
+          "confidence": 98.91
+        },
+        {
+          "text": "知。既自趨陪鳳闕，密勿鴛階，竊見列位大人，所以",
+          "bbox": [
+            488,
+            909,
+            2194,
+            974
+          ],
+          "confidence": 99.46
+        },
+        {
+          "text": "爲小番周旋而引拔者，心口相應，千里如面。蓋堯舜",
+          "bbox": [
+            488,
+            1043,
+            2196,
+            1107
+          ],
+          "confidence": 99.64
+        },
+        {
+          "text": "在上而臬夔稷契明明在朝，敦柔能之德焉，行協和之",
+          "bbox": [
+            485,
+            1175,
+            2197,
+            1241
+          ],
+          "confidence": 97.35
+        },
+        {
+          "text": "化焉。小番所以喜之深而感之切，輒敢忘其鄙陋，陳言",
+          "bbox": [
+            485,
+            1309,
+            2192,
+            1374
+          ],
+          "confidence": 99.6
+        },
+        {
+          "text": "以鳴謝耳。南薰順候，北斗宣輝，黃閣風清，敬候台",
+          "bbox": [
+            488,
+            1443,
+            2188,
+            1508
+          ],
+          "confidence": 99.65
+        },
+        {
+          "text": "PHIEN AM:",
+          "bbox": [
+            485,
+            1721,
+            741,
+            1760
+          ],
+          "confidence": 97.83
+        },
+        {
+          "text": "TRÌNH THIÊN TRIỀU NGỮ TIÊN ĐẠI THÀN NOI CÁC",
+          "bbox": [
+            640,
+            1796,
+            2045,
+            1844
+          ],
+          "confidence": 82.42
+        },
+        {
+          "text": "DAI HOC SY HOA DAI NHAN A DAI NHAN",
+          "bbox": [
+            786,
+            1883,
+            1891,
+            1929
+          ],
+          "confidence": 97.2
+        },
+        {
+          "text": "(LỊCH TRẦN SỦNG NGỐ VONG TIẾT THIÊN ÂN. QUỐC VƯƠNG THỦ TRÌNH)",
+          "bbox": [
+            521,
+            1995,
+            2168,
+            2049
+          ],
+          "confidence": 86.8
+        },
+        {
+          "text": "Tiểu phiên dĩ nhất giới bố y, yêu thiên chi sùng, hạnh hữu quốc áp.",
+          "bbox": [
+            631,
+            2151,
+            2188,
+            2205
+          ],
+          "confidence": 90.18
+        },
+        {
+          "text": "Thiết ký tự Ký Dậu chi tuyên phong đã, khán ăn chi biểu, tài cấp thiên",
+          "bbox": [
+            483,
+            2241,
+            2192,
+            2295
+          ],
+          "confidence": 88.93
+        },
+        {
+          "text": "hôn, nhi sùng luân tứ lý, tức hạ đãi ư tiêu quốc.",
+          "bbox": [
+            481,
+            2334,
+            1581,
+            2382
+          ],
+          "confidence": 82.37
+        },
+        {
+          "text": "Ký Canh Tuất chi triển cận dã, dĩ sinh trưởng hài tế chi vi,",
+          "bbox": [
+            628,
+            2439,
+            2187,
+            2489
+          ],
+          "confidence": 92.3
+        },
+        {
+          "text": "đác sâu đổ Trung triều lễ nhạc chi thỉnh, ngưỡng phụng Đại Hoàng",
+          "bbox": [
+            482,
+            2528,
+            2193,
+            2584
+          ],
+          "confidence": 88.22
+        },
+        {
+          "text": "đế, phủ tư quyến linh, ưu gia thế tất, phi thường lê sổ, long trọng u",
+          "bbox": [
+            482,
+            2621,
+            2195,
+            2675
+          ],
+          "confidence": 84.96
+        },
+        {
+          "text": "triều tham, hy thế trân kỳ, ốc ưu ư thương lại. Thân thư Ngụ thi chi",
+          "bbox": [
+            482,
+            2711,
+            2189,
+            2765
+          ],
+          "confidence": 86.54
+        },
+        {
+          "text": "tứ, thừa thiên ân ư cứu bệ, lưu quốc bảo ư van xuân, thực duy sử",
+          "bbox": [
+            482,
+            2803,
+            2194,
+            2852
+          ],
+          "confidence": 85.53
+        },
+        {
+          "text": "sách chi vi tiên văn, phỉ trực phiên hầu chi bất kỳ. Cập tự chuyên",
+          "bbox": [
+            481,
+            2892,
+            2189,
+            2943
+          ],
+          "confidence": 89.95
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2838,
+          3454
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 14.247,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              7,
+              19,
+              296,
+              45
+            ],
+            "generated_text": "ngothinhamch1.pdf",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.237,
+            "confidence": 98.43,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              484,
+              283,
+              1260,
+              322
+            ],
+            "generated_text": "NGÔ THI NHAM TOAN TAP - TAP III",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.36,
+            "confidence": 73.33,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              486,
+              327,
+              2205,
+              340
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.07,
+            "confidence": 23.04,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              485,
+              375,
+              2195,
+              440
+            ],
+            "generated_text": "畋畝起來，仰蒙栽培，有民有土，得從廷寄之列，聖天",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.634,
+            "confidence": 99.83,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              488,
+              509,
+              2198,
+              574
+            ],
+            "generated_text": "子進而夏之。二位中堂大人，分寅亮之猷，任鈞衡之",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.585,
+            "confidence": 99.77,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              429,
+              643,
+              2174,
+              707
+            ],
+            "generated_text": "重，仰體聖心，衣被下國，不以傖荒見外肝鬲之以事，",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.61,
+            "confidence": 99.49,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              492,
+              777,
+              2191,
+              840
+            ],
+            "generated_text": "眉目之以文。自小番未展覲以前，中朝雅化得之聞",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.523,
+            "confidence": 98.91,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              488,
+              909,
+              2194,
+              974
+            ],
+            "generated_text": "知。既自趨陪鳳闕，密勿鴛階，竊見列位大人，所以",
+            "n_lines": 1,
+            "tokens": 32,
+            "seconds": 0.706,
+            "confidence": 99.46,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              488,
+              1043,
+              2196,
+              1107
+            ],
+            "generated_text": "爲小番周旋而引拔者，心口相應，千里如面。蓋堯舜",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.6,
+            "confidence": 99.64,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              485,
+              1175,
+              2197,
+              1241
+            ],
+            "generated_text": "在上而臬夔稷契明明在朝，敦柔能之德焉，行協和之",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.617,
+            "confidence": 97.35,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              485,
+              1309,
+              2192,
+              1374
+            ],
+            "generated_text": "化焉。小番所以喜之深而感之切，輒敢忘其鄙陋，陳言",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.576,
+            "confidence": 99.6,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              488,
+              1443,
+              2188,
+              1508
+            ],
+            "generated_text": "以鳴謝耳。南薰順候，北斗宣輝，黃閣風清，敬候台",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 0.641,
+            "confidence": 99.65,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              485,
+              1721,
+              741,
+              1760
+            ],
+            "generated_text": "PHIEN AM:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.166,
+            "confidence": 97.83,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              640,
+              1796,
+              2045,
+              1844
+            ],
+            "generated_text": "TRÌNH THIÊN TRIỀU NGỮ TIÊN ĐẠI THÀN NOI CÁC",
+            "n_lines": 1,
+            "tokens": 34,
+            "seconds": 0.741,
+            "confidence": 82.42,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              786,
+              1883,
+              1891,
+              1929
+            ],
+            "generated_text": "DAI HOC SY HOA DAI NHAN A DAI NHAN",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.367,
+            "confidence": 97.2,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              521,
+              1995,
+              2168,
+              2049
+            ],
+            "generated_text": "(LỊCH TRẦN SỦNG NGỐ VONG TIẾT THIÊN ÂN. QUỐC VƯƠNG THỦ TRÌNH)",
+            "n_lines": 1,
+            "tokens": 54,
+            "seconds": 1.136,
+            "confidence": 86.8,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              631,
+              2151,
+              2188,
+              2205
+            ],
+            "generated_text": "Tiểu phiên dĩ nhất giới bố y, yêu thiên chi sùng, hạnh hữu quốc áp.",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 0.635,
+            "confidence": 90.18,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              483,
+              2241,
+              2192,
+              2295
+            ],
+            "generated_text": "Thiết ký tự Ký Dậu chi tuyên phong đã, khán ăn chi biểu, tài cấp thiên",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 0.644,
+            "confidence": 88.93,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              481,
+              2334,
+              1581,
+              2382
+            ],
+            "generated_text": "hôn, nhi sùng luân tứ lý, tức hạ đãi ư tiêu quốc.",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.555,
+            "confidence": 82.37,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              628,
+              2439,
+              2187,
+              2489
+            ],
+            "generated_text": "Ký Canh Tuất chi triển cận dã, dĩ sinh trưởng hài tế chi vi,",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.579,
+            "confidence": 92.3,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              482,
+              2528,
+              2193,
+              2584
+            ],
+            "generated_text": "đác sâu đổ Trung triều lễ nhạc chi thỉnh, ngưỡng phụng Đại Hoàng",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 0.641,
+            "confidence": 88.22,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              482,
+              2621,
+              2195,
+              2675
+            ],
+            "generated_text": "đế, phủ tư quyến linh, ưu gia thế tất, phi thường lê sổ, long trọng u",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 0.657,
+            "confidence": 84.96,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              482,
+              2711,
+              2189,
+              2765
+            ],
+            "generated_text": "triều tham, hy thế trân kỳ, ốc ưu ư thương lại. Thân thư Ngụ thi chi",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 0.653,
+            "confidence": 86.54,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              482,
+              2803,
+              2194,
+              2852
+            ],
+            "generated_text": "tứ, thừa thiên ân ư cứu bệ, lưu quốc bảo ư van xuân, thực duy sử",
+            "n_lines": 1,
+            "tokens": 32,
+            "seconds": 0.696,
+            "confidence": 85.53,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              481,
+              2892,
+              2189,
+              2943
+            ],
+            "generated_text": "sách chi vi tiên văn, phỉ trực phiên hầu chi bất kỳ. Cập tự chuyên",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.614,
+            "confidence": 89.95,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              496,
+              1586,
+              628,
+              1596
+            ],
+            "ink": 393
+          },
+          {
+            "box": [
+              487,
+              1605,
+              752,
+              1627
+            ],
+            "ink": 1281
+          },
+          {
+            "box": [
+              725,
+              1786,
+              2003,
+              1800
+            ],
+            "ink": 659
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "61cbea5c0055c260ccfc12f884e0febca7b2783b",
+        "git_describe": "61cbea5",
+        "git_dirty": true,
+        "gpu": "NVIDIA L4",
+        "dtype": "bfloat16",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

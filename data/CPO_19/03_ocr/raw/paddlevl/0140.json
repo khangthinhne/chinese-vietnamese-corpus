@@ -1,0 +1,900 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 140,
+  "runs": [
+    {
+      "key": "076e6979bbf888dbf8348d7ace8fc551472054bc35e78204d8b6c97f11822fe9",
+      "parameters": {
+        "image_sha256": "bf7e2617001a9f39ec24d4f4ef4f67d22bcd12fb6f4c47ad6c8f286ee0639b51",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T12:41:30+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_140.png",
+      "image_size": [
+        2599,
+        3227
+      ],
+      "crop_box": [
+        0,
+        0,
+        2599,
+        3227
+      ],
+      "lines": [
+        {
+          "text": "ngothinhamle1.pdf",
+          "bbox": [
+            6,
+            19,
+            1323,
+            45
+          ],
+          "confidence": 92.05
+        },
+        {
+          "text": "HOÀNG HOA ĐỔ PHA",
+          "bbox": [
+            1537,
+            195,
+            2001,
+            233
+          ],
+          "confidence": 79.85
+        },
+        {
+          "text": "đ.Bản A.2871: Tranh 筝.",
+          "bbox": [
+            441,
+            296,
+            959,
+            338
+          ],
+          "confidence": 90.49
+        },
+        {
+          "text": "Bản A.117/c1: Lung 籠",
+          "bbox": [
+            441,
+            368,
+            1093,
+            413
+          ],
+          "confidence": 97.81
+        },
+        {
+          "text": "CHU THICH:",
+          "bbox": [
+            294,
+            440,
+            582,
+            479
+          ],
+          "confidence": 99.27
+        },
+        {
+          "text": "1. Tương Âm: Tên một huyện thuộc tỉnh Hồ Nam.",
+          "bbox": [
+            446,
+            503,
+            1481,
+            548
+          ],
+          "confidence": 94.79
+        },
+        {
+          "text": "2.Tam Tương: Tức Tương Đàm, Tương Âm và Tương Hương, thuộc tỉnh",
+          "bbox": [
+            443,
+            575,
+            2001,
+            624
+          ],
+          "confidence": 94.53
+        },
+        {
+          "text": "Họ Nam.",
+          "bbox": [
+            294,
+            659,
+            487,
+            689
+          ],
+          "confidence": 73.3
+        },
+        {
+          "text": "Đất Sở: Tên nước thời Xuân Thu, nay thuộc vùng Hồ Nam, Hồ Bắc.",
+          "bbox": [
+            443,
+            713,
+            1860,
+            759
+          ],
+          "confidence": 97.9
+        },
+        {
+          "text": "(1) 临陉理言六字",
+          "bbox": [
+            844,
+            846,
+            1576,
+            875
+          ],
+          "confidence": 46.36
+        },
+        {
+          "text": "61.湘陰騂予夜宿",
+          "bbox": [
+            840,
+            867,
+            1577,
+            922
+          ],
+          "confidence": 85.8
+        },
+        {
+          "text": "不知何處是高唐",
+          "bbox": [
+            948,
+            1037,
+            1532,
+            1101
+          ],
+          "confidence": 95.22
+        },
+        {
+          "text": "自古京湖道楚疆",
+          "bbox": [
+            956,
+            1161,
+            1534,
+            1225
+          ],
+          "confidence": 99.08
+        },
+        {
+          "text": "路信陽來煙漠漠",
+          "bbox": [
+            943,
+            1285,
+            1532,
+            1347
+          ],
+          "confidence": 99.43
+        },
+        {
+          "text": "湖疑山浸水茫茫",
+          "bbox": [
+            946,
+            1409,
+            1529,
+            1470
+          ],
+          "confidence": 99.24
+        },
+        {
+          "text": "榴花雨霽星還曙",
+          "bbox": [
+            945,
+            1531,
+            1535,
+            1594
+          ],
+          "confidence": 96.93
+        },
+        {
+          "text": "柏葉杯浮夜未央",
+          "bbox": [
+            948,
+            1655,
+            1535,
+            1717
+          ],
+          "confidence": 99.74
+        },
+        {
+          "text": "遊覲未遑窮訪景",
+          "bbox": [
+            946,
+            1777,
+            1535,
+            1844
+          ],
+          "confidence": 99.91
+        },
+        {
+          "text": "故燒高燭寫風光",
+          "bbox": [
+            947,
+            1903,
+            1536,
+            1969
+          ],
+          "confidence": 99.88
+        },
+        {
+          "text": "PHIÊN AM:",
+          "bbox": [
+            301,
+            2052,
+            556,
+            2092
+          ],
+          "confidence": 87.87
+        },
+        {
+          "text": "TƯỢNG ÂM DÍCH ĐỈNH DA TỤC",
+          "bbox": [
+            748,
+            2118,
+            1558,
+            2165
+          ],
+          "confidence": 79.18
+        },
+        {
+          "text": "Bất tri hà xú thi Cao Đường,",
+          "bbox": [
+            745,
+            2248,
+            1447,
+            2294
+          ],
+          "confidence": 93.59
+        },
+        {
+          "text": "Tư cố Kinh Hộ đạo Sở cương.",
+          "bbox": [
+            749,
+            2331,
+            1412,
+            2376
+          ],
+          "confidence": 85.34
+        },
+        {
+          "text": "Lộ tín Dương lai yên mạc mạc;",
+          "bbox": [
+            746,
+            2413,
+            1488,
+            2465
+          ],
+          "confidence": 85.72
+        },
+        {
+          "text": "Hô Nghi sơn tâm thủy mang mang.",
+          "bbox": [
+            745,
+            2495,
+            1556,
+            2547
+          ],
+          "confidence": 91.09
+        },
+        {
+          "text": "Lưu hoa vũ tế (b) tinh hoàn (c) thu;",
+          "bbox": [
+            746,
+            2576,
+            1477,
+            2621
+          ],
+          "confidence": 85.41
+        },
+        {
+          "text": "Bách diệp bôi phù da vi uống.",
+          "bbox": [
+            745,
+            2659,
+            1433,
+            2703
+          ],
+          "confidence": 92.31
+        },
+        {
+          "text": "Du cận (c) vị hoàng cùng phòng cánh,",
+          "bbox": [
+            746,
+            2741,
+            1575,
+            2794
+          ],
+          "confidence": 81.97
+        },
+        {
+          "text": "Cô thiêu cao chúc tải phong quang.",
+          "bbox": [
+            750,
+            2824,
+            1535,
+            2876
+          ],
+          "confidence": 78.66
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2599,
+          3227
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 35.361,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              6,
+              19,
+              1323,
+              45
+            ],
+            "generated_text": "ngothinhamle1.pdf",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.882,
+            "confidence": 92.05,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              1537,
+              195,
+              2001,
+              233
+            ],
+            "generated_text": "HOÀNG HOA ĐỔ PHA",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.079,
+            "confidence": 79.85,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              295,
+              238,
+              2006,
+              252
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.464,
+            "confidence": 81.8,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              441,
+              296,
+              959,
+              338
+            ],
+            "generated_text": "đ.Bản A.2871: Tranh 筝.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.428,
+            "confidence": 90.49,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              441,
+              368,
+              1093,
+              413
+            ],
+            "generated_text": "Bản A.117/c1: Lung 籠",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.633,
+            "confidence": 97.81,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              294,
+              440,
+              582,
+              479
+            ],
+            "generated_text": "CHU THICH:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.735,
+            "confidence": 99.27,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              446,
+              503,
+              1481,
+              548
+            ],
+            "generated_text": "1. Tương Âm: Tên một huyện thuộc tỉnh Hồ Nam.",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.711,
+            "confidence": 94.79,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              443,
+              575,
+              2001,
+              624
+            ],
+            "generated_text": "2.Tam Tương: Tức Tương Đàm, Tương Âm và Tương Hương, thuộc tỉnh",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 2.07,
+            "confidence": 94.53,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              294,
+              659,
+              487,
+              689
+            ],
+            "generated_text": "Họ Nam.",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.664,
+            "confidence": 73.3,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              443,
+              713,
+              1860,
+              759
+            ],
+            "generated_text": "Đất Sở: Tên nước thời Xuân Thu, nay thuộc vùng Hồ Nam, Hồ Bắc.",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 2.066,
+            "confidence": 97.9,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              844,
+              846,
+              1576,
+              875
+            ],
+            "generated_text": "(1) 临陉理言六字",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.132,
+            "confidence": 46.36,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              840,
+              867,
+              1577,
+              922
+            ],
+            "generated_text": "61.湘陰騂予夜宿",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.192,
+            "confidence": 85.8,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              948,
+              1037,
+              1532,
+              1101
+            ],
+            "generated_text": "不知何處是高唐",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.73,
+            "confidence": 95.22,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              956,
+              1161,
+              1534,
+              1225
+            ],
+            "generated_text": "自古京湖道楚疆",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.789,
+            "confidence": 99.08,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              943,
+              1285,
+              1532,
+              1347
+            ],
+            "generated_text": "路信陽來煙漠漠",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 1.005,
+            "confidence": 99.43,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              946,
+              1409,
+              1529,
+              1470
+            ],
+            "generated_text": "湖疑山浸水茫茫",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.805,
+            "confidence": 99.24,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              945,
+              1531,
+              1535,
+              1594
+            ],
+            "generated_text": "榴花雨霽星還曙",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.978,
+            "confidence": 96.93,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              948,
+              1655,
+              1535,
+              1717
+            ],
+            "generated_text": "柏葉杯浮夜未央",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.868,
+            "confidence": 99.74,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              946,
+              1777,
+              1535,
+              1844
+            ],
+            "generated_text": "遊覲未遑窮訪景",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.336,
+            "confidence": 99.91,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              947,
+              1903,
+              1536,
+              1969
+            ],
+            "generated_text": "故燒高燭寫風光",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.076,
+            "confidence": 99.88,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              301,
+              2052,
+              556,
+              2092
+            ],
+            "generated_text": "PHIÊN AM:",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.787,
+            "confidence": 87.87,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              748,
+              2118,
+              1558,
+              2165
+            ],
+            "generated_text": "TƯỢNG ÂM DÍCH ĐỈNH DA TỤC",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.867,
+            "confidence": 79.18,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              745,
+              2248,
+              1447,
+              2294
+            ],
+            "generated_text": "Bất tri hà xú thi Cao Đường,",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.13,
+            "confidence": 93.59,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              749,
+              2331,
+              1412,
+              2376
+            ],
+            "generated_text": "Tư cố Kinh Hộ đạo Sở cương.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.293,
+            "confidence": 85.34,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              746,
+              2413,
+              1488,
+              2465
+            ],
+            "generated_text": "Lộ tín Dương lai yên mạc mạc;",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.198,
+            "confidence": 85.72,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              745,
+              2495,
+              1556,
+              2547
+            ],
+            "generated_text": "Hô Nghi sơn tâm thủy mang mang.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.156,
+            "confidence": 91.09,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              746,
+              2576,
+              1477,
+              2621
+            ],
+            "generated_text": "Lưu hoa vũ tế (b) tinh hoàn (c) thu;",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.499,
+            "confidence": 85.41,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              745,
+              2659,
+              1433,
+              2703
+            ],
+            "generated_text": "Bách diệp bôi phù da vi uống.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.186,
+            "confidence": 92.31,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              746,
+              2741,
+              1575,
+              2794
+            ],
+            "generated_text": "Du cận (c) vị hoàng cùng phòng cánh,",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.338,
+            "confidence": 81.97,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              750,
+              2824,
+              1535,
+              2876
+            ],
+            "generated_text": "Cô thiêu cao chúc tải phong quang.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.262,
+            "confidence": 78.66,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              592,
+              544,
+              1155,
+              555
+            ],
+            "ink": 222
+          },
+          {
+            "box": [
+              295,
+              646,
+              410,
+              660
+            ],
+            "ink": 386
+          },
+          {
+            "box": [
+              930,
+              2700,
+              1417,
+              2712
+            ],
+            "ink": 313
+          },
+          {
+            "box": [
+              1929,
+              2976,
+              2007,
+              2988
+            ],
+            "ink": 256
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

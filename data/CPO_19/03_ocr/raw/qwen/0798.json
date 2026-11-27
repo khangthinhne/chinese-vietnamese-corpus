@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "qwen",
+  "page": 798,
+  "runs": [
+    {
+      "key": "336b103a43dd68f8b1a89c1f7ab4b85b129e4df155e1f98b1682d47a2366740d",
+      "parameters": {
+        "image_sha256": "d10b807824d960feb58cf2d6cee6c58fd0641ce78612407fa9cfd278bb344def",
+        "engine": {
+          "name": "qwen",
+          "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "model_revision": "main",
+          "transformers_version": "4.57.6",
+          "torch_version": "2.9.1+cu128",
+          "cuda_version": "12.8",
+          "bitsandbytes_version": "0.50.2",
+          "quantization": {
+            "load_in_4bit": true,
+            "quant_type": "nf4",
+            "double_quant": true,
+            "compute_dtype": "float16"
+          },
+          "mode": "all",
+          "min_pixels": 50176,
+          "max_pixels": 802816,
+          "band_inches": 2.0,
+          "max_new_tokens": 768,
+          "repetition_penalty": 1.05,
+          "adapter_version": 3,
+          "prompt_version": 3,
+          "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74"
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-26T09:19:27+00:00",
+      "image": "/marimo/.cpo19_ocr/repo/data/CPO_19/02_extraction/pages/page_798.png",
+      "image_size": [
+        2124,
+        3016
+      ],
+      "crop_box": [
+        0,
+        0,
+        2124,
+        3016
+      ],
+      "lines": [],
+      "raw": {
+        "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+        "model_revision": "main",
+        "mode": "all",
+        "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74",
+        "dpi": 300,
+        "image_size": [
+          2124,
+          3016
+        ],
+        "band_target_height": 600,
+        "bbox_granularity": "band_even_split",
+        "max_new_tokens": 768,
+        "max_pixels": 802816,
+        "inference_seconds": 0.0,
+        "bands": [],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": null,
+        "git_describe": null,
+        "git_dirty": null,
+        "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+        "dtype": "float16",
+        "adapter_version": 3
+      }
+    }
+  ]
+}

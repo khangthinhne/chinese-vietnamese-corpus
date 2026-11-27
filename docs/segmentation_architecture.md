@@ -153,6 +153,18 @@ Bật trong config (hoặc `--ocr-streams han_vie`); mặc định tắt, chế 
      chữ thường) mở nghĩa, khi OCR làm mất chữ "DỊCH NGHĨA";
    - `notes_after_attribution` (mặc định []; CPO_20 dùng ["am"]): sau dòng nguồn "Trích ..." là chú thích.
    Mọi chuyển lớp ngầm ghi review `implicit_layer_start`.
+   - `am_detection` (mặc định tắt; CPO_20 bật): phần am MỞ NGẦM mà không khớp cách đọc Hán–Việt của chữ Hán
+     (`src/segmentation/am_detect.py`, `min_match` 0,35) chuyển sang nghia; phần sau tiêu đề PHIÊN ÂM tường minh
+     giữ nguyên. Review `am_reassigned_to_nghia`.
+   - `document_overrides`: ghi đè theo TRANG BẮT ĐẦU của tài liệu, bắt buộc có `reason`
+     (`src/segmentation/overrides.py`): `exclude` (ra khỏi lớp dóng) / `notes` (vùng chú thích), tuỳ chọn
+     `layers`, `implicit_am_only`, `han_prefix`. Mỗi dòng bị gỡ có review `override_excluded`/`override_note`;
+     ghi đè không khớp tài liệu nào thì log cảnh báo.
+   - `am_detection.split_lines` (mặc định tắt): phần DỊCH dính vào cuối lớp am khi OCR mất nhãn "Dịch nghĩa:" ->
+     nghia (`am_detect.split_point`: 2 dòng liền >= 6 âm tiết khớp cách đọc Hán–Việt < 0,55, đã đủ 80% số chữ Hán,
+     phần trước khớp >= 0,6; bỏ qua tiêu đề chạy, mục chú thích). Review `am_tail_split_to_nghia`.
+   - `verse_tho_split` (mặc định tắt): bài thơ không có lớp tho mà nghia >= 1,6 x số dòng thân am và phần đuôi là câu
+     thơ ngắn (<= 12 âm tiết) -> phần đuôi sang tho. Review `nghia_tail_split_to_tho`.
 5. Cảnh báo: hai luồng khác phạm vi trang, tài liệu có Hán mà không có âm (và ngược lại), dòng han nằm ngoài
    khoảng trang của tài liệu (`metadata.json` -> `segmentation.ocr_streams`).
 

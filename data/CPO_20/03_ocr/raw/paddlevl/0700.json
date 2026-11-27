@@ -1,0 +1,745 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_20",
+  "engine": "paddlevl",
+  "page": 700,
+  "runs": [
+    {
+      "key": "32799189050a9a93adb017c6ec172f708d1d121058a41c696c96de8a0c6bd682",
+      "parameters": {
+        "image_sha256": "e6aeb7fadb00f3650aa19ac3ebdc36df522431bf0f049f1e8090b2318cafb37a",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T14:18:00+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_700.png",
+      "image_size": [
+        1839,
+        2803
+      ],
+      "crop_box": [
+        0,
+        0,
+        1839,
+        2803
+      ],
+      "lines": [
+        {
+          "text": "Vich nghĩa:",
+          "bbox": [
+            271,
+            268,
+            525,
+            299
+          ],
+          "confidence": 87.98
+        },
+        {
+          "text": "ĐÊM TRĂNG ĐẦU MỤA THU",
+          "bbox": [
+            510,
+            388,
+            1390,
+            454
+          ],
+          "confidence": 88.24
+        },
+        {
+          "text": "Gió may thổi hiu hắt trên mái nhà ngói.",
+          "bbox": [
+            510,
+            534,
+            1358,
+            585
+          ],
+          "confidence": 88.0
+        },
+        {
+          "text": "Ngọn đèn lạnh khi tỏ khi mờ, đêm đài lê thê.",
+          "bbox": [
+            509,
+            594,
+            1468,
+            645
+          ],
+          "confidence": 89.25
+        },
+        {
+          "text": "Anh trắng, soi tỏ cảnh sông núi tiêu điều,",
+          "bbox": [
+            507,
+            655,
+            1383,
+            705
+          ],
+          "confidence": 88.82
+        },
+        {
+          "text": "Tiếng dễ kêu nỉ non khiến cây có buồn bã.",
+          "bbox": [
+            507,
+            711,
+            1397,
+            764
+          ],
+          "confidence": 87.42
+        },
+        {
+          "text": "Thì giờ thấm thoát, trời cũng giống như người khách,",
+          "bbox": [
+            506,
+            770,
+            1622,
+            830
+          ],
+          "confidence": 94.19
+        },
+        {
+          "text": "Đường đời nổi chim, đất thật hết như chiếc thuyền.",
+          "bbox": [
+            504,
+            831,
+            1579,
+            886
+          ],
+          "confidence": 92.69
+        },
+        {
+          "text": "Đời Trùng Hoa qua rồi, mùa xuân kém hẳn,",
+          "bbox": [
+            504,
+            890,
+            1421,
+            944
+          ],
+          "confidence": 92.84
+        },
+        {
+          "text": "Ván cỡ \"phóng phat\" tàn không biết đã trải bao thu.",
+          "bbox": [
+            507,
+            953,
+            1597,
+            1006
+          ],
+          "confidence": 85.83
+        },
+        {
+          "text": "道中遇雨",
+          "bbox": [
+            817,
+            1195,
+            1479,
+            1275
+          ],
+          "confidence": 99.47
+        },
+        {
+          "text": "殷殷微雷起天末",
+          "bbox": [
+            699,
+            1361,
+            1286,
+            1420
+          ],
+          "confidence": 93.17
+        },
+        {
+          "text": "黑雲四合狂風發",
+          "bbox": [
+            699,
+            1433,
+            1286,
+            1494
+          ],
+          "confidence": 99.33
+        },
+        {
+          "text": "漠漠满地沙麇飛",
+          "bbox": [
+            696,
+            1505,
+            1286,
+            1566
+          ],
+          "confidence": 76.44
+        },
+        {
+          "text": "觧觿弧村榭築脫",
+          "bbox": [
+            698,
+            1578,
+            1285,
+            1639
+          ],
+          "confidence": 70.07
+        },
+        {
+          "text": "不勝倦鳥雨中啼",
+          "bbox": [
+            696,
+            1650,
+            1283,
+            1709
+          ],
+          "confidence": 95.87
+        },
+        {
+          "text": "無限潛魚江外活",
+          "bbox": [
+            694,
+            1722,
+            1282,
+            1781
+          ],
+          "confidence": 96.16
+        },
+        {
+          "text": "遊子飄零何處緒",
+          "bbox": [
+            693,
+            1795,
+            1282,
+            1855
+          ],
+          "confidence": 77.26
+        },
+        {
+          "text": "故鄉思尺無由達",
+          "bbox": [
+            693,
+            1867,
+            1280,
+            1928
+          ],
+          "confidence": 90.26
+        },
+        {
+          "text": "Thiên âm:",
+          "bbox": [
+            256,
+            2009,
+            479,
+            2039
+          ],
+          "confidence": 92.3
+        },
+        {
+          "text": "ĐAO TRUNG NGỐ VỤ",
+          "bbox": [
+            492,
+            2135,
+            1124,
+            2195
+          ],
+          "confidence": 80.59
+        },
+        {
+          "text": "An ăn vi lôi khỏi thiên mat.",
+          "bbox": [
+            490,
+            2277,
+            1082,
+            2323
+          ],
+          "confidence": 88.41
+        },
+        {
+          "text": "Hắc vân tử hợp cương phong phát.",
+          "bbox": [
+            490,
+            2335,
+            1207,
+            2389
+          ],
+          "confidence": 76.4
+        },
+        {
+          "text": "Mạc mạc măn địa sa trần phi.",
+          "bbox": [
+            488,
+            2396,
+            1118,
+            2440
+          ],
+          "confidence": 87.25
+        },
+        {
+          "text": "Tiêu tiêu cô thôn thu diệp thoát.",
+          "bbox": [
+            488,
+            2450,
+            1166,
+            2498
+          ],
+          "confidence": 94.09
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          1839,
+          2803
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 10.424,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              271,
+              268,
+              525,
+              299
+            ],
+            "generated_text": "Vich nghĩa:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.234,
+            "confidence": 87.98,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              510,
+              388,
+              1390,
+              454
+            ],
+            "generated_text": "ĐÊM TRĂNG ĐẦU MỤA THU",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.51,
+            "confidence": 88.24,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              510,
+              534,
+              1358,
+              585
+            ],
+            "generated_text": "Gió may thổi hiu hắt trên mái nhà ngói.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.462,
+            "confidence": 88.0,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              509,
+              594,
+              1468,
+              645
+            ],
+            "generated_text": "Ngọn đèn lạnh khi tỏ khi mờ, đêm đài lê thê.",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.596,
+            "confidence": 89.25,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              507,
+              655,
+              1383,
+              705
+            ],
+            "generated_text": "Anh trắng, soi tỏ cảnh sông núi tiêu điều,",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.532,
+            "confidence": 88.82,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              507,
+              711,
+              1397,
+              764
+            ],
+            "generated_text": "Tiếng dễ kêu nỉ non khiến cây có buồn bã.",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.554,
+            "confidence": 87.42,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              506,
+              770,
+              1622,
+              830
+            ],
+            "generated_text": "Thì giờ thấm thoát, trời cũng giống như người khách,",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.562,
+            "confidence": 94.19,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              504,
+              831,
+              1579,
+              886
+            ],
+            "generated_text": "Đường đời nổi chim, đất thật hết như chiếc thuyền.",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.632,
+            "confidence": 92.69,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              504,
+              890,
+              1421,
+              944
+            ],
+            "generated_text": "Đời Trùng Hoa qua rồi, mùa xuân kém hẳn,",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.581,
+            "confidence": 92.84,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              507,
+              953,
+              1597,
+              1006
+            ],
+            "generated_text": "Ván cỡ \"phóng phat\" tàn không biết đã trải bao thu.",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.619,
+            "confidence": 85.83,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              817,
+              1195,
+              1479,
+              1275
+            ],
+            "generated_text": "道中遇雨",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.221,
+            "confidence": 99.47,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              699,
+              1361,
+              1286,
+              1420
+            ],
+            "generated_text": "殷殷微雷起天末",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.293,
+            "confidence": 93.17,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              699,
+              1433,
+              1286,
+              1494
+            ],
+            "generated_text": "黑雲四合狂風發",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.278,
+            "confidence": 99.33,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              696,
+              1505,
+              1286,
+              1566
+            ],
+            "generated_text": "漠漠满地沙麇飛",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.324,
+            "confidence": 76.44,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              698,
+              1578,
+              1285,
+              1639
+            ],
+            "generated_text": "觧觿弧村榭築脫",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.461,
+            "confidence": 70.07,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              696,
+              1650,
+              1283,
+              1709
+            ],
+            "generated_text": "不勝倦鳥雨中啼",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.32,
+            "confidence": 95.87,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              694,
+              1722,
+              1282,
+              1781
+            ],
+            "generated_text": "無限潛魚江外活",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.328,
+            "confidence": 96.16,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              693,
+              1795,
+              1282,
+              1855
+            ],
+            "generated_text": "遊子飄零何處緒",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.365,
+            "confidence": 77.26,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              693,
+              1867,
+              1280,
+              1928
+            ],
+            "generated_text": "故鄉思尺無由達",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.31,
+            "confidence": 90.26,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              256,
+              2009,
+              479,
+              2039
+            ],
+            "generated_text": "Thiên âm:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.233,
+            "confidence": 92.3,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              492,
+              2135,
+              1124,
+              2195
+            ],
+            "generated_text": "ĐAO TRUNG NGỐ VỤ",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.413,
+            "confidence": 80.59,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              490,
+              2277,
+              1082,
+              2323
+            ],
+            "generated_text": "An ăn vi lôi khỏi thiên mat.",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.378,
+            "confidence": 88.41,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              490,
+              2335,
+              1207,
+              2389
+            ],
+            "generated_text": "Hắc vân tử hợp cương phong phát.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.403,
+            "confidence": 76.4,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              488,
+              2396,
+              1118,
+              2440
+            ],
+            "generated_text": "Mạc mạc măn địa sa trần phi.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.425,
+            "confidence": 87.25,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              488,
+              2450,
+              1166,
+              2498
+            ],
+            "generated_text": "Tiêu tiêu cô thôn thu diệp thoát.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.39,
+            "confidence": 94.09,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              259,
+              2537,
+              331,
+              2548
+            ],
+            "ink": 395
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      }
+    }
+  ]
+}

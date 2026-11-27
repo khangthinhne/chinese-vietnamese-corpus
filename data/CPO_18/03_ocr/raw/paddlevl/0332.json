@@ -1,0 +1,883 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_18",
+  "engine": "paddlevl",
+  "page": 332,
+  "runs": [
+    {
+      "key": "0d4f31f07be898bfc4f4f71e47c92c083105c0aa261bae2b2c3b9506a7430cf2",
+      "parameters": {
+        "image_sha256": "72de76896bd30a82763408752b26fc0455d8b375049208e53c23c10f7594e548",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T14:29:41+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_332.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        0,
+        2480,
+        3509
+      ],
+      "lines": [
+        {
+          "text": "Sưu tầm và khảo luận tác phẩm chủ Hán của người Việt Nam trước TK 10",
+          "bbox": [
+            227,
+            119,
+            2435,
+            176
+          ],
+          "confidence": 94.76
+        },
+        {
+          "text": "：",
+          "bbox": [
+            207,
+            207,
+            2261,
+            230
+          ],
+          "confidence": 26.55
+        },
+        {
+          "text": "PHIEN AM:",
+          "bbox": [
+            348,
+            324,
+            720,
+            381
+          ],
+          "confidence": 91.79
+        },
+        {
+          "text": "DOI BINH BO THI XA PHAN",
+          "bbox": [
+            820,
+            465,
+            1566,
+            524
+          ],
+          "confidence": 92.98
+        },
+        {
+          "text": "(Đặc Bình Bô thi cử nhân trường đóa,",
+          "bbox": [
+            513,
+            590,
+            1764,
+            647
+          ],
+          "confidence": 77.24
+        },
+        {
+          "text": "thình dung nhac tiết, Thái thương xưng",
+          "bbox": [
+            466,
+            674,
+            2433,
+            731
+          ],
+          "confidence": 78.12
+        },
+        {
+          "text": "cách lệnh vô vấn, thủ nội tuvên sī chi lê).",
+          "bbox": [
+            461,
+            752,
+            1827,
+            810
+          ],
+          "confidence": 75.65
+        },
+        {
+          "text": "KHUONG CONG PHUC",
+          "bbox": [
+            1315,
+            882,
+            2007,
+            937
+          ],
+          "confidence": 87.92
+        },
+        {
+          "text": "Xa đi quan đức,nhac dĩ hòa thanh. Tương tuyên si ư",
+          "bbox": [
+            320,
+            1023,
+            2213,
+            1092
+          ],
+          "confidence": 79.72
+        },
+        {
+          "text": "Trach Cung, tất trương hầu ư Tương Phố. Sở dĩ : Thê",
+          "bbox": [
+            188,
+            1116,
+            2207,
+            1189
+          ],
+          "confidence": 82.74
+        },
+        {
+          "text": "tông miếu chi tân khách, bi hướng yên chi uy nghi. Hà",
+          "bbox": [
+            188,
+            1213,
+            2201,
+            1290
+          ],
+          "confidence": 88.04
+        },
+        {
+          "text": "hốt vũ phu nhi yêu Nhã, Tung ? Khi đồ cường âm cường",
+          "bbox": [
+            184,
+            1310,
+            2202,
+            1390
+          ],
+          "confidence": 90.01
+        },
+        {
+          "text": "thực, lao Chúc, Sử chỉ chính từ : Thái tân, Thái phôn,",
+          "bbox": [
+            183,
+            1408,
+            2195,
+            1479
+          ],
+          "confidence": 90.46
+        },
+        {
+          "text": "lênh Thái thương chi tấu khúc !",
+          "bbox": [
+            181,
+            1500,
+            1278,
+            1571
+          ],
+          "confidence": 91.44
+        },
+        {
+          "text": "Thả Ngũ thiên chi lẽ, vô \"cũ cũ chi vũ phu\" ; tam",
+          "bbox": [
+            309,
+            1618,
+            2197,
+            1690
+          ],
+          "confidence": 87.99
+        },
+        {
+          "text": "ngâu chi gian, tận \"ao ao chi minh lộc\". Cấu dung xả nhi",
+          "bbox": [
+            176,
+            1718,
+            2193,
+            1793
+          ],
+          "confidence": 87.41
+        },
+        {
+          "text": "hũu di, tai cách lệnh nhi vô văn. Trách nãi kỳ bất nhiên",
+          "bbox": [
+            173,
+            1811,
+            2411,
+            1883
+          ],
+          "confidence": 83.72
+        },
+        {
+          "text": "hỗ ? Tổ chi hưu ích si giả.",
+          "bbox": [
+            172,
+            1902,
+            1046,
+            1971
+          ],
+          "confidence": 80.69
+        },
+        {
+          "text": "DICH NGHIA:",
+          "bbox": [
+            303,
+            2181,
+            747,
+            2238
+          ],
+          "confidence": 94.25
+        },
+        {
+          "text": "PHÂN XỬ VIỆC THI BẢN CỦA BÓ BINH (1)",
+          "bbox": [
+            596,
+            2313,
+            1702,
+            2378
+          ],
+          "confidence": 85.19
+        },
+        {
+          "text": "(Được biết bộ Binh sắp tổ chức cuộc thi bắn bia tầm",
+          "bbox": [
+            431,
+            2438,
+            2176,
+            2501
+          ],
+          "confidence": 84.77
+        },
+        {
+          "text": "xa dê tuyên chọn võ sĩ, có xin dùng nhac tiết (2) để hòa",
+          "bbox": [
+            298,
+            2528,
+            2170,
+            2590
+          ],
+          "confidence": 83.67
+        },
+        {
+          "text": "tâu, nhưng quan Thái thường (3) bảo rằng không một",
+          "bbox": [
+            297,
+            2616,
+            2170,
+            2686
+          ],
+          "confidence": 93.57
+        },
+        {
+          "text": "văn bản nào quy định như vậy, việc dùng nhạc tiết hòa",
+          "bbox": [
+            294,
+            2698,
+            2165,
+            2767
+          ],
+          "confidence": 96.36
+        },
+        {
+          "text": "tâu là thuộc về lễ tuyến chon hiện thần kia).",
+          "bbox": [
+            294,
+            2771,
+            1742,
+            2835
+          ],
+          "confidence": 81.47
+        },
+        {
+          "text": "KHUONG CONG PHUC",
+          "bbox": [
+            1310,
+            2907,
+            1993,
+            2960
+          ],
+          "confidence": 92.54
+        },
+        {
+          "text": "Bản cung là để xem đức hạnh (4), nhac là để hòa âm",
+          "bbox": [
+            285,
+            3014,
+            2442,
+            3089
+          ],
+          "confidence": 83.3
+        },
+        {
+          "text": "thanh. Sắp chọn hiện sĩ nơi Trạch Cung (5), ất căng tấm.",
+          "bbox": [
+            141,
+            3111,
+            2355,
+            3193
+          ],
+          "confidence": 82.95
+        },
+        {
+          "text": "bia nơi Tương Phố (6). Làm như vậy là để cho tân khách",
+          "bbox": [
+            133,
+            3207,
+            2265,
+            3280
+          ],
+          "confidence": 84.09
+        },
+        {
+          "text": "miếu đường nghiêm trang, ủy nghi yên tiệc đảm bảo.",
+          "bbox": [
+            129,
+            3301,
+            2190,
+            3386
+          ],
+          "confidence": 92.78
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          3509
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 44.23,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              227,
+              119,
+              2435,
+              176
+            ],
+            "generated_text": "Sưu tầm và khảo luận tác phẩm chủ Hán của người Việt Nam trước TK 10",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 2.01,
+            "confidence": 94.76,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              207,
+              207,
+              2261,
+              230
+            ],
+            "generated_text": "：",
+            "n_lines": 1,
+            "tokens": 2,
+            "seconds": 0.479,
+            "confidence": 26.55,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              348,
+              324,
+              720,
+              381
+            ],
+            "generated_text": "PHIEN AM:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.685,
+            "confidence": 91.79,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              820,
+              465,
+              1566,
+              524
+            ],
+            "generated_text": "DOI BINH BO THI XA PHAN",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.979,
+            "confidence": 92.98,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              513,
+              590,
+              1764,
+              647
+            ],
+            "generated_text": "(Đặc Bình Bô thi cử nhân trường đóa,",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.205,
+            "confidence": 77.24,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              466,
+              674,
+              2433,
+              731
+            ],
+            "generated_text": "thình dung nhac tiết, Thái thương xưng",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.4,
+            "confidence": 78.12,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              461,
+              752,
+              1827,
+              810
+            ],
+            "generated_text": "cách lệnh vô vấn, thủ nội tuvên sī chi lê).",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.402,
+            "confidence": 75.65,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              1315,
+              882,
+              2007,
+              937
+            ],
+            "generated_text": "KHUONG CONG PHUC",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.76,
+            "confidence": 87.92,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              320,
+              1023,
+              2213,
+              1092
+            ],
+            "generated_text": "Xa đi quan đức,nhac dĩ hòa thanh. Tương tuyên si ư",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.775,
+            "confidence": 79.72,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              188,
+              1116,
+              2207,
+              1189
+            ],
+            "generated_text": "Trach Cung, tất trương hầu ư Tương Phố. Sở dĩ : Thê",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 1.9,
+            "confidence": 82.74,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              188,
+              1213,
+              2201,
+              1290
+            ],
+            "generated_text": "tông miếu chi tân khách, bi hướng yên chi uy nghi. Hà",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.47,
+            "confidence": 88.04,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              184,
+              1310,
+              2202,
+              1390
+            ],
+            "generated_text": "hốt vũ phu nhi yêu Nhã, Tung ? Khi đồ cường âm cường",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.767,
+            "confidence": 90.01,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              183,
+              1408,
+              2195,
+              1479
+            ],
+            "generated_text": "thực, lao Chúc, Sử chỉ chính từ : Thái tân, Thái phôn,",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 1.835,
+            "confidence": 90.46,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              181,
+              1500,
+              1278,
+              1571
+            ],
+            "generated_text": "lênh Thái thương chi tấu khúc !",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.164,
+            "confidence": 91.44,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              309,
+              1618,
+              2197,
+              1690
+            ],
+            "generated_text": "Thả Ngũ thiên chi lẽ, vô \"cũ cũ chi vũ phu\" ; tam",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 1.76,
+            "confidence": 87.99,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              176,
+              1718,
+              2193,
+              1793
+            ],
+            "generated_text": "ngâu chi gian, tận \"ao ao chi minh lộc\". Cấu dung xả nhi",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.785,
+            "confidence": 87.41,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              173,
+              1811,
+              2411,
+              1883
+            ],
+            "generated_text": "hũu di, tai cách lệnh nhi vô văn. Trách nãi kỳ bất nhiên",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 2.012,
+            "confidence": 83.72,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              172,
+              1902,
+              1046,
+              1971
+            ],
+            "generated_text": "hỗ ? Tổ chi hưu ích si giả.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.109,
+            "confidence": 80.69,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              303,
+              2181,
+              747,
+              2238
+            ],
+            "generated_text": "DICH NGHIA:",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.709,
+            "confidence": 94.25,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              596,
+              2313,
+              1702,
+              2378
+            ],
+            "generated_text": "PHÂN XỬ VIỆC THI BẢN CỦA BÓ BINH (1)",
+            "n_lines": 1,
+            "tokens": 32,
+            "seconds": 2.403,
+            "confidence": 85.19,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              431,
+              2438,
+              2176,
+              2501
+            ],
+            "generated_text": "(Được biết bộ Binh sắp tổ chức cuộc thi bắn bia tầm",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.585,
+            "confidence": 84.77,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              298,
+              2528,
+              2170,
+              2590
+            ],
+            "generated_text": "xa dê tuyên chọn võ sĩ, có xin dùng nhac tiết (2) để hòa",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 1.931,
+            "confidence": 83.67,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              297,
+              2616,
+              2170,
+              2686
+            ],
+            "generated_text": "tâu, nhưng quan Thái thường (3) bảo rằng không một",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.34,
+            "confidence": 93.57,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              294,
+              2698,
+              2165,
+              2767
+            ],
+            "generated_text": "văn bản nào quy định như vậy, việc dùng nhạc tiết hòa",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.478,
+            "confidence": 96.36,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              294,
+              2771,
+              1742,
+              2835
+            ],
+            "generated_text": "tâu là thuộc về lễ tuyến chon hiện thần kia).",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.287,
+            "confidence": 81.47,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              1310,
+              2907,
+              1993,
+              2960
+            ],
+            "generated_text": "KHUONG CONG PHUC",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.744,
+            "confidence": 92.54,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              285,
+              3014,
+              2442,
+              3089
+            ],
+            "generated_text": "Bản cung là để xem đức hạnh (4), nhac là để hòa âm",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.757,
+            "confidence": 83.3,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              141,
+              3111,
+              2355,
+              3193
+            ],
+            "generated_text": "thanh. Sắp chọn hiện sĩ nơi Trạch Cung (5), ất căng tấm.",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.196,
+            "confidence": 82.95,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              133,
+              3207,
+              2265,
+              3280
+            ],
+            "generated_text": "bia nơi Tương Phố (6). Làm như vậy là để cho tân khách",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.686,
+            "confidence": 84.09,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              129,
+              3301,
+              2190,
+              3386
+            ],
+            "generated_text": "miếu đường nghiêm trang, ủy nghi yên tiệc đảm bảo.",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.612,
+            "confidence": 92.78,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              711,
+              729,
+              1788,
+              740
+            ],
+            "ink": 638
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

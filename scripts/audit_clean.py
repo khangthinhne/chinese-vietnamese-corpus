@@ -37,6 +37,9 @@ FOOTNOTE_RE = re.compile(r"\(\s*\d{1,3}\s*\)|\[\s*\d{1,3}\s*\]|[¹²³⁴⁵⁶�
 # chú thích kiểu (奇華海口門) trong câu Hán; KHÔNG tính hậu tố tiêu đề như （二首） "hai bài"
 HAN_PAREN_RE = re.compile(r"[（(]\s*(?![一二三四五六七八九十]+\s*首)[㐀-鿿豈-﫿]{2,}\s*[)）]")
 HYPHEN_RE = re.compile(r"\w-\s*$|\w-\s+\w")
+LETTER_MARKER_RE = re.compile(r"\([a-zđ]\)")                 # chỉ mục khảo dị dạng chữ cái: (a), (b)
+FULLWIDTH_PUNCT_RE = re.compile(r"[，。：；！？（）「」『』、]")
+SPACE_BEFORE_PUNCT_RE = re.compile(r"\S\s+[,.;:!?)](?!\.)")
 
 
 def chars(text: str) -> int:
@@ -162,7 +165,66 @@ def audit_layer(layout: DataLayout, layer: str, ocr_ids: set[str]) -> dict:
         missing += [i for i in ids if i not in ocr_ids]
     out["provenance"] = {"sentences_without_source_ids": empty, "unknown_source_ids": len(missing),
                          "examples": missing[:10], "known_ocr_ids": len(ocr_ids)}
+    if layer != "han":
+        out["letter_markers"] = [{"id": el.get("ID"), "pages": el.get("PAGES"), "text": (el.text or "")[:90]}
+                                 for el in clean_el if LETTER_MARKER_RE.search(el.text or "")]
+        out["punct"] = punct_issues(clean_el)
+    out["numbers"] = number_loss(seg, clean)
+    out["page_loss"] = page_loss(_units(layout.segmentation_layer(layer), "SEGMENT"), struct_el)
     return out
+
+
+def punct_issues(clean_el: list[ET.Element]) -> dict:
+    """Dấu câu trong lớp tiếng Việt: full-width, khoảng trắng trước dấu câu, ngoặc/ngoặc kép lệch."""
+    full, space, unbalanced = [], [], []
+    for el in clean_el:
+        t = el.text or ""
+        if FULLWIDTH_PUNCT_RE.search(t):
+            full.append({"id": el.get("ID"), "text": t[:80]})
+        if SPACE_BEFORE_PUNCT_RE.search(t):
+            space.append({"id": el.get("ID"), "text": t[:80]})
+        if t.count("(") != t.count(")") or t.count("“") != t.count("”") or t.count('"') % 2:
+            unbalanced.append({"id": el.get("ID"), "text": t[:80]})
+    return {"fullwidth": len(full), "space_before": len(space), "unbalanced": len(unbalanced),
+            "examples": {"fullwidth": full[:5], "space_before": space[:5], "unbalanced": unbalanced[:5]}}
+
+
+def number_loss(seg: list[str], clean: list[str]) -> dict:
+    """Số (chuỗi chữ số) có ở lớp gốc mà mất ở bản sạch, KHÔNG tính số nằm trong chỉ mục chú thích/số trang."""
+    def numbers(texts, strip):
+        out: dict[str, int] = defaultdict(int)
+        for t in texts:
+            if strip:
+                if PAGE_NUMBER_RE.match(t):
+                    continue
+                t = FOOTNOTE_RE.sub(" ", t)
+            for n in re.findall(r"\d+", t):
+                out[n] += 1
+        return out
+    before, after = numbers(seg, True), numbers(clean, False)
+    lost = {n: c - after.get(n, 0) for n, c in before.items() if c > after.get(n, 0)}
+    return {"before": sum(before.values()), "after": sum(after.values()), "lost": sum(lost.values()),
+            "lost_examples": sorted(lost)[:15]}
+
+
+def page_loss(seg_el: list[ET.Element], struct_el: list[ET.Element]) -> dict:
+    """Tỉ lệ ký tự bỏ ở bước clean theo trang; trang bất thường = > max(3 x trung vị, 20%) và >= 30 ký tự."""
+    before: dict[str, int] = defaultdict(int)
+    after: dict[str, int] = defaultdict(int)
+    for el in seg_el:
+        before[el.get("PAGE", "")] += chars(el.text or "")
+    for el in struct_el:
+        after[el.get("PAGE", "")] += chars(el.text or "")
+    ratios = {p: (b - after.get(p, 0)) / b for p, b in before.items() if b}
+    if not ratios:
+        return {"median": 0.0, "outliers": []}
+    vals = sorted(ratios.values())
+    median = vals[len(vals) // 2]
+    limit = max(3 * median, 0.20)
+    outliers = sorted(((p, round(r, 3), before[p] - after.get(p, 0)) for p, r in ratios.items()
+                       if r > limit and before[p] - after.get(p, 0) >= 30), key=lambda x: -x[1])
+    return {"median": round(median, 4), "limit": round(limit, 3),
+            "outliers": [{"page": p, "ratio": r, "chars_lost": n} for p, r, n in outliers[:20]]}
 
 
 def problems(report: dict) -> list[str]:
@@ -186,6 +248,17 @@ def problems(report: dict) -> list[str]:
         if r["duplicates"]["unjoined_hyphen"]:
             msgs.append(f"{layer}: {len(r['duplicates']['unjoined_hyphen'])} câu có gạch nối chưa ghép")
         msgs += [f"{layer}: {a}" for a in r["loss"]["alerts"]]
+        if r.get("letter_markers"):
+            msgs.append(f"{layer}: {len(r['letter_markers'])} câu còn chỉ mục chữ cái (a)/(b)")
+        pu = r.get("punct") or {}
+        if pu.get("fullwidth") or pu.get("space_before") or pu.get("unbalanced"):
+            msgs.append(f"{layer}: dấu câu: full-width {pu['fullwidth']}, khoảng trắng trước dấu {pu['space_before']}, "
+                        f"ngoặc lệch {pu['unbalanced']}")
+        if r["numbers"]["lost"]:
+            msgs.append(f"{layer}: {r['numbers']['lost']} số bị mất (vd {r['numbers']['lost_examples'][:5]})")
+        if r["page_loss"]["outliers"]:
+            msgs.append(f"{layer}: {len(r['page_loss']['outliers'])} trang mất ký tự bất thường "
+                        f"(vd {[o['page'] for o in r['page_loss']['outliers'][:5]]})")
         pv = r["provenance"]
         if pv["sentences_without_source_ids"] or pv["unknown_source_ids"]:
             msgs.append(f"{layer}: truy vết hỏng: {pv['sentences_without_source_ids']} câu không có SOURCE_IDS, "

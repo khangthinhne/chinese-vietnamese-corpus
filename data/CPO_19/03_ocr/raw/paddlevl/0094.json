@@ -1,0 +1,1031 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 94,
+  "runs": [
+    {
+      "key": "bfeac7069a8a49d20c89a338ae4cb89b273cf331112c570182aaa86d4ec563a1",
+      "parameters": {
+        "image_sha256": "033d45a4983da0d8783d83ba737d932263d004dd4f72406f31df0efc8d349548",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T12:09:55+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_094.png",
+      "image_size": [
+        2563,
+        3201
+      ],
+      "crop_box": [
+        0,
+        0,
+        2563,
+        3201
+      ],
+      "lines": [
+        {
+          "text": "ngothinhamle1.pdf",
+          "bbox": [
+            7,
+            19,
+            286,
+            45
+          ],
+          "confidence": 96.3
+        },
+        {
+          "text": "HOÀNG HOA ĐỔ PHA",
+          "bbox": [
+            1434,
+            204,
+            2096,
+            243
+          ],
+          "confidence": 84.87
+        },
+        {
+          "text": "Vi ha danh khu tâm thắng tích,",
+          "bbox": [
+            831,
+            309,
+            2032,
+            352
+          ],
+          "confidence": 94.13
+        },
+        {
+          "text": "Triệu thiên sản khán (d) phú tiêu chinh.",
+          "bbox": [
+            838,
+            390,
+            1721,
+            433
+          ],
+          "confidence": 85.68
+        },
+        {
+          "text": "DICH NGHIA:",
+          "bbox": [
+            388,
+            505,
+            698,
+            544
+          ],
+          "confidence": 98.6
+        },
+        {
+          "text": "TINH THANH QUỐ LAM (A)",
+          "bbox": [
+            920,
+            579,
+            1564,
+            625
+          ],
+          "confidence": 69.8
+        },
+        {
+          "text": "Nghe nói Quế Lâm (¹) có thành vua Việt, (²)",
+          "bbox": [
+            626,
+            706,
+            2099,
+            754
+          ],
+          "confidence": 94.05
+        },
+        {
+          "text": "Sông núi trong ngoài bao bọc bốn bê.",
+          "bbox": [
+            626,
+            788,
+            2047,
+            831
+          ],
+          "confidence": 94.05
+        },
+        {
+          "text": "Xưởng đất đúc nên hai lớp thành vàng, (3) đánh và giũ đều tiên;",
+          "bbox": [
+            623,
+            864,
+            2060,
+            908
+          ],
+          "confidence": 88.49
+        },
+        {
+          "text": "Kho trời chưa nhiều ngọc báu, (4) đủ dùng cho lúc ổ, khi đi.",
+          "bbox": [
+            626,
+            940,
+            1938,
+            988
+          ],
+          "confidence": 85.24
+        },
+        {
+          "text": "Vai kê vai nhau, mô hôi người vây ra thành trân mưa xuống;",
+          "bbox": [
+            449,
+            1021,
+            2066,
+            1066
+          ],
+          "confidence": 81.56
+        },
+        {
+          "text": "Sáng lóe đỉnh non, ghé nhìn thấy những sao đêm.",
+          "bbox": [
+            626,
+            1100,
+            1772,
+            1145
+          ],
+          "confidence": 95.08
+        },
+        {
+          "text": "Chưa rồi để tìm thắng tích nơi danh tiếng,",
+          "bbox": [
+            626,
+            1178,
+            1600,
+            1223
+          ],
+          "confidence": 88.19
+        },
+        {
+          "text": "Vì phải vội vào châu ngâm câu \"Đi đêm.\"(6)",
+          "bbox": [
+            587,
+            1258,
+            1877,
+            1302
+          ],
+          "confidence": 83.99
+        },
+        {
+          "text": "KHAO DI:",
+          "bbox": [
+            390,
+            1343,
+            1395,
+            1382
+          ],
+          "confidence": 98.6
+        },
+        {
+          "text": "a. Bản A.2871: Việt Vương thành 粵王城.",
+          "bbox": [
+            538,
+            1418,
+            1712,
+            1460
+          ],
+          "confidence": 95.67
+        },
+        {
+          "text": "b. Bản A.117c/1: Tú hướng 四向.",
+          "bbox": [
+            537,
+            1498,
+            1215,
+            1539
+          ],
+          "confidence": 94.43
+        },
+        {
+          "text": "c. Bản A.117c/1: Lĩnh khởi 嶺起.",
+          "bbox": [
+            536,
+            1575,
+            1329,
+            1618
+          ],
+          "confidence": 94.41
+        },
+        {
+          "text": "d. Bản A.117c/1: Khán sân 緊趁.",
+          "bbox": [
+            539,
+            1654,
+            1870,
+            1696
+          ],
+          "confidence": 94.41
+        },
+        {
+          "text": "NGUYEN CHU:",
+          "bbox": [
+            390,
+            1760,
+            1700,
+            1798
+          ],
+          "confidence": 94.69
+        },
+        {
+          "text": "A.Xét vị trí Việt Tây (Quảng Tây), nước châu về rất đẹp, thế đất từ Vân",
+          "bbox": [
+            539,
+            1833,
+            2097,
+            1882
+          ],
+          "confidence": 94.9
+        },
+        {
+          "text": "Nam đổ xuống, gò đất cao thấp ăn hiện, đến Quế Lâm, thì núi đất được bóc đi,",
+          "bbox": [
+            316,
+            1912,
+            2093,
+            1956
+          ],
+          "confidence": 94.98
+        },
+        {
+          "text": "thay bằng núi đá, đỉnh núi nhọn hoắt như những ngọn lửa bốc lên, trông xa",
+          "bbox": [
+            389,
+            1991,
+            2094,
+            2041
+          ],
+          "confidence": 94.22
+        },
+        {
+          "text": "giống như dao, kích dụng đứng thành rừng. Nhánh tà là sông Ly, bắt nguồn từ",
+          "bbox": [
+            390,
+            2070,
+            2095,
+            2122
+          ],
+          "confidence": 91.87
+        },
+        {
+          "text": "phương tây bắc, chảy ra động nam. Nhánh hữu là sông Minh bắt nguồn từ",
+          "bbox": [
+            390,
+            2151,
+            2095,
+            2195
+          ],
+          "confidence": 93.69
+        },
+        {
+          "text": "hướng tây nam chảy theo phương động bắc, đến phương tây nam, động bắc thì",
+          "bbox": [
+            389,
+            2231,
+            2093,
+            2280
+          ],
+          "confidence": 95.46
+        },
+        {
+          "text": "tụ hội ở sông Tâm, chảy xuôi xuống Việt Đông (Quảng Đông), cũng là một nơi",
+          "bbox": [
+            390,
+            2310,
+            2095,
+            2359
+          ],
+          "confidence": 97.66
+        },
+        {
+          "text": "Hán Vũ Đế đặt ra các quận Thương Ngô, Uất Lâm, nay Thương Ngô là",
+          "bbox": [
+            540,
+            2465,
+            2092,
+            2514
+          ],
+          "confidence": 96.9
+        },
+        {
+          "text": "phủ thành châu Ngô; Uất Lâm là tỉnh thành Quế Lâm. Nơi hai con sông Ly và",
+          "bbox": [
+            388,
+            2542,
+            2091,
+            2588
+          ],
+          "confidence": 96.78
+        },
+        {
+          "text": "Minh hợp lưu, có thành của nhà vua, tương truyền gọi là thành Sở Vương. Có lẽ",
+          "bbox": [
+            388,
+            2621,
+            2093,
+            2668
+          ],
+          "confidence": 95.93
+        },
+        {
+          "text": "không phải nước Sở đòi Xuân Thu, phải là nước Sở trong số nước phân tranh sau",
+          "bbox": [
+            388,
+            2700,
+            2093,
+            2747
+          ],
+          "confidence": 96.2
+        },
+        {
+          "text": "đòi Hán, đòi Tấn. Triệu Uý Đà đóng đô ở Phiên Ngung chủ không phải ở đây, tức",
+          "bbox": [
+            389,
+            2777,
+            2092,
+            2830
+          ],
+          "confidence": 92.33
+        },
+        {
+          "text": "là ở phủ tri Quảng Châu của tỉnh Quảng Đông, nay là tỉnh li [tỉnh Quảng",
+          "bbox": [
+            387,
+            2858,
+            2092,
+            2909
+          ],
+          "confidence": 91.51
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2563,
+          3201
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 60.437,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              7,
+              19,
+              286,
+              45
+            ],
+            "generated_text": "ngothinhamle1.pdf",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.905,
+            "confidence": 96.3,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              1434,
+              204,
+              2096,
+              243
+            ],
+            "generated_text": "HOÀNG HOA ĐỔ PHA",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.042,
+            "confidence": 84.87,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              390,
+              249,
+              2101,
+              264
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.457,
+            "confidence": 81.76,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              831,
+              309,
+              2032,
+              352
+            ],
+            "generated_text": "Vi ha danh khu tâm thắng tích,",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.975,
+            "confidence": 94.13,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              838,
+              390,
+              1721,
+              433
+            ],
+            "generated_text": "Triệu thiên sản khán (d) phú tiêu chinh.",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.495,
+            "confidence": 85.68,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              388,
+              505,
+              698,
+              544
+            ],
+            "generated_text": "DICH NGHIA:",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.759,
+            "confidence": 98.6,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              920,
+              579,
+              1564,
+              625
+            ],
+            "generated_text": "TINH THANH QUỐ LAM (A)",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.459,
+            "confidence": 69.8,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              626,
+              706,
+              2099,
+              754
+            ],
+            "generated_text": "Nghe nói Quế Lâm (¹) có thành vua Việt, (²)",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.615,
+            "confidence": 94.05,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              626,
+              788,
+              2047,
+              831
+            ],
+            "generated_text": "Sông núi trong ngoài bao bọc bốn bê.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.286,
+            "confidence": 94.05,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              623,
+              864,
+              2060,
+              908
+            ],
+            "generated_text": "Xưởng đất đúc nên hai lớp thành vàng, (3) đánh và giũ đều tiên;",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 2.061,
+            "confidence": 88.49,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              626,
+              940,
+              1938,
+              988
+            ],
+            "generated_text": "Kho trời chưa nhiều ngọc báu, (4) đủ dùng cho lúc ổ, khi đi.",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 2.137,
+            "confidence": 85.24,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              449,
+              1021,
+              2066,
+              1066
+            ],
+            "generated_text": "Vai kê vai nhau, mô hôi người vây ra thành trân mưa xuống;",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.843,
+            "confidence": 81.56,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              626,
+              1100,
+              1772,
+              1145
+            ],
+            "generated_text": "Sáng lóe đỉnh non, ghé nhìn thấy những sao đêm.",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.798,
+            "confidence": 95.08,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              626,
+              1178,
+              1600,
+              1223
+            ],
+            "generated_text": "Chưa rồi để tìm thắng tích nơi danh tiếng,",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.532,
+            "confidence": 88.19,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              587,
+              1258,
+              1877,
+              1302
+            ],
+            "generated_text": "Vì phải vội vào châu ngâm câu \"Đi đêm.\"(6)",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.692,
+            "confidence": 83.99,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              390,
+              1343,
+              1395,
+              1382
+            ],
+            "generated_text": "KHAO DI:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.787,
+            "confidence": 98.6,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              538,
+              1418,
+              1712,
+              1460
+            ],
+            "generated_text": "a. Bản A.2871: Việt Vương thành 粵王城.",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.703,
+            "confidence": 95.67,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              537,
+              1498,
+              1215,
+              1539
+            ],
+            "generated_text": "b. Bản A.117c/1: Tú hướng 四向.",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.598,
+            "confidence": 94.43,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              536,
+              1575,
+              1329,
+              1618
+            ],
+            "generated_text": "c. Bản A.117c/1: Lĩnh khởi 嶺起.",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 1.918,
+            "confidence": 94.41,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              539,
+              1654,
+              1870,
+              1696
+            ],
+            "generated_text": "d. Bản A.117c/1: Khán sân 緊趁.",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.824,
+            "confidence": 94.41,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              390,
+              1760,
+              1700,
+              1798
+            ],
+            "generated_text": "NGUYEN CHU:",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.822,
+            "confidence": 94.69,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              539,
+              1833,
+              2097,
+              1882
+            ],
+            "generated_text": "A.Xét vị trí Việt Tây (Quảng Tây), nước châu về rất đẹp, thế đất từ Vân",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 2.244,
+            "confidence": 94.9,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              316,
+              1912,
+              2093,
+              1956
+            ],
+            "generated_text": "Nam đổ xuống, gò đất cao thấp ăn hiện, đến Quế Lâm, thì núi đất được bóc đi,",
+            "n_lines": 1,
+            "tokens": 34,
+            "seconds": 2.756,
+            "confidence": 94.98,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              389,
+              1991,
+              2094,
+              2041
+            ],
+            "generated_text": "thay bằng núi đá, đỉnh núi nhọn hoắt như những ngọn lửa bốc lên, trông xa",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 2.439,
+            "confidence": 94.22,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              390,
+              2070,
+              2095,
+              2122
+            ],
+            "generated_text": "giống như dao, kích dụng đứng thành rừng. Nhánh tà là sông Ly, bắt nguồn từ",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.285,
+            "confidence": 91.87,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              390,
+              2151,
+              2095,
+              2195
+            ],
+            "generated_text": "phương tây bắc, chảy ra động nam. Nhánh hữu là sông Minh bắt nguồn từ",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.284,
+            "confidence": 93.69,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              389,
+              2231,
+              2093,
+              2280
+            ],
+            "generated_text": "hướng tây nam chảy theo phương động bắc, đến phương tây nam, động bắc thì",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 2.21,
+            "confidence": 95.46,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              390,
+              2310,
+              2095,
+              2359
+            ],
+            "generated_text": "tụ hội ở sông Tâm, chảy xuôi xuống Việt Đông (Quảng Đông), cũng là một nơi",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 2.488,
+            "confidence": 97.66,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              540,
+              2465,
+              2092,
+              2514
+            ],
+            "generated_text": "Hán Vũ Đế đặt ra các quận Thương Ngô, Uất Lâm, nay Thương Ngô là",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 2.24,
+            "confidence": 96.9,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              388,
+              2542,
+              2091,
+              2588
+            ],
+            "generated_text": "phủ thành châu Ngô; Uất Lâm là tỉnh thành Quế Lâm. Nơi hai con sông Ly và",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 2.359,
+            "confidence": 96.78,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              388,
+              2621,
+              2093,
+              2668
+            ],
+            "generated_text": "Minh hợp lưu, có thành của nhà vua, tương truyền gọi là thành Sở Vương. Có lẽ",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 2.425,
+            "confidence": 95.93,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 32,
+            "box": [
+              388,
+              2700,
+              2093,
+              2747
+            ],
+            "generated_text": "không phải nước Sở đòi Xuân Thu, phải là nước Sở trong số nước phân tranh sau",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 2.141,
+            "confidence": 96.2,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 33,
+            "box": [
+              389,
+              2777,
+              2092,
+              2830
+            ],
+            "generated_text": "đòi Hán, đòi Tấn. Triệu Uý Đà đóng đô ở Phiên Ngung chủ không phải ở đây, tức",
+            "n_lines": 1,
+            "tokens": 34,
+            "seconds": 2.714,
+            "confidence": 92.33,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 34,
+            "box": [
+              387,
+              2858,
+              2092,
+              2909
+            ],
+            "generated_text": "là ở phủ tri Quảng Châu của tỉnh Quảng Đông, nay là tỉnh li [tỉnh Quảng",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 2.135,
+            "confidence": 91.51,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              714,
+              829,
+              1264,
+              838
+            ],
+            "ink": 242
+          },
+          {
+            "box": [
+              747,
+              904,
+              2059,
+              915
+            ],
+            "ink": 392
+          },
+          {
+            "box": [
+              716,
+              1142,
+              1646,
+              1152
+            ],
+            "ink": 278
+          },
+          {
+            "box": [
+              680,
+              1952,
+              2091,
+              1961
+            ],
+            "ink": 299
+          },
+          {
+            "box": [
+              390,
+              2191,
+              1944,
+              2202
+            ],
+            "ink": 391
+          },
+          {
+            "box": [
+              393,
+              2400,
+              557,
+              2411
+            ],
+            "ink": 475
+          },
+          {
+            "box": [
+              392,
+              2415,
+              567,
+              2427
+            ],
+            "ink": 568
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

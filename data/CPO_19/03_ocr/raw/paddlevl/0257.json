@@ -1,0 +1,485 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 257,
+  "runs": [
+    {
+      "key": "774f39329562663cf860a53570a7e9cfa85f073dc4e5cd1fd21da7a839149bde",
+      "parameters": {
+        "image_sha256": "fa1b204500ae91ee63eae4d44d01c40eae6f376035a475845ea669f7d0237c5f",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T14:06:01+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_257.png",
+      "image_size": [
+        2582,
+        3211
+      ],
+      "crop_box": [
+        0,
+        0,
+        2582,
+        3211
+      ],
+      "lines": [
+        {
+          "text": "ngothinhamch1.pdf",
+          "bbox": [
+            7,
+            19,
+            296,
+            45
+          ],
+          "confidence": 98.71
+        },
+        {
+          "text": "NGÔ THI NHÂM TOÀN TẬP - TẬP III",
+          "bbox": [
+            401,
+            195,
+            1174,
+            243
+          ],
+          "confidence": 92.47
+        },
+        {
+          "text": "DICH THO",
+          "bbox": [
+            401,
+            316,
+            1558,
+            355
+          ],
+          "confidence": 86.98
+        },
+        {
+          "text": "Thân hèn giúp nước bấy nhiêu năm,",
+          "bbox": [
+            931,
+            391,
+            1763,
+            436
+          ],
+          "confidence": 92.02
+        },
+        {
+          "text": "Giong ruồi ngày đêm chăng ngại ngần.",
+          "bbox": [
+            929,
+            473,
+            1876,
+            526
+          ],
+          "confidence": 87.94
+        },
+        {
+          "text": "Cay đăng gian nan, thang thuốc đăng;",
+          "bbox": [
+            675,
+            554,
+            1826,
+            608
+          ],
+          "confidence": 96.04
+        },
+        {
+          "text": "Tốt lành thuân lợi, thấy trời ban.",
+          "bbox": [
+            931,
+            635,
+            1861,
+            680
+          ],
+          "confidence": 93.73
+        },
+        {
+          "text": "Om xong sẽ khoẻ, lòng ngay thắng;",
+          "bbox": [
+            931,
+            717,
+            1731,
+            772
+          ],
+          "confidence": 90.01
+        },
+        {
+          "text": "Hao lai được bù, ất cảnh xuân.",
+          "bbox": [
+            927,
+            800,
+            2015,
+            845
+          ],
+          "confidence": 89.29
+        },
+        {
+          "text": "Thánh day: Ôm lâu sinh sáng suốt,",
+          "bbox": [
+            931,
+            882,
+            1744,
+            928
+          ],
+          "confidence": 93.58
+        },
+        {
+          "text": "Giữ mình thanh đam, ven mười phân.",
+          "bbox": [
+            525,
+            965,
+            1805,
+            1011
+          ],
+          "confidence": 87.69
+        },
+        {
+          "text": "Làm Giang",
+          "bbox": [
+            1838,
+            1061,
+            2111,
+            1093
+          ],
+          "confidence": 98.85
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2582,
+          3211
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 15.01,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              7,
+              19,
+              296,
+              45
+            ],
+            "generated_text": "ngothinhamch1.pdf",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.927,
+            "confidence": 98.71,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              401,
+              195,
+              1174,
+              243
+            ],
+            "generated_text": "NGÔ THI NHÂM TOÀN TẬP - TẬP III",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.77,
+            "confidence": 92.47,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              403,
+              248,
+              2118,
+              262
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.457,
+            "confidence": 90.45,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              401,
+              316,
+              1558,
+              355
+            ],
+            "generated_text": "DICH THO",
+            "n_lines": 1,
+            "tokens": 4,
+            "seconds": 0.662,
+            "confidence": 86.98,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              931,
+              391,
+              1763,
+              436
+            ],
+            "generated_text": "Thân hèn giúp nước bấy nhiêu năm,",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.228,
+            "confidence": 92.02,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              929,
+              473,
+              1876,
+              526
+            ],
+            "generated_text": "Giong ruồi ngày đêm chăng ngại ngần.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.362,
+            "confidence": 87.94,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              675,
+              554,
+              1826,
+              608
+            ],
+            "generated_text": "Cay đăng gian nan, thang thuốc đăng;",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.438,
+            "confidence": 96.04,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              931,
+              635,
+              1861,
+              680
+            ],
+            "generated_text": "Tốt lành thuân lợi, thấy trời ban.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.382,
+            "confidence": 93.73,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              931,
+              717,
+              1731,
+              772
+            ],
+            "generated_text": "Om xong sẽ khoẻ, lòng ngay thắng;",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.267,
+            "confidence": 90.01,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              927,
+              800,
+              2015,
+              845
+            ],
+            "generated_text": "Hao lai được bù, ất cảnh xuân.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.425,
+            "confidence": 89.29,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              931,
+              882,
+              1744,
+              928
+            ],
+            "generated_text": "Thánh day: Ôm lâu sinh sáng suốt,",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.167,
+            "confidence": 93.58,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              525,
+              965,
+              1805,
+              1011
+            ],
+            "generated_text": "Giữ mình thanh đam, ven mười phân.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.256,
+            "confidence": 87.69,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              1838,
+              1061,
+              2111,
+              1093
+            ],
+            "generated_text": "Làm Giang",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.669,
+            "confidence": 98.85,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              1161,
+              434,
+              1755,
+              444
+            ],
+            "ink": 207
+          },
+          {
+            "box": [
+              1132,
+              927,
+              1616,
+              936
+            ],
+            "ink": 171
+          },
+          {
+            "box": [
+              1846,
+              1049,
+              2022,
+              1061
+            ],
+            "ink": 310
+          },
+          {
+            "box": [
+              1204,
+              1194,
+              1302,
+              1213
+            ],
+            "ink": 605
+          },
+          {
+            "box": [
+              411,
+              2970,
+              496,
+              2981
+            ],
+            "ink": 275
+          },
+          {
+            "box": [
+              425,
+              2984,
+              499,
+              2993
+            ],
+            "ink": 267
+          },
+          {
+            "box": [
+              408,
+              3002,
+              496,
+              3014
+            ],
+            "ink": 296
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

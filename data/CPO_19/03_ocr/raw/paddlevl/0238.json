@@ -1,0 +1,953 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 238,
+  "runs": [
+    {
+      "key": "6a95c7be7b2b7bcf51ebd6a54c5bdfb9f0ed0002ac2af14e6edfe0efb673721f",
+      "parameters": {
+        "image_sha256": "0e34580d83c53af15ec507324d6dc8f85de2e9adc0d7de2e6f7a264131868b0c",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T13:52:31+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_238.png",
+      "image_size": [
+        2619,
+        2999
+      ],
+      "crop_box": [
+        0,
+        0,
+        2619,
+        2999
+      ],
+      "lines": [
+        {
+          "text": "ngothinhamle1.pdf",
+          "bbox": [
+            7,
+            19,
+            1049,
+            45
+          ],
+          "confidence": 94.68
+        },
+        {
+          "text": "HOANG HOA ĐỔ PHA",
+          "bbox": [
+            1617,
+            195,
+            2082,
+            234
+          ],
+          "confidence": 89.82
+        },
+        {
+          "text": "Cối bỏ yên cương, thả cho rảnh rỗi,",
+          "bbox": [
+            673,
+            305,
+            1474,
+            350
+          ],
+          "confidence": 85.47
+        },
+        {
+          "text": "Cho ăn lúa đâu pha thêm mỗ đâu.",
+          "bbox": [
+            618,
+            394,
+            1458,
+            437
+          ],
+          "confidence": 85.17
+        },
+        {
+          "text": "Vài ba trống canh, trong tàu nằm nghỉ,",
+          "bbox": [
+            671,
+            482,
+            1575,
+            525
+          ],
+          "confidence": 88.53
+        },
+        {
+          "text": "Mói phải lần lượt, theo roi ruối giong.",
+          "bbox": [
+            634,
+            567,
+            1534,
+            611
+          ],
+          "confidence": 85.61
+        },
+        {
+          "text": "Vua xưa dùng dân cũng theo cách ấy,",
+          "bbox": [
+            671,
+            654,
+            1535,
+            698
+          ],
+          "confidence": 96.09
+        },
+        {
+          "text": "Dân được sử dụng, mét mà không oán hồn.",
+          "bbox": [
+            673,
+            737,
+            1659,
+            783
+          ],
+          "confidence": 91.33
+        },
+        {
+          "text": "Dàn không đối rét, dân sẽ mừng vui.",
+          "bbox": [
+            666,
+            827,
+            1508,
+            870
+          ],
+          "confidence": 84.42
+        },
+        {
+          "text": "Bác quân tử yêu dân, trước hết phải yêu vật,",
+          "bbox": [
+            666,
+            909,
+            1694,
+            953
+          ],
+          "confidence": 92.49
+        },
+        {
+          "text": "Phải gắng noi theo phép “an dân” của Cao Đạo.",
+          "bbox": [
+            667,
+            991,
+            1790,
+            1038
+          ],
+          "confidence": 90.05
+        },
+        {
+          "text": "Nếu hỏi di sứ (3) chuyên này những gì thu được?",
+          "bbox": [
+            666,
+            1074,
+            1749,
+            1120
+          ],
+          "confidence": 82.35
+        },
+        {
+          "text": "Thì xin đăng bức tranh Bắc Trực nuôi la.",
+          "bbox": [
+            666,
+            1156,
+            1608,
+            1201
+          ],
+          "confidence": 88.36
+        },
+        {
+          "text": "KHAO DI:",
+          "bbox": [
+            300,
+            1235,
+            1513,
+            1273
+          ],
+          "confidence": 78.07
+        },
+        {
+          "text": "a. Bản A.117c/1, A.1579: Phóng 放.",
+          "bbox": [
+            514,
+            1301,
+            1241,
+            1343
+          ],
+          "confidence": 97.0
+        },
+        {
+          "text": "b. Bản A.1579: Phô 鋪.",
+          "bbox": [
+            513,
+            1371,
+            974,
+            1413
+          ],
+          "confidence": 90.34
+        },
+        {
+          "text": "c. Bản A.117c/1: Dương dân 養民.",
+          "bbox": [
+            512,
+            1442,
+            1202,
+            1484
+          ],
+          "confidence": 92.75
+        },
+        {
+          "text": "d. Bản A.117c/1: Túc 印.",
+          "bbox": [
+            514,
+            1513,
+            1011,
+            1555
+          ],
+          "confidence": 88.15
+        },
+        {
+          "text": "CHU THICH:",
+          "bbox": [
+            366,
+            1612,
+            655,
+            1652
+          ],
+          "confidence": 95.74
+        },
+        {
+          "text": "1. Bắc Trực: Nay là tỉnh Hà Bắc. Tỉnh này thời Minh gọi là Bắc Trực Lê,",
+          "bbox": [
+            519,
+            1682,
+            2068,
+            1729
+          ],
+          "confidence": 93.43
+        },
+        {
+          "text": "thời Thanh goi là Trực Lê.",
+          "bbox": [
+            366,
+            1759,
+            923,
+            1801
+          ],
+          "confidence": 89.83
+        },
+        {
+          "text": "2. Thiên Cao Dao mô, Kinh Thư chép: Cao Dao nói với Đại Vũ rằng: “Tai",
+          "bbox": [
+            234,
+            1833,
+            2070,
+            1879
+          ],
+          "confidence": 91.27
+        },
+        {
+          "text": "tri nhân, tại an dân.” (Chính là ở chỗ biết người, ở chỗ làm cho yên dân). Đó là",
+          "bbox": [
+            365,
+            1908,
+            2068,
+            1954
+          ],
+          "confidence": 97.75
+        },
+        {
+          "text": "phép “An dân” của Cao Dao.",
+          "bbox": [
+            365,
+            1984,
+            964,
+            2025
+          ],
+          "confidence": 95.53
+        },
+        {
+          "text": "3.Đi sú: Dịch thoát chữ \"tư tuân,\" tư tuân vốn có nghĩa là \"thăm hỏi,\" là",
+          "bbox": [
+            516,
+            2058,
+            2068,
+            2103
+          ],
+          "confidence": 89.89
+        },
+        {
+          "text": "công việc chủ yếu của người đi sứ thòi xưa.",
+          "bbox": [
+            364,
+            2133,
+            1264,
+            2174
+          ],
+          "confidence": 87.48
+        },
+        {
+          "text": "106.冀州道中",
+          "bbox": [
+            918,
+            2266,
+            1492,
+            2320
+          ],
+          "confidence": 97.62
+        },
+        {
+          "text": "100. 兵川过",
+          "bbox": [
+            918,
+            2312,
+            1464,
+            2341
+          ],
+          "confidence": 75.68
+        },
+        {
+          "text": "冀北來龍最緲綿",
+          "bbox": [
+            898,
+            2467,
+            1480,
+            2531
+          ],
+          "confidence": 96.34
+        },
+        {
+          "text": "羲堯此地奠山川",
+          "bbox": [
+            897,
+            2597,
+            1475,
+            2661
+          ],
+          "confidence": 97.79
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2619,
+          2999
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 43.832,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              7,
+              19,
+              1049,
+              45
+            ],
+            "generated_text": "ngothinhamle1.pdf",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.992,
+            "confidence": 94.68,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              1617,
+              195,
+              2082,
+              234
+            ],
+            "generated_text": "HOANG HOA ĐỔ PHA",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 1.0,
+            "confidence": 89.82,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              375,
+              239,
+              2086,
+              252
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.455,
+            "confidence": 49.55,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              673,
+              305,
+              1474,
+              350
+            ],
+            "generated_text": "Cối bỏ yên cương, thả cho rảnh rỗi,",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.397,
+            "confidence": 85.47,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              618,
+              394,
+              1458,
+              437
+            ],
+            "generated_text": "Cho ăn lúa đâu pha thêm mỗ đâu.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.357,
+            "confidence": 85.17,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              671,
+              482,
+              1575,
+              525
+            ],
+            "generated_text": "Vài ba trống canh, trong tàu nằm nghỉ,",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.496,
+            "confidence": 88.53,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              634,
+              567,
+              1534,
+              611
+            ],
+            "generated_text": "Mói phải lần lượt, theo roi ruối giong.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.359,
+            "confidence": 85.61,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              671,
+              654,
+              1535,
+              698
+            ],
+            "generated_text": "Vua xưa dùng dân cũng theo cách ấy,",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.223,
+            "confidence": 96.09,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              673,
+              737,
+              1659,
+              783
+            ],
+            "generated_text": "Dân được sử dụng, mét mà không oán hồn.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.375,
+            "confidence": 91.33,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              666,
+              827,
+              1508,
+              870
+            ],
+            "generated_text": "Dàn không đối rét, dân sẽ mừng vui.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.293,
+            "confidence": 84.42,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              666,
+              909,
+              1694,
+              953
+            ],
+            "generated_text": "Bác quân tử yêu dân, trước hết phải yêu vật,",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.535,
+            "confidence": 92.49,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              667,
+              991,
+              1790,
+              1038
+            ],
+            "generated_text": "Phải gắng noi theo phép “an dân” của Cao Đạo.",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.645,
+            "confidence": 90.05,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              666,
+              1074,
+              1749,
+              1120
+            ],
+            "generated_text": "Nếu hỏi di sứ (3) chuyên này những gì thu được?",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.709,
+            "confidence": 82.35,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              666,
+              1156,
+              1608,
+              1201
+            ],
+            "generated_text": "Thì xin đăng bức tranh Bắc Trực nuôi la.",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.635,
+            "confidence": 88.36,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              300,
+              1235,
+              1513,
+              1273
+            ],
+            "generated_text": "KHAO DI:",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.612,
+            "confidence": 78.07,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              514,
+              1301,
+              1241,
+              1343
+            ],
+            "generated_text": "a. Bản A.117c/1, A.1579: Phóng 放.",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 1.875,
+            "confidence": 97.0,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              513,
+              1371,
+              974,
+              1413
+            ],
+            "generated_text": "b. Bản A.1579: Phô 鋪.",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.489,
+            "confidence": 90.34,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              512,
+              1442,
+              1202,
+              1484
+            ],
+            "generated_text": "c. Bản A.117c/1: Dương dân 養民.",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.619,
+            "confidence": 92.75,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              514,
+              1513,
+              1011,
+              1555
+            ],
+            "generated_text": "d. Bản A.117c/1: Túc 印.",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.517,
+            "confidence": 88.15,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              366,
+              1612,
+              655,
+              1652
+            ],
+            "generated_text": "CHU THICH:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.732,
+            "confidence": 95.74,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              519,
+              1682,
+              2068,
+              1729
+            ],
+            "generated_text": "1. Bắc Trực: Nay là tỉnh Hà Bắc. Tỉnh này thời Minh gọi là Bắc Trực Lê,",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 2.312,
+            "confidence": 93.43,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              366,
+              1759,
+              923,
+              1801
+            ],
+            "generated_text": "thời Thanh goi là Trực Lê.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.174,
+            "confidence": 89.83,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              234,
+              1833,
+              2070,
+              1879
+            ],
+            "generated_text": "2. Thiên Cao Dao mô, Kinh Thư chép: Cao Dao nói với Đại Vũ rằng: “Tai",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 2.481,
+            "confidence": 91.27,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              365,
+              1908,
+              2068,
+              1954
+            ],
+            "generated_text": "tri nhân, tại an dân.” (Chính là ở chỗ biết người, ở chỗ làm cho yên dân). Đó là",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 2.351,
+            "confidence": 97.75,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              365,
+              1984,
+              964,
+              2025
+            ],
+            "generated_text": "phép “An dân” của Cao Dao.",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.162,
+            "confidence": 95.53,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              516,
+              2058,
+              2068,
+              2103
+            ],
+            "generated_text": "3.Đi sú: Dịch thoát chữ \"tư tuân,\" tư tuân vốn có nghĩa là \"thăm hỏi,\" là",
+            "n_lines": 1,
+            "tokens": 36,
+            "seconds": 2.739,
+            "confidence": 89.89,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              364,
+              2133,
+              1264,
+              2174
+            ],
+            "generated_text": "công việc chủ yếu của người đi sứ thòi xưa.",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.431,
+            "confidence": 87.48,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              918,
+              2266,
+              1492,
+              2320
+            ],
+            "generated_text": "106.冀州道中",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.929,
+            "confidence": 97.62,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              918,
+              2312,
+              1464,
+              2341
+            ],
+            "generated_text": "100. 兵川过",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.926,
+            "confidence": 75.68,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              898,
+              2467,
+              1480,
+              2531
+            ],
+            "generated_text": "冀北來龍最緲綿",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.102,
+            "confidence": 96.34,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              897,
+              2597,
+              1475,
+              2661
+            ],
+            "generated_text": "羲堯此地奠山川",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.905,
+            "confidence": 97.79,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              931,
+              522,
+              1571,
+              531
+            ],
+            "ink": 231
+          },
+          {
+            "box": [
+              972,
+              696,
+              1532,
+              705
+            ],
+            "ink": 195
+          },
+          {
+            "box": [
+              850,
+              780,
+              1444,
+              790
+            ],
+            "ink": 236
+          },
+          {
+            "box": [
+              674,
+              822,
+              1023,
+              831
+            ],
+            "ink": 229
+          },
+          {
+            "box": [
+              712,
+              950,
+              1733,
+              961
+            ],
+            "ink": 257
+          },
+          {
+            "box": [
+              788,
+              1034,
+              1214,
+              1044
+            ],
+            "ink": 274
+          },
+          {
+            "box": [
+              1104,
+              1116,
+              1696,
+              1126
+            ],
+            "ink": 261
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

@@ -1,0 +1,278 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_18",
+  "engine": "qwen",
+  "page": 521,
+  "runs": [
+    {
+      "key": "51e585ec36c44d4b5b44536aba3e3d851c4a2e8a69c6ea1699d9fa80842dea87",
+      "parameters": {
+        "image_sha256": "641aedc4e676e415463c7404f44aa6d704e181bf86fa958b057b738bf0ad133a",
+        "engine": {
+          "name": "qwen",
+          "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "model_revision": "main",
+          "transformers_version": "4.57.6",
+          "torch_version": "2.5.1+cu121",
+          "cuda_version": "12.1",
+          "bitsandbytes_version": "0.50.2",
+          "quantization": {
+            "load_in_4bit": true,
+            "quant_type": "nf4",
+            "double_quant": true,
+            "compute_dtype": "float16"
+          },
+          "mode": "all",
+          "min_pixels": 50176,
+          "max_pixels": 802816,
+          "band_inches": 2.0,
+          "max_new_tokens": 768,
+          "repetition_penalty": 1.05,
+          "adapter_version": 3,
+          "prompt_version": 3,
+          "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74"
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T21:58:48+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_521.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        0,
+        2480,
+        3509
+      ],
+      "lines": [
+        {
+          "text": "Phụ lục",
+          "bbox": [
+            27,
+            0,
+            2414,
+            262
+          ],
+          "confidence": 93.04
+        },
+        {
+          "text": "(191) Vong mệnh: lẩn lút, trốn tránh. Chưa rõ liên quan như thế nào đến cái chết không tránh khỏi mà Mâu Tử đang",
+          "bbox": [
+            27,
+            262,
+            2414,
+            524
+          ],
+          "confidence": 93.04
+        },
+        {
+          "text": "chứng minh.",
+          "bbox": [
+            266,
+            534,
+            1346,
+            770
+          ],
+          "confidence": 97.18
+        },
+        {
+          "text": "(192) Xem lại chú thích 62, điều 9.",
+          "bbox": [
+            266,
+            770,
+            1346,
+            1005
+          ],
+          "confidence": 97.18
+        },
+        {
+          "text": "問",
+          "bbox": [
+            264,
+            1218,
+            2170,
+            1594
+          ],
+          "confidence": 84.01
+        },
+        {
+          "text": "蜘蛛布而蔚罗陈，鸟迹见而文字作。故有法成易，无法成难。吾览佛经之要有三十七品；老氏道经亦三十七篇，故法之焉。",
+          "bbox": [
+            266,
+            1623,
+            2168,
+            2126
+          ],
+          "confidence": 85.05
+        },
+        {
+          "text": "伏曰：鄙人矇瞽，生於幽仄，敢出愚言，弗慮禍福。今也聞命，霍如湯雪。請得革情，洒心自赦。願受五戒，作優婆塞。",
+          "bbox": [
+            266,
+            2152,
+            2168,
+            2713
+          ],
+          "confidence": 88.72
+        },
+        {
+          "text": "Vấn viết: Tứ chỉ sở giải, thành tất bị yên, cố phi bộc đẳng chỉ sở văn gia. Nhiên tử sở lý hà dĩ chỉ trứ tam thập thất điều, dịệc hữu pháp hồ?",
+          "bbox": [
+            27,
+            2745,
+            2475,
+            3127
+          ],
+          "confidence": 87.87
+        },
+        {
+          "text": "Mâu Tử viết: Phù chuyển bồng phiêu nhi xa luân thành, oa mộc lưu nhi chu tiếp thiết. Tri thù bố nhi úy",
+          "bbox": [
+            27,
+            3127,
+            2475,
+            3509
+          ],
+          "confidence": 87.87
+        }
+      ],
+      "raw": {
+        "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+        "model_revision": "main",
+        "mode": "all",
+        "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          3509
+        ],
+        "band_target_height": 600,
+        "bbox_granularity": "band_even_split",
+        "max_new_tokens": 768,
+        "max_pixels": 802816,
+        "inference_seconds": 19.091,
+        "bands": [
+          {
+            "band": 1,
+            "y0": 0,
+            "y1": 529,
+            "ink_box": [
+              27,
+              0,
+              2414,
+              524
+            ],
+            "generated_text": "Phụ lục\n\n(191) Vong mệnh: lẩn lút, trốn tránh. Chưa rõ liên quan như thế nào đến cái chết không tránh khỏi mà Mâu Tử đang",
+            "n_lines": 2,
+            "tokens": 44,
+            "seconds": 3.285,
+            "confidence": 93.04,
+            "flags": []
+          },
+          {
+            "band": 2,
+            "y0": 529,
+            "y1": 1111,
+            "ink_box": [
+              266,
+              534,
+              1346,
+              1005
+            ],
+            "generated_text": "chứng minh.\n(192) Xem lại chú thích 62, điều 9.",
+            "n_lines": 2,
+            "tokens": 24,
+            "seconds": 1.829,
+            "confidence": 97.18,
+            "flags": []
+          },
+          {
+            "band": 3,
+            "y0": 1111,
+            "y1": 1609,
+            "ink_box": [
+              264,
+              1218,
+              2170,
+              1594
+            ],
+            "generated_text": "問",
+            "n_lines": 1,
+            "tokens": 2,
+            "seconds": 0.522,
+            "confidence": 84.01,
+            "flags": []
+          },
+          {
+            "band": 4,
+            "y0": 1609,
+            "y1": 2139,
+            "ink_box": [
+              266,
+              1623,
+              2168,
+              2126
+            ],
+            "generated_text": "蜘蛛布而蔚罗陈，鸟迹见而文字作。故有法成易，无法成难。吾览佛经之要有三十七品；老氏道经亦三十七篇，故法之焉。",
+            "n_lines": 1,
+            "tokens": 49,
+            "seconds": 3.575,
+            "confidence": 85.05,
+            "flags": []
+          },
+          {
+            "band": 5,
+            "y0": 2139,
+            "y1": 2729,
+            "ink_box": [
+              266,
+              2152,
+              2168,
+              2713
+            ],
+            "generated_text": "伏曰：鄙人矇瞽，生於幽仄，敢出愚言，弗慮禍福。今也聞命，霍如湯雪。請得革情，洒心自赦。願受五戒，作優婆塞。",
+            "n_lines": 1,
+            "tokens": 56,
+            "seconds": 4.163,
+            "confidence": 88.72,
+            "flags": []
+          },
+          {
+            "band": 6,
+            "y0": 2729,
+            "y1": 3509,
+            "ink_box": [
+              27,
+              2745,
+              2475,
+              3509
+            ],
+            "generated_text": "Vấn viết: Tứ chỉ sở giải, thành tất bị yên, cố phi bộc đẳng chỉ sở văn gia. Nhiên tử sở lý hà dĩ chỉ trứ tam thập thất điều, dịệc hữu pháp hồ?\nMâu Tử viết: Phù chuyển bồng phiêu nhi xa luân thành, oa mộc lưu nhi chu tiếp thiết. Tri thù bố nhi úy",
+            "n_lines": 2,
+            "tokens": 81,
+            "seconds": 5.677,
+            "confidence": 87.87,
+            "flags": []
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "61cbea5c0055c260ccfc12f884e0febca7b2783b",
+        "git_describe": "61cbea5",
+        "git_dirty": true,
+        "gpu": "NVIDIA L4",
+        "dtype": "float16",
+        "adapter_version": 3
+      }
+    }
+  ]
+}

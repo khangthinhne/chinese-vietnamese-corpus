@@ -1,0 +1,847 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 56,
+  "runs": [
+    {
+      "key": "db3f8412870acbce722b85019a7d418c75bfc1b6d07838bcedfd1e16bfbc265e",
+      "parameters": {
+        "image_sha256": "ecf2087380c72c17abd5cecf90434868f42b44a6d64189572d4e4905916bb6da",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T11:44:35+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_056.png",
+      "image_size": [
+        2590,
+        3028
+      ],
+      "crop_box": [
+        0,
+        0,
+        2590,
+        3028
+      ],
+      "lines": [
+        {
+          "text": "ngothinhamle1.pdf",
+          "bbox": [
+            7,
+            19,
+            1091,
+            45
+          ],
+          "confidence": 93.85
+        },
+        {
+          "text": "HOÀNG HOA ĐÔ PHA",
+          "bbox": [
+            1454,
+            197,
+            2107,
+            237
+          ],
+          "confidence": 91.61
+        },
+        {
+          "text": "Ngược trọng biên để duê hiệu, trước tri sở của châu, (B)",
+          "bbox": [
+            657,
+            276,
+            1890,
+            320
+          ],
+          "confidence": 78.34
+        },
+        {
+          "text": "Mà nhớ tôi nhà nho đòi Minh hùng hôn bàn luân. (c)",
+          "bbox": [
+            656,
+            357,
+            1857,
+            402
+          ],
+          "confidence": 88.51
+        },
+        {
+          "text": "KHAO DI:",
+          "bbox": [
+            394,
+            445,
+            1579,
+            484
+          ],
+          "confidence": 97.36
+        },
+        {
+          "text": "a.A.404: Quan Công miếu 關公廟.",
+          "bbox": [
+            545,
+            527,
+            1270,
+            567
+          ],
+          "confidence": 93.26
+        },
+        {
+          "text": "b. Bản A.404, A.1697, A.1579, A.2871: Môn tiến biến 門前扁",
+          "bbox": [
+            543,
+            608,
+            1820,
+            649
+          ],
+          "confidence": 96.99
+        },
+        {
+          "text": "c.Bản A.404, A.1697, A.1579, A.2871, A.117c/1: Vị ái minh nho luân nghi",
+          "bbox": [
+            540,
+            689,
+            2104,
+            733
+          ],
+          "confidence": 97.25
+        },
+        {
+          "text": "hùng爲愛明儒議論雄",
+          "bbox": [
+            393,
+            773,
+            880,
+            816
+          ],
+          "confidence": 87.95
+        },
+        {
+          "text": "NGUYÊN CHÚ:",
+          "bbox": [
+            393,
+            879,
+            729,
+            917
+          ],
+          "confidence": 87.81
+        },
+        {
+          "text": "A. Miếu ở châu Tân Ninh đối diện với văn miếu ở bờ sông bên kia.",
+          "bbox": [
+            540,
+            959,
+            1918,
+            1002
+          ],
+          "confidence": 95.69
+        },
+        {
+          "text": "B.Đến ở trên sông phía trước trị sở của châu, có biến đế duệ hiệu là \"Bác",
+          "bbox": [
+            544,
+            1041,
+            2102,
+            1085
+          ],
+          "confidence": 84.92
+        },
+        {
+          "text": "chi thanh.",
+          "bbox": [
+            390,
+            1135,
+            611,
+            1164
+          ],
+          "confidence": 98.33
+        },
+        {
+          "text": "C.Giữa năm Gia Tĩnh triều Minh, đối tên hèm, tôn Khổng Tử là “Đại",
+          "bbox": [
+            543,
+            1205,
+            2103,
+            1251
+          ],
+          "confidence": 88.45
+        },
+        {
+          "text": "thành chí thánh Văn tuyên vương,\" các bậc tiên hiền, tiên nho đều goi là Phu tử,",
+          "bbox": [
+            392,
+            1287,
+            2099,
+            1334
+          ],
+          "confidence": 90.31
+        },
+        {
+          "text": "bo tước công hầu.",
+          "bbox": [
+            392,
+            1381,
+            763,
+            1411
+          ],
+          "confidence": 84.62
+        },
+        {
+          "text": "CHU THICH:",
+          "bbox": [
+            392,
+            1480,
+            1323,
+            1518
+          ],
+          "confidence": 98.85
+        },
+        {
+          "text": "1. Không Từ: Tức Không Minh Gia Cát Lương.",
+          "bbox": [
+            546,
+            1555,
+            1512,
+            1597
+          ],
+          "confidence": 93.01
+        },
+        {
+          "text": "2.Quan Công: Tức Quan Vân Trường. Thời Tam Quốc, Lưu Bị, Quan Vân",
+          "bbox": [
+            542,
+            1633,
+            2101,
+            1682
+          ],
+          "confidence": 96.51
+        },
+        {
+          "text": "Trường, Trương Phi kết nghĩa anh em tại vườn đào. Dùng Khổng Minh làm",
+          "bbox": [
+            390,
+            1711,
+            2099,
+            1760
+          ],
+          "confidence": 96.04
+        },
+        {
+          "text": "quân sự khôi phục nhà Hán. Quan Công còn gọi là Quan Vũ, được người đời tôn",
+          "bbox": [
+            392,
+            1788,
+            2100,
+            1839
+          ],
+          "confidence": 97.81
+        },
+        {
+          "text": "làm đế, xây miếu thờ goi Miếu Quan Đế.",
+          "bbox": [
+            390,
+            1867,
+            1245,
+            1908
+          ],
+          "confidence": 91.07
+        },
+        {
+          "text": "19南寍記見",
+          "bbox": [
+            970,
+            2027,
+            1479,
+            2076
+          ],
+          "confidence": 87.0
+        },
+        {
+          "text": "17.南宁記元",
+          "bbox": [
+            970,
+            2068,
+            1500,
+            2097
+          ],
+          "confidence": 61.33
+        },
+        {
+          "text": "南寧俗號小南京",
+          "bbox": [
+            941,
+            2229,
+            1524,
+            2287
+          ],
+          "confidence": 99.48
+        },
+        {
+          "text": "人物繁華滿市城",
+          "bbox": [
+            933,
+            2357,
+            1525,
+            2417
+          ],
+          "confidence": 99.57
+        },
+        {
+          "text": "夾道屋盧懤幛日",
+          "bbox": [
+            938,
+            2489,
+            1512,
+            2551
+          ],
+          "confidence": 90.4
+        },
+        {
+          "text": "臨流臺榭燭垂星",
+          "bbox": [
+            935,
+            2621,
+            2218,
+            2683
+          ],
+          "confidence": 99.94
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2590,
+          3028
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 45.316,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              7,
+              19,
+              1091,
+              45
+            ],
+            "generated_text": "ngothinhamle1.pdf",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.977,
+            "confidence": 93.85,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              1454,
+              197,
+              2107,
+              237
+            ],
+            "generated_text": "HOÀNG HOA ĐÔ PHA",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 1.034,
+            "confidence": 91.61,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              399,
+              242,
+              2111,
+              256
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.454,
+            "confidence": 86.32,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              657,
+              276,
+              1890,
+              320
+            ],
+            "generated_text": "Ngược trọng biên để duê hiệu, trước tri sở của châu, (B)",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.723,
+            "confidence": 78.34,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              656,
+              357,
+              1857,
+              402
+            ],
+            "generated_text": "Mà nhớ tôi nhà nho đòi Minh hùng hôn bàn luân. (c)",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.757,
+            "confidence": 88.51,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              394,
+              445,
+              1579,
+              484
+            ],
+            "generated_text": "KHAO DI:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.663,
+            "confidence": 97.36,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              545,
+              527,
+              1270,
+              567
+            ],
+            "generated_text": "a.A.404: Quan Công miếu 關公廟.",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.667,
+            "confidence": 93.26,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              543,
+              608,
+              1820,
+              649
+            ],
+            "generated_text": "b. Bản A.404, A.1697, A.1579, A.2871: Môn tiến biến 門前扁",
+            "n_lines": 1,
+            "tokens": 42,
+            "seconds": 2.938,
+            "confidence": 96.99,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              540,
+              689,
+              2104,
+              733
+            ],
+            "generated_text": "c.Bản A.404, A.1697, A.1579, A.2871, A.117c/1: Vị ái minh nho luân nghi",
+            "n_lines": 1,
+            "tokens": 52,
+            "seconds": 3.822,
+            "confidence": 97.25,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              393,
+              773,
+              880,
+              816
+            ],
+            "generated_text": "hùng爲愛明儒議論雄",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.949,
+            "confidence": 87.95,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              393,
+              879,
+              729,
+              917
+            ],
+            "generated_text": "NGUYÊN CHÚ:",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.886,
+            "confidence": 87.81,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              540,
+              959,
+              1918,
+              1002
+            ],
+            "generated_text": "A. Miếu ở châu Tân Ninh đối diện với văn miếu ở bờ sông bên kia.",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.079,
+            "confidence": 95.69,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              544,
+              1041,
+              2102,
+              1085
+            ],
+            "generated_text": "B.Đến ở trên sông phía trước trị sở của châu, có biến đế duệ hiệu là \"Bác",
+            "n_lines": 1,
+            "tokens": 32,
+            "seconds": 2.418,
+            "confidence": 84.92,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              390,
+              1135,
+              611,
+              1164
+            ],
+            "generated_text": "chi thanh.",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.637,
+            "confidence": 98.33,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              543,
+              1205,
+              2103,
+              1251
+            ],
+            "generated_text": "C.Giữa năm Gia Tĩnh triều Minh, đối tên hèm, tôn Khổng Tử là “Đại",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 2.361,
+            "confidence": 88.45,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              392,
+              1287,
+              2099,
+              1334
+            ],
+            "generated_text": "thành chí thánh Văn tuyên vương,\" các bậc tiên hiền, tiên nho đều goi là Phu tử,",
+            "n_lines": 1,
+            "tokens": 35,
+            "seconds": 2.757,
+            "confidence": 90.31,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              392,
+              1381,
+              763,
+              1411
+            ],
+            "generated_text": "bo tước công hầu.",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.842,
+            "confidence": 84.62,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              392,
+              1480,
+              1323,
+              1518
+            ],
+            "generated_text": "CHU THICH:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.733,
+            "confidence": 98.85,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              546,
+              1555,
+              1512,
+              1597
+            ],
+            "generated_text": "1. Không Từ: Tức Không Minh Gia Cát Lương.",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.71,
+            "confidence": 93.01,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              542,
+              1633,
+              2101,
+              1682
+            ],
+            "generated_text": "2.Quan Công: Tức Quan Vân Trường. Thời Tam Quốc, Lưu Bị, Quan Vân",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 2.367,
+            "confidence": 96.51,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              390,
+              1711,
+              2099,
+              1760
+            ],
+            "generated_text": "Trường, Trương Phi kết nghĩa anh em tại vườn đào. Dùng Khổng Minh làm",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 2.128,
+            "confidence": 96.04,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              392,
+              1788,
+              2100,
+              1839
+            ],
+            "generated_text": "quân sự khôi phục nhà Hán. Quan Công còn gọi là Quan Vũ, được người đời tôn",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 2.491,
+            "confidence": 97.81,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              390,
+              1867,
+              1245,
+              1908
+            ],
+            "generated_text": "làm đế, xây miếu thờ goi Miếu Quan Đế.",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.693,
+            "confidence": 91.07,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              970,
+              2027,
+              1479,
+              2076
+            ],
+            "generated_text": "19南寍記見",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.911,
+            "confidence": 87.0,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              970,
+              2068,
+              1500,
+              2097
+            ],
+            "generated_text": "17.南宁記元",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.86,
+            "confidence": 61.33,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              941,
+              2229,
+              1524,
+              2287
+            ],
+            "generated_text": "南寧俗號小南京",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.929,
+            "confidence": 99.48,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              933,
+              2357,
+              1525,
+              2417
+            ],
+            "generated_text": "人物繁華滿市城",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.8,
+            "confidence": 99.57,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              938,
+              2489,
+              1512,
+              2551
+            ],
+            "generated_text": "夾道屋盧懤幛日",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.35,
+            "confidence": 90.4,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              935,
+              2621,
+              2218,
+              2683
+            ],
+            "generated_text": "臨流臺榭燭垂星",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.374,
+            "confidence": 99.94,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              699,
+              317,
+              1847,
+              327
+            ],
+            "ink": 297
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

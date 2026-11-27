@@ -1,0 +1,720 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_20",
+  "engine": "paddlevl",
+  "page": 177,
+  "runs": [
+    {
+      "key": "8df21cfbf62141c1f32bb206f23a739de5325d1ee94b19d3a98f88f65a9c1fb3",
+      "parameters": {
+        "image_sha256": "002b44b912c90534732d54fd35a8e880dbb73f77a8cede58cb1e2b838aadfe49",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T06:08:20+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_177.png",
+      "image_size": [
+        1823,
+        2814
+      ],
+      "crop_box": [
+        0,
+        0,
+        1823,
+        2814
+      ],
+      "lines": [
+        {
+          "text": "夷自從弓又帶戈",
+          "bbox": [
+            579,
+            424,
+            1161,
+            477
+          ],
+          "confidence": 98.42
+        },
+        {
+          "text": "吾邦文献似中華",
+          "bbox": [
+            579,
+            496,
+            1160,
+            551
+          ],
+          "confidence": 95.3
+        },
+        {
+          "text": "矧經欽賜安南國",
+          "bbox": [
+            581,
+            569,
+            1162,
+            624
+          ],
+          "confidence": 99.63
+        },
+        {
+          "text": "此字書來不亦訛",
+          "bbox": [
+            581,
+            643,
+            1163,
+            698
+          ],
+          "confidence": 99.11
+        },
+        {
+          "text": "Phిన am:",
+          "bbox": [
+            149,
+            853,
+            365,
+            881
+          ],
+          "confidence": 63.86
+        },
+        {
+          "text": "BIEN “DI”",
+          "bbox": [
+            496,
+            967,
+            804,
+            1016
+          ],
+          "confidence": 92.84
+        },
+        {
+          "text": "Di tự tòng cung hụt đới qua¹,",
+          "bbox": [
+            381,
+            1105,
+            1008,
+            1153
+          ],
+          "confidence": 68.05
+        },
+        {
+          "text": "Ngô bang văn hiến tự Trung Hoa.",
+          "bbox": [
+            379,
+            1162,
+            1075,
+            1211
+          ],
+          "confidence": 96.1
+        },
+        {
+          "text": "Thần kinh khâm tư An Nam quốc,",
+          "bbox": [
+            379,
+            1222,
+            1581,
+            1263
+          ],
+          "confidence": 86.91
+        },
+        {
+          "text": "Thủ tư thư lại bất diệc ngoa².",
+          "bbox": [
+            381,
+            1280,
+            1000,
+            1320
+          ],
+          "confidence": 76.22
+        },
+        {
+          "text": "Uich nghĩa:",
+          "bbox": [
+            149,
+            1467,
+            392,
+            1497
+          ],
+          "confidence": 86.24
+        },
+        {
+          "text": "TRANH LUẬN VÊ CHỮ DI",
+          "bbox": [
+            379,
+            1572,
+            1136,
+            1631
+          ],
+          "confidence": 90.46
+        },
+        {
+          "text": "Chữ di do chữ cung và chữ qua hợp lại,",
+          "bbox": [
+            381,
+            1719,
+            1178,
+            1761
+          ],
+          "confidence": 91.52
+        },
+        {
+          "text": "Nước ta về văn hiến cũng giống như Trung Hoa.",
+          "bbox": [
+            381,
+            1773,
+            1367,
+            1824
+          ],
+          "confidence": 97.51
+        },
+        {
+          "text": "Hướng chi từ xưa đã gọi là nước An Nam rồi,",
+          "bbox": [
+            381,
+            1834,
+            1303,
+            1878
+          ],
+          "confidence": 93.0
+        },
+        {
+          "text": "Viết chữ đi này ra, há chẳng phải là sai lầm hay sao?",
+          "bbox": [
+            379,
+            1890,
+            1483,
+            1936
+          ],
+          "confidence": 93.99
+        },
+        {
+          "text": "一",
+          "bbox": [
+            150,
+            2166,
+            742,
+            2184
+          ],
+          "confidence": 17.28
+        },
+        {
+          "text": "1. Tác giả chiết tự. Chủ di trong Hán tự gồm chủ cung và bộ phận còn lại gần",
+          "bbox": [
+            238,
+            2201,
+            1589,
+            2242
+          ],
+          "confidence": 94.52
+        },
+        {
+          "text": "giống chủ \"qua\" (chú không phải chủ \"qua\").",
+          "bbox": [
+            149,
+            2253,
+            874,
+            2289
+          ],
+          "confidence": 88.29
+        },
+        {
+          "text": "2. Bài này không có trong tập Hoa nguyên tùy bộ. Có lẽ nó thuộc phần thơ của",
+          "bbox": [
+            235,
+            2295,
+            1589,
+            2338
+          ],
+          "confidence": 94.05
+        },
+        {
+          "text": "Vũ Huy Tấn trong chuyến đi sử Trung Quốc năm 1795, hiện chưa tìm thấy. Văn bản",
+          "bbox": [
+            149,
+            2340,
+            1589,
+            2384
+          ],
+          "confidence": 93.42
+        },
+        {
+          "text": "này lấy trong bài Ông Vũ Huy Tấn với tập \"Hoa trình tùy bộ\" của Hoa Bằng: Tri Tân",
+          "bbox": [
+            151,
+            2387,
+            1586,
+            2431
+          ],
+          "confidence": 94.72
+        },
+        {
+          "text": "các số 35, 36, 37 và 40 năm 1942.",
+          "bbox": [
+            149,
+            2441,
+            710,
+            2478
+          ],
+          "confidence": 99.87
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          1823,
+          2814
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 21.069,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              579,
+              424,
+              1161,
+              477
+            ],
+            "generated_text": "夷自從弓又帶戈",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.598,
+            "confidence": 98.42,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              579,
+              496,
+              1160,
+              551
+            ],
+            "generated_text": "吾邦文献似中華",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.537,
+            "confidence": 95.3,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              581,
+              569,
+              1162,
+              624
+            ],
+            "generated_text": "矧經欽賜安南國",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.861,
+            "confidence": 99.63,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              581,
+              643,
+              1163,
+              698
+            ],
+            "generated_text": "此字書來不亦訛",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.664,
+            "confidence": 99.11,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              149,
+              853,
+              365,
+              881
+            ],
+            "generated_text": "Phిన am:",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.412,
+            "confidence": 63.86,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              496,
+              967,
+              804,
+              1016
+            ],
+            "generated_text": "BIEN “DI”",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.437,
+            "confidence": 92.84,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              381,
+              1105,
+              1008,
+              1153
+            ],
+            "generated_text": "Di tự tòng cung hụt đới qua¹,",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.847,
+            "confidence": 68.05,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              379,
+              1162,
+              1075,
+              1211
+            ],
+            "generated_text": "Ngô bang văn hiến tự Trung Hoa.",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.748,
+            "confidence": 96.1,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              379,
+              1222,
+              1581,
+              1263
+            ],
+            "generated_text": "Thần kinh khâm tư An Nam quốc,",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.696,
+            "confidence": 86.91,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              381,
+              1280,
+              1000,
+              1320
+            ],
+            "generated_text": "Thủ tư thư lại bất diệc ngoa².",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.895,
+            "confidence": 76.22,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              149,
+              1467,
+              392,
+              1497
+            ],
+            "generated_text": "Uich nghĩa:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.49,
+            "confidence": 86.24,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              379,
+              1572,
+              1136,
+              1631
+            ],
+            "generated_text": "TRANH LUẬN VÊ CHỮ DI",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.849,
+            "confidence": 90.46,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              381,
+              1719,
+              1178,
+              1761
+            ],
+            "generated_text": "Chữ di do chữ cung và chữ qua hợp lại,",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.878,
+            "confidence": 91.52,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              381,
+              1773,
+              1367,
+              1824
+            ],
+            "generated_text": "Nước ta về văn hiến cũng giống như Trung Hoa.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.832,
+            "confidence": 97.51,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              381,
+              1834,
+              1303,
+              1878
+            ],
+            "generated_text": "Hướng chi từ xưa đã gọi là nước An Nam rồi,",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.998,
+            "confidence": 93.0,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              379,
+              1890,
+              1483,
+              1936
+            ],
+            "generated_text": "Viết chữ đi này ra, há chẳng phải là sai lầm hay sao?",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.372,
+            "confidence": 93.99,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              150,
+              2166,
+              742,
+              2184
+            ],
+            "generated_text": "一",
+            "n_lines": 1,
+            "tokens": 2,
+            "seconds": 0.33,
+            "confidence": 17.28,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              238,
+              2201,
+              1589,
+              2242
+            ],
+            "generated_text": "1. Tác giả chiết tự. Chủ di trong Hán tự gồm chủ cung và bộ phận còn lại gần",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 1.642,
+            "confidence": 94.52,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              149,
+              2253,
+              874,
+              2289
+            ],
+            "generated_text": "giống chủ \"qua\" (chú không phải chủ \"qua\").",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.911,
+            "confidence": 88.29,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              235,
+              2295,
+              1589,
+              2338
+            ],
+            "generated_text": "2. Bài này không có trong tập Hoa nguyên tùy bộ. Có lẽ nó thuộc phần thơ của",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 1.38,
+            "confidence": 94.05,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              149,
+              2340,
+              1589,
+              2384
+            ],
+            "generated_text": "Vũ Huy Tấn trong chuyến đi sử Trung Quốc năm 1795, hiện chưa tìm thấy. Văn bản",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 1.607,
+            "confidence": 93.42,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              151,
+              2387,
+              1586,
+              2431
+            ],
+            "generated_text": "này lấy trong bài Ông Vũ Huy Tấn với tập \"Hoa trình tùy bộ\" của Hoa Bằng: Tri Tân",
+            "n_lines": 1,
+            "tokens": 34,
+            "seconds": 1.712,
+            "confidence": 94.72,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              149,
+              2441,
+              710,
+              2478
+            ],
+            "generated_text": "các số 35, 36, 37 và 40 năm 1942.",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 1.369,
+            "confidence": 99.87,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              695,
+              241,
+              837,
+              260
+            ],
+            "ink": 745
+          },
+          {
+            "box": [
+              695,
+              260,
+              832,
+              274
+            ],
+            "ink": 652
+          },
+          {
+            "box": [
+              695,
+              272,
+              837,
+              290
+            ],
+            "ink": 724
+          },
+          {
+            "box": [
+              1514,
+              2513,
+              1586,
+              2523
+            ],
+            "ink": 243
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      }
+    }
+  ]
+}

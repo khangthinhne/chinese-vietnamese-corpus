@@ -1,0 +1,248 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_18",
+  "engine": "qwen",
+  "page": 413,
+  "runs": [
+    {
+      "key": "ebf6e62d3a1cd3025aefa7b346aba3dfc6e3a902d53d1912d32b321a3e32c4cd",
+      "parameters": {
+        "image_sha256": "6098ef5a9993c961dd8c1b8a076abdb7601de8a8236dab3e45db639b6b1bb931",
+        "engine": {
+          "name": "qwen",
+          "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "model_revision": "main",
+          "transformers_version": "4.57.6",
+          "torch_version": "2.5.1+cu121",
+          "cuda_version": "12.1",
+          "bitsandbytes_version": "0.50.2",
+          "quantization": {
+            "load_in_4bit": true,
+            "quant_type": "nf4",
+            "double_quant": true,
+            "compute_dtype": "float16"
+          },
+          "mode": "all",
+          "min_pixels": 50176,
+          "max_pixels": 802816,
+          "band_inches": 2.0,
+          "max_new_tokens": 768,
+          "repetition_penalty": 1.05,
+          "adapter_version": 3,
+          "prompt_version": 3,
+          "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74"
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T20:57:19+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_413.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        0,
+        2480,
+        3509
+      ],
+      "lines": [
+        {
+          "text": "或問：佛從何出生？寧有先祖及國邑乎？如何施行？",
+          "bbox": [
+            116,
+            165,
+            2363,
+            773
+          ],
+          "confidence": 74.87
+        },
+        {
+          "text": "富翁：富翁也。不敏略其要。",
+          "bbox": [
+            125,
+            765,
+            2363,
+            1373
+          ],
+          "confidence": 31.03
+        },
+        {
+          "text": "步，\"天下,靡有踰我者也\".時天大動,宮皆明。日,王青衣復産一兒廐字,奴字匿,馬字健,王字太子。",
+          "bbox": [
+            126,
+            1365,
+            2363,
+            1973
+          ],
+          "confidence": 42.18
+        },
+        {
+          "text": "太子有三十二，八十好。。身長丈六，體背金色。頂有師，舌自，手把千軸，頂光萬里。此略其相。年十，王納妃，鄰則寢，太子則遷坐，寢則天，陰陽而，遂懷一，六年",
+          "bbox": [
+            127,
+            1965,
+            2360,
+            2573
+          ],
+          "confidence": 58.13
+        },
+        {
+          "text": "父王珍偉太子，爲興宮，妓女，寶玩並列於前。。。。，二年十九，二日夜，呼車匿健陟跨之，鬼神扶舉飛而出",
+          "bbox": [
+            116,
+            2565,
+            2036,
+            2942
+          ],
+          "confidence": 53.77
+        },
+        {
+          "text": "宫。明日，廓然不知所在。王及吏民莫不歎歎追之。及田，王曰：“未有爾時，禱請神祈。今既",
+          "bbox": [
+            158,
+            2953,
+            2475,
+            3497
+          ],
+          "confidence": 89.66
+        }
+      ],
+      "raw": {
+        "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+        "model_revision": "main",
+        "mode": "all",
+        "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          3509
+        ],
+        "band_target_height": 600,
+        "bbox_granularity": "band_even_split",
+        "max_new_tokens": 768,
+        "max_pixels": 802816,
+        "inference_seconds": 18.459,
+        "bands": [
+          {
+            "band": 1,
+            "y0": 169,
+            "y1": 769,
+            "ink_box": [
+              116,
+              165,
+              2363,
+              773
+            ],
+            "generated_text": "或問：佛從何出生？寧有先祖及國邑乎？如何施行？",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.825,
+            "confidence": 74.87,
+            "flags": []
+          },
+          {
+            "band": 2,
+            "y0": 769,
+            "y1": 1369,
+            "ink_box": [
+              125,
+              765,
+              2363,
+              1373
+            ],
+            "generated_text": "富翁：富翁也。不敏略其要。",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.377,
+            "confidence": 31.03,
+            "flags": []
+          },
+          {
+            "band": 3,
+            "y0": 1369,
+            "y1": 1969,
+            "ink_box": [
+              126,
+              1365,
+              2363,
+              1973
+            ],
+            "generated_text": "步，\"天下,靡有踰我者也\".時天大動,宮皆明。日,王青衣復産一兒廐字,奴字匿,馬字健,王字太子。",
+            "n_lines": 1,
+            "tokens": 48,
+            "seconds": 3.517,
+            "confidence": 42.18,
+            "flags": []
+          },
+          {
+            "band": 4,
+            "y0": 1969,
+            "y1": 2569,
+            "ink_box": [
+              127,
+              1965,
+              2360,
+              2573
+            ],
+            "generated_text": "太子有三十二，八十好。。身長丈六，體背金色。頂有師，舌自，手把千軸，頂光萬里。此略其相。年十，王納妃，鄰則寢，太子則遷坐，寢則天，陰陽而，遂懷一，六年",
+            "n_lines": 1,
+            "tokens": 73,
+            "seconds": 5.141,
+            "confidence": 58.13,
+            "flags": []
+          },
+          {
+            "band": 5,
+            "y0": 2569,
+            "y1": 2947,
+            "ink_box": [
+              116,
+              2565,
+              2036,
+              2942
+            ],
+            "generated_text": "父王珍偉太子，爲興宮，妓女，寶玩並列於前。。。。，二年十九，二日夜，呼車匿健陟跨之，鬼神扶舉飛而出",
+            "n_lines": 1,
+            "tokens": 47,
+            "seconds": 3.399,
+            "confidence": 53.77,
+            "flags": []
+          },
+          {
+            "band": 6,
+            "y0": 2947,
+            "y1": 3493,
+            "ink_box": [
+              158,
+              2953,
+              2475,
+              3497
+            ],
+            "generated_text": "宫。明日，廓然不知所在。王及吏民莫不歎歎追之。及田，王曰：“未有爾時，禱請神祈。今既",
+            "n_lines": 1,
+            "tokens": 42,
+            "seconds": 3.161,
+            "confidence": 89.66,
+            "flags": []
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "61cbea5c0055c260ccfc12f884e0febca7b2783b",
+        "git_describe": "61cbea5",
+        "git_dirty": true,
+        "gpu": "NVIDIA L4",
+        "dtype": "float16",
+        "adapter_version": 3
+      }
+    }
+  ]
+}

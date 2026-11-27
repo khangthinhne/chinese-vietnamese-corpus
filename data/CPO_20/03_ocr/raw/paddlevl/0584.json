@@ -1,0 +1,1047 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_20",
+  "engine": "paddlevl",
+  "page": 584,
+  "runs": [
+    {
+      "key": "55469c6350550b05b445a3362c10f6e566cdba730288b7cff09dd41943eb4378",
+      "parameters": {
+        "image_sha256": "68359c5d973766cd5b18bb290d339718717ef57eb065f13189eb7e19f59044f8",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T08:52:11+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_584.png",
+      "image_size": [
+        1839,
+        2803
+      ],
+      "crop_box": [
+        0,
+        0,
+        1839,
+        2803
+      ],
+      "lines": [
+        {
+          "text": "Tôn Sĩ Nghi sợ mất mật, ngựa không kịp đóng yên, người không",
+          "bbox": [
+            342,
+            289,
+            1713,
+            344
+          ],
+          "confidence": 93.58
+        },
+        {
+          "text": "kip mặc giáp, dân bọn lính kỳ mã của mình chuồn trước qua cầu",
+          "bbox": [
+            254,
+            352,
+            1711,
+            401
+          ],
+          "confidence": 88.83
+        },
+        {
+          "text": "phao, rồi nhằm hướng bắc mà chạy. Quân sĩ các doanh nghe tin, đều",
+          "bbox": [
+            254,
+            411,
+            1711,
+            462
+          ],
+          "confidence": 90.96
+        },
+        {
+          "text": "hoàng hôn, tan tác bỏ chạy, tranh nhau qua cầu sang sông, xô đẩy",
+          "bbox": [
+            254,
+            471,
+            1711,
+            522
+          ],
+          "confidence": 90.82
+        },
+        {
+          "text": "nhau rơi xuống mà chết rất nhiều. Lát sau cầu lại bị đút, quân lính",
+          "bbox": [
+            254,
+            530,
+            1710,
+            580
+          ],
+          "confidence": 94.75
+        },
+        {
+          "text": "đều rơi xuống nước, đến nỗi nước sông Nhị Hà vì thế mà tắc nghẽn",
+          "bbox": [
+            254,
+            589,
+            1710,
+            640
+          ],
+          "confidence": 94.23
+        },
+        {
+          "text": "không chạy được nữa.",
+          "bbox": [
+            254,
+            655,
+            743,
+            687
+          ],
+          "confidence": 89.55
+        },
+        {
+          "text": "Vua Lê ở trong điện, nghe tin có việc biến đấy, với và cùng bọn Lê",
+          "bbox": [
+            345,
+            720,
+            1708,
+            772
+          ],
+          "confidence": 91.12
+        },
+        {
+          "text": "Quýnh, Trình Hiến đưa thái hậu ra ngoài. Cả bọn chạy đến bên sông",
+          "bbox": [
+            252,
+            778,
+            1710,
+            831
+          ],
+          "confidence": 97.28
+        },
+        {
+          "text": "thì thấy câu phao đã đút, thuyền bè cũng không, bèn gấp rút chạy",
+          "bbox": [
+            252,
+            840,
+            1710,
+            893
+          ],
+          "confidence": 96.98
+        },
+        {
+          "text": "đến Nghi Tàm, thình lình gặp được chiếc thuyền đánh cá, với cướp",
+          "bbox": [
+            252,
+            897,
+            1708,
+            950
+          ],
+          "confidence": 91.73
+        },
+        {
+          "text": "lấy rồi chèo sang bờ Bắc. Trưa ngày mồng 6, vua Lê và những người",
+          "bbox": [
+            252,
+            959,
+            1708,
+            1011
+          ],
+          "confidence": 96.67
+        },
+        {
+          "text": "tùy tòng chạy đến núi Tam Tàng, nghe nói Tôn Sĩ Nghị đã đi khỏi",
+          "bbox": [
+            251,
+            1020,
+            1708,
+            1069
+          ],
+          "confidence": 92.14
+        },
+        {
+          "text": "đó. Bấy giờ quân Thanh chạy về nước, trên đường động nghịt như",
+          "bbox": [
+            251,
+            1078,
+            1710,
+            1130
+          ],
+          "confidence": 92.23
+        },
+        {
+          "text": "chợ, đêm ngày đi gấp, không dám nghĩ ngơi. Vua đưa thái hậu cùng",
+          "bbox": [
+            249,
+            1140,
+            1708,
+            1191
+          ],
+          "confidence": 93.67
+        },
+        {
+          "text": "đi với họ đến đồn Hòa Lạc thì gặp một người thổ hào. Hồi trước vua",
+          "bbox": [
+            249,
+            1197,
+            1708,
+            1248
+          ],
+          "confidence": 92.63
+        },
+        {
+          "text": "Lê chạy ra ngoài, người ấy đã được biết mặt; lúc đó thấy vua, người",
+          "bbox": [
+            249,
+            1259,
+            1707,
+            1308
+          ],
+          "confidence": 98.6
+        },
+        {
+          "text": "Ấy bất giác rơi lệ, nhân tiện mọi vua vào trại trong núi tạm nghỉ.",
+          "bbox": [
+            248,
+            1319,
+            1705,
+            1366
+          ],
+          "confidence": 85.2
+        },
+        {
+          "text": "Bấy giờ, vua Lê và những người tùy từng luôn mấy ngày không ăn, ai",
+          "bbox": [
+            163,
+            1376,
+            1707,
+            1431
+          ],
+          "confidence": 95.23
+        },
+        {
+          "text": "nấy đều đã mệt lử. Người thổ hào kia liền giết gà làm com thét dãi.",
+          "bbox": [
+            245,
+            1436,
+            1705,
+            1484
+          ],
+          "confidence": 84.41
+        },
+        {
+          "text": "Vua sai bưng một mâm lên mời thái hậu; còn mình thì cùng ăn với",
+          "bbox": [
+            251,
+            1498,
+            1705,
+            1544
+          ],
+          "confidence": 95.35
+        },
+        {
+          "text": "bọn Quýnh, Hiến ở mâm dưới.",
+          "bbox": [
+            248,
+            1553,
+            889,
+            1597
+          ],
+          "confidence": 96.33
+        },
+        {
+          "text": "An vừa xong, chợt nghe tin quân Tây Sơn đã đuổi theo đến nơi.",
+          "bbox": [
+            335,
+            1631,
+            1704,
+            1675
+          ],
+          "confidence": 93.68
+        },
+        {
+          "text": "Vua cuống quýt bảo người thổ hào răng:",
+          "bbox": [
+            249,
+            1687,
+            1088,
+            1733
+          ],
+          "confidence": 91.2
+        },
+        {
+          "text": "- Muôn đội hậu tình, không có gì để báo đáp, chỉ có trời cao đất",
+          "bbox": [
+            334,
+            1758,
+            1705,
+            1805
+          ],
+          "confidence": 94.75
+        },
+        {
+          "text": "dây chứng giám tắc lòng thành của ông mà ban phúc cho thôi. Bây",
+          "bbox": [
+            246,
+            1819,
+            1705,
+            1866
+          ],
+          "confidence": 91.68
+        },
+        {
+          "text": "giờ quân giặc gần tối, trước mắt đây có con đường sống nào có thể",
+          "bbox": [
+            245,
+            1880,
+            1702,
+            1925
+          ],
+          "confidence": 88.88
+        },
+        {
+          "text": "chay gấp lên của ải, xin tính kế ngay cho.",
+          "bbox": [
+            245,
+            1937,
+            1129,
+            1981
+          ],
+          "confidence": 89.41
+        },
+        {
+          "text": "Người thọ hào vội và sai con đưa đường, theo lối tất trong núi mà",
+          "bbox": [
+            334,
+            2010,
+            1702,
+            2056
+          ],
+          "confidence": 89.09
+        },
+        {
+          "text": "đi. Trời nhà nhem tối thì nhà vua đến của ải, theo kịp chỗ nghỉ của",
+          "bbox": [
+            245,
+            2065,
+            1704,
+            2115
+          ],
+          "confidence": 91.95
+        },
+        {
+          "text": "Tôn Sĩ Nghi. Một lát các viên quan khác cũng lúc tục theo đến, cùng",
+          "bbox": [
+            245,
+            2126,
+            1704,
+            2174
+          ],
+          "confidence": 90.57
+        },
+        {
+          "text": "nhìn nhau than thở, oán giận chảy nước mắt. Tôn Sĩ Nghị cũng lấy",
+          "bbox": [
+            245,
+            2188,
+            1702,
+            2235
+          ],
+          "confidence": 93.39
+        },
+        {
+          "text": "lam xâu hổ.",
+          "bbox": [
+            245,
+            2254,
+            496,
+            2284
+          ],
+          "confidence": 74.29
+        },
+        {
+          "text": "Nhân tiện, vua từ giả Sĩ Nghị và nói:",
+          "bbox": [
+            334,
+            2320,
+            1118,
+            2362
+          ],
+          "confidence": 91.75
+        },
+        {
+          "text": ".",
+          "bbox": [
+            242,
+            2429,
+            848,
+            2446
+          ],
+          "confidence": 36.99
+        },
+        {
+          "text": "1. Có sách chép, đạo quân Vân Quý lúc này mới kéo sang đến Sơn Tây, nghe tin",
+          "bbox": [
+            337,
+            2471,
+            1701,
+            2510
+          ],
+          "confidence": 97.57
+        },
+        {
+          "text": "Nghị thua chạy, nên cũng với vàng tìm đường tháo lui về.",
+          "bbox": [
+            242,
+            2520,
+            1216,
+            2556
+          ],
+          "confidence": 87.29
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          1839,
+          2803
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 23.611,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              342,
+              289,
+              1713,
+              344
+            ],
+            "generated_text": "Tôn Sĩ Nghi sợ mất mật, ngựa không kịp đóng yên, người không",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.659,
+            "confidence": 93.58,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              254,
+              352,
+              1711,
+              401
+            ],
+            "generated_text": "kip mặc giáp, dân bọn lính kỳ mã của mình chuồn trước qua cầu",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.588,
+            "confidence": 88.83,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              254,
+              411,
+              1711,
+              462
+            ],
+            "generated_text": "phao, rồi nhằm hướng bắc mà chạy. Quân sĩ các doanh nghe tin, đều",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 0.785,
+            "confidence": 90.96,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              254,
+              471,
+              1711,
+              522
+            ],
+            "generated_text": "hoàng hôn, tan tác bỏ chạy, tranh nhau qua cầu sang sông, xô đẩy",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.684,
+            "confidence": 90.82,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              254,
+              530,
+              1710,
+              580
+            ],
+            "generated_text": "nhau rơi xuống mà chết rất nhiều. Lát sau cầu lại bị đút, quân lính",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.651,
+            "confidence": 94.75,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              254,
+              589,
+              1710,
+              640
+            ],
+            "generated_text": "đều rơi xuống nước, đến nỗi nước sông Nhị Hà vì thế mà tắc nghẽn",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.654,
+            "confidence": 94.23,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              254,
+              655,
+              743,
+              687
+            ],
+            "generated_text": "không chạy được nữa.",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.319,
+            "confidence": 89.55,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              345,
+              720,
+              1708,
+              772
+            ],
+            "generated_text": "Vua Lê ở trong điện, nghe tin có việc biến đấy, với và cùng bọn Lê",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.632,
+            "confidence": 91.12,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              252,
+              778,
+              1710,
+              831
+            ],
+            "generated_text": "Quýnh, Trình Hiến đưa thái hậu ra ngoài. Cả bọn chạy đến bên sông",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 0.747,
+            "confidence": 97.28,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              252,
+              840,
+              1710,
+              893
+            ],
+            "generated_text": "thì thấy câu phao đã đút, thuyền bè cũng không, bèn gấp rút chạy",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.723,
+            "confidence": 96.98,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              252,
+              897,
+              1708,
+              950
+            ],
+            "generated_text": "đến Nghi Tàm, thình lình gặp được chiếc thuyền đánh cá, với cướp",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 0.717,
+            "confidence": 91.73,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              252,
+              959,
+              1708,
+              1011
+            ],
+            "generated_text": "lấy rồi chèo sang bờ Bắc. Trưa ngày mồng 6, vua Lê và những người",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 0.747,
+            "confidence": 96.67,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              251,
+              1020,
+              1708,
+              1069
+            ],
+            "generated_text": "tùy tòng chạy đến núi Tam Tàng, nghe nói Tôn Sĩ Nghị đã đi khỏi",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 0.731,
+            "confidence": 92.14,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              251,
+              1078,
+              1710,
+              1130
+            ],
+            "generated_text": "đó. Bấy giờ quân Thanh chạy về nước, trên đường động nghịt như",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.647,
+            "confidence": 92.23,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              249,
+              1140,
+              1708,
+              1191
+            ],
+            "generated_text": "chợ, đêm ngày đi gấp, không dám nghĩ ngơi. Vua đưa thái hậu cùng",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.693,
+            "confidence": 93.67,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              249,
+              1197,
+              1708,
+              1248
+            ],
+            "generated_text": "đi với họ đến đồn Hòa Lạc thì gặp một người thổ hào. Hồi trước vua",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.707,
+            "confidence": 92.63,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              249,
+              1259,
+              1707,
+              1308
+            ],
+            "generated_text": "Lê chạy ra ngoài, người ấy đã được biết mặt; lúc đó thấy vua, người",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.672,
+            "confidence": 98.6,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              248,
+              1319,
+              1705,
+              1366
+            ],
+            "generated_text": "Ấy bất giác rơi lệ, nhân tiện mọi vua vào trại trong núi tạm nghỉ.",
+            "n_lines": 1,
+            "tokens": 32,
+            "seconds": 0.816,
+            "confidence": 85.2,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              163,
+              1376,
+              1707,
+              1431
+            ],
+            "generated_text": "Bấy giờ, vua Lê và những người tùy từng luôn mấy ngày không ăn, ai",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.674,
+            "confidence": 95.23,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              245,
+              1436,
+              1705,
+              1484
+            ],
+            "generated_text": "nấy đều đã mệt lử. Người thổ hào kia liền giết gà làm com thét dãi.",
+            "n_lines": 1,
+            "tokens": 32,
+            "seconds": 0.834,
+            "confidence": 84.41,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              251,
+              1498,
+              1705,
+              1544
+            ],
+            "generated_text": "Vua sai bưng một mâm lên mời thái hậu; còn mình thì cùng ăn với",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.587,
+            "confidence": 95.35,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              248,
+              1553,
+              889,
+              1597
+            ],
+            "generated_text": "bọn Quýnh, Hiến ở mâm dưới.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.476,
+            "confidence": 96.33,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              335,
+              1631,
+              1704,
+              1675
+            ],
+            "generated_text": "An vừa xong, chợt nghe tin quân Tây Sơn đã đuổi theo đến nơi.",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.721,
+            "confidence": 93.68,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              249,
+              1687,
+              1088,
+              1733
+            ],
+            "generated_text": "Vua cuống quýt bảo người thổ hào răng:",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.508,
+            "confidence": 91.2,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              334,
+              1758,
+              1705,
+              1805
+            ],
+            "generated_text": "- Muôn đội hậu tình, không có gì để báo đáp, chỉ có trời cao đất",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.62,
+            "confidence": 94.75,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              246,
+              1819,
+              1705,
+              1866
+            ],
+            "generated_text": "dây chứng giám tắc lòng thành của ông mà ban phúc cho thôi. Bây",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.687,
+            "confidence": 91.68,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              245,
+              1880,
+              1702,
+              1925
+            ],
+            "generated_text": "giờ quân giặc gần tối, trước mắt đây có con đường sống nào có thể",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.619,
+            "confidence": 88.88,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              245,
+              1937,
+              1129,
+              1981
+            ],
+            "generated_text": "chay gấp lên của ải, xin tính kế ngay cho.",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.514,
+            "confidence": 89.41,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              334,
+              2010,
+              1702,
+              2056
+            ],
+            "generated_text": "Người thọ hào vội và sai con đưa đường, theo lối tất trong núi mà",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.692,
+            "confidence": 89.09,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              245,
+              2065,
+              1704,
+              2115
+            ],
+            "generated_text": "đi. Trời nhà nhem tối thì nhà vua đến của ải, theo kịp chỗ nghỉ của",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 0.726,
+            "confidence": 91.95,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              245,
+              2126,
+              1704,
+              2174
+            ],
+            "generated_text": "Tôn Sĩ Nghi. Một lát các viên quan khác cũng lúc tục theo đến, cùng",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.681,
+            "confidence": 90.57,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 32,
+            "box": [
+              245,
+              2188,
+              1702,
+              2235
+            ],
+            "generated_text": "nhìn nhau than thở, oán giận chảy nước mắt. Tôn Sĩ Nghị cũng lấy",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 0.739,
+            "confidence": 93.39,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 33,
+            "box": [
+              245,
+              2254,
+              496,
+              2284
+            ],
+            "generated_text": "lam xâu hổ.",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.263,
+            "confidence": 74.29,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 34,
+            "box": [
+              334,
+              2320,
+              1118,
+              2362
+            ],
+            "generated_text": "Nhân tiện, vua từ giả Sĩ Nghị và nói:",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.481,
+            "confidence": 91.75,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 35,
+            "box": [
+              242,
+              2429,
+              848,
+              2446
+            ],
+            "generated_text": ".",
+            "n_lines": 1,
+            "tokens": 2,
+            "seconds": 0.17,
+            "confidence": 36.99,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 36,
+            "box": [
+              337,
+              2471,
+              1701,
+              2510
+            ],
+            "generated_text": "1. Có sách chép, đạo quân Vân Quý lúc này mới kéo sang đến Sơn Tây, nghe tin",
+            "n_lines": 1,
+            "tokens": 33,
+            "seconds": 0.78,
+            "confidence": 97.57,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 37,
+            "box": [
+              242,
+              2520,
+              1216,
+              2556
+            ],
+            "generated_text": "Nghị thua chạy, nên cũng với vàng tìm đường tháo lui về.",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.665,
+            "confidence": 87.29,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      }
+    }
+  ]
+}

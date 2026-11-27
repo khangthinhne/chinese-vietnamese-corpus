@@ -1,0 +1,902 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_18",
+  "engine": "paddlevl",
+  "page": 370,
+  "runs": [
+    {
+      "key": "b6a97838ba2c749343608fb9a4c6ed1c24be42ad6b214e9cb418bc9a2b38b193",
+      "parameters": {
+        "image_sha256": "d14ee7d1cdebfd310ac73e766b88f11b674f06d0c59cc0a78ba351a454b50274",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T15:04:55+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_370.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        0,
+        2480,
+        3509
+      ],
+      "lines": [
+        {
+          "text": "Sưu tấm và khảo luận tác phẩm chủ Hán của người Việt Nam trước TK 10",
+          "bbox": [
+            289,
+            108,
+            1885,
+            172
+          ],
+          "confidence": 94.18
+        },
+        {
+          "text": "___",
+          "bbox": [
+            270,
+            200,
+            2262,
+            225
+          ],
+          "confidence": 21.05
+        },
+        {
+          "text": "(Thiên uyên tập anh, Thương",
+          "bbox": [
+            1139,
+            304,
+            2099,
+            367
+          ],
+          "confidence": 94.8
+        },
+        {
+          "text": "quyền, đê nhi thế nhất nhân).",
+          "bbox": [
+            1124,
+            394,
+            2124,
+            456
+          ],
+          "confidence": 79.06
+        },
+        {
+          "text": "KHAO DI:",
+          "bbox": [
+            411,
+            537,
+            726,
+            594
+          ],
+          "confidence": 95.25
+        },
+        {
+          "text": "(1) Bản A : không có chủ giả (or \"chữ\" ?)",
+          "bbox": [
+            284,
+            660,
+            1400,
+            728
+          ],
+          "confidence": 56.39
+        },
+        {
+          "text": "(2) Bản A: thi 是.",
+          "bbox": [
+            282,
+            799,
+            915,
+            866
+          ],
+          "confidence": 93.07
+        },
+        {
+          "text": "(3) Bản A:ma 魔.",
+          "bbox": [
+            281,
+            936,
+            928,
+            1003
+          ],
+          "confidence": 94.23
+        },
+        {
+          "text": "(4) Bản A, Bản B : 踈 . Không rõ chữ gì. Phải chăng do",
+          "bbox": [
+            265,
+            1074,
+            2244,
+            1143
+          ],
+          "confidence": 94.1
+        },
+        {
+          "text": "chū sơ đ� viết nhầm mà thành ? Chúng tôi chữa lai.",
+          "bbox": [
+            403,
+            1174,
+            2240,
+            1241
+          ],
+          "confidence": 76.21
+        },
+        {
+          "text": "chọ tra cứu them.",
+          "bbox": [
+            403,
+            1288,
+            1000,
+            1334
+          ],
+          "confidence": 84.14
+        },
+        {
+          "text": "(5) Bản A, Bản B : giá 遮 nghĩa là che lấp, không hợp",
+          "bbox": [
+            281,
+            1402,
+            2240,
+            1483
+          ],
+          "confidence": 97.86
+        },
+        {
+          "text": "văn cảnh. Chúng tôi đoán là giá 這，do động âm mà",
+          "bbox": [
+            397,
+            1502,
+            2240,
+            1580
+          ],
+          "confidence": 87.64
+        },
+        {
+          "text": "viết nhầm. Chữ giá thú hai có nghĩa là “này”, đặt",
+          "bbox": [
+            397,
+            1600,
+            2240,
+            1668
+          ],
+          "confidence": 84.77
+        },
+        {
+          "text": "vào câu rất thích hợp. Vây chữa lai.",
+          "bbox": [
+            397,
+            1691,
+            1621,
+            1758
+          ],
+          "confidence": 97.25
+        },
+        {
+          "text": "DICH NGHIA:",
+          "bbox": [
+            408,
+            1935,
+            854,
+            1991
+          ],
+          "confidence": 94.93
+        },
+        {
+          "text": "TÂM TỰC LA PHẬT (1).",
+          "bbox": [
+            941,
+            2060,
+            1537,
+            2120
+          ],
+          "confidence": 90.26
+        },
+        {
+          "text": "THIEN HOI - CAM THANH",
+          "bbox": [
+            1193,
+            2193,
+            1945,
+            2248
+          ],
+          "confidence": 94.91
+        },
+        {
+          "text": "... Thiên Hôi (...) xuất gia, tư đặt hiệu là Tổ Phong,",
+          "bbox": [
+            414,
+            2308,
+            2231,
+            2375
+          ],
+          "confidence": 94.3
+        },
+        {
+          "text": "dao khắp cõi ngoài tìm học yếu lĩnh đảo Thiên. Sau gặp",
+          "bbox": [
+            284,
+            2402,
+            2232,
+            2477
+          ],
+          "confidence": 93.14
+        },
+        {
+          "text": "Cảm Thành ở chùa Kiến Sở bèn nương thân hầu ha, hơn",
+          "bbox": [
+            286,
+            2493,
+            2232,
+            2559
+          ],
+          "confidence": 89.99
+        },
+        {
+          "text": "mười năm không tổ về mét mối. Một hôm nhà sự vào",
+          "bbox": [
+            286,
+            2586,
+            2233,
+            2650
+          ],
+          "confidence": 83.52
+        },
+        {
+          "text": "phòng hỏi rằng : “Kinh sách có nói : Thích Ca Như Lai",
+          "bbox": [
+            286,
+            2676,
+            2231,
+            2742
+          ],
+          "confidence": 91.97
+        },
+        {
+          "text": "tùy hoàn cảnh mà tu hành, trải qua ba a tăng kỳ kiếp",
+          "bbox": [
+            287,
+            2769,
+            2232,
+            2834
+          ],
+          "confidence": 96.38
+        },
+        {
+          "text": "lón (2) mới được thành Phát. Nay Đai đức (3) thường bảo",
+          "bbox": [
+            287,
+            2858,
+            2234,
+            2924
+          ],
+          "confidence": 90.71
+        },
+        {
+          "text": "tâm tức là Phát, con đây chưa hiểu, mong được chỉ vẽ",
+          "bbox": [
+            288,
+            2950,
+            2475,
+            3014
+          ],
+          "confidence": 93.26
+        },
+        {
+          "text": "cho\". Thành hỏi : \"Kinh sách là do ai nói đấy?\" Nhà sư",
+          "bbox": [
+            285,
+            3039,
+            2434,
+            3104
+          ],
+          "confidence": 92.83
+        },
+        {
+          "text": "đáp : “Há chăng phải là do Phát nói đó sao?” Thành",
+          "bbox": [
+            286,
+            3129,
+            2334,
+            3196
+          ],
+          "confidence": 91.4
+        },
+        {
+          "text": "rằng : “Nếu là Phát nói, thì tại sao Kinh Văn Thù",
+          "bbox": [
+            285,
+            3217,
+            2241,
+            3287
+          ],
+          "confidence": 90.35
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          3509
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 41.558,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              289,
+              108,
+              1885,
+              172
+            ],
+            "generated_text": "Sưu tấm và khảo luận tác phẩm chủ Hán của người Việt Nam trước TK 10",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 1.788,
+            "confidence": 94.18,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              270,
+              200,
+              2262,
+              225
+            ],
+            "generated_text": "___",
+            "n_lines": 1,
+            "tokens": 2,
+            "seconds": 0.475,
+            "confidence": 21.05,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              1139,
+              304,
+              2099,
+              367
+            ],
+            "generated_text": "(Thiên uyên tập anh, Thương",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.051,
+            "confidence": 94.8,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              1124,
+              394,
+              2124,
+              456
+            ],
+            "generated_text": "quyền, đê nhi thế nhất nhân).",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.057,
+            "confidence": 79.06,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              411,
+              537,
+              726,
+              594
+            ],
+            "generated_text": "KHAO DI:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.656,
+            "confidence": 95.25,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              284,
+              660,
+              1400,
+              728
+            ],
+            "generated_text": "(1) Bản A : không có chủ giả (or \"chữ\" ?)",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.551,
+            "confidence": 56.39,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              282,
+              799,
+              915,
+              866
+            ],
+            "generated_text": "(2) Bản A: thi 是.",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.983,
+            "confidence": 93.07,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              281,
+              936,
+              928,
+              1003
+            ],
+            "generated_text": "(3) Bản A:ma 魔.",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.048,
+            "confidence": 94.23,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              265,
+              1074,
+              2244,
+              1143
+            ],
+            "generated_text": "(4) Bản A, Bản B : 踈 . Không rõ chữ gì. Phải chăng do",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 2.191,
+            "confidence": 94.1,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              403,
+              1174,
+              2240,
+              1241
+            ],
+            "generated_text": "chū sơ đ� viết nhầm mà thành ? Chúng tôi chữa lai.",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.597,
+            "confidence": 76.21,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              403,
+              1288,
+              1000,
+              1334
+            ],
+            "generated_text": "chọ tra cứu them.",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.906,
+            "confidence": 84.14,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              281,
+              1402,
+              2240,
+              1483
+            ],
+            "generated_text": "(5) Bản A, Bản B : giá 遮 nghĩa là che lấp, không hợp",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.74,
+            "confidence": 97.86,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              397,
+              1502,
+              2240,
+              1580
+            ],
+            "generated_text": "văn cảnh. Chúng tôi đoán là giá 這，do động âm mà",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.458,
+            "confidence": 87.64,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              397,
+              1600,
+              2240,
+              1668
+            ],
+            "generated_text": "viết nhầm. Chữ giá thú hai có nghĩa là “này”, đặt",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.65,
+            "confidence": 84.77,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              397,
+              1691,
+              1621,
+              1758
+            ],
+            "generated_text": "vào câu rất thích hợp. Vây chữa lai.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.374,
+            "confidence": 97.25,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              408,
+              1935,
+              854,
+              1991
+            ],
+            "generated_text": "DICH NGHIA:",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.699,
+            "confidence": 94.93,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              941,
+              2060,
+              1537,
+              2120
+            ],
+            "generated_text": "TÂM TỰC LA PHẬT (1).",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.407,
+            "confidence": 90.26,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              1193,
+              2193,
+              1945,
+              2248
+            ],
+            "generated_text": "THIEN HOI - CAM THANH",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.953,
+            "confidence": 94.91,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              414,
+              2308,
+              2231,
+              2375
+            ],
+            "generated_text": "... Thiên Hôi (...) xuất gia, tư đặt hiệu là Tổ Phong,",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.602,
+            "confidence": 94.3,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              284,
+              2402,
+              2232,
+              2477
+            ],
+            "generated_text": "dao khắp cõi ngoài tìm học yếu lĩnh đảo Thiên. Sau gặp",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 1.946,
+            "confidence": 93.14,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              286,
+              2493,
+              2232,
+              2559
+            ],
+            "generated_text": "Cảm Thành ở chùa Kiến Sở bèn nương thân hầu ha, hơn",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.846,
+            "confidence": 89.99,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              286,
+              2586,
+              2233,
+              2650
+            ],
+            "generated_text": "mười năm không tổ về mét mối. Một hôm nhà sự vào",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.467,
+            "confidence": 83.52,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              286,
+              2676,
+              2231,
+              2742
+            ],
+            "generated_text": "phòng hỏi rằng : “Kinh sách có nói : Thích Ca Như Lai",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.646,
+            "confidence": 91.97,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              287,
+              2769,
+              2232,
+              2834
+            ],
+            "generated_text": "tùy hoàn cảnh mà tu hành, trải qua ba a tăng kỳ kiếp",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.86,
+            "confidence": 96.38,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              287,
+              2858,
+              2234,
+              2924
+            ],
+            "generated_text": "lón (2) mới được thành Phát. Nay Đai đức (3) thường bảo",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.78,
+            "confidence": 90.71,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              288,
+              2950,
+              2475,
+              3014
+            ],
+            "generated_text": "tâm tức là Phát, con đây chưa hiểu, mong được chỉ vẽ",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.736,
+            "confidence": 93.26,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              285,
+              3039,
+              2434,
+              3104
+            ],
+            "generated_text": "cho\". Thành hỏi : \"Kinh sách là do ai nói đấy?\" Nhà sư",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.909,
+            "confidence": 92.83,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              286,
+              3129,
+              2334,
+              3196
+            ],
+            "generated_text": "đáp : “Há chăng phải là do Phát nói đó sao?” Thành",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.598,
+            "confidence": 91.4,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              285,
+              3217,
+              2241,
+              3287
+            ],
+            "generated_text": "rằng : “Nếu là Phát nói, thì tại sao Kinh Văn Thù",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.58,
+            "confidence": 90.35,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              295,
+              1140,
+              2135,
+              1153
+            ],
+            "ink": 920
+          },
+          {
+            "box": [
+              976,
+              1668,
+              2193,
+              1678
+            ],
+            "ink": 663
+          },
+          {
+            "box": [
+              359,
+              2833,
+              2210,
+              2844
+            ],
+            "ink": 728
+          },
+          {
+            "box": [
+              796,
+              3014,
+              2440,
+              3024
+            ],
+            "ink": 691
+          },
+          {
+            "box": [
+              369,
+              3193,
+              2278,
+              3205
+            ],
+            "ink": 933
+          },
+          {
+            "box": [
+              291,
+              3403,
+              2070,
+              3430
+            ],
+            "ink": 2305
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

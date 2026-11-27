@@ -1,0 +1,896 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_18",
+  "engine": "paddlevl",
+  "page": 423,
+  "runs": [
+    {
+      "key": "06df3e0a58abb04c86aa204542034fc4da720f678d8f59bd7b6d98c0cf623ab0",
+      "parameters": {
+        "image_sha256": "eb42b3c445ae82641785645224d636fa646f90e0c2632d95c3c16c8da97e3497",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T15:46:14+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_423.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        0,
+        2480,
+        3509
+      ],
+      "lines": [
+        {
+          "text": "[",
+          "bbox": [
+            289,
+            240,
+            2179,
+            248
+          ],
+          "confidence": 10.0
+        },
+        {
+          "text": "$\\begin{aligned}& \\text{✗}\\\\& \\text{✗}\\\\& \\text{✗}\\\\& \\text{✗}\\end{aligned}$",
+          "bbox": [
+            289,
+            248,
+            2179,
+            257
+          ],
+          "confidence": 10.0
+        },
+        {
+          "text": "CHU THICH:",
+          "bbox": [
+            435,
+            343,
+            845,
+            395
+          ],
+          "confidence": 88.59
+        },
+        {
+          "text": "(33) Thuy hiệu : tên đặt cho người sau khi chết, thường gọi",
+          "bbox": [
+            307,
+            442,
+            2173,
+            502
+          ],
+          "confidence": 96.44
+        },
+        {
+          "text": "len dạc diem của người ay khi con sông.",
+          "bbox": [
+            437,
+            537,
+            1636,
+            580
+          ],
+          "confidence": 78.23
+        },
+        {
+          "text": "(34) Tam hoàng : gôm Toại Nhân, Phục Hy, Thần Nông (theo",
+          "bbox": [
+            307,
+            623,
+            2444,
+            693
+          ],
+          "confidence": 93.33
+        },
+        {
+          "text": "Thương thư đại truyền). Ngũ dế : gồm Hoàng Đế, Chuyên",
+          "bbox": [
+            434,
+            704,
+            2444,
+            775
+          ],
+          "confidence": 84.33
+        },
+        {
+          "text": "Húc, Để Cốc, Để Nghiêu, Để Thuấn (theo Sử ký).",
+          "bbox": [
+            434,
+            784,
+            2444,
+            843
+          ],
+          "confidence": 90.19
+        },
+        {
+          "text": "(35) Giác : tiếng Phan là bodhi, góm 2 nghĩa : giác sát và giác",
+          "bbox": [
+            304,
+            887,
+            2444,
+            956
+          ],
+          "confidence": 90.87
+        },
+        {
+          "text": "ngô. Giác sát, tức tỉnh táo xem xét để biết đâu là việc ác.",
+          "bbox": [
+            432,
+            967,
+            2444,
+            1026
+          ],
+          "confidence": 94.12
+        },
+        {
+          "text": "Giác ngộ, tức khám phá ra chân lý. Một số thuộc tính",
+          "bbox": [
+            434,
+            1049,
+            2444,
+            1109
+          ],
+          "confidence": 93.45
+        },
+        {
+          "text": "miêu tả bên dưới, như \"mơ hồ biến hóa, phân thân tán",
+          "bbox": [
+            436,
+            1129,
+            2181,
+            1190
+          ],
+          "confidence": 92.47
+        },
+        {
+          "text": "thế ...\" là để nói về cái \"pháp thân\" của Phát (có khác với",
+          "bbox": [
+            433,
+            1209,
+            2444,
+            1271
+          ],
+          "confidence": 86.19
+        },
+        {
+          "text": "hóa thân và báo thân).",
+          "bbox": [
+            433,
+            1293,
+            2444,
+            1349
+          ],
+          "confidence": 97.17
+        },
+        {
+          "text": "問曰：何謂之爲道？道何類也？",
+          "bbox": [
+            370,
+            1695,
+            2444,
+            1773
+          ],
+          "confidence": 97.42
+        },
+        {
+          "text": "牟子曰：道之言導也。導人致於無爲。牽之",
+          "bbox": [
+            238,
+            1852,
+            2444,
+            1932
+          ],
+          "confidence": 98.43
+        },
+        {
+          "text": "無前，引之無後，舉之無上，抑之無下，視之無",
+          "bbox": [
+            305,
+            1978,
+            2187,
+            2057
+          ],
+          "confidence": 99.15
+        },
+        {
+          "text": "形，聽之無聲。四表爲大，綩綖其外；毫釐爲",
+          "bbox": [
+            309,
+            2099,
+            2184,
+            2179
+          ],
+          "confidence": 96.38
+        },
+        {
+          "text": "細，間關其內。故謂之道。",
+          "bbox": [
+            170,
+            2222,
+            1338,
+            2298
+          ],
+          "confidence": 92.49
+        },
+        {
+          "text": "PHIEN AM :",
+          "bbox": [
+            432,
+            2494,
+            2441,
+            2548
+          ],
+          "confidence": 97.31
+        },
+        {
+          "text": "Vấn viết : Hà vi chi vi dao ? Đạo hà loại giả ?",
+          "bbox": [
+            429,
+            2611,
+            2444,
+            2676
+          ],
+          "confidence": 82.44
+        },
+        {
+          "text": "Mâu Tử viết : Đạo chi ngôn đạo giả. Đạo nhân trí ư",
+          "bbox": [
+            429,
+            2734,
+            2444,
+            2807
+          ],
+          "confidence": 90.02
+        },
+        {
+          "text": "vô vi. Khiên chi vô tiến, dân chi vô hậu, cứ chi vô",
+          "bbox": [
+            300,
+            2823,
+            2444,
+            2888
+          ],
+          "confidence": 86.81
+        },
+        {
+          "text": "thượng, ức chi vô ha, thị chi vô hình, thính chi vô thanh.",
+          "bbox": [
+            303,
+            2912,
+            2444,
+            2985
+          ],
+          "confidence": 88.89
+        },
+        {
+          "text": "Từ biểu vi đại, uyển diện kỳ ngoại ; hào ly vi tế, gian",
+          "bbox": [
+            298,
+            2992,
+            2475,
+            3075
+          ],
+          "confidence": 92.2
+        },
+        {
+          "text": "quan kỳ nội. Cổ vi chi đao.",
+          "bbox": [
+            298,
+            3086,
+            2444,
+            3146
+          ],
+          "confidence": 84.61
+        },
+        {
+          "text": "391",
+          "bbox": [
+            2085,
+            3244,
+            2444,
+            3260
+          ],
+          "confidence": 58.38
+        },
+        {
+          "text": "1",
+          "bbox": [
+            2085,
+            3260,
+            2444,
+            3276
+          ],
+          "confidence": 58.38
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          3509
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 47.661,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              35,
+              0,
+              2444,
+              27
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.491,
+            "confidence": 94.22,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              289,
+              240,
+              2179,
+              257
+            ],
+            "generated_text": "[\n$\\begin{aligned}& \\text{✗}\\\\& \\text{✗}\\\\& \\text{✗}\\\\& \\text{✗}\\end{aligned}$\n\n$\\begin{aligned}& \\text{✗}\\\\& \\text{✗}\\\\& \\text{✗}\\\\& \\text{✗}\\end{aligned}$",
+            "n_lines": 2,
+            "tokens": 85,
+            "seconds": 6.408,
+            "confidence": 10.0,
+            "flags": [
+              "duplicate_lines_dropped"
+            ],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              435,
+              343,
+              845,
+              395
+            ],
+            "generated_text": "CHU THICH:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.734,
+            "confidence": 88.59,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              307,
+              442,
+              2173,
+              502
+            ],
+            "generated_text": "(33) Thuy hiệu : tên đặt cho người sau khi chết, thường gọi",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.765,
+            "confidence": 96.44,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              437,
+              537,
+              1636,
+              580
+            ],
+            "generated_text": "len dạc diem của người ay khi con sông.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.088,
+            "confidence": 78.23,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              307,
+              623,
+              2444,
+              693
+            ],
+            "generated_text": "(34) Tam hoàng : gôm Toại Nhân, Phục Hy, Thần Nông (theo",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.141,
+            "confidence": 93.33,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              434,
+              704,
+              2444,
+              775
+            ],
+            "generated_text": "Thương thư đại truyền). Ngũ dế : gồm Hoàng Đế, Chuyên",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.772,
+            "confidence": 84.33,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              434,
+              784,
+              2444,
+              843
+            ],
+            "generated_text": "Húc, Để Cốc, Để Nghiêu, Để Thuấn (theo Sử ký).",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 2.159,
+            "confidence": 90.19,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              304,
+              887,
+              2444,
+              956
+            ],
+            "generated_text": "(35) Giác : tiếng Phan là bodhi, góm 2 nghĩa : giác sát và giác",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 2.242,
+            "confidence": 90.87,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              432,
+              967,
+              2444,
+              1026
+            ],
+            "generated_text": "ngô. Giác sát, tức tỉnh táo xem xét để biết đâu là việc ác.",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 2.104,
+            "confidence": 94.12,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              434,
+              1049,
+              2444,
+              1109
+            ],
+            "generated_text": "Giác ngộ, tức khám phá ra chân lý. Một số thuộc tính",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.811,
+            "confidence": 93.45,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              436,
+              1129,
+              2181,
+              1190
+            ],
+            "generated_text": "miêu tả bên dưới, như \"mơ hồ biến hóa, phân thân tán",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 2.006,
+            "confidence": 92.47,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              433,
+              1209,
+              2444,
+              1271
+            ],
+            "generated_text": "thế ...\" là để nói về cái \"pháp thân\" của Phát (có khác với",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.86,
+            "confidence": 86.19,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              433,
+              1293,
+              2444,
+              1349
+            ],
+            "generated_text": "hóa thân và báo thân).",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 1.081,
+            "confidence": 97.17,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              370,
+              1695,
+              2444,
+              1773
+            ],
+            "generated_text": "問曰：何謂之爲道？道何類也？",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.356,
+            "confidence": 97.42,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              238,
+              1852,
+              2444,
+              1932
+            ],
+            "generated_text": "牟子曰：道之言導也。導人致於無爲。牽之",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.818,
+            "confidence": 98.43,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              305,
+              1978,
+              2187,
+              2057
+            ],
+            "generated_text": "無前，引之無後，舉之無上，抑之無下，視之無",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.61,
+            "confidence": 99.15,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              309,
+              2099,
+              2184,
+              2179
+            ],
+            "generated_text": "形，聽之無聲。四表爲大，綩綖其外；毫釐爲",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 2.023,
+            "confidence": 96.38,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              170,
+              2222,
+              1338,
+              2298
+            ],
+            "generated_text": "細，間關其內。故謂之道。",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.17,
+            "confidence": 92.49,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              432,
+              2494,
+              2441,
+              2548
+            ],
+            "generated_text": "PHIEN AM :",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.745,
+            "confidence": 97.31,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              429,
+              2611,
+              2444,
+              2676
+            ],
+            "generated_text": "Vấn viết : Hà vi chi vi dao ? Đạo hà loại giả ?",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.562,
+            "confidence": 82.44,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              429,
+              2734,
+              2444,
+              2807
+            ],
+            "generated_text": "Mâu Tử viết : Đạo chi ngôn đạo giả. Đạo nhân trí ư",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.717,
+            "confidence": 90.02,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              300,
+              2823,
+              2444,
+              2888
+            ],
+            "generated_text": "vô vi. Khiên chi vô tiến, dân chi vô hậu, cứ chi vô",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.853,
+            "confidence": 86.81,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              303,
+              2912,
+              2444,
+              2985
+            ],
+            "generated_text": "thượng, ức chi vô ha, thị chi vô hình, thính chi vô thanh.",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.743,
+            "confidence": 88.89,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              298,
+              2992,
+              2475,
+              3075
+            ],
+            "generated_text": "Từ biểu vi đại, uyển diện kỳ ngoại ; hào ly vi tế, gian",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.856,
+            "confidence": 92.2,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              298,
+              3086,
+              2444,
+              3146
+            ],
+            "generated_text": "quan kỳ nội. Cổ vi chi đao.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.356,
+            "confidence": 84.61,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              2085,
+              3244,
+              2444,
+              3276
+            ],
+            "generated_text": "391\n1",
+            "n_lines": 2,
+            "tokens": 6,
+            "seconds": 0.685,
+            "confidence": 58.38,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              44,
+              3483,
+              2444,
+              3497
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.499,
+            "confidence": 16.33,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              2011,
+              170,
+              2174,
+              188
+            ],
+            "ink": 1089
+          },
+          {
+            "box": [
+              2010,
+              189,
+              2175,
+              204
+            ],
+            "ink": 807
+          },
+          {
+            "box": [
+              544,
+              501,
+              2142,
+              511
+            ],
+            "ink": 422
+          },
+          {
+            "box": [
+              435,
+              520,
+              1553,
+              540
+            ],
+            "ink": 1451
+          },
+          {
+            "box": [
+              319,
+              3143,
+              2444,
+              3154
+            ],
+            "ink": 628
+          },
+          {
+            "box": [
+              2175,
+              3203,
+              2444,
+              3212
+            ],
+            "ink": 531
+          },
+          {
+            "box": [
+              2081,
+              3279,
+              2444,
+              3289
+            ],
+            "ink": 560
+          },
+          {
+            "box": [
+              2065,
+              3304,
+              2444,
+              3321
+            ],
+            "ink": 1067
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

@@ -1,0 +1,1040 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 89,
+  "runs": [
+    {
+      "key": "f8700e69b3bc4cbcf6af05f47ca91ecaf61a0e7e79ea5c995cccefc0a65f2541",
+      "parameters": {
+        "image_sha256": "44e819dde11f9235a9602c7638c2c5174b8d68ddc736bbe6d7a173479f50f09c",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T12:06:19+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_089.png",
+      "image_size": [
+        2774,
+        3388
+      ],
+      "crop_box": [
+        0,
+        0,
+        2774,
+        3388
+      ],
+      "lines": [
+        {
+          "text": "ngothinhamch1.pdf",
+          "bbox": [
+            7,
+            19,
+            296,
+            45
+          ],
+          "confidence": 98.71
+        },
+        {
+          "text": "NGÔ THI NHÂM TOẠN TẬP - TẬP III",
+          "bbox": [
+            668,
+            312,
+            1443,
+            351
+          ],
+          "confidence": 80.86
+        },
+        {
+          "text": "Sú thân có tang, chơi từ cuộc vui.",
+          "bbox": [
+            1118,
+            417,
+            1882,
+            461
+          ],
+          "confidence": 87.9
+        },
+        {
+          "text": "Chúc dịch trong dinh đấu ngôi ôm trán,",
+          "bbox": [
+            1118,
+            499,
+            2174,
+            544
+          ],
+          "confidence": 78.79
+        },
+        {
+          "text": "Ai ai nấy không quên Tiên vương ta.",
+          "bbox": [
+            1115,
+            580,
+            2164,
+            625
+          ],
+          "confidence": 92.95
+        },
+        {
+          "text": "Tỉnh Hình\\(^{(2)}\\) đường hiểm, người xưa từng nói,",
+          "bbox": [
+            670,
+            662,
+            2163,
+            709
+          ],
+          "confidence": 91.64
+        },
+        {
+          "text": "Hiểm trở không bằng cản thân văn hơn.",
+          "bbox": [
+            935,
+            742,
+            2041,
+            791
+          ],
+          "confidence": 88.08
+        },
+        {
+          "text": "Đi xa trẻo cao phải tư giữ gìn,",
+          "bbox": [
+            1118,
+            828,
+            1806,
+            872
+          ],
+          "confidence": 82.53
+        },
+        {
+          "text": "Thiên vương đã húa cho về nước sớm.",
+          "bbox": [
+            1118,
+            905,
+            1995,
+            950
+          ],
+          "confidence": 95.97
+        },
+        {
+          "text": "KHAO DI:",
+          "bbox": [
+            670,
+            989,
+            890,
+            1028
+          ],
+          "confidence": 91.21
+        },
+        {
+          "text": "a. Bản A.1579: Trì chiếu thư 持詔書.",
+          "bbox": [
+            817,
+            1065,
+            1582,
+            1107
+          ],
+          "confidence": 93.04
+        },
+        {
+          "text": "b. Bản A.1579: Nhất hồi lưu é - 回流翳",
+          "bbox": [
+            816,
+            1143,
+            1681,
+            1187
+          ],
+          "confidence": 84.3
+        },
+        {
+          "text": "c. Bản A.1579: Đăng ngạn 登岸.",
+          "bbox": [
+            818,
+            1221,
+            1478,
+            1268
+          ],
+          "confidence": 91.29
+        },
+        {
+          "text": "d.Bản A.1579: Bất kỳ ㄟ",
+          "bbox": [
+            820,
+            1299,
+            1396,
+            1340
+          ],
+          "confidence": 76.67
+        },
+        {
+          "text": "CHU THICH:",
+          "bbox": [
+            670,
+            1404,
+            959,
+            1444
+          ],
+          "confidence": 91.37
+        },
+        {
+          "text": "1.Vĩnh Phúc: Tên huyện thuộc tỉnh Quảng Tây, phía nam Quế Lâm.",
+          "bbox": [
+            823,
+            1478,
+            2264,
+            1529
+          ],
+          "confidence": 97.74
+        },
+        {
+          "text": "2.Tỉnh Hình: Một ngọn núi thuộc huyện Tỉnh Hình tỉnh Hà Bắc, núi cao",
+          "bbox": [
+            820,
+            1557,
+            2379,
+            1606
+          ],
+          "confidence": 95.39
+        },
+        {
+          "text": "hiểm trở, xung quanh nhô cao, ở giữa tạo thành thung lũng sâu như giếng,",
+          "bbox": [
+            669,
+            1636,
+            2377,
+            1687
+          ],
+          "confidence": 96.18
+        },
+        {
+          "text": "nên có tên ấy. Sau \"Tỉnh Hình\" thường dùng để chỉ những đoạn đường khó đi,",
+          "bbox": [
+            670,
+            1713,
+            2377,
+            1764
+          ],
+          "confidence": 95.1
+        },
+        {
+          "text": "hiểm trợ.",
+          "bbox": [
+            670,
+            1805,
+            866,
+            1835
+          ],
+          "confidence": 70.75
+        },
+        {
+          "text": "DICH THO:",
+          "bbox": [
+            671,
+            1901,
+            1258,
+            1941
+          ],
+          "confidence": 97.67
+        },
+        {
+          "text": "Đêm ngày đi gấp năm trăm đặm,",
+          "bbox": [
+            1080,
+            1978,
+            1846,
+            2031
+          ],
+          "confidence": 87.99
+        },
+        {
+          "text": "Người ngựa ruồi nhanh chăng nghỉ thêm.",
+          "bbox": [
+            1080,
+            2059,
+            2042,
+            2112
+          ],
+          "confidence": 88.86
+        },
+        {
+          "text": "Chiếu thu đưa tối truyền hoá tốc,",
+          "bbox": [
+            796,
+            2141,
+            1843,
+            2185
+          ],
+          "confidence": 85.26
+        },
+        {
+          "text": "Sú giả tuân theo ruồi sao đêm.",
+          "bbox": [
+            1083,
+            2224,
+            1786,
+            2267
+          ],
+          "confidence": 88.34
+        },
+        {
+          "text": "Mưa móc đầy trời xe ướt sũng,",
+          "bbox": [
+            1082,
+            2310,
+            1774,
+            2353
+          ],
+          "confidence": 87.26
+        },
+        {
+          "text": "Một trân âm u, mưa chứa chan.",
+          "bbox": [
+            1082,
+            2397,
+            1814,
+            2441
+          ],
+          "confidence": 87.59
+        },
+        {
+          "text": "Thác reo như sấm, dòng chảy xiết,",
+          "bbox": [
+            1086,
+            2483,
+            1871,
+            2528
+          ],
+          "confidence": 88.85
+        },
+        {
+          "text": "Lái đò goi to: \"Mời sang sông.\"",
+          "bbox": [
+            1082,
+            2573,
+            1783,
+            2618
+          ],
+          "confidence": 92.72
+        },
+        {
+          "text": "Vua qua sông xong lai treo núi,",
+          "bbox": [
+            1093,
+            2676,
+            1804,
+            2709
+          ],
+          "confidence": 86.79
+        },
+        {
+          "text": "Đá núi như chông trời mit mừng.",
+          "bbox": [
+            1083,
+            2757,
+            1917,
+            2801
+          ],
+          "confidence": 87.35
+        },
+        {
+          "text": "Núi văng quanh hưu, không làng bán,",
+          "bbox": [
+            1083,
+            2847,
+            1970,
+            2900
+          ],
+          "confidence": 87.16
+        },
+        {
+          "text": "Người đi tiếng nói ở từng không.",
+          "bbox": [
+            1082,
+            2937,
+            1828,
+            2983
+          ],
+          "confidence": 96.42
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2774,
+          3388
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 47.259,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              7,
+              19,
+              296,
+              45
+            ],
+            "generated_text": "ngothinhamch1.pdf",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.919,
+            "confidence": 98.71,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              668,
+              312,
+              1443,
+              351
+            ],
+            "generated_text": "NGÔ THI NHÂM TOẠN TẬP - TẬP III",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 1.886,
+            "confidence": 80.86,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              671,
+              355,
+              2380,
+              370
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.456,
+            "confidence": 14.26,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              1118,
+              417,
+              1882,
+              461
+            ],
+            "generated_text": "Sú thân có tang, chơi từ cuộc vui.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.262,
+            "confidence": 87.9,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              1118,
+              499,
+              2174,
+              544
+            ],
+            "generated_text": "Chúc dịch trong dinh đấu ngôi ôm trán,",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.569,
+            "confidence": 78.79,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              1115,
+              580,
+              2164,
+              625
+            ],
+            "generated_text": "Ai ai nấy không quên Tiên vương ta.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.356,
+            "confidence": 92.95,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              670,
+              662,
+              2163,
+              709
+            ],
+            "generated_text": "Tỉnh Hình\\(^{(2)}\\) đường hiểm, người xưa từng nói,",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.658,
+            "confidence": 91.64,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              935,
+              742,
+              2041,
+              791
+            ],
+            "generated_text": "Hiểm trở không bằng cản thân văn hơn.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.347,
+            "confidence": 88.08,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              1118,
+              828,
+              1806,
+              872
+            ],
+            "generated_text": "Đi xa trẻo cao phải tư giữ gìn,",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.31,
+            "confidence": 82.53,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              1118,
+              905,
+              1995,
+              950
+            ],
+            "generated_text": "Thiên vương đã húa cho về nước sớm.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.371,
+            "confidence": 95.97,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              670,
+              989,
+              890,
+              1028
+            ],
+            "generated_text": "KHAO DI:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.687,
+            "confidence": 91.21,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              817,
+              1065,
+              1582,
+              1107
+            ],
+            "generated_text": "a. Bản A.1579: Trì chiếu thư 持詔書.",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 1.89,
+            "confidence": 93.04,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              816,
+              1143,
+              1681,
+              1187
+            ],
+            "generated_text": "b. Bản A.1579: Nhất hồi lưu é - 回流翳",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 1.984,
+            "confidence": 84.3,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              818,
+              1221,
+              1478,
+              1268
+            ],
+            "generated_text": "c. Bản A.1579: Đăng ngạn 登岸.",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.526,
+            "confidence": 91.29,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              820,
+              1299,
+              1396,
+              1340
+            ],
+            "generated_text": "d.Bản A.1579: Bất kỳ ㄟ",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.629,
+            "confidence": 76.67,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              670,
+              1404,
+              959,
+              1444
+            ],
+            "generated_text": "CHU THICH:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.723,
+            "confidence": 91.37,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              823,
+              1478,
+              2264,
+              1529
+            ],
+            "generated_text": "1.Vĩnh Phúc: Tên huyện thuộc tỉnh Quảng Tây, phía nam Quế Lâm.",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.1,
+            "confidence": 97.74,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              820,
+              1557,
+              2379,
+              1606
+            ],
+            "generated_text": "2.Tỉnh Hình: Một ngọn núi thuộc huyện Tỉnh Hình tỉnh Hà Bắc, núi cao",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 2.217,
+            "confidence": 95.39,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              669,
+              1636,
+              2377,
+              1687
+            ],
+            "generated_text": "hiểm trở, xung quanh nhô cao, ở giữa tạo thành thung lũng sâu như giếng,",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 2.332,
+            "confidence": 96.18,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              670,
+              1713,
+              2377,
+              1764
+            ],
+            "generated_text": "nên có tên ấy. Sau \"Tỉnh Hình\" thường dùng để chỉ những đoạn đường khó đi,",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.253,
+            "confidence": 95.1,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              670,
+              1805,
+              866,
+              1835
+            ],
+            "generated_text": "hiểm trợ.",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.706,
+            "confidence": 70.75,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              671,
+              1901,
+              1258,
+              1941
+            ],
+            "generated_text": "DICH THO:",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.712,
+            "confidence": 97.67,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              1080,
+              1978,
+              1846,
+              2031
+            ],
+            "generated_text": "Đêm ngày đi gấp năm trăm đặm,",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.193,
+            "confidence": 87.99,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              1080,
+              2059,
+              2042,
+              2112
+            ],
+            "generated_text": "Người ngựa ruồi nhanh chăng nghỉ thêm.",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.559,
+            "confidence": 88.86,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              796,
+              2141,
+              1843,
+              2185
+            ],
+            "generated_text": "Chiếu thu đưa tối truyền hoá tốc,",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.416,
+            "confidence": 85.26,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              1083,
+              2224,
+              1786,
+              2267
+            ],
+            "generated_text": "Sú giả tuân theo ruồi sao đêm.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.124,
+            "confidence": 88.34,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              1082,
+              2310,
+              1774,
+              2353
+            ],
+            "generated_text": "Mưa móc đầy trời xe ướt sũng,",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.374,
+            "confidence": 87.26,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              1082,
+              2397,
+              1814,
+              2441
+            ],
+            "generated_text": "Một trân âm u, mưa chứa chan.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.235,
+            "confidence": 87.59,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              1086,
+              2483,
+              1871,
+              2528
+            ],
+            "generated_text": "Thác reo như sấm, dòng chảy xiết,",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.395,
+            "confidence": 88.85,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              1082,
+              2573,
+              1783,
+              2618
+            ],
+            "generated_text": "Lái đò goi to: \"Mời sang sông.\"",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.294,
+            "confidence": 92.72,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              1093,
+              2676,
+              1804,
+              2709
+            ],
+            "generated_text": "Vua qua sông xong lai treo núi,",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.171,
+            "confidence": 86.79,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 32,
+            "box": [
+              1083,
+              2757,
+              1917,
+              2801
+            ],
+            "generated_text": "Đá núi như chông trời mit mừng.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.219,
+            "confidence": 87.35,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 33,
+            "box": [
+              1083,
+              2847,
+              1970,
+              2900
+            ],
+            "generated_text": "Núi văng quanh hưu, không làng bán,",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.357,
+            "confidence": 87.16,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 34,
+            "box": [
+              1082,
+              2937,
+              1828,
+              2983
+            ],
+            "generated_text": "Người đi tiếng nói ở từng không.",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 1.022,
+            "confidence": 96.42,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              745,
+              305,
+              1346,
+              316
+            ],
+            "ink": 283
+          },
+          {
+            "box": [
+              1297,
+              622,
+              1884,
+              632
+            ],
+            "ink": 289
+          },
+          {
+            "box": [
+              1525,
+              705,
+              2160,
+              715
+            ],
+            "ink": 305
+          },
+          {
+            "box": [
+              1446,
+              868,
+              1804,
+              879
+            ],
+            "ink": 301
+          },
+          {
+            "box": [
+              1242,
+              2615,
+              1745,
+              2626
+            ],
+            "ink": 351
+          },
+          {
+            "box": [
+              1087,
+              2665,
+              1792,
+              2679
+            ],
+            "ink": 496
+          },
+          {
+            "box": [
+              1202,
+              2708,
+              1568,
+              2717
+            ],
+            "ink": 244
+          },
+          {
+            "box": [
+              1122,
+              2979,
+              1812,
+              2991
+            ],
+            "ink": 378
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

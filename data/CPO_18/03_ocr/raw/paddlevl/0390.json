@@ -1,0 +1,964 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_18",
+  "engine": "paddlevl",
+  "page": 390,
+  "runs": [
+    {
+      "key": "62afebcdf675d026dd04c8327483e12dc3e98ab15371a3a7bc33c1ed4aa43315",
+      "parameters": {
+        "image_sha256": "41effb911e755c1540510d29527b910e5fba2ab04462d8598f40130b209bab0b",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T15:20:06+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_390.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        0,
+        2480,
+        3509
+      ],
+      "lines": [
+        {
+          "text": "Sưu tấm và khảo luận tác phẩm chủ Hán của người Việt Nam trước TK 10",
+          "bbox": [
+            255,
+            101,
+            1875,
+            162
+          ],
+          "confidence": 92.17
+        },
+        {
+          "text": "[",
+          "bbox": [
+            240,
+            190,
+            2419,
+            215
+          ],
+          "confidence": 29.37
+        },
+        {
+          "text": "Luc Tổ tư chủ Luc Tổ kim tương, hầu khủng vị đạo sở",
+          "bbox": [
+            257,
+            299,
+            2419,
+            376
+          ],
+          "confidence": 84.64
+        },
+        {
+          "text": "thù, mai vu tư môn, thả chúc viết : \"Trực minh vương",
+          "bbox": [
+            255,
+            393,
+            2419,
+            461
+          ],
+          "confidence": 89.6
+        },
+        {
+          "text": "tác xuất, ngo am chua tác tang.",
+          "bbox": [
+            255,
+            508,
+            2420,
+            555
+          ],
+          "confidence": 84.38
+        },
+        {
+          "text": "Tương thi tích, vi đê tử Thiên Ong viết : \"Sơ Cao",
+          "bbox": [
+            139,
+            620,
+            2441,
+            686
+          ],
+          "confidence": 83.83
+        },
+        {
+          "text": "Biên ký ư Tô Lich trúc thành, tri ngã Cổ Pháp chi địa",
+          "bbox": [
+            109,
+            714,
+            2236,
+            782
+          ],
+          "confidence": 90.84
+        },
+        {
+          "text": "hũu vương giả khí, nãi tac đoan Diêm Giang cấp Phù",
+          "bbox": [
+            245,
+            808,
+            2236,
+            876
+          ],
+          "confidence": 85.61
+        },
+        {
+          "text": "Chân trì đăng thập cứu xú dĩ yêm (1) chi. Ngô kim dĩ",
+          "bbox": [
+            256,
+            903,
+            2419,
+            971
+          ],
+          "confidence": 84.21
+        },
+        {
+          "text": "khuyến Khúc Làm diễn phục như cổ. Hưu ư Minh Châu",
+          "bbox": [
+            253,
+            997,
+            2419,
+            1065
+          ],
+          "confidence": 80.79
+        },
+        {
+          "text": "từ (2) chủng mộc miên nhất thu dĩ trấn đoan xử, tri hầu",
+          "bbox": [
+            257,
+            1091,
+            2233,
+            1158
+          ],
+          "confidence": 79.44
+        },
+        {
+          "text": "thế tất hữu hững vương giả xuất dĩ phù thực ngô chính",
+          "bbox": [
+            258,
+            1185,
+            2234,
+            1263
+          ],
+          "confidence": 85.85
+        },
+        {
+          "text": "pháp giả. Ngô một hậu, như thiện vị trúc thổ bác phù",
+          "bbox": [
+            258,
+            1279,
+            2233,
+            1359
+          ],
+          "confidence": 92.34
+        },
+        {
+          "text": "đồ, dĩ pháp yêm (3) tàng kỳ trung, vật linh nhân kiến\" ...",
+          "bbox": [
+            260,
+            1369,
+            2202,
+            1448
+          ],
+          "confidence": 85.11
+        },
+        {
+          "text": "... Sự chủng môc miên thu thời, thường hữu kê vân :",
+          "bbox": [
+            394,
+            1503,
+            2213,
+            1572
+          ],
+          "confidence": 81.73
+        },
+        {
+          "text": "Đại sơn long dầu khơi,",
+          "bbox": [
+            789,
+            1714,
+            1564,
+            1760
+          ],
+          "confidence": 71.35
+        },
+        {
+          "text": "Cu vi an chau minh.",
+          "bbox": [
+            791,
+            1807,
+            2435,
+            1851
+          ],
+          "confidence": 91.09
+        },
+        {
+          "text": "Tháp bát tủ đinh thành.",
+          "bbox": [
+            789,
+            1879,
+            1627,
+            1943
+          ],
+          "confidence": 89.01
+        },
+        {
+          "text": "Miên thu hiện lòng hình.",
+          "bbox": [
+            792,
+            1971,
+            1651,
+            2035
+          ],
+          "confidence": 84.93
+        },
+        {
+          "text": "Thổ kế thủ nguyệt nội.",
+          "bbox": [
+            793,
+            2064,
+            1573,
+            2128
+          ],
+          "confidence": 82.62
+        },
+        {
+          "text": "Đinh kiến nhất xuất thanh.",
+          "bbox": [
+            793,
+            2152,
+            1745,
+            2218
+          ],
+          "confidence": 93.48
+        },
+        {
+          "text": "(Thiên uyên tập anh, Ha quyên,",
+          "bbox": [
+            1100,
+            2283,
+            2116,
+            2343
+          ],
+          "confidence": 95.88
+        },
+        {
+          "text": "để tháp thế tứ nhân chi nhất).",
+          "bbox": [
+            1121,
+            2366,
+            2084,
+            2426
+          ],
+          "confidence": 76.51
+        },
+        {
+          "text": "KHAO DI:",
+          "bbox": [
+            402,
+            2618,
+            725,
+            2672
+          ],
+          "confidence": 94.48
+        },
+        {
+          "text": "(1) Bản A và Bản B : yếm 厭 . Đúng ra phải là yếm 壓 ,",
+          "bbox": [
+            269,
+            2717,
+            2223,
+            2799
+          ],
+          "confidence": 93.95
+        },
+        {
+          "text": "có nghĩa là trấn áp. Chúng tôi chữa lại.",
+          "bbox": [
+            393,
+            2812,
+            1734,
+            2877
+          ],
+          "confidence": 96.35
+        },
+        {
+          "text": "(2) Bản A: tư 字.",
+          "bbox": [
+            268,
+            2921,
+            2436,
+            2983
+          ],
+          "confidence": 79.85
+        },
+        {
+          "text": "(3) Bản A và Bản B : yếm 厭. Đúng ra phải là yếm 魇，",
+          "bbox": [
+            266,
+            3028,
+            2440,
+            3112
+          ],
+          "confidence": 91.67
+        },
+        {
+          "text": "có nghĩa la yem chu.",
+          "bbox": [
+            388,
+            3142,
+            2330,
+            3188
+          ],
+          "confidence": 76.25
+        },
+        {
+          "text": "360",
+          "bbox": [
+            266,
+            3350,
+            2108,
+            3390
+          ],
+          "confidence": 91.24
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          3509
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 43.327,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              255,
+              101,
+              1875,
+              162
+            ],
+            "generated_text": "Sưu tấm và khảo luận tác phẩm chủ Hán của người Việt Nam trước TK 10",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 1.812,
+            "confidence": 92.17,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              240,
+              190,
+              2419,
+              215
+            ],
+            "generated_text": "[",
+            "n_lines": 1,
+            "tokens": 2,
+            "seconds": 0.55,
+            "confidence": 29.37,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              257,
+              299,
+              2419,
+              376
+            ],
+            "generated_text": "Luc Tổ tư chủ Luc Tổ kim tương, hầu khủng vị đạo sở",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.875,
+            "confidence": 84.64,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              255,
+              393,
+              2419,
+              461
+            ],
+            "generated_text": "thù, mai vu tư môn, thả chúc viết : \"Trực minh vương",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 1.967,
+            "confidence": 89.6,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              255,
+              508,
+              2420,
+              555
+            ],
+            "generated_text": "tác xuất, ngo am chua tác tang.",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.219,
+            "confidence": 84.38,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              139,
+              620,
+              2441,
+              686
+            ],
+            "generated_text": "Tương thi tích, vi đê tử Thiên Ong viết : \"Sơ Cao",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.813,
+            "confidence": 83.83,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              109,
+              714,
+              2236,
+              782
+            ],
+            "generated_text": "Biên ký ư Tô Lich trúc thành, tri ngã Cổ Pháp chi địa",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 1.946,
+            "confidence": 90.84,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              245,
+              808,
+              2236,
+              876
+            ],
+            "generated_text": "hũu vương giả khí, nãi tac đoan Diêm Giang cấp Phù",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.78,
+            "confidence": 85.61,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              256,
+              903,
+              2419,
+              971
+            ],
+            "generated_text": "Chân trì đăng thập cứu xú dĩ yêm (1) chi. Ngô kim dĩ",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 2.173,
+            "confidence": 84.21,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              253,
+              997,
+              2419,
+              1065
+            ],
+            "generated_text": "khuyến Khúc Làm diễn phục như cổ. Hưu ư Minh Châu",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.759,
+            "confidence": 80.79,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              257,
+              1091,
+              2233,
+              1158
+            ],
+            "generated_text": "từ (2) chủng mộc miên nhất thu dĩ trấn đoan xử, tri hầu",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 1.979,
+            "confidence": 79.44,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              258,
+              1185,
+              2234,
+              1263
+            ],
+            "generated_text": "thế tất hữu hững vương giả xuất dĩ phù thực ngô chính",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.642,
+            "confidence": 85.85,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              258,
+              1279,
+              2233,
+              1359
+            ],
+            "generated_text": "pháp giả. Ngô một hậu, như thiện vị trúc thổ bác phù",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.699,
+            "confidence": 92.34,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              260,
+              1369,
+              2202,
+              1448
+            ],
+            "generated_text": "đồ, dĩ pháp yêm (3) tàng kỳ trung, vật linh nhân kiến\" ...",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 1.92,
+            "confidence": 85.11,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              394,
+              1503,
+              2213,
+              1572
+            ],
+            "generated_text": "... Sự chủng môc miên thu thời, thường hữu kê vân :",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.653,
+            "confidence": 81.73,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              789,
+              1714,
+              1564,
+              1760
+            ],
+            "generated_text": "Đại sơn long dầu khơi,",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.954,
+            "confidence": 71.35,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              791,
+              1807,
+              2435,
+              1851
+            ],
+            "generated_text": "Cu vi an chau minh.",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.911,
+            "confidence": 91.09,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              789,
+              1879,
+              1627,
+              1943
+            ],
+            "generated_text": "Tháp bát tủ đinh thành.",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.933,
+            "confidence": 89.01,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              792,
+              1971,
+              1651,
+              2035
+            ],
+            "generated_text": "Miên thu hiện lòng hình.",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.835,
+            "confidence": 84.93,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              793,
+              2064,
+              1573,
+              2128
+            ],
+            "generated_text": "Thổ kế thủ nguyệt nội.",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.969,
+            "confidence": 82.62,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              793,
+              2152,
+              1745,
+              2218
+            ],
+            "generated_text": "Đinh kiến nhất xuất thanh.",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.918,
+            "confidence": 93.48,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              1100,
+              2283,
+              2116,
+              2343
+            ],
+            "generated_text": "(Thiên uyên tập anh, Ha quyên,",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.213,
+            "confidence": 95.88,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              1121,
+              2366,
+              2084,
+              2426
+            ],
+            "generated_text": "để tháp thế tứ nhân chi nhất).",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.043,
+            "confidence": 76.51,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              402,
+              2618,
+              725,
+              2672
+            ],
+            "generated_text": "KHAO DI:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.646,
+            "confidence": 94.48,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              269,
+              2717,
+              2223,
+              2799
+            ],
+            "generated_text": "(1) Bản A và Bản B : yếm 厭 . Đúng ra phải là yếm 壓 ,",
+            "n_lines": 1,
+            "tokens": 33,
+            "seconds": 2.312,
+            "confidence": 93.95,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              393,
+              2812,
+              1734,
+              2877
+            ],
+            "generated_text": "có nghĩa là trấn áp. Chúng tôi chữa lại.",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.546,
+            "confidence": 96.35,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              268,
+              2921,
+              2436,
+              2983
+            ],
+            "generated_text": "(2) Bản A: tư 字.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.204,
+            "confidence": 79.85,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              266,
+              3028,
+              2440,
+              3112
+            ],
+            "generated_text": "(3) Bản A và Bản B : yếm 厭. Đúng ra phải là yếm 魇，",
+            "n_lines": 1,
+            "tokens": 33,
+            "seconds": 2.499,
+            "confidence": 91.67,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              388,
+              3142,
+              2330,
+              3188
+            ],
+            "generated_text": "có nghĩa la yem chu.",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.942,
+            "confidence": 76.25,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              266,
+              3350,
+              2108,
+              3390
+            ],
+            "generated_text": "360",
+            "n_lines": 1,
+            "tokens": 4,
+            "seconds": 0.61,
+            "confidence": 91.24,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              472,
+              496,
+              2419,
+              507
+            ],
+            "ink": 689
+          },
+          {
+            "box": [
+              565,
+              686,
+              1671,
+              697
+            ],
+            "ink": 476
+          },
+          {
+            "box": [
+              483,
+              781,
+              2188,
+              792
+            ],
+            "ink": 504
+          },
+          {
+            "box": [
+              589,
+              873,
+              2034,
+              886
+            ],
+            "ink": 757
+          },
+          {
+            "box": [
+              724,
+              969,
+              2419,
+              980
+            ],
+            "ink": 535
+          },
+          {
+            "box": [
+              789,
+              1695,
+              1540,
+              1718
+            ],
+            "ink": 1710
+          },
+          {
+            "box": [
+              797,
+              1790,
+              2437,
+              1807
+            ],
+            "ink": 1213
+          },
+          {
+            "box": [
+              1111,
+              2340,
+              2002,
+              2352
+            ],
+            "ink": 657
+          },
+          {
+            "box": [
+              435,
+              3126,
+              2331,
+              3144
+            ],
+            "ink": 1440
+          },
+          {
+            "box": [
+              528,
+              3189,
+              2280,
+              3198
+            ],
+            "ink": 513
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

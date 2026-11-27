@@ -1,0 +1,493 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_18",
+  "engine": "paddlevl",
+  "page": 291,
+  "runs": [
+    {
+      "key": "ce1e5229161d6402d63aaa0c95afb3bbc7554eb72f5fe8501a2b4c2ea3d57ad5",
+      "parameters": {
+        "image_sha256": "ab50a90eafbf055d712f24694301d8e179ca1e270de5ddcc6801c343ad672321",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T13:53:29+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_291.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        0,
+        2480,
+        3509
+      ],
+      "lines": [
+        {
+          "text": "[Unabel]",
+          "bbox": [
+            53,
+            0,
+            380,
+            20
+          ],
+          "confidence": 28.35
+        },
+        {
+          "text": "Phân II : Nguyên văn tác phẩm dịch và chủ thích",
+          "bbox": [
+            1152,
+            195,
+            2206,
+            249
+          ],
+          "confidence": 88.46
+        },
+        {
+          "text": "[",
+          "bbox": [
+            278,
+            276,
+            2209,
+            300
+          ],
+          "confidence": 10.63
+        },
+        {
+          "text": "xưng không 稱空 thì mới hiệp vận được trong bài minh.",
+          "bbox": [
+            292,
+            377,
+            2201,
+            455
+          ],
+          "confidence": 89.59
+        },
+        {
+          "text": "Ô đây đã chữa lai.",
+          "bbox": [
+            298,
+            483,
+            922,
+            547
+          ],
+          "confidence": 88.36
+        },
+        {
+          "text": "(17) Bản A và Bản B : 薔 có lẽ là chủ uất 鬱, tam",
+          "bbox": [
+            431,
+            591,
+            2201,
+            671
+          ],
+          "confidence": 87.53
+        },
+        {
+          "text": "chữa lai, chờ tra cứu thêm.",
+          "bbox": [
+            296,
+            688,
+            1211,
+            750
+          ],
+          "confidence": 94.26
+        },
+        {
+          "text": "(18) Bản A : duc 欲 ; Bản B : 欲.",
+          "bbox": [
+            431,
+            794,
+            1572,
+            868
+          ],
+          "confidence": 91.9
+        },
+        {
+          "text": "(19) Bản A : kiến 峯 ; Bản B : 峰 . Phải là kiến thì",
+          "bbox": [
+            431,
+            907,
+            2200,
+            974
+          ],
+          "confidence": 85.72
+        },
+        {
+          "text": "mói ghép được với chủ sẵn 蛭 tiếp sau đó để thành một",
+          "bbox": [
+            299,
+            1000,
+            2204,
+            1077
+          ],
+          "confidence": 68.89
+        },
+        {
+          "text": "từ kep.",
+          "bbox": [
+            297,
+            1109,
+            539,
+            1154
+          ],
+          "confidence": 71.37
+        },
+        {
+          "text": "(20) Bản A : lưu 留 ; Bản B : lưu 溜 (nghĩa không",
+          "bbox": [
+            429,
+            1200,
+            2209,
+            1275
+          ],
+          "confidence": 96.58
+        },
+        {
+          "text": "hợp ngư canh).",
+          "bbox": [
+            297,
+            1311,
+            808,
+            1356
+          ],
+          "confidence": 89.21
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          3509
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 16.859,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              53,
+              0,
+              380,
+              20
+            ],
+            "generated_text": "[Unabel]",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.595,
+            "confidence": 28.35,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              1152,
+              195,
+              2206,
+              249
+            ],
+            "generated_text": "Phân II : Nguyên văn tác phẩm dịch và chủ thích",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.462,
+            "confidence": 88.46,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              278,
+              276,
+              2209,
+              300
+            ],
+            "generated_text": "[",
+            "n_lines": 1,
+            "tokens": 2,
+            "seconds": 0.489,
+            "confidence": 10.63,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              292,
+              377,
+              2201,
+              455
+            ],
+            "generated_text": "xưng không 稱空 thì mới hiệp vận được trong bài minh.",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 1.424,
+            "confidence": 89.59,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              298,
+              483,
+              922,
+              547
+            ],
+            "generated_text": "Ô đây đã chữa lai.",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.816,
+            "confidence": 88.36,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              431,
+              591,
+              2201,
+              671
+            ],
+            "generated_text": "(17) Bản A và Bản B : 薔 có lẽ là chủ uất 鬱, tam",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 2.009,
+            "confidence": 87.53,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              296,
+              688,
+              1211,
+              750
+            ],
+            "generated_text": "chữa lai, chờ tra cứu thêm.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.153,
+            "confidence": 94.26,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              431,
+              794,
+              1572,
+              868
+            ],
+            "generated_text": "(18) Bản A : duc 欲 ; Bản B : 欲.",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.522,
+            "confidence": 91.9,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              431,
+              907,
+              2200,
+              974
+            ],
+            "generated_text": "(19) Bản A : kiến 峯 ; Bản B : 峰 . Phải là kiến thì",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 2.072,
+            "confidence": 85.72,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              299,
+              1000,
+              2204,
+              1077
+            ],
+            "generated_text": "mói ghép được với chủ sẵn 蛭 tiếp sau đó để thành một",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.664,
+            "confidence": 68.89,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              297,
+              1109,
+              539,
+              1154
+            ],
+            "generated_text": "từ kep.",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.603,
+            "confidence": 71.37,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              429,
+              1200,
+              2209,
+              1275
+            ],
+            "generated_text": "(20) Bản A : lưu 留 ; Bản B : lưu 溜 (nghĩa không",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 1.836,
+            "confidence": 96.58,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              297,
+              1311,
+              808,
+              1356
+            ],
+            "generated_text": "hợp ngư canh).",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.797,
+            "confidence": 89.21,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              43,
+              3485,
+              2020,
+              3501
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.415,
+            "confidence": 39.22,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              444,
+              971,
+              1591,
+              982
+            ],
+            "ink": 537
+          },
+          {
+            "box": [
+              354,
+              1356,
+              769,
+              1365
+            ],
+            "ink": 491
+          },
+          {
+            "box": [
+              2333,
+              3042,
+              2432,
+              3051
+            ],
+            "ink": 527
+          },
+          {
+            "box": [
+              2064,
+              3300,
+              2190,
+              3323
+            ],
+            "ink": 1794
+          },
+          {
+            "box": [
+              2052,
+              3328,
+              2186,
+              3342
+            ],
+            "ink": 924
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

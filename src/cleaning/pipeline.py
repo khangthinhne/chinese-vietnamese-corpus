@@ -36,8 +36,8 @@ from src.cleaning.reconstruction import reconstruct_page_boundaries
 from src.cleaning.normalization import normalize_lines
 from src.cleaning.filtering import filter_invalid_lines
 from src.cleaning.segmentation import make_sentences
-from src.cleaning.metadata import (aggregate_document_metadata, aggregate_file_metadata,
-                                   extract_metadata, write_layer_metadata)
+from src.cleaning.metadata import (aggregate_document_metadata, aggregate_file_metadata, attach_captured,
+                                   capture_note_lines, extract_metadata, write_layer_metadata)
 
 log = logging.getLogger("clean")
 
@@ -119,12 +119,18 @@ def run_structural_cleaning(work_id: str, layer: str, raw_lines: list[RawLine], 
                              ln.raw_text or ln.text, list(ln.flags),
                              list(ln.source_ids), ln.document_id))
 
+    # 1.5 Niên đại sáng tác / người dịch: ra khỏi chính văn nhưng vào metadata (không bị bỏ như chú thích/cuối trang)
+    lines, captured = capture_note_lines(lines, cfg.metadata, layer)
+    for fld, ln in captured:
+        audit.add("extract_metadata", f"metadata_{fld}", rule=f"metadata:{fld}", line=ln, note=ln.text)
+
     # 2. Trang: loại thủ công / trắng / header-footer lặp
     lines, page_records = filter_pages(lines, cfg, audit)
 
     # 2.5 Metadata cấp tài liệu: tiêu đề/tác giả/quy trách + ranh giới PHIÊN ÂM/DỊCH NGHĨA/CHÚ THÍCH.
     #     Không cấu hình gì -> no-op (không xoá gì); dòng trích được KHÔNG đi vào corpus chính.
     meta_lines, meta = extract_metadata(lines, cfg.metadata, layer)
+    attach_captured(meta, captured)
     meta_rows: list[tuple[str, int, str, str]] = []
     meta_removed = meta.excluded + meta.uncertain if cfg.metadata.exclude_from_main_text else []
     for ln, reason in meta_removed:
@@ -251,6 +257,7 @@ def build_config(args, layer: str) -> CleanConfig:
         split_colon=args.split_colon,
         drop_patterns=list(DEFAULT_DROP) + list(args.drop_pattern or []),
         heading_heuristic=not args.no_heading_heuristic,
+        han_heading_heuristic=getattr(args, "han_heading_heuristic", False),
         strip_markers=not args.keep_markers,
         abbrev=set(VI_ABBREV) | {a.strip().lower() for a in (args.abbrev or "").split(",") if a.strip()},
         start_after=args.start_after,
@@ -259,6 +266,7 @@ def build_config(args, layer: str) -> CleanConfig:
         remove_headers=not args.no_headers,
         remove_footers=not args.no_footers,
         header_footer_min_pages=args.header_footer_min_pages,
+        drop_recurring_single_lines=not getattr(args, "keep_single_line_pages", False),
         remove_duplicates=not args.no_duplicates,
         duplicate_threshold=args.dup_threshold,
         duplicate_min_len=args.dup_min_len,
@@ -266,8 +274,10 @@ def build_config(args, layer: str) -> CleanConfig:
         ocr=OCRCleaningConfig(
             remove_patterns=list(args.ocr_remove or []),
             replace_patterns=[_parse_replace(r) for r in (args.ocr_replace or [])],
+            strip_letter_markers=not getattr(args, "keep_letter_markers", False),
+            am_markers_extended=getattr(args, "am_markers_extended", False),
         ),
-        footnotes=FootnoteConfig(),
+        footnotes=FootnoteConfig(note_entries=getattr(args, "note_entries", False)),
         metadata=MetadataConfig(
             enabled=not args.no_metadata,
             exclude_from_main_text=not args.metadata_keep,
@@ -276,6 +286,9 @@ def build_config(args, layer: str) -> CleanConfig:
             title_patterns=list(args.meta_title_pattern or []),
             author_patterns=list(args.meta_author_pattern or []),
             attribution_patterns=list(args.meta_attribution_pattern or []),
+            capture_notes=not getattr(args, "no_capture_notes", False),
+            translator_names=list(getattr(args, "translator_name", None) or []),
+            capture_source_lines=getattr(args, "capture_source_lines", False),
             author_max_tokens=args.meta_author_max_tokens,
             author_max_len=args.meta_author_max_len,
         ),
@@ -288,6 +301,37 @@ SHARED_CLEANING_OUTPUTS = ("review_required.xml", "cleaning_audit.xml")
 def layer_outputs(outputs: list[Path]) -> list[Path]:
     """Bỏ các file kiểm toán dùng chung giữa các lớp khỏi danh sách dùng để chặn chạy lại."""
     return [p for p in outputs if Path(p).name not in SHARED_CLEANING_OUTPUTS]
+
+
+def stream_running_header_ids(layout: DataLayout) -> set[str]:
+    """Tiêu đề chạy tính trên han.xml + vie.xml của cả work (chế độ hai luồng); rỗng nếu chưa có hai luồng."""
+    from src.segmentation import streams
+    try:
+        merged = streams.merge_streams(streams.load_stream(layout, "han"), streams.load_stream(layout, "vie"))
+    except FileNotFoundError:
+        log.warning("--stream-running-headers: chưa có han.xml/vie.xml, bỏ qua")
+        return set()
+    return streams.edge_running_header_ids(merged)
+
+
+def stream_page_notes(layout: DataLayout) -> tuple[dict[int, set[str]], dict[int, set[str]]]:
+    """Theo trang, từ cả luồng vie.xml: (số của các mục chú thích "N. ...", chữ số chỉ mục trong thân)."""
+    from src.cleaning.footnotes import INLINE_MARKER_RE, MARKER_ENTRY_RE
+    from src.segmentation import streams
+    try:
+        vie = streams.load_stream(layout, "vie")
+    except FileNotFoundError:
+        log.warning("--stream-note-markers: chưa có vie.xml, bỏ qua")
+        return {}, {}
+    notes: dict[int, set[str]] = {}
+    markers: dict[int, set[str]] = {}
+    for ln in vie:
+        m = MARKER_ENTRY_RE.match(ln.text.strip())
+        if m:
+            notes.setdefault(ln.page, set()).add(m.group(1))
+        else:
+            markers.setdefault(ln.page, set()).update(x.group(1) for x in INLINE_MARKER_RE.finditer(ln.text))
+    return notes, markers
 
 
 def run(args) -> Path:
@@ -307,6 +351,13 @@ def run(args) -> Path:
         inputs.append(Path(args.config))
 
     cfg = build_config(args, layer)
+    if getattr(args, "stream_running_headers", False):
+        cfg.stream_header_ids = frozenset(stream_running_header_ids(layout))
+    if getattr(args, "stream_note_markers", False):
+        notes, markers = stream_page_notes(layout)
+        cfg.ocr.page_note_numbers = notes
+        cfg.footnotes.stream_page_markers = markers
+    cfg.footnotes.note_entry_markers = getattr(args, "note_entry_markers", False)
     cfg.footnotes.enabled = not args.no_footnotes
     cfg.footnotes.policy = args.footnote_policy
     cfg.footnotes.detect_parentheses = not args.no_paren_notes
@@ -334,6 +385,11 @@ def run(args) -> Path:
             write_layer_metadata(out_dir, layer, struct.metadata_docs)
             aggregate_document_metadata(out_dir, args.work_id)
             aggregate_file_metadata(layout, out_dir)
+        elif struct.metadata_docs:
+            # đã phân đoạn: metadata tài liệu do segmentation ghi; ở đây chỉ có niên đại sáng tác / người dịch
+            # tách ra ở bước 1.5 -> 05_cleaning/<lớp>.metadata.xml + document_metadata.xml
+            write_layer_metadata(out_dir, layer, struct.metadata_docs)
+            aggregate_document_metadata(out_dir, args.work_id)
         atomic_write_text(out_dir / f"{layer}.dropped.tsv", "id\tpage\treason\ttext\n" + "".join(
             f"{i}\t{p}\t{r}\t{t.replace(chr(9), ' ').replace(chr(10), ' ')}\n" for i, p, r, t in struct.dropped_rows))
         write_audit_files(out_dir, struct.audit, struct.notes, struct.duplicates, struct.reconstructions)
@@ -405,10 +461,28 @@ def create_parser():
     p.add_argument("--end-before", help="Regex ranh giới cuối đoạn: ngừng lấy trước dòng khớp (không gồm dòng khớp)")
     p.add_argument("--no-heading-heuristic", action="store_true")
     p.add_argument("--keep-markers", action="store_true")
+    p.add_argument("--note-entries", action="store_true",
+                   help="Lớp am/nghia/tho: coi dòng '1. Thuật ngữ: ...' / '1. Bản A... chép' là mục chú thích (tuỳ chọn)")
+    p.add_argument("--keep-single-line-pages", action="store_true",
+                   help="Không bỏ dòng duy nhất của trang dù nó lặp y hệt trên >= --header-footer-min-pages trang")
+    p.add_argument("--han-heading-heuristic", action="store_true",
+                   help="Lớp han: bỏ dòng Hán ngắn không dấu câu như tiêu đề/tên người viết (mặc định TẮT: phá thơ)")
+    p.add_argument("--keep-letter-markers", action="store_true",
+                   help="Giữ chỉ mục khảo dị dạng chữ cái (a), (b) trong lớp am/nghia/tho (mặc định xoá)")
     p.add_argument("--abbrev", help="Viết tắt Việt thêm, phân cách dấu phẩy")
     # trang / trùng / nối
     p.add_argument("--exclude-pages", help="Trang loại thủ công, vd '205,210-212'")
     p.add_argument("--no-headers", action="store_true", help="Tắt nhận diện header đầu trang lặp lại")
+    p.add_argument("--stream-running-headers", action="store_true",
+                   help="Chế độ hai luồng: bỏ tiêu đề chạy tính trên han.xml+vie.xml của cả work (khớp mờ, mép trang)")
+    p.add_argument("--am-markers-extended", action="store_true",
+                   help="Lớp am: xoá thêm chỉ mục sau dấu câu và ở cuối dòng (không áp dòng viết hoa toàn bộ)")
+    p.add_argument("--capture-source-lines", action="store_true",
+                   help="Lớp Việt: dòng nguồn 'Trích <Tên sách>' (không dấu kết câu) -> metadata source")
+    p.add_argument("--stream-note-markers", action="store_true",
+                   help="Chế độ hai luồng: số mục chú thích/chỉ mục theo trang từ cả vie.xml (nghia/tho: xoá chỉ mục)")
+    p.add_argument("--note-entry-markers", action="store_true",
+                   help="Lớp Việt: dòng 'N. ...' là mục chú thích khi N trùng chữ số chỉ mục trên cùng trang")
     p.add_argument("--no-footers", action="store_true", help="Tắt nhận diện footer cuối trang lặp lại")
     p.add_argument("--header-footer-min-pages", type=int, default=3)
     p.add_argument("--no-duplicates", action="store_true", help="Tắt phát hiện dòng OCR trùng")
@@ -431,6 +505,10 @@ def create_parser():
                    help="Marker đóng (vd '^CHÚ THÍCH\\s*:'); phần SAU marker bị loại khỏi corpus chính")
     p.add_argument("--meta-title-pattern", action="append", metavar="REGEX",
                    help="Regex ép phân loại dòng là TIÊU ĐỀ (lặp lại được)")
+    p.add_argument("--translator-name", action="append", metavar="TÊN",
+                   help="Dòng chỉ gồm tên người dịch này (vd 'Lâm Giang') -> metadata 'translator' (lặp lại được)")
+    p.add_argument("--no-capture-notes", action="store_true",
+                   help="Không tách dòng niên đại sáng tác / người dịch sang metadata (hành vi cũ)")
     p.add_argument("--meta-author-pattern", action="append", metavar="REGEX",
                    help="Regex ép phân loại dòng là TÁC GIẢ (lặp lại được)")
     p.add_argument("--meta-attribution-pattern", action="append", metavar="REGEX",
@@ -450,6 +528,9 @@ def main(argv: list[str] | None = None) -> int:
     args = parse_args(parser, argv)
     try:
         run(args)
+    except deps.UpToDate as exc:          # đầu ra còn mới: bỏ qua, không phải lỗi
+        log.info("%s", exc)
+        return 0
     except (OSError, ValueError) as exc:
         log.error("%s", exc)
         return 1

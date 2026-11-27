@@ -197,6 +197,22 @@ Cấu hình JSON `clean.<layer>.common` (áp cho mọi lớp) hỗ trợ các ng
 `header_footer_min_pages`, `footnote_policy`, `enable_*` (tắt từng nhánh),
 `ocr_remove`, `ocr_replace`; cờ CLI tương đương (xem `python -m src.preprocessing.clean --help`).
 
+Cờ thêm ở vòng clean dữ liệu đầy đủ (`reports/clean_full_20261127.md`), **mặc định tắt**, đặt trong `clean.common`:
+- `stream_running_headers` (`--stream-running-headers`, chế độ hai luồng): bỏ tiêu đề chạy tính trên han.xml+vie.xml
+  của cả work (khớp mờ, chỉ dòng ở 2 dòng đầu/cuối trang, `streams.edge_running_header_ids`).
+- `footnotes.note_entry_markers` (`--note-entry-markers`): dòng "N. ..." là mục chú thích khi N trùng một chữ số chỉ
+  mục trong thân trên cùng trang, hoặc liền sau mục N-1 đã nhận.
+- `stream_note_markers` (`--stream-note-markers`): số mục chú thích / chỉ mục theo trang lấy từ cả vie.xml; lớp
+  nghia/tho xoá chỉ mục trùng số một mục chú thích cùng trang ("Đảo Bồng 3 khói tỏa").
+- `am_markers_extended` (`--am-markers-extended`): lớp am xoá thêm chỉ mục sau dấu câu và ở cuối dòng, trừ số bài
+  ("BÀI 2", "Kỳ 3").
+- `capture_source_lines` (`--capture-source-lines`): dòng nguồn "Trích <Tên sách>" (không dấu kết câu) -> metadata
+  `source`.
+
+Text sạch mỗi câu một dòng: `python scripts/export_clean_text.py --work-id W` ghi `data/W/05_cleaning/text/`
+(`han.txt`, `viet_<lớp>.txt`, `mapping.tsv`); khi đóng gói nộp bài: `--package-root DIR --topic MA_DE_TAI` chép sang
+`DIR/<MA_DE_TAI>_<W>/03_text_sach/`. Danh sách rà soát OCR cho người: `python scripts/export_ocr_review.py --work-id W`.
+
 
 ## Thêm phương pháp dóng hàng
 Viết class kế thừa `Aligner` trong `src/alignment/aligners.py`, gắn `@register_aligner`, trả về `list[Bead]`

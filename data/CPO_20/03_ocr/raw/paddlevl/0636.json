@@ -1,0 +1,884 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_20",
+  "engine": "paddlevl",
+  "page": 636,
+  "runs": [
+    {
+      "key": "73f81648679e055bdbf8cc230457e36dec40672008c5c67273f3d688bbad75d6",
+      "parameters": {
+        "image_sha256": "b7aeb507d48001fa452c211eb4f2a0f6453c7cb0b8f33743300c456b5ea98d84",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T13:52:29+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_636.png",
+      "image_size": [
+        1840,
+        2803
+      ],
+      "crop_box": [
+        0,
+        0,
+        1840,
+        2803
+      ],
+      "lines": [
+        {
+          "text": "余答之曰：",
+          "bbox": [
+            304,
+            250,
+            648,
+            299
+          ],
+          "confidence": 99.58
+        },
+        {
+          "text": "夫山不在高，有仙则名。",
+          "bbox": [
+            306,
+            316,
+            1072,
+            369
+          ],
+          "confidence": 98.78
+        },
+        {
+          "text": "水不在深，有龙则灵。",
+          "bbox": [
+            306,
+            386,
+            1016,
+            438
+          ],
+          "confidence": 80.91
+        },
+        {
+          "text": "稱詩者，談征戍羈旅則佳。談王侯卿相則俗。",
+          "bbox": [
+            306,
+            522,
+            1716,
+            580
+          ],
+          "confidence": 97.89
+        },
+        {
+          "text": "繪畫者，寫丹楹紺殿則濁，鴻柴門野店則清",
+          "bbox": [
+            307,
+            589,
+            1716,
+            649
+          ],
+          "confidence": 94.9
+        },
+        {
+          "text": "故山或高於岱，華而不入於版圖。",
+          "bbox": [
+            307,
+            658,
+            1411,
+            717
+          ],
+          "confidence": 97.06
+        },
+        {
+          "text": "水或深於桃源而不齒於品評。",
+          "bbox": [
+            307,
+            730,
+            1327,
+            784
+          ],
+          "confidence": 94.86
+        },
+        {
+          "text": "是以善觀天者，不觀天於天，而觀天於理。",
+          "bbox": [
+            309,
+            798,
+            1658,
+            856
+          ],
+          "confidence": 97.83
+        },
+        {
+          "text": "善觀山水者，但當即其動靜之體，",
+          "bbox": [
+            309,
+            866,
+            1411,
+            923
+          ],
+          "confidence": 95.11
+        },
+        {
+          "text": "而不必，相其高深之形。",
+          "bbox": [
+            307,
+            936,
+            1075,
+            994
+          ],
+          "confidence": 93.09
+        },
+        {
+          "text": "何必窮虎豹之窟，抵魚龍之墟，然",
+          "bbox": [
+            306,
+            1009,
+            1386,
+            1066
+          ],
+          "confidence": 98.6
+        },
+        {
+          "text": "後足以盡吾洒落之情哉。",
+          "bbox": [
+            312,
+            1073,
+            1319,
+            1133
+          ],
+          "confidence": 91.34
+        },
+        {
+          "text": "今夫吾之山海也。",
+          "bbox": [
+            306,
+            1147,
+            902,
+            1202
+          ],
+          "confidence": 96.9
+        },
+        {
+          "text": "匪凌何渊，",
+          "bbox": [
+            306,
+            1214,
+            646,
+            1267
+          ],
+          "confidence": 86.79
+        },
+        {
+          "text": "匪升何桑。",
+          "bbox": [
+            306,
+            1283,
+            646,
+            1336
+          ],
+          "confidence": 96.03
+        },
+        {
+          "text": "柯斧不傷，",
+          "bbox": [
+            304,
+            1351,
+            646,
+            1405
+          ],
+          "confidence": 92.89
+        },
+        {
+          "text": "罩罟不張。",
+          "bbox": [
+            306,
+            1420,
+            645,
+            1472
+          ],
+          "confidence": 94.61
+        },
+        {
+          "text": "獸無猛而藜可採。",
+          "bbox": [
+            304,
+            1489,
+            899,
+            1542
+          ],
+          "confidence": 83.06
+        },
+        {
+          "text": "水常甘，而波不揚。",
+          "bbox": [
+            306,
+            1559,
+            899,
+            1613
+          ],
+          "confidence": 95.46
+        },
+        {
+          "text": "蓋隰然有庭草溪流之思。",
+          "bbox": [
+            309,
+            1622,
+            1152,
+            1683
+          ],
+          "confidence": 93.4
+        },
+        {
+          "text": "縱然移蓬桀之山，挽瀛洲之水，",
+          "bbox": [
+            307,
+            1690,
+            1319,
+            1755
+          ],
+          "confidence": 93.18
+        },
+        {
+          "text": "而出色塵世，為樂吾之樂則未也。",
+          "bbox": [
+            306,
+            1762,
+            1406,
+            1830
+          ],
+          "confidence": 96.57
+        },
+        {
+          "text": "遂酌客而為歌之曰：",
+          "bbox": [
+            306,
+            1831,
+            983,
+            1888
+          ],
+          "confidence": 98.2
+        },
+        {
+          "text": "岧嶢萬仞兮，何石非山。",
+          "bbox": [
+            307,
+            1900,
+            1131,
+            1958
+          ],
+          "confidence": 92.16
+        },
+        {
+          "text": "更有心之堅貞兮，覺移轉之較難。",
+          "bbox": [
+            303,
+            1965,
+            1397,
+            2033
+          ],
+          "confidence": 98.13
+        },
+        {
+          "text": "汪洋千頃兮，何波非水。",
+          "bbox": [
+            302,
+            2036,
+            1063,
+            2095
+          ],
+          "confidence": 95.66
+        },
+        {
+          "text": "還有量之浩天兮，匪澆澄得易。",
+          "bbox": [
+            301,
+            2106,
+            1347,
+            2170
+          ],
+          "confidence": 86.23
+        },
+        {
+          "text": "故曰：當求夫形而上之道；",
+          "bbox": [
+            300,
+            2177,
+            1147,
+            2235
+          ],
+          "confidence": 97.0
+        },
+        {
+          "text": "而不當窒夫形而下之器。",
+          "bbox": [
+            304,
+            2245,
+            1335,
+            2305
+          ],
+          "confidence": 92.69
+        },
+        {
+          "text": "若夫泰山之高，沧海之大，皆其間之物爾。",
+          "bbox": [
+            293,
+            2313,
+            1634,
+            2374
+          ],
+          "confidence": 91.73
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          1840,
+          2803
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 12.494,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              304,
+              250,
+              648,
+              299
+            ],
+            "generated_text": "余答之曰：",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.24,
+            "confidence": 99.58,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              306,
+              316,
+              1072,
+              369
+            ],
+            "generated_text": "夫山不在高，有仙则名。",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.331,
+            "confidence": 98.78,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              306,
+              386,
+              1016,
+              438
+            ],
+            "generated_text": "水不在深，有龙则灵。",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.309,
+            "confidence": 80.91,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              306,
+              522,
+              1716,
+              580
+            ],
+            "generated_text": "稱詩者，談征戍羈旅則佳。談王侯卿相則俗。",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 0.76,
+            "confidence": 97.89,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              307,
+              589,
+              1716,
+              649
+            ],
+            "generated_text": "繪畫者，寫丹楹紺殿則濁，鴻柴門野店則清",
+            "n_lines": 1,
+            "tokens": 30,
+            "seconds": 0.71,
+            "confidence": 94.9,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              307,
+              658,
+              1411,
+              717
+            ],
+            "generated_text": "故山或高於岱，華而不入於版圖。",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.512,
+            "confidence": 97.06,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              307,
+              730,
+              1327,
+              784
+            ],
+            "generated_text": "水或深於桃源而不齒於品評。",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 0.457,
+            "confidence": 94.86,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              309,
+              798,
+              1658,
+              856
+            ],
+            "generated_text": "是以善觀天者，不觀天於天，而觀天於理。",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.495,
+            "confidence": 97.83,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              309,
+              866,
+              1411,
+              923
+            ],
+            "generated_text": "善觀山水者，但當即其動靜之體，",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.524,
+            "confidence": 95.11,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              307,
+              936,
+              1075,
+              994
+            ],
+            "generated_text": "而不必，相其高深之形。",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.34,
+            "confidence": 93.09,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              306,
+              1009,
+              1386,
+              1066
+            ],
+            "generated_text": "何必窮虎豹之窟，抵魚龍之墟，然",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.521,
+            "confidence": 98.6,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              312,
+              1073,
+              1319,
+              1133
+            ],
+            "generated_text": "後足以盡吾洒落之情哉。",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.371,
+            "confidence": 91.34,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              306,
+              1147,
+              902,
+              1202
+            ],
+            "generated_text": "今夫吾之山海也。",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.334,
+            "confidence": 96.9,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              306,
+              1214,
+              646,
+              1267
+            ],
+            "generated_text": "匪凌何渊，",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.231,
+            "confidence": 86.79,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              306,
+              1283,
+              646,
+              1336
+            ],
+            "generated_text": "匪升何桑。",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.232,
+            "confidence": 96.03,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              304,
+              1351,
+              646,
+              1405
+            ],
+            "generated_text": "柯斧不傷，",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.24,
+            "confidence": 92.89,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              306,
+              1420,
+              645,
+              1472
+            ],
+            "generated_text": "罩罟不張。",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.277,
+            "confidence": 94.61,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              304,
+              1489,
+              899,
+              1542
+            ],
+            "generated_text": "獸無猛而藜可採。",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 0.386,
+            "confidence": 83.06,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              306,
+              1559,
+              899,
+              1613
+            ],
+            "generated_text": "水常甘，而波不揚。",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 0.368,
+            "confidence": 95.46,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              309,
+              1622,
+              1152,
+              1683
+            ],
+            "generated_text": "蓋隰然有庭草溪流之思。",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 0.451,
+            "confidence": 93.4,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              307,
+              1690,
+              1319,
+              1755
+            ],
+            "generated_text": "縱然移蓬桀之山，挽瀛洲之水，",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.548,
+            "confidence": 93.18,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              306,
+              1762,
+              1406,
+              1830
+            ],
+            "generated_text": "而出色塵世，為樂吾之樂則未也。",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.466,
+            "confidence": 96.57,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              306,
+              1831,
+              983,
+              1888
+            ],
+            "generated_text": "遂酌客而為歌之曰：",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.316,
+            "confidence": 98.2,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              307,
+              1900,
+              1131,
+              1958
+            ],
+            "generated_text": "岧嶢萬仞兮，何石非山。",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 0.482,
+            "confidence": 92.16,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              303,
+              1965,
+              1397,
+              2033
+            ],
+            "generated_text": "更有心之堅貞兮，覺移轉之較難。",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.52,
+            "confidence": 98.13,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              302,
+              2036,
+              1063,
+              2095
+            ],
+            "generated_text": "汪洋千頃兮，何波非水。",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 0.416,
+            "confidence": 95.66,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              301,
+              2106,
+              1347,
+              2170
+            ],
+            "generated_text": "還有量之浩天兮，匪澆澄得易。",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.475,
+            "confidence": 86.23,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              300,
+              2177,
+              1147,
+              2235
+            ],
+            "generated_text": "故曰：當求夫形而上之道；",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.351,
+            "confidence": 97.0,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              304,
+              2245,
+              1335,
+              2305
+            ],
+            "generated_text": "而不當窒夫形而下之器。",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.362,
+            "confidence": 92.69,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              293,
+              2313,
+              1634,
+              2374
+            ],
+            "generated_text": "若夫泰山之高，沧海之大，皆其間之物爾。",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 0.465,
+            "confidence": 91.73,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              307,
+              466,
+              474,
+              477
+            ],
+            "ink": 431
+          },
+          {
+            "box": [
+              271,
+              2524,
+              353,
+              2543
+            ],
+            "ink": 745
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      }
+    }
+  ]
+}

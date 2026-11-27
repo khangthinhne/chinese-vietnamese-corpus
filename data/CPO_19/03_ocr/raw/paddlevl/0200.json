@@ -1,0 +1,805 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_19",
+  "engine": "paddlevl",
+  "page": 200,
+  "runs": [
+    {
+      "key": "ba2371ad5020bfefd21adc5115b0e20f64160623d4269527a9e7aec53e1b32ca",
+      "parameters": {
+        "image_sha256": "f8655bab18b2c8e3f2b15cc7aef5fc934686ef92c9f1c465c1ed54a4cbd65e39",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T13:26:07+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_19/02_extraction/pages/page_200.png",
+      "image_size": [
+        2575,
+        3207
+      ],
+      "crop_box": [
+        0,
+        0,
+        2575,
+        3207
+      ],
+      "lines": [
+        {
+          "text": "ngothinhamle1.pdf",
+          "bbox": [
+            6,
+            19,
+            287,
+            45
+          ],
+          "confidence": 96.54
+        },
+        {
+          "text": "HOÀNG HOA ĐỔ PHA",
+          "bbox": [
+            1633,
+            213,
+            2097,
+            253
+          ],
+          "confidence": 85.2
+        },
+        {
+          "text": "90. 輪路",
+          "bbox": [
+            1064,
+            301,
+            1759,
+            371
+          ],
+          "confidence": 99.8
+        },
+        {
+          "text": "車輪剝路久成溪",
+          "bbox": [
+            925,
+            508,
+            1510,
+            569
+          ],
+          "confidence": 99.75
+        },
+        {
+          "text": "柳陌看来是柳堤",
+          "bbox": [
+            796,
+            644,
+            1514,
+            708
+          ],
+          "confidence": 98.14
+        },
+        {
+          "text": "缺地應知姜氏樂",
+          "bbox": [
+            924,
+            784,
+            1510,
+            848
+          ],
+          "confidence": 98.02
+        },
+        {
+          "text": "觀天莫笑子陽低",
+          "bbox": [
+            924,
+            923,
+            1515,
+            985
+          ],
+          "confidence": 99.55
+        },
+        {
+          "text": "暑中鶉火三分減",
+          "bbox": [
+            274,
+            1059,
+            1514,
+            1124
+          ],
+          "confidence": 98.34
+        },
+        {
+          "text": "雨後銀河一色齊",
+          "bbox": [
+            929,
+            1193,
+            1531,
+            1254
+          ],
+          "confidence": 99.08
+        },
+        {
+          "text": "夾道偏宜新夏好",
+          "bbox": [
+            930,
+            1314,
+            1518,
+            1378
+          ],
+          "confidence": 98.87
+        },
+        {
+          "text": "左攀紅榴右攀梨",
+          "bbox": [
+            928,
+            1436,
+            1855,
+            1499
+          ],
+          "confidence": 95.8
+        },
+        {
+          "text": "PHIÊN AM:",
+          "bbox": [
+            397,
+            1596,
+            1466,
+            1636
+          ],
+          "confidence": 88.49
+        },
+        {
+          "text": "LUẬN LỖ",
+          "bbox": [
+            1126,
+            1674,
+            1367,
+            1719
+          ],
+          "confidence": 78.74
+        },
+        {
+          "text": "Xa luân bác lô cứu thành khê,",
+          "bbox": [
+            657,
+            1811,
+            1570,
+            1857
+          ],
+          "confidence": 90.19
+        },
+        {
+          "text": "Liêu mach khán lai thi liêu đê.",
+          "bbox": [
+            878,
+            1899,
+            1588,
+            1945
+          ],
+          "confidence": 87.57
+        },
+        {
+          "text": "Khuyết địa ứng tri. Khuong Thi lạc;",
+          "bbox": [
+            872,
+            1987,
+            1696,
+            2042
+          ],
+          "confidence": 83.81
+        },
+        {
+          "text": "Quan thiên mac tiểu Tử Dương đế.",
+          "bbox": [
+            375,
+            2074,
+            1674,
+            2120
+          ],
+          "confidence": 85.36
+        },
+        {
+          "text": "Thủ trung Thuân Hoà tam phân giảm;",
+          "bbox": [
+            884,
+            2159,
+            2042,
+            2214
+          ],
+          "confidence": 85.08
+        },
+        {
+          "text": "Vũ hầu Ngân Hà nhất sắc tệ.",
+          "bbox": [
+            882,
+            2247,
+            1551,
+            2292
+          ],
+          "confidence": 89.2
+        },
+        {
+          "text": "Giáp đạo thiên nghi tân ha hảo,",
+          "bbox": [
+            466,
+            2333,
+            1620,
+            2378
+          ],
+          "confidence": 88.28
+        },
+        {
+          "text": "Tá phần hông lưu hữu phần lê.",
+          "bbox": [
+            883,
+            2419,
+            1600,
+            2465
+          ],
+          "confidence": 86.68
+        },
+        {
+          "text": "DICH NGHIA:",
+          "bbox": [
+            396,
+            2537,
+            706,
+            2576
+          ],
+          "confidence": 97.16
+        },
+        {
+          "text": "ĐƯỜNG XE ĐI",
+          "bbox": [
+            687,
+            2624,
+            1413,
+            2666
+          ],
+          "confidence": 85.59
+        },
+        {
+          "text": "Bánh xe bóc đường, lâu ngày thành rãnh,",
+          "bbox": [
+            694,
+            2755,
+            1651,
+            2808
+          ],
+          "confidence": 94.57
+        },
+        {
+          "text": "Bò liễu xem ra đã là đê liễu.",
+          "bbox": [
+            569,
+            2835,
+            1404,
+            2883
+          ],
+          "confidence": 88.38
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2575,
+          3207
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 27.556,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              6,
+              19,
+              287,
+              45
+            ],
+            "generated_text": "ngothinhamle1.pdf",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.895,
+            "confidence": 96.54,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              1633,
+              213,
+              2097,
+              253
+            ],
+            "generated_text": "HOÀNG HOA ĐỔ PHA",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.063,
+            "confidence": 85.2,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              395,
+              258,
+              2101,
+              271
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.455,
+            "confidence": 71.98,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              1064,
+              301,
+              1759,
+              371
+            ],
+            "generated_text": "90. 輪路",
+            "n_lines": 1,
+            "tokens": 9,
+            "seconds": 0.923,
+            "confidence": 99.8,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              925,
+              508,
+              1510,
+              569
+            ],
+            "generated_text": "車輪剝路久成溪",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.101,
+            "confidence": 99.75,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              796,
+              644,
+              1514,
+              708
+            ],
+            "generated_text": "柳陌看来是柳堤",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.849,
+            "confidence": 98.14,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              924,
+              784,
+              1510,
+              848
+            ],
+            "generated_text": "缺地應知姜氏樂",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.842,
+            "confidence": 98.02,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              924,
+              923,
+              1515,
+              985
+            ],
+            "generated_text": "觀天莫笑子陽低",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.854,
+            "confidence": 99.55,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              274,
+              1059,
+              1514,
+              1124
+            ],
+            "generated_text": "暑中鶉火三分減",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 1.144,
+            "confidence": 98.34,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              929,
+              1193,
+              1531,
+              1254
+            ],
+            "generated_text": "雨後銀河一色齊",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.858,
+            "confidence": 99.08,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              930,
+              1314,
+              1518,
+              1378
+            ],
+            "generated_text": "夾道偏宜新夏好",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.963,
+            "confidence": 98.87,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              928,
+              1436,
+              1855,
+              1499
+            ],
+            "generated_text": "左攀紅榴右攀梨",
+            "n_lines": 1,
+            "tokens": 8,
+            "seconds": 0.851,
+            "confidence": 95.8,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              397,
+              1596,
+              1466,
+              1636
+            ],
+            "generated_text": "PHIÊN AM:",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.864,
+            "confidence": 88.49,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              1126,
+              1674,
+              1367,
+              1719
+            ],
+            "generated_text": "LUẬN LỖ",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.951,
+            "confidence": 78.74,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              657,
+              1811,
+              1570,
+              1857
+            ],
+            "generated_text": "Xa luân bác lô cứu thành khê,",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.381,
+            "confidence": 90.19,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              878,
+              1899,
+              1588,
+              1945
+            ],
+            "generated_text": "Liêu mach khán lai thi liêu đê.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.125,
+            "confidence": 87.57,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              872,
+              1987,
+              1696,
+              2042
+            ],
+            "generated_text": "Khuyết địa ứng tri. Khuong Thi lạc;",
+            "n_lines": 1,
+            "tokens": 18,
+            "seconds": 1.477,
+            "confidence": 83.81,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              375,
+              2074,
+              1674,
+              2120
+            ],
+            "generated_text": "Quan thiên mac tiểu Tử Dương đế.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.257,
+            "confidence": 85.36,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              884,
+              2159,
+              2042,
+              2214
+            ],
+            "generated_text": "Thủ trung Thuân Hoà tam phân giảm;",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.366,
+            "confidence": 85.08,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              882,
+              2247,
+              1551,
+              2292
+            ],
+            "generated_text": "Vũ hầu Ngân Hà nhất sắc tệ.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.171,
+            "confidence": 89.2,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              466,
+              2333,
+              1620,
+              2378
+            ],
+            "generated_text": "Giáp đạo thiên nghi tân ha hảo,",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.374,
+            "confidence": 88.28,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              883,
+              2419,
+              1600,
+              2465
+            ],
+            "generated_text": "Tá phần hông lưu hữu phần lê.",
+            "n_lines": 1,
+            "tokens": 14,
+            "seconds": 1.181,
+            "confidence": 86.68,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              396,
+              2537,
+              706,
+              2576
+            ],
+            "generated_text": "DICH NGHIA:",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.765,
+            "confidence": 97.16,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              687,
+              2624,
+              1413,
+              2666
+            ],
+            "generated_text": "ĐƯỜNG XE ĐI",
+            "n_lines": 1,
+            "tokens": 12,
+            "seconds": 1.071,
+            "confidence": 85.59,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              694,
+              2755,
+              1651,
+              2808
+            ],
+            "generated_text": "Bánh xe bóc đường, lâu ngày thành rãnh,",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.418,
+            "confidence": 94.57,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              569,
+              2835,
+              1404,
+              2883
+            ],
+            "generated_text": "Bò liễu xem ra đã là đê liễu.",
+            "n_lines": 1,
+            "tokens": 16,
+            "seconds": 1.355,
+            "confidence": 88.38,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              902,
+              2118,
+              1592,
+              2127
+            ],
+            "ink": 212
+          },
+          {
+            "box": [
+              959,
+              2374,
+              1618,
+              2386
+            ],
+            "ink": 333
+          },
+          {
+            "box": [
+              951,
+              2462,
+              1429,
+              2473
+            ],
+            "ink": 301
+          },
+          {
+            "box": [
+              2033,
+              2986,
+              2121,
+              2999
+            ],
+            "ink": 387
+          },
+          {
+            "box": [
+              2032,
+              3018,
+              2121,
+              3031
+            ],
+            "ink": 352
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

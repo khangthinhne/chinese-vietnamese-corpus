@@ -1,0 +1,985 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_20",
+  "engine": "paddlevl",
+  "page": 368,
+  "runs": [
+    {
+      "key": "76e9e8b5aa190cf958b7fe60d425f00643b6ccb70feb9b80a439be226dec73ab",
+      "parameters": {
+        "image_sha256": "32a4032864f91a9d17625f117a49008a6c010d2762d759b3ce88c6cedc9528e8",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "bfloat16",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T07:10:00+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_368.png",
+      "image_size": [
+        1839,
+        2803
+      ],
+      "crop_box": [
+        0,
+        0,
+        1839,
+        2803
+      ],
+      "lines": [
+        {
+          "text": "Tiếp đó bon máy chục người kia cũng mỗi người một câu phụ",
+          "bbox": [
+            342,
+            246,
+            1697,
+            301
+          ],
+          "confidence": 89.21
+        },
+        {
+          "text": "họa thêm vào. Rút cục lính tráng ai chẳng hám lợi, họ bèn diu",
+          "bbox": [
+            254,
+            305,
+            1701,
+            360
+          ],
+          "confidence": 88.83
+        },
+        {
+          "text": "giong mẹ rằng:",
+          "bbox": [
+            252,
+            372,
+            584,
+            404
+          ],
+          "confidence": 68.53
+        },
+        {
+          "text": "- Đã thế, thì hãy tha cho em ruột thái phi. Còn Triêm Vũ hầu là",
+          "bbox": [
+            340,
+            432,
+            1696,
+            482
+          ],
+          "confidence": 95.5
+        },
+        {
+          "text": "người giữa trời, bọn tôi phải xin mỗi người một miếng thịt để nhắm",
+          "bbox": [
+            254,
+            491,
+            1699,
+            544
+          ],
+          "confidence": 96.93
+        },
+        {
+          "text": "rượu, rồi sẽ tan về ngay tức khác. Nếu không, thì đâu có số tiền ấy",
+          "bbox": [
+            252,
+            552,
+            1699,
+            601
+          ],
+          "confidence": 90.5
+        },
+        {
+          "text": "cũng chẳng làm cho ba quân nguôi giận được.",
+          "bbox": [
+            252,
+            611,
+            1198,
+            655
+          ],
+          "confidence": 93.74
+        },
+        {
+          "text": "Chưa nói:",
+          "bbox": [
+            340,
+            685,
+            543,
+            716
+          ],
+          "confidence": 82.28
+        },
+        {
+          "text": "- Tha thi tha cả. Sao còn tách bạch người nọ người kia?",
+          "bbox": [
+            338,
+            744,
+            1505,
+            794
+          ],
+          "confidence": 87.01
+        },
+        {
+          "text": "Quan linh nói:",
+          "bbox": [
+            338,
+            820,
+            643,
+            852
+          ],
+          "confidence": 75.13
+        },
+        {
+          "text": "- Nhà chúa nếu còn quanh co che chở cho Triêm Vũ hầu; bon tôi",
+          "bbox": [
+            337,
+            883,
+            1696,
+            931
+          ],
+          "confidence": 96.67
+        },
+        {
+          "text": "khi \"máu đã nhập tim\"¹, thì ngay cả quốc cứu cũng không tha nữa!",
+          "bbox": [
+            249,
+            939,
+            1643,
+            991
+          ],
+          "confidence": 92.02
+        },
+        {
+          "text": "Nguyên hôm trước Triêm Vũ hầu trốn vào phủ, lấn ở trên gác Kỳ",
+          "bbox": [
+            335,
+            1008,
+            1694,
+            1058
+          ],
+          "confidence": 96.05
+        },
+        {
+          "text": "Lân văn dùng đôi kiếm để giữ mình. Trong lúc bon quân lính đòi",
+          "bbox": [
+            248,
+            1065,
+            1694,
+            1117
+          ],
+          "confidence": 91.65
+        },
+        {
+          "text": "giết, Triêm Vũ hầu bụng bảo dạ: “Nếu chúng không nghe nhà chúa",
+          "bbox": [
+            248,
+            1123,
+            1696,
+            1177
+          ],
+          "confidence": 95.08
+        },
+        {
+          "text": "điều đình, mà cứ xông vào bắt ta, thì phải đúng trên thang chém lấy",
+          "bbox": [
+            248,
+            1184,
+            1694,
+            1236
+          ],
+          "confidence": 93.68
+        },
+        {
+          "text": "dăm ba cái đầu của bọn chúng, chủ ta không chịu chết một mình!\".",
+          "bbox": [
+            248,
+            1244,
+            1633,
+            1294
+          ],
+          "confidence": 88.79
+        },
+        {
+          "text": "Đến lúc này việc đã gấp quá, chúa bèn sai người đến đồ Triêm",
+          "bbox": [
+            334,
+            1314,
+            1711,
+            1366
+          ],
+          "confidence": 92.31
+        },
+        {
+          "text": "Vũ hầu ràng: \"Bây giờ xã tắc nguy nan như treo trên sợi tóc, nhà",
+          "bbox": [
+            248,
+            1372,
+            1693,
+            1423
+          ],
+          "confidence": 91.16
+        },
+        {
+          "text": "chúa không thể cố giấu tương quân được nữa. Vậy xin tương quân hãy",
+          "bbox": [
+            246,
+            1430,
+            1693,
+            1484
+          ],
+          "confidence": 92.25
+        },
+        {
+          "text": "vì chúa chờ tiếc cái chết, để cho nhà chúa được yên. Đó là công muôn",
+          "bbox": [
+            245,
+            1490,
+            1693,
+            1541
+          ],
+          "confidence": 94.21
+        },
+        {
+          "text": "đời của tương quân...!\"",
+          "bbox": [
+            245,
+            1551,
+            715,
+            1589
+          ],
+          "confidence": 85.37
+        },
+        {
+          "text": "Triêm Vũ hầu bất đắc dĩ phải trèo thang xướng ra mất chúa mà nói:",
+          "bbox": [
+            331,
+            1619,
+            1672,
+            1670
+          ],
+          "confidence": 90.54
+        },
+        {
+          "text": "- Chết thì chết, thần xin hai tay kiếm tung hoành với chúng nó",
+          "bbox": [
+            331,
+            1690,
+            1690,
+            1742
+          ],
+          "confidence": 96.17
+        },
+        {
+          "text": "một trận, giết gọn lấy vài trăm đứa, cho hà bót con giận của nhà chúa!",
+          "bbox": [
+            243,
+            1751,
+            1676,
+            1800
+          ],
+          "confidence": 94.79
+        },
+        {
+          "text": "Chưa nói:",
+          "bbox": [
+            331,
+            1830,
+            535,
+            1859
+          ],
+          "confidence": 85.19
+        },
+        {
+          "text": "- Như thế, chỉ làm cho thái phi kinh sợ, mà quả nhân cũng",
+          "bbox": [
+            329,
+            1892,
+            1690,
+            1942
+          ],
+          "confidence": 95.63
+        },
+        {
+          "text": "chăng được yên nào!",
+          "bbox": [
+            243,
+            1956,
+            671,
+            1991
+          ],
+          "confidence": 94.26
+        },
+        {
+          "text": "Triêm Vũ hầu quảng hai thanh gươm xướng đất nói:",
+          "bbox": [
+            329,
+            2020,
+            1410,
+            2070
+          ],
+          "confidence": 90.12
+        },
+        {
+          "text": "- Bó tay mà chiu nhu thế, thân dành chết uống vây!",
+          "bbox": [
+            327,
+            2095,
+            1419,
+            2142
+          ],
+          "confidence": 88.63
+        },
+        {
+          "text": "Chúa khóc mà từ biết Triêm Vũ hầu. Rồi lại húa với Triêm Vũ",
+          "bbox": [
+            329,
+            2166,
+            1685,
+            2214
+          ],
+          "confidence": 95.72
+        },
+        {
+          "text": "hầu răng, sau khi y chết, sẽ cấp cho một ngàn khoảnh ruộng làm của",
+          "bbox": [
+            242,
+            2223,
+            1685,
+            2271
+          ],
+          "confidence": 90.36
+        },
+        {
+          "text": "nổi đời và phong cho làm phúc thần, bắt đầu mười làng thờ cúng.",
+          "bbox": [
+            242,
+            2281,
+            1602,
+            2329
+          ],
+          "confidence": 88.4
+        },
+        {
+          "text": "1. Do câu tục ngữ: \"Máu nhập tim, nhà lim cũng nhỏ\".",
+          "bbox": [
+            332,
+            2452,
+            1229,
+            2489
+          ],
+          "confidence": 88.55
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          1839,
+          2803
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 23.665,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              342,
+              246,
+              1697,
+              301
+            ],
+            "generated_text": "Tiếp đó bon máy chục người kia cũng mỗi người một câu phụ",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 0.524,
+            "confidence": 89.21,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              254,
+              305,
+              1701,
+              360
+            ],
+            "generated_text": "họa thêm vào. Rút cục lính tráng ai chẳng hám lợi, họ bèn diu",
+            "n_lines": 1,
+            "tokens": 33,
+            "seconds": 0.814,
+            "confidence": 88.83,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              252,
+              372,
+              584,
+              404
+            ],
+            "generated_text": "giong mẹ rằng:",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.289,
+            "confidence": 68.53,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              340,
+              432,
+              1696,
+              482
+            ],
+            "generated_text": "- Đã thế, thì hãy tha cho em ruột thái phi. Còn Triêm Vũ hầu là",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.683,
+            "confidence": 95.5,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              254,
+              491,
+              1699,
+              544
+            ],
+            "generated_text": "người giữa trời, bọn tôi phải xin mỗi người một miếng thịt để nhắm",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.677,
+            "confidence": 96.93,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              252,
+              552,
+              1699,
+              601
+            ],
+            "generated_text": "rượu, rồi sẽ tan về ngay tức khác. Nếu không, thì đâu có số tiền ấy",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.688,
+            "confidence": 90.5,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              252,
+              611,
+              1198,
+              655
+            ],
+            "generated_text": "cũng chẳng làm cho ba quân nguôi giận được.",
+            "n_lines": 1,
+            "tokens": 19,
+            "seconds": 0.54,
+            "confidence": 93.74,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              340,
+              685,
+              543,
+              716
+            ],
+            "generated_text": "Chưa nói:",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.242,
+            "confidence": 82.28,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              338,
+              744,
+              1505,
+              794
+            ],
+            "generated_text": "- Tha thi tha cả. Sao còn tách bạch người nọ người kia?",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.622,
+            "confidence": 87.01,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              338,
+              820,
+              643,
+              852
+            ],
+            "generated_text": "Quan linh nói:",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.261,
+            "confidence": 75.13,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              337,
+              883,
+              1696,
+              931
+            ],
+            "generated_text": "- Nhà chúa nếu còn quanh co che chở cho Triêm Vũ hầu; bon tôi",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 0.653,
+            "confidence": 96.67,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              249,
+              939,
+              1643,
+              991
+            ],
+            "generated_text": "khi \"máu đã nhập tim\"¹, thì ngay cả quốc cứu cũng không tha nữa!",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.648,
+            "confidence": 92.02,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              335,
+              1008,
+              1694,
+              1058
+            ],
+            "generated_text": "Nguyên hôm trước Triêm Vũ hầu trốn vào phủ, lấn ở trên gác Kỳ",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.686,
+            "confidence": 96.05,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              248,
+              1065,
+              1694,
+              1117
+            ],
+            "generated_text": "Lân văn dùng đôi kiếm để giữ mình. Trong lúc bon quân lính đòi",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.697,
+            "confidence": 91.65,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              248,
+              1123,
+              1696,
+              1177
+            ],
+            "generated_text": "giết, Triêm Vũ hầu bụng bảo dạ: “Nếu chúng không nghe nhà chúa",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.692,
+            "confidence": 95.08,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              248,
+              1184,
+              1694,
+              1236
+            ],
+            "generated_text": "điều đình, mà cứ xông vào bắt ta, thì phải đúng trên thang chém lấy",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.676,
+            "confidence": 93.68,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              248,
+              1244,
+              1633,
+              1294
+            ],
+            "generated_text": "dăm ba cái đầu của bọn chúng, chủ ta không chịu chết một mình!\".",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.588,
+            "confidence": 88.79,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              334,
+              1314,
+              1711,
+              1366
+            ],
+            "generated_text": "Đến lúc này việc đã gấp quá, chúa bèn sai người đến đồ Triêm",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.583,
+            "confidence": 92.31,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              248,
+              1372,
+              1693,
+              1423
+            ],
+            "generated_text": "Vũ hầu ràng: \"Bây giờ xã tắc nguy nan như treo trên sợi tóc, nhà",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 0.728,
+            "confidence": 91.16,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              246,
+              1430,
+              1693,
+              1484
+            ],
+            "generated_text": "chúa không thể cố giấu tương quân được nữa. Vậy xin tương quân hãy",
+            "n_lines": 1,
+            "tokens": 28,
+            "seconds": 0.702,
+            "confidence": 92.25,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              245,
+              1490,
+              1693,
+              1541
+            ],
+            "generated_text": "vì chúa chờ tiếc cái chết, để cho nhà chúa được yên. Đó là công muôn",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 0.67,
+            "confidence": 94.21,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              245,
+              1551,
+              715,
+              1589
+            ],
+            "generated_text": "đời của tương quân...!\"",
+            "n_lines": 1,
+            "tokens": 10,
+            "seconds": 0.331,
+            "confidence": 85.37,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              331,
+              1619,
+              1672,
+              1670
+            ],
+            "generated_text": "Triêm Vũ hầu bất đắc dĩ phải trèo thang xướng ra mất chúa mà nói:",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 0.707,
+            "confidence": 90.54,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              331,
+              1690,
+              1690,
+              1742
+            ],
+            "generated_text": "- Chết thì chết, thần xin hai tay kiếm tung hoành với chúng nó",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 0.781,
+            "confidence": 96.17,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              243,
+              1751,
+              1676,
+              1800
+            ],
+            "generated_text": "một trận, giết gọn lấy vài trăm đứa, cho hà bót con giận của nhà chúa!",
+            "n_lines": 1,
+            "tokens": 33,
+            "seconds": 3.244,
+            "confidence": 94.79,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              331,
+              1830,
+              535,
+              1859
+            ],
+            "generated_text": "Chưa nói:",
+            "n_lines": 1,
+            "tokens": 5,
+            "seconds": 0.613,
+            "confidence": 85.19,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 27,
+            "box": [
+              329,
+              1892,
+              1690,
+              1942
+            ],
+            "generated_text": "- Như thế, chỉ làm cho thái phi kinh sợ, mà quả nhân cũng",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.141,
+            "confidence": 95.63,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 28,
+            "box": [
+              243,
+              1956,
+              671,
+              1991
+            ],
+            "generated_text": "chăng được yên nào!",
+            "n_lines": 1,
+            "tokens": 7,
+            "seconds": 0.262,
+            "confidence": 94.26,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 29,
+            "box": [
+              329,
+              2020,
+              1410,
+              2070
+            ],
+            "generated_text": "Triêm Vũ hầu quảng hai thanh gươm xướng đất nói:",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 0.621,
+            "confidence": 90.12,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 30,
+            "box": [
+              327,
+              2095,
+              1419,
+              2142
+            ],
+            "generated_text": "- Bó tay mà chiu nhu thế, thân dành chết uống vây!",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 0.647,
+            "confidence": 88.63,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 31,
+            "box": [
+              329,
+              2166,
+              1685,
+              2214
+            ],
+            "generated_text": "Chúa khóc mà từ biết Triêm Vũ hầu. Rồi lại húa với Triêm Vũ",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.638,
+            "confidence": 95.72,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 32,
+            "box": [
+              242,
+              2223,
+              1685,
+              2271
+            ],
+            "generated_text": "hầu răng, sau khi y chết, sẽ cấp cho một ngàn khoảnh ruộng làm của",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.602,
+            "confidence": 90.36,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 33,
+            "box": [
+              242,
+              2281,
+              1602,
+              2329
+            ],
+            "generated_text": "nổi đời và phong cho làm phúc thần, bắt đầu mười làng thờ cúng.",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 0.639,
+            "confidence": 88.4,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 34,
+            "box": [
+              240,
+              2409,
+              835,
+              2426
+            ],
+            "generated_text": "",
+            "n_lines": 0,
+            "tokens": 1,
+            "seconds": 0.161,
+            "confidence": 49.62,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 35,
+            "box": [
+              332,
+              2452,
+              1229,
+              2489
+            ],
+            "generated_text": "1. Do câu tục ngữ: \"Máu nhập tim, nhà lim cũng nhỏ\".",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 0.613,
+            "confidence": 88.55,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      }
+    }
+  ]
+}

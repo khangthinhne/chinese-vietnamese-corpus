@@ -1,0 +1,842 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_18",
+  "engine": "paddlevl",
+  "page": 305,
+  "runs": [
+    {
+      "key": "e5a18296ff3ba3bf0d7f9dca1ded1c420bcbc310f444917e119bfe9995bf7ff4",
+      "parameters": {
+        "image_sha256": "765af02cfafa357f4d6296617bc9f2cd77d32007bb7c4422ee1786d9d4929c75",
+        "engine": {
+          "name": "paddlevl",
+          "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "model_revision": "main",
+          "transformers_version": "5.24.0",
+          "torch_version": "2.14.1+cu126",
+          "cuda_version": "12.6",
+          "dtype": "float32",
+          "orientation": "horizontal",
+          "max_pixels": 1003520,
+          "band_inches": 2.0,
+          "max_new_tokens": 512,
+          "prompt": "OCR:",
+          "col_rel_threshold": 0.05,
+          "min_unit_ink_rel": 0.08,
+          "min_pixels": 147456,
+          "min_band_side": 56,
+          "min_span_px": 14,
+          "loop_pattern": "(.{6,80}?)\\1{3,}",
+          "max_identical_run": 2,
+          "confidence_caps": [
+            10.0,
+            30.0
+          ],
+          "ink_percentiles": [
+            2.0,
+            98.0,
+            0.1
+          ],
+          "adapter_version": 5
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T14:03:29+00:00",
+      "image": "/content/han-viet-corpus/data/CPO_18/02_extraction/pages/page_305.png",
+      "image_size": [
+        2480,
+        3509
+      ],
+      "crop_box": [
+        0,
+        0,
+        2480,
+        3509
+      ],
+      "lines": [
+        {
+          "text": "-",
+          "bbox": [
+            0,
+            0,
+            1277,
+            33
+          ],
+          "confidence": 20.86
+        },
+        {
+          "text": "Phần II : Nguyên văn tác phẩm dịch và chủ thích",
+          "bbox": [
+            1122,
+            200,
+            2480,
+            249
+          ],
+          "confidence": 89.6
+        },
+        {
+          "text": "I",
+          "bbox": [
+            236,
+            279,
+            2480,
+            299
+          ],
+          "confidence": 29.61
+        },
+        {
+          "text": "CHU THICH:",
+          "bbox": [
+            390,
+            387,
+            2480,
+            441
+          ],
+          "confidence": 91.3
+        },
+        {
+          "text": "(1) Nguyên văn Bản A chép : \"Dĩ tiên, bích, không, kính,",
+          "bbox": [
+            256,
+            504,
+            2187,
+            573
+          ],
+          "confidence": 94.32
+        },
+        {
+          "text": "xuân, hải vi vân\" (lấy các chủ tiến, bích, không, kính,",
+          "bbox": [
+            390,
+            589,
+            2480,
+            650
+          ],
+          "confidence": 90.13
+        },
+        {
+          "text": "xuân, hải làm vân). Chúng tôi đảo lại trật tự 3 chủ \"tiên,",
+          "bbox": [
+            387,
+            671,
+            2480,
+            734
+          ],
+          "confidence": 86.16
+        },
+        {
+          "text": "bích, không\" thành \"không, bích, tiên\" cho phù hợp với",
+          "bbox": [
+            389,
+            755,
+            2480,
+            822
+          ],
+          "confidence": 97.69
+        },
+        {
+          "text": "thực tế hiệp vận của bài phu.",
+          "bbox": [
+            391,
+            854,
+            2480,
+            896
+          ],
+          "confidence": 77.33
+        },
+        {
+          "text": "(2) Hơi thần : trên mặt biển khi lăng sóng, đôi khi thấy như",
+          "bbox": [
+            257,
+            954,
+            2480,
+            1019
+          ],
+          "confidence": 89.87
+        },
+        {
+          "text": "có thuyền bè cung điện lọ lủng tăng không, người xưa",
+          "bbox": [
+            388,
+            1040,
+            2480,
+            1110
+          ],
+          "confidence": 81.59
+        },
+        {
+          "text": "cho đó là hơi của con thần phả ra. Sự thực, đầy chỉ là",
+          "bbox": [
+            388,
+            1120,
+            2195,
+            1186
+          ],
+          "confidence": 87.65
+        },
+        {
+          "text": "hiện tượng khúc xa ảnh sáng qua hơi nước.",
+          "bbox": [
+            388,
+            1205,
+            1746,
+            1265
+          ],
+          "confidence": 90.05
+        },
+        {
+          "text": "(3) Nguyên văn là lăng ươi (sáng sủa), nghĩa không được ôn",
+          "bbox": [
+            256,
+            1321,
+            2199,
+            1393
+          ],
+          "confidence": 81.69
+        },
+        {
+          "text": "làm theo văn cảnh. Chúng tôi đoán có lẽ là chủ tiêu 消",
+          "bbox": [
+            386,
+            1406,
+            2191,
+            1469
+          ],
+          "confidence": 95.42
+        },
+        {
+          "text": "(tiêu tan) do viết nhầm mà thành, nên đã tam chữa lại",
+          "bbox": [
+            387,
+            1490,
+            2198,
+            1551
+          ],
+          "confidence": 93.51
+        },
+        {
+          "text": "khi dich, trong khi chờ tra cứu thêm.",
+          "bbox": [
+            384,
+            1571,
+            1548,
+            1631
+          ],
+          "confidence": 97.89
+        },
+        {
+          "text": "(4) Tam Sơn : ba ngon núi giữa biển, theo thân thoai Trung",
+          "bbox": [
+            255,
+            1691,
+            2199,
+            1750
+          ],
+          "confidence": 95.63
+        },
+        {
+          "text": "Quốc, gồm Phương Trương, Bông Lai và Doanh Châu.",
+          "bbox": [
+            388,
+            1774,
+            2198,
+            1834
+          ],
+          "confidence": 94.43
+        },
+        {
+          "text": "Cũng có thuyết nói là Phương Hộ, Bông Hộ và Doanh",
+          "bbox": [
+            390,
+            1856,
+            2204,
+            1916
+          ],
+          "confidence": 90.44
+        },
+        {
+          "text": "Hô. Sở dĩ goi là \"hổ\", vì chúng đều có hình dang giống",
+          "bbox": [
+            390,
+            1938,
+            2207,
+            2000
+          ],
+          "confidence": 85.43
+        },
+        {
+          "text": "quá bầu dùng dụng rượu, tức bầu rượu.",
+          "bbox": [
+            391,
+            2028,
+            1639,
+            2080
+          ],
+          "confidence": 89.88
+        },
+        {
+          "text": "(5) Bài phú mất phần cuối, đầy là điều mà trước nay chưa ai",
+          "bbox": [
+            258,
+            2138,
+            2204,
+            2201
+          ],
+          "confidence": 93.08
+        },
+        {
+          "text": "chú ý tối. Nhưng mất không nhiều, vì vấn cuối của bài",
+          "bbox": [
+            390,
+            2225,
+            2201,
+            2285
+          ],
+          "confidence": 87.97
+        },
+        {
+          "text": "phu cung da xuất hiện trong van ban.",
+          "bbox": [
+            391,
+            2323,
+            1585,
+            2367
+          ],
+          "confidence": 86.86
+        },
+        {
+          "text": "285",
+          "bbox": [
+            1970,
+            3347,
+            2192,
+            3394
+          ],
+          "confidence": 90.55
+        }
+      ],
+      "raw": {
+        "model_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "model_revision": "main",
+        "orientation": "horizontal",
+        "prompt": "OCR:",
+        "dpi": 300,
+        "image_size": [
+          2480,
+          3509
+        ],
+        "bbox_granularity": "row_exact",
+        "max_new_tokens": 512,
+        "max_pixels": 1003520,
+        "inference_seconds": 38.704,
+        "bands": [
+          {
+            "unit": 1,
+            "box": [
+              0,
+              0,
+              1277,
+              33
+            ],
+            "generated_text": "-",
+            "n_lines": 1,
+            "tokens": 2,
+            "seconds": 0.42,
+            "confidence": 20.86,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 2,
+            "box": [
+              1122,
+              200,
+              2480,
+              249
+            ],
+            "generated_text": "Phần II : Nguyên văn tác phẩm dịch và chủ thích",
+            "n_lines": 1,
+            "tokens": 17,
+            "seconds": 1.301,
+            "confidence": 89.6,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 3,
+            "box": [
+              236,
+              279,
+              2480,
+              299
+            ],
+            "generated_text": "I",
+            "n_lines": 1,
+            "tokens": 2,
+            "seconds": 0.55,
+            "confidence": 29.61,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 4,
+            "box": [
+              390,
+              387,
+              2480,
+              441
+            ],
+            "generated_text": "CHU THICH:",
+            "n_lines": 1,
+            "tokens": 6,
+            "seconds": 0.753,
+            "confidence": 91.3,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 5,
+            "box": [
+              256,
+              504,
+              2187,
+              573
+            ],
+            "generated_text": "(1) Nguyên văn Bản A chép : \"Dĩ tiên, bích, không, kính,",
+            "n_lines": 1,
+            "tokens": 27,
+            "seconds": 1.97,
+            "confidence": 94.32,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 6,
+            "box": [
+              390,
+              589,
+              2480,
+              650
+            ],
+            "generated_text": "xuân, hải vi vân\" (lấy các chủ tiến, bích, không, kính,",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 2.079,
+            "confidence": 90.13,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 7,
+            "box": [
+              387,
+              671,
+              2480,
+              734
+            ],
+            "generated_text": "xuân, hải làm vân). Chúng tôi đảo lại trật tự 3 chủ \"tiên,",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 2.064,
+            "confidence": 86.16,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 8,
+            "box": [
+              389,
+              755,
+              2480,
+              822
+            ],
+            "generated_text": "bích, không\" thành \"không, bích, tiên\" cho phù hợp với",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.691,
+            "confidence": 97.69,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 9,
+            "box": [
+              391,
+              854,
+              2480,
+              896
+            ],
+            "generated_text": "thực tế hiệp vận của bài phu.",
+            "n_lines": 1,
+            "tokens": 13,
+            "seconds": 1.218,
+            "confidence": 77.33,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 10,
+            "box": [
+              257,
+              954,
+              2480,
+              1019
+            ],
+            "generated_text": "(2) Hơi thần : trên mặt biển khi lăng sóng, đôi khi thấy như",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.95,
+            "confidence": 89.87,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 11,
+            "box": [
+              388,
+              1040,
+              2480,
+              1110
+            ],
+            "generated_text": "có thuyền bè cung điện lọ lủng tăng không, người xưa",
+            "n_lines": 1,
+            "tokens": 22,
+            "seconds": 1.727,
+            "confidence": 81.59,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 12,
+            "box": [
+              388,
+              1120,
+              2195,
+              1186
+            ],
+            "generated_text": "cho đó là hơi của con thần phả ra. Sự thực, đầy chỉ là",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.719,
+            "confidence": 87.65,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 13,
+            "box": [
+              388,
+              1205,
+              1746,
+              1265
+            ],
+            "generated_text": "hiện tượng khúc xa ảnh sáng qua hơi nước.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.173,
+            "confidence": 90.05,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 14,
+            "box": [
+              256,
+              1321,
+              2199,
+              1393
+            ],
+            "generated_text": "(3) Nguyên văn là lăng ươi (sáng sủa), nghĩa không được ôn",
+            "n_lines": 1,
+            "tokens": 26,
+            "seconds": 1.855,
+            "confidence": 81.69,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 15,
+            "box": [
+              386,
+              1406,
+              2191,
+              1469
+            ],
+            "generated_text": "làm theo văn cảnh. Chúng tôi đoán có lẽ là chủ tiêu 消",
+            "n_lines": 1,
+            "tokens": 23,
+            "seconds": 1.729,
+            "confidence": 95.42,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 16,
+            "box": [
+              387,
+              1490,
+              2198,
+              1551
+            ],
+            "generated_text": "(tiêu tan) do viết nhầm mà thành, nên đã tam chữa lại",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.581,
+            "confidence": 93.51,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 17,
+            "box": [
+              384,
+              1571,
+              1548,
+              1631
+            ],
+            "generated_text": "khi dich, trong khi chờ tra cứu thêm.",
+            "n_lines": 1,
+            "tokens": 15,
+            "seconds": 1.328,
+            "confidence": 97.89,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 18,
+            "box": [
+              255,
+              1691,
+              2199,
+              1750
+            ],
+            "generated_text": "(4) Tam Sơn : ba ngon núi giữa biển, theo thân thoai Trung",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.902,
+            "confidence": 95.63,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 19,
+            "box": [
+              388,
+              1774,
+              2198,
+              1834
+            ],
+            "generated_text": "Quốc, gồm Phương Trương, Bông Lai và Doanh Châu.",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.674,
+            "confidence": 94.43,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 20,
+            "box": [
+              390,
+              1856,
+              2204,
+              1916
+            ],
+            "generated_text": "Cũng có thuyết nói là Phương Hộ, Bông Hộ và Doanh",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.677,
+            "confidence": 90.44,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 21,
+            "box": [
+              390,
+              1938,
+              2207,
+              2000
+            ],
+            "generated_text": "Hô. Sở dĩ goi là \"hổ\", vì chúng đều có hình dang giống",
+            "n_lines": 1,
+            "tokens": 24,
+            "seconds": 1.843,
+            "confidence": 85.43,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 22,
+            "box": [
+              391,
+              2028,
+              1639,
+              2080
+            ],
+            "generated_text": "quá bầu dùng dụng rượu, tức bầu rượu.",
+            "n_lines": 1,
+            "tokens": 20,
+            "seconds": 1.442,
+            "confidence": 89.88,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 23,
+            "box": [
+              258,
+              2138,
+              2204,
+              2201
+            ],
+            "generated_text": "(5) Bài phú mất phần cuối, đầy là điều mà trước nay chưa ai",
+            "n_lines": 1,
+            "tokens": 25,
+            "seconds": 1.945,
+            "confidence": 93.08,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 24,
+            "box": [
+              390,
+              2225,
+              2201,
+              2285
+            ],
+            "generated_text": "chú ý tối. Nhưng mất không nhiều, vì vấn cuối của bài",
+            "n_lines": 1,
+            "tokens": 21,
+            "seconds": 1.662,
+            "confidence": 87.97,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 25,
+            "box": [
+              391,
+              2323,
+              1585,
+              2367
+            ],
+            "generated_text": "phu cung da xuất hiện trong van ban.",
+            "n_lines": 1,
+            "tokens": 11,
+            "seconds": 0.911,
+            "confidence": 86.86,
+            "flags": [],
+            "max_pixels": 1003520
+          },
+          {
+            "unit": 26,
+            "box": [
+              1970,
+              3347,
+              2192,
+              3394
+            ],
+            "generated_text": "285",
+            "n_lines": 1,
+            "tokens": 4,
+            "seconds": 0.532,
+            "confidence": 90.55,
+            "flags": [],
+            "max_pixels": 1003520
+          }
+        ],
+        "skipped_units": [
+          {
+            "box": [
+              397,
+              838,
+              2480,
+              857
+            ],
+            "ink": 1605
+          },
+          {
+            "box": [
+              266,
+              1016,
+              2480,
+              1025
+            ],
+            "ink": 536
+          },
+          {
+            "box": [
+              266,
+              1749,
+              2192,
+              1760
+            ],
+            "ink": 599
+          },
+          {
+            "box": [
+              421,
+              1832,
+              1483,
+              1844
+            ],
+            "ink": 679
+          },
+          {
+            "box": [
+              525,
+              1916,
+              1726,
+              1926
+            ],
+            "ink": 501
+          },
+          {
+            "box": [
+              731,
+              1997,
+              2201,
+              2011
+            ],
+            "ink": 949
+          },
+          {
+            "box": [
+              410,
+              2080,
+              1571,
+              2090
+            ],
+            "ink": 467
+          },
+          {
+            "box": [
+              431,
+              2308,
+              1516,
+              2327
+            ],
+            "ink": 1623
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "8059589dd465aa49cef5f6635e74418c37994b51",
+        "git_describe": "8059589",
+        "git_dirty": true,
+        "gpu": "Tesla T4",
+        "dtype": "float32",
+        "adapter_version": 5
+      }
+    }
+  ]
+}

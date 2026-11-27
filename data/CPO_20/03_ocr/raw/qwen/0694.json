@@ -1,0 +1,244 @@
+{
+  "schema_version": 1,
+  "work_id": "CPO_20",
+  "engine": "qwen",
+  "page": 694,
+  "runs": [
+    {
+      "key": "dd88578cddfdeeb02e314f8380f8f10109c653ff3078c64e52c64d3df48b55d2",
+      "parameters": {
+        "image_sha256": "7183526d938af69e003080feda91e784073e0934877782eb958ffb4df9615a45",
+        "engine": {
+          "name": "qwen",
+          "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "model_revision": "main",
+          "transformers_version": "4.57.6",
+          "torch_version": "2.5.1+cu121",
+          "cuda_version": "12.1",
+          "bitsandbytes_version": "0.50.2",
+          "quantization": {
+            "load_in_4bit": true,
+            "quant_type": "nf4",
+            "double_quant": true,
+            "compute_dtype": "float16"
+          },
+          "mode": "all",
+          "min_pixels": 50176,
+          "max_pixels": 802816,
+          "band_inches": 2.0,
+          "max_new_tokens": 768,
+          "repetition_penalty": 1.05,
+          "adapter_version": 3,
+          "prompt_version": 3,
+          "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74"
+        },
+        "lang": "all",
+        "region": null,
+        "psm": 6,
+        "dpi": 300,
+        "preprocessing": "rgb-crop-v1"
+      },
+      "created_at": "2026-11-25T18:52:43+00:00",
+      "image": "E:\\Projects\\han-viet-corpus\\data\\CPO_20\\02_extraction\\pages\\page_694.png",
+      "image_size": [
+        1839,
+        2803
+      ],
+      "crop_box": [
+        0,
+        0,
+        1839,
+        2803
+      ],
+      "lines": [
+        {
+          "text": "聞人哭許從子情日不出鄰袁何哭人何所哭婦至在聽母寡翻門家哉辜",
+          "bbox": [
+            756,
+            225,
+            1762,
+            800
+          ],
+          "confidence": 59.59
+        },
+        {
+          "text": "夫三憔孤影，既何四枕長男。年成兩復，不知朝中一哭。女哀處孤魂。",
+          "bbox": [
+            788,
+            792,
+            1762,
+            1385
+          ],
+          "confidence": 26.25
+        },
+        {
+          "text": "跡寐蛛鼠牽去人地",
+          "bbox": [
+            792,
+            1377,
+            1762,
+            1525
+          ],
+          "confidence": 69.57
+        },
+        {
+          "text": "逍夢蟬龜遑之家園",
+          "bbox": [
+            792,
+            1525,
+            1762,
+            1672
+          ],
+          "confidence": 69.57
+        },
+        {
+          "text": "撫若網穴不棄鄰荒",
+          "bbox": [
+            792,
+            1672,
+            1762,
+            1819
+          ],
+          "confidence": 69.57
+        },
+        {
+          "text": "暮徨虛顏寡扶昔今",
+          "bbox": [
+            792,
+            1819,
+            1762,
+            1967
+          ],
+          "confidence": 69.57
+        },
+        {
+          "text": "桑事愁裡聲",
+          "bbox": [
+            257,
+            1959,
+            1762,
+            2154
+          ],
+          "confidence": 49.38
+        },
+        {
+          "text": "世多復孤聞此",
+          "bbox": [
+            257,
+            2154,
+            1762,
+            2348
+          ],
+          "confidence": 49.38
+        },
+        {
+          "text": "餘性忍枕頰然睡",
+          "bbox": [
+            257,
+            2348,
+            1762,
+            2543
+          ],
+          "confidence": 49.38
+        }
+      ],
+      "raw": {
+        "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+        "model_revision": "main",
+        "mode": "all",
+        "prompt_sha256": "b155501b06b8f0140e3f0eab8a3e163c04ed2f3d5bfaef5ad555249318e76b74",
+        "dpi": 300,
+        "image_size": [
+          1839,
+          2803
+        ],
+        "band_target_height": 600,
+        "bbox_granularity": "band_even_split",
+        "max_new_tokens": 768,
+        "max_pixels": 802816,
+        "inference_seconds": 12.132,
+        "bands": [
+          {
+            "band": 1,
+            "y0": 229,
+            "y1": 796,
+            "ink_box": [
+              756,
+              225,
+              1762,
+              800
+            ],
+            "generated_text": "聞人哭許從子情日不出鄰袁何哭人何所哭婦至在聽母寡翻門家哉辜",
+            "n_lines": 1,
+            "tokens": 29,
+            "seconds": 2.985,
+            "confidence": 59.59,
+            "flags": []
+          },
+          {
+            "band": 2,
+            "y0": 796,
+            "y1": 1381,
+            "ink_box": [
+              788,
+              792,
+              1762,
+              1385
+            ],
+            "generated_text": "夫三憔孤影，既何四枕長男。年成兩復，不知朝中一哭。女哀處孤魂。",
+            "n_lines": 1,
+            "tokens": 31,
+            "seconds": 2.959,
+            "confidence": 26.25,
+            "flags": []
+          },
+          {
+            "band": 3,
+            "y0": 1381,
+            "y1": 1963,
+            "ink_box": [
+              792,
+              1377,
+              1762,
+              1967
+            ],
+            "generated_text": "跡寐蛛鼠牽去人地\n逍夢蟬龜遑之家園\n撫若網穴不棄鄰荒\n暮徨虛顏寡扶昔今",
+            "n_lines": 4,
+            "tokens": 38,
+            "seconds": 3.277,
+            "confidence": 69.57,
+            "flags": []
+          },
+          {
+            "band": 4,
+            "y0": 1963,
+            "y1": 2539,
+            "ink_box": [
+              257,
+              1959,
+              1762,
+              2543
+            ],
+            "generated_text": "桑事愁裡聲\n世多復孤聞此\n餘性忍枕頰然睡",
+            "n_lines": 3,
+            "tokens": 22,
+            "seconds": 2.9,
+            "confidence": 49.38,
+            "flags": []
+          }
+        ],
+        "any_degenerate": false,
+        "any_truncated": false,
+        "lang": "all"
+      },
+      "provenance": {
+        "git_commit": "9f9251f525e6fb14a7842465d834ea0d351ab96e",
+        "git_describe": "9f9251f",
+        "git_dirty": true,
+        "gpu": "NVIDIA GeForce RTX 3050 6GB Laptop GPU",
+        "dtype": "float16",
+        "adapter_version": 3
+      }
+    }
+  ]
+}
