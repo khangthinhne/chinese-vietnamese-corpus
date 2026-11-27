@@ -1,9 +1,11 @@
 # han-viet-corpus
 
-Đồ án dóng hàng Hán–Việt (CPO_17..CPO_20) theo `Guideline.pdf`: OCR/trích text, tách lớp,
-làm sạch, tách câu, dóng hàng, xuất TSV + XLSX. Mỗi cặp hợp lệ nằm trên một dòng
-`<Hán>\t<Việt>`; `.tsv` và `.xlsx` phải giống hệt nhau (sheet `DONG_HANG`, hai cột `Hán`, `Việt`).
-README.md có sơ đồ pipeline đầy đủ.
+Đồ án dóng hàng Hán–Việt (CPO_18, CPO_19, CPO_20) theo `Guideline.pdf`: OCR/trích text, tách lớp,
+làm sạch, tách câu, dóng hàng, xuất TSV + XLSX. **Định dạng nộp đã chốt:** mỗi tác phẩm một file 4 cột
+`Hán | Dịch âm | Dịch nghĩa | Dịch thơ` (`python -m src.alignment.export --pair han-viet`); `.tsv` và `.xlsx` phải
+giống hệt nhau (sheet `DONG_HANG`). README.md có sơ đồ pipeline đầy đủ.
+
+**Đầu phiên: đọc `docs/STATUS.md`** (nhánh, quyết định đã chốt, task đang dở, việc chờ người dùng quyết).
 
 ## Pipeline (Single-Stream)
 PDF -> `02_extraction/pages/NNNN.png` -> OCR 1 lần/trang -> `03_ocr/raw/NNNN.json` (bất biến)
@@ -43,6 +45,8 @@ python -m src.ocr.ocr --help                                       # --engines, 
 $env:PADDLEVL_ORIENTATION="horizontal"                             # Hán in ngang ở CPO_18/19/20
 python -m src.ocr.ocr --config configs/CPO_20.json --layer han --engines paddlevl --pages 1-280   # .venv-paddle
 python -m src.ocr.ocr --config configs/CPO_20.json --layer vie --engines qwen --pages 1-280       # my_nlp
+python -m src.pipeline --config configs/CPO_20.json --steps layers --force   # dựng han.xml/vie.xml ĐÚNG phạm vi trang
+# CHÚ Ý: build_layers --config không kèm --pages dựng MỌI trang có raw, kể cả trang đã loại (tạo lại TXT trang bỏ)
 python -m src.ocr.build_layers --config configs/CPO_20.json        # JSON thô -> han.xml, vie.xml, TXT + kiểm tra
 python -m src.ocr.build_layers --config configs/CPO_20.json --report-only   # chỉ kiểm tra + bảng tổng hợp
 powershell -File scripts\ocr_work.ps1 -Work CPO_19                # OCR cả work một mạch (resume được), docs/ocr_runbook.md
