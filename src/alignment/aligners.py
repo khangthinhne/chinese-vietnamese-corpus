@@ -11,7 +11,11 @@ Hợp đồng:
 Đã có:
     levenshtein  han-am     so khớp âm Hán-Việt với bản phiên âm (cần từ điển --opt reading_dict=...)
     length       bất kỳ     dóng theo độ dài (Gale-Church), KHÔNG cần model; baseline/dự phòng
-Dự kiến thêm (cùng giao diện): clc (API lab), bertalign/vecalign, llm (cho dịch thơ).
+    bertalign    han-nghia  embedding câu (LaBSE | bge-m3) + cầu nối âm tuỳ chọn (src/alignment/bertalign.py)
+Dự kiến thêm (cùng giao diện): llm (cho dịch thơ). API CLC không được cấp nên không cài.
+
+Aligner có thể định nghĩa prepare(layout, src_layer, tgt_layer, src, tgt): align.py gọi MỘT lần với toàn bộ câu
+của work trước khi dóng từng tài liệu (vd. hiệu chỉnh tỉ lệ độ dài theo work, nạp dữ liệu phụ).
 """
 
 from __future__ import annotations
@@ -52,6 +56,9 @@ class Aligner(ABC):
 
     def describe(self) -> dict:
         return {"name": self.name, "options": self.opts}
+
+    def prepare(self, layout, src_layer: str, tgt_layer: str, src: list[Sentence], tgt: list[Sentence]) -> None:
+        """Tuỳ chọn: thống kê toàn work trước khi dóng từng tài liệu. Mặc định không làm gì."""
 
     @abstractmethod
     def align(self, src_layer: str, tgt_layer: str, src: list[Sentence], tgt: list[Sentence]) -> list[Bead]:
@@ -366,3 +373,7 @@ class LengthAligner(Aligner):
 
         spans = monotonic_align(len(src), len(tgt), cost, DEFAULT_MOVES, o["band"])
         return spans_to_beads(spans, score)
+
+
+# Aligner ở module riêng (đăng ký khi import; phụ thuộc nặng như torch chỉ nạp lúc dùng).
+from src.alignment import bertalign as _bertalign  # noqa: E402,F401

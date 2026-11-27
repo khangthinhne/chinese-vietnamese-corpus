@@ -217,7 +217,37 @@ Text sạch mỗi câu một dòng: `python scripts/export_clean_text.py --work-
 ## Thêm phương pháp dóng hàng
 Viết class kế thừa `Aligner` trong `src/alignment/aligners.py`, gắn `@register_aligner`, trả về `list[Bead]`
 phủ đủ hai phía theo thứ tự (câu thừa = Bead một phía rỗng + cờ `unaligned`). Sau đó dùng `--method <tên>`.
-Dự kiến: `clc` (API lab), `bertalign`/`vecalign`, `llm` (dịch thơ).
+Dự kiến: `llm` (dịch thơ). API CLC không được cấp nên không cài. Aligner cần thống kê toàn work thì định nghĩa
+`prepare(layout, src_layer, tgt_layer, src, tgt)`; `align.py` gọi một lần trước khi dóng từng tài liệu.
+
+### `bertalign` (han-nghia)
+Cài lại thuật toán Bertalign trong `src/alignment/bertalign.py`, không dùng gói `bertalign`. Embedding nằm ở
+`src/alignment/embeddings.py` (transformers thuần, chạy được trong `my_nlp`; không cần sentence-transformers).
+```powershell
+$env:HAN_VIET_MODEL_DIR="E:\models"          # thư mục chứa LaBSE\, bge-m3\ đã tải (không có thì tải từ HF)
+python -m src.alignment.align --pair han-nghia --work-id CPO_19 --method bertalign --opt model=bge-m3 --force
+python -m src.alignment.align --pair han-nghia --work-id CPO_19 --method bertalign --opt model=bge-m3 --opt bridge_weight=3 --force
+python scripts/eval_han_nghia.py --work-id CPO_19 --run a=<x.xml> --run b=<y.xml> [--review 30 --prefer b --review-out r.tsv]
+# chấm theo bộ dóng tay eval/gold/{work}_*.xlsx, gộp 3 work ('{work}' được thay; bỏ file khoá ~$ của Excel)
+python scripts/eval_han_nghia.py --work-id CPO_18,CPO_19,CPO_20 --run a=<root>/{work}/06_alignment/han-nghia.a.xml `
+    --gold --tune
+```
+- Chấm theo chuẩn: bản dóng tay đã sửa OCR và tách câu lại, nên được chiếu lên ID câu pipeline. Việc chiếu dùng dóng
+  token, rồi gộp các hàng chuẩn dính chung một câu pipeline thành bead chuẩn (`build_gold`). Hàng có Dịch nghĩa mà
+  lớp nghĩa pipeline không có thì bị loại khỏi phần chấm và được liệt kê trong `rows_nghia_unreachable`.
+- Bead a-b với 1 <= a,b <= `max_side` (4) và a+b <= `max_total` (8). Bead 1-0 và 0-1 có cờ `unaligned`.
+- Điểm bead = cosine(đoạn Hán, đoạn nghĩa) + `bridge_weight` × trùng từ âm + `len_weight` × (log2(1+min/max) - 1).
+  Tỉ lệ độ dài nghĩa/Hán được tính theo từng work trong `prepare`. Bead một phía nhận điểm `skip`.
+- Cầu nối âm (`bridge_weight` > 0): đọc `06_alignment/han-am.xml` (hoặc `bridge_file`). Trùng từ là Dice của n-gram
+  âm tiết 1–3 (bỏ dấu, chữ thường), trọng số `ngram_weights` × IDF.
+- Cache embedding: SQLite theo sha1 câu, đặt ở `cache_dir` (mặc định `$HAN_VIET_EMB_CACHE` hoặc
+  `~/.cache/han_viet_corpus/embeddings`). Mô hình chỉ được nạp khi có câu chưa có trong cache.
+- GPU: dùng fp16. Lệnh từ chối chạy nếu tiến trình khác đang chiếm > `gpu_busy_mb` MiB (1024).
+- `configs/CPO_18.json`, `CPO_19.json`, `CPO_20.json` dùng `bertalign` cho `han-nghia`, với `opt` là `model=bge-m3`
+  và `bridge_weight=3` (đổi ngày 2026-11-28). Mặc định trong mã (`default_method`) vẫn là `length`.
+  Số liệu: `reports/han_nghia_20261127.md`, mục 4a (bộ chuẩn 50 trang; strict F1 0,62 với `length`, 0,91 với cấu hình này).
+- Mô hình không tải được qua Python trên máy local (lỗi SSL). Đặt `HAN_VIET_MODEL_DIR` trỏ vào thư mục chứa `bge-m3\`
+  trước khi chạy pipeline.
 
 ## Thêm engine OCR
 Class kế thừa `OcrEngine` trong `src/ocr/engines.py` + `@register_engine`, rồi `--engines <tên>`

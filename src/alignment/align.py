@@ -76,6 +76,7 @@ def run(args) -> Path | None:
     deps.check_fresh(layout, f"align:{args.pair}", inputs, [out], args.force,
                      f"{out} đã tồn tại; dùng --force để ghi đè")
     aligner = ALIGNERS[method](**parse_opts(args.opt))
+    aligner.prepare(layout, src_layer, tgt_layer, src, tgt)
     groups: dict[str, tuple[list[int], list[int]]] = {}
     for i, s in enumerate(src):
         groups.setdefault(s.document_id, ([], []))[0].append(i)

@@ -60,6 +60,8 @@ python -m src.cleaning.pipeline --work-id CPO_19 --structural-only
 python -m src.validation.validate --config configs/CPO_19.json
 python -m src.alignment.align --pair han-am --work-id CPO_19
 python -m src.alignment.export --pair han-viet --work-id CPO_19
+python -m src.alignment.align --pair han-nghia --work-id CPO_19 --method bertalign --opt model=bge-m3 --opt bridge_weight=3 --force  # docs/pipeline.md
+python scripts/eval_han_nghia.py --work-id CPO_18,CPO_19,CPO_20 --run a=<root>/{work}/...xml --gold --tune   # chấm han-nghia theo eval/gold/
 python -m src.ocr.engines.smoke_paddlevl <ảnh> <raw.json>          # thử một trang với paddlevl
 ```
 `--pages` là bắt buộc (không tự OCR cả thư mục).

@@ -1,4 +1,4 @@
-# Trạng thái dự án (cập nhật 2026-11-27)
+# Trạng thái dự án (cập nhật 2026-11-28)
 
 Đọc file này đầu mỗi phiên làm việc mới. Chi tiết nằm trong các báo cáo ở `reports/`.
 
@@ -9,6 +9,11 @@
   - `8f7f048`: bật cờ clean/segmentation và các ghi đè;
   - `d4ebc58`: vòng clean trên dữ liệu đầy đủ.
 - `data/` đã được commit đến `5d49ba6`, gồm cả 16 trang OCR lại.
+- `47fcc60` (2026-11-28 01:32): người dùng merge `origin/main` vào nhánh này. Merge mang về các file dóng tay
+  `assignment_submission/align50/` và commit `dc05a52` (dóng CPO_19 tr.14–63, sửa `data/CPO_19/07_export/` và
+  `05_cleaning/validation_report.json`).
+- 69 TXT `ocr_raw_text` (mục 10.5 của báo cáo audit segmentation) đã bị xoá trong commit `5d49ba6`. Không còn thay
+  đổi nào đang chờ trong `git status data/`.
 
 ## Quyết định đã chốt
 - **Định dạng nộp:** một file 4 cột `Hán | Dịch âm | Dịch nghĩa | Dịch thơ` cho mỗi tác phẩm, xuất bằng
@@ -51,25 +56,36 @@ Cả 3 work đạt cổng 1–3 (`scripts/audit_segmentation.py`):
 | CPO_19 | 0,874 | 3519 | |
 | CPO_20 | 0,865 | 2058 | |
 
-## Task đang dở: bộ dóng han-nghia
-Đặc tả nằm trong tin nhắn của người dùng ngày 2026-11-27. Tóm tắt:
-- **Aligner mới `bertalign`:** tự cài thuật toán, embedding cấu hình được (LaBSE, BAAI/bge-m3), fp16, cache embedding theo hash câu.
-  Bead được phép 1-1 đến n-m, tối đa 4 câu mỗi phía; 0-1 và 1-0 có cờ.
-- **Tín hiệu cầu nối âm:** câu âm tương ứng lấy từ han-am. Trùng từ được tính sau khi bỏ dấu, có trọng số IDF, ưu tiên cụm
-  2–3 âm tiết. Điểm = embedding + w × trùng từ + tiên nghiệm độ dài.
-- **So sánh 3 cấu hình:** LaBSE; BGE-M3; BGE-M3 + cầu nối.
-  - Có file chuẩn `mau_dong_hang_50_trang.xlsx` thì đo độ chính xác và độ phủ bead.
-  - Chưa có chuẩn thì đo độ đồng thuận giữa các cấu hình, và rà bằng mắt 30 bead mỗi work.
-- **Cách chạy:** trên bản sao, một commit, **không dùng API CLC** (không được cấp). Báo cáo `reports/han_nghia_<ngày>.md`.
-- **Đã làm:** mới đọc mã. Mỗi aligner là một class đăng ký bằng `@register_aligner` trong `src/alignment/aligners.py`.
-  Lõi quy hoạch động là `src/alignment/dp.monotonic_align`, nhận `cost(i0,i1,j0,j1)` và các bước `moves`.
-  `align.py` chạy riêng từng tài liệu. Bead han-am lưu ở `06_alignment/han-am.xml` (`SRC_IDS`/`TGT_IDS`).
-- **Bước tiếp theo:**
-  1. kiểm tra môi trường (sentence-transformers, mô hình đã tải offline chưa, GPU);
-  2. tìm file chuẩn dóng tay;
-  3. viết aligner và test;
-  4. chạy 3 cấu hình trên bản sao ở `E:\claude_scratch\`;
-  5. viết báo cáo.
+## Task vừa xong: bộ dóng han-nghia (đã commit 2026-11-28; chạy trên `data/` thật đang chờ xác nhận)
+Báo cáo: `reports/han_nghia_20261127.md`. Nhãn rà bằng mắt: `reports/han_nghia_review_20261127.tsv`.
+Bộ chuẩn: `eval/gold/` (xem `eval/gold/README.md`).
+- **Aligner `bertalign`** (`src/alignment/bertalign.py`, `src/alignment/embeddings.py`):
+  - tự cài thuật toán; embedding LaBSE hoặc bge-m3, fp16, cache SQLite theo sha1 câu;
+  - bead tối đa 4 câu mỗi phía, 0-1 và 1-0 có cờ `unaligned`;
+  - cầu nối âm `bridge_weight` lấy câu âm từ han-am.xml;
+  - `prepare()` hiệu chỉnh tỉ lệ độ dài theo work.
+- **Đánh giá:** `scripts/eval_han_nghia.py` (độ đồng thuận, chấm theo chuẩn + `--tune`, lấy mẫu rà).
+- **Không dùng API CLC** (không được cấp).
+- **Kết quả** (bản sao ở `E:\claude_scratch\hn_20261127\`; mô hình ở `E:\claude_scratch\hf\`):
+  - đã chấm theo bộ dóng tay `eval/gold/` (báo cáo mục 4a; số liệu ở `reports/han_nghia_gold_20261128.json`);
+  - strict F1: `length` 0,62; LaBSE 0,90; BGE-M3 0,90; BGE-M3 + cầu nối w=3 0,91. Ba cấu hình embedding ngang nhau
+    (khoảng tin cậy bootstrap chứa 0);
+  - w=3 chọn trên dev; trên test row_acc 0,932.
+- **Config đã đổi (người dùng duyệt 2026-11-28):** `pairs.han-nghia` của `configs/CPO_18/19/20.json` dùng
+  `bertalign` với `model=bge-m3`, `bridge_weight=3`. Cả 3 work dùng chung một cấu hình, vì chênh lệch theo work nằm
+  trong nhiễu. `CPO_19_unified.json` không đổi.
+  - Chạy cần `HAN_VIET_MODEL_DIR` trỏ vào `E:\claude_scratch\hf` (Python trên máy local lỗi SSL khi tải từ HF).
+- **Chưa làm:**
+  - chạy han-nghia trên `data/` thật (chờ người dùng xác nhận);
+  - xuất file nộp 4 cột (chờ han-tho xong).
+- **Nguồn lỗi lớn nhất:** chú thích, khảo dị, dịch thơ và âm lọt vào lớp nghĩa. Xem báo cáo, mục 6.
+- **Lỗi tách lớp mà bộ chuẩn phát hiện (cần sửa ở segmentation, không vá ở bước dóng):**
+  - `CPO_20.0046`: mất toàn bộ lớp nghĩa của bài. Bộ chuẩn có 8 câu Dịch nghĩa (hàng `CPO_20.0046.001`–`.008`), nhưng
+    lớp nghĩa của pipeline không có câu nào.
+  - `CPO_18.0209.002`: câu nghĩa "Nhưng nếu đã có thể thông suốt bên kia, thì sao lại còn vướng mắc đối với bên
+    này?" không có trong `05_cleaning`.
+- **Đề xuất bộ chuẩn thứ hai:** dóng tay khoảng 50 trang ở nửa sau mỗi cuốn. Bộ hiện tại là 50 trang đầu, nơi lớp nghĩa
+  sạch nhất, nên số liệu có thể tốt hơn thực tế. Chú thích, khảo dị và dịch thơ lọt vào lớp nghĩa chủ yếu ở phần sau.
 
 ## Báo cáo chính (`reports/`)
 - `segmentation_audit_20261126.md`: audit segmentation. Mục 9 là vòng 2; mục 10 là ghi đè CPO_18, quét ảo giác Qwen,
@@ -80,11 +96,20 @@ Cả 3 work đạt cổng 1–3 (`scripts/audit_segmentation.py`):
 - `blocked_actions.md`: các thao tác từng bị chặn.
 
 ## Đang chờ người dùng quyết
-1. **Phân công dóng tay 50 trang đầu:** ai làm work nào. Cần cả mẫu file nộp (đề xuất: `assignment_submission/align50/`,
-   mỗi người một file mẫu điền sẵn cặp máy dóng). Trước đó cần chạy `--steps export` vì `07_export` hiện là bản 26/11.
+1. **Bộ chuẩn dóng tay:**
+   - xác nhận `eval/gold/CPO_19_p14-63_dryrun.xlsx` là bản chốt (ô "Thành viên" chưa điền). Có xác nhận thì chạy lại
+     eval và cập nhật báo cáo mục 4a. File CPO_18 đã hết bị Excel khoá;
+   - bộ chuẩn thứ hai ở nửa sau mỗi cuốn: ai làm, khoảng trang nào.
 2. **Sửa tay OCR:** CPO_18 tr.353, 402, 523, 528 và 531 (tr.531 có 3 dòng tiếng Anh bịa). Có làm thư mục
    `03_ocr/corrections/` để lưu bản sửa hay không.
 3. **Luật nhận dạng câu tiếng Anh ngắn:** có sửa không. Câu kiểu "snow does not fall" hiện lọt qua.
 4. **Cấu trúc gói nộp:** `Guideline.pdf` không có trong repo, cần tài liệu này để làm script đóng gói đúng.
-5. **Dữ liệu tạm của Claude:** nằm ở `E:\claude_scratch\8d960ee1\` (bản sao, worktree `wt`, `wt2`, `wt_base`,
+5. **han-nghia trên `data/` thật:** chờ xác nhận trước khi ghi.
+   - Lệnh sẽ ghi đè `data/<W>/06_alignment/han-nghia.xml` và cập nhật `02_extraction/metadata.json`. Cả hai đều đang
+     được git theo dõi.
+   - Đầu vào thật trùng bản sao đã chấm (cùng sha1 `05_cleaning` và `han-am.xml`), nên kết quả sẽ trùng `bge_bridge3`.
+6. **Lọc lớp nghĩa:** chú thích, khảo dị, dịch thơ và âm lọt vào lớp nghĩa. Cần một vòng sửa segmentation/clean,
+   gồm cả hai lỗi tách lớp ở trên (`CPO_20.0046`, `CPO_18.0209.002`).
+7. **Dữ liệu tạm của Claude:** `E:\claude_scratch\hn_20261127\` (bản sao han-nghia + cache embedding ~280 MB) và
+   `E:\claude_scratch\hf\` (LaBSE + bge-m3, ~4,2 GB). Ngoài ra còn `E:\claude_scratch\8d960ee1\` (bản sao, worktree `wt`, `wt2`, `wt_base`,
    `wt_commits`). Có giữ lại hay không.

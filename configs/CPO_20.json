@@ -132,7 +132,11 @@
         "name": "CPO_20_han-am_parallel"
       },
       "han-nghia": {
-        "method": "length",
+        "method": "bertalign",
+        "opt": [
+          "model=bge-m3",
+          "bridge_weight=3"
+        ],
         "name": "CPO_20_han-nghia_parallel"
       },
       "han-tho": {
