@@ -3,7 +3,7 @@
   "work_id": "CPO_20",
   "layer": "vie",
   "engine": "qwen",
-  "built_at": "2026-11-27T21:38:10+00:00",
+  "built_at": "2026-11-28T17:27:59+00:00",
   "xml": "03_ocr/ocr_raw/vie.xml",
   "text_dir": "03_ocr/ocr_raw_text/vie",
   "totals": {
@@ -11,13 +11,13 @@
     "pages_with_run": 501,
     "pages_with_lines": 463,
     "n_src": 12621,
-    "n_kept": 8355,
-    "n_dropped": 4266,
+    "n_kept": 8342,
+    "n_dropped": 4279,
     "cjk_removed": 21968,
-    "n_rejected": 6,
+    "n_rejected": 19,
     "n_merged_units": 0,
     "n_corrections_applied": 0,
-    "n_corrections_deleted": 0,
+    "n_corrections_deleted": 13,
     "n_corrections_skipped": 0
   },
   "filter": {
@@ -26,11 +26,117 @@
   },
   "corrections": {
     "file": "03_ocr/corrections/corrections.tsv",
-    "log": []
+    "log": [
+      {
+        "row": 2,
+        "line_id": "vie.P0772.S018",
+        "editor": "Claude (đối chiếu ảnh trang PDF)",
+        "date": "2026-11-28",
+        "status": "deleted",
+        "old": "Đại Nghiên"
+      },
+      {
+        "row": 3,
+        "line_id": "vie.P0772.S019",
+        "editor": "Claude (đối chiếu ảnh trang PDF)",
+        "date": "2026-11-28",
+        "status": "deleted",
+        "old": "Cửu Trụ"
+      },
+      {
+        "row": 4,
+        "line_id": "vie.P0772.S020",
+        "editor": "Claude (đối chiếu ảnh trang PDF)",
+        "date": "2026-11-28",
+        "status": "deleted",
+        "old": "Trí Tuệ"
+      },
+      {
+        "row": 5,
+        "line_id": "vie.P0772.S021",
+        "editor": "Claude (đối chiếu ảnh trang PDF)",
+        "date": "2026-11-28",
+        "status": "deleted",
+        "old": "Tự Do"
+      },
+      {
+        "row": 6,
+        "line_id": "vie.P0772.S022",
+        "editor": "Claude (đối chiếu ảnh trang PDF)",
+        "date": "2026-11-28",
+        "status": "deleted",
+        "old": "Vô Hạn"
+      },
+      {
+        "row": 7,
+        "line_id": "vie.P0772.S023",
+        "editor": "Claude (đối chiếu ảnh trang PDF)",
+        "date": "2026-11-28",
+        "status": "deleted",
+        "old": "Sự Kiện"
+      },
+      {
+        "row": 8,
+        "line_id": "vie.P0772.S024",
+        "editor": "Claude (đối chiếu ảnh trang PDF)",
+        "date": "2026-11-28",
+        "status": "deleted",
+        "old": "Nghĩa Lý"
+      },
+      {
+        "row": 9,
+        "line_id": "vie.P0772.S025",
+        "editor": "Claude (đối chiếu ảnh trang PDF)",
+        "date": "2026-11-28",
+        "status": "deleted",
+        "old": "Học Tập"
+      },
+      {
+        "row": 10,
+        "line_id": "vie.P0772.S026",
+        "editor": "Claude (đối chiếu ảnh trang PDF)",
+        "date": "2026-11-28",
+        "status": "deleted",
+        "old": "Tự Do"
+      },
+      {
+        "row": 11,
+        "line_id": "vie.P0772.S027",
+        "editor": "Claude (đối chiếu ảnh trang PDF)",
+        "date": "2026-11-28",
+        "status": "deleted",
+        "old": "Vô Hạn"
+      },
+      {
+        "row": 12,
+        "line_id": "vie.P0772.S028",
+        "editor": "Claude (đối chiếu ảnh trang PDF)",
+        "date": "2026-11-28",
+        "status": "deleted",
+        "old": "Sự Kiện"
+      },
+      {
+        "row": 13,
+        "line_id": "vie.P0772.S029",
+        "editor": "Claude (đối chiếu ảnh trang PDF)",
+        "date": "2026-11-28",
+        "status": "deleted",
+        "old": "Nghĩa Lý"
+      },
+      {
+        "row": 14,
+        "line_id": "vie.P0772.S030",
+        "editor": "Claude (đối chiếu ảnh trang PDF)",
+        "date": "2026-11-28",
+        "status": "deleted",
+        "old": "Học Tập"
+      }
+    ]
   },
   "warnings": [
     "P0712: vie mất 100% dòng không phải Hán sau lọc (2/2)",
-    "P0713: vie mất 100% dòng không phải Hán sau lọc (2/2)"
+    "P0713: vie mất 100% dòng không phải Hán sau lọc (2/2)",
+    "P0772: vie mất 43% dòng không phải Hán sau lọc (13/30)"
   ],
   "pages": [
     {
@@ -7530,13 +7636,79 @@
       "key": "52262d6695728e45c3e7f12797950041c8c91d5316f83072050bd4789387a9ed",
       "raw": "03_ocr/raw/qwen/0772.json",
       "n_src": 32,
-      "n_kept": 30,
-      "n_dropped": 2,
+      "n_kept": 17,
+      "n_dropped": 15,
       "cjk_removed": 15,
-      "n_rejected": 0,
+      "n_rejected": 13,
       "n_src_non_han": 30,
-      "n_dropped_non_han": 0,
-      "rejected": [],
+      "n_dropped_non_han": 13,
+      "rejected": [
+        {
+          "src_line": 18,
+          "reason": "correction_delete",
+          "text": "Đại Nghiên"
+        },
+        {
+          "src_line": 19,
+          "reason": "correction_delete",
+          "text": "Cửu Trụ"
+        },
+        {
+          "src_line": 20,
+          "reason": "correction_delete",
+          "text": "Trí Tuệ"
+        },
+        {
+          "src_line": 21,
+          "reason": "correction_delete",
+          "text": "Tự Do"
+        },
+        {
+          "src_line": 22,
+          "reason": "correction_delete",
+          "text": "Vô Hạn"
+        },
+        {
+          "src_line": 23,
+          "reason": "correction_delete",
+          "text": "Sự Kiện"
+        },
+        {
+          "src_line": 24,
+          "reason": "correction_delete",
+          "text": "Nghĩa Lý"
+        },
+        {
+          "src_line": 25,
+          "reason": "correction_delete",
+          "text": "Học Tập"
+        },
+        {
+          "src_line": 26,
+          "reason": "correction_delete",
+          "text": "Tự Do"
+        },
+        {
+          "src_line": 27,
+          "reason": "correction_delete",
+          "text": "Vô Hạn"
+        },
+        {
+          "src_line": 28,
+          "reason": "correction_delete",
+          "text": "Sự Kiện"
+        },
+        {
+          "src_line": 29,
+          "reason": "correction_delete",
+          "text": "Nghĩa Lý"
+        },
+        {
+          "src_line": 30,
+          "reason": "correction_delete",
+          "text": "Học Tập"
+        }
+      ],
       "merged": []
     },
     {
