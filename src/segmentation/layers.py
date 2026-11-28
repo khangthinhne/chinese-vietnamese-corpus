@@ -626,7 +626,15 @@ def assign_document_unified(work_id: str, doc: Document, layer_cfg: dict, meta_c
         cfg_meta = metadata_config(layer, layer_cfg.get(layer, {}), meta_cfg or {})
         raw = [RawLine(id=x.id, page=x.page, text=x.text, raw_text=x.text,
                        source_ids=list(x.source_ids), document_id=x.document_id) for x in rows]
-        kept, md = classify_leading_block(raw, cfg_meta, layer, doc.id)
+        forced: frozenset[str] = frozenset()
+        zone_cfg = layer_cfg.get(layer, {}).get("title_zone") if layer == "han" else None
+        if zone_cfg:
+            forced = frozenset(rows[i].id for i in han_title_zone(rows, **zone_cfg))
+            for x in rows:
+                if x.id in forced:
+                    review.append(review_row(work_id, doc.id, layer, "han_title_zone_line", [x.page], x.text,
+                                             list(x.source_ids)))
+        kept, md = classify_leading_block(raw, cfg_meta, layer, doc.id, forced)
         kept_ids = {r.id for r in kept}
         lines_by_layer[layer] = [x for x in rows if x.id in kept_ids]
         if not lines_by_layer[layer]:
@@ -649,6 +657,51 @@ def assign_document_unified(work_id: str, doc: Document, layer_cfg: dict, meta_c
 
     return DocumentLayers(lines=lines_by_layer, headings=headings,
                           metadata_rows=metadata_rows, uncertain=uncertain, review=review)
+
+
+TITLE_ZONE_MAX_ROWS = 4
+TITLE_ZONE_MIN_ROWS = 4                          # cần đủ dòng để trung vị chiều cao có nghĩa
+
+
+def _height(line: LayerLine) -> int | None:
+    return line.bbox[3] - line.bbox[1] if line.bbox else None
+
+
+def han_title_zone(rows: list[LayerLine], thin_ratio: float = 0.75, tall_ratio: float = 1.3,
+                   max_rows: int = TITLE_ZONE_MAX_ROWS) -> list[int]:
+    """Chỉ số các dòng Hán ĐẦU tài liệu thuộc vùng tiêu đề theo hình học (không theo chữ, vì OCR tiêu đề hay rác).
+
+    Tiêu đề in chữ to: paddlevl hoặc đọc thành một dòng CAO (> tall_ratio x trung vị chiều cao dòng của tài liệu),
+    hoặc xẻ một dòng in thành hai dòng OCR chồng mép nhau, trong đó ít nhất một dòng MỎNG (< thin_ratio x trung vị).
+    Vùng = các dòng liên tiếp từ đầu: dòng mỏng, dòng cao, hoặc dòng chồng mép (cùng trang, đỉnh dòng sau < đáy
+    dòng trước) với một dòng mỏng kề nó. Tối đa max_rows dòng; dừng ở dòng đầu tiên không thoả.
+    """
+    heights = [h for h in (_height(r) for r in rows) if h]
+    if len(heights) < TITLE_ZONE_MIN_ROWS:
+        return []
+    heights.sort()
+    med = heights[len(heights) // 2]
+
+    def thin(i: int) -> bool:
+        h = _height(rows[i])
+        return h is not None and h < thin_ratio * med
+
+    def overlaps(i: int, j: int) -> bool:          # i ngay trước j
+        a, b = rows[i], rows[j]
+        return bool(a.bbox and b.bbox and a.page == b.page and b.bbox[1] < a.bbox[3])
+
+    zone: list[int] = []
+    for i in range(min(max_rows, len(rows))):
+        h = _height(rows[i])
+        if h is None:
+            break
+        paired_prev = bool(zone) and zone[-1] == i - 1 and overlaps(i - 1, i) and (thin(i) or thin(i - 1))
+        paired_next = i + 1 < len(rows) and overlaps(i, i + 1) and thin(i + 1)
+        if thin(i) or h > tall_ratio * med or paired_prev or paired_next:
+            zone.append(i)
+            continue
+        break
+    return zone
 
 
 HAN_TITLE_SUSPECT_RATIO = 0.5

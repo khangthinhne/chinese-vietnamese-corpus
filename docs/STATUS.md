@@ -1,11 +1,11 @@
-# Trạng thái dự án (cập nhật 2026-11-28)
+# Trạng thái dự án (cập nhật 2026-11-29)
 
 Đọc file này đầu mỗi phiên làm việc mới. Chi tiết nằm trong các báo cáo ở `reports/`.
 
 ## Nhánh và commit
-- Nhánh hiện tại: `fix/clean-full`. Đã push lên `origin/main` đến `a00a0ae` (2026-11-28, theo yêu cầu người dùng). Các
-  commit sau đó chưa push.
-- Commit mới nhất: commit đợt 2026-11-28 (xem `git log -1`, báo cáo `reports/batch_20261128.md`). Trước đó:
+- Nhánh hiện tại: `fix/clean-full`, trùng `origin/main` ở `51b5f99`. `dad0237` (đợt 2026-11-28 + bảng 1-0) đã push lên
+  `main`; sau đó các thành viên commit bảng duyệt 1-0 (`55cb021`, `73b8af1`, `bd4cff6`, `51b5f99`).
+- Xử lý kết quả duyệt 1-0 (2026-11-29, báo cáo `reports/review_1_0_20261129.md`): chưa commit. Trước đó:
   - `a00a0ae`: chạy bertalign trên `data/`, có 3 co-author (Minh Quan, Tien Dat, Yen Nhi);
   - `95c0800`: aligner bertalign, eval theo `eval/gold/`, config han-nghia;
   - `5d49ba6`: người dùng commit dữ liệu sau khi chạy lại pipeline;
@@ -42,7 +42,7 @@
   Segmentation bật thêm `verse_tho_split`.
 - **Ghi đè theo bài** (`segmentation.document_overrides`, khoá theo trang bắt đầu, có lý do):
   - CPO_18 .012, .013 (bản dọc của văn bia), .028: loại khỏi lớp dóng;
-  - CPO_18 .015: chuyển sang vùng chú thích;
+  - CPO_18 tr.358, tr.359: `continue` (chữ Hán trích trong khảo dị không mở tài liệu mới; thay `notes` .015 cũ);
   - CPO_20 .053 tr.123–134 (văn Nôm, không có chữ Hán đối ứng): loại khỏi lớp dóng.
 - **Quy ước chung:**
   - raw OCR chỉ được nối thêm, không sửa;
@@ -59,7 +59,14 @@ Cả 3 work đạt cổng 1–3 (`scripts/audit_segmentation.py`):
 | CPO_19 | 0,874 | 3519 | |
 | CPO_20 | 0,865 | 2058 | |
 
-## Task vừa xong: đợt 2026-11-28 (báo cáo `reports/batch_20261128.md`)
+## Task vừa xong: xử lý duyệt tay 1-0 (2026-11-29, báo cáo `reports/review_1_0_20261129.md`)
+- Nguồn: `assignment_submission/han-nghia-review/<W>/` (447 hàng, kết luận tự do, xếp 4 nhóm bằng luật).
+- Sửa: vùng tiêu đề Hán theo bbox (`layers.han.title_zone`, CPO_19/20); `running_header_edge_only` (chỉ CPO_19,
+  bật chung làm hỏng CPO_18); override `continue` (CPO_18 tr.358-359); 13 hàng sửa tay OCR CPO_20 tr.772 (Qwen bịa).
+- Câu Hán 1-0: CPO_18 60 -> 53, CPO_19 72 -> 28, CPO_20 315 -> 275. Gold không đổi (strict 0,918), 3 cổng audit đạt.
+- Còn lại chủ yếu là sách không có dịch nghĩa (38 + 15 + 250) và lỗi dóng của aligner (9 + 2 + 13).
+
+## Task trước: đợt 2026-11-28 (báo cáo `reports/batch_20261128.md`)
 - **Sửa tay OCR:** `data/<W>/03_ocr/corrections/corrections.tsv`.
   - Chỉ ghi thêm, áp ở `build_layers`; `src/ocr/corrections.py`, `docs/ocr.md` mục 7.7.
   - CPO_18: 20 hàng (tr.212, 353, 402, 523, 528, 531), đều áp được.
@@ -112,6 +119,8 @@ Bộ chuẩn: `eval/gold/` (xem `eval/gold/README.md`).
   là 50 trang đầu, nơi lớp nghĩa sạch nhất, nên số liệu có thể tốt hơn thực tế.
 
 ## Báo cáo chính (`reports/`)
+- `review_1_0_20261129.md`: xử lý duyệt tay câu Hán 1-0 (nguyên nhân, sửa, trước/sau, còn tồn).
+- `han_nghia_1_0_20261128.xlsx`: bảng câu Hán 1-0 gửi thành viên duyệt (bản đã điền ở `assignment_submission/`).
 - `batch_20261128.md`: sửa tay OCR, luật tiếng Anh, vòng sửa lớp nghĩa/thơ (trước/sau), phân rã 1-0.
 - `han_nghia_20261127.md`: aligner bertalign, chấm theo `eval/gold/` (mục 4a).
 - `segmentation_audit_20261126.md`: audit segmentation. Mục 9 là vòng 2; mục 10 là ghi đè CPO_18, quét ảo giác Qwen,
@@ -130,8 +139,11 @@ Bộ chuẩn: `eval/gold/` (xem `eval/gold/README.md`).
    - tiểu sử tác giả trong nghĩa;
    - 5 bài CPO_20 có âm mà không có nghĩa (.123, .153, .164, .186, .205): cần mở ảnh xem sách có in dịch nghĩa không;
    - vùng chú thích chỉ kéo tới hết trang, nên chú thích kéo sang trang sau vẫn lọt.
-4. **Sửa tay OCR tiếp:** các trang khác trong `reports/review_ocr_CPO_*.xlsx` có thể nhập vào `corrections.tsv`.
-5. **Dữ liệu tạm của Claude:**
+4. **Câu 1-0 còn tồn sau duyệt** (`reports/review_1_0_20261129.md` mục 4): 11 tiêu đề Hán một dòng cao bình
+   thường; điểm cắt CPO_19 tr.79/tr.348; 24 lỗi dóng của aligner (câu cuối bài, tên nhân vật đầu mục dịch CPO_18,
+   văn xuôi CPO_20 tr.97-112); ghi chú viết tay CPO_18 tr.501 (nên sửa tay OCR).
+5. **Sửa tay OCR tiếp:** các trang khác trong `reports/review_ocr_CPO_*.xlsx` có thể nhập vào `corrections.tsv`.
+6. **Dữ liệu tạm của Claude:**
    - `E:\claude_scratch\hn_20261127\`: bản sao han-nghia + cache embedding, khoảng 360 MB;
    - `E:\claude_scratch\hf\`: LaBSE + bge-m3, khoảng 4 GB;
-   - `E:\claude_scratch\batch_20261128\`: bản sao V1–V3 của đợt này, có thể xoá.
+   - `E:\claude_scratch\batch_20261128\`: bản sao V1–V6 (đợt 2026-11-28 và duyệt 1-0), có thể xoá.

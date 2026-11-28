@@ -208,12 +208,30 @@ def edge_running_header_ids(merged: list[OcrLine], edge: int = EDGE_LINES,
             if on_edge and (key in ok or ok_match(ln.text))}
 
 
-def header_predicate(lines: list[OcrLine]):
+def edge_line_ids(lines: list[OcrLine], edge: int = EDGE_LINES) -> set[str]:
+    """source_id của `edge` dòng đầu và cuối mỗi trang (theo thứ tự đã trộn hai luồng)."""
+    by_page: dict[int, list[OcrLine]] = defaultdict(list)
+    for ln in lines:
+        by_page[ln.page].append(ln)
+    out: set[str] = set()
+    for page_lines in by_page.values():
+        out.update(ln.source_id for ln in page_lines[:edge] + page_lines[-edge:])
+    return out
+
+
+def header_predicate(lines: list[OcrLine], edge_only: bool = False, edge: int = EDGE_LINES):
     """Hàm ln -> bool: dòng KHÔNG mang cấu trúc: tiêu đề chạy (lặp trên nhiều trang, kể cả bản OCR sai dấu) hoặc
     dòng Việt nhiễu (`is_noise_vie`). Máy trạng thái không dùng các dòng này để ngầm mở lớp, mở lớp kế tiếp, hay
-    đếm là dòng nội dung."""
+    đếm là dòng nội dung.
+
+    `edge_only` (config `segmentation.running_header_edge_only`, mặc định tắt): dòng lặp chỉ là tiêu đề chạy khi nằm
+    ở mép trang (`edge` dòng đầu/cuối). CPO_19 bật: "LẠI MỘT ĐẠO(1)" in giữa trang ở đầu phần dịch của nhiều bức thư
+    bị coi là tiêu đề chạy nên không mở được lớp nghĩa khi thiếu chữ "DỊCH NGHĨA" (duyệt 1-0, 2026-11-28). KHÔNG bật
+    cho CPO_18: tên tác giả viết hoa lặp giữa trang ("LÝ MIỄU") khi đó mở nhầm lớp nghĩa (gold 0.862 -> 0.763)."""
     match = header_matcher(running_headers(lines))
-    return lambda ln: match(ln.text) or (getattr(ln, "writing_system", "") == "vie" and is_noise_vie(ln.text))
+    at_edge = edge_line_ids(lines, edge) if edge_only else None
+    return lambda ln: ((match(ln.text) and (at_edge is None or getattr(ln, "source_id", None) in at_edge))
+                       or (getattr(ln, "writing_system", "") == "vie" and is_noise_vie(ln.text)))
 
 
 def running_headers(lines: list[OcrLine], min_pages: int = HEADER_MIN_PAGES) -> set[str]:

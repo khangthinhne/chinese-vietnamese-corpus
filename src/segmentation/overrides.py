@@ -11,7 +11,9 @@ Dùng cho các bài mà luật chung xử lý sai và người duyệt đã quy�
 - Khoá là TRANG BẮT ĐẦU của tài liệu (ID tài liệu đổi khi segmentation đổi); `han_prefix` (tuỳ chọn) phân biệt
   hai tài liệu cùng trang bắt đầu: dòng Hán đầu tiên của tài liệu phải bắt đầu bằng chuỗi này.
 - `action`: `exclude` (ra khỏi lớp dóng, review `override_excluded`) hoặc `notes` (vùng chú thích, review
-  `override_note`). Cả hai đều gỡ dòng khỏi lớp; mỗi dòng bị gỡ có một dòng review (không mất dấu) và mỗi lần áp
+  `override_note`), hoặc `continue`: khối Hán bắt đầu ở `start_page` (bắt buộc `han_prefix`) KHÔNG mở tài liệu mới,
+  dòng của nó thuộc tài liệu trước (chữ Hán trích trong khảo dị có >= 2 dòng; CPO_18 tr.358-359). Áp ở bước tìm
+  ranh giới tài liệu (`suppressed_starts`), review `document_override`. Cả hai đều gỡ dòng khỏi lớp; mỗi dòng bị gỡ có một dòng review (không mất dấu) và mỗi lần áp
   dụng có một dòng review `document_override` mang lý do.
 - `layers` (mặc định: mọi lớp của tài liệu); `implicit_am_only`: với lớp am chỉ gỡ phần MỞ NGẦM (trước tiêu đề
   PHIÊN ÂM tường minh); `pages` ("123-134" hoặc [123, 124]): chỉ gỡ dòng nằm trên các trang này (CPO_20.053: thơ và
@@ -25,7 +27,8 @@ from dataclasses import dataclass
 
 from src.segmentation.documents import review_row
 
-ACTIONS = {"exclude": "override_excluded", "notes": "override_note"}
+ACTIONS = {"exclude": "override_excluded", "notes": "override_note", "continue": "override_continue"}
+LAYER_ACTIONS = frozenset({"exclude", "notes"})          # áp trên lớp của một tài liệu đã tách
 
 
 @dataclass(frozen=True)
@@ -65,6 +68,8 @@ def parse_overrides(raw: list | None) -> list[DocumentOverride]:
             raise ValueError(f"{where}: thiếu reason")
         if not isinstance(item.get("start_page"), int):
             raise ValueError(f"{where}: start_page phải là số trang")
+        if item["action"] == "continue" and not str(item.get("han_prefix") or "").strip():
+            raise ValueError(f"{where}: action continue cần han_prefix (dòng Hán mở khối cần gộp)")
         out.append(DocumentOverride(int(item["start_page"]), item["action"], str(item["reason"]).strip(),
                                     tuple(item.get("layers") or ()), bool(item.get("implicit_am_only")),
                                     str(item.get("han_prefix") or ""), _pages(item.get("pages"), where)))
@@ -72,8 +77,24 @@ def parse_overrides(raw: list | None) -> list[DocumentOverride]:
 
 
 def overrides_for(start_page: int, first_han: str, overrides: list[DocumentOverride]) -> list[DocumentOverride]:
-    return [o for o in overrides
-            if o.start_page == start_page and (not o.han_prefix or first_han.startswith(o.han_prefix))]
+    return [o for o in overrides if o.action in LAYER_ACTIONS
+            and o.start_page == start_page and (not o.han_prefix or first_han.startswith(o.han_prefix))]
+
+
+def suppressed_starts(lines: list, allowed: set[int], overrides: list[DocumentOverride]
+                      ) -> tuple[set[int], list[DocumentOverride]]:
+    """(chỉ số dòng không được mở tài liệu, override `continue` đã dùng). `lines` là dòng đã trộn hai luồng."""
+    out: set[int] = set()
+    used: list[DocumentOverride] = []
+    for ov in overrides:
+        if ov.action != "continue":
+            continue
+        hits = {i for i in allowed
+                if lines[i].page == ov.start_page and lines[i].text.strip().startswith(ov.han_prefix)}
+        if hits:
+            out |= hits
+            used.append(ov)
+    return out, used
 
 
 def apply_overrides(work_id: str, doc_id: str, grouped: dict[str, list], implicit_am: list,

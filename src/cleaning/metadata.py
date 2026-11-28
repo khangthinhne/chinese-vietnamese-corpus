@@ -178,11 +178,18 @@ HAN_TITLE_MAX_LINES = 1                          # tiêu đề Hán: 1 dòng (+ 
 _HAN_SUBTITLE_RE = re.compile(r"^\s*[(（]")
 
 
-def _limit_han_title(title_lines: list[RawLine]) -> tuple[list[RawLine], list[RawLine]]:
+def _limit_han_title(title_lines: list[RawLine], forced: frozenset[str] = frozenset()
+                     ) -> tuple[list[RawLine], list[RawLine]]:
     """(dòng giữ làm tiêu đề, dòng trả về chính văn). Tiêu đề chữ to hay bị OCR thành rác, khi đó mẫu tiêu đề
-    ^[Hán]{2,12}$ gom luôn vài dòng thân văn đầu (CPO_20 tr.268 "又安天氣和暢…") vào "tiêu đề"."""
-    keep = title_lines[:HAN_TITLE_MAX_LINES]
-    rest = title_lines[HAN_TITLE_MAX_LINES:]
+    ^[Hán]{2,12}$ gom luôn vài dòng thân văn đầu (CPO_20 tr.268 "又安天氣和暢…") vào "tiêu đề".
+    Dòng thuộc vùng tiêu đề theo hình học (`forced`, xem segmentation.layers.han_title_zone) luôn giữ làm tiêu đề:
+    giới hạn chỉ áp cho các dòng SAU dòng forced cuối cùng."""
+    n_keep = HAN_TITLE_MAX_LINES
+    forced_idx = [i for i, ln in enumerate(title_lines) if ln.id in forced]
+    if forced_idx:
+        n_keep = max(n_keep, forced_idx[-1] + 1)
+    keep = title_lines[:n_keep]
+    rest = title_lines[n_keep:]
     if rest and _HAN_SUBTITLE_RE.match(rest[0].raw_text or rest[0].text):
         keep, rest = keep + rest[:1], rest[1:]
     return keep, rest
@@ -190,7 +197,7 @@ def _limit_han_title(title_lines: list[RawLine]) -> tuple[list[RawLine], list[Ra
 
 def _flush_block(doc: DocumentMetadata, block: list[tuple[RawLine, bool]],
                  explicit_author: list[RawLine], attr_lines: list[RawLine],
-                 cfg: MetadataConfig, han: bool) -> list[RawLine]:
+                 cfg: MetadataConfig, han: bool, forced: frozenset[str] = frozenset()) -> list[RawLine]:
     """Chốt khối dòng metadata thu được trước khi thân bài bắt đầu.
 
     block = [(dòng, là_tiêu_đề_tường minh)]. Quy tắc tách tiêu đề / tác giả: dòng CUỐI
@@ -202,13 +209,14 @@ def _flush_block(doc: DocumentMetadata, block: list[tuple[RawLine, bool]],
     author_lines: list[RawLine] = []
     if explicit_author:
         author_lines = list(explicit_author)
-    elif len(pool) >= 2 and ((_han_author_shape if han else _vi_author_shape)(pool[-1].text, cfg)):
+    elif (len(pool) >= 2 and pool[-1].id not in forced
+          and ((_han_author_shape if han else _vi_author_shape)(pool[-1].text, cfg))):
         author_lines = [pool[-1]]
     author_ids = {id(ln) for ln in author_lines}
     title_lines = [ln for ln, _ in block if id(ln) not in author_ids]
     restored: list[RawLine] = []
     if han and len(title_lines) > HAN_TITLE_MAX_LINES:
-        title_lines, restored = _limit_han_title(title_lines)
+        title_lines, restored = _limit_han_title(title_lines, forced)
         doc.restored.extend((ln, "han_title_extra_line") for ln in restored)
     has_explicit_title = any(explicit for _, explicit in block)
     title_conf = "high" if (has_explicit_title or len(pool) >= 2) else "ambiguous"
@@ -254,7 +262,8 @@ def verse_starts(lines: list[RawLine], title_res: list[re.Pattern]) -> set[int]:
 def _classify_document(doc_id: str, lines: list[RawLine], cfg: MetadataConfig, han: bool,
                        start_res: list[re.Pattern], end_res: list[re.Pattern],
                        title_res: list[re.Pattern], author_res: list[re.Pattern],
-                       attr_res: list[re.Pattern]) -> tuple[list[RawLine], DocumentMetadata]:
+                       attr_res: list[re.Pattern], forced_title_ids: frozenset[str] = frozenset()
+                       ) -> tuple[list[RawLine], DocumentMetadata]:
     doc = DocumentMetadata(document_id=doc_id)
     kept: list[RawLine] = []
     state = "front" if start_res else "meta"     # lớp Hán thường không có marker -> meta từ đầu
@@ -263,7 +272,7 @@ def _classify_document(doc_id: str, lines: list[RawLine], cfg: MetadataConfig, h
     attr_lines: list[RawLine] = []
 
     def flush() -> None:
-        restored = _flush_block(doc, block, explicit_author, attr_lines, cfg, han)
+        restored = _flush_block(doc, block, explicit_author, attr_lines, cfg, han, forced_title_ids)
         if restored:                             # dòng thân văn bị gom nhầm vào tiêu đề: trả về chính văn
             restored_ids = {id(x) for x in restored}
             kept.extend(ln for ln, _ in block if id(ln) in restored_ids)
@@ -298,6 +307,9 @@ def _classify_document(doc_id: str, lines: list[RawLine], cfg: MetadataConfig, h
         # ---- state "meta": phân loại khối metadata ----
         if any(r.search(probe) for r in attr_res):
             attr_lines.append(ln)
+            continue
+        if ln.id in forced_title_ids:             # vùng tiêu đề theo hình học (chữ to / dòng OCR bị xẻ đôi)
+            block.append((ln, True))
             continue
         if index in verse:                        # câu thơ mở đầu thân bài, không phải tiêu đề
             flush()
@@ -460,11 +472,13 @@ def attach_captured(meta: MetadataResult, captured: list[tuple[str, RawLine]]) -
 
 
 def classify_leading_block(lines: list[RawLine], cfg: MetadataConfig, layer: str,
-                           document_id: str = "") -> tuple[list[RawLine], DocumentMetadata]:
+                           document_id: str = "", forced_title_ids: frozenset[str] = frozenset()
+                           ) -> tuple[list[RawLine], DocumentMetadata]:
     """Dùng cho bước segmentation: dòng đã thuộc ĐÚNG một tài liệu + lớp.
 
     Không có ranh giới mục (section_start/end) vì segmentation đã cắt xong; chỉ phân loại
     tiêu đề / tác giả / quy trách ở đầu khối. Không cấu hình pattern -> giữ nguyên.
+    `forced_title_ids`: dòng đầu khối chắc chắn thuộc tiêu đề (do segmentation xác định theo bbox).
     """
     doc_id = document_id or (document_id_of(lines[0]) if lines else "")
     if not cfg.enabled or not (cfg.title_patterns or cfg.author_patterns or cfg.attribution_patterns):
@@ -476,7 +490,7 @@ def classify_leading_block(lines: list[RawLine], cfg: MetadataConfig, layer: str
     attr_res = [compile_boundary(p, f"metadata.attribution_patterns[{i}]")
                 for i, p in enumerate(cfg.attribution_patterns)]
     kept, doc = _classify_document(doc_id, lines, cfg, layer == "han", [], [],
-                                   title_res, author_res, attr_res)
+                                   title_res, author_res, attr_res, frozenset(forced_title_ids))
     if not cfg.exclude_from_main_text:
         return list(lines), doc
     return kept, doc

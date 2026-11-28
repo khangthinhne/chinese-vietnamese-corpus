@@ -152,6 +152,19 @@ def load_work(layout: DataLayout, pages: list[int] | None) -> dict:
 
 
 # ----------------------------------------------------------------------------- 3. kế toán dòng
+def contiguous_run(sids: list[str], lines: dict[str, dict], key: str) -> list[str]:
+    """Dãy >= 2 dòng liên tiếp (cùng trang, theo thứ tự) có khoá ghép lại bằng đúng `key`; [] nếu không có."""
+    for i in range(len(sids)):
+        acc = ""
+        for j in range(i, len(sids)):
+            acc += match_key(lines[sids[j]]["text"])
+            if acc == key and j > i:
+                return sids[i:j + 1]
+            if not key.startswith(acc):
+                break
+    return []
+
+
 def metadata_source_ids(metadata: list[dict], lines: dict[str, dict], taken: set[str] | None = None) -> dict[str, str]:
     """Metadata ghi ID dòng NỘI BỘ của tài liệu, không phải ID luồng: ánh xạ bằng (trang, văn bản)."""
     by_page: dict[int, dict[str, list[str]]] = defaultdict(lambda: defaultdict(list))
@@ -177,6 +190,13 @@ def metadata_source_ids(metadata: list[dict], lines: dict[str, dict], taken: set
                         same = free or same
                         if same:
                             for sid in same:
+                                out.setdefault(sid, f"metadata:{name}")
+                            continue
+                        # tiêu đề Hán ghép không dấu cách từ nhiều dòng liên tiếp, kể cả dòng 1 chữ (vùng tiêu đề
+                        # theo bbox, CPO_19 tr.91 "建宫僅陣"): khớp cả dãy dòng liên tiếp có chữ ghép đúng bằng trường
+                        run = contiguous_run(by_page_sids.get(page, []), lines, key)
+                        if run:
+                            for sid in run:
                                 out.setdefault(sid, f"metadata:{name}")
                             continue
                         # một trường metadata có thể ghép nhiều dòng liên tiếp ("TIÊU ĐỀ DÒNG 1 DÒNG 2", cả dòng "I")

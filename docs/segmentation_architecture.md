@@ -159,7 +159,14 @@ Bật trong config (hoặc `--ocr-streams han_vie`); mặc định tắt, chế 
    - `document_overrides`: ghi đè theo TRANG BẮT ĐẦU của tài liệu, bắt buộc có `reason`
      (`src/segmentation/overrides.py`): `exclude` (ra khỏi lớp dóng) / `notes` (vùng chú thích), tuỳ chọn
      `layers`, `implicit_am_only`, `han_prefix`. Mỗi dòng bị gỡ có review `override_excluded`/`override_note`;
-     ghi đè không khớp tài liệu nào thì log cảnh báo.
+     ghi đè không khớp tài liệu nào thì log cảnh báo. Action `continue` (bắt buộc `han_prefix`): khối Hán bắt đầu
+     ở trang đó KHÔNG mở tài liệu mới, dòng của nó thuộc tài liệu trước (chữ Hán trích trong khảo dị >= 2 dòng;
+     CPO_18 tr.358-359 từng tách DỊCH NGHĨA/DỊCH THƠ của Đề lữ sấn sang tài liệu khác). Áp ở bước tìm ranh giới
+     (`overrides.suppressed_starts`), review `document_override`.
+   - `running_header_edge_only` (mặc định false; CPO_19 bật): dòng lặp >= 3 trang chỉ là tiêu đề chạy khi nằm trong
+     2 dòng đầu/cuối trang. CPO_19 in "LẠI MỘT ĐẠO(1)" giữa trang ở đầu phần dịch của nhiều bức thư; coi là tiêu đề
+     chạy thì không mở được nghĩa khi thiếu "DỊCH NGHĨA" (CPO_19.189 tr.442). Không bật cho CPO_18: tên tác giả viết
+     hoa lặp giữa trang ("LÝ MIỄU") khi đó mở nhầm lớp nghĩa (gold CPO_18 0,862 -> 0,763).
    - `am_detection.split_lines` (mặc định tắt): phần DỊCH dính vào cuối lớp am khi OCR mất nhãn "Dịch nghĩa:" ->
      nghia (`am_detect.split_point`: 2 dòng liền >= 6 âm tiết khớp cách đọc Hán–Việt < 0,55, đã đủ 80% số chữ Hán,
      phần trước khớp >= 0,6; bỏ qua tiêu đề chạy, mục chú thích). Review `am_tail_split_to_nghia`.
@@ -178,7 +185,16 @@ Bật trong config (hoặc `--ocr-streams han_vie`); mặc định tắt, chế 
    khoảng trang của tài liệu (`metadata.json` -> `segmentation.ocr_streams`).
 
 Metadata lớp han: dòng trông như tiêu đề mà dòng kế tiếp cũng vậy và cùng số chữ Hán (4..7) là câu thơ, không
-gom vào tiêu đề (thơ không chấm câu). Tách câu `am` mặc định `auto`: văn vần (>= 75% dòng <= 12 âm tiết có dấu
+gom vào tiêu đề (thơ không chấm câu).
+
+Vùng tiêu đề Hán theo bbox (`segmentation.layers.han.title_zone`, vd `{"thin_ratio": 0.75, "tall_ratio": 1.3}`;
+CPO_19, CPO_20 bật, CPO_18 không): tiêu đề in chữ to bị paddlevl đọc thành một dòng CAO (> 1,3 x trung vị chiều cao
+dòng Hán của tài liệu) hoặc xẻ một dòng in thành hai dòng OCR chồng mép, ít nhất một dòng MỎNG (< 0,75 x trung vị),
+chữ thường là rác ("4 谒關留贈潘御史" + ".边陲田相相何又"). Các dòng liên tiếp từ đầu tài liệu thoả điều kiện (tối đa
+4) là tiêu đề bắt buộc (`layers.han_title_zone` -> `classify_leading_block(forced_title_ids=...)`): không bị
+`_limit_han_title` trả về chính văn, không bị coi là câu thơ, không làm tác giả. Review `han_title_zone_line`.
+Trước đây (duyệt 1-0, 2026-11-28) 33/34 dòng tiêu đề lọt thân bài của CPO_19 và 34/44 của CPO_20 thuộc loại này.
+Không bật cho CPO_18 (văn xuôi, dòng mỏng ở đầu bài là chữ thật). Tách câu `am` mặc định `auto`: văn vần (>= 75% dòng <= 12 âm tiết có dấu
 cuối dòng) tách theo dòng, văn xuôi theo dấu câu.
 
 ### 3.4. Bảng Thuộc Tính Chuẩn

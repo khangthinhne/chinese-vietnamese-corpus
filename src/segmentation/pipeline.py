@@ -141,16 +141,23 @@ def run(args) -> None:
         allowed = ocr_streams.allowed_document_starts(
             merged, min_block_lines=int(seg.get("document", {}).get("min_han_block_lines",
                                                                    ocr_streams.MIN_HAN_BLOCK_LINES)))
-        is_header = ocr_streams.header_predicate(merged)
+        is_header = ocr_streams.header_predicate(merged, edge_only=bool(seg.get("running_header_edge_only")))
         from src.segmentation.am_detect import AmDetector
         am_detector = AmDetector(seg.get("am_detection"), Path(__file__).resolve().parents[2])
-        from src.segmentation.overrides import overrides_for, parse_overrides
+        from src.segmentation.overrides import overrides_for, parse_overrides, suppressed_starts
         doc_overrides = parse_overrides(seg.get("document_overrides"))
         used_overrides: set[int] = set()
+        suppressed, continued = suppressed_starts(merged, allowed, doc_overrides)
+        allowed = allowed - suppressed
+        used_overrides.update(id(o) for o in continued)
         docs, review = segment_documents_unified(args.work_id, merged,
                                                  ocr_streams.document_config(seg.get("document", {})),
                                                  pages, allowed_starts=allowed)
         review = coverage + review
+        from src.segmentation.documents import review_row
+        for ov in continued:
+            review.append(review_row(args.work_id, "", "han", "document_override", [ov.start_page],
+                                     f"continue ({ov.han_prefix}): {ov.reason}"))
         sources_used = ["han", "vie"]
         stream_info = {"mode": streams_mode, "lines": ocr_streams.stream_stats(merged),
                        "han_pages": sorted({ln.page for ln in han_lines}),
