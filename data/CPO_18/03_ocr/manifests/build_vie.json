@@ -3,7 +3,7 @@
   "work_id": "CPO_18",
   "layer": "vie",
   "engine": "qwen",
-  "built_at": "2026-11-27T02:44:49+00:00",
+  "built_at": "2026-11-27T21:31:07+00:00",
   "xml": "03_ocr/ocr_raw/vie.xml",
   "text_dir": "03_ocr/ocr_raw_text/vie",
   "totals": {
@@ -11,17 +11,197 @@
     "pages_with_run": 311,
     "pages_with_lines": 305,
     "n_src": 3889,
-    "n_kept": 3167,
-    "n_dropped": 722,
+    "n_kept": 3153,
+    "n_dropped": 736,
     "cjk_removed": 18158,
-    "n_rejected": 2,
-    "n_merged_units": 0
+    "n_rejected": 16,
+    "n_merged_units": 0,
+    "n_corrections_applied": 8,
+    "n_corrections_deleted": 12,
+    "n_corrections_skipped": 0
   },
   "filter": {
     "han_min_cjk_share": 0.3,
     "han_min_cjk_with_latin": 2
   },
-  "warnings": [],
+  "corrections": {
+    "file": "03_ocr/corrections/corrections.tsv",
+    "log": [
+      {
+        "row": 20,
+        "line_id": "vie.P0212.S002",
+        "editor": "Claude (đối chiếu ảnh trang PDF)",
+        "date": "2026-11-28",
+        "status": "applied",
+        "old": "Lộc Viên (21), Phu tử (22) nêu đức âm ở TƯU LỘ (23), tai ta không trực tiếp được nghe, mắt ta không trực tiếp được thấy, đều là tin theo sách vở cả. Nếu không tin bên kia thì ngờ bên này cũng phải. Nhưng nếu đã có thể thông",
+        "new": "Lộc Viên (21), Phu tử (22) nêu đức âm ở Tưu Lỗ (23), tai ta không trực tiếp được nghe, mắt ta không trực tiếp được thấy, đều là tin theo sách vở cả. Nếu không tin bên kia thì ngờ bên này cũng phải. Nhưng nếu đã có thể thông suốt bên kia, thì sao lại còn vướng mắc đối với bên này ?"
+      },
+      {
+        "row": 21,
+        "line_id": "vie.P0212.S003",
+        "editor": "Claude (đối chiếu ảnh trang PDF)",
+        "date": "2026-11-28",
+        "status": "applied",
+        "old": "sử quân suy nghĩ sâu xa, xét rõ tam thế (24), mong ngài tìm hiểu lời dạy Thọ lượng (25) chưa dứt, gần thì theo dấu tích Định Quang, Nho Đồng (26), giữa thì suy xét các sách chép về Đại Thông Trí Thắng (27), để cởi bỏ sự tối tăm trì trệ cho mọi người, như vén mấy tầng mây",
+        "new": "Sứ quân suy nghĩ sâu xa, xét rõ tam thế (24), mong ngài tìm hiểu lời dạy Thọ lượng (25) chưa dứt, gần thì theo dấu tích Định Quang, Nho Đồng (26), giữa thì suy xét các sách chép về Đại Thông Trí Thắng (27), để cởi bỏ sự tối tăm trì trệ cho mọi người, như vén mấy tầng mây"
+      },
+      {
+        "row": 2,
+        "line_id": "vie.P0353.S003",
+        "editor": "Claude (đối chiếu ảnh trang PDF)",
+        "date": "2026-11-28",
+        "status": "applied",
+        "old": "Nă, Nguyễn Pháp Liên, Cao Thị Dĩnh, Thượng trục quốc Hoàng Lệnh Hy và vợ là Phùng Thị Bạch, Đỗ Nương Xuân, Lã Nương Hâm, Lã Nương Tận, Đỗ Thị Lôi, Quách Thị Ngung, con trai là Đằng, con gái là Nương Chức, Trịnh Thị Xí, Kiểu Thị Đại, Thạch Trường Nạp, vợ là Liễu Điều, La Ả Liệt, Muộn Thị Nhãn, Đỗ Thị Hàm, Cao Thị Thuật, Đỗ Thị Yết (?). Tín tài thí chủ :",
+        "new": "Nã, Nguyễn Pháp Liên, Cao Thị Dĩnh, Thượng trụ quốc Hoàng Lệnh Hy và vợ là Phùng Thị Bạch, Đỗ Nương Xuân, Lã Nương Hãm, Lã Nương Tận, Đỗ Thị Lôi, Quách Thị Ngung, con trai là Đăng, con gái là Nương Chức, Trịnh Thị Xí, Kiểu Thị Đại, Thạch Trường Nạp, vợ là Liễu Điều, La Ả Liệt, Muộn Thị Nhãn, Đỗ Thị Hàm, Cao Thị Thuật, Đỗ Thị Yết (?). Tín tài thí chủ :"
+      },
+      {
+        "row": 3,
+        "line_id": "vie.P0353.S012",
+        "editor": "Claude (đối chiếu ảnh trang PDF)",
+        "date": "2026-11-28",
+        "status": "applied",
+        "old": "Hoàng Nương Nẫm, Quách Thị Quý đã qua đời, Lý Biện Thế, Quách Hãn, Trần Thị Thanh đã qua đời, Quách",
+        "new": "Hoàng Nương Nẫm, Quách Thị Quý đã qua đời, Lý Biện Thế, Quách Hãm, Trần Thị Thanh đã qua đời, Quách"
+      },
+      {
+        "row": 4,
+        "line_id": "vie.P0353.S013",
+        "editor": "Claude (đối chiếu ảnh trang PDF)",
+        "date": "2026-11-28",
+        "status": "applied",
+        "old": "Thị Triều, Hoàng Thị Lợi, Quách Thị Nương, Đỗ Anh Cường, vợ là Vương Thị Lễ, Nguyễn Chân Nghệ, Hoàng Thị Tuyển, Nguyễn Thị Na (?), Hoàng Như Sính, Lê Thị Tiểu, Quách Thị Đại, Quách Xuân Cù, Quách Thị Phỏng, Vương Nương Thứ, Đỗ Trục Nhật, Trần Thị Hạnh, Cao Thị Nhãn, Đỗ Thị Dục, Đỗ Thị Mạ, Vương Thi Hỉ, Đỗ Thị Du, Đỗ Thị Chế, Đỗ Thị (1 chữ không đọc được)",
+        "new": "Thị Triều, Hoàng Thị Lợi, Quách Thị Nương, Đỗ Anh Cường, vợ là Vương Thị Lễ, Nguyễn Chân Nghệ, Hoàng Thị Tuyển, Nguyễn Thị Na (?), Hoàng Như Sính, Lê Thị Tiểu, Quách Thị Đại, Quách Xuân Cù, Quách Thị Phỏng, Vương Nương Thứ, Đỗ Trục Nhật, Trần Thị Hạnh, Cao Thị Nhãn, Đỗ Thị Dục, Đỗ Thị Mạ, Vương Thị Hỉ, Đỗ Thị Du, Đỗ Thị Chế, Đỗ Thị (1 chữ không đọc được)."
+      },
+      {
+        "row": 5,
+        "line_id": "vie.P0353.S014",
+        "editor": "Claude (đối chiếu ảnh trang PDF)",
+        "date": "2026-11-28",
+        "status": "deleted",
+        "old": "Thị, N, Bọ, Mạ, Bát, Bọ, Mạ, Ché, Bọ, Nại (1 chữ không được)."
+      },
+      {
+        "row": 6,
+        "line_id": "vie.P0402.S004",
+        "editor": "Claude (đối chiếu ảnh trang PDF)",
+        "date": "2026-11-28",
+        "status": "deleted",
+        "old": "HỌC THỦY QUỐC"
+      },
+      {
+        "row": 7,
+        "line_id": "vie.P0402.S005",
+        "editor": "Claude (đối chiếu ảnh trang PDF)",
+        "date": "2026-11-28",
+        "status": "deleted",
+        "old": "Sử dụng 20000000"
+      },
+      {
+        "row": 8,
+        "line_id": "vie.P0402.S006",
+        "editor": "Claude (đối chiếu ảnh trang PDF)",
+        "date": "2026-11-28",
+        "status": "deleted",
+        "old": "Bài giảng: \"Điều tra dân số\" - Mô tả các phương pháp điều tra dân số (8)"
+      },
+      {
+        "row": 9,
+        "line_id": "vie.P0402.S007",
+        "editor": "Claude (đối chiếu ảnh trang PDF)",
+        "date": "2026-11-28",
+        "status": "deleted",
+        "old": "- Phân loại dân số: Dân số được phân loại thành hai nhóm chính là: Dân số trong nước và Dân số ngoài nước."
+      },
+      {
+        "row": 10,
+        "line_id": "vie.P0523.S006",
+        "editor": "Claude (đối chiếu ảnh trang PDF)",
+        "date": "2026-11-28",
+        "status": "deleted",
+        "old": "m 5 5"
+      },
+      {
+        "row": 11,
+        "line_id": "vie.P0523.S007",
+        "editor": "Claude (đối chiếu ảnh trang PDF)",
+        "date": "2026-11-28",
+        "status": "deleted",
+        "old": "gōng qì"
+      },
+      {
+        "row": 12,
+        "line_id": "vie.P0523.S008",
+        "editor": "Claude (đối chiếu ảnh trang PDF)",
+        "date": "2026-11-28",
+        "status": "deleted",
+        "old": "gōng qì"
+      },
+      {
+        "row": 13,
+        "line_id": "vie.P0523.S009",
+        "editor": "Claude (đối chiếu ảnh trang PDF)",
+        "date": "2026-11-28",
+        "status": "deleted",
+        "old": "gōng q"
+      },
+      {
+        "row": 14,
+        "line_id": "vie.P0528.S002",
+        "editor": "Claude (đối chiếu ảnh trang PDF)",
+        "date": "2026-11-28",
+        "status": "applied",
+        "old": "đi quá chỗ thường dừng lại để chia tay là Hổ Khê lúc nào không biết, ba người nhìn nhau cười, từ đó có diễn \"Hổ Khê tam tiểu\" (Ba người cười ở khe Hổ). Đây muốn nói",
+        "new": "đi quá chỗ thường dừng lại để chia tay là Hổ Khê lúc nào không biết, ba người nhìn nhau cười, từ đó có điển \"Hổ Khê tam tiếu\" (Ba người cười ở khe Hổ). Đây muốn nói"
+      },
+      {
+        "row": 15,
+        "line_id": "vie.P0528.S004",
+        "editor": "Claude (đối chiếu ảnh trang PDF)",
+        "date": "2026-11-28",
+        "status": "deleted",
+        "old": "$\\gamma_{\\mu}^{\\alpha},\\tau,\\sigma\\in\\mathbb{H}\\quad d\\nu_{\\alpha}\\tilde{\\nu}_{\\beta}\\subset\\Omega_{j}$"
+      },
+      {
+        "row": 16,
+        "line_id": "vie.P0528.S005",
+        "editor": "Claude (đối chiếu ảnh trang PDF)",
+        "date": "2026-11-28",
+        "status": "deleted",
+        "old": "et"
+      },
+      {
+        "row": 17,
+        "line_id": "vie.P0531.S009",
+        "editor": "Claude (đối chiếu ảnh trang PDF)",
+        "date": "2026-11-28",
+        "status": "deleted",
+        "old": "; snow,"
+      },
+      {
+        "row": 18,
+        "line_id": "vie.P0531.S013",
+        "editor": "Claude (đối chiếu ảnh trang PDF)",
+        "date": "2026-11-28",
+        "status": "applied",
+        "old": "TỔNG HOÀNG TRI (NHẤT TÁC HÒA) TÂN",
+        "new": "TỐNG HOÀNG TRI (NHẤT TÁC HÒA) TÂN"
+      },
+      {
+        "row": 19,
+        "line_id": "vie.P0531.S020",
+        "editor": "Claude (đối chiếu ảnh trang PDF)",
+        "date": "2026-11-28",
+        "status": "applied",
+        "old": "Chương thổ bất sinh trà.",
+        "new": "Chướng thổ bất sinh trà."
+      }
+    ]
+  },
+  "warnings": [
+    "P0402: vie mất 62% dòng không phải Hán sau lọc (5/8)",
+    "P0523: vie mất 50% dòng không phải Hán sau lọc (4/8)",
+    "P0528: vie mất 50% dòng không phải Hán sau lọc (3/6)"
+  ],
   "pages": [
     {
       "page": 205,
@@ -1978,13 +2158,19 @@
       "key": "0166d31238b4b0bd9c568c8650c4c5a31c500b017563936cea1b39499b750f15",
       "raw": "03_ocr/raw/qwen/0353.json",
       "n_src": 14,
-      "n_kept": 14,
-      "n_dropped": 0,
+      "n_kept": 13,
+      "n_dropped": 1,
       "cjk_removed": 0,
-      "n_rejected": 0,
+      "n_rejected": 1,
       "n_src_non_han": 14,
-      "n_dropped_non_han": 0,
-      "rejected": [],
+      "n_dropped_non_han": 1,
+      "rejected": [
+        {
+          "src_line": 14,
+          "reason": "correction_delete",
+          "text": "Thị, N, Bọ, Mạ, Bát, Bọ, Mạ, Ché, Bọ, Nại (1 chữ không được)."
+        }
+      ],
       "merged": []
     },
     {
@@ -2730,13 +2916,34 @@
       "key": "a504cee96d9de5326b77b2fab6c3a63f8c9dfbe67888f35704f7b6d856f136a2",
       "raw": "03_ocr/raw/qwen/0402.json",
       "n_src": 18,
-      "n_kept": 7,
-      "n_dropped": 11,
+      "n_kept": 3,
+      "n_dropped": 15,
       "cjk_removed": 20,
-      "n_rejected": 0,
+      "n_rejected": 4,
       "n_src_non_han": 8,
-      "n_dropped_non_han": 1,
-      "rejected": [],
+      "n_dropped_non_han": 5,
+      "rejected": [
+        {
+          "src_line": 4,
+          "reason": "correction_delete",
+          "text": "HỌC THỦY QUỐC"
+        },
+        {
+          "src_line": 5,
+          "reason": "correction_delete",
+          "text": "Sử dụng 20000000"
+        },
+        {
+          "src_line": 6,
+          "reason": "correction_delete",
+          "text": "Bài giảng: \"Điều tra dân số\" - Mô tả các phương pháp điều tra dân số (8)"
+        },
+        {
+          "src_line": 7,
+          "reason": "correction_delete",
+          "text": "- Phân loại dân số: Dân số được phân loại thành hai nhóm chính là: Dân số trong nước và Dân số ngoài nước."
+        }
+      ],
       "merged": []
     },
     {
@@ -4666,13 +4873,34 @@
       "key": "6d16219a6c5dd5f49b317d09513dc1334e312f3781a2f688b7a749f84c7be959",
       "raw": "03_ocr/raw/qwen/0523.json",
       "n_src": 11,
-      "n_kept": 8,
-      "n_dropped": 3,
+      "n_kept": 4,
+      "n_dropped": 7,
       "cjk_removed": 34,
-      "n_rejected": 0,
+      "n_rejected": 4,
       "n_src_non_han": 8,
-      "n_dropped_non_han": 1,
-      "rejected": [],
+      "n_dropped_non_han": 4,
+      "rejected": [
+        {
+          "src_line": 6,
+          "reason": "correction_delete",
+          "text": "m 5 5"
+        },
+        {
+          "src_line": 7,
+          "reason": "correction_delete",
+          "text": "gōng qì"
+        },
+        {
+          "src_line": 8,
+          "reason": "correction_delete",
+          "text": "gōng qì"
+        },
+        {
+          "src_line": 9,
+          "reason": "correction_delete",
+          "text": "gōng q"
+        }
+      ],
       "merged": []
     },
     {
@@ -4746,13 +4974,24 @@
       "key": "f7071e599b071b51538951c92142d387808641318fb0ebd694b245e90cc97f80",
       "raw": "03_ocr/raw/qwen/0528.json",
       "n_src": 6,
-      "n_kept": 5,
-      "n_dropped": 1,
+      "n_kept": 3,
+      "n_dropped": 3,
       "cjk_removed": 0,
-      "n_rejected": 0,
+      "n_rejected": 2,
       "n_src_non_han": 6,
-      "n_dropped_non_han": 1,
-      "rejected": [],
+      "n_dropped_non_han": 3,
+      "rejected": [
+        {
+          "src_line": 4,
+          "reason": "correction_delete",
+          "text": "$\\gamma_{\\mu}^{\\alpha},\\tau,\\sigma\\in\\mathbb{H}\\quad d\\nu_{\\alpha}\\tilde{\\nu}_{\\beta}\\subset\\Omega_{j}$"
+        },
+        {
+          "src_line": 5,
+          "reason": "correction_delete",
+          "text": "et"
+        }
+      ],
       "merged": []
     },
     {
@@ -4794,13 +5033,29 @@
       "key": "b3ea36df3de599521c0dabae4fc60e5380ef772c2ac3f884a0d507c75ebcf0b3",
       "raw": "03_ocr/raw/qwen/0531.json",
       "n_src": 22,
-      "n_kept": 18,
-      "n_dropped": 4,
+      "n_kept": 15,
+      "n_dropped": 7,
       "cjk_removed": 20,
-      "n_rejected": 0,
+      "n_rejected": 3,
       "n_src_non_han": 17,
-      "n_dropped_non_han": 0,
-      "rejected": [],
+      "n_dropped_non_han": 2,
+      "rejected": [
+        {
+          "src_line": 10,
+          "reason": "english_function_words",
+          "text": "snow does not fall,"
+        },
+        {
+          "src_line": 11,
+          "reason": "english_function_words",
+          "text": "snow does not fall."
+        },
+        {
+          "src_line": 9,
+          "reason": "correction_delete",
+          "text": "; snow,"
+        }
+      ],
       "merged": []
     },
     {

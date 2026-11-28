@@ -164,7 +164,16 @@ Bật trong config (hoặc `--ocr-streams han_vie`); mặc định tắt, chế 
      nghia (`am_detect.split_point`: 2 dòng liền >= 6 âm tiết khớp cách đọc Hán–Việt < 0,55, đã đủ 80% số chữ Hán,
      phần trước khớp >= 0,6; bỏ qua tiêu đề chạy, mục chú thích). Review `am_tail_split_to_nghia`.
    - `verse_tho_split` (mặc định tắt): bài thơ không có lớp tho mà nghia >= 1,6 x số dòng thân am và phần đuôi là câu
-     thơ ngắn (<= 12 âm tiết) -> phần đuôi sang tho. Review `nghia_tail_split_to_tho`.
+     thơ ngắn (<= 12 âm tiết) -> phần đuôi sang tho. Review `nghia_tail_split_to_tho`. Điểm cắt lùi tối đa 2 dòng khi
+     dòng ngay trước có số âm tiết thuộc khuôn của phần thơ (một dòng OCR nghĩa chứa hai câu dịch, CPO_20 tr.42).
+   - `note_entry_ends` (mặc định []; CPO_20 dùng ["am", "nghia", "tho"]): mục chú thích cuối trang kết thúc lớp tới
+     hết trang. Nhận "1. Thuật ngữ: ...", "(65) Thuật ngữ: ...", và mục KHÔNG số "Thuật ngữ: ..." khi thuật ngữ dài
+     2-6 từ và đã xuất hiện trong lớp âm trước đó của tài liệu. Review `unnumbered_note_entry`.
+   - Tiêu đề khối ghi chú (KHẢO DỊ/CHÚ THÍCH/NGUYÊN CHÚ) kết thúc mọi lớp Việt đang mở, kể cả lớp không có nó trong
+     `end_patterns` (CPO_19 tr.79-80: mất "DỊCH NGHĨA", khảo dị từng bị gán vào am rồi sang nghia). Review
+     `note_heading_closed_layer`.
+   - Tiêu đề viết hoa mở lớp ngầm dài tối đa 24 từ (`UPPER_TITLE_MAX_WORDS`; trước đây 12 từ làm mất cả lớp nghĩa
+     của CPO_20.022 có tiêu đề dịch 19 từ).
 5. Cảnh báo: hai luồng khác phạm vi trang, tài liệu có Hán mà không có âm (và ngược lại), dòng han nằm ngoài
    khoảng trang của tài liệu (`metadata.json` -> `segmentation.ocr_streams`).
 

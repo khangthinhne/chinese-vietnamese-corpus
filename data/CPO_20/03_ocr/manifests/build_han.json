@@ -3,7 +3,7 @@
   "work_id": "CPO_20",
   "layer": "han",
   "engine": "paddlevl",
-  "built_at": "2026-11-27T02:45:06+00:00",
+  "built_at": "2026-11-27T21:38:04+00:00",
   "xml": "03_ocr/ocr_raw/han.xml",
   "text_dir": "03_ocr/ocr_raw_text/han",
   "totals": {
@@ -15,11 +15,18 @@
     "n_dropped": 10382,
     "cjk_removed": 0,
     "n_rejected": 26,
-    "n_merged_units": 1
+    "n_merged_units": 1,
+    "n_corrections_applied": 0,
+    "n_corrections_deleted": 0,
+    "n_corrections_skipped": 0
   },
   "filter": {
     "han_min_cjk_share": 0.3,
     "han_min_cjk_with_latin": 2
+  },
+  "corrections": {
+    "file": "03_ocr/corrections/corrections.tsv",
+    "log": []
   },
   "warnings": [
     "P0006: trang có run paddlevl nhưng không ra dòng Hán nào",

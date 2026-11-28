@@ -30,8 +30,46 @@ from src.segmentation.patterns import (
 
 DEFAULT_SOURCE = {"han": "chi_tra", "am": "vie", "nghia": "vie", "tho": "vie"}
 
-# Mục chú thích đầu dòng: "1. Nguyên dẫn: ...", "2) Y đài: ..." (số, dấu chấm/ngoặc, thuật ngữ ngắn, dấu hai chấm).
-NOTE_ENTRY_RE = re.compile(r"^\s*\d{1,2}\s*[.)]\s*[^\d\s][^:：]{0,40}[:：]\s*\S")
+# Mục chú thích đầu dòng: "1. Nguyên dẫn: ...", "2) Y đài: ...", "(65) Dư Nhượng: ..." (số 1-3 chữ số có dấu chấm/
+# ngoặc đóng hoặc nằm trong ngoặc, thuật ngữ ngắn, dấu hai chấm). Dạng "(65)" là cách in chú thích của CPO_18.
+NOTE_ENTRY_RE = re.compile(r"^\s*(?:\(\s*\d{1,3}\s*\)|\d{1,3}\s*[.)])\s*[^\d\s][^:：]{0,40}[:：]\s*\S")
+
+# Mục chú thích KHÔNG có số (OCR làm mất "1." hoặc sách không đánh số, CPO_20 tr.86/236/634):
+# "Lương triều: Hai triều; ...", "Đinh Hồ long khứ: Vua Hoàng Đế ...". Chỉ nhận khi thuật ngữ 2..6 từ, viết hoa chữ
+# đầu, không phải lời dẫn ("... nói rằng:"), và ĐÃ XUẤT HIỆN trong lớp PHIÊN ÂM trước đó của tài liệu (chú thích
+# giải nghĩa từ của nguyên văn). Chỉ so với âm, không so với nghĩa: "Ngươi chẳng thấy: ..." lặp lại trong lớp nghĩa
+# của bài hành (CPO_19) không bao giờ bị tính. "Đáp: ..." (1 từ), "Kính thấy ... đài hạ: ..." (> 6 từ) cũng không.
+NOTE_TERM_RE = re.compile(r"^\s*([^\W\d_][^:：.;!?()\"“”]{1,60}?)\s*[:：]\s*\S")
+# Mục khảo dị khi OCR mất tiêu đề "KHẢO DỊ:" (CPO_19 tr.64, 121): "a. Bản A.117c/1: Nguyên cương.",
+# "Bản A.1579: Động nguyên.". Ký hiệu thư viện "A.<số>"/"AVHv.<số>" rất đặc thù, nên luôn áp cho mọi lớp Việt
+# (không cần note_entry_ends): dòng này và phần còn lại của trang không gán lớp.
+KHAO_DI_ENTRY_RE = re.compile(r"^\s*(?:[a-zđ]\s*[.)]\s*)?Bản\s+(?:A|AVHv|VHv|AHN)\s*\.\s*\d")
+NOTE_TERM_MIN_WORDS = 2
+NOTE_TERM_MAX_WORDS = 6
+_NOTE_TERM_SPEECH_RE = re.compile(r"\b(?:rằng|nói|hỏi|đáp|viết|chép|có câu|thơ|bảo|thưa|tâu|kính)\b", re.IGNORECASE)
+
+
+def fold_latin(text: str) -> str:
+    """Bỏ dấu, chữ thường, đ->d, gộp khoảng trắng: để so thuật ngữ chú thích với văn bản bất chấp lỗi dấu của OCR."""
+    text = unicodedata.normalize("NFD", text.lower().replace("đ", "d"))
+    text = "".join(c for c in text if not unicodedata.combining(c))
+    return " ".join(re.findall(r"[a-z0-9]+", text))
+
+
+def unnumbered_note_term(text: str, seen_folded: str) -> str | None:
+    """Thuật ngữ nếu dòng là mục chú thích không số mà thuật ngữ đã có trong `seen_folded` (văn bản trước đó, đã
+    fold_latin), ngược lại None."""
+    m = NOTE_TERM_RE.match(text)
+    if not m:
+        return None
+    term = m.group(1).strip()
+    words = term.split()
+    if not (NOTE_TERM_MIN_WORDS <= len(words) <= NOTE_TERM_MAX_WORDS) or not term[0].isupper():
+        return None
+    if _NOTE_TERM_SPEECH_RE.search(term):
+        return None
+    folded = fold_latin(term)
+    return term if folded and f" {folded} " in f" {seen_folded} " else None
 
 
 # Tiêu đề khối ghi chú kết thúc lớp nghia, so khớp mờ theo lỗi OCR thường gặp: KHẢO DỊ / KHÁO DỊ / KHAO DI /
@@ -283,14 +321,22 @@ def assign_document(work_id: str, doc: Document, layer_cfg: dict, meta_cfg: dict
 _TITLE_SUFFIX_RE = re.compile(r"\s*[\(\[]\s*\w{1,3}\s*[\)\]]\s*$")
 
 
+# Tiêu đề dịch viết hoa dài nhất đã gặp: 19 từ ("HỌA TIỂN QUÁN THỊ LÀNG BỘ HÌNH ... Ở HÒA NGHĨA", CPO_20.022); giới
+# hạn cũ 12 từ làm mất cả lớp nghĩa của bài đó.
+UPPER_TITLE_MAX_WORDS = 24
+# Lớp Việt: tiêu đề khối ghi chú (KHẢO DỊ/CHÚ THÍCH/NGUYÊN CHÚ) kết thúc lớp nào đang mở trong số này.
+VIE_LAYERS = frozenset({"am", "nghia", "tho"})
+SEEN_TEXT_MAX = 200_000                          # giới hạn văn bản tích luỹ để dò thuật ngữ chú thích (tài liệu dài)
+
+
 def is_upper_title(text: str) -> bool:
     """Dòng tiêu đề Việt viết hoa toàn bộ (vd "LÊN NÚI MẪU TỬ (1)", "THỜ MÙNG MƯA"): >= 2 chữ cái Latin, không
-    chữ thường, <= 12 từ, không kết thúc bằng dấu phẩy/chấm phẩy (câu thơ viết hoa nhầm)."""
+    chữ thường, <= UPPER_TITLE_MAX_WORDS từ, không kết thúc bằng dấu phẩy/chấm phẩy (câu thơ viết hoa nhầm)."""
     probe = _TITLE_SUFFIX_RE.sub("", text.strip())
     letters = [c for c in probe if c.isalpha() and unicodedata.name(c, "").startswith("LATIN")]
     if len(letters) < 2 or any(c.islower() for c in letters):
         return False
-    return len(probe.split()) <= 12 and not probe.endswith((",", ";"))
+    return len(probe.split()) <= UPPER_TITLE_MAX_WORDS and not probe.endswith((",", ";"))
 
 
 def assign_document_unified(work_id: str, doc: Document, layer_cfg: dict, meta_cfg: dict,
@@ -319,7 +365,10 @@ def assign_document_unified(work_id: str, doc: Document, layer_cfg: dict, meta_c
     - `note_entry_ends` (tuỳ chọn), vd {"am", "nghia", "tho"}: trong các lớp đó, dòng mục chú thích "1. Thuật ngữ: ..."
       (`NOTE_ENTRY_RE`) mở vùng chú thích cuối trang: nó và các dòng sau trên CÙNG TRANG không gán lớp; sang trang
       mới mà chưa gặp tiêu đề thì lớp cũ chạy tiếp (CPO_20 in chú thích cuối trang không có tiêu đề CHÚ THÍCH,
-      audit 2026-11-26).
+      audit 2026-11-26). Cũng nhận "(65) Thuật ngữ: ..." và mục KHÔNG số "Thuật ngữ: ..." khi thuật ngữ (2-6 từ) đã có
+      trong lớp am trước đó của tài liệu (`unnumbered_note_term`, review `unnumbered_note_entry`).
+    - Tiêu đề khối ghi chú (KHẢO DỊ/CHÚ THÍCH/NGUYÊN CHÚ, `NOTE_HEADING_RE`) kết thúc mọi lớp Việt đang mở, kể cả
+      lớp không liệt kê nó trong end_patterns (review `note_heading_closed_layer`).
     - Tiêu đề mục tường minh đặt lại số dòng nội dung của lớp đó; dòng `is_header` (tiêu đề chạy, dòng Việt nhiễu)
       không tính là dòng nội dung (CPO_18.005: rác + tiêu đề chạy làm "PHIÊN ÂM:" rồi tiêu đề bài mở nhầm nghia).
     - Dòng bị `keep_line` loại được ghi review `dropped_cross_stream` (từng dòng), không mất dấu.
@@ -364,6 +413,7 @@ def assign_document_unified(work_id: str, doc: Document, layer_cfg: dict, meta_c
     am_implicit_run = False                      # lớp am hiện đang chạy từ lần mở ngầm (chưa gặp tiêu đề PHIÊN ÂM)
     implicit_am: list[OcrLine] = []              # dòng am gán trong lúc đó (bộ nhận diện chỉ xét/chuyển các dòng này)
     last_layer: str | None = current             # lớp nội dung gần nhất (để thoát khỏi đoạn chú thích)
+    seen_folded = ""                             # văn bản lớp am đã gán (fold_latin), để nhận chú thích không số
     attribution = {n: compile_patterns(layer_cfg[n].get("attribution_patterns"),
                                        f"segmentation.layers.{n}.attribution_patterns", False)
                    for n in notes_after_attribution if n in layer_cfg}
@@ -420,6 +470,12 @@ def assign_document_unified(work_id: str, doc: Document, layer_cfg: dict, meta_c
             headings.append(h_info)
             if current in ends_hit:
                 current = None
+            elif current in VIE_LAYERS and NOTE_HEADING_RE.match(ln.text.strip()):
+                # KHẢO DỊ/CHÚ THÍCH/NGUYÊN CHÚ kết thúc MỌI lớp Việt đang mở, không chỉ lớp liệt kê nó trong
+                # end_patterns (CPO_19 tr.79-80: mất "DỊCH NGHĨA" nên vẫn ở am, khảo dị bị gán vào am rồi sang nghia).
+                review.append(review_row(work_id, doc.id, current, "note_heading_closed_layer",
+                                         [ln.page], ln.text, [ln.source_id]))
+                current = None
             continue
 
         if (implicit_next and keep_line is not None and current in implicit_next
@@ -447,17 +503,29 @@ def assign_document_unified(work_id: str, doc: Document, layer_cfg: dict, meta_c
             if current is None and last_layer:   # chú thích cuối trang đã hết: nội dung lớp chạy tiếp sang trang mới
                 current = last_layer
             notes_page = None
-        if (current in note_entry_ends and NOTE_ENTRY_RE.match(ln.text)
-                and (keep_line is None or keep_line(current, ln))):
+        if current in VIE_LAYERS and KHAO_DI_ENTRY_RE.match(ln.text):
+            review.append(review_row(work_id, doc.id, current, "khao_di_entry_without_heading",
+                                     [ln.page], ln.text, [ln.source_id]))
             last_layer = current
-            current = None                       # mục chú thích "1. Thuật ngữ: ...": hết lớp tới cuối trang
+            current = None                       # khảo dị không tiêu đề: hết lớp tới cuối trang
             notes_page = ln.page
+        if current in note_entry_ends and (keep_line is None or keep_line(current, ln)):
+            term = None if NOTE_ENTRY_RE.match(ln.text) else unnumbered_note_term(ln.text, seen_folded)
+            if term is not None or NOTE_ENTRY_RE.match(ln.text):
+                if term is not None:
+                    review.append(review_row(work_id, doc.id, current, "unnumbered_note_entry",
+                                             [ln.page], ln.text, [ln.source_id]))
+                last_layer = current
+                current = None                   # mục chú thích "1. Thuật ngữ: ...": hết lớp tới cuối trang
+                notes_page = ln.page
         target = current
         if target is None:
             review.append(review_row(work_id, doc.id, "", "unassigned_line",
                                      [ln.page], ln.text, [ln.source_id]))
             continue
         grouped.setdefault(target, []).append(ln)
+        if target == "am" and len(seen_folded) < SEEN_TEXT_MAX:
+            seen_folded += " " + fold_latin(ln.text)
         if target == "am" and am_implicit_run:
             implicit_am.append(ln)
         last_layer = target

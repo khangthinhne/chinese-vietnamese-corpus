@@ -3,7 +3,7 @@
   "work_id": "CPO_19",
   "layer": "vie",
   "engine": "qwen",
-  "built_at": "2026-11-27T02:45:01+00:00",
+  "built_at": "2026-11-27T21:32:28+00:00",
   "xml": "03_ocr/ocr_raw/vie.xml",
   "text_dir": "03_ocr/ocr_raw_text/vie",
   "totals": {
@@ -15,11 +15,18 @@
     "n_dropped": 3553,
     "cjk_removed": 69830,
     "n_rejected": 12,
-    "n_merged_units": 0
+    "n_merged_units": 0,
+    "n_corrections_applied": 0,
+    "n_corrections_deleted": 0,
+    "n_corrections_skipped": 0
   },
   "filter": {
     "han_min_cjk_share": 0.3,
     "han_min_cjk_with_latin": 2
+  },
+  "corrections": {
+    "file": "03_ocr/corrections/corrections.tsv",
+    "log": []
   },
   "warnings": [
     "P0013: vie mất 38% dòng không phải Hán sau lọc (16/42)",

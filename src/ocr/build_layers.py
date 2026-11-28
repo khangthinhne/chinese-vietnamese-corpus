@@ -12,6 +12,8 @@
   (số thứ tự dòng gốc của engine, 1-based) cho mỗi LINE. RUN chỉ giữ provenance (khoá, tham số), không
   chép lại dòng/payload gốc chưa lọc.
 - TXT chỉ tạo cho trang có ít nhất một dòng sau lọc. Không đụng raw.xml và ocr_raw_text/NNNN.txt.
+- Sửa tay OCR (`03_ocr/corrections/corrections.tsv`, xem src/ocr/corrections.py) được áp SAU lọc: đổi text dòng hoặc
+  xoá dòng (chuyển sang `rejected`, lý do `correction_delete`). Nhật ký từng hàng nằm trong manifests/build_<luồng>.json.
 """
 
 from __future__ import annotations
@@ -28,6 +30,7 @@ from pathlib import Path
 from src.common import deps
 from src.common.corpus import DataLayout, base_parser, parse_args, parse_pages, write_json
 from src.common.xmlstore import add, bbox_attr, file_element, read_root, write_file_root, write_root
+from src.ocr import corrections as ocr_corrections
 from src.ocr import raw_store
 from src.ocr.raw_xml import _add_engine, _add_parameters
 from src.ocr.run_quality import run_is_valid
@@ -307,6 +310,8 @@ def build_layer(layout: DataLayout, layer: str, pages: list[int], *, force: bool
     check_target(layout, layer, force)
     prefs = preferred_keys(layout, layer, engine)
     vie_prefs = preferred_keys(layout, "vie", LAYER_ENGINES["vie"]) if layer == "han" else {}
+    fixes = ocr_corrections.by_page(ocr_corrections.load_corrections(layout.ocr_corrections_path), layer)
+    correction_log: list[dict] = []
     outs: list[PageOut] = []
     for page in pages:
         runs = raw_store.page_runs(layout, engine, page, layout.work_id, LAYER_WRITING_SYSTEMS[layer])
@@ -318,6 +323,13 @@ def build_layer(layout: DataLayout, layer: str, pages: list[int], *, force: bool
                          han_min_cjk_with_latin=han_min_cjk_with_latin)
         if layer == "han" and len(out.filtered.kept) == 1:
             drop_lone_han(layout, page, out, vie_prefs, lone_han_min_vie_lines)
+        if fixes.get(page):     # sửa tay (03_ocr/corrections): áp sau lọc, theo thứ tự trong file
+            page_log = ocr_corrections.apply_page(out.filtered.kept, out.filtered.rejected, out.src_lines,
+                                                  fixes[page])
+            for rec in page_log:
+                level = logging.INFO if rec["status"] in ("applied", "deleted") else logging.WARNING
+                log.log(level, "[%s] sửa tay %s (hàng %d): %s", layer, rec["line_id"], rec["row"], rec["status"])
+            correction_log += page_log
         outs.append(out)
         for src, why, text in out.filtered.rejected:
             log.info("[%s] P%04d loại dòng %d (%s): %s", layer, page,
@@ -349,15 +361,46 @@ def build_layer(layout: DataLayout, layer: str, pages: list[int], *, force: bool
                    "n_dropped": sum(r["n_dropped"] for r in with_run),
                    "cjk_removed": sum(r["cjk_removed"] for r in with_run),
                    "n_rejected": sum(r["n_rejected"] for r in with_run),
-                   "n_merged_units": sum(len(r["merged"]) for r in with_run)},
+                   "n_merged_units": sum(len(r["merged"]) for r in with_run),
+                   "n_corrections_applied": sum(r["status"] == "applied" for r in correction_log),
+                   "n_corrections_deleted": sum(r["status"] == "deleted" for r in correction_log),
+                   "n_corrections_skipped": sum(r["status"] not in ("applied", "deleted") for r in correction_log)},
         "filter": {"han_min_cjk_share": han_min_cjk_share, "han_min_cjk_with_latin": han_min_cjk_with_latin},
-        "warnings": layer_warnings(layer, records),
+        "corrections": {"file": layout.rel(layout.ocr_corrections_path), "log": correction_log},
+        "warnings": layer_warnings(layer, records) + [
+            f"sửa tay {r['line_id']} (hàng {r['row']}) không áp: {r['status']}"
+            for r in correction_log if r["status"] not in ("applied", "deleted")],
         "pages": records,
     }
     write_json(layout.ocr_layer_manifest_path("build", layer), summary)
+    n_review = write_review(layout, layer, records)
+    if n_review:
+        log.info("[%s] %s: %d dòng bị loại theo luật cần rà (%s)", layout.work_id, layer, n_review,
+                 ", ".join(sorted(REVIEW_REASONS)))
     log.info("[%s] %s: %d trang có run %s, %d trang có dòng -> %s", layout.work_id, layer,
              len(with_run), engine, len(texts), xml_path)
     return summary
+
+
+# Lý do loại cần người rà lại (luật mới, có thể loại nhầm): ghi riêng ra manifests/review_<luồng>.tsv.
+REVIEW_REASONS = frozenset({"english_function_words", ocr_corrections.DELETE_REASON})
+
+
+def review_path(layout: DataLayout, layer: str) -> Path:
+    return layout.ocr_manifest_dir / f"review_{layer}.tsv"
+
+
+def write_review(layout: DataLayout, layer: str, records: list[dict]) -> int:
+    """Ghi lại (toàn bộ, mỗi lần dựng) danh sách dòng bị loại theo REVIEW_REASONS. Trả về số dòng."""
+    rows = [(r["page"], x["src_line"], x["reason"], x["text"]) for r in records for x in r["rejected"]
+            if x["reason"] in REVIEW_REASONS]
+    path = review_path(layout, layer)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with open(path, "w", encoding="utf-8", newline="") as fh:
+        fh.write("page\tsrc_line\treason\ttext\n")
+        for page, src, reason, text in rows:
+            fh.write(f"{page}\t{src}\t{reason}\t{' '.join(str(text).split())}\n")
+    return len(rows)
 
 
 def non_han_counts(out: PageOut) -> dict[str, int]:
@@ -531,7 +574,8 @@ def build_inputs(layout: DataLayout, layer: str) -> list[Path]:
     if layer == "han":
         inputs += layer_manifest_paths(layout, "vie")
     unified = raw_store.unified_manifest_path(layout)
-    return inputs + ([unified] if unified.exists() else [])
+    fixes = layout.ocr_corrections_path            # sửa tay: đổi file là phải dựng lại
+    return inputs + ([unified] if unified.exists() else []) + ([fixes] if fixes.exists() else [])
 
 
 def run(args) -> dict:

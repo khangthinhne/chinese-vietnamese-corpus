@@ -1446,6 +1446,14 @@
             <ORIGINAL>Phóng phạt kỳ tần ² kỳ độ thu.</ORIGINAL>
             <PROCESSED>Phóng phạt kỳ tần kỳ độ thu.</PROCESSED>
         </RECORD>
+        <RECORD LAYER="am" ACTION="remove_marker" REASON="in_text_marker" RULE="AM_DIGIT_MARKER_RE" PAGE="703" LINE_ID="CPO_20.181.P0703.L009">
+            <ORIGINAL>Thùy du 1 đương niên quái tích thiện,</ORIGINAL>
+            <PROCESSED>Thùy du đương niên quái tích thiện,</PROCESSED>
+        </RECORD>
+        <RECORD LAYER="am" ACTION="remove_marker" REASON="in_text_marker" RULE="AM_DIGIT_MARKER_RE" PAGE="703" LINE_ID="CPO_20.181.P0703.L010">
+            <ORIGINAL>Trùng nhân 2 hà lực đảm đa gian.</ORIGINAL>
+            <PROCESSED>Trùng nhân hà lực đảm đa gian.</PROCESSED>
+        </RECORD>
         <RECORD LAYER="am" ACTION="remove_marker" REASON="in_text_marker" RULE="AM_DIGIT_MARKER_RE" PAGE="743" LINE_ID="CPO_20.188.P0743.L014">
             <ORIGINAL>Thiên nhiên thiên quân 1 hoàn tự vinh</ORIGINAL>
             <PROCESSED>Thiên nhiên thiên quân hoàn tự vinh</PROCESSED>
@@ -1608,9 +1616,6 @@
         <RECORD LAYER="am" ACTION="reconstruct" REASON="ambiguous_join" RULE="cross_page_continuation" PAGE="236" LINE_ID="CPO_20.110.P0236.L009" NOTE="next=CPO_20.111.P0237.L001">
             <ORIGINAL>CẢM NGÂM</ORIGINAL>
         </RECORD>
-        <RECORD LAYER="am" ACTION="reconstruct" REASON="ambiguous_join" RULE="cross_page_continuation" PAGE="243" LINE_ID="CPO_20.114.P0243.L010" NOTE="next=CPO_20.115.P0244.L003">
-            <ORIGINAL>Lạp Đinh: Tên núi thuộc Nghệ An,</ORIGINAL>
-        </RECORD>
         <RECORD LAYER="am" ACTION="reconstruct" REASON="ambiguous_join" RULE="cross_page_continuation" PAGE="260" LINE_ID="CPO_20.123.P0260.L028" NOTE="next=CPO_20.123.P0261.L029">
             <ORIGINAL>Điền biên phụ sô,</ORIGINAL>
         </RECORD>
@@ -1674,10 +1679,7 @@
         <RECORD LAYER="nghia" ACTION="extract_metadata" REASON="metadata_source" RULE="metadata:source" PAGE="122" LINE_ID="CPO_20.053.P0122.L010" NOTE="Trích Dụ Am văn tập, quyển V">
             <ORIGINAL>Trích Dụ Am văn tập, quyển V</ORIGINAL>
         </RECORD>
-        <RECORD LAYER="nghia" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="182" LINE_ID="CPO_20.079.P0182.L044" NOTE="Ngô Linh Ngọc dịch">
-            <ORIGINAL>Ngô Linh Ngọc dịch</ORIGINAL>
-        </RECORD>
-        <RECORD LAYER="nghia" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="287" LINE_ID="CPO_20.132.P0287.L020" NOTE="Ngô Linh Ngọc dịch">
+        <RECORD LAYER="nghia" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="182" LINE_ID="CPO_20.079.P0182.L043" NOTE="Ngô Linh Ngọc dịch">
             <ORIGINAL>Ngô Linh Ngọc dịch</ORIGINAL>
         </RECORD>
         <RECORD LAYER="nghia" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="634" LINE_ID="CPO_20.152.P0634.L048" NOTE="Dương Minh và Thạch Can dịch">
@@ -1713,10 +1715,7 @@
         <RECORD LAYER="nghia" ACTION="extract_metadata" REASON="metadata_source" RULE="metadata:source" PAGE="122" LINE_ID="CPO_20.053.P0122.L010" NOTE="Trích Dụ Am văn tập, quyển V">
             <ORIGINAL>Trích Dụ Am văn tập, quyển V</ORIGINAL>
         </RECORD>
-        <RECORD LAYER="nghia" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="182" LINE_ID="CPO_20.079.P0182.L044" NOTE="Ngô Linh Ngọc dịch">
-            <ORIGINAL>Ngô Linh Ngọc dịch</ORIGINAL>
-        </RECORD>
-        <RECORD LAYER="nghia" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="287" LINE_ID="CPO_20.132.P0287.L020" NOTE="Ngô Linh Ngọc dịch">
+        <RECORD LAYER="nghia" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="182" LINE_ID="CPO_20.079.P0182.L043" NOTE="Ngô Linh Ngọc dịch">
             <ORIGINAL>Ngô Linh Ngọc dịch</ORIGINAL>
         </RECORD>
         <RECORD LAYER="nghia" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="634" LINE_ID="CPO_20.152.P0634.L048" NOTE="Dương Minh và Thạch Can dịch">
@@ -1774,23 +1773,23 @@
             <ORIGINAL>Trông tùng thu 8 Ấp Bái 9 dặm ngàn, man mác những đau lòng</ORIGINAL>
             <PROCESSED>Trông tùng thu Ấp Bái dặm ngàn, man mác những đau lòng</PROCESSED>
         </RECORD>
-        <RECORD LAYER="nghia" ACTION="remove_marker" REASON="in_text_marker" RULE="PAGE_NOTE_MARKER_RE" PAGE="108" LINE_ID="CPO_20.049.P0108.L016">
+        <RECORD LAYER="nghia" ACTION="remove_marker" REASON="in_text_marker" RULE="PAGE_NOTE_MARKER_RE" PAGE="108" LINE_ID="CPO_20.049.P0108.L009">
             <ORIGINAL>thành một môn hộ riêng, tạo ra bên ngoài cái trạng thái chu lưu bàng bạch của đạo ta, lại có đạo Phật đứng riêng, thế là chỉ gò vào những điều ngành ngọn, mà không biết nghiên cứu nó sẽ đi tới đâu. Rốt cục kẻ bảo le, người bảo vị, cãi vã nhao nhao, mà không nhận ra chim hồng 1! Ý kiến đã hẹp hòi, lại tích tụ thành tập quán lâu dài sâu sắc!</ORIGINAL>
             <PROCESSED>thành một môn hộ riêng, tạo ra bên ngoài cái trạng thái chu lưu bàng bạch của đạo ta, lại có đạo Phật đứng riêng, thế là chỉ gò vào những điều ngành ngọn, mà không biết nghiên cứu nó sẽ đi tới đâu. Rốt cục kẻ bảo le, người bảo vị, cãi vã nhao nhao, mà không nhận ra chim hồng! Ý kiến đã hẹp hòi, lại tích tụ thành tập quán lâu dài sâu sắc!</PROCESSED>
         </RECORD>
-        <RECORD LAYER="nghia" ACTION="remove_marker" REASON="in_text_marker" RULE="MARKER_RE" PAGE="108" LINE_ID="CPO_20.049.P0108.L017">
+        <RECORD LAYER="nghia" ACTION="remove_marker" REASON="in_text_marker" RULE="MARKER_RE" PAGE="108" LINE_ID="CPO_20.049.P0108.L010">
             <ORIGINAL>Quyền huynh ² tôi, ông Hy Doãn, quan Thị trung đại học sĩ là người học thức cao rộng, hơn hẳn các bạn khác, ông lịch thiệp sâu sắc, đi đến chỗ tinh túy, tam giáo cứu lưu, bách gia chư tử ³, không điều gì là không nghiền ngẫm đến nơi đến chốn. Cho nên lòng dạ bao la, điều khiển được muôn vật, thấu suốt được tam huyền ⁴.</ORIGINAL>
             <PROCESSED>Quyền huynh tôi, ông Hy Doãn, quan Thị trung đại học sĩ là người học thức cao rộng, hơn hẳn các bạn khác, ông lịch thiệp sâu sắc, đi đến chỗ tinh túy, tam giáo cứu lưu, bách gia chư tử, không điều gì là không nghiền ngẫm đến nơi đến chốn. Cho nên lòng dạ bao la, điều khiển được muôn vật, thấu suốt được tam huyền.</PROCESSED>
         </RECORD>
-        <RECORD LAYER="nghia" ACTION="remove_marker" REASON="in_text_marker" RULE="PAGE_NOTE_MARKER_RE" PAGE="108" LINE_ID="CPO_20.049.P0108.L019">
+        <RECORD LAYER="nghia" ACTION="remove_marker" REASON="in_text_marker" RULE="PAGE_NOTE_MARKER_RE" PAGE="108" LINE_ID="CPO_20.049.P0108.L012">
             <ORIGINAL>Sau Trúc Lâm tam tổ 5 thì phong khí nhà Thiền vắng lặng. Cái ý chí tuệ giác năm trăm năm về trước nhờ tân thanh mới lại phát huy. Vì thế mà môn đồ Trúc Lâm tôn ông làm "Đệ tứ tông" 6, điều đó không có gì là quá đáng.</ORIGINAL>
             <PROCESSED>Sau Trúc Lâm tam tổ thì phong khí nhà Thiền vắng lặng. Cái ý chí tuệ giác năm trăm năm về trước nhờ tân thanh mới lại phát huy. Vì thế mà môn đồ Trúc Lâm tôn ông làm "Đệ tứ tông" 6, điều đó không có gì là quá đáng.</PROCESSED>
         </RECORD>
-        <RECORD LAYER="nghia" ACTION="remove_marker" REASON="in_text_marker" RULE="PAGE_NOTE_MARKER_RE" PAGE="108" LINE_ID="CPO_20.049.P0108.L020">
+        <RECORD LAYER="nghia" ACTION="remove_marker" REASON="in_text_marker" RULE="PAGE_NOTE_MARKER_RE" PAGE="108" LINE_ID="CPO_20.049.P0108.L013">
             <ORIGINAL>Thuyết tân thanh của ông, bọn nhà Nho ta nghe thấy, tất có những chuyện bàn tán chung quanh, cho rằng: Đạo lý của Xương Lê 7 cũng từ thuyết nhà Phật mà ra, hay: Tượng Sơn 8 chủ tĩnh tất sẽ đi</ORIGINAL>
             <PROCESSED>Thuyết tân thanh của ông, bọn nhà Nho ta nghe thấy, tất có những chuyện bàn tán chung quanh, cho rằng: Đạo lý của Xương Lê cũng từ thuyết nhà Phật mà ra, hay: Tượng Sơn chủ tĩnh tất sẽ đi</PROCESSED>
         </RECORD>
-        <RECORD LAYER="nghia" ACTION="remove_marker" REASON="in_text_marker" RULE="PAGE_NOTE_MARKER_RE" PAGE="109" LINE_ID="CPO_20.049.P0109.L021">
+        <RECORD LAYER="nghia" ACTION="remove_marker" REASON="in_text_marker" RULE="PAGE_NOTE_MARKER_RE" PAGE="109" LINE_ID="CPO_20.049.P0109.L014">
             <ORIGINAL>theo đạo Thiền. Dựa vào những câu sáo ấy không thể nào hiểu ông được. Bộ sách này thấu triệt được tinh trời, suy cùng được đạo lý, đưa đạo Thiền nhập vào đạo Nho, khiến cho tám bộ Phạn vương không ra ngoài cung tướng Tổ vương 1. Thế thì thuyết tân thanh này là ý chí đầu tiên để phù trì cho chính đạo, không giống như những thuyết lờ mờ làm cho người xem không nắm được điều gì. Điều này chỉ có thể nói với những người hiểu đạo thôi. Tôi với ông hợp nhau cả hình lẫn thần và hiểu sâu cái ý làm ra thanh này của ông, nên mới nêu mấy lời lên đầu sách. Xin chờ các bậc quân tử hiểu đạo chỉ bảo thêm cho. Nay làm bài tựa.</ORIGINAL>
             <PROCESSED>theo đạo Thiền. Dựa vào những câu sáo ấy không thể nào hiểu ông được. Bộ sách này thấu triệt được tinh trời, suy cùng được đạo lý, đưa đạo Thiền nhập vào đạo Nho, khiến cho tám bộ Phạn vương không ra ngoài cung tướng Tổ vương. Thế thì thuyết tân thanh này là ý chí đầu tiên để phù trì cho chính đạo, không giống như những thuyết lờ mờ làm cho người xem không nắm được điều gì. Điều này chỉ có thể nói với những người hiểu đạo thôi. Tôi với ông hợp nhau cả hình lẫn thần và hiểu sâu cái ý làm ra thanh này của ông, nên mới nêu mấy lời lên đầu sách. Xin chờ các bậc quân tử hiểu đạo chỉ bảo thêm cho. Nay làm bài tựa.</PROCESSED>
         </RECORD>
@@ -1834,31 +1833,17 @@
             <ORIGINAL>Sang đò Lộc An²</ORIGINAL>
             <PROCESSED>Sang đò Lộc An</PROCESSED>
         </RECORD>
-        <RECORD LAYER="nghia" ACTION="remove_marker" REASON="in_text_marker" RULE="PAGE_NOTE_MARKER_RE" PAGE="703" LINE_ID="CPO_20.181.P0703.L005">
-            <ORIGINAL>Thùy du 1 đương niên quái tích thiện,</ORIGINAL>
-            <PROCESSED>Thùy du đương niên quái tích thiện,</PROCESSED>
-        </RECORD>
-        <RECORD LAYER="nghia" ACTION="remove_marker" REASON="in_text_marker" RULE="PAGE_NOTE_MARKER_RE" PAGE="703" LINE_ID="CPO_20.181.P0703.L006">
-            <ORIGINAL>Trùng nhân 2 hà lực đảm đa gian.</ORIGINAL>
-            <PROCESSED>Trùng nhân hà lực đảm đa gian.</PROCESSED>
-        </RECORD>
         <RECORD LAYER="nghia" ACTION="remove_marker" REASON="in_text_marker" RULE="PAGE_NOTE_MARKER_RE" PAGE="719" LINE_ID="CPO_20.185.P0719.L091">
             <ORIGINAL>Ở trong tứ dân 1.</ORIGINAL>
             <PROCESSED>Ở trong tứ dân.</PROCESSED>
         </RECORD>
-        <RECORD LAYER="nghia" ACTION="reconstruct" REASON="ambiguous_join" RULE="cross_page_continuation" PAGE="11" LINE_ID="CPO_20.004.P0011.L011" NOTE="next=CPO_20.005.P0013.L002">
-            <ORIGINAL>Xe đi, hầy hầy gió nam đưa,</ORIGINAL>
-        </RECORD>
-        <RECORD LAYER="nghia" ACTION="reconstruct" REASON="ambiguous_join" RULE="cross_page_continuation" PAGE="42" LINE_ID="CPO_20.019.P0042.L014" NOTE="next=CPO_20.020.P0044.L003">
-            <ORIGINAL>Uyên bay thuở ấy, vẫn còn đau,</ORIGINAL>
+        <RECORD LAYER="nghia" ACTION="reconstruct" REASON="ambiguous_join" RULE="cross_page_continuation" PAGE="47" LINE_ID="CPO_20.022.P0047.L007" NOTE="next=CPO_20.022.P0048.L008">
+            <ORIGINAL>Nơi ấy với kinh đô như vạt áo, như cổ họng, việc coi giữ biên cương rất năng nề,</ORIGINAL>
         </RECORD>
         <RECORD LAYER="nghia" ACTION="reconstruct" REASON="ambiguous_join" RULE="cross_page_continuation" PAGE="55" LINE_ID="CPO_20.025.P0055.L027" NOTE="next=CPO_20.025.P0056.L028">
             <ORIGINAL>dâng nước triều lên,</ORIGINAL>
         </RECORD>
-        <RECORD LAYER="nghia" ACTION="reconstruct" REASON="ambiguous_join" RULE="cross_page_continuation" PAGE="63" LINE_ID="CPO_20.028.P0063.L010" NOTE="next=CPO_20.029.P0065.L001">
-            <ORIGINAL>Tính tình, yên tĩnh là đầu,</ORIGINAL>
-        </RECORD>
-        <RECORD LAYER="nghia" ACTION="reconstruct" REASON="sentence_continuation" RULE="cross_page_continuation" PAGE="108" LINE_ID="CPO_20.049.P0108.L020" NOTE="next=CPO_20.049.P0109.L021">
+        <RECORD LAYER="nghia" ACTION="reconstruct" REASON="sentence_continuation" RULE="cross_page_continuation" PAGE="108" LINE_ID="CPO_20.049.P0108.L013" NOTE="next=CPO_20.049.P0109.L014">
             <ORIGINAL>Thuyết tân thanh của ông, bọn nhà Nho ta nghe thấy, tất có những chuyện bàn tán chung quanh, cho rằng: Đạo lý của Xương Lê cũng từ thuyết nhà Phật mà ra, hay: Tượng Sơn chủ tĩnh tất sẽ đi</ORIGINAL>
         </RECORD>
         <RECORD LAYER="nghia" ACTION="reconstruct" REASON="sentence_continuation" RULE="cross_page_continuation" PAGE="111" LINE_ID="CPO_20.050.P0111.L006" NOTE="next=CPO_20.050.P0112.L007">
@@ -1876,17 +1861,11 @@
         <RECORD LAYER="nghia" ACTION="reconstruct" REASON="sentence_continuation" RULE="cross_page_continuation" PAGE="121" LINE_ID="CPO_20.053.P0121.L008" NOTE="next=CPO_20.053.P0122.L009">
             <ORIGINAL>Tôi thường nghĩ: Cây có gốc sâu thì cành ngọn tốt, người có tài thực thì danh tiếng lớn lao. Nhờ phúc ấm của tổ tiên mà dòng văn đời đời nối tiếp, tinh hoa đầy rẫy trong văn từ mà bản lĩnh vẫn quy vào đạo lý, rõ là phong cách của một đại gia, vẻ đẹp hương thơm liên tiếp ngạt ngào rực rỡ. Nên gọi là "văn phái" cũng hợp ý mọi người, không phải riêng một nhà mình. Toàn tập hơn sáu mươi quyển, gần đây đã truyền bá khắp trong nước, ai cũng ca tụng. Nay anh em định đem khắc thành bản in, đòi tôi làm bài tựa. Tôi già rồi, đã yếu lại</ORIGINAL>
         </RECORD>
-        <RECORD LAYER="nghia" ACTION="reconstruct" REASON="ambiguous_join" RULE="cross_page_continuation" PAGE="139" LINE_ID="CPO_20.055.P0139.L011" NOTE="next=CPO_20.056.P0141.L003">
-            <ORIGINAL>Tam Thanh tìm đến đã ba phen,</ORIGINAL>
-        </RECORD>
         <RECORD LAYER="nghia" ACTION="reconstruct" REASON="ambiguous_join" RULE="cross_page_continuation" PAGE="144" LINE_ID="CPO_20.058.P0144.L009" NOTE="next=CPO_20.059.P0146.L002">
             <ORIGINAL>Nghe nói lần đi này, gần trời có gang tấc,</ORIGINAL>
         </RECORD>
         <RECORD LAYER="nghia" ACTION="reconstruct" REASON="ambiguous_join" RULE="cross_page_continuation" PAGE="196" LINE_ID="CPO_20.087.P0196.L007" NOTE="next=CPO_20.088.P0197.L002">
             <ORIGINAL>Nơi thôn ấp tươi đẹp, lần về này chắc nhiều hứng thú,</ORIGINAL>
-        </RECORD>
-        <RECORD LAYER="nghia" ACTION="reconstruct" REASON="ambiguous_join" RULE="cross_page_continuation" PAGE="226" LINE_ID="CPO_20.104.P0226.L010" NOTE="next=CPO_20.105.P0227.L003">
-            <ORIGINAL>Trong vắt vòm thu nước lộn trời,</ORIGINAL>
         </RECORD>
         <RECORD LAYER="nghia" ACTION="reconstruct" REASON="ambiguous_join" RULE="cross_page_continuation" PAGE="238" LINE_ID="CPO_20.111.P0238.L010" NOTE="next=CPO_20.112.P0240.L003">
             <ORIGINAL>Kìa đó hoa vàng dưới bờ giậu và cây ngô đồng bên giếng</ORIGINAL>
@@ -1903,8 +1882,11 @@
         <RECORD LAYER="nghia" ACTION="reconstruct" REASON="ambiguous_join" RULE="cross_page_continuation" PAGE="274" LINE_ID="CPO_20.126.P0274.L005" NOTE="next=CPO_20.126.P0275.L006">
             <ORIGINAL>Xã An Việt Thượng huyện La Sơn và xã Phúc Châu huyện Nghi Xuân làm nghề đóng thuyền. Xã Minh Lương, xã Văn Chàng thuộc huyện Thiên Lộc, xã Hoa Lâm thuộc huyện Đông Thành làm đồ sắt. Xã Phù Nghĩa huyện Kỳ Hòa, xã Văn Đồn huyện Nam Dương, xã Lý Trai huyện Đông Thành, xã Uy Viễn huyện Nghi Xuân làm lưỡi cày. Xã Cẩm Trang huyện La Sơn, xã Mỹ Dương huyện Nghi Xuân, xã Lưu Sơn huyện Nam Dương làm đồ gốm. Những xã Quang Chiêm, Đồng Cầm huyện La Sơn, xã Trảo Nha huyện Thạch Hà làm mâm gỗ. Xã 278</ORIGINAL>
         </RECORD>
-        <RECORD LAYER="nghia" ACTION="reconstruct" REASON="ambiguous_join" RULE="cross_page_continuation" PAGE="283" LINE_ID="CPO_20.130.P0283.L009" NOTE="next=CPO_20.131.P0284.L001">
+        <RECORD LAYER="nghia" ACTION="reconstruct" REASON="ambiguous_join" RULE="cross_page_continuation" PAGE="283" LINE_ID="CPO_20.130.P0283.L009" NOTE="next=CPO_20.131.P0285.L001">
             <ORIGINAL>Kìa như người dân phu quân áo phong phanh tuyết thấm</ORIGINAL>
+        </RECORD>
+        <RECORD LAYER="nghia" ACTION="reconstruct" REASON="ambiguous_join" RULE="cross_page_continuation" PAGE="286" LINE_ID="CPO_20.132.P0286.L009" NOTE="next=CPO_20.133.P0287.L001">
+            <ORIGINAL>Chắc chắn phải người đi công can mà cũng chắc phải</ORIGINAL>
         </RECORD>
         <RECORD LAYER="nghia" ACTION="reconstruct" REASON="ambiguous_join" RULE="cross_page_continuation" PAGE="287" LINE_ID="CPO_20.133.P0287.L001" NOTE="next=CPO_20.134.P0288.L001">
             <ORIGINAL>Mùa xuân rực rỡ bao quanh</ORIGINAL>
@@ -1915,10 +1897,13 @@
         <RECORD LAYER="nghia" ACTION="reconstruct" REASON="ambiguous_join" RULE="cross_page_continuation" PAGE="314" LINE_ID="CPO_20.145.P0314.L073" NOTE="next=CPO_20.145.P0315.L074">
             <ORIGINAL>Hầu hạ ta có Ngọc Nữ,</ORIGINAL>
         </RECORD>
-        <RECORD LAYER="nghia" ACTION="reconstruct" REASON="ambiguous_join" RULE="cross_page_continuation" PAGE="315" LINE_ID="CPO_20.145.P0315.L098" NOTE="next=CPO_20.146.P0320.L001">
-            <ORIGINAL>Nước thu, bầu trời, lẫn một màu,</ORIGINAL>
+        <RECORD LAYER="nghia" ACTION="reconstruct" REASON="ambiguous_join" RULE="cross_page_continuation" PAGE="315" LINE_ID="CPO_20.145.P0315.L096" NOTE="next=CPO_20.146.P0320.L001">
+            <ORIGINAL>Xưa nói tháng Tám, tuần Trung thu,</ORIGINAL>
         </RECORD>
-        <RECORD LAYER="nghia" ACTION="reconstruct" REASON="ambiguous_join" RULE="cross_page_continuation" PAGE="623" LINE_ID="CPO_20.147.P0623.L011" NOTE="next=CPO_20.148.P0624.L002">
+        <RECORD LAYER="nghia" ACTION="reconstruct" REASON="ambiguous_join" RULE="cross_page_continuation" PAGE="622" LINE_ID="CPO_20.146.P0622.L013" NOTE="next=CPO_20.147.P0623.L002">
+            <ORIGINAL>� � URLConnection</ORIGINAL>
+        </RECORD>
+        <RECORD LAYER="nghia" ACTION="reconstruct" REASON="ambiguous_join" RULE="cross_page_continuation" PAGE="623" LINE_ID="CPO_20.147.P0623.L008" NOTE="next=CPO_20.148.P0624.L002">
             <ORIGINAL>Luật thừa trứ của tạo vật là người ngu thường sung sướng,</ORIGINAL>
         </RECORD>
         <RECORD LAYER="nghia" ACTION="reconstruct" REASON="ambiguous_join" RULE="cross_page_continuation" PAGE="624" LINE_ID="CPO_20.148.P0624.L009" NOTE="next=CPO_20.149.P0626.L002">
@@ -1936,6 +1921,9 @@
         <RECORD LAYER="nghia" ACTION="reconstruct" REASON="ambiguous_join" RULE="cross_page_continuation" PAGE="655" LINE_ID="CPO_20.159.P0655.L008" NOTE="next=CPO_20.160.P0656.L001">
             <ORIGINAL>Mỗi tình đã mười năm chỉ nhờ thư tín,</ORIGINAL>
         </RECORD>
+        <RECORD LAYER="nghia" ACTION="reconstruct" REASON="ambiguous_join" RULE="cross_page_continuation" PAGE="706" LINE_ID="CPO_20.183.P0706.L006" NOTE="next=CPO_20.183.P0707.L007">
+            <ORIGINAL>Thời vận gian truân, số phận trớ trêu,</ORIGINAL>
+        </RECORD>
         <RECORD LAYER="nghia" ACTION="reconstruct" REASON="ambiguous_join" RULE="cross_page_continuation" PAGE="718" LINE_ID="CPO_20.185.P0718.L058" NOTE="next=CPO_20.185.P0719.L059">
             <ORIGINAL>Thuyền trù trừ không nỡ rời,</ORIGINAL>
         </RECORD>
@@ -1945,16 +1933,13 @@
         <RECORD LAYER="nghia" ACTION="reconstruct" REASON="sentence_continuation" RULE="cross_page_continuation" PAGE="738" LINE_ID="CPO_20.187.P0738.L007" NOTE="next=CPO_20.187.P0739.L008">
             <ORIGINAL>Trăng sáng đưa thuyền về, chốc lát đã về tới nơi dạy học. Các ông già trong thôn sắp sẵn rượu và thức nhắm chờ đợi. Vùng trăng như</ORIGINAL>
         </RECORD>
-        <RECORD LAYER="nghia" ACTION="reconstruct" REASON="ambiguous_join" RULE="cross_page_continuation" PAGE="744" LINE_ID="CPO_20.188.P0744.L033" NOTE="next=CPO_20.188.P0745.L034">
+        <RECORD LAYER="nghia" ACTION="reconstruct" REASON="ambiguous_join" RULE="cross_page_continuation" PAGE="744" LINE_ID="CPO_20.188.P0744.L031" NOTE="next=CPO_20.188.P0745.L032">
             <ORIGINAL>Nhan mình nếu đáng có danh tiếng tốt,</ORIGINAL>
         </RECORD>
         <RECORD LAYER="nghia" ACTION="reconstruct" REASON="ambiguous_join" RULE="cross_page_continuation" PAGE="756" LINE_ID="CPO_20.195.P0756.L008" NOTE="next=CPO_20.196.P0758.L001">
             <ORIGINAL>Sau cơn mưa cỏ cây trong vườn như hơn hở,</ORIGINAL>
         </RECORD>
-        <RECORD LAYER="nghia" ACTION="reconstruct" REASON="ambiguous_join" RULE="cross_page_continuation" PAGE="762" LINE_ID="CPO_20.198.P0762.L010" NOTE="next=CPO_20.199.P0763.L002">
-            <ORIGINAL>Anh hùng tự cổ đâu rồi,</ORIGINAL>
-        </RECORD>
-        <RECORD LAYER="nghia" ACTION="reconstruct" REASON="ambiguous_join" RULE="cross_page_continuation" PAGE="772" LINE_ID="CPO_20.204.P0772.L022" NOTE="next=CPO_20.206.P0774.L001">
+        <RECORD LAYER="nghia" ACTION="reconstruct" REASON="ambiguous_join" RULE="cross_page_continuation" PAGE="772" LINE_ID="CPO_20.204.P0772.L022" NOTE="next=CPO_20.206.P0775.L003">
             <ORIGINAL>Sự Kiện</ORIGINAL>
         </RECORD>
         <RECORD LAYER="tho" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="6" LINE_ID="CPO_20.001.P0006.L009" NOTE="Ngô Linh Ngọc dịch">
@@ -1966,7 +1951,7 @@
         <RECORD LAYER="tho" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="9" LINE_ID="CPO_20.003.P0009.L009" NOTE="Đỗ Ngọc Toại - Thạch Can dịch">
             <ORIGINAL>Đỗ Ngọc Toại - Thạch Can dịch</ORIGINAL>
         </RECORD>
-        <RECORD LAYER="tho" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="11" LINE_ID="CPO_20.004.P0011.L008" NOTE="Ngô Linh Ngọc dịch">
+        <RECORD LAYER="tho" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="11" LINE_ID="CPO_20.004.P0011.L009" NOTE="Ngô Linh Ngọc dịch">
             <ORIGINAL>Ngô Linh Ngọc dịch</ORIGINAL>
         </RECORD>
         <RECORD LAYER="tho" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="13" LINE_ID="CPO_20.005.P0013.L009" NOTE="Ngô Linh Ngọc dịch">
@@ -2011,13 +1996,13 @@
         <RECORD LAYER="tho" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="49" LINE_ID="CPO_20.023.P0049.L009" NOTE="Ngô Linh Ngọc dịch">
             <ORIGINAL>Ngô Linh Ngọc dịch</ORIGINAL>
         </RECORD>
-        <RECORD LAYER="tho" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="56" LINE_ID="CPO_20.025.P0056.L030" NOTE="Ngô Linh Ngọc dịch">
+        <RECORD LAYER="tho" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="56" LINE_ID="CPO_20.025.P0056.L032" NOTE="Ngô Linh Ngọc dịch">
             <ORIGINAL>Ngô Linh Ngọc dịch</ORIGINAL>
         </RECORD>
         <RECORD LAYER="tho" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="61" LINE_ID="CPO_20.027.P0061.L009" NOTE="Ngô Linh Ngọc dịch">
             <ORIGINAL>Ngô Linh Ngọc dịch</ORIGINAL>
         </RECORD>
-        <RECORD LAYER="tho" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="63" LINE_ID="CPO_20.028.P0063.L006" NOTE="Đỗ Ngọc Toại dịch">
+        <RECORD LAYER="tho" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="63" LINE_ID="CPO_20.028.P0063.L008" NOTE="Đỗ Ngọc Toại dịch">
             <ORIGINAL>Đỗ Ngọc Toại dịch</ORIGINAL>
         </RECORD>
         <RECORD LAYER="tho" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="65" LINE_ID="CPO_20.029.P0065.L009" NOTE="Ngô Linh Ngọc dịch">
@@ -2056,7 +2041,7 @@
         <RECORD LAYER="tho" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="137" LINE_ID="CPO_20.054.P0137.L009" NOTE="Ngô Linh Ngọc dịch">
             <ORIGINAL>Ngô Linh Ngọc dịch</ORIGINAL>
         </RECORD>
-        <RECORD LAYER="tho" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="139" LINE_ID="CPO_20.055.P0139.L008" NOTE="Nguyễn Huệ Chi dịch">
+        <RECORD LAYER="tho" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="139" LINE_ID="CPO_20.055.P0139.L009" NOTE="Nguyễn Huệ Chi dịch">
             <ORIGINAL>Nguyễn Huệ Chi dịch</ORIGINAL>
         </RECORD>
         <RECORD LAYER="tho" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="141" LINE_ID="CPO_20.056.P0141.L009" NOTE="Ngô Linh Ngọc dịch">
@@ -2086,7 +2071,7 @@
         <RECORD LAYER="tho" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="168" LINE_ID="CPO_20.072.P0168.L009" NOTE="Ngô Linh Ngọc dịch">
             <ORIGINAL>Ngô Linh Ngọc dịch</ORIGINAL>
         </RECORD>
-        <RECORD LAYER="tho" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="171" LINE_ID="CPO_20.074.P0171.L007" NOTE="Nguyễn Huệ Chi dịch">
+        <RECORD LAYER="tho" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="171" LINE_ID="CPO_20.074.P0171.L008" NOTE="Nguyễn Huệ Chi dịch">
             <ORIGINAL>Nguyễn Huệ Chi dịch</ORIGINAL>
         </RECORD>
         <RECORD LAYER="tho" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="176" LINE_ID="CPO_20.077.P0176.L009" NOTE="Ngô Linh Ngọc dịch">
@@ -2161,7 +2146,7 @@
         <RECORD LAYER="tho" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="224" LINE_ID="CPO_20.103.P0224.L009" NOTE="Nguyễn Văn Bách dịch">
             <ORIGINAL>Nguyễn Văn Bách dịch</ORIGINAL>
         </RECORD>
-        <RECORD LAYER="tho" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="226" LINE_ID="CPO_20.104.P0226.L008" NOTE="Nguyễn Văn Bách dịch">
+        <RECORD LAYER="tho" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="226" LINE_ID="CPO_20.104.P0226.L009" NOTE="Nguyễn Văn Bách dịch">
             <ORIGINAL>Nguyễn Văn Bách dịch</ORIGINAL>
         </RECORD>
         <RECORD LAYER="tho" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="228" LINE_ID="CPO_20.105.P0228.L009" NOTE="Nguyễn Văn Bách dịch">
@@ -2210,6 +2195,9 @@
             <ORIGINAL>Ngô Linh Ngọc dịch</ORIGINAL>
         </RECORD>
         <RECORD LAYER="tho" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="283" LINE_ID="CPO_20.130.P0283.L009" NOTE="Ngô Linh Ngọc dịch">
+            <ORIGINAL>Ngô Linh Ngọc dịch</ORIGINAL>
+        </RECORD>
+        <RECORD LAYER="tho" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="287" LINE_ID="CPO_20.132.P0287.L010" NOTE="Ngô Linh Ngọc dịch">
             <ORIGINAL>Ngô Linh Ngọc dịch</ORIGINAL>
         </RECORD>
         <RECORD LAYER="tho" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="288" LINE_ID="CPO_20.134.P0288.L009" NOTE="Ngô Linh Ngọc dịch">
@@ -2290,7 +2278,7 @@
         <RECORD LAYER="tho" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="703" LINE_ID="CPO_20.181.P0703.L009" NOTE="Nguyễn Văn Bách dịch">
             <ORIGINAL>Nguyễn Văn Bách dịch</ORIGINAL>
         </RECORD>
-        <RECORD LAYER="tho" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="707" LINE_ID="CPO_20.183.P0707.L021" NOTE="Nguyễn Văn Bách dịch">
+        <RECORD LAYER="tho" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="707" LINE_ID="CPO_20.183.P0707.L019" NOTE="Nguyễn Văn Bách dịch">
             <ORIGINAL>Nguyễn Văn Bách dịch</ORIGINAL>
         </RECORD>
         <RECORD LAYER="tho" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="734" LINE_ID="CPO_20.186.P0734.L145" NOTE="Thạch Can dịch">
@@ -2308,9 +2296,6 @@
         <RECORD LAYER="tho" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="751" LINE_ID="CPO_20.192.P0751.L005" NOTE="Nguyễn Văn Bách dịch">
             <ORIGINAL>Nguyễn Văn Bách dịch</ORIGINAL>
         </RECORD>
-        <RECORD LAYER="tho" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="753" LINE_ID="CPO_20.193.P0753.L014" NOTE="Nguyễn Văn Bách dịch">
-            <ORIGINAL>Nguyễn Văn Bách dịch</ORIGINAL>
-        </RECORD>
         <RECORD LAYER="tho" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="755" LINE_ID="CPO_20.194.P0755.L009" NOTE="Khương Hữu Dụng dịch">
             <ORIGINAL>Khương Hữu Dụng dịch</ORIGINAL>
         </RECORD>
@@ -2320,7 +2305,7 @@
         <RECORD LAYER="tho" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="760" LINE_ID="CPO_20.197.P0760.L009" NOTE="Nguyễn Văn Bách dịch">
             <ORIGINAL>Nguyễn Văn Bách dịch</ORIGINAL>
         </RECORD>
-        <RECORD LAYER="tho" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="762" LINE_ID="CPO_20.198.P0762.L008" NOTE="Nguyễn Văn Bách dịch">
+        <RECORD LAYER="tho" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="762" LINE_ID="CPO_20.198.P0762.L009" NOTE="Nguyễn Văn Bách dịch">
             <ORIGINAL>Nguyễn Văn Bách dịch</ORIGINAL>
         </RECORD>
         <RECORD LAYER="tho" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="763" LINE_ID="CPO_20.199.P0763.L009" NOTE="Nguyen Van Bach dich">
@@ -2371,7 +2356,7 @@
         <RECORD LAYER="tho" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="9" LINE_ID="CPO_20.003.P0009.L009" NOTE="Đỗ Ngọc Toại - Thạch Can dịch">
             <ORIGINAL>Đỗ Ngọc Toại - Thạch Can dịch</ORIGINAL>
         </RECORD>
-        <RECORD LAYER="tho" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="11" LINE_ID="CPO_20.004.P0011.L008" NOTE="Ngô Linh Ngọc dịch">
+        <RECORD LAYER="tho" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="11" LINE_ID="CPO_20.004.P0011.L009" NOTE="Ngô Linh Ngọc dịch">
             <ORIGINAL>Ngô Linh Ngọc dịch</ORIGINAL>
         </RECORD>
         <RECORD LAYER="tho" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="13" LINE_ID="CPO_20.005.P0013.L009" NOTE="Ngô Linh Ngọc dịch">
@@ -2416,13 +2401,13 @@
         <RECORD LAYER="tho" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="49" LINE_ID="CPO_20.023.P0049.L009" NOTE="Ngô Linh Ngọc dịch">
             <ORIGINAL>Ngô Linh Ngọc dịch</ORIGINAL>
         </RECORD>
-        <RECORD LAYER="tho" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="56" LINE_ID="CPO_20.025.P0056.L030" NOTE="Ngô Linh Ngọc dịch">
+        <RECORD LAYER="tho" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="56" LINE_ID="CPO_20.025.P0056.L032" NOTE="Ngô Linh Ngọc dịch">
             <ORIGINAL>Ngô Linh Ngọc dịch</ORIGINAL>
         </RECORD>
         <RECORD LAYER="tho" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="61" LINE_ID="CPO_20.027.P0061.L009" NOTE="Ngô Linh Ngọc dịch">
             <ORIGINAL>Ngô Linh Ngọc dịch</ORIGINAL>
         </RECORD>
-        <RECORD LAYER="tho" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="63" LINE_ID="CPO_20.028.P0063.L006" NOTE="Đỗ Ngọc Toại dịch">
+        <RECORD LAYER="tho" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="63" LINE_ID="CPO_20.028.P0063.L008" NOTE="Đỗ Ngọc Toại dịch">
             <ORIGINAL>Đỗ Ngọc Toại dịch</ORIGINAL>
         </RECORD>
         <RECORD LAYER="tho" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="65" LINE_ID="CPO_20.029.P0065.L009" NOTE="Ngô Linh Ngọc dịch">
@@ -2461,7 +2446,7 @@
         <RECORD LAYER="tho" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="137" LINE_ID="CPO_20.054.P0137.L009" NOTE="Ngô Linh Ngọc dịch">
             <ORIGINAL>Ngô Linh Ngọc dịch</ORIGINAL>
         </RECORD>
-        <RECORD LAYER="tho" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="139" LINE_ID="CPO_20.055.P0139.L008" NOTE="Nguyễn Huệ Chi dịch">
+        <RECORD LAYER="tho" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="139" LINE_ID="CPO_20.055.P0139.L009" NOTE="Nguyễn Huệ Chi dịch">
             <ORIGINAL>Nguyễn Huệ Chi dịch</ORIGINAL>
         </RECORD>
         <RECORD LAYER="tho" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="141" LINE_ID="CPO_20.056.P0141.L009" NOTE="Ngô Linh Ngọc dịch">
@@ -2491,7 +2476,7 @@
         <RECORD LAYER="tho" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="168" LINE_ID="CPO_20.072.P0168.L009" NOTE="Ngô Linh Ngọc dịch">
             <ORIGINAL>Ngô Linh Ngọc dịch</ORIGINAL>
         </RECORD>
-        <RECORD LAYER="tho" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="171" LINE_ID="CPO_20.074.P0171.L007" NOTE="Nguyễn Huệ Chi dịch">
+        <RECORD LAYER="tho" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="171" LINE_ID="CPO_20.074.P0171.L008" NOTE="Nguyễn Huệ Chi dịch">
             <ORIGINAL>Nguyễn Huệ Chi dịch</ORIGINAL>
         </RECORD>
         <RECORD LAYER="tho" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="176" LINE_ID="CPO_20.077.P0176.L009" NOTE="Ngô Linh Ngọc dịch">
@@ -2566,7 +2551,7 @@
         <RECORD LAYER="tho" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="224" LINE_ID="CPO_20.103.P0224.L009" NOTE="Nguyễn Văn Bách dịch">
             <ORIGINAL>Nguyễn Văn Bách dịch</ORIGINAL>
         </RECORD>
-        <RECORD LAYER="tho" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="226" LINE_ID="CPO_20.104.P0226.L008" NOTE="Nguyễn Văn Bách dịch">
+        <RECORD LAYER="tho" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="226" LINE_ID="CPO_20.104.P0226.L009" NOTE="Nguyễn Văn Bách dịch">
             <ORIGINAL>Nguyễn Văn Bách dịch</ORIGINAL>
         </RECORD>
         <RECORD LAYER="tho" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="228" LINE_ID="CPO_20.105.P0228.L009" NOTE="Nguyễn Văn Bách dịch">
@@ -2615,6 +2600,9 @@
             <ORIGINAL>Ngô Linh Ngọc dịch</ORIGINAL>
         </RECORD>
         <RECORD LAYER="tho" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="283" LINE_ID="CPO_20.130.P0283.L009" NOTE="Ngô Linh Ngọc dịch">
+            <ORIGINAL>Ngô Linh Ngọc dịch</ORIGINAL>
+        </RECORD>
+        <RECORD LAYER="tho" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="287" LINE_ID="CPO_20.132.P0287.L010" NOTE="Ngô Linh Ngọc dịch">
             <ORIGINAL>Ngô Linh Ngọc dịch</ORIGINAL>
         </RECORD>
         <RECORD LAYER="tho" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="288" LINE_ID="CPO_20.134.P0288.L009" NOTE="Ngô Linh Ngọc dịch">
@@ -2695,7 +2683,7 @@
         <RECORD LAYER="tho" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="703" LINE_ID="CPO_20.181.P0703.L009" NOTE="Nguyễn Văn Bách dịch">
             <ORIGINAL>Nguyễn Văn Bách dịch</ORIGINAL>
         </RECORD>
-        <RECORD LAYER="tho" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="707" LINE_ID="CPO_20.183.P0707.L021" NOTE="Nguyễn Văn Bách dịch">
+        <RECORD LAYER="tho" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="707" LINE_ID="CPO_20.183.P0707.L019" NOTE="Nguyễn Văn Bách dịch">
             <ORIGINAL>Nguyễn Văn Bách dịch</ORIGINAL>
         </RECORD>
         <RECORD LAYER="tho" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="734" LINE_ID="CPO_20.186.P0734.L145" NOTE="Thạch Can dịch">
@@ -2713,9 +2701,6 @@
         <RECORD LAYER="tho" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="751" LINE_ID="CPO_20.192.P0751.L005" NOTE="Nguyễn Văn Bách dịch">
             <ORIGINAL>Nguyễn Văn Bách dịch</ORIGINAL>
         </RECORD>
-        <RECORD LAYER="tho" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="753" LINE_ID="CPO_20.193.P0753.L014" NOTE="Nguyễn Văn Bách dịch">
-            <ORIGINAL>Nguyễn Văn Bách dịch</ORIGINAL>
-        </RECORD>
         <RECORD LAYER="tho" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="755" LINE_ID="CPO_20.194.P0755.L009" NOTE="Khương Hữu Dụng dịch">
             <ORIGINAL>Khương Hữu Dụng dịch</ORIGINAL>
         </RECORD>
@@ -2725,7 +2710,7 @@
         <RECORD LAYER="tho" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="760" LINE_ID="CPO_20.197.P0760.L009" NOTE="Nguyễn Văn Bách dịch">
             <ORIGINAL>Nguyễn Văn Bách dịch</ORIGINAL>
         </RECORD>
-        <RECORD LAYER="tho" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="762" LINE_ID="CPO_20.198.P0762.L008" NOTE="Nguyễn Văn Bách dịch">
+        <RECORD LAYER="tho" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="762" LINE_ID="CPO_20.198.P0762.L009" NOTE="Nguyễn Văn Bách dịch">
             <ORIGINAL>Nguyễn Văn Bách dịch</ORIGINAL>
         </RECORD>
         <RECORD LAYER="tho" ACTION="extract_metadata" REASON="metadata_translator" RULE="metadata:translator" PAGE="763" LINE_ID="CPO_20.199.P0763.L009" NOTE="Nguyen Van Bach dich">
@@ -2793,6 +2778,9 @@
         </RECORD>
         <RECORD LAYER="tho" ACTION="reconstruct" REASON="ambiguous_join" RULE="cross_page_continuation" PAGE="266" LINE_ID="CPO_20.123.P0266.L111" NOTE="next=CPO_20.123.P0267.L112">
             <ORIGINAL>Cầu nghe ta nói; rằng: lời nói hay,</ORIGINAL>
+        </RECORD>
+        <RECORD LAYER="tho" ACTION="reconstruct" REASON="ambiguous_join" RULE="cross_page_continuation" PAGE="287" LINE_ID="CPO_20.132.P0287.L012" NOTE="next=CPO_20.134.P0288.L001">
+            <ORIGINAL>Trận tàn tuyết phun ra</ORIGINAL>
         </RECORD>
         <RECORD LAYER="tho" ACTION="reconstruct" REASON="ambiguous_join" RULE="cross_page_continuation" PAGE="668" LINE_ID="CPO_20.164.P0668.L062" NOTE="next=CPO_20.164.P0669.L063">
             <ORIGINAL>Lên núi Nhạn Đăng mò hang hốc,</ORIGINAL>

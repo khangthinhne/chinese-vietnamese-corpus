@@ -3,8 +3,11 @@
 Đọc file này đầu mỗi phiên làm việc mới. Chi tiết nằm trong các báo cáo ở `reports/`.
 
 ## Nhánh và commit
-- Nhánh hiện tại: `fix/clean-full`. Chưa push; nhánh tách từ `audit/segmentation`, nhánh này tách từ `feat/merge-member-ocr`.
-- Commit mới nhất: commit cập nhật tài liệu này (xem `git log -1`). Trước đó:
+- Nhánh hiện tại: `fix/clean-full`. Đã push lên `origin/main` đến `a00a0ae` (2026-11-28, theo yêu cầu người dùng). Các
+  commit sau đó chưa push.
+- Commit mới nhất: commit đợt 2026-11-28 (xem `git log -1`, báo cáo `reports/batch_20261128.md`). Trước đó:
+  - `a00a0ae`: chạy bertalign trên `data/`, có 3 co-author (Minh Quan, Tien Dat, Yen Nhi);
+  - `95c0800`: aligner bertalign, eval theo `eval/gold/`, config han-nghia;
   - `5d49ba6`: người dùng commit dữ liệu sau khi chạy lại pipeline;
   - `8f7f048`: bật cờ clean/segmentation và các ghi đè;
   - `d4ebc58`: vòng clean trên dữ liệu đầy đủ.
@@ -56,7 +59,27 @@ Cả 3 work đạt cổng 1–3 (`scripts/audit_segmentation.py`):
 | CPO_19 | 0,874 | 3519 | |
 | CPO_20 | 0,865 | 2058 | |
 
-## Task vừa xong: bộ dóng han-nghia (commit `95c0800`; đã chạy trên `data/` thật 2026-11-28)
+## Task vừa xong: đợt 2026-11-28 (báo cáo `reports/batch_20261128.md`)
+- **Sửa tay OCR:** `data/<W>/03_ocr/corrections/corrections.tsv`.
+  - Chỉ ghi thêm, áp ở `build_layers`; `src/ocr/corrections.py`, `docs/ocr.md` mục 7.7.
+  - CPO_18: 20 hàng (tr.212, 353, 402, 523, 528, 531), đều áp được.
+  - `CPO_18.0209.002` hoá ra là lỗi OCR mất dòng ở tr.212, đã bổ sung bằng sửa tay.
+- **Luật câu tiếng Anh ngắn** `english_function_words`: toàn ASCII, ≥ 3 từ, ≥ 0,5 từ chức năng. Loại đúng 2 dòng
+  ("snow does not fall", CPO_18 tr.531). Review log ở `03_ocr/manifests/review_vie.tsv`.
+- **Vòng sửa lớp nghĩa/thơ** (mã luôn bật; config chỉ thêm `drop_pattern` dòng ghi nguồn cho CPO_18):
+  - tiêu đề dịch viết hoa tới 24 từ, sửa CPO_20.022 = gold tr.46;
+  - chú thích "(65)" và chú thích không số (khi thuật ngữ có trong âm; chỉ ở lớp bật `note_entry_ends`);
+  - KHẢO DỊ/CHÚ THÍCH đóng mọi lớp Việt; mục khảo dị "a. Bản A.<số>" không tiêu đề;
+  - điểm cắt nghia/tho lùi tối đa 2 dòng.
+  - Kết quả theo chuẩn: strict 0,913 → 0,918. CPO_20 0,920 → 0,947. Rò rỉ trong nghĩa 74 → 37 (theo phép đo của báo
+    cáo).
+  - Đã thử bật `note_entry_ends` cho CPO_18/19: làm mất nghĩa thật, nên không dùng.
+- **Phân rã câu Hán 1-0** (báo cáo mục 5): CPO_20 có 256/315 câu thuộc 5 bài không có lớp nghĩa.
+- **Đã xoá** `E:\claude_scratch\8d960ee1\` (commit của worktree đều đã có trên nhánh).
+- Không làm bộ chuẩn thứ hai (quyết định của người dùng).
+- `docs/guideline_summary.md` (người dùng cung cấp) là nguồn cho script đóng gói.
+
+## Task trước: bộ dóng han-nghia (commit `95c0800`; đã chạy trên `data/` thật 2026-11-28)
 Báo cáo: `reports/han_nghia_20261127.md`. Nhãn rà bằng mắt: `reports/han_nghia_review_20261127.tsv`.
 Bộ chuẩn: `eval/gold/` (xem `eval/gold/README.md`).
 - **Aligner `bertalign`** (`src/alignment/bertalign.py`, `src/alignment/embeddings.py`):
@@ -83,15 +106,14 @@ Bộ chuẩn: `eval/gold/` (xem `eval/gold/README.md`).
     CPO_20 334 / 106.
 - **Chưa làm:** xuất file nộp 4 cột (chờ han-tho xong). `07_export` vẫn là bản cũ, dóng nghĩa bằng `length`.
 - **Nguồn lỗi lớn nhất:** chú thích, khảo dị, dịch thơ và âm lọt vào lớp nghĩa. Xem báo cáo, mục 6.
-- **Lỗi tách lớp mà bộ chuẩn phát hiện (cần sửa ở segmentation, không vá ở bước dóng):**
-  - `CPO_20.0046`: mất toàn bộ lớp nghĩa của bài. Bộ chuẩn có 8 câu Dịch nghĩa (hàng `CPO_20.0046.001`–`.008`), nhưng
-    lớp nghĩa của pipeline không có câu nào.
-  - `CPO_18.0209.002`: câu nghĩa "Nhưng nếu đã có thể thông suốt bên kia, thì sao lại còn vướng mắc đối với bên
-    này?" không có trong `05_cleaning`.
-- **Đề xuất bộ chuẩn thứ hai:** dóng tay khoảng 50 trang ở nửa sau mỗi cuốn. Bộ hiện tại là 50 trang đầu, nơi lớp nghĩa
-  sạch nhất, nên số liệu có thể tốt hơn thực tế. Chú thích, khảo dị và dịch thơ lọt vào lớp nghĩa chủ yếu ở phần sau.
+- **Lỗi tách lớp mà bộ chuẩn phát hiện:** `CPO_20.0046` (mất lớp nghĩa) và `CPO_18.0209.002` (OCR mất dòng). Cả hai đã
+  sửa trong đợt 2026-11-28.
+- **Đề xuất bộ chuẩn thứ hai** (người dùng quyết: chưa làm): dóng tay khoảng 50 trang ở nửa sau mỗi cuốn. Bộ hiện tại
+  là 50 trang đầu, nơi lớp nghĩa sạch nhất, nên số liệu có thể tốt hơn thực tế.
 
 ## Báo cáo chính (`reports/`)
+- `batch_20261128.md`: sửa tay OCR, luật tiếng Anh, vòng sửa lớp nghĩa/thơ (trước/sau), phân rã 1-0.
+- `han_nghia_20261127.md`: aligner bertalign, chấm theo `eval/gold/` (mục 4a).
 - `segmentation_audit_20261126.md`: audit segmentation. Mục 9 là vòng 2; mục 10 là ghi đè CPO_18, quét ảo giác Qwen,
   danh sách OCR lại, 69 file bị xoá.
 - `clean_full_20261127.md`: vòng clean có cổng chất lượng. Mục 4 là các cờ; mục 7 là các quyết định và kết quả OCR lại.
@@ -100,15 +122,16 @@ Bộ chuẩn: `eval/gold/` (xem `eval/gold/README.md`).
 - `blocked_actions.md`: các thao tác từng bị chặn.
 
 ## Đang chờ người dùng quyết
-1. **Bộ chuẩn thứ hai ở nửa sau mỗi cuốn:** ai làm, khoảng trang nào. Bộ đầu tiên đã chốt (2026-11-28): file CPO_19
-   đổi tên thành `CPO_19_p14-63_Dat.xlsx`, đã chấm lại và số liệu không đổi.
-2. **Sửa tay OCR:** CPO_18 tr.353, 402, 523, 528 và 531 (tr.531 có 3 dòng tiếng Anh bịa). Có làm thư mục
-   `03_ocr/corrections/` để lưu bản sửa hay không.
-3. **Luật nhận dạng câu tiếng Anh ngắn:** có sửa không. Câu kiểu "snow does not fall" hiện lọt qua.
-4. **Cấu trúc gói nộp:** `Guideline.pdf` không có trong repo, cần tài liệu này để làm script đóng gói đúng.
-5. **Xuất file nộp 4 cột:** chờ han-tho xong rồi chạy `export --pair han-viet` cho cả 3 work.
-6. **Lọc lớp nghĩa:** chú thích, khảo dị, dịch thơ và âm lọt vào lớp nghĩa. Cần một vòng sửa segmentation/clean,
-   gồm cả hai lỗi tách lớp ở trên (`CPO_20.0046`, `CPO_18.0209.002`).
-7. **Dữ liệu tạm của Claude:** `E:\claude_scratch\hn_20261127\` (bản sao han-nghia + cache embedding ~280 MB) và
-   `E:\claude_scratch\hf\` (LaBSE + bge-m3, ~4,2 GB). Ngoài ra còn `E:\claude_scratch\8d960ee1\` (bản sao, worktree `wt`, `wt2`, `wt_base`,
-   `wt_commits`). Có giữ lại hay không.
+1. **Script đóng gói:** viết theo `docs/guideline_summary.md` (cấu trúc `<MA_DE_TAI>_<W>/01_nguon … 04_dong_hang`,
+   `BAO_CAO.md`). Cần mã đề tài `<MA_DE_TAI>`.
+2. **Xuất file nộp 4 cột:** chờ han-tho xong rồi chạy `export --pair han-viet` cho cả 3 work.
+3. **Lớp nghĩa/thơ còn tồn** (báo cáo `batch_20261128.md` mục 4.4):
+   - dòng âm trong nghĩa ở CPO_19.050, .162 và CPO_20.134;
+   - tiểu sử tác giả trong nghĩa;
+   - 5 bài CPO_20 có âm mà không có nghĩa (.123, .153, .164, .186, .205): cần mở ảnh xem sách có in dịch nghĩa không;
+   - vùng chú thích chỉ kéo tới hết trang, nên chú thích kéo sang trang sau vẫn lọt.
+4. **Sửa tay OCR tiếp:** các trang khác trong `reports/review_ocr_CPO_*.xlsx` có thể nhập vào `corrections.tsv`.
+5. **Dữ liệu tạm của Claude:**
+   - `E:\claude_scratch\hn_20261127\`: bản sao han-nghia + cache embedding, khoảng 360 MB;
+   - `E:\claude_scratch\hf\`: LaBSE + bge-m3, khoảng 4 GB;
+   - `E:\claude_scratch\batch_20261128\`: bản sao V1–V3 của đợt này, có thể xoá.

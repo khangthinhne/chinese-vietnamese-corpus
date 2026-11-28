@@ -223,5 +223,37 @@ dạng, đúng trang/thứ tự, không trùng; TXT tồn tại đúng cho các 
 - trang có run nhưng không ra dòng Hán lẫn dòng Việt;
 - trang có run paddlevl nhưng không ra dòng Hán nào;
 - trang vie mất > 30% dòng KHÔNG chứa chữ Hán (tối thiểu 2 dòng). Dòng Hán thuần bị bỏ khỏi vie là đúng thiết
-  kế nên không tính; dòng có chữ Latin không bao giờ bị bỏ.
+  kế nên không tính. Dòng có chữ Latin chỉ bị bỏ theo các luật lời dẫn của mô hình (`model_chatter`), pinyin, câu
+  tiếng Anh ngắn (mục 7.6) hoặc sửa tay (mục 7.7);
+- hàng sửa tay không áp được (`text_mismatch`, `line_filtered`, `line_not_found`).
+
+### 7.6. Câu tiếng Anh ngắn (`english_function_words`)
+Qwen đôi khi bịa câu tiếng Anh trên trang chỉ có mực thấm (CPO_18 tr.531 "snow does not fall."). Lớp vie loại dòng
+khi cả ba điều kiện đúng (`script_filter.english_reject_reason`):
+- toàn ASCII (tiếng Việt có dấu không bao giờ bị đụng);
+- ít nhất 3 từ;
+- ít nhất một nửa số từ là từ chức năng tiếng Anh. Lấy "một nửa" chứ không phải "quá nửa" vì "snow does not fall"
+  có đúng 2/4.
+
+Danh sách từ chức năng bỏ các từ trùng tiếng Việt không dấu (a, an, to, in, do, no, may, on, me, hay, ma). Quét 2026-11-28
+trên toàn bộ vie.xml của 3 work: luật loại 2 dòng (đều ở CPO_18 tr.531). Dòng tiếng Việt không dấu gần ngưỡng nhất
+có tỉ lệ từ chức năng 0,29. Mọi dòng bị loại theo luật này được ghi vào `03_ocr/manifests/review_vie.tsv` để rà.
+
+### 7.7. Sửa tay OCR (`03_ocr/corrections/corrections.tsv`)
+Dòng OCR sai mà không OCR lại được (trang mực thấm, Qwen bịa hay bỏ dòng) được sửa bằng file TSV, **chỉ ghi
+thêm**, áp ở `build_layers` SAU bước lọc. JSON thô không bao giờ bị sửa.
+```powershell
+python -m src.ocr.corrections add --work-id CPO_18 --line-id vie.P0402.S004 --delete --note "..." --editor "..."
+python -m src.ocr.corrections add --work-id CPO_18 --line-id vie.P0528.S002 --new "..." --note "..." --editor "..."
+python -m src.ocr.corrections check --work-id CPO_18     # định dạng + chỉ ghi thêm so với git HEAD
+python -m src.ocr.build_layers --config configs/CPO_18.json   # tự chạy lại khi file sửa đổi
+```
+- Cột: `line_id`, `text_old`, `text_new`, `note`, `editor`, `date`.
+- `line_id` = `<luồng>.P<trang>.S<SRC_LINE>`, ví dụ `vie.P0531.S013`. Dùng `SRC_LINE` (số dòng gốc của engine) vì
+  ID `PNNNN.LNNN` bị đánh lại sau lọc và sẽ trôi khi thêm/bớt dòng.
+- `text_old` phải trùng text hiện tại của dòng; lệch thì không áp, chỉ cảnh báo. Lệnh `add` tự đọc text cũ từ XML.
+- `text_new` rỗng là xoá dòng (lý do `correction_delete`, có trong `review_vie.tsv`).
+- Sửa sai thì thêm hàng mới với `text_old` là text đã sửa; không xoá hay sửa hàng cũ.
+- Nhật ký từng hàng (`applied`, `deleted`, `text_mismatch`, `line_filtered`, `line_not_found`) nằm trong
+  `manifests/build_<luồng>.json` (khối `corrections`) và log của `build_layers`.
 

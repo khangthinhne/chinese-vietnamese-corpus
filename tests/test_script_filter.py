@@ -3,7 +3,7 @@ import unicodedata
 import pytest
 
 from src.ocr.script_filter import (
-    count_cjk, filter_han_line, filter_page, filter_vie_line, han_reject_reason, has_cjk,
+    count_cjk, english_reject_reason, filter_han_line, filter_page, filter_vie_line, han_reject_reason, has_cjk,
     vie_reject_reason,
 )
 
@@ -165,3 +165,29 @@ def test_vie_rejects_model_chatter(line):
 def test_vie_keeps_vietnamese_and_ordinary_latin(line):
     assert vie_reject_reason(line) is None
     assert filter_page("vie", [line]).n_kept == 1
+
+
+@pytest.mark.parametrize("line", [
+    "snow does not fall,", "snow does not fall.",            # CPO_18 tr.531 (Qwen bịa trên trang mực thấm)
+    "It is not what it was.", "and they have been there",
+])
+def test_vie_rejects_short_english(line):
+    assert vie_reject_reason(line) == "english_function_words"
+    assert filter_page("vie", ["Phiên âm:", line]).rejected == [(2, "english_function_words", line)]
+
+
+@pytest.mark.parametrize("line", [
+    "; snow,",                                   # < 3 từ
+    "QUY AN NAM", "Do an to may",                # từ trùng tiếng Việt không dấu không được tính
+    "Cot du tiu so gian thao am.", "(BOI THAN SU BO)", "Jian You Qing Shi Nan Xiang Wei",   # dòng thật, gần ngưỡng
+    "Snow falls on the mountain.",               # có dấu chấm nhưng 2/5 từ chức năng (< 0,5)
+    "snow does not fall — tuyết",                # không toàn ASCII
+])
+def test_english_rule_keeps_non_english_or_short(line):
+    assert english_reject_reason(line) is None
+
+
+def test_english_rule_thresholds():
+    assert english_reject_reason("rain is not here") == "english_function_words"
+    assert english_reject_reason("rain is not here", min_share=0.8) is None
+    assert english_reject_reason("is not", min_words=2) == "english_function_words"

@@ -153,6 +153,15 @@ class DataLayout:
     def ocr_layer_manifest_path(self, kind: str, layer: str) -> Path:
         """kind = 'ocr' (lần chạy OCR theo luồng) | 'build' (số liệu dựng XML/TXT)."""
         return self.ocr_manifest_dir / f"{kind}_{layer}.json"
+
+    @property
+    def ocr_corrections_dir(self) -> Path:
+        """Sửa tay OCR (chỉ ghi thêm), áp ở build_layers. Xem src/ocr/corrections.py."""
+        return self.ocr_root / "corrections"
+
+    @property
+    def ocr_corrections_path(self) -> Path:
+        return self.ocr_corrections_dir / "corrections.tsv"
     # --- phân đoạn tài liệu/lớp ---
     @property
     def segmentation_dir(self) -> Path: return self.work_dir / "04_segmentation"

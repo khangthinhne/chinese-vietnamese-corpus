@@ -3,7 +3,8 @@
 Đồ án dóng hàng Hán–Việt (CPO_18, CPO_19, CPO_20) theo `Guideline.pdf`: OCR/trích text, tách lớp,
 làm sạch, tách câu, dóng hàng, xuất TSV + XLSX. **Định dạng nộp đã chốt:** mỗi tác phẩm một file 4 cột
 `Hán | Dịch âm | Dịch nghĩa | Dịch thơ` (`python -m src.alignment.export --pair han-viet`); `.tsv` và `.xlsx` phải
-giống hệt nhau (sheet `DONG_HANG`). README.md có sơ đồ pipeline đầy đủ.
+giống hệt nhau (sheet `DONG_HANG`). README.md có sơ đồ pipeline đầy đủ. `Guideline.pdf` không có trong repo: tóm tắt
+và các quyết định nhóm nằm ở `docs/guideline_summary.md`, là nguồn cho script đóng gói và báo cáo nộp.
 
 **Đầu phiên: đọc `docs/STATUS.md`** (nhánh, quyết định đã chốt, task đang dở, việc chờ người dùng quyết).
 
@@ -49,6 +50,7 @@ python -m src.pipeline --config configs/CPO_20.json --steps layers --force   # d
 # CHÚ Ý: build_layers --config không kèm --pages dựng MỌI trang có raw, kể cả trang đã loại (tạo lại TXT trang bỏ)
 python -m src.ocr.build_layers --config configs/CPO_20.json        # JSON thô -> han.xml, vie.xml, TXT + kiểm tra
 python -m src.ocr.build_layers --config configs/CPO_20.json --report-only   # chỉ kiểm tra + bảng tổng hợp
+python -m src.ocr.corrections add --work-id CPO_18 --line-id vie.P0402.S004 --delete --note ... --editor ...   # sửa tay OCR (docs/ocr.md 7.7)
 powershell -File scripts\ocr_work.ps1 -Work CPO_19                # OCR cả work một mạch (resume được), docs/ocr_runbook.md
 python scripts/check_ocr_complete.py --work-id CPO_19 [--sample 5] # OCR thô đã đủ chưa (0 error = đủ)
 python scripts/pack_ocr.py --work-id CPO_19                        # dist/CPO_19_ocr_<ngày>.zip; unpack_ocr.py để giải
@@ -124,4 +126,5 @@ Chữ Hán trong khảo dị/chú thích không có nghĩa là bắt đầu kh�
 Lab. Bàn giao `07_export/han-am/`. Xem `docs/han_am_lab_tool.md`.
 
 ## Tài liệu
-`docs/ocr.md`, `docs/segmentation_architecture.md`, `docs/pipeline.md`, `docs/migration.md`, `docs/han_am_lab_tool.md`.
+`docs/ocr.md`, `docs/segmentation_architecture.md`, `docs/pipeline.md`, `docs/migration.md`, `docs/han_am_lab_tool.md`,
+`docs/guideline_summary.md` (Guideline + quyết định nhóm; nguồn cho script đóng gói).

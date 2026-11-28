@@ -182,8 +182,38 @@ _VIE_CHATTER_RE = re.compile(
     r"|dòng\s+chữ\s+này\s+có\s+thể)")
 
 
+# Câu tiếng Anh ngắn Qwen bịa trên trang mực thấm (CPO_18 tr.531 "snow does not fall."; tr.470). Luật: dòng TOÀN
+# ASCII, >= ENGLISH_MIN_WORDS từ, và tỉ lệ từ chức năng tiếng Anh >= ENGLISH_MIN_FUNCTION_SHARE. Ngưỡng là ">= một
+# nửa", không phải "quá nửa", vì "snow does not fall" có đúng 2/4. Bỏ khỏi danh sách các từ trùng tiếng Việt không dấu
+# (a, an, to, in, do, no, may, on, me, hay, ma...) để "QUY AN NAM", "Do Muc" không bao giờ bị tính. Tiếng Việt có dấu
+# không bao giờ toàn ASCII nên không bị luật này đụng tới.
+ENGLISH_MIN_WORDS = 3
+ENGLISH_MIN_FUNCTION_SHARE = 0.5
+ENGLISH_FUNCTION_WORDS = frozenset("""
+the of and or but not nor is are was were be been being am does did has have had having it its this that these
+those as at by for with from into onto upon off out over under about above below than then there here where when
+what which who whom whose why how all any each every some such only also very just so too if else while because
+though although he she they we you i his her him them their our your my mine yours ours theirs will would can could
+shall should must might it's don't doesn't isn't aren't wasn't weren't won't can't cannot one ones own same other
+""".split())
+_ENGLISH_WORD_RE = re.compile(r"[A-Za-z]+(?:'[A-Za-z]+)?")
+
+
+def english_reject_reason(text: str, *, min_words: int = ENGLISH_MIN_WORDS,
+                          min_share: float = ENGLISH_MIN_FUNCTION_SHARE) -> str | None:
+    """"english_function_words" nếu dòng là câu tiếng Anh (toàn ASCII, đủ từ, nhiều từ chức năng), không thì None."""
+    if not text.isascii():
+        return None
+    words = [w.lower() for w in _ENGLISH_WORD_RE.findall(text)]
+    if len(words) < min_words:
+        return None
+    function = sum(w in ENGLISH_FUNCTION_WORDS for w in words)
+    return "english_function_words" if function / len(words) >= min_share else None
+
+
 def vie_reject_reason(text: str) -> str | None:
-    """Lý do loại một dòng khỏi lớp vie (None = giữ): lời dẫn tiếng Anh/tiếng Việt của mô hình, dòng pinyin."""
+    """Lý do loại một dòng khỏi lớp vie (None = giữ): lời dẫn tiếng Anh/tiếng Việt của mô hình, dòng pinyin,
+    câu tiếng Anh ngắn."""
     text = unicodedata.normalize("NFC", text)
     if _VIE_CHATTER_RE.search(text):
         return "model_chatter"
@@ -192,7 +222,9 @@ def vie_reject_reason(text: str) -> str | None:
         return "pinyin"
     if _VIE_SPECIFIC_RE.search(text):
         return None
-    return "model_chatter" if _CHATTER_RE.search(text) else None
+    if _CHATTER_RE.search(text):
+        return "model_chatter"
+    return english_reject_reason(text)
 
 
 def chatter_reason(text: str, layer: str) -> str | None:

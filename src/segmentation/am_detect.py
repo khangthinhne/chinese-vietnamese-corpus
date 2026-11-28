@@ -118,6 +118,7 @@ def split_point(han_texts: list[str], am_texts: list[str], readings: dict[str, f
 
 VERSE_THO_RATIO = 1.6       # nghia >= 1,6 x số dòng thân am (bài thơ, không có lớp tho) -> phần đuôi là dịch thơ
 VERSE_MAX_SYLLABLES = 12    # dòng dịch thơ: <= 12 âm tiết (lục bát, thất ngôn, ngũ ngôn)
+VERSE_BACKTRACK_MAX = 2     # lùi điểm cắt nghia/tho tối đa ngần này dòng (xem verse_tho_split)
 
 
 def verse_tho_split(am_texts: list[str], nghia_texts: list[str]) -> int | None:
@@ -135,6 +136,18 @@ def verse_tho_split(am_texts: list[str], nghia_texts: list[str]) -> int | None:
     tail = [t for t in nghia_texts[k:] if not _is_upper_title(t)]
     if len(tail) < 4 or any(len(SYLLABLE_RE.findall(t)) > VERSE_MAX_SYLLABLES for t in tail):
         return None
+    # Một dòng OCR nghĩa đôi khi chứa hai câu dịch, nên n dòng am ứng với < n dòng nghĩa và điểm cắt rơi chậm 1-2
+    # dòng: câu thơ dịch đầu tiên ("Uyên bay thuở ấy, vẫn còn đau,", CPO_20 tr.42) còn ở lại nghia. Lùi điểm cắt khi
+    # dòng ngay trước có số âm tiết thuộc khuôn của phần thơ (số âm tiết gặp >= 2 lần trong phần đuôi).
+    counts = [len(SYLLABLE_RE.findall(t)) for t in tail]
+    meter = {c for c in counts if counts.count(c) >= 2}
+    for _ in range(VERSE_BACKTRACK_MAX):
+        if k <= nb[0] or k - 1 not in nb:
+            break
+        prev = nghia_texts[k - 1]
+        if len(SYLLABLE_RE.findall(prev)) not in meter or _is_upper_title(prev):
+            break
+        k -= 1
     return k
 
 
